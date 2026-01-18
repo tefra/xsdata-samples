@@ -25,7 +25,7 @@ class CodelistExtensionType:
         codelist.
     """
 
-    codelist: str | None = field(
+    codelist: None | str = field(
         default=None,
         metadata={
             "name": "Codelist",
@@ -36,9 +36,9 @@ class CodelistExtensionType:
         },
     )
     inclusive_code_selection_or_exclusive_code_selection: (
-        CodelistExtensionType.InclusiveCodeSelection
+        None
+        | CodelistExtensionType.InclusiveCodeSelection
         | CodelistExtensionType.ExclusiveCodeSelection
-        | None
     ) = field(
         default=None,
         metadata={
@@ -61,7 +61,7 @@ class CodelistExtensionType:
             ),
         },
     )
-    prefix: str | None = field(
+    prefix: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",

@@ -31,7 +31,7 @@ __NAMESPACE__ = (
 
 @dataclass
 class BuildingType(SinglePointStructureType):
-    floor_area_m2: NumericType | None = field(
+    floor_area_m2: None | NumericType = field(
         default=None,
         metadata={
             "name": "FloorAreaM2",
@@ -39,7 +39,7 @@ class BuildingType(SinglePointStructureType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
         },
     )
-    floor_count: NumberType | None = field(
+    floor_count: None | NumberType = field(
         default=None,
         metadata={
             "name": "FloorCount",
@@ -47,7 +47,7 @@ class BuildingType(SinglePointStructureType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
         },
     )
-    floors_occupied: TextType | None = field(
+    floors_occupied: None | TextType = field(
         default=None,
         metadata={
             "name": "FloorsOccupied",
@@ -55,7 +55,7 @@ class BuildingType(SinglePointStructureType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
         },
     )
-    height_in_meter: QuantityType | None = field(
+    height_in_meter: None | QuantityType = field(
         default=None,
         metadata={
             "name": "HeightInMeter",
@@ -63,7 +63,7 @@ class BuildingType(SinglePointStructureType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
         },
     )
-    lift_count: NumberType | None = field(
+    lift_count: None | NumberType = field(
         default=None,
         metadata={
             "name": "LiftCount",
@@ -71,7 +71,7 @@ class BuildingType(SinglePointStructureType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
         },
     )
-    lowest_floor_occupied: TextType | None = field(
+    lowest_floor_occupied: None | TextType = field(
         default=None,
         metadata={
             "name": "LowestFloorOccupied",
@@ -79,7 +79,7 @@ class BuildingType(SinglePointStructureType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
         },
     )
-    completition_state: BuildingTypeCompletitionState | None = field(
+    completition_state: None | BuildingTypeCompletitionState = field(
         default=None,
         metadata={
             "name": "CompletitionState",
@@ -87,7 +87,7 @@ class BuildingType(SinglePointStructureType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
         },
     )
-    occupancy: CodeDescriptionType | None = field(
+    occupancy: None | CodeDescriptionType = field(
         default=None,
         metadata={
             "name": "Occupancy",

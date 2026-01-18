@@ -13,7 +13,7 @@ class TTextAnnotation(TArtifact):
     class Meta:
         name = "tTextAnnotation"
 
-    text: Text | None = field(
+    text: None | Text = field(
         default=None,
         metadata={
             "type": "Element",

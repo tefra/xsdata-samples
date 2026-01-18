@@ -23,7 +23,7 @@ class WinterDrivingManagement(NetworkManagement):
     """
 
     winter_equipment_management_type: (
-        WinterEquipmentManagementTypeEnum | None
+        None | WinterEquipmentManagementTypeEnum
     ) = field(
         default=None,
         metadata={
@@ -33,7 +33,7 @@ class WinterDrivingManagement(NetworkManagement):
             "required": True,
         },
     )
-    winter_driving_management_extension: ExtensionType | None = field(
+    winter_driving_management_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "winterDrivingManagementExtension",

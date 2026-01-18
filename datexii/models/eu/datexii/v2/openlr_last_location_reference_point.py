@@ -17,7 +17,7 @@ class OpenlrLastLocationReferencePoint(OpenlrBaseLocationReferencePoint):
     location reference point.
     """
 
-    openlr_last_location_reference_point_extension: ExtensionType | None = (
+    openlr_last_location_reference_point_extension: None | ExtensionType = (
         field(
             default=None,
             metadata={

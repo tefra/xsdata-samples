@@ -116,7 +116,7 @@ class SomeipMethodDeployment:
     class Meta:
         name = "SOMEIP-METHOD-DEPLOYMENT"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -125,7 +125,7 @@ class SomeipMethodDeployment:
             "required": True,
         },
     )
-    short_name_fragments: SomeipMethodDeployment.ShortNameFragments | None = (
+    short_name_fragments: None | SomeipMethodDeployment.ShortNameFragments = (
         field(
             default=None,
             metadata={
@@ -135,7 +135,7 @@ class SomeipMethodDeployment:
             },
         )
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -143,7 +143,7 @@ class SomeipMethodDeployment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -151,7 +151,7 @@ class SomeipMethodDeployment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -159,7 +159,7 @@ class SomeipMethodDeployment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -167,7 +167,7 @@ class SomeipMethodDeployment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -175,7 +175,7 @@ class SomeipMethodDeployment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: SomeipMethodDeployment.Annotations | None = field(
+    annotations: None | SomeipMethodDeployment.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -183,7 +183,7 @@ class SomeipMethodDeployment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    method_ref: SomeipMethodDeployment.MethodRef | None = field(
+    method_ref: None | SomeipMethodDeployment.MethodRef = field(
         default=None,
         metadata={
             "name": "METHOD-REF",
@@ -191,7 +191,7 @@ class SomeipMethodDeployment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    maximum_segment_length_request: PositiveInteger | None = field(
+    maximum_segment_length_request: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "MAXIMUM-SEGMENT-LENGTH-REQUEST",
@@ -199,7 +199,7 @@ class SomeipMethodDeployment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    maximum_segment_length_response: PositiveInteger | None = field(
+    maximum_segment_length_response: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "MAXIMUM-SEGMENT-LENGTH-RESPONSE",
@@ -207,7 +207,7 @@ class SomeipMethodDeployment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    method_id: PositiveInteger | None = field(
+    method_id: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "METHOD-ID",
@@ -215,7 +215,7 @@ class SomeipMethodDeployment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    separation_time_request: TimeValue | None = field(
+    separation_time_request: None | TimeValue = field(
         default=None,
         metadata={
             "name": "SEPARATION-TIME-REQUEST",
@@ -223,7 +223,7 @@ class SomeipMethodDeployment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    separation_time_response: TimeValue | None = field(
+    separation_time_response: None | TimeValue = field(
         default=None,
         metadata={
             "name": "SEPARATION-TIME-RESPONSE",
@@ -231,7 +231,7 @@ class SomeipMethodDeployment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    transport_protocol: TransportLayerProtocolEnum | None = field(
+    transport_protocol: None | TransportLayerProtocolEnum = field(
         default=None,
         metadata={
             "name": "TRANSPORT-PROTOCOL",
@@ -239,14 +239,14 @@ class SomeipMethodDeployment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -254,7 +254,7 @@ class SomeipMethodDeployment:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -286,7 +286,7 @@ class SomeipMethodDeployment:
 
     @dataclass
     class MethodRef(Ref):
-        dest: ClientServerOperationSubtypesEnum | None = field(
+        dest: None | ClientServerOperationSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

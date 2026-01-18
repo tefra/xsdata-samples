@@ -38,7 +38,7 @@ class DiagnosticEnvSwcModeElement:
     class Meta:
         name = "DIAGNOSTIC-ENV-SWC-MODE-ELEMENT"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -48,7 +48,7 @@ class DiagnosticEnvSwcModeElement:
         },
     )
     short_name_fragments: (
-        DiagnosticEnvSwcModeElement.ShortNameFragments | None
+        None | DiagnosticEnvSwcModeElement.ShortNameFragments
     ) = field(
         default=None,
         metadata={
@@ -57,7 +57,7 @@ class DiagnosticEnvSwcModeElement:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    mode_iref: PModeInSystemInstanceRef | None = field(
+    mode_iref: None | PModeInSystemInstanceRef = field(
         default=None,
         metadata={
             "name": "MODE-IREF",
@@ -65,14 +65,14 @@ class DiagnosticEnvSwcModeElement:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

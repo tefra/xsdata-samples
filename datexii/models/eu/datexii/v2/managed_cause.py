@@ -24,7 +24,7 @@ class ManagedCause(Cause):
     :ivar managed_cause_extension:
     """
 
-    managed_cause: SituationRecordVersionedReference | None = field(
+    managed_cause: None | SituationRecordVersionedReference = field(
         default=None,
         metadata={
             "name": "managedCause",
@@ -32,7 +32,7 @@ class ManagedCause(Cause):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    managed_cause_extension: ExtensionType | None = field(
+    managed_cause_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "managedCauseExtension",

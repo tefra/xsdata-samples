@@ -88,7 +88,7 @@ class ComponentType:
     class Meta:
         name = "componentType"
 
-    vendor: str | None = field(
+    vendor: None | str = field(
         default=None,
         metadata={
             "type": "Element",
@@ -96,7 +96,7 @@ class ComponentType:
             "required": True,
         },
     )
-    library: str | None = field(
+    library: None | str = field(
         default=None,
         metadata={
             "type": "Element",
@@ -104,7 +104,7 @@ class ComponentType:
             "required": True,
         },
     )
-    name: str | None = field(
+    name: None | str = field(
         default=None,
         metadata={
             "type": "Element",
@@ -112,7 +112,7 @@ class ComponentType:
             "required": True,
         },
     )
-    version: str | None = field(
+    version: None | str = field(
         default=None,
         metadata={
             "type": "Element",
@@ -120,7 +120,7 @@ class ComponentType:
             "required": True,
         },
     )
-    display_name: str | None = field(
+    display_name: None | str = field(
         default=None,
         metadata={
             "name": "displayName",
@@ -128,7 +128,7 @@ class ComponentType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    short_description: ShortDescription | None = field(
+    short_description: None | ShortDescription = field(
         default=None,
         metadata={
             "name": "shortDescription",
@@ -136,14 +136,14 @@ class ComponentType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    description: Description | None = field(
+    description: None | Description = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    type_definitions: ComponentType.TypeDefinitions | None = field(
+    type_definitions: None | ComponentType.TypeDefinitions = field(
         default=None,
         metadata={
             "name": "typeDefinitions",
@@ -151,7 +151,7 @@ class ComponentType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    power_domains: ComponentType.PowerDomains | None = field(
+    power_domains: None | ComponentType.PowerDomains = field(
         default=None,
         metadata={
             "name": "powerDomains",
@@ -159,7 +159,7 @@ class ComponentType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    bus_interfaces: BusInterfaces | None = field(
+    bus_interfaces: None | BusInterfaces = field(
         default=None,
         metadata={
             "name": "busInterfaces",
@@ -167,7 +167,7 @@ class ComponentType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    indirect_interfaces: IndirectInterfaces | None = field(
+    indirect_interfaces: None | IndirectInterfaces = field(
         default=None,
         metadata={
             "name": "indirectInterfaces",
@@ -175,21 +175,21 @@ class ComponentType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    channels: Channels | None = field(
+    channels: None | Channels = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    modes: ComponentType.Modes | None = field(
+    modes: None | ComponentType.Modes = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    address_spaces: AddressSpaces | None = field(
+    address_spaces: None | AddressSpaces = field(
         default=None,
         metadata={
             "name": "addressSpaces",
@@ -197,7 +197,7 @@ class ComponentType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    memory_maps: MemoryMaps | None = field(
+    memory_maps: None | MemoryMaps = field(
         default=None,
         metadata={
             "name": "memoryMaps",
@@ -205,14 +205,14 @@ class ComponentType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    model: Model | None = field(
+    model: None | Model = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    component_generators: ComponentGenerators | None = field(
+    component_generators: None | ComponentGenerators = field(
         default=None,
         metadata={
             "name": "componentGenerators",
@@ -220,14 +220,14 @@ class ComponentType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    choices: Choices | None = field(
+    choices: None | Choices = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    file_sets: FileSets | None = field(
+    file_sets: None | FileSets = field(
         default=None,
         metadata={
             "name": "fileSets",
@@ -235,7 +235,7 @@ class ComponentType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    clearbox_elements: ComponentType.ClearboxElements | None = field(
+    clearbox_elements: None | ComponentType.ClearboxElements = field(
         default=None,
         metadata={
             "name": "clearboxElements",
@@ -243,14 +243,14 @@ class ComponentType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    cpus: ComponentType.Cpus | None = field(
+    cpus: None | ComponentType.Cpus = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    other_clock_drivers: OtherClocks | None = field(
+    other_clock_drivers: None | OtherClocks = field(
         default=None,
         metadata={
             "name": "otherClockDrivers",
@@ -258,7 +258,7 @@ class ComponentType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    reset_types: ComponentType.ResetTypes | None = field(
+    reset_types: None | ComponentType.ResetTypes = field(
         default=None,
         metadata={
             "name": "resetTypes",
@@ -266,21 +266,21 @@ class ComponentType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    parameters: Parameters | None = field(
+    parameters: None | Parameters = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    assertions: Assertions | None = field(
+    assertions: None | Assertions = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    vendor_extensions: VendorExtensions | None = field(
+    vendor_extensions: None | VendorExtensions = field(
         default=None,
         metadata={
             "name": "vendorExtensions",
@@ -288,7 +288,7 @@ class ComponentType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -334,7 +334,7 @@ class ComponentType:
             :ivar id:
             """
 
-            name: str | None = field(
+            name: None | str = field(
                 default=None,
                 metadata={
                     "type": "Element",
@@ -342,7 +342,7 @@ class ComponentType:
                     "required": True,
                 },
             )
-            display_name: DisplayName | None = field(
+            display_name: None | DisplayName = field(
                 default=None,
                 metadata={
                     "name": "displayName",
@@ -350,7 +350,7 @@ class ComponentType:
                     "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
                 },
             )
-            short_description: ShortDescription | None = field(
+            short_description: None | ShortDescription = field(
                 default=None,
                 metadata={
                     "name": "shortDescription",
@@ -358,14 +358,14 @@ class ComponentType:
                     "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
                 },
             )
-            description: Description | None = field(
+            description: None | Description = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
                 },
             )
-            always_on: AlwaysOn | None = field(
+            always_on: None | AlwaysOn = field(
                 default=None,
                 metadata={
                     "name": "alwaysOn",
@@ -373,7 +373,7 @@ class ComponentType:
                     "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
                 },
             )
-            sub_domain_of: str | None = field(
+            sub_domain_of: None | str = field(
                 default=None,
                 metadata={
                     "name": "subDomainOf",
@@ -381,14 +381,14 @@ class ComponentType:
                     "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
                 },
             )
-            parameters: Parameters | None = field(
+            parameters: None | Parameters = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
                 },
             )
-            vendor_extensions: VendorExtensions | None = field(
+            vendor_extensions: None | VendorExtensions = field(
                 default=None,
                 metadata={
                     "name": "vendorExtensions",
@@ -396,7 +396,7 @@ class ComponentType:
                     "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
                 },
             )
-            id: str | None = field(
+            id: None | str = field(
                 default=None,
                 metadata={
                     "type": "Attribute",
@@ -429,7 +429,7 @@ class ComponentType:
             :ivar id:
             """
 
-            name: str | None = field(
+            name: None | str = field(
                 default=None,
                 metadata={
                     "type": "Element",
@@ -437,7 +437,7 @@ class ComponentType:
                     "required": True,
                 },
             )
-            display_name: DisplayName | None = field(
+            display_name: None | DisplayName = field(
                 default=None,
                 metadata={
                     "name": "displayName",
@@ -445,7 +445,7 @@ class ComponentType:
                     "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
                 },
             )
-            short_description: ShortDescription | None = field(
+            short_description: None | ShortDescription = field(
                 default=None,
                 metadata={
                     "name": "shortDescription",
@@ -453,7 +453,7 @@ class ComponentType:
                     "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
                 },
             )
-            description: Description | None = field(
+            description: None | Description = field(
                 default=None,
                 metadata={
                     "type": "Element",
@@ -476,14 +476,14 @@ class ComponentType:
                     "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
                 },
             )
-            condition: UnresolvedUnsignedBitExpression | None = field(
+            condition: None | UnresolvedUnsignedBitExpression = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
                 },
             )
-            vendor_extensions: VendorExtensions | None = field(
+            vendor_extensions: None | VendorExtensions = field(
                 default=None,
                 metadata={
                     "name": "vendorExtensions",
@@ -491,7 +491,7 @@ class ComponentType:
                     "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
                 },
             )
-            id: str | None = field(
+            id: None | str = field(
                 default=None,
                 metadata={
                     "type": "Attribute",
@@ -512,7 +512,7 @@ class ComponentType:
                 :ivar id:
                 """
 
-                name: str | None = field(
+                name: None | str = field(
                     default=None,
                     metadata={
                         "type": "Element",
@@ -520,7 +520,7 @@ class ComponentType:
                         "required": True,
                     },
                 )
-                display_name: DisplayName | None = field(
+                display_name: None | DisplayName = field(
                     default=None,
                     metadata={
                         "name": "displayName",
@@ -528,7 +528,7 @@ class ComponentType:
                         "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
                     },
                 )
-                short_description: ShortDescription | None = field(
+                short_description: None | ShortDescription = field(
                     default=None,
                     metadata={
                         "name": "shortDescription",
@@ -536,14 +536,14 @@ class ComponentType:
                         "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
                     },
                 )
-                description: Description | None = field(
+                description: None | Description = field(
                     default=None,
                     metadata={
                         "type": "Element",
                         "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
                     },
                 )
-                port_ref: ComponentType.Modes.Mode.PortSlice.PortRef | None = (
+                port_ref: None | ComponentType.Modes.Mode.PortSlice.PortRef = (
                     field(
                         default=None,
                         metadata={
@@ -562,7 +562,7 @@ class ComponentType:
                         "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
                     },
                 )
-                part_select: PartSelect | None = field(
+                part_select: None | PartSelect = field(
                     default=None,
                     metadata={
                         "name": "partSelect",
@@ -570,7 +570,7 @@ class ComponentType:
                         "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
                     },
                 )
-                id: str | None = field(
+                id: None | str = field(
                     default=None,
                     metadata={
                         "type": "Attribute",
@@ -580,7 +580,7 @@ class ComponentType:
 
                 @dataclass
                 class PortRef:
-                    port_ref: str | None = field(
+                    port_ref: None | str = field(
                         default=None,
                         metadata={
                             "name": "portRef",
@@ -611,7 +611,7 @@ class ComponentType:
                 :ivar id:
                 """
 
-                name: str | None = field(
+                name: None | str = field(
                     default=None,
                     metadata={
                         "type": "Element",
@@ -619,7 +619,7 @@ class ComponentType:
                         "required": True,
                     },
                 )
-                display_name: DisplayName | None = field(
+                display_name: None | DisplayName = field(
                     default=None,
                     metadata={
                         "name": "displayName",
@@ -627,7 +627,7 @@ class ComponentType:
                         "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
                     },
                 )
-                short_description: ShortDescription | None = field(
+                short_description: None | ShortDescription = field(
                     default=None,
                     metadata={
                         "name": "shortDescription",
@@ -635,7 +635,7 @@ class ComponentType:
                         "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
                     },
                 )
-                description: Description | None = field(
+                description: None | Description = field(
                     default=None,
                     metadata={
                         "type": "Element",
@@ -643,7 +643,7 @@ class ComponentType:
                     },
                 )
                 address_space_ref: (
-                    ComponentType.Modes.Mode.FieldSlice.AddressSpaceRef | None
+                    None | ComponentType.Modes.Mode.FieldSlice.AddressSpaceRef
                 ) = field(
                     default=None,
                     metadata={
@@ -653,7 +653,7 @@ class ComponentType:
                     },
                 )
                 memory_map_ref: (
-                    ComponentType.Modes.Mode.FieldSlice.MemoryMapRef | None
+                    None | ComponentType.Modes.Mode.FieldSlice.MemoryMapRef
                 ) = field(
                     default=None,
                     metadata={
@@ -662,7 +662,7 @@ class ComponentType:
                         "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
                     },
                 )
-                memory_remap_ref: MemoryRemapRef | None = field(
+                memory_remap_ref: None | MemoryRemapRef = field(
                     default=None,
                     metadata={
                         "name": "memoryRemapRef",
@@ -678,7 +678,7 @@ class ComponentType:
                         "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
                     },
                 )
-                address_block_ref: AddressBlockRef | None = field(
+                address_block_ref: None | AddressBlockRef = field(
                     default=None,
                     metadata={
                         "name": "addressBlockRef",
@@ -695,7 +695,7 @@ class ComponentType:
                         "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
                     },
                 )
-                register_ref: RegisterRef | None = field(
+                register_ref: None | RegisterRef = field(
                     default=None,
                     metadata={
                         "name": "registerRef",
@@ -704,7 +704,7 @@ class ComponentType:
                         "required": True,
                     },
                 )
-                alternate_register_ref: AlternateRegisterRef | None = field(
+                alternate_register_ref: None | AlternateRegisterRef = field(
                     default=None,
                     metadata={
                         "name": "alternateRegisterRef",
@@ -712,7 +712,7 @@ class ComponentType:
                         "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
                     },
                 )
-                field_ref: FieldRef | None = field(
+                field_ref: None | FieldRef = field(
                     default=None,
                     metadata={
                         "name": "fieldRef",
@@ -721,14 +721,14 @@ class ComponentType:
                         "required": True,
                     },
                 )
-                range: Range | None = field(
+                range: None | Range = field(
                     default=None,
                     metadata={
                         "type": "Element",
                         "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
                     },
                 )
-                id: str | None = field(
+                id: None | str = field(
                     default=None,
                     metadata={
                         "type": "Attribute",
@@ -738,7 +738,7 @@ class ComponentType:
 
                 @dataclass
                 class AddressSpaceRef:
-                    address_space_ref: str | None = field(
+                    address_space_ref: None | str = field(
                         default=None,
                         metadata={
                             "name": "addressSpaceRef",
@@ -749,7 +749,7 @@ class ComponentType:
 
                 @dataclass
                 class MemoryMapRef:
-                    memory_map_ref: str | None = field(
+                    memory_map_ref: None | str = field(
                         default=None,
                         metadata={
                             "name": "memoryMapRef",
@@ -823,7 +823,7 @@ class ComponentType:
             :ivar id:
             """
 
-            name: str | None = field(
+            name: None | str = field(
                 default=None,
                 metadata={
                     "type": "Element",
@@ -831,7 +831,7 @@ class ComponentType:
                     "required": True,
                 },
             )
-            display_name: DisplayName | None = field(
+            display_name: None | DisplayName = field(
                 default=None,
                 metadata={
                     "name": "displayName",
@@ -839,7 +839,7 @@ class ComponentType:
                     "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
                 },
             )
-            short_description: ShortDescription | None = field(
+            short_description: None | ShortDescription = field(
                 default=None,
                 metadata={
                     "name": "shortDescription",
@@ -847,22 +847,14 @@ class ComponentType:
                     "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
                 },
             )
-            description: Description | None = field(
+            description: None | Description = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
                 },
             )
-            range: UnsignedPositiveLongintExpression | None = field(
-                default=None,
-                metadata={
-                    "type": "Element",
-                    "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
-                    "required": True,
-                },
-            )
-            width: UnsignedPositiveIntExpression | None = field(
+            range: None | UnsignedPositiveLongintExpression = field(
                 default=None,
                 metadata={
                     "type": "Element",
@@ -870,14 +862,22 @@ class ComponentType:
                     "required": True,
                 },
             )
-            regions: ComponentType.Cpus.Cpu.Regions | None = field(
+            width: None | UnsignedPositiveIntExpression = field(
+                default=None,
+                metadata={
+                    "type": "Element",
+                    "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
+                    "required": True,
+                },
+            )
+            regions: None | ComponentType.Cpus.Cpu.Regions = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
                 },
             )
-            address_unit_bits: AddressUnitBits | None = field(
+            address_unit_bits: None | AddressUnitBits = field(
                 default=None,
                 metadata={
                     "name": "addressUnitBits",
@@ -893,7 +893,7 @@ class ComponentType:
                     "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
                 },
             )
-            memory_map_ref: str | None = field(
+            memory_map_ref: None | str = field(
                 default=None,
                 metadata={
                     "name": "memoryMapRef",
@@ -902,14 +902,14 @@ class ComponentType:
                     "required": True,
                 },
             )
-            parameters: Parameters | None = field(
+            parameters: None | Parameters = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
                 },
             )
-            vendor_extensions: VendorExtensions | None = field(
+            vendor_extensions: None | VendorExtensions = field(
                 default=None,
                 metadata={
                     "name": "vendorExtensions",
@@ -917,7 +917,7 @@ class ComponentType:
                     "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
                 },
             )
-            id: str | None = field(
+            id: None | str = field(
                 default=None,
                 metadata={
                     "type": "Attribute",
@@ -957,7 +957,7 @@ class ComponentType:
                     :ivar id:
                     """
 
-                    name: str | None = field(
+                    name: None | str = field(
                         default=None,
                         metadata={
                             "type": "Element",
@@ -965,7 +965,7 @@ class ComponentType:
                             "required": True,
                         },
                     )
-                    display_name: DisplayName | None = field(
+                    display_name: None | DisplayName = field(
                         default=None,
                         metadata={
                             "name": "displayName",
@@ -973,7 +973,7 @@ class ComponentType:
                             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
                         },
                     )
-                    short_description: ShortDescription | None = field(
+                    short_description: None | ShortDescription = field(
                         default=None,
                         metadata={
                             "name": "shortDescription",
@@ -981,14 +981,14 @@ class ComponentType:
                             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
                         },
                     )
-                    description: Description | None = field(
+                    description: None | Description = field(
                         default=None,
                         metadata={
                             "type": "Element",
                             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
                         },
                     )
-                    address_offset: UnsignedLongintExpression | None = field(
+                    address_offset: None | UnsignedLongintExpression = field(
                         default=None,
                         metadata={
                             "name": "addressOffset",
@@ -997,7 +997,7 @@ class ComponentType:
                             "required": True,
                         },
                     )
-                    range: UnsignedPositiveLongintExpression | None = field(
+                    range: None | UnsignedPositiveLongintExpression = field(
                         default=None,
                         metadata={
                             "type": "Element",
@@ -1005,7 +1005,7 @@ class ComponentType:
                             "required": True,
                         },
                     )
-                    vendor_extensions: VendorExtensions | None = field(
+                    vendor_extensions: None | VendorExtensions = field(
                         default=None,
                         metadata={
                             "name": "vendorExtensions",
@@ -1013,7 +1013,7 @@ class ComponentType:
                             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
                         },
                     )
-                    id: str | None = field(
+                    id: None | str = field(
                         default=None,
                         metadata={
                             "type": "Attribute",
@@ -1048,7 +1048,7 @@ class ComponentType:
             :ivar id:
             """
 
-            name: str | None = field(
+            name: None | str = field(
                 default=None,
                 metadata={
                     "type": "Element",
@@ -1056,7 +1056,7 @@ class ComponentType:
                     "required": True,
                 },
             )
-            display_name: DisplayName | None = field(
+            display_name: None | DisplayName = field(
                 default=None,
                 metadata={
                     "name": "displayName",
@@ -1064,7 +1064,7 @@ class ComponentType:
                     "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
                 },
             )
-            short_description: ShortDescription | None = field(
+            short_description: None | ShortDescription = field(
                 default=None,
                 metadata={
                     "name": "shortDescription",
@@ -1072,14 +1072,14 @@ class ComponentType:
                     "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
                 },
             )
-            description: Description | None = field(
+            description: None | Description = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
                 },
             )
-            vendor_extensions: VendorExtensions | None = field(
+            vendor_extensions: None | VendorExtensions = field(
                 default=None,
                 metadata={
                     "name": "vendorExtensions",
@@ -1087,7 +1087,7 @@ class ComponentType:
                     "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
                 },
             )
-            id: str | None = field(
+            id: None | str = field(
                 default=None,
                 metadata={
                     "type": "Attribute",

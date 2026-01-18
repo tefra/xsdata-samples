@@ -46,7 +46,7 @@ class NoticeAssignmentVersionStructure(AssignmentVersionStructure1):
         name = "NoticeAssignment_VersionStructure"
 
     notice_ref_or_group_of_notices_ref_or_notice: (
-        NoticeRef | GeneralGroupOfEntitiesRefStructure | Notice | None
+        None | NoticeRef | GeneralGroupOfEntitiesRefStructure | Notice
     ) = field(
         default=None,
         metadata={
@@ -70,7 +70,7 @@ class NoticeAssignmentVersionStructure(AssignmentVersionStructure1):
             ),
         },
     )
-    noticed_object_ref: VersionOfObjectRefStructure | None = field(
+    noticed_object_ref: None | VersionOfObjectRefStructure = field(
         default=None,
         metadata={
             "name": "NoticedObjectRef",
@@ -79,7 +79,8 @@ class NoticeAssignmentVersionStructure(AssignmentVersionStructure1):
         },
     )
     choice: (
-        TripRef
+        None
+        | TripRef
         | TripPatternTripRef
         | SingleJourneyPathRef
         | SingleJourneyRef
@@ -98,7 +99,6 @@ class NoticeAssignmentVersionStructure(AssignmentVersionStructure1):
         | NavigationPathRef
         | RouteRef
         | LinkSequenceRef
-        | None
     ) = field(
         default=None,
         metadata={
@@ -203,13 +203,13 @@ class NoticeAssignmentVersionStructure(AssignmentVersionStructure1):
         },
     )
     section_ref_or_general_section_ref: (
-        ParentCommonSectionRef
+        None
+        | ParentCommonSectionRef
         | CommonSectionRef
         | LineSectionRef
         | FareSectionRef
         | GeneralSectionRef
         | SectionRef
-        | None
     ) = field(
         default=None,
         metadata={
@@ -248,7 +248,7 @@ class NoticeAssignmentVersionStructure(AssignmentVersionStructure1):
             ),
         },
     )
-    start_point_in_pattern_ref: PointInSequenceRefStructure | None = field(
+    start_point_in_pattern_ref: None | PointInSequenceRefStructure = field(
         default=None,
         metadata={
             "name": "StartPointInPatternRef",
@@ -256,7 +256,7 @@ class NoticeAssignmentVersionStructure(AssignmentVersionStructure1):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    end_point_in_pattern_ref: PointInSequenceRefStructure | None = field(
+    end_point_in_pattern_ref: None | PointInSequenceRefStructure = field(
         default=None,
         metadata={
             "name": "EndPointInPatternRef",
@@ -264,7 +264,7 @@ class NoticeAssignmentVersionStructure(AssignmentVersionStructure1):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    mark: str | None = field(
+    mark: None | str = field(
         default=None,
         metadata={
             "name": "Mark",
@@ -272,7 +272,7 @@ class NoticeAssignmentVersionStructure(AssignmentVersionStructure1):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    mark_url: str | None = field(
+    mark_url: None | str = field(
         default=None,
         metadata={
             "name": "MarkUrl",
@@ -280,7 +280,7 @@ class NoticeAssignmentVersionStructure(AssignmentVersionStructure1):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    publicity_channel: PublicityChannelEnumeration | None = field(
+    publicity_channel: None | PublicityChannelEnumeration = field(
         default=None,
         metadata={
             "name": "PublicityChannel",
@@ -288,7 +288,7 @@ class NoticeAssignmentVersionStructure(AssignmentVersionStructure1):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    advertised: bool | None = field(
+    advertised: None | bool = field(
         default=None,
         metadata={
             "name": "Advertised",

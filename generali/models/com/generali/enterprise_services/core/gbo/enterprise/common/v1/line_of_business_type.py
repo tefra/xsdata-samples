@@ -13,7 +13,7 @@ __NAMESPACE__ = (
 
 @dataclass
 class LineOfBusinessType:
-    line_of_business: LineOfBusinessDetailType | None = field(
+    line_of_business: None | LineOfBusinessDetailType = field(
         default=None,
         metadata={
             "name": "LineOfBusiness",
@@ -22,7 +22,7 @@ class LineOfBusinessType:
             "required": True,
         },
     )
-    sub_line_of_business: LineOfBusinessDetailType | None = field(
+    sub_line_of_business: None | LineOfBusinessDetailType = field(
         default=None,
         metadata={
             "name": "SubLineOfBusiness",

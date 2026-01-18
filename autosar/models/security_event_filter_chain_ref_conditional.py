@@ -35,8 +35,8 @@ class SecurityEventFilterChainRefConditional:
         name = "SECURITY-EVENT-FILTER-CHAIN-REF-CONDITIONAL"
 
     security_event_filter_chain_ref: (
-        SecurityEventFilterChainRefConditional.SecurityEventFilterChainRef
-        | None
+        None
+        | SecurityEventFilterChainRefConditional.SecurityEventFilterChainRef
     ) = field(
         default=None,
         metadata={
@@ -45,7 +45,7 @@ class SecurityEventFilterChainRefConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -53,14 +53,14 @@ class SecurityEventFilterChainRefConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -71,7 +71,7 @@ class SecurityEventFilterChainRefConditional:
 
     @dataclass
     class SecurityEventFilterChainRef(Ref):
-        dest: SecurityEventFilterChainSubtypesEnum | None = field(
+        dest: None | SecurityEventFilterChainSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

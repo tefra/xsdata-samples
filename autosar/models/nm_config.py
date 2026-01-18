@@ -99,7 +99,7 @@ class NmConfig:
     class Meta:
         name = "NM-CONFIG"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -108,7 +108,7 @@ class NmConfig:
             "required": True,
         },
     )
-    short_name_fragments: NmConfig.ShortNameFragments | None = field(
+    short_name_fragments: None | NmConfig.ShortNameFragments = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -116,7 +116,7 @@ class NmConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -124,7 +124,7 @@ class NmConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -132,7 +132,7 @@ class NmConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -140,7 +140,7 @@ class NmConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -148,7 +148,7 @@ class NmConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -156,7 +156,7 @@ class NmConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: NmConfig.Annotations | None = field(
+    annotations: None | NmConfig.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -164,7 +164,7 @@ class NmConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -172,7 +172,7 @@ class NmConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nm_clusters: NmConfig.NmClusters | None = field(
+    nm_clusters: None | NmConfig.NmClusters = field(
         default=None,
         metadata={
             "name": "NM-CLUSTERS",
@@ -180,7 +180,7 @@ class NmConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nm_cluster_couplings: NmConfig.NmClusterCouplings | None = field(
+    nm_cluster_couplings: None | NmConfig.NmClusterCouplings = field(
         default=None,
         metadata={
             "name": "NM-CLUSTER-COUPLINGS",
@@ -188,7 +188,7 @@ class NmConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nm_if_ecus: NmConfig.NmIfEcus | None = field(
+    nm_if_ecus: None | NmConfig.NmIfEcus = field(
         default=None,
         metadata={
             "name": "NM-IF-ECUS",
@@ -196,14 +196,14 @@ class NmConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -211,7 +211,7 @@ class NmConfig:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",

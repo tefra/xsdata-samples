@@ -28,14 +28,14 @@ class VehicleTypeVersionStructure(TransportTypeVersionStructure):
     class Meta:
         name = "VehicleType_VersionStructure"
 
-    capacities: PassengerCapacitiesRelStructure | None = field(
+    capacities: None | PassengerCapacitiesRelStructure = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    low_floor: bool | None = field(
+    low_floor: None | bool = field(
         default=None,
         metadata={
             "name": "LowFloor",
@@ -43,7 +43,7 @@ class VehicleTypeVersionStructure(TransportTypeVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    has_lift_or_ramp: bool | None = field(
+    has_lift_or_ramp: None | bool = field(
         default=None,
         metadata={
             "name": "HasLiftOrRamp",
@@ -51,7 +51,7 @@ class VehicleTypeVersionStructure(TransportTypeVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    has_hoist: bool | None = field(
+    has_hoist: None | bool = field(
         default=None,
         metadata={
             "name": "HasHoist",
@@ -59,7 +59,7 @@ class VehicleTypeVersionStructure(TransportTypeVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    boarding_height: Decimal | None = field(
+    boarding_height: None | Decimal = field(
         default=None,
         metadata={
             "name": "BoardingHeight",
@@ -67,7 +67,7 @@ class VehicleTypeVersionStructure(TransportTypeVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    gap_to_platform: Decimal | None = field(
+    gap_to_platform: None | Decimal = field(
         default=None,
         metadata={
             "name": "GapToPlatform",
@@ -75,7 +75,7 @@ class VehicleTypeVersionStructure(TransportTypeVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    length: Decimal | None = field(
+    length: None | Decimal = field(
         default=None,
         metadata={
             "name": "Length",
@@ -83,7 +83,7 @@ class VehicleTypeVersionStructure(TransportTypeVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    width: Decimal | None = field(
+    width: None | Decimal = field(
         default=None,
         metadata={
             "name": "Width",
@@ -91,7 +91,7 @@ class VehicleTypeVersionStructure(TransportTypeVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    height: Decimal | None = field(
+    height: None | Decimal = field(
         default=None,
         metadata={
             "name": "Height",
@@ -99,7 +99,7 @@ class VehicleTypeVersionStructure(TransportTypeVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    weight: Decimal | None = field(
+    weight: None | Decimal = field(
         default=None,
         metadata={
             "name": "Weight",
@@ -107,7 +107,7 @@ class VehicleTypeVersionStructure(TransportTypeVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    first_axle_height: Decimal | None = field(
+    first_axle_height: None | Decimal = field(
         default=None,
         metadata={
             "name": "FirstAxleHeight",
@@ -115,7 +115,7 @@ class VehicleTypeVersionStructure(TransportTypeVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    included_in: VehicleTypeRefStructure | None = field(
+    included_in: None | VehicleTypeRefStructure = field(
         default=None,
         metadata={
             "name": "IncludedIn",
@@ -123,7 +123,7 @@ class VehicleTypeVersionStructure(TransportTypeVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    classified_as_ref: VehicleModelRefStructure | None = field(
+    classified_as_ref: None | VehicleModelRefStructure = field(
         default=None,
         metadata={
             "name": "ClassifiedAsRef",
@@ -131,14 +131,14 @@ class VehicleTypeVersionStructure(TransportTypeVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    facilities: ServiceFacilitySetsRelStructure | None = field(
+    facilities: None | ServiceFacilitySetsRelStructure = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    can_carry: PassengerCarryingRequirementsRelStructure | None = field(
+    can_carry: None | PassengerCarryingRequirementsRelStructure = field(
         default=None,
         metadata={
             "name": "canCarry",
@@ -146,7 +146,7 @@ class VehicleTypeVersionStructure(TransportTypeVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    can_manoeuvre: VehicleManoeuvringRequirementsRelStructure | None = field(
+    can_manoeuvre: None | VehicleManoeuvringRequirementsRelStructure = field(
         default=None,
         metadata={
             "name": "canManoeuvre",
@@ -155,7 +155,7 @@ class VehicleTypeVersionStructure(TransportTypeVersionStructure):
         },
     )
     satisfies_facility_requirements: (
-        FacilityRequirementsRelStructure | None
+        None | FacilityRequirementsRelStructure
     ) = field(
         default=None,
         metadata={

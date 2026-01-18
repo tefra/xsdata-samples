@@ -206,7 +206,7 @@ class EcuInstance:
     class Meta:
         name = "ECU-INSTANCE"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -215,7 +215,7 @@ class EcuInstance:
             "required": True,
         },
     )
-    short_name_fragments: EcuInstance.ShortNameFragments | None = field(
+    short_name_fragments: None | EcuInstance.ShortNameFragments = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -223,7 +223,7 @@ class EcuInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -231,7 +231,7 @@ class EcuInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -239,7 +239,7 @@ class EcuInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -247,7 +247,7 @@ class EcuInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -255,7 +255,7 @@ class EcuInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -263,7 +263,7 @@ class EcuInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: EcuInstance.Annotations | None = field(
+    annotations: None | EcuInstance.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -271,7 +271,7 @@ class EcuInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -280,7 +280,7 @@ class EcuInstance:
         },
     )
     associated_com_i_pdu_group_refs: (
-        EcuInstance.AssociatedComIPduGroupRefs | None
+        None | EcuInstance.AssociatedComIPduGroupRefs
     ) = field(
         default=None,
         metadata={
@@ -290,7 +290,7 @@ class EcuInstance:
         },
     )
     associated_consumed_provided_service_instance_groups: (
-        EcuInstance.AssociatedConsumedProvidedServiceInstanceGroups | None
+        None | EcuInstance.AssociatedConsumedProvidedServiceInstanceGroups
     ) = field(
         default=None,
         metadata={
@@ -300,7 +300,7 @@ class EcuInstance:
         },
     )
     associated_pdur_i_pdu_group_refs: (
-        EcuInstance.AssociatedPdurIPduGroupRefs | None
+        None | EcuInstance.AssociatedPdurIPduGroupRefs
     ) = field(
         default=None,
         metadata={
@@ -309,7 +309,7 @@ class EcuInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    can_tp_address_refs: EcuInstance.CanTpAddressRefs | None = field(
+    can_tp_address_refs: None | EcuInstance.CanTpAddressRefs = field(
         default=None,
         metadata={
             "name": "CAN-TP-ADDRESS-REFS",
@@ -317,7 +317,7 @@ class EcuInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    client_id_range: ClientIdRange | None = field(
+    client_id_range: None | ClientIdRange = field(
         default=None,
         metadata={
             "name": "CLIENT-ID-RANGE",
@@ -325,7 +325,7 @@ class EcuInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    com_configuration_gw_time_base: TimeValue | None = field(
+    com_configuration_gw_time_base: None | TimeValue = field(
         default=None,
         metadata={
             "name": "COM-CONFIGURATION-GW-TIME-BASE",
@@ -333,7 +333,7 @@ class EcuInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    com_configuration_rx_time_base: TimeValue | None = field(
+    com_configuration_rx_time_base: None | TimeValue = field(
         default=None,
         metadata={
             "name": "COM-CONFIGURATION-RX-TIME-BASE",
@@ -341,7 +341,7 @@ class EcuInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    com_configuration_tx_time_base: TimeValue | None = field(
+    com_configuration_tx_time_base: None | TimeValue = field(
         default=None,
         metadata={
             "name": "COM-CONFIGURATION-TX-TIME-BASE",
@@ -349,7 +349,7 @@ class EcuInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    com_enable_mdt_for_cyclic_transmission: Boolean | None = field(
+    com_enable_mdt_for_cyclic_transmission: None | Boolean = field(
         default=None,
         metadata={
             "name": "COM-ENABLE-MDT-FOR-CYCLIC-TRANSMISSION",
@@ -357,7 +357,7 @@ class EcuInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    comm_controllers: EcuInstance.CommControllers | None = field(
+    comm_controllers: None | EcuInstance.CommControllers = field(
         default=None,
         metadata={
             "name": "COMM-CONTROLLERS",
@@ -365,7 +365,7 @@ class EcuInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    connectors: EcuInstance.Connectors | None = field(
+    connectors: None | EcuInstance.Connectors = field(
         default=None,
         metadata={
             "name": "CONNECTORS",
@@ -373,7 +373,7 @@ class EcuInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    diagnostic_address: Integer | None = field(
+    diagnostic_address: None | Integer = field(
         default=None,
         metadata={
             "name": "DIAGNOSTIC-ADDRESS",
@@ -381,7 +381,7 @@ class EcuInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    diagnostic_props: DiagnosticEcuProps | None = field(
+    diagnostic_props: None | DiagnosticEcuProps = field(
         default=None,
         metadata={
             "name": "DIAGNOSTIC-PROPS",
@@ -389,7 +389,7 @@ class EcuInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    dlt_config: DltConfig | None = field(
+    dlt_config: None | DltConfig = field(
         default=None,
         metadata={
             "name": "DLT-CONFIG",
@@ -397,7 +397,7 @@ class EcuInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    do_ip_config: DoIpConfig | None = field(
+    do_ip_config: None | DoIpConfig = field(
         default=None,
         metadata={
             "name": "DO-IP-CONFIG",
@@ -405,7 +405,7 @@ class EcuInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ecu_instance_propss: EcuInstance.EcuInstancePropss | None = field(
+    ecu_instance_propss: None | EcuInstance.EcuInstancePropss = field(
         default=None,
         metadata={
             "name": "ECU-INSTANCE-PROPSS",
@@ -413,7 +413,7 @@ class EcuInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    eth_switch_port_group_derivation: Boolean | None = field(
+    eth_switch_port_group_derivation: None | Boolean = field(
         default=None,
         metadata={
             "name": "ETH-SWITCH-PORT-GROUP-DERIVATION",
@@ -421,7 +421,7 @@ class EcuInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    partitions: EcuInstance.Partitions | None = field(
+    partitions: None | EcuInstance.Partitions = field(
         default=None,
         metadata={
             "name": "PARTITIONS",
@@ -429,7 +429,7 @@ class EcuInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    pn_reset_time: TimeValue | None = field(
+    pn_reset_time: None | TimeValue = field(
         default=None,
         metadata={
             "name": "PN-RESET-TIME",
@@ -437,7 +437,7 @@ class EcuInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    pnc_prepare_sleep_timer: TimeValue | None = field(
+    pnc_prepare_sleep_timer: None | TimeValue = field(
         default=None,
         metadata={
             "name": "PNC-PREPARE-SLEEP-TIMER",
@@ -445,7 +445,7 @@ class EcuInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    pnc_synchronous_wakeup: Boolean | None = field(
+    pnc_synchronous_wakeup: None | Boolean = field(
         default=None,
         metadata={
             "name": "PNC-SYNCHRONOUS-WAKEUP",
@@ -453,7 +453,7 @@ class EcuInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sleep_mode_supported: Boolean | None = field(
+    sleep_mode_supported: None | Boolean = field(
         default=None,
         metadata={
             "name": "SLEEP-MODE-SUPPORTED",
@@ -461,7 +461,7 @@ class EcuInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tcp_ip_icmp_props_ref: EcuInstance.TcpIpIcmpPropsRef | None = field(
+    tcp_ip_icmp_props_ref: None | EcuInstance.TcpIpIcmpPropsRef = field(
         default=None,
         metadata={
             "name": "TCP-IP-ICMP-PROPS-REF",
@@ -469,7 +469,7 @@ class EcuInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tcp_ip_props_ref: EcuInstance.TcpIpPropsRef | None = field(
+    tcp_ip_props_ref: None | EcuInstance.TcpIpPropsRef = field(
         default=None,
         metadata={
             "name": "TCP-IP-PROPS-REF",
@@ -477,7 +477,7 @@ class EcuInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tp_address_refs: EcuInstance.TpAddressRefs | None = field(
+    tp_address_refs: None | EcuInstance.TpAddressRefs = field(
         default=None,
         metadata={
             "name": "TP-ADDRESS-REFS",
@@ -485,7 +485,7 @@ class EcuInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    v_2_x_supported: V2XSupportEnum | None = field(
+    v_2_x_supported: None | V2XSupportEnum = field(
         default=None,
         metadata={
             "name": "V-2-X-SUPPORTED",
@@ -493,7 +493,7 @@ class EcuInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    wake_up_over_bus_supported: Boolean | None = field(
+    wake_up_over_bus_supported: None | Boolean = field(
         default=None,
         metadata={
             "name": "WAKE-UP-OVER-BUS-SUPPORTED",
@@ -501,14 +501,14 @@ class EcuInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -516,7 +516,7 @@ class EcuInstance:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -561,7 +561,7 @@ class EcuInstance:
 
         @dataclass
         class AssociatedComIPduGroupRef(Ref):
-            dest: ISignalIPduGroupSubtypesEnum | None = field(
+            dest: None | ISignalIPduGroupSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -598,7 +598,7 @@ class EcuInstance:
 
         @dataclass
         class AssociatedPdurIPduGroupRef(Ref):
-            dest: PdurIPduGroupSubtypesEnum | None = field(
+            dest: None | PdurIPduGroupSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -622,7 +622,7 @@ class EcuInstance:
 
         @dataclass
         class CanTpAddressRef(Ref):
-            dest: CanTpAddressSubtypesEnum | None = field(
+            dest: None | CanTpAddressSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -781,7 +781,7 @@ class EcuInstance:
 
     @dataclass
     class TcpIpIcmpPropsRef(Ref):
-        dest: EthTcpIpIcmpPropsSubtypesEnum | None = field(
+        dest: None | EthTcpIpIcmpPropsSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -792,7 +792,7 @@ class EcuInstance:
 
     @dataclass
     class TcpIpPropsRef(Ref):
-        dest: EthTcpIpPropsSubtypesEnum | None = field(
+        dest: None | EthTcpIpPropsSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -814,7 +814,7 @@ class EcuInstance:
 
         @dataclass
         class TpAddressRef(Ref):
-            dest: TpAddressSubtypesEnum | None = field(
+            dest: None | TpAddressSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",

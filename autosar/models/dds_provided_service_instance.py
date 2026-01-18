@@ -122,7 +122,7 @@ class DdsProvidedServiceInstance:
     class Meta:
         name = "DDS-PROVIDED-SERVICE-INSTANCE"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -132,7 +132,7 @@ class DdsProvidedServiceInstance:
         },
     )
     short_name_fragments: (
-        DdsProvidedServiceInstance.ShortNameFragments | None
+        None | DdsProvidedServiceInstance.ShortNameFragments
     ) = field(
         default=None,
         metadata={
@@ -141,7 +141,7 @@ class DdsProvidedServiceInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -149,7 +149,7 @@ class DdsProvidedServiceInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -157,7 +157,7 @@ class DdsProvidedServiceInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -165,7 +165,7 @@ class DdsProvidedServiceInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -173,7 +173,7 @@ class DdsProvidedServiceInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -181,7 +181,7 @@ class DdsProvidedServiceInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: DdsProvidedServiceInstance.Annotations | None = field(
+    annotations: None | DdsProvidedServiceInstance.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -189,7 +189,7 @@ class DdsProvidedServiceInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -198,7 +198,7 @@ class DdsProvidedServiceInstance:
         },
     )
     e_2_e_event_protection_propss: (
-        DdsProvidedServiceInstance.E2EEventProtectionPropss | None
+        None | DdsProvidedServiceInstance.E2EEventProtectionPropss
     ) = field(
         default=None,
         metadata={
@@ -208,7 +208,7 @@ class DdsProvidedServiceInstance:
         },
     )
     e_2_e_method_protection_propss: (
-        DdsProvidedServiceInstance.E2EMethodProtectionPropss | None
+        None | DdsProvidedServiceInstance.E2EMethodProtectionPropss
     ) = field(
         default=None,
         metadata={
@@ -217,7 +217,7 @@ class DdsProvidedServiceInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    secure_com_configs: DdsProvidedServiceInstance.SecureComConfigs | None = (
+    secure_com_configs: None | DdsProvidedServiceInstance.SecureComConfigs = (
         field(
             default=None,
             metadata={
@@ -228,7 +228,7 @@ class DdsProvidedServiceInstance:
         )
     )
     service_interface_deployment_ref: (
-        DdsProvidedServiceInstance.ServiceInterfaceDeploymentRef | None
+        None | DdsProvidedServiceInstance.ServiceInterfaceDeploymentRef
     ) = field(
         default=None,
         metadata={
@@ -237,7 +237,7 @@ class DdsProvidedServiceInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    qos_profile: String | None = field(
+    qos_profile: None | String = field(
         default=None,
         metadata={
             "name": "QOS-PROFILE",
@@ -245,7 +245,7 @@ class DdsProvidedServiceInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    domain_id: Integer | None = field(
+    domain_id: None | Integer = field(
         default=None,
         metadata={
             "name": "DOMAIN-ID",
@@ -253,7 +253,7 @@ class DdsProvidedServiceInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    event_qos_propss: DdsProvidedServiceInstance.EventQosPropss | None = field(
+    event_qos_propss: None | DdsProvidedServiceInstance.EventQosPropss = field(
         default=None,
         metadata={
             "name": "EVENT-QOS-PROPSS",
@@ -262,7 +262,7 @@ class DdsProvidedServiceInstance:
         },
     )
     field_notifier_qos_propss: (
-        DdsProvidedServiceInstance.FieldNotifierQosPropss | None
+        None | DdsProvidedServiceInstance.FieldNotifierQosPropss
     ) = field(
         default=None,
         metadata={
@@ -271,7 +271,7 @@ class DdsProvidedServiceInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    service_instance_id: PositiveInteger | None = field(
+    service_instance_id: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "SERVICE-INSTANCE-ID",
@@ -279,14 +279,14 @@ class DdsProvidedServiceInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -294,7 +294,7 @@ class DdsProvidedServiceInstance:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -365,7 +365,7 @@ class DdsProvidedServiceInstance:
 
     @dataclass
     class ServiceInterfaceDeploymentRef(Ref):
-        dest: ServiceInterfaceDeploymentSubtypesEnum | None = field(
+        dest: None | ServiceInterfaceDeploymentSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

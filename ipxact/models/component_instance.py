@@ -39,7 +39,7 @@ class ComponentInstance:
         name = "componentInstance"
         namespace = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
-    instance_name: InstanceName | None = field(
+    instance_name: None | InstanceName = field(
         default=None,
         metadata={
             "name": "instanceName",
@@ -47,27 +47,27 @@ class ComponentInstance:
             "required": True,
         },
     )
-    display_name: DisplayName | None = field(
+    display_name: None | DisplayName = field(
         default=None,
         metadata={
             "name": "displayName",
             "type": "Element",
         },
     )
-    short_description: ShortDescription | None = field(
+    short_description: None | ShortDescription = field(
         default=None,
         metadata={
             "name": "shortDescription",
             "type": "Element",
         },
     )
-    description: Description | None = field(
+    description: None | Description = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    component_ref: ConfigurableLibraryRefType | None = field(
+    component_ref: None | ConfigurableLibraryRefType = field(
         default=None,
         metadata={
             "name": "componentRef",
@@ -75,21 +75,21 @@ class ComponentInstance:
             "required": True,
         },
     )
-    power_domain_links: PowerDomainLinks | None = field(
+    power_domain_links: None | PowerDomainLinks = field(
         default=None,
         metadata={
             "name": "powerDomainLinks",
             "type": "Element",
         },
     )
-    vendor_extensions: VendorExtensions | None = field(
+    vendor_extensions: None | VendorExtensions = field(
         default=None,
         metadata={
             "name": "vendorExtensions",
             "type": "Element",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",

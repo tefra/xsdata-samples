@@ -27,7 +27,7 @@ class MeasuredDataPublication(PayloadPublication):
     """
 
     measurement_site_table_reference: (
-        MeasurementSiteTableVersionedReference | None
+        None | MeasurementSiteTableVersionedReference
     ) = field(
         default=None,
         metadata={
@@ -37,7 +37,7 @@ class MeasuredDataPublication(PayloadPublication):
             "required": True,
         },
     )
-    header_information: HeaderInformation | None = field(
+    header_information: None | HeaderInformation = field(
         default=None,
         metadata={
             "name": "headerInformation",
@@ -55,7 +55,7 @@ class MeasuredDataPublication(PayloadPublication):
             "min_occurs": 1,
         },
     )
-    measured_data_publication_extension: ExtensionType | None = field(
+    measured_data_publication_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "measuredDataPublicationExtension",

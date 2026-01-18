@@ -98,7 +98,7 @@ class FieldType:
     class Meta:
         name = "FIELD"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -107,7 +107,7 @@ class FieldType:
             "required": True,
         },
     )
-    short_name_fragments: FieldType.ShortNameFragments | None = field(
+    short_name_fragments: None | FieldType.ShortNameFragments = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -115,7 +115,7 @@ class FieldType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -123,7 +123,7 @@ class FieldType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -131,7 +131,7 @@ class FieldType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -139,7 +139,7 @@ class FieldType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -147,7 +147,7 @@ class FieldType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -155,7 +155,7 @@ class FieldType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: FieldType.Annotations | None = field(
+    annotations: None | FieldType.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -163,7 +163,7 @@ class FieldType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_data_def_props: SwDataDefProps | None = field(
+    sw_data_def_props: None | SwDataDefProps = field(
         default=None,
         metadata={
             "name": "SW-DATA-DEF-PROPS",
@@ -171,7 +171,7 @@ class FieldType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    type_tref: FieldType.TypeTref | None = field(
+    type_tref: None | FieldType.TypeTref = field(
         default=None,
         metadata={
             "name": "TYPE-TREF",
@@ -179,7 +179,7 @@ class FieldType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    has_getter: Boolean | None = field(
+    has_getter: None | Boolean = field(
         default=None,
         metadata={
             "name": "HAS-GETTER",
@@ -187,7 +187,7 @@ class FieldType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    has_notifier: Boolean | None = field(
+    has_notifier: None | Boolean = field(
         default=None,
         metadata={
             "name": "HAS-NOTIFIER",
@@ -195,7 +195,7 @@ class FieldType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    has_setter: Boolean | None = field(
+    has_setter: None | Boolean = field(
         default=None,
         metadata={
             "name": "HAS-SETTER",
@@ -203,7 +203,7 @@ class FieldType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -211,14 +211,14 @@ class FieldType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -226,7 +226,7 @@ class FieldType:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -258,7 +258,7 @@ class FieldType:
 
     @dataclass
     class TypeTref(Ref):
-        dest: AutosarDataTypeSubtypesEnum | None = field(
+        dest: None | AutosarDataTypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

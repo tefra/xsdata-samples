@@ -31,7 +31,7 @@ class InvertCondition:
     class Meta:
         name = "INVERT-CONDITION"
 
-    condition: InvertCondition.Condition | None = field(
+    condition: None | InvertCondition.Condition = field(
         default=None,
         metadata={
             "name": "CONDITION",
@@ -39,14 +39,14 @@ class InvertCondition:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -57,7 +57,7 @@ class InvertCondition:
 
     @dataclass
     class Condition:
-        aggregation_condition: AggregationCondition | None = field(
+        aggregation_condition: None | AggregationCondition = field(
             default=None,
             metadata={
                 "name": "AGGREGATION-CONDITION",
@@ -65,7 +65,7 @@ class InvertCondition:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        invert_condition: InvertCondition | None = field(
+        invert_condition: None | InvertCondition = field(
             default=None,
             metadata={
                 "name": "INVERT-CONDITION",
@@ -73,7 +73,7 @@ class InvertCondition:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        primitive_attribute_condition: PrimitiveAttributeCondition | None = (
+        primitive_attribute_condition: None | PrimitiveAttributeCondition = (
             field(
                 default=None,
                 metadata={
@@ -83,7 +83,7 @@ class InvertCondition:
                 },
             )
         )
-        reference_condition: ReferenceCondition | None = field(
+        reference_condition: None | ReferenceCondition = field(
             default=None,
             metadata={
                 "name": "REFERENCE-CONDITION",
@@ -91,7 +91,7 @@ class InvertCondition:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        textual_condition: TextualCondition | None = field(
+        textual_condition: None | TextualCondition = field(
             default=None,
             metadata={
                 "name": "TEXTUAL-CONDITION",

@@ -13,7 +13,7 @@ class CycleStorageEquipmentVersionStructure(PlaceEquipmentVersionStructure):
     class Meta:
         name = "CycleStorageEquipment_VersionStructure"
 
-    number_of_spaces: int | None = field(
+    number_of_spaces: None | int = field(
         default=None,
         metadata={
             "name": "NumberOfSpaces",
@@ -21,7 +21,7 @@ class CycleStorageEquipmentVersionStructure(PlaceEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    cycle_storage_type: CycleStorageEnumeration | None = field(
+    cycle_storage_type: None | CycleStorageEnumeration = field(
         default=None,
         metadata={
             "name": "CycleStorageType",
@@ -29,7 +29,7 @@ class CycleStorageEquipmentVersionStructure(PlaceEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    cage: bool | None = field(
+    cage: None | bool = field(
         default=None,
         metadata={
             "name": "Cage",
@@ -37,7 +37,7 @@ class CycleStorageEquipmentVersionStructure(PlaceEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    covered: bool | None = field(
+    covered: None | bool = field(
         default=None,
         metadata={
             "name": "Covered",

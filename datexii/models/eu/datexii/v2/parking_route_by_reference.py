@@ -20,7 +20,7 @@ class ParkingRouteByReference(ParkingRoute):
     :ivar parking_route_by_reference_extension:
     """
 
-    parking_route_reference: ParkingRouteDetailsVersionedReference | None = (
+    parking_route_reference: None | ParkingRouteDetailsVersionedReference = (
         field(
             default=None,
             metadata={
@@ -31,7 +31,7 @@ class ParkingRouteByReference(ParkingRoute):
             },
         )
     )
-    parking_route_by_reference_extension: ExtensionType | None = field(
+    parking_route_by_reference_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "parkingRouteByReferenceExtension",

@@ -92,7 +92,7 @@ class SecurityEventReportToSecurityEventDefinitionMapping:
     class Meta:
         name = "SECURITY-EVENT-REPORT-TO-SECURITY-EVENT-DEFINITION-MAPPING"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -102,8 +102,8 @@ class SecurityEventReportToSecurityEventDefinitionMapping:
         },
     )
     short_name_fragments: (
-        SecurityEventReportToSecurityEventDefinitionMapping.ShortNameFragments
-        | None
+        None
+        | SecurityEventReportToSecurityEventDefinitionMapping.ShortNameFragments
     ) = field(
         default=None,
         metadata={
@@ -112,7 +112,7 @@ class SecurityEventReportToSecurityEventDefinitionMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -120,7 +120,7 @@ class SecurityEventReportToSecurityEventDefinitionMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -128,7 +128,7 @@ class SecurityEventReportToSecurityEventDefinitionMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -136,7 +136,7 @@ class SecurityEventReportToSecurityEventDefinitionMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -144,7 +144,7 @@ class SecurityEventReportToSecurityEventDefinitionMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -153,7 +153,7 @@ class SecurityEventReportToSecurityEventDefinitionMapping:
         },
     )
     annotations: (
-        SecurityEventReportToSecurityEventDefinitionMapping.Annotations | None
+        None | SecurityEventReportToSecurityEventDefinitionMapping.Annotations
     ) = field(
         default=None,
         metadata={
@@ -162,7 +162,7 @@ class SecurityEventReportToSecurityEventDefinitionMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -170,7 +170,7 @@ class SecurityEventReportToSecurityEventDefinitionMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    reported_security_event_iref: RPortInCompositionInstanceRef | None = field(
+    reported_security_event_iref: None | RPortInCompositionInstanceRef = field(
         default=None,
         metadata={
             "name": "REPORTED-SECURITY-EVENT-IREF",
@@ -179,8 +179,8 @@ class SecurityEventReportToSecurityEventDefinitionMapping:
         },
     )
     security_event_definition_ref: (
-        SecurityEventReportToSecurityEventDefinitionMapping.SecurityEventDefinitionRef
-        | None
+        None
+        | SecurityEventReportToSecurityEventDefinitionMapping.SecurityEventDefinitionRef
     ) = field(
         default=None,
         metadata={
@@ -189,14 +189,14 @@ class SecurityEventReportToSecurityEventDefinitionMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -204,7 +204,7 @@ class SecurityEventReportToSecurityEventDefinitionMapping:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -236,7 +236,7 @@ class SecurityEventReportToSecurityEventDefinitionMapping:
 
     @dataclass
     class SecurityEventDefinitionRef(Ref):
-        dest: SecurityEventDefinitionSubtypesEnum | None = field(
+        dest: None | SecurityEventDefinitionSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

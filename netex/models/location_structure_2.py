@@ -13,7 +13,7 @@ class LocationStructure2:
     class Meta:
         name = "LocationStructure"
 
-    longitude: Decimal | None = field(
+    longitude: None | Decimal = field(
         default=None,
         metadata={
             "name": "Longitude",
@@ -23,7 +23,7 @@ class LocationStructure2:
             "max_inclusive": Decimal("180"),
         },
     )
-    latitude: Decimal | None = field(
+    latitude: None | Decimal = field(
         default=None,
         metadata={
             "name": "Latitude",
@@ -33,7 +33,7 @@ class LocationStructure2:
             "max_inclusive": Decimal("90"),
         },
     )
-    altitude: Decimal | None = field(
+    altitude: None | Decimal = field(
         default=None,
         metadata={
             "name": "Altitude",
@@ -43,14 +43,14 @@ class LocationStructure2:
             "max_inclusive": Decimal("5000"),
         },
     )
-    pos: Pos | None = field(
+    pos: None | Pos = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.opengis.net/gml/3.2",
         },
     )
-    precision: Decimal | None = field(
+    precision: None | Decimal = field(
         default=None,
         metadata={
             "name": "Precision",
@@ -58,13 +58,13 @@ class LocationStructure2:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    srs_name: str | None = field(
+    srs_name: None | str = field(
         default=None,
         metadata={
             "name": "srsName",

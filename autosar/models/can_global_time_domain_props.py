@@ -34,7 +34,7 @@ class CanGlobalTimeDomainProps:
     class Meta:
         name = "CAN-GLOBAL-TIME-DOMAIN-PROPS"
 
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -42,7 +42,7 @@ class CanGlobalTimeDomainProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    fup_data_id_lists: CanGlobalTimeDomainProps.FupDataIdLists | None = field(
+    fup_data_id_lists: None | CanGlobalTimeDomainProps.FupDataIdLists = field(
         default=None,
         metadata={
             "name": "FUP-DATA-ID-LISTS",
@@ -50,7 +50,7 @@ class CanGlobalTimeDomainProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ofns_data_id_lists: CanGlobalTimeDomainProps.OfnsDataIdLists | None = (
+    ofns_data_id_lists: None | CanGlobalTimeDomainProps.OfnsDataIdLists = (
         field(
             default=None,
             metadata={
@@ -60,7 +60,7 @@ class CanGlobalTimeDomainProps:
             },
         )
     )
-    ofs_data_id_lists: CanGlobalTimeDomainProps.OfsDataIdLists | None = field(
+    ofs_data_id_lists: None | CanGlobalTimeDomainProps.OfsDataIdLists = field(
         default=None,
         metadata={
             "name": "OFS-DATA-ID-LISTS",
@@ -68,7 +68,7 @@ class CanGlobalTimeDomainProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sync_data_id_lists: CanGlobalTimeDomainProps.SyncDataIdLists | None = (
+    sync_data_id_lists: None | CanGlobalTimeDomainProps.SyncDataIdLists = (
         field(
             default=None,
             metadata={
@@ -78,14 +78,14 @@ class CanGlobalTimeDomainProps:
             },
         )
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

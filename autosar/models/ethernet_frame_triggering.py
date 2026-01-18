@@ -95,7 +95,7 @@ class EthernetFrameTriggering:
     class Meta:
         name = "ETHERNET-FRAME-TRIGGERING"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -104,7 +104,7 @@ class EthernetFrameTriggering:
             "required": True,
         },
     )
-    short_name_fragments: EthernetFrameTriggering.ShortNameFragments | None = (
+    short_name_fragments: None | EthernetFrameTriggering.ShortNameFragments = (
         field(
             default=None,
             metadata={
@@ -114,7 +114,7 @@ class EthernetFrameTriggering:
             },
         )
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -122,7 +122,7 @@ class EthernetFrameTriggering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -130,7 +130,7 @@ class EthernetFrameTriggering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -138,7 +138,7 @@ class EthernetFrameTriggering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -146,7 +146,7 @@ class EthernetFrameTriggering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -154,7 +154,7 @@ class EthernetFrameTriggering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: EthernetFrameTriggering.Annotations | None = field(
+    annotations: None | EthernetFrameTriggering.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -162,7 +162,7 @@ class EthernetFrameTriggering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    frame_port_refs: EthernetFrameTriggering.FramePortRefs | None = field(
+    frame_port_refs: None | EthernetFrameTriggering.FramePortRefs = field(
         default=None,
         metadata={
             "name": "FRAME-PORT-REFS",
@@ -170,7 +170,7 @@ class EthernetFrameTriggering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    frame_ref: EthernetFrameTriggering.FrameRef | None = field(
+    frame_ref: None | EthernetFrameTriggering.FrameRef = field(
         default=None,
         metadata={
             "name": "FRAME-REF",
@@ -178,7 +178,7 @@ class EthernetFrameTriggering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    pdu_triggerings: EthernetFrameTriggering.PduTriggerings | None = field(
+    pdu_triggerings: None | EthernetFrameTriggering.PduTriggerings = field(
         default=None,
         metadata={
             "name": "PDU-TRIGGERINGS",
@@ -186,7 +186,7 @@ class EthernetFrameTriggering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -194,14 +194,14 @@ class EthernetFrameTriggering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -209,7 +209,7 @@ class EthernetFrameTriggering:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -254,7 +254,7 @@ class EthernetFrameTriggering:
 
         @dataclass
         class FramePortRef(Ref):
-            dest: FramePortSubtypesEnum | None = field(
+            dest: None | FramePortSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -265,7 +265,7 @@ class EthernetFrameTriggering:
 
     @dataclass
     class FrameRef(Ref):
-        dest: FrameSubtypesEnum | None = field(
+        dest: None | FrameSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

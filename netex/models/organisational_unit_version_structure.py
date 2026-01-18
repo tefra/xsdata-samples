@@ -15,7 +15,7 @@ class OrganisationalUnitVersionStructure(OrganisationPartVersionStructure):
     class Meta:
         name = "OrganisationalUnit_VersionStructure"
 
-    department_ref: DepartmentRef | None = field(
+    department_ref: None | DepartmentRef = field(
         default=None,
         metadata={
             "name": "DepartmentRef",

@@ -35,7 +35,7 @@ class DataFormatTailoring:
     class Meta:
         name = "DATA-FORMAT-TAILORING"
 
-    class_tailorings: DataFormatTailoring.ClassTailorings | None = field(
+    class_tailorings: None | DataFormatTailoring.ClassTailorings = field(
         default=None,
         metadata={
             "name": "CLASS-TAILORINGS",
@@ -43,7 +43,7 @@ class DataFormatTailoring:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    constraint_tailorings: DataFormatTailoring.ConstraintTailorings | None = (
+    constraint_tailorings: None | DataFormatTailoring.ConstraintTailorings = (
         field(
             default=None,
             metadata={
@@ -53,14 +53,14 @@ class DataFormatTailoring:
             },
         )
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

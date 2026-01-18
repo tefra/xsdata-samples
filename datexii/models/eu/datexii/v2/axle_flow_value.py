@@ -18,7 +18,7 @@ class AxleFlowValue(DataValue):
     :ivar axle_flow_value_extension:
     """
 
-    axle_flow_rate: int | None = field(
+    axle_flow_rate: None | int = field(
         default=None,
         metadata={
             "name": "axleFlowRate",
@@ -27,7 +27,7 @@ class AxleFlowValue(DataValue):
             "required": True,
         },
     )
-    axle_flow_value_extension: ExtensionType | None = field(
+    axle_flow_value_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "axleFlowValueExtension",

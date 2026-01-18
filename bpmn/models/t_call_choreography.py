@@ -22,7 +22,7 @@ class TCallChoreography(TChoreographyActivity):
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    called_choreography_ref: QName | None = field(
+    called_choreography_ref: None | QName = field(
         default=None,
         metadata={
             "name": "calledChoreographyRef",

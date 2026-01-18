@@ -112,7 +112,7 @@ class TlsCryptoCipherSuite:
     class Meta:
         name = "TLS-CRYPTO-CIPHER-SUITE"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -121,7 +121,7 @@ class TlsCryptoCipherSuite:
             "required": True,
         },
     )
-    short_name_fragments: TlsCryptoCipherSuite.ShortNameFragments | None = (
+    short_name_fragments: None | TlsCryptoCipherSuite.ShortNameFragments = (
         field(
             default=None,
             metadata={
@@ -131,7 +131,7 @@ class TlsCryptoCipherSuite:
             },
         )
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -139,7 +139,7 @@ class TlsCryptoCipherSuite:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -147,7 +147,7 @@ class TlsCryptoCipherSuite:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -155,7 +155,7 @@ class TlsCryptoCipherSuite:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -163,7 +163,7 @@ class TlsCryptoCipherSuite:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -171,7 +171,7 @@ class TlsCryptoCipherSuite:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: TlsCryptoCipherSuite.Annotations | None = field(
+    annotations: None | TlsCryptoCipherSuite.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -179,7 +179,7 @@ class TlsCryptoCipherSuite:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    authentication_ref: TlsCryptoCipherSuite.AuthenticationRef | None = field(
+    authentication_ref: None | TlsCryptoCipherSuite.AuthenticationRef = field(
         default=None,
         metadata={
             "name": "AUTHENTICATION-REF",
@@ -187,7 +187,7 @@ class TlsCryptoCipherSuite:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    certificate_ref: TlsCryptoCipherSuite.CertificateRef | None = field(
+    certificate_ref: None | TlsCryptoCipherSuite.CertificateRef = field(
         default=None,
         metadata={
             "name": "CERTIFICATE-REF",
@@ -195,7 +195,7 @@ class TlsCryptoCipherSuite:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    encryption_ref: TlsCryptoCipherSuite.EncryptionRef | None = field(
+    encryption_ref: None | TlsCryptoCipherSuite.EncryptionRef = field(
         default=None,
         metadata={
             "name": "ENCRYPTION-REF",
@@ -203,7 +203,7 @@ class TlsCryptoCipherSuite:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    key_exchange_refs: TlsCryptoCipherSuite.KeyExchangeRefs | None = field(
+    key_exchange_refs: None | TlsCryptoCipherSuite.KeyExchangeRefs = field(
         default=None,
         metadata={
             "name": "KEY-EXCHANGE-REFS",
@@ -211,7 +211,7 @@ class TlsCryptoCipherSuite:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    pre_shared_key_ref: TlsCryptoCipherSuite.PreSharedKeyRef | None = field(
+    pre_shared_key_ref: None | TlsCryptoCipherSuite.PreSharedKeyRef = field(
         default=None,
         metadata={
             "name": "PRE-SHARED-KEY-REF",
@@ -219,7 +219,7 @@ class TlsCryptoCipherSuite:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    priority: PositiveInteger | None = field(
+    priority: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "PRIORITY",
@@ -227,7 +227,7 @@ class TlsCryptoCipherSuite:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    psk_identity: TlsPskIdentity | None = field(
+    psk_identity: None | TlsPskIdentity = field(
         default=None,
         metadata={
             "name": "PSK-IDENTITY",
@@ -235,7 +235,7 @@ class TlsCryptoCipherSuite:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    version: TlsVersionEnum | None = field(
+    version: None | TlsVersionEnum = field(
         default=None,
         metadata={
             "name": "VERSION",
@@ -243,14 +243,14 @@ class TlsCryptoCipherSuite:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -258,7 +258,7 @@ class TlsCryptoCipherSuite:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -290,7 +290,7 @@ class TlsCryptoCipherSuite:
 
     @dataclass
     class AuthenticationRef(Ref):
-        dest: CryptoServicePrimitiveSubtypesEnum | None = field(
+        dest: None | CryptoServicePrimitiveSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -301,7 +301,7 @@ class TlsCryptoCipherSuite:
 
     @dataclass
     class CertificateRef(Ref):
-        dest: CryptoServiceCertificateSubtypesEnum | None = field(
+        dest: None | CryptoServiceCertificateSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -312,7 +312,7 @@ class TlsCryptoCipherSuite:
 
     @dataclass
     class EncryptionRef(Ref):
-        dest: CryptoServicePrimitiveSubtypesEnum | None = field(
+        dest: None | CryptoServicePrimitiveSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -336,7 +336,7 @@ class TlsCryptoCipherSuite:
 
         @dataclass
         class KeyExchangeRef(Ref):
-            dest: CryptoServicePrimitiveSubtypesEnum | None = field(
+            dest: None | CryptoServicePrimitiveSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -347,7 +347,7 @@ class TlsCryptoCipherSuite:
 
     @dataclass
     class PreSharedKeyRef(Ref):
-        dest: CryptoServiceKeySubtypesEnum | None = field(
+        dest: None | CryptoServiceKeySubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

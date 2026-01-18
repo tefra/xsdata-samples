@@ -28,11 +28,11 @@ class JourneyPatternDerivedViewStructure(DerivedViewStructure):
         name = "JourneyPattern_DerivedViewStructure"
 
     journey_pattern_ref: (
-        ServiceJourneyPatternRef
+        None
+        | ServiceJourneyPatternRef
         | ServicePatternRef
         | DeadRunJourneyPatternRef
         | JourneyPatternRef
-        | None
     ) = field(
         default=None,
         metadata={
@@ -61,7 +61,7 @@ class JourneyPatternDerivedViewStructure(DerivedViewStructure):
             ),
         },
     )
-    route_ref_or_route_view: RouteRef | RouteView | None = field(
+    route_ref_or_route_view: None | RouteRef | RouteView = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -79,7 +79,7 @@ class JourneyPatternDerivedViewStructure(DerivedViewStructure):
             ),
         },
     )
-    direction_type: DirectionTypeEnumeration | None = field(
+    direction_type: None | DirectionTypeEnumeration = field(
         default=None,
         metadata={
             "name": "DirectionType",
@@ -87,7 +87,7 @@ class JourneyPatternDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    direction_ref_or_direction_view: DirectionRef | DirectionView | None = (
+    direction_ref_or_direction_view: None | DirectionRef | DirectionView = (
         field(
             default=None,
             metadata={
@@ -108,7 +108,7 @@ class JourneyPatternDerivedViewStructure(DerivedViewStructure):
         )
     )
     destination_display_ref_or_destination_display_view: (
-        DestinationDisplayRef | DestinationDisplayView | None
+        None | DestinationDisplayRef | DestinationDisplayView
     ) = field(
         default=None,
         metadata={
@@ -127,7 +127,7 @@ class JourneyPatternDerivedViewStructure(DerivedViewStructure):
             ),
         },
     )
-    type_of_journey_pattern_ref: TypeOfJourneyPatternRef | None = field(
+    type_of_journey_pattern_ref: None | TypeOfJourneyPatternRef = field(
         default=None,
         metadata={
             "name": "TypeOfJourneyPatternRef",
@@ -135,7 +135,7 @@ class JourneyPatternDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    operational_context_ref: OperationalContextRef | None = field(
+    operational_context_ref: None | OperationalContextRef = field(
         default=None,
         metadata={
             "name": "OperationalContextRef",
@@ -143,7 +143,7 @@ class JourneyPatternDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    timing_pattern_ref: TimingPatternRef | None = field(
+    timing_pattern_ref: None | TimingPatternRef = field(
         default=None,
         metadata={
             "name": "TimingPatternRef",
@@ -151,7 +151,7 @@ class JourneyPatternDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    notice_assignments: NoticeAssignmentsRelStructure | None = field(
+    notice_assignments: None | NoticeAssignmentsRelStructure = field(
         default=None,
         metadata={
             "name": "noticeAssignments",

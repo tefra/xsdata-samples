@@ -104,7 +104,7 @@ class DiagnosticServiceDataIdentifierPortMapping:
     class Meta:
         name = "DIAGNOSTIC-SERVICE-DATA-IDENTIFIER-PORT-MAPPING"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -114,7 +114,7 @@ class DiagnosticServiceDataIdentifierPortMapping:
         },
     )
     short_name_fragments: (
-        DiagnosticServiceDataIdentifierPortMapping.ShortNameFragments | None
+        None | DiagnosticServiceDataIdentifierPortMapping.ShortNameFragments
     ) = field(
         default=None,
         metadata={
@@ -123,7 +123,7 @@ class DiagnosticServiceDataIdentifierPortMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -131,7 +131,7 @@ class DiagnosticServiceDataIdentifierPortMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -139,7 +139,7 @@ class DiagnosticServiceDataIdentifierPortMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -147,7 +147,7 @@ class DiagnosticServiceDataIdentifierPortMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -155,7 +155,7 @@ class DiagnosticServiceDataIdentifierPortMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -164,7 +164,7 @@ class DiagnosticServiceDataIdentifierPortMapping:
         },
     )
     annotations: (
-        DiagnosticServiceDataIdentifierPortMapping.Annotations | None
+        None | DiagnosticServiceDataIdentifierPortMapping.Annotations
     ) = field(
         default=None,
         metadata={
@@ -173,7 +173,7 @@ class DiagnosticServiceDataIdentifierPortMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -182,8 +182,8 @@ class DiagnosticServiceDataIdentifierPortMapping:
         },
     )
     diagnostic_data_element_ref: (
-        DiagnosticServiceDataIdentifierPortMapping.DiagnosticDataElementRef
-        | None
+        None
+        | DiagnosticServiceDataIdentifierPortMapping.DiagnosticDataElementRef
     ) = field(
         default=None,
         metadata={
@@ -193,8 +193,8 @@ class DiagnosticServiceDataIdentifierPortMapping:
         },
     )
     diagnostic_data_identifier_ref: (
-        DiagnosticServiceDataIdentifierPortMapping.DiagnosticDataIdentifierRef
-        | None
+        None
+        | DiagnosticServiceDataIdentifierPortMapping.DiagnosticDataIdentifierRef
     ) = field(
         default=None,
         metadata={
@@ -204,7 +204,7 @@ class DiagnosticServiceDataIdentifierPortMapping:
         },
     )
     process_ref: (
-        DiagnosticServiceDataIdentifierPortMapping.ProcessRef | None
+        None | DiagnosticServiceDataIdentifierPortMapping.ProcessRef
     ) = field(
         default=None,
         metadata={
@@ -214,7 +214,7 @@ class DiagnosticServiceDataIdentifierPortMapping:
         },
     )
     swc_service_dependency_in_executable_iref: (
-        SwcServiceDependencyInExecutableInstanceRef | None
+        None | SwcServiceDependencyInExecutableInstanceRef
     ) = field(
         default=None,
         metadata={
@@ -223,14 +223,14 @@ class DiagnosticServiceDataIdentifierPortMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -238,7 +238,7 @@ class DiagnosticServiceDataIdentifierPortMapping:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -270,7 +270,7 @@ class DiagnosticServiceDataIdentifierPortMapping:
 
     @dataclass
     class DiagnosticDataElementRef(Ref):
-        dest: DiagnosticDataElementSubtypesEnum | None = field(
+        dest: None | DiagnosticDataElementSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -281,7 +281,7 @@ class DiagnosticServiceDataIdentifierPortMapping:
 
     @dataclass
     class DiagnosticDataIdentifierRef(Ref):
-        dest: DiagnosticDataIdentifierSubtypesEnum | None = field(
+        dest: None | DiagnosticDataIdentifierSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -292,7 +292,7 @@ class DiagnosticServiceDataIdentifierPortMapping:
 
     @dataclass
     class ProcessRef(Ref):
-        dest: ProcessDesignSubtypesEnum | None = field(
+        dest: None | ProcessDesignSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

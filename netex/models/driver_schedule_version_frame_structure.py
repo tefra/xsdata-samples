@@ -15,14 +15,14 @@ class DriverScheduleVersionFrameStructure(CommonVersionFrameStructure):
     class Meta:
         name = "DriverSchedule_VersionFrameStructure"
 
-    duties: DutiesInFrameRelStructure | None = field(
+    duties: None | DutiesInFrameRelStructure = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    duty_parts: DutyPartsInFrameRelStructure | None = field(
+    duty_parts: None | DutyPartsInFrameRelStructure = field(
         default=None,
         metadata={
             "name": "dutyParts",
@@ -30,7 +30,7 @@ class DriverScheduleVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    driver_trips: DriverTripsInFrameRelStructure | None = field(
+    driver_trips: None | DriverTripsInFrameRelStructure = field(
         default=None,
         metadata={
             "name": "driverTrips",

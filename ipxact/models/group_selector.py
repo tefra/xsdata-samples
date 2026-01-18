@@ -42,7 +42,7 @@ class GroupSelector:
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -58,7 +58,7 @@ class GroupSelector:
                 "required": True,
             },
         )
-        id: str | None = field(
+        id: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",

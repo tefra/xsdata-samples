@@ -66,7 +66,7 @@ class EthernetCommunicationControllerConditional:
     class Meta:
         name = "ETHERNET-COMMUNICATION-CONTROLLER-CONDITIONAL"
 
-    wake_up_by_controller_supported: Boolean | None = field(
+    wake_up_by_controller_supported: None | Boolean = field(
         default=None,
         metadata={
             "name": "WAKE-UP-BY-CONTROLLER-SUPPORTED",
@@ -75,7 +75,7 @@ class EthernetCommunicationControllerConditional:
         },
     )
     coupling_ports: (
-        EthernetCommunicationControllerConditional.CouplingPorts | None
+        None | EthernetCommunicationControllerConditional.CouplingPorts
     ) = field(
         default=None,
         metadata={
@@ -84,7 +84,7 @@ class EthernetCommunicationControllerConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    mac_layer_type: EthernetMacLayerTypeEnum | None = field(
+    mac_layer_type: None | EthernetMacLayerTypeEnum = field(
         default=None,
         metadata={
             "name": "MAC-LAYER-TYPE",
@@ -92,7 +92,7 @@ class EthernetCommunicationControllerConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    mac_unicast_address: MacAddressString | None = field(
+    mac_unicast_address: None | MacAddressString = field(
         default=None,
         metadata={
             "name": "MAC-UNICAST-ADDRESS",
@@ -100,7 +100,7 @@ class EthernetCommunicationControllerConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    maximum_receive_buffer_length: Integer | None = field(
+    maximum_receive_buffer_length: None | Integer = field(
         default=None,
         metadata={
             "name": "MAXIMUM-RECEIVE-BUFFER-LENGTH",
@@ -108,7 +108,7 @@ class EthernetCommunicationControllerConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    maximum_transmission_unit: PositiveInteger | None = field(
+    maximum_transmission_unit: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "MAXIMUM-TRANSMISSION-UNIT",
@@ -116,7 +116,7 @@ class EthernetCommunicationControllerConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    maximum_transmit_buffer_length: Integer | None = field(
+    maximum_transmit_buffer_length: None | Integer = field(
         default=None,
         metadata={
             "name": "MAXIMUM-TRANSMIT-BUFFER-LENGTH",
@@ -124,7 +124,7 @@ class EthernetCommunicationControllerConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    slave_act_as_passive_communication_slave: Boolean | None = field(
+    slave_act_as_passive_communication_slave: None | Boolean = field(
         default=None,
         metadata={
             "name": "SLAVE-ACT-AS-PASSIVE-COMMUNICATION-SLAVE",
@@ -132,7 +132,7 @@ class EthernetCommunicationControllerConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    slave_qualified_unexpected_link_down_time: TimeValue | None = field(
+    slave_qualified_unexpected_link_down_time: None | TimeValue = field(
         default=None,
         metadata={
             "name": "SLAVE-QUALIFIED-UNEXPECTED-LINK-DOWN-TIME",
@@ -140,7 +140,7 @@ class EthernetCommunicationControllerConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -148,14 +148,14 @@ class EthernetCommunicationControllerConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

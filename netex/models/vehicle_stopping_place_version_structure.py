@@ -25,7 +25,7 @@ class VehicleStoppingPlaceVersionStructure(StopPlaceSpaceVersionStructure):
         name = "VehicleStoppingPlace_VersionStructure"
 
     infrastructure_link_ref: (
-        WireLinkRef | RoadLinkRef | RailwayLinkRef | None
+        None | WireLinkRef | RoadLinkRef | RailwayLinkRef
     ) = field(
         default=None,
         metadata={
@@ -50,7 +50,7 @@ class VehicleStoppingPlaceVersionStructure(StopPlaceSpaceVersionStructure):
         },
     )
     infrastructure_point_ref: (
-        WirePointRef | RoadPointRef | RailwayPointRef | None
+        None | WirePointRef | RoadPointRef | RailwayPointRef
     ) = field(
         default=None,
         metadata={
@@ -74,7 +74,7 @@ class VehicleStoppingPlaceVersionStructure(StopPlaceSpaceVersionStructure):
             ),
         },
     )
-    vehicle_stopping_positions: VehicleStoppingPositionsRelStructure | None = (
+    vehicle_stopping_positions: None | VehicleStoppingPositionsRelStructure = (
         field(
             default=None,
             metadata={
@@ -84,7 +84,7 @@ class VehicleStoppingPlaceVersionStructure(StopPlaceSpaceVersionStructure):
             },
         )
     )
-    quay_alignments: VehicleQuayAlignmentsRelStructure | None = field(
+    quay_alignments: None | VehicleQuayAlignmentsRelStructure = field(
         default=None,
         metadata={
             "name": "quayAlignments",

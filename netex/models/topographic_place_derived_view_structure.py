@@ -15,7 +15,7 @@ class TopographicPlaceDerivedViewStructure(DerivedViewStructure):
     class Meta:
         name = "TopographicPlace_DerivedViewStructure"
 
-    topographic_place_ref: TopographicPlaceRef | None = field(
+    topographic_place_ref: None | TopographicPlaceRef = field(
         default=None,
         metadata={
             "name": "TopographicPlaceRef",
@@ -23,7 +23,7 @@ class TopographicPlaceDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    name: MultilingualString | None = field(
+    name: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "Name",
@@ -31,7 +31,7 @@ class TopographicPlaceDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    short_name: MultilingualString | None = field(
+    short_name: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "ShortName",
@@ -39,7 +39,7 @@ class TopographicPlaceDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    qualifier_name: MultilingualString | None = field(
+    qualifier_name: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "QualifierName",
@@ -47,7 +47,7 @@ class TopographicPlaceDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    country_ref: CountryRef | None = field(
+    country_ref: None | CountryRef = field(
         default=None,
         metadata={
             "name": "CountryRef",

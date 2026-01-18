@@ -15,7 +15,7 @@ class SiteEntranceVersionStructure(SiteComponentVersionStructure):
     class Meta:
         name = "SiteEntrance_VersionStructure"
 
-    public_code: str | None = field(
+    public_code: None | str = field(
         default=None,
         metadata={
             "name": "PublicCode",
@@ -23,7 +23,7 @@ class SiteEntranceVersionStructure(SiteComponentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    label: MultilingualString | None = field(
+    label: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "Label",
@@ -31,7 +31,7 @@ class SiteEntranceVersionStructure(SiteComponentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    entrance_type: EntranceEnumeration | None = field(
+    entrance_type: None | EntranceEnumeration = field(
         default=None,
         metadata={
             "name": "EntranceType",
@@ -39,7 +39,7 @@ class SiteEntranceVersionStructure(SiteComponentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    is_external: bool | None = field(
+    is_external: None | bool = field(
         default=None,
         metadata={
             "name": "IsExternal",
@@ -47,7 +47,7 @@ class SiteEntranceVersionStructure(SiteComponentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    is_entry: bool | None = field(
+    is_entry: None | bool = field(
         default=None,
         metadata={
             "name": "IsEntry",
@@ -55,7 +55,7 @@ class SiteEntranceVersionStructure(SiteComponentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    is_exit: bool | None = field(
+    is_exit: None | bool = field(
         default=None,
         metadata={
             "name": "IsExit",
@@ -63,7 +63,7 @@ class SiteEntranceVersionStructure(SiteComponentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    width: Decimal | None = field(
+    width: None | Decimal = field(
         default=None,
         metadata={
             "name": "Width",
@@ -71,7 +71,7 @@ class SiteEntranceVersionStructure(SiteComponentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    height: Decimal | None = field(
+    height: None | Decimal = field(
         default=None,
         metadata={
             "name": "Height",
@@ -79,7 +79,7 @@ class SiteEntranceVersionStructure(SiteComponentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    dropped_kerb_outside: bool | None = field(
+    dropped_kerb_outside: None | bool = field(
         default=None,
         metadata={
             "name": "DroppedKerbOutside",
@@ -87,7 +87,7 @@ class SiteEntranceVersionStructure(SiteComponentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    drop_off_point_close: bool | None = field(
+    drop_off_point_close: None | bool = field(
         default=None,
         metadata={
             "name": "DropOffPointClose",

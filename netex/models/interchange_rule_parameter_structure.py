@@ -32,7 +32,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 @dataclass
 class InterchangeRuleParameterStructure:
-    transport_mode: AllVehicleModesOfTransportEnumeration | None = field(
+    transport_mode: None | AllVehicleModesOfTransportEnumeration = field(
         default=None,
         metadata={
             "name": "TransportMode",
@@ -40,7 +40,7 @@ class InterchangeRuleParameterStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    operator_ref: OperatorRef | None = field(
+    operator_ref: None | OperatorRef = field(
         default=None,
         metadata={
             "name": "OperatorRef",
@@ -48,7 +48,7 @@ class InterchangeRuleParameterStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    stop_area_ref: StopAreaRefStructure | None = field(
+    stop_area_ref: None | StopAreaRefStructure = field(
         default=None,
         metadata={
             "name": "StopAreaRef",
@@ -56,7 +56,7 @@ class InterchangeRuleParameterStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    stop_place_ref: TaxiRankRef | StopPlaceRef | None = field(
+    stop_place_ref: None | TaxiRankRef | StopPlaceRef = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -100,7 +100,7 @@ class InterchangeRuleParameterStructure:
         },
     )
     scheduled_stop_point_ref: (
-        FareScheduledStopPointRef | ScheduledStopPointRef | None
+        None | FareScheduledStopPointRef | ScheduledStopPointRef
     ) = field(
         default=None,
         metadata={
@@ -119,7 +119,7 @@ class InterchangeRuleParameterStructure:
             ),
         },
     )
-    adjacent_stop_point_ref: ScheduledStopPointRefStructure | None = field(
+    adjacent_stop_point_ref: None | ScheduledStopPointRefStructure = field(
         default=None,
         metadata={
             "name": "AdjacentStopPointRef",
@@ -127,7 +127,7 @@ class InterchangeRuleParameterStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    adjacent_stop_place_ref: StopPlaceRefStructure | None = field(
+    adjacent_stop_place_ref: None | StopPlaceRefStructure = field(
         default=None,
         metadata={
             "name": "AdjacentStopPlaceRef",
@@ -135,7 +135,7 @@ class InterchangeRuleParameterStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    adjacent_point_ref: PointRefStructure | None = field(
+    adjacent_point_ref: None | PointRefStructure = field(
         default=None,
         metadata={
             "name": "AdjacentPointRef",
@@ -143,7 +143,7 @@ class InterchangeRuleParameterStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    end_stop_point_ref: ScheduledStopPointRefStructure | None = field(
+    end_stop_point_ref: None | ScheduledStopPointRefStructure = field(
         default=None,
         metadata={
             "name": "EndStopPointRef",
@@ -151,7 +151,7 @@ class InterchangeRuleParameterStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    time_demand_type_ref: TimeDemandTypeRef | None = field(
+    time_demand_type_ref: None | TimeDemandTypeRef = field(
         default=None,
         metadata={
             "name": "TimeDemandTypeRef",
@@ -160,10 +160,10 @@ class InterchangeRuleParameterStructure:
         },
     )
     service_journey_ref_or_journey_designator_or_service_designator: (
-        ServiceJourneyRefStructure
+        None
+        | ServiceJourneyRefStructure
         | JourneyDesignator
         | ServiceDesignator
-        | None
     ) = field(
         default=None,
         metadata={
@@ -187,7 +187,7 @@ class InterchangeRuleParameterStructure:
             ),
         },
     )
-    maximum_interchange_window: XmlDuration | None = field(
+    maximum_interchange_window: None | XmlDuration = field(
         default=None,
         metadata={
             "name": "MaximumInterchangeWindow",

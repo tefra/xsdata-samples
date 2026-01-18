@@ -19,7 +19,7 @@ __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
 @dataclass
 class TerminationResponseStatusStructure:
-    response_timestamp: ResponseTimestamp | None = field(
+    response_timestamp: None | ResponseTimestamp = field(
         default=None,
         metadata={
             "name": "ResponseTimestamp",
@@ -27,7 +27,7 @@ class TerminationResponseStatusStructure:
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    request_message_ref: MessageQualifierStructure | None = field(
+    request_message_ref: None | MessageQualifierStructure = field(
         default=None,
         metadata={
             "name": "RequestMessageRef",
@@ -35,7 +35,7 @@ class TerminationResponseStatusStructure:
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    subscriber_ref: ParticipantRefStructure | None = field(
+    subscriber_ref: None | ParticipantRefStructure = field(
         default=None,
         metadata={
             "name": "SubscriberRef",
@@ -43,7 +43,7 @@ class TerminationResponseStatusStructure:
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    subscription_filter_ref: SubscriptionFilterRefStructure | None = field(
+    subscription_filter_ref: None | SubscriptionFilterRefStructure = field(
         default=None,
         metadata={
             "name": "SubscriptionFilterRef",
@@ -51,7 +51,7 @@ class TerminationResponseStatusStructure:
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    subscription_ref: SubscriptionQualifierStructure | None = field(
+    subscription_ref: None | SubscriptionQualifierStructure = field(
         default=None,
         metadata={
             "name": "SubscriptionRef",
@@ -59,7 +59,7 @@ class TerminationResponseStatusStructure:
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    status: Status | None = field(
+    status: None | Status = field(
         default=None,
         metadata={
             "name": "Status",
@@ -69,7 +69,7 @@ class TerminationResponseStatusStructure:
         },
     )
     error_condition: (
-        TerminationResponseStatusStructure.ErrorCondition | None
+        None | TerminationResponseStatusStructure.ErrorCondition
     ) = field(
         default=None,
         metadata={
@@ -82,11 +82,11 @@ class TerminationResponseStatusStructure:
     @dataclass
     class ErrorCondition:
         choice: (
-            CapabilityNotSupportedError
+            None
+            | CapabilityNotSupportedError
             | UnknownSubscriberError
             | UnknownSubscriptionError
             | OtherError
-            | None
         ) = field(
             default=None,
             metadata={
@@ -115,7 +115,7 @@ class TerminationResponseStatusStructure:
                 ),
             },
         )
-        description: ErrorDescriptionStructure | None = field(
+        description: None | ErrorDescriptionStructure = field(
             default=None,
             metadata={
                 "name": "Description",

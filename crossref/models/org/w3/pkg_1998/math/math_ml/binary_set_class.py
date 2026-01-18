@@ -11,13 +11,13 @@ class BinarySetType:
         name = "binary-set.class"
         namespace = "http://www.w3.org/1998/Math/MathML"
 
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    xref: object | None = field(
+    xref: None | object = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -31,19 +31,19 @@ class BinarySetType:
             "tokens": True,
         },
     )
-    style: str | None = field(
+    style: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    href: str | None = field(
+    href: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    other: object | None = field(
+    other: None | object = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -56,13 +56,13 @@ class BinarySetType:
             "namespace": "##other",
         },
     )
-    encoding: str | None = field(
+    encoding: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    definition_url: str | None = field(
+    definition_url: None | str = field(
         default=None,
         metadata={
             "name": "definitionURL",

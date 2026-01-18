@@ -33,7 +33,7 @@ class SalesTransactionVersionStructure(FareContractEntryVersionStructure):
     class Meta:
         name = "SalesTransaction_VersionStructure"
 
-    amount: Decimal | None = field(
+    amount: None | Decimal = field(
         default=None,
         metadata={
             "name": "Amount",
@@ -41,7 +41,7 @@ class SalesTransactionVersionStructure(FareContractEntryVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    currency: str | None = field(
+    currency: None | str = field(
         default=None,
         metadata={
             "name": "Currency",
@@ -52,7 +52,7 @@ class SalesTransactionVersionStructure(FareContractEntryVersionStructure):
             "pattern": r"[A-Z][A-Z][A-Z]",
         },
     )
-    price_unit_ref: PriceUnitRef | None = field(
+    price_unit_ref: None | PriceUnitRef = field(
         default=None,
         metadata={
             "name": "PriceUnitRef",
@@ -60,7 +60,7 @@ class SalesTransactionVersionStructure(FareContractEntryVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    units: Decimal | None = field(
+    units: None | Decimal = field(
         default=None,
         metadata={
             "name": "Units",
@@ -68,7 +68,7 @@ class SalesTransactionVersionStructure(FareContractEntryVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    rule_step_results: PriceRuleStepResultsRelStructure | None = field(
+    rule_step_results: None | PriceRuleStepResultsRelStructure = field(
         default=None,
         metadata={
             "name": "ruleStepResults",
@@ -76,7 +76,7 @@ class SalesTransactionVersionStructure(FareContractEntryVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    payment_method: PaymentMethodEnumeration | None = field(
+    payment_method: None | PaymentMethodEnumeration = field(
         default=None,
         metadata={
             "name": "PaymentMethod",
@@ -84,7 +84,7 @@ class SalesTransactionVersionStructure(FareContractEntryVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    type_of_payment_method_ref: TypeOfPaymentMethodRef | None = field(
+    type_of_payment_method_ref: None | TypeOfPaymentMethodRef = field(
         default=None,
         metadata={
             "name": "TypeOfPaymentMethodRef",
@@ -92,7 +92,7 @@ class SalesTransactionVersionStructure(FareContractEntryVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    card_number: PrivateCodeStructure | None = field(
+    card_number: None | PrivateCodeStructure = field(
         default=None,
         metadata={
             "name": "CardNumber",
@@ -100,7 +100,7 @@ class SalesTransactionVersionStructure(FareContractEntryVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    travel_specifications: TravelSpecificationsRelStructure | None = field(
+    travel_specifications: None | TravelSpecificationsRelStructure = field(
         default=None,
         metadata={
             "name": "travelSpecifications",
@@ -108,7 +108,7 @@ class SalesTransactionVersionStructure(FareContractEntryVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    customer_purchase_packages: CustomerPurchasePackagesRelStructure | None = (
+    customer_purchase_packages: None | CustomerPurchasePackagesRelStructure = (
         field(
             default=None,
             metadata={
@@ -118,7 +118,7 @@ class SalesTransactionVersionStructure(FareContractEntryVersionStructure):
             },
         )
     )
-    travel_documents: TravelDocumentsRelStructure | None = field(
+    travel_documents: None | TravelDocumentsRelStructure = field(
         default=None,
         metadata={
             "name": "travelDocuments",
@@ -126,7 +126,7 @@ class SalesTransactionVersionStructure(FareContractEntryVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    collection_point_ref: PointVersionStructure | None = field(
+    collection_point_ref: None | PointVersionStructure = field(
         default=None,
         metadata={
             "name": "CollectionPointRef",
@@ -134,7 +134,7 @@ class SalesTransactionVersionStructure(FareContractEntryVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    collection_note: MultilingualString | None = field(
+    collection_note: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "CollectionNote",
@@ -142,7 +142,7 @@ class SalesTransactionVersionStructure(FareContractEntryVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    organisational_unit_ref: OrganisationalUnitRef | None = field(
+    organisational_unit_ref: None | OrganisationalUnitRef = field(
         default=None,
         metadata={
             "name": "OrganisationalUnitRef",
@@ -150,7 +150,7 @@ class SalesTransactionVersionStructure(FareContractEntryVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    retail_device_ref: RetailDeviceRef | None = field(
+    retail_device_ref: None | RetailDeviceRef = field(
         default=None,
         metadata={
             "name": "RetailDeviceRef",

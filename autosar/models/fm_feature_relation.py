@@ -91,7 +91,7 @@ class FmFeatureRelation:
     class Meta:
         name = "FM-FEATURE-RELATION"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -100,7 +100,7 @@ class FmFeatureRelation:
             "required": True,
         },
     )
-    short_name_fragments: FmFeatureRelation.ShortNameFragments | None = field(
+    short_name_fragments: None | FmFeatureRelation.ShortNameFragments = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -108,7 +108,7 @@ class FmFeatureRelation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -116,7 +116,7 @@ class FmFeatureRelation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -124,7 +124,7 @@ class FmFeatureRelation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -132,7 +132,7 @@ class FmFeatureRelation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -140,7 +140,7 @@ class FmFeatureRelation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -148,7 +148,7 @@ class FmFeatureRelation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: FmFeatureRelation.Annotations | None = field(
+    annotations: None | FmFeatureRelation.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -156,7 +156,7 @@ class FmFeatureRelation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    feature_refs: FmFeatureRelation.FeatureRefs | None = field(
+    feature_refs: None | FmFeatureRelation.FeatureRefs = field(
         default=None,
         metadata={
             "name": "FEATURE-REFS",
@@ -164,7 +164,7 @@ class FmFeatureRelation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    restriction: FmConditionByFeaturesAndAttributes | None = field(
+    restriction: None | FmConditionByFeaturesAndAttributes = field(
         default=None,
         metadata={
             "name": "RESTRICTION",
@@ -172,14 +172,14 @@ class FmFeatureRelation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -187,7 +187,7 @@ class FmFeatureRelation:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -230,7 +230,7 @@ class FmFeatureRelation:
 
         @dataclass
         class FeatureRef(Ref):
-            dest: FmFeatureSubtypesEnum | None = field(
+            dest: None | FmFeatureSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",

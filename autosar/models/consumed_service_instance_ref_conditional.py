@@ -35,7 +35,7 @@ class ConsumedServiceInstanceRefConditional:
         name = "CONSUMED-SERVICE-INSTANCE-REF-CONDITIONAL"
 
     consumed_service_instance_ref: (
-        ConsumedServiceInstanceRefConditional.ConsumedServiceInstanceRef | None
+        None | ConsumedServiceInstanceRefConditional.ConsumedServiceInstanceRef
     ) = field(
         default=None,
         metadata={
@@ -44,7 +44,7 @@ class ConsumedServiceInstanceRefConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -52,14 +52,14 @@ class ConsumedServiceInstanceRefConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -70,7 +70,7 @@ class ConsumedServiceInstanceRefConditional:
 
     @dataclass
     class ConsumedServiceInstanceRef(Ref):
-        dest: ConsumedServiceInstanceSubtypesEnum | None = field(
+        dest: None | ConsumedServiceInstanceSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

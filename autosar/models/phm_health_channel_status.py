@@ -91,7 +91,7 @@ class PhmHealthChannelStatus:
     class Meta:
         name = "PHM-HEALTH-CHANNEL-STATUS"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -100,7 +100,7 @@ class PhmHealthChannelStatus:
             "required": True,
         },
     )
-    short_name_fragments: PhmHealthChannelStatus.ShortNameFragments | None = (
+    short_name_fragments: None | PhmHealthChannelStatus.ShortNameFragments = (
         field(
             default=None,
             metadata={
@@ -110,7 +110,7 @@ class PhmHealthChannelStatus:
             },
         )
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -118,7 +118,7 @@ class PhmHealthChannelStatus:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -126,7 +126,7 @@ class PhmHealthChannelStatus:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -134,7 +134,7 @@ class PhmHealthChannelStatus:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -142,7 +142,7 @@ class PhmHealthChannelStatus:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -150,7 +150,7 @@ class PhmHealthChannelStatus:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: PhmHealthChannelStatus.Annotations | None = field(
+    annotations: None | PhmHealthChannelStatus.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -158,7 +158,7 @@ class PhmHealthChannelStatus:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    status_id: PositiveInteger | None = field(
+    status_id: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "STATUS-ID",
@@ -166,7 +166,7 @@ class PhmHealthChannelStatus:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    triggers_recovery_notification: Boolean | None = field(
+    triggers_recovery_notification: None | Boolean = field(
         default=None,
         metadata={
             "name": "TRIGGERS-RECOVERY-NOTIFICATION",
@@ -174,14 +174,14 @@ class PhmHealthChannelStatus:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -189,7 +189,7 @@ class PhmHealthChannelStatus:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",

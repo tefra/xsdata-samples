@@ -33,7 +33,7 @@ class TpegFramedPoint(TpegPointLocation):
     """
 
     tpeg_framed_point_location_type: (
-        TpegLoc01FramedPointLocationSubtypeEnum | None
+        None | TpegLoc01FramedPointLocationSubtypeEnum
     ) = field(
         default=None,
         metadata={
@@ -43,7 +43,7 @@ class TpegFramedPoint(TpegPointLocation):
             "required": True,
         },
     )
-    framed_point: TpegNonJunctionPoint | None = field(
+    framed_point: None | TpegNonJunctionPoint = field(
         default=None,
         metadata={
             "name": "framedPoint",
@@ -52,7 +52,7 @@ class TpegFramedPoint(TpegPointLocation):
             "required": True,
         },
     )
-    to: TpegPoint | None = field(
+    to: None | TpegPoint = field(
         default=None,
         metadata={
             "type": "Element",
@@ -60,7 +60,7 @@ class TpegFramedPoint(TpegPointLocation):
             "required": True,
         },
     )
-    from_value: TpegPoint | None = field(
+    from_value: None | TpegPoint = field(
         default=None,
         metadata={
             "name": "from",
@@ -69,7 +69,7 @@ class TpegFramedPoint(TpegPointLocation):
             "required": True,
         },
     )
-    tpeg_framed_point_extension: ExtensionType | None = field(
+    tpeg_framed_point_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "tpegFramedPointExtension",

@@ -16,7 +16,7 @@ class NonRoadEventInformation(SituationRecord):
     traffic flow.
     """
 
-    non_road_event_information_extension: ExtensionType | None = field(
+    non_road_event_information_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "nonRoadEventInformationExtension",

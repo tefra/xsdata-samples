@@ -57,7 +57,7 @@ class AutosarParameterRef:
     class Meta:
         name = "AUTOSAR-PARAMETER-REF"
 
-    autosar_parameter_iref: ParameterInAtomicSwcTypeInstanceRef | None = field(
+    autosar_parameter_iref: None | ParameterInAtomicSwcTypeInstanceRef = field(
         default=None,
         metadata={
             "name": "AUTOSAR-PARAMETER-IREF",
@@ -65,7 +65,7 @@ class AutosarParameterRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    local_parameter_ref: AutosarParameterRef.LocalParameterRef | None = field(
+    local_parameter_ref: None | AutosarParameterRef.LocalParameterRef = field(
         default=None,
         metadata={
             "name": "LOCAL-PARAMETER-REF",
@@ -73,14 +73,14 @@ class AutosarParameterRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -91,7 +91,7 @@ class AutosarParameterRef:
 
     @dataclass
     class LocalParameterRef(Ref):
-        dest: DataPrototypeSubtypesEnum | None = field(
+        dest: None | DataPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

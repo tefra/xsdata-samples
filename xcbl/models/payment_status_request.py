@@ -68,7 +68,7 @@ class PaymentStatusRequestHeader:
             "required": True,
         }
     )
-    payer_party: PayerParty | None = field(
+    payer_party: None | PayerParty = field(
         default=None,
         metadata={
             "name": "PayerParty",
@@ -82,7 +82,7 @@ class PaymentStatusRequestHeader:
             "required": True,
         }
     )
-    general_notes: GeneralNotes | None = field(
+    general_notes: None | GeneralNotes = field(
         default=None,
         metadata={
             "name": "GeneralNotes",
@@ -93,42 +93,42 @@ class PaymentStatusRequestHeader:
 
 @dataclass(kw_only=True)
 class PaymentStatusRequestDetail:
-    sequence_number: SequenceNumber | None = field(
+    sequence_number: None | SequenceNumber = field(
         default=None,
         metadata={
             "name": "SequenceNumber",
             "type": "Element",
         },
     )
-    payment_request_id: PaymentRequestId | None = field(
+    payment_request_id: None | PaymentRequestId = field(
         default=None,
         metadata={
             "name": "PaymentRequestID",
             "type": "Element",
         },
     )
-    confirmation_id: ConfirmationId | None = field(
+    confirmation_id: None | ConfirmationId = field(
         default=None,
         metadata={
             "name": "ConfirmationID",
             "type": "Element",
         },
     )
-    payment_date_range: PaymentDateRange | None = field(
+    payment_date_range: None | PaymentDateRange = field(
         default=None,
         metadata={
             "name": "PaymentDateRange",
             "type": "Element",
         },
     )
-    payment_dates: PaymentDates | None = field(
+    payment_dates: None | PaymentDates = field(
         default=None,
         metadata={
             "name": "PaymentDates",
             "type": "Element",
         },
     )
-    settlement_amount: SettlementAmount | None = field(
+    settlement_amount: None | SettlementAmount = field(
         default=None,
         metadata={
             "name": "SettlementAmount",
@@ -136,7 +136,7 @@ class PaymentStatusRequestDetail:
         },
     )
     list_of_payment_request_references: (
-        ListOfPaymentRequestReferences | None
+        None | ListOfPaymentRequestReferences
     ) = field(
         default=None,
         metadata={

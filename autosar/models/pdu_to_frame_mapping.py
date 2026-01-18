@@ -123,7 +123,7 @@ class PduToFrameMapping:
     class Meta:
         name = "PDU-TO-FRAME-MAPPING"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -132,7 +132,7 @@ class PduToFrameMapping:
             "required": True,
         },
     )
-    short_name_fragments: PduToFrameMapping.ShortNameFragments | None = field(
+    short_name_fragments: None | PduToFrameMapping.ShortNameFragments = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -140,7 +140,7 @@ class PduToFrameMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -148,7 +148,7 @@ class PduToFrameMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -156,7 +156,7 @@ class PduToFrameMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -164,7 +164,7 @@ class PduToFrameMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -172,7 +172,7 @@ class PduToFrameMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -180,7 +180,7 @@ class PduToFrameMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: PduToFrameMapping.Annotations | None = field(
+    annotations: None | PduToFrameMapping.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -188,7 +188,7 @@ class PduToFrameMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    packing_byte_order: ByteOrderEnum | None = field(
+    packing_byte_order: None | ByteOrderEnum = field(
         default=None,
         metadata={
             "name": "PACKING-BYTE-ORDER",
@@ -196,7 +196,7 @@ class PduToFrameMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    pdu_ref: PduToFrameMapping.PduRef | None = field(
+    pdu_ref: None | PduToFrameMapping.PduRef = field(
         default=None,
         metadata={
             "name": "PDU-REF",
@@ -204,7 +204,7 @@ class PduToFrameMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    start_position: Integer | None = field(
+    start_position: None | Integer = field(
         default=None,
         metadata={
             "name": "START-POSITION",
@@ -212,7 +212,7 @@ class PduToFrameMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    update_indication_bit_position: Integer | None = field(
+    update_indication_bit_position: None | Integer = field(
         default=None,
         metadata={
             "name": "UPDATE-INDICATION-BIT-POSITION",
@@ -220,7 +220,7 @@ class PduToFrameMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -228,14 +228,14 @@ class PduToFrameMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -243,7 +243,7 @@ class PduToFrameMapping:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -275,7 +275,7 @@ class PduToFrameMapping:
 
     @dataclass
     class PduRef(Ref):
-        dest: PduSubtypesEnum | None = field(
+        dest: None | PduSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

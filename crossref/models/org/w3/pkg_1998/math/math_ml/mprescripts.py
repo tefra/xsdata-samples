@@ -15,13 +15,13 @@ class Mprescripts:
         name = "mprescripts"
         namespace = "http://www.w3.org/1998/Math/MathML"
 
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    xref: object | None = field(
+    xref: None | object = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -35,19 +35,19 @@ class Mprescripts:
             "tokens": True,
         },
     )
-    style: str | None = field(
+    style: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    href: str | None = field(
+    href: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    other: object | None = field(
+    other: None | object = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -60,14 +60,14 @@ class Mprescripts:
             "namespace": "##other",
         },
     )
-    mathcolor: str | None = field(
+    mathcolor: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\s*((#[0-9a-fA-F]{3}([0-9a-fA-F]{3})?)|[aA][qQ][uU][aA]|[bB][lL][aA][cC][kK]|[bB][lL][uU][eE]|[fF][uU][cC][hH][sS][iI][aA]|[gG][rR][aA][yY]|[gG][rR][eE][eE][nN]|[lL][iI][mM][eE]|[mM][aA][rR][oO][oO][nN]|[nN][aA][vV][yY]|[oO][lL][iI][vV][eE]|[pP][uU][rR][pP][lL][eE]|[rR][eE][dD]|[sS][iI][lL][vV][eE][rR]|[tT][eE][aA][lL]|[wW][hH][iI][tT][eE]|[yY][eE][lL][lL][oO][wW])\s*",
         },
     )
-    mathbackground: str | MprescriptsValue | None = field(
+    mathbackground: None | str | MprescriptsValue = field(
         default=None,
         metadata={
             "type": "Attribute",

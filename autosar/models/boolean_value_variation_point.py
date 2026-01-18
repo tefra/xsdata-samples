@@ -50,14 +50,14 @@ class BooleanValueVariationPoint:
     class Meta:
         name = "BOOLEAN-VALUE-VARIATION-POINT"
 
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -65,28 +65,28 @@ class BooleanValueVariationPoint:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    binding_time: BindingTimeEnumSimple | None = field(
+    binding_time: None | BindingTimeEnumSimple = field(
         default=None,
         metadata={
             "name": "BINDING-TIME",
             "type": "Attribute",
         },
     )
-    blueprint_value: str | None = field(
+    blueprint_value: None | str = field(
         default=None,
         metadata={
             "name": "BLUEPRINT-VALUE",
             "type": "Attribute",
         },
     )
-    sd: str | None = field(
+    sd: None | str = field(
         default=None,
         metadata={
             "name": "SD",
             "type": "Attribute",
         },
     )
-    short_label: str | None = field(
+    short_label: None | str = field(
         default=None,
         metadata={
             "name": "SHORT-LABEL",
@@ -120,7 +120,7 @@ class BooleanValueVariationPoint:
 
     @dataclass
     class SyscStringRef(Ref):
-        dest: SwSystemconstSubtypesEnum | None = field(
+        dest: None | SwSystemconstSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -131,7 +131,7 @@ class BooleanValueVariationPoint:
 
     @dataclass
     class SyscRef(Ref):
-        dest: SwSystemconstSubtypesEnum | None = field(
+        dest: None | SwSystemconstSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

@@ -37,7 +37,7 @@ class SymbolicNameProps:
     class Meta:
         name = "SYMBOLIC-NAME-PROPS"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -46,7 +46,7 @@ class SymbolicNameProps:
             "required": True,
         },
     )
-    short_name_fragments: SymbolicNameProps.ShortNameFragments | None = field(
+    short_name_fragments: None | SymbolicNameProps.ShortNameFragments = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -54,7 +54,7 @@ class SymbolicNameProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    symbol: CIdentifier | None = field(
+    symbol: None | CIdentifier = field(
         default=None,
         metadata={
             "name": "SYMBOL",
@@ -62,14 +62,14 @@ class SymbolicNameProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

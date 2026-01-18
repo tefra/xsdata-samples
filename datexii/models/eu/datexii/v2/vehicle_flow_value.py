@@ -18,7 +18,7 @@ class VehicleFlowValue(DataValue):
     :ivar vehicle_flow_value_extension:
     """
 
-    vehicle_flow_rate: int | None = field(
+    vehicle_flow_rate: None | int = field(
         default=None,
         metadata={
             "name": "vehicleFlowRate",
@@ -27,7 +27,7 @@ class VehicleFlowValue(DataValue):
             "required": True,
         },
     )
-    vehicle_flow_value_extension: ExtensionType | None = field(
+    vehicle_flow_value_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "vehicleFlowValueExtension",

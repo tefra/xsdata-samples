@@ -47,7 +47,7 @@ class Publication:
             "max_occurs": 2,
         },
     )
-    doi: Doi | None = field(
+    doi: None | Doi = field(
         default=None,
         metadata={
             "type": "Element",

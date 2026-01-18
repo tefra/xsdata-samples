@@ -40,21 +40,21 @@ class MeasurementSpecificCharacteristics:
     :ivar measurement_specific_characteristics_extension:
     """
 
-    accuracy: float | None = field(
+    accuracy: None | float = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    period: float | None = field(
+    period: None | float = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    smoothing_factor: float | None = field(
+    smoothing_factor: None | float = field(
         default=None,
         metadata={
             "name": "smoothingFactor",
@@ -62,7 +62,7 @@ class MeasurementSpecificCharacteristics:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    specific_lane: LaneEnum | None = field(
+    specific_lane: None | LaneEnum = field(
         default=None,
         metadata={
             "name": "specificLane",
@@ -70,7 +70,7 @@ class MeasurementSpecificCharacteristics:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    specific_measurement_value_type: MeasuredOrDerivedDataTypeEnum | None = (
+    specific_measurement_value_type: None | MeasuredOrDerivedDataTypeEnum = (
         field(
             default=None,
             metadata={
@@ -81,7 +81,7 @@ class MeasurementSpecificCharacteristics:
             },
         )
     )
-    specific_vehicle_characteristics: VehicleCharacteristics | None = field(
+    specific_vehicle_characteristics: None | VehicleCharacteristics = field(
         default=None,
         metadata={
             "name": "specificVehicleCharacteristics",
@@ -89,7 +89,7 @@ class MeasurementSpecificCharacteristics:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    measurement_specific_characteristics_extension: ExtensionType | None = (
+    measurement_specific_characteristics_extension: None | ExtensionType = (
         field(
             default=None,
             metadata={

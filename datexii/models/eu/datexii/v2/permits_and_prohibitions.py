@@ -22,7 +22,7 @@ class PermitsAndProhibitions:
     :ivar permits_and_prohibitions_extension:
     """
 
-    activity: RestAreaActivityEnum | None = field(
+    activity: None | RestAreaActivityEnum = field(
         default=None,
         metadata={
             "type": "Element",
@@ -30,7 +30,7 @@ class PermitsAndProhibitions:
             "required": True,
         },
     )
-    regulation: RegulationEnum | None = field(
+    regulation: None | RegulationEnum = field(
         default=None,
         metadata={
             "type": "Element",
@@ -38,7 +38,7 @@ class PermitsAndProhibitions:
             "required": True,
         },
     )
-    permits_and_prohibitions_extension: ExtensionType | None = field(
+    permits_and_prohibitions_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "permitsAndProhibitionsExtension",

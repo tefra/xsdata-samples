@@ -35,7 +35,7 @@ class TextTableValuePair:
     class Meta:
         name = "TEXT-TABLE-VALUE-PAIR"
 
-    first_value: NumericalValueVariationPoint | None = field(
+    first_value: None | NumericalValueVariationPoint = field(
         default=None,
         metadata={
             "name": "FIRST-VALUE",
@@ -43,7 +43,7 @@ class TextTableValuePair:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    second_value: NumericalValueVariationPoint | None = field(
+    second_value: None | NumericalValueVariationPoint = field(
         default=None,
         metadata={
             "name": "SECOND-VALUE",
@@ -51,14 +51,14 @@ class TextTableValuePair:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

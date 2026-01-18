@@ -27,7 +27,7 @@ class SingleValueMappingType(AnnotableType):
     :ivar valid_to:
     """
 
-    source_value: MappedValueType | None = field(
+    source_value: None | MappedValueType = field(
         default=None,
         metadata={
             "name": "SourceValue",
@@ -36,7 +36,7 @@ class SingleValueMappingType(AnnotableType):
             "required": True,
         },
     )
-    target_value: str | None = field(
+    target_value: None | str = field(
         default=None,
         metadata={
             "name": "TargetValue",
@@ -44,14 +44,14 @@ class SingleValueMappingType(AnnotableType):
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
         },
     )
-    valid_from: XmlDate | None = field(
+    valid_from: None | XmlDate = field(
         default=None,
         metadata={
             "name": "validFrom",
             "type": "Attribute",
         },
     )
-    valid_to: XmlDate | None = field(
+    valid_to: None | XmlDate = field(
         default=None,
         metadata={
             "name": "validTo",

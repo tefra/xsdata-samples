@@ -42,7 +42,7 @@ class TransitInformation(NonRoadEventInformation):
     :ivar transit_information_extension:
     """
 
-    journey_destination: MultilingualString | None = field(
+    journey_destination: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "journeyDestination",
@@ -50,7 +50,7 @@ class TransitInformation(NonRoadEventInformation):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    journey_origin: MultilingualString | None = field(
+    journey_origin: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "journeyOrigin",
@@ -58,7 +58,7 @@ class TransitInformation(NonRoadEventInformation):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    journey_reference: str | None = field(
+    journey_reference: None | str = field(
         default=None,
         metadata={
             "name": "journeyReference",
@@ -67,7 +67,7 @@ class TransitInformation(NonRoadEventInformation):
             "max_length": 1024,
         },
     )
-    transit_service_information: TransitServiceInformationEnum | None = field(
+    transit_service_information: None | TransitServiceInformationEnum = field(
         default=None,
         metadata={
             "name": "transitServiceInformation",
@@ -76,7 +76,7 @@ class TransitInformation(NonRoadEventInformation):
             "required": True,
         },
     )
-    transit_service_type: TransitServiceTypeEnum | None = field(
+    transit_service_type: None | TransitServiceTypeEnum = field(
         default=None,
         metadata={
             "name": "transitServiceType",
@@ -85,7 +85,7 @@ class TransitInformation(NonRoadEventInformation):
             "required": True,
         },
     )
-    scheduled_departure_time: XmlDateTime | None = field(
+    scheduled_departure_time: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "scheduledDepartureTime",
@@ -93,7 +93,7 @@ class TransitInformation(NonRoadEventInformation):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    transit_information_extension: ExtensionType | None = field(
+    transit_information_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "transitInformationExtension",

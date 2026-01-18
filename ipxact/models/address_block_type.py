@@ -71,7 +71,7 @@ class AddressBlockType:
     class Meta:
         name = "addressBlockType"
 
-    name: str | None = field(
+    name: None | str = field(
         default=None,
         metadata={
             "type": "Element",
@@ -79,7 +79,7 @@ class AddressBlockType:
             "required": True,
         },
     )
-    display_name: DisplayName | None = field(
+    display_name: None | DisplayName = field(
         default=None,
         metadata={
             "name": "displayName",
@@ -87,7 +87,7 @@ class AddressBlockType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    short_description: ShortDescription | None = field(
+    short_description: None | ShortDescription = field(
         default=None,
         metadata={
             "name": "shortDescription",
@@ -95,14 +95,14 @@ class AddressBlockType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    description: Description | None = field(
+    description: None | Description = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    access_handles: AddressBlockType.AccessHandles | None = field(
+    access_handles: None | AddressBlockType.AccessHandles = field(
         default=None,
         metadata={
             "name": "accessHandles",
@@ -110,14 +110,14 @@ class AddressBlockType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    array: Array | None = field(
+    array: None | Array = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    base_address: BaseAddress | None = field(
+    base_address: None | BaseAddress = field(
         default=None,
         metadata={
             "name": "baseAddress",
@@ -127,7 +127,7 @@ class AddressBlockType:
         },
     )
     address_block_definition_ref: (
-        AddressBlockType.AddressBlockDefinitionRef | None
+        None | AddressBlockType.AddressBlockDefinitionRef
     ) = field(
         default=None,
         metadata={
@@ -136,7 +136,7 @@ class AddressBlockType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    type_identifier: str | None = field(
+    type_identifier: None | str = field(
         default=None,
         metadata={
             "name": "typeIdentifier",
@@ -144,35 +144,35 @@ class AddressBlockType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    range: UnsignedPositiveLongintExpression | None = field(
+    range: None | UnsignedPositiveLongintExpression = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    width: UnsignedPositiveIntExpression | None = field(
+    width: None | UnsignedPositiveIntExpression = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    usage: UsageType | None = field(
+    usage: None | UsageType = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    volatile: Volatile | None = field(
+    volatile: None | Volatile = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    access_policies: AccessPolicies | None = field(
+    access_policies: None | AccessPolicies = field(
         default=None,
         metadata={
             "name": "accessPolicies",
@@ -180,7 +180,7 @@ class AddressBlockType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    parameters: Parameters | None = field(
+    parameters: None | Parameters = field(
         default=None,
         metadata={
             "type": "Element",
@@ -202,7 +202,7 @@ class AddressBlockType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    vendor_extensions: VendorExtensions | None = field(
+    vendor_extensions: None | VendorExtensions = field(
         default=None,
         metadata={
             "name": "vendorExtensions",
@@ -210,7 +210,7 @@ class AddressBlockType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -245,7 +245,7 @@ class AddressBlockType:
                 "required": True,
             },
         )
-        type_definitions: str | None = field(
+        type_definitions: None | str = field(
             default=None,
             metadata={
                 "name": "typeDefinitions",
@@ -282,7 +282,7 @@ class AddressBlockType:
         :ivar id:
         """
 
-        name: str | None = field(
+        name: None | str = field(
             default=None,
             metadata={
                 "type": "Element",
@@ -290,7 +290,7 @@ class AddressBlockType:
                 "required": True,
             },
         )
-        display_name: DisplayName | None = field(
+        display_name: None | DisplayName = field(
             default=None,
             metadata={
                 "name": "displayName",
@@ -298,7 +298,7 @@ class AddressBlockType:
                 "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
             },
         )
-        short_description: ShortDescription | None = field(
+        short_description: None | ShortDescription = field(
             default=None,
             metadata={
                 "name": "shortDescription",
@@ -306,14 +306,14 @@ class AddressBlockType:
                 "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
             },
         )
-        description: Description | None = field(
+        description: None | Description = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
             },
         )
-        access_handles: AddressBlockType.Register.AccessHandles | None = field(
+        access_handles: None | AddressBlockType.Register.AccessHandles = field(
             default=None,
             metadata={
                 "name": "accessHandles",
@@ -321,14 +321,14 @@ class AddressBlockType:
                 "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
             },
         )
-        array: Array | None = field(
+        array: None | Array = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
             },
         )
-        address_offset: UnsignedLongintExpression | None = field(
+        address_offset: None | UnsignedLongintExpression = field(
             default=None,
             metadata={
                 "name": "addressOffset",
@@ -338,7 +338,7 @@ class AddressBlockType:
             },
         )
         register_definition_ref: (
-            AddressBlockType.Register.RegisterDefinitionRef | None
+            None | AddressBlockType.Register.RegisterDefinitionRef
         ) = field(
             default=None,
             metadata={
@@ -347,7 +347,7 @@ class AddressBlockType:
                 "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
             },
         )
-        type_identifier: str | None = field(
+        type_identifier: None | str = field(
             default=None,
             metadata={
                 "name": "typeIdentifier",
@@ -355,21 +355,21 @@ class AddressBlockType:
                 "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
             },
         )
-        size: UnsignedPositiveIntExpression | None = field(
+        size: None | UnsignedPositiveIntExpression = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
             },
         )
-        volatile: Volatile | None = field(
+        volatile: None | Volatile = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
             },
         )
-        access_policies: AccessPolicies | None = field(
+        access_policies: None | AccessPolicies = field(
             default=None,
             metadata={
                 "name": "accessPolicies",
@@ -385,7 +385,7 @@ class AddressBlockType:
                 "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
             },
         )
-        alternate_registers: AlternateRegisters | None = field(
+        alternate_registers: None | AlternateRegisters = field(
             default=None,
             metadata={
                 "name": "alternateRegisters",
@@ -393,14 +393,14 @@ class AddressBlockType:
                 "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
             },
         )
-        parameters: Parameters | None = field(
+        parameters: None | Parameters = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
             },
         )
-        vendor_extensions: VendorExtensions | None = field(
+        vendor_extensions: None | VendorExtensions = field(
             default=None,
             metadata={
                 "name": "vendorExtensions",
@@ -408,7 +408,7 @@ class AddressBlockType:
                 "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
             },
         )
-        id: str | None = field(
+        id: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -436,7 +436,7 @@ class AddressBlockType:
                     "required": True,
                 },
             )
-            type_definitions: str | None = field(
+            type_definitions: None | str = field(
                 default=None,
                 metadata={
                     "name": "typeDefinitions",

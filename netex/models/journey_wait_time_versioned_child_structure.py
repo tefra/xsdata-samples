@@ -26,14 +26,14 @@ class JourneyWaitTimeVersionedChildStructure(
         name = "JourneyWaitTime_VersionedChildStructure"
 
     choice: (
-        BorderPointRef
+        None
+        | BorderPointRef
         | FareScheduledStopPointRef
         | ScheduledStopPointRef
         | GaragePointRef
         | ParkingPointRef
         | ReliefPointRef
         | TimingPointRef
-        | None
     ) = field(
         default=None,
         metadata={
@@ -77,7 +77,7 @@ class JourneyWaitTimeVersionedChildStructure(
             ),
         },
     )
-    wait_time: XmlDuration | None = field(
+    wait_time: None | XmlDuration = field(
         default=None,
         metadata={
             "name": "WaitTime",

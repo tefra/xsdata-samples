@@ -26,11 +26,11 @@ class DynamicStopAssignmentVersionStructure(
         name = "DynamicStopAssignment_VersionStructure"
 
     journey_pattern_ref: (
-        ServiceJourneyPatternRef
+        None
+        | ServiceJourneyPatternRef
         | ServicePatternRef
         | DeadRunJourneyPatternRef
         | JourneyPatternRef
-        | None
     ) = field(
         default=None,
         metadata={
@@ -60,10 +60,10 @@ class DynamicStopAssignmentVersionStructure(
         },
     )
     passenger_stop_assignment_ref: (
-        VehicleJourneyStopAssignmentRef
+        None
+        | VehicleJourneyStopAssignmentRef
         | DynamicStopAssignmentRef
         | PassengerStopAssignmentRef
-        | None
     ) = field(
         default=None,
         metadata={

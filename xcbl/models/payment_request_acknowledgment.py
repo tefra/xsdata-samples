@@ -129,7 +129,7 @@ class FiaccountData:
     class Meta:
         name = "FIAccountData"
 
-    account_detail: AccountDetail | None = field(
+    account_detail: None | AccountDetail = field(
         default=None,
         metadata={
             "name": "AccountDetail",
@@ -143,14 +143,14 @@ class FiaccountData:
             "required": True,
         }
     )
-    sequence: Sequence | None = field(
+    sequence: None | Sequence = field(
         default=None,
         metadata={
             "name": "Sequence",
             "type": "Element",
         },
     )
-    finote: Finote | None = field(
+    finote: None | Finote = field(
         default=None,
         metadata={
             "name": "FINote",
@@ -222,7 +222,7 @@ class PaymentRequestAcknHeader:
             "required": True,
         }
     )
-    payment_request_ackn_coded_other: PaymentRequestAcknCodedOther | None = (
+    payment_request_ackn_coded_other: None | PaymentRequestAcknCodedOther = (
         field(
             default=None,
             metadata={
@@ -245,14 +245,14 @@ class PaymentRequestAcknHeader:
             "required": True,
         }
     )
-    payment_request_idreference: PaymentRequestIdreference | None = field(
+    payment_request_idreference: None | PaymentRequestIdreference = field(
         default=None,
         metadata={
             "name": "PaymentRequestIDReference",
             "type": "Element",
         },
     )
-    certificate_authority: CertificateAuthority | None = field(
+    certificate_authority: None | CertificateAuthority = field(
         default=None,
         metadata={
             "name": "CertificateAuthority",
@@ -266,7 +266,7 @@ class PaymentRequestAcknHeader:
             "required": True,
         }
     )
-    general_note: GeneralNote | None = field(
+    general_note: None | GeneralNote = field(
         default=None,
         metadata={
             "name": "GeneralNote",
@@ -309,7 +309,7 @@ class FinancialInstitutionDetail:
             "required": True,
         }
     )
-    list_of_financial_institutions: ListOfFinancialInstitutions | None = field(
+    list_of_financial_institutions: None | ListOfFinancialInstitutions = field(
         default=None,
         metadata={
             "name": "ListOfFinancialInstitutions",
@@ -334,77 +334,77 @@ class PaymentRequestAcknDetail:
             "required": True,
         }
     )
-    payment_sequence_no: PaymentSequenceNo | None = field(
+    payment_sequence_no: None | PaymentSequenceNo = field(
         default=None,
         metadata={
             "name": "PaymentSequenceNo",
             "type": "Element",
         },
     )
-    settlement_amount: SettlementAmount | None = field(
+    settlement_amount: None | SettlementAmount = field(
         default=None,
         metadata={
             "name": "SettlementAmount",
             "type": "Element",
         },
     )
-    debit_amount: DebitAmount | None = field(
+    debit_amount: None | DebitAmount = field(
         default=None,
         metadata={
             "name": "DebitAmount",
             "type": "Element",
         },
     )
-    credit_amount: CreditAmount | None = field(
+    credit_amount: None | CreditAmount = field(
         default=None,
         metadata={
             "name": "CreditAmount",
             "type": "Element",
         },
     )
-    payment_party: PaymentParty | None = field(
+    payment_party: None | PaymentParty = field(
         default=None,
         metadata={
             "name": "PaymentParty",
             "type": "Element",
         },
     )
-    financial_institution_detail: FinancialInstitutionDetail | None = field(
+    financial_institution_detail: None | FinancialInstitutionDetail = field(
         default=None,
         metadata={
             "name": "FinancialInstitutionDetail",
             "type": "Element",
         },
     )
-    list_of_rate_of_exchange_detail: ListOfRateOfExchangeDetail | None = field(
+    list_of_rate_of_exchange_detail: None | ListOfRateOfExchangeDetail = field(
         default=None,
         metadata={
             "name": "ListOfRateOfExchangeDetail",
             "type": "Element",
         },
     )
-    excpetion_note: ExcpetionNote | None = field(
+    excpetion_note: None | ExcpetionNote = field(
         default=None,
         metadata={
             "name": "ExcpetionNote",
             "type": "Element",
         },
     )
-    payment_request_note: PaymentRequestNote | None = field(
+    payment_request_note: None | PaymentRequestNote = field(
         default=None,
         metadata={
             "name": "PaymentRequestNote",
             "type": "Element",
         },
     )
-    list_of_payment_exception: ListOfPaymentException | None = field(
+    list_of_payment_exception: None | ListOfPaymentException = field(
         default=None,
         metadata={
             "name": "ListOfPaymentException",
             "type": "Element",
         },
     )
-    encrypted_info: EncryptedInfo | None = field(
+    encrypted_info: None | EncryptedInfo = field(
         default=None,
         metadata={
             "name": "EncryptedInfo",

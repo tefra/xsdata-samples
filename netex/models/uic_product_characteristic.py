@@ -14,7 +14,7 @@ class UicProductCharacteristic:
     class Meta:
         namespace = "http://www.netex.org.uk/netex"
 
-    value: UicProductCharacteristicEnumeration | None = field(
+    value: None | UicProductCharacteristicEnumeration = field(
         default=None,
         metadata={
             "required": True,

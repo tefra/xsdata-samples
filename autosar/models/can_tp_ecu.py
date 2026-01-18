@@ -39,7 +39,7 @@ class CanTpEcu:
     class Meta:
         name = "CAN-TP-ECU"
 
-    cycle_time_main_function: TimeValue | None = field(
+    cycle_time_main_function: None | TimeValue = field(
         default=None,
         metadata={
             "name": "CYCLE-TIME-MAIN-FUNCTION",
@@ -47,7 +47,7 @@ class CanTpEcu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ecu_instance_ref: CanTpEcu.EcuInstanceRef | None = field(
+    ecu_instance_ref: None | CanTpEcu.EcuInstanceRef = field(
         default=None,
         metadata={
             "name": "ECU-INSTANCE-REF",
@@ -55,7 +55,7 @@ class CanTpEcu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -63,14 +63,14 @@ class CanTpEcu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -81,7 +81,7 @@ class CanTpEcu:
 
     @dataclass
     class EcuInstanceRef(Ref):
-        dest: EcuInstanceSubtypesEnum | None = field(
+        dest: None | EcuInstanceSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

@@ -16,7 +16,7 @@ __NAMESPACE__ = (
 
 @dataclass
 class PremiumBasisType:
-    value: AmountType | None = field(
+    value: None | AmountType = field(
         default=None,
         metadata={
             "name": "Value",
@@ -25,7 +25,7 @@ class PremiumBasisType:
             "required": True,
         },
     )
-    basis: PremiumBasisTypeBasis | None = field(
+    basis: None | PremiumBasisTypeBasis = field(
         default=None,
         metadata={
             "name": "Basis",

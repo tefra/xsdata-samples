@@ -38,7 +38,7 @@ class PlcaProps:
     class Meta:
         name = "PLCA-PROPS"
 
-    plca_local_node_id: PositiveInteger | None = field(
+    plca_local_node_id: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "PLCA-LOCAL-NODE-ID",
@@ -46,7 +46,7 @@ class PlcaProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    plca_max_burst_count: PositiveInteger | None = field(
+    plca_max_burst_count: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "PLCA-MAX-BURST-COUNT",
@@ -54,7 +54,7 @@ class PlcaProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    plca_max_burst_timer: PositiveInteger | None = field(
+    plca_max_burst_timer: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "PLCA-MAX-BURST-TIMER",
@@ -62,14 +62,14 @@ class PlcaProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

@@ -21,7 +21,7 @@ class CustomerPurchasePackagePriceVersionedChildStructure(
         name = "CustomerPurchasePackagePrice_VersionedChildStructure"
 
     customer_purchase_package_ref_or_customer_purchase_package_element_ref: (
-        CustomerPurchasePackageRef | CustomerPurchasePackageElementRef | None
+        None | CustomerPurchasePackageRef | CustomerPurchasePackageElementRef
     ) = field(
         default=None,
         metadata={

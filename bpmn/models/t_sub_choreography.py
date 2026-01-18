@@ -656,7 +656,7 @@ class TAdHocSubProcess(TSubProcess):
     class Meta:
         name = "tAdHocSubProcess"
 
-    completion_condition: TExpression | None = field(
+    completion_condition: None | TExpression = field(
         default=None,
         metadata={
             "name": "completionCondition",
@@ -671,7 +671,7 @@ class TAdHocSubProcess(TSubProcess):
             "type": "Attribute",
         },
     )
-    ordering: TAdHocOrdering | None = field(
+    ordering: None | TAdHocOrdering = field(
         default=None,
         metadata={
             "type": "Attribute",

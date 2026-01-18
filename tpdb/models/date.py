@@ -10,7 +10,7 @@ class Date:
     class Meta:
         name = "date"
 
-    value: XmlDate | None = field(
+    value: None | XmlDate = field(
         default=None,
         metadata={
             "required": True,

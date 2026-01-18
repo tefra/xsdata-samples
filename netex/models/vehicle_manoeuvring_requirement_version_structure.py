@@ -17,7 +17,7 @@ class VehicleManoeuvringRequirementVersionStructure(
     class Meta:
         name = "VehicleManoeuvringRequirement_VersionStructure"
 
-    reversible: bool | None = field(
+    reversible: None | bool = field(
         default=None,
         metadata={
             "name": "Reversible",
@@ -25,7 +25,7 @@ class VehicleManoeuvringRequirementVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    minimum_turning_circle: Decimal | None = field(
+    minimum_turning_circle: None | Decimal = field(
         default=None,
         metadata={
             "name": "MinimumTurningCircle",
@@ -33,7 +33,7 @@ class VehicleManoeuvringRequirementVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    minimum_overtaking_width: Decimal | None = field(
+    minimum_overtaking_width: None | Decimal = field(
         default=None,
         metadata={
             "name": "MinimumOvertakingWidth",
@@ -41,7 +41,7 @@ class VehicleManoeuvringRequirementVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    minimum_length: Decimal | None = field(
+    minimum_length: None | Decimal = field(
         default=None,
         metadata={
             "name": "MinimumLength",

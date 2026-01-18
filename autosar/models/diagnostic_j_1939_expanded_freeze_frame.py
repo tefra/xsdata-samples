@@ -91,7 +91,7 @@ class DiagnosticJ1939ExpandedFreezeFrame:
     class Meta:
         name = "DIAGNOSTIC-J-1939-EXPANDED-FREEZE-FRAME"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -101,7 +101,7 @@ class DiagnosticJ1939ExpandedFreezeFrame:
         },
     )
     short_name_fragments: (
-        DiagnosticJ1939ExpandedFreezeFrame.ShortNameFragments | None
+        None | DiagnosticJ1939ExpandedFreezeFrame.ShortNameFragments
     ) = field(
         default=None,
         metadata={
@@ -110,7 +110,7 @@ class DiagnosticJ1939ExpandedFreezeFrame:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -118,7 +118,7 @@ class DiagnosticJ1939ExpandedFreezeFrame:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -126,7 +126,7 @@ class DiagnosticJ1939ExpandedFreezeFrame:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -134,7 +134,7 @@ class DiagnosticJ1939ExpandedFreezeFrame:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -142,7 +142,7 @@ class DiagnosticJ1939ExpandedFreezeFrame:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -150,7 +150,7 @@ class DiagnosticJ1939ExpandedFreezeFrame:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: DiagnosticJ1939ExpandedFreezeFrame.Annotations | None = field(
+    annotations: None | DiagnosticJ1939ExpandedFreezeFrame.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -158,7 +158,7 @@ class DiagnosticJ1939ExpandedFreezeFrame:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -166,7 +166,7 @@ class DiagnosticJ1939ExpandedFreezeFrame:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    node_ref: DiagnosticJ1939ExpandedFreezeFrame.NodeRef | None = field(
+    node_ref: None | DiagnosticJ1939ExpandedFreezeFrame.NodeRef = field(
         default=None,
         metadata={
             "name": "NODE-REF",
@@ -174,7 +174,7 @@ class DiagnosticJ1939ExpandedFreezeFrame:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    spn_refs: DiagnosticJ1939ExpandedFreezeFrame.SpnRefs | None = field(
+    spn_refs: None | DiagnosticJ1939ExpandedFreezeFrame.SpnRefs = field(
         default=None,
         metadata={
             "name": "SPN-REFS",
@@ -182,14 +182,14 @@ class DiagnosticJ1939ExpandedFreezeFrame:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -197,7 +197,7 @@ class DiagnosticJ1939ExpandedFreezeFrame:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -229,7 +229,7 @@ class DiagnosticJ1939ExpandedFreezeFrame:
 
     @dataclass
     class NodeRef(Ref):
-        dest: DiagnosticJ1939NodeSubtypesEnum | None = field(
+        dest: None | DiagnosticJ1939NodeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -253,7 +253,7 @@ class DiagnosticJ1939ExpandedFreezeFrame:
 
         @dataclass
         class SpnRef(Ref):
-            dest: DiagnosticJ1939SpnSubtypesEnum | None = field(
+            dest: None | DiagnosticJ1939SpnSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",

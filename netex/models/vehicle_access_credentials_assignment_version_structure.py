@@ -25,12 +25,12 @@ class VehicleAccessCredentialsAssignmentVersionStructure(
         name = "VehicleAccessCredentialsAssignment_VersionStructure"
 
     common_vehicle_service_ref_or_vehicle_pooling_service_ref: (
-        VehicleRentalServiceRef
+        None
+        | VehicleRentalServiceRef
         | VehicleSharingServiceRef
         | ChauffeuredVehicleServiceRef
         | TaxiServiceRef
         | CarPoolingServiceRef
-        | None
     ) = field(
         default=None,
         metadata={
@@ -64,7 +64,7 @@ class VehicleAccessCredentialsAssignmentVersionStructure(
             ),
         },
     )
-    vehicle_ref: VehicleRef | None = field(
+    vehicle_ref: None | VehicleRef = field(
         default=None,
         metadata={
             "name": "VehicleRef",
@@ -73,7 +73,7 @@ class VehicleAccessCredentialsAssignmentVersionStructure(
         },
     )
     medium_access_device_ref: (
-        MobileDeviceRef | EmvCardRef | SmartcardRef | None
+        None | MobileDeviceRef | EmvCardRef | SmartcardRef
     ) = field(
         default=None,
         metadata={
@@ -97,7 +97,7 @@ class VehicleAccessCredentialsAssignmentVersionStructure(
             ),
         },
     )
-    service_access_code_ref: ServiceAccessCodeRef | None = field(
+    service_access_code_ref: None | ServiceAccessCodeRef = field(
         default=None,
         metadata={
             "name": "ServiceAccessCodeRef",

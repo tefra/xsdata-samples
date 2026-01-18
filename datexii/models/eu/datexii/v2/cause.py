@@ -13,7 +13,7 @@ class Cause:
     Contains details of the cause of a record within a situation.
     """
 
-    cause_extension: ExtensionType | None = field(
+    cause_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "causeExtension",

@@ -45,7 +45,7 @@ class ISignalMapping:
     class Meta:
         name = "I-SIGNAL-MAPPING"
 
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -53,7 +53,7 @@ class ISignalMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    source_signal_ref: ISignalMapping.SourceSignalRef | None = field(
+    source_signal_ref: None | ISignalMapping.SourceSignalRef = field(
         default=None,
         metadata={
             "name": "SOURCE-SIGNAL-REF",
@@ -61,7 +61,7 @@ class ISignalMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    target_signal_ref: ISignalMapping.TargetSignalRef | None = field(
+    target_signal_ref: None | ISignalMapping.TargetSignalRef = field(
         default=None,
         metadata={
             "name": "TARGET-SIGNAL-REF",
@@ -69,7 +69,7 @@ class ISignalMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -77,14 +77,14 @@ class ISignalMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -95,7 +95,7 @@ class ISignalMapping:
 
     @dataclass
     class SourceSignalRef(Ref):
-        dest: ISignalTriggeringSubtypesEnum | None = field(
+        dest: None | ISignalTriggeringSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -106,7 +106,7 @@ class ISignalMapping:
 
     @dataclass
     class TargetSignalRef(Ref):
-        dest: ISignalTriggeringSubtypesEnum | None = field(
+        dest: None | ISignalTriggeringSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

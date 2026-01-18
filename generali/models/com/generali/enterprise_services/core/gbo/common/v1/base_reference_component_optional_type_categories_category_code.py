@@ -19,7 +19,7 @@ class BaseReferenceComponentOptionalTypeCategoriesCategoryCode(CodeType):
     class Meta:
         global_type = False
 
-    list_hierarchy_id: str | None = field(
+    list_hierarchy_id: None | str = field(
         default=None,
         metadata={
             "name": "listHierarchyID",

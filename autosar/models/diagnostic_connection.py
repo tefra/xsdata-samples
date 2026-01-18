@@ -93,7 +93,7 @@ class DiagnosticConnection:
     class Meta:
         name = "DIAGNOSTIC-CONNECTION"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -102,7 +102,7 @@ class DiagnosticConnection:
             "required": True,
         },
     )
-    short_name_fragments: DiagnosticConnection.ShortNameFragments | None = (
+    short_name_fragments: None | DiagnosticConnection.ShortNameFragments = (
         field(
             default=None,
             metadata={
@@ -112,7 +112,7 @@ class DiagnosticConnection:
             },
         )
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -120,7 +120,7 @@ class DiagnosticConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -128,7 +128,7 @@ class DiagnosticConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -136,7 +136,7 @@ class DiagnosticConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -144,7 +144,7 @@ class DiagnosticConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -152,7 +152,7 @@ class DiagnosticConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: DiagnosticConnection.Annotations | None = field(
+    annotations: None | DiagnosticConnection.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -160,7 +160,7 @@ class DiagnosticConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -169,7 +169,7 @@ class DiagnosticConnection:
         },
     )
     functional_request_refs: (
-        DiagnosticConnection.FunctionalRequestRefs | None
+        None | DiagnosticConnection.FunctionalRequestRefs
     ) = field(
         default=None,
         metadata={
@@ -179,7 +179,7 @@ class DiagnosticConnection:
         },
     )
     periodic_response_uudt_refs: (
-        DiagnosticConnection.PeriodicResponseUudtRefs | None
+        None | DiagnosticConnection.PeriodicResponseUudtRefs
     ) = field(
         default=None,
         metadata={
@@ -188,7 +188,7 @@ class DiagnosticConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    physical_request_ref: DiagnosticConnection.PhysicalRequestRef | None = (
+    physical_request_ref: None | DiagnosticConnection.PhysicalRequestRef = (
         field(
             default=None,
             metadata={
@@ -198,7 +198,7 @@ class DiagnosticConnection:
             },
         )
     )
-    response_on_event_ref: DiagnosticConnection.ResponseOnEventRef | None = (
+    response_on_event_ref: None | DiagnosticConnection.ResponseOnEventRef = (
         field(
             default=None,
             metadata={
@@ -208,7 +208,7 @@ class DiagnosticConnection:
             },
         )
     )
-    response_ref: DiagnosticConnection.ResponseRef | None = field(
+    response_ref: None | DiagnosticConnection.ResponseRef = field(
         default=None,
         metadata={
             "name": "RESPONSE-REF",
@@ -216,14 +216,14 @@ class DiagnosticConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -231,7 +231,7 @@ class DiagnosticConnection:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -276,7 +276,7 @@ class DiagnosticConnection:
 
         @dataclass
         class FunctionalRequestRef(Ref):
-            dest: TpConnectionIdentSubtypesEnum | None = field(
+            dest: None | TpConnectionIdentSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -300,7 +300,7 @@ class DiagnosticConnection:
 
         @dataclass
         class PeriodicResponseUudtRef(Ref):
-            dest: PduTriggeringSubtypesEnum | None = field(
+            dest: None | PduTriggeringSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -311,7 +311,7 @@ class DiagnosticConnection:
 
     @dataclass
     class PhysicalRequestRef(Ref):
-        dest: TpConnectionIdentSubtypesEnum | None = field(
+        dest: None | TpConnectionIdentSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -322,7 +322,7 @@ class DiagnosticConnection:
 
     @dataclass
     class ResponseOnEventRef(Ref):
-        dest: TpConnectionIdentSubtypesEnum | None = field(
+        dest: None | TpConnectionIdentSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -333,7 +333,7 @@ class DiagnosticConnection:
 
     @dataclass
     class ResponseRef(Ref):
-        dest: TpConnectionIdentSubtypesEnum | None = field(
+        dest: None | TpConnectionIdentSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

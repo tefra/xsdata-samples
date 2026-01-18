@@ -24,7 +24,7 @@ class CustomerVersionStructure(DataManagedObjectStructure):
     class Meta:
         name = "Customer_VersionStructure"
 
-    surname: str | None = field(
+    surname: None | str = field(
         default=None,
         metadata={
             "name": "Surname",
@@ -32,7 +32,7 @@ class CustomerVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    first_name: str | None = field(
+    first_name: None | str = field(
         default=None,
         metadata={
             "name": "FirstName",
@@ -40,7 +40,7 @@ class CustomerVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    title: str | None = field(
+    title: None | str = field(
         default=None,
         metadata={
             "name": "Title",
@@ -48,7 +48,7 @@ class CustomerVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    date_of_birth: XmlDate | None = field(
+    date_of_birth: None | XmlDate = field(
         default=None,
         metadata={
             "name": "DateOfBirth",
@@ -56,7 +56,7 @@ class CustomerVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    gender: GenderEnumeration | None = field(
+    gender: None | GenderEnumeration = field(
         default=None,
         metadata={
             "name": "Gender",
@@ -64,7 +64,7 @@ class CustomerVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    height: Decimal | None = field(
+    height: None | Decimal = field(
         default=None,
         metadata={
             "name": "Height",
@@ -72,7 +72,7 @@ class CustomerVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    photo: str | None = field(
+    photo: None | str = field(
         default=None,
         metadata={
             "name": "Photo",
@@ -80,7 +80,7 @@ class CustomerVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    smoker: bool | None = field(
+    smoker: None | bool = field(
         default=None,
         metadata={
             "name": "Smoker",
@@ -88,7 +88,7 @@ class CustomerVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    email: str | None = field(
+    email: None | str = field(
         default=None,
         metadata={
             "name": "Email",
@@ -96,7 +96,7 @@ class CustomerVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    email_verified: XmlDateTime | None = field(
+    email_verified: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "EmailVerified",
@@ -104,7 +104,7 @@ class CustomerVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    phone: TelephoneContactStructure | None = field(
+    phone: None | TelephoneContactStructure = field(
         default=None,
         metadata={
             "name": "Phone",
@@ -112,7 +112,7 @@ class CustomerVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    phone_verified: XmlDateTime | None = field(
+    phone_verified: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "PhoneVerified",
@@ -120,7 +120,7 @@ class CustomerVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    postal_address: PostalAddress | None = field(
+    postal_address: None | PostalAddress = field(
         default=None,
         metadata={
             "name": "PostalAddress",
@@ -128,7 +128,7 @@ class CustomerVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    identity_document_ref: PrivateCodeStructure | None = field(
+    identity_document_ref: None | PrivateCodeStructure = field(
         default=None,
         metadata={
             "name": "IdentityDocumentRef",
@@ -136,7 +136,7 @@ class CustomerVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    customer_eligibilities: CustomerEligibilitiesRelStructure | None = field(
+    customer_eligibilities: None | CustomerEligibilitiesRelStructure = field(
         default=None,
         metadata={
             "name": "customerEligibilities",
@@ -144,7 +144,7 @@ class CustomerVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    customer_accounts: CustomerAccountsRelStructure | None = field(
+    customer_accounts: None | CustomerAccountsRelStructure = field(
         default=None,
         metadata={
             "name": "customerAccounts",
@@ -152,7 +152,7 @@ class CustomerVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    fare_contracts: FareContractsRelStructure | None = field(
+    fare_contracts: None | FareContractsRelStructure = field(
         default=None,
         metadata={
             "name": "fareContracts",

@@ -15,7 +15,7 @@ class PointOfInterestDerivedViewStructure(DerivedViewStructure):
     class Meta:
         name = "PointOfInterest_DerivedViewStructure"
 
-    point_of_interest_ref: PointOfInterestRef | None = field(
+    point_of_interest_ref: None | PointOfInterestRef = field(
         default=None,
         metadata={
             "name": "PointOfInterestRef",
@@ -23,7 +23,7 @@ class PointOfInterestDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    name: MultilingualString | None = field(
+    name: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "Name",
@@ -31,7 +31,7 @@ class PointOfInterestDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    place_types: TypeOfPlaceRefsRelStructure | None = field(
+    place_types: None | TypeOfPlaceRefsRelStructure = field(
         default=None,
         metadata={
             "name": "placeTypes",
@@ -39,7 +39,7 @@ class PointOfInterestDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    short_name: MultilingualString | None = field(
+    short_name: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "ShortName",

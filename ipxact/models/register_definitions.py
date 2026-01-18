@@ -50,54 +50,54 @@ class RegisterDefinitions:
         :ivar id:
         """
 
-        name: str | None = field(
+        name: None | str = field(
             default=None,
             metadata={
                 "type": "Element",
                 "required": True,
             },
         )
-        display_name: DisplayName | None = field(
+        display_name: None | DisplayName = field(
             default=None,
             metadata={
                 "name": "displayName",
                 "type": "Element",
             },
         )
-        short_description: ShortDescription | None = field(
+        short_description: None | ShortDescription = field(
             default=None,
             metadata={
                 "name": "shortDescription",
                 "type": "Element",
             },
         )
-        description: Description | None = field(
+        description: None | Description = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        type_identifier: str | None = field(
+        type_identifier: None | str = field(
             default=None,
             metadata={
                 "name": "typeIdentifier",
                 "type": "Element",
             },
         )
-        size: UnsignedPositiveIntExpression | None = field(
+        size: None | UnsignedPositiveIntExpression = field(
             default=None,
             metadata={
                 "type": "Element",
                 "required": True,
             },
         )
-        volatile: Volatile | None = field(
+        volatile: None | Volatile = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        access_policies: AccessPolicies | None = field(
+        access_policies: None | AccessPolicies = field(
             default=None,
             metadata={
                 "name": "accessPolicies",
@@ -112,14 +112,14 @@ class RegisterDefinitions:
                 "min_occurs": 1,
             },
         )
-        vendor_extensions: VendorExtensions | None = field(
+        vendor_extensions: None | VendorExtensions = field(
             default=None,
             metadata={
                 "name": "vendorExtensions",
                 "type": "Element",
             },
         )
-        id: str | None = field(
+        id: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",

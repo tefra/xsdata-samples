@@ -41,7 +41,7 @@ class StopPointInJourneyPatternVersionedChildStructure(
         name = "StopPointInJourneyPattern_VersionedChildStructure"
 
     scheduled_stop_point_ref: (
-        FareScheduledStopPointRef | ScheduledStopPointRef | None
+        None | FareScheduledStopPointRef | ScheduledStopPointRef
     ) = field(
         default=None,
         metadata={
@@ -60,7 +60,7 @@ class StopPointInJourneyPatternVersionedChildStructure(
             ),
         },
     )
-    onward_timing_link_ref: TimingLinkRefStructure | None = field(
+    onward_timing_link_ref: None | TimingLinkRefStructure = field(
         default=None,
         metadata={
             "name": "OnwardTimingLinkRef",
@@ -68,7 +68,7 @@ class StopPointInJourneyPatternVersionedChildStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    is_wait_point: bool | None = field(
+    is_wait_point: None | bool = field(
         default=None,
         metadata={
             "name": "IsWaitPoint",
@@ -77,7 +77,7 @@ class StopPointInJourneyPatternVersionedChildStructure(
         },
     )
     wait_time_or_wait_times: (
-        XmlDuration | JourneyPatternWaitTimesRelStructure | None
+        None | XmlDuration | JourneyPatternWaitTimesRelStructure
     ) = field(
         default=None,
         metadata={
@@ -96,14 +96,14 @@ class StopPointInJourneyPatternVersionedChildStructure(
             ),
         },
     )
-    headways: JourneyPatternHeadwaysRelStructure | None = field(
+    headways: None | JourneyPatternHeadwaysRelStructure = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    onward_service_link_ref: ServiceLinkRefStructure | None = field(
+    onward_service_link_ref: None | ServiceLinkRefStructure = field(
         default=None,
         metadata={
             "name": "OnwardServiceLinkRef",
@@ -111,7 +111,7 @@ class StopPointInJourneyPatternVersionedChildStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    for_alighting: bool | None = field(
+    for_alighting: None | bool = field(
         default=None,
         metadata={
             "name": "ForAlighting",
@@ -119,7 +119,7 @@ class StopPointInJourneyPatternVersionedChildStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    for_boarding: bool | None = field(
+    for_boarding: None | bool = field(
         default=None,
         metadata={
             "name": "ForBoarding",
@@ -128,7 +128,7 @@ class StopPointInJourneyPatternVersionedChildStructure(
         },
     )
     alighting_side_in_direction_of_travel: (
-        SideInDirectionOfTravelEnumeration | None
+        None | SideInDirectionOfTravelEnumeration
     ) = field(
         default=None,
         metadata={
@@ -138,7 +138,7 @@ class StopPointInJourneyPatternVersionedChildStructure(
         },
     )
     boarding_side_in_direction_of_travel: (
-        SideInDirectionOfTravelEnumeration | None
+        None | SideInDirectionOfTravelEnumeration
     ) = field(
         default=None,
         metadata={
@@ -148,7 +148,7 @@ class StopPointInJourneyPatternVersionedChildStructure(
         },
     )
     destination_display_ref_or_destination_display_view: (
-        DestinationDisplayRef | DestinationDisplayView | None
+        None | DestinationDisplayRef | DestinationDisplayView
     ) = field(
         default=None,
         metadata={
@@ -167,14 +167,14 @@ class StopPointInJourneyPatternVersionedChildStructure(
             ),
         },
     )
-    vias: ViasRelStructure | None = field(
+    vias: None | ViasRelStructure = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    flexible_point_properties: FlexiblePointProperties | None = field(
+    flexible_point_properties: None | FlexiblePointProperties = field(
         default=None,
         metadata={
             "name": "FlexiblePointProperties",
@@ -182,7 +182,7 @@ class StopPointInJourneyPatternVersionedChildStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    change_of_destination_display: bool | None = field(
+    change_of_destination_display: None | bool = field(
         default=None,
         metadata={
             "name": "ChangeOfDestinationDisplay",
@@ -190,7 +190,7 @@ class StopPointInJourneyPatternVersionedChildStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    change_of_service_requirements: bool | None = field(
+    change_of_service_requirements: None | bool = field(
         default=None,
         metadata={
             "name": "ChangeOfServiceRequirements",
@@ -198,7 +198,7 @@ class StopPointInJourneyPatternVersionedChildStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    notice_assignments: NoticeAssignmentsRelStructure | None = field(
+    notice_assignments: None | NoticeAssignmentsRelStructure = field(
         default=None,
         metadata={
             "name": "noticeAssignments",
@@ -206,7 +206,7 @@ class StopPointInJourneyPatternVersionedChildStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    request_stop: bool | None = field(
+    request_stop: None | bool = field(
         default=None,
         metadata={
             "name": "RequestStop",
@@ -214,7 +214,7 @@ class StopPointInJourneyPatternVersionedChildStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    request_method: RequestMethodTypeEnumeration | None = field(
+    request_method: None | RequestMethodTypeEnumeration = field(
         default=None,
         metadata={
             "name": "RequestMethod",
@@ -222,7 +222,7 @@ class StopPointInJourneyPatternVersionedChildStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    stop_use: StopUseEnumeration | None = field(
+    stop_use: None | StopUseEnumeration = field(
         default=None,
         metadata={
             "name": "StopUse",
@@ -230,7 +230,7 @@ class StopPointInJourneyPatternVersionedChildStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    booking_arrangements: BookingArrangementsStructure | None = field(
+    booking_arrangements: None | BookingArrangementsStructure = field(
         default=None,
         metadata={
             "name": "BookingArrangements",
@@ -238,7 +238,7 @@ class StopPointInJourneyPatternVersionedChildStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    print: bool | None = field(
+    print: None | bool = field(
         default=None,
         metadata={
             "name": "Print",
@@ -246,7 +246,7 @@ class StopPointInJourneyPatternVersionedChildStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    dynamic: DynamicAdvertisementEnumeration | None = field(
+    dynamic: None | DynamicAdvertisementEnumeration = field(
         default=None,
         metadata={
             "name": "Dynamic",

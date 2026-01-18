@@ -115,7 +115,7 @@ class LinNmCluster:
     class Meta:
         name = "LIN-NM-CLUSTER"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -124,7 +124,7 @@ class LinNmCluster:
             "required": True,
         },
     )
-    short_name_fragments: LinNmCluster.ShortNameFragments | None = field(
+    short_name_fragments: None | LinNmCluster.ShortNameFragments = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -132,7 +132,7 @@ class LinNmCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -140,7 +140,7 @@ class LinNmCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -148,7 +148,7 @@ class LinNmCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -156,7 +156,7 @@ class LinNmCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -164,7 +164,7 @@ class LinNmCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -172,7 +172,7 @@ class LinNmCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: LinNmCluster.Annotations | None = field(
+    annotations: None | LinNmCluster.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -180,7 +180,7 @@ class LinNmCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    communication_cluster_ref: LinNmCluster.CommunicationClusterRef | None = (
+    communication_cluster_ref: None | LinNmCluster.CommunicationClusterRef = (
         field(
             default=None,
             metadata={
@@ -190,7 +190,7 @@ class LinNmCluster:
             },
         )
     )
-    nm_channel_id: PositiveInteger | None = field(
+    nm_channel_id: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "NM-CHANNEL-ID",
@@ -198,7 +198,7 @@ class LinNmCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nm_channel_sleep_master: Boolean | None = field(
+    nm_channel_sleep_master: None | Boolean = field(
         default=None,
         metadata={
             "name": "NM-CHANNEL-SLEEP-MASTER",
@@ -206,7 +206,7 @@ class LinNmCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nm_nodes: LinNmCluster.NmNodes | None = field(
+    nm_nodes: None | LinNmCluster.NmNodes = field(
         default=None,
         metadata={
             "name": "NM-NODES",
@@ -214,7 +214,7 @@ class LinNmCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nm_node_detection_enabled: Boolean | None = field(
+    nm_node_detection_enabled: None | Boolean = field(
         default=None,
         metadata={
             "name": "NM-NODE-DETECTION-ENABLED",
@@ -222,7 +222,7 @@ class LinNmCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nm_node_id_enabled: Boolean | None = field(
+    nm_node_id_enabled: None | Boolean = field(
         default=None,
         metadata={
             "name": "NM-NODE-ID-ENABLED",
@@ -230,7 +230,7 @@ class LinNmCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nm_pnc_participation: Boolean | None = field(
+    nm_pnc_participation: None | Boolean = field(
         default=None,
         metadata={
             "name": "NM-PNC-PARTICIPATION",
@@ -238,7 +238,7 @@ class LinNmCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nm_repeat_msg_ind_enabled: Boolean | None = field(
+    nm_repeat_msg_ind_enabled: None | Boolean = field(
         default=None,
         metadata={
             "name": "NM-REPEAT-MSG-IND-ENABLED",
@@ -246,7 +246,7 @@ class LinNmCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nm_synchronizing_network: Boolean | None = field(
+    nm_synchronizing_network: None | Boolean = field(
         default=None,
         metadata={
             "name": "NM-SYNCHRONIZING-NETWORK",
@@ -254,7 +254,7 @@ class LinNmCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -262,14 +262,14 @@ class LinNmCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -277,7 +277,7 @@ class LinNmCluster:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -309,7 +309,7 @@ class LinNmCluster:
 
     @dataclass
     class CommunicationClusterRef(Ref):
-        dest: CommunicationClusterSubtypesEnum | None = field(
+        dest: None | CommunicationClusterSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

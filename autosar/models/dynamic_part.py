@@ -40,7 +40,7 @@ class DynamicPart:
     class Meta:
         name = "DYNAMIC-PART"
 
-    segment_positions: DynamicPart.SegmentPositions | None = field(
+    segment_positions: None | DynamicPart.SegmentPositions = field(
         default=None,
         metadata={
             "name": "SEGMENT-POSITIONS",
@@ -48,7 +48,7 @@ class DynamicPart:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    dynamic_part_alternatives: DynamicPart.DynamicPartAlternatives | None = (
+    dynamic_part_alternatives: None | DynamicPart.DynamicPartAlternatives = (
         field(
             default=None,
             metadata={
@@ -58,7 +58,7 @@ class DynamicPart:
             },
         )
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -66,14 +66,14 @@ class DynamicPart:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

@@ -19,7 +19,7 @@ class AccessRightInProductVersionedChildStructure(
     class Meta:
         name = "AccessRightInProduct_VersionedChildStructure"
 
-    validable_element_ref: ValidableElementRef | None = field(
+    validable_element_ref: None | ValidableElementRef = field(
         default=None,
         metadata={
             "name": "ValidableElementRef",
@@ -28,7 +28,7 @@ class AccessRightInProductVersionedChildStructure(
         },
     )
     preassigned_fare_product_ref: (
-        SupplementProductRef | PreassignedFareProductRef | None
+        None | SupplementProductRef | PreassignedFareProductRef
     ) = field(
         default=None,
         metadata={

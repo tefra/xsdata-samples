@@ -38,7 +38,7 @@ class PersistencyRedundancyCrc:
     class Meta:
         name = "PERSISTENCY-REDUNDANCY-CRC"
 
-    scope: PersistencyRedundancyHandlingScopeEnum | None = field(
+    scope: None | PersistencyRedundancyHandlingScopeEnum = field(
         default=None,
         metadata={
             "name": "SCOPE",
@@ -46,7 +46,7 @@ class PersistencyRedundancyCrc:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    algorithm_family: String | None = field(
+    algorithm_family: None | String = field(
         default=None,
         metadata={
             "name": "ALGORITHM-FAMILY",
@@ -54,7 +54,7 @@ class PersistencyRedundancyCrc:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    length: PositiveInteger | None = field(
+    length: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "LENGTH",
@@ -62,14 +62,14 @@ class PersistencyRedundancyCrc:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

@@ -38,7 +38,7 @@ class TelephoneNumberType:
         digits.</description> </description>
     """
 
-    full_number_text: TextType | None = field(
+    full_number_text: None | TextType = field(
         default=None,
         metadata={
             "name": "FullNumberText",
@@ -47,7 +47,7 @@ class TelephoneNumberType:
             "required": True,
         },
     )
-    country_code_text: TelephoneNumberCountryCodeType | None = field(
+    country_code_text: None | TelephoneNumberCountryCodeType = field(
         default=None,
         metadata={
             "name": "CountryCodeText",
@@ -55,7 +55,7 @@ class TelephoneNumberType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
         },
     )
-    identification_code_text: TelephoneNumberIdentificationCodeType | None = (
+    identification_code_text: None | TelephoneNumberIdentificationCodeType = (
         field(
             default=None,
             metadata={
@@ -65,7 +65,7 @@ class TelephoneNumberType:
             },
         )
     )
-    subscriber_number_text: TelephoneNumberSubscriberNumberType | None = field(
+    subscriber_number_text: None | TelephoneNumberSubscriberNumberType = field(
         default=None,
         metadata={
             "name": "SubscriberNumberText",

@@ -31,7 +31,7 @@ __NAMESPACE__ = (
 
 @dataclass
 class RiskElementInvolvementType(RiskInvolvement):
-    insured_risk_element: RiskElementRoleType | None = field(
+    insured_risk_element: None | RiskElementRoleType = field(
         default=None,
         metadata={
             "name": "InsuredRiskElement",
@@ -40,7 +40,7 @@ class RiskElementInvolvementType(RiskInvolvement):
             "required": True,
         },
     )
-    validity: TimePeriodType | None = field(
+    validity: None | TimePeriodType = field(
         default=None,
         metadata={
             "name": "Validity",
@@ -48,7 +48,7 @@ class RiskElementInvolvementType(RiskInvolvement):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    classification_code: ClassificationType | None = field(
+    classification_code: None | ClassificationType = field(
         default=None,
         metadata={
             "name": "ClassificationCode",
@@ -56,7 +56,7 @@ class RiskElementInvolvementType(RiskInvolvement):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    engineering_car_ear: EngineeringCarEarType | None = field(
+    engineering_car_ear: None | EngineeringCarEarType = field(
         default=None,
         metadata={
             "name": "EngineeringCarEar",
@@ -64,7 +64,7 @@ class RiskElementInvolvementType(RiskInvolvement):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    engineering_mb: EngineeringMbType | None = field(
+    engineering_mb: None | EngineeringMbType = field(
         default=None,
         metadata={
             "name": "EngineeringMb",
@@ -72,7 +72,7 @@ class RiskElementInvolvementType(RiskInvolvement):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    engineering_pm: EngineeringPmType | None = field(
+    engineering_pm: None | EngineeringPmType = field(
         default=None,
         metadata={
             "name": "EngineeringPm",

@@ -48,7 +48,7 @@ class FrameMapping:
     class Meta:
         name = "FRAME-MAPPING"
 
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -56,7 +56,7 @@ class FrameMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    source_frame_ref: FrameMapping.SourceFrameRef | None = field(
+    source_frame_ref: None | FrameMapping.SourceFrameRef = field(
         default=None,
         metadata={
             "name": "SOURCE-FRAME-REF",
@@ -64,7 +64,7 @@ class FrameMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    target_frame_ref: FrameMapping.TargetFrameRef | None = field(
+    target_frame_ref: None | FrameMapping.TargetFrameRef = field(
         default=None,
         metadata={
             "name": "TARGET-FRAME-REF",
@@ -72,7 +72,7 @@ class FrameMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -80,14 +80,14 @@ class FrameMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -98,7 +98,7 @@ class FrameMapping:
 
     @dataclass
     class SourceFrameRef(Ref):
-        dest: FrameTriggeringSubtypesEnum | None = field(
+        dest: None | FrameTriggeringSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -109,7 +109,7 @@ class FrameMapping:
 
     @dataclass
     class TargetFrameRef(Ref):
-        dest: FrameTriggeringSubtypesEnum | None = field(
+        dest: None | FrameTriggeringSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

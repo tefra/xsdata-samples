@@ -15,7 +15,7 @@ class VehicleModelProfileVersionStructure(DataManagedObjectStructure):
     class Meta:
         name = "VehicleModelProfile_VersionStructure"
 
-    name: MultilingualString | None = field(
+    name: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "Name",
@@ -23,7 +23,7 @@ class VehicleModelProfileVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    number_of_gears: int | None = field(
+    number_of_gears: None | int = field(
         default=None,
         metadata={
             "name": "NumberOfGears",
@@ -31,7 +31,7 @@ class VehicleModelProfileVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    child_seat: ChildSeatEnumeration | None = field(
+    child_seat: None | ChildSeatEnumeration = field(
         default=None,
         metadata={
             "name": "ChildSeat",
@@ -39,7 +39,7 @@ class VehicleModelProfileVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    range_between_refuelling: Decimal | None = field(
+    range_between_refuelling: None | Decimal = field(
         default=None,
         metadata={
             "name": "RangeBetweenRefuelling",
@@ -47,7 +47,7 @@ class VehicleModelProfileVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    is_portable: bool | None = field(
+    is_portable: None | bool = field(
         default=None,
         metadata={
             "name": "IsPortable",

@@ -20,7 +20,7 @@ class ConfigurableLibraryRefType:
     class Meta:
         name = "configurableLibraryRefType"
 
-    configurable_element_values: ConfigurableElementValues | None = field(
+    configurable_element_values: None | ConfigurableElementValues = field(
         default=None,
         metadata={
             "name": "configurableElementValues",
@@ -28,35 +28,35 @@ class ConfigurableLibraryRefType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    vendor: str | None = field(
+    vendor: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "required": True,
         },
     )
-    library: str | None = field(
+    library: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "required": True,
         },
     )
-    name: str | None = field(
+    name: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "required": True,
         },
     )
-    version: str | None = field(
+    version: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "required": True,
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",

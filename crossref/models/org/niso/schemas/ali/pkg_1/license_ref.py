@@ -15,27 +15,27 @@ class LicenseRef:
         name = "license_ref"
         namespace = "http://www.niso.org/schemas/ali/1.0/"
 
-    content_type: str | None = field(
+    content_type: None | str = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    start_date: str | None = field(
+    start_date: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",

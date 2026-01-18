@@ -103,7 +103,7 @@ class HwPinGroup:
     class Meta:
         name = "HW-PIN-GROUP"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -112,7 +112,7 @@ class HwPinGroup:
             "required": True,
         },
     )
-    short_name_fragments: HwPinGroup.ShortNameFragments | None = field(
+    short_name_fragments: None | HwPinGroup.ShortNameFragments = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -120,7 +120,7 @@ class HwPinGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -128,7 +128,7 @@ class HwPinGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -136,7 +136,7 @@ class HwPinGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -144,7 +144,7 @@ class HwPinGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -152,7 +152,7 @@ class HwPinGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -160,7 +160,7 @@ class HwPinGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: HwPinGroup.Annotations | None = field(
+    annotations: None | HwPinGroup.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -168,7 +168,7 @@ class HwPinGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    hw_type_ref: HwPinGroup.HwTypeRef | None = field(
+    hw_type_ref: None | HwPinGroup.HwTypeRef = field(
         default=None,
         metadata={
             "name": "HW-TYPE-REF",
@@ -176,7 +176,7 @@ class HwPinGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    hw_category_refs: HwPinGroup.HwCategoryRefs | None = field(
+    hw_category_refs: None | HwPinGroup.HwCategoryRefs = field(
         default=None,
         metadata={
             "name": "HW-CATEGORY-REFS",
@@ -184,7 +184,7 @@ class HwPinGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    hw_attribute_values: HwPinGroup.HwAttributeValues | None = field(
+    hw_attribute_values: None | HwPinGroup.HwAttributeValues = field(
         default=None,
         metadata={
             "name": "HW-ATTRIBUTE-VALUES",
@@ -192,7 +192,7 @@ class HwPinGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    hw_pin_group_content: HwPinGroupContent | None = field(
+    hw_pin_group_content: None | HwPinGroupContent = field(
         default=None,
         metadata={
             "name": "HW-PIN-GROUP-CONTENT",
@@ -200,7 +200,7 @@ class HwPinGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -208,14 +208,14 @@ class HwPinGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -223,7 +223,7 @@ class HwPinGroup:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -255,7 +255,7 @@ class HwPinGroup:
 
     @dataclass
     class HwTypeRef(Ref):
-        dest: HwTypeSubtypesEnum | None = field(
+        dest: None | HwTypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -277,7 +277,7 @@ class HwPinGroup:
 
         @dataclass
         class HwCategoryRef(Ref):
-            dest: HwCategorySubtypesEnum | None = field(
+            dest: None | HwCategorySubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -342,14 +342,14 @@ class HwPinGroupContent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

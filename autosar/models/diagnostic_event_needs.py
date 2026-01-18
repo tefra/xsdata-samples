@@ -157,7 +157,7 @@ class DiagnosticEventNeeds:
     class Meta:
         name = "DIAGNOSTIC-EVENT-NEEDS"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -166,7 +166,7 @@ class DiagnosticEventNeeds:
             "required": True,
         },
     )
-    short_name_fragments: DiagnosticEventNeeds.ShortNameFragments | None = (
+    short_name_fragments: None | DiagnosticEventNeeds.ShortNameFragments = (
         field(
             default=None,
             metadata={
@@ -176,7 +176,7 @@ class DiagnosticEventNeeds:
             },
         )
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -184,7 +184,7 @@ class DiagnosticEventNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -192,7 +192,7 @@ class DiagnosticEventNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -200,7 +200,7 @@ class DiagnosticEventNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -208,7 +208,7 @@ class DiagnosticEventNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -216,7 +216,7 @@ class DiagnosticEventNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: DiagnosticEventNeeds.Annotations | None = field(
+    annotations: None | DiagnosticEventNeeds.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -224,7 +224,7 @@ class DiagnosticEventNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    audiences: DiagnosticEventNeeds.Audiences | None = field(
+    audiences: None | DiagnosticEventNeeds.Audiences = field(
         default=None,
         metadata={
             "name": "AUDIENCES",
@@ -232,7 +232,7 @@ class DiagnosticEventNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    diag_requirement: DiagRequirementIdString | None = field(
+    diag_requirement: None | DiagRequirementIdString = field(
         default=None,
         metadata={
             "name": "DIAG-REQUIREMENT",
@@ -240,7 +240,7 @@ class DiagnosticEventNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    security_access_level: PositiveInteger | None = field(
+    security_access_level: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "SECURITY-ACCESS-LEVEL",
@@ -248,7 +248,7 @@ class DiagnosticEventNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    consider_pto_status: Boolean | None = field(
+    consider_pto_status: None | Boolean = field(
         default=None,
         metadata={
             "name": "CONSIDER-PTO-STATUS",
@@ -256,7 +256,7 @@ class DiagnosticEventNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    deferring_fid_refs: DiagnosticEventNeeds.DeferringFidRefs | None = field(
+    deferring_fid_refs: None | DiagnosticEventNeeds.DeferringFidRefs = field(
         default=None,
         metadata={
             "name": "DEFERRING-FID-REFS",
@@ -265,7 +265,7 @@ class DiagnosticEventNeeds:
         },
     )
     diag_event_debounce_algorithm: (
-        DiagnosticEventNeeds.DiagEventDebounceAlgorithm | None
+        None | DiagnosticEventNeeds.DiagEventDebounceAlgorithm
     ) = field(
         default=None,
         metadata={
@@ -274,7 +274,7 @@ class DiagnosticEventNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    dtc_kind: DtcKindEnum | None = field(
+    dtc_kind: None | DtcKindEnum = field(
         default=None,
         metadata={
             "name": "DTC-KIND",
@@ -282,7 +282,7 @@ class DiagnosticEventNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    dtc_number: PositiveInteger | None = field(
+    dtc_number: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "DTC-NUMBER",
@@ -290,7 +290,7 @@ class DiagnosticEventNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    inhibiting_fid_ref: DiagnosticEventNeeds.InhibitingFidRef | None = field(
+    inhibiting_fid_ref: None | DiagnosticEventNeeds.InhibitingFidRef = field(
         default=None,
         metadata={
             "name": "INHIBITING-FID-REF",
@@ -299,7 +299,7 @@ class DiagnosticEventNeeds:
         },
     )
     inhibiting_secondary_fid_refs: (
-        DiagnosticEventNeeds.InhibitingSecondaryFidRefs | None
+        None | DiagnosticEventNeeds.InhibitingSecondaryFidRefs
     ) = field(
         default=None,
         metadata={
@@ -308,7 +308,7 @@ class DiagnosticEventNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    obd_dtc_number: PositiveInteger | None = field(
+    obd_dtc_number: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "OBD-DTC-NUMBER",
@@ -316,7 +316,7 @@ class DiagnosticEventNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    prestored_freezeframe_stored_in_nvm: Boolean | None = field(
+    prestored_freezeframe_stored_in_nvm: None | Boolean = field(
         default=None,
         metadata={
             "name": "PRESTORED-FREEZEFRAME-STORED-IN-NVM",
@@ -324,7 +324,7 @@ class DiagnosticEventNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    report_behavior: ReportBehaviorEnum | None = field(
+    report_behavior: None | ReportBehaviorEnum = field(
         default=None,
         metadata={
             "name": "REPORT-BEHAVIOR",
@@ -332,7 +332,7 @@ class DiagnosticEventNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    uds_dtc_number: PositiveInteger | None = field(
+    uds_dtc_number: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "UDS-DTC-NUMBER",
@@ -340,7 +340,7 @@ class DiagnosticEventNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    uses_monitor_data: Boolean | None = field(
+    uses_monitor_data: None | Boolean = field(
         default=None,
         metadata={
             "name": "USES-MONITOR-DATA",
@@ -348,14 +348,14 @@ class DiagnosticEventNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -363,7 +363,7 @@ class DiagnosticEventNeeds:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -426,7 +426,7 @@ class DiagnosticEventNeeds:
 
         @dataclass
         class DeferringFidRef(Ref):
-            dest: FunctionInhibitionNeedsSubtypesEnum | None = field(
+            dest: None | FunctionInhibitionNeedsSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -438,7 +438,7 @@ class DiagnosticEventNeeds:
     @dataclass
     class DiagEventDebounceAlgorithm:
         diag_event_debounce_counter_based: (
-            DiagEventDebounceCounterBased | None
+            None | DiagEventDebounceCounterBased
         ) = field(
             default=None,
             metadata={
@@ -448,7 +448,7 @@ class DiagnosticEventNeeds:
             },
         )
         diag_event_debounce_monitor_internal: (
-            DiagEventDebounceMonitorInternal | None
+            None | DiagEventDebounceMonitorInternal
         ) = field(
             default=None,
             metadata={
@@ -457,7 +457,7 @@ class DiagnosticEventNeeds:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diag_event_debounce_time_based: DiagEventDebounceTimeBased | None = (
+        diag_event_debounce_time_based: None | DiagEventDebounceTimeBased = (
             field(
                 default=None,
                 metadata={
@@ -470,7 +470,7 @@ class DiagnosticEventNeeds:
 
     @dataclass
     class InhibitingFidRef(Ref):
-        dest: FunctionInhibitionNeedsSubtypesEnum | None = field(
+        dest: None | FunctionInhibitionNeedsSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -494,7 +494,7 @@ class DiagnosticEventNeeds:
 
         @dataclass
         class InhibitingSecondaryFidRef(Ref):
-            dest: FunctionInhibitionNeedsSubtypesEnum | None = field(
+            dest: None | FunctionInhibitionNeedsSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",

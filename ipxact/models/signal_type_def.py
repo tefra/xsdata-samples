@@ -39,7 +39,7 @@ class SignalTypeDef:
         name = "signalTypeDef"
         namespace = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
-    signal_type: SignalTypeDefSignalType | None = field(
+    signal_type: None | SignalTypeDefSignalType = field(
         default=None,
         metadata={
             "name": "signalType",
@@ -54,7 +54,7 @@ class SignalTypeDef:
             "type": "Element",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -70,7 +70,7 @@ class SignalTypeDef:
                 "required": True,
             },
         )
-        id: str | None = field(
+        id: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",

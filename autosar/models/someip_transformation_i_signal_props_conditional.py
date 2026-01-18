@@ -112,7 +112,7 @@ class SomeipTransformationISignalPropsConditional:
     class Meta:
         name = "SOMEIP-TRANSFORMATION-I-SIGNAL-PROPS-CONDITIONAL"
 
-    cs_error_reaction: CsTransformerErrorReactionEnum | None = field(
+    cs_error_reaction: None | CsTransformerErrorReactionEnum = field(
         default=None,
         metadata={
             "name": "CS-ERROR-REACTION",
@@ -121,8 +121,8 @@ class SomeipTransformationISignalPropsConditional:
         },
     )
     data_prototype_transformation_propss: (
-        SomeipTransformationISignalPropsConditional.DataPrototypeTransformationPropss
-        | None
+        None
+        | SomeipTransformationISignalPropsConditional.DataPrototypeTransformationPropss
     ) = field(
         default=None,
         metadata={
@@ -132,7 +132,7 @@ class SomeipTransformationISignalPropsConditional:
         },
     )
     transformer_ref: (
-        SomeipTransformationISignalPropsConditional.TransformerRef | None
+        None | SomeipTransformationISignalPropsConditional.TransformerRef
     ) = field(
         default=None,
         metadata={
@@ -141,7 +141,7 @@ class SomeipTransformationISignalPropsConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    implements_legacy_string_serialization: Boolean | None = field(
+    implements_legacy_string_serialization: None | Boolean = field(
         default=None,
         metadata={
             "name": "IMPLEMENTS-LEGACY-STRING-SERIALIZATION",
@@ -149,7 +149,7 @@ class SomeipTransformationISignalPropsConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    implements_someip_string_handling: Boolean | None = field(
+    implements_someip_string_handling: None | Boolean = field(
         default=None,
         metadata={
             "name": "IMPLEMENTS-SOMEIP-STRING-HANDLING",
@@ -157,7 +157,7 @@ class SomeipTransformationISignalPropsConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    interface_version: PositiveInteger | None = field(
+    interface_version: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "INTERFACE-VERSION",
@@ -165,7 +165,7 @@ class SomeipTransformationISignalPropsConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    is_dynamic_length_field_size: Boolean | None = field(
+    is_dynamic_length_field_size: None | Boolean = field(
         default=None,
         metadata={
             "name": "IS-DYNAMIC-LENGTH-FIELD-SIZE",
@@ -173,7 +173,7 @@ class SomeipTransformationISignalPropsConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    message_type: SomeipMessageTypeEnum | None = field(
+    message_type: None | SomeipMessageTypeEnum = field(
         default=None,
         metadata={
             "name": "MESSAGE-TYPE",
@@ -181,7 +181,7 @@ class SomeipTransformationISignalPropsConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    session_handling_sr: SomeipTransformerSessionHandlingEnum | None = field(
+    session_handling_sr: None | SomeipTransformerSessionHandlingEnum = field(
         default=None,
         metadata={
             "name": "SESSION-HANDLING-SR",
@@ -189,7 +189,7 @@ class SomeipTransformationISignalPropsConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    size_of_array_length_fields: PositiveInteger | None = field(
+    size_of_array_length_fields: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "SIZE-OF-ARRAY-LENGTH-FIELDS",
@@ -197,7 +197,7 @@ class SomeipTransformationISignalPropsConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    size_of_string_length_fields: PositiveInteger | None = field(
+    size_of_string_length_fields: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "SIZE-OF-STRING-LENGTH-FIELDS",
@@ -205,7 +205,7 @@ class SomeipTransformationISignalPropsConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    size_of_struct_length_fields: PositiveInteger | None = field(
+    size_of_struct_length_fields: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "SIZE-OF-STRUCT-LENGTH-FIELDS",
@@ -213,7 +213,7 @@ class SomeipTransformationISignalPropsConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    size_of_union_length_fields: PositiveInteger | None = field(
+    size_of_union_length_fields: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "SIZE-OF-UNION-LENGTH-FIELDS",
@@ -222,7 +222,7 @@ class SomeipTransformationISignalPropsConditional:
         },
     )
     tlv_data_ids: (
-        SomeipTransformationISignalPropsConditional.TlvDataIds | None
+        None | SomeipTransformationISignalPropsConditional.TlvDataIds
     ) = field(
         default=None,
         metadata={
@@ -232,7 +232,7 @@ class SomeipTransformationISignalPropsConditional:
         },
     )
     tlv_data_id_0_refs: (
-        SomeipTransformationISignalPropsConditional.TlvDataId0Refs | None
+        None | SomeipTransformationISignalPropsConditional.TlvDataId0Refs
     ) = field(
         default=None,
         metadata={
@@ -242,8 +242,8 @@ class SomeipTransformationISignalPropsConditional:
         },
     )
     tlv_data_id_definition_refs: (
-        SomeipTransformationISignalPropsConditional.TlvDataIdDefinitionRefs
-        | None
+        None
+        | SomeipTransformationISignalPropsConditional.TlvDataIdDefinitionRefs
     ) = field(
         default=None,
         metadata={
@@ -252,7 +252,7 @@ class SomeipTransformationISignalPropsConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -260,14 +260,14 @@ class SomeipTransformationISignalPropsConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -291,7 +291,7 @@ class SomeipTransformationISignalPropsConditional:
 
     @dataclass
     class TransformerRef(Ref):
-        dest: TransformationTechnologySubtypesEnum | None = field(
+        dest: None | TransformationTechnologySubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -326,7 +326,7 @@ class SomeipTransformationISignalPropsConditional:
 
         @dataclass
         class TlvDataId0Ref(Ref):
-            dest: TlvDataIdDefinitionSetSubtypesEnum | None = field(
+            dest: None | TlvDataIdDefinitionSetSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -350,7 +350,7 @@ class SomeipTransformationISignalPropsConditional:
 
         @dataclass
         class TlvDataIdDefinitionRef(Ref):
-            dest: TlvDataIdDefinitionSetSubtypesEnum | None = field(
+            dest: None | TlvDataIdDefinitionSetSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",

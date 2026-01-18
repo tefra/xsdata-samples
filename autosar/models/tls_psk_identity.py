@@ -37,7 +37,7 @@ class TlsPskIdentity:
     class Meta:
         name = "TLS-PSK-IDENTITY"
 
-    pre_shared_key_ref: TlsPskIdentity.PreSharedKeyRef | None = field(
+    pre_shared_key_ref: None | TlsPskIdentity.PreSharedKeyRef = field(
         default=None,
         metadata={
             "name": "PRE-SHARED-KEY-REF",
@@ -45,7 +45,7 @@ class TlsPskIdentity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    psk_identity: String | None = field(
+    psk_identity: None | String = field(
         default=None,
         metadata={
             "name": "PSK-IDENTITY",
@@ -53,7 +53,7 @@ class TlsPskIdentity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    psk_identity_hint: String | None = field(
+    psk_identity_hint: None | String = field(
         default=None,
         metadata={
             "name": "PSK-IDENTITY-HINT",
@@ -61,14 +61,14 @@ class TlsPskIdentity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -79,7 +79,7 @@ class TlsPskIdentity:
 
     @dataclass
     class PreSharedKeyRef(Ref):
-        dest: CryptoServiceKeySubtypesEnum | None = field(
+        dest: None | CryptoServiceKeySubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

@@ -39,7 +39,7 @@ class GlobalUltimateInfoType:
     :ivar number_of_eusites_gugroup_exc_branches:
     """
 
-    gunsnumber_gu: str | None = field(
+    gunsnumber_gu: None | str = field(
         default=None,
         metadata={
             "name": "GUNSNumberGU",
@@ -49,7 +49,7 @@ class GlobalUltimateInfoType:
             "pattern": r"G([0-9]{9})",
         },
     )
-    full_name_gu: str | None = field(
+    full_name_gu: None | str = field(
         default=None,
         metadata={
             "name": "FullNameGU",
@@ -57,7 +57,7 @@ class GlobalUltimateInfoType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v2",
         },
     )
-    dunsnumber_gu: str | None = field(
+    dunsnumber_gu: None | str = field(
         default=None,
         metadata={
             "name": "DUNSNumberGU",
@@ -67,7 +67,7 @@ class GlobalUltimateInfoType:
             "pattern": r"([0-9]{9})",
         },
     )
-    country_code_gu: str | None = field(
+    country_code_gu: None | str = field(
         default=None,
         metadata={
             "name": "CountryCodeGU",
@@ -76,7 +76,7 @@ class GlobalUltimateInfoType:
             "pattern": r"[A-Z][A-Z]",
         },
     )
-    assigned_turnover_global_group: AmountType | None = field(
+    assigned_turnover_global_group: None | AmountType = field(
         default=None,
         metadata={
             "name": "AssignedTurnoverGlobalGroup",
@@ -85,7 +85,7 @@ class GlobalUltimateInfoType:
             "nillable": True,
         },
     )
-    assigned_number_of_employees_global_group: Decimal | None = field(
+    assigned_number_of_employees_global_group: None | Decimal = field(
         default=None,
         metadata={
             "name": "AssignedNumberOfEmployeesGlobalGroup",
@@ -93,7 +93,7 @@ class GlobalUltimateInfoType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v2",
         },
     )
-    assigned_sicgu: str | None = field(
+    assigned_sicgu: None | str = field(
         default=None,
         metadata={
             "name": "AssignedSICGU",
@@ -101,7 +101,7 @@ class GlobalUltimateInfoType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v2",
         },
     )
-    assigned_sicname_gu: str | None = field(
+    assigned_sicname_gu: None | str = field(
         default=None,
         metadata={
             "name": "AssignedSICNameGU",
@@ -109,7 +109,7 @@ class GlobalUltimateInfoType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v2",
         },
     )
-    assigned_sicguproportion_code: CodeType | None = field(
+    assigned_sicguproportion_code: None | CodeType = field(
         default=None,
         metadata={
             "name": "AssignedSICGUProportionCode",
@@ -117,7 +117,7 @@ class GlobalUltimateInfoType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v2",
         },
     )
-    number_of_level_in_corporate_tree: int | None = field(
+    number_of_level_in_corporate_tree: None | int = field(
         default=None,
         metadata={
             "name": "NumberOfLevelInCorporateTree",
@@ -125,7 +125,7 @@ class GlobalUltimateInfoType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v2",
         },
     )
-    number_of_countries_in_group: int | None = field(
+    number_of_countries_in_group: None | int = field(
         default=None,
         metadata={
             "name": "NumberOfCountriesInGroup",
@@ -133,7 +133,7 @@ class GlobalUltimateInfoType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v2",
         },
     )
-    is_multinational: bool | None = field(
+    is_multinational: None | bool = field(
         default=None,
         metadata={
             "name": "IsMultinational",
@@ -141,7 +141,7 @@ class GlobalUltimateInfoType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v2",
         },
     )
-    is_multinational_exc_branches: bool | None = field(
+    is_multinational_exc_branches: None | bool = field(
         default=None,
         metadata={
             "name": "IsMultinationalExcBranches",
@@ -149,7 +149,7 @@ class GlobalUltimateInfoType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v2",
         },
     )
-    number_of_sites_gugroup: int | None = field(
+    number_of_sites_gugroup: None | int = field(
         default=None,
         metadata={
             "name": "NumberOfSitesGUGroup",
@@ -157,7 +157,7 @@ class GlobalUltimateInfoType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v2",
         },
     )
-    number_of_sites_gugroup_exc_branches: int | None = field(
+    number_of_sites_gugroup_exc_branches: None | int = field(
         default=None,
         metadata={
             "name": "NumberOfSitesGUGroupExcBranches",
@@ -165,7 +165,7 @@ class GlobalUltimateInfoType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v2",
         },
     )
-    number_of_sites_gugroup_in_this_country: int | None = field(
+    number_of_sites_gugroup_in_this_country: None | int = field(
         default=None,
         metadata={
             "name": "NumberOfSitesGUGroupInThisCountry",
@@ -173,7 +173,7 @@ class GlobalUltimateInfoType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v2",
         },
     )
-    number_of_sites_gugroup_in_this_country_exc_branches: int | None = field(
+    number_of_sites_gugroup_in_this_country_exc_branches: None | int = field(
         default=None,
         metadata={
             "name": "NumberOfSitesGUGroupInThisCountryExcBranches",
@@ -181,7 +181,7 @@ class GlobalUltimateInfoType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v2",
         },
     )
-    number_of_eusites_gugroup: int | None = field(
+    number_of_eusites_gugroup: None | int = field(
         default=None,
         metadata={
             "name": "NumberOfEUSitesGUGroup",
@@ -189,7 +189,7 @@ class GlobalUltimateInfoType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v2",
         },
     )
-    number_of_eusites_gugroup_exc_branches: int | None = field(
+    number_of_eusites_gugroup_exc_branches: None | int = field(
         default=None,
         metadata={
             "name": "NumberOfEUSitesGUGroupExcBranches",

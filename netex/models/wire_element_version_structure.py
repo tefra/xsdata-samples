@@ -15,7 +15,7 @@ class WireElementVersionStructure(InfrastructureLinkVersionStructure):
     class Meta:
         name = "WireElement_VersionStructure"
 
-    from_point_ref: WirePointRefStructure | None = field(
+    from_point_ref: None | WirePointRefStructure = field(
         default=None,
         metadata={
             "name": "FromPointRef",
@@ -24,7 +24,7 @@ class WireElementVersionStructure(InfrastructureLinkVersionStructure):
             "required": True,
         },
     )
-    to_point_ref: WirePointRefStructure | None = field(
+    to_point_ref: None | WirePointRefStructure = field(
         default=None,
         metadata={
             "name": "ToPointRef",

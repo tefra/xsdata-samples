@@ -58,7 +58,7 @@ class SoConIPduIdentifier:
     class Meta:
         name = "SO-CON-I-PDU-IDENTIFIER"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -67,7 +67,7 @@ class SoConIPduIdentifier:
             "required": True,
         },
     )
-    short_name_fragments: SoConIPduIdentifier.ShortNameFragments | None = (
+    short_name_fragments: None | SoConIPduIdentifier.ShortNameFragments = (
         field(
             default=None,
             metadata={
@@ -77,7 +77,7 @@ class SoConIPduIdentifier:
             },
         )
     )
-    header_id: PositiveInteger | None = field(
+    header_id: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "HEADER-ID",
@@ -85,7 +85,7 @@ class SoConIPduIdentifier:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    pdu_collection_pdu_timeout: TimeValue | None = field(
+    pdu_collection_pdu_timeout: None | TimeValue = field(
         default=None,
         metadata={
             "name": "PDU-COLLECTION-PDU-TIMEOUT",
@@ -93,7 +93,7 @@ class SoConIPduIdentifier:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    pdu_collection_semantics: PduCollectionSemanticsEnum | None = field(
+    pdu_collection_semantics: None | PduCollectionSemanticsEnum = field(
         default=None,
         metadata={
             "name": "PDU-COLLECTION-SEMANTICS",
@@ -101,7 +101,7 @@ class SoConIPduIdentifier:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    pdu_collection_trigger: PduCollectionTriggerEnum | None = field(
+    pdu_collection_trigger: None | PduCollectionTriggerEnum = field(
         default=None,
         metadata={
             "name": "PDU-COLLECTION-TRIGGER",
@@ -109,7 +109,7 @@ class SoConIPduIdentifier:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    pdu_triggering_ref: SoConIPduIdentifier.PduTriggeringRef | None = field(
+    pdu_triggering_ref: None | SoConIPduIdentifier.PduTriggeringRef = field(
         default=None,
         metadata={
             "name": "PDU-TRIGGERING-REF",
@@ -117,14 +117,14 @@ class SoConIPduIdentifier:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -146,7 +146,7 @@ class SoConIPduIdentifier:
 
     @dataclass
     class PduTriggeringRef(Ref):
-        dest: PduTriggeringSubtypesEnum | None = field(
+        dest: None | PduTriggeringSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

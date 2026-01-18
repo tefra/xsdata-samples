@@ -67,7 +67,7 @@ class CanControllerFdConfigurationRequirements:
     class Meta:
         name = "CAN-CONTROLLER-FD-CONFIGURATION-REQUIREMENTS"
 
-    max_number_of_time_quanta_per_bit: Integer | None = field(
+    max_number_of_time_quanta_per_bit: None | Integer = field(
         default=None,
         metadata={
             "name": "MAX-NUMBER-OF-TIME-QUANTA-PER-BIT",
@@ -75,7 +75,7 @@ class CanControllerFdConfigurationRequirements:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    max_sample_point: Float | None = field(
+    max_sample_point: None | Float = field(
         default=None,
         metadata={
             "name": "MAX-SAMPLE-POINT",
@@ -83,7 +83,7 @@ class CanControllerFdConfigurationRequirements:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    max_sync_jump_width: Float | None = field(
+    max_sync_jump_width: None | Float = field(
         default=None,
         metadata={
             "name": "MAX-SYNC-JUMP-WIDTH",
@@ -91,7 +91,7 @@ class CanControllerFdConfigurationRequirements:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    max_trcv_delay_compensation_offset: TimeValue | None = field(
+    max_trcv_delay_compensation_offset: None | TimeValue = field(
         default=None,
         metadata={
             "name": "MAX-TRCV-DELAY-COMPENSATION-OFFSET",
@@ -99,7 +99,7 @@ class CanControllerFdConfigurationRequirements:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    min_number_of_time_quanta_per_bit: Integer | None = field(
+    min_number_of_time_quanta_per_bit: None | Integer = field(
         default=None,
         metadata={
             "name": "MIN-NUMBER-OF-TIME-QUANTA-PER-BIT",
@@ -107,7 +107,7 @@ class CanControllerFdConfigurationRequirements:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    min_sample_point: Float | None = field(
+    min_sample_point: None | Float = field(
         default=None,
         metadata={
             "name": "MIN-SAMPLE-POINT",
@@ -115,7 +115,7 @@ class CanControllerFdConfigurationRequirements:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    min_sync_jump_width: Float | None = field(
+    min_sync_jump_width: None | Float = field(
         default=None,
         metadata={
             "name": "MIN-SYNC-JUMP-WIDTH",
@@ -123,7 +123,7 @@ class CanControllerFdConfigurationRequirements:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    min_trcv_delay_compensation_offset: TimeValue | None = field(
+    min_trcv_delay_compensation_offset: None | TimeValue = field(
         default=None,
         metadata={
             "name": "MIN-TRCV-DELAY-COMPENSATION-OFFSET",
@@ -131,7 +131,7 @@ class CanControllerFdConfigurationRequirements:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    padding_value: PositiveInteger | None = field(
+    padding_value: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "PADDING-VALUE",
@@ -139,7 +139,7 @@ class CanControllerFdConfigurationRequirements:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tx_bit_rate_switch: Boolean | None = field(
+    tx_bit_rate_switch: None | Boolean = field(
         default=None,
         metadata={
             "name": "TX-BIT-RATE-SWITCH",
@@ -147,14 +147,14 @@ class CanControllerFdConfigurationRequirements:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

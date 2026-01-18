@@ -59,7 +59,7 @@ class EventControlledTiming:
     class Meta:
         name = "EVENT-CONTROLLED-TIMING"
 
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -67,7 +67,7 @@ class EventControlledTiming:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -75,7 +75,7 @@ class EventControlledTiming:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -83,7 +83,7 @@ class EventControlledTiming:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -91,7 +91,7 @@ class EventControlledTiming:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    number_of_repetitions: Integer | None = field(
+    number_of_repetitions: None | Integer = field(
         default=None,
         metadata={
             "name": "NUMBER-OF-REPETITIONS",
@@ -99,7 +99,7 @@ class EventControlledTiming:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    repetition_period: TimeRangeType | None = field(
+    repetition_period: None | TimeRangeType = field(
         default=None,
         metadata={
             "name": "REPETITION-PERIOD",
@@ -107,14 +107,14 @@ class EventControlledTiming:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

@@ -95,7 +95,7 @@ class TdEventTtCanCycleStart:
     class Meta:
         name = "TD-EVENT-TT-CAN-CYCLE-START"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -104,7 +104,7 @@ class TdEventTtCanCycleStart:
             "required": True,
         },
     )
-    short_name_fragments: TdEventTtCanCycleStart.ShortNameFragments | None = (
+    short_name_fragments: None | TdEventTtCanCycleStart.ShortNameFragments = (
         field(
             default=None,
             metadata={
@@ -114,7 +114,7 @@ class TdEventTtCanCycleStart:
             },
         )
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -122,7 +122,7 @@ class TdEventTtCanCycleStart:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -130,7 +130,7 @@ class TdEventTtCanCycleStart:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -138,7 +138,7 @@ class TdEventTtCanCycleStart:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -146,7 +146,7 @@ class TdEventTtCanCycleStart:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -154,7 +154,7 @@ class TdEventTtCanCycleStart:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: TdEventTtCanCycleStart.Annotations | None = field(
+    annotations: None | TdEventTtCanCycleStart.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -162,7 +162,7 @@ class TdEventTtCanCycleStart:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -170,7 +170,7 @@ class TdEventTtCanCycleStart:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    occurrence_expression: TdEventOccurrenceExpression | None = field(
+    occurrence_expression: None | TdEventOccurrenceExpression = field(
         default=None,
         metadata={
             "name": "OCCURRENCE-EXPRESSION",
@@ -178,7 +178,7 @@ class TdEventTtCanCycleStart:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ecu_instance_ref: TdEventTtCanCycleStart.EcuInstanceRef | None = field(
+    ecu_instance_ref: None | TdEventTtCanCycleStart.EcuInstanceRef = field(
         default=None,
         metadata={
             "name": "ECU-INSTANCE-REF",
@@ -186,7 +186,7 @@ class TdEventTtCanCycleStart:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    cycle_repetition: Integer | None = field(
+    cycle_repetition: None | Integer = field(
         default=None,
         metadata={
             "name": "CYCLE-REPETITION",
@@ -194,7 +194,7 @@ class TdEventTtCanCycleStart:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tt_can_cluster_ref: TdEventTtCanCycleStart.TtCanClusterRef | None = field(
+    tt_can_cluster_ref: None | TdEventTtCanCycleStart.TtCanClusterRef = field(
         default=None,
         metadata={
             "name": "TT-CAN-CLUSTER-REF",
@@ -202,14 +202,14 @@ class TdEventTtCanCycleStart:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -217,7 +217,7 @@ class TdEventTtCanCycleStart:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -249,7 +249,7 @@ class TdEventTtCanCycleStart:
 
     @dataclass
     class EcuInstanceRef(Ref):
-        dest: EcuInstanceSubtypesEnum | None = field(
+        dest: None | EcuInstanceSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -260,7 +260,7 @@ class TdEventTtCanCycleStart:
 
     @dataclass
     class TtCanClusterRef(Ref):
-        dest: TtcanClusterSubtypesEnum | None = field(
+        dest: None | TtcanClusterSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

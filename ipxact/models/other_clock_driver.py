@@ -24,7 +24,7 @@ class OtherClockDriver(ClockDriverType):
         name = "otherClockDriver"
         namespace = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
-    clock_name: str | None = field(
+    clock_name: None | str = field(
         default=None,
         metadata={
             "name": "clockName",
@@ -32,7 +32,7 @@ class OtherClockDriver(ClockDriverType):
             "required": True,
         },
     )
-    clock_source: str | None = field(
+    clock_source: None | str = field(
         default=None,
         metadata={
             "name": "clockSource",

@@ -66,7 +66,7 @@ class AdministrativeZoneVersionStructure(ZoneVersionStructure):
     class Meta:
         name = "AdministrativeZone_VersionStructure"
 
-    public_code: PrivateCodeStructure | None = field(
+    public_code: None | PrivateCodeStructure = field(
         default=None,
         metadata={
             "name": "PublicCode",
@@ -75,7 +75,8 @@ class AdministrativeZoneVersionStructure(ZoneVersionStructure):
         },
     )
     organisation_ref_or_other_organisation_ref_or_transport_organisation_ref: (
-        RetailConsortiumRef
+        None
+        | RetailConsortiumRef
         | OnlineServiceOperatorRef
         | GeneralOrganisationRef
         | ManagementAgentRef
@@ -85,7 +86,6 @@ class AdministrativeZoneVersionStructure(ZoneVersionStructure):
         | AuthorityRef
         | OperatorRef
         | OrganisationRef
-        | None
     ) = field(
         default=None,
         metadata={
@@ -144,14 +144,14 @@ class AdministrativeZoneVersionStructure(ZoneVersionStructure):
             ),
         },
     )
-    responsibilities: ResponsibilitySetsRelStructure | None = field(
+    responsibilities: None | ResponsibilitySetsRelStructure = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    codespace_assignments: CodespaceAssignmentsRelStructure | None = field(
+    codespace_assignments: None | CodespaceAssignmentsRelStructure = field(
         default=None,
         metadata={
             "name": "codespaceAssignments",
@@ -159,7 +159,7 @@ class AdministrativeZoneVersionStructure(ZoneVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    subzones: AdministrativeZonesRelStructure | None = field(
+    subzones: None | AdministrativeZonesRelStructure = field(
         default=None,
         metadata={
             "type": "Element",

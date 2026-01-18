@@ -12,7 +12,7 @@ class QueueingEquipmentVersionStructure(AccessEquipmentVersionStructure):
     class Meta:
         name = "QueueingEquipment_VersionStructure"
 
-    number_of_servers: int | None = field(
+    number_of_servers: None | int = field(
         default=None,
         metadata={
             "name": "NumberOfServers",
@@ -20,7 +20,7 @@ class QueueingEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    railed_queue: bool | None = field(
+    railed_queue: None | bool = field(
         default=None,
         metadata={
             "name": "RailedQueue",
@@ -28,7 +28,7 @@ class QueueingEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    ticketed_queue: bool | None = field(
+    ticketed_queue: None | bool = field(
         default=None,
         metadata={
             "name": "TicketedQueue",
@@ -36,7 +36,7 @@ class QueueingEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    disabled_priority: bool | None = field(
+    disabled_priority: None | bool = field(
         default=None,
         metadata={
             "name": "DisabledPriority",
@@ -44,7 +44,7 @@ class QueueingEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    queuing_seated_possible: bool | None = field(
+    queuing_seated_possible: None | bool = field(
         default=None,
         metadata={
             "name": "QueuingSeatedPossible",

@@ -38,7 +38,7 @@ class RestEndpointArgument:
     class Meta:
         name = "REST-ENDPOINT-ARGUMENT"
 
-    mandatory: Boolean | None = field(
+    mandatory: None | Boolean = field(
         default=None,
         metadata={
             "name": "MANDATORY",
@@ -46,7 +46,7 @@ class RestEndpointArgument:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    parameter: RestEndpointArgument.Parameter | None = field(
+    parameter: None | RestEndpointArgument.Parameter = field(
         default=None,
         metadata={
             "name": "PARAMETER",
@@ -54,14 +54,14 @@ class RestEndpointArgument:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -72,7 +72,7 @@ class RestEndpointArgument:
 
     @dataclass
     class Parameter:
-        rest_array_property_def: RestArrayPropertyDef | None = field(
+        rest_array_property_def: None | RestArrayPropertyDef = field(
             default=None,
             metadata={
                 "name": "REST-ARRAY-PROPERTY-DEF",
@@ -80,7 +80,7 @@ class RestEndpointArgument:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        rest_boolean_property_def: RestBooleanPropertyDef | None = field(
+        rest_boolean_property_def: None | RestBooleanPropertyDef = field(
             default=None,
             metadata={
                 "name": "REST-BOOLEAN-PROPERTY-DEF",
@@ -88,7 +88,7 @@ class RestEndpointArgument:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        rest_integer_property_def: RestIntegerPropertyDef | None = field(
+        rest_integer_property_def: None | RestIntegerPropertyDef = field(
             default=None,
             metadata={
                 "name": "REST-INTEGER-PROPERTY-DEF",
@@ -96,7 +96,7 @@ class RestEndpointArgument:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        rest_number_property_def: RestNumberPropertyDef | None = field(
+        rest_number_property_def: None | RestNumberPropertyDef = field(
             default=None,
             metadata={
                 "name": "REST-NUMBER-PROPERTY-DEF",
@@ -104,7 +104,7 @@ class RestEndpointArgument:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        rest_object_ref: RestObjectRef | None = field(
+        rest_object_ref: None | RestObjectRef = field(
             default=None,
             metadata={
                 "name": "REST-OBJECT-REF",
@@ -112,7 +112,7 @@ class RestEndpointArgument:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        rest_string_property_def: RestStringPropertyDef | None = field(
+        rest_string_property_def: None | RestStringPropertyDef = field(
             default=None,
             metadata={
                 "name": "REST-STRING-PROPERTY-DEF",

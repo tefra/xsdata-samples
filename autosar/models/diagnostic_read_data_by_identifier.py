@@ -102,7 +102,7 @@ class DiagnosticReadDataByIdentifier:
     class Meta:
         name = "DIAGNOSTIC-READ-DATA-BY-IDENTIFIER"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -112,7 +112,7 @@ class DiagnosticReadDataByIdentifier:
         },
     )
     short_name_fragments: (
-        DiagnosticReadDataByIdentifier.ShortNameFragments | None
+        None | DiagnosticReadDataByIdentifier.ShortNameFragments
     ) = field(
         default=None,
         metadata={
@@ -121,7 +121,7 @@ class DiagnosticReadDataByIdentifier:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -129,7 +129,7 @@ class DiagnosticReadDataByIdentifier:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -137,7 +137,7 @@ class DiagnosticReadDataByIdentifier:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -145,7 +145,7 @@ class DiagnosticReadDataByIdentifier:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -153,7 +153,7 @@ class DiagnosticReadDataByIdentifier:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -161,7 +161,7 @@ class DiagnosticReadDataByIdentifier:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: DiagnosticReadDataByIdentifier.Annotations | None = field(
+    annotations: None | DiagnosticReadDataByIdentifier.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -169,7 +169,7 @@ class DiagnosticReadDataByIdentifier:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -178,7 +178,7 @@ class DiagnosticReadDataByIdentifier:
         },
     )
     access_permission_ref: (
-        DiagnosticReadDataByIdentifier.AccessPermissionRef | None
+        None | DiagnosticReadDataByIdentifier.AccessPermissionRef
     ) = field(
         default=None,
         metadata={
@@ -188,7 +188,7 @@ class DiagnosticReadDataByIdentifier:
         },
     )
     data_identifier_ref: (
-        DiagnosticReadDataByIdentifier.DataIdentifierRef | None
+        None | DiagnosticReadDataByIdentifier.DataIdentifierRef
     ) = field(
         default=None,
         metadata={
@@ -197,7 +197,7 @@ class DiagnosticReadDataByIdentifier:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    read_class_ref: DiagnosticReadDataByIdentifier.ReadClassRef | None = field(
+    read_class_ref: None | DiagnosticReadDataByIdentifier.ReadClassRef = field(
         default=None,
         metadata={
             "name": "READ-CLASS-REF",
@@ -205,14 +205,14 @@ class DiagnosticReadDataByIdentifier:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -220,7 +220,7 @@ class DiagnosticReadDataByIdentifier:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -252,7 +252,7 @@ class DiagnosticReadDataByIdentifier:
 
     @dataclass
     class AccessPermissionRef(Ref):
-        dest: DiagnosticAccessPermissionSubtypesEnum | None = field(
+        dest: None | DiagnosticAccessPermissionSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -263,7 +263,7 @@ class DiagnosticReadDataByIdentifier:
 
     @dataclass
     class DataIdentifierRef(Ref):
-        dest: DiagnosticAbstractDataIdentifierSubtypesEnum | None = field(
+        dest: None | DiagnosticAbstractDataIdentifierSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -274,7 +274,7 @@ class DiagnosticReadDataByIdentifier:
 
     @dataclass
     class ReadClassRef(Ref):
-        dest: DiagnosticReadDataByIdentifierClassSubtypesEnum | None = field(
+        dest: None | DiagnosticReadDataByIdentifierClassSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

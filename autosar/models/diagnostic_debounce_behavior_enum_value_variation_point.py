@@ -50,14 +50,14 @@ class DiagnosticDebounceBehaviorEnumValueVariationPoint:
     class Meta:
         name = "DIAGNOSTIC-DEBOUNCE-BEHAVIOR-ENUM-VALUE-VARIATION-POINT"
 
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -65,28 +65,28 @@ class DiagnosticDebounceBehaviorEnumValueVariationPoint:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    binding_time: BindingTimeEnumSimple | None = field(
+    binding_time: None | BindingTimeEnumSimple = field(
         default=None,
         metadata={
             "name": "BINDING-TIME",
             "type": "Attribute",
         },
     )
-    blueprint_value: str | None = field(
+    blueprint_value: None | str = field(
         default=None,
         metadata={
             "name": "BLUEPRINT-VALUE",
             "type": "Attribute",
         },
     )
-    sd: str | None = field(
+    sd: None | str = field(
         default=None,
         metadata={
             "name": "SD",
             "type": "Attribute",
         },
     )
-    short_label: str | None = field(
+    short_label: None | str = field(
         default=None,
         metadata={
             "name": "SHORT-LABEL",
@@ -95,7 +95,7 @@ class DiagnosticDebounceBehaviorEnumValueVariationPoint:
             "pattern": r"[a-zA-Z]([a-zA-Z0-9]|_[a-zA-Z0-9])*_?",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "name": "BASE",
@@ -104,7 +104,7 @@ class DiagnosticDebounceBehaviorEnumValueVariationPoint:
             "pattern": r"[a-zA-Z][a-zA-Z0-9_]*",
         },
     )
-    enum_table: str | None = field(
+    enum_table: None | str = field(
         default=None,
         metadata={
             "name": "ENUM-TABLE",
@@ -139,7 +139,7 @@ class DiagnosticDebounceBehaviorEnumValueVariationPoint:
 
     @dataclass
     class SyscStringRef(Ref):
-        dest: SwSystemconstSubtypesEnum | None = field(
+        dest: None | SwSystemconstSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -150,7 +150,7 @@ class DiagnosticDebounceBehaviorEnumValueVariationPoint:
 
     @dataclass
     class SyscRef(Ref):
-        dest: SwSystemconstSubtypesEnum | None = field(
+        dest: None | SwSystemconstSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

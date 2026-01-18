@@ -86,7 +86,7 @@ class ModeDeclarationMapping:
     class Meta:
         name = "MODE-DECLARATION-MAPPING"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -95,7 +95,7 @@ class ModeDeclarationMapping:
             "required": True,
         },
     )
-    short_name_fragments: ModeDeclarationMapping.ShortNameFragments | None = (
+    short_name_fragments: None | ModeDeclarationMapping.ShortNameFragments = (
         field(
             default=None,
             metadata={
@@ -105,7 +105,7 @@ class ModeDeclarationMapping:
             },
         )
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -113,7 +113,7 @@ class ModeDeclarationMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -121,7 +121,7 @@ class ModeDeclarationMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -129,7 +129,7 @@ class ModeDeclarationMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -137,7 +137,7 @@ class ModeDeclarationMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -145,7 +145,7 @@ class ModeDeclarationMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: ModeDeclarationMapping.Annotations | None = field(
+    annotations: None | ModeDeclarationMapping.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -153,7 +153,7 @@ class ModeDeclarationMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    first_mode_refs: ModeDeclarationMapping.FirstModeRefs | None = field(
+    first_mode_refs: None | ModeDeclarationMapping.FirstModeRefs = field(
         default=None,
         metadata={
             "name": "FIRST-MODE-REFS",
@@ -161,7 +161,7 @@ class ModeDeclarationMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    second_mode_ref: ModeDeclarationMapping.SecondModeRef | None = field(
+    second_mode_ref: None | ModeDeclarationMapping.SecondModeRef = field(
         default=None,
         metadata={
             "name": "SECOND-MODE-REF",
@@ -169,14 +169,14 @@ class ModeDeclarationMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -184,7 +184,7 @@ class ModeDeclarationMapping:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -229,7 +229,7 @@ class ModeDeclarationMapping:
 
         @dataclass
         class FirstModeRef(Ref):
-            dest: ModeDeclarationSubtypesEnum | None = field(
+            dest: None | ModeDeclarationSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -240,7 +240,7 @@ class ModeDeclarationMapping:
 
     @dataclass
     class SecondModeRef(Ref):
-        dest: ModeDeclarationSubtypesEnum | None = field(
+        dest: None | ModeDeclarationSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

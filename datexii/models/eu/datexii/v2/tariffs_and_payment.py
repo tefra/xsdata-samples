@@ -53,7 +53,7 @@ class TariffsAndPayment:
     :ivar tariffs_and_payment_extension:
     """
 
-    last_updated: XmlDateTime | None = field(
+    last_updated: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "lastUpdated",
@@ -77,7 +77,7 @@ class TariffsAndPayment:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    payment_additional_description: MultilingualString | None = field(
+    payment_additional_description: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "paymentAdditionalDescription",
@@ -85,7 +85,7 @@ class TariffsAndPayment:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    free_of_charge: bool | None = field(
+    free_of_charge: None | bool = field(
         default=None,
         metadata={
             "name": "freeOfCharge",
@@ -93,7 +93,7 @@ class TariffsAndPayment:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    reservation_fee: Decimal | None = field(
+    reservation_fee: None | Decimal = field(
         default=None,
         metadata={
             "name": "reservationFee",
@@ -103,7 +103,7 @@ class TariffsAndPayment:
             "fraction_digits": 2,
         },
     )
-    url_link_address: str | None = field(
+    url_link_address: None | str = field(
         default=None,
         metadata={
             "name": "urlLinkAddress",
@@ -127,7 +127,7 @@ class TariffsAndPayment:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    accepted_payment_cards: AcceptedPaymentCards | None = field(
+    accepted_payment_cards: None | AcceptedPaymentCards = field(
         default=None,
         metadata={
             "name": "acceptedPaymentCards",
@@ -135,7 +135,7 @@ class TariffsAndPayment:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    tariffs_and_payment_extension: ExtensionType | None = field(
+    tariffs_and_payment_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "tariffsAndPaymentExtension",

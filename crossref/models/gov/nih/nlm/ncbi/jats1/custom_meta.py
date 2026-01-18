@@ -22,7 +22,7 @@ class CustomMeta:
         name = "custom-meta"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    meta_name: MetaName | None = field(
+    meta_name: None | MetaName = field(
         default=None,
         metadata={
             "name": "meta-name",
@@ -30,7 +30,7 @@ class CustomMeta:
             "required": True,
         },
     )
-    meta_value: MetaValue | None = field(
+    meta_value: None | MetaValue = field(
         default=None,
         metadata={
             "name": "meta-value",
@@ -38,74 +38,74 @@ class CustomMeta:
             "required": True,
         },
     )
-    assigning_authority: str | None = field(
+    assigning_authority: None | str = field(
         default=None,
         metadata={
             "name": "assigning-authority",
             "type": "Attribute",
         },
     )
-    hreflang: str | None = field(
+    hreflang: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    vocab: str | None = field(
+    vocab: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    vocab_identifier: str | None = field(
+    vocab_identifier: None | str = field(
         default=None,
         metadata={
             "name": "vocab-identifier",
             "type": "Attribute",
         },
     )
-    vocab_term: str | None = field(
+    vocab_term: None | str = field(
         default=None,
         metadata={
             "name": "vocab-term",
             "type": "Attribute",
         },
     )
-    vocab_term_identifier: str | None = field(
+    vocab_term_identifier: None | str = field(
         default=None,
         metadata={
             "name": "vocab-term-identifier",
             "type": "Attribute",
         },
     )
-    actuate: ActuateType | None = field(
+    actuate: None | ActuateType = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    href: str | None = field(
+    href: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    role: str | None = field(
+    role: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -113,14 +113,14 @@ class CustomMeta:
             "min_length": 1,
         },
     )
-    show: ShowType | None = field(
+    show: None | ShowType = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    title: str | None = field(
+    title: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -136,14 +136,14 @@ class CustomMeta:
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",

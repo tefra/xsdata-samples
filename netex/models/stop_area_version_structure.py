@@ -15,7 +15,7 @@ class StopAreaVersionStructure(ZoneVersionStructure):
     class Meta:
         name = "StopArea_VersionStructure"
 
-    public_code: str | None = field(
+    public_code: None | str = field(
         default=None,
         metadata={
             "name": "PublicCode",
@@ -23,7 +23,7 @@ class StopAreaVersionStructure(ZoneVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    parent_stop_area_ref: StopAreaRefStructure | None = field(
+    parent_stop_area_ref: None | StopAreaRefStructure = field(
         default=None,
         metadata={
             "name": "ParentStopAreaRef",
@@ -32,7 +32,7 @@ class StopAreaVersionStructure(ZoneVersionStructure):
         },
     )
     topographic_place_ref_or_topographic_place_view: (
-        TopographicPlaceRef | TopographicPlaceView | None
+        None | TopographicPlaceRef | TopographicPlaceView
     ) = field(
         default=None,
         metadata={

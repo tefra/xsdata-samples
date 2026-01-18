@@ -19,7 +19,7 @@ class LinkInJourneyPatternVersionedChildStructure(
         name = "LinkInJourneyPattern_VersionedChildStructure"
 
     service_link_ref_or_timing_link_ref: (
-        ServiceLinkRef | TimingLinkRef | None
+        None | ServiceLinkRef | TimingLinkRef
     ) = field(
         default=None,
         metadata={

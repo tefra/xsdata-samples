@@ -104,7 +104,7 @@ class MeasuredStackUsage:
     class Meta:
         name = "MEASURED-STACK-USAGE"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -113,7 +113,7 @@ class MeasuredStackUsage:
             "required": True,
         },
     )
-    short_name_fragments: MeasuredStackUsage.ShortNameFragments | None = field(
+    short_name_fragments: None | MeasuredStackUsage.ShortNameFragments = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -121,7 +121,7 @@ class MeasuredStackUsage:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -129,7 +129,7 @@ class MeasuredStackUsage:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -137,7 +137,7 @@ class MeasuredStackUsage:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -145,7 +145,7 @@ class MeasuredStackUsage:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -153,7 +153,7 @@ class MeasuredStackUsage:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -161,7 +161,7 @@ class MeasuredStackUsage:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: MeasuredStackUsage.Annotations | None = field(
+    annotations: None | MeasuredStackUsage.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -169,7 +169,7 @@ class MeasuredStackUsage:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    executable_entity_ref: MeasuredStackUsage.ExecutableEntityRef | None = (
+    executable_entity_ref: None | MeasuredStackUsage.ExecutableEntityRef = (
         field(
             default=None,
             metadata={
@@ -179,7 +179,7 @@ class MeasuredStackUsage:
             },
         )
     )
-    hardware_configuration: HardwareConfiguration | None = field(
+    hardware_configuration: None | HardwareConfiguration = field(
         default=None,
         metadata={
             "name": "HARDWARE-CONFIGURATION",
@@ -187,7 +187,7 @@ class MeasuredStackUsage:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    hw_element_ref: MeasuredStackUsage.HwElementRef | None = field(
+    hw_element_ref: None | MeasuredStackUsage.HwElementRef = field(
         default=None,
         metadata={
             "name": "HW-ELEMENT-REF",
@@ -195,7 +195,7 @@ class MeasuredStackUsage:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    software_context: SoftwareContext | None = field(
+    software_context: None | SoftwareContext = field(
         default=None,
         metadata={
             "name": "SOFTWARE-CONTEXT",
@@ -203,7 +203,7 @@ class MeasuredStackUsage:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -211,7 +211,7 @@ class MeasuredStackUsage:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    average_memory_consumption: PositiveInteger | None = field(
+    average_memory_consumption: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "AVERAGE-MEMORY-CONSUMPTION",
@@ -219,7 +219,7 @@ class MeasuredStackUsage:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    maximum_memory_consumption: PositiveInteger | None = field(
+    maximum_memory_consumption: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "MAXIMUM-MEMORY-CONSUMPTION",
@@ -227,7 +227,7 @@ class MeasuredStackUsage:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    minimum_memory_consumption: PositiveInteger | None = field(
+    minimum_memory_consumption: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "MINIMUM-MEMORY-CONSUMPTION",
@@ -235,7 +235,7 @@ class MeasuredStackUsage:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    test_pattern: String | None = field(
+    test_pattern: None | String = field(
         default=None,
         metadata={
             "name": "TEST-PATTERN",
@@ -243,14 +243,14 @@ class MeasuredStackUsage:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -258,7 +258,7 @@ class MeasuredStackUsage:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -290,7 +290,7 @@ class MeasuredStackUsage:
 
     @dataclass
     class ExecutableEntityRef(Ref):
-        dest: ExecutableEntitySubtypesEnum | None = field(
+        dest: None | ExecutableEntitySubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -301,7 +301,7 @@ class MeasuredStackUsage:
 
     @dataclass
     class HwElementRef(Ref):
-        dest: HwElementSubtypesEnum | None = field(
+        dest: None | HwElementSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

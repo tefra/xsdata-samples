@@ -101,7 +101,7 @@ class DiagnosticControlDtcSetting:
     class Meta:
         name = "DIAGNOSTIC-CONTROL-DTC-SETTING"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -111,7 +111,7 @@ class DiagnosticControlDtcSetting:
         },
     )
     short_name_fragments: (
-        DiagnosticControlDtcSetting.ShortNameFragments | None
+        None | DiagnosticControlDtcSetting.ShortNameFragments
     ) = field(
         default=None,
         metadata={
@@ -120,7 +120,7 @@ class DiagnosticControlDtcSetting:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -128,7 +128,7 @@ class DiagnosticControlDtcSetting:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -136,7 +136,7 @@ class DiagnosticControlDtcSetting:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -144,7 +144,7 @@ class DiagnosticControlDtcSetting:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -152,7 +152,7 @@ class DiagnosticControlDtcSetting:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -160,7 +160,7 @@ class DiagnosticControlDtcSetting:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: DiagnosticControlDtcSetting.Annotations | None = field(
+    annotations: None | DiagnosticControlDtcSetting.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -168,7 +168,7 @@ class DiagnosticControlDtcSetting:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -177,7 +177,7 @@ class DiagnosticControlDtcSetting:
         },
     )
     access_permission_ref: (
-        DiagnosticControlDtcSetting.AccessPermissionRef | None
+        None | DiagnosticControlDtcSetting.AccessPermissionRef
     ) = field(
         default=None,
         metadata={
@@ -187,7 +187,7 @@ class DiagnosticControlDtcSetting:
         },
     )
     dtc_setting_class_ref: (
-        DiagnosticControlDtcSetting.DtcSettingClassRef | None
+        None | DiagnosticControlDtcSetting.DtcSettingClassRef
     ) = field(
         default=None,
         metadata={
@@ -196,7 +196,7 @@ class DiagnosticControlDtcSetting:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    dtc_setting_parameter: PositiveInteger | None = field(
+    dtc_setting_parameter: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "DTC-SETTING-PARAMETER",
@@ -204,14 +204,14 @@ class DiagnosticControlDtcSetting:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -219,7 +219,7 @@ class DiagnosticControlDtcSetting:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -251,7 +251,7 @@ class DiagnosticControlDtcSetting:
 
     @dataclass
     class AccessPermissionRef(Ref):
-        dest: DiagnosticAccessPermissionSubtypesEnum | None = field(
+        dest: None | DiagnosticAccessPermissionSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -262,7 +262,7 @@ class DiagnosticControlDtcSetting:
 
     @dataclass
     class DtcSettingClassRef(Ref):
-        dest: DiagnosticControlDtcSettingClassSubtypesEnum | None = field(
+        dest: None | DiagnosticControlDtcSettingClassSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

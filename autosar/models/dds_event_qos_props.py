@@ -36,7 +36,7 @@ class DdsEventQosProps:
     class Meta:
         name = "DDS-EVENT-QOS-PROPS"
 
-    qos_profile: String | None = field(
+    qos_profile: None | String = field(
         default=None,
         metadata={
             "name": "QOS-PROFILE",
@@ -44,7 +44,7 @@ class DdsEventQosProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    event_ref: DdsEventQosProps.EventRef | None = field(
+    event_ref: None | DdsEventQosProps.EventRef = field(
         default=None,
         metadata={
             "name": "EVENT-REF",
@@ -52,14 +52,14 @@ class DdsEventQosProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -70,7 +70,7 @@ class DdsEventQosProps:
 
     @dataclass
     class EventRef(Ref):
-        dest: ServiceEventDeploymentSubtypesEnum | None = field(
+        dest: None | ServiceEventDeploymentSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

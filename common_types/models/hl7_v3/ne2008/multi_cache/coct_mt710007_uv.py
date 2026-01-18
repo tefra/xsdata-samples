@@ -34,7 +34,7 @@ class CoctMt710007UvLocatedEntity:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Ii | None = field(
+    type_id: None | Ii = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -50,14 +50,14 @@ class CoctMt710007UvLocatedEntity:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    null_flavor: NullFlavor | None = field(
+    null_flavor: None | NullFlavor = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
         },
     )
-    class_code: RoleClassLocatedEntity | None = field(
+    class_code: None | RoleClassLocatedEntity = field(
         default=None,
         metadata={
             "name": "classCode",
@@ -80,7 +80,7 @@ class CoctMt710007UvPlace:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Ii | None = field(
+    type_id: None | Ii = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -103,7 +103,7 @@ class CoctMt710007UvPlace:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    code: Ce | None = field(
+    code: None | Ce = field(
         default=None,
         metadata={
             "type": "Element",
@@ -117,21 +117,21 @@ class CoctMt710007UvPlace:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    desc: EdExplicit | None = field(
+    desc: None | EdExplicit = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    addr: AdExplicit | None = field(
+    addr: None | AdExplicit = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    directions_text: Ed | None = field(
+    directions_text: None | Ed = field(
         default=None,
         metadata={
             "name": "directionsText",
@@ -139,7 +139,7 @@ class CoctMt710007UvPlace:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    position_text: Ed | None = field(
+    position_text: None | Ed = field(
         default=None,
         metadata={
             "name": "positionText",
@@ -147,7 +147,7 @@ class CoctMt710007UvPlace:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    located_entity: CoctMt710007UvLocatedEntity | None = field(
+    located_entity: None | CoctMt710007UvLocatedEntity = field(
         default=None,
         metadata={
             "name": "locatedEntity",
@@ -156,14 +156,14 @@ class CoctMt710007UvPlace:
             "nillable": True,
         },
     )
-    null_flavor: NullFlavor | None = field(
+    null_flavor: None | NullFlavor = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
         },
     )
-    class_code: EntityClassPlace | None = field(
+    class_code: None | EntityClassPlace = field(
         default=None,
         metadata={
             "name": "classCode",

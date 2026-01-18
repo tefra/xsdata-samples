@@ -112,7 +112,7 @@ class SimulatedExecutionTime:
     class Meta:
         name = "SIMULATED-EXECUTION-TIME"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -121,7 +121,7 @@ class SimulatedExecutionTime:
             "required": True,
         },
     )
-    short_name_fragments: SimulatedExecutionTime.ShortNameFragments | None = (
+    short_name_fragments: None | SimulatedExecutionTime.ShortNameFragments = (
         field(
             default=None,
             metadata={
@@ -131,7 +131,7 @@ class SimulatedExecutionTime:
             },
         )
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -139,7 +139,7 @@ class SimulatedExecutionTime:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -147,7 +147,7 @@ class SimulatedExecutionTime:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -155,7 +155,7 @@ class SimulatedExecutionTime:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -163,7 +163,7 @@ class SimulatedExecutionTime:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -171,7 +171,7 @@ class SimulatedExecutionTime:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: SimulatedExecutionTime.Annotations | None = field(
+    annotations: None | SimulatedExecutionTime.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -179,7 +179,7 @@ class SimulatedExecutionTime:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    exclusive_area_ref: SimulatedExecutionTime.ExclusiveAreaRef | None = field(
+    exclusive_area_ref: None | SimulatedExecutionTime.ExclusiveAreaRef = field(
         default=None,
         metadata={
             "name": "EXCLUSIVE-AREA-REF",
@@ -188,7 +188,7 @@ class SimulatedExecutionTime:
         },
     )
     executable_entity_ref: (
-        SimulatedExecutionTime.ExecutableEntityRef | None
+        None | SimulatedExecutionTime.ExecutableEntityRef
     ) = field(
         default=None,
         metadata={
@@ -197,7 +197,7 @@ class SimulatedExecutionTime:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    hardware_configuration: HardwareConfiguration | None = field(
+    hardware_configuration: None | HardwareConfiguration = field(
         default=None,
         metadata={
             "name": "HARDWARE-CONFIGURATION",
@@ -205,7 +205,7 @@ class SimulatedExecutionTime:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    hw_element_ref: SimulatedExecutionTime.HwElementRef | None = field(
+    hw_element_ref: None | SimulatedExecutionTime.HwElementRef = field(
         default=None,
         metadata={
             "name": "HW-ELEMENT-REF",
@@ -214,7 +214,7 @@ class SimulatedExecutionTime:
         },
     )
     included_library_refs: (
-        SimulatedExecutionTime.IncludedLibraryRefs | None
+        None | SimulatedExecutionTime.IncludedLibraryRefs
     ) = field(
         default=None,
         metadata={
@@ -224,7 +224,7 @@ class SimulatedExecutionTime:
         },
     )
     memory_section_locations: (
-        SimulatedExecutionTime.MemorySectionLocations | None
+        None | SimulatedExecutionTime.MemorySectionLocations
     ) = field(
         default=None,
         metadata={
@@ -233,7 +233,7 @@ class SimulatedExecutionTime:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    software_context: SoftwareContext | None = field(
+    software_context: None | SoftwareContext = field(
         default=None,
         metadata={
             "name": "SOFTWARE-CONTEXT",
@@ -241,7 +241,7 @@ class SimulatedExecutionTime:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -249,7 +249,7 @@ class SimulatedExecutionTime:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    maximum_execution_time: MultidimensionalTime | None = field(
+    maximum_execution_time: None | MultidimensionalTime = field(
         default=None,
         metadata={
             "name": "MAXIMUM-EXECUTION-TIME",
@@ -257,7 +257,7 @@ class SimulatedExecutionTime:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    minimum_execution_time: MultidimensionalTime | None = field(
+    minimum_execution_time: None | MultidimensionalTime = field(
         default=None,
         metadata={
             "name": "MINIMUM-EXECUTION-TIME",
@@ -265,7 +265,7 @@ class SimulatedExecutionTime:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nominal_execution_time: MultidimensionalTime | None = field(
+    nominal_execution_time: None | MultidimensionalTime = field(
         default=None,
         metadata={
             "name": "NOMINAL-EXECUTION-TIME",
@@ -273,14 +273,14 @@ class SimulatedExecutionTime:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -288,7 +288,7 @@ class SimulatedExecutionTime:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -320,7 +320,7 @@ class SimulatedExecutionTime:
 
     @dataclass
     class ExclusiveAreaRef(Ref):
-        dest: ExclusiveAreaSubtypesEnum | None = field(
+        dest: None | ExclusiveAreaSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -331,7 +331,7 @@ class SimulatedExecutionTime:
 
     @dataclass
     class ExecutableEntityRef(Ref):
-        dest: ExecutableEntitySubtypesEnum | None = field(
+        dest: None | ExecutableEntitySubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -342,7 +342,7 @@ class SimulatedExecutionTime:
 
     @dataclass
     class HwElementRef(Ref):
-        dest: HwElementSubtypesEnum | None = field(
+        dest: None | HwElementSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -366,7 +366,7 @@ class SimulatedExecutionTime:
 
         @dataclass
         class IncludedLibraryRef(Ref):
-            dest: DependencyOnArtifactSubtypesEnum | None = field(
+            dest: None | DependencyOnArtifactSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",

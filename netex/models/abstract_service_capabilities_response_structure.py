@@ -15,7 +15,7 @@ __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
 @dataclass
 class AbstractServiceCapabilitiesResponseStructure(ResponseStructure):
-    request_message_ref: MessageQualifierStructure | None = field(
+    request_message_ref: None | MessageQualifierStructure = field(
         default=None,
         metadata={
             "name": "RequestMessageRef",
@@ -23,7 +23,7 @@ class AbstractServiceCapabilitiesResponseStructure(ResponseStructure):
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    delegator_address: str | None = field(
+    delegator_address: None | str = field(
         default=None,
         metadata={
             "name": "DelegatorAddress",
@@ -31,7 +31,7 @@ class AbstractServiceCapabilitiesResponseStructure(ResponseStructure):
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    delegator_ref: ParticipantRefStructure | None = field(
+    delegator_ref: None | ParticipantRefStructure = field(
         default=None,
         metadata={
             "name": "DelegatorRef",
@@ -39,7 +39,7 @@ class AbstractServiceCapabilitiesResponseStructure(ResponseStructure):
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    status: Status | None = field(
+    status: None | Status = field(
         default=None,
         metadata={
             "name": "Status",
@@ -47,7 +47,7 @@ class AbstractServiceCapabilitiesResponseStructure(ResponseStructure):
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    error_condition: ServiceDeliveryErrorConditionStructure | None = field(
+    error_condition: None | ServiceDeliveryErrorConditionStructure = field(
         default=None,
         metadata={
             "name": "ErrorCondition",

@@ -88,7 +88,7 @@ class DiagnosticMasterToSlaveEventMappingSet:
     class Meta:
         name = "DIAGNOSTIC-MASTER-TO-SLAVE-EVENT-MAPPING-SET"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -98,7 +98,7 @@ class DiagnosticMasterToSlaveEventMappingSet:
         },
     )
     short_name_fragments: (
-        DiagnosticMasterToSlaveEventMappingSet.ShortNameFragments | None
+        None | DiagnosticMasterToSlaveEventMappingSet.ShortNameFragments
     ) = field(
         default=None,
         metadata={
@@ -107,7 +107,7 @@ class DiagnosticMasterToSlaveEventMappingSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -115,7 +115,7 @@ class DiagnosticMasterToSlaveEventMappingSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -123,7 +123,7 @@ class DiagnosticMasterToSlaveEventMappingSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -131,7 +131,7 @@ class DiagnosticMasterToSlaveEventMappingSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -139,7 +139,7 @@ class DiagnosticMasterToSlaveEventMappingSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -147,7 +147,7 @@ class DiagnosticMasterToSlaveEventMappingSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: DiagnosticMasterToSlaveEventMappingSet.Annotations | None = (
+    annotations: None | DiagnosticMasterToSlaveEventMappingSet.Annotations = (
         field(
             default=None,
             metadata={
@@ -157,7 +157,7 @@ class DiagnosticMasterToSlaveEventMappingSet:
             },
         )
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -166,8 +166,8 @@ class DiagnosticMasterToSlaveEventMappingSet:
         },
     )
     master_to_slave_event_mappings: (
-        DiagnosticMasterToSlaveEventMappingSet.MasterToSlaveEventMappings
-        | None
+        None
+        | DiagnosticMasterToSlaveEventMappingSet.MasterToSlaveEventMappings
     ) = field(
         default=None,
         metadata={
@@ -176,14 +176,14 @@ class DiagnosticMasterToSlaveEventMappingSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -191,7 +191,7 @@ class DiagnosticMasterToSlaveEventMappingSet:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",

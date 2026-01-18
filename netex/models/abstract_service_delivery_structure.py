@@ -54,7 +54,7 @@ class AbstractServiceDeliveryStructure(ResponseStructure):
             "max_occurs": 3,
         },
     )
-    delegator_address: str | None = field(
+    delegator_address: None | str = field(
         default=None,
         metadata={
             "name": "DelegatorAddress",
@@ -62,7 +62,7 @@ class AbstractServiceDeliveryStructure(ResponseStructure):
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    delegator_ref: ParticipantRefStructure | None = field(
+    delegator_ref: None | ParticipantRefStructure = field(
         default=None,
         metadata={
             "name": "DelegatorRef",
@@ -70,7 +70,7 @@ class AbstractServiceDeliveryStructure(ResponseStructure):
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    status: Status | None = field(
+    status: None | Status = field(
         default=None,
         metadata={
             "name": "Status",
@@ -78,7 +78,7 @@ class AbstractServiceDeliveryStructure(ResponseStructure):
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    error_condition: ServiceDeliveryErrorConditionStructure | None = field(
+    error_condition: None | ServiceDeliveryErrorConditionStructure = field(
         default=None,
         metadata={
             "name": "ErrorCondition",
@@ -86,7 +86,7 @@ class AbstractServiceDeliveryStructure(ResponseStructure):
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    valid_until: XmlDateTime | None = field(
+    valid_until: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "ValidUntil",
@@ -94,7 +94,7 @@ class AbstractServiceDeliveryStructure(ResponseStructure):
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    shortest_possible_cycle: XmlDuration | None = field(
+    shortest_possible_cycle: None | XmlDuration = field(
         default=None,
         metadata={
             "name": "ShortestPossibleCycle",
@@ -102,7 +102,7 @@ class AbstractServiceDeliveryStructure(ResponseStructure):
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    default_language: str | None = field(
+    default_language: None | str = field(
         default=None,
         metadata={
             "name": "DefaultLanguage",

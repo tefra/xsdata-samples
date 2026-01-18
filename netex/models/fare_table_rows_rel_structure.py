@@ -38,7 +38,7 @@ class FareTableRowVersionedChildStructure(VersionedChildStructure):
     class Meta:
         name = "FareTableRow_VersionedChildStructure"
 
-    name: MultilingualString | None = field(
+    name: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "Name",
@@ -46,7 +46,7 @@ class FareTableRowVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    label: MultilingualString | None = field(
+    label: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "Label",
@@ -54,7 +54,7 @@ class FareTableRowVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    fare_table_ref: StandardFareTableRef | FareTableRef | None = field(
+    fare_table_ref: None | StandardFareTableRef | FareTableRef = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -72,7 +72,7 @@ class FareTableRowVersionedChildStructure(VersionedChildStructure):
             ),
         },
     )
-    notice_assignments: NoticeAssignmentsRelStructure | None = field(
+    notice_assignments: None | NoticeAssignmentsRelStructure = field(
         default=None,
         metadata={
             "name": "noticeAssignments",
@@ -80,21 +80,21 @@ class FareTableRowVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    representing: ObjectRefsRelStructure | None = field(
+    representing: None | ObjectRefsRelStructure = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    rows: FareTableRowsRelStructure | None = field(
+    rows: None | FareTableRowsRelStructure = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    order: int | None = field(
+    order: None | int = field(
         default=None,
         metadata={
             "type": "Attribute",

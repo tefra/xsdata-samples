@@ -91,7 +91,7 @@ class SecureCommunicationPropsSet:
     class Meta:
         name = "SECURE-COMMUNICATION-PROPS-SET"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -101,7 +101,7 @@ class SecureCommunicationPropsSet:
         },
     )
     short_name_fragments: (
-        SecureCommunicationPropsSet.ShortNameFragments | None
+        None | SecureCommunicationPropsSet.ShortNameFragments
     ) = field(
         default=None,
         metadata={
@@ -110,7 +110,7 @@ class SecureCommunicationPropsSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -118,7 +118,7 @@ class SecureCommunicationPropsSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -126,7 +126,7 @@ class SecureCommunicationPropsSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -134,7 +134,7 @@ class SecureCommunicationPropsSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -142,7 +142,7 @@ class SecureCommunicationPropsSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -150,7 +150,7 @@ class SecureCommunicationPropsSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: SecureCommunicationPropsSet.Annotations | None = field(
+    annotations: None | SecureCommunicationPropsSet.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -158,7 +158,7 @@ class SecureCommunicationPropsSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -167,7 +167,7 @@ class SecureCommunicationPropsSet:
         },
     )
     authentication_propss: (
-        SecureCommunicationPropsSet.AuthenticationPropss | None
+        None | SecureCommunicationPropsSet.AuthenticationPropss
     ) = field(
         default=None,
         metadata={
@@ -176,7 +176,7 @@ class SecureCommunicationPropsSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    freshness_propss: SecureCommunicationPropsSet.FreshnessPropss | None = (
+    freshness_propss: None | SecureCommunicationPropsSet.FreshnessPropss = (
         field(
             default=None,
             metadata={
@@ -186,14 +186,14 @@ class SecureCommunicationPropsSet:
             },
         )
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -201,7 +201,7 @@ class SecureCommunicationPropsSet:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",

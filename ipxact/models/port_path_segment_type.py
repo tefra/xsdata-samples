@@ -19,7 +19,7 @@ class PortPathSegmentType(StringExpression):
     class Meta:
         name = "portPathSegmentType"
 
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",

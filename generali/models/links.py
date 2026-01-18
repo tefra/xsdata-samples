@@ -11,7 +11,7 @@ class Links:
     class Meta:
         name = "_links"
 
-    self_value: Self | None = field(
+    self_value: None | Self = field(
         default=None,
         metadata={
             "name": "self",
@@ -19,7 +19,7 @@ class Links:
             "required": True,
         },
     )
-    find: Find | None = field(
+    find: None | Find = field(
         default=None,
         metadata={
             "type": "Element",

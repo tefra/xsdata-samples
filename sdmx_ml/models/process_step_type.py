@@ -51,7 +51,7 @@ class ProcessStepType(ProcessStepBaseType):
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
         },
     )
-    computation: ComputationType | None = field(
+    computation: None | ComputationType = field(
         default=None,
         metadata={
             "name": "Computation",

@@ -17,7 +17,7 @@ class CrossingEquipmentVersionStructure(AccessEquipmentVersionStructure):
     class Meta:
         name = "CrossingEquipment_VersionStructure"
 
-    crossing_type: CrossingTypeEnumeration | None = field(
+    crossing_type: None | CrossingTypeEnumeration = field(
         default=None,
         metadata={
             "name": "CrossingType",
@@ -25,7 +25,7 @@ class CrossingEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    zebra_crossing: bool | None = field(
+    zebra_crossing: None | bool = field(
         default=None,
         metadata={
             "name": "ZebraCrossing",
@@ -33,7 +33,7 @@ class CrossingEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    pedestrian_lights: bool | None = field(
+    pedestrian_lights: None | bool = field(
         default=None,
         metadata={
             "name": "PedestrianLights",
@@ -41,7 +41,7 @@ class CrossingEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    acoustic_device_sensors: bool | None = field(
+    acoustic_device_sensors: None | bool = field(
         default=None,
         metadata={
             "name": "AcousticDeviceSensors",
@@ -49,7 +49,7 @@ class CrossingEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    acoustic_crossing_aids: bool | None = field(
+    acoustic_crossing_aids: None | bool = field(
         default=None,
         metadata={
             "name": "AcousticCrossingAids",
@@ -57,7 +57,7 @@ class CrossingEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    tactile_guidance_strips: bool | None = field(
+    tactile_guidance_strips: None | bool = field(
         default=None,
         metadata={
             "name": "TactileGuidanceStrips",
@@ -65,7 +65,7 @@ class CrossingEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    tactile_warning_strip: TactileWarningStripEnumeration | None = field(
+    tactile_warning_strip: None | TactileWarningStripEnumeration = field(
         default=None,
         metadata={
             "name": "TactileWarningStrip",
@@ -73,7 +73,7 @@ class CrossingEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    visual_guidance_bands: bool | None = field(
+    visual_guidance_bands: None | bool = field(
         default=None,
         metadata={
             "name": "VisualGuidanceBands",
@@ -81,7 +81,7 @@ class CrossingEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    dropped_kerb: bool | None = field(
+    dropped_kerb: None | bool = field(
         default=None,
         metadata={
             "name": "DroppedKerb",
@@ -89,7 +89,7 @@ class CrossingEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    suitable_for_cycles: bool | None = field(
+    suitable_for_cycles: None | bool = field(
         default=None,
         metadata={
             "name": "SuitableForCycles",
@@ -97,7 +97,7 @@ class CrossingEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    marking_status: MarkingStatusEnumeration | None = field(
+    marking_status: None | MarkingStatusEnumeration = field(
         default=None,
         metadata={
             "name": "MarkingStatus",
@@ -105,7 +105,7 @@ class CrossingEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    vibrating_crossing_aids: bool | None = field(
+    vibrating_crossing_aids: None | bool = field(
         default=None,
         metadata={
             "name": "VibratingCrossingAids",
@@ -113,7 +113,7 @@ class CrossingEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    bump_crossing: bool | None = field(
+    bump_crossing: None | bool = field(
         default=None,
         metadata={
             "name": "BumpCrossing",
@@ -121,7 +121,7 @@ class CrossingEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    visual_obstacle: VisualObstacleEnumeration | None = field(
+    visual_obstacle: None | VisualObstacleEnumeration = field(
         default=None,
         metadata={
             "name": "VisualObstacle",
@@ -129,7 +129,7 @@ class CrossingEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    bollard_crossing: BollardCrossingEnumeration | None = field(
+    bollard_crossing: None | BollardCrossingEnumeration = field(
         default=None,
         metadata={
             "name": "BollardCrossing",

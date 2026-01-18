@@ -35,7 +35,7 @@ class DiagnosticSupportInfoByte:
     class Meta:
         name = "DIAGNOSTIC-SUPPORT-INFO-BYTE"
 
-    position: PositiveInteger | None = field(
+    position: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "POSITION",
@@ -43,7 +43,7 @@ class DiagnosticSupportInfoByte:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    size: PositiveInteger | None = field(
+    size: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "SIZE",
@@ -51,14 +51,14 @@ class DiagnosticSupportInfoByte:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

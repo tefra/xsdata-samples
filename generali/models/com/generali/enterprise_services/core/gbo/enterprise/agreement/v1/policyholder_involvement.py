@@ -13,7 +13,7 @@ __NAMESPACE__ = (
 
 @dataclass
 class PolicyholderInvolvement:
-    insured_role: InsuredRoleType | None = field(
+    insured_role: None | InsuredRoleType = field(
         default=None,
         metadata={
             "name": "InsuredRole",

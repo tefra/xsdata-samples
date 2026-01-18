@@ -98,7 +98,7 @@ class DiagnosticClearResetEmissionRelatedInfo:
     class Meta:
         name = "DIAGNOSTIC-CLEAR-RESET-EMISSION-RELATED-INFO"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -108,7 +108,7 @@ class DiagnosticClearResetEmissionRelatedInfo:
         },
     )
     short_name_fragments: (
-        DiagnosticClearResetEmissionRelatedInfo.ShortNameFragments | None
+        None | DiagnosticClearResetEmissionRelatedInfo.ShortNameFragments
     ) = field(
         default=None,
         metadata={
@@ -117,7 +117,7 @@ class DiagnosticClearResetEmissionRelatedInfo:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -125,7 +125,7 @@ class DiagnosticClearResetEmissionRelatedInfo:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -133,7 +133,7 @@ class DiagnosticClearResetEmissionRelatedInfo:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -141,7 +141,7 @@ class DiagnosticClearResetEmissionRelatedInfo:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -149,7 +149,7 @@ class DiagnosticClearResetEmissionRelatedInfo:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -157,7 +157,7 @@ class DiagnosticClearResetEmissionRelatedInfo:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: DiagnosticClearResetEmissionRelatedInfo.Annotations | None = (
+    annotations: None | DiagnosticClearResetEmissionRelatedInfo.Annotations = (
         field(
             default=None,
             metadata={
@@ -167,7 +167,7 @@ class DiagnosticClearResetEmissionRelatedInfo:
             },
         )
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -176,7 +176,7 @@ class DiagnosticClearResetEmissionRelatedInfo:
         },
     )
     access_permission_ref: (
-        DiagnosticClearResetEmissionRelatedInfo.AccessPermissionRef | None
+        None | DiagnosticClearResetEmissionRelatedInfo.AccessPermissionRef
     ) = field(
         default=None,
         metadata={
@@ -186,8 +186,8 @@ class DiagnosticClearResetEmissionRelatedInfo:
         },
     )
     clear_reset_emission_related_diagnostic_info_class_ref: (
-        DiagnosticClearResetEmissionRelatedInfo.ClearResetEmissionRelatedDiagnosticInfoClassRef
-        | None
+        None
+        | DiagnosticClearResetEmissionRelatedInfo.ClearResetEmissionRelatedDiagnosticInfoClassRef
     ) = field(
         default=None,
         metadata={
@@ -196,14 +196,14 @@ class DiagnosticClearResetEmissionRelatedInfo:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -211,7 +211,7 @@ class DiagnosticClearResetEmissionRelatedInfo:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -243,7 +243,7 @@ class DiagnosticClearResetEmissionRelatedInfo:
 
     @dataclass
     class AccessPermissionRef(Ref):
-        dest: DiagnosticAccessPermissionSubtypesEnum | None = field(
+        dest: None | DiagnosticAccessPermissionSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -255,7 +255,7 @@ class DiagnosticClearResetEmissionRelatedInfo:
     @dataclass
     class ClearResetEmissionRelatedDiagnosticInfoClassRef(Ref):
         dest: (
-            DiagnosticClearResetEmissionRelatedInfoClassSubtypesEnum | None
+            None | DiagnosticClearResetEmissionRelatedInfoClassSubtypesEnum
         ) = field(
             default=None,
             metadata={

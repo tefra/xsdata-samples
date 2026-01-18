@@ -33,7 +33,7 @@ class RtpTp:
     class Meta:
         name = "RTP-TP"
 
-    ssrc: PositiveInteger | None = field(
+    ssrc: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "SSRC",
@@ -41,7 +41,7 @@ class RtpTp:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tcp_udp_config: RtpTp.TcpUdpConfig | None = field(
+    tcp_udp_config: None | RtpTp.TcpUdpConfig = field(
         default=None,
         metadata={
             "name": "TCP-UDP-CONFIG",
@@ -49,14 +49,14 @@ class RtpTp:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -67,7 +67,7 @@ class RtpTp:
 
     @dataclass
     class TcpUdpConfig:
-        tcp_tp: TcpTp | None = field(
+        tcp_tp: None | TcpTp = field(
             default=None,
             metadata={
                 "name": "TCP-TP",
@@ -75,7 +75,7 @@ class RtpTp:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        udp_tp: UdpTp | None = field(
+        udp_tp: None | UdpTp = field(
             default=None,
             metadata={
                 "name": "UDP-TP",

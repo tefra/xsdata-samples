@@ -10,7 +10,7 @@ __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
 @dataclass
 class AbstractServiceRequestStructure(AbstractRequestStructure):
-    message_identifier: MessageQualifierStructure | None = field(
+    message_identifier: None | MessageQualifierStructure = field(
         default=None,
         metadata={
             "name": "MessageIdentifier",

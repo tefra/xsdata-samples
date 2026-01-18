@@ -100,7 +100,7 @@ class SomeipSdClientEventGroupTimingConfig:
     class Meta:
         name = "SOMEIP-SD-CLIENT-EVENT-GROUP-TIMING-CONFIG"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -110,7 +110,7 @@ class SomeipSdClientEventGroupTimingConfig:
         },
     )
     short_name_fragments: (
-        SomeipSdClientEventGroupTimingConfig.ShortNameFragments | None
+        None | SomeipSdClientEventGroupTimingConfig.ShortNameFragments
     ) = field(
         default=None,
         metadata={
@@ -119,7 +119,7 @@ class SomeipSdClientEventGroupTimingConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -127,7 +127,7 @@ class SomeipSdClientEventGroupTimingConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -135,7 +135,7 @@ class SomeipSdClientEventGroupTimingConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -143,7 +143,7 @@ class SomeipSdClientEventGroupTimingConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -151,7 +151,7 @@ class SomeipSdClientEventGroupTimingConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -159,7 +159,7 @@ class SomeipSdClientEventGroupTimingConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: SomeipSdClientEventGroupTimingConfig.Annotations | None = (
+    annotations: None | SomeipSdClientEventGroupTimingConfig.Annotations = (
         field(
             default=None,
             metadata={
@@ -169,7 +169,7 @@ class SomeipSdClientEventGroupTimingConfig:
             },
         )
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -177,7 +177,7 @@ class SomeipSdClientEventGroupTimingConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    request_response_delay: RequestResponseDelay | None = field(
+    request_response_delay: None | RequestResponseDelay = field(
         default=None,
         metadata={
             "name": "REQUEST-RESPONSE-DELAY",
@@ -185,7 +185,7 @@ class SomeipSdClientEventGroupTimingConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    subscribe_eventgroup_retry_delay: TimeValue | None = field(
+    subscribe_eventgroup_retry_delay: None | TimeValue = field(
         default=None,
         metadata={
             "name": "SUBSCRIBE-EVENTGROUP-RETRY-DELAY",
@@ -193,7 +193,7 @@ class SomeipSdClientEventGroupTimingConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    subscribe_eventgroup_retry_max: PositiveInteger | None = field(
+    subscribe_eventgroup_retry_max: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "SUBSCRIBE-EVENTGROUP-RETRY-MAX",
@@ -201,7 +201,7 @@ class SomeipSdClientEventGroupTimingConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    time_to_live: PositiveInteger | None = field(
+    time_to_live: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "TIME-TO-LIVE",
@@ -209,14 +209,14 @@ class SomeipSdClientEventGroupTimingConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -224,7 +224,7 @@ class SomeipSdClientEventGroupTimingConfig:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",

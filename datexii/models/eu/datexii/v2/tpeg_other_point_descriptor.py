@@ -25,7 +25,7 @@ class TpegOtherPointDescriptor(TpegPointDescriptor):
     """
 
     tpeg_other_point_descriptor_type: (
-        TpegLoc03OtherPointDescriptorSubtypeEnum | None
+        None | TpegLoc03OtherPointDescriptorSubtypeEnum
     ) = field(
         default=None,
         metadata={
@@ -35,7 +35,7 @@ class TpegOtherPointDescriptor(TpegPointDescriptor):
             "required": True,
         },
     )
-    tpeg_other_point_descriptor_extension: ExtensionType | None = field(
+    tpeg_other_point_descriptor_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "tpegOtherPointDescriptorExtension",

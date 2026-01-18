@@ -15,7 +15,7 @@ class ParkingRecordStatusEquipmentOrServiceFacilityIndexParkingEquipmentOrServic
         name = "_ParkingRecordStatusEquipmentOrServiceFacilityIndexParkingEquipmentOrServiceFacilityStatus"
 
     parking_equipment_or_service_facility_status: (
-        ParkingEquipmentOrServiceFacilityStatus | None
+        None | ParkingEquipmentOrServiceFacilityStatus
     ) = field(
         default=None,
         metadata={
@@ -25,7 +25,7 @@ class ParkingRecordStatusEquipmentOrServiceFacilityIndexParkingEquipmentOrServic
             "required": True,
         },
     )
-    equipment_or_service_facility_index: int | None = field(
+    equipment_or_service_facility_index: None | int = field(
         default=None,
         metadata={
             "name": "equipmentOrServiceFacilityIndex",

@@ -174,7 +174,7 @@ class SwcImplementation:
     class Meta:
         name = "SWC-IMPLEMENTATION"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -183,7 +183,7 @@ class SwcImplementation:
             "required": True,
         },
     )
-    short_name_fragments: SwcImplementation.ShortNameFragments | None = field(
+    short_name_fragments: None | SwcImplementation.ShortNameFragments = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -191,7 +191,7 @@ class SwcImplementation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -199,7 +199,7 @@ class SwcImplementation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -207,7 +207,7 @@ class SwcImplementation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -215,7 +215,7 @@ class SwcImplementation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -223,7 +223,7 @@ class SwcImplementation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -231,7 +231,7 @@ class SwcImplementation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: SwcImplementation.Annotations | None = field(
+    annotations: None | SwcImplementation.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -239,7 +239,7 @@ class SwcImplementation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -247,7 +247,7 @@ class SwcImplementation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    build_action_manifests: SwcImplementation.BuildActionManifests | None = (
+    build_action_manifests: None | SwcImplementation.BuildActionManifests = (
         field(
             default=None,
             metadata={
@@ -257,7 +257,7 @@ class SwcImplementation:
             },
         )
     )
-    code_descriptors: SwcImplementation.CodeDescriptors | None = field(
+    code_descriptors: None | SwcImplementation.CodeDescriptors = field(
         default=None,
         metadata={
             "name": "CODE-DESCRIPTORS",
@@ -265,7 +265,7 @@ class SwcImplementation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    compilers: SwcImplementation.Compilers | None = field(
+    compilers: None | SwcImplementation.Compilers = field(
         default=None,
         metadata={
             "name": "COMPILERS",
@@ -273,7 +273,7 @@ class SwcImplementation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    generated_artifacts: SwcImplementation.GeneratedArtifacts | None = field(
+    generated_artifacts: None | SwcImplementation.GeneratedArtifacts = field(
         default=None,
         metadata={
             "name": "GENERATED-ARTIFACTS",
@@ -281,7 +281,7 @@ class SwcImplementation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    hw_element_refs: SwcImplementation.HwElementRefs | None = field(
+    hw_element_refs: None | SwcImplementation.HwElementRefs = field(
         default=None,
         metadata={
             "name": "HW-ELEMENT-REFS",
@@ -289,7 +289,7 @@ class SwcImplementation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    linkers: SwcImplementation.Linkers | None = field(
+    linkers: None | SwcImplementation.Linkers = field(
         default=None,
         metadata={
             "name": "LINKERS",
@@ -297,7 +297,7 @@ class SwcImplementation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    mc_support: McSupportData | None = field(
+    mc_support: None | McSupportData = field(
         default=None,
         metadata={
             "name": "MC-SUPPORT",
@@ -305,7 +305,7 @@ class SwcImplementation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    programming_language: ProgramminglanguageEnum | None = field(
+    programming_language: None | ProgramminglanguageEnum = field(
         default=None,
         metadata={
             "name": "PROGRAMMING-LANGUAGE",
@@ -313,7 +313,7 @@ class SwcImplementation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    required_artifacts: SwcImplementation.RequiredArtifacts | None = field(
+    required_artifacts: None | SwcImplementation.RequiredArtifacts = field(
         default=None,
         metadata={
             "name": "REQUIRED-ARTIFACTS",
@@ -322,7 +322,7 @@ class SwcImplementation:
         },
     )
     required_generator_tools: (
-        SwcImplementation.RequiredGeneratorTools | None
+        None | SwcImplementation.RequiredGeneratorTools
     ) = field(
         default=None,
         metadata={
@@ -331,7 +331,7 @@ class SwcImplementation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    resource_consumption: ResourceConsumption | None = field(
+    resource_consumption: None | ResourceConsumption = field(
         default=None,
         metadata={
             "name": "RESOURCE-CONSUMPTION",
@@ -339,7 +339,7 @@ class SwcImplementation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_version: RevisionLabelString | None = field(
+    sw_version: None | RevisionLabelString = field(
         default=None,
         metadata={
             "name": "SW-VERSION",
@@ -347,7 +347,7 @@ class SwcImplementation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    swc_bsw_mapping_ref: SwcImplementation.SwcBswMappingRef | None = field(
+    swc_bsw_mapping_ref: None | SwcImplementation.SwcBswMappingRef = field(
         default=None,
         metadata={
             "name": "SWC-BSW-MAPPING-REF",
@@ -355,7 +355,7 @@ class SwcImplementation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    used_code_generator: String | None = field(
+    used_code_generator: None | String = field(
         default=None,
         metadata={
             "name": "USED-CODE-GENERATOR",
@@ -363,7 +363,7 @@ class SwcImplementation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    vendor_id: PositiveInteger | None = field(
+    vendor_id: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "VENDOR-ID",
@@ -371,7 +371,7 @@ class SwcImplementation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    behavior_ref: SwcImplementation.BehaviorRef | None = field(
+    behavior_ref: None | SwcImplementation.BehaviorRef = field(
         default=None,
         metadata={
             "name": "BEHAVIOR-REF",
@@ -380,7 +380,7 @@ class SwcImplementation:
         },
     )
     per_instance_memory_sizes: (
-        SwcImplementation.PerInstanceMemorySizes | None
+        None | SwcImplementation.PerInstanceMemorySizes
     ) = field(
         default=None,
         metadata={
@@ -389,7 +389,7 @@ class SwcImplementation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    required_rte_vendor: String | None = field(
+    required_rte_vendor: None | String = field(
         default=None,
         metadata={
             "name": "REQUIRED-RTE-VENDOR",
@@ -397,14 +397,14 @@ class SwcImplementation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -412,7 +412,7 @@ class SwcImplementation:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -503,7 +503,7 @@ class SwcImplementation:
 
         @dataclass
         class HwElementRef(Ref):
-            dest: HwElementSubtypesEnum | None = field(
+            dest: None | HwElementSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -547,7 +547,7 @@ class SwcImplementation:
 
     @dataclass
     class SwcBswMappingRef(Ref):
-        dest: SwcBswMappingSubtypesEnum | None = field(
+        dest: None | SwcBswMappingSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -558,7 +558,7 @@ class SwcImplementation:
 
     @dataclass
     class BehaviorRef(Ref):
-        dest: SwcInternalBehaviorSubtypesEnum | None = field(
+        dest: None | SwcInternalBehaviorSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

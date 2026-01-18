@@ -37,7 +37,7 @@ class PortPrototypeBlueprintMapping:
         name = "PORT-PROTOTYPE-BLUEPRINT-MAPPING"
 
     port_prototype_blueprint_ref: (
-        PortPrototypeBlueprintMapping.PortPrototypeBlueprintRef | None
+        None | PortPrototypeBlueprintMapping.PortPrototypeBlueprintRef
     ) = field(
         default=None,
         metadata={
@@ -47,7 +47,7 @@ class PortPrototypeBlueprintMapping:
         },
     )
     derived_port_prototype_ref: (
-        PortPrototypeBlueprintMapping.DerivedPortPrototypeRef | None
+        None | PortPrototypeBlueprintMapping.DerivedPortPrototypeRef
     ) = field(
         default=None,
         metadata={
@@ -56,14 +56,14 @@ class PortPrototypeBlueprintMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -74,7 +74,7 @@ class PortPrototypeBlueprintMapping:
 
     @dataclass
     class PortPrototypeBlueprintRef(Ref):
-        dest: PortPrototypeBlueprintSubtypesEnum | None = field(
+        dest: None | PortPrototypeBlueprintSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -85,7 +85,7 @@ class PortPrototypeBlueprintMapping:
 
     @dataclass
     class DerivedPortPrototypeRef(Ref):
-        dest: PortPrototypeSubtypesEnum | None = field(
+        dest: None | PortPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

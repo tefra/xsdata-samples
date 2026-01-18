@@ -84,7 +84,7 @@ class TariffVersionStructure(DataManagedObjectStructure):
     class Meta:
         name = "Tariff_VersionStructure"
 
-    name: MultilingualString | None = field(
+    name: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "Name",
@@ -92,7 +92,7 @@ class TariffVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    alternative_names: AlternativeNamesRelStructure | None = field(
+    alternative_names: None | AlternativeNamesRelStructure = field(
         default=None,
         metadata={
             "name": "alternativeNames",
@@ -100,7 +100,7 @@ class TariffVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    description: MultilingualString | None = field(
+    description: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "Description",
@@ -108,7 +108,7 @@ class TariffVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    notice_assignments: NoticeAssignmentsRelStructure | None = field(
+    notice_assignments: None | NoticeAssignmentsRelStructure = field(
         default=None,
         metadata={
             "name": "noticeAssignments",
@@ -116,7 +116,7 @@ class TariffVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    document_links: InfoLinksRelStructure | None = field(
+    document_links: None | InfoLinksRelStructure = field(
         default=None,
         metadata={
             "name": "documentLinks",
@@ -124,7 +124,7 @@ class TariffVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    private_code: PrivateCode | None = field(
+    private_code: None | PrivateCode = field(
         default=None,
         metadata={
             "name": "PrivateCode",
@@ -133,7 +133,8 @@ class TariffVersionStructure(DataManagedObjectStructure):
         },
     )
     choice: (
-        RetailConsortiumRef
+        None
+        | RetailConsortiumRef
         | OnlineServiceOperatorRef
         | GeneralOrganisationRef
         | ManagementAgentRef
@@ -144,7 +145,6 @@ class TariffVersionStructure(DataManagedObjectStructure):
         | OperatorRef
         | OrganisationRef
         | GroupOfOperatorsRef
-        | None
     ) = field(
         default=None,
         metadata={
@@ -209,7 +209,7 @@ class TariffVersionStructure(DataManagedObjectStructure):
         },
     )
     line_ref_or_group_of_lines_ref: (
-        FlexibleLineRef | LineRef | NetworkRef | GroupOfLinesRef | None
+        None | FlexibleLineRef | LineRef | NetworkRef | GroupOfLinesRef
     ) = field(
         default=None,
         metadata={
@@ -239,7 +239,8 @@ class TariffVersionStructure(DataManagedObjectStructure):
         },
     )
     choice_1: (
-        OnlineServiceRef
+        None
+        | OnlineServiceRef
         | VehicleRentalServiceRef
         | VehicleSharingServiceRef
         | ChauffeuredVehicleServiceRef
@@ -260,7 +261,6 @@ class TariffVersionStructure(DataManagedObjectStructure):
         | AssistanceServiceRef
         | TicketingServiceRef
         | LocalServiceRef
-        | None
     ) = field(
         default=None,
         metadata={
@@ -374,7 +374,7 @@ class TariffVersionStructure(DataManagedObjectStructure):
             ),
         },
     )
-    type_of_tariff_ref: TypeOfTariffRef | None = field(
+    type_of_tariff_ref: None | TypeOfTariffRef = field(
         default=None,
         metadata={
             "name": "TypeOfTariffRef",
@@ -382,7 +382,7 @@ class TariffVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    tariff_basis: TariffBasisEnumeration | None = field(
+    tariff_basis: None | TariffBasisEnumeration = field(
         default=None,
         metadata={
             "name": "TariffBasis",
@@ -390,7 +390,7 @@ class TariffVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    return_fare_twice_single: bool | None = field(
+    return_fare_twice_single: None | bool = field(
         default=None,
         metadata={
             "name": "ReturnFareTwiceSingle",
@@ -398,7 +398,7 @@ class TariffVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    geographical_unit_ref: GeographicalUnitRef | None = field(
+    geographical_unit_ref: None | GeographicalUnitRef = field(
         default=None,
         metadata={
             "name": "GeographicalUnitRef",
@@ -406,7 +406,7 @@ class TariffVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    geographical_intervals: GeographicalIntervalsRelStructure | None = field(
+    geographical_intervals: None | GeographicalIntervalsRelStructure = field(
         default=None,
         metadata={
             "name": "geographicalIntervals",
@@ -415,7 +415,7 @@ class TariffVersionStructure(DataManagedObjectStructure):
         },
     )
     geographical_structure_factors: (
-        GeographicalStructureFactorsRelStructure | None
+        None | GeographicalStructureFactorsRelStructure
     ) = field(
         default=None,
         metadata={
@@ -424,7 +424,7 @@ class TariffVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    time_unit_ref: TimeUnitRef | None = field(
+    time_unit_ref: None | TimeUnitRef = field(
         default=None,
         metadata={
             "name": "TimeUnitRef",
@@ -432,7 +432,7 @@ class TariffVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    time_intervals: TimeIntervalsRelStructure | None = field(
+    time_intervals: None | TimeIntervalsRelStructure = field(
         default=None,
         metadata={
             "name": "timeIntervals",
@@ -440,7 +440,7 @@ class TariffVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    time_structure_factors: TimeStructureFactorsRelStructure | None = field(
+    time_structure_factors: None | TimeStructureFactorsRelStructure = field(
         default=None,
         metadata={
             "name": "timeStructureFactors",
@@ -448,7 +448,7 @@ class TariffVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    quality_structure_factors: QualityStructureFactorsRelStructure | None = (
+    quality_structure_factors: None | QualityStructureFactorsRelStructure = (
         field(
             default=None,
             metadata={
@@ -458,7 +458,7 @@ class TariffVersionStructure(DataManagedObjectStructure):
             },
         )
     )
-    fare_structure_elements: FareStructureElementsRelStructure | None = field(
+    fare_structure_elements: None | FareStructureElementsRelStructure = field(
         default=None,
         metadata={
             "name": "fareStructureElements",
@@ -466,7 +466,7 @@ class TariffVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    distance_matrix_elements: DistanceMatrixElementsRelStructure | None = (
+    distance_matrix_elements: None | DistanceMatrixElementsRelStructure = (
         field(
             default=None,
             metadata={
@@ -477,7 +477,7 @@ class TariffVersionStructure(DataManagedObjectStructure):
         )
     )
     groups_of_distance_matrix_elements: (
-        GroupsOfDistanceMatrixElementsRelStructure | None
+        None | GroupsOfDistanceMatrixElementsRelStructure
     ) = field(
         default=None,
         metadata={
@@ -486,7 +486,7 @@ class TariffVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    price_unit_ref: PriceUnitRef | None = field(
+    price_unit_ref: None | PriceUnitRef = field(
         default=None,
         metadata={
             "name": "PriceUnitRef",
@@ -494,7 +494,7 @@ class TariffVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    price_groups: PriceGroupsRelStructure | None = field(
+    price_groups: None | PriceGroupsRelStructure = field(
         default=None,
         metadata={
             "name": "priceGroups",
@@ -502,7 +502,7 @@ class TariffVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    fare_tables: FareTablesRelStructure | None = field(
+    fare_tables: None | FareTablesRelStructure = field(
         default=None,
         metadata={
             "name": "fareTables",

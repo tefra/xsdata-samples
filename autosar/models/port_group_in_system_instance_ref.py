@@ -37,7 +37,7 @@ class PortGroupInSystemInstanceRef:
         name = "PORT-GROUP-IN-SYSTEM-INSTANCE-REF"
 
     context_composition_ref: (
-        PortGroupInSystemInstanceRef.ContextCompositionRef | None
+        None | PortGroupInSystemInstanceRef.ContextCompositionRef
     ) = field(
         default=None,
         metadata={
@@ -56,7 +56,7 @@ class PortGroupInSystemInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    target_ref: PortGroupInSystemInstanceRef.TargetRef | None = field(
+    target_ref: None | PortGroupInSystemInstanceRef.TargetRef = field(
         default=None,
         metadata={
             "name": "TARGET-REF",
@@ -64,14 +64,14 @@ class PortGroupInSystemInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -82,7 +82,7 @@ class PortGroupInSystemInstanceRef:
 
     @dataclass
     class ContextCompositionRef(Ref):
-        dest: RootSwCompositionPrototypeSubtypesEnum | None = field(
+        dest: None | RootSwCompositionPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -93,7 +93,7 @@ class PortGroupInSystemInstanceRef:
 
     @dataclass
     class ContextComponentRef(Ref):
-        dest: SwComponentPrototypeSubtypesEnum | None = field(
+        dest: None | SwComponentPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -104,7 +104,7 @@ class PortGroupInSystemInstanceRef:
 
     @dataclass
     class TargetRef(Ref):
-        dest: PortGroupSubtypesEnum | None = field(
+        dest: None | PortGroupSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

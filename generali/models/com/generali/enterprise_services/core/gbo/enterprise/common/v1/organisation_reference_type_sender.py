@@ -19,7 +19,7 @@ class OrganisationReferenceTypeSender(CodeType):
     class Meta:
         global_type = False
 
-    reference_type: ReferenceSourceType | None = field(
+    reference_type: None | ReferenceSourceType = field(
         default=None,
         metadata={
             "name": "referenceType",

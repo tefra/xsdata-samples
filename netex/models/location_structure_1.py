@@ -43,7 +43,7 @@ class LocationStructure1:
             "max_occurs": 2,
         },
     )
-    precision: int | None = field(
+    precision: None | int = field(
         default=None,
         metadata={
             "name": "Precision",
@@ -51,13 +51,13 @@ class LocationStructure1:
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    srs_name: str | None = field(
+    srs_name: None | str = field(
         default=None,
         metadata={
             "name": "srsName",
@@ -67,7 +67,7 @@ class LocationStructure1:
 
     @dataclass
     class Longitude:
-        value: Decimal | None = field(
+        value: None | Decimal = field(
             default=None,
             metadata={
                 "required": True,
@@ -78,7 +78,7 @@ class LocationStructure1:
 
     @dataclass
     class Latitude:
-        value: Decimal | None = field(
+        value: None | Decimal = field(
             default=None,
             metadata={
                 "required": True,

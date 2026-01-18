@@ -16,7 +16,7 @@ class OpenlrPointAlongLine(OpenlrBasePointLocation):
     Point along a line.
     """
 
-    openlr_point_along_line_extension: ExtensionType | None = field(
+    openlr_point_along_line_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "openlrPointAlongLineExtension",

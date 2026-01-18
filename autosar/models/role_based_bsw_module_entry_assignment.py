@@ -49,7 +49,7 @@ class RoleBasedBswModuleEntryAssignment:
         name = "ROLE-BASED-BSW-MODULE-ENTRY-ASSIGNMENT"
 
     assigned_entry_ref: (
-        RoleBasedBswModuleEntryAssignment.AssignedEntryRef | None
+        None | RoleBasedBswModuleEntryAssignment.AssignedEntryRef
     ) = field(
         default=None,
         metadata={
@@ -58,7 +58,7 @@ class RoleBasedBswModuleEntryAssignment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    role: Identifier | None = field(
+    role: None | Identifier = field(
         default=None,
         metadata={
             "name": "ROLE",
@@ -66,7 +66,7 @@ class RoleBasedBswModuleEntryAssignment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -74,14 +74,14 @@ class RoleBasedBswModuleEntryAssignment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -92,7 +92,7 @@ class RoleBasedBswModuleEntryAssignment:
 
     @dataclass
     class AssignedEntryRef(Ref):
-        dest: BswModuleEntrySubtypesEnum | None = field(
+        dest: None | BswModuleEntrySubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

@@ -54,7 +54,7 @@ class J1939TpPg:
     class Meta:
         name = "J-1939-TP-PG"
 
-    direct_pdu_ref: J1939TpPg.DirectPduRef | None = field(
+    direct_pdu_ref: None | J1939TpPg.DirectPduRef = field(
         default=None,
         metadata={
             "name": "DIRECT-PDU-REF",
@@ -62,7 +62,7 @@ class J1939TpPg:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    pgn: Integer | None = field(
+    pgn: None | Integer = field(
         default=None,
         metadata={
             "name": "PGN",
@@ -70,7 +70,7 @@ class J1939TpPg:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    requestable: Boolean | None = field(
+    requestable: None | Boolean = field(
         default=None,
         metadata={
             "name": "REQUESTABLE",
@@ -78,7 +78,7 @@ class J1939TpPg:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sdu_refs: J1939TpPg.SduRefs | None = field(
+    sdu_refs: None | J1939TpPg.SduRefs = field(
         default=None,
         metadata={
             "name": "SDU-REFS",
@@ -86,7 +86,7 @@ class J1939TpPg:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tp_sdu_ref: J1939TpPg.TpSduRef | None = field(
+    tp_sdu_ref: None | J1939TpPg.TpSduRef = field(
         default=None,
         metadata={
             "name": "TP-SDU-REF",
@@ -94,14 +94,14 @@ class J1939TpPg:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -112,7 +112,7 @@ class J1939TpPg:
 
     @dataclass
     class DirectPduRef(Ref):
-        dest: NPduSubtypesEnum | None = field(
+        dest: None | NPduSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -134,7 +134,7 @@ class J1939TpPg:
 
         @dataclass
         class SduRef(Ref):
-            dest: IPduSubtypesEnum | None = field(
+            dest: None | IPduSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -145,7 +145,7 @@ class J1939TpPg:
 
     @dataclass
     class TpSduRef(Ref):
-        dest: IPduSubtypesEnum | None = field(
+        dest: None | IPduSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

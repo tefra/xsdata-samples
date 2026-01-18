@@ -17,7 +17,7 @@ class Index(UnsignedIntExpression):
         name = "index"
         namespace = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",

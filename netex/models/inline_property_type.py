@@ -7,7 +7,7 @@ __NAMESPACE__ = "http://www.opengis.net/gml/3.2"
 
 @dataclass
 class InlinePropertyType:
-    any_element: object | None = field(
+    any_element: None | object = field(
         default=None,
         metadata={
             "type": "Wildcard",

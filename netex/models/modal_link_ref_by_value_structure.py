@@ -10,7 +10,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 @dataclass
 class ModalLinkRefByValueStructure(LinkRefByValueStructure):
-    vehicle_mode: VehicleMode | None = field(
+    vehicle_mode: None | VehicleMode = field(
         default=None,
         metadata={
             "name": "VehicleMode",

@@ -19,19 +19,19 @@ class RelatedItem:
         name = "related_item"
         namespace = "http://www.crossref.org/relations.xsd"
 
-    description: Description | None = field(
+    description: None | Description = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    inter_work_relation: InterWorkRelation | None = field(
+    inter_work_relation: None | InterWorkRelation = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    intra_work_relation: IntraWorkRelation | None = field(
+    intra_work_relation: None | IntraWorkRelation = field(
         default=None,
         metadata={
             "type": "Element",

@@ -13,7 +13,7 @@ class DeadRunWithCallsVersionStructure(DeadRunVersionStructure):
     class Meta:
         name = "DeadRunWithCalls_VersionStructure"
 
-    calls: DeadRunCallsRelStructure | None = field(
+    calls: None | DeadRunCallsRelStructure = field(
         default=None,
         metadata={
             "type": "Element",

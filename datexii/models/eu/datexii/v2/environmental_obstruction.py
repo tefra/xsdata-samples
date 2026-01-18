@@ -22,14 +22,14 @@ class EnvironmentalObstruction(Obstruction):
     :ivar environmental_obstruction_extension:
     """
 
-    depth: float | None = field(
+    depth: None | float = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    environmental_obstruction_type: EnvironmentalObstructionTypeEnum | None = (
+    environmental_obstruction_type: None | EnvironmentalObstructionTypeEnum = (
         field(
             default=None,
             metadata={
@@ -40,7 +40,7 @@ class EnvironmentalObstruction(Obstruction):
             },
         )
     )
-    environmental_obstruction_extension: ExtensionType | None = field(
+    environmental_obstruction_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "environmentalObstructionExtension",

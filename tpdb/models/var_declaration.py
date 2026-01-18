@@ -11,14 +11,14 @@ class VarDeclaration:
     class Meta:
         name = "varDeclaration"
 
-    var: Var | None = field(
+    var: None | Var = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
         },
     )
-    type_value: Type | None = field(
+    type_value: None | Type = field(
         default=None,
         metadata={
             "name": "type",

@@ -9,7 +9,7 @@ __NAMESPACE__ = "http://www.opengis.net/gml/3.2"
 
 @dataclass
 class AbstractRingPropertyType:
-    linear_ring: LinearRing | None = field(
+    linear_ring: None | LinearRing = field(
         default=None,
         metadata={
             "name": "LinearRing",

@@ -9,7 +9,7 @@ __NAMESPACE__ = "http://www.opengis.net/gml/3.2"
 
 @dataclass
 class CodeWithAuthorityType(CodeType):
-    code_space: str | None = field(
+    code_space: None | str = field(
         default=None,
         metadata={
             "name": "codeSpace",

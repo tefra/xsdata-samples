@@ -551,7 +551,7 @@ class AsnpartialOrder:
             "required": True,
         }
     )
-    asnpartial_order_coded_other: AsnpartialOrderCodedOther | None = field(
+    asnpartial_order_coded_other: None | AsnpartialOrderCodedOther = field(
         default=None,
         metadata={
             "name": "ASNPartialOrderCodedOther",
@@ -573,14 +573,14 @@ class ActualAmount:
 
 @dataclass(kw_only=True)
 class ActualPaymentStatus:
-    actual_payment_status_coded: ActualPaymentStatusCoded | None = field(
+    actual_payment_status_coded: None | ActualPaymentStatusCoded = field(
         default=None,
         metadata={
             "name": "ActualPaymentStatusCoded",
             "type": "Element",
         },
     )
-    actual_payment_status_coded_other: ActualPaymentStatusCodedOther | None = (
+    actual_payment_status_coded_other: None | ActualPaymentStatusCodedOther = (
         field(
             default=None,
             metadata={
@@ -720,7 +720,7 @@ class DeliveryNoteNumber:
 
 @dataclass(kw_only=True)
 class EncryptedField:
-    sequence: Sequence | None = field(
+    sequence: None | Sequence = field(
         default=None,
         metadata={
             "name": "Sequence",
@@ -768,7 +768,7 @@ class FinancialInstitutionCoded:
         }
     )
     financial_institution_qaulifier_coded_other: (
-        FinancialInstitutionQaulifierCodedOther | None
+        None | FinancialInstitutionQaulifierCodedOther
     ) = field(
         default=None,
         metadata={
@@ -827,7 +827,7 @@ class InvoiceType:
             "required": True,
         }
     )
-    invoice_type_coded_other: InvoiceTypeCodedOther | None = field(
+    invoice_type_coded_other: None | InvoiceTypeCodedOther = field(
         default=None,
         metadata={
             "name": "InvoiceTypeCodedOther",
@@ -964,21 +964,21 @@ class OtherAsnreferences:
 
 @dataclass(kw_only=True)
 class OtherInvoiceParties:
-    bill_to_party: BillToParty | None = field(
+    bill_to_party: None | BillToParty = field(
         default=None,
         metadata={
             "name": "BillToParty",
             "type": "Element",
         },
     )
-    remit_to_party: RemitToParty | None = field(
+    remit_to_party: None | RemitToParty = field(
         default=None,
         metadata={
             "name": "RemitToParty",
             "type": "Element",
         },
     )
-    list_of_party_coded: ListOfPartyCoded | None = field(
+    list_of_party_coded: None | ListOfPartyCoded = field(
         default=None,
         metadata={
             "name": "ListOfPartyCoded",
@@ -1029,63 +1029,63 @@ class PayerParty:
             "required": True,
         }
     )
-    list_of_identifier: ListOfIdentifier | None = field(
+    list_of_identifier: None | ListOfIdentifier = field(
         default=None,
         metadata={
             "name": "ListOfIdentifier",
             "type": "Element",
         },
     )
-    mdfbusiness: Mdfbusiness | None = field(
+    mdfbusiness: None | Mdfbusiness = field(
         default=None,
         metadata={
             "name": "MDFBusiness",
             "type": "Element",
         },
     )
-    name_address: NameAddress | None = field(
+    name_address: None | NameAddress = field(
         default=None,
         metadata={
             "name": "NameAddress",
             "type": "Element",
         },
     )
-    order_contact: OrderContact | None = field(
+    order_contact: None | OrderContact = field(
         default=None,
         metadata={
             "name": "OrderContact",
             "type": "Element",
         },
     )
-    receiving_contact: ReceivingContact | None = field(
+    receiving_contact: None | ReceivingContact = field(
         default=None,
         metadata={
             "name": "ReceivingContact",
             "type": "Element",
         },
     )
-    shipping_contact: ShippingContact | None = field(
+    shipping_contact: None | ShippingContact = field(
         default=None,
         metadata={
             "name": "ShippingContact",
             "type": "Element",
         },
     )
-    other_contacts: OtherContacts | None = field(
+    other_contacts: None | OtherContacts = field(
         default=None,
         metadata={
             "name": "OtherContacts",
             "type": "Element",
         },
     )
-    correspondence_language: CorrespondenceLanguage | None = field(
+    correspondence_language: None | CorrespondenceLanguage = field(
         default=None,
         metadata={
             "name": "CorrespondenceLanguage",
             "type": "Element",
         },
     )
-    certificate_authority: CertificateAuthority | None = field(
+    certificate_authority: None | CertificateAuthority = field(
         default=None,
         metadata={
             "name": "CertificateAuthority",
@@ -1330,7 +1330,7 @@ class Unusable:
 
 @dataclass(kw_only=True)
 class Adjustment:
-    line_item_reference: LineItemReference | None = field(
+    line_item_reference: None | LineItemReference = field(
         default=None,
         metadata={
             "name": "LineItemReference",
@@ -1344,35 +1344,35 @@ class Adjustment:
             "required": True,
         }
     )
-    adjustment_reason_coded_other: AdjustmentReasonCodedOther | None = field(
+    adjustment_reason_coded_other: None | AdjustmentReasonCodedOther = field(
         default=None,
         metadata={
             "name": "AdjustmentReasonCodedOther",
             "type": "Element",
         },
     )
-    adjustment_date: AdjustmentDate | None = field(
+    adjustment_date: None | AdjustmentDate = field(
         default=None,
         metadata={
             "name": "AdjustmentDate",
             "type": "Element",
         },
     )
-    expected_amount: ExpectedAmount | None = field(
+    expected_amount: None | ExpectedAmount = field(
         default=None,
         metadata={
             "name": "ExpectedAmount",
             "type": "Element",
         },
     )
-    adjustment_amount: AdjustmentAmount | None = field(
+    adjustment_amount: None | AdjustmentAmount = field(
         default=None,
         metadata={
             "name": "AdjustmentAmount",
             "type": "Element",
         },
     )
-    adjustment_percent: AdjustmentPercent | None = field(
+    adjustment_percent: None | AdjustmentPercent = field(
         default=None,
         metadata={
             "name": "AdjustmentPercent",
@@ -1386,7 +1386,7 @@ class Adjustment:
             "required": True,
         }
     )
-    adjustment_note: AdjustmentNote | None = field(
+    adjustment_note: None | AdjustmentNote = field(
         default=None,
         metadata={
             "name": "AdjustmentNote",
@@ -1404,7 +1404,7 @@ class AuthorizationReference:
             "required": True,
         }
     )
-    authorization_assigned_by: AuthorizationAssignedBy | None = field(
+    authorization_assigned_by: None | AuthorizationAssignedBy = field(
         default=None,
         metadata={
             "name": "AuthorizationAssignedBy",
@@ -1440,14 +1440,14 @@ class CostAllocation:
             "required": True,
         }
     )
-    work_breakdown_structure: WorkBreakdownStructure | None = field(
+    work_breakdown_structure: None | WorkBreakdownStructure = field(
         default=None,
         metadata={
             "name": "WorkBreakdownStructure",
             "type": "Element",
         },
     )
-    fixed_asset: FixedAsset | None = field(
+    fixed_asset: None | FixedAsset = field(
         default=None,
         metadata={
             "name": "FixedAsset",
@@ -1458,35 +1458,35 @@ class CostAllocation:
 
 @dataclass(kw_only=True)
 class ExceptionQuantities:
-    ordered: Ordered | None = field(
+    ordered: None | Ordered = field(
         default=None,
         metadata={
             "name": "Ordered",
             "type": "Element",
         },
     )
-    damaged: Damaged | None = field(
+    damaged: None | Damaged = field(
         default=None,
         metadata={
             "name": "Damaged",
             "type": "Element",
         },
     )
-    unusable: Unusable | None = field(
+    unusable: None | Unusable = field(
         default=None,
         metadata={
             "name": "Unusable",
             "type": "Element",
         },
     )
-    returned: Returned | None = field(
+    returned: None | Returned = field(
         default=None,
         metadata={
             "name": "Returned",
             "type": "Element",
         },
     )
-    shipped_to_date: ShippedToDate | None = field(
+    shipped_to_date: None | ShippedToDate = field(
         default=None,
         metadata={
             "name": "ShippedToDate",
@@ -1497,49 +1497,49 @@ class ExceptionQuantities:
 
 @dataclass(kw_only=True)
 class InvoiceDates:
-    invoice_due_date: InvoiceDueDate | None = field(
+    invoice_due_date: None | InvoiceDueDate = field(
         default=None,
         metadata={
             "name": "InvoiceDueDate",
             "type": "Element",
         },
     )
-    expected_ship_to_date_time: ExpectedShipToDateTime | None = field(
+    expected_ship_to_date_time: None | ExpectedShipToDateTime = field(
         default=None,
         metadata={
             "name": "ExpectedShipToDateTime",
             "type": "Element",
         },
     )
-    actual_ship_to_date_time: ActualShipToDateTime | None = field(
+    actual_ship_to_date_time: None | ActualShipToDateTime = field(
         default=None,
         metadata={
             "name": "ActualShipToDateTime",
             "type": "Element",
         },
     )
-    receipt_date_time: ReceiptDateTime | None = field(
+    receipt_date_time: None | ReceiptDateTime = field(
         default=None,
         metadata={
             "name": "ReceiptDateTime",
             "type": "Element",
         },
     )
-    tax_period: TaxPeriod | None = field(
+    tax_period: None | TaxPeriod = field(
         default=None,
         metadata={
             "name": "TaxPeriod",
             "type": "Element",
         },
     )
-    invoicing_period: InvoicingPeriod | None = field(
+    invoicing_period: None | InvoicingPeriod = field(
         default=None,
         metadata={
             "name": "InvoicingPeriod",
             "type": "Element",
         },
     )
-    list_of_other_invoice_dates: ListOfOtherInvoiceDates | None = field(
+    list_of_other_invoice_dates: None | ListOfOtherInvoiceDates = field(
         default=None,
         metadata={
             "name": "ListOfOtherInvoiceDates",
@@ -1564,14 +1564,14 @@ class InvoicePricingDetail:
             "type": "Element",
         },
     )
-    item_allowances_or_charges: ItemAllowancesOrCharges | None = field(
+    item_allowances_or_charges: None | ItemAllowancesOrCharges = field(
         default=None,
         metadata={
             "name": "ItemAllowancesOrCharges",
             "type": "Element",
         },
     )
-    total_value: TotalValue | None = field(
+    total_value: None | TotalValue = field(
         default=None,
         metadata={
             "name": "TotalValue",
@@ -1585,28 +1585,28 @@ class InvoicePricingDetail:
             "required": True,
         }
     )
-    payment_currency_total_value: PaymentCurrencyTotalValue | None = field(
+    payment_currency_total_value: None | PaymentCurrencyTotalValue = field(
         default=None,
         metadata={
             "name": "PaymentCurrencyTotalValue",
             "type": "Element",
         },
     )
-    tax_accounting_sub_total_value: TaxAccountingSubTotalValue | None = field(
+    tax_accounting_sub_total_value: None | TaxAccountingSubTotalValue = field(
         default=None,
         metadata={
             "name": "TaxAccountingSubTotalValue",
             "type": "Element",
         },
     )
-    actual_payment_status: ActualPaymentStatus | None = field(
+    actual_payment_status: None | ActualPaymentStatus = field(
         default=None,
         metadata={
             "name": "ActualPaymentStatus",
             "type": "Element",
         },
     )
-    total_tax_amount: TotalTaxAmount | None = field(
+    total_tax_amount: None | TotalTaxAmount = field(
         default=None,
         metadata={
             "name": "TotalTaxAmount",
@@ -1666,28 +1666,28 @@ class PaymentParty:
             "required": True,
         }
     )
-    buyer_party: BuyerParty | None = field(
+    buyer_party: None | BuyerParty = field(
         default=None,
         metadata={
             "name": "BuyerParty",
             "type": "Element",
         },
     )
-    supplier_party: SupplierParty | None = field(
+    supplier_party: None | SupplierParty = field(
         default=None,
         metadata={
             "name": "SupplierParty",
             "type": "Element",
         },
     )
-    bill_to_party: BillToParty | None = field(
+    bill_to_party: None | BillToParty = field(
         default=None,
         metadata={
             "name": "BillToParty",
             "type": "Element",
         },
     )
-    list_of_party_coded: ListOfPartyCoded | None = field(
+    list_of_party_coded: None | ListOfPartyCoded = field(
         default=None,
         metadata={
             "name": "ListOfPartyCoded",
@@ -1705,14 +1705,14 @@ class PurchaseOrderReference:
             "required": True,
         }
     )
-    purchase_order_date: PurchaseOrderDate | None = field(
+    purchase_order_date: None | PurchaseOrderDate = field(
         default=None,
         metadata={
             "name": "PurchaseOrderDate",
             "type": "Element",
         },
     )
-    purchase_order_line_item_number: PurchaseOrderLineItemNumber | None = (
+    purchase_order_line_item_number: None | PurchaseOrderLineItemNumber = (
         field(
             default=None,
             metadata={
@@ -1721,14 +1721,14 @@ class PurchaseOrderReference:
             },
         )
     )
-    partial_order_coded: PartialOrderCoded | None = field(
+    partial_order_coded: None | PartialOrderCoded = field(
         default=None,
         metadata={
             "name": "PartialOrderCoded",
             "type": "Element",
         },
     )
-    partial_order_coded_other: PartialOrderCodedOther | None = field(
+    partial_order_coded_other: None | PartialOrderCodedOther = field(
         default=None,
         metadata={
             "name": "PartialOrderCodedOther",
@@ -1757,14 +1757,14 @@ class TraceType:
             "required": True,
         }
     )
-    trace_type_coded_other: TraceTypeCodedOther | None = field(
+    trace_type_coded_other: None | TraceTypeCodedOther = field(
         default=None,
         metadata={
             "name": "TraceTypeCodedOther",
             "type": "Element",
         },
     )
-    trace_reference: TraceReference | None = field(
+    trace_reference: None | TraceReference = field(
         default=None,
         metadata={
             "name": "TraceReference",
@@ -1782,7 +1782,7 @@ class TrackingInformation:
             "required": True,
         }
     )
-    tracking_call_url: TrackingCallUrl | None = field(
+    tracking_call_url: None | TrackingCallUrl = field(
         default=None,
         metadata={
             "name": "TrackingCallURL",
@@ -1793,7 +1793,7 @@ class TrackingInformation:
 
 @dataclass(kw_only=True)
 class EncryptedInfo:
-    certificate_authority: CertificateAuthority | None = field(
+    certificate_authority: None | CertificateAuthority = field(
         default=None,
         metadata={
             "name": "CertificateAuthority",
@@ -1860,7 +1860,7 @@ class RelatedInvoiceRef:
             "required": True,
         }
     )
-    invoice_line_item_number: InvoiceLineItemNumber | None = field(
+    invoice_line_item_number: None | InvoiceLineItemNumber = field(
         default=None,
         metadata={
             "name": "InvoiceLineItemNumber",
@@ -1892,7 +1892,7 @@ class RemittanceAdviceHeader:
             "required": True,
         }
     )
-    remittance_advice_status_coded: RemittanceAdviceStatusCoded | None = field(
+    remittance_advice_status_coded: None | RemittanceAdviceStatusCoded = field(
         default=None,
         metadata={
             "name": "RemittanceAdviceStatusCoded",
@@ -1900,7 +1900,7 @@ class RemittanceAdviceHeader:
         },
     )
     remittance_advice_status_coded_other: (
-        RemittanceAdviceStatusCodedOther | None
+        None | RemittanceAdviceStatusCodedOther
     ) = field(
         default=None,
         metadata={
@@ -1908,14 +1908,14 @@ class RemittanceAdviceHeader:
             "type": "Element",
         },
     )
-    payment_settlement_date: PaymentSettlementDate | None = field(
+    payment_settlement_date: None | PaymentSettlementDate = field(
         default=None,
         metadata={
             "name": "PaymentSettlementDate",
             "type": "Element",
         },
     )
-    total_amount_due: TotalAmountDue | None = field(
+    total_amount_due: None | TotalAmountDue = field(
         default=None,
         metadata={
             "name": "TotalAmountDue",
@@ -1936,14 +1936,14 @@ class RemittanceAdviceHeader:
             "required": True,
         }
     )
-    list_of_rate_of_exchange_detail: ListOfRateOfExchangeDetail | None = field(
+    list_of_rate_of_exchange_detail: None | ListOfRateOfExchangeDetail = field(
         default=None,
         metadata={
             "name": "ListOfRateOfExchangeDetail",
             "type": "Element",
         },
     )
-    list_of_price: ListOfPrice | None = field(
+    list_of_price: None | ListOfPrice = field(
         default=None,
         metadata={
             "name": "ListOfPrice",
@@ -1957,14 +1957,14 @@ class RemittanceAdviceHeader:
             "required": True,
         }
     )
-    is_credit: IsCredit | None = field(
+    is_credit: None | IsCredit = field(
         default=None,
         metadata={
             "name": "IsCredit",
             "type": "Element",
         },
     )
-    payment_instructions: PaymentInstructions | None = field(
+    payment_instructions: None | PaymentInstructions = field(
         default=None,
         metadata={
             "name": "PaymentInstructions",
@@ -1972,7 +1972,7 @@ class RemittanceAdviceHeader:
         },
     )
     list_of_financial_institution_coded: (
-        ListOfFinancialInstitutionCoded | None
+        None | ListOfFinancialInstitutionCoded
     ) = field(
         default=None,
         metadata={
@@ -1987,28 +1987,28 @@ class RemittanceAdviceHeader:
             "required": True,
         }
     )
-    payment_reason_coded: PaymentReasonCoded | None = field(
+    payment_reason_coded: None | PaymentReasonCoded = field(
         default=None,
         metadata={
             "name": "PaymentReasonCoded",
             "type": "Element",
         },
     )
-    payment_reason_coded_other: PaymentReasonCodedOther | None = field(
+    payment_reason_coded_other: None | PaymentReasonCodedOther = field(
         default=None,
         metadata={
             "name": "PaymentReasonCodedOther",
             "type": "Element",
         },
     )
-    transaction_handling_coded: TransactionHandlingCoded | None = field(
+    transaction_handling_coded: None | TransactionHandlingCoded = field(
         default=None,
         metadata={
             "name": "TransactionHandlingCoded",
             "type": "Element",
         },
     )
-    transaction_handling_coded_other: TransactionHandlingCodedOther | None = (
+    transaction_handling_coded_other: None | TransactionHandlingCodedOther = (
         field(
             default=None,
             metadata={
@@ -2017,7 +2017,7 @@ class RemittanceAdviceHeader:
             },
         )
     )
-    trace_type: TraceType | None = field(
+    trace_type: None | TraceType = field(
         default=None,
         metadata={
             "name": "TraceType",
@@ -2025,7 +2025,7 @@ class RemittanceAdviceHeader:
         },
     )
     list_of_remittance_advice_reference: (
-        ListOfRemittanceAdviceReference | None
+        None | ListOfRemittanceAdviceReference
     ) = field(
         default=None,
         metadata={
@@ -2033,14 +2033,14 @@ class RemittanceAdviceHeader:
             "type": "Element",
         },
     )
-    remittance_advice_attachment: RemittanceAdviceAttachment | None = field(
+    remittance_advice_attachment: None | RemittanceAdviceAttachment = field(
         default=None,
         metadata={
             "name": "RemittanceAdviceAttachment",
             "type": "Element",
         },
     )
-    general_note: GeneralNote | None = field(
+    general_note: None | GeneralNote = field(
         default=None,
         metadata={
             "name": "GeneralNote",
@@ -2054,84 +2054,84 @@ class Asnreferences:
     class Meta:
         name = "ASNReferences"
 
-    shipment_identifier: ShipmentIdentifier | None = field(
+    shipment_identifier: None | ShipmentIdentifier = field(
         default=None,
         metadata={
             "name": "ShipmentIdentifier",
             "type": "Element",
         },
     )
-    packing_list_number: PackingListNumber | None = field(
+    packing_list_number: None | PackingListNumber = field(
         default=None,
         metadata={
             "name": "PackingListNumber",
             "type": "Element",
         },
     )
-    contract_number: ContractNumber | None = field(
+    contract_number: None | ContractNumber = field(
         default=None,
         metadata={
             "name": "ContractNumber",
             "type": "Element",
         },
     )
-    bill_of_lading_number: BillOfLadingNumber | None = field(
+    bill_of_lading_number: None | BillOfLadingNumber = field(
         default=None,
         metadata={
             "name": "BillOfLadingNumber",
             "type": "Element",
         },
     )
-    air_waybill_number: AirWaybillNumber2 | None = field(
+    air_waybill_number: None | AirWaybillNumber2 = field(
         default=None,
         metadata={
             "name": "AirWaybillNumber",
             "type": "Element",
         },
     )
-    import_licence_number: ImportLicenceNumber | None = field(
+    import_licence_number: None | ImportLicenceNumber = field(
         default=None,
         metadata={
             "name": "ImportLicenceNumber",
             "type": "Element",
         },
     )
-    export_licence_number: ExportLicenceNumber | None = field(
+    export_licence_number: None | ExportLicenceNumber = field(
         default=None,
         metadata={
             "name": "ExportLicenceNumber",
             "type": "Element",
         },
     )
-    letter_of_credit_number: LetterOfCreditNumber | None = field(
+    letter_of_credit_number: None | LetterOfCreditNumber = field(
         default=None,
         metadata={
             "name": "LetterOfCreditNumber",
             "type": "Element",
         },
     )
-    url: Url | None = field(
+    url: None | Url = field(
         default=None,
         metadata={
             "name": "URL",
             "type": "Element",
         },
     )
-    tracking_information: TrackingInformation | None = field(
+    tracking_information: None | TrackingInformation = field(
         default=None,
         metadata={
             "name": "TrackingInformation",
             "type": "Element",
         },
     )
-    list_of_carrier_reference: ListOfCarrierReference | None = field(
+    list_of_carrier_reference: None | ListOfCarrierReference = field(
         default=None,
         metadata={
             "name": "ListOfCarrierReference",
             "type": "Element",
         },
     )
-    other_asnreferences: OtherAsnreferences | None = field(
+    other_asnreferences: None | OtherAsnreferences = field(
         default=None,
         metadata={
             "name": "OtherASNReferences",
@@ -2154,42 +2154,42 @@ class ListOfRelatedInvoiceRef:
 
 @dataclass(kw_only=True)
 class PaymentRequestSummary:
-    total_payment_documents: TotalPaymentDocuments | None = field(
+    total_payment_documents: None | TotalPaymentDocuments = field(
         default=None,
         metadata={
             "name": "TotalPaymentDocuments",
             "type": "Element",
         },
     )
-    total_line_item: TotalLineItem | None = field(
+    total_line_item: None | TotalLineItem = field(
         default=None,
         metadata={
             "name": "TotalLineItem",
             "type": "Element",
         },
     )
-    total_settlement_amount: TotalSettlementAmount | None = field(
+    total_settlement_amount: None | TotalSettlementAmount = field(
         default=None,
         metadata={
             "name": "TotalSettlementAmount",
             "type": "Element",
         },
     )
-    encrypted_info: EncryptedInfo | None = field(
+    encrypted_info: None | EncryptedInfo = field(
         default=None,
         metadata={
             "name": "EncryptedInfo",
             "type": "Element",
         },
     )
-    list_of_summary_items: ListOfSummaryItems | None = field(
+    list_of_summary_items: None | ListOfSummaryItems = field(
         default=None,
         metadata={
             "name": "ListOfSummaryItems",
             "type": "Element",
         },
     )
-    summary_note: SummaryNote | None = field(
+    summary_note: None | SummaryNote = field(
         default=None,
         metadata={
             "name": "SummaryNote",
@@ -2210,28 +2210,28 @@ class AsnorderNumber:
             "required": True,
         }
     )
-    seller_order_number: SellerOrderNumber | None = field(
+    seller_order_number: None | SellerOrderNumber = field(
         default=None,
         metadata={
             "name": "SellerOrderNumber",
             "type": "Element",
         },
     )
-    list_of_message_id: ListOfMessageId | None = field(
+    list_of_message_id: None | ListOfMessageId = field(
         default=None,
         metadata={
             "name": "ListOfMessageID",
             "type": "Element",
         },
     )
-    asnpartial_order: AsnpartialOrder | None = field(
+    asnpartial_order: None | AsnpartialOrder = field(
         default=None,
         metadata={
             "name": "ASNPartialOrder",
             "type": "Element",
         },
     )
-    asnreferences: Asnreferences | None = field(
+    asnreferences: None | Asnreferences = field(
         default=None,
         metadata={
             "name": "ASNReferences",
@@ -2253,126 +2253,126 @@ class RemittanceAdviceSummary:
 
 @dataclass(kw_only=True)
 class InvoiceReferences:
-    purchase_order_reference: PurchaseOrderReference | None = field(
+    purchase_order_reference: None | PurchaseOrderReference = field(
         default=None,
         metadata={
             "name": "PurchaseOrderReference",
             "type": "Element",
         },
     )
-    contract_reference: ContractReference | None = field(
+    contract_reference: None | ContractReference = field(
         default=None,
         metadata={
             "name": "ContractReference",
             "type": "Element",
         },
     )
-    account_number: AccountNumber | None = field(
+    account_number: None | AccountNumber = field(
         default=None,
         metadata={
             "name": "AccountNumber",
             "type": "Element",
         },
     )
-    proforma_invoice_number: ProformaInvoiceNumber | None = field(
+    proforma_invoice_number: None | ProformaInvoiceNumber = field(
         default=None,
         metadata={
             "name": "ProformaInvoiceNumber",
             "type": "Element",
         },
     )
-    asnnumber: Asnnumber | None = field(
+    asnnumber: None | Asnnumber = field(
         default=None,
         metadata={
             "name": "ASNNumber",
             "type": "Element",
         },
     )
-    asnorder_number: AsnorderNumber | None = field(
+    asnorder_number: None | AsnorderNumber = field(
         default=None,
         metadata={
             "name": "ASNOrderNumber",
             "type": "Element",
         },
     )
-    supplier_order_number: SupplierOrderNumber | None = field(
+    supplier_order_number: None | SupplierOrderNumber = field(
         default=None,
         metadata={
             "name": "SupplierOrderNumber",
             "type": "Element",
         },
     )
-    price_list_number: PriceListNumber | None = field(
+    price_list_number: None | PriceListNumber = field(
         default=None,
         metadata={
             "name": "PriceListNumber",
             "type": "Element",
         },
     )
-    price_list_version_number: PriceListVersionNumber | None = field(
+    price_list_version_number: None | PriceListVersionNumber = field(
         default=None,
         metadata={
             "name": "PriceListVersionNumber",
             "type": "Element",
         },
     )
-    buyers_catalog_number: BuyersCatalogNumber | None = field(
+    buyers_catalog_number: None | BuyersCatalogNumber = field(
         default=None,
         metadata={
             "name": "BuyersCatalogNumber",
             "type": "Element",
         },
     )
-    bill_of_lading_number: BillOfLadingNumber | None = field(
+    bill_of_lading_number: None | BillOfLadingNumber = field(
         default=None,
         metadata={
             "name": "BillOfLadingNumber",
             "type": "Element",
         },
     )
-    air_way_bill_number: AirWayBillNumber1 | None = field(
+    air_way_bill_number: None | AirWayBillNumber1 = field(
         default=None,
         metadata={
             "name": "AirWayBillNumber",
             "type": "Element",
         },
     )
-    letter_of_credit_number: LetterOfCreditNumber | None = field(
+    letter_of_credit_number: None | LetterOfCreditNumber = field(
         default=None,
         metadata={
             "name": "LetterOfCreditNumber",
             "type": "Element",
         },
     )
-    authorization_reference: AuthorizationReference | None = field(
+    authorization_reference: None | AuthorizationReference = field(
         default=None,
         metadata={
             "name": "AuthorizationReference",
             "type": "Element",
         },
     )
-    delivery_note_number: DeliveryNoteNumber | None = field(
+    delivery_note_number: None | DeliveryNoteNumber = field(
         default=None,
         metadata={
             "name": "DeliveryNoteNumber",
             "type": "Element",
         },
     )
-    cost_allocation: CostAllocation | None = field(
+    cost_allocation: None | CostAllocation = field(
         default=None,
         metadata={
             "name": "CostAllocation",
             "type": "Element",
         },
     )
-    list_of_related_invoice_ref: ListOfRelatedInvoiceRef | None = field(
+    list_of_related_invoice_ref: None | ListOfRelatedInvoiceRef = field(
         default=None,
         metadata={
             "name": "ListOfRelatedInvoiceRef",
             "type": "Element",
         },
     )
-    other_invoice_references: OtherInvoiceReferences | None = field(
+    other_invoice_references: None | OtherInvoiceReferences = field(
         default=None,
         metadata={
             "name": "OtherInvoiceReferences",
@@ -2401,133 +2401,133 @@ class InvoiceBaseItemDetail:
             "required": True,
         }
     )
-    line_item_type: LineItemType | None = field(
+    line_item_type: None | LineItemType = field(
         default=None,
         metadata={
             "name": "LineItemType",
             "type": "Element",
         },
     )
-    parent_item_number: ParentItemNumber | None = field(
+    parent_item_number: None | ParentItemNumber = field(
         default=None,
         metadata={
             "name": "ParentItemNumber",
             "type": "Element",
         },
     )
-    item_identifiers: ItemIdentifiers | None = field(
+    item_identifiers: None | ItemIdentifiers = field(
         default=None,
         metadata={
             "name": "ItemIdentifiers",
             "type": "Element",
         },
     )
-    list_of_dimension: ListOfDimension | None = field(
+    list_of_dimension: None | ListOfDimension = field(
         default=None,
         metadata={
             "name": "ListOfDimension",
             "type": "Element",
         },
     )
-    total_quantity: TotalQuantity | None = field(
+    total_quantity: None | TotalQuantity = field(
         default=None,
         metadata={
             "name": "TotalQuantity",
             "type": "Element",
         },
     )
-    max_back_order_quantity: MaxBackOrderQuantity | None = field(
+    max_back_order_quantity: None | MaxBackOrderQuantity = field(
         default=None,
         metadata={
             "name": "MaxBackOrderQuantity",
             "type": "Element",
         },
     )
-    list_of_quantity_coded: ListOfQuantityCoded | None = field(
+    list_of_quantity_coded: None | ListOfQuantityCoded = field(
         default=None,
         metadata={
             "name": "ListOfQuantityCoded",
             "type": "Element",
         },
     )
-    off_catalog_flag: OffCatalogFlag | None = field(
+    off_catalog_flag: None | OffCatalogFlag = field(
         default=None,
         metadata={
             "name": "OffCatalogFlag",
             "type": "Element",
         },
     )
-    catalog_reference: CatalogReference | None = field(
+    catalog_reference: None | CatalogReference = field(
         default=None,
         metadata={
             "name": "CatalogReference",
             "type": "Element",
         },
     )
-    item_contract_references: ItemContractReferences | None = field(
+    item_contract_references: None | ItemContractReferences = field(
         default=None,
         metadata={
             "name": "ItemContractReferences",
             "type": "Element",
         },
     )
-    list_of_item_references: ListOfItemReferences | None = field(
+    list_of_item_references: None | ListOfItemReferences = field(
         default=None,
         metadata={
             "name": "ListOfItemReferences",
             "type": "Element",
         },
     )
-    country_of_origin: CountryOfOrigin | None = field(
+    country_of_origin: None | CountryOfOrigin = field(
         default=None,
         metadata={
             "name": "CountryOfOrigin",
             "type": "Element",
         },
     )
-    country_of_destination: CountryOfDestination | None = field(
+    country_of_destination: None | CountryOfDestination = field(
         default=None,
         metadata={
             "name": "CountryOfDestination",
             "type": "Element",
         },
     )
-    final_recipient: FinalRecipient | None = field(
+    final_recipient: None | FinalRecipient = field(
         default=None,
         metadata={
             "name": "FinalRecipient",
             "type": "Element",
         },
     )
-    list_of_party_coded: ListOfPartyCoded | None = field(
+    list_of_party_coded: None | ListOfPartyCoded = field(
         default=None,
         metadata={
             "name": "ListOfPartyCoded",
             "type": "Element",
         },
     )
-    conditions_of_sale: ConditionsOfSale | None = field(
+    conditions_of_sale: None | ConditionsOfSale = field(
         default=None,
         metadata={
             "name": "ConditionsOfSale",
             "type": "Element",
         },
     )
-    hazardous_materials: HazardousMaterials | None = field(
+    hazardous_materials: None | HazardousMaterials = field(
         default=None,
         metadata={
             "name": "HazardousMaterials",
             "type": "Element",
         },
     )
-    line_item_references: LineItemReferences | None = field(
+    line_item_references: None | LineItemReferences = field(
         default=None,
         metadata={
             "name": "LineItemReferences",
             "type": "Element",
         },
     )
-    exception_quantities: ExceptionQuantities | None = field(
+    exception_quantities: None | ExceptionQuantities = field(
         default=None,
         metadata={
             "name": "ExceptionQuantities",
@@ -2552,49 +2552,49 @@ class InvoiceItemDetail:
             "required": True,
         }
     )
-    line_item_dates: LineItemDates | None = field(
+    line_item_dates: None | LineItemDates = field(
         default=None,
         metadata={
             "name": "LineItemDates",
             "type": "Element",
         },
     )
-    other_invoice_parties: OtherInvoiceParties | None = field(
+    other_invoice_parties: None | OtherInvoiceParties = field(
         default=None,
         metadata={
             "name": "OtherInvoiceParties",
             "type": "Element",
         },
     )
-    delivery_detail: DeliveryDetail | None = field(
+    delivery_detail: None | DeliveryDetail = field(
         default=None,
         metadata={
             "name": "DeliveryDetail",
             "type": "Element",
         },
     )
-    line_item_note: LineItemNote | None = field(
+    line_item_note: None | LineItemNote = field(
         default=None,
         metadata={
             "name": "LineItemNote",
             "type": "Element",
         },
     )
-    list_of_structured_note: ListOfStructuredNote | None = field(
+    list_of_structured_note: None | ListOfStructuredNote = field(
         default=None,
         metadata={
             "name": "ListOfStructuredNote",
             "type": "Element",
         },
     )
-    list_of_name_value_set: ListOfNameValueSet | None = field(
+    list_of_name_value_set: None | ListOfNameValueSet = field(
         default=None,
         metadata={
             "name": "ListOfNameValueSet",
             "type": "Element",
         },
     )
-    line_item_attachments: LineItemAttachments | None = field(
+    line_item_attachments: None | LineItemAttachments = field(
         default=None,
         metadata={
             "name": "LineItemAttachments",
@@ -2623,28 +2623,28 @@ class InvoicingDetail:
             "required": True,
         }
     )
-    invoicing_detail_amount_due: InvoicingDetailAmountDue | None = field(
+    invoicing_detail_amount_due: None | InvoicingDetailAmountDue = field(
         default=None,
         metadata={
             "name": "InvoicingDetailAmountDue",
             "type": "Element",
         },
     )
-    invoicing_detail_amount_paid: InvoicingDetailAmountPaid | None = field(
+    invoicing_detail_amount_paid: None | InvoicingDetailAmountPaid = field(
         default=None,
         metadata={
             "name": "InvoicingDetailAmountPaid",
             "type": "Element",
         },
     )
-    invoicing_item_detail: InvoicingItemDetail | None = field(
+    invoicing_item_detail: None | InvoicingItemDetail = field(
         default=None,
         metadata={
             "name": "InvoicingItemDetail",
             "type": "Element",
         },
     )
-    list_of_adjustments: ListOfAdjustments | None = field(
+    list_of_adjustments: None | ListOfAdjustments = field(
         default=None,
         metadata={
             "name": "ListOfAdjustments",
@@ -2674,56 +2674,56 @@ class Subsidiary:
             "required": True,
         }
     )
-    list_of_identifier: ListOfIdentifier | None = field(
+    list_of_identifier: None | ListOfIdentifier = field(
         default=None,
         metadata={
             "name": "ListOfIdentifier",
             "type": "Element",
         },
     )
-    mdfbusiness: Mdfbusiness | None = field(
+    mdfbusiness: None | Mdfbusiness = field(
         default=None,
         metadata={
             "name": "MDFBusiness",
             "type": "Element",
         },
     )
-    name_address: NameAddress | None = field(
+    name_address: None | NameAddress = field(
         default=None,
         metadata={
             "name": "NameAddress",
             "type": "Element",
         },
     )
-    order_contact: OrderContact | None = field(
+    order_contact: None | OrderContact = field(
         default=None,
         metadata={
             "name": "OrderContact",
             "type": "Element",
         },
     )
-    receiving_contact: ReceivingContact | None = field(
+    receiving_contact: None | ReceivingContact = field(
         default=None,
         metadata={
             "name": "ReceivingContact",
             "type": "Element",
         },
     )
-    shipping_contact: ShippingContact | None = field(
+    shipping_contact: None | ShippingContact = field(
         default=None,
         metadata={
             "name": "ShippingContact",
             "type": "Element",
         },
     )
-    other_contacts: OtherContacts | None = field(
+    other_contacts: None | OtherContacts = field(
         default=None,
         metadata={
             "name": "OtherContacts",
             "type": "Element",
         },
     )
-    correspondence_language: CorrespondenceLanguage | None = field(
+    correspondence_language: None | CorrespondenceLanguage = field(
         default=None,
         metadata={
             "name": "CorrespondenceLanguage",
@@ -2753,42 +2753,42 @@ class ListOfSubsidiary:
 
 @dataclass(kw_only=True)
 class RemittanceAdviceDetail:
-    list_of_subsidiary: ListOfSubsidiary | None = field(
+    list_of_subsidiary: None | ListOfSubsidiary = field(
         default=None,
         metadata={
             "name": "ListOfSubsidiary",
             "type": "Element",
         },
     )
-    list_of_invoicing_detail: ListOfInvoicingDetail | None = field(
+    list_of_invoicing_detail: None | ListOfInvoicingDetail = field(
         default=None,
         metadata={
             "name": "ListOfInvoicingDetail",
             "type": "Element",
         },
     )
-    list_of_adjustments: ListOfAdjustments | None = field(
+    list_of_adjustments: None | ListOfAdjustments = field(
         default=None,
         metadata={
             "name": "ListOfAdjustments",
             "type": "Element",
         },
     )
-    remittance_advice_id: RemittanceAdviceId | None = field(
+    remittance_advice_id: None | RemittanceAdviceId = field(
         default=None,
         metadata={
             "name": "RemittanceAdviceID",
             "type": "Element",
         },
     )
-    contact_number: ContactNumber | None = field(
+    contact_number: None | ContactNumber = field(
         default=None,
         metadata={
             "name": "ContactNumber",
             "type": "Element",
         },
     )
-    general_note: GeneralNote | None = field(
+    general_note: None | GeneralNote = field(
         default=None,
         metadata={
             "name": "GeneralNote",

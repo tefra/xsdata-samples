@@ -64,55 +64,55 @@ class AbstractionDefinition:
         name = "abstractionDefinition"
         namespace = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
-    vendor: str | None = field(
+    vendor: None | str = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
         },
     )
-    library: str | None = field(
+    library: None | str = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
         },
     )
-    name: str | None = field(
+    name: None | str = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
         },
     )
-    version: str | None = field(
+    version: None | str = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
         },
     )
-    display_name: str | None = field(
+    display_name: None | str = field(
         default=None,
         metadata={
             "name": "displayName",
             "type": "Element",
         },
     )
-    short_description: ShortDescription | None = field(
+    short_description: None | ShortDescription = field(
         default=None,
         metadata={
             "name": "shortDescription",
             "type": "Element",
         },
     )
-    description: Description | None = field(
+    description: None | Description = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    bus_type: LibraryRefType | None = field(
+    bus_type: None | LibraryRefType = field(
         default=None,
         metadata={
             "name": "busType",
@@ -120,45 +120,45 @@ class AbstractionDefinition:
             "required": True,
         },
     )
-    extends: LibraryRefType | None = field(
+    extends: None | LibraryRefType = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    ports: AbstractionDefinition.Ports | None = field(
+    ports: None | AbstractionDefinition.Ports = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
         },
     )
-    choices: Choices | None = field(
+    choices: None | Choices = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    parameters: Parameters | None = field(
+    parameters: None | Parameters = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    assertions: Assertions | None = field(
+    assertions: None | Assertions = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    vendor_extensions: VendorExtensions | None = field(
+    vendor_extensions: None | VendorExtensions = field(
         default=None,
         metadata={
             "name": "vendorExtensions",
             "type": "Element",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -195,7 +195,7 @@ class AbstractionDefinition:
             :ivar id:
             """
 
-            logical_name: str | None = field(
+            logical_name: None | str = field(
                 default=None,
                 metadata={
                     "name": "logicalName",
@@ -203,60 +203,60 @@ class AbstractionDefinition:
                     "required": True,
                 },
             )
-            display_name: DisplayName | None = field(
+            display_name: None | DisplayName = field(
                 default=None,
                 metadata={
                     "name": "displayName",
                     "type": "Element",
                 },
             )
-            short_description: ShortDescription | None = field(
+            short_description: None | ShortDescription = field(
                 default=None,
                 metadata={
                     "name": "shortDescription",
                     "type": "Element",
                 },
             )
-            description: Description | None = field(
+            description: None | Description = field(
                 default=None,
                 metadata={
                     "type": "Element",
                 },
             )
-            match: bool | None = field(
+            match: None | bool = field(
                 default=None,
                 metadata={
                     "type": "Element",
                 },
             )
-            wire: Wire | None = field(
+            wire: None | Wire = field(
                 default=None,
                 metadata={
                     "type": "Element",
                 },
             )
             transactional: (
-                AbstractionDefinition.Ports.Port.Transactional | None
+                None | AbstractionDefinition.Ports.Port.Transactional
             ) = field(
                 default=None,
                 metadata={
                     "type": "Element",
                 },
             )
-            packets: Packets | None = field(
+            packets: None | Packets = field(
                 default=None,
                 metadata={
                     "type": "Element",
                 },
             )
-            vendor_extensions: VendorExtensions | None = field(
+            vendor_extensions: None | VendorExtensions = field(
                 default=None,
                 metadata={
                     "name": "vendorExtensions",
                     "type": "Element",
                 },
             )
-            id: str | None = field(
+            id: None | str = field(
                 default=None,
                 metadata={
                     "type": "Attribute",
@@ -279,7 +279,7 @@ class AbstractionDefinition:
                     present in a target bus interface.
                 """
 
-                qualifier: QualifierType | None = field(
+                qualifier: None | QualifierType = field(
                     default=None,
                     metadata={
                         "type": "Element",
@@ -295,8 +295,8 @@ class AbstractionDefinition:
                     },
                 )
                 on_initiator: (
-                    AbstractionDefinition.Ports.Port.Transactional.OnInitiator
-                    | None
+                    None
+                    | AbstractionDefinition.Ports.Port.Transactional.OnInitiator
                 ) = field(
                     default=None,
                     metadata={
@@ -305,8 +305,8 @@ class AbstractionDefinition:
                     },
                 )
                 on_target: (
-                    AbstractionDefinition.Ports.Port.Transactional.OnTarget
-                    | None
+                    None
+                    | AbstractionDefinition.Ports.Port.Transactional.OnTarget
                 ) = field(
                     default=None,
                     metadata={
@@ -332,45 +332,45 @@ class AbstractionDefinition:
                     :ivar id:
                     """
 
-                    group: str | None = field(
+                    group: None | str = field(
                         default=None,
                         metadata={
                             "type": "Element",
                             "required": True,
                         },
                     )
-                    presence: Presence | None = field(
+                    presence: None | Presence = field(
                         default=None,
                         metadata={
                             "type": "Element",
                         },
                     )
-                    initiative: OnSystemInitiative | None = field(
+                    initiative: None | OnSystemInitiative = field(
                         default=None,
                         metadata={
                             "type": "Element",
                         },
                     )
-                    kind: Kind | None = field(
+                    kind: None | Kind = field(
                         default=None,
                         metadata={
                             "type": "Element",
                         },
                     )
-                    bus_width: UnsignedPositiveIntExpression | None = field(
+                    bus_width: None | UnsignedPositiveIntExpression = field(
                         default=None,
                         metadata={
                             "name": "busWidth",
                             "type": "Element",
                         },
                     )
-                    protocol: Protocol | None = field(
+                    protocol: None | Protocol = field(
                         default=None,
                         metadata={
                             "type": "Element",
                         },
                     )
-                    id: str | None = field(
+                    id: None | str = field(
                         default=None,
                         metadata={
                             "type": "Attribute",
@@ -392,32 +392,32 @@ class AbstractionDefinition:
                         must match
                     """
 
-                    presence: Presence | None = field(
+                    presence: None | Presence = field(
                         default=None,
                         metadata={
                             "type": "Element",
                         },
                     )
-                    initiative: OnInitiatorInitiative | None = field(
+                    initiative: None | OnInitiatorInitiative = field(
                         default=None,
                         metadata={
                             "type": "Element",
                         },
                     )
-                    kind: Kind | None = field(
+                    kind: None | Kind = field(
                         default=None,
                         metadata={
                             "type": "Element",
                         },
                     )
-                    bus_width: UnsignedPositiveIntExpression | None = field(
+                    bus_width: None | UnsignedPositiveIntExpression = field(
                         default=None,
                         metadata={
                             "name": "busWidth",
                             "type": "Element",
                         },
                     )
-                    protocol: Protocol | None = field(
+                    protocol: None | Protocol = field(
                         default=None,
                         metadata={
                             "type": "Element",
@@ -438,32 +438,32 @@ class AbstractionDefinition:
                         must match
                     """
 
-                    presence: Presence | None = field(
+                    presence: None | Presence = field(
                         default=None,
                         metadata={
                             "type": "Element",
                         },
                     )
-                    initiative: OnTargetInitiative | None = field(
+                    initiative: None | OnTargetInitiative = field(
                         default=None,
                         metadata={
                             "type": "Element",
                         },
                     )
-                    kind: Kind | None = field(
+                    kind: None | Kind = field(
                         default=None,
                         metadata={
                             "type": "Element",
                         },
                     )
-                    bus_width: UnsignedPositiveIntExpression | None = field(
+                    bus_width: None | UnsignedPositiveIntExpression = field(
                         default=None,
                         metadata={
                             "name": "busWidth",
                             "type": "Element",
                         },
                     )
-                    protocol: Protocol | None = field(
+                    protocol: None | Protocol = field(
                         default=None,
                         metadata={
                             "type": "Element",

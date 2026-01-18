@@ -12,7 +12,7 @@ class Location:
     class Meta:
         namespace = "http://xmlns.generali.com/services/program/FeedbackProgramService/v1"
 
-    global_location_id: str | None = field(
+    global_location_id: None | str = field(
         default=None,
         metadata={
             "name": "GlobalLocationID",
@@ -20,7 +20,7 @@ class Location:
             "required": True,
         },
     )
-    local_location_id: str | None = field(
+    local_location_id: None | str = field(
         default=None,
         metadata={
             "name": "LocalLocationID",

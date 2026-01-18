@@ -100,7 +100,7 @@ class BuildActionEnvironment:
     class Meta:
         name = "BUILD-ACTION-ENVIRONMENT"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -109,7 +109,7 @@ class BuildActionEnvironment:
             "required": True,
         },
     )
-    short_name_fragments: BuildActionEnvironment.ShortNameFragments | None = (
+    short_name_fragments: None | BuildActionEnvironment.ShortNameFragments = (
         field(
             default=None,
             metadata={
@@ -119,7 +119,7 @@ class BuildActionEnvironment:
             },
         )
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -127,7 +127,7 @@ class BuildActionEnvironment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -135,7 +135,7 @@ class BuildActionEnvironment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -143,7 +143,7 @@ class BuildActionEnvironment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -151,7 +151,7 @@ class BuildActionEnvironment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -159,7 +159,7 @@ class BuildActionEnvironment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: BuildActionEnvironment.Annotations | None = field(
+    annotations: None | BuildActionEnvironment.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -167,7 +167,7 @@ class BuildActionEnvironment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    blueprint_policys: BuildActionEnvironment.BlueprintPolicys | None = field(
+    blueprint_policys: None | BuildActionEnvironment.BlueprintPolicys = field(
         default=None,
         metadata={
             "name": "BLUEPRINT-POLICYS",
@@ -175,7 +175,7 @@ class BuildActionEnvironment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    short_name_pattern: String | None = field(
+    short_name_pattern: None | String = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-PATTERN",
@@ -183,7 +183,7 @@ class BuildActionEnvironment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sdgs: BuildActionEnvironment.Sdgs | None = field(
+    sdgs: None | BuildActionEnvironment.Sdgs = field(
         default=None,
         metadata={
             "name": "SDGS",
@@ -191,7 +191,7 @@ class BuildActionEnvironment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -199,14 +199,14 @@ class BuildActionEnvironment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -214,7 +214,7 @@ class BuildActionEnvironment:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",

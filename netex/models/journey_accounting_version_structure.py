@@ -29,7 +29,7 @@ class JourneyAccountingVersionStructure(AssignmentVersionStructure1):
     class Meta:
         name = "JourneyAccounting_VersionStructure"
 
-    accounted_object_ref: VersionOfObjectRefStructure | None = field(
+    accounted_object_ref: None | VersionOfObjectRefStructure = field(
         default=None,
         metadata={
             "name": "AccountedObjectRef",
@@ -38,7 +38,8 @@ class JourneyAccountingVersionStructure(AssignmentVersionStructure1):
         },
     )
     organisation_ref_or_other_organisation_ref_or_transport_organisation_ref: (
-        RetailConsortiumRef
+        None
+        | RetailConsortiumRef
         | OnlineServiceOperatorRef
         | GeneralOrganisationRef
         | ManagementAgentRef
@@ -48,7 +49,6 @@ class JourneyAccountingVersionStructure(AssignmentVersionStructure1):
         | AuthorityRef
         | OperatorRef
         | OrganisationRef
-        | None
     ) = field(
         default=None,
         metadata={
@@ -107,7 +107,7 @@ class JourneyAccountingVersionStructure(AssignmentVersionStructure1):
             ),
         },
     )
-    supply_contract_ref: SupplyContractRef | None = field(
+    supply_contract_ref: None | SupplyContractRef = field(
         default=None,
         metadata={
             "name": "SupplyContractRef",
@@ -115,7 +115,7 @@ class JourneyAccountingVersionStructure(AssignmentVersionStructure1):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    accounting_code: str | None = field(
+    accounting_code: None | str = field(
         default=None,
         metadata={
             "name": "AccountingCode",
@@ -123,7 +123,7 @@ class JourneyAccountingVersionStructure(AssignmentVersionStructure1):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    accounting_type: JourneyAccountingEnumeration | None = field(
+    accounting_type: None | JourneyAccountingEnumeration = field(
         default=None,
         metadata={
             "name": "AccountingType",
@@ -139,7 +139,7 @@ class JourneyAccountingVersionStructure(AssignmentVersionStructure1):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    distance: Decimal | None = field(
+    distance: None | Decimal = field(
         default=None,
         metadata={
             "name": "Distance",
@@ -147,7 +147,7 @@ class JourneyAccountingVersionStructure(AssignmentVersionStructure1):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    duration: XmlDuration | None = field(
+    duration: None | XmlDuration = field(
         default=None,
         metadata={
             "name": "Duration",

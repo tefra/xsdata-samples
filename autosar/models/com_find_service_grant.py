@@ -93,7 +93,7 @@ class ComFindServiceGrant:
     class Meta:
         name = "COM-FIND-SERVICE-GRANT"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -102,7 +102,7 @@ class ComFindServiceGrant:
             "required": True,
         },
     )
-    short_name_fragments: ComFindServiceGrant.ShortNameFragments | None = (
+    short_name_fragments: None | ComFindServiceGrant.ShortNameFragments = (
         field(
             default=None,
             metadata={
@@ -112,7 +112,7 @@ class ComFindServiceGrant:
             },
         )
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -120,7 +120,7 @@ class ComFindServiceGrant:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -128,7 +128,7 @@ class ComFindServiceGrant:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -136,7 +136,7 @@ class ComFindServiceGrant:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -144,7 +144,7 @@ class ComFindServiceGrant:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -152,7 +152,7 @@ class ComFindServiceGrant:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: ComFindServiceGrant.Annotations | None = field(
+    annotations: None | ComFindServiceGrant.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -160,7 +160,7 @@ class ComFindServiceGrant:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -168,7 +168,7 @@ class ComFindServiceGrant:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    design_ref: ComFindServiceGrant.DesignRef | None = field(
+    design_ref: None | ComFindServiceGrant.DesignRef = field(
         default=None,
         metadata={
             "name": "DESIGN-REF",
@@ -176,7 +176,7 @@ class ComFindServiceGrant:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    service_instance_ref: ComFindServiceGrant.ServiceInstanceRef | None = (
+    service_instance_ref: None | ComFindServiceGrant.ServiceInstanceRef = (
         field(
             default=None,
             metadata={
@@ -186,14 +186,14 @@ class ComFindServiceGrant:
             },
         )
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -201,7 +201,7 @@ class ComFindServiceGrant:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -233,7 +233,7 @@ class ComFindServiceGrant:
 
     @dataclass
     class DesignRef(Ref):
-        dest: ComFindServiceGrantDesignSubtypesEnum | None = field(
+        dest: None | ComFindServiceGrantDesignSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -244,7 +244,7 @@ class ComFindServiceGrant:
 
     @dataclass
     class ServiceInstanceRef(Ref):
-        dest: AdaptivePlatformServiceInstanceSubtypesEnum | None = field(
+        dest: None | AdaptivePlatformServiceInstanceSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

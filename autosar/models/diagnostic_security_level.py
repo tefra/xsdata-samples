@@ -95,7 +95,7 @@ class DiagnosticSecurityLevel:
     class Meta:
         name = "DIAGNOSTIC-SECURITY-LEVEL"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -104,7 +104,7 @@ class DiagnosticSecurityLevel:
             "required": True,
         },
     )
-    short_name_fragments: DiagnosticSecurityLevel.ShortNameFragments | None = (
+    short_name_fragments: None | DiagnosticSecurityLevel.ShortNameFragments = (
         field(
             default=None,
             metadata={
@@ -114,7 +114,7 @@ class DiagnosticSecurityLevel:
             },
         )
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -122,7 +122,7 @@ class DiagnosticSecurityLevel:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -130,7 +130,7 @@ class DiagnosticSecurityLevel:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -138,7 +138,7 @@ class DiagnosticSecurityLevel:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -146,7 +146,7 @@ class DiagnosticSecurityLevel:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -154,7 +154,7 @@ class DiagnosticSecurityLevel:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: DiagnosticSecurityLevel.Annotations | None = field(
+    annotations: None | DiagnosticSecurityLevel.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -162,7 +162,7 @@ class DiagnosticSecurityLevel:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -170,7 +170,7 @@ class DiagnosticSecurityLevel:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    access_data_record_size: PositiveInteger | None = field(
+    access_data_record_size: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "ACCESS-DATA-RECORD-SIZE",
@@ -178,7 +178,7 @@ class DiagnosticSecurityLevel:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    key_size: PositiveInteger | None = field(
+    key_size: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "KEY-SIZE",
@@ -186,7 +186,7 @@ class DiagnosticSecurityLevel:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    num_failed_security_access: PositiveInteger | None = field(
+    num_failed_security_access: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "NUM-FAILED-SECURITY-ACCESS",
@@ -194,7 +194,7 @@ class DiagnosticSecurityLevel:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    security_delay_time: TimeValue | None = field(
+    security_delay_time: None | TimeValue = field(
         default=None,
         metadata={
             "name": "SECURITY-DELAY-TIME",
@@ -202,7 +202,7 @@ class DiagnosticSecurityLevel:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    seed_size: PositiveInteger | None = field(
+    seed_size: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "SEED-SIZE",
@@ -210,14 +210,14 @@ class DiagnosticSecurityLevel:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -225,7 +225,7 @@ class DiagnosticSecurityLevel:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",

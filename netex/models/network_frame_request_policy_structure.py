@@ -12,7 +12,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 @dataclass
 class NetworkFrameRequestPolicyStructure:
-    maximum_number_of_elements: int | None = field(
+    maximum_number_of_elements: None | int = field(
         default=None,
         metadata={
             "name": "MaximumNumberOfElements",
@@ -20,7 +20,7 @@ class NetworkFrameRequestPolicyStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    include_deleted: bool | None = field(
+    include_deleted: None | bool = field(
         default=None,
         metadata={
             "name": "IncludeDeleted",
@@ -28,7 +28,7 @@ class NetworkFrameRequestPolicyStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    urgency: XmlDuration | None = field(
+    urgency: None | XmlDuration = field(
         default=None,
         metadata={
             "name": "Urgency",
@@ -36,7 +36,7 @@ class NetworkFrameRequestPolicyStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    must_have_by: XmlDateTime | None = field(
+    must_have_by: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "MustHaveBy",
@@ -44,7 +44,7 @@ class NetworkFrameRequestPolicyStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    language: str | None = field(
+    language: None | str = field(
         default=None,
         metadata={
             "name": "Language",

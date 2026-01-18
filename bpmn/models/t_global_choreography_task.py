@@ -13,7 +13,7 @@ class TGlobalChoreographyTask(TChoreography):
     class Meta:
         name = "tGlobalChoreographyTask"
 
-    initiating_participant_ref: QName | None = field(
+    initiating_participant_ref: None | QName = field(
         default=None,
         metadata={
             "name": "initiatingParticipantRef",

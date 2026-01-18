@@ -110,7 +110,7 @@ class SignalBasedFieldToISignalTriggeringMapping:
     class Meta:
         name = "SIGNAL-BASED-FIELD-TO-I-SIGNAL-TRIGGERING-MAPPING"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -120,7 +120,7 @@ class SignalBasedFieldToISignalTriggeringMapping:
         },
     )
     short_name_fragments: (
-        SignalBasedFieldToISignalTriggeringMapping.ShortNameFragments | None
+        None | SignalBasedFieldToISignalTriggeringMapping.ShortNameFragments
     ) = field(
         default=None,
         metadata={
@@ -129,7 +129,7 @@ class SignalBasedFieldToISignalTriggeringMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -137,7 +137,7 @@ class SignalBasedFieldToISignalTriggeringMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -145,7 +145,7 @@ class SignalBasedFieldToISignalTriggeringMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -153,7 +153,7 @@ class SignalBasedFieldToISignalTriggeringMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -161,7 +161,7 @@ class SignalBasedFieldToISignalTriggeringMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -170,7 +170,7 @@ class SignalBasedFieldToISignalTriggeringMapping:
         },
     )
     annotations: (
-        SignalBasedFieldToISignalTriggeringMapping.Annotations | None
+        None | SignalBasedFieldToISignalTriggeringMapping.Annotations
     ) = field(
         default=None,
         metadata={
@@ -180,7 +180,7 @@ class SignalBasedFieldToISignalTriggeringMapping:
         },
     )
     data_prototype_in_service_interface_ref: (
-        DataPrototypeInServiceInterfaceRef | None
+        None | DataPrototypeInServiceInterfaceRef
     ) = field(
         default=None,
         metadata={
@@ -189,7 +189,7 @@ class SignalBasedFieldToISignalTriggeringMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    filter: DataFilter | None = field(
+    filter: None | DataFilter = field(
         default=None,
         metadata={
             "name": "FILTER",
@@ -198,7 +198,7 @@ class SignalBasedFieldToISignalTriggeringMapping:
         },
     )
     getter_call_signal_ref: (
-        SignalBasedFieldToISignalTriggeringMapping.GetterCallSignalRef | None
+        None | SignalBasedFieldToISignalTriggeringMapping.GetterCallSignalRef
     ) = field(
         default=None,
         metadata={
@@ -208,7 +208,7 @@ class SignalBasedFieldToISignalTriggeringMapping:
         },
     )
     getter_return_signal_ref: (
-        SignalBasedFieldToISignalTriggeringMapping.GetterReturnSignalRef | None
+        None | SignalBasedFieldToISignalTriggeringMapping.GetterReturnSignalRef
     ) = field(
         default=None,
         metadata={
@@ -218,8 +218,8 @@ class SignalBasedFieldToISignalTriggeringMapping:
         },
     )
     notifier_signal_triggering_ref: (
-        SignalBasedFieldToISignalTriggeringMapping.NotifierSignalTriggeringRef
-        | None
+        None
+        | SignalBasedFieldToISignalTriggeringMapping.NotifierSignalTriggeringRef
     ) = field(
         default=None,
         metadata={
@@ -229,7 +229,7 @@ class SignalBasedFieldToISignalTriggeringMapping:
         },
     )
     setter_call_signal_ref: (
-        SignalBasedFieldToISignalTriggeringMapping.SetterCallSignalRef | None
+        None | SignalBasedFieldToISignalTriggeringMapping.SetterCallSignalRef
     ) = field(
         default=None,
         metadata={
@@ -239,7 +239,7 @@ class SignalBasedFieldToISignalTriggeringMapping:
         },
     )
     setter_return_signal_ref: (
-        SignalBasedFieldToISignalTriggeringMapping.SetterReturnSignalRef | None
+        None | SignalBasedFieldToISignalTriggeringMapping.SetterReturnSignalRef
     ) = field(
         default=None,
         metadata={
@@ -248,7 +248,7 @@ class SignalBasedFieldToISignalTriggeringMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    transmission_trigger: Boolean | None = field(
+    transmission_trigger: None | Boolean = field(
         default=None,
         metadata={
             "name": "TRANSMISSION-TRIGGER",
@@ -256,14 +256,14 @@ class SignalBasedFieldToISignalTriggeringMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -271,7 +271,7 @@ class SignalBasedFieldToISignalTriggeringMapping:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -303,7 +303,7 @@ class SignalBasedFieldToISignalTriggeringMapping:
 
     @dataclass
     class GetterCallSignalRef(Ref):
-        dest: ISignalTriggeringSubtypesEnum | None = field(
+        dest: None | ISignalTriggeringSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -314,7 +314,7 @@ class SignalBasedFieldToISignalTriggeringMapping:
 
     @dataclass
     class GetterReturnSignalRef(Ref):
-        dest: ISignalTriggeringSubtypesEnum | None = field(
+        dest: None | ISignalTriggeringSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -325,7 +325,7 @@ class SignalBasedFieldToISignalTriggeringMapping:
 
     @dataclass
     class NotifierSignalTriggeringRef(Ref):
-        dest: ISignalTriggeringSubtypesEnum | None = field(
+        dest: None | ISignalTriggeringSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -336,7 +336,7 @@ class SignalBasedFieldToISignalTriggeringMapping:
 
     @dataclass
     class SetterCallSignalRef(Ref):
-        dest: ISignalTriggeringSubtypesEnum | None = field(
+        dest: None | ISignalTriggeringSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -347,7 +347,7 @@ class SignalBasedFieldToISignalTriggeringMapping:
 
     @dataclass
     class SetterReturnSignalRef(Ref):
-        dest: ISignalTriggeringSubtypesEnum | None = field(
+        dest: None | ISignalTriggeringSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

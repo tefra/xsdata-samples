@@ -14,7 +14,7 @@ class SimplePointVersionStructure(EntityInVersionStructure):
     class Meta:
         name = "SimplePoint_VersionStructure"
 
-    name: MultilingualString | None = field(
+    name: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "Name",
@@ -22,7 +22,7 @@ class SimplePointVersionStructure(EntityInVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    location: LocationStructure2 | None = field(
+    location: None | LocationStructure2 = field(
         default=None,
         metadata={
             "name": "Location",

@@ -122,7 +122,7 @@ class CompositeInterface:
     class Meta:
         name = "COMPOSITE-INTERFACE"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -131,7 +131,7 @@ class CompositeInterface:
             "required": True,
         },
     )
-    short_name_fragments: CompositeInterface.ShortNameFragments | None = field(
+    short_name_fragments: None | CompositeInterface.ShortNameFragments = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -139,7 +139,7 @@ class CompositeInterface:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -147,7 +147,7 @@ class CompositeInterface:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -155,7 +155,7 @@ class CompositeInterface:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -163,7 +163,7 @@ class CompositeInterface:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -171,7 +171,7 @@ class CompositeInterface:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -179,7 +179,7 @@ class CompositeInterface:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: CompositeInterface.Annotations | None = field(
+    annotations: None | CompositeInterface.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -187,7 +187,7 @@ class CompositeInterface:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -195,7 +195,7 @@ class CompositeInterface:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    blueprint_policys: CompositeInterface.BlueprintPolicys | None = field(
+    blueprint_policys: None | CompositeInterface.BlueprintPolicys = field(
         default=None,
         metadata={
             "name": "BLUEPRINT-POLICYS",
@@ -203,7 +203,7 @@ class CompositeInterface:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    short_name_pattern: String | None = field(
+    short_name_pattern: None | String = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-PATTERN",
@@ -211,7 +211,7 @@ class CompositeInterface:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    is_service: Boolean | None = field(
+    is_service: None | Boolean = field(
         default=None,
         metadata={
             "name": "IS-SERVICE",
@@ -219,7 +219,7 @@ class CompositeInterface:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    namespaces: CompositeInterface.Namespaces | None = field(
+    namespaces: None | CompositeInterface.Namespaces = field(
         default=None,
         metadata={
             "name": "NAMESPACES",
@@ -227,7 +227,7 @@ class CompositeInterface:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    service_kind: ServiceProviderEnum | None = field(
+    service_kind: None | ServiceProviderEnum = field(
         default=None,
         metadata={
             "name": "SERVICE-KIND",
@@ -235,7 +235,7 @@ class CompositeInterface:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    commands: CompositeInterface.Commands | None = field(
+    commands: None | CompositeInterface.Commands = field(
         default=None,
         metadata={
             "name": "COMMANDS",
@@ -243,7 +243,7 @@ class CompositeInterface:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    indications: CompositeInterface.Indications | None = field(
+    indications: None | CompositeInterface.Indications = field(
         default=None,
         metadata={
             "name": "INDICATIONS",
@@ -251,14 +251,14 @@ class CompositeInterface:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -266,7 +266,7 @@ class CompositeInterface:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",

@@ -34,7 +34,7 @@ class CoctMt120104UvAuthor:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Ii | None = field(
+    type_id: None | Ii = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -50,7 +50,7 @@ class CoctMt120104UvAuthor:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    assigned_entity: CoctMt090001Uv01AssignedEntity | None = field(
+    assigned_entity: None | CoctMt090001Uv01AssignedEntity = field(
         default=None,
         metadata={
             "name": "assignedEntity",
@@ -59,7 +59,7 @@ class CoctMt120104UvAuthor:
             "nillable": True,
         },
     )
-    null_flavor: NullFlavor | None = field(
+    null_flavor: None | NullFlavor = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -97,7 +97,7 @@ class CoctMt120104UvObservationDx:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Ii | None = field(
+    type_id: None | Ii = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -113,14 +113,14 @@ class CoctMt120104UvObservationDx:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    id: Ii | None = field(
+    id: None | Ii = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    code: Ce | None = field(
+    code: None | Ce = field(
         default=None,
         metadata={
             "type": "Element",
@@ -128,7 +128,7 @@ class CoctMt120104UvObservationDx:
             "required": True,
         },
     )
-    status_code: Cs | None = field(
+    status_code: None | Cs = field(
         default=None,
         metadata={
             "name": "statusCode",
@@ -137,7 +137,7 @@ class CoctMt120104UvObservationDx:
             "required": True,
         },
     )
-    effective_time: IvlTsExplicit | None = field(
+    effective_time: None | IvlTsExplicit = field(
         default=None,
         metadata={
             "name": "effectiveTime",
@@ -145,7 +145,7 @@ class CoctMt120104UvObservationDx:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    value: Ce | None = field(
+    value: None | Ce = field(
         default=None,
         metadata={
             "type": "Element",
@@ -153,7 +153,7 @@ class CoctMt120104UvObservationDx:
             "required": True,
         },
     )
-    target_site_code: Cd | None = field(
+    target_site_code: None | Cd = field(
         default=None,
         metadata={
             "name": "targetSiteCode",
@@ -169,14 +169,14 @@ class CoctMt120104UvObservationDx:
             "nillable": True,
         },
     )
-    null_flavor: NullFlavor | None = field(
+    null_flavor: None | NullFlavor = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
         },
     )
-    class_code: ActClassObservation | None = field(
+    class_code: None | ActClassObservation = field(
         default=None,
         metadata={
             "name": "classCode",

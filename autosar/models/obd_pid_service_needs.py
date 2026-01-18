@@ -106,7 +106,7 @@ class ObdPidServiceNeeds:
     class Meta:
         name = "OBD-PID-SERVICE-NEEDS"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -115,7 +115,7 @@ class ObdPidServiceNeeds:
             "required": True,
         },
     )
-    short_name_fragments: ObdPidServiceNeeds.ShortNameFragments | None = field(
+    short_name_fragments: None | ObdPidServiceNeeds.ShortNameFragments = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -123,7 +123,7 @@ class ObdPidServiceNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -131,7 +131,7 @@ class ObdPidServiceNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -139,7 +139,7 @@ class ObdPidServiceNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -147,7 +147,7 @@ class ObdPidServiceNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -155,7 +155,7 @@ class ObdPidServiceNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -163,7 +163,7 @@ class ObdPidServiceNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: ObdPidServiceNeeds.Annotations | None = field(
+    annotations: None | ObdPidServiceNeeds.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -171,7 +171,7 @@ class ObdPidServiceNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    audiences: ObdPidServiceNeeds.Audiences | None = field(
+    audiences: None | ObdPidServiceNeeds.Audiences = field(
         default=None,
         metadata={
             "name": "AUDIENCES",
@@ -179,7 +179,7 @@ class ObdPidServiceNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    diag_requirement: DiagRequirementIdString | None = field(
+    diag_requirement: None | DiagRequirementIdString = field(
         default=None,
         metadata={
             "name": "DIAG-REQUIREMENT",
@@ -187,7 +187,7 @@ class ObdPidServiceNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    security_access_level: PositiveInteger | None = field(
+    security_access_level: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "SECURITY-ACCESS-LEVEL",
@@ -195,7 +195,7 @@ class ObdPidServiceNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    data_length: PositiveInteger | None = field(
+    data_length: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "DATA-LENGTH",
@@ -203,7 +203,7 @@ class ObdPidServiceNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    parameter_id: PositiveInteger | None = field(
+    parameter_id: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "PARAMETER-ID",
@@ -211,7 +211,7 @@ class ObdPidServiceNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    standard: String | None = field(
+    standard: None | String = field(
         default=None,
         metadata={
             "name": "STANDARD",
@@ -219,14 +219,14 @@ class ObdPidServiceNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -234,7 +234,7 @@ class ObdPidServiceNeeds:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",

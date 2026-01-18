@@ -12,7 +12,7 @@ class FareUnit(FareUnitVersionStructure):
     class Meta:
         namespace = "http://www.netex.org.uk/netex"
 
-    name_of_class: str | None = field(
+    name_of_class: None | str = field(
         default=None,
         metadata={
             "name": "nameOfClass",

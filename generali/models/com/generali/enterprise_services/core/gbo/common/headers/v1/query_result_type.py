@@ -22,7 +22,7 @@ class QueryResultType(BaseHeaderType):
         response message.</description>
     """
 
-    total_count: int | None = field(
+    total_count: None | int = field(
         default=None,
         metadata={
             "name": "TotalCount",

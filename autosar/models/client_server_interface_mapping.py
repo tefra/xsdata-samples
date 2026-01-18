@@ -105,7 +105,7 @@ class ClientServerInterfaceMapping:
     class Meta:
         name = "CLIENT-SERVER-INTERFACE-MAPPING"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -115,7 +115,7 @@ class ClientServerInterfaceMapping:
         },
     )
     short_name_fragments: (
-        ClientServerInterfaceMapping.ShortNameFragments | None
+        None | ClientServerInterfaceMapping.ShortNameFragments
     ) = field(
         default=None,
         metadata={
@@ -124,7 +124,7 @@ class ClientServerInterfaceMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -132,7 +132,7 @@ class ClientServerInterfaceMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -140,7 +140,7 @@ class ClientServerInterfaceMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -148,7 +148,7 @@ class ClientServerInterfaceMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -156,7 +156,7 @@ class ClientServerInterfaceMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -164,7 +164,7 @@ class ClientServerInterfaceMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: ClientServerInterfaceMapping.Annotations | None = field(
+    annotations: None | ClientServerInterfaceMapping.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -172,7 +172,7 @@ class ClientServerInterfaceMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    blueprint_policys: ClientServerInterfaceMapping.BlueprintPolicys | None = (
+    blueprint_policys: None | ClientServerInterfaceMapping.BlueprintPolicys = (
         field(
             default=None,
             metadata={
@@ -182,7 +182,7 @@ class ClientServerInterfaceMapping:
             },
         )
     )
-    short_name_pattern: String | None = field(
+    short_name_pattern: None | String = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-PATTERN",
@@ -190,7 +190,7 @@ class ClientServerInterfaceMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -198,7 +198,7 @@ class ClientServerInterfaceMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    error_mappings: ClientServerInterfaceMapping.ErrorMappings | None = field(
+    error_mappings: None | ClientServerInterfaceMapping.ErrorMappings = field(
         default=None,
         metadata={
             "name": "ERROR-MAPPINGS",
@@ -207,7 +207,7 @@ class ClientServerInterfaceMapping:
         },
     )
     operation_mappings: (
-        ClientServerInterfaceMapping.OperationMappings | None
+        None | ClientServerInterfaceMapping.OperationMappings
     ) = field(
         default=None,
         metadata={
@@ -216,14 +216,14 @@ class ClientServerInterfaceMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -231,7 +231,7 @@ class ClientServerInterfaceMapping:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",

@@ -44,7 +44,7 @@ class SdClientConfig:
     class Meta:
         name = "SD-CLIENT-CONFIG"
 
-    capability_records: SdClientConfig.CapabilityRecords | None = field(
+    capability_records: None | SdClientConfig.CapabilityRecords = field(
         default=None,
         metadata={
             "name": "CAPABILITY-RECORDS",
@@ -52,7 +52,7 @@ class SdClientConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    client_service_major_version: PositiveInteger | None = field(
+    client_service_major_version: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "CLIENT-SERVICE-MAJOR-VERSION",
@@ -60,7 +60,7 @@ class SdClientConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    client_service_minor_version: PositiveInteger | None = field(
+    client_service_minor_version: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "CLIENT-SERVICE-MINOR-VERSION",
@@ -68,7 +68,7 @@ class SdClientConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    initial_find_behavior: InitialSdDelayConfig | None = field(
+    initial_find_behavior: None | InitialSdDelayConfig = field(
         default=None,
         metadata={
             "name": "INITIAL-FIND-BEHAVIOR",
@@ -76,7 +76,7 @@ class SdClientConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    request_response_delay: RequestResponseDelay | None = field(
+    request_response_delay: None | RequestResponseDelay = field(
         default=None,
         metadata={
             "name": "REQUEST-RESPONSE-DELAY",
@@ -84,7 +84,7 @@ class SdClientConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ttl: PositiveInteger | None = field(
+    ttl: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "TTL",
@@ -92,14 +92,14 @@ class SdClientConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

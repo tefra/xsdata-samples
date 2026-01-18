@@ -25,7 +25,7 @@ class RelatedOrganisationVersionStructure(VersionedChildStructure):
     class Meta:
         name = "RelatedOrganisation_VersionStructure"
 
-    name: MultilingualString | None = field(
+    name: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "Name",
@@ -33,7 +33,7 @@ class RelatedOrganisationVersionStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    description: MultilingualString | None = field(
+    description: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "Description",
@@ -42,7 +42,8 @@ class RelatedOrganisationVersionStructure(VersionedChildStructure):
         },
     )
     organisation_ref_or_other_organisation_ref_or_transport_organisation_ref: (
-        RetailConsortiumRef
+        None
+        | RetailConsortiumRef
         | OnlineServiceOperatorRef
         | GeneralOrganisationRef
         | ManagementAgentRef
@@ -52,7 +53,6 @@ class RelatedOrganisationVersionStructure(VersionedChildStructure):
         | AuthorityRef
         | OperatorRef
         | OrganisationRef
-        | None
     ) = field(
         default=None,
         metadata={
@@ -111,7 +111,7 @@ class RelatedOrganisationVersionStructure(VersionedChildStructure):
             ),
         },
     )
-    organisation_role_type: OrganisationRoleEnumeration | None = field(
+    organisation_role_type: None | OrganisationRoleEnumeration = field(
         default=None,
         metadata={
             "name": "OrganisationRoleType",
@@ -119,7 +119,7 @@ class RelatedOrganisationVersionStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    responsibility_role_ref: ResponsibilityRoleRef | None = field(
+    responsibility_role_ref: None | ResponsibilityRoleRef = field(
         default=None,
         metadata={
             "name": "ResponsibilityRoleRef",

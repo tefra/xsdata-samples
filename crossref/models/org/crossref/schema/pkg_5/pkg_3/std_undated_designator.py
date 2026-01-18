@@ -20,13 +20,13 @@ class StdUndatedDesignator(StdDesignatorT):
         name = "std_undated_designator"
         namespace = "http://www.crossref.org/schema/5.3.1"
 
-    family: str | None = field(
+    family: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    set: str | None = field(
+    set: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",

@@ -34,7 +34,7 @@ class PncMappingIdent:
     class Meta:
         name = "PNC-MAPPING-IDENT"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -43,7 +43,7 @@ class PncMappingIdent:
             "required": True,
         },
     )
-    short_name_fragments: PncMappingIdent.ShortNameFragments | None = field(
+    short_name_fragments: None | PncMappingIdent.ShortNameFragments = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -51,14 +51,14 @@ class PncMappingIdent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

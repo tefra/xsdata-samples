@@ -34,7 +34,7 @@ class PModeGroupInAtomicSwcInstanceRef:
         name = "P-MODE-GROUP-IN-ATOMIC-SWC-INSTANCE-REF"
 
     context_p_port_ref: (
-        PModeGroupInAtomicSwcInstanceRef.ContextPPortRef | None
+        None | PModeGroupInAtomicSwcInstanceRef.ContextPPortRef
     ) = field(
         default=None,
         metadata={
@@ -44,7 +44,7 @@ class PModeGroupInAtomicSwcInstanceRef:
         },
     )
     target_mode_group_ref: (
-        PModeGroupInAtomicSwcInstanceRef.TargetModeGroupRef | None
+        None | PModeGroupInAtomicSwcInstanceRef.TargetModeGroupRef
     ) = field(
         default=None,
         metadata={
@@ -53,14 +53,14 @@ class PModeGroupInAtomicSwcInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -71,7 +71,7 @@ class PModeGroupInAtomicSwcInstanceRef:
 
     @dataclass
     class ContextPPortRef(Ref):
-        dest: AbstractProvidedPortPrototypeSubtypesEnum | None = field(
+        dest: None | AbstractProvidedPortPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -82,7 +82,7 @@ class PModeGroupInAtomicSwcInstanceRef:
 
     @dataclass
     class TargetModeGroupRef(Ref):
-        dest: ModeDeclarationGroupPrototypeSubtypesEnum | None = field(
+        dest: None | ModeDeclarationGroupPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

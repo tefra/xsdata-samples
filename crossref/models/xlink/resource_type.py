@@ -22,7 +22,7 @@ class ResourceType:
             "required": True,
         },
     )
-    role: str | None = field(
+    role: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -30,14 +30,14 @@ class ResourceType:
             "min_length": 1,
         },
     )
-    title: str | None = field(
+    title: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    label: str | None = field(
+    label: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",

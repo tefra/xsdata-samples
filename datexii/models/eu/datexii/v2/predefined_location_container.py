@@ -14,7 +14,7 @@ class PredefinedLocationContainer:
     itinerary, non ordered group of locations or single location.
     """
 
-    predefined_location_container_extension: ExtensionType | None = field(
+    predefined_location_container_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "predefinedLocationContainerExtension",

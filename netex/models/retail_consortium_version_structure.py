@@ -17,7 +17,7 @@ class RetailConsortiumVersionStructure(OrganisationVersionStructure):
     class Meta:
         name = "RetailConsortium_VersionStructure"
 
-    postal_address: PostalAddress | None = field(
+    postal_address: None | PostalAddress = field(
         default=None,
         metadata={
             "name": "PostalAddress",
@@ -25,14 +25,14 @@ class RetailConsortiumVersionStructure(OrganisationVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    members: OrganisationRefsRelStructure | None = field(
+    members: None | OrganisationRefsRelStructure = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    blacklist_refs: BlacklistRefsRelStructure | None = field(
+    blacklist_refs: None | BlacklistRefsRelStructure = field(
         default=None,
         metadata={
             "name": "blacklistRefs",
@@ -40,7 +40,7 @@ class RetailConsortiumVersionStructure(OrganisationVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    whitelist_refs: WhitelistRefsRelStructure | None = field(
+    whitelist_refs: None | WhitelistRefsRelStructure = field(
         default=None,
         metadata={
             "name": "whitelistRefs",
@@ -48,7 +48,7 @@ class RetailConsortiumVersionStructure(OrganisationVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    retail_devices: RetailDevicesRelStructure | None = field(
+    retail_devices: None | RetailDevicesRelStructure = field(
         default=None,
         metadata={
             "name": "retailDevices",

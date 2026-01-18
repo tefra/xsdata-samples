@@ -105,7 +105,7 @@ class DoIpRoutingActivationAuthenticationNeeds:
     class Meta:
         name = "DO-IP-ROUTING-ACTIVATION-AUTHENTICATION-NEEDS"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -115,7 +115,7 @@ class DoIpRoutingActivationAuthenticationNeeds:
         },
     )
     short_name_fragments: (
-        DoIpRoutingActivationAuthenticationNeeds.ShortNameFragments | None
+        None | DoIpRoutingActivationAuthenticationNeeds.ShortNameFragments
     ) = field(
         default=None,
         metadata={
@@ -124,7 +124,7 @@ class DoIpRoutingActivationAuthenticationNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -132,7 +132,7 @@ class DoIpRoutingActivationAuthenticationNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -140,7 +140,7 @@ class DoIpRoutingActivationAuthenticationNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -148,7 +148,7 @@ class DoIpRoutingActivationAuthenticationNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -156,7 +156,7 @@ class DoIpRoutingActivationAuthenticationNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -165,7 +165,7 @@ class DoIpRoutingActivationAuthenticationNeeds:
         },
     )
     annotations: (
-        DoIpRoutingActivationAuthenticationNeeds.Annotations | None
+        None | DoIpRoutingActivationAuthenticationNeeds.Annotations
     ) = field(
         default=None,
         metadata={
@@ -174,7 +174,7 @@ class DoIpRoutingActivationAuthenticationNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    data_length_request: PositiveInteger | None = field(
+    data_length_request: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "DATA-LENGTH-REQUEST",
@@ -182,7 +182,7 @@ class DoIpRoutingActivationAuthenticationNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    data_length_response: PositiveInteger | None = field(
+    data_length_response: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "DATA-LENGTH-RESPONSE",
@@ -190,7 +190,7 @@ class DoIpRoutingActivationAuthenticationNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    routing_activation_type: NmtokenString | None = field(
+    routing_activation_type: None | NmtokenString = field(
         default=None,
         metadata={
             "name": "ROUTING-ACTIVATION-TYPE",
@@ -198,14 +198,14 @@ class DoIpRoutingActivationAuthenticationNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -213,7 +213,7 @@ class DoIpRoutingActivationAuthenticationNeeds:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",

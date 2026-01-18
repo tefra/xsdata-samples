@@ -15,7 +15,7 @@ class TrafficElement(SituationRecord):
     affecting, or has the potential to affect traffic flow.
     """
 
-    traffic_element_extension: ExtensionType | None = field(
+    traffic_element_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "trafficElementExtension",

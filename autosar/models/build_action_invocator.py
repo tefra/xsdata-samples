@@ -38,7 +38,7 @@ class BuildActionInvocator:
     class Meta:
         name = "BUILD-ACTION-INVOCATOR"
 
-    command: VerbatimString | None = field(
+    command: None | VerbatimString = field(
         default=None,
         metadata={
             "name": "COMMAND",
@@ -46,7 +46,7 @@ class BuildActionInvocator:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sdgs: BuildActionInvocator.Sdgs | None = field(
+    sdgs: None | BuildActionInvocator.Sdgs = field(
         default=None,
         metadata={
             "name": "SDGS",
@@ -54,14 +54,14 @@ class BuildActionInvocator:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

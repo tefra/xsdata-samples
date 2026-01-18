@@ -23,7 +23,7 @@ class AccommodationVersionedChildStructure(VersionedChildStructure):
     class Meta:
         name = "Accommodation_VersionedChildStructure"
 
-    name: MultilingualString | None = field(
+    name: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "Name",
@@ -31,7 +31,7 @@ class AccommodationVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    service_facility_set_ref: ServiceFacilitySetRef | None = field(
+    service_facility_set_ref: None | ServiceFacilitySetRef = field(
         default=None,
         metadata={
             "name": "ServiceFacilitySetRef",
@@ -39,7 +39,7 @@ class AccommodationVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    fare_class: FareClass | None = field(
+    fare_class: None | FareClass = field(
         default=None,
         metadata={
             "name": "FareClass",
@@ -47,7 +47,7 @@ class AccommodationVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    class_of_use_ref: ClassOfUseRef | None = field(
+    class_of_use_ref: None | ClassOfUseRef = field(
         default=None,
         metadata={
             "name": "ClassOfUseRef",
@@ -55,7 +55,7 @@ class AccommodationVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    accommodation_facility: AccommodationFacility | None = field(
+    accommodation_facility: None | AccommodationFacility = field(
         default=None,
         metadata={
             "name": "AccommodationFacility",
@@ -63,7 +63,7 @@ class AccommodationVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    couchette_facility: CouchetteFacility | None = field(
+    couchette_facility: None | CouchetteFacility = field(
         default=None,
         metadata={
             "name": "CouchetteFacility",
@@ -71,7 +71,7 @@ class AccommodationVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    maximum_number_of_berths: int | None = field(
+    maximum_number_of_berths: None | int = field(
         default=None,
         metadata={
             "name": "MaximumNumberOfBerths",
@@ -79,7 +79,7 @@ class AccommodationVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    berth_facility: BerthFacility | None = field(
+    berth_facility: None | BerthFacility = field(
         default=None,
         metadata={
             "name": "BerthFacility",
@@ -87,7 +87,7 @@ class AccommodationVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    shower_facility: SanitaryFacilityEnumeration | None = field(
+    shower_facility: None | SanitaryFacilityEnumeration = field(
         default=None,
         metadata={
             "name": "ShowerFacility",
@@ -95,7 +95,7 @@ class AccommodationVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    toilet_facility: SanitaryFacilityEnumeration | None = field(
+    toilet_facility: None | SanitaryFacilityEnumeration = field(
         default=None,
         metadata={
             "name": "ToiletFacility",
@@ -103,7 +103,7 @@ class AccommodationVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    gender_limitation: GenderLimitation | None = field(
+    gender_limitation: None | GenderLimitation = field(
         default=None,
         metadata={
             "name": "GenderLimitation",
@@ -111,7 +111,7 @@ class AccommodationVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    nuisance_facility_list: NuisanceFacilityList | None = field(
+    nuisance_facility_list: None | NuisanceFacilityList = field(
         default=None,
         metadata={
             "name": "NuisanceFacilityList",
@@ -119,7 +119,7 @@ class AccommodationVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    passenger_comms_facility_list: PassengerCommsFacilityList | None = field(
+    passenger_comms_facility_list: None | PassengerCommsFacilityList = field(
         default=None,
         metadata={
             "name": "PassengerCommsFacilityList",

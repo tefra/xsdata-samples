@@ -37,7 +37,7 @@ class ParkingVersionStructure(SiteVersionStructure):
     class Meta:
         name = "Parking_VersionStructure"
 
-    path_links: SitePathLinksRelStructure | None = field(
+    path_links: None | SitePathLinksRelStructure = field(
         default=None,
         metadata={
             "name": "pathLinks",
@@ -45,7 +45,7 @@ class ParkingVersionStructure(SiteVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    path_junctions: PathJunctionsRelStructure | None = field(
+    path_junctions: None | PathJunctionsRelStructure = field(
         default=None,
         metadata={
             "name": "pathJunctions",
@@ -53,14 +53,14 @@ class ParkingVersionStructure(SiteVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    accesses: AccessesRelStructure | None = field(
+    accesses: None | AccessesRelStructure = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    navigation_paths: NavigationPathsRelStructure | None = field(
+    navigation_paths: None | NavigationPathsRelStructure = field(
         default=None,
         metadata={
             "name": "navigationPaths",
@@ -68,7 +68,7 @@ class ParkingVersionStructure(SiteVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    public_code: str | None = field(
+    public_code: None | str = field(
         default=None,
         metadata={
             "name": "PublicCode",
@@ -76,7 +76,7 @@ class ParkingVersionStructure(SiteVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    label: MultilingualString | None = field(
+    label: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "Label",
@@ -84,7 +84,7 @@ class ParkingVersionStructure(SiteVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    parking_type: ParkingTypeEnumeration | None = field(
+    parking_type: None | ParkingTypeEnumeration = field(
         default=None,
         metadata={
             "name": "ParkingType",
@@ -92,7 +92,7 @@ class ParkingVersionStructure(SiteVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    type_of_parking_ref: TypeOfParkingRef | None = field(
+    type_of_parking_ref: None | TypeOfParkingRef = field(
         default=None,
         metadata={
             "name": "TypeOfParkingRef",
@@ -109,7 +109,7 @@ class ParkingVersionStructure(SiteVersionStructure):
             "tokens": True,
         },
     )
-    vehicle_types: TransportTypeRefsRelStructure | None = field(
+    vehicle_types: None | TransportTypeRefsRelStructure = field(
         default=None,
         metadata={
             "name": "vehicleTypes",
@@ -117,7 +117,7 @@ class ParkingVersionStructure(SiteVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    parking_layout: ParkingLayoutEnumeration | None = field(
+    parking_layout: None | ParkingLayoutEnumeration = field(
         default=None,
         metadata={
             "name": "ParkingLayout",
@@ -125,7 +125,7 @@ class ParkingVersionStructure(SiteVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    number_of_parking_levels: int | None = field(
+    number_of_parking_levels: None | int = field(
         default=None,
         metadata={
             "name": "NumberOfParkingLevels",
@@ -133,7 +133,7 @@ class ParkingVersionStructure(SiteVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    principal_capacity: int | None = field(
+    principal_capacity: None | int = field(
         default=None,
         metadata={
             "name": "PrincipalCapacity",
@@ -141,7 +141,7 @@ class ParkingVersionStructure(SiteVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    total_capacity: int | None = field(
+    total_capacity: None | int = field(
         default=None,
         metadata={
             "name": "TotalCapacity",
@@ -149,7 +149,7 @@ class ParkingVersionStructure(SiteVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    overnight_parking_permitted: bool | None = field(
+    overnight_parking_permitted: None | bool = field(
         default=None,
         metadata={
             "name": "OvernightParkingPermitted",
@@ -157,7 +157,7 @@ class ParkingVersionStructure(SiteVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    prohibited_for_hazardous_materials: bool | None = field(
+    prohibited_for_hazardous_materials: None | bool = field(
         default=None,
         metadata={
             "name": "ProhibitedForHazardousMaterials",
@@ -165,7 +165,7 @@ class ParkingVersionStructure(SiteVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    recharging_available: bool | None = field(
+    recharging_available: None | bool = field(
         default=None,
         metadata={
             "name": "RechargingAvailable",
@@ -173,7 +173,7 @@ class ParkingVersionStructure(SiteVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    secure: bool | None = field(
+    secure: None | bool = field(
         default=None,
         metadata={
             "name": "Secure",
@@ -181,7 +181,7 @@ class ParkingVersionStructure(SiteVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    real_time_occupancy_available: bool | None = field(
+    real_time_occupancy_available: None | bool = field(
         default=None,
         metadata={
             "name": "RealTimeOccupancyAvailable",
@@ -209,7 +209,7 @@ class ParkingVersionStructure(SiteVersionStructure):
             "tokens": True,
         },
     )
-    types_of_payment_method: TypeOfPaymentMethodRefsRelStructure | None = (
+    types_of_payment_method: None | TypeOfPaymentMethodRefsRelStructure = (
         field(
             default=None,
             metadata={
@@ -219,7 +219,7 @@ class ParkingVersionStructure(SiteVersionStructure):
             },
         )
     )
-    default_currency: str | None = field(
+    default_currency: None | str = field(
         default=None,
         metadata={
             "name": "DefaultCurrency",
@@ -251,7 +251,7 @@ class ParkingVersionStructure(SiteVersionStructure):
             "tokens": True,
         },
     )
-    parking_reservation: ParkingReservationEnumeration | None = field(
+    parking_reservation: None | ParkingReservationEnumeration = field(
         default=None,
         metadata={
             "name": "ParkingReservation",
@@ -259,7 +259,7 @@ class ParkingVersionStructure(SiteVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    booking_url: str | None = field(
+    booking_url: None | str = field(
         default=None,
         metadata={
             "name": "BookingUrl",
@@ -267,7 +267,7 @@ class ParkingVersionStructure(SiteVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    payment_by_mobile: PaymentByMobileStructure | None = field(
+    payment_by_mobile: None | PaymentByMobileStructure = field(
         default=None,
         metadata={
             "name": "PaymentByMobile",
@@ -275,7 +275,7 @@ class ParkingVersionStructure(SiteVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    free_parking_out_of_hours: bool | None = field(
+    free_parking_out_of_hours: None | bool = field(
         default=None,
         metadata={
             "name": "FreeParkingOutOfHours",
@@ -283,7 +283,7 @@ class ParkingVersionStructure(SiteVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    parking_properties: ParkingPropertiesRelStructure | None = field(
+    parking_properties: None | ParkingPropertiesRelStructure = field(
         default=None,
         metadata={
             "name": "parkingProperties",
@@ -291,7 +291,7 @@ class ParkingVersionStructure(SiteVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    parking_areas: ParkingAreasRelStructure | None = field(
+    parking_areas: None | ParkingAreasRelStructure = field(
         default=None,
         metadata={
             "name": "parkingAreas",
@@ -299,7 +299,7 @@ class ParkingVersionStructure(SiteVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    vehicle_entrances: ParkingEntrancesForVehiclesRelStructure | None = field(
+    vehicle_entrances: None | ParkingEntrancesForVehiclesRelStructure = field(
         default=None,
         metadata={
             "name": "vehicleEntrances",

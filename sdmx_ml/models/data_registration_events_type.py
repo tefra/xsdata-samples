@@ -99,7 +99,7 @@ class DataRegistrationEventsType:
 
     @dataclass(frozen=True)
     class RegistrationId:
-        value: str | None = field(
+        value: None | str = field(
             default=None,
             metadata={
                 "required": True,
@@ -109,7 +109,7 @@ class DataRegistrationEventsType:
 
     @dataclass(frozen=True)
     class ProvisionAgreement:
-        value: str | None = field(
+        value: None | str = field(
             default=None,
             metadata={
                 "required": True,
@@ -119,7 +119,7 @@ class DataRegistrationEventsType:
 
     @dataclass(frozen=True)
     class DataProvider:
-        value: str | None = field(
+        value: None | str = field(
             default=None,
             metadata={
                 "required": True,
@@ -137,7 +137,7 @@ class DataRegistrationEventsType:
 
     @dataclass(frozen=True)
     class Category:
-        value: str | None = field(
+        value: None | str = field(
             default=None,
             metadata={
                 "required": True,

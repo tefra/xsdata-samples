@@ -15,7 +15,7 @@ class OpenlrExtendedArea:
     Extension to provide Area information in openLR format.
     """
 
-    openlr_area_location_reference: OpenlrAreaLocationReference | None = field(
+    openlr_area_location_reference: None | OpenlrAreaLocationReference = field(
         default=None,
         metadata={
             "name": "openlrAreaLocationReference",

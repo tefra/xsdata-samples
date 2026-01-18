@@ -15,7 +15,7 @@ class LineInDirectionRefStructure:
     class Meta:
         name = "LineInDirectionRef_Structure"
 
-    line_ref: FlexibleLineRef | LineRef | None = field(
+    line_ref: None | FlexibleLineRef | LineRef = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -33,7 +33,7 @@ class LineInDirectionRefStructure:
             ),
         },
     )
-    direction_ref: DirectionRef | None = field(
+    direction_ref: None | DirectionRef = field(
         default=None,
         metadata={
             "name": "DirectionRef",
@@ -41,7 +41,7 @@ class LineInDirectionRefStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    external_line_ref: ExternalObjectRefStructure | None = field(
+    external_line_ref: None | ExternalObjectRefStructure = field(
         default=None,
         metadata={
             "name": "ExternalLineRef",
@@ -49,7 +49,7 @@ class LineInDirectionRefStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    external_direction_ref: ExternalObjectRefStructure | None = field(
+    external_direction_ref: None | ExternalObjectRefStructure = field(
         default=None,
         metadata={
             "name": "ExternalDirectionRef",

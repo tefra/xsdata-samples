@@ -15,7 +15,7 @@ class TimeUnitPriceVersionedChildStructure(FarePriceVersionedChildStructure):
     class Meta:
         name = "TimeUnitPrice_VersionedChildStructure"
 
-    time_unit_ref: TimeUnitRef | None = field(
+    time_unit_ref: None | TimeUnitRef = field(
         default=None,
         metadata={
             "name": "TimeUnitRef",

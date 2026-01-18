@@ -24,7 +24,7 @@ class AlertCArea:
     :ivar alert_carea_extension:
     """
 
-    alert_clocation_country_code: str | None = field(
+    alert_clocation_country_code: None | str = field(
         default=None,
         metadata={
             "name": "alertCLocationCountryCode",
@@ -34,7 +34,7 @@ class AlertCArea:
             "max_length": 1024,
         },
     )
-    alert_clocation_table_number: str | None = field(
+    alert_clocation_table_number: None | str = field(
         default=None,
         metadata={
             "name": "alertCLocationTableNumber",
@@ -44,7 +44,7 @@ class AlertCArea:
             "max_length": 1024,
         },
     )
-    alert_clocation_table_version: str | None = field(
+    alert_clocation_table_version: None | str = field(
         default=None,
         metadata={
             "name": "alertCLocationTableVersion",
@@ -54,7 +54,7 @@ class AlertCArea:
             "max_length": 1024,
         },
     )
-    area_location: AlertCLocation | None = field(
+    area_location: None | AlertCLocation = field(
         default=None,
         metadata={
             "name": "areaLocation",
@@ -63,7 +63,7 @@ class AlertCArea:
             "required": True,
         },
     )
-    alert_carea_extension: ExtensionType | None = field(
+    alert_carea_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "alertCAreaExtension",

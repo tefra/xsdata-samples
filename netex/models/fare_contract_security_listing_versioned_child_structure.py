@@ -17,7 +17,7 @@ class FareContractSecurityListingVersionedChildStructure(
     class Meta:
         name = "FareContractSecurityListing_VersionedChildStructure"
 
-    fare_contract_ref: FareContractRef | None = field(
+    fare_contract_ref: None | FareContractRef = field(
         default=None,
         metadata={
             "name": "FareContractRef",

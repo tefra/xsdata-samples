@@ -61,7 +61,8 @@ class PointOnSectionVersionedChildStructure(
         name = "PointOnSection_VersionedChildStructure"
 
     choice_1: (
-        VehicleMeetingPointRef
+        None
+        | VehicleMeetingPointRef
         | WirePointRef
         | RoadPointRef
         | RailwayPointRef
@@ -94,7 +95,6 @@ class PointOnSectionVersionedChildStructure(
         | BeaconPoint
         | ActivationPoint
         | Point2
-        | None
     ) = field(
         default=None,
         metadata={
@@ -269,7 +269,8 @@ class PointOnSectionVersionedChildStructure(
         },
     )
     link_ref_or_infrastructure_link_ref: (
-        OnwardVehicleMeetingLinkRef
+        None
+        | OnwardVehicleMeetingLinkRef
         | VehicleMeetingLinkRef
         | ServiceLinkRef
         | LineLinkRef
@@ -280,7 +281,6 @@ class PointOnSectionVersionedChildStructure(
         | ActivationLinkRef
         | PathLinkRef
         | RouteLinkRef
-        | None
     ) = field(
         default=None,
         metadata={
@@ -344,7 +344,7 @@ class PointOnSectionVersionedChildStructure(
             ),
         },
     )
-    reverse: bool | None = field(
+    reverse: None | bool = field(
         default=None,
         metadata={
             "name": "Reverse",

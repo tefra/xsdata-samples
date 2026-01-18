@@ -13,7 +13,7 @@ from xcbl.models.time_series_response import (
 @dataclass(kw_only=True)
 class TimeSeriesDetail:
     list_of_characteristic_combinations: (
-        ListOfCharacteristicCombinations | None
+        None | ListOfCharacteristicCombinations
     ) = field(
         default=None,
         metadata={
@@ -22,7 +22,7 @@ class TimeSeriesDetail:
         },
     )
     list_of_time_series_key_figure_data: (
-        ListOfTimeSeriesKeyFigureData | None
+        None | ListOfTimeSeriesKeyFigureData
     ) = field(
         default=None,
         metadata={

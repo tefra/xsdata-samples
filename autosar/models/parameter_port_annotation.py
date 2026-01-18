@@ -42,7 +42,7 @@ class ParameterPortAnnotation:
     class Meta:
         name = "PARAMETER-PORT-ANNOTATION"
 
-    label: MultilanguageLongName | None = field(
+    label: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LABEL",
@@ -50,7 +50,7 @@ class ParameterPortAnnotation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotation_origin: String | None = field(
+    annotation_origin: None | String = field(
         default=None,
         metadata={
             "name": "ANNOTATION-ORIGIN",
@@ -58,7 +58,7 @@ class ParameterPortAnnotation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotation_text: DocumentationBlock | None = field(
+    annotation_text: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "ANNOTATION-TEXT",
@@ -66,7 +66,7 @@ class ParameterPortAnnotation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    parameter_ref: ParameterPortAnnotation.ParameterRef | None = field(
+    parameter_ref: None | ParameterPortAnnotation.ParameterRef = field(
         default=None,
         metadata={
             "name": "PARAMETER-REF",
@@ -74,14 +74,14 @@ class ParameterPortAnnotation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -92,7 +92,7 @@ class ParameterPortAnnotation:
 
     @dataclass
     class ParameterRef(Ref):
-        dest: ParameterDataPrototypeSubtypesEnum | None = field(
+        dest: None | ParameterDataPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

@@ -14,7 +14,7 @@ __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
 @dataclass
 class CheckStatusResponseBodyStructure:
-    status: Status | None = field(
+    status: None | Status = field(
         default=None,
         metadata={
             "name": "Status",
@@ -22,7 +22,7 @@ class CheckStatusResponseBodyStructure:
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    data_ready: bool | None = field(
+    data_ready: None | bool = field(
         default=None,
         metadata={
             "name": "DataReady",
@@ -30,7 +30,7 @@ class CheckStatusResponseBodyStructure:
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    error_condition: CheckStatusResponseBodyStructure.ErrorCondition | None = (
+    error_condition: None | CheckStatusResponseBodyStructure.ErrorCondition = (
         field(
             default=None,
             metadata={
@@ -40,7 +40,7 @@ class CheckStatusResponseBodyStructure:
             },
         )
     )
-    valid_until: XmlDateTime | None = field(
+    valid_until: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "ValidUntil",
@@ -48,7 +48,7 @@ class CheckStatusResponseBodyStructure:
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    shortest_possible_cycle: XmlDuration | None = field(
+    shortest_possible_cycle: None | XmlDuration = field(
         default=None,
         metadata={
             "name": "ShortestPossibleCycle",
@@ -56,7 +56,7 @@ class CheckStatusResponseBodyStructure:
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    service_started_time: XmlDateTime | None = field(
+    service_started_time: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "ServiceStartedTime",
@@ -68,7 +68,7 @@ class CheckStatusResponseBodyStructure:
     @dataclass
     class ErrorCondition:
         service_not_available_error_or_other_error: (
-            ServiceNotAvailableError | OtherError | None
+            None | ServiceNotAvailableError | OtherError
         ) = field(
             default=None,
             metadata={
@@ -87,7 +87,7 @@ class CheckStatusResponseBodyStructure:
                 ),
             },
         )
-        description: ErrorDescriptionStructure | None = field(
+        description: None | ErrorDescriptionStructure = field(
             default=None,
             metadata={
                 "name": "Description",

@@ -28,21 +28,21 @@ class CellSpecification:
         name = "cellSpecification"
         namespace = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
-    cell_function: CellSpecification.CellFunction | None = field(
+    cell_function: None | CellSpecification.CellFunction = field(
         default=None,
         metadata={
             "name": "cellFunction",
             "type": "Element",
         },
     )
-    cell_class: CellClassValueType | None = field(
+    cell_class: None | CellClassValueType = field(
         default=None,
         metadata={
             "name": "cellClass",
             "type": "Element",
         },
     )
-    cell_strength: CellStrengthValueType | None = field(
+    cell_strength: None | CellStrengthValueType = field(
         default=None,
         metadata={
             "name": "cellStrength",
@@ -52,13 +52,13 @@ class CellSpecification:
 
     @dataclass
     class CellFunction:
-        value: CellFunctionValueType | None = field(
+        value: None | CellFunctionValueType = field(
             default=None,
             metadata={
                 "required": True,
             },
         )
-        other: str | None = field(
+        other: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",

@@ -83,7 +83,7 @@ class ResourceGroup:
     class Meta:
         name = "RESOURCE-GROUP"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -92,7 +92,7 @@ class ResourceGroup:
             "required": True,
         },
     )
-    short_name_fragments: ResourceGroup.ShortNameFragments | None = field(
+    short_name_fragments: None | ResourceGroup.ShortNameFragments = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -100,7 +100,7 @@ class ResourceGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -108,7 +108,7 @@ class ResourceGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -116,7 +116,7 @@ class ResourceGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -124,7 +124,7 @@ class ResourceGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -132,7 +132,7 @@ class ResourceGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -140,7 +140,7 @@ class ResourceGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: ResourceGroup.Annotations | None = field(
+    annotations: None | ResourceGroup.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -148,7 +148,7 @@ class ResourceGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    cpu_usage: PositiveInteger | None = field(
+    cpu_usage: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "CPU-USAGE",
@@ -156,7 +156,7 @@ class ResourceGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    mem_usage: PositiveInteger | None = field(
+    mem_usage: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "MEM-USAGE",
@@ -164,14 +164,14 @@ class ResourceGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -179,7 +179,7 @@ class ResourceGroup:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",

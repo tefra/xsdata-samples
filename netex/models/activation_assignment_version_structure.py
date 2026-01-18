@@ -15,7 +15,7 @@ class ActivationAssignmentVersionStructure(AssignmentVersionStructure1):
     class Meta:
         name = "ActivationAssignment_VersionStructure"
 
-    equipment_ref: ActivatedEquipmentRefStructure | None = field(
+    equipment_ref: None | ActivatedEquipmentRefStructure = field(
         default=None,
         metadata={
             "name": "EquipmentRef",
@@ -23,7 +23,7 @@ class ActivationAssignmentVersionStructure(AssignmentVersionStructure1):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    link_ref: ActivationLinkRefStructure | None = field(
+    link_ref: None | ActivationLinkRefStructure = field(
         default=None,
         metadata={
             "name": "LinkRef",
@@ -31,7 +31,7 @@ class ActivationAssignmentVersionStructure(AssignmentVersionStructure1):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    point_ref: ActivationPointRefStructure | None = field(
+    point_ref: None | ActivationPointRefStructure = field(
         default=None,
         metadata={
             "name": "PointRef",

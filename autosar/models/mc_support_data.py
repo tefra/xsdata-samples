@@ -60,7 +60,7 @@ class McSupportData:
     class Meta:
         name = "MC-SUPPORT-DATA"
 
-    emulation_supports: McSupportData.EmulationSupports | None = field(
+    emulation_supports: None | McSupportData.EmulationSupports = field(
         default=None,
         metadata={
             "name": "EMULATION-SUPPORTS",
@@ -68,7 +68,7 @@ class McSupportData:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    mc_parameter_instances: McSupportData.McParameterInstances | None = field(
+    mc_parameter_instances: None | McSupportData.McParameterInstances = field(
         default=None,
         metadata={
             "name": "MC-PARAMETER-INSTANCES",
@@ -76,7 +76,7 @@ class McSupportData:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    mc_variable_instances: McSupportData.McVariableInstances | None = field(
+    mc_variable_instances: None | McSupportData.McVariableInstances = field(
         default=None,
         metadata={
             "name": "MC-VARIABLE-INSTANCES",
@@ -85,7 +85,7 @@ class McSupportData:
         },
     )
     measurable_system_constant_values_refs: (
-        McSupportData.MeasurableSystemConstantValuesRefs | None
+        None | McSupportData.MeasurableSystemConstantValuesRefs
     ) = field(
         default=None,
         metadata={
@@ -94,7 +94,7 @@ class McSupportData:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    rpt_support_data: RptSupportData | None = field(
+    rpt_support_data: None | RptSupportData = field(
         default=None,
         metadata={
             "name": "RPT-SUPPORT-DATA",
@@ -102,14 +102,14 @@ class McSupportData:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -168,7 +168,7 @@ class McSupportData:
 
         @dataclass
         class MeasurableSystemConstantValuesRef(Ref):
-            dest: SwSystemconstantValueSetSubtypesEnum | None = field(
+            dest: None | SwSystemconstantValueSetSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",

@@ -13,7 +13,7 @@ class VehiclePoolingDriverInfoRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "vehiclePoolingDriverInfoRefs_RelStructure"
 
-    vehicle_pooling_driver_info_ref: VehiclePoolingDriverInfoRef | None = (
+    vehicle_pooling_driver_info_ref: None | VehiclePoolingDriverInfoRef = (
         field(
             default=None,
             metadata={

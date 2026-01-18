@@ -38,7 +38,7 @@ class BswParameterPolicy:
     class Meta:
         name = "BSW-PARAMETER-POLICY"
 
-    enable_take_address: Boolean | None = field(
+    enable_take_address: None | Boolean = field(
         default=None,
         metadata={
             "name": "ENABLE-TAKE-ADDRESS",
@@ -47,7 +47,7 @@ class BswParameterPolicy:
         },
     )
     per_instance_parameter_ref: (
-        BswParameterPolicy.PerInstanceParameterRef | None
+        None | BswParameterPolicy.PerInstanceParameterRef
     ) = field(
         default=None,
         metadata={
@@ -56,7 +56,7 @@ class BswParameterPolicy:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -64,14 +64,14 @@ class BswParameterPolicy:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -82,7 +82,7 @@ class BswParameterPolicy:
 
     @dataclass
     class PerInstanceParameterRef(Ref):
-        dest: ParameterDataPrototypeSubtypesEnum | None = field(
+        dest: None | ParameterDataPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

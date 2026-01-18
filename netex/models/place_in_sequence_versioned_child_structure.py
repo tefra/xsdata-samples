@@ -20,7 +20,7 @@ class PlaceInSequenceVersionedChildStructure(
     class Meta:
         name = "PlaceInSequence_VersionedChildStructure"
 
-    place_ref: PlaceRefStructure | None = field(
+    place_ref: None | PlaceRefStructure = field(
         default=None,
         metadata={
             "name": "PlaceRef",
@@ -28,7 +28,7 @@ class PlaceInSequenceVersionedChildStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    branch_level: str | None = field(
+    branch_level: None | str = field(
         default=None,
         metadata={
             "name": "BranchLevel",
@@ -36,7 +36,7 @@ class PlaceInSequenceVersionedChildStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    onward_links: PathLinksInSequenceRelStructure | None = field(
+    onward_links: None | PathLinksInSequenceRelStructure = field(
         default=None,
         metadata={
             "name": "onwardLinks",

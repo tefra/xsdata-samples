@@ -263,56 +263,56 @@ class Asndates:
     class Meta:
         name = "ASNDates"
 
-    delivery_date: DeliveryDate | None = field(
+    delivery_date: None | DeliveryDate = field(
         default=None,
         metadata={
             "name": "DeliveryDate",
             "type": "Element",
         },
     )
-    shipped_date: ShippedDate | None = field(
+    shipped_date: None | ShippedDate = field(
         default=None,
         metadata={
             "name": "ShippedDate",
             "type": "Element",
         },
     )
-    earliest_delivery_date: EarliestDeliveryDate | None = field(
+    earliest_delivery_date: None | EarliestDeliveryDate = field(
         default=None,
         metadata={
             "name": "EarliestDeliveryDate",
             "type": "Element",
         },
     )
-    latest_delivery_date: LatestDeliveryDate | None = field(
+    latest_delivery_date: None | LatestDeliveryDate = field(
         default=None,
         metadata={
             "name": "LatestDeliveryDate",
             "type": "Element",
         },
     )
-    collection_date_of_cargo: CollectionDateOfCargo | None = field(
+    collection_date_of_cargo: None | CollectionDateOfCargo = field(
         default=None,
         metadata={
             "name": "CollectionDateOfCargo",
             "type": "Element",
         },
     )
-    schedule_delivery_date_after: ScheduleDeliveryDateAfter | None = field(
+    schedule_delivery_date_after: None | ScheduleDeliveryDateAfter = field(
         default=None,
         metadata={
             "name": "ScheduleDeliveryDateAfter",
             "type": "Element",
         },
     )
-    schedule_delivery_date_before: ScheduleDeliveryDateBefore | None = field(
+    schedule_delivery_date_before: None | ScheduleDeliveryDateBefore = field(
         default=None,
         metadata={
             "name": "ScheduleDeliveryDateBefore",
             "type": "Element",
         },
     )
-    list_of_date_coded: ListOfDateCoded | None = field(
+    list_of_date_coded: None | ListOfDateCoded = field(
         default=None,
         metadata={
             "name": "ListOfDateCoded",
@@ -431,7 +431,7 @@ class Asnpurpose:
             "required": True,
         }
     )
-    asnpurpose_coded_other: AsnpurposeCodedOther | None = field(
+    asnpurpose_coded_other: None | AsnpurposeCodedOther = field(
         default=None,
         metadata={
             "name": "ASNPurposeCodedOther",
@@ -452,7 +452,7 @@ class Asnstatus:
             "required": True,
         }
     )
-    asnstatus_coded_other: AsnstatusCodedOther | None = field(
+    asnstatus_coded_other: None | AsnstatusCodedOther = field(
         default=None,
         metadata={
             "name": "ASNStatusCodedOther",
@@ -466,21 +466,21 @@ class Asnsummary:
     class Meta:
         name = "ASNSummary"
 
-    number_of_lines: NumberOfLines | None = field(
+    number_of_lines: None | NumberOfLines = field(
         default=None,
         metadata={
             "name": "NumberOfLines",
             "type": "Element",
         },
     )
-    transport_packaging_totals: TransportPackagingTotals | None = field(
+    transport_packaging_totals: None | TransportPackagingTotals = field(
         default=None,
         metadata={
             "name": "TransportPackagingTotals",
             "type": "Element",
         },
     )
-    summary_note: SummaryNote | None = field(
+    summary_note: None | SummaryNote = field(
         default=None,
         metadata={
             "name": "SummaryNote",
@@ -515,7 +515,7 @@ class Asntype:
             "required": True,
         }
     )
-    asntype_coded_other: AsntypeCodedOther | None = field(
+    asntype_coded_other: None | AsntypeCodedOther = field(
         default=None,
         metadata={
             "name": "ASNTypeCodedOther",
@@ -558,154 +558,154 @@ class AsnbaseItemDetail:
             "required": True,
         }
     )
-    line_item_type: LineItemType | None = field(
+    line_item_type: None | LineItemType = field(
         default=None,
         metadata={
             "name": "LineItemType",
             "type": "Element",
         },
     )
-    parent_item_number: ParentItemNumber | None = field(
+    parent_item_number: None | ParentItemNumber = field(
         default=None,
         metadata={
             "name": "ParentItemNumber",
             "type": "Element",
         },
     )
-    item_identifiers: ItemIdentifiers | None = field(
+    item_identifiers: None | ItemIdentifiers = field(
         default=None,
         metadata={
             "name": "ItemIdentifiers",
             "type": "Element",
         },
     )
-    list_of_dimension: ListOfDimension | None = field(
+    list_of_dimension: None | ListOfDimension = field(
         default=None,
         metadata={
             "name": "ListOfDimension",
             "type": "Element",
         },
     )
-    total_quantity: TotalQuantity | None = field(
+    total_quantity: None | TotalQuantity = field(
         default=None,
         metadata={
             "name": "TotalQuantity",
             "type": "Element",
         },
     )
-    max_back_order_quantity: MaxBackOrderQuantity | None = field(
+    max_back_order_quantity: None | MaxBackOrderQuantity = field(
         default=None,
         metadata={
             "name": "MaxBackOrderQuantity",
             "type": "Element",
         },
     )
-    list_of_quantity_coded: ListOfQuantityCoded | None = field(
+    list_of_quantity_coded: None | ListOfQuantityCoded = field(
         default=None,
         metadata={
             "name": "ListOfQuantityCoded",
             "type": "Element",
         },
     )
-    off_catalog_flag: OffCatalogFlag | None = field(
+    off_catalog_flag: None | OffCatalogFlag = field(
         default=None,
         metadata={
             "name": "OffCatalogFlag",
             "type": "Element",
         },
     )
-    catalog_reference: CatalogReference | None = field(
+    catalog_reference: None | CatalogReference = field(
         default=None,
         metadata={
             "name": "CatalogReference",
             "type": "Element",
         },
     )
-    item_contract_references: ItemContractReferences | None = field(
+    item_contract_references: None | ItemContractReferences = field(
         default=None,
         metadata={
             "name": "ItemContractReferences",
             "type": "Element",
         },
     )
-    list_of_item_references: ListOfItemReferences | None = field(
+    list_of_item_references: None | ListOfItemReferences = field(
         default=None,
         metadata={
             "name": "ListOfItemReferences",
             "type": "Element",
         },
     )
-    country_of_origin: CountryOfOrigin | None = field(
+    country_of_origin: None | CountryOfOrigin = field(
         default=None,
         metadata={
             "name": "CountryOfOrigin",
             "type": "Element",
         },
     )
-    country_of_destination: CountryOfDestination | None = field(
+    country_of_destination: None | CountryOfDestination = field(
         default=None,
         metadata={
             "name": "CountryOfDestination",
             "type": "Element",
         },
     )
-    final_recipient: FinalRecipient | None = field(
+    final_recipient: None | FinalRecipient = field(
         default=None,
         metadata={
             "name": "FinalRecipient",
             "type": "Element",
         },
     )
-    list_of_party_coded: ListOfPartyCoded | None = field(
+    list_of_party_coded: None | ListOfPartyCoded = field(
         default=None,
         metadata={
             "name": "ListOfPartyCoded",
             "type": "Element",
         },
     )
-    conditions_of_sale: ConditionsOfSale | None = field(
+    conditions_of_sale: None | ConditionsOfSale = field(
         default=None,
         metadata={
             "name": "ConditionsOfSale",
             "type": "Element",
         },
     )
-    hazardous_materials: HazardousMaterials | None = field(
+    hazardous_materials: None | HazardousMaterials = field(
         default=None,
         metadata={
             "name": "HazardousMaterials",
             "type": "Element",
         },
     )
-    detail_response_coded: DetailResponseCoded | None = field(
+    detail_response_coded: None | DetailResponseCoded = field(
         default=None,
         metadata={
             "name": "DetailResponseCoded",
             "type": "Element",
         },
     )
-    detail_response_coded_other: DetailResponseCodedOther | None = field(
+    detail_response_coded_other: None | DetailResponseCodedOther = field(
         default=None,
         metadata={
             "name": "DetailResponseCodedOther",
             "type": "Element",
         },
     )
-    line_item_order_reference: LineItemOrderReference | None = field(
+    line_item_order_reference: None | LineItemOrderReference = field(
         default=None,
         metadata={
             "name": "LineItemOrderReference",
             "type": "Element",
         },
     )
-    asnline_item_references: AsnlineItemReferences | None = field(
+    asnline_item_references: None | AsnlineItemReferences = field(
         default=None,
         metadata={
             "name": "ASNLineItemReferences",
             "type": "Element",
         },
     )
-    exception_quantities: ExceptionQuantities | None = field(
+    exception_quantities: None | ExceptionQuantities = field(
         default=None,
         metadata={
             "name": "ExceptionQuantities",
@@ -719,42 +719,42 @@ class AsnbaseItemDetail:
             "type": "Element",
         },
     )
-    list_of_destination_ref: ListOfDestinationRef | None = field(
+    list_of_destination_ref: None | ListOfDestinationRef = field(
         default=None,
         metadata={
             "name": "ListOfDestinationRef",
             "type": "Element",
         },
     )
-    requested_delivery_date: RequestedDeliveryDate | None = field(
+    requested_delivery_date: None | RequestedDeliveryDate = field(
         default=None,
         metadata={
             "name": "RequestedDeliveryDate",
             "type": "Element",
         },
     )
-    ship_by_date: ShipByDate | None = field(
+    ship_by_date: None | ShipByDate = field(
         default=None,
         metadata={
             "name": "ShipByDate",
             "type": "Element",
         },
     )
-    other_item_dates: OtherItemDates | None = field(
+    other_item_dates: None | OtherItemDates = field(
         default=None,
         metadata={
             "name": "OtherItemDates",
             "type": "Element",
         },
     )
-    item_ship_to_party: ItemShipToParty | None = field(
+    item_ship_to_party: None | ItemShipToParty = field(
         default=None,
         metadata={
             "name": "ItemShipToParty",
             "type": "Element",
         },
     )
-    item_ship_from_party: ItemShipFromParty | None = field(
+    item_ship_from_party: None | ItemShipFromParty = field(
         default=None,
         metadata={
             "name": "ItemShipFromParty",
@@ -790,7 +790,7 @@ class Asnheader:
             "min_occurs": 1,
         },
     )
-    asnreferences: Asnreferences | None = field(
+    asnreferences: None | Asnreferences = field(
         default=None,
         metadata={
             "name": "ASNReferences",
@@ -804,28 +804,28 @@ class Asnheader:
             "required": True,
         }
     )
-    asntype: Asntype | None = field(
+    asntype: None | Asntype = field(
         default=None,
         metadata={
             "name": "ASNType",
             "type": "Element",
         },
     )
-    asnstatus: Asnstatus | None = field(
+    asnstatus: None | Asnstatus = field(
         default=None,
         metadata={
             "name": "ASNStatus",
             "type": "Element",
         },
     )
-    asncurrency: Asncurrency | None = field(
+    asncurrency: None | Asncurrency = field(
         default=None,
         metadata={
             "name": "ASNCurrency",
             "type": "Element",
         },
     )
-    asnlanguage: Asnlanguage | None = field(
+    asnlanguage: None | Asnlanguage = field(
         default=None,
         metadata={
             "name": "ASNLanguage",
@@ -846,56 +846,56 @@ class Asnheader:
             "required": True,
         }
     )
-    list_of_transport_routing: ListOfTransportRouting | None = field(
+    list_of_transport_routing: None | ListOfTransportRouting = field(
         default=None,
         metadata={
             "name": "ListOfTransportRouting",
             "type": "Element",
         },
     )
-    asnterms_of_delivery: AsntermsOfDelivery | None = field(
+    asnterms_of_delivery: None | AsntermsOfDelivery = field(
         default=None,
         metadata={
             "name": "ASNTermsOfDelivery",
             "type": "Element",
         },
     )
-    asnpayment_instructions: AsnpaymentInstructions | None = field(
+    asnpayment_instructions: None | AsnpaymentInstructions = field(
         default=None,
         metadata={
             "name": "ASNPaymentInstructions",
             "type": "Element",
         },
     )
-    asnallowances_or_charges: AsnallowancesOrCharges | None = field(
+    asnallowances_or_charges: None | AsnallowancesOrCharges = field(
         default=None,
         metadata={
             "name": "ASNAllowancesOrCharges",
             "type": "Element",
         },
     )
-    asnheader_note: AsnheaderNote | None = field(
+    asnheader_note: None | AsnheaderNote = field(
         default=None,
         metadata={
             "name": "ASNHeaderNote",
             "type": "Element",
         },
     )
-    list_of_structured_note: ListOfStructuredNote | None = field(
+    list_of_structured_note: None | ListOfStructuredNote = field(
         default=None,
         metadata={
             "name": "ListOfStructuredNote",
             "type": "Element",
         },
     )
-    list_of_name_value_set: ListOfNameValueSet | None = field(
+    list_of_name_value_set: None | ListOfNameValueSet = field(
         default=None,
         metadata={
             "name": "ListOfNameValueSet",
             "type": "Element",
         },
     )
-    asnheader_attachments: AsnheaderAttachments | None = field(
+    asnheader_attachments: None | AsnheaderAttachments = field(
         default=None,
         metadata={
             "name": "ASNHeaderAttachments",
@@ -932,7 +932,7 @@ class AsnitemDetail:
         }
     )
     asnline_item_list_of_allow_or_charge: (
-        AsnlineItemListOfAllowOrCharge | None
+        None | AsnlineItemListOfAllowOrCharge
     ) = field(
         default=None,
         metadata={
@@ -940,28 +940,28 @@ class AsnitemDetail:
             "type": "Element",
         },
     )
-    line_item_note: LineItemNote | None = field(
+    line_item_note: None | LineItemNote = field(
         default=None,
         metadata={
             "name": "LineItemNote",
             "type": "Element",
         },
     )
-    list_of_structured_note: ListOfStructuredNote | None = field(
+    list_of_structured_note: None | ListOfStructuredNote = field(
         default=None,
         metadata={
             "name": "ListOfStructuredNote",
             "type": "Element",
         },
     )
-    list_of_name_value_set: ListOfNameValueSet | None = field(
+    list_of_name_value_set: None | ListOfNameValueSet = field(
         default=None,
         metadata={
             "name": "ListOfNameValueSet",
             "type": "Element",
         },
     )
-    line_item_attachment: LineItemAttachment | None = field(
+    line_item_attachment: None | LineItemAttachment = field(
         default=None,
         metadata={
             "name": "LineItemAttachment",
@@ -997,7 +997,7 @@ class Asndetail:
             "required": True,
         }
     )
-    list_of_asnpackage_detail: ListOfAsnpackageDetail | None = field(
+    list_of_asnpackage_detail: None | ListOfAsnpackageDetail = field(
         default=None,
         metadata={
             "name": "ListOfASNPackageDetail",
@@ -1015,14 +1015,14 @@ class AdvanceShipmentNotice:
             "required": True,
         }
     )
-    asndetail: Asndetail | None = field(
+    asndetail: None | Asndetail = field(
         default=None,
         metadata={
             "name": "ASNDetail",
             "type": "Element",
         },
     )
-    asnsummary: Asnsummary | None = field(
+    asnsummary: None | Asnsummary = field(
         default=None,
         metadata={
             "name": "ASNSummary",

@@ -46,7 +46,7 @@ class SoftwareClusterDependencyCompareCondition:
     class Meta:
         name = "SOFTWARE-CLUSTER-DEPENDENCY-COMPARE-CONDITION"
 
-    compare_type: SoftwareClusterDependencyOperatorEnum | None = field(
+    compare_type: None | SoftwareClusterDependencyOperatorEnum = field(
         default=None,
         metadata={
             "name": "COMPARE-TYPE",
@@ -54,7 +54,7 @@ class SoftwareClusterDependencyCompareCondition:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    consider_build_number: Boolean | None = field(
+    consider_build_number: None | Boolean = field(
         default=None,
         metadata={
             "name": "CONSIDER-BUILD-NUMBER",
@@ -63,7 +63,7 @@ class SoftwareClusterDependencyCompareCondition:
         },
     )
     software_cluster_ref: (
-        SoftwareClusterDependencyCompareCondition.SoftwareClusterRef | None
+        None | SoftwareClusterDependencyCompareCondition.SoftwareClusterRef
     ) = field(
         default=None,
         metadata={
@@ -72,7 +72,7 @@ class SoftwareClusterDependencyCompareCondition:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    version: StrongRevisionLabelString | None = field(
+    version: None | StrongRevisionLabelString = field(
         default=None,
         metadata={
             "name": "VERSION",
@@ -80,14 +80,14 @@ class SoftwareClusterDependencyCompareCondition:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -98,7 +98,7 @@ class SoftwareClusterDependencyCompareCondition:
 
     @dataclass
     class SoftwareClusterRef(Ref):
-        dest: SoftwareClusterSubtypesEnum | None = field(
+        dest: None | SoftwareClusterSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

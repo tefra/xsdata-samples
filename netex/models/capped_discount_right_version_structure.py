@@ -15,7 +15,7 @@ class CappedDiscountRightVersionStructure(SaleDiscountRightVersionStructure):
     class Meta:
         name = "CappedDiscountRight_VersionStructure"
 
-    capping_rules: CappingRulesRelStructure | None = field(
+    capping_rules: None | CappingRulesRelStructure = field(
         default=None,
         metadata={
             "name": "cappingRules",

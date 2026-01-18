@@ -41,7 +41,7 @@ class McFunctionDataRefSetConditional:
         name = "MC-FUNCTION-DATA-REF-SET-CONDITIONAL"
 
     flat_map_entry_refs: (
-        McFunctionDataRefSetConditional.FlatMapEntryRefs | None
+        None | McFunctionDataRefSetConditional.FlatMapEntryRefs
     ) = field(
         default=None,
         metadata={
@@ -51,7 +51,7 @@ class McFunctionDataRefSetConditional:
         },
     )
     mc_data_instance_refs: (
-        McFunctionDataRefSetConditional.McDataInstanceRefs | None
+        None | McFunctionDataRefSetConditional.McDataInstanceRefs
     ) = field(
         default=None,
         metadata={
@@ -60,7 +60,7 @@ class McFunctionDataRefSetConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -68,14 +68,14 @@ class McFunctionDataRefSetConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -99,7 +99,7 @@ class McFunctionDataRefSetConditional:
 
         @dataclass
         class FlatMapEntryRef(Ref):
-            dest: FlatInstanceDescriptorSubtypesEnum | None = field(
+            dest: None | FlatInstanceDescriptorSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -123,7 +123,7 @@ class McFunctionDataRefSetConditional:
 
         @dataclass
         class McDataInstanceRef(Ref):
-            dest: McDataInstanceSubtypesEnum | None = field(
+            dest: None | McDataInstanceSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",

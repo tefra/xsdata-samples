@@ -8,7 +8,7 @@ class FromDateTime:
     class Meta:
         name = "from-date-time"
 
-    type_value: str | None = field(
+    type_value: None | str = field(
         default=None,
         metadata={
             "name": "type",
@@ -16,7 +16,7 @@ class FromDateTime:
             "required": True,
         },
     )
-    format: str | None = field(
+    format: None | str = field(
         default=None,
         metadata={
             "type": "Element",

@@ -35,7 +35,7 @@ class LocalMemoryMapType:
     class Meta:
         name = "localMemoryMapType"
 
-    name: str | None = field(
+    name: None | str = field(
         default=None,
         metadata={
             "type": "Element",
@@ -43,7 +43,7 @@ class LocalMemoryMapType:
             "required": True,
         },
     )
-    display_name: DisplayName | None = field(
+    display_name: None | DisplayName = field(
         default=None,
         metadata={
             "name": "displayName",
@@ -51,7 +51,7 @@ class LocalMemoryMapType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    short_description: ShortDescription | None = field(
+    short_description: None | ShortDescription = field(
         default=None,
         metadata={
             "name": "shortDescription",
@@ -59,7 +59,7 @@ class LocalMemoryMapType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    description: Description | None = field(
+    description: None | Description = field(
         default=None,
         metadata={
             "type": "Element",
@@ -81,7 +81,7 @@ class LocalMemoryMapType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    vendor_extensions: VendorExtensions | None = field(
+    vendor_extensions: None | VendorExtensions = field(
         default=None,
         metadata={
             "name": "vendorExtensions",
@@ -89,7 +89,7 @@ class LocalMemoryMapType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",

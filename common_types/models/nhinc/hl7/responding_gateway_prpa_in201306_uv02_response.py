@@ -13,7 +13,7 @@ class CommunityPrpaIn201306Uv02ResponseType:
     class Meta:
         name = "Community_PRPA_IN201306UV02ResponseType"
 
-    prpa_in201306_uv02: PrpaIn201306Uv02 | None = field(
+    prpa_in201306_uv02: None | PrpaIn201306Uv02 = field(
         default=None,
         metadata={
             "name": "PRPA_IN201306UV02",
@@ -22,7 +22,7 @@ class CommunityPrpaIn201306Uv02ResponseType:
             "required": True,
         },
     )
-    nhin_target_community: NhinTargetCommunityType | None = field(
+    nhin_target_community: None | NhinTargetCommunityType = field(
         default=None,
         metadata={
             "name": "nhinTargetCommunity",

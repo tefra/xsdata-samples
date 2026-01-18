@@ -9,7 +9,7 @@ __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
 @dataclass
 class CapabilityNotSupportedErrorStructure(ErrorCodeStructure):
-    capability_ref: str | None = field(
+    capability_ref: None | str = field(
         default=None,
         metadata={
             "name": "CapabilityRef",

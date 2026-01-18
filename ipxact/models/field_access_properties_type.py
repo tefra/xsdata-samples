@@ -10,7 +10,7 @@ class FieldAccessPropertiesType:
     class Meta:
         name = "fieldAccessPropertiesType"
 
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",

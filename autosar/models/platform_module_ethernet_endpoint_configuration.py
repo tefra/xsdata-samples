@@ -100,7 +100,7 @@ class PlatformModuleEthernetEndpointConfiguration:
     class Meta:
         name = "PLATFORM-MODULE-ETHERNET-ENDPOINT-CONFIGURATION"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -110,7 +110,7 @@ class PlatformModuleEthernetEndpointConfiguration:
         },
     )
     short_name_fragments: (
-        PlatformModuleEthernetEndpointConfiguration.ShortNameFragments | None
+        None | PlatformModuleEthernetEndpointConfiguration.ShortNameFragments
     ) = field(
         default=None,
         metadata={
@@ -119,7 +119,7 @@ class PlatformModuleEthernetEndpointConfiguration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -127,7 +127,7 @@ class PlatformModuleEthernetEndpointConfiguration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -135,7 +135,7 @@ class PlatformModuleEthernetEndpointConfiguration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -143,7 +143,7 @@ class PlatformModuleEthernetEndpointConfiguration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -151,7 +151,7 @@ class PlatformModuleEthernetEndpointConfiguration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -160,7 +160,7 @@ class PlatformModuleEthernetEndpointConfiguration:
         },
     )
     annotations: (
-        PlatformModuleEthernetEndpointConfiguration.Annotations | None
+        None | PlatformModuleEthernetEndpointConfiguration.Annotations
     ) = field(
         default=None,
         metadata={
@@ -169,7 +169,7 @@ class PlatformModuleEthernetEndpointConfiguration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -178,8 +178,8 @@ class PlatformModuleEthernetEndpointConfiguration:
         },
     )
     communication_connector_ref: (
-        PlatformModuleEthernetEndpointConfiguration.CommunicationConnectorRef
-        | None
+        None
+        | PlatformModuleEthernetEndpointConfiguration.CommunicationConnectorRef
     ) = field(
         default=None,
         metadata={
@@ -188,7 +188,7 @@ class PlatformModuleEthernetEndpointConfiguration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ipv_4_multicast_ip_address: Ip4AddressString | None = field(
+    ipv_4_multicast_ip_address: None | Ip4AddressString = field(
         default=None,
         metadata={
             "name": "IPV-4-MULTICAST-IP-ADDRESS",
@@ -196,7 +196,7 @@ class PlatformModuleEthernetEndpointConfiguration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ipv_6_multicast_ip_address: Ip6AddressString | None = field(
+    ipv_6_multicast_ip_address: None | Ip6AddressString = field(
         default=None,
         metadata={
             "name": "IPV-6-MULTICAST-IP-ADDRESS",
@@ -204,7 +204,7 @@ class PlatformModuleEthernetEndpointConfiguration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tcp_port: PositiveInteger | None = field(
+    tcp_port: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "TCP-PORT",
@@ -212,7 +212,7 @@ class PlatformModuleEthernetEndpointConfiguration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    udp_port: PositiveInteger | None = field(
+    udp_port: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "UDP-PORT",
@@ -220,14 +220,14 @@ class PlatformModuleEthernetEndpointConfiguration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -235,7 +235,7 @@ class PlatformModuleEthernetEndpointConfiguration:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -267,7 +267,7 @@ class PlatformModuleEthernetEndpointConfiguration:
 
     @dataclass
     class CommunicationConnectorRef(Ref):
-        dest: EthernetCommunicationConnectorSubtypesEnum | None = field(
+        dest: None | EthernetCommunicationConnectorSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

@@ -43,46 +43,46 @@ class ConstraintSet:
         name = "constraintSet"
         namespace = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
-    name: str | None = field(
+    name: None | str = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    display_name: DisplayName | None = field(
+    display_name: None | DisplayName = field(
         default=None,
         metadata={
             "name": "displayName",
             "type": "Element",
         },
     )
-    short_description: ShortDescription | None = field(
+    short_description: None | ShortDescription = field(
         default=None,
         metadata={
             "name": "shortDescription",
             "type": "Element",
         },
     )
-    description: Description | None = field(
+    description: None | Description = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    vector: ConstraintSet.Vector | None = field(
+    vector: None | ConstraintSet.Vector = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    drive_constraint: DriveConstraint | None = field(
+    drive_constraint: None | DriveConstraint = field(
         default=None,
         metadata={
             "name": "driveConstraint",
             "type": "Element",
         },
     )
-    load_constraint: LoadConstraint | None = field(
+    load_constraint: None | LoadConstraint = field(
         default=None,
         metadata={
             "name": "loadConstraint",
@@ -103,7 +103,7 @@ class ConstraintSet:
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -120,14 +120,14 @@ class ConstraintSet:
             select a bit-slice of a vector.
         """
 
-        left: UnsignedIntExpression | None = field(
+        left: None | UnsignedIntExpression = field(
             default=None,
             metadata={
                 "type": "Element",
                 "required": True,
             },
         )
-        right: UnsignedIntExpression | None = field(
+        right: None | UnsignedIntExpression = field(
             default=None,
             metadata={
                 "type": "Element",

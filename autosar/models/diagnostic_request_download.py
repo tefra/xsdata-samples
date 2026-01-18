@@ -103,7 +103,7 @@ class DiagnosticRequestDownload:
     class Meta:
         name = "DIAGNOSTIC-REQUEST-DOWNLOAD"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -113,7 +113,7 @@ class DiagnosticRequestDownload:
         },
     )
     short_name_fragments: (
-        DiagnosticRequestDownload.ShortNameFragments | None
+        None | DiagnosticRequestDownload.ShortNameFragments
     ) = field(
         default=None,
         metadata={
@@ -122,7 +122,7 @@ class DiagnosticRequestDownload:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -130,7 +130,7 @@ class DiagnosticRequestDownload:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -138,7 +138,7 @@ class DiagnosticRequestDownload:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -146,7 +146,7 @@ class DiagnosticRequestDownload:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -154,7 +154,7 @@ class DiagnosticRequestDownload:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -162,7 +162,7 @@ class DiagnosticRequestDownload:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: DiagnosticRequestDownload.Annotations | None = field(
+    annotations: None | DiagnosticRequestDownload.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -170,7 +170,7 @@ class DiagnosticRequestDownload:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -179,7 +179,7 @@ class DiagnosticRequestDownload:
         },
     )
     access_permission_ref: (
-        DiagnosticRequestDownload.AccessPermissionRef | None
+        None | DiagnosticRequestDownload.AccessPermissionRef
     ) = field(
         default=None,
         metadata={
@@ -188,7 +188,7 @@ class DiagnosticRequestDownload:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    memory_range_refs: DiagnosticRequestDownload.MemoryRangeRefs | None = (
+    memory_range_refs: None | DiagnosticRequestDownload.MemoryRangeRefs = (
         field(
             default=None,
             metadata={
@@ -199,7 +199,7 @@ class DiagnosticRequestDownload:
         )
     )
     request_download_class_ref: (
-        DiagnosticRequestDownload.RequestDownloadClassRef | None
+        None | DiagnosticRequestDownload.RequestDownloadClassRef
     ) = field(
         default=None,
         metadata={
@@ -208,14 +208,14 @@ class DiagnosticRequestDownload:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -223,7 +223,7 @@ class DiagnosticRequestDownload:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -255,7 +255,7 @@ class DiagnosticRequestDownload:
 
     @dataclass
     class AccessPermissionRef(Ref):
-        dest: DiagnosticAccessPermissionSubtypesEnum | None = field(
+        dest: None | DiagnosticAccessPermissionSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -279,7 +279,7 @@ class DiagnosticRequestDownload:
 
         @dataclass
         class MemoryRangeRef(Ref):
-            dest: DiagnosticMemoryIdentifierSubtypesEnum | None = field(
+            dest: None | DiagnosticMemoryIdentifierSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -290,7 +290,7 @@ class DiagnosticRequestDownload:
 
     @dataclass
     class RequestDownloadClassRef(Ref):
-        dest: DiagnosticRequestDownloadClassSubtypesEnum | None = field(
+        dest: None | DiagnosticRequestDownloadClassSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

@@ -97,7 +97,7 @@ class ISignalTriggering:
     class Meta:
         name = "I-SIGNAL-TRIGGERING"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -106,7 +106,7 @@ class ISignalTriggering:
             "required": True,
         },
     )
-    short_name_fragments: ISignalTriggering.ShortNameFragments | None = field(
+    short_name_fragments: None | ISignalTriggering.ShortNameFragments = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -114,7 +114,7 @@ class ISignalTriggering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -122,7 +122,7 @@ class ISignalTriggering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -130,7 +130,7 @@ class ISignalTriggering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -138,7 +138,7 @@ class ISignalTriggering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -146,7 +146,7 @@ class ISignalTriggering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -154,7 +154,7 @@ class ISignalTriggering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: ISignalTriggering.Annotations | None = field(
+    annotations: None | ISignalTriggering.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -162,7 +162,7 @@ class ISignalTriggering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    i_signal_group_ref: ISignalTriggering.ISignalGroupRef | None = field(
+    i_signal_group_ref: None | ISignalTriggering.ISignalGroupRef = field(
         default=None,
         metadata={
             "name": "I-SIGNAL-GROUP-REF",
@@ -170,7 +170,7 @@ class ISignalTriggering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    i_signal_port_refs: ISignalTriggering.ISignalPortRefs | None = field(
+    i_signal_port_refs: None | ISignalTriggering.ISignalPortRefs = field(
         default=None,
         metadata={
             "name": "I-SIGNAL-PORT-REFS",
@@ -178,7 +178,7 @@ class ISignalTriggering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    i_signal_ref: ISignalTriggering.ISignalRef | None = field(
+    i_signal_ref: None | ISignalTriggering.ISignalRef = field(
         default=None,
         metadata={
             "name": "I-SIGNAL-REF",
@@ -186,7 +186,7 @@ class ISignalTriggering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -194,14 +194,14 @@ class ISignalTriggering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -209,7 +209,7 @@ class ISignalTriggering:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -241,7 +241,7 @@ class ISignalTriggering:
 
     @dataclass
     class ISignalGroupRef(Ref):
-        dest: ISignalGroupSubtypesEnum | None = field(
+        dest: None | ISignalGroupSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -265,7 +265,7 @@ class ISignalTriggering:
 
         @dataclass
         class ISignalPortRef(Ref):
-            dest: ISignalPortSubtypesEnum | None = field(
+            dest: None | ISignalPortSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -276,7 +276,7 @@ class ISignalTriggering:
 
     @dataclass
     class ISignalRef(Ref):
-        dest: ISignalSubtypesEnum | None = field(
+        dest: None | ISignalSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

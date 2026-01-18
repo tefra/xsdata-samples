@@ -13,7 +13,7 @@ class RelationshipRefStructure:
             "required": True,
         },
     )
-    name_of_class: str | None = field(
+    name_of_class: None | str = field(
         default=None,
         metadata={
             "name": "nameOfClass",

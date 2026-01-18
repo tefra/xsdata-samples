@@ -20,7 +20,7 @@ class QuayVersionStructure(StopPlaceSpaceVersionStructure):
     class Meta:
         name = "Quay_VersionStructure"
 
-    public_code: str | None = field(
+    public_code: None | str = field(
         default=None,
         metadata={
             "name": "PublicCode",
@@ -28,7 +28,7 @@ class QuayVersionStructure(StopPlaceSpaceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    plate_code: str | None = field(
+    plate_code: None | str = field(
         default=None,
         metadata={
             "name": "PlateCode",
@@ -36,7 +36,7 @@ class QuayVersionStructure(StopPlaceSpaceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    short_code: int | None = field(
+    short_code: None | int = field(
         default=None,
         metadata={
             "name": "ShortCode",
@@ -44,14 +44,14 @@ class QuayVersionStructure(StopPlaceSpaceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    destinations: DestinationDisplayViewsRelStructure | None = field(
+    destinations: None | DestinationDisplayViewsRelStructure = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    compass_bearing: float | None = field(
+    compass_bearing: None | float = field(
         default=None,
         metadata={
             "name": "CompassBearing",
@@ -59,7 +59,7 @@ class QuayVersionStructure(StopPlaceSpaceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    compass_octant: CompassBearing8Enumeration | None = field(
+    compass_octant: None | CompassBearing8Enumeration = field(
         default=None,
         metadata={
             "name": "CompassOctant",
@@ -67,7 +67,7 @@ class QuayVersionStructure(StopPlaceSpaceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    quay_type: QuayTypeEnumeration | None = field(
+    quay_type: None | QuayTypeEnumeration = field(
         default=None,
         metadata={
             "name": "QuayType",
@@ -75,7 +75,7 @@ class QuayVersionStructure(StopPlaceSpaceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    platform_height: Decimal | None = field(
+    platform_height: None | Decimal = field(
         default=None,
         metadata={
             "name": "PlatformHeight",
@@ -83,7 +83,7 @@ class QuayVersionStructure(StopPlaceSpaceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    edge_to_track_center_distance: Decimal | None = field(
+    edge_to_track_center_distance: None | Decimal = field(
         default=None,
         metadata={
             "name": "EdgeToTrackCenterDistance",
@@ -91,7 +91,7 @@ class QuayVersionStructure(StopPlaceSpaceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    parent_quay_ref: QuayRefStructure | None = field(
+    parent_quay_ref: None | QuayRefStructure = field(
         default=None,
         metadata={
             "name": "ParentQuayRef",
@@ -99,7 +99,7 @@ class QuayVersionStructure(StopPlaceSpaceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    boarding_positions: BoardingPositionsRelStructure | None = field(
+    boarding_positions: None | BoardingPositionsRelStructure = field(
         default=None,
         metadata={
             "name": "boardingPositions",

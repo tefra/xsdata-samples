@@ -24,7 +24,7 @@ class UrbanParkingSite(ParkingSite):
     :ivar urban_parking_site_extension:
     """
 
-    urban_parking_site_type: UrbanParkingSiteTypeEnum | None = field(
+    urban_parking_site_type: None | UrbanParkingSiteTypeEnum = field(
         default=None,
         metadata={
             "name": "urbanParkingSiteType",
@@ -33,7 +33,7 @@ class UrbanParkingSite(ParkingSite):
             "required": True,
         },
     )
-    parking_zone: MultilingualString | None = field(
+    parking_zone: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "parkingZone",
@@ -41,7 +41,7 @@ class UrbanParkingSite(ParkingSite):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    urban_parking_site_extension: ExtensionType | None = field(
+    urban_parking_site_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "urbanParkingSiteExtension",

@@ -15,7 +15,7 @@ class GroupConstraintMemberVersionedChildStructure(VersionedChildStructure):
     class Meta:
         name = "GroupConstraintMember_VersionedChildStructure"
 
-    purpose_of_grouping_ref: PurposeOfGroupingRefStructure | None = field(
+    purpose_of_grouping_ref: None | PurposeOfGroupingRefStructure = field(
         default=None,
         metadata={
             "name": "PurposeOfGroupingRef",
@@ -23,7 +23,7 @@ class GroupConstraintMemberVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    member_class_ref: ClassRefStructure | None = field(
+    member_class_ref: None | ClassRefStructure = field(
         default=None,
         metadata={
             "name": "MemberClassRef",
@@ -32,7 +32,7 @@ class GroupConstraintMemberVersionedChildStructure(VersionedChildStructure):
             "required": True,
         },
     )
-    member_type_of_value_ref: TypeOfValueRefStructure | None = field(
+    member_type_of_value_ref: None | TypeOfValueRefStructure = field(
         default=None,
         metadata={
             "name": "MemberTypeOfValueRef",

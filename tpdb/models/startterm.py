@@ -12,20 +12,20 @@ class Startterm:
     class Meta:
         name = "startterm"
 
-    constructor_based: ConstructorBased | None = field(
+    constructor_based: None | ConstructorBased = field(
         default=None,
         metadata={
             "name": "constructor-based",
             "type": "Element",
         },
     )
-    full: Full | None = field(
+    full: None | Full = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    automaton: Automaton | None = field(
+    automaton: None | Automaton = field(
         default=None,
         metadata={
             "type": "Element",

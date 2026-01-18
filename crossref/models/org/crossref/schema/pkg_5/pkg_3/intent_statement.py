@@ -26,7 +26,7 @@ class IntentStatement:
         name = "intent_statement"
         namespace = "http://www.crossref.org/schema/5.3.1"
 
-    language: IntentStatementLanguage | None = field(
+    language: None | IntentStatementLanguage = field(
         default=None,
         metadata={
             "type": "Attribute",

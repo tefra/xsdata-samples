@@ -35,7 +35,7 @@ class PathLinkVersionStructure(LinkVersionStructure):
     class Meta:
         name = "PathLink_VersionStructure"
 
-    from_value: PathLinkEndStructure | None = field(
+    from_value: None | PathLinkEndStructure = field(
         default=None,
         metadata={
             "name": "From",
@@ -44,7 +44,7 @@ class PathLinkVersionStructure(LinkVersionStructure):
             "required": True,
         },
     )
-    to: PathLinkEndStructure | None = field(
+    to: None | PathLinkEndStructure = field(
         default=None,
         metadata={
             "name": "To",
@@ -53,7 +53,7 @@ class PathLinkVersionStructure(LinkVersionStructure):
             "required": True,
         },
     )
-    description: MultilingualString | None = field(
+    description: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "Description",
@@ -62,7 +62,7 @@ class PathLinkVersionStructure(LinkVersionStructure):
         },
     )
     accessibility_assessment_ref_or_accessibility_assessment: (
-        AccessibilityAssessmentRef | AccessibilityAssessment | None
+        None | AccessibilityAssessmentRef | AccessibilityAssessment
     ) = field(
         default=None,
         metadata={
@@ -90,7 +90,7 @@ class PathLinkVersionStructure(LinkVersionStructure):
             "tokens": True,
         },
     )
-    public_use: PublicUseEnumeration | None = field(
+    public_use: None | PublicUseEnumeration = field(
         default=None,
         metadata={
             "name": "PublicUse",
@@ -98,7 +98,7 @@ class PathLinkVersionStructure(LinkVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    covered: CoveredEnumeration | None = field(
+    covered: None | CoveredEnumeration = field(
         default=None,
         metadata={
             "name": "Covered",
@@ -106,7 +106,7 @@ class PathLinkVersionStructure(LinkVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    gated: GatedEnumeration | None = field(
+    gated: None | GatedEnumeration = field(
         default=None,
         metadata={
             "name": "Gated",
@@ -114,7 +114,7 @@ class PathLinkVersionStructure(LinkVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    lighting: LightingEnumeration | None = field(
+    lighting: None | LightingEnumeration = field(
         default=None,
         metadata={
             "name": "Lighting",
@@ -122,7 +122,7 @@ class PathLinkVersionStructure(LinkVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    all_areas_wheelchair_accessible: bool | None = field(
+    all_areas_wheelchair_accessible: None | bool = field(
         default=None,
         metadata={
             "name": "AllAreasWheelchairAccessible",
@@ -130,7 +130,7 @@ class PathLinkVersionStructure(LinkVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    person_capacity: int | None = field(
+    person_capacity: None | int = field(
         default=None,
         metadata={
             "name": "PersonCapacity",
@@ -138,7 +138,7 @@ class PathLinkVersionStructure(LinkVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    presentation: PresentationStructure | None = field(
+    presentation: None | PresentationStructure = field(
         default=None,
         metadata={
             "name": "Presentation",
@@ -146,14 +146,14 @@ class PathLinkVersionStructure(LinkVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    facilities: SiteFacilitySetsRelStructure | None = field(
+    facilities: None | SiteFacilitySetsRelStructure = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    towards: MultilingualString | None = field(
+    towards: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "Towards",
@@ -161,7 +161,7 @@ class PathLinkVersionStructure(LinkVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    back: MultilingualString | None = field(
+    back: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "Back",
@@ -169,7 +169,7 @@ class PathLinkVersionStructure(LinkVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    number_of_steps: int | None = field(
+    number_of_steps: None | int = field(
         default=None,
         metadata={
             "name": "NumberOfSteps",
@@ -177,7 +177,7 @@ class PathLinkVersionStructure(LinkVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    minimum_height: Decimal | None = field(
+    minimum_height: None | Decimal = field(
         default=None,
         metadata={
             "name": "MinimumHeight",
@@ -185,7 +185,7 @@ class PathLinkVersionStructure(LinkVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    minimum_width: Decimal | None = field(
+    minimum_width: None | Decimal = field(
         default=None,
         metadata={
             "name": "MinimumWidth",
@@ -193,7 +193,7 @@ class PathLinkVersionStructure(LinkVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    allowed_use: PathDirectionEnumeration | None = field(
+    allowed_use: None | PathDirectionEnumeration = field(
         default=None,
         metadata={
             "name": "AllowedUse",
@@ -201,7 +201,7 @@ class PathLinkVersionStructure(LinkVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    transition: TransitionEnumeration | None = field(
+    transition: None | TransitionEnumeration = field(
         default=None,
         metadata={
             "name": "Transition",
@@ -209,7 +209,7 @@ class PathLinkVersionStructure(LinkVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    gradient: int | None = field(
+    gradient: None | int = field(
         default=None,
         metadata={
             "name": "Gradient",
@@ -217,7 +217,7 @@ class PathLinkVersionStructure(LinkVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    gradient_type: GradientEnumeration | None = field(
+    gradient_type: None | GradientEnumeration = field(
         default=None,
         metadata={
             "name": "GradientType",
@@ -225,7 +225,7 @@ class PathLinkVersionStructure(LinkVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    tilt_angle: int | None = field(
+    tilt_angle: None | int = field(
         default=None,
         metadata={
             "name": "TiltAngle",
@@ -233,7 +233,7 @@ class PathLinkVersionStructure(LinkVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    tilt_type: TiltTypeEnumeration | None = field(
+    tilt_type: None | TiltTypeEnumeration = field(
         default=None,
         metadata={
             "name": "TiltType",
@@ -241,7 +241,7 @@ class PathLinkVersionStructure(LinkVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    access_feature_type: AccessFeatureEnumeration | None = field(
+    access_feature_type: None | AccessFeatureEnumeration = field(
         default=None,
         metadata={
             "name": "AccessFeatureType",
@@ -249,7 +249,7 @@ class PathLinkVersionStructure(LinkVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    passage_type: PassageTypeEnumeration | None = field(
+    passage_type: None | PassageTypeEnumeration = field(
         default=None,
         metadata={
             "name": "PassageType",
@@ -257,7 +257,7 @@ class PathLinkVersionStructure(LinkVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    flooring_type: FlooringTypeEnumeration | None = field(
+    flooring_type: None | FlooringTypeEnumeration = field(
         default=None,
         metadata={
             "name": "FlooringType",
@@ -265,7 +265,7 @@ class PathLinkVersionStructure(LinkVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    right_side_border: BorderTypeEnumeration | None = field(
+    right_side_border: None | BorderTypeEnumeration = field(
         default=None,
         metadata={
             "name": "RightSideBorder",
@@ -273,7 +273,7 @@ class PathLinkVersionStructure(LinkVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    left_side_border: BorderTypeEnumeration | None = field(
+    left_side_border: None | BorderTypeEnumeration = field(
         default=None,
         metadata={
             "name": "LeftSideBorder",
@@ -281,7 +281,7 @@ class PathLinkVersionStructure(LinkVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    tactile_warning_strip: TactileWarningStripEnumeration | None = field(
+    tactile_warning_strip: None | TactileWarningStripEnumeration = field(
         default=None,
         metadata={
             "name": "TactileWarningStrip",
@@ -289,7 +289,7 @@ class PathLinkVersionStructure(LinkVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    tactile_guiding_strip: bool | None = field(
+    tactile_guiding_strip: None | bool = field(
         default=None,
         metadata={
             "name": "TactileGuidingStrip",
@@ -297,7 +297,7 @@ class PathLinkVersionStructure(LinkVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    maximum_flow_per_minute: int | None = field(
+    maximum_flow_per_minute: None | int = field(
         default=None,
         metadata={
             "name": "MaximumFlowPerMinute",
@@ -305,7 +305,7 @@ class PathLinkVersionStructure(LinkVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    transfer_duration: TransferDurationStructure | None = field(
+    transfer_duration: None | TransferDurationStructure = field(
         default=None,
         metadata={
             "name": "TransferDuration",

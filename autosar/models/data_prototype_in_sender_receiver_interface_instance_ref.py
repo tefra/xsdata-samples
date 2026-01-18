@@ -36,8 +36,8 @@ class DataPrototypeInSenderReceiverInterfaceInstanceRef:
         name = "DATA-PROTOTYPE-IN-SENDER-RECEIVER-INTERFACE-INSTANCE-REF"
 
     root_data_prototype_in_sr_ref: (
-        DataPrototypeInSenderReceiverInterfaceInstanceRef.RootDataPrototypeInSrRef
-        | None
+        None
+        | DataPrototypeInSenderReceiverInterfaceInstanceRef.RootDataPrototypeInSrRef
     ) = field(
         default=None,
         metadata={
@@ -57,8 +57,8 @@ class DataPrototypeInSenderReceiverInterfaceInstanceRef:
         },
     )
     target_data_prototype_in_sr_ref: (
-        DataPrototypeInSenderReceiverInterfaceInstanceRef.TargetDataPrototypeInSrRef
-        | None
+        None
+        | DataPrototypeInSenderReceiverInterfaceInstanceRef.TargetDataPrototypeInSrRef
     ) = field(
         default=None,
         metadata={
@@ -67,14 +67,14 @@ class DataPrototypeInSenderReceiverInterfaceInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -85,7 +85,7 @@ class DataPrototypeInSenderReceiverInterfaceInstanceRef:
 
     @dataclass
     class RootDataPrototypeInSrRef(Ref):
-        dest: AutosarDataPrototypeSubtypesEnum | None = field(
+        dest: None | AutosarDataPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -96,7 +96,7 @@ class DataPrototypeInSenderReceiverInterfaceInstanceRef:
 
     @dataclass
     class ContextDataPrototypeInSrRef(Ref):
-        dest: ApplicationCompositeElementDataPrototypeSubtypesEnum | None = (
+        dest: None | ApplicationCompositeElementDataPrototypeSubtypesEnum = (
             field(
                 default=None,
                 metadata={
@@ -109,7 +109,7 @@ class DataPrototypeInSenderReceiverInterfaceInstanceRef:
 
     @dataclass
     class TargetDataPrototypeInSrRef(Ref):
-        dest: DataPrototypeSubtypesEnum | None = field(
+        dest: None | DataPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

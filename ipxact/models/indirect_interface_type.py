@@ -45,7 +45,7 @@ class IndirectInterfaceType:
     class Meta:
         name = "indirectInterfaceType"
 
-    name: str | None = field(
+    name: None | str = field(
         default=None,
         metadata={
             "type": "Element",
@@ -53,7 +53,7 @@ class IndirectInterfaceType:
             "required": True,
         },
     )
-    display_name: DisplayName | None = field(
+    display_name: None | DisplayName = field(
         default=None,
         metadata={
             "name": "displayName",
@@ -61,7 +61,7 @@ class IndirectInterfaceType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    short_description: ShortDescription | None = field(
+    short_description: None | ShortDescription = field(
         default=None,
         metadata={
             "name": "shortDescription",
@@ -69,14 +69,14 @@ class IndirectInterfaceType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    description: Description | None = field(
+    description: None | Description = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    indirect_address_ref: IndirectAddressRef | None = field(
+    indirect_address_ref: None | IndirectAddressRef = field(
         default=None,
         metadata={
             "name": "indirectAddressRef",
@@ -85,7 +85,7 @@ class IndirectInterfaceType:
             "required": True,
         },
     )
-    indirect_data_ref: IndirectDataRef | None = field(
+    indirect_data_ref: None | IndirectDataRef = field(
         default=None,
         metadata={
             "name": "indirectDataRef",
@@ -94,7 +94,7 @@ class IndirectInterfaceType:
             "required": True,
         },
     )
-    memory_map_ref: str | None = field(
+    memory_map_ref: None | str = field(
         default=None,
         metadata={
             "name": "memoryMapRef",
@@ -110,7 +110,7 @@ class IndirectInterfaceType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    bits_in_lau: BitsInLau | None = field(
+    bits_in_lau: None | BitsInLau = field(
         default=None,
         metadata={
             "name": "bitsInLau",
@@ -118,21 +118,21 @@ class IndirectInterfaceType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    endianness: EndianessType | None = field(
+    endianness: None | EndianessType = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    parameters: Parameters | None = field(
+    parameters: None | Parameters = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    vendor_extensions: VendorExtensions | None = field(
+    vendor_extensions: None | VendorExtensions = field(
         default=None,
         metadata={
             "name": "vendorExtensions",
@@ -140,7 +140,7 @@ class IndirectInterfaceType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",

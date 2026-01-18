@@ -17,7 +17,7 @@ class RouteLinkVersionStructure(LinkVersionStructure):
     class Meta:
         name = "RouteLink_VersionStructure"
 
-    from_point_ref: RoutePointRefStructure | None = field(
+    from_point_ref: None | RoutePointRefStructure = field(
         default=None,
         metadata={
             "name": "FromPointRef",
@@ -26,7 +26,7 @@ class RouteLinkVersionStructure(LinkVersionStructure):
             "required": True,
         },
     )
-    to_point_ref: RoutePointRefStructure | None = field(
+    to_point_ref: None | RoutePointRefStructure = field(
         default=None,
         metadata={
             "name": "ToPointRef",
@@ -35,7 +35,7 @@ class RouteLinkVersionStructure(LinkVersionStructure):
             "required": True,
         },
     )
-    operational_context_ref: OperationalContextRef | None = field(
+    operational_context_ref: None | OperationalContextRef = field(
         default=None,
         metadata={
             "name": "OperationalContextRef",
@@ -44,7 +44,7 @@ class RouteLinkVersionStructure(LinkVersionStructure):
         },
     )
     mode_restriction_assessments: (
-        ModeRestrictionAssessmentsRelStructure | None
+        None | ModeRestrictionAssessmentsRelStructure
     ) = field(
         default=None,
         metadata={

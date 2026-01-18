@@ -15,7 +15,7 @@ class OpenlrGeoCoordinate:
     and latitude coordinate values.
     """
 
-    openlr_coordinate: PointCoordinates | None = field(
+    openlr_coordinate: None | PointCoordinates = field(
         default=None,
         metadata={
             "name": "openlrCoordinate",
@@ -24,7 +24,7 @@ class OpenlrGeoCoordinate:
             "required": True,
         },
     )
-    openlr_geo_coordinate_extension: ExtensionType | None = field(
+    openlr_geo_coordinate_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "openlrGeoCoordinateExtension",

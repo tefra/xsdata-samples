@@ -13,7 +13,7 @@ class ReliefPointVersionStructure(TimingPointVersionStructure):
     class Meta:
         name = "ReliefPoint_VersionStructure"
 
-    crew_base_ref: CrewBaseRef | None = field(
+    crew_base_ref: None | CrewBaseRef = field(
         default=None,
         metadata={
             "name": "CrewBaseRef",

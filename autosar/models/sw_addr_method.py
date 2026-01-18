@@ -118,7 +118,7 @@ class SwAddrMethod:
     class Meta:
         name = "SW-ADDR-METHOD"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -127,7 +127,7 @@ class SwAddrMethod:
             "required": True,
         },
     )
-    short_name_fragments: SwAddrMethod.ShortNameFragments | None = field(
+    short_name_fragments: None | SwAddrMethod.ShortNameFragments = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -135,7 +135,7 @@ class SwAddrMethod:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -143,7 +143,7 @@ class SwAddrMethod:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -151,7 +151,7 @@ class SwAddrMethod:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -159,7 +159,7 @@ class SwAddrMethod:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -167,7 +167,7 @@ class SwAddrMethod:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -175,7 +175,7 @@ class SwAddrMethod:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: SwAddrMethod.Annotations | None = field(
+    annotations: None | SwAddrMethod.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -183,7 +183,7 @@ class SwAddrMethod:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -191,7 +191,7 @@ class SwAddrMethod:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    blueprint_policys: SwAddrMethod.BlueprintPolicys | None = field(
+    blueprint_policys: None | SwAddrMethod.BlueprintPolicys = field(
         default=None,
         metadata={
             "name": "BLUEPRINT-POLICYS",
@@ -199,7 +199,7 @@ class SwAddrMethod:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    short_name_pattern: String | None = field(
+    short_name_pattern: None | String = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-PATTERN",
@@ -208,7 +208,7 @@ class SwAddrMethod:
         },
     )
     memory_allocation_keyword_policy: (
-        MemoryAllocationKeywordPolicyType | None
+        None | MemoryAllocationKeywordPolicyType
     ) = field(
         default=None,
         metadata={
@@ -217,7 +217,7 @@ class SwAddrMethod:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    options: SwAddrMethod.Options | None = field(
+    options: None | SwAddrMethod.Options = field(
         default=None,
         metadata={
             "name": "OPTIONS",
@@ -225,7 +225,7 @@ class SwAddrMethod:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    section_initialization_policy: SectionInitializationPolicyType | None = (
+    section_initialization_policy: None | SectionInitializationPolicyType = (
         field(
             default=None,
             metadata={
@@ -235,7 +235,7 @@ class SwAddrMethod:
             },
         )
     )
-    section_type: MemorySectionType | None = field(
+    section_type: None | MemorySectionType = field(
         default=None,
         metadata={
             "name": "SECTION-TYPE",
@@ -243,14 +243,14 @@ class SwAddrMethod:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -258,7 +258,7 @@ class SwAddrMethod:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",

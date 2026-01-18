@@ -41,7 +41,7 @@ class StaticPart:
     class Meta:
         name = "STATIC-PART"
 
-    segment_positions: StaticPart.SegmentPositions | None = field(
+    segment_positions: None | StaticPart.SegmentPositions = field(
         default=None,
         metadata={
             "name": "SEGMENT-POSITIONS",
@@ -49,7 +49,7 @@ class StaticPart:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    i_pdu_ref: StaticPart.IPduRef | None = field(
+    i_pdu_ref: None | StaticPart.IPduRef = field(
         default=None,
         metadata={
             "name": "I-PDU-REF",
@@ -57,7 +57,7 @@ class StaticPart:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -65,14 +65,14 @@ class StaticPart:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -94,7 +94,7 @@ class StaticPart:
 
     @dataclass
     class IPduRef(Ref):
-        dest: ISignalIPduSubtypesEnum | None = field(
+        dest: None | ISignalIPduSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

@@ -54,7 +54,7 @@ class VlanMembership:
     class Meta:
         name = "VLAN-MEMBERSHIP"
 
-    default_priority: PositiveInteger | None = field(
+    default_priority: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "DEFAULT-PRIORITY",
@@ -62,7 +62,7 @@ class VlanMembership:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    dhcp_address_assignment: DhcpServerConfiguration | None = field(
+    dhcp_address_assignment: None | DhcpServerConfiguration = field(
         default=None,
         metadata={
             "name": "DHCP-ADDRESS-ASSIGNMENT",
@@ -70,7 +70,7 @@ class VlanMembership:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    send_activity: EthernetSwitchVlanEgressTaggingEnum | None = field(
+    send_activity: None | EthernetSwitchVlanEgressTaggingEnum = field(
         default=None,
         metadata={
             "name": "SEND-ACTIVITY",
@@ -78,7 +78,7 @@ class VlanMembership:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    vlan_ref: VlanMembership.VlanRef | None = field(
+    vlan_ref: None | VlanMembership.VlanRef = field(
         default=None,
         metadata={
             "name": "VLAN-REF",
@@ -86,14 +86,14 @@ class VlanMembership:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -104,7 +104,7 @@ class VlanMembership:
 
     @dataclass
     class VlanRef(Ref):
-        dest: EthernetPhysicalChannelSubtypesEnum | None = field(
+        dest: None | EthernetPhysicalChannelSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

@@ -35,7 +35,7 @@ class IdsmTrafficLimitationRefConditional:
         name = "IDSM-TRAFFIC-LIMITATION-REF-CONDITIONAL"
 
     idsm_traffic_limitation_ref: (
-        IdsmTrafficLimitationRefConditional.IdsmTrafficLimitationRef | None
+        None | IdsmTrafficLimitationRefConditional.IdsmTrafficLimitationRef
     ) = field(
         default=None,
         metadata={
@@ -44,7 +44,7 @@ class IdsmTrafficLimitationRefConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -52,14 +52,14 @@ class IdsmTrafficLimitationRefConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -70,7 +70,7 @@ class IdsmTrafficLimitationRefConditional:
 
     @dataclass
     class IdsmTrafficLimitationRef(Ref):
-        dest: IdsmTrafficLimitationSubtypesEnum | None = field(
+        dest: None | IdsmTrafficLimitationSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

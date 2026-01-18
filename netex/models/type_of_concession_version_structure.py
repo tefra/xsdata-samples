@@ -13,7 +13,7 @@ class TypeOfConcessionVersionStructure(TypeOfValueVersionStructure):
     class Meta:
         name = "TypeOfConcession_VersionStructure"
 
-    alternative_names: AlternativeNamesRelStructure | None = field(
+    alternative_names: None | AlternativeNamesRelStructure = field(
         default=None,
         metadata={
             "name": "alternativeNames",

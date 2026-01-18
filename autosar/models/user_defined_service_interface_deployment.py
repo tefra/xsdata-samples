@@ -102,7 +102,7 @@ class UserDefinedServiceInterfaceDeployment:
     class Meta:
         name = "USER-DEFINED-SERVICE-INTERFACE-DEPLOYMENT"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -112,7 +112,7 @@ class UserDefinedServiceInterfaceDeployment:
         },
     )
     short_name_fragments: (
-        UserDefinedServiceInterfaceDeployment.ShortNameFragments | None
+        None | UserDefinedServiceInterfaceDeployment.ShortNameFragments
     ) = field(
         default=None,
         metadata={
@@ -121,7 +121,7 @@ class UserDefinedServiceInterfaceDeployment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -129,7 +129,7 @@ class UserDefinedServiceInterfaceDeployment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -137,7 +137,7 @@ class UserDefinedServiceInterfaceDeployment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -145,7 +145,7 @@ class UserDefinedServiceInterfaceDeployment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -153,7 +153,7 @@ class UserDefinedServiceInterfaceDeployment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -161,7 +161,7 @@ class UserDefinedServiceInterfaceDeployment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: UserDefinedServiceInterfaceDeployment.Annotations | None = (
+    annotations: None | UserDefinedServiceInterfaceDeployment.Annotations = (
         field(
             default=None,
             metadata={
@@ -171,7 +171,7 @@ class UserDefinedServiceInterfaceDeployment:
             },
         )
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -180,7 +180,7 @@ class UserDefinedServiceInterfaceDeployment:
         },
     )
     event_deployments: (
-        UserDefinedServiceInterfaceDeployment.EventDeployments | None
+        None | UserDefinedServiceInterfaceDeployment.EventDeployments
     ) = field(
         default=None,
         metadata={
@@ -190,7 +190,7 @@ class UserDefinedServiceInterfaceDeployment:
         },
     )
     field_deployments: (
-        UserDefinedServiceInterfaceDeployment.FieldDeployments | None
+        None | UserDefinedServiceInterfaceDeployment.FieldDeployments
     ) = field(
         default=None,
         metadata={
@@ -200,7 +200,7 @@ class UserDefinedServiceInterfaceDeployment:
         },
     )
     method_deployments: (
-        UserDefinedServiceInterfaceDeployment.MethodDeployments | None
+        None | UserDefinedServiceInterfaceDeployment.MethodDeployments
     ) = field(
         default=None,
         metadata={
@@ -210,7 +210,7 @@ class UserDefinedServiceInterfaceDeployment:
         },
     )
     service_interface_ref: (
-        UserDefinedServiceInterfaceDeployment.ServiceInterfaceRef | None
+        None | UserDefinedServiceInterfaceDeployment.ServiceInterfaceRef
     ) = field(
         default=None,
         metadata={
@@ -219,14 +219,14 @@ class UserDefinedServiceInterfaceDeployment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -234,7 +234,7 @@ class UserDefinedServiceInterfaceDeployment:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -345,7 +345,7 @@ class UserDefinedServiceInterfaceDeployment:
 
     @dataclass
     class ServiceInterfaceRef(Ref):
-        dest: ServiceInterfaceSubtypesEnum | None = field(
+        dest: None | ServiceInterfaceSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

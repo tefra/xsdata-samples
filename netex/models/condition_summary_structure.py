@@ -13,7 +13,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 @dataclass
 class ConditionSummaryStructure:
-    fare_structure_type: FareStructureTypeEnumeration | None = field(
+    fare_structure_type: None | FareStructureTypeEnumeration = field(
         default=None,
         metadata={
             "name": "FareStructureType",
@@ -21,7 +21,7 @@ class ConditionSummaryStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    tariff_basis: TariffBasisEnumeration | None = field(
+    tariff_basis: None | TariffBasisEnumeration = field(
         default=None,
         metadata={
             "name": "TariffBasis",
@@ -29,7 +29,7 @@ class ConditionSummaryStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    has_notices: bool | None = field(
+    has_notices: None | bool = field(
         default=None,
         metadata={
             "name": "HasNotices",
@@ -37,7 +37,7 @@ class ConditionSummaryStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    provides_card: bool | None = field(
+    provides_card: None | bool = field(
         default=None,
         metadata={
             "name": "ProvidesCard",
@@ -45,7 +45,7 @@ class ConditionSummaryStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    goes_on_card: bool | None = field(
+    goes_on_card: None | bool = field(
         default=None,
         metadata={
             "name": "GoesOnCard",
@@ -53,7 +53,7 @@ class ConditionSummaryStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    is_personal: bool | None = field(
+    is_personal: None | bool = field(
         default=None,
         metadata={
             "name": "IsPersonal",
@@ -61,7 +61,7 @@ class ConditionSummaryStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    requires_photo: bool | None = field(
+    requires_photo: None | bool = field(
         default=None,
         metadata={
             "name": "RequiresPhoto",
@@ -69,7 +69,7 @@ class ConditionSummaryStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    must_carry: bool | None = field(
+    must_carry: None | bool = field(
         default=None,
         metadata={
             "name": "MustCarry",
@@ -77,7 +77,7 @@ class ConditionSummaryStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    requires_account: bool | None = field(
+    requires_account: None | bool = field(
         default=None,
         metadata={
             "name": "RequiresAccount",
@@ -85,7 +85,7 @@ class ConditionSummaryStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    is_supplement: bool | None = field(
+    is_supplement: None | bool = field(
         default=None,
         metadata={
             "name": "IsSupplement",
@@ -93,7 +93,7 @@ class ConditionSummaryStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    requires_entitlement: bool | None = field(
+    requires_entitlement: None | bool = field(
         default=None,
         metadata={
             "name": "RequiresEntitlement",
@@ -101,7 +101,7 @@ class ConditionSummaryStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    gives_entitlement: bool | None = field(
+    gives_entitlement: None | bool = field(
         default=None,
         metadata={
             "name": "GivesEntitlement",
@@ -109,7 +109,7 @@ class ConditionSummaryStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    has_operator_restrictions: OperatorRestrictionsEnumeration | None = field(
+    has_operator_restrictions: None | OperatorRestrictionsEnumeration = field(
         default=None,
         metadata={
             "name": "HasOperatorRestrictions",
@@ -117,7 +117,7 @@ class ConditionSummaryStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    has_travel_time_restrictions: bool | None = field(
+    has_travel_time_restrictions: None | bool = field(
         default=None,
         metadata={
             "name": "HasTravelTimeRestrictions",
@@ -125,7 +125,7 @@ class ConditionSummaryStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    has_route_restrictions: bool | None = field(
+    has_route_restrictions: None | bool = field(
         default=None,
         metadata={
             "name": "HasRouteRestrictions",
@@ -133,7 +133,7 @@ class ConditionSummaryStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    train_restrictions: TrainRestrictionsEnumeration | None = field(
+    train_restrictions: None | TrainRestrictionsEnumeration = field(
         default=None,
         metadata={
             "name": "TrainRestrictions",
@@ -141,7 +141,7 @@ class ConditionSummaryStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    has_zone_restrictions: bool | None = field(
+    has_zone_restrictions: None | bool = field(
         default=None,
         metadata={
             "name": "HasZoneRestrictions",
@@ -149,7 +149,7 @@ class ConditionSummaryStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    can_break_journey: bool | None = field(
+    can_break_journey: None | bool = field(
         default=None,
         metadata={
             "name": "CanBreakJourney",
@@ -157,7 +157,7 @@ class ConditionSummaryStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    return_trips_only: bool | None = field(
+    return_trips_only: None | bool = field(
         default=None,
         metadata={
             "name": "ReturnTripsOnly",
@@ -165,7 +165,7 @@ class ConditionSummaryStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    night_train: bool | None = field(
+    night_train: None | bool = field(
         default=None,
         metadata={
             "name": "NightTrain",
@@ -173,7 +173,7 @@ class ConditionSummaryStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    can_change_class: bool | None = field(
+    can_change_class: None | bool = field(
         default=None,
         metadata={
             "name": "CanChangeClass",
@@ -181,7 +181,7 @@ class ConditionSummaryStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    is_refundable: bool | None = field(
+    is_refundable: None | bool = field(
         default=None,
         metadata={
             "name": "IsRefundable",
@@ -189,7 +189,7 @@ class ConditionSummaryStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    is_exchangable: bool | None = field(
+    is_exchangable: None | bool = field(
         default=None,
         metadata={
             "name": "IsExchangable",
@@ -197,7 +197,7 @@ class ConditionSummaryStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    has_exchange_fee: bool | None = field(
+    has_exchange_fee: None | bool = field(
         default=None,
         metadata={
             "name": "HasExchangeFee",
@@ -205,7 +205,7 @@ class ConditionSummaryStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    has_discounted_fares: bool | None = field(
+    has_discounted_fares: None | bool = field(
         default=None,
         metadata={
             "name": "HasDiscountedFares",
@@ -213,7 +213,7 @@ class ConditionSummaryStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    allow_additional_discounts: bool | None = field(
+    allow_additional_discounts: None | bool = field(
         default=None,
         metadata={
             "name": "AllowAdditionalDiscounts",
@@ -221,7 +221,7 @@ class ConditionSummaryStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    allow_companion_discounts: bool | None = field(
+    allow_companion_discounts: None | bool = field(
         default=None,
         metadata={
             "name": "AllowCompanionDiscounts",
@@ -229,7 +229,7 @@ class ConditionSummaryStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    has_minimum_price: bool | None = field(
+    has_minimum_price: None | bool = field(
         default=None,
         metadata={
             "name": "HasMinimumPrice",
@@ -237,7 +237,7 @@ class ConditionSummaryStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    requires_positive_balance: bool | None = field(
+    requires_positive_balance: None | bool = field(
         default=None,
         metadata={
             "name": "RequiresPositiveBalance",
@@ -245,7 +245,7 @@ class ConditionSummaryStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    requires_deposit: bool | None = field(
+    requires_deposit: None | bool = field(
         default=None,
         metadata={
             "name": "RequiresDeposit",
@@ -253,7 +253,7 @@ class ConditionSummaryStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    no_cash_payment: bool | None = field(
+    no_cash_payment: None | bool = field(
         default=None,
         metadata={
             "name": "NoCashPayment",
@@ -261,7 +261,7 @@ class ConditionSummaryStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    has_purchase_conditions: bool | None = field(
+    has_purchase_conditions: None | bool = field(
         default=None,
         metadata={
             "name": "HasPurchaseConditions",
@@ -269,7 +269,7 @@ class ConditionSummaryStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    has_dynamic_pricing: bool | None = field(
+    has_dynamic_pricing: None | bool = field(
         default=None,
         metadata={
             "name": "HasDynamicPricing",
@@ -277,7 +277,7 @@ class ConditionSummaryStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    requires_reservation: bool | None = field(
+    requires_reservation: None | bool = field(
         default=None,
         metadata={
             "name": "RequiresReservation",
@@ -285,7 +285,7 @@ class ConditionSummaryStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    has_reservation_fee: bool | None = field(
+    has_reservation_fee: None | bool = field(
         default=None,
         metadata={
             "name": "HasReservationFee",
@@ -293,7 +293,7 @@ class ConditionSummaryStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    has_quota: bool | None = field(
+    has_quota: None | bool = field(
         default=None,
         metadata={
             "name": "HasQuota",
@@ -301,7 +301,7 @@ class ConditionSummaryStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    penalty_if_without_ticket: bool | None = field(
+    penalty_if_without_ticket: None | bool = field(
         default=None,
         metadata={
             "name": "PenaltyIfWithoutTicket",
@@ -309,7 +309,7 @@ class ConditionSummaryStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    available_on_subscription: bool | None = field(
+    available_on_subscription: None | bool = field(
         default=None,
         metadata={
             "name": "AvailableOnSubscription",
@@ -317,7 +317,7 @@ class ConditionSummaryStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    unlimited_mileage: bool | None = field(
+    unlimited_mileage: None | bool = field(
         default=None,
         metadata={
             "name": "UnlimitedMileage",
@@ -325,7 +325,7 @@ class ConditionSummaryStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    like_for_like_refuelling: bool | None = field(
+    like_for_like_refuelling: None | bool = field(
         default=None,
         metadata={
             "name": "LikeForLikeRefuelling",
@@ -333,7 +333,7 @@ class ConditionSummaryStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    vehicle_collection: VehicleCollectionEnumeration | None = field(
+    vehicle_collection: None | VehicleCollectionEnumeration = field(
         default=None,
         metadata={
             "name": "VehicleCollection",

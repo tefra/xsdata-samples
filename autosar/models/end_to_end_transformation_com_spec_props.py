@@ -107,7 +107,7 @@ class EndToEndTransformationComSpecProps:
     class Meta:
         name = "END-TO-END-TRANSFORMATION-COM-SPEC-PROPS"
 
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -115,7 +115,7 @@ class EndToEndTransformationComSpecProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -123,7 +123,7 @@ class EndToEndTransformationComSpecProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -131,7 +131,7 @@ class EndToEndTransformationComSpecProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -139,7 +139,7 @@ class EndToEndTransformationComSpecProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    clear_from_valid_to_invalid: Boolean | None = field(
+    clear_from_valid_to_invalid: None | Boolean = field(
         default=None,
         metadata={
             "name": "CLEAR-FROM-VALID-TO-INVALID",
@@ -147,7 +147,7 @@ class EndToEndTransformationComSpecProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    disable_end_to_end_check: Boolean | None = field(
+    disable_end_to_end_check: None | Boolean = field(
         default=None,
         metadata={
             "name": "DISABLE-END-TO-END-CHECK",
@@ -155,7 +155,7 @@ class EndToEndTransformationComSpecProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    disable_end_to_end_state_machine: Boolean | None = field(
+    disable_end_to_end_state_machine: None | Boolean = field(
         default=None,
         metadata={
             "name": "DISABLE-END-TO-END-STATE-MACHINE",
@@ -164,8 +164,8 @@ class EndToEndTransformationComSpecProps:
         },
     )
     e_2_e_profile_compatibility_props_ref: (
-        EndToEndTransformationComSpecProps.E2EProfileCompatibilityPropsRef
-        | None
+        None
+        | EndToEndTransformationComSpecProps.E2EProfileCompatibilityPropsRef
     ) = field(
         default=None,
         metadata={
@@ -174,7 +174,7 @@ class EndToEndTransformationComSpecProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    max_delta_counter: PositiveInteger | None = field(
+    max_delta_counter: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "MAX-DELTA-COUNTER",
@@ -182,7 +182,7 @@ class EndToEndTransformationComSpecProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    max_error_state_init: PositiveInteger | None = field(
+    max_error_state_init: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "MAX-ERROR-STATE-INIT",
@@ -190,7 +190,7 @@ class EndToEndTransformationComSpecProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    max_error_state_invalid: PositiveInteger | None = field(
+    max_error_state_invalid: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "MAX-ERROR-STATE-INVALID",
@@ -198,7 +198,7 @@ class EndToEndTransformationComSpecProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    max_error_state_valid: PositiveInteger | None = field(
+    max_error_state_valid: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "MAX-ERROR-STATE-VALID",
@@ -206,7 +206,7 @@ class EndToEndTransformationComSpecProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    max_no_new_or_repeated_data: PositiveInteger | None = field(
+    max_no_new_or_repeated_data: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "MAX-NO-NEW-OR-REPEATED-DATA",
@@ -214,7 +214,7 @@ class EndToEndTransformationComSpecProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    min_ok_state_init: PositiveInteger | None = field(
+    min_ok_state_init: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "MIN-OK-STATE-INIT",
@@ -222,7 +222,7 @@ class EndToEndTransformationComSpecProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    min_ok_state_invalid: PositiveInteger | None = field(
+    min_ok_state_invalid: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "MIN-OK-STATE-INVALID",
@@ -230,7 +230,7 @@ class EndToEndTransformationComSpecProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    min_ok_state_valid: PositiveInteger | None = field(
+    min_ok_state_valid: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "MIN-OK-STATE-VALID",
@@ -238,7 +238,7 @@ class EndToEndTransformationComSpecProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sync_counter_init: PositiveInteger | None = field(
+    sync_counter_init: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "SYNC-COUNTER-INIT",
@@ -246,7 +246,7 @@ class EndToEndTransformationComSpecProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    window_size: PositiveInteger | None = field(
+    window_size: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "WINDOW-SIZE",
@@ -254,7 +254,7 @@ class EndToEndTransformationComSpecProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    window_size_init: PositiveInteger | None = field(
+    window_size_init: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "WINDOW-SIZE-INIT",
@@ -262,7 +262,7 @@ class EndToEndTransformationComSpecProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    window_size_invalid: PositiveInteger | None = field(
+    window_size_invalid: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "WINDOW-SIZE-INVALID",
@@ -270,7 +270,7 @@ class EndToEndTransformationComSpecProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    window_size_valid: PositiveInteger | None = field(
+    window_size_valid: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "WINDOW-SIZE-VALID",
@@ -278,14 +278,14 @@ class EndToEndTransformationComSpecProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -296,7 +296,7 @@ class EndToEndTransformationComSpecProps:
 
     @dataclass
     class E2EProfileCompatibilityPropsRef(Ref):
-        dest: E2EProfileCompatibilityPropsSubtypesEnum | None = field(
+        dest: None | E2EProfileCompatibilityPropsSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

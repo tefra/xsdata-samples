@@ -39,7 +39,7 @@ class IdsmSignatureSupportCp:
     class Meta:
         name = "IDSM-SIGNATURE-SUPPORT-CP"
 
-    authentication_ref: IdsmSignatureSupportCp.AuthenticationRef | None = (
+    authentication_ref: None | IdsmSignatureSupportCp.AuthenticationRef = (
         field(
             default=None,
             metadata={
@@ -50,7 +50,7 @@ class IdsmSignatureSupportCp:
         )
     )
     crypto_service_key_ref: (
-        IdsmSignatureSupportCp.CryptoServiceKeyRef | None
+        None | IdsmSignatureSupportCp.CryptoServiceKeyRef
     ) = field(
         default=None,
         metadata={
@@ -59,14 +59,14 @@ class IdsmSignatureSupportCp:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -77,7 +77,7 @@ class IdsmSignatureSupportCp:
 
     @dataclass
     class AuthenticationRef(Ref):
-        dest: CryptoServicePrimitiveSubtypesEnum | None = field(
+        dest: None | CryptoServicePrimitiveSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -88,7 +88,7 @@ class IdsmSignatureSupportCp:
 
     @dataclass
     class CryptoServiceKeyRef(Ref):
-        dest: CryptoServiceKeySubtypesEnum | None = field(
+        dest: None | CryptoServiceKeySubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

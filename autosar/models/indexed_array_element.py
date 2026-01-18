@@ -44,7 +44,7 @@ class IndexedArrayElement:
         name = "INDEXED-ARRAY-ELEMENT"
 
     application_array_element_ref: (
-        IndexedArrayElement.ApplicationArrayElementRef | None
+        None | IndexedArrayElement.ApplicationArrayElementRef
     ) = field(
         default=None,
         metadata={
@@ -54,7 +54,7 @@ class IndexedArrayElement:
         },
     )
     implementation_array_element_ref: (
-        IndexedArrayElement.ImplementationArrayElementRef | None
+        None | IndexedArrayElement.ImplementationArrayElementRef
     ) = field(
         default=None,
         metadata={
@@ -63,7 +63,7 @@ class IndexedArrayElement:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    index: Integer | None = field(
+    index: None | Integer = field(
         default=None,
         metadata={
             "name": "INDEX",
@@ -71,14 +71,14 @@ class IndexedArrayElement:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -89,7 +89,7 @@ class IndexedArrayElement:
 
     @dataclass
     class ApplicationArrayElementRef(Ref):
-        dest: ApplicationArrayElementSubtypesEnum | None = field(
+        dest: None | ApplicationArrayElementSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -100,7 +100,7 @@ class IndexedArrayElement:
 
     @dataclass
     class ImplementationArrayElementRef(Ref):
-        dest: ImplementationDataTypeElementSubtypesEnum | None = field(
+        dest: None | ImplementationDataTypeElementSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

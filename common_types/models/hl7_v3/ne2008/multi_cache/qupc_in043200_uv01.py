@@ -76,7 +76,7 @@ class QupcIn043200Uv01MfmiMt700712Uv01Subject5:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Ii | None = field(
+    type_id: None | Ii = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -92,7 +92,7 @@ class QupcIn043200Uv01MfmiMt700712Uv01Subject5:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    care_provision_event: RepcMt004000Uv01CareProvisionEvent | None = field(
+    care_provision_event: None | RepcMt004000Uv01CareProvisionEvent = field(
         default=None,
         metadata={
             "name": "careProvisionEvent",
@@ -101,7 +101,7 @@ class QupcIn043200Uv01MfmiMt700712Uv01Subject5:
             "nillable": True,
         },
     )
-    null_flavor: NullFlavor | None = field(
+    null_flavor: None | NullFlavor = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -161,7 +161,7 @@ class QupcIn043200Uv01MfmiMt700712Uv01RegistrationEvent:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Ii | None = field(
+    type_id: None | Ii = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -184,7 +184,7 @@ class QupcIn043200Uv01MfmiMt700712Uv01RegistrationEvent:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    status_code: Cs | None = field(
+    status_code: None | Cs = field(
         default=None,
         metadata={
             "name": "statusCode",
@@ -193,7 +193,7 @@ class QupcIn043200Uv01MfmiMt700712Uv01RegistrationEvent:
             "required": True,
         },
     )
-    effective_time: IvlTsExplicit | None = field(
+    effective_time: None | IvlTsExplicit = field(
         default=None,
         metadata={
             "name": "effectiveTime",
@@ -201,7 +201,7 @@ class QupcIn043200Uv01MfmiMt700712Uv01RegistrationEvent:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    author: MfmiMt700712Uv01Author2 | None = field(
+    author: None | MfmiMt700712Uv01Author2 = field(
         default=None,
         metadata={
             "type": "Element",
@@ -209,7 +209,7 @@ class QupcIn043200Uv01MfmiMt700712Uv01RegistrationEvent:
             "nillable": True,
         },
     )
-    custodian: MfmiMt700712Uv01Custodian | None = field(
+    custodian: None | MfmiMt700712Uv01Custodian = field(
         default=None,
         metadata={
             "type": "Element",
@@ -243,7 +243,7 @@ class QupcIn043200Uv01MfmiMt700712Uv01RegistrationEvent:
             "nillable": True,
         },
     )
-    subject2: QupcIn043200Uv01MfmiMt700712Uv01Subject5 | None = field(
+    subject2: None | QupcIn043200Uv01MfmiMt700712Uv01Subject5 = field(
         default=None,
         metadata={
             "type": "Element",
@@ -251,7 +251,7 @@ class QupcIn043200Uv01MfmiMt700712Uv01RegistrationEvent:
             "required": True,
         },
     )
-    null_flavor: NullFlavor | None = field(
+    null_flavor: None | NullFlavor = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -291,7 +291,7 @@ class QupcIn043200Uv01MfmiMt700712Uv01Subject1:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Ii | None = field(
+    type_id: None | Ii = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -308,7 +308,7 @@ class QupcIn043200Uv01MfmiMt700712Uv01Subject1:
         },
     )
     registration_event: (
-        QupcIn043200Uv01MfmiMt700712Uv01RegistrationEvent | None
+        None | QupcIn043200Uv01MfmiMt700712Uv01RegistrationEvent
     ) = field(
         default=None,
         metadata={
@@ -318,7 +318,7 @@ class QupcIn043200Uv01MfmiMt700712Uv01Subject1:
             "nillable": True,
         },
     )
-    null_flavor: NullFlavor | None = field(
+    null_flavor: None | NullFlavor = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -378,7 +378,7 @@ class QupcIn043200Uv01MfmiMt700712Uv01ControlActProcess:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Ii | None = field(
+    type_id: None | Ii = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -401,21 +401,21 @@ class QupcIn043200Uv01MfmiMt700712Uv01ControlActProcess:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    code: Cd | None = field(
+    code: None | Cd = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    text: EdExplicit | None = field(
+    text: None | EdExplicit = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    effective_time: IvlTsExplicit | None = field(
+    effective_time: None | IvlTsExplicit = field(
         default=None,
         metadata={
             "name": "effectiveTime",
@@ -439,7 +439,7 @@ class QupcIn043200Uv01MfmiMt700712Uv01ControlActProcess:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    language_code: Ce | None = field(
+    language_code: None | Ce = field(
         default=None,
         metadata={
             "name": "languageCode",
@@ -499,7 +499,7 @@ class QupcIn043200Uv01MfmiMt700712Uv01ControlActProcess:
             "nillable": True,
         },
     )
-    query_ack: MfmiMt700712Uv01QueryAck | None = field(
+    query_ack: None | MfmiMt700712Uv01QueryAck = field(
         default=None,
         metadata={
             "name": "queryAck",
@@ -508,7 +508,7 @@ class QupcIn043200Uv01MfmiMt700712Uv01ControlActProcess:
             "required": True,
         },
     )
-    parameter_list: QupcMt040300Uv01ParameterList | None = field(
+    parameter_list: None | QupcMt040300Uv01ParameterList = field(
         default=None,
         metadata={
             "name": "parameterList",
@@ -517,14 +517,14 @@ class QupcIn043200Uv01MfmiMt700712Uv01ControlActProcess:
             "nillable": True,
         },
     )
-    null_flavor: NullFlavor | None = field(
+    null_flavor: None | NullFlavor = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
         },
     )
-    class_code: ActClassControlAct | None = field(
+    class_code: None | ActClassControlAct = field(
         default=None,
         metadata={
             "name": "classCode",
@@ -532,7 +532,7 @@ class QupcIn043200Uv01MfmiMt700712Uv01ControlActProcess:
             "required": True,
         },
     )
-    mood_code: XActMoodIntentEvent | None = field(
+    mood_code: None | XActMoodIntentEvent = field(
         default=None,
         metadata={
             "name": "moodCode",
@@ -555,7 +555,7 @@ class QupcIn043200Uv01McciMt000300Uv01Message:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Ii | None = field(
+    type_id: None | Ii = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -571,7 +571,7 @@ class QupcIn043200Uv01McciMt000300Uv01Message:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    id: Ii | None = field(
+    id: None | Ii = field(
         default=None,
         metadata={
             "type": "Element",
@@ -579,7 +579,7 @@ class QupcIn043200Uv01McciMt000300Uv01Message:
             "required": True,
         },
     )
-    creation_time: TsExplicit | None = field(
+    creation_time: None | TsExplicit = field(
         default=None,
         metadata={
             "name": "creationTime",
@@ -588,7 +588,7 @@ class QupcIn043200Uv01McciMt000300Uv01Message:
             "required": True,
         },
     )
-    security_text: St | None = field(
+    security_text: None | St = field(
         default=None,
         metadata={
             "name": "securityText",
@@ -596,7 +596,7 @@ class QupcIn043200Uv01McciMt000300Uv01Message:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    version_code: Cs | None = field(
+    version_code: None | Cs = field(
         default=None,
         metadata={
             "name": "versionCode",
@@ -604,7 +604,7 @@ class QupcIn043200Uv01McciMt000300Uv01Message:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    interaction_id: Ii | None = field(
+    interaction_id: None | Ii = field(
         default=None,
         metadata={
             "name": "interactionId",
@@ -621,7 +621,7 @@ class QupcIn043200Uv01McciMt000300Uv01Message:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    processing_code: Cs | None = field(
+    processing_code: None | Cs = field(
         default=None,
         metadata={
             "name": "processingCode",
@@ -630,7 +630,7 @@ class QupcIn043200Uv01McciMt000300Uv01Message:
             "required": True,
         },
     )
-    processing_mode_code: Cs | None = field(
+    processing_mode_code: None | Cs = field(
         default=None,
         metadata={
             "name": "processingModeCode",
@@ -639,7 +639,7 @@ class QupcIn043200Uv01McciMt000300Uv01Message:
             "required": True,
         },
     )
-    accept_ack_code: Cs | None = field(
+    accept_ack_code: None | Cs = field(
         default=None,
         metadata={
             "name": "acceptAckCode",
@@ -673,7 +673,7 @@ class QupcIn043200Uv01McciMt000300Uv01Message:
             "nillable": True,
         },
     )
-    sender: McciMt000300Uv01Sender | None = field(
+    sender: None | McciMt000300Uv01Sender = field(
         default=None,
         metadata={
             "type": "Element",
@@ -699,7 +699,7 @@ class QupcIn043200Uv01McciMt000300Uv01Message:
         },
     )
     control_act_process: (
-        QupcIn043200Uv01MfmiMt700712Uv01ControlActProcess | None
+        None | QupcIn043200Uv01MfmiMt700712Uv01ControlActProcess
     ) = field(
         default=None,
         metadata={
@@ -709,7 +709,7 @@ class QupcIn043200Uv01McciMt000300Uv01Message:
             "required": True,
         },
     )
-    null_flavor: NullFlavor | None = field(
+    null_flavor: None | NullFlavor = field(
         default=None,
         metadata={
             "name": "nullFlavor",

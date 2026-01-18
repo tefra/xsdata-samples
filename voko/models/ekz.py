@@ -57,7 +57,7 @@ class Ekz:
     class Meta:
         name = "ekz"
 
-    mrk: str | None = field(
+    mrk: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -160,19 +160,19 @@ class Ref:
     class Meta:
         name = "ref"
 
-    tip: RefTip | None = field(
+    tip: None | RefTip = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    val: str | None = field(
+    val: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    lst: str | None = field(
+    lst: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -241,13 +241,13 @@ class Trd:
     class Meta:
         name = "trd"
 
-    lng: str | None = field(
+    lng: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    fnt: str | None = field(
+    fnt: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -290,7 +290,7 @@ class Klr:
     class Meta:
         name = "klr"
 
-    tip: KlrTip | None = field(
+    tip: None | KlrTip = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -414,7 +414,7 @@ class Mll:
     class Meta:
         name = "mll"
 
-    tip: MllTip | None = field(
+    tip: None | MllTip = field(
         default=None,
         metadata={
             "type": "Attribute",

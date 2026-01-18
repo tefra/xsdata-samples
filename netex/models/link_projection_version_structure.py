@@ -15,7 +15,7 @@ class LinkProjectionVersionStructure(ProjectionVersionStructure):
     class Meta:
         name = "LinkProjection_VersionStructure"
 
-    projected_link_ref: LinkRefStructure | None = field(
+    projected_link_ref: None | LinkRefStructure = field(
         default=None,
         metadata={
             "name": "ProjectedLinkRef",
@@ -23,7 +23,7 @@ class LinkProjectionVersionStructure(ProjectionVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    project_to_link_ref: LinkRefStructure | None = field(
+    project_to_link_ref: None | LinkRefStructure = field(
         default=None,
         metadata={
             "name": "ProjectToLinkRef",
@@ -32,7 +32,7 @@ class LinkProjectionVersionStructure(ProjectionVersionStructure):
         },
     )
     start_point_on_link_ref_or_start_point_on_link_by_value: (
-        PointOnLinkRefStructure1 | PointOnLinkByValueStructure | None
+        None | PointOnLinkRefStructure1 | PointOnLinkByValueStructure
     ) = field(
         default=None,
         metadata={
@@ -52,7 +52,7 @@ class LinkProjectionVersionStructure(ProjectionVersionStructure):
         },
     )
     end_point_on_link_ref_or_end_point_on_link_by_value: (
-        PointOnLinkRefStructure1 | PointOnLinkByValueStructure | None
+        None | PointOnLinkRefStructure1 | PointOnLinkByValueStructure
     ) = field(
         default=None,
         metadata={

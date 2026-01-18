@@ -18,7 +18,7 @@ class MeetingRestrictionVersionStructure(
     class Meta:
         name = "MeetingRestriction_VersionStructure"
 
-    for_vehicle_type_ref: VehicleTypeRefStructure | None = field(
+    for_vehicle_type_ref: None | VehicleTypeRefStructure = field(
         default=None,
         metadata={
             "name": "ForVehicleTypeRef",
@@ -26,7 +26,7 @@ class MeetingRestrictionVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    against_vehicle_type_ref: TransportTypeRefStructure | None = field(
+    against_vehicle_type_ref: None | TransportTypeRefStructure = field(
         default=None,
         metadata={
             "name": "AgainstVehicleTypeRef",

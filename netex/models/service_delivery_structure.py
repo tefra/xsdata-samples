@@ -14,7 +14,7 @@ __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
 @dataclass
 class ServiceDeliveryStructure(ProducerResponseStructure):
-    status: bool | None = field(
+    status: None | bool = field(
         default=None,
         metadata={
             "name": "Status",
@@ -22,7 +22,7 @@ class ServiceDeliveryStructure(ProducerResponseStructure):
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    error_condition: ServiceDeliveryStructure.ErrorCondition | None = field(
+    error_condition: None | ServiceDeliveryStructure.ErrorCondition = field(
         default=None,
         metadata={
             "name": "ErrorCondition",
@@ -30,7 +30,7 @@ class ServiceDeliveryStructure(ProducerResponseStructure):
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    more_data: bool | None = field(
+    more_data: None | bool = field(
         default=None,
         metadata={
             "name": "MoreData",
@@ -46,7 +46,7 @@ class ServiceDeliveryStructure(ProducerResponseStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    srs_name: str | None = field(
+    srs_name: None | str = field(
         default=None,
         metadata={
             "name": "srsName",
@@ -57,7 +57,7 @@ class ServiceDeliveryStructure(ProducerResponseStructure):
     @dataclass
     class ErrorCondition:
         capability_not_supported_error_or_other_error: (
-            CapabilityNotSupportedError | OtherError | None
+            None | CapabilityNotSupportedError | OtherError
         ) = field(
             default=None,
             metadata={
@@ -76,7 +76,7 @@ class ServiceDeliveryStructure(ProducerResponseStructure):
                 ),
             },
         )
-        description: ErrorDescriptionStructure | None = field(
+        description: None | ErrorDescriptionStructure = field(
             default=None,
             metadata={
                 "name": "Description",

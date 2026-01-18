@@ -14,7 +14,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 @dataclass
 class GroupOfOperatorsStructure(GroupOfEntitiesVersionStructure):
-    use_to_exclude: bool | None = field(
+    use_to_exclude: None | bool = field(
         default=None,
         metadata={
             "name": "UseToExclude",
@@ -22,7 +22,7 @@ class GroupOfOperatorsStructure(GroupOfEntitiesVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    members: TransportOrganisationRefsRelStructure | None = field(
+    members: None | TransportOrganisationRefsRelStructure = field(
         default=None,
         metadata={
             "type": "Element",

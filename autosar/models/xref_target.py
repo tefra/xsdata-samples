@@ -37,7 +37,7 @@ class XrefTarget:
     class Meta:
         name = "XREF-TARGET"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -46,7 +46,7 @@ class XrefTarget:
             "required": True,
         },
     )
-    short_name_fragments: XrefTarget.ShortNameFragments | None = field(
+    short_name_fragments: None | XrefTarget.ShortNameFragments = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -54,7 +54,7 @@ class XrefTarget:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name_1: SingleLanguageLongName | None = field(
+    long_name_1: None | SingleLanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME-1",
@@ -62,14 +62,14 @@ class XrefTarget:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

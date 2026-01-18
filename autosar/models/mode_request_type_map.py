@@ -43,7 +43,7 @@ class ModeRequestTypeMap:
         name = "MODE-REQUEST-TYPE-MAP"
 
     implementation_data_type_ref: (
-        ModeRequestTypeMap.ImplementationDataTypeRef | None
+        None | ModeRequestTypeMap.ImplementationDataTypeRef
     ) = field(
         default=None,
         metadata={
@@ -52,7 +52,7 @@ class ModeRequestTypeMap:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    mode_group_ref: ModeRequestTypeMap.ModeGroupRef | None = field(
+    mode_group_ref: None | ModeRequestTypeMap.ModeGroupRef = field(
         default=None,
         metadata={
             "name": "MODE-GROUP-REF",
@@ -60,14 +60,14 @@ class ModeRequestTypeMap:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -78,7 +78,7 @@ class ModeRequestTypeMap:
 
     @dataclass
     class ImplementationDataTypeRef(Ref):
-        dest: AbstractImplementationDataTypeSubtypesEnum | None = field(
+        dest: None | AbstractImplementationDataTypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -89,7 +89,7 @@ class ModeRequestTypeMap:
 
     @dataclass
     class ModeGroupRef(Ref):
-        dest: ModeDeclarationGroupSubtypesEnum | None = field(
+        dest: None | ModeDeclarationGroupSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

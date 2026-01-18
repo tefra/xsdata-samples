@@ -35,7 +35,7 @@ class IpSecConfig:
     class Meta:
         name = "IP-SEC-CONFIG"
 
-    ip_sec_config_props_ref: IpSecConfig.IpSecConfigPropsRef | None = field(
+    ip_sec_config_props_ref: None | IpSecConfig.IpSecConfigPropsRef = field(
         default=None,
         metadata={
             "name": "IP-SEC-CONFIG-PROPS-REF",
@@ -43,7 +43,7 @@ class IpSecConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ip_sec_rules: IpSecConfig.IpSecRules | None = field(
+    ip_sec_rules: None | IpSecConfig.IpSecRules = field(
         default=None,
         metadata={
             "name": "IP-SEC-RULES",
@@ -51,14 +51,14 @@ class IpSecConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -69,7 +69,7 @@ class IpSecConfig:
 
     @dataclass
     class IpSecConfigPropsRef(Ref):
-        dest: IpSecConfigPropsSubtypesEnum | None = field(
+        dest: None | IpSecConfigPropsSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

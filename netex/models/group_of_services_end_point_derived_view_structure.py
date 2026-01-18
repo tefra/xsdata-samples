@@ -17,7 +17,7 @@ class GroupOfServicesEndPointDerivedViewStructure(DerivedViewStructure):
     class Meta:
         name = "GroupOfServicesEndPoint_DerivedViewStructure"
 
-    name: MultilingualString | None = field(
+    name: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "Name",
@@ -26,7 +26,7 @@ class GroupOfServicesEndPointDerivedViewStructure(DerivedViewStructure):
         },
     )
     scheduled_stop_point_ref: (
-        FareScheduledStopPointRef | ScheduledStopPointRef | None
+        None | FareScheduledStopPointRef | ScheduledStopPointRef
     ) = field(
         default=None,
         metadata={
@@ -45,7 +45,7 @@ class GroupOfServicesEndPointDerivedViewStructure(DerivedViewStructure):
             ),
         },
     )
-    destination_display_ref: DestinationDisplayRef | None = field(
+    destination_display_ref: None | DestinationDisplayRef = field(
         default=None,
         metadata={
             "name": "DestinationDisplayRef",
@@ -53,7 +53,7 @@ class GroupOfServicesEndPointDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    topographic_place_view: TopographicPlaceView | None = field(
+    topographic_place_view: None | TopographicPlaceView = field(
         default=None,
         metadata={
             "name": "TopographicPlaceView",

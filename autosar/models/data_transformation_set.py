@@ -91,7 +91,7 @@ class DataTransformationSet:
     class Meta:
         name = "DATA-TRANSFORMATION-SET"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -100,7 +100,7 @@ class DataTransformationSet:
             "required": True,
         },
     )
-    short_name_fragments: DataTransformationSet.ShortNameFragments | None = (
+    short_name_fragments: None | DataTransformationSet.ShortNameFragments = (
         field(
             default=None,
             metadata={
@@ -110,7 +110,7 @@ class DataTransformationSet:
             },
         )
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -118,7 +118,7 @@ class DataTransformationSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -126,7 +126,7 @@ class DataTransformationSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -134,7 +134,7 @@ class DataTransformationSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -142,7 +142,7 @@ class DataTransformationSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -150,7 +150,7 @@ class DataTransformationSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: DataTransformationSet.Annotations | None = field(
+    annotations: None | DataTransformationSet.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -158,7 +158,7 @@ class DataTransformationSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -166,7 +166,7 @@ class DataTransformationSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    data_transformations: DataTransformationSet.DataTransformations | None = (
+    data_transformations: None | DataTransformationSet.DataTransformations = (
         field(
             default=None,
             metadata={
@@ -177,7 +177,7 @@ class DataTransformationSet:
         )
     )
     transformation_technologys: (
-        DataTransformationSet.TransformationTechnologys | None
+        None | DataTransformationSet.TransformationTechnologys
     ) = field(
         default=None,
         metadata={
@@ -186,14 +186,14 @@ class DataTransformationSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -201,7 +201,7 @@ class DataTransformationSet:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",

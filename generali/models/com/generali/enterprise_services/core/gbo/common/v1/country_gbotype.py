@@ -17,7 +17,7 @@ class CountryGbotype:
     class Meta:
         name = "CountryGBOType"
 
-    isocode2: str | None = field(
+    isocode2: None | str = field(
         default=None,
         metadata={
             "name": "ISOCode2",
@@ -27,7 +27,7 @@ class CountryGbotype:
             "pattern": r"[A-Z][A-Z]",
         },
     )
-    isocode3: str | None = field(
+    isocode3: None | str = field(
         default=None,
         metadata={
             "name": "ISOCode3",
@@ -36,14 +36,14 @@ class CountryGbotype:
             "pattern": r"[A-Z][A-Z][A-Z]",
         },
     )
-    name: TextType | None = field(
+    name: None | TextType = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
         },
     )
-    subdivisions: SubdivisionsType | None = field(
+    subdivisions: None | SubdivisionsType = field(
         default=None,
         metadata={
             "type": "Element",

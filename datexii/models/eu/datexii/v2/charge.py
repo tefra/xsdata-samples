@@ -46,7 +46,7 @@ class Charge:
     :ivar charge_extension:
     """
 
-    charge: Decimal | None = field(
+    charge: None | Decimal = field(
         default=None,
         metadata={
             "type": "Element",
@@ -56,7 +56,7 @@ class Charge:
             "fraction_digits": 2,
         },
     )
-    charge_interval: float | None = field(
+    charge_interval: None | float = field(
         default=None,
         metadata={
             "name": "chargeInterval",
@@ -64,7 +64,7 @@ class Charge:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    charge_type: ChargeTypeEnum | None = field(
+    charge_type: None | ChargeTypeEnum = field(
         default=None,
         metadata={
             "name": "chargeType",
@@ -72,7 +72,7 @@ class Charge:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    charge_type_description: MultilingualString | None = field(
+    charge_type_description: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "chargeTypeDescription",
@@ -80,7 +80,7 @@ class Charge:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    max_iterations_of_charge: int | None = field(
+    max_iterations_of_charge: None | int = field(
         default=None,
         metadata={
             "name": "maxIterationsOfCharge",
@@ -88,7 +88,7 @@ class Charge:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    min_iterations_of_charge: int | None = field(
+    min_iterations_of_charge: None | int = field(
         default=None,
         metadata={
             "name": "minIterationsOfCharge",
@@ -96,7 +96,7 @@ class Charge:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    charge_order_index: int | None = field(
+    charge_order_index: None | int = field(
         default=None,
         metadata={
             "name": "chargeOrderIndex",
@@ -104,7 +104,7 @@ class Charge:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    time_period_of_day: TimePeriodOfDay | None = field(
+    time_period_of_day: None | TimePeriodOfDay = field(
         default=None,
         metadata={
             "name": "timePeriodOfDay",
@@ -112,7 +112,7 @@ class Charge:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    charge_extension: ExtensionType | None = field(
+    charge_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "chargeExtension",

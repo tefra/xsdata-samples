@@ -22,7 +22,8 @@ __NAMESPACE__ = "http://www.siri.org.uk/siri"
 @dataclass
 class ErrorConditionStructure:
     choice: (
-        ServiceNotAvailableError
+        None
+        | ServiceNotAvailableError
         | CapabilityNotSupportedError
         | AccessNotAllowedError
         | InvalidDataReferencesError
@@ -32,7 +33,6 @@ class ErrorConditionStructure:
         | UnknownExtensionsError
         | AllowedResourceUsageExceededError
         | OtherError
-        | None
     ) = field(
         default=None,
         metadata={
@@ -91,7 +91,7 @@ class ErrorConditionStructure:
             ),
         },
     )
-    description: NaturalLanguageStringStructure | None = field(
+    description: None | NaturalLanguageStringStructure = field(
         default=None,
         metadata={
             "name": "Description",

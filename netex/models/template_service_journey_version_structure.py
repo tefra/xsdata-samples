@@ -17,7 +17,7 @@ class TemplateServiceJourneyVersionStructure(ServiceJourneyVersionStructure):
         name = "TemplateServiceJourney_VersionStructure"
 
     template_vehicle_journey_type: (
-        TemplateVehicleJourneyTypeEnumeration | None
+        None | TemplateVehicleJourneyTypeEnumeration
     ) = field(
         default=None,
         metadata={
@@ -26,7 +26,7 @@ class TemplateServiceJourneyVersionStructure(ServiceJourneyVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    frequency_groups: FrequencyGroupsRelStructure | None = field(
+    frequency_groups: None | FrequencyGroupsRelStructure = field(
         default=None,
         metadata={
             "name": "frequencyGroups",

@@ -19,7 +19,7 @@ class Front:
         name = "front"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    journal_meta: JournalMeta | None = field(
+    journal_meta: None | JournalMeta = field(
         default=None,
         metadata={
             "name": "journal-meta",
@@ -27,7 +27,7 @@ class Front:
             "required": True,
         },
     )
-    article_meta: ArticleMeta | None = field(
+    article_meta: None | ArticleMeta = field(
         default=None,
         metadata={
             "name": "article-meta",
@@ -35,19 +35,19 @@ class Front:
             "required": True,
         },
     )
-    notes: Notes | None = field(
+    notes: None | Notes = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",

@@ -28,20 +28,20 @@ class Ipv4AddressSourceEnum:
     class Meta:
         name = "IPV-4-ADDRESS-SOURCE-ENUM"
 
-    value: Ipv4AddressSourceEnumSimple | None = field(
+    value: None | Ipv4AddressSourceEnumSimple = field(
         default=None,
         metadata={
             "required": True,
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

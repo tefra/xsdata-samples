@@ -68,7 +68,7 @@ class DateMapType(IdentifiableType):
             ),
         },
     )
-    resolve_period: ResolvePeriodType | None = field(
+    resolve_period: None | ResolvePeriodType = field(
         default=None,
         metadata={
             "name": "resolvePeriod",
@@ -78,7 +78,7 @@ class DateMapType(IdentifiableType):
 
     @dataclass(frozen=True)
     class FrequencyDimension:
-        value: str | None = field(
+        value: None | str = field(
             default=None,
             metadata={
                 "required": True,
@@ -88,7 +88,7 @@ class DateMapType(IdentifiableType):
 
     @dataclass(frozen=True)
     class MappedFrequencies:
-        value: str | None = field(
+        value: None | str = field(
             default=None,
             metadata={
                 "required": True,
@@ -98,7 +98,7 @@ class DateMapType(IdentifiableType):
 
     @dataclass(frozen=True)
     class TargetFrequencyId:
-        value: str | None = field(
+        value: None | str = field(
             default=None,
             metadata={
                 "required": True,

@@ -38,7 +38,7 @@ class BswPerInstanceMemoryPolicy:
     class Meta:
         name = "BSW-PER-INSTANCE-MEMORY-POLICY"
 
-    enable_take_address: Boolean | None = field(
+    enable_take_address: None | Boolean = field(
         default=None,
         metadata={
             "name": "ENABLE-TAKE-ADDRESS",
@@ -47,7 +47,7 @@ class BswPerInstanceMemoryPolicy:
         },
     )
     ar_typed_per_instance_memory_ref: (
-        BswPerInstanceMemoryPolicy.ArTypedPerInstanceMemoryRef | None
+        None | BswPerInstanceMemoryPolicy.ArTypedPerInstanceMemoryRef
     ) = field(
         default=None,
         metadata={
@@ -56,7 +56,7 @@ class BswPerInstanceMemoryPolicy:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -64,14 +64,14 @@ class BswPerInstanceMemoryPolicy:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -82,7 +82,7 @@ class BswPerInstanceMemoryPolicy:
 
     @dataclass
     class ArTypedPerInstanceMemoryRef(Ref):
-        dest: VariableDataPrototypeSubtypesEnum | None = field(
+        dest: None | VariableDataPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

@@ -12,7 +12,7 @@ class VmsTextLineIndexVmsTextLine:
     class Meta:
         name = "_VmsTextLineIndexVmsTextLine"
 
-    vms_text_line: VmsTextLine | None = field(
+    vms_text_line: None | VmsTextLine = field(
         default=None,
         metadata={
             "name": "vmsTextLine",
@@ -21,7 +21,7 @@ class VmsTextLineIndexVmsTextLine:
             "required": True,
         },
     )
-    line_index: int | None = field(
+    line_index: None | int = field(
         default=None,
         metadata={
             "name": "lineIndex",

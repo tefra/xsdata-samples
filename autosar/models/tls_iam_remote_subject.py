@@ -102,7 +102,7 @@ class TlsIamRemoteSubject:
     class Meta:
         name = "TLS-IAM-REMOTE-SUBJECT"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -111,7 +111,7 @@ class TlsIamRemoteSubject:
             "required": True,
         },
     )
-    short_name_fragments: TlsIamRemoteSubject.ShortNameFragments | None = (
+    short_name_fragments: None | TlsIamRemoteSubject.ShortNameFragments = (
         field(
             default=None,
             metadata={
@@ -121,7 +121,7 @@ class TlsIamRemoteSubject:
             },
         )
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -129,7 +129,7 @@ class TlsIamRemoteSubject:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -137,7 +137,7 @@ class TlsIamRemoteSubject:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -145,7 +145,7 @@ class TlsIamRemoteSubject:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -153,7 +153,7 @@ class TlsIamRemoteSubject:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -161,7 +161,7 @@ class TlsIamRemoteSubject:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: TlsIamRemoteSubject.Annotations | None = field(
+    annotations: None | TlsIamRemoteSubject.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -169,7 +169,7 @@ class TlsIamRemoteSubject:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -178,7 +178,7 @@ class TlsIamRemoteSubject:
         },
     )
     accepted_crypto_cipher_suite_with_psk_refs: (
-        TlsIamRemoteSubject.AcceptedCryptoCipherSuiteWithPskRefs | None
+        None | TlsIamRemoteSubject.AcceptedCryptoCipherSuiteWithPskRefs
     ) = field(
         default=None,
         metadata={
@@ -188,7 +188,7 @@ class TlsIamRemoteSubject:
         },
     )
     accepted_remote_certificate_refs: (
-        TlsIamRemoteSubject.AcceptedRemoteCertificateRefs | None
+        None | TlsIamRemoteSubject.AcceptedRemoteCertificateRefs
     ) = field(
         default=None,
         metadata={
@@ -197,7 +197,7 @@ class TlsIamRemoteSubject:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    cert_common_name: String | None = field(
+    cert_common_name: None | String = field(
         default=None,
         metadata={
             "name": "CERT-COMMON-NAME",
@@ -205,7 +205,7 @@ class TlsIamRemoteSubject:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    derived_certificate_accepted: Boolean | None = field(
+    derived_certificate_accepted: None | Boolean = field(
         default=None,
         metadata={
             "name": "DERIVED-CERTIFICATE-ACCEPTED",
@@ -214,7 +214,7 @@ class TlsIamRemoteSubject:
         },
     )
     iam_relevant_tls_secure_com_props_refs: (
-        TlsIamRemoteSubject.IamRelevantTlsSecureComPropsRefs | None
+        None | TlsIamRemoteSubject.IamRelevantTlsSecureComPropsRefs
     ) = field(
         default=None,
         metadata={
@@ -223,14 +223,14 @@ class TlsIamRemoteSubject:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -238,7 +238,7 @@ class TlsIamRemoteSubject:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -283,7 +283,7 @@ class TlsIamRemoteSubject:
 
         @dataclass
         class AcceptedCryptoCipherSuiteWithPskRef(Ref):
-            dest: TlsCryptoCipherSuiteSubtypesEnum | None = field(
+            dest: None | TlsCryptoCipherSuiteSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -307,7 +307,7 @@ class TlsIamRemoteSubject:
 
         @dataclass
         class AcceptedRemoteCertificateRef(Ref):
-            dest: CryptoServiceCertificateSubtypesEnum | None = field(
+            dest: None | CryptoServiceCertificateSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -331,7 +331,7 @@ class TlsIamRemoteSubject:
 
         @dataclass
         class IamRelevantTlsSecureComPropsRef(Ref):
-            dest: TlsSecureComPropsSubtypesEnum | None = field(
+            dest: None | TlsSecureComPropsSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",

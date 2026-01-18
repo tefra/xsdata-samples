@@ -127,7 +127,7 @@ class SwBaseType:
     class Meta:
         name = "SW-BASE-TYPE"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -136,7 +136,7 @@ class SwBaseType:
             "required": True,
         },
     )
-    short_name_fragments: SwBaseType.ShortNameFragments | None = field(
+    short_name_fragments: None | SwBaseType.ShortNameFragments = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -144,7 +144,7 @@ class SwBaseType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -152,7 +152,7 @@ class SwBaseType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -160,7 +160,7 @@ class SwBaseType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -168,7 +168,7 @@ class SwBaseType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -176,7 +176,7 @@ class SwBaseType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -184,7 +184,7 @@ class SwBaseType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: SwBaseType.Annotations | None = field(
+    annotations: None | SwBaseType.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -192,7 +192,7 @@ class SwBaseType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    blueprint_policys: SwBaseType.BlueprintPolicys | None = field(
+    blueprint_policys: None | SwBaseType.BlueprintPolicys = field(
         default=None,
         metadata={
             "name": "BLUEPRINT-POLICYS",
@@ -200,7 +200,7 @@ class SwBaseType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    short_name_pattern: String | None = field(
+    short_name_pattern: None | String = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-PATTERN",
@@ -208,7 +208,7 @@ class SwBaseType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -216,7 +216,7 @@ class SwBaseType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    base_type_size: PositiveInteger | None = field(
+    base_type_size: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "BASE-TYPE-SIZE",
@@ -224,7 +224,7 @@ class SwBaseType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    max_base_type_size: PositiveInteger | None = field(
+    max_base_type_size: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "MAX-BASE-TYPE-SIZE",
@@ -232,7 +232,7 @@ class SwBaseType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    base_type_encoding: BaseTypeEncodingString | None = field(
+    base_type_encoding: None | BaseTypeEncodingString = field(
         default=None,
         metadata={
             "name": "BASE-TYPE-ENCODING",
@@ -240,7 +240,7 @@ class SwBaseType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    mem_alignment: PositiveInteger | None = field(
+    mem_alignment: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "MEM-ALIGNMENT",
@@ -248,7 +248,7 @@ class SwBaseType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    byte_order: ByteOrderEnum | None = field(
+    byte_order: None | ByteOrderEnum = field(
         default=None,
         metadata={
             "name": "BYTE-ORDER",
@@ -256,7 +256,7 @@ class SwBaseType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    native_declaration: NativeDeclarationString | None = field(
+    native_declaration: None | NativeDeclarationString = field(
         default=None,
         metadata={
             "name": "NATIVE-DECLARATION",
@@ -264,14 +264,14 @@ class SwBaseType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -279,7 +279,7 @@ class SwBaseType:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",

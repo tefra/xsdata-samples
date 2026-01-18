@@ -7,7 +7,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 @dataclass
 class NetworkFrameSubscriptionPolicyStructure:
-    incremental_updates: bool | None = field(
+    incremental_updates: None | bool = field(
         default=None,
         metadata={
             "name": "IncrementalUpdates",

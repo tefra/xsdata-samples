@@ -29,20 +29,20 @@ class DtcKindEnum:
     class Meta:
         name = "DTC-KIND-ENUM"
 
-    value: DtcKindEnumSimple | None = field(
+    value: None | DtcKindEnumSimple = field(
         default=None,
         metadata={
             "required": True,
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

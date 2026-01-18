@@ -49,7 +49,7 @@ class ModeSwitchSenderComSpec:
     class Meta:
         name = "MODE-SWITCH-SENDER-COM-SPEC"
 
-    enhanced_mode_api: Boolean | None = field(
+    enhanced_mode_api: None | Boolean = field(
         default=None,
         metadata={
             "name": "ENHANCED-MODE-API",
@@ -57,7 +57,7 @@ class ModeSwitchSenderComSpec:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    mode_group_ref: ModeSwitchSenderComSpec.ModeGroupRef | None = field(
+    mode_group_ref: None | ModeSwitchSenderComSpec.ModeGroupRef = field(
         default=None,
         metadata={
             "name": "MODE-GROUP-REF",
@@ -65,7 +65,7 @@ class ModeSwitchSenderComSpec:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    mode_switched_ack: ModeSwitchedAckRequest | None = field(
+    mode_switched_ack: None | ModeSwitchedAckRequest = field(
         default=None,
         metadata={
             "name": "MODE-SWITCHED-ACK",
@@ -73,7 +73,7 @@ class ModeSwitchSenderComSpec:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    queue_length: PositiveInteger | None = field(
+    queue_length: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "QUEUE-LENGTH",
@@ -81,14 +81,14 @@ class ModeSwitchSenderComSpec:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -99,7 +99,7 @@ class ModeSwitchSenderComSpec:
 
     @dataclass
     class ModeGroupRef(Ref):
-        dest: ModeDeclarationGroupPrototypeSubtypesEnum | None = field(
+        dest: None | ModeDeclarationGroupPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

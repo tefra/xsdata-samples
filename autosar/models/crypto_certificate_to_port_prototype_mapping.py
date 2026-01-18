@@ -99,7 +99,7 @@ class CryptoCertificateToPortPrototypeMapping:
     class Meta:
         name = "CRYPTO-CERTIFICATE-TO-PORT-PROTOTYPE-MAPPING"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -109,7 +109,7 @@ class CryptoCertificateToPortPrototypeMapping:
         },
     )
     short_name_fragments: (
-        CryptoCertificateToPortPrototypeMapping.ShortNameFragments | None
+        None | CryptoCertificateToPortPrototypeMapping.ShortNameFragments
     ) = field(
         default=None,
         metadata={
@@ -118,7 +118,7 @@ class CryptoCertificateToPortPrototypeMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -126,7 +126,7 @@ class CryptoCertificateToPortPrototypeMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -134,7 +134,7 @@ class CryptoCertificateToPortPrototypeMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -142,7 +142,7 @@ class CryptoCertificateToPortPrototypeMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -150,7 +150,7 @@ class CryptoCertificateToPortPrototypeMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -158,7 +158,7 @@ class CryptoCertificateToPortPrototypeMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: CryptoCertificateToPortPrototypeMapping.Annotations | None = (
+    annotations: None | CryptoCertificateToPortPrototypeMapping.Annotations = (
         field(
             default=None,
             metadata={
@@ -168,7 +168,7 @@ class CryptoCertificateToPortPrototypeMapping:
             },
         )
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -177,7 +177,7 @@ class CryptoCertificateToPortPrototypeMapping:
         },
     )
     crypto_certificate_ref: (
-        CryptoCertificateToPortPrototypeMapping.CryptoCertificateRef | None
+        None | CryptoCertificateToPortPrototypeMapping.CryptoCertificateRef
     ) = field(
         default=None,
         metadata={
@@ -186,7 +186,7 @@ class CryptoCertificateToPortPrototypeMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    port_prototype_iref: PortPrototypeInExecutableInstanceRef | None = field(
+    port_prototype_iref: None | PortPrototypeInExecutableInstanceRef = field(
         default=None,
         metadata={
             "name": "PORT-PROTOTYPE-IREF",
@@ -194,7 +194,7 @@ class CryptoCertificateToPortPrototypeMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    process_ref: CryptoCertificateToPortPrototypeMapping.ProcessRef | None = (
+    process_ref: None | CryptoCertificateToPortPrototypeMapping.ProcessRef = (
         field(
             default=None,
             metadata={
@@ -204,7 +204,7 @@ class CryptoCertificateToPortPrototypeMapping:
             },
         )
     )
-    write_access: Boolean | None = field(
+    write_access: None | Boolean = field(
         default=None,
         metadata={
             "name": "WRITE-ACCESS",
@@ -212,14 +212,14 @@ class CryptoCertificateToPortPrototypeMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -227,7 +227,7 @@ class CryptoCertificateToPortPrototypeMapping:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -259,7 +259,7 @@ class CryptoCertificateToPortPrototypeMapping:
 
     @dataclass
     class CryptoCertificateRef(Ref):
-        dest: CryptoCertificateSubtypesEnum | None = field(
+        dest: None | CryptoCertificateSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -270,7 +270,7 @@ class CryptoCertificateToPortPrototypeMapping:
 
     @dataclass
     class ProcessRef(Ref):
-        dest: ProcessSubtypesEnum | None = field(
+        dest: None | ProcessSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

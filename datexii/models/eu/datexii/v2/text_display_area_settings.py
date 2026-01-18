@@ -31,7 +31,7 @@ class TextDisplayAreaSettings:
     :ivar text_display_area_settings_extension:
     """
 
-    text_lanterns_on: bool | None = field(
+    text_lanterns_on: None | bool = field(
         default=None,
         metadata={
             "name": "textLanternsOn",
@@ -39,7 +39,7 @@ class TextDisplayAreaSettings:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    text_luminance_override: bool | None = field(
+    text_luminance_override: None | bool = field(
         default=None,
         metadata={
             "name": "textLuminanceOverride",
@@ -47,7 +47,7 @@ class TextDisplayAreaSettings:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    text_luminance_level: int | None = field(
+    text_luminance_level: None | int = field(
         default=None,
         metadata={
             "name": "textLuminanceLevel",
@@ -55,7 +55,7 @@ class TextDisplayAreaSettings:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    text_luminance_level_name: VmsLuminanceLevelEnum | None = field(
+    text_luminance_level_name: None | VmsLuminanceLevelEnum = field(
         default=None,
         metadata={
             "name": "textLuminanceLevelName",
@@ -63,7 +63,7 @@ class TextDisplayAreaSettings:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    text_display_area_settings_extension: ExtensionType | None = field(
+    text_display_area_settings_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "textDisplayAreaSettingsExtension",

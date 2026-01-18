@@ -30,7 +30,7 @@ class GarageVersionStructure(AddressablePlaceVersionStructure):
     class Meta:
         name = "Garage_VersionStructure"
 
-    contact_details: ContactStructure | None = field(
+    contact_details: None | ContactStructure = field(
         default=None,
         metadata={
             "name": "ContactDetails",
@@ -39,7 +39,8 @@ class GarageVersionStructure(AddressablePlaceVersionStructure):
         },
     )
     organisation_ref_or_other_organisation_ref_or_transport_organisation_ref: (
-        RetailConsortiumRef
+        None
+        | RetailConsortiumRef
         | OnlineServiceOperatorRef
         | GeneralOrganisationRef
         | ManagementAgentRef
@@ -49,7 +50,6 @@ class GarageVersionStructure(AddressablePlaceVersionStructure):
         | AuthorityRef
         | OperatorRef
         | OrganisationRef
-        | None
     ) = field(
         default=None,
         metadata={
@@ -108,14 +108,14 @@ class GarageVersionStructure(AddressablePlaceVersionStructure):
             ),
         },
     )
-    operators: TransportOrganisationRefsRelStructure | None = field(
+    operators: None | TransportOrganisationRefsRelStructure = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    garage_points: GaragePointsRelStructure | None = field(
+    garage_points: None | GaragePointsRelStructure = field(
         default=None,
         metadata={
             "name": "garagePoints",
@@ -123,7 +123,7 @@ class GarageVersionStructure(AddressablePlaceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    crew_bases: CrewBaseRefsRelStructure | None = field(
+    crew_bases: None | CrewBaseRefsRelStructure = field(
         default=None,
         metadata={
             "name": "crewBases",

@@ -32,7 +32,7 @@ class SimpleAccessHandle:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    path_segments: SimpleAccessHandle.PathSegments | None = field(
+    path_segments: None | SimpleAccessHandle.PathSegments = field(
         default=None,
         metadata={
             "name": "pathSegments",
@@ -41,7 +41,7 @@ class SimpleAccessHandle:
             "required": True,
         },
     )
-    vendor_extensions: VendorExtensions | None = field(
+    vendor_extensions: None | VendorExtensions = field(
         default=None,
         metadata={
             "name": "vendorExtensions",
@@ -49,7 +49,7 @@ class SimpleAccessHandle:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -65,7 +65,7 @@ class SimpleAccessHandle:
                 "required": True,
             },
         )
-        id: str | None = field(
+        id: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",

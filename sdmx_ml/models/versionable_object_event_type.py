@@ -58,7 +58,7 @@ class VersionableObjectEventType:
 
     @dataclass(frozen=True)
     class Urn:
-        value: str | None = field(
+        value: None | str = field(
             default=None,
             metadata={
                 "required": True,
@@ -67,7 +67,7 @@ class VersionableObjectEventType:
 
     @dataclass(frozen=True)
     class Id:
-        value: str | WildCardValueType | None = field(
+        value: None | str | WildCardValueType = field(
             default=None,
             metadata={
                 "required": True,
@@ -77,7 +77,7 @@ class VersionableObjectEventType:
 
     @dataclass(frozen=True)
     class Version:
-        value: str | WildcardType | WildCardValueType | None = field(
+        value: None | str | WildcardType | WildCardValueType = field(
             default=None,
             metadata={
                 "required": True,

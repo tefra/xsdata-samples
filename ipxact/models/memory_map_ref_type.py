@@ -28,7 +28,7 @@ class MemoryMapRefType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    memory_map_ref: str | None = field(
+    memory_map_ref: None | str = field(
         default=None,
         metadata={
             "name": "memoryMapRef",
@@ -49,7 +49,7 @@ class MemoryMapRefType:
                 "required": True,
             },
         )
-        id: str | None = field(
+        id: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",

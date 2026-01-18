@@ -13,7 +13,7 @@ __NAMESPACE__ = (
 
 @dataclass
 class UnderwriterRoleType:
-    underwriter_type: UnderwriterRoleTypeUnderwriterType | None = field(
+    underwriter_type: None | UnderwriterRoleTypeUnderwriterType = field(
         default=None,
         metadata={
             "name": "UnderwriterType",

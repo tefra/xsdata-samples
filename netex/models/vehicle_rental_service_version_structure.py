@@ -20,7 +20,7 @@ class VehicleRentalServiceVersionStructure(
     class Meta:
         name = "VehicleRentalService_VersionStructure"
 
-    vehicle_rental_ref: VehicleRentalRef | None = field(
+    vehicle_rental_ref: None | VehicleRentalRef = field(
         default=None,
         metadata={
             "name": "VehicleRentalRef",
@@ -29,7 +29,7 @@ class VehicleRentalServiceVersionStructure(
             "required": True,
         },
     )
-    maximum_rental_period: XmlDuration | None = field(
+    maximum_rental_period: None | XmlDuration = field(
         default=None,
         metadata={
             "name": "MaximumRentalPeriod",
@@ -37,7 +37,7 @@ class VehicleRentalServiceVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    minimum_rental_period: XmlDuration | None = field(
+    minimum_rental_period: None | XmlDuration = field(
         default=None,
         metadata={
             "name": "MinimumRentalPeriod",
@@ -45,7 +45,7 @@ class VehicleRentalServiceVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    rental_policy_url: str | None = field(
+    rental_policy_url: None | str = field(
         default=None,
         metadata={
             "name": "RentalPolicyUrl",
@@ -53,7 +53,7 @@ class VehicleRentalServiceVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    fleets: FleetRefsRelStructure | None = field(
+    fleets: None | FleetRefsRelStructure = field(
         default=None,
         metadata={
             "type": "Element",

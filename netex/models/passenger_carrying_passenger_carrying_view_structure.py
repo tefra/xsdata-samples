@@ -14,7 +14,7 @@ class PassengerCarryingPassengerCarryingViewStructure(DerivedViewStructure):
     class Meta:
         name = "PassengerCarryingPassengerCarrying_ViewStructure"
 
-    passenger_capacity: PassengerCapacity | None = field(
+    passenger_capacity: None | PassengerCapacity = field(
         default=None,
         metadata={
             "name": "PassengerCapacity",
@@ -22,7 +22,7 @@ class PassengerCarryingPassengerCarryingViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    low_floor: bool | None = field(
+    low_floor: None | bool = field(
         default=None,
         metadata={
             "name": "LowFloor",
@@ -30,7 +30,7 @@ class PassengerCarryingPassengerCarryingViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    has_lift_or_ramp: bool | None = field(
+    has_lift_or_ramp: None | bool = field(
         default=None,
         metadata={
             "name": "HasLiftOrRamp",
@@ -38,7 +38,7 @@ class PassengerCarryingPassengerCarryingViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    has_hoist: bool | None = field(
+    has_hoist: None | bool = field(
         default=None,
         metadata={
             "name": "HasHoist",
@@ -46,7 +46,7 @@ class PassengerCarryingPassengerCarryingViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    boarding_height: Decimal | None = field(
+    boarding_height: None | Decimal = field(
         default=None,
         metadata={
             "name": "BoardingHeight",
@@ -54,7 +54,7 @@ class PassengerCarryingPassengerCarryingViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    gap_to_platform: Decimal | None = field(
+    gap_to_platform: None | Decimal = field(
         default=None,
         metadata={
             "name": "GapToPlatform",

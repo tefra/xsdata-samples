@@ -15,7 +15,7 @@ class ContactVersionStructure(DataManagedObjectStructure):
     class Meta:
         name = "Contact_VersionStructure"
 
-    name: MultilingualString | None = field(
+    name: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "Name",
@@ -23,7 +23,7 @@ class ContactVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    contact_details: ContactDetailsStructure | None = field(
+    contact_details: None | ContactDetailsStructure = field(
         default=None,
         metadata={
             "name": "ContactDetails",
@@ -31,7 +31,7 @@ class ContactVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    contact_type: ContactTypeEnumeration | None = field(
+    contact_type: None | ContactTypeEnumeration = field(
         default=None,
         metadata={
             "name": "ContactType",

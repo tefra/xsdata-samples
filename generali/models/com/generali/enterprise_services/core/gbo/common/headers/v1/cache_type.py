@@ -30,7 +30,7 @@ class CacheType(BaseHeaderType):
     :ivar last_modified_date_time:
     """
 
-    use_cache: CacheOptions | None = field(
+    use_cache: None | CacheOptions = field(
         default=None,
         metadata={
             "name": "UseCache",
@@ -39,7 +39,7 @@ class CacheType(BaseHeaderType):
             "required": True,
         },
     )
-    max_age_quantity: int | None = field(
+    max_age_quantity: None | int = field(
         default=None,
         metadata={
             "name": "MaxAgeQuantity",
@@ -47,7 +47,7 @@ class CacheType(BaseHeaderType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/headers/v1",
         },
     )
-    last_modified_date_time: XmlDateTime | None = field(
+    last_modified_date_time: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "LastModifiedDateTime",

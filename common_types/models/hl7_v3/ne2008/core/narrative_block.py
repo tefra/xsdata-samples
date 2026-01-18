@@ -53,14 +53,14 @@ class StrucDocFootnoteRef:
     class Meta:
         name = "StrucDoc.FootnoteRef"
 
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "name": "ID",
             "type": "Attribute",
         },
     )
-    language: str | None = field(
+    language: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -74,7 +74,7 @@ class StrucDocFootnoteRef:
             "tokens": True,
         },
     )
-    idref: str | None = field(
+    idref: None | str = field(
         default=None,
         metadata={
             "name": "IDREF",
@@ -248,14 +248,14 @@ class StrucDocCaption:
     class Meta:
         name = "StrucDoc.Caption"
 
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "name": "ID",
             "type": "Attribute",
         },
     )
-    language: str | None = field(
+    language: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -311,14 +311,14 @@ class StrucDocCol:
     class Meta:
         name = "StrucDoc.Col"
 
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "name": "ID",
             "type": "Attribute",
         },
     )
-    language: str | None = field(
+    language: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -338,31 +338,31 @@ class StrucDocCol:
             "type": "Attribute",
         },
     )
-    width: str | None = field(
+    width: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    align: StrucDocColAlign | None = field(
+    align: None | StrucDocColAlign = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    char: str | None = field(
+    char: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    charoff: str | None = field(
+    charoff: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    valign: StrucDocColValign | None = field(
+    valign: None | StrucDocColValign = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -375,14 +375,14 @@ class StrucDocTitleContent:
     class Meta:
         name = "StrucDoc.TitleContent"
 
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "name": "ID",
             "type": "Attribute",
         },
     )
-    language: str | None = field(
+    language: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -450,14 +450,14 @@ class StrucDocColgroup:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "name": "ID",
             "type": "Attribute",
         },
     )
-    language: str | None = field(
+    language: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -477,31 +477,31 @@ class StrucDocColgroup:
             "type": "Attribute",
         },
     )
-    width: str | None = field(
+    width: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    align: StrucDocColgroupAlign | None = field(
+    align: None | StrucDocColgroupAlign = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    char: str | None = field(
+    char: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    charoff: str | None = field(
+    charoff: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    valign: StrucDocColgroupValign | None = field(
+    valign: None | StrucDocColgroupValign = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -514,7 +514,7 @@ class StrucDocRenderMultiMedia:
     class Meta:
         name = "StrucDoc.RenderMultiMedia"
 
-    caption: StrucDocCaption | None = field(
+    caption: None | StrucDocCaption = field(
         default=None,
         metadata={
             "type": "Element",
@@ -529,14 +529,14 @@ class StrucDocRenderMultiMedia:
             "tokens": True,
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "name": "ID",
             "type": "Attribute",
         },
     )
-    language: str | None = field(
+    language: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -557,14 +557,14 @@ class StrucDocTitleFootnote:
     class Meta:
         name = "StrucDoc.TitleFootnote"
 
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "name": "ID",
             "type": "Attribute",
         },
     )
-    language: str | None = field(
+    language: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -615,14 +615,14 @@ class StrucDocContent:
     class Meta:
         name = "StrucDoc.Content"
 
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "name": "ID",
             "type": "Attribute",
         },
     )
-    language: str | None = field(
+    language: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -636,7 +636,7 @@ class StrucDocContent:
             "tokens": True,
         },
     )
-    revised: StrucDocContentRevised | None = field(
+    revised: None | StrucDocContentRevised = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -699,14 +699,14 @@ class StrucDocTitle:
     class Meta:
         name = "StrucDoc.Title"
 
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "name": "ID",
             "type": "Attribute",
         },
     )
-    language: str | None = field(
+    language: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -775,14 +775,14 @@ class StrucDocFootnote:
     class Meta:
         name = "StrucDoc.Footnote"
 
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "name": "ID",
             "type": "Attribute",
         },
     )
-    language: str | None = field(
+    language: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -858,44 +858,44 @@ class StrucDocLinkHtml:
     class Meta:
         name = "StrucDoc.LinkHtml"
 
-    name: str | None = field(
+    name: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    href: str | None = field(
+    href: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    rel: str | None = field(
+    rel: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    rev: str | None = field(
+    rev: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    title: str | None = field(
+    title: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "name": "ID",
             "type": "Attribute",
         },
     )
-    language: str | None = field(
+    language: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -936,14 +936,14 @@ class StrucDocParagraph:
     class Meta:
         name = "StrucDoc.Paragraph"
 
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "name": "ID",
             "type": "Attribute",
         },
     )
-    language: str | None = field(
+    language: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -1019,14 +1019,14 @@ class StrucDocTh:
     class Meta:
         name = "StrucDoc.Th"
 
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "name": "ID",
             "type": "Attribute",
         },
     )
-    language: str | None = field(
+    language: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -1040,13 +1040,13 @@ class StrucDocTh:
             "tokens": True,
         },
     )
-    abbr: str | None = field(
+    abbr: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    axis: str | None = field(
+    axis: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -1059,7 +1059,7 @@ class StrucDocTh:
             "tokens": True,
         },
     )
-    scope: StrucDocThScope | None = field(
+    scope: None | StrucDocThScope = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -1077,25 +1077,25 @@ class StrucDocTh:
             "type": "Attribute",
         },
     )
-    align: StrucDocThAlign | None = field(
+    align: None | StrucDocThAlign = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    char: str | None = field(
+    char: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    charoff: str | None = field(
+    charoff: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    valign: StrucDocThValign | None = field(
+    valign: None | StrucDocThValign = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -1158,14 +1158,14 @@ class StrucDocItem:
     class Meta:
         name = "StrucDoc.Item"
 
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "name": "ID",
             "type": "Attribute",
         },
     )
-    language: str | None = field(
+    language: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -1256,7 +1256,7 @@ class StrucDocList:
     class Meta:
         name = "StrucDoc.List"
 
-    caption: StrucDocCaption | None = field(
+    caption: None | StrucDocCaption = field(
         default=None,
         metadata={
             "type": "Element",
@@ -1271,14 +1271,14 @@ class StrucDocList:
             "min_occurs": 1,
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "name": "ID",
             "type": "Attribute",
         },
     )
-    language: str | None = field(
+    language: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -1306,14 +1306,14 @@ class StrucDocTd:
     class Meta:
         name = "StrucDoc.Td"
 
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "name": "ID",
             "type": "Attribute",
         },
     )
-    language: str | None = field(
+    language: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -1327,13 +1327,13 @@ class StrucDocTd:
             "tokens": True,
         },
     )
-    abbr: str | None = field(
+    abbr: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    axis: str | None = field(
+    axis: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -1346,7 +1346,7 @@ class StrucDocTd:
             "tokens": True,
         },
     )
-    scope: StrucDocTdScope | None = field(
+    scope: None | StrucDocTdScope = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -1364,25 +1364,25 @@ class StrucDocTd:
             "type": "Attribute",
         },
     )
-    align: StrucDocTdAlign | None = field(
+    align: None | StrucDocTdAlign = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    char: str | None = field(
+    char: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    charoff: str | None = field(
+    charoff: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    valign: StrucDocTdValign | None = field(
+    valign: None | StrucDocTdValign = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -1469,14 +1469,14 @@ class StrucDocTr:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "name": "ID",
             "type": "Attribute",
         },
     )
-    language: str | None = field(
+    language: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -1490,25 +1490,25 @@ class StrucDocTr:
             "tokens": True,
         },
     )
-    align: StrucDocTrAlign | None = field(
+    align: None | StrucDocTrAlign = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    char: str | None = field(
+    char: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    charoff: str | None = field(
+    charoff: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    valign: StrucDocTrValign | None = field(
+    valign: None | StrucDocTrValign = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -1529,14 +1529,14 @@ class StrucDocTbody:
             "min_occurs": 1,
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "name": "ID",
             "type": "Attribute",
         },
     )
-    language: str | None = field(
+    language: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -1550,25 +1550,25 @@ class StrucDocTbody:
             "tokens": True,
         },
     )
-    align: StrucDocTbodyAlign | None = field(
+    align: None | StrucDocTbodyAlign = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    char: str | None = field(
+    char: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    charoff: str | None = field(
+    charoff: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    valign: StrucDocTbodyValign | None = field(
+    valign: None | StrucDocTbodyValign = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -1589,14 +1589,14 @@ class StrucDocTfoot:
             "min_occurs": 1,
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "name": "ID",
             "type": "Attribute",
         },
     )
-    language: str | None = field(
+    language: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -1610,25 +1610,25 @@ class StrucDocTfoot:
             "tokens": True,
         },
     )
-    align: StrucDocTfootAlign | None = field(
+    align: None | StrucDocTfootAlign = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    char: str | None = field(
+    char: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    charoff: str | None = field(
+    charoff: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    valign: StrucDocTfootValign | None = field(
+    valign: None | StrucDocTfootValign = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -1649,14 +1649,14 @@ class StrucDocThead:
             "min_occurs": 1,
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "name": "ID",
             "type": "Attribute",
         },
     )
-    language: str | None = field(
+    language: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -1670,25 +1670,25 @@ class StrucDocThead:
             "tokens": True,
         },
     )
-    align: StrucDocTheadAlign | None = field(
+    align: None | StrucDocTheadAlign = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    char: str | None = field(
+    char: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    charoff: str | None = field(
+    charoff: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    valign: StrucDocTheadValign | None = field(
+    valign: None | StrucDocTheadValign = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -1701,7 +1701,7 @@ class StrucDocTable:
     class Meta:
         name = "StrucDoc.Table"
 
-    caption: StrucDocCaption | None = field(
+    caption: None | StrucDocCaption = field(
         default=None,
         metadata={
             "type": "Element",
@@ -1722,14 +1722,14 @@ class StrucDocTable:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    thead: StrucDocThead | None = field(
+    thead: None | StrucDocThead = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    tfoot: StrucDocTfoot | None = field(
+    tfoot: None | StrucDocTfoot = field(
         default=None,
         metadata={
             "type": "Element",
@@ -1744,14 +1744,14 @@ class StrucDocTable:
             "min_occurs": 1,
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "name": "ID",
             "type": "Attribute",
         },
     )
-    language: str | None = field(
+    language: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -1765,43 +1765,43 @@ class StrucDocTable:
             "tokens": True,
         },
     )
-    summary: str | None = field(
+    summary: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    width: str | None = field(
+    width: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    border: str | None = field(
+    border: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    frame: StrucDocTableFrame | None = field(
+    frame: None | StrucDocTableFrame = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    rules: StrucDocTableRules | None = field(
+    rules: None | StrucDocTableRules = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    cellspacing: str | None = field(
+    cellspacing: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    cellpadding: str | None = field(
+    cellpadding: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -1814,14 +1814,14 @@ class StrucDocText:
     class Meta:
         name = "StrucDoc.Text"
 
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "name": "ID",
             "type": "Attribute",
         },
     )
-    language: str | None = field(
+    language: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",

@@ -31,7 +31,7 @@ class ComplexFeatureProjectionVersionStructure(ProjectionVersionStructure):
     class Meta:
         name = "ComplexFeatureProjection_VersionStructure"
 
-    projected_fearture_ref: ComplexFeatureRefStructure | None = field(
+    projected_fearture_ref: None | ComplexFeatureRefStructure = field(
         default=None,
         metadata={
             "name": "ProjectedFeartureRef",
@@ -39,7 +39,7 @@ class ComplexFeatureProjectionVersionStructure(ProjectionVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    onto_feature_ref: ComplexFeatureRefStructure | None = field(
+    onto_feature_ref: None | ComplexFeatureRefStructure = field(
         default=None,
         metadata={
             "name": "OntoFeatureRef",
@@ -152,7 +152,7 @@ class ComplexFeatureProjectionVersionStructure(ProjectionVersionStructure):
             ),
         },
     )
-    features: ComplexFeatureRefsRelStructure | None = field(
+    features: None | ComplexFeatureRefsRelStructure = field(
         default=None,
         metadata={
             "type": "Element",

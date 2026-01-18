@@ -35,7 +35,7 @@ class DiagnosticConnectionRefConditional:
         name = "DIAGNOSTIC-CONNECTION-REF-CONDITIONAL"
 
     diagnostic_connection_ref: (
-        DiagnosticConnectionRefConditional.DiagnosticConnectionRef | None
+        None | DiagnosticConnectionRefConditional.DiagnosticConnectionRef
     ) = field(
         default=None,
         metadata={
@@ -44,7 +44,7 @@ class DiagnosticConnectionRefConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -52,14 +52,14 @@ class DiagnosticConnectionRefConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -70,7 +70,7 @@ class DiagnosticConnectionRefConditional:
 
     @dataclass
     class DiagnosticConnectionRef(Ref):
-        dest: DiagnosticConnectionSubtypesEnum | None = field(
+        dest: None | DiagnosticConnectionSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

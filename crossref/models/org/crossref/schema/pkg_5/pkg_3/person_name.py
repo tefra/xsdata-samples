@@ -39,67 +39,67 @@ class PersonName:
         name = "person_name"
         namespace = "http://www.crossref.org/schema/5.3.1"
 
-    given_name: GivenName | None = field(
+    given_name: None | GivenName = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    surname: Surname | None = field(
+    surname: None | Surname = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
         },
     )
-    suffix: Suffix | None = field(
+    suffix: None | Suffix = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    affiliations: Affiliations | None = field(
+    affiliations: None | Affiliations = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    orcid: Orcid | None = field(
+    orcid: None | Orcid = field(
         default=None,
         metadata={
             "name": "ORCID",
             "type": "Element",
         },
     )
-    alt_name: AltName | None = field(
+    alt_name: None | AltName = field(
         default=None,
         metadata={
             "name": "alt-name",
             "type": "Element",
         },
     )
-    sequence: PersonNameSequence | None = field(
+    sequence: None | PersonNameSequence = field(
         default=None,
         metadata={
             "type": "Attribute",
             "required": True,
         },
     )
-    contributor_role: PersonNameContributorRole | None = field(
+    contributor_role: None | PersonNameContributorRole = field(
         default=None,
         metadata={
             "type": "Attribute",
             "required": True,
         },
     )
-    name_style: PersonNameNameStyle | None = field(
+    name_style: None | PersonNameNameStyle = field(
         default=None,
         metadata={
             "name": "name-style",
             "type": "Attribute",
         },
     )
-    language: PersonNameLanguage | None = field(
+    language: None | PersonNameLanguage = field(
         default=None,
         metadata={
             "type": "Attribute",

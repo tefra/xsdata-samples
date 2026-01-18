@@ -21,7 +21,7 @@ class FareZoneVersionStructure(TariffZoneVersionStructure):
     class Meta:
         name = "FareZone_VersionStructure"
 
-    parent_fare_zone_ref: FareZoneRefStructure | None = field(
+    parent_fare_zone_ref: None | FareZoneRefStructure = field(
         default=None,
         metadata={
             "name": "ParentFareZoneRef",
@@ -29,7 +29,7 @@ class FareZoneVersionStructure(TariffZoneVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    zone_topology: ZoneTopologyEnumeration | None = field(
+    zone_topology: None | ZoneTopologyEnumeration = field(
         default=None,
         metadata={
             "name": "ZoneTopology",
@@ -37,7 +37,7 @@ class FareZoneVersionStructure(TariffZoneVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    scoping_method: ScopingMethodEnumeration | None = field(
+    scoping_method: None | ScopingMethodEnumeration = field(
         default=None,
         metadata={
             "name": "ScopingMethod",
@@ -45,7 +45,7 @@ class FareZoneVersionStructure(TariffZoneVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    transport_organisation_ref: AuthorityRef | OperatorRef | None = field(
+    transport_organisation_ref: None | AuthorityRef | OperatorRef = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -63,7 +63,7 @@ class FareZoneVersionStructure(TariffZoneVersionStructure):
             ),
         },
     )
-    group_of_operators_ref: GroupOfOperatorsRef | None = field(
+    group_of_operators_ref: None | GroupOfOperatorsRef = field(
         default=None,
         metadata={
             "name": "GroupOfOperatorsRef",
@@ -71,7 +71,7 @@ class FareZoneVersionStructure(TariffZoneVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    fare_sections: FareSectionsRelStructure | None = field(
+    fare_sections: None | FareSectionsRelStructure = field(
         default=None,
         metadata={
             "name": "fareSections",
@@ -79,14 +79,14 @@ class FareZoneVersionStructure(TariffZoneVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    contains: TariffZoneRefsRelStructure | None = field(
+    contains: None | TariffZoneRefsRelStructure = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    neighbours: FareZoneRefsRelStructure | None = field(
+    neighbours: None | FareZoneRefsRelStructure = field(
         default=None,
         metadata={
             "type": "Element",

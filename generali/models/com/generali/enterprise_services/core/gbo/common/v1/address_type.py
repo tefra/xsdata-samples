@@ -11,7 +11,7 @@ __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/common/v1"
 
 @dataclass
 class AddressType:
-    address_line1: str | None = field(
+    address_line1: None | str = field(
         default=None,
         metadata={
             "name": "AddressLine1",
@@ -20,7 +20,7 @@ class AddressType:
             "required": True,
         },
     )
-    address_line2: str | None = field(
+    address_line2: None | str = field(
         default=None,
         metadata={
             "name": "AddressLine2",
@@ -28,7 +28,7 @@ class AddressType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
         },
     )
-    state: str | None = field(
+    state: None | str = field(
         default=None,
         metadata={
             "name": "State",
@@ -36,7 +36,7 @@ class AddressType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
         },
     )
-    city: str | None = field(
+    city: None | str = field(
         default=None,
         metadata={
             "name": "City",
@@ -44,7 +44,7 @@ class AddressType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
         },
     )
-    zip_code: str | None = field(
+    zip_code: None | str = field(
         default=None,
         metadata={
             "name": "ZipCode",
@@ -52,7 +52,7 @@ class AddressType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
         },
     )
-    country: CountryGbotype | None = field(
+    country: None | CountryGbotype = field(
         default=None,
         metadata={
             "name": "Country",

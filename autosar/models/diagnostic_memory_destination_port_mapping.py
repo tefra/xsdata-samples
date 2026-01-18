@@ -99,7 +99,7 @@ class DiagnosticMemoryDestinationPortMapping:
     class Meta:
         name = "DIAGNOSTIC-MEMORY-DESTINATION-PORT-MAPPING"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -109,7 +109,7 @@ class DiagnosticMemoryDestinationPortMapping:
         },
     )
     short_name_fragments: (
-        DiagnosticMemoryDestinationPortMapping.ShortNameFragments | None
+        None | DiagnosticMemoryDestinationPortMapping.ShortNameFragments
     ) = field(
         default=None,
         metadata={
@@ -118,7 +118,7 @@ class DiagnosticMemoryDestinationPortMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -126,7 +126,7 @@ class DiagnosticMemoryDestinationPortMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -134,7 +134,7 @@ class DiagnosticMemoryDestinationPortMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -142,7 +142,7 @@ class DiagnosticMemoryDestinationPortMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -150,7 +150,7 @@ class DiagnosticMemoryDestinationPortMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -158,7 +158,7 @@ class DiagnosticMemoryDestinationPortMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: DiagnosticMemoryDestinationPortMapping.Annotations | None = (
+    annotations: None | DiagnosticMemoryDestinationPortMapping.Annotations = (
         field(
             default=None,
             metadata={
@@ -168,7 +168,7 @@ class DiagnosticMemoryDestinationPortMapping:
             },
         )
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -177,7 +177,7 @@ class DiagnosticMemoryDestinationPortMapping:
         },
     )
     memory_destination_ref: (
-        DiagnosticMemoryDestinationPortMapping.MemoryDestinationRef | None
+        None | DiagnosticMemoryDestinationPortMapping.MemoryDestinationRef
     ) = field(
         default=None,
         metadata={
@@ -186,7 +186,7 @@ class DiagnosticMemoryDestinationPortMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    process_ref: DiagnosticMemoryDestinationPortMapping.ProcessRef | None = (
+    process_ref: None | DiagnosticMemoryDestinationPortMapping.ProcessRef = (
         field(
             default=None,
             metadata={
@@ -197,7 +197,7 @@ class DiagnosticMemoryDestinationPortMapping:
         )
     )
     swc_service_dependency_in_executable_iref: (
-        SwcServiceDependencyInExecutableInstanceRef | None
+        None | SwcServiceDependencyInExecutableInstanceRef
     ) = field(
         default=None,
         metadata={
@@ -206,14 +206,14 @@ class DiagnosticMemoryDestinationPortMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -221,7 +221,7 @@ class DiagnosticMemoryDestinationPortMapping:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -253,7 +253,7 @@ class DiagnosticMemoryDestinationPortMapping:
 
     @dataclass
     class MemoryDestinationRef(Ref):
-        dest: DiagnosticMemoryDestinationSubtypesEnum | None = field(
+        dest: None | DiagnosticMemoryDestinationSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -264,7 +264,7 @@ class DiagnosticMemoryDestinationPortMapping:
 
     @dataclass
     class ProcessRef(Ref):
-        dest: ProcessDesignSubtypesEnum | None = field(
+        dest: None | ProcessDesignSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

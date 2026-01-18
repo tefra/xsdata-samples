@@ -148,7 +148,7 @@ class EcuTiming:
     class Meta:
         name = "ECU-TIMING"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -157,7 +157,7 @@ class EcuTiming:
             "required": True,
         },
     )
-    short_name_fragments: EcuTiming.ShortNameFragments | None = field(
+    short_name_fragments: None | EcuTiming.ShortNameFragments = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -165,7 +165,7 @@ class EcuTiming:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -173,7 +173,7 @@ class EcuTiming:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -181,7 +181,7 @@ class EcuTiming:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -189,7 +189,7 @@ class EcuTiming:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -197,7 +197,7 @@ class EcuTiming:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -205,7 +205,7 @@ class EcuTiming:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: EcuTiming.Annotations | None = field(
+    annotations: None | EcuTiming.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -213,7 +213,7 @@ class EcuTiming:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -221,7 +221,7 @@ class EcuTiming:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    timing_conditions: EcuTiming.TimingConditions | None = field(
+    timing_conditions: None | EcuTiming.TimingConditions = field(
         default=None,
         metadata={
             "name": "TIMING-CONDITIONS",
@@ -229,7 +229,7 @@ class EcuTiming:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    timing_descriptions: EcuTiming.TimingDescriptions | None = field(
+    timing_descriptions: None | EcuTiming.TimingDescriptions = field(
         default=None,
         metadata={
             "name": "TIMING-DESCRIPTIONS",
@@ -237,7 +237,7 @@ class EcuTiming:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    timing_guarantees: EcuTiming.TimingGuarantees | None = field(
+    timing_guarantees: None | EcuTiming.TimingGuarantees = field(
         default=None,
         metadata={
             "name": "TIMING-GUARANTEES",
@@ -245,7 +245,7 @@ class EcuTiming:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    timing_requirements: EcuTiming.TimingRequirements | None = field(
+    timing_requirements: None | EcuTiming.TimingRequirements = field(
         default=None,
         metadata={
             "name": "TIMING-REQUIREMENTS",
@@ -253,7 +253,7 @@ class EcuTiming:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    timing_resource: TimingExtensionResource | None = field(
+    timing_resource: None | TimingExtensionResource = field(
         default=None,
         metadata={
             "name": "TIMING-RESOURCE",
@@ -261,7 +261,7 @@ class EcuTiming:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ecu_configuration_ref: EcuTiming.EcuConfigurationRef | None = field(
+    ecu_configuration_ref: None | EcuTiming.EcuConfigurationRef = field(
         default=None,
         metadata={
             "name": "ECU-CONFIGURATION-REF",
@@ -269,14 +269,14 @@ class EcuTiming:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -284,7 +284,7 @@ class EcuTiming:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -740,7 +740,7 @@ class EcuTiming:
 
     @dataclass
     class EcuConfigurationRef(Ref):
-        dest: EcucValueCollectionSubtypesEnum | None = field(
+        dest: None | EcucValueCollectionSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

@@ -32,7 +32,7 @@ class EcuInstanceRefConditional:
     class Meta:
         name = "ECU-INSTANCE-REF-CONDITIONAL"
 
-    ecu_instance_ref: EcuInstanceRefConditional.EcuInstanceRef | None = field(
+    ecu_instance_ref: None | EcuInstanceRefConditional.EcuInstanceRef = field(
         default=None,
         metadata={
             "name": "ECU-INSTANCE-REF",
@@ -40,7 +40,7 @@ class EcuInstanceRefConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -48,14 +48,14 @@ class EcuInstanceRefConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -66,7 +66,7 @@ class EcuInstanceRefConditional:
 
     @dataclass
     class EcuInstanceRef(Ref):
-        dest: EcuInstanceSubtypesEnum | None = field(
+        dest: None | EcuInstanceSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

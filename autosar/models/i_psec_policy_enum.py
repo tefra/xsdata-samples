@@ -26,20 +26,20 @@ class IPsecPolicyEnum:
     class Meta:
         name = "I-PSEC-POLICY-ENUM"
 
-    value: IPsecPolicyEnumSimple | None = field(
+    value: None | IPsecPolicyEnumSimple = field(
         default=None,
         metadata={
             "required": True,
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

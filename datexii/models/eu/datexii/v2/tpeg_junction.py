@@ -33,7 +33,7 @@ class TpegJunction(TpegPoint):
     :ivar tpeg_junction_extension:
     """
 
-    point_coordinates: PointCoordinates | None = field(
+    point_coordinates: None | PointCoordinates = field(
         default=None,
         metadata={
             "name": "pointCoordinates",
@@ -42,7 +42,7 @@ class TpegJunction(TpegPoint):
             "required": True,
         },
     )
-    name: TpegJunctionPointDescriptor | None = field(
+    name: None | TpegJunctionPointDescriptor = field(
         default=None,
         metadata={
             "type": "Element",
@@ -66,7 +66,7 @@ class TpegJunction(TpegPoint):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    tpeg_junction_extension: ExtensionType | None = field(
+    tpeg_junction_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "tpegJunctionExtension",

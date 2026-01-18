@@ -51,7 +51,7 @@ class FareStructureElementVersionStructure(PriceableObjectVersionStructure):
     class Meta:
         name = "FareStructureElement_VersionStructure"
 
-    tariff_basis: TariffBasisEnumeration | None = field(
+    tariff_basis: None | TariffBasisEnumeration = field(
         default=None,
         metadata={
             "name": "TariffBasis",
@@ -60,7 +60,7 @@ class FareStructureElementVersionStructure(PriceableObjectVersionStructure):
         },
     )
     type_of_fare_structure_element_ref: (
-        TypeOfFareStructureElementRef | None
+        None | TypeOfFareStructureElementRef
     ) = field(
         default=None,
         metadata={
@@ -70,10 +70,10 @@ class FareStructureElementVersionStructure(PriceableObjectVersionStructure):
         },
     )
     geographical_interval_ref_or_geographical_intervals_or_geographical_structure_factors: (
-        GeographicalIntervalRef
+        None
+        | GeographicalIntervalRef
         | GeographicalIntervalsRelStructure
         | GeographicalStructureFactorsRelStructure
-        | None
     ) = field(
         default=None,
         metadata={
@@ -98,10 +98,10 @@ class FareStructureElementVersionStructure(PriceableObjectVersionStructure):
         },
     )
     time_interval_ref_or_time_intervals_or_time_structure_factors: (
-        TimeIntervalRef
+        None
+        | TimeIntervalRef
         | TimeIntervalsRelStructure
         | TimeStructureFactorsRelStructure
-        | None
     ) = field(
         default=None,
         metadata={
@@ -126,11 +126,11 @@ class FareStructureElementVersionStructure(PriceableObjectVersionStructure):
         },
     )
     choice: (
-        FareQuotaFactorRef
+        None
+        | FareQuotaFactorRef
         | FareDemandFactorRef
         | QualityStructureFactorRef
         | QualityStructureFactorsRelStructure
-        | None
     ) = field(
         default=None,
         metadata={
@@ -160,11 +160,11 @@ class FareStructureElementVersionStructure(PriceableObjectVersionStructure):
         },
     )
     choice_1: (
-        DistanceMatrixElementRef
+        None
+        | DistanceMatrixElementRef
         | DistanceMatrixElementsRelStructure
         | GroupOfDistanceMatrixElementsRef
         | GroupOfDistanceMatrixElements
-        | None
     ) = field(
         default=None,
         metadata={
@@ -194,7 +194,7 @@ class FareStructureElementVersionStructure(PriceableObjectVersionStructure):
         },
     )
     fare_structure_elements_in_sequence: (
-        FareStructureElementsInSequenceRelStructure | None
+        None | FareStructureElementsInSequenceRelStructure
     ) = field(
         default=None,
         metadata={
@@ -204,10 +204,10 @@ class FareStructureElementVersionStructure(PriceableObjectVersionStructure):
         },
     )
     validity_parameter_assignments_or_generic_parameter_assignment_or_generic_parameter_assignment_in_context: (
-        GenericParameterAssignmentsRelStructure
+        None
+        | GenericParameterAssignmentsRelStructure
         | GenericParameterAssignment
         | GenericParameterAssignmentInContext
-        | None
     ) = field(
         default=None,
         metadata={
@@ -231,14 +231,14 @@ class FareStructureElementVersionStructure(PriceableObjectVersionStructure):
             ),
         },
     )
-    prices: FareStructureElementPricesRelStructure | None = field(
+    prices: None | FareStructureElementPricesRelStructure = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    name_of_class_of_unit: str | None = field(
+    name_of_class_of_unit: None | str = field(
         default=None,
         metadata={
             "name": "nameOfClassOfUnit",

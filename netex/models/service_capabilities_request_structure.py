@@ -10,7 +10,7 @@ __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
 @dataclass
 class ServiceCapabilitiesRequestStructure(AbstractServiceRequestStructure):
-    participant_permissions: bool | None = field(
+    participant_permissions: None | bool = field(
         default=None,
         metadata={
             "name": "ParticipantPermissions",
@@ -18,7 +18,7 @@ class ServiceCapabilitiesRequestStructure(AbstractServiceRequestStructure):
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    extensions: Extensions1 | None = field(
+    extensions: None | Extensions1 = field(
         default=None,
         metadata={
             "name": "Extensions",

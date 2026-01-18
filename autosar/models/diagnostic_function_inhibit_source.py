@@ -90,7 +90,7 @@ class DiagnosticFunctionInhibitSource:
     class Meta:
         name = "DIAGNOSTIC-FUNCTION-INHIBIT-SOURCE"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -100,7 +100,7 @@ class DiagnosticFunctionInhibitSource:
         },
     )
     short_name_fragments: (
-        DiagnosticFunctionInhibitSource.ShortNameFragments | None
+        None | DiagnosticFunctionInhibitSource.ShortNameFragments
     ) = field(
         default=None,
         metadata={
@@ -109,7 +109,7 @@ class DiagnosticFunctionInhibitSource:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -117,7 +117,7 @@ class DiagnosticFunctionInhibitSource:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -125,7 +125,7 @@ class DiagnosticFunctionInhibitSource:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -133,7 +133,7 @@ class DiagnosticFunctionInhibitSource:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -141,7 +141,7 @@ class DiagnosticFunctionInhibitSource:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -149,7 +149,7 @@ class DiagnosticFunctionInhibitSource:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: DiagnosticFunctionInhibitSource.Annotations | None = field(
+    annotations: None | DiagnosticFunctionInhibitSource.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -157,7 +157,7 @@ class DiagnosticFunctionInhibitSource:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    event_group_ref: DiagnosticFunctionInhibitSource.EventGroupRef | None = (
+    event_group_ref: None | DiagnosticFunctionInhibitSource.EventGroupRef = (
         field(
             default=None,
             metadata={
@@ -167,7 +167,7 @@ class DiagnosticFunctionInhibitSource:
             },
         )
     )
-    event_ref: DiagnosticFunctionInhibitSource.EventRef | None = field(
+    event_ref: None | DiagnosticFunctionInhibitSource.EventRef = field(
         default=None,
         metadata={
             "name": "EVENT-REF",
@@ -175,14 +175,14 @@ class DiagnosticFunctionInhibitSource:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -190,7 +190,7 @@ class DiagnosticFunctionInhibitSource:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -222,7 +222,7 @@ class DiagnosticFunctionInhibitSource:
 
     @dataclass
     class EventGroupRef(Ref):
-        dest: DiagnosticFimAliasEventGroupSubtypesEnum | None = field(
+        dest: None | DiagnosticFimAliasEventGroupSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -233,7 +233,7 @@ class DiagnosticFunctionInhibitSource:
 
     @dataclass
     class EventRef(Ref):
-        dest: DiagnosticFimAliasEventSubtypesEnum | None = field(
+        dest: None | DiagnosticFimAliasEventSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

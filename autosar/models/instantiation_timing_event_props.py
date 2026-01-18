@@ -44,7 +44,7 @@ class InstantiationTimingEventProps:
     class Meta:
         name = "INSTANTIATION-TIMING-EVENT-PROPS"
 
-    refined_event_iref: InstanceEventInCompositionInstanceRef | None = field(
+    refined_event_iref: None | InstanceEventInCompositionInstanceRef = field(
         default=None,
         metadata={
             "name": "REFINED-EVENT-IREF",
@@ -52,7 +52,7 @@ class InstantiationTimingEventProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    short_label: Identifier | None = field(
+    short_label: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-LABEL",
@@ -60,7 +60,7 @@ class InstantiationTimingEventProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -68,7 +68,7 @@ class InstantiationTimingEventProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    period: TimeValue | None = field(
+    period: None | TimeValue = field(
         default=None,
         metadata={
             "name": "PERIOD",
@@ -76,14 +76,14 @@ class InstantiationTimingEventProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

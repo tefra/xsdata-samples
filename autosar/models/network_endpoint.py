@@ -96,7 +96,7 @@ class NetworkEndpoint:
     class Meta:
         name = "NETWORK-ENDPOINT"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -105,7 +105,7 @@ class NetworkEndpoint:
             "required": True,
         },
     )
-    short_name_fragments: NetworkEndpoint.ShortNameFragments | None = field(
+    short_name_fragments: None | NetworkEndpoint.ShortNameFragments = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -113,7 +113,7 @@ class NetworkEndpoint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -121,7 +121,7 @@ class NetworkEndpoint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -129,7 +129,7 @@ class NetworkEndpoint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -137,7 +137,7 @@ class NetworkEndpoint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -145,7 +145,7 @@ class NetworkEndpoint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -153,7 +153,7 @@ class NetworkEndpoint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: NetworkEndpoint.Annotations | None = field(
+    annotations: None | NetworkEndpoint.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -161,7 +161,7 @@ class NetworkEndpoint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    fully_qualified_domain_name: String | None = field(
+    fully_qualified_domain_name: None | String = field(
         default=None,
         metadata={
             "name": "FULLY-QUALIFIED-DOMAIN-NAME",
@@ -169,7 +169,7 @@ class NetworkEndpoint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    infrastructure_services: InfrastructureServices | None = field(
+    infrastructure_services: None | InfrastructureServices = field(
         default=None,
         metadata={
             "name": "INFRASTRUCTURE-SERVICES",
@@ -177,7 +177,7 @@ class NetworkEndpoint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ip_sec_config: IpSecConfig | None = field(
+    ip_sec_config: None | IpSecConfig = field(
         default=None,
         metadata={
             "name": "IP-SEC-CONFIG",
@@ -186,7 +186,7 @@ class NetworkEndpoint:
         },
     )
     network_endpoint_addresses: (
-        NetworkEndpoint.NetworkEndpointAddresses | None
+        None | NetworkEndpoint.NetworkEndpointAddresses
     ) = field(
         default=None,
         metadata={
@@ -195,7 +195,7 @@ class NetworkEndpoint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    priority: PositiveInteger | None = field(
+    priority: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "PRIORITY",
@@ -203,14 +203,14 @@ class NetworkEndpoint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -218,7 +218,7 @@ class NetworkEndpoint:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",

@@ -10,7 +10,7 @@ __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
 @dataclass
 class AbstractReferencingItemStructure(AbstractItemStructure):
-    item_ref: ItemRefStructure | None = field(
+    item_ref: None | ItemRefStructure = field(
         default=None,
         metadata={
             "name": "ItemRef",

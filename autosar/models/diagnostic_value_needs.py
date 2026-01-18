@@ -122,7 +122,7 @@ class DiagnosticValueNeeds:
     class Meta:
         name = "DIAGNOSTIC-VALUE-NEEDS"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -131,7 +131,7 @@ class DiagnosticValueNeeds:
             "required": True,
         },
     )
-    short_name_fragments: DiagnosticValueNeeds.ShortNameFragments | None = (
+    short_name_fragments: None | DiagnosticValueNeeds.ShortNameFragments = (
         field(
             default=None,
             metadata={
@@ -141,7 +141,7 @@ class DiagnosticValueNeeds:
             },
         )
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -149,7 +149,7 @@ class DiagnosticValueNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -157,7 +157,7 @@ class DiagnosticValueNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -165,7 +165,7 @@ class DiagnosticValueNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -173,7 +173,7 @@ class DiagnosticValueNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -181,7 +181,7 @@ class DiagnosticValueNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: DiagnosticValueNeeds.Annotations | None = field(
+    annotations: None | DiagnosticValueNeeds.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -189,7 +189,7 @@ class DiagnosticValueNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    audiences: DiagnosticValueNeeds.Audiences | None = field(
+    audiences: None | DiagnosticValueNeeds.Audiences = field(
         default=None,
         metadata={
             "name": "AUDIENCES",
@@ -197,7 +197,7 @@ class DiagnosticValueNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    diag_requirement: DiagRequirementIdString | None = field(
+    diag_requirement: None | DiagRequirementIdString = field(
         default=None,
         metadata={
             "name": "DIAG-REQUIREMENT",
@@ -205,7 +205,7 @@ class DiagnosticValueNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    security_access_level: PositiveInteger | None = field(
+    security_access_level: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "SECURITY-ACCESS-LEVEL",
@@ -213,7 +213,7 @@ class DiagnosticValueNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    data_length: PositiveInteger | None = field(
+    data_length: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "DATA-LENGTH",
@@ -221,7 +221,7 @@ class DiagnosticValueNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    diagnostic_value_access: DiagnosticValueAccessEnum | None = field(
+    diagnostic_value_access: None | DiagnosticValueAccessEnum = field(
         default=None,
         metadata={
             "name": "DIAGNOSTIC-VALUE-ACCESS",
@@ -229,7 +229,7 @@ class DiagnosticValueNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    did_number: PositiveInteger | None = field(
+    did_number: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "DID-NUMBER",
@@ -237,7 +237,7 @@ class DiagnosticValueNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    fixed_length: Boolean | None = field(
+    fixed_length: None | Boolean = field(
         default=None,
         metadata={
             "name": "FIXED-LENGTH",
@@ -245,7 +245,7 @@ class DiagnosticValueNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    processing_style: DiagnosticProcessingStyleEnum | None = field(
+    processing_style: None | DiagnosticProcessingStyleEnum = field(
         default=None,
         metadata={
             "name": "PROCESSING-STYLE",
@@ -253,14 +253,14 @@ class DiagnosticValueNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -268,7 +268,7 @@ class DiagnosticValueNeeds:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",

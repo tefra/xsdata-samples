@@ -50,7 +50,7 @@ class SectionNamePrefix:
     class Meta:
         name = "SECTION-NAME-PREFIX"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -59,7 +59,7 @@ class SectionNamePrefix:
             "required": True,
         },
     )
-    short_name_fragments: SectionNamePrefix.ShortNameFragments | None = field(
+    short_name_fragments: None | SectionNamePrefix.ShortNameFragments = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -67,7 +67,7 @@ class SectionNamePrefix:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    symbol: CIdentifier | None = field(
+    symbol: None | CIdentifier = field(
         default=None,
         metadata={
             "name": "SYMBOL",
@@ -75,7 +75,7 @@ class SectionNamePrefix:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    implemented_in_ref: SectionNamePrefix.ImplementedInRef | None = field(
+    implemented_in_ref: None | SectionNamePrefix.ImplementedInRef = field(
         default=None,
         metadata={
             "name": "IMPLEMENTED-IN-REF",
@@ -83,7 +83,7 @@ class SectionNamePrefix:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -91,14 +91,14 @@ class SectionNamePrefix:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -120,7 +120,7 @@ class SectionNamePrefix:
 
     @dataclass
     class ImplementedInRef(Ref):
-        dest: DependencyOnArtifactSubtypesEnum | None = field(
+        dest: None | DependencyOnArtifactSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

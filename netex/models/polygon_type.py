@@ -12,7 +12,7 @@ __NAMESPACE__ = "http://www.opengis.net/gml/3.2"
 
 @dataclass
 class PolygonType(AbstractSurfaceType):
-    exterior: Exterior | None = field(
+    exterior: None | Exterior = field(
         default=None,
         metadata={
             "type": "Element",

@@ -17,7 +17,7 @@ __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/common/v1"
 
 @dataclass
 class ValueTypeDeduction:
-    percentage: PercentType | None = field(
+    percentage: None | PercentType = field(
         default=None,
         metadata={
             "name": "Percentage",
@@ -25,7 +25,7 @@ class ValueTypeDeduction:
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
         },
     )
-    amount: AmountType | None = field(
+    amount: None | AmountType = field(
         default=None,
         metadata={
             "name": "Amount",
@@ -33,7 +33,7 @@ class ValueTypeDeduction:
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
         },
     )
-    quantity: QuantityType | None = field(
+    quantity: None | QuantityType = field(
         default=None,
         metadata={
             "name": "Quantity",

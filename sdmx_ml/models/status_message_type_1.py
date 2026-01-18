@@ -37,7 +37,7 @@ class StatusMessageType1:
             "min_occurs": 1,
         },
     )
-    code: str | None = field(
+    code: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",

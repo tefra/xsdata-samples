@@ -68,7 +68,7 @@ class QueuedSenderComSpec:
         name = "QUEUED-SENDER-COM-SPEC"
 
     composite_network_representations: (
-        QueuedSenderComSpec.CompositeNetworkRepresentations | None
+        None | QueuedSenderComSpec.CompositeNetworkRepresentations
     ) = field(
         default=None,
         metadata={
@@ -77,7 +77,7 @@ class QueuedSenderComSpec:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    data_element_ref: QueuedSenderComSpec.DataElementRef | None = field(
+    data_element_ref: None | QueuedSenderComSpec.DataElementRef = field(
         default=None,
         metadata={
             "name": "DATA-ELEMENT-REF",
@@ -85,7 +85,7 @@ class QueuedSenderComSpec:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    data_update_period: TimeValue | None = field(
+    data_update_period: None | TimeValue = field(
         default=None,
         metadata={
             "name": "DATA-UPDATE-PERIOD",
@@ -93,7 +93,7 @@ class QueuedSenderComSpec:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    handle_out_of_range: HandleOutOfRangeEnum | None = field(
+    handle_out_of_range: None | HandleOutOfRangeEnum = field(
         default=None,
         metadata={
             "name": "HANDLE-OUT-OF-RANGE",
@@ -101,7 +101,7 @@ class QueuedSenderComSpec:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    network_representation: SwDataDefProps | None = field(
+    network_representation: None | SwDataDefProps = field(
         default=None,
         metadata={
             "name": "NETWORK-REPRESENTATION",
@@ -109,7 +109,7 @@ class QueuedSenderComSpec:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sender_intent: SenderIntentEnum | None = field(
+    sender_intent: None | SenderIntentEnum = field(
         default=None,
         metadata={
             "name": "SENDER-INTENT",
@@ -117,7 +117,7 @@ class QueuedSenderComSpec:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    transmission_acknowledge: TransmissionAcknowledgementRequest | None = (
+    transmission_acknowledge: None | TransmissionAcknowledgementRequest = (
         field(
             default=None,
             metadata={
@@ -127,7 +127,7 @@ class QueuedSenderComSpec:
             },
         )
     )
-    transmission_props: TransmissionComSpecProps | None = field(
+    transmission_props: None | TransmissionComSpecProps = field(
         default=None,
         metadata={
             "name": "TRANSMISSION-PROPS",
@@ -135,7 +135,7 @@ class QueuedSenderComSpec:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    uses_end_to_end_protection: BooleanValueVariationPoint | None = field(
+    uses_end_to_end_protection: None | BooleanValueVariationPoint = field(
         default=None,
         metadata={
             "name": "USES-END-TO-END-PROTECTION",
@@ -143,14 +143,14 @@ class QueuedSenderComSpec:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -174,7 +174,7 @@ class QueuedSenderComSpec:
 
     @dataclass
     class DataElementRef(Ref):
-        dest: AutosarDataPrototypeSubtypesEnum | None = field(
+        dest: None | AutosarDataPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

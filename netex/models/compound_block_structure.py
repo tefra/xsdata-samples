@@ -17,7 +17,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 @dataclass
 class CompoundBlockStructure(DataManagedObjectStructure):
-    name: MultilingualString | None = field(
+    name: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "Name",
@@ -25,7 +25,7 @@ class CompoundBlockStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    description: MultilingualString | None = field(
+    description: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "Description",
@@ -33,7 +33,7 @@ class CompoundBlockStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    vehicle_type_ref: CompoundTrainRef | TrainRef | VehicleTypeRef | None = (
+    vehicle_type_ref: None | CompoundTrainRef | TrainRef | VehicleTypeRef = (
         field(
             default=None,
             metadata={
@@ -58,7 +58,7 @@ class CompoundBlockStructure(DataManagedObjectStructure):
             },
         )
     )
-    start_point_ref: TimingPointInJourneyPatternRefStructure | None = field(
+    start_point_ref: None | TimingPointInJourneyPatternRefStructure = field(
         default=None,
         metadata={
             "name": "StartPointRef",
@@ -66,7 +66,7 @@ class CompoundBlockStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    end_point_ref: TimingPointInJourneyPatternRefStructure | None = field(
+    end_point_ref: None | TimingPointInJourneyPatternRefStructure = field(
         default=None,
         metadata={
             "name": "EndPointRef",
@@ -74,7 +74,7 @@ class CompoundBlockStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    parts: BlockPartsRelStructure | None = field(
+    parts: None | BlockPartsRelStructure = field(
         default=None,
         metadata={
             "type": "Element",

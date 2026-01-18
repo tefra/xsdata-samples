@@ -18,7 +18,7 @@ class OpenlrRectangleLocationReference(OpenlrAreaLocationReference):
     defined by two geo-coordinate pairs.
     """
 
-    openlr_rectangle: OpenlrRectangle | None = field(
+    openlr_rectangle: None | OpenlrRectangle = field(
         default=None,
         metadata={
             "name": "openlrRectangle",
@@ -27,7 +27,7 @@ class OpenlrRectangleLocationReference(OpenlrAreaLocationReference):
             "required": True,
         },
     )
-    openlr_rectangle_location_reference_extension: ExtensionType | None = (
+    openlr_rectangle_location_reference_extension: None | ExtensionType = (
         field(
             default=None,
             metadata={

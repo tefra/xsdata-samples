@@ -36,7 +36,7 @@ class SomeipCollectionProps:
     class Meta:
         name = "SOMEIP-COLLECTION-PROPS"
 
-    udp_collection_buffer_timeout: TimeValue | None = field(
+    udp_collection_buffer_timeout: None | TimeValue = field(
         default=None,
         metadata={
             "name": "UDP-COLLECTION-BUFFER-TIMEOUT",
@@ -44,7 +44,7 @@ class SomeipCollectionProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    udp_collection_trigger: UdpCollectionTriggerEnum | None = field(
+    udp_collection_trigger: None | UdpCollectionTriggerEnum = field(
         default=None,
         metadata={
             "name": "UDP-COLLECTION-TRIGGER",
@@ -52,14 +52,14 @@ class SomeipCollectionProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

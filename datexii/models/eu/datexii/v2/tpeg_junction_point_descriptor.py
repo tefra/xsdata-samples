@@ -25,7 +25,7 @@ class TpegJunctionPointDescriptor(TpegPointDescriptor):
     """
 
     tpeg_junction_point_descriptor_type: (
-        TpegLoc03JunctionPointDescriptorSubtypeEnum | None
+        None | TpegLoc03JunctionPointDescriptorSubtypeEnum
     ) = field(
         default=None,
         metadata={
@@ -35,7 +35,7 @@ class TpegJunctionPointDescriptor(TpegPointDescriptor):
             "required": True,
         },
     )
-    tpeg_junction_point_descriptor_extension: ExtensionType | None = field(
+    tpeg_junction_point_descriptor_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "tpegJunctionPointDescriptorExtension",

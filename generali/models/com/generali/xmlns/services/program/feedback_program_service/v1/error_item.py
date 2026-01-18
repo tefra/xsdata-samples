@@ -12,7 +12,7 @@ class ErrorItem:
     class Meta:
         namespace = "http://xmlns.generali.com/services/program/FeedbackProgramService/v1"
 
-    code: str | None = field(
+    code: None | str = field(
         default=None,
         metadata={
             "name": "Code",
@@ -20,7 +20,7 @@ class ErrorItem:
             "required": True,
         },
     )
-    description: str | None = field(
+    description: None | str = field(
         default=None,
         metadata={
             "name": "Description",
@@ -28,7 +28,7 @@ class ErrorItem:
             "required": True,
         },
     )
-    type_value: str | None = field(
+    type_value: None | str = field(
         default=None,
         metadata={
             "name": "Type",
@@ -36,7 +36,7 @@ class ErrorItem:
             "required": True,
         },
     )
-    level: str | None = field(
+    level: None | str = field(
         default=None,
         metadata={
             "name": "Level",

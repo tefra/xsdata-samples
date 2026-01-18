@@ -29,14 +29,14 @@ class TransparentBridge:
         name = "transparentBridge"
         namespace = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
-    vendor_extensions: VendorExtensions | None = field(
+    vendor_extensions: None | VendorExtensions = field(
         default=None,
         metadata={
             "name": "vendorExtensions",
             "type": "Element",
         },
     )
-    initiator_ref: str | None = field(
+    initiator_ref: None | str = field(
         default=None,
         metadata={
             "name": "initiatorRef",
@@ -44,7 +44,7 @@ class TransparentBridge:
             "required": True,
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",

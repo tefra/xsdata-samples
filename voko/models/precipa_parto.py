@@ -12,19 +12,19 @@ class PrecipaParto:
     class Meta:
         name = "precipa-parto"
 
-    parto: Parto | None = field(
+    parto: None | Parto = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    sekcio: Sekcio | None = field(
+    sekcio: None | Sekcio = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    art: Art | None = field(
+    art: None | Art = field(
         default=None,
         metadata={
             "type": "Element",

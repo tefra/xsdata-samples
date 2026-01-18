@@ -48,7 +48,7 @@ class PlanningSchedule:
         }
     )
     list_of_location_grouped_planning_detail: (
-        ListOfLocationGroupedPlanningDetail | None
+        None | ListOfLocationGroupedPlanningDetail
     ) = field(
         default=None,
         metadata={
@@ -57,7 +57,7 @@ class PlanningSchedule:
         },
     )
     list_of_material_grouped_planning_detail: (
-        ListOfMaterialGroupedPlanningDetail | None
+        None | ListOfMaterialGroupedPlanningDetail
     ) = field(
         default=None,
         metadata={
@@ -65,7 +65,7 @@ class PlanningSchedule:
             "type": "Element",
         },
     )
-    planning_schedule_summary: PlanningScheduleSummary | None = field(
+    planning_schedule_summary: None | PlanningScheduleSummary = field(
         default=None,
         metadata={
             "name": "PlanningScheduleSummary",

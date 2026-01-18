@@ -14,7 +14,7 @@ class AreaExtended:
     Extension class for area used in parking publication extension.
     """
 
-    named_area: NamedArea | None = field(
+    named_area: None | NamedArea = field(
         default=None,
         metadata={
             "name": "namedArea",

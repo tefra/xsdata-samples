@@ -101,7 +101,7 @@ class FmFeatureSelection:
     class Meta:
         name = "FM-FEATURE-SELECTION"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -110,7 +110,7 @@ class FmFeatureSelection:
             "required": True,
         },
     )
-    short_name_fragments: FmFeatureSelection.ShortNameFragments | None = field(
+    short_name_fragments: None | FmFeatureSelection.ShortNameFragments = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -118,7 +118,7 @@ class FmFeatureSelection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -126,7 +126,7 @@ class FmFeatureSelection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -134,7 +134,7 @@ class FmFeatureSelection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -142,7 +142,7 @@ class FmFeatureSelection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -150,7 +150,7 @@ class FmFeatureSelection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -158,7 +158,7 @@ class FmFeatureSelection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: FmFeatureSelection.Annotations | None = field(
+    annotations: None | FmFeatureSelection.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -166,7 +166,7 @@ class FmFeatureSelection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    feature_ref: FmFeatureSelection.FeatureRef | None = field(
+    feature_ref: None | FmFeatureSelection.FeatureRef = field(
         default=None,
         metadata={
             "name": "FEATURE-REF",
@@ -174,7 +174,7 @@ class FmFeatureSelection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    state: FmFeatureSelectionState | None = field(
+    state: None | FmFeatureSelectionState = field(
         default=None,
         metadata={
             "name": "STATE",
@@ -182,7 +182,7 @@ class FmFeatureSelection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    minimum_selected_binding_time: BindingTimeEnum | None = field(
+    minimum_selected_binding_time: None | BindingTimeEnum = field(
         default=None,
         metadata={
             "name": "MINIMUM-SELECTED-BINDING-TIME",
@@ -190,7 +190,7 @@ class FmFeatureSelection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    maximum_selected_binding_time: BindingTimeEnum | None = field(
+    maximum_selected_binding_time: None | BindingTimeEnum = field(
         default=None,
         metadata={
             "name": "MAXIMUM-SELECTED-BINDING-TIME",
@@ -198,7 +198,7 @@ class FmFeatureSelection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    attribute_values: FmFeatureSelection.AttributeValues | None = field(
+    attribute_values: None | FmFeatureSelection.AttributeValues = field(
         default=None,
         metadata={
             "name": "ATTRIBUTE-VALUES",
@@ -206,14 +206,14 @@ class FmFeatureSelection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -221,7 +221,7 @@ class FmFeatureSelection:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -253,7 +253,7 @@ class FmFeatureSelection:
 
     @dataclass
     class FeatureRef(Ref):
-        dest: FmFeatureSubtypesEnum | None = field(
+        dest: None | FmFeatureSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

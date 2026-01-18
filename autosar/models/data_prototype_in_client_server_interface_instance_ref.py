@@ -36,8 +36,8 @@ class DataPrototypeInClientServerInterfaceInstanceRef:
         name = "DATA-PROTOTYPE-IN-CLIENT-SERVER-INTERFACE-INSTANCE-REF"
 
     root_data_prototype_in_cs_ref: (
-        DataPrototypeInClientServerInterfaceInstanceRef.RootDataPrototypeInCsRef
-        | None
+        None
+        | DataPrototypeInClientServerInterfaceInstanceRef.RootDataPrototypeInCsRef
     ) = field(
         default=None,
         metadata={
@@ -57,8 +57,8 @@ class DataPrototypeInClientServerInterfaceInstanceRef:
         },
     )
     target_data_prototype_in_cs_ref: (
-        DataPrototypeInClientServerInterfaceInstanceRef.TargetDataPrototypeInCsRef
-        | None
+        None
+        | DataPrototypeInClientServerInterfaceInstanceRef.TargetDataPrototypeInCsRef
     ) = field(
         default=None,
         metadata={
@@ -67,14 +67,14 @@ class DataPrototypeInClientServerInterfaceInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -85,7 +85,7 @@ class DataPrototypeInClientServerInterfaceInstanceRef:
 
     @dataclass
     class RootDataPrototypeInCsRef(Ref):
-        dest: AutosarDataPrototypeSubtypesEnum | None = field(
+        dest: None | AutosarDataPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -96,7 +96,7 @@ class DataPrototypeInClientServerInterfaceInstanceRef:
 
     @dataclass
     class ContextDataPrototypeInCsRef(Ref):
-        dest: ApplicationCompositeElementDataPrototypeSubtypesEnum | None = (
+        dest: None | ApplicationCompositeElementDataPrototypeSubtypesEnum = (
             field(
                 default=None,
                 metadata={
@@ -109,7 +109,7 @@ class DataPrototypeInClientServerInterfaceInstanceRef:
 
     @dataclass
     class TargetDataPrototypeInCsRef(Ref):
-        dest: DataPrototypeSubtypesEnum | None = field(
+        dest: None | DataPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

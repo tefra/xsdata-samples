@@ -19,73 +19,73 @@ class RestrictedBy:
         name = "restricted-by"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    assigning_authority: str | None = field(
+    assigning_authority: None | str = field(
         default=None,
         metadata={
             "name": "assigning-authority",
             "type": "Attribute",
         },
     )
-    designator: str | None = field(
+    designator: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    hreflang: str | None = field(
+    hreflang: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    vocab: str | None = field(
+    vocab: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    vocab_identifier: str | None = field(
+    vocab_identifier: None | str = field(
         default=None,
         metadata={
             "name": "vocab-identifier",
             "type": "Attribute",
         },
     )
-    vocab_term: str | None = field(
+    vocab_term: None | str = field(
         default=None,
         metadata={
             "name": "vocab-term",
             "type": "Attribute",
         },
     )
-    vocab_term_identifier: str | None = field(
+    vocab_term_identifier: None | str = field(
         default=None,
         metadata={
             "name": "vocab-term-identifier",
             "type": "Attribute",
         },
     )
-    actuate: ActuateType | None = field(
+    actuate: None | ActuateType = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    href: str | None = field(
+    href: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    role: str | None = field(
+    role: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -93,14 +93,14 @@ class RestrictedBy:
             "min_length": 1,
         },
     )
-    show: ShowType | None = field(
+    show: None | ShowType = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    title: str | None = field(
+    title: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -116,7 +116,7 @@ class RestrictedBy:
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",

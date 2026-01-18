@@ -21,7 +21,7 @@ class ModeRestrictionAssessmentVersionStructure(
     class Meta:
         name = "ModeRestrictionAssessment_VersionStructure"
 
-    exclude: bool | None = field(
+    exclude: None | bool = field(
         default=None,
         metadata={
             "name": "Exclude",
@@ -29,7 +29,7 @@ class ModeRestrictionAssessmentVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    transport_modes: TransportModesRelStructure | None = field(
+    transport_modes: None | TransportModesRelStructure = field(
         default=None,
         metadata={
             "name": "transportModes",
@@ -38,13 +38,13 @@ class ModeRestrictionAssessmentVersionStructure(
         },
     )
     mode_of_operation_ref_or_alternative_mode_of_operation_ref_or_conventional_mode_of_operation_ref: (
-        PersonalModeOfOperationRef
+        None
+        | PersonalModeOfOperationRef
         | VehiclePoolingRef
         | VehicleSharingRef
         | VehicleRentalRef
         | FlexibleModeOfOperationRef
         | ScheduledModeOfOperationRef
-        | None
     ) = field(
         default=None,
         metadata={
@@ -83,7 +83,7 @@ class ModeRestrictionAssessmentVersionStructure(
             ),
         },
     )
-    minimum_number_of_passengers: int | None = field(
+    minimum_number_of_passengers: None | int = field(
         default=None,
         metadata={
             "name": "MinimumNumberOfPassengers",

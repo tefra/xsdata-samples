@@ -33,7 +33,7 @@ class CompuScales:
     class Meta:
         name = "COMPU-SCALES"
 
-    compu_scales: CompuScales.CompuScalesInner | None = field(
+    compu_scales: None | CompuScales.CompuScalesInner = field(
         default=None,
         metadata={
             "name": "COMPU-SCALES",
@@ -41,14 +41,14 @@ class CompuScales:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

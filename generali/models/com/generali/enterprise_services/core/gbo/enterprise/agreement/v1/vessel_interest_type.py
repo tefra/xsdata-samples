@@ -16,7 +16,7 @@ __NAMESPACE__ = (
 
 @dataclass
 class VesselInterestType:
-    template_name: str | None = field(
+    template_name: None | str = field(
         default=None,
         metadata={
             "name": "TemplateName",
@@ -24,7 +24,7 @@ class VesselInterestType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    currency: str | None = field(
+    currency: None | str = field(
         default=None,
         metadata={
             "name": "Currency",
@@ -32,7 +32,7 @@ class VesselInterestType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    value: AmountType | None = field(
+    value: None | AmountType = field(
         default=None,
         metadata={
             "name": "Value",
@@ -40,7 +40,7 @@ class VesselInterestType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    rate: NumericType | None = field(
+    rate: None | NumericType = field(
         default=None,
         metadata={
             "name": "Rate",
@@ -48,7 +48,7 @@ class VesselInterestType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    deductible: AmountType | None = field(
+    deductible: None | AmountType = field(
         default=None,
         metadata={
             "name": "Deductible",

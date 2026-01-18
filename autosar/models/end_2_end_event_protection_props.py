@@ -102,7 +102,7 @@ class End2EndEventProtectionProps:
     class Meta:
         name = "END-2-END-EVENT-PROTECTION-PROPS"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -112,7 +112,7 @@ class End2EndEventProtectionProps:
         },
     )
     short_name_fragments: (
-        End2EndEventProtectionProps.ShortNameFragments | None
+        None | End2EndEventProtectionProps.ShortNameFragments
     ) = field(
         default=None,
         metadata={
@@ -121,7 +121,7 @@ class End2EndEventProtectionProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -129,7 +129,7 @@ class End2EndEventProtectionProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -137,7 +137,7 @@ class End2EndEventProtectionProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -145,7 +145,7 @@ class End2EndEventProtectionProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -153,7 +153,7 @@ class End2EndEventProtectionProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -161,7 +161,7 @@ class End2EndEventProtectionProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: End2EndEventProtectionProps.Annotations | None = field(
+    annotations: None | End2EndEventProtectionProps.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -169,7 +169,7 @@ class End2EndEventProtectionProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    data_ids: End2EndEventProtectionProps.DataIds | None = field(
+    data_ids: None | End2EndEventProtectionProps.DataIds = field(
         default=None,
         metadata={
             "name": "DATA-IDS",
@@ -177,7 +177,7 @@ class End2EndEventProtectionProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    data_length: PositiveInteger | None = field(
+    data_length: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "DATA-LENGTH",
@@ -185,7 +185,7 @@ class End2EndEventProtectionProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    data_update_period: TimeValue | None = field(
+    data_update_period: None | TimeValue = field(
         default=None,
         metadata={
             "name": "DATA-UPDATE-PERIOD",
@@ -194,7 +194,7 @@ class End2EndEventProtectionProps:
         },
     )
     e_2_e_profile_configuration_ref: (
-        End2EndEventProtectionProps.E2EProfileConfigurationRef | None
+        None | End2EndEventProtectionProps.E2EProfileConfigurationRef
     ) = field(
         default=None,
         metadata={
@@ -203,7 +203,7 @@ class End2EndEventProtectionProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    event_ref: End2EndEventProtectionProps.EventRef | None = field(
+    event_ref: None | End2EndEventProtectionProps.EventRef = field(
         default=None,
         metadata={
             "name": "EVENT-REF",
@@ -211,7 +211,7 @@ class End2EndEventProtectionProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    max_data_length: PositiveInteger | None = field(
+    max_data_length: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "MAX-DATA-LENGTH",
@@ -219,7 +219,7 @@ class End2EndEventProtectionProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    min_data_length: PositiveInteger | None = field(
+    min_data_length: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "MIN-DATA-LENGTH",
@@ -227,14 +227,14 @@ class End2EndEventProtectionProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -242,7 +242,7 @@ class End2EndEventProtectionProps:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -296,7 +296,7 @@ class End2EndEventProtectionProps:
 
     @dataclass
     class E2EProfileConfigurationRef(Ref):
-        dest: E2EProfileConfigurationSubtypesEnum | None = field(
+        dest: None | E2EProfileConfigurationSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -307,7 +307,7 @@ class End2EndEventProtectionProps:
 
     @dataclass
     class EventRef(Ref):
-        dest: ServiceEventDeploymentSubtypesEnum | None = field(
+        dest: None | ServiceEventDeploymentSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

@@ -36,7 +36,7 @@ class ConfidenceInterval:
     class Meta:
         name = "CONFIDENCE-INTERVAL"
 
-    lower_bound: MultidimensionalTime | None = field(
+    lower_bound: None | MultidimensionalTime = field(
         default=None,
         metadata={
             "name": "LOWER-BOUND",
@@ -44,7 +44,7 @@ class ConfidenceInterval:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    propability: Float | None = field(
+    propability: None | Float = field(
         default=None,
         metadata={
             "name": "PROPABILITY",
@@ -52,7 +52,7 @@ class ConfidenceInterval:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    upper_bound: MultidimensionalTime | None = field(
+    upper_bound: None | MultidimensionalTime = field(
         default=None,
         metadata={
             "name": "UPPER-BOUND",
@@ -60,14 +60,14 @@ class ConfidenceInterval:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

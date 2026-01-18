@@ -59,7 +59,7 @@ class ContactDetails(Contact):
     :ivar version:
     """
 
-    contact_organisation_name: MultilingualString | None = field(
+    contact_organisation_name: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "contactOrganisationName",
@@ -67,7 +67,7 @@ class ContactDetails(Contact):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    contact_person_name: str | None = field(
+    contact_person_name: None | str = field(
         default=None,
         metadata={
             "name": "contactPersonName",
@@ -76,7 +76,7 @@ class ContactDetails(Contact):
             "max_length": 1024,
         },
     )
-    contact_person_first_name: str | None = field(
+    contact_person_first_name: None | str = field(
         default=None,
         metadata={
             "name": "contactPersonFirstName",
@@ -85,7 +85,7 @@ class ContactDetails(Contact):
             "max_length": 1024,
         },
     )
-    contact_person_position: MultilingualString | None = field(
+    contact_person_position: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "contactPersonPosition",
@@ -101,7 +101,7 @@ class ContactDetails(Contact):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    contact_details_address: MultilingualString | None = field(
+    contact_details_address: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "contactDetailsAddress",
@@ -109,7 +109,7 @@ class ContactDetails(Contact):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    contact_details_street: str | None = field(
+    contact_details_street: None | str = field(
         default=None,
         metadata={
             "name": "contactDetailsStreet",
@@ -128,7 +128,7 @@ class ContactDetails(Contact):
             "max_length": 1024,
         },
     )
-    contact_details_postcode: str | None = field(
+    contact_details_postcode: None | str = field(
         default=None,
         metadata={
             "name": "contactDetailsPostcode",
@@ -137,7 +137,7 @@ class ContactDetails(Contact):
             "max_length": 1024,
         },
     )
-    contact_details_city: MultilingualString | None = field(
+    contact_details_city: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "contactDetailsCity",
@@ -145,14 +145,14 @@ class ContactDetails(Contact):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    country: CountryEnum | None = field(
+    country: None | CountryEnum = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    contact_details_telephone_number: str | None = field(
+    contact_details_telephone_number: None | str = field(
         default=None,
         metadata={
             "name": "contactDetailsTelephoneNumber",
@@ -161,7 +161,7 @@ class ContactDetails(Contact):
             "max_length": 1024,
         },
     )
-    contact_details_fax: str | None = field(
+    contact_details_fax: None | str = field(
         default=None,
         metadata={
             "name": "contactDetailsFax",
@@ -170,7 +170,7 @@ class ContactDetails(Contact):
             "max_length": 1024,
         },
     )
-    contact_details_email: str | None = field(
+    contact_details_email: None | str = field(
         default=None,
         metadata={
             "name": "contactDetailsEMail",
@@ -179,7 +179,7 @@ class ContactDetails(Contact):
             "max_length": 1024,
         },
     )
-    url_link_address: str | None = field(
+    url_link_address: None | str = field(
         default=None,
         metadata={
             "name": "urlLinkAddress",
@@ -187,7 +187,7 @@ class ContactDetails(Contact):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    contact_details_logo_url: str | None = field(
+    contact_details_logo_url: None | str = field(
         default=None,
         metadata={
             "name": "contactDetailsLogoUrl",
@@ -195,7 +195,7 @@ class ContactDetails(Contact):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    available24hours: bool | None = field(
+    available24hours: None | bool = field(
         default=None,
         metadata={
             "type": "Element",
@@ -218,7 +218,7 @@ class ContactDetails(Contact):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    publishing_agreement: bool | None = field(
+    publishing_agreement: None | bool = field(
         default=None,
         metadata={
             "name": "publishingAgreement",
@@ -226,7 +226,7 @@ class ContactDetails(Contact):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    contact_details_ownership: OwnershipTypeEnum | None = field(
+    contact_details_ownership: None | OwnershipTypeEnum = field(
         default=None,
         metadata={
             "name": "contactDetailsOwnership",
@@ -234,7 +234,7 @@ class ContactDetails(Contact):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    group_of_locations: GroupOfLocations | None = field(
+    group_of_locations: None | GroupOfLocations = field(
         default=None,
         metadata={
             "name": "groupOfLocations",
@@ -242,7 +242,7 @@ class ContactDetails(Contact):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    contact_details_extension: ExtensionType | None = field(
+    contact_details_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "contactDetailsExtension",
@@ -250,14 +250,14 @@ class ContactDetails(Contact):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "required": True,
         },
     )
-    version: str | None = field(
+    version: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",

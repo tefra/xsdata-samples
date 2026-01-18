@@ -57,7 +57,7 @@ class PurposeOfGroupingValueStructure(TypeOfValueVersionStructure):
     class Meta:
         name = "PurposeOfGrouping_ValueStructure"
 
-    classes: ClassRefsRelStructure | None = field(
+    classes: None | ClassRefsRelStructure = field(
         default=None,
         metadata={
             "type": "Element",
@@ -65,7 +65,8 @@ class PurposeOfGroupingValueStructure(TypeOfValueVersionStructure):
         },
     )
     type_of_entity: (
-        TypeOfMobilityService
+        None
+        | TypeOfMobilityService
         | TypeOfRetailDevice
         | CustomerAccountStatus
         | TypeOfCustomerAccount
@@ -107,7 +108,6 @@ class PurposeOfGroupingValueStructure(TypeOfValueVersionStructure):
         | TypeOfFrame
         | TypeOfResponsibilityRole
         | TypeOfEntity
-        | None
     ) = field(
         default=None,
         metadata={

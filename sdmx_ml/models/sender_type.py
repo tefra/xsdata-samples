@@ -19,7 +19,7 @@ class SenderType(PartyType):
         are implied to be in an indeterminate "local time".
     """
 
-    timezone: str | None = field(
+    timezone: None | str = field(
         default=None,
         metadata={
             "name": "Timezone",

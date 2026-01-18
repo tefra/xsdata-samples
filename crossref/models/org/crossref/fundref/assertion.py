@@ -34,7 +34,7 @@ class Assertion:
             "type": "Attribute",
         },
     )
-    name: AssertionName | None = field(
+    name: None | AssertionName = field(
         default=None,
         metadata={
             "type": "Attribute",

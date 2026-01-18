@@ -19,7 +19,7 @@ class Archive:
         name = "archive"
         namespace = "http://www.crossref.org/schema/5.3.1"
 
-    name: ArchiveName | None = field(
+    name: None | ArchiveName = field(
         default=None,
         metadata={
             "type": "Attribute",

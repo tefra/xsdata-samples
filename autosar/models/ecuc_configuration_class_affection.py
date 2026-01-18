@@ -40,7 +40,7 @@ class EcucConfigurationClassAffection:
     class Meta:
         name = "ECUC-CONFIGURATION-CLASS-AFFECTION"
 
-    affected_refs: EcucConfigurationClassAffection.AffectedRefs | None = field(
+    affected_refs: None | EcucConfigurationClassAffection.AffectedRefs = field(
         default=None,
         metadata={
             "name": "AFFECTED-REFS",
@@ -48,7 +48,7 @@ class EcucConfigurationClassAffection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    affection_kind: EcucAffectionEnum | None = field(
+    affection_kind: None | EcucAffectionEnum = field(
         default=None,
         metadata={
             "name": "AFFECTION-KIND",
@@ -56,14 +56,14 @@ class EcucConfigurationClassAffection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -87,7 +87,7 @@ class EcucConfigurationClassAffection:
 
         @dataclass
         class AffectedRef(Ref):
-            dest: EcucCommonAttributesSubtypesEnum | None = field(
+            dest: None | EcucCommonAttributesSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",

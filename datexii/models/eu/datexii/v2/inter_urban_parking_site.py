@@ -23,7 +23,7 @@ class InterUrbanParkingSite(ParkingSite):
     """
 
     inter_urban_parking_site_location: (
-        InterUrbanParkingSiteLocationEnum | None
+        None | InterUrbanParkingSiteLocationEnum
     ) = field(
         default=None,
         metadata={
@@ -33,7 +33,7 @@ class InterUrbanParkingSite(ParkingSite):
             "required": True,
         },
     )
-    inter_urban_parking_site_extension: ExtensionType | None = field(
+    inter_urban_parking_site_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "interUrbanParkingSiteExtension",

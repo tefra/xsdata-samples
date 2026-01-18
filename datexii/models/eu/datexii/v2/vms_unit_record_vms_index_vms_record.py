@@ -12,7 +12,7 @@ class VmsUnitRecordVmsIndexVmsRecord:
     class Meta:
         name = "_VmsUnitRecordVmsIndexVmsRecord"
 
-    vms_record: VmsRecord | None = field(
+    vms_record: None | VmsRecord = field(
         default=None,
         metadata={
             "name": "vmsRecord",
@@ -21,7 +21,7 @@ class VmsUnitRecordVmsIndexVmsRecord:
             "required": True,
         },
     )
-    vms_index: int | None = field(
+    vms_index: None | int = field(
         default=None,
         metadata={
             "name": "vmsIndex",

@@ -40,7 +40,7 @@ class McDataAccessDetails:
     class Meta:
         name = "MC-DATA-ACCESS-DETAILS"
 
-    rte_event_irefs: McDataAccessDetails.RteEventIrefs | None = field(
+    rte_event_irefs: None | McDataAccessDetails.RteEventIrefs = field(
         default=None,
         metadata={
             "name": "RTE-EVENT-IREFS",
@@ -48,7 +48,7 @@ class McDataAccessDetails:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variable_access_irefs: McDataAccessDetails.VariableAccessIrefs | None = (
+    variable_access_irefs: None | McDataAccessDetails.VariableAccessIrefs = (
         field(
             default=None,
             metadata={
@@ -58,14 +58,14 @@ class McDataAccessDetails:
             },
         )
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

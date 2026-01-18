@@ -29,7 +29,7 @@ class BswModeSwitchAckRequest:
     class Meta:
         name = "BSW-MODE-SWITCH-ACK-REQUEST"
 
-    timeout: TimeValue | None = field(
+    timeout: None | TimeValue = field(
         default=None,
         metadata={
             "name": "TIMEOUT",
@@ -37,14 +37,14 @@ class BswModeSwitchAckRequest:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

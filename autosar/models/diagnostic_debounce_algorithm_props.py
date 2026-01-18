@@ -51,7 +51,7 @@ class DiagnosticDebounceAlgorithmProps:
     class Meta:
         name = "DIAGNOSTIC-DEBOUNCE-ALGORITHM-PROPS"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -61,7 +61,7 @@ class DiagnosticDebounceAlgorithmProps:
         },
     )
     short_name_fragments: (
-        DiagnosticDebounceAlgorithmProps.ShortNameFragments | None
+        None | DiagnosticDebounceAlgorithmProps.ShortNameFragments
     ) = field(
         default=None,
         metadata={
@@ -71,7 +71,7 @@ class DiagnosticDebounceAlgorithmProps:
         },
     )
     debounce_algorithm: (
-        DiagnosticDebounceAlgorithmProps.DebounceAlgorithm | None
+        None | DiagnosticDebounceAlgorithmProps.DebounceAlgorithm
     ) = field(
         default=None,
         metadata={
@@ -81,7 +81,7 @@ class DiagnosticDebounceAlgorithmProps:
         },
     )
     debounce_behavior: (
-        DiagnosticDebounceBehaviorEnumValueVariationPoint | None
+        None | DiagnosticDebounceBehaviorEnumValueVariationPoint
     ) = field(
         default=None,
         metadata={
@@ -90,7 +90,7 @@ class DiagnosticDebounceAlgorithmProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    debounce_counter_storage: Boolean | None = field(
+    debounce_counter_storage: None | Boolean = field(
         default=None,
         metadata={
             "name": "DEBOUNCE-COUNTER-STORAGE",
@@ -98,14 +98,14 @@ class DiagnosticDebounceAlgorithmProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -128,7 +128,7 @@ class DiagnosticDebounceAlgorithmProps:
     @dataclass
     class DebounceAlgorithm:
         diag_event_debounce_counter_based: (
-            DiagEventDebounceCounterBased | None
+            None | DiagEventDebounceCounterBased
         ) = field(
             default=None,
             metadata={
@@ -138,7 +138,7 @@ class DiagnosticDebounceAlgorithmProps:
             },
         )
         diag_event_debounce_monitor_internal: (
-            DiagEventDebounceMonitorInternal | None
+            None | DiagEventDebounceMonitorInternal
         ) = field(
             default=None,
             metadata={
@@ -147,7 +147,7 @@ class DiagnosticDebounceAlgorithmProps:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diag_event_debounce_time_based: DiagEventDebounceTimeBased | None = (
+        diag_event_debounce_time_based: None | DiagEventDebounceTimeBased = (
             field(
                 default=None,
                 metadata={

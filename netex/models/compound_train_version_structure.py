@@ -15,7 +15,7 @@ class CompoundTrainVersionStructure(VehicleTypeVersionStructure):
     class Meta:
         name = "CompoundTrain_VersionStructure"
 
-    components: TrainsInCompoundTrainRelStructure | None = field(
+    components: None | TrainsInCompoundTrainRelStructure = field(
         default=None,
         metadata={
             "type": "Element",

@@ -13,7 +13,7 @@ class TAssignment(TBaseElement):
     class Meta:
         name = "tAssignment"
 
-    from_value: TExpression | None = field(
+    from_value: None | TExpression = field(
         default=None,
         metadata={
             "name": "from",
@@ -22,7 +22,7 @@ class TAssignment(TBaseElement):
             "required": True,
         },
     )
-    to: TExpression | None = field(
+    to: None | TExpression = field(
         default=None,
         metadata={
             "type": "Element",

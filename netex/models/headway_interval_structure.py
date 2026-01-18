@@ -9,7 +9,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 @dataclass
 class HeadwayIntervalStructure:
-    scheduled_headway_interval: XmlDuration | None = field(
+    scheduled_headway_interval: None | XmlDuration = field(
         default=None,
         metadata={
             "name": "ScheduledHeadwayInterval",
@@ -17,7 +17,7 @@ class HeadwayIntervalStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    minimum_headway_interval: XmlDuration | None = field(
+    minimum_headway_interval: None | XmlDuration = field(
         default=None,
         metadata={
             "name": "MinimumHeadwayInterval",
@@ -25,7 +25,7 @@ class HeadwayIntervalStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    maximum_headway_interval: XmlDuration | None = field(
+    maximum_headway_interval: None | XmlDuration = field(
         default=None,
         metadata={
             "name": "MaximumHeadwayInterval",

@@ -32,7 +32,7 @@ class CompuScaleConstantContents:
     class Meta:
         name = "COMPU-SCALE-CONSTANT-CONTENTS"
 
-    compu_const: CompuConst | None = field(
+    compu_const: None | CompuConst = field(
         default=None,
         metadata={
             "name": "COMPU-CONST",
@@ -40,14 +40,14 @@ class CompuScaleConstantContents:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

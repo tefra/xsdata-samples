@@ -13,7 +13,7 @@ class TConversationAssociation(TBaseElement):
     class Meta:
         name = "tConversationAssociation"
 
-    inner_conversation_node_ref: QName | None = field(
+    inner_conversation_node_ref: None | QName = field(
         default=None,
         metadata={
             "name": "innerConversationNodeRef",
@@ -21,7 +21,7 @@ class TConversationAssociation(TBaseElement):
             "required": True,
         },
     )
-    outer_conversation_node_ref: QName | None = field(
+    outer_conversation_node_ref: None | QName = field(
         default=None,
         metadata={
             "name": "outerConversationNodeRef",

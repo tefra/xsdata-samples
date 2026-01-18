@@ -114,7 +114,7 @@ class TdEventFrameEthernet:
     class Meta:
         name = "TD-EVENT-FRAME-ETHERNET"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -123,7 +123,7 @@ class TdEventFrameEthernet:
             "required": True,
         },
     )
-    short_name_fragments: TdEventFrameEthernet.ShortNameFragments | None = (
+    short_name_fragments: None | TdEventFrameEthernet.ShortNameFragments = (
         field(
             default=None,
             metadata={
@@ -133,7 +133,7 @@ class TdEventFrameEthernet:
             },
         )
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -141,7 +141,7 @@ class TdEventFrameEthernet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -149,7 +149,7 @@ class TdEventFrameEthernet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -157,7 +157,7 @@ class TdEventFrameEthernet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -165,7 +165,7 @@ class TdEventFrameEthernet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -173,7 +173,7 @@ class TdEventFrameEthernet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: TdEventFrameEthernet.Annotations | None = field(
+    annotations: None | TdEventFrameEthernet.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -181,7 +181,7 @@ class TdEventFrameEthernet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -189,7 +189,7 @@ class TdEventFrameEthernet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    occurrence_expression: TdEventOccurrenceExpression | None = field(
+    occurrence_expression: None | TdEventOccurrenceExpression = field(
         default=None,
         metadata={
             "name": "OCCURRENCE-EXPRESSION",
@@ -197,7 +197,7 @@ class TdEventFrameEthernet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ecu_instance_ref: TdEventFrameEthernet.EcuInstanceRef | None = field(
+    ecu_instance_ref: None | TdEventFrameEthernet.EcuInstanceRef = field(
         default=None,
         metadata={
             "name": "ECU-INSTANCE-REF",
@@ -206,7 +206,7 @@ class TdEventFrameEthernet:
         },
     )
     socket_connection_bundle_ref: (
-        TdEventFrameEthernet.SocketConnectionBundleRef | None
+        None | TdEventFrameEthernet.SocketConnectionBundleRef
     ) = field(
         default=None,
         metadata={
@@ -216,7 +216,7 @@ class TdEventFrameEthernet:
         },
     )
     static_socket_connection_ref: (
-        TdEventFrameEthernet.StaticSocketConnectionRef | None
+        None | TdEventFrameEthernet.StaticSocketConnectionRef
     ) = field(
         default=None,
         metadata={
@@ -225,7 +225,7 @@ class TdEventFrameEthernet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    td_event_type: TdEventFrameEthernetTypeEnum | None = field(
+    td_event_type: None | TdEventFrameEthernetTypeEnum = field(
         default=None,
         metadata={
             "name": "TD-EVENT-TYPE",
@@ -233,7 +233,7 @@ class TdEventFrameEthernet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    td_header_id_filters: TdEventFrameEthernet.TdHeaderIdFilters | None = (
+    td_header_id_filters: None | TdEventFrameEthernet.TdHeaderIdFilters = (
         field(
             default=None,
             metadata={
@@ -244,7 +244,7 @@ class TdEventFrameEthernet:
         )
     )
     td_pdu_triggering_filter_refs: (
-        TdEventFrameEthernet.TdPduTriggeringFilterRefs | None
+        None | TdEventFrameEthernet.TdPduTriggeringFilterRefs
     ) = field(
         default=None,
         metadata={
@@ -253,14 +253,14 @@ class TdEventFrameEthernet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -268,7 +268,7 @@ class TdEventFrameEthernet:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -300,7 +300,7 @@ class TdEventFrameEthernet:
 
     @dataclass
     class EcuInstanceRef(Ref):
-        dest: EcuInstanceSubtypesEnum | None = field(
+        dest: None | EcuInstanceSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -311,7 +311,7 @@ class TdEventFrameEthernet:
 
     @dataclass
     class SocketConnectionBundleRef(Ref):
-        dest: SocketConnectionBundleSubtypesEnum | None = field(
+        dest: None | SocketConnectionBundleSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -322,7 +322,7 @@ class TdEventFrameEthernet:
 
     @dataclass
     class StaticSocketConnectionRef(Ref):
-        dest: StaticSocketConnectionSubtypesEnum | None = field(
+        dest: None | StaticSocketConnectionSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -357,7 +357,7 @@ class TdEventFrameEthernet:
 
         @dataclass
         class TdPduTriggeringFilterRef(Ref):
-            dest: PduTriggeringSubtypesEnum | None = field(
+            dest: None | PduTriggeringSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",

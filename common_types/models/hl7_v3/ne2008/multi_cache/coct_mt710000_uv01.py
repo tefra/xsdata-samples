@@ -33,7 +33,7 @@ class CoctMt710000Uv01LocatedEntityHasParts:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Ii | None = field(
+    type_id: None | Ii = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -57,7 +57,7 @@ class CoctMt710000Uv01LocatedEntityHasParts:
             "min_occurs": 1,
         },
     )
-    located_place: CoctMt710000Uv01Place | None = field(
+    located_place: None | CoctMt710000Uv01Place = field(
         default=None,
         metadata={
             "name": "locatedPlace",
@@ -66,14 +66,14 @@ class CoctMt710000Uv01LocatedEntityHasParts:
             "nillable": True,
         },
     )
-    null_flavor: NullFlavor | None = field(
+    null_flavor: None | NullFlavor = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
         },
     )
-    class_code: RoleClassLocatedEntity | None = field(
+    class_code: None | RoleClassLocatedEntity = field(
         default=None,
         metadata={
             "name": "classCode",
@@ -96,7 +96,7 @@ class CoctMt710000Uv01LocatedEntityPartOf:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Ii | None = field(
+    type_id: None | Ii = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -120,7 +120,7 @@ class CoctMt710000Uv01LocatedEntityPartOf:
             "min_occurs": 1,
         },
     )
-    location: CoctMt710000Uv01Place | None = field(
+    location: None | CoctMt710000Uv01Place = field(
         default=None,
         metadata={
             "type": "Element",
@@ -128,14 +128,14 @@ class CoctMt710000Uv01LocatedEntityPartOf:
             "nillable": True,
         },
     )
-    null_flavor: NullFlavor | None = field(
+    null_flavor: None | NullFlavor = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
         },
     )
-    class_code: RoleClassLocatedEntity | None = field(
+    class_code: None | RoleClassLocatedEntity = field(
         default=None,
         metadata={
             "name": "classCode",
@@ -158,7 +158,7 @@ class CoctMt710000Uv01Place:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Ii | None = field(
+    type_id: None | Ii = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -181,7 +181,7 @@ class CoctMt710000Uv01Place:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    code: Ce | None = field(
+    code: None | Ce = field(
         default=None,
         metadata={
             "type": "Element",
@@ -195,14 +195,14 @@ class CoctMt710000Uv01Place:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    desc: EdExplicit | None = field(
+    desc: None | EdExplicit = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    directions_text: EdExplicit | None = field(
+    directions_text: None | EdExplicit = field(
         default=None,
         metadata={
             "name": "directionsText",
@@ -210,7 +210,7 @@ class CoctMt710000Uv01Place:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    position_text: EdExplicit | None = field(
+    position_text: None | EdExplicit = field(
         default=None,
         metadata={
             "name": "positionText",
@@ -218,7 +218,7 @@ class CoctMt710000Uv01Place:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    gps_text: St | None = field(
+    gps_text: None | St = field(
         default=None,
         metadata={
             "name": "gpsText",
@@ -248,14 +248,14 @@ class CoctMt710000Uv01Place:
             },
         )
     )
-    null_flavor: NullFlavor | None = field(
+    null_flavor: None | NullFlavor = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
         },
     )
-    class_code: EntityClassPlace | None = field(
+    class_code: None | EntityClassPlace = field(
         default=None,
         metadata={
             "name": "classCode",

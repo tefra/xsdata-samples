@@ -54,14 +54,14 @@ class ProcessingMeta:
             "type": "Element",
         },
     )
-    base_tagset: ProcessingMetaBaseTagset | None = field(
+    base_tagset: None | ProcessingMetaBaseTagset = field(
         default=None,
         metadata={
             "name": "base-tagset",
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -75,28 +75,28 @@ class ProcessingMeta:
             "tokens": True,
         },
     )
-    mathml_version: ProcessingMetaMathmlVersion | None = field(
+    mathml_version: None | ProcessingMetaMathmlVersion = field(
         default=None,
         metadata={
             "name": "mathml-version",
             "type": "Attribute",
         },
     )
-    table_model: ProcessingMetaTableModel | None = field(
+    table_model: None | ProcessingMetaTableModel = field(
         default=None,
         metadata={
             "name": "table-model",
             "type": "Attribute",
         },
     )
-    tagset_family: ProcessingMetaTagsetFamily | None = field(
+    tagset_family: None | ProcessingMetaTagsetFamily = field(
         default=None,
         metadata={
             "name": "tagset-family",
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",

@@ -34,47 +34,47 @@ class ResourceName:
         name = "resource-name"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    content_type: str | None = field(
+    content_type: None | str = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    hreflang: str | None = field(
+    hreflang: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    actuate: ActuateType | None = field(
+    actuate: None | ActuateType = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    href: str | None = field(
+    href: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    role: str | None = field(
+    role: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -82,14 +82,14 @@ class ResourceName:
             "min_length": 1,
         },
     )
-    show: ShowType | None = field(
+    show: None | ShowType = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    title: str | None = field(
+    title: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -105,14 +105,14 @@ class ResourceName:
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",

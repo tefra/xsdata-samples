@@ -28,7 +28,7 @@ class ProvisionAgreementType(ProvisionAgreementBaseType):
         provided via a URN and/or a full set of reference fields.
     """
 
-    dataflow: str | None = field(
+    dataflow: None | str = field(
         default=None,
         metadata={
             "name": "Dataflow",
@@ -38,7 +38,7 @@ class ProvisionAgreementType(ProvisionAgreementBaseType):
             "pattern": r".+\.datastructure\.Dataflow=.+",
         },
     )
-    data_provider: str | None = field(
+    data_provider: None | str = field(
         default=None,
         metadata={
             "name": "DataProvider",

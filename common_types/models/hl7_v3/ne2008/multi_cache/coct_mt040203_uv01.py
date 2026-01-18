@@ -32,7 +32,7 @@ class CoctMt040203Uv01NotificationParty:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Ii | None = field(
+    type_id: None | Ii = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -56,7 +56,7 @@ class CoctMt040203Uv01NotificationParty:
             "min_occurs": 1,
         },
     )
-    code: Ce | None = field(
+    code: None | Ce = field(
         default=None,
         metadata={
             "type": "Element",
@@ -77,7 +77,7 @@ class CoctMt040203Uv01NotificationParty:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    contact_organization: CoctMt150003Uv03Organization | None = field(
+    contact_organization: None | CoctMt150003Uv03Organization = field(
         default=None,
         metadata={
             "name": "contactOrganization",
@@ -86,7 +86,7 @@ class CoctMt040203Uv01NotificationParty:
             "nillable": True,
         },
     )
-    contact_person: CoctMt030203Uv02Person | None = field(
+    contact_person: None | CoctMt030203Uv02Person = field(
         default=None,
         metadata={
             "name": "contactPerson",
@@ -95,14 +95,14 @@ class CoctMt040203Uv01NotificationParty:
             "nillable": True,
         },
     )
-    null_flavor: NullFlavor | None = field(
+    null_flavor: None | NullFlavor = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
         },
     )
-    class_code: RoleClassContact | None = field(
+    class_code: None | RoleClassContact = field(
         default=None,
         metadata={
             "name": "classCode",

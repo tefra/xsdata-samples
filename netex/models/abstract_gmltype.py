@@ -15,7 +15,7 @@ class AbstractGmltype:
     class Meta:
         name = "AbstractGMLType"
 
-    description_reference: DescriptionReference | None = field(
+    description_reference: None | DescriptionReference = field(
         default=None,
         metadata={
             "name": "descriptionReference",
@@ -23,7 +23,7 @@ class AbstractGmltype:
             "namespace": "http://www.opengis.net/gml/3.2",
         },
     )
-    identifier: Identifier | None = field(
+    identifier: None | Identifier = field(
         default=None,
         metadata={
             "type": "Element",
@@ -37,7 +37,7 @@ class AbstractGmltype:
             "namespace": "http://www.opengis.net/gml/3.2",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",

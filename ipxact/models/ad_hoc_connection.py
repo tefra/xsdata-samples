@@ -38,7 +38,7 @@ class AdHocConnection:
         name = "adHocConnection"
         namespace = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
-    name: str | None = field(
+    name: None | str = field(
         default=None,
         metadata={
             "type": "Element",
@@ -47,34 +47,34 @@ class AdHocConnection:
             "pattern": r"\i[\p{L}\p{N}\.\-:_]*",
         },
     )
-    display_name: DisplayName | None = field(
+    display_name: None | DisplayName = field(
         default=None,
         metadata={
             "name": "displayName",
             "type": "Element",
         },
     )
-    short_description: ShortDescription | None = field(
+    short_description: None | ShortDescription = field(
         default=None,
         metadata={
             "name": "shortDescription",
             "type": "Element",
         },
     )
-    description: Description | None = field(
+    description: None | Description = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    tied_value: ComplexTiedValueExpression | None = field(
+    tied_value: None | ComplexTiedValueExpression = field(
         default=None,
         metadata={
             "name": "tiedValue",
             "type": "Element",
         },
     )
-    port_references: AdHocConnection.PortReferences | None = field(
+    port_references: None | AdHocConnection.PortReferences = field(
         default=None,
         metadata={
             "name": "portReferences",
@@ -82,14 +82,14 @@ class AdHocConnection:
             "required": True,
         },
     )
-    vendor_extensions: VendorExtensions | None = field(
+    vendor_extensions: None | VendorExtensions = field(
         default=None,
         metadata={
             "name": "vendorExtensions",
             "type": "Element",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -145,21 +145,21 @@ class AdHocConnection:
                     "type": "Element",
                 },
             )
-            part_select: PartSelect | None = field(
+            part_select: None | PartSelect = field(
                 default=None,
                 metadata={
                     "name": "partSelect",
                     "type": "Element",
                 },
             )
-            vendor_extensions: VendorExtensions | None = field(
+            vendor_extensions: None | VendorExtensions = field(
                 default=None,
                 metadata={
                     "name": "vendorExtensions",
                     "type": "Element",
                 },
             )
-            port_ref: str | None = field(
+            port_ref: None | str = field(
                 default=None,
                 metadata={
                     "name": "portRef",
@@ -169,7 +169,7 @@ class AdHocConnection:
                     "pattern": r"\i[\p{L}\p{N}\.\-:_]*",
                 },
             )
-            component_instance_ref: str | None = field(
+            component_instance_ref: None | str = field(
                 default=None,
                 metadata={
                     "name": "componentInstanceRef",
@@ -177,7 +177,7 @@ class AdHocConnection:
                     "required": True,
                 },
             )
-            id: str | None = field(
+            id: None | str = field(
                 default=None,
                 metadata={
                     "type": "Attribute",

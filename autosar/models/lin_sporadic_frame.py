@@ -106,7 +106,7 @@ class LinSporadicFrame:
     class Meta:
         name = "LIN-SPORADIC-FRAME"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -115,7 +115,7 @@ class LinSporadicFrame:
             "required": True,
         },
     )
-    short_name_fragments: LinSporadicFrame.ShortNameFragments | None = field(
+    short_name_fragments: None | LinSporadicFrame.ShortNameFragments = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -123,7 +123,7 @@ class LinSporadicFrame:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -131,7 +131,7 @@ class LinSporadicFrame:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -139,7 +139,7 @@ class LinSporadicFrame:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -147,7 +147,7 @@ class LinSporadicFrame:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -155,7 +155,7 @@ class LinSporadicFrame:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -163,7 +163,7 @@ class LinSporadicFrame:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: LinSporadicFrame.Annotations | None = field(
+    annotations: None | LinSporadicFrame.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -171,7 +171,7 @@ class LinSporadicFrame:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -179,7 +179,7 @@ class LinSporadicFrame:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    frame_length: Integer | None = field(
+    frame_length: None | Integer = field(
         default=None,
         metadata={
             "name": "FRAME-LENGTH",
@@ -187,7 +187,7 @@ class LinSporadicFrame:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    pdu_to_frame_mappings: LinSporadicFrame.PduToFrameMappings | None = field(
+    pdu_to_frame_mappings: None | LinSporadicFrame.PduToFrameMappings = field(
         default=None,
         metadata={
             "name": "PDU-TO-FRAME-MAPPINGS",
@@ -195,7 +195,7 @@ class LinSporadicFrame:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    substituted_frame_refs: LinSporadicFrame.SubstitutedFrameRefs | None = (
+    substituted_frame_refs: None | LinSporadicFrame.SubstitutedFrameRefs = (
         field(
             default=None,
             metadata={
@@ -205,14 +205,14 @@ class LinSporadicFrame:
             },
         )
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -220,7 +220,7 @@ class LinSporadicFrame:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -276,7 +276,7 @@ class LinSporadicFrame:
 
         @dataclass
         class SubstitutedFrameRef(Ref):
-            dest: LinUnconditionalFrameSubtypesEnum | None = field(
+            dest: None | LinUnconditionalFrameSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",

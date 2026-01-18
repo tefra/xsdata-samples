@@ -40,7 +40,7 @@ class SubspaceRefType:
     class Meta:
         name = "subspaceRefType"
 
-    name: str | None = field(
+    name: None | str = field(
         default=None,
         metadata={
             "type": "Element",
@@ -48,7 +48,7 @@ class SubspaceRefType:
             "required": True,
         },
     )
-    display_name: DisplayName | None = field(
+    display_name: None | DisplayName = field(
         default=None,
         metadata={
             "name": "displayName",
@@ -56,7 +56,7 @@ class SubspaceRefType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    short_description: ShortDescription | None = field(
+    short_description: None | ShortDescription = field(
         default=None,
         metadata={
             "name": "shortDescription",
@@ -64,14 +64,14 @@ class SubspaceRefType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    description: Description | None = field(
+    description: None | Description = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    base_address: SignedLongintExpression | None = field(
+    base_address: None | SignedLongintExpression = field(
         default=None,
         metadata={
             "name": "baseAddress",
@@ -80,14 +80,14 @@ class SubspaceRefType:
             "required": True,
         },
     )
-    parameters: Parameters | None = field(
+    parameters: None | Parameters = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    vendor_extensions: VendorExtensions | None = field(
+    vendor_extensions: None | VendorExtensions = field(
         default=None,
         metadata={
             "name": "vendorExtensions",
@@ -95,7 +95,7 @@ class SubspaceRefType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    initiator_ref: str | None = field(
+    initiator_ref: None | str = field(
         default=None,
         metadata={
             "name": "initiatorRef",
@@ -103,14 +103,14 @@ class SubspaceRefType:
             "required": True,
         },
     )
-    segment_ref: str | None = field(
+    segment_ref: None | str = field(
         default=None,
         metadata={
             "name": "segmentRef",
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",

@@ -53,7 +53,7 @@ class ParameterRequireComSpec:
     class Meta:
         name = "PARAMETER-REQUIRE-COM-SPEC"
 
-    init_value: ParameterRequireComSpec.InitValue | None = field(
+    init_value: None | ParameterRequireComSpec.InitValue = field(
         default=None,
         metadata={
             "name": "INIT-VALUE",
@@ -61,7 +61,7 @@ class ParameterRequireComSpec:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    parameter_ref: ParameterRequireComSpec.ParameterRef | None = field(
+    parameter_ref: None | ParameterRequireComSpec.ParameterRef = field(
         default=None,
         metadata={
             "name": "PARAMETER-REF",
@@ -69,14 +69,14 @@ class ParameterRequireComSpec:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -88,7 +88,7 @@ class ParameterRequireComSpec:
     @dataclass
     class InitValue:
         application_assoc_map_value_specification: (
-            ApplicationAssocMapValueSpecification | None
+            None | ApplicationAssocMapValueSpecification
         ) = field(
             default=None,
             metadata={
@@ -98,7 +98,7 @@ class ParameterRequireComSpec:
             },
         )
         application_rule_based_value_specification: (
-            ApplicationRuleBasedValueSpecification | None
+            None | ApplicationRuleBasedValueSpecification
         ) = field(
             default=None,
             metadata={
@@ -108,7 +108,7 @@ class ParameterRequireComSpec:
             },
         )
         application_value_specification: (
-            ApplicationValueSpecification | None
+            None | ApplicationValueSpecification
         ) = field(
             default=None,
             metadata={
@@ -117,7 +117,7 @@ class ParameterRequireComSpec:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        array_value_specification: ArrayValueSpecification | None = field(
+        array_value_specification: None | ArrayValueSpecification = field(
             default=None,
             metadata={
                 "name": "ARRAY-VALUE-SPECIFICATION",
@@ -126,7 +126,7 @@ class ParameterRequireComSpec:
             },
         )
         composite_rule_based_value_specification: (
-            CompositeRuleBasedValueSpecification | None
+            None | CompositeRuleBasedValueSpecification
         ) = field(
             default=None,
             metadata={
@@ -135,7 +135,7 @@ class ParameterRequireComSpec:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        constant_reference: ConstantReference | None = field(
+        constant_reference: None | ConstantReference = field(
             default=None,
             metadata={
                 "name": "CONSTANT-REFERENCE",
@@ -144,7 +144,7 @@ class ParameterRequireComSpec:
             },
         )
         not_available_value_specification: (
-            NotAvailableValueSpecification | None
+            None | NotAvailableValueSpecification
         ) = field(
             default=None,
             metadata={
@@ -154,7 +154,7 @@ class ParameterRequireComSpec:
             },
         )
         numerical_rule_based_value_specification: (
-            NumericalRuleBasedValueSpecification | None
+            None | NumericalRuleBasedValueSpecification
         ) = field(
             default=None,
             metadata={
@@ -163,7 +163,7 @@ class ParameterRequireComSpec:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        numerical_value_specification: NumericalValueSpecification | None = (
+        numerical_value_specification: None | NumericalValueSpecification = (
             field(
                 default=None,
                 metadata={
@@ -173,7 +173,7 @@ class ParameterRequireComSpec:
                 },
             )
         )
-        record_value_specification: RecordValueSpecification | None = field(
+        record_value_specification: None | RecordValueSpecification = field(
             default=None,
             metadata={
                 "name": "RECORD-VALUE-SPECIFICATION",
@@ -181,7 +181,7 @@ class ParameterRequireComSpec:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        reference_value_specification: ReferenceValueSpecification | None = (
+        reference_value_specification: None | ReferenceValueSpecification = (
             field(
                 default=None,
                 metadata={
@@ -191,7 +191,7 @@ class ParameterRequireComSpec:
                 },
             )
         )
-        text_value_specification: TextValueSpecification | None = field(
+        text_value_specification: None | TextValueSpecification = field(
             default=None,
             metadata={
                 "name": "TEXT-VALUE-SPECIFICATION",
@@ -202,7 +202,7 @@ class ParameterRequireComSpec:
 
     @dataclass
     class ParameterRef(Ref):
-        dest: ParameterDataPrototypeSubtypesEnum | None = field(
+        dest: None | ParameterDataPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

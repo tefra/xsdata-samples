@@ -30,7 +30,7 @@ class MobilityServiceVersionStructure(EquipmentVersionStructure):
     class Meta:
         name = "MobilityService_VersionStructure"
 
-    short_name: MultilingualString | None = field(
+    short_name: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "ShortName",
@@ -38,7 +38,7 @@ class MobilityServiceVersionStructure(EquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    start_date: XmlDate | None = field(
+    start_date: None | XmlDate = field(
         default=None,
         metadata={
             "name": "StartDate",
@@ -46,7 +46,7 @@ class MobilityServiceVersionStructure(EquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    type_of_mobility_service_ref: TypeOfMobilityServiceRef | None = field(
+    type_of_mobility_service_ref: None | TypeOfMobilityServiceRef = field(
         default=None,
         metadata={
             "name": "TypeOfMobilityServiceRef",
@@ -55,7 +55,8 @@ class MobilityServiceVersionStructure(EquipmentVersionStructure):
         },
     )
     organisation_ref_or_other_organisation_ref_or_transport_organisation_ref: (
-        RetailConsortiumRef
+        None
+        | RetailConsortiumRef
         | OnlineServiceOperatorRef
         | GeneralOrganisationRef
         | ManagementAgentRef
@@ -65,7 +66,6 @@ class MobilityServiceVersionStructure(EquipmentVersionStructure):
         | AuthorityRef
         | OperatorRef
         | OrganisationRef
-        | None
     ) = field(
         default=None,
         metadata={
@@ -124,7 +124,7 @@ class MobilityServiceVersionStructure(EquipmentVersionStructure):
             ),
         },
     )
-    topographic_place_ref: TopographicPlaceRef | None = field(
+    topographic_place_ref: None | TopographicPlaceRef = field(
         default=None,
         metadata={
             "name": "TopographicPlaceRef",
@@ -133,7 +133,7 @@ class MobilityServiceVersionStructure(EquipmentVersionStructure):
         },
     )
     service_booking_arrangements: (
-        ServiceBookingArrangementsStructure | None
+        None | ServiceBookingArrangementsStructure
     ) = field(
         default=None,
         metadata={

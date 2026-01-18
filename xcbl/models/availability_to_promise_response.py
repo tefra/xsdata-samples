@@ -127,7 +127,7 @@ class AtpcheckType:
             "required": True,
         }
     )
-    atpcheck_type_coded_other: AtpcheckTypeCodedOther | None = field(
+    atpcheck_type_coded_other: None | AtpcheckTypeCodedOther = field(
         default=None,
         metadata={
             "name": "ATPCheckTypeCodedOther",
@@ -149,7 +149,7 @@ class Atpresponse:
         }
     )
     availability_to_promise_response_coded_other: (
-        AvailabilityToPromiseResponseCodedOther | None
+        None | AvailabilityToPromiseResponseCodedOther
     ) = field(
         default=None,
         metadata={
@@ -171,7 +171,7 @@ class AvailabilityDeliveryOption:
         )
     )
     availability_delivery_option_coded_other: (
-        AvailabilityDeliveryOptionCodedOther | None
+        None | AvailabilityDeliveryOptionCodedOther
     ) = field(
         default=None,
         metadata={
@@ -252,7 +252,7 @@ class AvailabilityToPromisePurpose:
         }
     )
     availability_to_promise_purpose_coded_other: (
-        AvailabilityToPromisePurposeCodedOther | None
+        None | AvailabilityToPromisePurposeCodedOther
     ) = field(
         default=None,
         metadata={
@@ -297,7 +297,7 @@ class AvailabilityToPromiseResponseItemListOfAttachment:
 
 @dataclass(kw_only=True)
 class AvailabilityToPromiseResponseSummary:
-    total_number_of_line_items: TotalNumberOfLineItems | None = field(
+    total_number_of_line_items: None | TotalNumberOfLineItems = field(
         default=None,
         metadata={
             "name": "TotalNumberOfLineItems",
@@ -380,7 +380,7 @@ class AvailabilityToPromiseResponseHeader:
             "required": True,
         }
     )
-    list_of_reference_coded: ListOfReferenceCoded | None = field(
+    list_of_reference_coded: None | ListOfReferenceCoded = field(
         default=None,
         metadata={
             "name": "ListOfReferenceCoded",
@@ -394,7 +394,7 @@ class AvailabilityToPromiseResponseHeader:
             "required": True,
         }
     )
-    atpcheck_type: AtpcheckType | None = field(
+    atpcheck_type: None | AtpcheckType = field(
         default=None,
         metadata={
             "name": "ATPCheckType",
@@ -408,14 +408,14 @@ class AvailabilityToPromiseResponseHeader:
             "required": True,
         }
     )
-    responding_party: RespondingParty | None = field(
+    responding_party: None | RespondingParty = field(
         default=None,
         metadata={
             "name": "RespondingParty",
             "type": "Element",
         },
     )
-    availability_ship_to_party: AvailabilityShipToParty | None = field(
+    availability_ship_to_party: None | AvailabilityShipToParty = field(
         default=None,
         metadata={
             "name": "AvailabilityShipToParty",
@@ -423,7 +423,7 @@ class AvailabilityToPromiseResponseHeader:
         },
     )
     availability_response_header_transport: (
-        AvailabilityResponseHeaderTransport | None
+        None | AvailabilityResponseHeaderTransport
     ) = field(
         default=None,
         metadata={
@@ -431,7 +431,7 @@ class AvailabilityToPromiseResponseHeader:
             "type": "Element",
         },
     )
-    general_note: GeneralNote | None = field(
+    general_note: None | GeneralNote = field(
         default=None,
         metadata={
             "name": "GeneralNote",
@@ -439,7 +439,7 @@ class AvailabilityToPromiseResponseHeader:
         },
     )
     availability_response_list_of_attachment: (
-        AvailabilityResponseListOfAttachment | None
+        None | AvailabilityResponseListOfAttachment
     ) = field(
         default=None,
         metadata={
@@ -452,7 +452,7 @@ class AvailabilityToPromiseResponseHeader:
 @dataclass(kw_only=True)
 class AvailabilityToPromiseResponseItemDetail:
     availability_to_promise_item_response: (
-        AvailabilityToPromiseItemResponse | None
+        None | AvailabilityToPromiseItemResponse
     ) = field(
         default=None,
         metadata={
@@ -468,7 +468,7 @@ class AvailabilityToPromiseResponseItemDetail:
         }
     )
     availability_to_promise_response_delivery_detail: (
-        AvailabilityToPromiseResponseDeliveryDetail | None
+        None | AvailabilityToPromiseResponseDeliveryDetail
     ) = field(
         default=None,
         metadata={
@@ -477,7 +477,7 @@ class AvailabilityToPromiseResponseItemDetail:
         },
     )
     availability_to_promise_response_transport_detail: (
-        AvailabilityToPromiseResponseTransportDetail | None
+        None | AvailabilityToPromiseResponseTransportDetail
     ) = field(
         default=None,
         metadata={
@@ -486,7 +486,7 @@ class AvailabilityToPromiseResponseItemDetail:
         },
     )
     availability_to_promise_response_item_list_of_attachment: (
-        AvailabilityToPromiseResponseItemListOfAttachment | None
+        None | AvailabilityToPromiseResponseItemListOfAttachment
     ) = field(
         default=None,
         metadata={
@@ -494,7 +494,7 @@ class AvailabilityToPromiseResponseItemDetail:
             "type": "Element",
         },
     )
-    general_note: GeneralNote | None = field(
+    general_note: None | GeneralNote = field(
         default=None,
         metadata={
             "name": "GeneralNote",
@@ -520,7 +520,7 @@ class ListOfAvailabilityToPromiseResponseItemDetail:
 @dataclass(kw_only=True)
 class AvailabilityToPromiseResponseDetail:
     list_of_availability_to_promise_response_item_detail: (
-        ListOfAvailabilityToPromiseResponseItemDetail | None
+        None | ListOfAvailabilityToPromiseResponseItemDetail
     ) = field(
         default=None,
         metadata={
@@ -540,7 +540,7 @@ class AvailabilityToPromiseResponse:
         }
     )
     availability_to_promise_response_detail: (
-        AvailabilityToPromiseResponseDetail | None
+        None | AvailabilityToPromiseResponseDetail
     ) = field(
         default=None,
         metadata={
@@ -549,7 +549,7 @@ class AvailabilityToPromiseResponse:
         },
     )
     availability_to_promise_response_summary: (
-        AvailabilityToPromiseResponseSummary | None
+        None | AvailabilityToPromiseResponseSummary
     ) = field(
         default=None,
         metadata={

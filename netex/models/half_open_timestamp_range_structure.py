@@ -9,7 +9,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 @dataclass
 class HalfOpenTimestampRangeStructure:
-    start_time: XmlDateTime | None = field(
+    start_time: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "StartTime",
@@ -18,7 +18,7 @@ class HalfOpenTimestampRangeStructure:
             "required": True,
         },
     )
-    end_time: XmlDateTime | None = field(
+    end_time: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "EndTime",

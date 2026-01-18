@@ -52,7 +52,7 @@ class DataValue:
         specific and needs to be agreed between supplier and client.
     """
 
-    data_error: bool | None = field(
+    data_error: None | bool = field(
         default=None,
         metadata={
             "name": "dataError",
@@ -60,7 +60,7 @@ class DataValue:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    reason_for_data_error: MultilingualString | None = field(
+    reason_for_data_error: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "reasonForDataError",
@@ -68,7 +68,7 @@ class DataValue:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    data_value_extension: ExtensionType | None = field(
+    data_value_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "dataValueExtension",
@@ -76,48 +76,48 @@ class DataValue:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    accuracy: float | None = field(
+    accuracy: None | float = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    computational_method: ComputationMethodEnum | None = field(
+    computational_method: None | ComputationMethodEnum = field(
         default=None,
         metadata={
             "name": "computationalMethod",
             "type": "Attribute",
         },
     )
-    number_of_incomplete_inputs: int | None = field(
+    number_of_incomplete_inputs: None | int = field(
         default=None,
         metadata={
             "name": "numberOfIncompleteInputs",
             "type": "Attribute",
         },
     )
-    number_of_input_values_used: int | None = field(
+    number_of_input_values_used: None | int = field(
         default=None,
         metadata={
             "name": "numberOfInputValuesUsed",
             "type": "Attribute",
         },
     )
-    smoothing_factor: float | None = field(
+    smoothing_factor: None | float = field(
         default=None,
         metadata={
             "name": "smoothingFactor",
             "type": "Attribute",
         },
     )
-    standard_deviation: float | None = field(
+    standard_deviation: None | float = field(
         default=None,
         metadata={
             "name": "standardDeviation",
             "type": "Attribute",
         },
     )
-    supplier_calculated_data_quality: float | None = field(
+    supplier_calculated_data_quality: None | float = field(
         default=None,
         metadata={
             "name": "supplierCalculatedDataQuality",

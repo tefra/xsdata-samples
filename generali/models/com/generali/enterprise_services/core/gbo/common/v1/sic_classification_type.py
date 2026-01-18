@@ -17,7 +17,7 @@ __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/common/v1"
 
 @dataclass
 class SicClassificationType:
-    code: CodeType | None = field(
+    code: None | CodeType = field(
         default=None,
         metadata={
             "name": "Code",
@@ -26,7 +26,7 @@ class SicClassificationType:
             "required": True,
         },
     )
-    type_value: SictypeEnum | None = field(
+    type_value: None | SictypeEnum = field(
         default=None,
         metadata={
             "name": "Type",
@@ -35,7 +35,7 @@ class SicClassificationType:
             "required": True,
         },
     )
-    short_description: TextType | None = field(
+    short_description: None | TextType = field(
         default=None,
         metadata={
             "name": "ShortDescription",
@@ -43,7 +43,7 @@ class SicClassificationType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
         },
     )
-    description: TextType | None = field(
+    description: None | TextType = field(
         default=None,
         metadata={
             "name": "Description",

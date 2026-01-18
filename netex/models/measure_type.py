@@ -7,13 +7,13 @@ __NAMESPACE__ = "http://www.opengis.net/gml/3.2"
 
 @dataclass
 class MeasureType:
-    value: float | None = field(
+    value: None | float = field(
         default=None,
         metadata={
             "required": True,
         },
     )
-    uom: str | None = field(
+    uom: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",

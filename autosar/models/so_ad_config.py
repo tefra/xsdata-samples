@@ -42,7 +42,7 @@ class SoAdConfig:
     class Meta:
         name = "SO-AD-CONFIG"
 
-    connections: SoAdConfig.Connections | None = field(
+    connections: None | SoAdConfig.Connections = field(
         default=None,
         metadata={
             "name": "CONNECTIONS",
@@ -50,7 +50,7 @@ class SoAdConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    connection_bundles: SoAdConfig.ConnectionBundles | None = field(
+    connection_bundles: None | SoAdConfig.ConnectionBundles = field(
         default=None,
         metadata={
             "name": "CONNECTION-BUNDLES",
@@ -58,7 +58,7 @@ class SoAdConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    logic_addresss: SoAdConfig.LogicAddresss | None = field(
+    logic_addresss: None | SoAdConfig.LogicAddresss = field(
         default=None,
         metadata={
             "name": "LOGIC-ADDRESSS",
@@ -66,7 +66,7 @@ class SoAdConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    socket_addresss: SoAdConfig.SocketAddresss | None = field(
+    socket_addresss: None | SoAdConfig.SocketAddresss = field(
         default=None,
         metadata={
             "name": "SOCKET-ADDRESSS",
@@ -74,14 +74,14 @@ class SoAdConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

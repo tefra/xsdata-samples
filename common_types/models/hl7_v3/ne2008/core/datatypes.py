@@ -69,7 +69,7 @@ class GlistPq(AnyType):
     class Meta:
         name = "GLIST_PQ"
 
-    head: Pq | None = field(
+    head: None | Pq = field(
         default=None,
         metadata={
             "type": "Element",
@@ -77,7 +77,7 @@ class GlistPq(AnyType):
             "required": True,
         },
     )
-    increment: Pq | None = field(
+    increment: None | Pq = field(
         default=None,
         metadata={
             "type": "Element",
@@ -85,13 +85,13 @@ class GlistPq(AnyType):
             "required": True,
         },
     )
-    period: int | None = field(
+    period: None | int = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    denominator: int | None = field(
+    denominator: None | int = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -124,7 +124,7 @@ class GlistTs(AnyType):
     class Meta:
         name = "GLIST_TS"
 
-    head: Ts | None = field(
+    head: None | Ts = field(
         default=None,
         metadata={
             "type": "Element",
@@ -132,7 +132,7 @@ class GlistTs(AnyType):
             "required": True,
         },
     )
-    increment: Pq | None = field(
+    increment: None | Pq = field(
         default=None,
         metadata={
             "type": "Element",
@@ -140,13 +140,13 @@ class GlistTs(AnyType):
             "required": True,
         },
     )
-    period: int | None = field(
+    period: None | int = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    denominator: int | None = field(
+    denominator: None | int = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -166,7 +166,7 @@ class HxitCe(Ce):
     class Meta:
         name = "HXIT_CE"
 
-    valid_time: IvlTs | None = field(
+    valid_time: None | IvlTs = field(
         default=None,
         metadata={
             "name": "validTime",
@@ -188,7 +188,7 @@ class HxitPq(Pq):
     class Meta:
         name = "HXIT_PQ"
 
-    valid_time: IvlTs | None = field(
+    valid_time: None | IvlTs = field(
         default=None,
         metadata={
             "name": "validTime",
@@ -309,14 +309,14 @@ class PivlTs(SxcmTs):
     class Meta:
         name = "PIVL_TS"
 
-    phase: IvlTs | None = field(
+    phase: None | IvlTs = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    period: Pq | None = field(
+    period: None | Pq = field(
         default=None,
         metadata={
             "type": "Element",
@@ -324,7 +324,7 @@ class PivlTs(SxcmTs):
         },
     )
     alignment: (
-        CalendarCycleOneLetter | str | CalendarCycleTwoLetterValue | None
+        None | CalendarCycleOneLetter | str | CalendarCycleTwoLetterValue
     ) = field(
         default=None,
         metadata={
@@ -362,7 +362,7 @@ class PpdPq(Pq):
     class Meta:
         name = "PPD_PQ"
 
-    standard_deviation: Pq | None = field(
+    standard_deviation: None | Pq = field(
         default=None,
         metadata={
             "name": "standardDeviation",
@@ -370,7 +370,7 @@ class PpdPq(Pq):
             "namespace": "urn:hl7-org:v3",
         },
     )
-    distribution_type: ProbabilityDistributionType | None = field(
+    distribution_type: None | ProbabilityDistributionType = field(
         default=None,
         metadata={
             "name": "distributionType",
@@ -399,7 +399,7 @@ class PpdTs(Ts):
     class Meta:
         name = "PPD_TS"
 
-    standard_deviation: Pq | None = field(
+    standard_deviation: None | Pq = field(
         default=None,
         metadata={
             "name": "standardDeviation",
@@ -407,7 +407,7 @@ class PpdTs(Ts):
             "namespace": "urn:hl7-org:v3",
         },
     )
-    distribution_type: ProbabilityDistributionType | None = field(
+    distribution_type: None | ProbabilityDistributionType = field(
         default=None,
         metadata={
             "name": "distributionType",
@@ -429,7 +429,7 @@ class RtoMoPq(Qty):
     class Meta:
         name = "RTO_MO_PQ"
 
-    numerator: Mo | None = field(
+    numerator: None | Mo = field(
         default=None,
         metadata={
             "type": "Element",
@@ -437,7 +437,7 @@ class RtoMoPq(Qty):
             "required": True,
         },
     )
-    denominator: Pq | None = field(
+    denominator: None | Pq = field(
         default=None,
         metadata={
             "type": "Element",
@@ -460,7 +460,7 @@ class RtoPqPq(Qty):
     class Meta:
         name = "RTO_PQ_PQ"
 
-    numerator: Pq | None = field(
+    numerator: None | Pq = field(
         default=None,
         metadata={
             "type": "Element",
@@ -468,7 +468,7 @@ class RtoPqPq(Qty):
             "required": True,
         },
     )
-    denominator: Pq | None = field(
+    denominator: None | Pq = field(
         default=None,
         metadata={
             "type": "Element",
@@ -493,7 +493,7 @@ class SlistPq(AnyType):
     class Meta:
         name = "SLIST_PQ"
 
-    origin: Pq | None = field(
+    origin: None | Pq = field(
         default=None,
         metadata={
             "type": "Element",
@@ -501,7 +501,7 @@ class SlistPq(AnyType):
             "required": True,
         },
     )
-    scale: Pq | None = field(
+    scale: None | Pq = field(
         default=None,
         metadata={
             "type": "Element",
@@ -534,7 +534,7 @@ class SlistTs(AnyType):
     class Meta:
         name = "SLIST_TS"
 
-    origin: Ts | None = field(
+    origin: None | Ts = field(
         default=None,
         metadata={
             "type": "Element",
@@ -542,7 +542,7 @@ class SlistTs(AnyType):
             "required": True,
         },
     )
-    scale: Pq | None = field(
+    scale: None | Pq = field(
         default=None,
         metadata={
             "type": "Element",
@@ -690,7 +690,7 @@ class UvpTs(Ts):
     class Meta:
         name = "UVP_TS"
 
-    probability: float | None = field(
+    probability: None | float = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -719,7 +719,7 @@ class IvlInt(SxcmInt):
     class Meta:
         name = "IVL_INT"
 
-    low: IvxbInt | None = field(
+    low: None | IvxbInt = field(
         default=None,
         metadata={
             "type": "Element",
@@ -742,7 +742,7 @@ class IvlInt(SxcmInt):
             "max_occurs": 3,
         },
     )
-    center: Int | None = field(
+    center: None | Int = field(
         default=None,
         metadata={
             "type": "Element",
@@ -770,7 +770,7 @@ class IvlMo(SxcmMo):
     class Meta:
         name = "IVL_MO"
 
-    low: IvxbMo | None = field(
+    low: None | IvxbMo = field(
         default=None,
         metadata={
             "type": "Element",
@@ -793,7 +793,7 @@ class IvlMo(SxcmMo):
             "max_occurs": 3,
         },
     )
-    center: Mo | None = field(
+    center: None | Mo = field(
         default=None,
         metadata={
             "type": "Element",
@@ -821,7 +821,7 @@ class IvlPq(SxcmPq):
     class Meta:
         name = "IVL_PQ"
 
-    low: IvxbPq | None = field(
+    low: None | IvxbPq = field(
         default=None,
         metadata={
             "type": "Element",
@@ -844,7 +844,7 @@ class IvlPq(SxcmPq):
             "max_occurs": 3,
         },
     )
-    center: Pq | None = field(
+    center: None | Pq = field(
         default=None,
         metadata={
             "type": "Element",
@@ -872,7 +872,7 @@ class IvlReal(SxcmReal):
     class Meta:
         name = "IVL_REAL"
 
-    low: IvxbReal | None = field(
+    low: None | IvxbReal = field(
         default=None,
         metadata={
             "type": "Element",
@@ -895,7 +895,7 @@ class IvlReal(SxcmReal):
             "max_occurs": 3,
         },
     )
-    center: Real | None = field(
+    center: None | Real = field(
         default=None,
         metadata={
             "type": "Element",
@@ -1029,14 +1029,14 @@ class EivlTs(SxcmTs):
     class Meta:
         name = "EIVL_TS"
 
-    event: EivlEvent | None = field(
+    event: None | EivlEvent = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    offset: IvlPq | None = field(
+    offset: None | IvlPq = field(
         default=None,
         metadata={
             "type": "Element",
@@ -1064,7 +1064,7 @@ class IvlPpdPq(SxcmPpdPq):
     class Meta:
         name = "IVL_PPD_PQ"
 
-    low: IvxbPpdPq | None = field(
+    low: None | IvxbPpdPq = field(
         default=None,
         metadata={
             "type": "Element",
@@ -1087,7 +1087,7 @@ class IvlPpdPq(SxcmPpdPq):
             "max_occurs": 3,
         },
     )
-    center: PpdPq | None = field(
+    center: None | PpdPq = field(
         default=None,
         metadata={
             "type": "Element",
@@ -1115,7 +1115,7 @@ class IvlPpdTs(SxcmPpdTs):
     class Meta:
         name = "IVL_PPD_TS"
 
-    low: IvxbPpdTs | None = field(
+    low: None | IvxbPpdTs = field(
         default=None,
         metadata={
             "type": "Element",
@@ -1138,7 +1138,7 @@ class IvlPpdTs(SxcmPpdTs):
             "max_occurs": 3,
         },
     )
-    center: PpdTs | None = field(
+    center: None | PpdTs = field(
         default=None,
         metadata={
             "type": "Element",
@@ -1172,14 +1172,14 @@ class EivlPpdTs(SxcmPpdTs):
     class Meta:
         name = "EIVL_PPD_TS"
 
-    event: EivlEvent | None = field(
+    event: None | EivlEvent = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    offset: IvlPpdPq | None = field(
+    offset: None | IvlPpdPq = field(
         default=None,
         metadata={
             "type": "Element",
@@ -1219,14 +1219,14 @@ class PivlPpdTs(SxcmPpdTs):
     class Meta:
         name = "PIVL_PPD_TS"
 
-    phase: IvlPpdTs | None = field(
+    phase: None | IvlPpdTs = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    period: PpdPq | None = field(
+    period: None | PpdPq = field(
         default=None,
         metadata={
             "type": "Element",
@@ -1234,7 +1234,7 @@ class PivlPpdTs(SxcmPpdTs):
         },
     )
     alignment: (
-        CalendarCycleOneLetter | str | CalendarCycleTwoLetterValue | None
+        None | CalendarCycleOneLetter | str | CalendarCycleTwoLetterValue
     ) = field(
         default=None,
         metadata={

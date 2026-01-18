@@ -148,7 +148,7 @@ class ISignalToIPduMapping:
     class Meta:
         name = "I-SIGNAL-TO-I-PDU-MAPPING"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -157,7 +157,7 @@ class ISignalToIPduMapping:
             "required": True,
         },
     )
-    short_name_fragments: ISignalToIPduMapping.ShortNameFragments | None = (
+    short_name_fragments: None | ISignalToIPduMapping.ShortNameFragments = (
         field(
             default=None,
             metadata={
@@ -167,7 +167,7 @@ class ISignalToIPduMapping:
             },
         )
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -175,7 +175,7 @@ class ISignalToIPduMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -183,7 +183,7 @@ class ISignalToIPduMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -191,7 +191,7 @@ class ISignalToIPduMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -199,7 +199,7 @@ class ISignalToIPduMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -207,7 +207,7 @@ class ISignalToIPduMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: ISignalToIPduMapping.Annotations | None = field(
+    annotations: None | ISignalToIPduMapping.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -215,7 +215,7 @@ class ISignalToIPduMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    i_signal_group_ref: ISignalToIPduMapping.ISignalGroupRef | None = field(
+    i_signal_group_ref: None | ISignalToIPduMapping.ISignalGroupRef = field(
         default=None,
         metadata={
             "name": "I-SIGNAL-GROUP-REF",
@@ -223,7 +223,7 @@ class ISignalToIPduMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    i_signal_ref: ISignalToIPduMapping.ISignalRef | None = field(
+    i_signal_ref: None | ISignalToIPduMapping.ISignalRef = field(
         default=None,
         metadata={
             "name": "I-SIGNAL-REF",
@@ -231,7 +231,7 @@ class ISignalToIPduMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    packing_byte_order: ByteOrderEnum | None = field(
+    packing_byte_order: None | ByteOrderEnum = field(
         default=None,
         metadata={
             "name": "PACKING-BYTE-ORDER",
@@ -239,7 +239,7 @@ class ISignalToIPduMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    start_position: Integer | None = field(
+    start_position: None | Integer = field(
         default=None,
         metadata={
             "name": "START-POSITION",
@@ -247,7 +247,7 @@ class ISignalToIPduMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    transfer_property: TransferPropertyEnum | None = field(
+    transfer_property: None | TransferPropertyEnum = field(
         default=None,
         metadata={
             "name": "TRANSFER-PROPERTY",
@@ -255,7 +255,7 @@ class ISignalToIPduMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    update_indication_bit_position: Integer | None = field(
+    update_indication_bit_position: None | Integer = field(
         default=None,
         metadata={
             "name": "UPDATE-INDICATION-BIT-POSITION",
@@ -263,7 +263,7 @@ class ISignalToIPduMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -271,14 +271,14 @@ class ISignalToIPduMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -286,7 +286,7 @@ class ISignalToIPduMapping:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -318,7 +318,7 @@ class ISignalToIPduMapping:
 
     @dataclass
     class ISignalGroupRef(Ref):
-        dest: ISignalGroupSubtypesEnum | None = field(
+        dest: None | ISignalGroupSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -329,7 +329,7 @@ class ISignalToIPduMapping:
 
     @dataclass
     class ISignalRef(Ref):
-        dest: ISignalSubtypesEnum | None = field(
+        dest: None | ISignalSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

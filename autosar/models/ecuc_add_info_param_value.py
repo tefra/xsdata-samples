@@ -54,7 +54,7 @@ class EcucAddInfoParamValue:
     class Meta:
         name = "ECUC-ADD-INFO-PARAM-VALUE"
 
-    index: PositiveInteger | None = field(
+    index: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "INDEX",
@@ -62,7 +62,7 @@ class EcucAddInfoParamValue:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    definition_ref: EcucAddInfoParamValue.DefinitionRef | None = field(
+    definition_ref: None | EcucAddInfoParamValue.DefinitionRef = field(
         default=None,
         metadata={
             "name": "DEFINITION-REF",
@@ -70,7 +70,7 @@ class EcucAddInfoParamValue:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: EcucAddInfoParamValue.Annotations | None = field(
+    annotations: None | EcucAddInfoParamValue.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -78,7 +78,7 @@ class EcucAddInfoParamValue:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    is_auto_value: Boolean | None = field(
+    is_auto_value: None | Boolean = field(
         default=None,
         metadata={
             "name": "IS-AUTO-VALUE",
@@ -86,7 +86,7 @@ class EcucAddInfoParamValue:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -94,7 +94,7 @@ class EcucAddInfoParamValue:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    value: DocumentationBlock | None = field(
+    value: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "VALUE",
@@ -102,14 +102,14 @@ class EcucAddInfoParamValue:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -120,7 +120,7 @@ class EcucAddInfoParamValue:
 
     @dataclass
     class DefinitionRef(Ref):
-        dest: EcucParameterDefSubtypesEnum | None = field(
+        dest: None | EcucParameterDefSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

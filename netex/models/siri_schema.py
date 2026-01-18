@@ -25,7 +25,8 @@ __NAMESPACE__ = "http://www.siri.org.uk/siri"
 @dataclass
 class SiriSchema:
     choice: (
-        ServiceRequest
+        None
+        | ServiceRequest
         | SubscriptionRequest
         | TerminateSubscriptionRequest
         | DataReadyNotification
@@ -41,7 +42,6 @@ class SiriSchema:
         | CheckStatusResponse
         | CapabilitiesResponse
         | Extensions1
-        | None
     ) = field(
         default=None,
         metadata={

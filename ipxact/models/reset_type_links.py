@@ -42,7 +42,7 @@ class ResetTypeLinks:
         """
 
         external_reset_type_reference: (
-            ResetTypeLinks.ResetTypeLink.ExternalResetTypeReference | None
+            None | ResetTypeLinks.ResetTypeLink.ExternalResetTypeReference
         ) = field(
             default=None,
             metadata={
@@ -52,7 +52,7 @@ class ResetTypeLinks:
             },
         )
         reset_type_reference: (
-            ResetTypeLinks.ResetTypeLink.ResetTypeReference | None
+            None | ResetTypeLinks.ResetTypeLink.ResetTypeReference
         ) = field(
             default=None,
             metadata={
@@ -61,14 +61,14 @@ class ResetTypeLinks:
                 "required": True,
             },
         )
-        vendor_extensions: VendorExtensions | None = field(
+        vendor_extensions: None | VendorExtensions = field(
             default=None,
             metadata={
                 "name": "vendorExtensions",
                 "type": "Element",
             },
         )
-        id: str | None = field(
+        id: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -82,7 +82,7 @@ class ResetTypeLinks:
             :ivar reset_type_ref: Reference to a specific resetType.
             """
 
-            reset_type_ref: str | None = field(
+            reset_type_ref: None | str = field(
                 default=None,
                 metadata={
                     "name": "resetTypeRef",
@@ -97,7 +97,7 @@ class ResetTypeLinks:
             :ivar reset_type_ref: Reference to a specific resetType
             """
 
-            reset_type_ref: str | None = field(
+            reset_type_ref: None | str = field(
                 default=None,
                 metadata={
                     "name": "resetTypeRef",

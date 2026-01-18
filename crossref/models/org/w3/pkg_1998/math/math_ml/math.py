@@ -1311,71 +1311,71 @@ class Math:
             "type": "Element",
         },
     )
-    mathcolor: str | None = field(
+    mathcolor: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\s*((#[0-9a-fA-F]{3}([0-9a-fA-F]{3})?)|[aA][qQ][uU][aA]|[bB][lL][aA][cC][kK]|[bB][lL][uU][eE]|[fF][uU][cC][hH][sS][iI][aA]|[gG][rR][aA][yY]|[gG][rR][eE][eE][nN]|[lL][iI][mM][eE]|[mM][aA][rR][oO][oO][nN]|[nN][aA][vV][yY]|[oO][lL][iI][vV][eE]|[pP][uU][rR][pP][lL][eE]|[rR][eE][dD]|[sS][iI][lL][vV][eE][rR]|[tT][eE][aA][lL]|[wW][hH][iI][tT][eE]|[yY][eE][lL][lL][oO][wW])\s*",
         },
     )
-    mathbackground: str | MathValue | None = field(
+    mathbackground: None | str | MathValue = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\s*((#[0-9a-fA-F]{3}([0-9a-fA-F]{3})?)|[aA][qQ][uU][aA]|[bB][lL][aA][cC][kK]|[bB][lL][uU][eE]|[fF][uU][cC][hH][sS][iI][aA]|[gG][rR][aA][yY]|[gG][rR][eE][eE][nN]|[lL][iI][mM][eE]|[mM][aA][rR][oO][oO][nN]|[nN][aA][vV][yY]|[oO][lL][iI][vV][eE]|[pP][uU][rR][pP][lL][eE]|[rR][eE][dD]|[sS][iI][lL][vV][eE][rR]|[tT][eE][aA][lL]|[wW][hH][iI][tT][eE]|[yY][eE][lL][lL][oO][wW])\s*",
         },
     )
-    scriptlevel: int | None = field(
+    scriptlevel: None | int = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    displaystyle: MathDisplaystyle | None = field(
+    displaystyle: None | MathDisplaystyle = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    scriptsizemultiplier: Decimal | None = field(
+    scriptsizemultiplier: None | Decimal = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    scriptminsize: str | None = field(
+    scriptminsize: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\s*((-?[0-9]*([0-9]\.?|\.[0-9])[0-9]*(e[mx]|in|cm|mm|p[xtc]|%)?)|(negative)?((very){0,2}thi(n|ck)|medium)mathspace)\s*",
         },
     )
-    infixlinebreakstyle: MathInfixlinebreakstyle | None = field(
+    infixlinebreakstyle: None | MathInfixlinebreakstyle = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    decimalpoint: str | None = field(
+    decimalpoint: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\s*\S\s*",
         },
     )
-    accent: MathAccent | None = field(
+    accent: None | MathAccent = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    accentunder: MathAccentunder | None = field(
+    accentunder: None | MathAccentunder = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    align: MathAlign | None = field(
+    align: None | MathAlign = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -1388,26 +1388,26 @@ class Math:
             "tokens": True,
         },
     )
-    bevelled: MathBevelled | None = field(
+    bevelled: None | MathBevelled = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    charalign: MathCharalign | None = field(
+    charalign: None | MathCharalign = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    charspacing: str | MathValue | None = field(
+    charspacing: None | str | MathValue = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\s*((-?[0-9]*([0-9]\.?|\.[0-9])[0-9]*(e[mx]|in|cm|mm|p[xtc]|%)?)|(negative)?((very){0,2}thi(n|ck)|medium)mathspace)\s*",
         },
     )
-    close: object | None = field(
+    close: None | object = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -1436,7 +1436,7 @@ class Math:
             "tokens": True,
         },
     )
-    columnspan: int | None = field(
+    columnspan: None | int = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -1456,56 +1456,56 @@ class Math:
             "tokens": True,
         },
     )
-    denomalign: MathDenomalign | None = field(
+    denomalign: None | MathDenomalign = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    depth: str | None = field(
+    depth: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\s*((-?[0-9]*([0-9]\.?|\.[0-9])[0-9]*(e[mx]|in|cm|mm|p[xtc]|%)?)|(negative)?((very){0,2}thi(n|ck)|medium)mathspace)\s*",
         },
     )
-    dir: MathDir | None = field(
+    dir: None | MathDir = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    edge: MathEdge | None = field(
+    edge: None | MathEdge = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    equalcolumns: MathEqualcolumns | None = field(
+    equalcolumns: None | MathEqualcolumns = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    equalrows: MathEqualrows | None = field(
+    equalrows: None | MathEqualrows = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    fence: MathFence | None = field(
+    fence: None | MathFence = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    form: MathForm | None = field(
+    form: None | MathForm = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    frame: Linestyle | None = field(
+    frame: None | Linestyle = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -1519,213 +1519,213 @@ class Math:
             "tokens": True,
         },
     )
-    groupalign: str | None = field(
+    groupalign: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"(\s*\{\s*(left|center|right|decimalpoint)(\s+(left|center|right|decimalpoint))*\})*\s*",
         },
     )
-    height: str | None = field(
+    height: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\s*((-?[0-9]*([0-9]\.?|\.[0-9])[0-9]*(e[mx]|in|cm|mm|p[xtc]|%)?)|(negative)?((very){0,2}thi(n|ck)|medium)mathspace)\s*",
         },
     )
-    indentalign: MathIndentalign | None = field(
+    indentalign: None | MathIndentalign = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    indentalignfirst: MathIndentalignfirst | None = field(
+    indentalignfirst: None | MathIndentalignfirst = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    indentalignlast: MathIndentalignlast | None = field(
+    indentalignlast: None | MathIndentalignlast = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    indentshift: str | None = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-            "pattern": r"\s*((-?[0-9]*([0-9]\.?|\.[0-9])[0-9]*(e[mx]|in|cm|mm|p[xtc]|%)?)|(negative)?((very){0,2}thi(n|ck)|medium)mathspace)\s*",
-        },
-    )
-    indentshiftfirst: str | MathValue | None = field(
+    indentshift: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\s*((-?[0-9]*([0-9]\.?|\.[0-9])[0-9]*(e[mx]|in|cm|mm|p[xtc]|%)?)|(negative)?((very){0,2}thi(n|ck)|medium)mathspace)\s*",
         },
     )
-    indentshiftlast: str | MathValue | None = field(
+    indentshiftfirst: None | str | MathValue = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\s*((-?[0-9]*([0-9]\.?|\.[0-9])[0-9]*(e[mx]|in|cm|mm|p[xtc]|%)?)|(negative)?((very){0,2}thi(n|ck)|medium)mathspace)\s*",
         },
     )
-    indenttarget: object | None = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        },
-    )
-    largeop: MathLargeop | None = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        },
-    )
-    leftoverhang: str | None = field(
+    indentshiftlast: None | str | MathValue = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\s*((-?[0-9]*([0-9]\.?|\.[0-9])[0-9]*(e[mx]|in|cm|mm|p[xtc]|%)?)|(negative)?((very){0,2}thi(n|ck)|medium)mathspace)\s*",
         },
     )
-    length: int | None = field(
+    indenttarget: None | object = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    linebreak: MathLinebreak | None = field(
+    largeop: None | MathLargeop = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    linebreakmultchar: object | None = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        },
-    )
-    linebreakstyle: MathLinebreakstyle | None = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        },
-    )
-    lineleading: str | None = field(
+    leftoverhang: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\s*((-?[0-9]*([0-9]\.?|\.[0-9])[0-9]*(e[mx]|in|cm|mm|p[xtc]|%)?)|(negative)?((very){0,2}thi(n|ck)|medium)mathspace)\s*",
         },
     )
-    linethickness: str | MathValue | None = field(
+    length: None | int = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        },
+    )
+    linebreak: None | MathLinebreak = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        },
+    )
+    linebreakmultchar: None | object = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        },
+    )
+    linebreakstyle: None | MathLinebreakstyle = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        },
+    )
+    lineleading: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\s*((-?[0-9]*([0-9]\.?|\.[0-9])[0-9]*(e[mx]|in|cm|mm|p[xtc]|%)?)|(negative)?((very){0,2}thi(n|ck)|medium)mathspace)\s*",
         },
     )
-    location: MathLocation | None = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        },
-    )
-    longdivstyle: MathLongdivstyle | None = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        },
-    )
-    lquote: object | None = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        },
-    )
-    lspace: str | None = field(
+    linethickness: None | str | MathValue = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\s*((-?[0-9]*([0-9]\.?|\.[0-9])[0-9]*(e[mx]|in|cm|mm|p[xtc]|%)?)|(negative)?((very){0,2}thi(n|ck)|medium)mathspace)\s*",
         },
     )
-    mathsize: str | MathValue | None = field(
+    location: None | MathLocation = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        },
+    )
+    longdivstyle: None | MathLongdivstyle = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        },
+    )
+    lquote: None | object = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        },
+    )
+    lspace: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\s*((-?[0-9]*([0-9]\.?|\.[0-9])[0-9]*(e[mx]|in|cm|mm|p[xtc]|%)?)|(negative)?((very){0,2}thi(n|ck)|medium)mathspace)\s*",
         },
     )
-    mathvariant: MathMathvariant | None = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        },
-    )
-    maxsize: str | MathValue | None = field(
+    mathsize: None | str | MathValue = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\s*((-?[0-9]*([0-9]\.?|\.[0-9])[0-9]*(e[mx]|in|cm|mm|p[xtc]|%)?)|(negative)?((very){0,2}thi(n|ck)|medium)mathspace)\s*",
         },
     )
-    minlabelspacing: str | None = field(
+    mathvariant: None | MathMathvariant = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        },
+    )
+    maxsize: None | str | MathValue = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\s*((-?[0-9]*([0-9]\.?|\.[0-9])[0-9]*(e[mx]|in|cm|mm|p[xtc]|%)?)|(negative)?((very){0,2}thi(n|ck)|medium)mathspace)\s*",
         },
     )
-    minsize: str | None = field(
+    minlabelspacing: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\s*((-?[0-9]*([0-9]\.?|\.[0-9])[0-9]*(e[mx]|in|cm|mm|p[xtc]|%)?)|(negative)?((very){0,2}thi(n|ck)|medium)mathspace)\s*",
         },
     )
-    movablelimits: MathMovablelimits | None = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        },
-    )
-    mslinethickness: str | MathValue | None = field(
+    minsize: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\s*((-?[0-9]*([0-9]\.?|\.[0-9])[0-9]*(e[mx]|in|cm|mm|p[xtc]|%)?)|(negative)?((very){0,2}thi(n|ck)|medium)mathspace)\s*",
         },
     )
-    notation: object | None = field(
+    movablelimits: None | MathMovablelimits = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    numalign: MathNumalign | None = field(
+    mslinethickness: None | str | MathValue = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+            "pattern": r"\s*((-?[0-9]*([0-9]\.?|\.[0-9])[0-9]*(e[mx]|in|cm|mm|p[xtc]|%)?)|(negative)?((very){0,2}thi(n|ck)|medium)mathspace)\s*",
+        },
+    )
+    notation: None | object = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    open: object | None = field(
+    numalign: None | MathNumalign = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    position: int | None = field(
+    open: None | object = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    rightoverhang: str | None = field(
+    position: None | int = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        },
+    )
+    rightoverhang: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -1755,108 +1755,108 @@ class Math:
             "tokens": True,
         },
     )
-    rowspan: int | None = field(
+    rowspan: None | int = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    rquote: object | None = field(
+    rquote: None | object = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    rspace: str | None = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-            "pattern": r"\s*((-?[0-9]*([0-9]\.?|\.[0-9])[0-9]*(e[mx]|in|cm|mm|p[xtc]|%)?)|(negative)?((very){0,2}thi(n|ck)|medium)mathspace)\s*",
-        },
-    )
-    selection: int | None = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        },
-    )
-    separator: MathSeparator | None = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        },
-    )
-    separators: object | None = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        },
-    )
-    shift: int | None = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        },
-    )
-    side: MathSide | None = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        },
-    )
-    stackalign: MathStackalign | None = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        },
-    )
-    stretchy: MathStretchy | None = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        },
-    )
-    subscriptshift: str | None = field(
+    rspace: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\s*((-?[0-9]*([0-9]\.?|\.[0-9])[0-9]*(e[mx]|in|cm|mm|p[xtc]|%)?)|(negative)?((very){0,2}thi(n|ck)|medium)mathspace)\s*",
         },
     )
-    superscriptshift: str | None = field(
+    selection: None | int = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        },
+    )
+    separator: None | MathSeparator = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        },
+    )
+    separators: None | object = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        },
+    )
+    shift: None | int = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        },
+    )
+    side: None | MathSide = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        },
+    )
+    stackalign: None | MathStackalign = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        },
+    )
+    stretchy: None | MathStretchy = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        },
+    )
+    subscriptshift: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\s*((-?[0-9]*([0-9]\.?|\.[0-9])[0-9]*(e[mx]|in|cm|mm|p[xtc]|%)?)|(negative)?((very){0,2}thi(n|ck)|medium)mathspace)\s*",
         },
     )
-    symmetric: MathSymmetric | None = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        },
-    )
-    valign: str | None = field(
+    superscriptshift: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\s*((-?[0-9]*([0-9]\.?|\.[0-9])[0-9]*(e[mx]|in|cm|mm|p[xtc]|%)?)|(negative)?((very){0,2}thi(n|ck)|medium)mathspace)\s*",
         },
     )
-    width: str | None = field(
+    symmetric: None | MathSymmetric = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        },
+    )
+    valign: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\s*((-?[0-9]*([0-9]\.?|\.[0-9])[0-9]*(e[mx]|in|cm|mm|p[xtc]|%)?)|(negative)?((very){0,2}thi(n|ck)|medium)mathspace)\s*",
         },
     )
-    id: str | None = field(
+    width: None | str = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+            "pattern": r"\s*((-?[0-9]*([0-9]\.?|\.[0-9])[0-9]*(e[mx]|in|cm|mm|p[xtc]|%)?)|(negative)?((very){0,2}thi(n|ck)|medium)mathspace)\s*",
+        },
+    )
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    xref: object | None = field(
+    xref: None | object = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -1870,19 +1870,19 @@ class Math:
             "tokens": True,
         },
     )
-    style: str | None = field(
+    style: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    href: str | None = field(
+    href: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    other: object | None = field(
+    other: None | object = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -1895,32 +1895,32 @@ class Math:
             "namespace": "##other",
         },
     )
-    display: MathDisplay | None = field(
+    display: None | MathDisplay = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    maxwidth: str | None = field(
+    maxwidth: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\s*((-?[0-9]*([0-9]\.?|\.[0-9])[0-9]*(e[mx]|in|cm|mm|p[xtc]|%)?)|(negative)?((very){0,2}thi(n|ck)|medium)mathspace)\s*",
         },
     )
-    overflow: MathOverflow | None = field(
+    overflow: None | MathOverflow = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    altimg: str | None = field(
+    altimg: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    altimg_width: str | None = field(
+    altimg_width: None | str = field(
         default=None,
         metadata={
             "name": "altimg-width",
@@ -1928,7 +1928,7 @@ class Math:
             "pattern": r"\s*((-?[0-9]*([0-9]\.?|\.[0-9])[0-9]*(e[mx]|in|cm|mm|p[xtc]|%)?)|(negative)?((very){0,2}thi(n|ck)|medium)mathspace)\s*",
         },
     )
-    altimg_height: str | None = field(
+    altimg_height: None | str = field(
         default=None,
         metadata={
             "name": "altimg-height",
@@ -1936,7 +1936,7 @@ class Math:
             "pattern": r"\s*((-?[0-9]*([0-9]\.?|\.[0-9])[0-9]*(e[mx]|in|cm|mm|p[xtc]|%)?)|(negative)?((very){0,2}thi(n|ck)|medium)mathspace)\s*",
         },
     )
-    altimg_valign: str | MathValue | None = field(
+    altimg_valign: None | str | MathValue = field(
         default=None,
         metadata={
             "name": "altimg-valign",
@@ -1944,26 +1944,26 @@ class Math:
             "pattern": r"\s*((-?[0-9]*([0-9]\.?|\.[0-9])[0-9]*(e[mx]|in|cm|mm|p[xtc]|%)?)|(negative)?((very){0,2}thi(n|ck)|medium)mathspace)\s*",
         },
     )
-    alttext: object | None = field(
+    alttext: None | object = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    cdgroup: str | None = field(
+    cdgroup: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    mode_attribute: str | None = field(
+    mode_attribute: None | str = field(
         default=None,
         metadata={
             "name": "mode",
             "type": "Attribute",
         },
     )
-    macros: str | None = field(
+    macros: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -1972,1016 +1972,1016 @@ class Math:
 
     @dataclass
     class Semantics:
-        apply: Apply | None = field(
+        apply: None | Apply = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        bind: Bind | None = field(
+        bind: None | Bind = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        ci: Ci | None = field(
+        ci: None | Ci = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cn: Cn | None = field(
+        cn: None | Cn = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        csymbol: Csymbol | None = field(
+        csymbol: None | Csymbol = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cbytes: Cbytes | None = field(
+        cbytes: None | Cbytes = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cerror: Cerror | None = field(
+        cerror: None | Cerror = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cs: Cs | None = field(
+        cs: None | Cs = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        share: Share | None = field(
+        share: None | Share = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        piecewise: Piecewise | None = field(
+        piecewise: None | Piecewise = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        declare: Declare | None = field(
+        declare: None | Declare = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        fn: Fn | None = field(
+        fn: None | Fn = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        reln: Reln | None = field(
+        reln: None | Reln = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        interval: Interval | None = field(
+        interval: None | Interval = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        moment: Moment | None = field(
+        moment: None | Moment = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        log: Log | None = field(
+        log: None | Log = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        ln: Ln | None = field(
+        ln: None | Ln = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        image: Image | None = field(
+        image: None | Image = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        codomain: Codomain | None = field(
+        codomain: None | Codomain = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        domain: Domain | None = field(
+        domain: None | Domain = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        ident: Ident | None = field(
+        ident: None | Ident = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        inverse: Inverse | None = field(
+        inverse: None | Inverse = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        lambda_value: Lambda | None = field(
+        lambda_value: None | Lambda = field(
             default=None,
             metadata={
                 "name": "lambda",
                 "type": "Element",
             },
         )
-        compose: Compose | None = field(
+        compose: None | Compose = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        quotient: Quotient | None = field(
+        quotient: None | Quotient = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        divide: Divide | None = field(
+        divide: None | Divide = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        minus: Minus | None = field(
+        minus: None | Minus = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        power: Power | None = field(
+        power: None | Power = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        rem: Rem | None = field(
+        rem: None | Rem = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        root: Root | None = field(
+        root: None | Root = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        factorial: Factorial | None = field(
+        factorial: None | Factorial = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        abs: Abs | None = field(
+        abs: None | Abs = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        conjugate: Conjugate | None = field(
+        conjugate: None | Conjugate = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arg: Arg | None = field(
+        arg: None | Arg = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        real: Real | None = field(
+        real: None | Real = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        imaginary: Imaginary | None = field(
+        imaginary: None | Imaginary = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        floor: Floor | None = field(
+        floor: None | Floor = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        ceiling: Ceiling | None = field(
+        ceiling: None | Ceiling = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        exp: Exp | None = field(
+        exp: None | Exp = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        min: Min | None = field(
+        min: None | Min = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        max: Max | None = field(
+        max: None | Max = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        lcm: Lcm | None = field(
+        lcm: None | Lcm = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        gcd: Gcd | None = field(
+        gcd: None | Gcd = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        times: Times | None = field(
+        times: None | Times = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        plus: Plus | None = field(
+        plus: None | Plus = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        xor: Xor | None = field(
+        xor: None | Xor = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        or_value: Or | None = field(
+        or_value: None | Or = field(
             default=None,
             metadata={
                 "name": "or",
                 "type": "Element",
             },
         )
-        and_value: And | None = field(
+        and_value: None | And = field(
             default=None,
             metadata={
                 "name": "and",
                 "type": "Element",
             },
         )
-        not_value: Not | None = field(
+        not_value: None | Not = field(
             default=None,
             metadata={
                 "name": "not",
                 "type": "Element",
             },
         )
-        equivalent: Equivalent | None = field(
+        equivalent: None | Equivalent = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        implies: Implies | None = field(
+        implies: None | Implies = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        exists: Exists | None = field(
+        exists: None | Exists = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        forall: Forall | None = field(
+        forall: None | Forall = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        leq: Leq | None = field(
+        leq: None | Leq = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        geq: Geq | None = field(
+        geq: None | Geq = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        lt: Lt | None = field(
+        lt: None | Lt = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        gt: Gt | None = field(
+        gt: None | Gt = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        eq: Eq | None = field(
+        eq: None | Eq = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        tendsto: Tendsto | None = field(
+        tendsto: None | Tendsto = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        factorof: Factorof | None = field(
+        factorof: None | Factorof = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        approx: Approx | None = field(
+        approx: None | Approx = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        neq: Neq | None = field(
+        neq: None | Neq = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        int_value: Int | None = field(
+        int_value: None | Int = field(
             default=None,
             metadata={
                 "name": "int",
                 "type": "Element",
             },
         )
-        diff: Diff | None = field(
+        diff: None | Diff = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        partialdiff: Partialdiff | None = field(
+        partialdiff: None | Partialdiff = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        laplacian: Laplacian | None = field(
+        laplacian: None | Laplacian = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        curl: Curl | None = field(
+        curl: None | Curl = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        grad: Grad | None = field(
+        grad: None | Grad = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        divergence: Divergence | None = field(
+        divergence: None | Divergence = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        list_value: List | None = field(
+        list_value: None | List = field(
             default=None,
             metadata={
                 "name": "list",
                 "type": "Element",
             },
         )
-        set: Set | None = field(
+        set: None | Set = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cartesianproduct: Cartesianproduct | None = field(
+        cartesianproduct: None | Cartesianproduct = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        intersect: Intersect | None = field(
+        intersect: None | Intersect = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        union: UnionType | None = field(
+        union: None | UnionType = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        setdiff: Setdiff | None = field(
+        setdiff: None | Setdiff = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        notprsubset: Notprsubset | None = field(
+        notprsubset: None | Notprsubset = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        notsubset: Notsubset | None = field(
+        notsubset: None | Notsubset = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        notin: Notin | None = field(
+        notin: None | Notin = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        in_value: In | None = field(
+        in_value: None | In = field(
             default=None,
             metadata={
                 "name": "in",
                 "type": "Element",
             },
         )
-        prsubset: Prsubset | None = field(
+        prsubset: None | Prsubset = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        subset: Subset | None = field(
+        subset: None | Subset = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        card: Card | None = field(
+        card: None | Card = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        sum: Sum | None = field(
+        sum: None | Sum = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        product: Product | None = field(
+        product: None | Product = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        limit: Limit | None = field(
+        limit: None | Limit = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arctanh: Arctanh | None = field(
+        arctanh: None | Arctanh = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arcsinh: Arcsinh | None = field(
+        arcsinh: None | Arcsinh = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arcsech: Arcsech | None = field(
+        arcsech: None | Arcsech = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arcsec: Arcsec | None = field(
+        arcsec: None | Arcsec = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arccsch: Arccsch | None = field(
+        arccsch: None | Arccsch = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arccsc: Arccsc | None = field(
+        arccsc: None | Arccsc = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arccoth: Arccoth | None = field(
+        arccoth: None | Arccoth = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arccot: Arccot | None = field(
+        arccot: None | Arccot = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arccosh: Arccosh | None = field(
+        arccosh: None | Arccosh = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arctan: Arctan | None = field(
+        arctan: None | Arctan = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arccos: Arccos | None = field(
+        arccos: None | Arccos = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arcsin: Arcsin | None = field(
+        arcsin: None | Arcsin = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        coth: Coth | None = field(
+        coth: None | Coth = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        csch: Csch | None = field(
+        csch: None | Csch = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        sech: Sech | None = field(
+        sech: None | Sech = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        tanh: Tanh | None = field(
+        tanh: None | Tanh = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cosh: Cosh | None = field(
+        cosh: None | Cosh = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        sinh: Sinh | None = field(
+        sinh: None | Sinh = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cot: Cot | None = field(
+        cot: None | Cot = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        csc: Csc | None = field(
+        csc: None | Csc = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        sec: Sec | None = field(
+        sec: None | Sec = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        tan: Tan | None = field(
+        tan: None | Tan = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cos: Cos | None = field(
+        cos: None | Cos = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        sin: Sin | None = field(
+        sin: None | Sin = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mode: Mode | None = field(
+        mode: None | Mode = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        median: Median | None = field(
+        median: None | Median = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        variance: Variance | None = field(
+        variance: None | Variance = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        sdev: Sdev | None = field(
+        sdev: None | Sdev = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mean: Mean | None = field(
+        mean: None | Mean = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        matrixrow: Matrixrow | None = field(
+        matrixrow: None | Matrixrow = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        matrix: Matrix | None = field(
+        matrix: None | Matrix = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        vector: Vector | None = field(
+        vector: None | Vector = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        transpose: Transpose | None = field(
+        transpose: None | Transpose = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        determinant: Determinant | None = field(
+        determinant: None | Determinant = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        selector: Selector | None = field(
+        selector: None | Selector = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        outerproduct: Outerproduct | None = field(
+        outerproduct: None | Outerproduct = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        scalarproduct: Scalarproduct | None = field(
+        scalarproduct: None | Scalarproduct = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        vectorproduct: Vectorproduct | None = field(
+        vectorproduct: None | Vectorproduct = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        emptyset: Emptyset | None = field(
+        emptyset: None | Emptyset = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        primes: Primes | None = field(
+        primes: None | Primes = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        complexes: Complexes | None = field(
+        complexes: None | Complexes = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        naturalnumbers: Naturalnumbers | None = field(
+        naturalnumbers: None | Naturalnumbers = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        rationals: Rationals | None = field(
+        rationals: None | Rationals = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        reals: Reals | None = field(
+        reals: None | Reals = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        integers: Integers | None = field(
+        integers: None | Integers = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        infinity: Infinity | None = field(
+        infinity: None | Infinity = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        eulergamma: Eulergamma | None = field(
+        eulergamma: None | Eulergamma = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        pi: Pi | None = field(
+        pi: None | Pi = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        false: FalseType | None = field(
+        false: None | FalseType = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        true: TrueType | None = field(
+        true: None | TrueType = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        notanumber: Notanumber | None = field(
+        notanumber: None | Notanumber = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        imaginaryi: Imaginaryi | None = field(
+        imaginaryi: None | Imaginaryi = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        exponentiale: Exponentiale | None = field(
+        exponentiale: None | Exponentiale = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        maction: Maction | None = field(
+        maction: None | Maction = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mlongdiv: Mlongdiv | None = field(
+        mlongdiv: None | Mlongdiv = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mstack: Mstack | None = field(
+        mstack: None | Mstack = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mtable: Mtable | None = field(
+        mtable: None | Mtable = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mmultiscripts: Mmultiscripts | None = field(
+        mmultiscripts: None | Mmultiscripts = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        munderover: Munderover | None = field(
+        munderover: None | Munderover = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mover: Mover | None = field(
+        mover: None | Mover = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        munder: Munder | None = field(
+        munder: None | Munder = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        msubsup: Msubsup | None = field(
+        msubsup: None | Msubsup = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        msup: Msup | None = field(
+        msup: None | Msup = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        msub: Msub | None = field(
+        msub: None | Msub = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        menclose: Menclose | None = field(
+        menclose: None | Menclose = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mfenced: Mfenced | None = field(
+        mfenced: None | Mfenced = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mphantom: Mphantom | None = field(
+        mphantom: None | Mphantom = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mpadded: Mpadded | None = field(
+        mpadded: None | Mpadded = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        merror: Merror | None = field(
+        merror: None | Merror = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mstyle: Mstyle | None = field(
+        mstyle: None | Mstyle = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mroot: Mroot | None = field(
+        mroot: None | Mroot = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        msqrt: Msqrt | None = field(
+        msqrt: None | Msqrt = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mfrac: Mfrac | None = field(
+        mfrac: None | Mfrac = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mrow: Mrow | None = field(
+        mrow: None | Mrow = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        maligngroup: Maligngroup | None = field(
+        maligngroup: None | Maligngroup = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        malignmark: Malignmark | None = field(
+        malignmark: None | Malignmark = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        ms: Ms | None = field(
+        ms: None | Ms = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mspace: Mspace | None = field(
+        mspace: None | Mspace = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mtext: Mtext | None = field(
+        mtext: None | Mtext = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mo: Mo | None = field(
+        mo: None | Mo = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mn: Mn | None = field(
+        mn: None | Mn = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mi: Mi | None = field(
+        mi: None | Mi = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        semantics: Math.Semantics | None = field(
+        semantics: None | Math.Semantics = field(
             default=None,
             metadata={
                 "type": "Element",
@@ -3000,13 +3000,13 @@ class Math:
                 "type": "Element",
             },
         )
-        id: str | None = field(
+        id: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
             },
         )
-        xref: object | None = field(
+        xref: None | object = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -3020,19 +3020,19 @@ class Math:
                 "tokens": True,
             },
         )
-        style: str | None = field(
+        style: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
             },
         )
-        href: str | None = field(
+        href: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
             },
         )
-        other: object | None = field(
+        other: None | object = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -3045,26 +3045,26 @@ class Math:
                 "namespace": "##other",
             },
         )
-        encoding: str | None = field(
+        encoding: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
             },
         )
-        definition_url: str | None = field(
+        definition_url: None | str = field(
             default=None,
             metadata={
                 "name": "definitionURL",
                 "type": "Attribute",
             },
         )
-        cd: str | None = field(
+        cd: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
             },
         )
-        name: str | None = field(
+        name: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",

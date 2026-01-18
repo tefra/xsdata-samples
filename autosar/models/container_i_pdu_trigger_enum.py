@@ -28,20 +28,20 @@ class ContainerIPduTriggerEnum:
     class Meta:
         name = "CONTAINER-I-PDU-TRIGGER-ENUM"
 
-    value: ContainerIPduTriggerEnumSimple | None = field(
+    value: None | ContainerIPduTriggerEnumSimple = field(
         default=None,
         metadata={
             "required": True,
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

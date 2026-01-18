@@ -40,7 +40,7 @@ class EventInExecutableInstanceRef:
         name = "EVENT-IN-EXECUTABLE-INSTANCE-REF"
 
     context_root_sw_component_prototype_ref: (
-        EventInExecutableInstanceRef.ContextRootSwComponentPrototypeRef | None
+        None | EventInExecutableInstanceRef.ContextRootSwComponentPrototypeRef
     ) = field(
         default=None,
         metadata={
@@ -60,7 +60,7 @@ class EventInExecutableInstanceRef:
         },
     )
     context_r_port_prototype_ref: (
-        EventInExecutableInstanceRef.ContextRPortPrototypeRef | None
+        None | EventInExecutableInstanceRef.ContextRPortPrototypeRef
     ) = field(
         default=None,
         metadata={
@@ -69,7 +69,7 @@ class EventInExecutableInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    target_event_ref: EventInExecutableInstanceRef.TargetEventRef | None = (
+    target_event_ref: None | EventInExecutableInstanceRef.TargetEventRef = (
         field(
             default=None,
             metadata={
@@ -79,14 +79,14 @@ class EventInExecutableInstanceRef:
             },
         )
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -97,7 +97,7 @@ class EventInExecutableInstanceRef:
 
     @dataclass
     class ContextRootSwComponentPrototypeRef(Ref):
-        dest: RootSwComponentPrototypeSubtypesEnum | None = field(
+        dest: None | RootSwComponentPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -108,7 +108,7 @@ class EventInExecutableInstanceRef:
 
     @dataclass
     class ContextSwComponentPrototypeRef(Ref):
-        dest: SwComponentPrototypeSubtypesEnum | None = field(
+        dest: None | SwComponentPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -119,7 +119,7 @@ class EventInExecutableInstanceRef:
 
     @dataclass
     class ContextRPortPrototypeRef(Ref):
-        dest: RPortPrototypeSubtypesEnum | None = field(
+        dest: None | RPortPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -130,7 +130,7 @@ class EventInExecutableInstanceRef:
 
     @dataclass
     class TargetEventRef(Ref):
-        dest: VariableDataPrototypeSubtypesEnum | None = field(
+        dest: None | VariableDataPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

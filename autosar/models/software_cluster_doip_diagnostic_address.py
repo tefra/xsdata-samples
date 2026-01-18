@@ -36,7 +36,7 @@ class SoftwareClusterDoipDiagnosticAddress:
     class Meta:
         name = "SOFTWARE-CLUSTER-DOIP-DIAGNOSTIC-ADDRESS"
 
-    address_semantics: SoftwareClusterDiagnosticAddressSemanticsEnum | None = (
+    address_semantics: None | SoftwareClusterDiagnosticAddressSemanticsEnum = (
         field(
             default=None,
             metadata={
@@ -46,7 +46,7 @@ class SoftwareClusterDoipDiagnosticAddress:
             },
         )
     )
-    diagnostic_address: PositiveInteger | None = field(
+    diagnostic_address: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "DIAGNOSTIC-ADDRESS",
@@ -54,14 +54,14 @@ class SoftwareClusterDoipDiagnosticAddress:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

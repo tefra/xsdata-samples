@@ -154,7 +154,7 @@ class ConsumedServiceInstance:
     class Meta:
         name = "CONSUMED-SERVICE-INSTANCE"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -163,7 +163,7 @@ class ConsumedServiceInstance:
             "required": True,
         },
     )
-    short_name_fragments: ConsumedServiceInstance.ShortNameFragments | None = (
+    short_name_fragments: None | ConsumedServiceInstance.ShortNameFragments = (
         field(
             default=None,
             metadata={
@@ -173,7 +173,7 @@ class ConsumedServiceInstance:
             },
         )
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -181,7 +181,7 @@ class ConsumedServiceInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -189,7 +189,7 @@ class ConsumedServiceInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -197,7 +197,7 @@ class ConsumedServiceInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -205,7 +205,7 @@ class ConsumedServiceInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -213,7 +213,7 @@ class ConsumedServiceInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: ConsumedServiceInstance.Annotations | None = field(
+    annotations: None | ConsumedServiceInstance.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -221,7 +221,7 @@ class ConsumedServiceInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    capability_records: ConsumedServiceInstance.CapabilityRecords | None = (
+    capability_records: None | ConsumedServiceInstance.CapabilityRecords = (
         field(
             default=None,
             metadata={
@@ -231,7 +231,7 @@ class ConsumedServiceInstance:
             },
         )
     )
-    major_version: PositiveInteger | None = field(
+    major_version: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "MAJOR-VERSION",
@@ -240,7 +240,7 @@ class ConsumedServiceInstance:
         },
     )
     method_activation_routing_groups: (
-        ConsumedServiceInstance.MethodActivationRoutingGroups | None
+        None | ConsumedServiceInstance.MethodActivationRoutingGroups
     ) = field(
         default=None,
         metadata={
@@ -249,7 +249,7 @@ class ConsumedServiceInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    routing_group_refs: ConsumedServiceInstance.RoutingGroupRefs | None = (
+    routing_group_refs: None | ConsumedServiceInstance.RoutingGroupRefs = (
         field(
             default=None,
             metadata={
@@ -259,7 +259,7 @@ class ConsumedServiceInstance:
             },
         )
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -267,7 +267,7 @@ class ConsumedServiceInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    auto_require: Boolean | None = field(
+    auto_require: None | Boolean = field(
         default=None,
         metadata={
             "name": "AUTO-REQUIRE",
@@ -276,7 +276,7 @@ class ConsumedServiceInstance:
         },
     )
     blacklisted_versions: (
-        ConsumedServiceInstance.BlacklistedVersions | None
+        None | ConsumedServiceInstance.BlacklistedVersions
     ) = field(
         default=None,
         metadata={
@@ -286,7 +286,7 @@ class ConsumedServiceInstance:
         },
     )
     consumed_event_groups: (
-        ConsumedServiceInstance.ConsumedEventGroups | None
+        None | ConsumedServiceInstance.ConsumedEventGroups
     ) = field(
         default=None,
         metadata={
@@ -295,7 +295,7 @@ class ConsumedServiceInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    instance_identifier: AnyServiceInstanceId | None = field(
+    instance_identifier: None | AnyServiceInstanceId = field(
         default=None,
         metadata={
             "name": "INSTANCE-IDENTIFIER",
@@ -304,7 +304,7 @@ class ConsumedServiceInstance:
         },
     )
     local_unicast_addresss: (
-        ConsumedServiceInstance.LocalUnicastAddresss | None
+        None | ConsumedServiceInstance.LocalUnicastAddresss
     ) = field(
         default=None,
         metadata={
@@ -313,7 +313,7 @@ class ConsumedServiceInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    minor_version: AnyVersionString | None = field(
+    minor_version: None | AnyVersionString = field(
         default=None,
         metadata={
             "name": "MINOR-VERSION",
@@ -322,7 +322,7 @@ class ConsumedServiceInstance:
         },
     )
     provided_service_instance_ref: (
-        ConsumedServiceInstance.ProvidedServiceInstanceRef | None
+        None | ConsumedServiceInstance.ProvidedServiceInstanceRef
     ) = field(
         default=None,
         metadata={
@@ -332,7 +332,7 @@ class ConsumedServiceInstance:
         },
     )
     remote_unicast_addresss: (
-        ConsumedServiceInstance.RemoteUnicastAddresss | None
+        None | ConsumedServiceInstance.RemoteUnicastAddresss
     ) = field(
         default=None,
         metadata={
@@ -341,7 +341,7 @@ class ConsumedServiceInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sd_client_config: SdClientConfig | None = field(
+    sd_client_config: None | SdClientConfig = field(
         default=None,
         metadata={
             "name": "SD-CLIENT-CONFIG",
@@ -350,7 +350,7 @@ class ConsumedServiceInstance:
         },
     )
     sd_client_timer_configs: (
-        ConsumedServiceInstance.SdClientTimerConfigs | None
+        None | ConsumedServiceInstance.SdClientTimerConfigs
     ) = field(
         default=None,
         metadata={
@@ -359,7 +359,7 @@ class ConsumedServiceInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    service_identifier: PositiveInteger | None = field(
+    service_identifier: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "SERVICE-IDENTIFIER",
@@ -367,7 +367,7 @@ class ConsumedServiceInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    version_driven_find_behavior: ServiceVersionAcceptanceKindEnum | None = (
+    version_driven_find_behavior: None | ServiceVersionAcceptanceKindEnum = (
         field(
             default=None,
             metadata={
@@ -377,14 +377,14 @@ class ConsumedServiceInstance:
             },
         )
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -392,7 +392,7 @@ class ConsumedServiceInstance:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -459,7 +459,7 @@ class ConsumedServiceInstance:
 
         @dataclass
         class RoutingGroupRef(Ref):
-            dest: SoAdRoutingGroupSubtypesEnum | None = field(
+            dest: None | SoAdRoutingGroupSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -505,7 +505,7 @@ class ConsumedServiceInstance:
 
     @dataclass
     class ProvidedServiceInstanceRef(Ref):
-        dest: ProvidedServiceInstanceSubtypesEnum | None = field(
+        dest: None | ProvidedServiceInstanceSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

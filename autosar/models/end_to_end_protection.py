@@ -112,7 +112,7 @@ class EndToEndProtection:
     class Meta:
         name = "END-TO-END-PROTECTION"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -121,7 +121,7 @@ class EndToEndProtection:
             "required": True,
         },
     )
-    short_name_fragments: EndToEndProtection.ShortNameFragments | None = field(
+    short_name_fragments: None | EndToEndProtection.ShortNameFragments = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -129,7 +129,7 @@ class EndToEndProtection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -137,7 +137,7 @@ class EndToEndProtection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -145,7 +145,7 @@ class EndToEndProtection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -153,7 +153,7 @@ class EndToEndProtection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -161,7 +161,7 @@ class EndToEndProtection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -169,7 +169,7 @@ class EndToEndProtection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: EndToEndProtection.Annotations | None = field(
+    annotations: None | EndToEndProtection.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -177,7 +177,7 @@ class EndToEndProtection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    end_to_end_profile: EndToEndDescription | None = field(
+    end_to_end_profile: None | EndToEndDescription = field(
         default=None,
         metadata={
             "name": "END-TO-END-PROFILE",
@@ -186,7 +186,7 @@ class EndToEndProtection:
         },
     )
     end_to_end_protection_i_signal_i_pdus: (
-        EndToEndProtection.EndToEndProtectionISignalIPdus | None
+        None | EndToEndProtection.EndToEndProtectionISignalIPdus
     ) = field(
         default=None,
         metadata={
@@ -196,7 +196,7 @@ class EndToEndProtection:
         },
     )
     end_to_end_protection_variable_prototypes: (
-        EndToEndProtection.EndToEndProtectionVariablePrototypes | None
+        None | EndToEndProtection.EndToEndProtectionVariablePrototypes
     ) = field(
         default=None,
         metadata={
@@ -205,7 +205,7 @@ class EndToEndProtection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -213,14 +213,14 @@ class EndToEndProtection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -228,7 +228,7 @@ class EndToEndProtection:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",

@@ -16,7 +16,7 @@ class StopPlacesRelStructure(ContainmentAggregationStructure):
         name = "stopPlaces_RelStructure"
 
     taxi_rank_ref_or_stop_place_ref_or_stop_place: (
-        TaxiRankRef | StopPlaceRef | StopPlace | None
+        None | TaxiRankRef | StopPlaceRef | StopPlace
     ) = field(
         default=None,
         metadata={

@@ -18,7 +18,7 @@ class AccessibilityAssessmentVersionedChildStructure(VersionedChildStructure):
     class Meta:
         name = "AccessibilityAssessment_VersionedChildStructure"
 
-    mobility_impaired_access: LimitationStatusEnumeration | None = field(
+    mobility_impaired_access: None | LimitationStatusEnumeration = field(
         default=None,
         metadata={
             "name": "MobilityImpairedAccess",
@@ -27,21 +27,21 @@ class AccessibilityAssessmentVersionedChildStructure(VersionedChildStructure):
             "required": True,
         },
     )
-    limitations: AccessibilityLimitationsRelStructure | None = field(
+    limitations: None | AccessibilityLimitationsRelStructure = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    suitabilities: SuitabilitiesRelStructure | None = field(
+    suitabilities: None | SuitabilitiesRelStructure = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    comment: MultilingualString | None = field(
+    comment: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "Comment",

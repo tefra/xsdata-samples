@@ -25,7 +25,7 @@ class GlobalPositionAddressType:
         (the geoid) that defines the nominal sea level.
     """
 
-    latitude: NumericType | None = field(
+    latitude: None | NumericType = field(
         default=None,
         metadata={
             "name": "Latitude",
@@ -34,7 +34,7 @@ class GlobalPositionAddressType:
             "required": True,
         },
     )
-    longitude: NumericType | None = field(
+    longitude: None | NumericType = field(
         default=None,
         metadata={
             "name": "Longitude",
@@ -43,7 +43,7 @@ class GlobalPositionAddressType:
             "required": True,
         },
     )
-    wgscode: Idtype | None = field(
+    wgscode: None | Idtype = field(
         default=None,
         metadata={
             "name": "WGSCode",

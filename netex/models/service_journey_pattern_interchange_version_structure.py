@@ -16,7 +16,7 @@ class ServiceJourneyPatternInterchangeVersionStructure(
     class Meta:
         name = "ServiceJourneyPatternInterchange_VersionStructure"
 
-    from_point_ref: ScheduledStopPointRefStructure | None = field(
+    from_point_ref: None | ScheduledStopPointRefStructure = field(
         default=None,
         metadata={
             "name": "FromPointRef",
@@ -25,7 +25,7 @@ class ServiceJourneyPatternInterchangeVersionStructure(
             "required": True,
         },
     )
-    from_visit_number: int | None = field(
+    from_visit_number: None | int = field(
         default=None,
         metadata={
             "name": "FromVisitNumber",
@@ -33,7 +33,7 @@ class ServiceJourneyPatternInterchangeVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    to_point_ref: ScheduledStopPointRefStructure | None = field(
+    to_point_ref: None | ScheduledStopPointRefStructure = field(
         default=None,
         metadata={
             "name": "ToPointRef",
@@ -42,7 +42,7 @@ class ServiceJourneyPatternInterchangeVersionStructure(
             "required": True,
         },
     )
-    to_visit_number: int | None = field(
+    to_visit_number: None | int = field(
         default=None,
         metadata={
             "name": "ToVisitNumber",
@@ -50,7 +50,7 @@ class ServiceJourneyPatternInterchangeVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    from_journey_pattern_ref: JourneyPatternRefStructure | None = field(
+    from_journey_pattern_ref: None | JourneyPatternRefStructure = field(
         default=None,
         metadata={
             "name": "FromJourneyPatternRef",
@@ -59,7 +59,7 @@ class ServiceJourneyPatternInterchangeVersionStructure(
             "required": True,
         },
     )
-    to_journey_pattern_ref: JourneyPatternRefStructure | None = field(
+    to_journey_pattern_ref: None | JourneyPatternRefStructure = field(
         default=None,
         metadata={
             "name": "ToJourneyPatternRef",

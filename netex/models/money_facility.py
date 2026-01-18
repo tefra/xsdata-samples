@@ -12,7 +12,7 @@ class MoneyFacility:
     class Meta:
         namespace = "http://www.netex.org.uk/netex"
 
-    value: MoneyFacilityEnumeration | None = field(
+    value: None | MoneyFacilityEnumeration = field(
         default=None,
         metadata={
             "required": True,

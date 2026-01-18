@@ -35,7 +35,7 @@ class PortInterfaceBlueprintMapping:
         name = "PORT-INTERFACE-BLUEPRINT-MAPPING"
 
     port_interface_blueprint_ref: (
-        PortInterfaceBlueprintMapping.PortInterfaceBlueprintRef | None
+        None | PortInterfaceBlueprintMapping.PortInterfaceBlueprintRef
     ) = field(
         default=None,
         metadata={
@@ -45,7 +45,7 @@ class PortInterfaceBlueprintMapping:
         },
     )
     derived_port_interface_ref: (
-        PortInterfaceBlueprintMapping.DerivedPortInterfaceRef | None
+        None | PortInterfaceBlueprintMapping.DerivedPortInterfaceRef
     ) = field(
         default=None,
         metadata={
@@ -54,14 +54,14 @@ class PortInterfaceBlueprintMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -72,7 +72,7 @@ class PortInterfaceBlueprintMapping:
 
     @dataclass
     class PortInterfaceBlueprintRef(Ref):
-        dest: PortInterfaceSubtypesEnum | None = field(
+        dest: None | PortInterfaceSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -83,7 +83,7 @@ class PortInterfaceBlueprintMapping:
 
     @dataclass
     class DerivedPortInterfaceRef(Ref):
-        dest: PortInterfaceSubtypesEnum | None = field(
+        dest: None | PortInterfaceSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

@@ -50,7 +50,7 @@ class AssignNad:
     class Meta:
         name = "ASSIGN-NAD"
 
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -58,7 +58,7 @@ class AssignNad:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    delay: TimeValue | None = field(
+    delay: None | TimeValue = field(
         default=None,
         metadata={
             "name": "DELAY",
@@ -66,7 +66,7 @@ class AssignNad:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    position_in_table: Integer | None = field(
+    position_in_table: None | Integer = field(
         default=None,
         metadata={
             "name": "POSITION-IN-TABLE",
@@ -74,7 +74,7 @@ class AssignNad:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    assigned_controller_ref: AssignNad.AssignedControllerRef | None = field(
+    assigned_controller_ref: None | AssignNad.AssignedControllerRef = field(
         default=None,
         metadata={
             "name": "ASSIGNED-CONTROLLER-REF",
@@ -83,7 +83,7 @@ class AssignNad:
         },
     )
     assigned_lin_slave_config_ref: (
-        AssignNad.AssignedLinSlaveConfigRef | None
+        None | AssignNad.AssignedLinSlaveConfigRef
     ) = field(
         default=None,
         metadata={
@@ -92,7 +92,7 @@ class AssignNad:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    new_nad: Integer | None = field(
+    new_nad: None | Integer = field(
         default=None,
         metadata={
             "name": "NEW-NAD",
@@ -100,14 +100,14 @@ class AssignNad:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -118,7 +118,7 @@ class AssignNad:
 
     @dataclass
     class AssignedControllerRef(Ref):
-        dest: LinSlaveSubtypesEnum | None = field(
+        dest: None | LinSlaveSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -129,7 +129,7 @@ class AssignNad:
 
     @dataclass
     class AssignedLinSlaveConfigRef(Ref):
-        dest: LinSlaveConfigIdentSubtypesEnum | None = field(
+        dest: None | LinSlaveConfigIdentSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

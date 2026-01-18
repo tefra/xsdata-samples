@@ -95,7 +95,7 @@ class DataSetType(AnnotableType):
     :ivar local_attributes:
     """
 
-    data_provider: str | None = field(
+    data_provider: None | str = field(
         default=None,
         metadata={
             "name": "DataProvider",
@@ -134,7 +134,7 @@ class DataSetType(AnnotableType):
             },
         )
     )
-    metadata: MetadataSetType | None = field(
+    metadata: None | MetadataSetType = field(
         default=None,
         metadata={
             "name": "Metadata",
@@ -142,7 +142,7 @@ class DataSetType(AnnotableType):
             "namespace": "",
         },
     )
-    structure_ref: str | None = field(
+    structure_ref: None | str = field(
         default=None,
         metadata={
             "name": "structureRef",
@@ -151,7 +151,7 @@ class DataSetType(AnnotableType):
             "required": True,
         },
     )
-    set_id: str | None = field(
+    set_id: None | str = field(
         default=None,
         metadata={
             "name": "setID",
@@ -160,14 +160,14 @@ class DataSetType(AnnotableType):
             "pattern": r"[A-Za-z0-9_@$\-]+",
         },
     )
-    action: ActionType | None = field(
+    action: None | ActionType = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/data/structurespecific",
         },
     )
-    reporting_begin_date: XmlPeriod | XmlDate | XmlDateTime | None = field(
+    reporting_begin_date: None | XmlPeriod | XmlDate | XmlDateTime = field(
         default=None,
         metadata={
             "name": "reportingBeginDate",
@@ -175,7 +175,7 @@ class DataSetType(AnnotableType):
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/data/structurespecific",
         },
     )
-    reporting_end_date: XmlPeriod | XmlDate | XmlDateTime | None = field(
+    reporting_end_date: None | XmlPeriod | XmlDate | XmlDateTime = field(
         default=None,
         metadata={
             "name": "reportingEndDate",
@@ -183,7 +183,7 @@ class DataSetType(AnnotableType):
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/data/structurespecific",
         },
     )
-    valid_from_date: XmlDateTime | None = field(
+    valid_from_date: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "validFromDate",
@@ -191,7 +191,7 @@ class DataSetType(AnnotableType):
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/data/structurespecific",
         },
     )
-    valid_to_date: XmlDateTime | None = field(
+    valid_to_date: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "validToDate",
@@ -199,7 +199,7 @@ class DataSetType(AnnotableType):
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/data/structurespecific",
         },
     )
-    publication_year: XmlPeriod | None = field(
+    publication_year: None | XmlPeriod = field(
         default=None,
         metadata={
             "name": "publicationYear",
@@ -207,7 +207,7 @@ class DataSetType(AnnotableType):
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/data/structurespecific",
         },
     )
-    publication_period: XmlPeriod | XmlDate | XmlDateTime | str | None = field(
+    publication_period: None | XmlPeriod | XmlDate | XmlDateTime | str = field(
         default=None,
         metadata={
             "name": "publicationPeriod",

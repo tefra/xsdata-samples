@@ -19,7 +19,7 @@ class LocalDataTypeEntry:
             "min_occurs": 1,
         },
     )
-    key: str | None = field(
+    key: None | str = field(
         default=None,
         metadata={
             "name": "Key",

@@ -21,7 +21,7 @@ class PathSegmentType(UnresolvedStringExpression):
     class Meta:
         name = "pathSegmentType"
 
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",

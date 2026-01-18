@@ -13,7 +13,7 @@ class TStandardLoopCharacteristics(TLoopCharacteristics):
     class Meta:
         name = "tStandardLoopCharacteristics"
 
-    loop_condition: TExpression | None = field(
+    loop_condition: None | TExpression = field(
         default=None,
         metadata={
             "name": "loopCondition",
@@ -28,7 +28,7 @@ class TStandardLoopCharacteristics(TLoopCharacteristics):
             "type": "Attribute",
         },
     )
-    loop_maximum: int | None = field(
+    loop_maximum: None | int = field(
         default=None,
         metadata={
             "name": "loopMaximum",

@@ -29,20 +29,20 @@ class SwCalibrationAccessEnum:
     class Meta:
         name = "SW-CALIBRATION-ACCESS-ENUM"
 
-    value: SwCalibrationAccessEnumSimple | None = field(
+    value: None | SwCalibrationAccessEnumSimple = field(
         default=None,
         metadata={
             "required": True,
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

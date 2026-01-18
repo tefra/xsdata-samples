@@ -101,7 +101,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 @dataclass
 class TravelSpecificationSummaryViewStructure:
-    origin: TravelSpecificationSummaryEndpointStructure | None = field(
+    origin: None | TravelSpecificationSummaryEndpointStructure = field(
         default=None,
         metadata={
             "name": "Origin",
@@ -109,7 +109,7 @@ class TravelSpecificationSummaryViewStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    destination: TravelSpecificationSummaryEndpointStructure | None = field(
+    destination: None | TravelSpecificationSummaryEndpointStructure = field(
         default=None,
         metadata={
             "name": "Destination",
@@ -117,7 +117,7 @@ class TravelSpecificationSummaryViewStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    start: XmlDateTime | None = field(
+    start: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "Start",
@@ -125,7 +125,7 @@ class TravelSpecificationSummaryViewStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    end: XmlDateTime | None = field(
+    end: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "End",
@@ -133,7 +133,7 @@ class TravelSpecificationSummaryViewStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    duration: XmlDuration | None = field(
+    duration: None | XmlDuration = field(
         default=None,
         metadata={
             "name": "Duration",
@@ -141,14 +141,14 @@ class TravelSpecificationSummaryViewStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    journeys: TravelSpecificationJourneyRefsRelStructure | None = field(
+    journeys: None | TravelSpecificationJourneyRefsRelStructure = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    series_constraints: SeriesConstraintRefsRelStructure | None = field(
+    series_constraints: None | SeriesConstraintRefsRelStructure = field(
         default=None,
         metadata={
             "name": "seriesConstraints",
@@ -157,7 +157,7 @@ class TravelSpecificationSummaryViewStructure:
         },
     )
     authority_ref_or_operator_ref_or_group_of_operators_ref: (
-        AuthorityRef | OperatorRef | GroupOfOperatorsRef | None
+        None | AuthorityRef | OperatorRef | GroupOfOperatorsRef
     ) = field(
         default=None,
         metadata={
@@ -181,7 +181,7 @@ class TravelSpecificationSummaryViewStructure:
             ),
         },
     )
-    type_of_product_category_ref: TypeOfProductCategoryRef | None = field(
+    type_of_product_category_ref: None | TypeOfProductCategoryRef = field(
         default=None,
         metadata={
             "name": "TypeOfProductCategoryRef",
@@ -189,7 +189,7 @@ class TravelSpecificationSummaryViewStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    type_of_fare_product_ref: TypeOfFareProductRef | None = field(
+    type_of_fare_product_ref: None | TypeOfFareProductRef = field(
         default=None,
         metadata={
             "name": "TypeOfFareProductRef",
@@ -197,7 +197,7 @@ class TravelSpecificationSummaryViewStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    fare_class: FareClass | None = field(
+    fare_class: None | FareClass = field(
         default=None,
         metadata={
             "name": "FareClass",
@@ -205,7 +205,7 @@ class TravelSpecificationSummaryViewStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    class_of_use_ref: ClassOfUseRef | None = field(
+    class_of_use_ref: None | ClassOfUseRef = field(
         default=None,
         metadata={
             "name": "ClassOfUseRef",
@@ -214,7 +214,7 @@ class TravelSpecificationSummaryViewStructure:
         },
     )
     user_profile_ref: (
-        VehiclePoolerProfileRef | CompanionProfileRef | UserProfileRef | None
+        None | VehiclePoolerProfileRef | CompanionProfileRef | UserProfileRef
     ) = field(
         default=None,
         metadata={
@@ -238,7 +238,7 @@ class TravelSpecificationSummaryViewStructure:
             ),
         },
     )
-    group_ticket_ref: GroupTicketRef | None = field(
+    group_ticket_ref: None | GroupTicketRef = field(
         default=None,
         metadata={
             "name": "GroupTicketRef",
@@ -246,7 +246,7 @@ class TravelSpecificationSummaryViewStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    maximum_number_of_users: int | None = field(
+    maximum_number_of_users: None | int = field(
         default=None,
         metadata={
             "name": "MaximumNumberOfUsers",
@@ -254,7 +254,7 @@ class TravelSpecificationSummaryViewStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    train_element_ref: TrainElementRef | None = field(
+    train_element_ref: None | TrainElementRef = field(
         default=None,
         metadata={
             "name": "TrainElementRef",
@@ -263,7 +263,7 @@ class TravelSpecificationSummaryViewStructure:
         },
     )
     train_component_label_assignment_ref: (
-        TrainComponentLabelAssignmentRef | None
+        None | TrainComponentLabelAssignmentRef
     ) = field(
         default=None,
         metadata={
@@ -272,7 +272,7 @@ class TravelSpecificationSummaryViewStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    passenger_seat_ref: PassengerSeatRef | None = field(
+    passenger_seat_ref: None | PassengerSeatRef = field(
         default=None,
         metadata={
             "name": "PassengerSeatRef",
@@ -280,7 +280,7 @@ class TravelSpecificationSummaryViewStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    service_facility_set: ServiceFacilitySet | None = field(
+    service_facility_set: None | ServiceFacilitySet = field(
         default=None,
         metadata={
             "name": "ServiceFacilitySet",
@@ -289,7 +289,8 @@ class TravelSpecificationSummaryViewStructure:
         },
     )
     choice: (
-        RetailDeviceRef
+        None
+        | RetailDeviceRef
         | OnlineServiceRef
         | VehicleRentalServiceRef
         | VehicleSharingServiceRef
@@ -352,7 +353,6 @@ class TravelSpecificationSummaryViewStructure:
         | VehicleEquipmentRef
         | PassengerEquipmentRef
         | EquipmentRef
-        | None
     ) = field(
         default=None,
         metadata={

@@ -85,7 +85,7 @@ class SwSystemconstantValueSet:
     class Meta:
         name = "SW-SYSTEMCONSTANT-VALUE-SET"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -95,7 +95,7 @@ class SwSystemconstantValueSet:
         },
     )
     short_name_fragments: (
-        SwSystemconstantValueSet.ShortNameFragments | None
+        None | SwSystemconstantValueSet.ShortNameFragments
     ) = field(
         default=None,
         metadata={
@@ -104,7 +104,7 @@ class SwSystemconstantValueSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -112,7 +112,7 @@ class SwSystemconstantValueSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -120,7 +120,7 @@ class SwSystemconstantValueSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -128,7 +128,7 @@ class SwSystemconstantValueSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -136,7 +136,7 @@ class SwSystemconstantValueSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -144,7 +144,7 @@ class SwSystemconstantValueSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: SwSystemconstantValueSet.Annotations | None = field(
+    annotations: None | SwSystemconstantValueSet.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -152,7 +152,7 @@ class SwSystemconstantValueSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -161,7 +161,7 @@ class SwSystemconstantValueSet:
         },
     )
     sw_systemconstant_values: (
-        SwSystemconstantValueSet.SwSystemconstantValues | None
+        None | SwSystemconstantValueSet.SwSystemconstantValues
     ) = field(
         default=None,
         metadata={
@@ -170,14 +170,14 @@ class SwSystemconstantValueSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -185,7 +185,7 @@ class SwSystemconstantValueSet:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",

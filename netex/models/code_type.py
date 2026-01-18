@@ -13,7 +13,7 @@ class CodeType:
             "required": True,
         },
     )
-    code_space: str | None = field(
+    code_space: None | str = field(
         default=None,
         metadata={
             "name": "codeSpace",

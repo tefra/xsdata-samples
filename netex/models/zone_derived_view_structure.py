@@ -25,7 +25,8 @@ class ZoneDerivedViewStructure(DerivedViewStructure):
         name = "Zone_DerivedViewStructure"
 
     zone_ref_or_tariff_zone_ref: (
-        MobilityServiceConstraintZoneRef
+        None
+        | MobilityServiceConstraintZoneRef
         | StopAreaRef
         | TransportAdministrativeZoneRef
         | AccessZoneRef
@@ -33,7 +34,6 @@ class ZoneDerivedViewStructure(DerivedViewStructure):
         | FareZoneRef
         | TariffZoneRef
         | ZoneRef
-        | None
     ) = field(
         default=None,
         metadata={
@@ -82,7 +82,7 @@ class ZoneDerivedViewStructure(DerivedViewStructure):
             ),
         },
     )
-    name: MultilingualString | None = field(
+    name: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "Name",
@@ -90,7 +90,7 @@ class ZoneDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    type_of_zone_ref: TypeOfZoneRef | None = field(
+    type_of_zone_ref: None | TypeOfZoneRef = field(
         default=None,
         metadata={
             "name": "TypeOfZoneRef",

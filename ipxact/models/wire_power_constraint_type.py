@@ -14,7 +14,7 @@ class WirePowerConstraintType:
     class Meta:
         name = "wirePowerConstraintType"
 
-    power_domain_ref: PowerDomainRef | None = field(
+    power_domain_ref: None | PowerDomainRef = field(
         default=None,
         metadata={
             "name": "powerDomainRef",
@@ -23,14 +23,14 @@ class WirePowerConstraintType:
             "required": True,
         },
     )
-    range: Range | None = field(
+    range: None | Range = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    vendor_extensions: VendorExtensions | None = field(
+    vendor_extensions: None | VendorExtensions = field(
         default=None,
         metadata={
             "name": "vendorExtensions",
@@ -38,7 +38,7 @@ class WirePowerConstraintType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",

@@ -90,7 +90,7 @@ class ParkingAssignment:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    parking_assignment_extension: ExtensionType | None = field(
+    parking_assignment_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "parkingAssignmentExtension",

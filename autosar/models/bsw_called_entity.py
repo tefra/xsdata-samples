@@ -184,7 +184,7 @@ class BswCalledEntity:
     class Meta:
         name = "BSW-CALLED-ENTITY"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -193,7 +193,7 @@ class BswCalledEntity:
             "required": True,
         },
     )
-    short_name_fragments: BswCalledEntity.ShortNameFragments | None = field(
+    short_name_fragments: None | BswCalledEntity.ShortNameFragments = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -201,7 +201,7 @@ class BswCalledEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -209,7 +209,7 @@ class BswCalledEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -217,7 +217,7 @@ class BswCalledEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -225,7 +225,7 @@ class BswCalledEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -233,7 +233,7 @@ class BswCalledEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -241,7 +241,7 @@ class BswCalledEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: BswCalledEntity.Annotations | None = field(
+    annotations: None | BswCalledEntity.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -249,7 +249,7 @@ class BswCalledEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    activation_reasons: BswCalledEntity.ActivationReasons | None = field(
+    activation_reasons: None | BswCalledEntity.ActivationReasons = field(
         default=None,
         metadata={
             "name": "ACTIVATION-REASONS",
@@ -258,7 +258,7 @@ class BswCalledEntity:
         },
     )
     can_enter_exclusive_area_refs: (
-        BswCalledEntity.CanEnterExclusiveAreaRefs | None
+        None | BswCalledEntity.CanEnterExclusiveAreaRefs
     ) = field(
         default=None,
         metadata={
@@ -268,7 +268,7 @@ class BswCalledEntity:
         },
     )
     exclusive_area_nesting_order_refs: (
-        BswCalledEntity.ExclusiveAreaNestingOrderRefs | None
+        None | BswCalledEntity.ExclusiveAreaNestingOrderRefs
     ) = field(
         default=None,
         metadata={
@@ -277,7 +277,7 @@ class BswCalledEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    minimum_start_interval: TimeValue | None = field(
+    minimum_start_interval: None | TimeValue = field(
         default=None,
         metadata={
             "name": "MINIMUM-START-INTERVAL",
@@ -285,7 +285,7 @@ class BswCalledEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    reentrancy_level: ReentrancyLevelEnum | None = field(
+    reentrancy_level: None | ReentrancyLevelEnum = field(
         default=None,
         metadata={
             "name": "REENTRANCY-LEVEL",
@@ -294,7 +294,7 @@ class BswCalledEntity:
         },
     )
     runs_inside_exclusive_area_refs: (
-        BswCalledEntity.RunsInsideExclusiveAreaRefs | None
+        None | BswCalledEntity.RunsInsideExclusiveAreaRefs
     ) = field(
         default=None,
         metadata={
@@ -303,7 +303,7 @@ class BswCalledEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_addr_method_ref: BswCalledEntity.SwAddrMethodRef | None = field(
+    sw_addr_method_ref: None | BswCalledEntity.SwAddrMethodRef = field(
         default=None,
         metadata={
             "name": "SW-ADDR-METHOD-REF",
@@ -311,7 +311,7 @@ class BswCalledEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    accessed_mode_groups: BswCalledEntity.AccessedModeGroups | None = field(
+    accessed_mode_groups: None | BswCalledEntity.AccessedModeGroups = field(
         default=None,
         metadata={
             "name": "ACCESSED-MODE-GROUPS",
@@ -319,7 +319,7 @@ class BswCalledEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    activation_points: BswCalledEntity.ActivationPoints | None = field(
+    activation_points: None | BswCalledEntity.ActivationPoints = field(
         default=None,
         metadata={
             "name": "ACTIVATION-POINTS",
@@ -327,7 +327,7 @@ class BswCalledEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    call_points: BswCalledEntity.CallPoints | None = field(
+    call_points: None | BswCalledEntity.CallPoints = field(
         default=None,
         metadata={
             "name": "CALL-POINTS",
@@ -335,7 +335,7 @@ class BswCalledEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    called_entrys: BswCalledEntity.CalledEntrys | None = field(
+    called_entrys: None | BswCalledEntity.CalledEntrys = field(
         default=None,
         metadata={
             "name": "CALLED-ENTRYS",
@@ -343,7 +343,7 @@ class BswCalledEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    data_receive_points: BswCalledEntity.DataReceivePoints | None = field(
+    data_receive_points: None | BswCalledEntity.DataReceivePoints = field(
         default=None,
         metadata={
             "name": "DATA-RECEIVE-POINTS",
@@ -351,7 +351,7 @@ class BswCalledEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    data_send_points: BswCalledEntity.DataSendPoints | None = field(
+    data_send_points: None | BswCalledEntity.DataSendPoints = field(
         default=None,
         metadata={
             "name": "DATA-SEND-POINTS",
@@ -359,7 +359,7 @@ class BswCalledEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    implemented_entry_ref: BswCalledEntity.ImplementedEntryRef | None = field(
+    implemented_entry_ref: None | BswCalledEntity.ImplementedEntryRef = field(
         default=None,
         metadata={
             "name": "IMPLEMENTED-ENTRY-REF",
@@ -367,7 +367,7 @@ class BswCalledEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    issued_triggers: BswCalledEntity.IssuedTriggers | None = field(
+    issued_triggers: None | BswCalledEntity.IssuedTriggers = field(
         default=None,
         metadata={
             "name": "ISSUED-TRIGGERS",
@@ -375,7 +375,7 @@ class BswCalledEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    managed_mode_groups: BswCalledEntity.ManagedModeGroups | None = field(
+    managed_mode_groups: None | BswCalledEntity.ManagedModeGroups = field(
         default=None,
         metadata={
             "name": "MANAGED-MODE-GROUPS",
@@ -384,7 +384,7 @@ class BswCalledEntity:
         },
     )
     scheduler_name_prefix_ref: (
-        BswCalledEntity.SchedulerNamePrefixRef | None
+        None | BswCalledEntity.SchedulerNamePrefixRef
     ) = field(
         default=None,
         metadata={
@@ -393,7 +393,7 @@ class BswCalledEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -401,14 +401,14 @@ class BswCalledEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -416,7 +416,7 @@ class BswCalledEntity:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -474,7 +474,7 @@ class BswCalledEntity:
 
         @dataclass
         class CanEnterExclusiveAreaRef(Ref):
-            dest: ExclusiveAreaSubtypesEnum | None = field(
+            dest: None | ExclusiveAreaSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -498,7 +498,7 @@ class BswCalledEntity:
 
         @dataclass
         class ExclusiveAreaNestingOrderRef(Ref):
-            dest: ExclusiveAreaNestingOrderSubtypesEnum | None = field(
+            dest: None | ExclusiveAreaNestingOrderSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -522,7 +522,7 @@ class BswCalledEntity:
 
         @dataclass
         class RunsInsideExclusiveAreaRef(Ref):
-            dest: ExclusiveAreaSubtypesEnum | None = field(
+            dest: None | ExclusiveAreaSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -533,7 +533,7 @@ class BswCalledEntity:
 
     @dataclass
     class SwAddrMethodRef(Ref):
-        dest: SwAddrMethodSubtypesEnum | None = field(
+        dest: None | SwAddrMethodSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -646,7 +646,7 @@ class BswCalledEntity:
 
     @dataclass
     class ImplementedEntryRef(Ref):
-        dest: BswModuleEntrySubtypesEnum | None = field(
+        dest: None | BswModuleEntrySubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -681,7 +681,7 @@ class BswCalledEntity:
 
     @dataclass
     class SchedulerNamePrefixRef(Ref):
-        dest: BswSchedulerNamePrefixSubtypesEnum | None = field(
+        dest: None | BswSchedulerNamePrefixSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

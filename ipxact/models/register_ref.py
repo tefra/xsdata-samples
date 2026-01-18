@@ -13,13 +13,13 @@ class RegisterRef:
         name = "registerRef"
         namespace = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
-    indices: Indices | None = field(
+    indices: None | Indices = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    register_ref: str | None = field(
+    register_ref: None | str = field(
         default=None,
         metadata={
             "name": "registerRef",

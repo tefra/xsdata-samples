@@ -40,7 +40,7 @@ class SoftwareClusterDependencyFormula:
     class Meta:
         name = "SOFTWARE-CLUSTER-DEPENDENCY-FORMULA"
 
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -48,7 +48,7 @@ class SoftwareClusterDependencyFormula:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    operator: SoftwareClusterDependencyLogicalOperatorEnum | None = field(
+    operator: None | SoftwareClusterDependencyLogicalOperatorEnum = field(
         default=None,
         metadata={
             "name": "OPERATOR",
@@ -56,7 +56,7 @@ class SoftwareClusterDependencyFormula:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    parts: SoftwareClusterDependencyFormula.Parts | None = field(
+    parts: None | SoftwareClusterDependencyFormula.Parts = field(
         default=None,
         metadata={
             "name": "PARTS",
@@ -64,14 +64,14 @@ class SoftwareClusterDependencyFormula:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

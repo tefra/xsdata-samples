@@ -11,14 +11,14 @@ class Condition:
     class Meta:
         name = "condition"
 
-    lhs: Lhs | None = field(
+    lhs: None | Lhs = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
         },
     )
-    rhs: Rhs | None = field(
+    rhs: None | Rhs = field(
         default=None,
         metadata={
             "type": "Element",

@@ -17,7 +17,7 @@ class TrainComponentVersionStructure(DataManagedObjectStructure):
     class Meta:
         name = "TrainComponent_VersionStructure"
 
-    label: MultilingualString | None = field(
+    label: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "Label",
@@ -25,7 +25,7 @@ class TrainComponentVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    description: MultilingualString | None = field(
+    description: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "Description",
@@ -33,7 +33,7 @@ class TrainComponentVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    train_ref: TrainRef | None = field(
+    train_ref: None | TrainRef = field(
         default=None,
         metadata={
             "name": "TrainRef",
@@ -42,7 +42,7 @@ class TrainComponentVersionStructure(DataManagedObjectStructure):
         },
     )
     train_element_ref_or_train_element: (
-        TrainElementRef | TrainElement | None
+        None | TrainElementRef | TrainElement
     ) = field(
         default=None,
         metadata={
@@ -61,7 +61,7 @@ class TrainComponentVersionStructure(DataManagedObjectStructure):
             ),
         },
     )
-    operational_orientation: VehicleOrientationEnumeration | None = field(
+    operational_orientation: None | VehicleOrientationEnumeration = field(
         default=None,
         metadata={
             "name": "OperationalOrientation",
@@ -69,7 +69,7 @@ class TrainComponentVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    order: int | None = field(
+    order: None | int = field(
         default=None,
         metadata={
             "type": "Attribute",

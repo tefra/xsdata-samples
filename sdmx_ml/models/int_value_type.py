@@ -24,4 +24,4 @@ class IntValueType(ValueType):
             "type": "Ignore",
         },
     )
-    value: int | None = field(default=None)
+    value: None | int = field(default=None)

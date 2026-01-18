@@ -28,7 +28,7 @@ class Fault:
     :ivar fault_extension:
     """
 
-    fault_identifier: str | None = field(
+    fault_identifier: None | str = field(
         default=None,
         metadata={
             "name": "faultIdentifier",
@@ -37,7 +37,7 @@ class Fault:
             "max_length": 1024,
         },
     )
-    fault_description: str | None = field(
+    fault_description: None | str = field(
         default=None,
         metadata={
             "name": "faultDescription",
@@ -46,7 +46,7 @@ class Fault:
             "max_length": 1024,
         },
     )
-    fault_creation_time: XmlDateTime | None = field(
+    fault_creation_time: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "faultCreationTime",
@@ -54,7 +54,7 @@ class Fault:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    fault_last_update_time: XmlDateTime | None = field(
+    fault_last_update_time: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "faultLastUpdateTime",
@@ -63,7 +63,7 @@ class Fault:
             "required": True,
         },
     )
-    fault_severity: FaultSeverityEnum | None = field(
+    fault_severity: None | FaultSeverityEnum = field(
         default=None,
         metadata={
             "name": "faultSeverity",
@@ -71,7 +71,7 @@ class Fault:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    fault_extension: ExtensionType | None = field(
+    fault_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "faultExtension",

@@ -31,7 +31,7 @@ class TriggerMapping:
     class Meta:
         name = "TRIGGER-MAPPING"
 
-    first_trigger_ref: TriggerMapping.FirstTriggerRef | None = field(
+    first_trigger_ref: None | TriggerMapping.FirstTriggerRef = field(
         default=None,
         metadata={
             "name": "FIRST-TRIGGER-REF",
@@ -39,7 +39,7 @@ class TriggerMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    second_trigger_ref: TriggerMapping.SecondTriggerRef | None = field(
+    second_trigger_ref: None | TriggerMapping.SecondTriggerRef = field(
         default=None,
         metadata={
             "name": "SECOND-TRIGGER-REF",
@@ -47,14 +47,14 @@ class TriggerMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -65,7 +65,7 @@ class TriggerMapping:
 
     @dataclass
     class FirstTriggerRef(Ref):
-        dest: TriggerSubtypesEnum | None = field(
+        dest: None | TriggerSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -76,7 +76,7 @@ class TriggerMapping:
 
     @dataclass
     class SecondTriggerRef(Ref):
-        dest: TriggerSubtypesEnum | None = field(
+        dest: None | TriggerSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

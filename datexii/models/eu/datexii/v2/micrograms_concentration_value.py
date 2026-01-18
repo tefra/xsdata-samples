@@ -20,7 +20,7 @@ class MicrogramsConcentrationValue(DataValue):
     :ivar micrograms_concentration_value_extension:
     """
 
-    micrograms_concentration: float | None = field(
+    micrograms_concentration: None | float = field(
         default=None,
         metadata={
             "name": "microgramsConcentration",
@@ -29,7 +29,7 @@ class MicrogramsConcentrationValue(DataValue):
             "required": True,
         },
     )
-    micrograms_concentration_value_extension: ExtensionType | None = field(
+    micrograms_concentration_value_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "microgramsConcentrationValueExtension",

@@ -48,75 +48,75 @@ class FieldAccessPolicyDefinitions:
         :ivar id:
         """
 
-        name: str | None = field(
+        name: None | str = field(
             default=None,
             metadata={
                 "type": "Element",
                 "required": True,
             },
         )
-        display_name: DisplayName | None = field(
+        display_name: None | DisplayName = field(
             default=None,
             metadata={
                 "name": "displayName",
                 "type": "Element",
             },
         )
-        short_description: ShortDescription | None = field(
+        short_description: None | ShortDescription = field(
             default=None,
             metadata={
                 "name": "shortDescription",
                 "type": "Element",
             },
         )
-        description: Description | None = field(
+        description: None | Description = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        access: Access | None = field(
+        access: None | Access = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        modified_write_value: ModifiedWriteValue | None = field(
+        modified_write_value: None | ModifiedWriteValue = field(
             default=None,
             metadata={
                 "name": "modifiedWriteValue",
                 "type": "Element",
             },
         )
-        write_value_constraint: WriteValueConstraint | None = field(
+        write_value_constraint: None | WriteValueConstraint = field(
             default=None,
             metadata={
                 "name": "writeValueConstraint",
                 "type": "Element",
             },
         )
-        read_action: ReadAction | None = field(
+        read_action: None | ReadAction = field(
             default=None,
             metadata={
                 "name": "readAction",
                 "type": "Element",
             },
         )
-        read_response: ReadResponse | None = field(
+        read_response: None | ReadResponse = field(
             default=None,
             metadata={
                 "name": "readResponse",
                 "type": "Element",
             },
         )
-        vendor_extensions: VendorExtensions | None = field(
+        vendor_extensions: None | VendorExtensions = field(
             default=None,
             metadata={
                 "name": "vendorExtensions",
                 "type": "Element",
             },
         )
-        id: str | None = field(
+        id: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",

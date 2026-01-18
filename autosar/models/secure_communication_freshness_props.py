@@ -106,7 +106,7 @@ class SecureCommunicationFreshnessProps:
     class Meta:
         name = "SECURE-COMMUNICATION-FRESHNESS-PROPS"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -116,7 +116,7 @@ class SecureCommunicationFreshnessProps:
         },
     )
     short_name_fragments: (
-        SecureCommunicationFreshnessProps.ShortNameFragments | None
+        None | SecureCommunicationFreshnessProps.ShortNameFragments
     ) = field(
         default=None,
         metadata={
@@ -125,7 +125,7 @@ class SecureCommunicationFreshnessProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -133,7 +133,7 @@ class SecureCommunicationFreshnessProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -141,7 +141,7 @@ class SecureCommunicationFreshnessProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -149,7 +149,7 @@ class SecureCommunicationFreshnessProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -157,7 +157,7 @@ class SecureCommunicationFreshnessProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -165,7 +165,7 @@ class SecureCommunicationFreshnessProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: SecureCommunicationFreshnessProps.Annotations | None = field(
+    annotations: None | SecureCommunicationFreshnessProps.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -173,7 +173,7 @@ class SecureCommunicationFreshnessProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    freshness_counter_sync_attempts: PositiveInteger | None = field(
+    freshness_counter_sync_attempts: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "FRESHNESS-COUNTER-SYNC-ATTEMPTS",
@@ -181,7 +181,7 @@ class SecureCommunicationFreshnessProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    freshness_timestamp_time_period_factor: PositiveInteger | None = field(
+    freshness_timestamp_time_period_factor: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "FRESHNESS-TIMESTAMP-TIME-PERIOD-FACTOR",
@@ -189,7 +189,7 @@ class SecureCommunicationFreshnessProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    freshness_value_length: PositiveInteger | None = field(
+    freshness_value_length: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "FRESHNESS-VALUE-LENGTH",
@@ -197,7 +197,7 @@ class SecureCommunicationFreshnessProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    freshness_value_tx_length: PositiveInteger | None = field(
+    freshness_value_tx_length: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "FRESHNESS-VALUE-TX-LENGTH",
@@ -205,7 +205,7 @@ class SecureCommunicationFreshnessProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    use_freshness_timestamp: Boolean | None = field(
+    use_freshness_timestamp: None | Boolean = field(
         default=None,
         metadata={
             "name": "USE-FRESHNESS-TIMESTAMP",
@@ -213,14 +213,14 @@ class SecureCommunicationFreshnessProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -228,7 +228,7 @@ class SecureCommunicationFreshnessProps:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",

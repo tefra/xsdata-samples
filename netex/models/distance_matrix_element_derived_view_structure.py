@@ -16,7 +16,7 @@ class DistanceMatrixElementDerivedViewStructure(DerivedViewStructure):
         name = "DistanceMatrixElement_DerivedViewStructure"
 
     start_stop_point_ref_or_start_tariff_zone_ref: (
-        ScheduledStopPointRefStructure | TariffZoneRefStructure | None
+        None | ScheduledStopPointRefStructure | TariffZoneRefStructure
     ) = field(
         default=None,
         metadata={
@@ -35,7 +35,7 @@ class DistanceMatrixElementDerivedViewStructure(DerivedViewStructure):
             ),
         },
     )
-    start_name: MultilingualString | None = field(
+    start_name: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "StartName",
@@ -44,7 +44,7 @@ class DistanceMatrixElementDerivedViewStructure(DerivedViewStructure):
         },
     )
     end_stop_point_ref_or_end_tariff_zone_ref: (
-        ScheduledStopPointRefStructure | TariffZoneRefStructure | None
+        None | ScheduledStopPointRefStructure | TariffZoneRefStructure
     ) = field(
         default=None,
         metadata={
@@ -63,7 +63,7 @@ class DistanceMatrixElementDerivedViewStructure(DerivedViewStructure):
             ),
         },
     )
-    end_name: MultilingualString | None = field(
+    end_name: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "EndName",

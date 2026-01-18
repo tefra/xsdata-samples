@@ -112,7 +112,7 @@ class BinaryManifestProvideResource:
     class Meta:
         name = "BINARY-MANIFEST-PROVIDE-RESOURCE"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -122,7 +122,7 @@ class BinaryManifestProvideResource:
         },
     )
     short_name_fragments: (
-        BinaryManifestProvideResource.ShortNameFragments | None
+        None | BinaryManifestProvideResource.ShortNameFragments
     ) = field(
         default=None,
         metadata={
@@ -131,7 +131,7 @@ class BinaryManifestProvideResource:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -139,7 +139,7 @@ class BinaryManifestProvideResource:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -147,7 +147,7 @@ class BinaryManifestProvideResource:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -155,7 +155,7 @@ class BinaryManifestProvideResource:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -163,7 +163,7 @@ class BinaryManifestProvideResource:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -171,7 +171,7 @@ class BinaryManifestProvideResource:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: BinaryManifestProvideResource.Annotations | None = field(
+    annotations: None | BinaryManifestProvideResource.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -179,7 +179,7 @@ class BinaryManifestProvideResource:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    global_resource_id: PositiveInteger | None = field(
+    global_resource_id: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "GLOBAL-RESOURCE-ID",
@@ -187,7 +187,7 @@ class BinaryManifestProvideResource:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    items: BinaryManifestProvideResource.Items | None = field(
+    items: None | BinaryManifestProvideResource.Items = field(
         default=None,
         metadata={
             "name": "ITEMS",
@@ -196,7 +196,7 @@ class BinaryManifestProvideResource:
         },
     )
     resource_definition_ref: (
-        BinaryManifestProvideResource.ResourceDefinitionRef | None
+        None | BinaryManifestProvideResource.ResourceDefinitionRef
     ) = field(
         default=None,
         metadata={
@@ -205,7 +205,7 @@ class BinaryManifestProvideResource:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    resource_guard_value: String | None = field(
+    resource_guard_value: None | String = field(
         default=None,
         metadata={
             "name": "RESOURCE-GUARD-VALUE",
@@ -213,7 +213,7 @@ class BinaryManifestProvideResource:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    resource_ref: BinaryManifestProvideResource.ResourceRef | None = field(
+    resource_ref: None | BinaryManifestProvideResource.ResourceRef = field(
         default=None,
         metadata={
             "name": "RESOURCE-REF",
@@ -221,7 +221,7 @@ class BinaryManifestProvideResource:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    number_of_notifier_sets: PositiveInteger | None = field(
+    number_of_notifier_sets: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "NUMBER-OF-NOTIFIER-SETS",
@@ -229,7 +229,7 @@ class BinaryManifestProvideResource:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    supports_multiple_notifier_sets: Boolean | None = field(
+    supports_multiple_notifier_sets: None | Boolean = field(
         default=None,
         metadata={
             "name": "SUPPORTS-MULTIPLE-NOTIFIER-SETS",
@@ -237,14 +237,14 @@ class BinaryManifestProvideResource:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -252,7 +252,7 @@ class BinaryManifestProvideResource:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -295,7 +295,7 @@ class BinaryManifestProvideResource:
 
     @dataclass
     class ResourceDefinitionRef(Ref):
-        dest: BinaryManifestResourceDefinitionSubtypesEnum | None = field(
+        dest: None | BinaryManifestResourceDefinitionSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -306,7 +306,7 @@ class BinaryManifestProvideResource:
 
     @dataclass
     class ResourceRef(Ref):
-        dest: CpSoftwareClusterResourceSubtypesEnum | None = field(
+        dest: None | CpSoftwareClusterResourceSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

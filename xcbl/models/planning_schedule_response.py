@@ -110,133 +110,133 @@ class BasePlanningDetail:
             "required": True,
         }
     )
-    line_item_type: LineItemType | None = field(
+    line_item_type: None | LineItemType = field(
         default=None,
         metadata={
             "name": "LineItemType",
             "type": "Element",
         },
     )
-    parent_item_number: ParentItemNumber | None = field(
+    parent_item_number: None | ParentItemNumber = field(
         default=None,
         metadata={
             "name": "ParentItemNumber",
             "type": "Element",
         },
     )
-    item_identifiers: ItemIdentifiers | None = field(
+    item_identifiers: None | ItemIdentifiers = field(
         default=None,
         metadata={
             "name": "ItemIdentifiers",
             "type": "Element",
         },
     )
-    list_of_dimension: ListOfDimension | None = field(
+    list_of_dimension: None | ListOfDimension = field(
         default=None,
         metadata={
             "name": "ListOfDimension",
             "type": "Element",
         },
     )
-    total_quantity: TotalQuantity | None = field(
+    total_quantity: None | TotalQuantity = field(
         default=None,
         metadata={
             "name": "TotalQuantity",
             "type": "Element",
         },
     )
-    max_back_order_quantity: MaxBackOrderQuantity | None = field(
+    max_back_order_quantity: None | MaxBackOrderQuantity = field(
         default=None,
         metadata={
             "name": "MaxBackOrderQuantity",
             "type": "Element",
         },
     )
-    list_of_quantity_coded: ListOfQuantityCoded | None = field(
+    list_of_quantity_coded: None | ListOfQuantityCoded = field(
         default=None,
         metadata={
             "name": "ListOfQuantityCoded",
             "type": "Element",
         },
     )
-    off_catalog_flag: OffCatalogFlag | None = field(
+    off_catalog_flag: None | OffCatalogFlag = field(
         default=None,
         metadata={
             "name": "OffCatalogFlag",
             "type": "Element",
         },
     )
-    catalog_reference: CatalogReference | None = field(
+    catalog_reference: None | CatalogReference = field(
         default=None,
         metadata={
             "name": "CatalogReference",
             "type": "Element",
         },
     )
-    item_contract_references: ItemContractReferences | None = field(
+    item_contract_references: None | ItemContractReferences = field(
         default=None,
         metadata={
             "name": "ItemContractReferences",
             "type": "Element",
         },
     )
-    list_of_item_references: ListOfItemReferences | None = field(
+    list_of_item_references: None | ListOfItemReferences = field(
         default=None,
         metadata={
             "name": "ListOfItemReferences",
             "type": "Element",
         },
     )
-    country_of_origin: CountryOfOrigin | None = field(
+    country_of_origin: None | CountryOfOrigin = field(
         default=None,
         metadata={
             "name": "CountryOfOrigin",
             "type": "Element",
         },
     )
-    country_of_destination: CountryOfDestination | None = field(
+    country_of_destination: None | CountryOfDestination = field(
         default=None,
         metadata={
             "name": "CountryOfDestination",
             "type": "Element",
         },
     )
-    final_recipient: FinalRecipient | None = field(
+    final_recipient: None | FinalRecipient = field(
         default=None,
         metadata={
             "name": "FinalRecipient",
             "type": "Element",
         },
     )
-    list_of_party_coded: ListOfPartyCoded | None = field(
+    list_of_party_coded: None | ListOfPartyCoded = field(
         default=None,
         metadata={
             "name": "ListOfPartyCoded",
             "type": "Element",
         },
     )
-    conditions_of_sale: ConditionsOfSale | None = field(
+    conditions_of_sale: None | ConditionsOfSale = field(
         default=None,
         metadata={
             "name": "ConditionsOfSale",
             "type": "Element",
         },
     )
-    hazardous_materials: HazardousMaterials | None = field(
+    hazardous_materials: None | HazardousMaterials = field(
         default=None,
         metadata={
             "name": "HazardousMaterials",
             "type": "Element",
         },
     )
-    record_keeping_year: RecordKeepingYear | None = field(
+    record_keeping_year: None | RecordKeepingYear = field(
         default=None,
         metadata={
             "name": "RecordKeepingYear",
             "type": "Element",
         },
     )
-    item_schedule_reference: ItemScheduleReference | None = field(
+    item_schedule_reference: None | ItemScheduleReference = field(
         default=None,
         metadata={
             "name": "ItemScheduleReference",
@@ -250,28 +250,28 @@ class BasePlanningDetail:
             "required": True,
         }
     )
-    forecast_frequency_coded_other: ForecastFrequencyCodedOther | None = field(
+    forecast_frequency_coded_other: None | ForecastFrequencyCodedOther = field(
         default=None,
         metadata={
             "name": "ForecastFrequencyCodedOther",
             "type": "Element",
         },
     )
-    item_quantities: ItemQuantities | None = field(
+    item_quantities: None | ItemQuantities = field(
         default=None,
         metadata={
             "name": "ItemQuantities",
             "type": "Element",
         },
     )
-    item_release_status_coded: ItemReleaseStatusCoded | None = field(
+    item_release_status_coded: None | ItemReleaseStatusCoded = field(
         default=None,
         metadata={
             "name": "ItemReleaseStatusCoded",
             "type": "Element",
         },
     )
-    item_release_status_coded_other: ItemReleaseStatusCodedOther | None = (
+    item_release_status_coded_other: None | ItemReleaseStatusCodedOther = (
         field(
             default=None,
             metadata={
@@ -298,14 +298,14 @@ class PlanningScheduleHeader:
             "required": True,
         }
     )
-    schedule_references: ScheduleReferences | None = field(
+    schedule_references: None | ScheduleReferences = field(
         default=None,
         metadata={
             "name": "ScheduleReferences",
             "type": "Element",
         },
     )
-    release_number: ReleaseNumber | None = field(
+    release_number: None | ReleaseNumber = field(
         default=None,
         metadata={
             "name": "ReleaseNumber",
@@ -319,7 +319,7 @@ class PlanningScheduleHeader:
             "required": True,
         }
     )
-    requested_response: RequestedResponse | None = field(
+    requested_response: None | RequestedResponse = field(
         default=None,
         metadata={
             "name": "RequestedResponse",
@@ -333,7 +333,7 @@ class PlanningScheduleHeader:
             "required": True,
         }
     )
-    schedule_type_coded_other: ScheduleTypeCodedOther | None = field(
+    schedule_type_coded_other: None | ScheduleTypeCodedOther = field(
         default=None,
         metadata={
             "name": "ScheduleTypeCodedOther",
@@ -347,14 +347,14 @@ class PlanningScheduleHeader:
             "required": True,
         }
     )
-    quantity_qualifier_coded_other: QuantityQualifierCodedOther | None = field(
+    quantity_qualifier_coded_other: None | QuantityQualifierCodedOther = field(
         default=None,
         metadata={
             "name": "QuantityQualifierCodedOther",
             "type": "Element",
         },
     )
-    validity_dates: ValidityDates | None = field(
+    validity_dates: None | ValidityDates = field(
         default=None,
         metadata={
             "name": "ValidityDates",
@@ -375,21 +375,21 @@ class PlanningScheduleHeader:
             "required": True,
         }
     )
-    planning_schedule_header_note: PlanningScheduleHeaderNote | None = field(
+    planning_schedule_header_note: None | PlanningScheduleHeaderNote = field(
         default=None,
         metadata={
             "name": "PlanningScheduleHeaderNote",
             "type": "Element",
         },
     )
-    list_of_structured_note: ListOfStructuredNote | None = field(
+    list_of_structured_note: None | ListOfStructuredNote = field(
         default=None,
         metadata={
             "name": "ListOfStructuredNote",
             "type": "Element",
         },
     )
-    list_of_attachment: ListOfAttachment | None = field(
+    list_of_attachment: None | ListOfAttachment = field(
         default=None,
         metadata={
             "name": "ListOfAttachment",
@@ -418,7 +418,7 @@ class ScheduleDetail:
             "required": True,
         }
     )
-    commitment_level_coded_other: CommitmentLevelCodedOther | None = field(
+    commitment_level_coded_other: None | CommitmentLevelCodedOther = field(
         default=None,
         metadata={
             "name": "CommitmentLevelCodedOther",
@@ -439,14 +439,14 @@ class ScheduleDetail:
             "required": True,
         }
     )
-    item_resource_authorization: ItemResourceAuthorization | None = field(
+    item_resource_authorization: None | ItemResourceAuthorization = field(
         default=None,
         metadata={
             "name": "ItemResourceAuthorization",
             "type": "Element",
         },
     )
-    schedule_note: ScheduleNote | None = field(
+    schedule_note: None | ScheduleNote = field(
         default=None,
         metadata={
             "name": "ScheduleNote",
@@ -516,14 +516,14 @@ class LocationPlanningItemDetail:
             "required": True,
         }
     )
-    line_item_note: LineItemNote | None = field(
+    line_item_note: None | LineItemNote = field(
         default=None,
         metadata={
             "name": "LineItemNote",
             "type": "Element",
         },
     )
-    list_of_structured_note: ListOfStructuredNote | None = field(
+    list_of_structured_note: None | ListOfStructuredNote = field(
         default=None,
         metadata={
             "name": "ListOfStructuredNote",
@@ -534,14 +534,14 @@ class LocationPlanningItemDetail:
 
 @dataclass(kw_only=True)
 class LocationSchedule:
-    location: Location | None = field(
+    location: None | Location = field(
         default=None,
         metadata={
             "name": "Location",
             "type": "Element",
         },
     )
-    list_of_contact: ListOfContact | None = field(
+    list_of_contact: None | ListOfContact = field(
         default=None,
         metadata={
             "name": "ListOfContact",
@@ -580,7 +580,7 @@ class PlanningScheduleResponseHeader:
             "required": True,
         }
     )
-    list_of_reference_coded: ListOfReferenceCoded | None = field(
+    list_of_reference_coded: None | ListOfReferenceCoded = field(
         default=None,
         metadata={
             "name": "ListOfReferenceCoded",
@@ -623,7 +623,7 @@ class PlanningScheduleResponseHeader:
         }
     )
     original_planning_schedule_header: (
-        OriginalPlanningScheduleHeader | None
+        None | OriginalPlanningScheduleHeader
     ) = field(
         default=None,
         metadata={
@@ -631,7 +631,7 @@ class PlanningScheduleResponseHeader:
             "type": "Element",
         },
     )
-    changed_planning_schedule_header: ChangedPlanningScheduleHeader | None = (
+    changed_planning_schedule_header: None | ChangedPlanningScheduleHeader = (
         field(
             default=None,
             metadata={
@@ -641,7 +641,7 @@ class PlanningScheduleResponseHeader:
         )
     )
     planning_schedule_response_header_note: (
-        PlanningScheduleResponseHeaderNote | None
+        None | PlanningScheduleResponseHeaderNote
     ) = field(
         default=None,
         metadata={
@@ -649,14 +649,14 @@ class PlanningScheduleResponseHeader:
             "type": "Element",
         },
     )
-    list_of_structured_note: ListOfStructuredNote | None = field(
+    list_of_structured_note: None | ListOfStructuredNote = field(
         default=None,
         metadata={
             "name": "ListOfStructuredNote",
             "type": "Element",
         },
     )
-    list_of_attachment: ListOfAttachment | None = field(
+    list_of_attachment: None | ListOfAttachment = field(
         default=None,
         metadata={
             "name": "ListOfAttachment",
@@ -698,7 +698,7 @@ class LocationGroupedPlanningDetail:
             "required": True,
         }
     )
-    list_of_contact: ListOfContact | None = field(
+    list_of_contact: None | ListOfContact = field(
         default=None,
         metadata={
             "name": "ListOfContact",
@@ -732,14 +732,14 @@ class MaterialGroupedPlanningDetail:
             "required": True,
         }
     )
-    line_item_note: LineItemNote | None = field(
+    line_item_note: None | LineItemNote = field(
         default=None,
         metadata={
             "name": "LineItemNote",
             "type": "Element",
         },
     )
-    list_of_structured_note: ListOfStructuredNote | None = field(
+    list_of_structured_note: None | ListOfStructuredNote = field(
         default=None,
         metadata={
             "name": "ListOfStructuredNote",
@@ -801,7 +801,7 @@ class LocationGroupedPlanningResponse:
             "required": True,
         }
     )
-    detail_response_coded_other: DetailResponseCodedOther | None = field(
+    detail_response_coded_other: None | DetailResponseCodedOther = field(
         default=None,
         metadata={
             "name": "DetailResponseCodedOther",
@@ -809,7 +809,7 @@ class LocationGroupedPlanningResponse:
         },
     )
     original_location_grouped_planning_detail: (
-        OriginalLocationGroupedPlanningDetail | None
+        None | OriginalLocationGroupedPlanningDetail
     ) = field(
         default=None,
         metadata={
@@ -818,7 +818,7 @@ class LocationGroupedPlanningResponse:
         },
     )
     changed_location_grouped_planning_detail: (
-        ChangedLocationGroupedPlanningDetail | None
+        None | ChangedLocationGroupedPlanningDetail
     ) = field(
         default=None,
         metadata={
@@ -826,21 +826,21 @@ class LocationGroupedPlanningResponse:
             "type": "Element",
         },
     )
-    line_item_note: LineItemNote | None = field(
+    line_item_note: None | LineItemNote = field(
         default=None,
         metadata={
             "name": "LineItemNote",
             "type": "Element",
         },
     )
-    list_of_structured_note: ListOfStructuredNote | None = field(
+    list_of_structured_note: None | ListOfStructuredNote = field(
         default=None,
         metadata={
             "name": "ListOfStructuredNote",
             "type": "Element",
         },
     )
-    list_of_attachment: ListOfAttachment | None = field(
+    list_of_attachment: None | ListOfAttachment = field(
         default=None,
         metadata={
             "name": "ListOfAttachment",
@@ -858,7 +858,7 @@ class MaterialGroupedPlanningResponse:
             "required": True,
         }
     )
-    detail_response_coded_other: DetailResponseCodedOther | None = field(
+    detail_response_coded_other: None | DetailResponseCodedOther = field(
         default=None,
         metadata={
             "name": "DetailResponseCodedOther",
@@ -866,7 +866,7 @@ class MaterialGroupedPlanningResponse:
         },
     )
     original_material_grouped_planning_detail: (
-        OriginalMaterialGroupedPlanningDetail | None
+        None | OriginalMaterialGroupedPlanningDetail
     ) = field(
         default=None,
         metadata={
@@ -875,7 +875,7 @@ class MaterialGroupedPlanningResponse:
         },
     )
     changed_material_grouped_planning_detail: (
-        ChangedMaterialGroupedPlanningDetail | None
+        None | ChangedMaterialGroupedPlanningDetail
     ) = field(
         default=None,
         metadata={
@@ -883,21 +883,21 @@ class MaterialGroupedPlanningResponse:
             "type": "Element",
         },
     )
-    line_item_note: LineItemNote | None = field(
+    line_item_note: None | LineItemNote = field(
         default=None,
         metadata={
             "name": "LineItemNote",
             "type": "Element",
         },
     )
-    list_of_structured_note: ListOfStructuredNote | None = field(
+    list_of_structured_note: None | ListOfStructuredNote = field(
         default=None,
         metadata={
             "name": "ListOfStructuredNote",
             "type": "Element",
         },
     )
-    list_of_attachment: ListOfAttachment | None = field(
+    list_of_attachment: None | ListOfAttachment = field(
         default=None,
         metadata={
             "name": "ListOfAttachment",
@@ -944,7 +944,7 @@ class PlanningScheduleResponse:
         }
     )
     list_of_location_grouped_planning_response: (
-        ListOfLocationGroupedPlanningResponse | None
+        None | ListOfLocationGroupedPlanningResponse
     ) = field(
         default=None,
         metadata={
@@ -953,7 +953,7 @@ class PlanningScheduleResponse:
         },
     )
     list_of_material_grouped_planning_response: (
-        ListOfMaterialGroupedPlanningResponse | None
+        None | ListOfMaterialGroupedPlanningResponse
     ) = field(
         default=None,
         metadata={
@@ -962,7 +962,7 @@ class PlanningScheduleResponse:
         },
     )
     planning_schedule_response_summary: (
-        PlanningScheduleResponseSummary | None
+        None | PlanningScheduleResponseSummary
     ) = field(
         default=None,
         metadata={

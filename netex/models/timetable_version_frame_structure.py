@@ -96,7 +96,7 @@ class TimetableVersionFrameStructure(CommonVersionFrameStructure):
             "tokens": True,
         },
     )
-    headway_service: bool | None = field(
+    headway_service: None | bool = field(
         default=None,
         metadata={
             "name": "HeadwayService",
@@ -104,7 +104,7 @@ class TimetableVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    monitored: bool | None = field(
+    monitored: None | bool = field(
         default=None,
         metadata={
             "name": "Monitored",
@@ -112,7 +112,7 @@ class TimetableVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    network_view: NetworkView | None = field(
+    network_view: None | NetworkView = field(
         default=None,
         metadata={
             "name": "NetworkView",
@@ -120,7 +120,7 @@ class TimetableVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    line_view: LineView | None = field(
+    line_view: None | LineView = field(
         default=None,
         metadata={
             "name": "LineView",
@@ -128,7 +128,7 @@ class TimetableVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    operator_view: OperatorView | None = field(
+    operator_view: None | OperatorView = field(
         default=None,
         metadata={
             "name": "OperatorView",
@@ -136,7 +136,7 @@ class TimetableVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    service_calendar_frame_ref: ServiceCalendarFrameRef | None = field(
+    service_calendar_frame_ref: None | ServiceCalendarFrameRef = field(
         default=None,
         metadata={
             "name": "ServiceCalendarFrameRef",
@@ -144,7 +144,7 @@ class TimetableVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    default_mode: VehicleModeEnumeration | None = field(
+    default_mode: None | VehicleModeEnumeration = field(
         default=None,
         metadata={
             "name": "DefaultMode",
@@ -152,7 +152,7 @@ class TimetableVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    journey_accounting_ref: JourneyAccountingRef | None = field(
+    journey_accounting_ref: None | JourneyAccountingRef = field(
         default=None,
         metadata={
             "name": "JourneyAccountingRef",
@@ -160,7 +160,7 @@ class TimetableVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    booking_times: ContainedAvailabilityConditionsRelStructure | None = field(
+    booking_times: None | ContainedAvailabilityConditionsRelStructure = field(
         default=None,
         metadata={
             "name": "bookingTimes",
@@ -168,7 +168,7 @@ class TimetableVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    accessibility_assessment: AccessibilityAssessment | None = field(
+    accessibility_assessment: None | AccessibilityAssessment = field(
         default=None,
         metadata={
             "name": "AccessibilityAssessment",
@@ -177,12 +177,12 @@ class TimetableVersionFrameStructure(CommonVersionFrameStructure):
         },
     )
     transport_type_ref_or_vehicle_type_ref: (
-        SimpleVehicleTypeRef
+        None
+        | SimpleVehicleTypeRef
         | CompoundTrainRef
         | TrainRef
         | VehicleTypeRef
         | TransportTypeRef
-        | None
     ) = field(
         default=None,
         metadata={
@@ -216,7 +216,7 @@ class TimetableVersionFrameStructure(CommonVersionFrameStructure):
             ),
         },
     )
-    time_demand_types: TimeDemandTypesInFrameRelStructure | None = field(
+    time_demand_types: None | TimeDemandTypesInFrameRelStructure = field(
         default=None,
         metadata={
             "name": "timeDemandTypes",
@@ -225,7 +225,7 @@ class TimetableVersionFrameStructure(CommonVersionFrameStructure):
         },
     )
     time_demand_type_assignments: (
-        TimeDemandTypeAssignmentsInFrameRelStructure | None
+        None | TimeDemandTypeAssignmentsInFrameRelStructure
     ) = field(
         default=None,
         metadata={
@@ -234,7 +234,7 @@ class TimetableVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    timing_link_groups: GroupOfLinksInFrameRelStructure | None = field(
+    timing_link_groups: None | GroupOfLinksInFrameRelStructure = field(
         default=None,
         metadata={
             "name": "timingLinkGroups",
@@ -242,7 +242,7 @@ class TimetableVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    vehicle_journeys: JourneysInFrameRelStructure | None = field(
+    vehicle_journeys: None | JourneysInFrameRelStructure = field(
         default=None,
         metadata={
             "name": "vehicleJourneys",
@@ -250,7 +250,7 @@ class TimetableVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    frequency_groups: FrequencyGroupsInFrameRelStructure | None = field(
+    frequency_groups: None | FrequencyGroupsInFrameRelStructure = field(
         default=None,
         metadata={
             "name": "frequencyGroups",
@@ -258,7 +258,7 @@ class TimetableVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    groups_of_services: GroupsOfServicesInFrameRelStructure | None = field(
+    groups_of_services: None | GroupsOfServicesInFrameRelStructure = field(
         default=None,
         metadata={
             "name": "groupsOfServices",
@@ -266,7 +266,7 @@ class TimetableVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    train_numbers: TrainNumbersInFrameRelStructure | None = field(
+    train_numbers: None | TrainNumbersInFrameRelStructure = field(
         default=None,
         metadata={
             "name": "trainNumbers",
@@ -274,7 +274,7 @@ class TimetableVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    journey_part_couples: JourneyPartCouplesInFrameRelStructure | None = field(
+    journey_part_couples: None | JourneyPartCouplesInFrameRelStructure = field(
         default=None,
         metadata={
             "name": "journeyPartCouples",
@@ -282,7 +282,7 @@ class TimetableVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    coupled_journeys: CoupledJourneysInFrameRelStructure | None = field(
+    coupled_journeys: None | CoupledJourneysInFrameRelStructure = field(
         default=None,
         metadata={
             "name": "coupledJourneys",
@@ -290,7 +290,7 @@ class TimetableVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    service_facility_sets: ServiceFacilitySetsInFrameRelStructure | None = (
+    service_facility_sets: None | ServiceFacilitySetsInFrameRelStructure = (
         field(
             default=None,
             metadata={
@@ -300,7 +300,7 @@ class TimetableVersionFrameStructure(CommonVersionFrameStructure):
             },
         )
     )
-    types_of_service: TypesOfServiceInFrameRelStructure | None = field(
+    types_of_service: None | TypesOfServiceInFrameRelStructure = field(
         default=None,
         metadata={
             "name": "typesOfService",
@@ -309,7 +309,7 @@ class TimetableVersionFrameStructure(CommonVersionFrameStructure):
         },
     )
     flexible_service_properties: (
-        FlexibleServicePropertiesInFrameRelStructure | None
+        None | FlexibleServicePropertiesInFrameRelStructure
     ) = field(
         default=None,
         metadata={
@@ -319,7 +319,7 @@ class TimetableVersionFrameStructure(CommonVersionFrameStructure):
         },
     )
     vehicle_journey_stop_assignments: (
-        VehicleJourneyStopAssignmentsInFrameRelStructure | None
+        None | VehicleJourneyStopAssignmentsInFrameRelStructure
     ) = field(
         default=None,
         metadata={
@@ -328,14 +328,14 @@ class TimetableVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    notices: NoticesInFrameRelStructure | None = field(
+    notices: None | NoticesInFrameRelStructure = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    notice_assignments: NoticeAssignmentsInFrameRelStructure | None = field(
+    notice_assignments: None | NoticeAssignmentsInFrameRelStructure = field(
         default=None,
         metadata={
             "name": "noticeAssignments",
@@ -343,7 +343,7 @@ class TimetableVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    journey_meetings: JourneyMeetingsInFrameRelStructure | None = field(
+    journey_meetings: None | JourneyMeetingsInFrameRelStructure = field(
         default=None,
         metadata={
             "name": "journeyMeetings",
@@ -351,7 +351,7 @@ class TimetableVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    journey_interchanges: JourneyInterchangesInFrameRelStructure | None = (
+    journey_interchanges: None | JourneyInterchangesInFrameRelStructure = (
         field(
             default=None,
             metadata={
@@ -361,7 +361,7 @@ class TimetableVersionFrameStructure(CommonVersionFrameStructure):
             },
         )
     )
-    default_interchanges: DefaultInterchangesInFrameRelStructure | None = (
+    default_interchanges: None | DefaultInterchangesInFrameRelStructure = (
         field(
             default=None,
             metadata={
@@ -371,7 +371,7 @@ class TimetableVersionFrameStructure(CommonVersionFrameStructure):
             },
         )
     )
-    interchange_rules: InterchangeRulesInFrameRelStructure | None = field(
+    interchange_rules: None | InterchangeRulesInFrameRelStructure = field(
         default=None,
         metadata={
             "name": "interchangeRules",
@@ -379,7 +379,7 @@ class TimetableVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    vehicle_types: VehicleTypesInFrameRelStructure | None = field(
+    vehicle_types: None | VehicleTypesInFrameRelStructure = field(
         default=None,
         metadata={
             "name": "vehicleTypes",
@@ -387,7 +387,7 @@ class TimetableVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    journey_accountings: JourneyAccountingsInFrameRelStructure | None = field(
+    journey_accountings: None | JourneyAccountingsInFrameRelStructure = field(
         default=None,
         metadata={
             "name": "journeyAccountings",

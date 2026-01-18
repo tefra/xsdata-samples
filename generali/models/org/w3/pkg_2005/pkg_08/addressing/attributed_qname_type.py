@@ -11,7 +11,7 @@ class AttributedQnameType:
     class Meta:
         name = "AttributedQNameType"
 
-    value: QName | None = field(
+    value: None | QName = field(
         default=None,
         metadata={
             "required": True,

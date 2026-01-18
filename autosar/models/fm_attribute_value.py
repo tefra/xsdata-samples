@@ -33,7 +33,7 @@ class FmAttributeValue:
     class Meta:
         name = "FM-ATTRIBUTE-VALUE"
 
-    definition_ref: FmAttributeValue.DefinitionRef | None = field(
+    definition_ref: None | FmAttributeValue.DefinitionRef = field(
         default=None,
         metadata={
             "name": "DEFINITION-REF",
@@ -41,7 +41,7 @@ class FmAttributeValue:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    value: NumericalValue | None = field(
+    value: None | NumericalValue = field(
         default=None,
         metadata={
             "name": "VALUE",
@@ -49,14 +49,14 @@ class FmAttributeValue:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -67,7 +67,7 @@ class FmAttributeValue:
 
     @dataclass
     class DefinitionRef(Ref):
-        dest: FmAttributeDefSubtypesEnum | None = field(
+        dest: None | FmAttributeDefSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

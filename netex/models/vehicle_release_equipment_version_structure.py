@@ -17,7 +17,7 @@ class VehicleReleaseEquipmentVersionStructure(
     class Meta:
         name = "VehicleReleaseEquipment_VersionStructure"
 
-    remote_control: bool | None = field(
+    remote_control: None | bool = field(
         default=None,
         metadata={
             "name": "RemoteControl",
@@ -25,7 +25,7 @@ class VehicleReleaseEquipmentVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    local_control: bool | None = field(
+    local_control: None | bool = field(
         default=None,
         metadata={
             "name": "LocalControl",
@@ -33,7 +33,7 @@ class VehicleReleaseEquipmentVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    locking_mechanism: LockingMechanismEnumeration | None = field(
+    locking_mechanism: None | LockingMechanismEnumeration = field(
         default=None,
         metadata={
             "name": "LockingMechanism",

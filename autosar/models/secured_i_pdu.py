@@ -137,7 +137,7 @@ class SecuredIPdu:
     class Meta:
         name = "SECURED-I-PDU"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -146,7 +146,7 @@ class SecuredIPdu:
             "required": True,
         },
     )
-    short_name_fragments: SecuredIPdu.ShortNameFragments | None = field(
+    short_name_fragments: None | SecuredIPdu.ShortNameFragments = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -154,7 +154,7 @@ class SecuredIPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -162,7 +162,7 @@ class SecuredIPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -170,7 +170,7 @@ class SecuredIPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -178,7 +178,7 @@ class SecuredIPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -186,7 +186,7 @@ class SecuredIPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -194,7 +194,7 @@ class SecuredIPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: SecuredIPdu.Annotations | None = field(
+    annotations: None | SecuredIPdu.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -202,7 +202,7 @@ class SecuredIPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -210,7 +210,7 @@ class SecuredIPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    has_dynamic_length: Boolean | None = field(
+    has_dynamic_length: None | Boolean = field(
         default=None,
         metadata={
             "name": "HAS-DYNAMIC-LENGTH",
@@ -218,7 +218,7 @@ class SecuredIPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    length: Integer | None = field(
+    length: None | Integer = field(
         default=None,
         metadata={
             "name": "LENGTH",
@@ -226,7 +226,7 @@ class SecuredIPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    meta_data_length: PositiveInteger | None = field(
+    meta_data_length: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "META-DATA-LENGTH",
@@ -234,7 +234,7 @@ class SecuredIPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    contained_i_pdu_props: ContainedIPduProps | None = field(
+    contained_i_pdu_props: None | ContainedIPduProps = field(
         default=None,
         metadata={
             "name": "CONTAINED-I-PDU-PROPS",
@@ -242,7 +242,7 @@ class SecuredIPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    authentication_props_ref: SecuredIPdu.AuthenticationPropsRef | None = (
+    authentication_props_ref: None | SecuredIPdu.AuthenticationPropsRef = (
         field(
             default=None,
             metadata={
@@ -252,7 +252,7 @@ class SecuredIPdu:
             },
         )
     )
-    freshness_props_ref: SecuredIPdu.FreshnessPropsRef | None = field(
+    freshness_props_ref: None | SecuredIPdu.FreshnessPropsRef = field(
         default=None,
         metadata={
             "name": "FRESHNESS-PROPS-REF",
@@ -260,7 +260,7 @@ class SecuredIPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    payload_ref: SecuredIPdu.PayloadRef | None = field(
+    payload_ref: None | SecuredIPdu.PayloadRef = field(
         default=None,
         metadata={
             "name": "PAYLOAD-REF",
@@ -268,7 +268,7 @@ class SecuredIPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    secure_communication_props: SecureCommunicationProps | None = field(
+    secure_communication_props: None | SecureCommunicationProps = field(
         default=None,
         metadata={
             "name": "SECURE-COMMUNICATION-PROPS",
@@ -276,7 +276,7 @@ class SecuredIPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    use_as_cryptographic_i_pdu: Boolean | None = field(
+    use_as_cryptographic_i_pdu: None | Boolean = field(
         default=None,
         metadata={
             "name": "USE-AS-CRYPTOGRAPHIC-I-PDU",
@@ -284,7 +284,7 @@ class SecuredIPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    use_secured_pdu_header: SecuredPduHeaderEnum | None = field(
+    use_secured_pdu_header: None | SecuredPduHeaderEnum = field(
         default=None,
         metadata={
             "name": "USE-SECURED-PDU-HEADER",
@@ -292,14 +292,14 @@ class SecuredIPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -307,7 +307,7 @@ class SecuredIPdu:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -339,7 +339,7 @@ class SecuredIPdu:
 
     @dataclass
     class AuthenticationPropsRef(Ref):
-        dest: SecureCommunicationAuthenticationPropsSubtypesEnum | None = (
+        dest: None | SecureCommunicationAuthenticationPropsSubtypesEnum = (
             field(
                 default=None,
                 metadata={
@@ -352,7 +352,7 @@ class SecuredIPdu:
 
     @dataclass
     class FreshnessPropsRef(Ref):
-        dest: SecureCommunicationFreshnessPropsSubtypesEnum | None = field(
+        dest: None | SecureCommunicationFreshnessPropsSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -363,7 +363,7 @@ class SecuredIPdu:
 
     @dataclass
     class PayloadRef(Ref):
-        dest: PduTriggeringSubtypesEnum | None = field(
+        dest: None | PduTriggeringSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

@@ -17,7 +17,7 @@ class StairEquipmentVersionStructure(AccessEquipmentVersionStructure):
     class Meta:
         name = "StairEquipment_VersionStructure"
 
-    depth: Decimal | None = field(
+    depth: None | Decimal = field(
         default=None,
         metadata={
             "name": "Depth",
@@ -25,7 +25,7 @@ class StairEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    number_of_steps: int | None = field(
+    number_of_steps: None | int = field(
         default=None,
         metadata={
             "name": "NumberOfSteps",
@@ -33,7 +33,7 @@ class StairEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    step_height: Decimal | None = field(
+    step_height: None | Decimal = field(
         default=None,
         metadata={
             "name": "StepHeight",
@@ -41,7 +41,7 @@ class StairEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    step_length: Decimal | None = field(
+    step_length: None | Decimal = field(
         default=None,
         metadata={
             "name": "StepLength",
@@ -49,7 +49,7 @@ class StairEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    step_colour_contrast: bool | None = field(
+    step_colour_contrast: None | bool = field(
         default=None,
         metadata={
             "name": "StepColourContrast",
@@ -57,7 +57,7 @@ class StairEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    step_condition: StepConditionEnumeration | None = field(
+    step_condition: None | StepConditionEnumeration = field(
         default=None,
         metadata={
             "name": "StepCondition",
@@ -65,7 +65,7 @@ class StairEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    handrail_type: HandrailEnumeration | None = field(
+    handrail_type: None | HandrailEnumeration = field(
         default=None,
         metadata={
             "name": "HandrailType",
@@ -73,7 +73,7 @@ class StairEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    handrail_height: Decimal | None = field(
+    handrail_height: None | Decimal = field(
         default=None,
         metadata={
             "name": "HandrailHeight",
@@ -81,7 +81,7 @@ class StairEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    lower_handrail_height: Decimal | None = field(
+    lower_handrail_height: None | Decimal = field(
         default=None,
         metadata={
             "name": "LowerHandrailHeight",
@@ -89,7 +89,7 @@ class StairEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    tactile_writing: bool | None = field(
+    tactile_writing: None | bool = field(
         default=None,
         metadata={
             "name": "TactileWriting",
@@ -97,7 +97,7 @@ class StairEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    stair_ramp: StairRampEnumeration | None = field(
+    stair_ramp: None | StairRampEnumeration = field(
         default=None,
         metadata={
             "name": "StairRamp",
@@ -105,7 +105,7 @@ class StairEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    top_end: StairEndStructure | None = field(
+    top_end: None | StairEndStructure = field(
         default=None,
         metadata={
             "name": "TopEnd",
@@ -113,7 +113,7 @@ class StairEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    bottom_end: StairEndStructure | None = field(
+    bottom_end: None | StairEndStructure = field(
         default=None,
         metadata={
             "name": "BottomEnd",

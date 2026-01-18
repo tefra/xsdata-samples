@@ -23,13 +23,13 @@ class UnresolvedUnsignedPositiveIntExpression(ComplexBaseExpression):
     class Meta:
         name = "unresolvedUnsignedPositiveIntExpression"
 
-    minimum: int | None = field(
+    minimum: None | int = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    maximum: int | None = field(
+    maximum: None | int = field(
         default=None,
         metadata={
             "type": "Attribute",

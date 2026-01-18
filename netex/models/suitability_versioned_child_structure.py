@@ -15,7 +15,7 @@ class SuitabilityVersionedChildStructure(UserNeedVersionedChildStructure):
     class Meta:
         name = "Suitability_VersionedChildStructure"
 
-    suitable: SuitableEnumeration | None = field(
+    suitable: None | SuitableEnumeration = field(
         default=None,
         metadata={
             "name": "Suitable",

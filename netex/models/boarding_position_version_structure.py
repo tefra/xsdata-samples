@@ -15,7 +15,7 @@ class BoardingPositionVersionStructure(StopPlaceSpaceVersionStructure):
     class Meta:
         name = "BoardingPosition_VersionStructure"
 
-    public_code: str | None = field(
+    public_code: None | str = field(
         default=None,
         metadata={
             "name": "PublicCode",
@@ -23,7 +23,7 @@ class BoardingPositionVersionStructure(StopPlaceSpaceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    boarding_position_type: BoardingPositionTypeEnumeration | None = field(
+    boarding_position_type: None | BoardingPositionTypeEnumeration = field(
         default=None,
         metadata={
             "name": "BoardingPositionType",
@@ -31,7 +31,7 @@ class BoardingPositionVersionStructure(StopPlaceSpaceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    boarding_position_entrances: EntranceRefsRelStructure | None = field(
+    boarding_position_entrances: None | EntranceRefsRelStructure = field(
         default=None,
         metadata={
             "name": "boardingPositionEntrances",
@@ -39,7 +39,7 @@ class BoardingPositionVersionStructure(StopPlaceSpaceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    platform_height: Decimal | None = field(
+    platform_height: None | Decimal = field(
         default=None,
         metadata={
             "name": "PlatformHeight",
@@ -47,7 +47,7 @@ class BoardingPositionVersionStructure(StopPlaceSpaceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    edge_to_track_center_distance: Decimal | None = field(
+    edge_to_track_center_distance: None | Decimal = field(
         default=None,
         metadata={
             "name": "EdgeToTrackCenterDistance",

@@ -107,7 +107,7 @@ class DataTypeMappingSet:
     class Meta:
         name = "DATA-TYPE-MAPPING-SET"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -116,7 +116,7 @@ class DataTypeMappingSet:
             "required": True,
         },
     )
-    short_name_fragments: DataTypeMappingSet.ShortNameFragments | None = field(
+    short_name_fragments: None | DataTypeMappingSet.ShortNameFragments = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -124,7 +124,7 @@ class DataTypeMappingSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -132,7 +132,7 @@ class DataTypeMappingSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -140,7 +140,7 @@ class DataTypeMappingSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -148,7 +148,7 @@ class DataTypeMappingSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -156,7 +156,7 @@ class DataTypeMappingSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -164,7 +164,7 @@ class DataTypeMappingSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: DataTypeMappingSet.Annotations | None = field(
+    annotations: None | DataTypeMappingSet.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -172,7 +172,7 @@ class DataTypeMappingSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -180,7 +180,7 @@ class DataTypeMappingSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    blueprint_policys: DataTypeMappingSet.BlueprintPolicys | None = field(
+    blueprint_policys: None | DataTypeMappingSet.BlueprintPolicys = field(
         default=None,
         metadata={
             "name": "BLUEPRINT-POLICYS",
@@ -188,7 +188,7 @@ class DataTypeMappingSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    short_name_pattern: String | None = field(
+    short_name_pattern: None | String = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-PATTERN",
@@ -196,7 +196,7 @@ class DataTypeMappingSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    data_type_maps: DataTypeMappingSet.DataTypeMaps | None = field(
+    data_type_maps: None | DataTypeMappingSet.DataTypeMaps = field(
         default=None,
         metadata={
             "name": "DATA-TYPE-MAPS",
@@ -204,7 +204,7 @@ class DataTypeMappingSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    mode_request_type_maps: DataTypeMappingSet.ModeRequestTypeMaps | None = (
+    mode_request_type_maps: None | DataTypeMappingSet.ModeRequestTypeMaps = (
         field(
             default=None,
             metadata={
@@ -214,14 +214,14 @@ class DataTypeMappingSet:
             },
         )
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -229,7 +229,7 @@ class DataTypeMappingSet:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",

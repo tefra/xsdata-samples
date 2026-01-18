@@ -118,7 +118,7 @@ class ParameterInterface:
     class Meta:
         name = "PARAMETER-INTERFACE"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -127,7 +127,7 @@ class ParameterInterface:
             "required": True,
         },
     )
-    short_name_fragments: ParameterInterface.ShortNameFragments | None = field(
+    short_name_fragments: None | ParameterInterface.ShortNameFragments = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -135,7 +135,7 @@ class ParameterInterface:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -143,7 +143,7 @@ class ParameterInterface:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -151,7 +151,7 @@ class ParameterInterface:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -159,7 +159,7 @@ class ParameterInterface:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -167,7 +167,7 @@ class ParameterInterface:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -175,7 +175,7 @@ class ParameterInterface:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: ParameterInterface.Annotations | None = field(
+    annotations: None | ParameterInterface.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -183,7 +183,7 @@ class ParameterInterface:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -191,7 +191,7 @@ class ParameterInterface:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    blueprint_policys: ParameterInterface.BlueprintPolicys | None = field(
+    blueprint_policys: None | ParameterInterface.BlueprintPolicys = field(
         default=None,
         metadata={
             "name": "BLUEPRINT-POLICYS",
@@ -199,7 +199,7 @@ class ParameterInterface:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    short_name_pattern: String | None = field(
+    short_name_pattern: None | String = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-PATTERN",
@@ -207,7 +207,7 @@ class ParameterInterface:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    is_service: Boolean | None = field(
+    is_service: None | Boolean = field(
         default=None,
         metadata={
             "name": "IS-SERVICE",
@@ -215,7 +215,7 @@ class ParameterInterface:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    namespaces: ParameterInterface.Namespaces | None = field(
+    namespaces: None | ParameterInterface.Namespaces = field(
         default=None,
         metadata={
             "name": "NAMESPACES",
@@ -223,7 +223,7 @@ class ParameterInterface:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    service_kind: ServiceProviderEnum | None = field(
+    service_kind: None | ServiceProviderEnum = field(
         default=None,
         metadata={
             "name": "SERVICE-KIND",
@@ -231,7 +231,7 @@ class ParameterInterface:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    parameters: ParameterInterface.Parameters | None = field(
+    parameters: None | ParameterInterface.Parameters = field(
         default=None,
         metadata={
             "name": "PARAMETERS",
@@ -239,14 +239,14 @@ class ParameterInterface:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -254,7 +254,7 @@ class ParameterInterface:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",

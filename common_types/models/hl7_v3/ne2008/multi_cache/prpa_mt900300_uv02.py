@@ -31,7 +31,7 @@ class PrpaMt900300Uv02CareEventId:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Ii | None = field(
+    type_id: None | Ii = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -55,7 +55,7 @@ class PrpaMt900300Uv02CareEventId:
             "min_occurs": 1,
         },
     )
-    semantics_text: St | None = field(
+    semantics_text: None | St = field(
         default=None,
         metadata={
             "name": "semanticsText",
@@ -63,7 +63,7 @@ class PrpaMt900300Uv02CareEventId:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    null_flavor: NullFlavor | None = field(
+    null_flavor: None | NullFlavor = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -85,7 +85,7 @@ class PrpaMt900300Uv02EncounterStatus:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Ii | None = field(
+    type_id: None | Ii = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -109,7 +109,7 @@ class PrpaMt900300Uv02EncounterStatus:
             "min_occurs": 1,
         },
     )
-    semantics_text: St | None = field(
+    semantics_text: None | St = field(
         default=None,
         metadata={
             "name": "semanticsText",
@@ -117,7 +117,7 @@ class PrpaMt900300Uv02EncounterStatus:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    null_flavor: NullFlavor | None = field(
+    null_flavor: None | NullFlavor = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -139,7 +139,7 @@ class PrpaMt900300Uv02EncounterTimeframe:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Ii | None = field(
+    type_id: None | Ii = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -155,7 +155,7 @@ class PrpaMt900300Uv02EncounterTimeframe:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    value: IvlTsExplicit | None = field(
+    value: None | IvlTsExplicit = field(
         default=None,
         metadata={
             "type": "Element",
@@ -163,7 +163,7 @@ class PrpaMt900300Uv02EncounterTimeframe:
             "required": True,
         },
     )
-    semantics_text: St | None = field(
+    semantics_text: None | St = field(
         default=None,
         metadata={
             "name": "semanticsText",
@@ -171,7 +171,7 @@ class PrpaMt900300Uv02EncounterTimeframe:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    null_flavor: NullFlavor | None = field(
+    null_flavor: None | NullFlavor = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -193,7 +193,7 @@ class PrpaMt900300Uv02PatientId:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Ii | None = field(
+    type_id: None | Ii = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -217,7 +217,7 @@ class PrpaMt900300Uv02PatientId:
             "min_occurs": 1,
         },
     )
-    semantics_text: St | None = field(
+    semantics_text: None | St = field(
         default=None,
         metadata={
             "name": "semanticsText",
@@ -225,7 +225,7 @@ class PrpaMt900300Uv02PatientId:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    null_flavor: NullFlavor | None = field(
+    null_flavor: None | NullFlavor = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -247,7 +247,7 @@ class PrpaMt900300Uv02ResponsibleOrganization:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Ii | None = field(
+    type_id: None | Ii = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -271,7 +271,7 @@ class PrpaMt900300Uv02ResponsibleOrganization:
             "min_occurs": 1,
         },
     )
-    semantics_text: St | None = field(
+    semantics_text: None | St = field(
         default=None,
         metadata={
             "name": "semanticsText",
@@ -279,7 +279,7 @@ class PrpaMt900300Uv02ResponsibleOrganization:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    null_flavor: NullFlavor | None = field(
+    null_flavor: None | NullFlavor = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -301,7 +301,7 @@ class PrpaMt900300Uv02SortControl:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Ii | None = field(
+    type_id: None | Ii = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -317,7 +317,7 @@ class PrpaMt900300Uv02SortControl:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    sequence_number: Int | None = field(
+    sequence_number: None | Int = field(
         default=None,
         metadata={
             "name": "sequenceNumber",
@@ -325,7 +325,7 @@ class PrpaMt900300Uv02SortControl:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    element_name: Sc | None = field(
+    element_name: None | Sc = field(
         default=None,
         metadata={
             "name": "elementName",
@@ -333,7 +333,7 @@ class PrpaMt900300Uv02SortControl:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    direction_code: Cs | None = field(
+    direction_code: None | Cs = field(
         default=None,
         metadata={
             "name": "directionCode",
@@ -341,7 +341,7 @@ class PrpaMt900300Uv02SortControl:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    null_flavor: NullFlavor | None = field(
+    null_flavor: None | NullFlavor = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -363,7 +363,7 @@ class PrpaMt900300Uv02TypeOfEncounter:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Ii | None = field(
+    type_id: None | Ii = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -379,7 +379,7 @@ class PrpaMt900300Uv02TypeOfEncounter:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    value: Cd | None = field(
+    value: None | Cd = field(
         default=None,
         metadata={
             "type": "Element",
@@ -387,7 +387,7 @@ class PrpaMt900300Uv02TypeOfEncounter:
             "required": True,
         },
     )
-    semantics_text: St | None = field(
+    semantics_text: None | St = field(
         default=None,
         metadata={
             "name": "semanticsText",
@@ -395,7 +395,7 @@ class PrpaMt900300Uv02TypeOfEncounter:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    null_flavor: NullFlavor | None = field(
+    null_flavor: None | NullFlavor = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -417,7 +417,7 @@ class PrpaMt900300Uv02QueryByParameterPayload:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Ii | None = field(
+    type_id: None | Ii = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -433,7 +433,7 @@ class PrpaMt900300Uv02QueryByParameterPayload:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    query_id: Ii | None = field(
+    query_id: None | Ii = field(
         default=None,
         metadata={
             "name": "queryId",
@@ -441,7 +441,7 @@ class PrpaMt900300Uv02QueryByParameterPayload:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    status_code: Cs | None = field(
+    status_code: None | Cs = field(
         default=None,
         metadata={
             "name": "statusCode",
@@ -450,7 +450,7 @@ class PrpaMt900300Uv02QueryByParameterPayload:
             "required": True,
         },
     )
-    modify_code: Cs | None = field(
+    modify_code: None | Cs = field(
         default=None,
         metadata={
             "name": "modifyCode",
@@ -466,7 +466,7 @@ class PrpaMt900300Uv02QueryByParameterPayload:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    response_modality_code: Cs | None = field(
+    response_modality_code: None | Cs = field(
         default=None,
         metadata={
             "name": "responseModalityCode",
@@ -474,7 +474,7 @@ class PrpaMt900300Uv02QueryByParameterPayload:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    response_priority_code: Cs | None = field(
+    response_priority_code: None | Cs = field(
         default=None,
         metadata={
             "name": "responsePriorityCode",
@@ -482,7 +482,7 @@ class PrpaMt900300Uv02QueryByParameterPayload:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    initial_quantity: Int | None = field(
+    initial_quantity: None | Int = field(
         default=None,
         metadata={
             "name": "initialQuantity",
@@ -490,7 +490,7 @@ class PrpaMt900300Uv02QueryByParameterPayload:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    initial_quantity_code: Ce | None = field(
+    initial_quantity_code: None | Ce = field(
         default=None,
         metadata={
             "name": "initialQuantityCode",
@@ -498,7 +498,7 @@ class PrpaMt900300Uv02QueryByParameterPayload:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    care_event_id: PrpaMt900300Uv02CareEventId | None = field(
+    care_event_id: None | PrpaMt900300Uv02CareEventId = field(
         default=None,
         metadata={
             "name": "careEventID",
@@ -507,7 +507,7 @@ class PrpaMt900300Uv02QueryByParameterPayload:
             "nillable": True,
         },
     )
-    encounter_status: PrpaMt900300Uv02EncounterStatus | None = field(
+    encounter_status: None | PrpaMt900300Uv02EncounterStatus = field(
         default=None,
         metadata={
             "name": "encounterStatus",
@@ -516,7 +516,7 @@ class PrpaMt900300Uv02QueryByParameterPayload:
             "nillable": True,
         },
     )
-    encounter_timeframe: PrpaMt900300Uv02EncounterTimeframe | None = field(
+    encounter_timeframe: None | PrpaMt900300Uv02EncounterTimeframe = field(
         default=None,
         metadata={
             "name": "encounterTimeframe",
@@ -525,7 +525,7 @@ class PrpaMt900300Uv02QueryByParameterPayload:
             "nillable": True,
         },
     )
-    patient_id: PrpaMt900300Uv02PatientId | None = field(
+    patient_id: None | PrpaMt900300Uv02PatientId = field(
         default=None,
         metadata={
             "name": "patientId",
@@ -535,7 +535,7 @@ class PrpaMt900300Uv02QueryByParameterPayload:
         },
     )
     responsible_organization: (
-        PrpaMt900300Uv02ResponsibleOrganization | None
+        None | PrpaMt900300Uv02ResponsibleOrganization
     ) = field(
         default=None,
         metadata={
@@ -554,7 +554,7 @@ class PrpaMt900300Uv02QueryByParameterPayload:
             "nillable": True,
         },
     )
-    type_of_encounter: PrpaMt900300Uv02TypeOfEncounter | None = field(
+    type_of_encounter: None | PrpaMt900300Uv02TypeOfEncounter = field(
         default=None,
         metadata={
             "name": "typeOfEncounter",
@@ -563,7 +563,7 @@ class PrpaMt900300Uv02QueryByParameterPayload:
             "nillable": True,
         },
     )
-    null_flavor: NullFlavor | None = field(
+    null_flavor: None | NullFlavor = field(
         default=None,
         metadata={
             "name": "nullFlavor",

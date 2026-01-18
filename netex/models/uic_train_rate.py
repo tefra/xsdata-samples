@@ -12,7 +12,7 @@ class UicTrainRate:
     class Meta:
         namespace = "http://www.netex.org.uk/netex"
 
-    value: UicRateTypeEnumeration | None = field(
+    value: None | UicRateTypeEnumeration = field(
         default=None,
         metadata={
             "required": True,

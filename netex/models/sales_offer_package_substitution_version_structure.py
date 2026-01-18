@@ -16,7 +16,7 @@ class SalesOfferPackageSubstitutionVersionStructure(
     class Meta:
         name = "SalesOfferPackageSubstitution_VersionStructure"
 
-    sales_offer_package_ref: SalesOfferPackageRef | None = field(
+    sales_offer_package_ref: None | SalesOfferPackageRef = field(
         default=None,
         metadata={
             "name": "SalesOfferPackageRef",
@@ -24,7 +24,7 @@ class SalesOfferPackageSubstitutionVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    with_sales_offer_package_ref: SalesOfferPackageRefStructure | None = field(
+    with_sales_offer_package_ref: None | SalesOfferPackageRefStructure = field(
         default=None,
         metadata={
             "name": "WithSalesOfferPackageRef",

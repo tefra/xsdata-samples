@@ -58,7 +58,7 @@ class ConditionalChangeNad:
     class Meta:
         name = "CONDITIONAL-CHANGE-NAD"
 
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -66,7 +66,7 @@ class ConditionalChangeNad:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    delay: TimeValue | None = field(
+    delay: None | TimeValue = field(
         default=None,
         metadata={
             "name": "DELAY",
@@ -74,7 +74,7 @@ class ConditionalChangeNad:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    position_in_table: Integer | None = field(
+    position_in_table: None | Integer = field(
         default=None,
         metadata={
             "name": "POSITION-IN-TABLE",
@@ -83,7 +83,7 @@ class ConditionalChangeNad:
         },
     )
     assigned_controller_ref: (
-        ConditionalChangeNad.AssignedControllerRef | None
+        None | ConditionalChangeNad.AssignedControllerRef
     ) = field(
         default=None,
         metadata={
@@ -93,7 +93,7 @@ class ConditionalChangeNad:
         },
     )
     assigned_lin_slave_config_ref: (
-        ConditionalChangeNad.AssignedLinSlaveConfigRef | None
+        None | ConditionalChangeNad.AssignedLinSlaveConfigRef
     ) = field(
         default=None,
         metadata={
@@ -102,7 +102,7 @@ class ConditionalChangeNad:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    byte: Integer | None = field(
+    byte: None | Integer = field(
         default=None,
         metadata={
             "name": "BYTE",
@@ -110,7 +110,7 @@ class ConditionalChangeNad:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    id: PositiveInteger | None = field(
+    id: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "ID",
@@ -118,7 +118,7 @@ class ConditionalChangeNad:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    invert: Integer | None = field(
+    invert: None | Integer = field(
         default=None,
         metadata={
             "name": "INVERT",
@@ -126,7 +126,7 @@ class ConditionalChangeNad:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    mask: Integer | None = field(
+    mask: None | Integer = field(
         default=None,
         metadata={
             "name": "MASK",
@@ -134,7 +134,7 @@ class ConditionalChangeNad:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    new_nad: Integer | None = field(
+    new_nad: None | Integer = field(
         default=None,
         metadata={
             "name": "NEW-NAD",
@@ -142,14 +142,14 @@ class ConditionalChangeNad:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -160,7 +160,7 @@ class ConditionalChangeNad:
 
     @dataclass
     class AssignedControllerRef(Ref):
-        dest: LinSlaveSubtypesEnum | None = field(
+        dest: None | LinSlaveSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -171,7 +171,7 @@ class ConditionalChangeNad:
 
     @dataclass
     class AssignedLinSlaveConfigRef(Ref):
-        dest: LinSlaveConfigIdentSubtypesEnum | None = field(
+        dest: None | LinSlaveConfigIdentSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

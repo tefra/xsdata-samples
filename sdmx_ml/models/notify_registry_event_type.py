@@ -38,7 +38,7 @@ class NotifyRegistryEventType:
     :ivar structural_event_or_registration_event:
     """
 
-    event_time: XmlDateTime | None = field(
+    event_time: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "EventTime",
@@ -48,9 +48,9 @@ class NotifyRegistryEventType:
         },
     )
     object_urn_or_registration_id: (
-        NotifyRegistryEventType.ObjectUrn
+        None
+        | NotifyRegistryEventType.ObjectUrn
         | NotifyRegistryEventType.RegistrationId
-        | None
     ) = field(
         default=None,
         metadata={
@@ -71,7 +71,7 @@ class NotifyRegistryEventType:
             ),
         },
     )
-    subscription_urn: str | None = field(
+    subscription_urn: None | str = field(
         default=None,
         metadata={
             "name": "SubscriptionURN",
@@ -80,7 +80,7 @@ class NotifyRegistryEventType:
             "required": True,
         },
     )
-    event_action: ActionType | None = field(
+    event_action: None | ActionType = field(
         default=None,
         metadata={
             "name": "EventAction",
@@ -90,7 +90,7 @@ class NotifyRegistryEventType:
         },
     )
     structural_event_or_registration_event: (
-        StructuralEventType | RegistrationEventType | None
+        None | StructuralEventType | RegistrationEventType
     ) = field(
         default=None,
         metadata={
@@ -112,7 +112,7 @@ class NotifyRegistryEventType:
 
     @dataclass(frozen=True)
     class ObjectUrn:
-        value: str | None = field(
+        value: None | str = field(
             default=None,
             metadata={
                 "required": True,
@@ -121,7 +121,7 @@ class NotifyRegistryEventType:
 
     @dataclass(frozen=True)
     class RegistrationId:
-        value: str | None = field(
+        value: None | str = field(
             default=None,
             metadata={
                 "required": True,

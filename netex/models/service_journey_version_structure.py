@@ -75,7 +75,7 @@ class ServiceJourneyVersionStructure(JourneyVersionStructure):
     class Meta:
         name = "ServiceJourney_VersionStructure"
 
-    service_alteration: ServiceAlterationEnumeration | None = field(
+    service_alteration: None | ServiceAlterationEnumeration = field(
         default=None,
         metadata={
             "name": "ServiceAlteration",
@@ -83,7 +83,7 @@ class ServiceJourneyVersionStructure(JourneyVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    departure_time: XmlTime | None = field(
+    departure_time: None | XmlTime = field(
         default=None,
         metadata={
             "name": "DepartureTime",
@@ -91,7 +91,7 @@ class ServiceJourneyVersionStructure(JourneyVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    departure_day_offset: int | None = field(
+    departure_day_offset: None | int = field(
         default=None,
         metadata={
             "name": "DepartureDayOffset",
@@ -99,7 +99,7 @@ class ServiceJourneyVersionStructure(JourneyVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    frequency: FrequencyStructure | None = field(
+    frequency: None | FrequencyStructure = field(
         default=None,
         metadata={
             "name": "Frequency",
@@ -107,7 +107,7 @@ class ServiceJourneyVersionStructure(JourneyVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    journey_duration: XmlDuration | None = field(
+    journey_duration: None | XmlDuration = field(
         default=None,
         metadata={
             "name": "JourneyDuration",
@@ -115,7 +115,7 @@ class ServiceJourneyVersionStructure(JourneyVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    day_types: DayTypeRefsRelStructure | None = field(
+    day_types: None | DayTypeRefsRelStructure = field(
         default=None,
         metadata={
             "name": "dayTypes",
@@ -123,7 +123,7 @@ class ServiceJourneyVersionStructure(JourneyVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    route_ref: RouteRef | None = field(
+    route_ref: None | RouteRef = field(
         default=None,
         metadata={
             "name": "RouteRef",
@@ -132,11 +132,11 @@ class ServiceJourneyVersionStructure(JourneyVersionStructure):
         },
     )
     journey_pattern_ref: (
-        ServiceJourneyPatternRef
+        None
+        | ServiceJourneyPatternRef
         | ServicePatternRef
         | DeadRunJourneyPatternRef
         | JourneyPatternRef
-        | None
     ) = field(
         default=None,
         metadata={
@@ -165,7 +165,7 @@ class ServiceJourneyVersionStructure(JourneyVersionStructure):
             ),
         },
     )
-    time_demand_type_ref: TimeDemandTypeRefStructure | None = field(
+    time_demand_type_ref: None | TimeDemandTypeRefStructure = field(
         default=None,
         metadata={
             "name": "TimeDemandTypeRef",
@@ -173,7 +173,7 @@ class ServiceJourneyVersionStructure(JourneyVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    timing_algorithm_type_ref: TimingAlgorithmTypeRef | None = field(
+    timing_algorithm_type_ref: None | TimingAlgorithmTypeRef = field(
         default=None,
         metadata={
             "name": "TimingAlgorithmTypeRef",
@@ -182,10 +182,10 @@ class ServiceJourneyVersionStructure(JourneyVersionStructure):
         },
     )
     journey_frequency_group_ref: (
-        RhythmicalJourneyGroupRef
+        None
+        | RhythmicalJourneyGroupRef
         | HeadwayJourneyGroupRef
         | JourneyFrequencyGroupRef
-        | None
     ) = field(
         default=None,
         metadata={
@@ -209,7 +209,7 @@ class ServiceJourneyVersionStructure(JourneyVersionStructure):
             ),
         },
     )
-    vehicle_type_ref: CompoundTrainRef | TrainRef | VehicleTypeRef | None = (
+    vehicle_type_ref: None | CompoundTrainRef | TrainRef | VehicleTypeRef = (
         field(
             default=None,
             metadata={
@@ -234,7 +234,7 @@ class ServiceJourneyVersionStructure(JourneyVersionStructure):
             },
         )
     )
-    operational_context_ref: OperationalContextRef | None = field(
+    operational_context_ref: None | OperationalContextRef = field(
         default=None,
         metadata={
             "name": "OperationalContextRef",
@@ -242,7 +242,7 @@ class ServiceJourneyVersionStructure(JourneyVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    block_ref: TrainBlockRef | BlockRef | None = field(
+    block_ref: None | TrainBlockRef | BlockRef = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -260,7 +260,7 @@ class ServiceJourneyVersionStructure(JourneyVersionStructure):
             ),
         },
     )
-    course_of_journeys_ref: CourseOfJourneysRef | None = field(
+    course_of_journeys_ref: None | CourseOfJourneysRef = field(
         default=None,
         metadata={
             "name": "CourseOfJourneysRef",
@@ -268,7 +268,7 @@ class ServiceJourneyVersionStructure(JourneyVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    public_code: str | None = field(
+    public_code: None | str = field(
         default=None,
         metadata={
             "name": "PublicCode",
@@ -276,7 +276,7 @@ class ServiceJourneyVersionStructure(JourneyVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    operator_ref_or_operator_view: OperatorRef | OperatorView | None = field(
+    operator_ref_or_operator_view: None | OperatorRef | OperatorView = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -294,7 +294,7 @@ class ServiceJourneyVersionStructure(JourneyVersionStructure):
             ),
         },
     )
-    choice: FlexibleLineRef | LineRef | LineView | FlexibleLineView | None = (
+    choice: None | FlexibleLineRef | LineRef | LineView | FlexibleLineView = (
         field(
             default=None,
             metadata={
@@ -324,7 +324,7 @@ class ServiceJourneyVersionStructure(JourneyVersionStructure):
             },
         )
     )
-    direction_type: DirectionType | None = field(
+    direction_type: None | DirectionType = field(
         default=None,
         metadata={
             "name": "DirectionType",
@@ -332,7 +332,7 @@ class ServiceJourneyVersionStructure(JourneyVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    journey_pattern_view: JourneyPatternView | None = field(
+    journey_pattern_view: None | JourneyPatternView = field(
         default=None,
         metadata={
             "name": "JourneyPatternView",
@@ -340,7 +340,7 @@ class ServiceJourneyVersionStructure(JourneyVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    groups_of_services: GroupOfServicesRefsRelStructure | None = field(
+    groups_of_services: None | GroupOfServicesRefsRelStructure = field(
         default=None,
         metadata={
             "name": "groupsOfServices",
@@ -348,7 +348,7 @@ class ServiceJourneyVersionStructure(JourneyVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    time_demand_types: TimeDemandTypeRefsRelStructure | None = field(
+    time_demand_types: None | TimeDemandTypeRefsRelStructure = field(
         default=None,
         metadata={
             "name": "timeDemandTypes",
@@ -356,7 +356,7 @@ class ServiceJourneyVersionStructure(JourneyVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    train_numbers: TrainNumberRefsRelStructure | None = field(
+    train_numbers: None | TrainNumberRefsRelStructure = field(
         default=None,
         metadata={
             "name": "trainNumbers",
@@ -364,7 +364,7 @@ class ServiceJourneyVersionStructure(JourneyVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    origin: JourneyEndpointStructure | None = field(
+    origin: None | JourneyEndpointStructure = field(
         default=None,
         metadata={
             "name": "Origin",
@@ -372,7 +372,7 @@ class ServiceJourneyVersionStructure(JourneyVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    destination: JourneyEndpointStructure | None = field(
+    destination: None | JourneyEndpointStructure = field(
         default=None,
         metadata={
             "name": "Destination",
@@ -380,7 +380,7 @@ class ServiceJourneyVersionStructure(JourneyVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    print: bool | None = field(
+    print: None | bool = field(
         default=None,
         metadata={
             "name": "Print",
@@ -388,7 +388,7 @@ class ServiceJourneyVersionStructure(JourneyVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    dynamic: DynamicAdvertisementEnumeration | None = field(
+    dynamic: None | DynamicAdvertisementEnumeration = field(
         default=None,
         metadata={
             "name": "Dynamic",
@@ -396,7 +396,7 @@ class ServiceJourneyVersionStructure(JourneyVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    wait_times: VehicleJourneyWaitTimesRelStructure | None = field(
+    wait_times: None | VehicleJourneyWaitTimesRelStructure = field(
         default=None,
         metadata={
             "name": "waitTimes",
@@ -404,7 +404,7 @@ class ServiceJourneyVersionStructure(JourneyVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    run_times: VehicleJourneyRunTimesRelStructure | None = field(
+    run_times: None | VehicleJourneyRunTimesRelStructure = field(
         default=None,
         metadata={
             "name": "runTimes",
@@ -412,14 +412,14 @@ class ServiceJourneyVersionStructure(JourneyVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    layovers: VehicleJourneyLayoversRelStructure | None = field(
+    layovers: None | VehicleJourneyLayoversRelStructure = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    passing_times: TimetabledPassingTimesRelStructure | None = field(
+    passing_times: None | TimetabledPassingTimesRelStructure = field(
         default=None,
         metadata={
             "name": "passingTimes",
@@ -427,28 +427,28 @@ class ServiceJourneyVersionStructure(JourneyVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    parts: JourneyPartsRelStructure | None = field(
+    parts: None | JourneyPartsRelStructure = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    calls: CallsRelStructure | None = field(
+    calls: None | CallsRelStructure = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    facilities: ServiceFacilitySetsRelStructure | None = field(
+    facilities: None | ServiceFacilitySetsRelStructure = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    check_constraints: CheckConstraintsRelStructure | None = field(
+    check_constraints: None | CheckConstraintsRelStructure = field(
         default=None,
         metadata={
             "name": "checkConstraints",
@@ -457,9 +457,9 @@ class ServiceJourneyVersionStructure(JourneyVersionStructure):
         },
     )
     passenger_carrying_requirement_ref_or_passenger_carrying_requirements_view: (
-        PassengerCarryingRequirementRef
+        None
+        | PassengerCarryingRequirementRef
         | PassengerCarryingRequirementsView
-        | None
     ) = field(
         default=None,
         metadata={
@@ -478,7 +478,7 @@ class ServiceJourneyVersionStructure(JourneyVersionStructure):
             ),
         },
     )
-    train_size: TrainSize | None = field(
+    train_size: None | TrainSize = field(
         default=None,
         metadata={
             "name": "TrainSize",
@@ -486,7 +486,7 @@ class ServiceJourneyVersionStructure(JourneyVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    equipments: VehicleEquipmentsRelStructure | None = field(
+    equipments: None | VehicleEquipmentsRelStructure = field(
         default=None,
         metadata={
             "type": "Element",
@@ -494,7 +494,7 @@ class ServiceJourneyVersionStructure(JourneyVersionStructure):
         },
     )
     flexible_service_properties_ref_or_flexible_service_properties: (
-        FlexibleServicePropertiesRef | FlexibleServiceProperties | None
+        None | FlexibleServicePropertiesRef | FlexibleServiceProperties
     ) = field(
         default=None,
         metadata={

@@ -31,7 +31,7 @@ class CodingTextFormatType(SimpleComponentTextFormatType):
             "type": "Ignore",
         },
     )
-    text_type: SimpleCodeDataType | None = field(
+    text_type: None | SimpleCodeDataType = field(
         default=None,
         metadata={
             "name": "textType",

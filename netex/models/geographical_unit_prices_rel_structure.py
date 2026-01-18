@@ -62,7 +62,7 @@ class GeographicalUnitPriceVersionedChildStructure(
     class Meta:
         name = "GeographicalUnitPrice_VersionedChildStructure"
 
-    geographical_unit_ref: GeographicalUnitRef | None = field(
+    geographical_unit_ref: None | GeographicalUnitRef = field(
         default=None,
         metadata={
             "name": "GeographicalUnitRef",
@@ -70,7 +70,7 @@ class GeographicalUnitPriceVersionedChildStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    prices: GeographicalUnitPricesRelStructure | None = field(
+    prices: None | GeographicalUnitPricesRelStructure = field(
         default=None,
         metadata={
             "type": "Element",

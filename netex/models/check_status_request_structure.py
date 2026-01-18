@@ -10,7 +10,7 @@ __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
 @dataclass
 class CheckStatusRequestStructure(RequestStructure):
-    extensions: Extensions1 | None = field(
+    extensions: None | Extensions1 = field(
         default=None,
         metadata={
             "name": "Extensions",

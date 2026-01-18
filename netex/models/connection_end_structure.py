@@ -14,7 +14,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 @dataclass
 class ConnectionEndStructure:
-    transport_mode: AllModesEnumeration | None = field(
+    transport_mode: None | AllModesEnumeration = field(
         default=None,
         metadata={
             "name": "TransportMode",
@@ -22,7 +22,7 @@ class ConnectionEndStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    submode: Submode | None = field(
+    submode: None | Submode = field(
         default=None,
         metadata={
             "name": "Submode",
@@ -30,7 +30,7 @@ class ConnectionEndStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    transport_organisation_ref: AuthorityRef | OperatorRef | None = field(
+    transport_organisation_ref: None | AuthorityRef | OperatorRef = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -49,7 +49,7 @@ class ConnectionEndStructure:
         },
     )
     scheduled_stop_point_ref_or_vehicle_meeting_point_ref: (
-        ScheduledStopPointRefStructure | PointRefStructure | None
+        None | ScheduledStopPointRefStructure | PointRefStructure
     ) = field(
         default=None,
         metadata={

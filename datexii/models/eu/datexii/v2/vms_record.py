@@ -68,7 +68,7 @@ class VmsRecord:
     :ivar vms_record_extension:
     """
 
-    vms_description: MultilingualString | None = field(
+    vms_description: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "vmsDescription",
@@ -76,7 +76,7 @@ class VmsRecord:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    vms_owner: MultilingualString | None = field(
+    vms_owner: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "vmsOwner",
@@ -84,7 +84,7 @@ class VmsRecord:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    vms_physical_mounting: PhysicalMountingEnum | None = field(
+    vms_physical_mounting: None | PhysicalMountingEnum = field(
         default=None,
         metadata={
             "name": "vmsPhysicalMounting",
@@ -92,7 +92,7 @@ class VmsRecord:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    vms_type: VmsTypeEnum | None = field(
+    vms_type: None | VmsTypeEnum = field(
         default=None,
         metadata={
             "name": "vmsType",
@@ -100,7 +100,7 @@ class VmsRecord:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    vms_type_code: str | None = field(
+    vms_type_code: None | str = field(
         default=None,
         metadata={
             "name": "vmsTypeCode",
@@ -109,7 +109,7 @@ class VmsRecord:
             "max_length": 1024,
         },
     )
-    number_of_pictogram_display_areas: int | None = field(
+    number_of_pictogram_display_areas: None | int = field(
         default=None,
         metadata={
             "name": "numberOfPictogramDisplayAreas",
@@ -117,7 +117,7 @@ class VmsRecord:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    dynamically_configurable_display_areas: bool | None = field(
+    dynamically_configurable_display_areas: None | bool = field(
         default=None,
         metadata={
             "name": "dynamicallyConfigurableDisplayAreas",
@@ -125,7 +125,7 @@ class VmsRecord:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    vms_display_height: float | None = field(
+    vms_display_height: None | float = field(
         default=None,
         metadata={
             "name": "vmsDisplayHeight",
@@ -133,7 +133,7 @@ class VmsRecord:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    vms_display_width: float | None = field(
+    vms_display_width: None | float = field(
         default=None,
         metadata={
             "name": "vmsDisplayWidth",
@@ -141,7 +141,7 @@ class VmsRecord:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    vms_height_above_roadway: float | None = field(
+    vms_height_above_roadway: None | float = field(
         default=None,
         metadata={
             "name": "vmsHeightAboveRoadway",
@@ -149,7 +149,7 @@ class VmsRecord:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    vms_text_display_characteristics: VmsTextDisplayCharacteristics | None = (
+    vms_text_display_characteristics: None | VmsTextDisplayCharacteristics = (
         field(
             default=None,
             metadata={
@@ -169,7 +169,7 @@ class VmsRecord:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    vms_location: Location | None = field(
+    vms_location: None | Location = field(
         default=None,
         metadata={
             "name": "vmsLocation",
@@ -177,7 +177,7 @@ class VmsRecord:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    vms_managed_logical_location: VmsManagedLogicalLocation | None = field(
+    vms_managed_logical_location: None | VmsManagedLogicalLocation = field(
         default=None,
         metadata={
             "name": "vmsManagedLogicalLocation",
@@ -185,7 +185,7 @@ class VmsRecord:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    background_image_url: UrlLink | None = field(
+    background_image_url: None | UrlLink = field(
         default=None,
         metadata={
             "name": "backgroundImageUrl",
@@ -193,7 +193,7 @@ class VmsRecord:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    vms_record_extension: ExtensionType | None = field(
+    vms_record_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "vmsRecordExtension",

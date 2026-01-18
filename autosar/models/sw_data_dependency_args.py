@@ -85,14 +85,14 @@ class SwDataDependencyArgs:
             "sequence": 2,
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -103,7 +103,7 @@ class SwDataDependencyArgs:
 
     @dataclass
     class McDataInstanceRef(Ref):
-        dest: McDataInstanceSubtypesEnum | None = field(
+        dest: None | McDataInstanceSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -114,7 +114,7 @@ class SwDataDependencyArgs:
 
     @dataclass
     class McDataInstanceVarRef(Ref):
-        dest: McDataInstanceSubtypesEnum | None = field(
+        dest: None | McDataInstanceSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

@@ -15,7 +15,7 @@ class RoadElementVersionStructure(InfrastructureLinkVersionStructure):
     class Meta:
         name = "RoadElement_VersionStructure"
 
-    from_point_ref: RoadPointRefStructure | None = field(
+    from_point_ref: None | RoadPointRefStructure = field(
         default=None,
         metadata={
             "name": "FromPointRef",
@@ -24,7 +24,7 @@ class RoadElementVersionStructure(InfrastructureLinkVersionStructure):
             "required": True,
         },
     )
-    to_point_ref: RoadPointRefStructure | None = field(
+    to_point_ref: None | RoadPointRefStructure = field(
         default=None,
         metadata={
             "name": "ToPointRef",

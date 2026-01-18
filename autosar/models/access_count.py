@@ -40,7 +40,7 @@ class AccessCount:
     class Meta:
         name = "ACCESS-COUNT"
 
-    access_point_ref: AccessCount.AccessPointRef | None = field(
+    access_point_ref: None | AccessCount.AccessPointRef = field(
         default=None,
         metadata={
             "name": "ACCESS-POINT-REF",
@@ -48,7 +48,7 @@ class AccessCount:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    value: PositiveIntegerValueVariationPoint | None = field(
+    value: None | PositiveIntegerValueVariationPoint = field(
         default=None,
         metadata={
             "name": "VALUE",
@@ -56,7 +56,7 @@ class AccessCount:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -64,14 +64,14 @@ class AccessCount:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -82,7 +82,7 @@ class AccessCount:
 
     @dataclass
     class AccessPointRef(Ref):
-        dest: AbstractAccessPointSubtypesEnum | None = field(
+        dest: None | AbstractAccessPointSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

@@ -20,10 +20,10 @@ class QualityStructureFactorPriceVersionedChildStructure(
         name = "QualityStructureFactorPrice_VersionedChildStructure"
 
     quality_structure_factor_ref: (
-        FareQuotaFactorRef
+        None
+        | FareQuotaFactorRef
         | FareDemandFactorRef
         | QualityStructureFactorRef
-        | None
     ) = field(
         default=None,
         metadata={

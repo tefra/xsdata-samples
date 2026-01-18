@@ -15,7 +15,7 @@ class BorderPointValueStructure(TimingPointVersionStructure):
     class Meta:
         name = "BorderPoint_ValueStructure"
 
-    short_name: MultilingualString | None = field(
+    short_name: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "ShortName",
@@ -23,7 +23,7 @@ class BorderPointValueStructure(TimingPointVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    description: MultilingualString | None = field(
+    description: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "Description",
@@ -32,7 +32,7 @@ class BorderPointValueStructure(TimingPointVersionStructure):
         },
     )
     group_of_operators_ref_or_group_of_operators: (
-        GroupOfOperatorsRef | GroupOfOperators | None
+        None | GroupOfOperatorsRef | GroupOfOperators
     ) = field(
         default=None,
         metadata={

@@ -86,7 +86,7 @@ class IoHwAbstractionServerAnnotation:
     class Meta:
         name = "IO-HW-ABSTRACTION-SERVER-ANNOTATION"
 
-    label: MultilanguageLongName | None = field(
+    label: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LABEL",
@@ -94,7 +94,7 @@ class IoHwAbstractionServerAnnotation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotation_origin: String | None = field(
+    annotation_origin: None | String = field(
         default=None,
         metadata={
             "name": "ANNOTATION-ORIGIN",
@@ -102,7 +102,7 @@ class IoHwAbstractionServerAnnotation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotation_text: DocumentationBlock | None = field(
+    annotation_text: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "ANNOTATION-TEXT",
@@ -110,7 +110,7 @@ class IoHwAbstractionServerAnnotation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    age: MultidimensionalTime | None = field(
+    age: None | MultidimensionalTime = field(
         default=None,
         metadata={
             "name": "AGE",
@@ -118,7 +118,7 @@ class IoHwAbstractionServerAnnotation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    argument_ref: IoHwAbstractionServerAnnotation.ArgumentRef | None = field(
+    argument_ref: None | IoHwAbstractionServerAnnotation.ArgumentRef = field(
         default=None,
         metadata={
             "name": "ARGUMENT-REF",
@@ -126,7 +126,7 @@ class IoHwAbstractionServerAnnotation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    bsw_resolution: Float | None = field(
+    bsw_resolution: None | Float = field(
         default=None,
         metadata={
             "name": "BSW-RESOLUTION",
@@ -134,7 +134,7 @@ class IoHwAbstractionServerAnnotation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    data_element_ref: IoHwAbstractionServerAnnotation.DataElementRef | None = (
+    data_element_ref: None | IoHwAbstractionServerAnnotation.DataElementRef = (
         field(
             default=None,
             metadata={
@@ -145,7 +145,7 @@ class IoHwAbstractionServerAnnotation:
         )
     )
     failure_monitoring_ref: (
-        IoHwAbstractionServerAnnotation.FailureMonitoringRef | None
+        None | IoHwAbstractionServerAnnotation.FailureMonitoringRef
     ) = field(
         default=None,
         metadata={
@@ -154,7 +154,7 @@ class IoHwAbstractionServerAnnotation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    filtering_debouncing: FilterDebouncingEnum | None = field(
+    filtering_debouncing: None | FilterDebouncingEnum = field(
         default=None,
         metadata={
             "name": "FILTERING-DEBOUNCING",
@@ -162,7 +162,7 @@ class IoHwAbstractionServerAnnotation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    pulse_test: PulseTestEnum | None = field(
+    pulse_test: None | PulseTestEnum = field(
         default=None,
         metadata={
             "name": "PULSE-TEST",
@@ -170,7 +170,7 @@ class IoHwAbstractionServerAnnotation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    trigger_ref: IoHwAbstractionServerAnnotation.TriggerRef | None = field(
+    trigger_ref: None | IoHwAbstractionServerAnnotation.TriggerRef = field(
         default=None,
         metadata={
             "name": "TRIGGER-REF",
@@ -178,14 +178,14 @@ class IoHwAbstractionServerAnnotation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -196,7 +196,7 @@ class IoHwAbstractionServerAnnotation:
 
     @dataclass
     class ArgumentRef(Ref):
-        dest: ArgumentDataPrototypeSubtypesEnum | None = field(
+        dest: None | ArgumentDataPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -207,7 +207,7 @@ class IoHwAbstractionServerAnnotation:
 
     @dataclass
     class DataElementRef(Ref):
-        dest: VariableDataPrototypeSubtypesEnum | None = field(
+        dest: None | VariableDataPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -218,7 +218,7 @@ class IoHwAbstractionServerAnnotation:
 
     @dataclass
     class FailureMonitoringRef(Ref):
-        dest: PortPrototypeSubtypesEnum | None = field(
+        dest: None | PortPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -229,7 +229,7 @@ class IoHwAbstractionServerAnnotation:
 
     @dataclass
     class TriggerRef(Ref):
-        dest: TriggerSubtypesEnum | None = field(
+        dest: None | TriggerSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

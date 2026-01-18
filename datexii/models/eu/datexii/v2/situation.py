@@ -41,7 +41,7 @@ class Situation:
     :ivar version:
     """
 
-    overall_severity: SeverityEnum | None = field(
+    overall_severity: None | SeverityEnum = field(
         default=None,
         metadata={
             "name": "overallSeverity",
@@ -57,7 +57,7 @@ class Situation:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    situation_version_time: XmlDateTime | None = field(
+    situation_version_time: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "situationVersionTime",
@@ -65,7 +65,7 @@ class Situation:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    header_information: HeaderInformation | None = field(
+    header_information: None | HeaderInformation = field(
         default=None,
         metadata={
             "name": "headerInformation",
@@ -83,7 +83,7 @@ class Situation:
             "min_occurs": 1,
         },
     )
-    situation_extension: ExtensionType | None = field(
+    situation_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "situationExtension",
@@ -91,14 +91,14 @@ class Situation:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "required": True,
         },
     )
-    version: str | None = field(
+    version: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",

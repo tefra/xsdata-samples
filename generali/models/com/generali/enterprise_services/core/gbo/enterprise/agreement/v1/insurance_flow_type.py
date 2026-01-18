@@ -28,7 +28,7 @@ __NAMESPACE__ = (
 
 @dataclass
 class InsuranceFlowType(OrganisationInvolvementType):
-    sequence_number: NumericType | None = field(
+    sequence_number: None | NumericType = field(
         default=None,
         metadata={
             "name": "SequenceNumber",
@@ -37,7 +37,7 @@ class InsuranceFlowType(OrganisationInvolvementType):
             "required": True,
         },
     )
-    risk_share: PercentType | None = field(
+    risk_share: None | PercentType = field(
         default=None,
         metadata={
             "name": "RiskShare",
@@ -46,7 +46,7 @@ class InsuranceFlowType(OrganisationInvolvementType):
             "required": True,
         },
     )
-    cedants: InsuranceFlowTypeCedants | None = field(
+    cedants: None | InsuranceFlowTypeCedants = field(
         default=None,
         metadata={
             "name": "Cedants",
@@ -54,7 +54,7 @@ class InsuranceFlowType(OrganisationInvolvementType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    coinsurer_involvements: InsuranceFlowTypeCoinsurerInvolvements | None = (
+    coinsurer_involvements: None | InsuranceFlowTypeCoinsurerInvolvements = (
         field(
             default=None,
             metadata={
@@ -64,7 +64,7 @@ class InsuranceFlowType(OrganisationInvolvementType):
             },
         )
     )
-    reinsurers: InsuranceFlowTypeReinsurers | None = field(
+    reinsurers: None | InsuranceFlowTypeReinsurers = field(
         default=None,
         metadata={
             "name": "Reinsurers",

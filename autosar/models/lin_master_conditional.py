@@ -53,7 +53,7 @@ class LinMasterConditional:
     class Meta:
         name = "LIN-MASTER-CONDITIONAL"
 
-    wake_up_by_controller_supported: Boolean | None = field(
+    wake_up_by_controller_supported: None | Boolean = field(
         default=None,
         metadata={
             "name": "WAKE-UP-BY-CONTROLLER-SUPPORTED",
@@ -61,7 +61,7 @@ class LinMasterConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    protocol_version: String | None = field(
+    protocol_version: None | String = field(
         default=None,
         metadata={
             "name": "PROTOCOL-VERSION",
@@ -69,7 +69,7 @@ class LinMasterConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    lin_slaves: LinMasterConditional.LinSlaves | None = field(
+    lin_slaves: None | LinMasterConditional.LinSlaves = field(
         default=None,
         metadata={
             "name": "LIN-SLAVES",
@@ -77,7 +77,7 @@ class LinMasterConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    time_base: TimeValue | None = field(
+    time_base: None | TimeValue = field(
         default=None,
         metadata={
             "name": "TIME-BASE",
@@ -85,7 +85,7 @@ class LinMasterConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    time_base_jitter: TimeValue | None = field(
+    time_base_jitter: None | TimeValue = field(
         default=None,
         metadata={
             "name": "TIME-BASE-JITTER",
@@ -93,7 +93,7 @@ class LinMasterConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -101,14 +101,14 @@ class LinMasterConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

@@ -12,7 +12,7 @@ class PolygonAreaIndexPointCoordinates:
     class Meta:
         name = "_PolygonAreaIndexPointCoordinates"
 
-    point_coordinates: PointCoordinates | None = field(
+    point_coordinates: None | PointCoordinates = field(
         default=None,
         metadata={
             "name": "pointCoordinates",
@@ -21,7 +21,7 @@ class PolygonAreaIndexPointCoordinates:
             "required": True,
         },
     )
-    index: int | None = field(
+    index: None | int = field(
         default=None,
         metadata={
             "type": "Attribute",

@@ -25,7 +25,7 @@ class StringName:
         name = "string-name"
         namespace = "http://www.crossref.org/schema/5.3.1"
 
-    content_type: object | None = field(
+    content_type: None | object = field(
         default=None,
         metadata={
             "name": "content-type",
@@ -39,14 +39,14 @@ class StringName:
             "type": "Attribute",
         },
     )
-    specific_use: object | None = field(
+    specific_use: None | object = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    language: StringNameLanguage | None = field(
+    language: None | StringNameLanguage = field(
         default=None,
         metadata={
             "type": "Attribute",

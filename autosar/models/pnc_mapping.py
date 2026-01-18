@@ -124,7 +124,7 @@ class PncMapping:
     class Meta:
         name = "PNC-MAPPING"
 
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -132,7 +132,7 @@ class PncMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -140,7 +140,7 @@ class PncMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -148,7 +148,7 @@ class PncMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -157,7 +157,7 @@ class PncMapping:
         },
     )
     dynamic_pnc_mapping_pdu_group_refs: (
-        PncMapping.DynamicPncMappingPduGroupRefs | None
+        None | PncMapping.DynamicPncMappingPduGroupRefs
     ) = field(
         default=None,
         metadata={
@@ -166,7 +166,7 @@ class PncMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ident: PncMappingIdent | None = field(
+    ident: None | PncMappingIdent = field(
         default=None,
         metadata={
             "name": "IDENT",
@@ -174,7 +174,7 @@ class PncMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    physical_channel_refs: PncMapping.PhysicalChannelRefs | None = field(
+    physical_channel_refs: None | PncMapping.PhysicalChannelRefs = field(
         default=None,
         metadata={
             "name": "PHYSICAL-CHANNEL-REFS",
@@ -183,7 +183,7 @@ class PncMapping:
         },
     )
     pnc_consumed_provided_service_instance_groups: (
-        PncMapping.PncConsumedProvidedServiceInstanceGroups | None
+        None | PncMapping.PncConsumedProvidedServiceInstanceGroups
     ) = field(
         default=None,
         metadata={
@@ -192,7 +192,7 @@ class PncMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    pnc_group_refs: PncMapping.PncGroupRefs | None = field(
+    pnc_group_refs: None | PncMapping.PncGroupRefs = field(
         default=None,
         metadata={
             "name": "PNC-GROUP-REFS",
@@ -200,7 +200,7 @@ class PncMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    pnc_identifier: PositiveInteger | None = field(
+    pnc_identifier: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "PNC-IDENTIFIER",
@@ -208,7 +208,7 @@ class PncMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    pnc_pdur_group_refs: PncMapping.PncPdurGroupRefs | None = field(
+    pnc_pdur_group_refs: None | PncMapping.PncPdurGroupRefs = field(
         default=None,
         metadata={
             "name": "PNC-PDUR-GROUP-REFS",
@@ -216,7 +216,7 @@ class PncMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    pnc_wakeup_enable: Boolean | None = field(
+    pnc_wakeup_enable: None | Boolean = field(
         default=None,
         metadata={
             "name": "PNC-WAKEUP-ENABLE",
@@ -225,7 +225,7 @@ class PncMapping:
         },
     )
     relevant_for_dynamic_pnc_mapping_refs: (
-        PncMapping.RelevantForDynamicPncMappingRefs | None
+        None | PncMapping.RelevantForDynamicPncMappingRefs
     ) = field(
         default=None,
         metadata={
@@ -234,7 +234,7 @@ class PncMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    service_instance_refs: PncMapping.ServiceInstanceRefs | None = field(
+    service_instance_refs: None | PncMapping.ServiceInstanceRefs = field(
         default=None,
         metadata={
             "name": "SERVICE-INSTANCE-REFS",
@@ -242,7 +242,7 @@ class PncMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    short_label: Identifier | None = field(
+    short_label: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-LABEL",
@@ -250,7 +250,7 @@ class PncMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    vfc_irefs: PncMapping.VfcIrefs | None = field(
+    vfc_irefs: None | PncMapping.VfcIrefs = field(
         default=None,
         metadata={
             "name": "VFC-IREFS",
@@ -258,7 +258,7 @@ class PncMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    wakeup_frame_refs: PncMapping.WakeupFrameRefs | None = field(
+    wakeup_frame_refs: None | PncMapping.WakeupFrameRefs = field(
         default=None,
         metadata={
             "name": "WAKEUP-FRAME-REFS",
@@ -266,7 +266,7 @@ class PncMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -274,14 +274,14 @@ class PncMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -305,7 +305,7 @@ class PncMapping:
 
         @dataclass
         class DynamicPncMappingPduGroupRef(Ref):
-            dest: ISignalIPduGroupSubtypesEnum | None = field(
+            dest: None | ISignalIPduGroupSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -329,7 +329,7 @@ class PncMapping:
 
         @dataclass
         class PhysicalChannelRef(Ref):
-            dest: PhysicalChannelSubtypesEnum | None = field(
+            dest: None | PhysicalChannelSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -364,7 +364,7 @@ class PncMapping:
 
         @dataclass
         class PncGroupRef(Ref):
-            dest: ISignalIPduGroupSubtypesEnum | None = field(
+            dest: None | ISignalIPduGroupSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -388,7 +388,7 @@ class PncMapping:
 
         @dataclass
         class PncPdurGroupRef(Ref):
-            dest: PdurIPduGroupSubtypesEnum | None = field(
+            dest: None | PdurIPduGroupSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -412,7 +412,7 @@ class PncMapping:
 
         @dataclass
         class RelevantForDynamicPncMappingRef(Ref):
-            dest: EcuInstanceSubtypesEnum | None = field(
+            dest: None | EcuInstanceSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -436,7 +436,7 @@ class PncMapping:
 
         @dataclass
         class ServiceInstanceRef(Ref):
-            dest: AdaptivePlatformServiceInstanceSubtypesEnum | None = field(
+            dest: None | AdaptivePlatformServiceInstanceSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -471,7 +471,7 @@ class PncMapping:
 
         @dataclass
         class WakeupFrameRef(Ref):
-            dest: FrameTriggeringSubtypesEnum | None = field(
+            dest: None | FrameTriggeringSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",

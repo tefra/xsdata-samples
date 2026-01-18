@@ -14,33 +14,33 @@ class Trs:
     class Meta:
         name = "trs"
 
-    rules: Rules | None = field(
+    rules: None | Rules = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
         },
     )
-    signature: Signature | None = field(
+    signature: None | Signature = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    higher_order_signature: HigherOrderSignature | None = field(
+    higher_order_signature: None | HigherOrderSignature = field(
         default=None,
         metadata={
             "name": "higherOrderSignature",
             "type": "Element",
         },
     )
-    comment: Comment | None = field(
+    comment: None | Comment = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    conditiontype: Conditiontype | None = field(
+    conditiontype: None | Conditiontype = field(
         default=None,
         metadata={
             "type": "Element",

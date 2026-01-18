@@ -36,7 +36,7 @@ class IndividualCharge:
     :ivar individual_charge_extension:
     """
 
-    charge_band_reference: ChargeBandVersionedReference | None = field(
+    charge_band_reference: None | ChargeBandVersionedReference = field(
         default=None,
         metadata={
             "name": "chargeBandReference",
@@ -44,7 +44,7 @@ class IndividualCharge:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    charge_paid: Decimal | None = field(
+    charge_paid: None | Decimal = field(
         default=None,
         metadata={
             "name": "chargePaid",
@@ -55,7 +55,7 @@ class IndividualCharge:
             "fraction_digits": 2,
         },
     )
-    charge_currency: CurrencyEnum | None = field(
+    charge_currency: None | CurrencyEnum = field(
         default=None,
         metadata={
             "name": "chargeCurrency",
@@ -63,7 +63,7 @@ class IndividualCharge:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    used_means_of_payment: MeansOfPaymentEnum | None = field(
+    used_means_of_payment: None | MeansOfPaymentEnum = field(
         default=None,
         metadata={
             "name": "usedMeansOfPayment",
@@ -71,7 +71,7 @@ class IndividualCharge:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    with_reservation: bool | None = field(
+    with_reservation: None | bool = field(
         default=None,
         metadata={
             "name": "withReservation",
@@ -79,7 +79,7 @@ class IndividualCharge:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    used_payment_card: UsedPaymentCard | None = field(
+    used_payment_card: None | UsedPaymentCard = field(
         default=None,
         metadata={
             "name": "usedPaymentCard",
@@ -87,7 +87,7 @@ class IndividualCharge:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    individual_charge_extension: ExtensionType | None = field(
+    individual_charge_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "individualChargeExtension",

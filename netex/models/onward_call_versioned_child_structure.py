@@ -14,7 +14,7 @@ class OnwardCallVersionedChildStructure(CallVersionedChildStructure):
     class Meta:
         name = "OnwardCall_VersionedChildStructure"
 
-    target_passing_time_view: TargetPassingTimeView | None = field(
+    target_passing_time_view: None | TargetPassingTimeView = field(
         default=None,
         metadata={
             "name": "TargetPassingTimeView",
@@ -22,7 +22,7 @@ class OnwardCallVersionedChildStructure(CallVersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    estimated_passing_time_view: EstimatedPassingTimeView | None = field(
+    estimated_passing_time_view: None | EstimatedPassingTimeView = field(
         default=None,
         metadata={
             "name": "EstimatedPassingTimeView",

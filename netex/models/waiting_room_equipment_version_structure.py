@@ -27,7 +27,7 @@ class WaitingRoomEquipmentVersionStructure(WaitingEquipmentVersionStructure):
             "tokens": True,
         },
     )
-    women_only: bool | None = field(
+    women_only: None | bool = field(
         default=None,
         metadata={
             "name": "WomenOnly",
@@ -44,7 +44,7 @@ class WaitingRoomEquipmentVersionStructure(WaitingEquipmentVersionStructure):
             "tokens": True,
         },
     )
-    class_of_use_ref: ClassOfUseRef | None = field(
+    class_of_use_ref: None | ClassOfUseRef = field(
         default=None,
         metadata={
             "name": "ClassOfUseRef",

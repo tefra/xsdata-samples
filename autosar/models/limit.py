@@ -55,14 +55,14 @@ class Limit:
     class Meta:
         name = "LIMIT"
 
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -70,28 +70,28 @@ class Limit:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    binding_time: BindingTimeEnumSimple | None = field(
+    binding_time: None | BindingTimeEnumSimple = field(
         default=None,
         metadata={
             "name": "BINDING-TIME",
             "type": "Attribute",
         },
     )
-    blueprint_value: str | None = field(
+    blueprint_value: None | str = field(
         default=None,
         metadata={
             "name": "BLUEPRINT-VALUE",
             "type": "Attribute",
         },
     )
-    sd: str | None = field(
+    sd: None | str = field(
         default=None,
         metadata={
             "name": "SD",
             "type": "Attribute",
         },
     )
-    short_label: str | None = field(
+    short_label: None | str = field(
         default=None,
         metadata={
             "name": "SHORT-LABEL",
@@ -100,7 +100,7 @@ class Limit:
             "pattern": r"[a-zA-Z]([a-zA-Z0-9]|_[a-zA-Z0-9])*_?",
         },
     )
-    interval_type: IntervalTypeEnumSimple | None = field(
+    interval_type: None | IntervalTypeEnumSimple = field(
         default=None,
         metadata={
             "name": "INTERVAL-TYPE",
@@ -130,7 +130,7 @@ class Limit:
 
     @dataclass
     class SyscStringRef(Ref):
-        dest: SwSystemconstSubtypesEnum | None = field(
+        dest: None | SwSystemconstSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -141,7 +141,7 @@ class Limit:
 
     @dataclass
     class SyscRef(Ref):
-        dest: SwSystemconstSubtypesEnum | None = field(
+        dest: None | SwSystemconstSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

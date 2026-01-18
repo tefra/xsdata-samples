@@ -158,7 +158,7 @@ class OtherHeiId:
             "required": True,
         },
     )
-    type_value: OtherHeiIdValue | None = field(
+    type_value: None | OtherHeiIdValue = field(
         default=None,
         metadata={
             "name": "type",
@@ -197,7 +197,7 @@ class HttpwithOptionalLang:
             "pattern": r"https?://.+",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -222,7 +222,7 @@ class MultilineStringWithOptionalLang(MultilineString):
     class Meta:
         target_namespace = "https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
 
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -261,7 +261,7 @@ class StringWithOptionalLang:
             "required": True,
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -335,7 +335,7 @@ class Hei:
             "min_occurs": 1,
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -391,7 +391,7 @@ class ManifestApiEntryBase:
             "namespace": "https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd",
         },
     )
-    admin_notes: AdminNotes | None = field(
+    admin_notes: None | AdminNotes = field(
         default=None,
         metadata={
             "name": "admin-notes",
@@ -399,7 +399,7 @@ class ManifestApiEntryBase:
             "namespace": "https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd",
         },
     )
-    version: str | None = field(
+    version: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -446,7 +446,7 @@ class ErrorResponse:
         name = "error-response"
         namespace = "https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
 
-    developer_message: MultilineString | None = field(
+    developer_message: None | MultilineString = field(
         default=None,
         metadata={
             "name": "developer-message",
@@ -579,7 +579,7 @@ class Host:
             "namespace": "https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd",
         },
     )
-    admin_notes: AdminNotes | None = field(
+    admin_notes: None | AdminNotes = field(
         default=None,
         metadata={
             "name": "admin-notes",
@@ -587,7 +587,7 @@ class Host:
             "namespace": "https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd",
         },
     )
-    apis_implemented: ApisImplemented | None = field(
+    apis_implemented: None | ApisImplemented = field(
         default=None,
         metadata={
             "name": "apis-implemented",
@@ -595,21 +595,21 @@ class Host:
             "namespace": "https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1",
         },
     )
-    institutions_covered: Host.InstitutionsCovered | None = field(
+    institutions_covered: None | Host.InstitutionsCovered = field(
         default=None,
         metadata={
             "name": "institutions-covered",
             "type": "Element",
         },
     )
-    client_credentials_in_use: Host.ClientCredentialsInUse | None = field(
+    client_credentials_in_use: None | Host.ClientCredentialsInUse = field(
         default=None,
         metadata={
             "name": "client-credentials-in-use",
             "type": "Element",
         },
     )
-    server_credentials_in_use: Host.ServerCredentialsInUse | None = field(
+    server_credentials_in_use: None | Host.ServerCredentialsInUse = field(
         default=None,
         metadata={
             "name": "server-credentials-in-use",
@@ -717,14 +717,14 @@ class Catalogue:
             "min_occurs": 1,
         },
     )
-    institutions: Catalogue.Institutions | None = field(
+    institutions: None | Catalogue.Institutions = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
         },
     )
-    binaries: Catalogue.Binaries | None = field(
+    binaries: None | Catalogue.Binaries = field(
         default=None,
         metadata={
             "type": "Element",
@@ -779,7 +779,7 @@ class Catalogue:
                 "namespace": "https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd",
             },
         )
-        admin_notes: AdminNotes | None = field(
+        admin_notes: None | AdminNotes = field(
             default=None,
             metadata={
                 "name": "admin-notes",
@@ -787,14 +787,14 @@ class Catalogue:
                 "namespace": "https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd",
             },
         )
-        apis_implemented: ApisImplemented | None = field(
+        apis_implemented: None | ApisImplemented = field(
             default=None,
             metadata={
                 "name": "apis-implemented",
                 "type": "Element",
             },
         )
-        institutions_covered: Catalogue.Host.InstitutionsCovered | None = (
+        institutions_covered: None | Catalogue.Host.InstitutionsCovered = (
             field(
                 default=None,
                 metadata={
@@ -804,7 +804,7 @@ class Catalogue:
             )
         )
         client_credentials_in_use: (
-            Catalogue.Host.ClientCredentialsInUse | None
+            None | Catalogue.Host.ClientCredentialsInUse
         ) = field(
             default=None,
             metadata={
@@ -813,7 +813,7 @@ class Catalogue:
             },
         )
         server_credentials_in_use: (
-            Catalogue.Host.ServerCredentialsInUse | None
+            None | Catalogue.Host.ServerCredentialsInUse
         ) = field(
             default=None,
             metadata={
@@ -892,7 +892,7 @@ class Catalogue:
                 :ivar sha_256: Certificate's SHA-256 digest (in HEX).
                 """
 
-                sha_256: str | None = field(
+                sha_256: None | str = field(
                     default=None,
                     metadata={
                         "name": "sha-256",
@@ -908,7 +908,7 @@ class Catalogue:
                 :ivar sha_256: Public key's SHA-256 digest (in HEX).
                 """
 
-                sha_256: str | None = field(
+                sha_256: None | str = field(
                     default=None,
                     metadata={
                         "name": "sha-256",
@@ -956,7 +956,7 @@ class Catalogue:
                 :ivar sha_256: Public key's SHA-256 digest (in HEX).
                 """
 
-                sha_256: str | None = field(
+                sha_256: None | str = field(
                     default=None,
                     metadata={
                         "name": "sha-256",
@@ -1003,14 +1003,14 @@ class Catalogue:
                 matching by humans when debugging XML).
             """
 
-            value: bytes | None = field(
+            value: None | bytes = field(
                 default=None,
                 metadata={
                     "required": True,
                     "format": "base64",
                 },
             )
-            sha_256: str | None = field(
+            sha_256: None | str = field(
                 default=None,
                 metadata={
                     "name": "sha-256",

@@ -46,7 +46,7 @@ class LocalPoliciesTypeLocalPolicy:
     class Meta:
         global_type = False
 
-    local_policy_id: str | None = field(
+    local_policy_id: None | str = field(
         default=None,
         metadata={
             "name": "LocalPolicyID",
@@ -54,7 +54,7 @@ class LocalPoliciesTypeLocalPolicy:
             "namespace": "http://xmlns.generali.com/services/program/FeedbackProgramService/v1",
         },
     )
-    local_policy_reference: str | None = field(
+    local_policy_reference: None | str = field(
         default=None,
         metadata={
             "name": "LocalPolicyReference",
@@ -62,7 +62,7 @@ class LocalPoliciesTypeLocalPolicy:
             "namespace": "http://xmlns.generali.com/services/program/FeedbackProgramService/v1",
         },
     )
-    producing_office_ref: str | None = field(
+    producing_office_ref: None | str = field(
         default=None,
         metadata={
             "name": "ProducingOfficeRef",
@@ -70,7 +70,7 @@ class LocalPoliciesTypeLocalPolicy:
             "namespace": "http://xmlns.generali.com/services/program/FeedbackProgramService/v1",
         },
     )
-    reinsurance_policy_ref: str | None = field(
+    reinsurance_policy_ref: None | str = field(
         default=None,
         metadata={
             "name": "ReinsurancePolicyRef",
@@ -78,7 +78,7 @@ class LocalPoliciesTypeLocalPolicy:
             "namespace": "http://xmlns.generali.com/services/program/FeedbackProgramService/v1",
         },
     )
-    status: Status | None = field(
+    status: None | Status = field(
         default=None,
         metadata={
             "name": "Status",
@@ -87,7 +87,7 @@ class LocalPoliciesTypeLocalPolicy:
             "required": True,
         },
     )
-    party_ids: LocalPoliciesTypeLocalPolicyPartyIds | None = field(
+    party_ids: None | LocalPoliciesTypeLocalPolicyPartyIds = field(
         default=None,
         metadata={
             "name": "PartyIDs",
@@ -95,7 +95,7 @@ class LocalPoliciesTypeLocalPolicy:
             "namespace": "http://xmlns.generali.com/services/program/FeedbackProgramService/v1",
         },
     )
-    risks: LocalPoliciesTypeLocalPolicyRisks | None = field(
+    risks: None | LocalPoliciesTypeLocalPolicyRisks = field(
         default=None,
         metadata={
             "name": "Risks",
@@ -104,7 +104,7 @@ class LocalPoliciesTypeLocalPolicy:
         },
     )
     reinsurance_agreements: (
-        LocalPoliciesTypeLocalPolicyReinsuranceAgreements | None
+        None | LocalPoliciesTypeLocalPolicyReinsuranceAgreements
     ) = field(
         default=None,
         metadata={
@@ -113,7 +113,7 @@ class LocalPoliciesTypeLocalPolicy:
             "namespace": "http://xmlns.generali.com/services/program/FeedbackProgramService/v1",
         },
     )
-    inception_date: XmlDateTime | None = field(
+    inception_date: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "InceptionDate",
@@ -122,7 +122,7 @@ class LocalPoliciesTypeLocalPolicy:
             "nillable": True,
         },
     )
-    issuance_date: XmlDateTime | None = field(
+    issuance_date: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "IssuanceDate",
@@ -131,7 +131,7 @@ class LocalPoliciesTypeLocalPolicy:
             "nillable": True,
         },
     )
-    expiry_date: XmlDateTime | None = field(
+    expiry_date: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "ExpiryDate",

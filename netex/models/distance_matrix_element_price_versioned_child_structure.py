@@ -21,7 +21,7 @@ class DistanceMatrixElementPriceVersionedChildStructure(
         name = "DistanceMatrixElementPrice_VersionedChildStructure"
 
     distance_matrix_element_ref_or_group_of_distance_matrix_elements_ref: (
-        DistanceMatrixElementRef | GroupOfDistanceMatrixElementsRef | None
+        None | DistanceMatrixElementRef | GroupOfDistanceMatrixElementsRef
     ) = field(
         default=None,
         metadata={

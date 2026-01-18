@@ -32,7 +32,7 @@ class RemotingTechnology:
     class Meta:
         name = "REMOTING-TECHNOLOGY"
 
-    name: RemotingTechnologyEnum | None = field(
+    name: None | RemotingTechnologyEnum = field(
         default=None,
         metadata={
             "name": "NAME",
@@ -40,7 +40,7 @@ class RemotingTechnology:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    version: String | None = field(
+    version: None | String = field(
         default=None,
         metadata={
             "name": "VERSION",
@@ -48,14 +48,14 @@ class RemotingTechnology:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

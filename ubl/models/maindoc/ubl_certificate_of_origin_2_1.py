@@ -34,7 +34,7 @@ __NAMESPACE__ = (
 
 @dataclass(frozen=True)
 class CertificateOfOriginType:
-    ublextensions: Ublextensions | None = field(
+    ublextensions: None | Ublextensions = field(
         default=None,
         metadata={
             "name": "UBLExtensions",
@@ -42,7 +42,7 @@ class CertificateOfOriginType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2",
         },
     )
-    ublversion_id: UblversionId | None = field(
+    ublversion_id: None | UblversionId = field(
         default=None,
         metadata={
             "name": "UBLVersionID",
@@ -50,7 +50,7 @@ class CertificateOfOriginType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    customization_id: CustomizationId | None = field(
+    customization_id: None | CustomizationId = field(
         default=None,
         metadata={
             "name": "CustomizationID",
@@ -58,7 +58,7 @@ class CertificateOfOriginType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    profile_id: ProfileId | None = field(
+    profile_id: None | ProfileId = field(
         default=None,
         metadata={
             "name": "ProfileID",
@@ -66,7 +66,7 @@ class CertificateOfOriginType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    profile_execution_id: ProfileExecutionId | None = field(
+    profile_execution_id: None | ProfileExecutionId = field(
         default=None,
         metadata={
             "name": "ProfileExecutionID",
@@ -74,7 +74,7 @@ class CertificateOfOriginType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    id: Id | None = field(
+    id: None | Id = field(
         default=None,
         metadata={
             "name": "ID",
@@ -83,7 +83,7 @@ class CertificateOfOriginType:
             "required": True,
         },
     )
-    uuid: Uuid | None = field(
+    uuid: None | Uuid = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -91,7 +91,7 @@ class CertificateOfOriginType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    issue_date: IssueDate | None = field(
+    issue_date: None | IssueDate = field(
         default=None,
         metadata={
             "name": "IssueDate",
@@ -99,7 +99,7 @@ class CertificateOfOriginType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    issue_time: IssueTime | None = field(
+    issue_time: None | IssueTime = field(
         default=None,
         metadata={
             "name": "IssueTime",
@@ -123,7 +123,7 @@ class CertificateOfOriginType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    version_id: VersionId | None = field(
+    version_id: None | VersionId = field(
         default=None,
         metadata={
             "name": "VersionID",
@@ -139,7 +139,7 @@ class CertificateOfOriginType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    exporter_party: ExporterParty | None = field(
+    exporter_party: None | ExporterParty = field(
         default=None,
         metadata={
             "name": "ExporterParty",
@@ -147,7 +147,7 @@ class CertificateOfOriginType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    importer_party: ImporterParty | None = field(
+    importer_party: None | ImporterParty = field(
         default=None,
         metadata={
             "name": "ImporterParty",
@@ -164,7 +164,7 @@ class CertificateOfOriginType:
         },
     )
     certificate_of_origin_application: (
-        CertificateOfOriginApplication | None
+        None | CertificateOfOriginApplication
     ) = field(
         default=None,
         metadata={
@@ -174,7 +174,7 @@ class CertificateOfOriginType:
             "required": True,
         },
     )
-    issuer_endorsement: IssuerEndorsement | None = field(
+    issuer_endorsement: None | IssuerEndorsement = field(
         default=None,
         metadata={
             "name": "IssuerEndorsement",
@@ -183,7 +183,7 @@ class CertificateOfOriginType:
             "required": True,
         },
     )
-    embassy_endorsement: EmbassyEndorsement | None = field(
+    embassy_endorsement: None | EmbassyEndorsement = field(
         default=None,
         metadata={
             "name": "EmbassyEndorsement",
@@ -191,7 +191,7 @@ class CertificateOfOriginType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    insurance_endorsement: InsuranceEndorsement | None = field(
+    insurance_endorsement: None | InsuranceEndorsement = field(
         default=None,
         metadata={
             "name": "InsuranceEndorsement",

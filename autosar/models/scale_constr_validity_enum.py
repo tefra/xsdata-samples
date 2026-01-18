@@ -28,20 +28,20 @@ class ScaleConstrValidityEnum:
     class Meta:
         name = "SCALE-CONSTR-VALIDITY-ENUM"
 
-    value: ScaleConstrValidityEnumSimple | None = field(
+    value: None | ScaleConstrValidityEnumSimple = field(
         default=None,
         metadata={
             "required": True,
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

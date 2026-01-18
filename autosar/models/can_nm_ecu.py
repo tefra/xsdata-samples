@@ -32,7 +32,7 @@ class CanNmEcu:
     class Meta:
         name = "CAN-NM-ECU"
 
-    nm_repeat_msg_indication_enabled: Boolean | None = field(
+    nm_repeat_msg_indication_enabled: None | Boolean = field(
         default=None,
         metadata={
             "name": "NM-REPEAT-MSG-INDICATION-ENABLED",
@@ -40,14 +40,14 @@ class CanNmEcu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

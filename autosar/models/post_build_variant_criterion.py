@@ -85,7 +85,7 @@ class PostBuildVariantCriterion:
     class Meta:
         name = "POST-BUILD-VARIANT-CRITERION"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -95,7 +95,7 @@ class PostBuildVariantCriterion:
         },
     )
     short_name_fragments: (
-        PostBuildVariantCriterion.ShortNameFragments | None
+        None | PostBuildVariantCriterion.ShortNameFragments
     ) = field(
         default=None,
         metadata={
@@ -104,7 +104,7 @@ class PostBuildVariantCriterion:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -112,7 +112,7 @@ class PostBuildVariantCriterion:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -120,7 +120,7 @@ class PostBuildVariantCriterion:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -128,7 +128,7 @@ class PostBuildVariantCriterion:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -136,7 +136,7 @@ class PostBuildVariantCriterion:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -144,7 +144,7 @@ class PostBuildVariantCriterion:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: PostBuildVariantCriterion.Annotations | None = field(
+    annotations: None | PostBuildVariantCriterion.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -152,7 +152,7 @@ class PostBuildVariantCriterion:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -160,7 +160,7 @@ class PostBuildVariantCriterion:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    compu_method_ref: PostBuildVariantCriterion.CompuMethodRef | None = field(
+    compu_method_ref: None | PostBuildVariantCriterion.CompuMethodRef = field(
         default=None,
         metadata={
             "name": "COMPU-METHOD-REF",
@@ -168,14 +168,14 @@ class PostBuildVariantCriterion:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -183,7 +183,7 @@ class PostBuildVariantCriterion:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -215,7 +215,7 @@ class PostBuildVariantCriterion:
 
     @dataclass
     class CompuMethodRef(Ref):
-        dest: CompuMethodSubtypesEnum | None = field(
+        dest: None | CompuMethodSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

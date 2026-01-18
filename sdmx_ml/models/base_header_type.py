@@ -66,7 +66,7 @@ class BaseHeaderType:
         source of the data.
     """
 
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "name": "ID",
@@ -85,7 +85,7 @@ class BaseHeaderType:
             "required": True,
         },
     )
-    prepared: XmlDateTime | XmlDate | None = field(
+    prepared: None | XmlDateTime | XmlDate = field(
         default=None,
         metadata={
             "name": "Prepared",
@@ -94,7 +94,7 @@ class BaseHeaderType:
             "required": True,
         },
     )
-    sender: SenderType | None = field(
+    sender: None | SenderType = field(
         default=None,
         metadata={
             "name": "Sender",
@@ -127,7 +127,7 @@ class BaseHeaderType:
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/message",
         },
     )
-    data_provider: str | None = field(
+    data_provider: None | str = field(
         default=None,
         metadata={
             "name": "DataProvider",
@@ -136,7 +136,7 @@ class BaseHeaderType:
             "pattern": r".+\.base\.DataProvider=.+:DATA_PROVIDERS\(.+\).+",
         },
     )
-    metadata_provider: str | None = field(
+    metadata_provider: None | str = field(
         default=None,
         metadata={
             "name": "MetadataProvider",
@@ -145,7 +145,7 @@ class BaseHeaderType:
             "pattern": r".+\.base\.MetadataProvider=.+:METADATA_PROVIDERS\(.+\).+",
         },
     )
-    data_set_action: ActionType | None = field(
+    data_set_action: None | ActionType = field(
         default=None,
         metadata={
             "name": "DataSetAction",
@@ -162,7 +162,7 @@ class BaseHeaderType:
             "pattern": r"[A-Za-z0-9_@$\-]+",
         },
     )
-    extracted: XmlDateTime | None = field(
+    extracted: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "Extracted",
@@ -170,7 +170,7 @@ class BaseHeaderType:
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/message",
         },
     )
-    reporting_begin: XmlPeriod | XmlDate | XmlDateTime | str | None = field(
+    reporting_begin: None | XmlPeriod | XmlDate | XmlDateTime | str = field(
         default=None,
         metadata={
             "name": "ReportingBegin",
@@ -179,7 +179,7 @@ class BaseHeaderType:
             "pattern": r".{5}A1.*",
         },
     )
-    reporting_end: XmlPeriod | XmlDate | XmlDateTime | str | None = field(
+    reporting_end: None | XmlPeriod | XmlDate | XmlDateTime | str = field(
         default=None,
         metadata={
             "name": "ReportingEnd",
@@ -188,7 +188,7 @@ class BaseHeaderType:
             "pattern": r".{5}A1.*",
         },
     )
-    embargo_date: XmlDateTime | None = field(
+    embargo_date: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "EmbargoDate",

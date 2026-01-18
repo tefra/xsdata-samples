@@ -34,7 +34,7 @@ class PPortInCompositionInstanceRef:
         name = "P-PORT-IN-COMPOSITION-INSTANCE-REF"
 
     context_component_ref: (
-        PPortInCompositionInstanceRef.ContextComponentRef | None
+        None | PPortInCompositionInstanceRef.ContextComponentRef
     ) = field(
         default=None,
         metadata={
@@ -43,7 +43,7 @@ class PPortInCompositionInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    target_p_port_ref: PPortInCompositionInstanceRef.TargetPPortRef | None = (
+    target_p_port_ref: None | PPortInCompositionInstanceRef.TargetPPortRef = (
         field(
             default=None,
             metadata={
@@ -53,14 +53,14 @@ class PPortInCompositionInstanceRef:
             },
         )
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -71,7 +71,7 @@ class PPortInCompositionInstanceRef:
 
     @dataclass
     class ContextComponentRef(Ref):
-        dest: SwComponentPrototypeSubtypesEnum | None = field(
+        dest: None | SwComponentPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -82,7 +82,7 @@ class PPortInCompositionInstanceRef:
 
     @dataclass
     class TargetPPortRef(Ref):
-        dest: AbstractProvidedPortPrototypeSubtypesEnum | None = field(
+        dest: None | AbstractProvidedPortPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

@@ -22,7 +22,7 @@ class MediumApplicationInstanceVersionedChildStructure(
     class Meta:
         name = "MediumApplicationInstance_VersionedChildStructure"
 
-    name: MultilingualString | None = field(
+    name: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "Name",
@@ -30,7 +30,7 @@ class MediumApplicationInstanceVersionedChildStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    identity_token: str | None = field(
+    identity_token: None | str = field(
         default=None,
         metadata={
             "name": "IdentityToken",
@@ -39,7 +39,7 @@ class MediumApplicationInstanceVersionedChildStructure(
         },
     )
     medium_access_device_ref: (
-        MobileDeviceRef | EmvCardRef | SmartcardRef | None
+        None | MobileDeviceRef | EmvCardRef | SmartcardRef
     ) = field(
         default=None,
         metadata={
@@ -63,7 +63,7 @@ class MediumApplicationInstanceVersionedChildStructure(
             ),
         },
     )
-    customer_account_ref: CustomerAccountRef | None = field(
+    customer_account_ref: None | CustomerAccountRef = field(
         default=None,
         metadata={
             "name": "CustomerAccountRef",
@@ -71,7 +71,7 @@ class MediumApplicationInstanceVersionedChildStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    type_of_travel_document_ref: TypeOfTravelDocumentRef | None = field(
+    type_of_travel_document_ref: None | TypeOfTravelDocumentRef = field(
         default=None,
         metadata={
             "name": "TypeOfTravelDocumentRef",
@@ -79,7 +79,7 @@ class MediumApplicationInstanceVersionedChildStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    travel_document_ref: ServiceAccessCodeRef | TravelDocumentRef | None = (
+    travel_document_ref: None | ServiceAccessCodeRef | TravelDocumentRef = (
         field(
             default=None,
             metadata={

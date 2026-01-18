@@ -45,7 +45,7 @@ class Xfile:
     class Meta:
         name = "XFILE"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -54,7 +54,7 @@ class Xfile:
             "required": True,
         },
     )
-    short_name_fragments: Xfile.ShortNameFragments | None = field(
+    short_name_fragments: None | Xfile.ShortNameFragments = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -62,7 +62,7 @@ class Xfile:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name_1: SingleLanguageLongName | None = field(
+    long_name_1: None | SingleLanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME-1",
@@ -70,7 +70,7 @@ class Xfile:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    url: Url | None = field(
+    url: None | Url = field(
         default=None,
         metadata={
             "name": "URL",
@@ -78,7 +78,7 @@ class Xfile:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tool: String | None = field(
+    tool: None | String = field(
         default=None,
         metadata={
             "name": "TOOL",
@@ -86,7 +86,7 @@ class Xfile:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tool_version: String | None = field(
+    tool_version: None | String = field(
         default=None,
         metadata={
             "name": "TOOL-VERSION",
@@ -94,14 +94,14 @@ class Xfile:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

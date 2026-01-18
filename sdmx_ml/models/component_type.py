@@ -37,7 +37,7 @@ class ComponentType(ComponentBaseType):
         item scheme reference is used.
     """
 
-    concept_identity: str | None = field(
+    concept_identity: None | str = field(
         default=None,
         metadata={
             "name": "ConceptIdentity",
@@ -46,7 +46,7 @@ class ComponentType(ComponentBaseType):
             "pattern": r".+\.conceptscheme\.Concept=.+",
         },
     )
-    local_representation: RepresentationType | None = field(
+    local_representation: None | RepresentationType = field(
         default=None,
         metadata={
             "name": "LocalRepresentation",

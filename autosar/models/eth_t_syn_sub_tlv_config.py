@@ -36,7 +36,7 @@ class EthTSynSubTlvConfig:
     class Meta:
         name = "ETH-T-SYN-SUB-TLV-CONFIG"
 
-    ofs_sub_tlv: Boolean | None = field(
+    ofs_sub_tlv: None | Boolean = field(
         default=None,
         metadata={
             "name": "OFS-SUB-TLV",
@@ -44,7 +44,7 @@ class EthTSynSubTlvConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    status_sub_tlv: Boolean | None = field(
+    status_sub_tlv: None | Boolean = field(
         default=None,
         metadata={
             "name": "STATUS-SUB-TLV",
@@ -52,7 +52,7 @@ class EthTSynSubTlvConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    time_sub_tlv: Boolean | None = field(
+    time_sub_tlv: None | Boolean = field(
         default=None,
         metadata={
             "name": "TIME-SUB-TLV",
@@ -60,7 +60,7 @@ class EthTSynSubTlvConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    user_data_sub_tlv: Boolean | None = field(
+    user_data_sub_tlv: None | Boolean = field(
         default=None,
         metadata={
             "name": "USER-DATA-SUB-TLV",
@@ -68,14 +68,14 @@ class EthTSynSubTlvConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

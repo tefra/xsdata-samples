@@ -25,7 +25,7 @@ class NotifyOrganisationGbmrequestType(BaseGbmheaderType):
     class Meta:
         name = "NotifyOrganisationGBMRequestType"
 
-    organisation_gbo: OrganisationGbotype | None = field(
+    organisation_gbo: None | OrganisationGbotype = field(
         default=None,
         metadata={
             "name": "OrganisationGBO",

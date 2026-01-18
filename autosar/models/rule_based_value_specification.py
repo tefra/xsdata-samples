@@ -44,7 +44,7 @@ class RuleBasedValueSpecification:
     class Meta:
         name = "RULE-BASED-VALUE-SPECIFICATION"
 
-    rule: Identifier | None = field(
+    rule: None | Identifier = field(
         default=None,
         metadata={
             "name": "RULE",
@@ -52,7 +52,7 @@ class RuleBasedValueSpecification:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    argumentss: RuleBasedValueSpecification.Argumentss | None = field(
+    argumentss: None | RuleBasedValueSpecification.Argumentss = field(
         default=None,
         metadata={
             "name": "ARGUMENTSS",
@@ -60,7 +60,7 @@ class RuleBasedValueSpecification:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    max_size_to_fill: Integer | None = field(
+    max_size_to_fill: None | Integer = field(
         default=None,
         metadata={
             "name": "MAX-SIZE-TO-FILL",
@@ -68,14 +68,14 @@ class RuleBasedValueSpecification:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

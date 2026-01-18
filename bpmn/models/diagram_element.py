@@ -10,13 +10,13 @@ class DiagramElement:
     class Meta:
         namespace = "http://www.omg.org/spec/DD/20100524/DI"
 
-    extension: DiagramElement.Extension | None = field(
+    extension: None | DiagramElement.Extension = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",

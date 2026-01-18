@@ -25,14 +25,14 @@ class HierInterfaceType:
     class Meta:
         name = "hierInterfaceType"
 
-    description: Description | None = field(
+    description: None | Description = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    vendor_extensions: VendorExtensions | None = field(
+    vendor_extensions: None | VendorExtensions = field(
         default=None,
         metadata={
             "name": "vendorExtensions",
@@ -40,7 +40,7 @@ class HierInterfaceType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    bus_ref: str | None = field(
+    bus_ref: None | str = field(
         default=None,
         metadata={
             "name": "busRef",
@@ -48,7 +48,7 @@ class HierInterfaceType:
             "required": True,
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",

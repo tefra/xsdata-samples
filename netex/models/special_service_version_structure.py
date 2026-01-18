@@ -34,7 +34,7 @@ class SpecialServiceVersionStructure(JourneyVersionStructure):
     class Meta:
         name = "SpecialService_VersionStructure"
 
-    departure_time: XmlTime | None = field(
+    departure_time: None | XmlTime = field(
         default=None,
         metadata={
             "name": "DepartureTime",
@@ -42,7 +42,7 @@ class SpecialServiceVersionStructure(JourneyVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    departure_day_offset: int | None = field(
+    departure_day_offset: None | int = field(
         default=None,
         metadata={
             "name": "DepartureDayOffset",
@@ -50,7 +50,7 @@ class SpecialServiceVersionStructure(JourneyVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    frequency: FrequencyStructure | None = field(
+    frequency: None | FrequencyStructure = field(
         default=None,
         metadata={
             "name": "Frequency",
@@ -58,7 +58,7 @@ class SpecialServiceVersionStructure(JourneyVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    journey_duration: XmlDuration | None = field(
+    journey_duration: None | XmlDuration = field(
         default=None,
         metadata={
             "name": "JourneyDuration",
@@ -66,7 +66,7 @@ class SpecialServiceVersionStructure(JourneyVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    client: MultilingualString | None = field(
+    client: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "Client",
@@ -74,7 +74,7 @@ class SpecialServiceVersionStructure(JourneyVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    day_types: DayTypeRefsRelStructure | None = field(
+    day_types: None | DayTypeRefsRelStructure = field(
         default=None,
         metadata={
             "name": "dayTypes",
@@ -83,11 +83,11 @@ class SpecialServiceVersionStructure(JourneyVersionStructure):
         },
     )
     journey_pattern_ref: (
-        ServiceJourneyPatternRef
+        None
+        | ServiceJourneyPatternRef
         | ServicePatternRef
         | DeadRunJourneyPatternRef
         | JourneyPatternRef
-        | None
     ) = field(
         default=None,
         metadata={
@@ -116,7 +116,7 @@ class SpecialServiceVersionStructure(JourneyVersionStructure):
             ),
         },
     )
-    vehicle_type_ref: CompoundTrainRef | TrainRef | VehicleTypeRef | None = (
+    vehicle_type_ref: None | CompoundTrainRef | TrainRef | VehicleTypeRef = (
         field(
             default=None,
             metadata={
@@ -141,7 +141,7 @@ class SpecialServiceVersionStructure(JourneyVersionStructure):
             },
         )
     )
-    origin: JourneyEndpointStructure | None = field(
+    origin: None | JourneyEndpointStructure = field(
         default=None,
         metadata={
             "name": "Origin",
@@ -149,7 +149,7 @@ class SpecialServiceVersionStructure(JourneyVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    destination: JourneyEndpointStructure | None = field(
+    destination: None | JourneyEndpointStructure = field(
         default=None,
         metadata={
             "name": "Destination",
@@ -157,7 +157,7 @@ class SpecialServiceVersionStructure(JourneyVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    print: bool | None = field(
+    print: None | bool = field(
         default=None,
         metadata={
             "name": "Print",
@@ -165,7 +165,7 @@ class SpecialServiceVersionStructure(JourneyVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    dynamic: DynamicAdvertisementEnumeration | None = field(
+    dynamic: None | DynamicAdvertisementEnumeration = field(
         default=None,
         metadata={
             "name": "Dynamic",
@@ -173,7 +173,7 @@ class SpecialServiceVersionStructure(JourneyVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    type_of_flexible_service_ref: TypeOfFlexibleServiceRef | None = field(
+    type_of_flexible_service_ref: None | TypeOfFlexibleServiceRef = field(
         default=None,
         metadata={
             "name": "TypeOfFlexibleServiceRef",
@@ -181,7 +181,7 @@ class SpecialServiceVersionStructure(JourneyVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    flexible_service_type: FlexibleServiceEnumeration | None = field(
+    flexible_service_type: None | FlexibleServiceEnumeration = field(
         default=None,
         metadata={
             "name": "FlexibleServiceType",
@@ -189,7 +189,7 @@ class SpecialServiceVersionStructure(JourneyVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    cancellation_possible: bool | None = field(
+    cancellation_possible: None | bool = field(
         default=None,
         metadata={
             "name": "CancellationPossible",
@@ -197,7 +197,7 @@ class SpecialServiceVersionStructure(JourneyVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    change_of_time_possible: bool | None = field(
+    change_of_time_possible: None | bool = field(
         default=None,
         metadata={
             "name": "ChangeOfTimePossible",
@@ -205,7 +205,7 @@ class SpecialServiceVersionStructure(JourneyVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    booking_contact: ContactStructure | None = field(
+    booking_contact: None | ContactStructure = field(
         default=None,
         metadata={
             "name": "BookingContact",
@@ -222,7 +222,7 @@ class SpecialServiceVersionStructure(JourneyVersionStructure):
             "tokens": True,
         },
     )
-    booking_access: BookingAccessEnumeration | None = field(
+    booking_access: None | BookingAccessEnumeration = field(
         default=None,
         metadata={
             "name": "BookingAccess",
@@ -230,7 +230,7 @@ class SpecialServiceVersionStructure(JourneyVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    book_when: PurchaseWhenEnumeration | None = field(
+    book_when: None | PurchaseWhenEnumeration = field(
         default=None,
         metadata={
             "name": "BookWhen",
@@ -247,7 +247,7 @@ class SpecialServiceVersionStructure(JourneyVersionStructure):
             "tokens": True,
         },
     )
-    latest_booking_time: XmlTime | None = field(
+    latest_booking_time: None | XmlTime = field(
         default=None,
         metadata={
             "name": "LatestBookingTime",
@@ -255,7 +255,7 @@ class SpecialServiceVersionStructure(JourneyVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    minimum_booking_period: XmlDuration | None = field(
+    minimum_booking_period: None | XmlDuration = field(
         default=None,
         metadata={
             "name": "MinimumBookingPeriod",
@@ -263,7 +263,7 @@ class SpecialServiceVersionStructure(JourneyVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    maximum_booking_period: XmlDuration | None = field(
+    maximum_booking_period: None | XmlDuration = field(
         default=None,
         metadata={
             "name": "MaximumBookingPeriod",
@@ -271,7 +271,7 @@ class SpecialServiceVersionStructure(JourneyVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    booking_url: str | None = field(
+    booking_url: None | str = field(
         default=None,
         metadata={
             "name": "BookingUrl",
@@ -279,7 +279,7 @@ class SpecialServiceVersionStructure(JourneyVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    booking_note: MultilingualString | None = field(
+    booking_note: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "BookingNote",

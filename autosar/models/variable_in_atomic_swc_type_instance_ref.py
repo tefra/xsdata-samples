@@ -43,7 +43,7 @@ class VariableInAtomicSwcTypeInstanceRef:
         name = "VARIABLE-IN-ATOMIC-SWC-TYPE-INSTANCE-REF"
 
     port_prototype_ref: (
-        VariableInAtomicSwcTypeInstanceRef.PortPrototypeRef | None
+        None | VariableInAtomicSwcTypeInstanceRef.PortPrototypeRef
     ) = field(
         default=None,
         metadata={
@@ -53,7 +53,7 @@ class VariableInAtomicSwcTypeInstanceRef:
         },
     )
     root_variable_data_prototype_ref: (
-        VariableInAtomicSwcTypeInstanceRef.RootVariableDataPrototypeRef | None
+        None | VariableInAtomicSwcTypeInstanceRef.RootVariableDataPrototypeRef
     ) = field(
         default=None,
         metadata={
@@ -73,7 +73,7 @@ class VariableInAtomicSwcTypeInstanceRef:
         },
     )
     target_data_prototype_ref: (
-        VariableInAtomicSwcTypeInstanceRef.TargetDataPrototypeRef | None
+        None | VariableInAtomicSwcTypeInstanceRef.TargetDataPrototypeRef
     ) = field(
         default=None,
         metadata={
@@ -82,14 +82,14 @@ class VariableInAtomicSwcTypeInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -100,7 +100,7 @@ class VariableInAtomicSwcTypeInstanceRef:
 
     @dataclass
     class PortPrototypeRef(Ref):
-        dest: PortPrototypeSubtypesEnum | None = field(
+        dest: None | PortPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -111,7 +111,7 @@ class VariableInAtomicSwcTypeInstanceRef:
 
     @dataclass
     class RootVariableDataPrototypeRef(Ref):
-        dest: VariableDataPrototypeSubtypesEnum | None = field(
+        dest: None | VariableDataPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -122,7 +122,7 @@ class VariableInAtomicSwcTypeInstanceRef:
 
     @dataclass
     class ContextDataPrototypeRef(Ref):
-        dest: ApplicationCompositeElementDataPrototypeSubtypesEnum | None = (
+        dest: None | ApplicationCompositeElementDataPrototypeSubtypesEnum = (
             field(
                 default=None,
                 metadata={
@@ -135,7 +135,7 @@ class VariableInAtomicSwcTypeInstanceRef:
 
     @dataclass
     class TargetDataPrototypeRef(Ref):
-        dest: DataPrototypeSubtypesEnum | None = field(
+        dest: None | DataPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

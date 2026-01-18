@@ -60,7 +60,7 @@ class RepresentationType:
             "type": "Attribute",
         },
     )
-    max_occurs: int | UnboundedCodeType | None = field(
+    max_occurs: None | int | UnboundedCodeType = field(
         default=None,
         metadata={
             "name": "maxOccurs",

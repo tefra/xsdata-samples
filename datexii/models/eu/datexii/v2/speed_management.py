@@ -24,7 +24,7 @@ class SpeedManagement(NetworkManagement):
     :ivar speed_management_extension:
     """
 
-    speed_management_type: SpeedManagementTypeEnum | None = field(
+    speed_management_type: None | SpeedManagementTypeEnum = field(
         default=None,
         metadata={
             "name": "speedManagementType",
@@ -32,7 +32,7 @@ class SpeedManagement(NetworkManagement):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    temporary_speed_limit: float | None = field(
+    temporary_speed_limit: None | float = field(
         default=None,
         metadata={
             "name": "temporarySpeedLimit",
@@ -40,7 +40,7 @@ class SpeedManagement(NetworkManagement):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    speed_management_extension: ExtensionType | None = field(
+    speed_management_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "speedManagementExtension",

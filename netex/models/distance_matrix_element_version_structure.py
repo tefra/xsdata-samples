@@ -32,7 +32,7 @@ class DistanceMatrixElementVersionStructure(PriceableObjectVersionStructure):
     class Meta:
         name = "DistanceMatrixElement_VersionStructure"
 
-    distance: Decimal | None = field(
+    distance: None | Decimal = field(
         default=None,
         metadata={
             "name": "Distance",
@@ -40,7 +40,7 @@ class DistanceMatrixElementVersionStructure(PriceableObjectVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    relative_ranking: int | None = field(
+    relative_ranking: None | int = field(
         default=None,
         metadata={
             "name": "RelativeRanking",
@@ -48,7 +48,7 @@ class DistanceMatrixElementVersionStructure(PriceableObjectVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    is_direct: bool | None = field(
+    is_direct: None | bool = field(
         default=None,
         metadata={
             "name": "IsDirect",
@@ -56,7 +56,7 @@ class DistanceMatrixElementVersionStructure(PriceableObjectVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    inverse_allowed: bool | None = field(
+    inverse_allowed: None | bool = field(
         default=None,
         metadata={
             "name": "InverseAllowed",
@@ -65,14 +65,14 @@ class DistanceMatrixElementVersionStructure(PriceableObjectVersionStructure):
         },
     )
     choice: (
-        ScheduledStopPointRefStructure
+        None
+        | ScheduledStopPointRefStructure
         | ScheduledStopPointDerivedViewStructure
         | TariffZoneRefStructure
         | ZoneDerivedViewStructure
         | PointRefStructure
         | FareSectionRefStructure
         | FarePointInPatternRefStructure
-        | None
     ) = field(
         default=None,
         metadata={
@@ -117,14 +117,14 @@ class DistanceMatrixElementVersionStructure(PriceableObjectVersionStructure):
         },
     )
     choice_1: (
-        ScheduledStopPointRefStructure
+        None
+        | ScheduledStopPointRefStructure
         | ScheduledStopPointDerivedViewStructure
         | TariffZoneRefStructure
         | ZoneDerivedViewStructure
         | PointRefStructure
         | FareSectionRefStructure
         | FarePointInPatternRefStructure
-        | None
     ) = field(
         default=None,
         metadata={
@@ -168,7 +168,7 @@ class DistanceMatrixElementVersionStructure(PriceableObjectVersionStructure):
             ),
         },
     )
-    series_constraints: SeriesConstraintsRelStructure | None = field(
+    series_constraints: None | SeriesConstraintsRelStructure = field(
         default=None,
         metadata={
             "name": "seriesConstraints",
@@ -176,7 +176,7 @@ class DistanceMatrixElementVersionStructure(PriceableObjectVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    structure_factors: GeographicalStructureFactorsRelStructure | None = field(
+    structure_factors: None | GeographicalStructureFactorsRelStructure = field(
         default=None,
         metadata={
             "name": "structureFactors",
@@ -184,14 +184,14 @@ class DistanceMatrixElementVersionStructure(PriceableObjectVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    tariffs: TariffRefsRelStructure | None = field(
+    tariffs: None | TariffRefsRelStructure = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    fare_table_ref: StandardFareTableRef | FareTableRef | None = field(
+    fare_table_ref: None | StandardFareTableRef | FareTableRef = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -209,7 +209,7 @@ class DistanceMatrixElementVersionStructure(PriceableObjectVersionStructure):
             ),
         },
     )
-    prices: DistanceMatrixElementPricesRelStructure | None = field(
+    prices: None | DistanceMatrixElementPricesRelStructure = field(
         default=None,
         metadata={
             "type": "Element",

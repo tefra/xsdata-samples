@@ -41,7 +41,7 @@ class TransportOrganisationVersionStructure(OrganisationVersionStructure):
     class Meta:
         name = "TransportOrganisation_VersionStructure"
 
-    country_ref: CountryRef | None = field(
+    country_ref: None | CountryRef = field(
         default=None,
         metadata={
             "name": "CountryRef",
@@ -50,10 +50,10 @@ class TransportOrganisationVersionStructure(OrganisationVersionStructure):
         },
     )
     address: (
-        PostalAddress
+        None
+        | PostalAddress
         | RoadAddress
         | TransportOrganisationVersionStructure.Address
-        | None
     ) = field(
         default=None,
         metadata={
@@ -79,7 +79,7 @@ class TransportOrganisationVersionStructure(OrganisationVersionStructure):
             ),
         },
     )
-    primary_mode: AllModesEnumeration | None = field(
+    primary_mode: None | AllModesEnumeration = field(
         default=None,
         metadata={
             "name": "PrimaryMode",
@@ -88,7 +88,8 @@ class TransportOrganisationVersionStructure(OrganisationVersionStructure):
         },
     )
     choice: (
-        AirSubmode
+        None
+        | AirSubmode
         | BusSubmode
         | CoachSubmode
         | FunicularSubmode
@@ -100,7 +101,6 @@ class TransportOrganisationVersionStructure(OrganisationVersionStructure):
         | SnowAndIceSubmode
         | TaxiSubmode
         | SelfDriveSubmode
-        | None
     ) = field(
         default=None,
         metadata={
@@ -170,13 +170,13 @@ class TransportOrganisationVersionStructure(OrganisationVersionStructure):
         },
     )
     mode_of_operation_ref_or_alternative_mode_of_operation_ref_or_conventional_mode_of_operation_ref: (
-        PersonalModeOfOperationRef
+        None
+        | PersonalModeOfOperationRef
         | VehiclePoolingRef
         | VehicleSharingRef
         | VehicleRentalRef
         | FlexibleModeOfOperationRef
         | ScheduledModeOfOperationRef
-        | None
     ) = field(
         default=None,
         metadata={
@@ -224,7 +224,7 @@ class TransportOrganisationVersionStructure(OrganisationVersionStructure):
             "tokens": True,
         },
     )
-    customer_service_contact_details: ContactStructure | None = field(
+    customer_service_contact_details: None | ContactStructure = field(
         default=None,
         metadata={
             "name": "CustomerServiceContactDetails",
@@ -232,14 +232,14 @@ class TransportOrganisationVersionStructure(OrganisationVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    departments: DepartmentsRelStructure | None = field(
+    departments: None | DepartmentsRelStructure = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    other_modes: ModeRefsRelStructure | None = field(
+    other_modes: None | ModeRefsRelStructure = field(
         default=None,
         metadata={
             "name": "otherModes",

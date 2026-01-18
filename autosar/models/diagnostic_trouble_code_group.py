@@ -93,7 +93,7 @@ class DiagnosticTroubleCodeGroup:
     class Meta:
         name = "DIAGNOSTIC-TROUBLE-CODE-GROUP"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -103,7 +103,7 @@ class DiagnosticTroubleCodeGroup:
         },
     )
     short_name_fragments: (
-        DiagnosticTroubleCodeGroup.ShortNameFragments | None
+        None | DiagnosticTroubleCodeGroup.ShortNameFragments
     ) = field(
         default=None,
         metadata={
@@ -112,7 +112,7 @@ class DiagnosticTroubleCodeGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -120,7 +120,7 @@ class DiagnosticTroubleCodeGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -128,7 +128,7 @@ class DiagnosticTroubleCodeGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -136,7 +136,7 @@ class DiagnosticTroubleCodeGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -144,7 +144,7 @@ class DiagnosticTroubleCodeGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -152,7 +152,7 @@ class DiagnosticTroubleCodeGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: DiagnosticTroubleCodeGroup.Annotations | None = field(
+    annotations: None | DiagnosticTroubleCodeGroup.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -160,7 +160,7 @@ class DiagnosticTroubleCodeGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -168,7 +168,7 @@ class DiagnosticTroubleCodeGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    dtcs: DiagnosticTroubleCodeGroup.Dtcs | None = field(
+    dtcs: None | DiagnosticTroubleCodeGroup.Dtcs = field(
         default=None,
         metadata={
             "name": "DTCS",
@@ -176,7 +176,7 @@ class DiagnosticTroubleCodeGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    group_number: PositiveIntegerValueVariationPoint | None = field(
+    group_number: None | PositiveIntegerValueVariationPoint = field(
         default=None,
         metadata={
             "name": "GROUP-NUMBER",
@@ -184,14 +184,14 @@ class DiagnosticTroubleCodeGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -199,7 +199,7 @@ class DiagnosticTroubleCodeGroup:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",

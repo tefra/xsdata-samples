@@ -63,7 +63,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 @dataclass
 class NetworkFilterByValueStructure(ObjectFilterByValueStructure):
-    network_ref: NetworkRef | None = field(
+    network_ref: None | NetworkRef = field(
         default=None,
         metadata={
             "name": "NetworkRef",
@@ -71,7 +71,7 @@ class NetworkFilterByValueStructure(ObjectFilterByValueStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    places: NetworkFilterByValueStructure.Places | None = field(
+    places: None | NetworkFilterByValueStructure.Places = field(
         default=None,
         metadata={
             "type": "Element",

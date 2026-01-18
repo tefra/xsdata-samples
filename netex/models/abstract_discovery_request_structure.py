@@ -11,7 +11,7 @@ __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
 @dataclass
 class AbstractDiscoveryRequestStructure(AuthenticatedRequestStructure):
-    address: str | None = field(
+    address: None | str = field(
         default=None,
         metadata={
             "name": "Address",
@@ -19,7 +19,7 @@ class AbstractDiscoveryRequestStructure(AuthenticatedRequestStructure):
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    requestor_ref: RequestorRef | None = field(
+    requestor_ref: None | RequestorRef = field(
         default=None,
         metadata={
             "name": "RequestorRef",
@@ -28,7 +28,7 @@ class AbstractDiscoveryRequestStructure(AuthenticatedRequestStructure):
             "required": True,
         },
     )
-    message_identifier: MessageQualifierStructure | None = field(
+    message_identifier: None | MessageQualifierStructure = field(
         default=None,
         metadata={
             "name": "MessageIdentifier",

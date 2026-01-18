@@ -25,13 +25,13 @@ class Mn:
         name = "mn"
         namespace = "http://www.w3.org/1998/Math/MathML"
 
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    xref: object | None = field(
+    xref: None | object = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -45,19 +45,19 @@ class Mn:
             "tokens": True,
         },
     )
-    style: str | None = field(
+    style: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    href: str | None = field(
+    href: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    other: object | None = field(
+    other: None | object = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -70,72 +70,72 @@ class Mn:
             "namespace": "##other",
         },
     )
-    mathcolor: str | None = field(
+    mathcolor: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\s*((#[0-9a-fA-F]{3}([0-9a-fA-F]{3})?)|[aA][qQ][uU][aA]|[bB][lL][aA][cC][kK]|[bB][lL][uU][eE]|[fF][uU][cC][hH][sS][iI][aA]|[gG][rR][aA][yY]|[gG][rR][eE][eE][nN]|[lL][iI][mM][eE]|[mM][aA][rR][oO][oO][nN]|[nN][aA][vV][yY]|[oO][lL][iI][vV][eE]|[pP][uU][rR][pP][lL][eE]|[rR][eE][dD]|[sS][iI][lL][vV][eE][rR]|[tT][eE][aA][lL]|[wW][hH][iI][tT][eE]|[yY][eE][lL][lL][oO][wW])\s*",
         },
     )
-    mathbackground: str | MnValue | None = field(
+    mathbackground: None | str | MnValue = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\s*((#[0-9a-fA-F]{3}([0-9a-fA-F]{3})?)|[aA][qQ][uU][aA]|[bB][lL][aA][cC][kK]|[bB][lL][uU][eE]|[fF][uU][cC][hH][sS][iI][aA]|[gG][rR][aA][yY]|[gG][rR][eE][eE][nN]|[lL][iI][mM][eE]|[mM][aA][rR][oO][oO][nN]|[nN][aA][vV][yY]|[oO][lL][iI][vV][eE]|[pP][uU][rR][pP][lL][eE]|[rR][eE][dD]|[sS][iI][lL][vV][eE][rR]|[tT][eE][aA][lL]|[wW][hH][iI][tT][eE]|[yY][eE][lL][lL][oO][wW])\s*",
         },
     )
-    mathvariant: MnMathvariant | None = field(
+    mathvariant: None | MnMathvariant = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    mathsize: str | MnValue | None = field(
+    mathsize: None | str | MnValue = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\s*((-?[0-9]*([0-9]\.?|\.[0-9])[0-9]*(e[mx]|in|cm|mm|p[xtc]|%)?)|(negative)?((very){0,2}thi(n|ck)|medium)mathspace)\s*",
         },
     )
-    dir: MnDir | None = field(
+    dir: None | MnDir = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    fontfamily: object | None = field(
+    fontfamily: None | object = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    fontweight: MnFontweight | None = field(
+    fontweight: None | MnFontweight = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    fontstyle: MnFontstyle | None = field(
+    fontstyle: None | MnFontstyle = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    fontsize: str | None = field(
+    fontsize: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\s*((-?[0-9]*([0-9]\.?|\.[0-9])[0-9]*(e[mx]|in|cm|mm|p[xtc]|%)?)|(negative)?((very){0,2}thi(n|ck)|medium)mathspace)\s*",
         },
     )
-    color: str | None = field(
+    color: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\s*((#[0-9a-fA-F]{3}([0-9a-fA-F]{3})?)|[aA][qQ][uU][aA]|[bB][lL][aA][cC][kK]|[bB][lL][uU][eE]|[fF][uU][cC][hH][sS][iI][aA]|[gG][rR][aA][yY]|[gG][rR][eE][eE][nN]|[lL][iI][mM][eE]|[mM][aA][rR][oO][oO][nN]|[nN][aA][vV][yY]|[oO][lL][iI][vV][eE]|[pP][uU][rR][pP][lL][eE]|[rR][eE][dD]|[sS][iI][lL][vV][eE][rR]|[tT][eE][aA][lL]|[wW][hH][iI][tT][eE]|[yY][eE][lL][lL][oO][wW])\s*",
         },
     )
-    background: str | MnValue | None = field(
+    background: None | str | MnValue = field(
         default=None,
         metadata={
             "type": "Attribute",

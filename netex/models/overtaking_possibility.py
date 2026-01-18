@@ -15,7 +15,7 @@ class OvertakingPossibility(OvertakingPossibilityVersionStructure):
     class Meta:
         namespace = "http://www.netex.org.uk/netex"
 
-    overtaking_at_point_ref: PointRefStructure | None = field(
+    overtaking_at_point_ref: None | PointRefStructure = field(
         default=None,
         metadata={
             "name": "OvertakingAtPointRef",

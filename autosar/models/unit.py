@@ -107,7 +107,7 @@ class Unit:
     class Meta:
         name = "UNIT"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -116,7 +116,7 @@ class Unit:
             "required": True,
         },
     )
-    short_name_fragments: Unit.ShortNameFragments | None = field(
+    short_name_fragments: None | Unit.ShortNameFragments = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -124,7 +124,7 @@ class Unit:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -132,7 +132,7 @@ class Unit:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -140,7 +140,7 @@ class Unit:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -148,7 +148,7 @@ class Unit:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -156,7 +156,7 @@ class Unit:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -164,7 +164,7 @@ class Unit:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Unit.Annotations | None = field(
+    annotations: None | Unit.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -172,7 +172,7 @@ class Unit:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -180,7 +180,7 @@ class Unit:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    display_name: SingleLanguageUnitNames | None = field(
+    display_name: None | SingleLanguageUnitNames = field(
         default=None,
         metadata={
             "name": "DISPLAY-NAME",
@@ -188,7 +188,7 @@ class Unit:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    factor_si_to_unit: Float | None = field(
+    factor_si_to_unit: None | Float = field(
         default=None,
         metadata={
             "name": "FACTOR-SI-TO-UNIT",
@@ -196,7 +196,7 @@ class Unit:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    offset_si_to_unit: Float | None = field(
+    offset_si_to_unit: None | Float = field(
         default=None,
         metadata={
             "name": "OFFSET-SI-TO-UNIT",
@@ -204,7 +204,7 @@ class Unit:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    physical_dimension_ref: Unit.PhysicalDimensionRef | None = field(
+    physical_dimension_ref: None | Unit.PhysicalDimensionRef = field(
         default=None,
         metadata={
             "name": "PHYSICAL-DIMENSION-REF",
@@ -212,14 +212,14 @@ class Unit:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -227,7 +227,7 @@ class Unit:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -259,7 +259,7 @@ class Unit:
 
     @dataclass
     class PhysicalDimensionRef(Ref):
-        dest: PhysicalDimensionSubtypesEnum | None = field(
+        dest: None | PhysicalDimensionSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

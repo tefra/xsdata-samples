@@ -582,7 +582,7 @@ class ComplexFeatureMemberVersionedChildStructure(
     class Meta:
         name = "ComplexFeatureMember_VersionedChildStructure"
 
-    complex_feature_ref: ComplexFeatureRefStructure | None = field(
+    complex_feature_ref: None | ComplexFeatureRefStructure = field(
         default=None,
         metadata={
             "name": "ComplexFeatureRef",
@@ -591,7 +591,8 @@ class ComplexFeatureMemberVersionedChildStructure(
         },
     )
     choice: (
-        SimpleFeatureRef
+        None
+        | SimpleFeatureRef
         | TripLegRef
         | IndividualPassengerInfoRef
         | VehiclePoolingDriverInfoRef
@@ -1112,7 +1113,6 @@ class ComplexFeatureMemberVersionedChildStructure(
         | DataSourceRef
         | VersionRef
         | VersionOfObjectRef
-        | None
     ) = field(
         default=None,
         metadata={

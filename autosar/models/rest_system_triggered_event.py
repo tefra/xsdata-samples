@@ -32,7 +32,7 @@ class RestSystemTriggeredEvent:
     class Meta:
         name = "REST-SYSTEM-TRIGGERED-EVENT"
 
-    element_ref: RestSystemTriggeredEvent.ElementRef | None = field(
+    element_ref: None | RestSystemTriggeredEvent.ElementRef = field(
         default=None,
         metadata={
             "name": "ELEMENT-REF",
@@ -40,14 +40,14 @@ class RestSystemTriggeredEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -58,7 +58,7 @@ class RestSystemTriggeredEvent:
 
     @dataclass
     class ElementRef(Ref):
-        dest: RestElementDefSubtypesEnum | None = field(
+        dest: None | RestElementDefSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

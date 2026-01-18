@@ -16,7 +16,7 @@ class Risk:
     class Meta:
         namespace = "http://xmlns.generali.com/services/program/FeedbackProgramService/v1"
 
-    global_risk_id: str | None = field(
+    global_risk_id: None | str = field(
         default=None,
         metadata={
             "name": "GlobalRiskID",
@@ -24,7 +24,7 @@ class Risk:
             "required": True,
         },
     )
-    local_risk_id: str | None = field(
+    local_risk_id: None | str = field(
         default=None,
         metadata={
             "name": "LocalRiskID",
@@ -32,7 +32,7 @@ class Risk:
             "required": True,
         },
     )
-    reinsurance_agreement: str | None = field(
+    reinsurance_agreement: None | str = field(
         default=None,
         metadata={
             "name": "ReinsuranceAgreement",
@@ -40,7 +40,7 @@ class Risk:
             "required": True,
         },
     )
-    locations: Locations | None = field(
+    locations: None | Locations = field(
         default=None,
         metadata={
             "name": "Locations",

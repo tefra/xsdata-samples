@@ -84,7 +84,7 @@ class UserDefinedMethodDeployment:
     class Meta:
         name = "USER-DEFINED-METHOD-DEPLOYMENT"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -94,7 +94,7 @@ class UserDefinedMethodDeployment:
         },
     )
     short_name_fragments: (
-        UserDefinedMethodDeployment.ShortNameFragments | None
+        None | UserDefinedMethodDeployment.ShortNameFragments
     ) = field(
         default=None,
         metadata={
@@ -103,7 +103,7 @@ class UserDefinedMethodDeployment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -111,7 +111,7 @@ class UserDefinedMethodDeployment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -119,7 +119,7 @@ class UserDefinedMethodDeployment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -127,7 +127,7 @@ class UserDefinedMethodDeployment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -135,7 +135,7 @@ class UserDefinedMethodDeployment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -143,7 +143,7 @@ class UserDefinedMethodDeployment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: UserDefinedMethodDeployment.Annotations | None = field(
+    annotations: None | UserDefinedMethodDeployment.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -151,7 +151,7 @@ class UserDefinedMethodDeployment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    method_ref: UserDefinedMethodDeployment.MethodRef | None = field(
+    method_ref: None | UserDefinedMethodDeployment.MethodRef = field(
         default=None,
         metadata={
             "name": "METHOD-REF",
@@ -159,14 +159,14 @@ class UserDefinedMethodDeployment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -174,7 +174,7 @@ class UserDefinedMethodDeployment:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -206,7 +206,7 @@ class UserDefinedMethodDeployment:
 
     @dataclass
     class MethodRef(Ref):
-        dest: ClientServerOperationSubtypesEnum | None = field(
+        dest: None | ClientServerOperationSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

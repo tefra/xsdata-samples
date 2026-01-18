@@ -25,7 +25,8 @@ class FareProductPriceVersionedChildStructure(
         name = "FareProductPrice_VersionedChildStructure"
 
     preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref: (
-        SupplementProductRef
+        None
+        | SupplementProductRef
         | PreassignedFareProductRef
         | AmountOfPriceUnitProductRef
         | UsageDiscountRightRef
@@ -33,7 +34,6 @@ class FareProductPriceVersionedChildStructure(
         | CappedDiscountRightRef
         | SaleDiscountRightRef
         | FareProductRef
-        | None
     ) = field(
         default=None,
         metadata={

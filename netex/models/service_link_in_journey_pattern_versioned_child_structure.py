@@ -19,7 +19,7 @@ class ServiceLinkInJourneyPatternVersionedChildStructure(
     class Meta:
         name = "ServiceLinkInJourneyPattern_VersionedChildStructure"
 
-    timing_link_ref: TimingLinkRef | None = field(
+    timing_link_ref: None | TimingLinkRef = field(
         default=None,
         metadata={
             "name": "TimingLinkRef",
@@ -27,7 +27,7 @@ class ServiceLinkInJourneyPatternVersionedChildStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    run_times: JourneyRunTimesRelStructure | None = field(
+    run_times: None | JourneyRunTimesRelStructure = field(
         default=None,
         metadata={
             "name": "runTimes",
@@ -35,7 +35,7 @@ class ServiceLinkInJourneyPatternVersionedChildStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    service_link_ref: ServiceLinkRef | None = field(
+    service_link_ref: None | ServiceLinkRef = field(
         default=None,
         metadata={
             "name": "ServiceLinkRef",

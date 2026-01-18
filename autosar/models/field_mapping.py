@@ -96,7 +96,7 @@ class FieldMapping:
     class Meta:
         name = "FIELD-MAPPING"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -105,7 +105,7 @@ class FieldMapping:
             "required": True,
         },
     )
-    short_name_fragments: FieldMapping.ShortNameFragments | None = field(
+    short_name_fragments: None | FieldMapping.ShortNameFragments = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -113,7 +113,7 @@ class FieldMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -121,7 +121,7 @@ class FieldMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -129,7 +129,7 @@ class FieldMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -137,7 +137,7 @@ class FieldMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -145,7 +145,7 @@ class FieldMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -153,7 +153,7 @@ class FieldMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: FieldMapping.Annotations | None = field(
+    annotations: None | FieldMapping.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -161,7 +161,7 @@ class FieldMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    field_ref: FieldMapping.FieldRef | None = field(
+    field_ref: None | FieldMapping.FieldRef = field(
         default=None,
         metadata={
             "name": "FIELD-REF",
@@ -169,7 +169,7 @@ class FieldMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    getter_operation_ref: FieldMapping.GetterOperationRef | None = field(
+    getter_operation_ref: None | FieldMapping.GetterOperationRef = field(
         default=None,
         metadata={
             "name": "GETTER-OPERATION-REF",
@@ -177,7 +177,7 @@ class FieldMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    notifier_data_element_ref: FieldMapping.NotifierDataElementRef | None = (
+    notifier_data_element_ref: None | FieldMapping.NotifierDataElementRef = (
         field(
             default=None,
             metadata={
@@ -187,7 +187,7 @@ class FieldMapping:
             },
         )
     )
-    setter_operation_ref: FieldMapping.SetterOperationRef | None = field(
+    setter_operation_ref: None | FieldMapping.SetterOperationRef = field(
         default=None,
         metadata={
             "name": "SETTER-OPERATION-REF",
@@ -195,14 +195,14 @@ class FieldMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -210,7 +210,7 @@ class FieldMapping:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -242,7 +242,7 @@ class FieldMapping:
 
     @dataclass
     class FieldRef(Ref):
-        dest: FieldSubtypesEnum | None = field(
+        dest: None | FieldSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -253,7 +253,7 @@ class FieldMapping:
 
     @dataclass
     class GetterOperationRef(Ref):
-        dest: ClientServerOperationSubtypesEnum | None = field(
+        dest: None | ClientServerOperationSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -264,7 +264,7 @@ class FieldMapping:
 
     @dataclass
     class NotifierDataElementRef(Ref):
-        dest: VariableDataPrototypeSubtypesEnum | None = field(
+        dest: None | VariableDataPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -275,7 +275,7 @@ class FieldMapping:
 
     @dataclass
     class SetterOperationRef(Ref):
-        dest: ClientServerOperationSubtypesEnum | None = field(
+        dest: None | ClientServerOperationSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

@@ -105,7 +105,7 @@ class PeriodicEventTriggering:
     class Meta:
         name = "PERIODIC-EVENT-TRIGGERING"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -114,7 +114,7 @@ class PeriodicEventTriggering:
             "required": True,
         },
     )
-    short_name_fragments: PeriodicEventTriggering.ShortNameFragments | None = (
+    short_name_fragments: None | PeriodicEventTriggering.ShortNameFragments = (
         field(
             default=None,
             metadata={
@@ -124,7 +124,7 @@ class PeriodicEventTriggering:
             },
         )
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -132,7 +132,7 @@ class PeriodicEventTriggering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -140,7 +140,7 @@ class PeriodicEventTriggering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -148,7 +148,7 @@ class PeriodicEventTriggering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -156,7 +156,7 @@ class PeriodicEventTriggering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -164,7 +164,7 @@ class PeriodicEventTriggering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: PeriodicEventTriggering.Annotations | None = field(
+    annotations: None | PeriodicEventTriggering.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -172,7 +172,7 @@ class PeriodicEventTriggering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    trace_refs: PeriodicEventTriggering.TraceRefs | None = field(
+    trace_refs: None | PeriodicEventTriggering.TraceRefs = field(
         default=None,
         metadata={
             "name": "TRACE-REFS",
@@ -180,7 +180,7 @@ class PeriodicEventTriggering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    timing_condition_ref: PeriodicEventTriggering.TimingConditionRef | None = (
+    timing_condition_ref: None | PeriodicEventTriggering.TimingConditionRef = (
         field(
             default=None,
             metadata={
@@ -190,7 +190,7 @@ class PeriodicEventTriggering:
             },
         )
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -198,7 +198,7 @@ class PeriodicEventTriggering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    event_ref: PeriodicEventTriggering.EventRef | None = field(
+    event_ref: None | PeriodicEventTriggering.EventRef = field(
         default=None,
         metadata={
             "name": "EVENT-REF",
@@ -206,7 +206,7 @@ class PeriodicEventTriggering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    minimum_inter_arrival_time: MultidimensionalTime | None = field(
+    minimum_inter_arrival_time: None | MultidimensionalTime = field(
         default=None,
         metadata={
             "name": "MINIMUM-INTER-ARRIVAL-TIME",
@@ -214,7 +214,7 @@ class PeriodicEventTriggering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    jitter: MultidimensionalTime | None = field(
+    jitter: None | MultidimensionalTime = field(
         default=None,
         metadata={
             "name": "JITTER",
@@ -222,7 +222,7 @@ class PeriodicEventTriggering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    period: MultidimensionalTime | None = field(
+    period: None | MultidimensionalTime = field(
         default=None,
         metadata={
             "name": "PERIOD",
@@ -230,14 +230,14 @@ class PeriodicEventTriggering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -245,7 +245,7 @@ class PeriodicEventTriggering:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -288,7 +288,7 @@ class PeriodicEventTriggering:
 
         @dataclass
         class TraceRef(Ref):
-            dest: TraceableSubtypesEnum | None = field(
+            dest: None | TraceableSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -299,7 +299,7 @@ class PeriodicEventTriggering:
 
     @dataclass
     class TimingConditionRef(Ref):
-        dest: TimingConditionSubtypesEnum | None = field(
+        dest: None | TimingConditionSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -310,7 +310,7 @@ class PeriodicEventTriggering:
 
     @dataclass
     class EventRef(Ref):
-        dest: TimingDescriptionEventSubtypesEnum | None = field(
+        dest: None | TimingDescriptionEventSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

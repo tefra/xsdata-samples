@@ -67,14 +67,14 @@ class ParkingEquipmentOrServiceFacility:
             "max_length": 1024,
         },
     )
-    availability: AvailabilityEnum | None = field(
+    availability: None | AvailabilityEnum = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    number_of_equipment_or_service_facility: int | None = field(
+    number_of_equipment_or_service_facility: None | int = field(
         default=None,
         metadata={
             "name": "numberOfEquipmentOrServiceFacility",
@@ -82,7 +82,7 @@ class ParkingEquipmentOrServiceFacility:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    additional_description: MultilingualString | None = field(
+    additional_description: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "additionalDescription",
@@ -90,7 +90,7 @@ class ParkingEquipmentOrServiceFacility:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    other_equipment_or_service_facility: MultilingualString | None = field(
+    other_equipment_or_service_facility: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "otherEquipmentOrServiceFacility",
@@ -105,7 +105,7 @@ class ParkingEquipmentOrServiceFacility:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    name_or_brand: MultilingualString | None = field(
+    name_or_brand: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "nameOrBrand",
@@ -113,14 +113,14 @@ class ParkingEquipmentOrServiceFacility:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    comment: MultilingualString | None = field(
+    comment: None | MultilingualString = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    photo_url: str | None = field(
+    photo_url: None | str = field(
         default=None,
         metadata={
             "name": "photoUrl",
@@ -136,7 +136,7 @@ class ParkingEquipmentOrServiceFacility:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    availability_and_opening_times: OpeningTimes | None = field(
+    availability_and_opening_times: None | OpeningTimes = field(
         default=None,
         metadata={
             "name": "availabilityAndOpeningTimes",
@@ -144,7 +144,7 @@ class ParkingEquipmentOrServiceFacility:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    tariffs_and_payment: TariffsAndPayment | None = field(
+    tariffs_and_payment: None | TariffsAndPayment = field(
         default=None,
         metadata={
             "name": "tariffsAndPayment",
@@ -152,7 +152,7 @@ class ParkingEquipmentOrServiceFacility:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    group_of_locations: GroupOfLocations | None = field(
+    group_of_locations: None | GroupOfLocations = field(
         default=None,
         metadata={
             "name": "groupOfLocations",
@@ -168,7 +168,7 @@ class ParkingEquipmentOrServiceFacility:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    parking_equipment_or_service_facility_extension: ExtensionType | None = (
+    parking_equipment_or_service_facility_extension: None | ExtensionType = (
         field(
             default=None,
             metadata={

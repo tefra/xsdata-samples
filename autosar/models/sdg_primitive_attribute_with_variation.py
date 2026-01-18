@@ -108,7 +108,7 @@ class SdgPrimitiveAttributeWithVariation:
     class Meta:
         name = "SDG-PRIMITIVE-ATTRIBUTE-WITH-VARIATION"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -118,7 +118,7 @@ class SdgPrimitiveAttributeWithVariation:
         },
     )
     short_name_fragments: (
-        SdgPrimitiveAttributeWithVariation.ShortNameFragments | None
+        None | SdgPrimitiveAttributeWithVariation.ShortNameFragments
     ) = field(
         default=None,
         metadata={
@@ -127,7 +127,7 @@ class SdgPrimitiveAttributeWithVariation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -135,7 +135,7 @@ class SdgPrimitiveAttributeWithVariation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -143,7 +143,7 @@ class SdgPrimitiveAttributeWithVariation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -151,7 +151,7 @@ class SdgPrimitiveAttributeWithVariation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -159,7 +159,7 @@ class SdgPrimitiveAttributeWithVariation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -167,7 +167,7 @@ class SdgPrimitiveAttributeWithVariation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: SdgPrimitiveAttributeWithVariation.Annotations | None = field(
+    annotations: None | SdgPrimitiveAttributeWithVariation.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -175,7 +175,7 @@ class SdgPrimitiveAttributeWithVariation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    lower_multiplicity: PositiveInteger | None = field(
+    lower_multiplicity: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "LOWER-MULTIPLICITY",
@@ -183,7 +183,7 @@ class SdgPrimitiveAttributeWithVariation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    upper_multiplicity: PositiveInteger | None = field(
+    upper_multiplicity: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "UPPER-MULTIPLICITY",
@@ -191,7 +191,7 @@ class SdgPrimitiveAttributeWithVariation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    upper_multiplicity_infinite: Boolean | None = field(
+    upper_multiplicity_infinite: None | Boolean = field(
         default=None,
         metadata={
             "name": "UPPER-MULTIPLICITY-INFINITE",
@@ -199,7 +199,7 @@ class SdgPrimitiveAttributeWithVariation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    gid: NmtokenString | None = field(
+    gid: None | NmtokenString = field(
         default=None,
         metadata={
             "name": "GID",
@@ -207,7 +207,7 @@ class SdgPrimitiveAttributeWithVariation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    max: LimitValue | None = field(
+    max: None | LimitValue = field(
         default=None,
         metadata={
             "name": "MAX",
@@ -215,7 +215,7 @@ class SdgPrimitiveAttributeWithVariation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    max_length: PositiveInteger | None = field(
+    max_length: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "MAX-LENGTH",
@@ -223,7 +223,7 @@ class SdgPrimitiveAttributeWithVariation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    min: LimitValue | None = field(
+    min: None | LimitValue = field(
         default=None,
         metadata={
             "name": "MIN",
@@ -231,7 +231,7 @@ class SdgPrimitiveAttributeWithVariation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    min_length: PositiveInteger | None = field(
+    min_length: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "MIN-LENGTH",
@@ -239,7 +239,7 @@ class SdgPrimitiveAttributeWithVariation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    pattern: RegularExpression | None = field(
+    pattern: None | RegularExpression = field(
         default=None,
         metadata={
             "name": "PATTERN",
@@ -247,7 +247,7 @@ class SdgPrimitiveAttributeWithVariation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation: Boolean | None = field(
+    variation: None | Boolean = field(
         default=None,
         metadata={
             "name": "VARIATION",
@@ -256,7 +256,7 @@ class SdgPrimitiveAttributeWithVariation:
         },
     )
     valid_binding_times: (
-        SdgPrimitiveAttributeWithVariation.ValidBindingTimes | None
+        None | SdgPrimitiveAttributeWithVariation.ValidBindingTimes
     ) = field(
         default=None,
         metadata={
@@ -265,14 +265,14 @@ class SdgPrimitiveAttributeWithVariation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -280,7 +280,7 @@ class SdgPrimitiveAttributeWithVariation:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",

@@ -30,7 +30,7 @@ class CompuScaleRationalFormula:
     class Meta:
         name = "COMPU-SCALE-RATIONAL-FORMULA"
 
-    compu_rational_coeffs: CompuRationalCoeffs | None = field(
+    compu_rational_coeffs: None | CompuRationalCoeffs = field(
         default=None,
         metadata={
             "name": "COMPU-RATIONAL-COEFFS",
@@ -38,14 +38,14 @@ class CompuScaleRationalFormula:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

@@ -17,7 +17,7 @@ class EquipmentVersionStructure(DataManagedObjectStructure):
     class Meta:
         name = "Equipment_VersionStructure"
 
-    name: MultilingualString | None = field(
+    name: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "Name",
@@ -25,7 +25,7 @@ class EquipmentVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    private_code: PrivateCode | None = field(
+    private_code: None | PrivateCode = field(
         default=None,
         metadata={
             "name": "PrivateCode",
@@ -33,7 +33,7 @@ class EquipmentVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    public_code: PrivateCodeStructure | None = field(
+    public_code: None | PrivateCodeStructure = field(
         default=None,
         metadata={
             "name": "PublicCode",
@@ -41,7 +41,7 @@ class EquipmentVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    image: str | None = field(
+    image: None | str = field(
         default=None,
         metadata={
             "name": "Image",
@@ -49,7 +49,7 @@ class EquipmentVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    type_of_equipment_ref: TypeOfEquipmentRef | None = field(
+    type_of_equipment_ref: None | TypeOfEquipmentRef = field(
         default=None,
         metadata={
             "name": "TypeOfEquipmentRef",
@@ -57,7 +57,7 @@ class EquipmentVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    description: MultilingualString | None = field(
+    description: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "Description",
@@ -65,7 +65,7 @@ class EquipmentVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    note: MultilingualString | None = field(
+    note: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "Note",
@@ -73,7 +73,7 @@ class EquipmentVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    info_links: InfoLinksRelStructure | None = field(
+    info_links: None | InfoLinksRelStructure = field(
         default=None,
         metadata={
             "name": "infoLinks",
@@ -81,7 +81,7 @@ class EquipmentVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    out_of_service: bool | None = field(
+    out_of_service: None | bool = field(
         default=None,
         metadata={
             "name": "OutOfService",

@@ -56,7 +56,7 @@ class ContainedIPduProps:
     class Meta:
         name = "CONTAINED-I-PDU-PROPS"
 
-    collection_semantics: ContainedIPduCollectionSemanticsEnum | None = field(
+    collection_semantics: None | ContainedIPduCollectionSemanticsEnum = field(
         default=None,
         metadata={
             "name": "COLLECTION-SEMANTICS",
@@ -64,7 +64,7 @@ class ContainedIPduProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    header_id_long_header: PositiveInteger | None = field(
+    header_id_long_header: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "HEADER-ID-LONG-HEADER",
@@ -72,7 +72,7 @@ class ContainedIPduProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    header_id_short_header: PositiveInteger | None = field(
+    header_id_short_header: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "HEADER-ID-SHORT-HEADER",
@@ -80,7 +80,7 @@ class ContainedIPduProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    offset: PositiveInteger | None = field(
+    offset: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "OFFSET",
@@ -88,7 +88,7 @@ class ContainedIPduProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    priority: PositiveInteger | None = field(
+    priority: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "PRIORITY",
@@ -96,7 +96,7 @@ class ContainedIPduProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    timeout: TimeValue | None = field(
+    timeout: None | TimeValue = field(
         default=None,
         metadata={
             "name": "TIMEOUT",
@@ -104,7 +104,7 @@ class ContainedIPduProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    trigger: PduCollectionTriggerEnum | None = field(
+    trigger: None | PduCollectionTriggerEnum = field(
         default=None,
         metadata={
             "name": "TRIGGER",
@@ -112,7 +112,7 @@ class ContainedIPduProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    update_indication_bit_position: PositiveInteger | None = field(
+    update_indication_bit_position: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "UPDATE-INDICATION-BIT-POSITION",
@@ -120,14 +120,14 @@ class ContainedIPduProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

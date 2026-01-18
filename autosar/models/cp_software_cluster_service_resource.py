@@ -98,7 +98,7 @@ class CpSoftwareClusterServiceResource:
     class Meta:
         name = "CP-SOFTWARE-CLUSTER-SERVICE-RESOURCE"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -108,7 +108,7 @@ class CpSoftwareClusterServiceResource:
         },
     )
     short_name_fragments: (
-        CpSoftwareClusterServiceResource.ShortNameFragments | None
+        None | CpSoftwareClusterServiceResource.ShortNameFragments
     ) = field(
         default=None,
         metadata={
@@ -117,7 +117,7 @@ class CpSoftwareClusterServiceResource:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -125,7 +125,7 @@ class CpSoftwareClusterServiceResource:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -133,7 +133,7 @@ class CpSoftwareClusterServiceResource:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -141,7 +141,7 @@ class CpSoftwareClusterServiceResource:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -149,7 +149,7 @@ class CpSoftwareClusterServiceResource:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -157,7 +157,7 @@ class CpSoftwareClusterServiceResource:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: CpSoftwareClusterServiceResource.Annotations | None = field(
+    annotations: None | CpSoftwareClusterServiceResource.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -166,7 +166,7 @@ class CpSoftwareClusterServiceResource:
         },
     )
     dependent_resources: (
-        CpSoftwareClusterServiceResource.DependentResources | None
+        None | CpSoftwareClusterServiceResource.DependentResources
     ) = field(
         default=None,
         metadata={
@@ -175,7 +175,7 @@ class CpSoftwareClusterServiceResource:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    global_resource_id: PositiveInteger | None = field(
+    global_resource_id: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "GLOBAL-RESOURCE-ID",
@@ -183,7 +183,7 @@ class CpSoftwareClusterServiceResource:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    is_mandatory: Boolean | None = field(
+    is_mandatory: None | Boolean = field(
         default=None,
         metadata={
             "name": "IS-MANDATORY",
@@ -192,7 +192,7 @@ class CpSoftwareClusterServiceResource:
         },
     )
     resource_needs_refs: (
-        CpSoftwareClusterServiceResource.ResourceNeedsRefs | None
+        None | CpSoftwareClusterServiceResource.ResourceNeedsRefs
     ) = field(
         default=None,
         metadata={
@@ -201,14 +201,14 @@ class CpSoftwareClusterServiceResource:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -216,7 +216,7 @@ class CpSoftwareClusterServiceResource:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -274,7 +274,7 @@ class CpSoftwareClusterServiceResource:
 
         @dataclass
         class ResourceNeedsRef(Ref):
-            dest: EcucContainerValueSubtypesEnum | None = field(
+            dest: None | EcucContainerValueSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",

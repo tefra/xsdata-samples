@@ -61,7 +61,7 @@ class PostalAddressType:
         full name of the country.</description> </description>
     """
 
-    occupant_name_text: TextType | None = field(
+    occupant_name_text: None | TextType = field(
         default=None,
         metadata={
             "name": "OccupantNameText",
@@ -69,7 +69,7 @@ class PostalAddressType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
         },
     )
-    address_line1_text: TextType | None = field(
+    address_line1_text: None | TextType = field(
         default=None,
         metadata={
             "name": "AddressLine1Text",
@@ -77,7 +77,7 @@ class PostalAddressType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
         },
     )
-    address_line2_text: TextType | None = field(
+    address_line2_text: None | TextType = field(
         default=None,
         metadata={
             "name": "AddressLine2Text",
@@ -85,7 +85,7 @@ class PostalAddressType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
         },
     )
-    address_line3_text: TextType | None = field(
+    address_line3_text: None | TextType = field(
         default=None,
         metadata={
             "name": "AddressLine3Text",
@@ -93,7 +93,7 @@ class PostalAddressType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
         },
     )
-    portal_door_text: TextType | None = field(
+    portal_door_text: None | TextType = field(
         default=None,
         metadata={
             "name": "PortalDoorText",
@@ -101,7 +101,7 @@ class PostalAddressType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
         },
     )
-    portal_text: TextType | None = field(
+    portal_text: None | TextType = field(
         default=None,
         metadata={
             "name": "PortalText",
@@ -109,7 +109,7 @@ class PostalAddressType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
         },
     )
-    floor_number_text: TextType | None = field(
+    floor_number_text: None | TextType = field(
         default=None,
         metadata={
             "name": "FloorNumberText",
@@ -117,7 +117,7 @@ class PostalAddressType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
         },
     )
-    floor_type: CodeType | None = field(
+    floor_type: None | CodeType = field(
         default=None,
         metadata={
             "name": "FloorType",
@@ -125,7 +125,7 @@ class PostalAddressType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
         },
     )
-    building_number_text: TextType | None = field(
+    building_number_text: None | TextType = field(
         default=None,
         metadata={
             "name": "BuildingNumberText",
@@ -133,7 +133,7 @@ class PostalAddressType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
         },
     )
-    building_name_text: TextType | None = field(
+    building_name_text: None | TextType = field(
         default=None,
         metadata={
             "name": "BuildingNameText",
@@ -141,7 +141,7 @@ class PostalAddressType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
         },
     )
-    street_name_text: TextType | None = field(
+    street_name_text: None | TextType = field(
         default=None,
         metadata={
             "name": "StreetNameText",
@@ -149,7 +149,7 @@ class PostalAddressType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
         },
     )
-    street_suffix_text: TextType | None = field(
+    street_suffix_text: None | TextType = field(
         default=None,
         metadata={
             "name": "StreetSuffixText",
@@ -157,7 +157,7 @@ class PostalAddressType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
         },
     )
-    street_type: CodeType | None = field(
+    street_type: None | CodeType = field(
         default=None,
         metadata={
             "name": "StreetType",
@@ -165,7 +165,7 @@ class PostalAddressType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
         },
     )
-    post_code_id: Idtype | None = field(
+    post_code_id: None | Idtype = field(
         default=None,
         metadata={
             "name": "PostCodeID",
@@ -173,7 +173,7 @@ class PostalAddressType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
         },
     )
-    county_text: TextType | None = field(
+    county_text: None | TextType = field(
         default=None,
         metadata={
             "name": "CountyText",
@@ -181,7 +181,7 @@ class PostalAddressType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
         },
     )
-    country_code_id: CodeType | None = field(
+    country_code_id: None | CodeType = field(
         default=None,
         metadata={
             "name": "CountryCodeID",
@@ -189,7 +189,7 @@ class PostalAddressType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
         },
     )
-    country_name_text: TextType | None = field(
+    country_name_text: None | TextType = field(
         default=None,
         metadata={
             "name": "CountryNameText",

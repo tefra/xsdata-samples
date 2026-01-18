@@ -7,7 +7,7 @@ __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
 @dataclass
 class CapabilityGeneralInteractionStructure:
-    interaction: CapabilityGeneralInteractionStructure.Interaction | None = (
+    interaction: None | CapabilityGeneralInteractionStructure.Interaction = (
         field(
             default=None,
             metadata={
@@ -18,7 +18,7 @@ class CapabilityGeneralInteractionStructure:
             },
         )
     )
-    delivery: CapabilityGeneralInteractionStructure.Delivery | None = field(
+    delivery: None | CapabilityGeneralInteractionStructure.Delivery = field(
         default=None,
         metadata={
             "name": "Delivery",
@@ -63,7 +63,7 @@ class CapabilityGeneralInteractionStructure:
             "required": True,
         },
     )
-    visit_numberis_order: bool | None = field(
+    visit_numberis_order: None | bool = field(
         default=None,
         metadata={
             "name": "VisitNumberisOrder",
@@ -95,7 +95,7 @@ class CapabilityGeneralInteractionStructure:
 
     @dataclass
     class Delivery:
-        direct_delivery: bool | None = field(
+        direct_delivery: None | bool = field(
             default=None,
             metadata={
                 "name": "DirectDelivery",
@@ -104,7 +104,7 @@ class CapabilityGeneralInteractionStructure:
                 "required": True,
             },
         )
-        fetched_delivery: bool | None = field(
+        fetched_delivery: None | bool = field(
             default=None,
             metadata={
                 "name": "FetchedDelivery",

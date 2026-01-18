@@ -14,7 +14,7 @@ class LuggageLockerFacility:
     class Meta:
         namespace = "http://www.netex.org.uk/netex"
 
-    value: LuggageLockerFacilityEnumeration | None = field(
+    value: None | LuggageLockerFacilityEnumeration = field(
         default=None,
         metadata={
             "required": True,

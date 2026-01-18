@@ -28,7 +28,7 @@ class TransTypeDef:
         name = "transTypeDef"
         namespace = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
-    type_name: TransTypeDef.TypeName | None = field(
+    type_name: None | TransTypeDef.TypeName = field(
         default=None,
         metadata={
             "name": "typeName",
@@ -42,7 +42,7 @@ class TransTypeDef:
             "type": "Element",
         },
     )
-    type_parameters: TypeParameters | None = field(
+    type_parameters: None | TypeParameters = field(
         default=None,
         metadata={
             "name": "typeParameters",
@@ -56,7 +56,7 @@ class TransTypeDef:
             "type": "Element",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -94,7 +94,7 @@ class TransTypeDef:
                 "required": True,
             },
         )
-        id: str | None = field(
+        id: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -110,7 +110,7 @@ class TransTypeDef:
                 "required": True,
             },
         )
-        id: str | None = field(
+        id: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",

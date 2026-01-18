@@ -15,7 +15,7 @@ class MinimumStayVersionStructure(UsageParameterVersionStructure):
     class Meta:
         name = "MinimumStay_VersionStructure"
 
-    minimum_stay_type: MinimumStayTypeEnumeration | None = field(
+    minimum_stay_type: None | MinimumStayTypeEnumeration = field(
         default=None,
         metadata={
             "name": "MinimumStayType",
@@ -32,7 +32,7 @@ class MinimumStayVersionStructure(UsageParameterVersionStructure):
             "tokens": True,
         },
     )
-    minimum_number_of_nights_away: int | None = field(
+    minimum_number_of_nights_away: None | int = field(
         default=None,
         metadata={
             "name": "MinimumNumberOfNightsAway",
@@ -40,7 +40,7 @@ class MinimumStayVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    maximum_number_of_nights_away: int | None = field(
+    maximum_number_of_nights_away: None | int = field(
         default=None,
         metadata={
             "name": "MaximumNumberOfNightsAway",

@@ -9,7 +9,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 @dataclass
 class TransferDurationStructure:
-    default_duration: XmlDuration | None = field(
+    default_duration: None | XmlDuration = field(
         default=None,
         metadata={
             "name": "DefaultDuration",
@@ -17,7 +17,7 @@ class TransferDurationStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    frequent_traveller_duration: XmlDuration | None = field(
+    frequent_traveller_duration: None | XmlDuration = field(
         default=None,
         metadata={
             "name": "FrequentTravellerDuration",
@@ -25,7 +25,7 @@ class TransferDurationStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    occasional_traveller_duration: XmlDuration | None = field(
+    occasional_traveller_duration: None | XmlDuration = field(
         default=None,
         metadata={
             "name": "OccasionalTravellerDuration",
@@ -33,7 +33,7 @@ class TransferDurationStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    mobility_restricted_traveller_duration: XmlDuration | None = field(
+    mobility_restricted_traveller_duration: None | XmlDuration = field(
         default=None,
         metadata={
             "name": "MobilityRestrictedTravellerDuration",

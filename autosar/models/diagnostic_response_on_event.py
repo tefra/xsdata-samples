@@ -115,7 +115,7 @@ class DiagnosticResponseOnEvent:
     class Meta:
         name = "DIAGNOSTIC-RESPONSE-ON-EVENT"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -125,7 +125,7 @@ class DiagnosticResponseOnEvent:
         },
     )
     short_name_fragments: (
-        DiagnosticResponseOnEvent.ShortNameFragments | None
+        None | DiagnosticResponseOnEvent.ShortNameFragments
     ) = field(
         default=None,
         metadata={
@@ -134,7 +134,7 @@ class DiagnosticResponseOnEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -142,7 +142,7 @@ class DiagnosticResponseOnEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -150,7 +150,7 @@ class DiagnosticResponseOnEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -158,7 +158,7 @@ class DiagnosticResponseOnEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -166,7 +166,7 @@ class DiagnosticResponseOnEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -174,7 +174,7 @@ class DiagnosticResponseOnEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: DiagnosticResponseOnEvent.Annotations | None = field(
+    annotations: None | DiagnosticResponseOnEvent.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -182,7 +182,7 @@ class DiagnosticResponseOnEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -191,7 +191,7 @@ class DiagnosticResponseOnEvent:
         },
     )
     access_permission_ref: (
-        DiagnosticResponseOnEvent.AccessPermissionRef | None
+        None | DiagnosticResponseOnEvent.AccessPermissionRef
     ) = field(
         default=None,
         metadata={
@@ -200,7 +200,7 @@ class DiagnosticResponseOnEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    events: DiagnosticResponseOnEvent.Events | None = field(
+    events: None | DiagnosticResponseOnEvent.Events = field(
         default=None,
         metadata={
             "name": "EVENTS",
@@ -208,7 +208,7 @@ class DiagnosticResponseOnEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    event_windows: DiagnosticResponseOnEvent.EventWindows | None = field(
+    event_windows: None | DiagnosticResponseOnEvent.EventWindows = field(
         default=None,
         metadata={
             "name": "EVENT-WINDOWS",
@@ -216,7 +216,7 @@ class DiagnosticResponseOnEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    response_on_event_action: DiagnosticResponseOnEventActionEnum | None = (
+    response_on_event_action: None | DiagnosticResponseOnEventActionEnum = (
         field(
             default=None,
             metadata={
@@ -227,7 +227,7 @@ class DiagnosticResponseOnEvent:
         )
     )
     response_on_event_class_ref: (
-        DiagnosticResponseOnEvent.ResponseOnEventClassRef | None
+        None | DiagnosticResponseOnEvent.ResponseOnEventClassRef
     ) = field(
         default=None,
         metadata={
@@ -236,7 +236,7 @@ class DiagnosticResponseOnEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    store_event_support: DiagnosticStoreEventSupportEnum | None = field(
+    store_event_support: None | DiagnosticStoreEventSupportEnum = field(
         default=None,
         metadata={
             "name": "STORE-EVENT-SUPPORT",
@@ -244,14 +244,14 @@ class DiagnosticResponseOnEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -259,7 +259,7 @@ class DiagnosticResponseOnEvent:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -291,7 +291,7 @@ class DiagnosticResponseOnEvent:
 
     @dataclass
     class AccessPermissionRef(Ref):
-        dest: DiagnosticAccessPermissionSubtypesEnum | None = field(
+        dest: None | DiagnosticAccessPermissionSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -336,7 +336,7 @@ class DiagnosticResponseOnEvent:
 
     @dataclass
     class ResponseOnEventClassRef(Ref):
-        dest: DiagnosticResponseOnEventClassSubtypesEnum | None = field(
+        dest: None | DiagnosticResponseOnEventClassSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

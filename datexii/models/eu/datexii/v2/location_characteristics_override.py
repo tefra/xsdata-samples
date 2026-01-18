@@ -24,7 +24,7 @@ class LocationCharacteristicsOverride:
     :ivar location_characteristics_override_extension:
     """
 
-    measurement_lanes_override: LaneEnum | None = field(
+    measurement_lanes_override: None | LaneEnum = field(
         default=None,
         metadata={
             "name": "measurementLanesOverride",
@@ -32,7 +32,7 @@ class LocationCharacteristicsOverride:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    reversed_flow: bool | None = field(
+    reversed_flow: None | bool = field(
         default=None,
         metadata={
             "name": "reversedFlow",
@@ -40,7 +40,7 @@ class LocationCharacteristicsOverride:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    location_characteristics_override_extension: ExtensionType | None = field(
+    location_characteristics_override_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "locationCharacteristicsOverrideExtension",

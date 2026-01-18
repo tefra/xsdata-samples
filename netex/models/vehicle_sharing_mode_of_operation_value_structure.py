@@ -17,7 +17,7 @@ class VehicleSharingModeOfOperationValueStructure(
     class Meta:
         name = "VehicleSharingModeOfOperation_ValueStructure"
 
-    vehicle_sharing_type: VehicleSharingTypeEnumeration | None = field(
+    vehicle_sharing_type: None | VehicleSharingTypeEnumeration = field(
         default=None,
         metadata={
             "name": "VehicleSharingType",

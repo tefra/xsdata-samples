@@ -52,7 +52,7 @@ class TlvDataIdDefinition:
     class Meta:
         name = "TLV-DATA-ID-DEFINITION"
 
-    id: PositiveInteger | None = field(
+    id: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "ID",
@@ -60,7 +60,7 @@ class TlvDataIdDefinition:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tlv_argument_ref: TlvDataIdDefinition.TlvArgumentRef | None = field(
+    tlv_argument_ref: None | TlvDataIdDefinition.TlvArgumentRef = field(
         default=None,
         metadata={
             "name": "TLV-ARGUMENT-REF",
@@ -69,7 +69,7 @@ class TlvDataIdDefinition:
         },
     )
     tlv_implementation_data_type_element_ref: (
-        TlvDataIdDefinition.TlvImplementationDataTypeElementRef | None
+        None | TlvDataIdDefinition.TlvImplementationDataTypeElementRef
     ) = field(
         default=None,
         metadata={
@@ -78,7 +78,7 @@ class TlvDataIdDefinition:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tlv_record_element_ref: TlvDataIdDefinition.TlvRecordElementRef | None = (
+    tlv_record_element_ref: None | TlvDataIdDefinition.TlvRecordElementRef = (
         field(
             default=None,
             metadata={
@@ -88,7 +88,7 @@ class TlvDataIdDefinition:
             },
         )
     )
-    tlv_sub_element_ref: TlvDataIdDefinition.TlvSubElementRef | None = field(
+    tlv_sub_element_ref: None | TlvDataIdDefinition.TlvSubElementRef = field(
         default=None,
         metadata={
             "name": "TLV-SUB-ELEMENT-REF",
@@ -96,14 +96,14 @@ class TlvDataIdDefinition:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -114,7 +114,7 @@ class TlvDataIdDefinition:
 
     @dataclass
     class TlvArgumentRef(Ref):
-        dest: ArgumentDataPrototypeSubtypesEnum | None = field(
+        dest: None | ArgumentDataPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -125,7 +125,7 @@ class TlvDataIdDefinition:
 
     @dataclass
     class TlvImplementationDataTypeElementRef(Ref):
-        dest: ImplementationDataTypeElementSubtypesEnum | None = field(
+        dest: None | ImplementationDataTypeElementSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -136,7 +136,7 @@ class TlvDataIdDefinition:
 
     @dataclass
     class TlvRecordElementRef(Ref):
-        dest: ApplicationRecordElementSubtypesEnum | None = field(
+        dest: None | ApplicationRecordElementSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -147,7 +147,7 @@ class TlvDataIdDefinition:
 
     @dataclass
     class TlvSubElementRef(Ref):
-        dest: CppImplementationDataTypeElementSubtypesEnum | None = field(
+        dest: None | CppImplementationDataTypeElementSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

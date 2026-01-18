@@ -91,7 +91,7 @@ class SecurityEventThresholdFilter:
     class Meta:
         name = "SECURITY-EVENT-THRESHOLD-FILTER"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -101,7 +101,7 @@ class SecurityEventThresholdFilter:
         },
     )
     short_name_fragments: (
-        SecurityEventThresholdFilter.ShortNameFragments | None
+        None | SecurityEventThresholdFilter.ShortNameFragments
     ) = field(
         default=None,
         metadata={
@@ -110,7 +110,7 @@ class SecurityEventThresholdFilter:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -118,7 +118,7 @@ class SecurityEventThresholdFilter:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -126,7 +126,7 @@ class SecurityEventThresholdFilter:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -134,7 +134,7 @@ class SecurityEventThresholdFilter:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -142,7 +142,7 @@ class SecurityEventThresholdFilter:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -150,7 +150,7 @@ class SecurityEventThresholdFilter:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: SecurityEventThresholdFilter.Annotations | None = field(
+    annotations: None | SecurityEventThresholdFilter.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -158,7 +158,7 @@ class SecurityEventThresholdFilter:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    interval_length: TimeValue | None = field(
+    interval_length: None | TimeValue = field(
         default=None,
         metadata={
             "name": "INTERVAL-LENGTH",
@@ -166,7 +166,7 @@ class SecurityEventThresholdFilter:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    threshold_number: PositiveInteger | None = field(
+    threshold_number: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "THRESHOLD-NUMBER",
@@ -174,14 +174,14 @@ class SecurityEventThresholdFilter:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -189,7 +189,7 @@ class SecurityEventThresholdFilter:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",

@@ -38,8 +38,8 @@ class PhmCheckpointInExecutableInstanceRef:
         name = "PHM-CHECKPOINT-IN-EXECUTABLE-INSTANCE-REF"
 
     context_root_sw_component_prototype_ref: (
-        PhmCheckpointInExecutableInstanceRef.ContextRootSwComponentPrototypeRef
-        | None
+        None
+        | PhmCheckpointInExecutableInstanceRef.ContextRootSwComponentPrototypeRef
     ) = field(
         default=None,
         metadata={
@@ -59,7 +59,7 @@ class PhmCheckpointInExecutableInstanceRef:
         },
     )
     context_r_port_prototype_ref: (
-        PhmCheckpointInExecutableInstanceRef.ContextRPortPrototypeRef | None
+        None | PhmCheckpointInExecutableInstanceRef.ContextRPortPrototypeRef
     ) = field(
         default=None,
         metadata={
@@ -69,7 +69,7 @@ class PhmCheckpointInExecutableInstanceRef:
         },
     )
     target_phm_checkpoint_ref: (
-        PhmCheckpointInExecutableInstanceRef.TargetPhmCheckpointRef | None
+        None | PhmCheckpointInExecutableInstanceRef.TargetPhmCheckpointRef
     ) = field(
         default=None,
         metadata={
@@ -78,14 +78,14 @@ class PhmCheckpointInExecutableInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -96,7 +96,7 @@ class PhmCheckpointInExecutableInstanceRef:
 
     @dataclass
     class ContextRootSwComponentPrototypeRef(Ref):
-        dest: RootSwComponentPrototypeSubtypesEnum | None = field(
+        dest: None | RootSwComponentPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -107,7 +107,7 @@ class PhmCheckpointInExecutableInstanceRef:
 
     @dataclass
     class ContextComponentPrototypeRef(Ref):
-        dest: SwComponentPrototypeSubtypesEnum | None = field(
+        dest: None | SwComponentPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -118,7 +118,7 @@ class PhmCheckpointInExecutableInstanceRef:
 
     @dataclass
     class ContextRPortPrototypeRef(Ref):
-        dest: RPortPrototypeSubtypesEnum | None = field(
+        dest: None | RPortPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -129,7 +129,7 @@ class PhmCheckpointInExecutableInstanceRef:
 
     @dataclass
     class TargetPhmCheckpointRef(Ref):
-        dest: PhmCheckpointSubtypesEnum | None = field(
+        dest: None | PhmCheckpointSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

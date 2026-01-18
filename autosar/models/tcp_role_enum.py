@@ -29,20 +29,20 @@ class TcpRoleEnum:
     class Meta:
         name = "TCP-ROLE-ENUM"
 
-    value: TcpRoleEnumSimple | None = field(
+    value: None | TcpRoleEnumSimple = field(
         default=None,
         metadata={
             "required": True,
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

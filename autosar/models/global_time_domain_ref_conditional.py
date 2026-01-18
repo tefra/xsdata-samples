@@ -33,7 +33,7 @@ class GlobalTimeDomainRefConditional:
         name = "GLOBAL-TIME-DOMAIN-REF-CONDITIONAL"
 
     global_time_domain_ref: (
-        GlobalTimeDomainRefConditional.GlobalTimeDomainRef | None
+        None | GlobalTimeDomainRefConditional.GlobalTimeDomainRef
     ) = field(
         default=None,
         metadata={
@@ -42,7 +42,7 @@ class GlobalTimeDomainRefConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -50,14 +50,14 @@ class GlobalTimeDomainRefConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -68,7 +68,7 @@ class GlobalTimeDomainRefConditional:
 
     @dataclass
     class GlobalTimeDomainRef(Ref):
-        dest: GlobalTimeDomainSubtypesEnum | None = field(
+        dest: None | GlobalTimeDomainSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

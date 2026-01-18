@@ -44,7 +44,7 @@ class ModeDeclarationGroupPrototypeMapping:
         name = "MODE-DECLARATION-GROUP-PROTOTYPE-MAPPING"
 
     first_mode_group_ref: (
-        ModeDeclarationGroupPrototypeMapping.FirstModeGroupRef | None
+        None | ModeDeclarationGroupPrototypeMapping.FirstModeGroupRef
     ) = field(
         default=None,
         metadata={
@@ -54,8 +54,8 @@ class ModeDeclarationGroupPrototypeMapping:
         },
     )
     mode_declaration_mapping_set_ref: (
-        ModeDeclarationGroupPrototypeMapping.ModeDeclarationMappingSetRef
-        | None
+        None
+        | ModeDeclarationGroupPrototypeMapping.ModeDeclarationMappingSetRef
     ) = field(
         default=None,
         metadata={
@@ -65,7 +65,7 @@ class ModeDeclarationGroupPrototypeMapping:
         },
     )
     second_mode_group_ref: (
-        ModeDeclarationGroupPrototypeMapping.SecondModeGroupRef | None
+        None | ModeDeclarationGroupPrototypeMapping.SecondModeGroupRef
     ) = field(
         default=None,
         metadata={
@@ -74,14 +74,14 @@ class ModeDeclarationGroupPrototypeMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -92,7 +92,7 @@ class ModeDeclarationGroupPrototypeMapping:
 
     @dataclass
     class FirstModeGroupRef(Ref):
-        dest: ModeDeclarationGroupPrototypeSubtypesEnum | None = field(
+        dest: None | ModeDeclarationGroupPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -103,7 +103,7 @@ class ModeDeclarationGroupPrototypeMapping:
 
     @dataclass
     class ModeDeclarationMappingSetRef(Ref):
-        dest: ModeDeclarationMappingSetSubtypesEnum | None = field(
+        dest: None | ModeDeclarationMappingSetSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -114,7 +114,7 @@ class ModeDeclarationGroupPrototypeMapping:
 
     @dataclass
     class SecondModeGroupRef(Ref):
-        dest: ModeDeclarationGroupPrototypeSubtypesEnum | None = field(
+        dest: None | ModeDeclarationGroupPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

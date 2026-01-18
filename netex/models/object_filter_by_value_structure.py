@@ -630,7 +630,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 @dataclass
 class ObjectFilterByValueStructure:
-    layer_ref: LayerRef | None = field(
+    layer_ref: None | LayerRef = field(
         default=None,
         metadata={
             "name": "LayerRef",
@@ -638,7 +638,7 @@ class ObjectFilterByValueStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    bounding_box: BoundingBoxStructure2 | None = field(
+    bounding_box: None | BoundingBoxStructure2 = field(
         default=None,
         metadata={
             "name": "BoundingBox",
@@ -646,7 +646,7 @@ class ObjectFilterByValueStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    object_references: ObjectFilterByValueStructure.ObjectReferences | None = (
+    object_references: None | ObjectFilterByValueStructure.ObjectReferences = (
         field(
             default=None,
             metadata={

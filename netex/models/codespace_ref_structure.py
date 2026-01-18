@@ -13,7 +13,7 @@ class CodespaceRefStructure:
             "required": True,
         },
     )
-    ref: str | None = field(
+    ref: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",

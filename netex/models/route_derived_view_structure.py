@@ -22,7 +22,7 @@ class RouteDerivedViewStructure(DerivedViewStructure):
     class Meta:
         name = "Route_DerivedViewStructure"
 
-    route_ref: RouteRef | None = field(
+    route_ref: None | RouteRef = field(
         default=None,
         metadata={
             "name": "RouteRef",
@@ -30,7 +30,7 @@ class RouteDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    vehicle_mode: AllVehicleModesOfTransportEnumeration | None = field(
+    vehicle_mode: None | AllVehicleModesOfTransportEnumeration = field(
         default=None,
         metadata={
             "name": "VehicleMode",
@@ -38,7 +38,7 @@ class RouteDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    name: MultilingualString | None = field(
+    name: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "Name",
@@ -47,7 +47,7 @@ class RouteDerivedViewStructure(DerivedViewStructure):
         },
     )
     flexible_line_ref_or_line_ref_or_line_view: (
-        FlexibleLineRef | LineRef | LineView | None
+        None | FlexibleLineRef | LineRef | LineView
     ) = field(
         default=None,
         metadata={
@@ -71,7 +71,7 @@ class RouteDerivedViewStructure(DerivedViewStructure):
             ),
         },
     )
-    direction_view: DirectionView | None = field(
+    direction_view: None | DirectionView = field(
         default=None,
         metadata={
             "name": "DirectionView",
@@ -79,7 +79,7 @@ class RouteDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    link_sequence_projection_ref: LinkSequenceProjectionRef | None = field(
+    link_sequence_projection_ref: None | LinkSequenceProjectionRef = field(
         default=None,
         metadata={
             "name": "LinkSequenceProjectionRef",

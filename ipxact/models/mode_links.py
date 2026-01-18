@@ -41,7 +41,7 @@ class ModeLinks:
         """
 
         external_mode_reference: (
-            ModeLinks.ModeLink.ExternalModeReference | None
+            None | ModeLinks.ModeLink.ExternalModeReference
         ) = field(
             default=None,
             metadata={
@@ -50,7 +50,7 @@ class ModeLinks:
                 "required": True,
             },
         )
-        mode_reference: ModeLinks.ModeLink.ModeReference | None = field(
+        mode_reference: None | ModeLinks.ModeLink.ModeReference = field(
             default=None,
             metadata={
                 "name": "modeReference",
@@ -58,14 +58,14 @@ class ModeLinks:
                 "required": True,
             },
         )
-        vendor_extensions: VendorExtensions | None = field(
+        vendor_extensions: None | VendorExtensions = field(
             default=None,
             metadata={
                 "name": "vendorExtensions",
                 "type": "Element",
             },
         )
-        id: str | None = field(
+        id: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -79,7 +79,7 @@ class ModeLinks:
             :ivar mode_ref: Reference to a specific mode.
             """
 
-            mode_ref: str | None = field(
+            mode_ref: None | str = field(
                 default=None,
                 metadata={
                     "name": "modeRef",
@@ -94,7 +94,7 @@ class ModeLinks:
             :ivar mode_ref: Reference to a specific mode.
             """
 
-            mode_ref: str | None = field(
+            mode_ref: None | str = field(
                 default=None,
                 metadata={
                     "name": "modeRef",

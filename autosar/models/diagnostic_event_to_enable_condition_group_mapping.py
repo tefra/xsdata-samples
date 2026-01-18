@@ -90,7 +90,7 @@ class DiagnosticEventToEnableConditionGroupMapping:
     class Meta:
         name = "DIAGNOSTIC-EVENT-TO-ENABLE-CONDITION-GROUP-MAPPING"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -100,7 +100,7 @@ class DiagnosticEventToEnableConditionGroupMapping:
         },
     )
     short_name_fragments: (
-        DiagnosticEventToEnableConditionGroupMapping.ShortNameFragments | None
+        None | DiagnosticEventToEnableConditionGroupMapping.ShortNameFragments
     ) = field(
         default=None,
         metadata={
@@ -109,7 +109,7 @@ class DiagnosticEventToEnableConditionGroupMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -117,7 +117,7 @@ class DiagnosticEventToEnableConditionGroupMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -125,7 +125,7 @@ class DiagnosticEventToEnableConditionGroupMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -133,7 +133,7 @@ class DiagnosticEventToEnableConditionGroupMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -141,7 +141,7 @@ class DiagnosticEventToEnableConditionGroupMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -150,7 +150,7 @@ class DiagnosticEventToEnableConditionGroupMapping:
         },
     )
     annotations: (
-        DiagnosticEventToEnableConditionGroupMapping.Annotations | None
+        None | DiagnosticEventToEnableConditionGroupMapping.Annotations
     ) = field(
         default=None,
         metadata={
@@ -159,7 +159,7 @@ class DiagnosticEventToEnableConditionGroupMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -168,7 +168,7 @@ class DiagnosticEventToEnableConditionGroupMapping:
         },
     )
     diagnostic_event_ref: (
-        DiagnosticEventToEnableConditionGroupMapping.DiagnosticEventRef | None
+        None | DiagnosticEventToEnableConditionGroupMapping.DiagnosticEventRef
     ) = field(
         default=None,
         metadata={
@@ -178,8 +178,8 @@ class DiagnosticEventToEnableConditionGroupMapping:
         },
     )
     enable_condition_group_ref: (
-        DiagnosticEventToEnableConditionGroupMapping.EnableConditionGroupRef
-        | None
+        None
+        | DiagnosticEventToEnableConditionGroupMapping.EnableConditionGroupRef
     ) = field(
         default=None,
         metadata={
@@ -188,14 +188,14 @@ class DiagnosticEventToEnableConditionGroupMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -203,7 +203,7 @@ class DiagnosticEventToEnableConditionGroupMapping:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -235,7 +235,7 @@ class DiagnosticEventToEnableConditionGroupMapping:
 
     @dataclass
     class DiagnosticEventRef(Ref):
-        dest: DiagnosticEventSubtypesEnum | None = field(
+        dest: None | DiagnosticEventSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -246,7 +246,7 @@ class DiagnosticEventToEnableConditionGroupMapping:
 
     @dataclass
     class EnableConditionGroupRef(Ref):
-        dest: DiagnosticEnableConditionGroupSubtypesEnum | None = field(
+        dest: None | DiagnosticEnableConditionGroupSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

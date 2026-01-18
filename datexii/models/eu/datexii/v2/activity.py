@@ -19,7 +19,7 @@ class Activity(TrafficElement):
     :ivar activity_extension:
     """
 
-    mobility_of_activity: Mobility | None = field(
+    mobility_of_activity: None | Mobility = field(
         default=None,
         metadata={
             "name": "mobilityOfActivity",
@@ -27,7 +27,7 @@ class Activity(TrafficElement):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    activity_extension: ExtensionType | None = field(
+    activity_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "activityExtension",

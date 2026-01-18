@@ -21,7 +21,7 @@ class SubscriptionResponseBodyStructure:
             "min_occurs": 1,
         },
     )
-    subscription_manager_address: str | None = field(
+    subscription_manager_address: None | str = field(
         default=None,
         metadata={
             "name": "SubscriptionManagerAddress",
@@ -29,7 +29,7 @@ class SubscriptionResponseBodyStructure:
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    service_started_time: XmlDateTime | None = field(
+    service_started_time: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "ServiceStartedTime",

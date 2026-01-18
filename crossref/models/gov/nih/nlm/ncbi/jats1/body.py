@@ -284,27 +284,27 @@ class Body:
             "type": "Element",
         },
     )
-    sig_block: SigBlock | None = field(
+    sig_block: None | SigBlock = field(
         default=None,
         metadata={
             "name": "sig-block",
             "type": "Element",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",

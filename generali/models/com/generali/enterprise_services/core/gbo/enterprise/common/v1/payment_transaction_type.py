@@ -19,7 +19,7 @@ __NAMESPACE__ = (
 
 @dataclass
 class PaymentTransactionType(BaseReferenceComponentType):
-    payment_date: DateTimeType | None = field(
+    payment_date: None | DateTimeType = field(
         default=None,
         metadata={
             "name": "PaymentDate",
@@ -27,7 +27,7 @@ class PaymentTransactionType(BaseReferenceComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
         },
     )
-    payment_due_date: DateTimeType | None = field(
+    payment_due_date: None | DateTimeType = field(
         default=None,
         metadata={
             "name": "PaymentDueDate",

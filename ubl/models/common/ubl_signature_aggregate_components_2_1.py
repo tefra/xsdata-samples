@@ -13,7 +13,7 @@ __NAMESPACE__ = "urn:oasis:names:specification:ubl:schema:xsd:SignatureAggregate
 
 @dataclass(frozen=True)
 class SignatureInformationType:
-    id: Id | None = field(
+    id: None | Id = field(
         default=None,
         metadata={
             "name": "ID",
@@ -21,7 +21,7 @@ class SignatureInformationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    referenced_signature_id: ReferencedSignatureId | None = field(
+    referenced_signature_id: None | ReferencedSignatureId = field(
         default=None,
         metadata={
             "name": "ReferencedSignatureID",
@@ -29,7 +29,7 @@ class SignatureInformationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:SignatureBasicComponents-2",
         },
     )
-    signature: Signature | None = field(
+    signature: None | Signature = field(
         default=None,
         metadata={
             "name": "Signature",

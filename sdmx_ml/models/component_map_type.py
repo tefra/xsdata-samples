@@ -34,7 +34,7 @@ class ComponentMapType(AnnotableType):
             "pattern": r"[A-Za-z0-9_@$\-]+",
         },
     )
-    representation_map: str | None = field(
+    representation_map: None | str = field(
         default=None,
         metadata={
             "name": "RepresentationMap",

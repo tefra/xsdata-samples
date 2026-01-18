@@ -31,7 +31,7 @@ class DiagnosticParameterSupportInfo:
     class Meta:
         name = "DIAGNOSTIC-PARAMETER-SUPPORT-INFO"
 
-    support_info_bit: PositiveInteger | None = field(
+    support_info_bit: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "SUPPORT-INFO-BIT",
@@ -39,14 +39,14 @@ class DiagnosticParameterSupportInfo:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

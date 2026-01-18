@@ -13,7 +13,7 @@ class Shape(Node):
     class Meta:
         namespace = "http://www.omg.org/spec/DD/20100524/DI"
 
-    bounds: Bounds | None = field(
+    bounds: None | Bounds = field(
         default=None,
         metadata={
             "name": "Bounds",

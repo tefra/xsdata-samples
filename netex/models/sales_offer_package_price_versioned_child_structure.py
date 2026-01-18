@@ -19,7 +19,7 @@ class SalesOfferPackagePriceVersionedChildStructure(
         name = "SalesOfferPackagePrice_VersionedChildStructure"
 
     sales_offer_package_ref_or_sales_offer_package_element_ref: (
-        SalesOfferPackageRef | SalesOfferPackageElementRef | None
+        None | SalesOfferPackageRef | SalesOfferPackageElementRef
     ) = field(
         default=None,
         metadata={

@@ -52,7 +52,7 @@ class CyclicTiming:
     class Meta:
         name = "CYCLIC-TIMING"
 
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -60,7 +60,7 @@ class CyclicTiming:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -68,7 +68,7 @@ class CyclicTiming:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -76,7 +76,7 @@ class CyclicTiming:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -84,7 +84,7 @@ class CyclicTiming:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    time_offset: TimeRangeType | None = field(
+    time_offset: None | TimeRangeType = field(
         default=None,
         metadata={
             "name": "TIME-OFFSET",
@@ -92,7 +92,7 @@ class CyclicTiming:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    time_period: TimeRangeType | None = field(
+    time_period: None | TimeRangeType = field(
         default=None,
         metadata={
             "name": "TIME-PERIOD",
@@ -100,14 +100,14 @@ class CyclicTiming:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

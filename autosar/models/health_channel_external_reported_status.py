@@ -36,7 +36,7 @@ class HealthChannelExternalReportedStatus:
     class Meta:
         name = "HEALTH-CHANNEL-EXTERNAL-REPORTED-STATUS"
 
-    status_id: PositiveInteger | None = field(
+    status_id: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "STATUS-ID",
@@ -44,7 +44,7 @@ class HealthChannelExternalReportedStatus:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    status_ref: HealthChannelExternalReportedStatus.StatusRef | None = field(
+    status_ref: None | HealthChannelExternalReportedStatus.StatusRef = field(
         default=None,
         metadata={
             "name": "STATUS-REF",
@@ -52,14 +52,14 @@ class HealthChannelExternalReportedStatus:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -70,7 +70,7 @@ class HealthChannelExternalReportedStatus:
 
     @dataclass
     class StatusRef(Ref):
-        dest: PhmHealthChannelStatusSubtypesEnum | None = field(
+        dest: None | PhmHealthChannelStatusSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

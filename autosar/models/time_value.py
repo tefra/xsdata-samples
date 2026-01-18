@@ -29,20 +29,20 @@ class TimeValue:
     class Meta:
         name = "TIME-VALUE"
 
-    value: float | None = field(
+    value: None | float = field(
         default=None,
         metadata={
             "required": True,
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

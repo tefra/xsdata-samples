@@ -65,13 +65,13 @@ class StandardMetadata:
         name = "standard_metadata"
         namespace = "http://www.crossref.org/schema/5.3.1"
 
-    contributors: Contributors | None = field(
+    contributors: None | Contributors = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    titles: Titles | None = field(
+    titles: None | Titles = field(
         default=None,
         metadata={
             "type": "Element",
@@ -85,20 +85,20 @@ class StandardMetadata:
             "namespace": "http://www.ncbi.nlm.nih.gov/JATS1",
         },
     )
-    designators: Designators | None = field(
+    designators: None | Designators = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
         },
     )
-    edition_number: EditionNumber | None = field(
+    edition_number: None | EditionNumber = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    approval_date: ApprovalDate | None = field(
+    approval_date: None | ApprovalDate = field(
         default=None,
         metadata={
             "type": "Element",
@@ -111,39 +111,39 @@ class StandardMetadata:
             "max_occurs": 6,
         },
     )
-    publisher: Publisher | None = field(
+    publisher: None | Publisher = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    standards_body: StandardsBody | None = field(
+    standards_body: None | StandardsBody = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
         },
     )
-    publisher_item: PublisherItem | None = field(
+    publisher_item: None | PublisherItem = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    crossmark: Crossmark | None = field(
+    crossmark: None | Crossmark = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    program: FundrefProgram | None = field(
+    program: None | FundrefProgram = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.crossref.org/fundref.xsd",
         },
     )
-    program_1: AccessIndicatorsProgram | None = field(
+    program_1: None | AccessIndicatorsProgram = field(
         default=None,
         metadata={
             "name": "program",
@@ -151,7 +151,7 @@ class StandardMetadata:
             "namespace": "http://www.crossref.org/AccessIndicators.xsd",
         },
     )
-    program_2: RelationsProgram | None = field(
+    program_2: None | RelationsProgram = field(
         default=None,
         metadata={
             "name": "program",
@@ -159,32 +159,32 @@ class StandardMetadata:
             "namespace": "http://www.crossref.org/relations.xsd",
         },
     )
-    archive_locations: ArchiveLocations | None = field(
+    archive_locations: None | ArchiveLocations = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    doi_data: DoiData | None = field(
+    doi_data: None | DoiData = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
         },
     )
-    citation_list: CitationList | None = field(
+    citation_list: None | CitationList = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    publication_status: StandardMetadataPublicationStatus | None = field(
+    publication_status: None | StandardMetadataPublicationStatus = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    language: StandardMetadataLanguage | None = field(
+    language: None | StandardMetadataLanguage = field(
         default=None,
         metadata={
             "type": "Attribute",

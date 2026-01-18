@@ -35,8 +35,8 @@ class ConsumedProvidedServiceInstanceGroupRefConditional:
         name = "CONSUMED-PROVIDED-SERVICE-INSTANCE-GROUP-REF-CONDITIONAL"
 
     consumed_provided_service_instance_group_ref: (
-        ConsumedProvidedServiceInstanceGroupRefConditional.ConsumedProvidedServiceInstanceGroupRef
-        | None
+        None
+        | ConsumedProvidedServiceInstanceGroupRefConditional.ConsumedProvidedServiceInstanceGroupRef
     ) = field(
         default=None,
         metadata={
@@ -45,7 +45,7 @@ class ConsumedProvidedServiceInstanceGroupRefConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -53,14 +53,14 @@ class ConsumedProvidedServiceInstanceGroupRefConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -71,7 +71,7 @@ class ConsumedProvidedServiceInstanceGroupRefConditional:
 
     @dataclass
     class ConsumedProvidedServiceInstanceGroupRef(Ref):
-        dest: ConsumedProvidedServiceInstanceGroupSubtypesEnum | None = field(
+        dest: None | ConsumedProvidedServiceInstanceGroupSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

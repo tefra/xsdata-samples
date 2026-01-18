@@ -18,7 +18,7 @@ class AlternativeId:
     class Meta:
         name = "ALTERNATIVE-ID"
 
-    identifier: str | None = field(
+    identifier: None | str = field(
         default=None,
         metadata={
             "name": "IDENTIFIER",
@@ -33,7 +33,7 @@ class AttributeValueBoolean:
     class Meta:
         name = "ATTRIBUTE-VALUE-BOOLEAN"
 
-    definition: AttributeValueBoolean.Definition | None = field(
+    definition: None | AttributeValueBoolean.Definition = field(
         default=None,
         metadata={
             "name": "DEFINITION",
@@ -42,7 +42,7 @@ class AttributeValueBoolean:
             "required": True,
         },
     )
-    the_value: bool | None = field(
+    the_value: None | bool = field(
         default=None,
         metadata={
             "name": "THE-VALUE",
@@ -53,7 +53,7 @@ class AttributeValueBoolean:
 
     @dataclass
     class Definition:
-        attribute_definition_boolean_ref: str | None = field(
+        attribute_definition_boolean_ref: None | str = field(
             default=None,
             metadata={
                 "name": "ATTRIBUTE-DEFINITION-BOOLEAN-REF",
@@ -69,7 +69,7 @@ class AttributeValueDate:
     class Meta:
         name = "ATTRIBUTE-VALUE-DATE"
 
-    definition: AttributeValueDate.Definition | None = field(
+    definition: None | AttributeValueDate.Definition = field(
         default=None,
         metadata={
             "name": "DEFINITION",
@@ -78,7 +78,7 @@ class AttributeValueDate:
             "required": True,
         },
     )
-    the_value: XmlDateTime | None = field(
+    the_value: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "THE-VALUE",
@@ -89,7 +89,7 @@ class AttributeValueDate:
 
     @dataclass
     class Definition:
-        attribute_definition_date_ref: str | None = field(
+        attribute_definition_date_ref: None | str = field(
             default=None,
             metadata={
                 "name": "ATTRIBUTE-DEFINITION-DATE-REF",
@@ -105,7 +105,7 @@ class AttributeValueEnumeration:
     class Meta:
         name = "ATTRIBUTE-VALUE-ENUMERATION"
 
-    definition: AttributeValueEnumeration.Definition | None = field(
+    definition: None | AttributeValueEnumeration.Definition = field(
         default=None,
         metadata={
             "name": "DEFINITION",
@@ -114,7 +114,7 @@ class AttributeValueEnumeration:
             "required": True,
         },
     )
-    values: AttributeValueEnumeration.Values | None = field(
+    values: None | AttributeValueEnumeration.Values = field(
         default=None,
         metadata={
             "name": "VALUES",
@@ -125,7 +125,7 @@ class AttributeValueEnumeration:
 
     @dataclass
     class Definition:
-        attribute_definition_enumeration_ref: str | None = field(
+        attribute_definition_enumeration_ref: None | str = field(
             default=None,
             metadata={
                 "name": "ATTRIBUTE-DEFINITION-ENUMERATION-REF",
@@ -152,7 +152,7 @@ class AttributeValueInteger:
     class Meta:
         name = "ATTRIBUTE-VALUE-INTEGER"
 
-    definition: AttributeValueInteger.Definition | None = field(
+    definition: None | AttributeValueInteger.Definition = field(
         default=None,
         metadata={
             "name": "DEFINITION",
@@ -161,7 +161,7 @@ class AttributeValueInteger:
             "required": True,
         },
     )
-    the_value: int | None = field(
+    the_value: None | int = field(
         default=None,
         metadata={
             "name": "THE-VALUE",
@@ -172,7 +172,7 @@ class AttributeValueInteger:
 
     @dataclass
     class Definition:
-        attribute_definition_integer_ref: str | None = field(
+        attribute_definition_integer_ref: None | str = field(
             default=None,
             metadata={
                 "name": "ATTRIBUTE-DEFINITION-INTEGER-REF",
@@ -188,7 +188,7 @@ class AttributeValueReal:
     class Meta:
         name = "ATTRIBUTE-VALUE-REAL"
 
-    definition: AttributeValueReal.Definition | None = field(
+    definition: None | AttributeValueReal.Definition = field(
         default=None,
         metadata={
             "name": "DEFINITION",
@@ -197,7 +197,7 @@ class AttributeValueReal:
             "required": True,
         },
     )
-    the_value: float | None = field(
+    the_value: None | float = field(
         default=None,
         metadata={
             "name": "THE-VALUE",
@@ -208,7 +208,7 @@ class AttributeValueReal:
 
     @dataclass
     class Definition:
-        attribute_definition_real_ref: str | None = field(
+        attribute_definition_real_ref: None | str = field(
             default=None,
             metadata={
                 "name": "ATTRIBUTE-DEFINITION-REAL-REF",
@@ -224,7 +224,7 @@ class AttributeValueString:
     class Meta:
         name = "ATTRIBUTE-VALUE-STRING"
 
-    definition: AttributeValueString.Definition | None = field(
+    definition: None | AttributeValueString.Definition = field(
         default=None,
         metadata={
             "name": "DEFINITION",
@@ -233,7 +233,7 @@ class AttributeValueString:
             "required": True,
         },
     )
-    the_value: str | None = field(
+    the_value: None | str = field(
         default=None,
         metadata={
             "name": "THE-VALUE",
@@ -244,7 +244,7 @@ class AttributeValueString:
 
     @dataclass
     class Definition:
-        attribute_definition_string_ref: str | None = field(
+        attribute_definition_string_ref: None | str = field(
             default=None,
             metadata={
                 "name": "ATTRIBUTE-DEFINITION-STRING-REF",
@@ -260,7 +260,7 @@ class EmbeddedValue:
     class Meta:
         name = "EMBEDDED-VALUE"
 
-    key: int | None = field(
+    key: None | int = field(
         default=None,
         metadata={
             "name": "KEY",
@@ -268,7 +268,7 @@ class EmbeddedValue:
             "required": True,
         },
     )
-    other_content: str | None = field(
+    other_content: None | str = field(
         default=None,
         metadata={
             "name": "OTHER-CONTENT",
@@ -283,7 +283,7 @@ class ReqIfHeader:
     class Meta:
         name = "REQ-IF-HEADER"
 
-    comment: str | None = field(
+    comment: None | str = field(
         default=None,
         metadata={
             "name": "COMMENT",
@@ -291,7 +291,7 @@ class ReqIfHeader:
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
         },
     )
-    creation_time: XmlDateTime | None = field(
+    creation_time: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "CREATION-TIME",
@@ -300,7 +300,7 @@ class ReqIfHeader:
             "required": True,
         },
     )
-    repository_id: str | None = field(
+    repository_id: None | str = field(
         default=None,
         metadata={
             "name": "REPOSITORY-ID",
@@ -308,7 +308,7 @@ class ReqIfHeader:
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
         },
     )
-    req_if_tool_id: str | None = field(
+    req_if_tool_id: None | str = field(
         default=None,
         metadata={
             "name": "REQ-IF-TOOL-ID",
@@ -327,7 +327,7 @@ class ReqIfHeader:
             "required": True,
         },
     )
-    source_tool_id: str | None = field(
+    source_tool_id: None | str = field(
         default=None,
         metadata={
             "name": "SOURCE-TOOL-ID",
@@ -336,7 +336,7 @@ class ReqIfHeader:
             "required": True,
         },
     )
-    title: str | None = field(
+    title: None | str = field(
         default=None,
         metadata={
             "name": "TITLE",
@@ -345,7 +345,7 @@ class ReqIfHeader:
             "required": True,
         },
     )
-    identifier: str | None = field(
+    identifier: None | str = field(
         default=None,
         metadata={
             "name": "IDENTIFIER",
@@ -374,7 +374,7 @@ class AttributeDefinitionBoolean:
     class Meta:
         name = "ATTRIBUTE-DEFINITION-BOOLEAN"
 
-    alternative_id: AttributeDefinitionBoolean.AlternativeId | None = field(
+    alternative_id: None | AttributeDefinitionBoolean.AlternativeId = field(
         default=None,
         metadata={
             "name": "ALTERNATIVE-ID",
@@ -382,7 +382,7 @@ class AttributeDefinitionBoolean:
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
         },
     )
-    default_value: AttributeDefinitionBoolean.DefaultValue | None = field(
+    default_value: None | AttributeDefinitionBoolean.DefaultValue = field(
         default=None,
         metadata={
             "name": "DEFAULT-VALUE",
@@ -390,7 +390,7 @@ class AttributeDefinitionBoolean:
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
         },
     )
-    type_value: AttributeDefinitionBoolean.Type | None = field(
+    type_value: None | AttributeDefinitionBoolean.Type = field(
         default=None,
         metadata={
             "name": "TYPE",
@@ -399,14 +399,14 @@ class AttributeDefinitionBoolean:
             "required": True,
         },
     )
-    desc: str | None = field(
+    desc: None | str = field(
         default=None,
         metadata={
             "name": "DESC",
             "type": "Attribute",
         },
     )
-    identifier: str | None = field(
+    identifier: None | str = field(
         default=None,
         metadata={
             "name": "IDENTIFIER",
@@ -414,14 +414,14 @@ class AttributeDefinitionBoolean:
             "required": True,
         },
     )
-    is_editable: bool | None = field(
+    is_editable: None | bool = field(
         default=None,
         metadata={
             "name": "IS-EDITABLE",
             "type": "Attribute",
         },
     )
-    last_change: XmlDateTime | None = field(
+    last_change: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "LAST-CHANGE",
@@ -429,7 +429,7 @@ class AttributeDefinitionBoolean:
             "required": True,
         },
     )
-    long_name: str | None = field(
+    long_name: None | str = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -439,7 +439,7 @@ class AttributeDefinitionBoolean:
 
     @dataclass
     class AlternativeId:
-        alternative_id: AlternativeId | None = field(
+        alternative_id: None | AlternativeId = field(
             default=None,
             metadata={
                 "name": "ALTERNATIVE-ID",
@@ -450,7 +450,7 @@ class AttributeDefinitionBoolean:
 
     @dataclass
     class DefaultValue:
-        attribute_value_boolean: AttributeValueBoolean | None = field(
+        attribute_value_boolean: None | AttributeValueBoolean = field(
             default=None,
             metadata={
                 "name": "ATTRIBUTE-VALUE-BOOLEAN",
@@ -461,7 +461,7 @@ class AttributeDefinitionBoolean:
 
     @dataclass
     class Type:
-        datatype_definition_boolean_ref: str | None = field(
+        datatype_definition_boolean_ref: None | str = field(
             default=None,
             metadata={
                 "name": "DATATYPE-DEFINITION-BOOLEAN-REF",
@@ -477,7 +477,7 @@ class AttributeDefinitionDate:
     class Meta:
         name = "ATTRIBUTE-DEFINITION-DATE"
 
-    alternative_id: AttributeDefinitionDate.AlternativeId | None = field(
+    alternative_id: None | AttributeDefinitionDate.AlternativeId = field(
         default=None,
         metadata={
             "name": "ALTERNATIVE-ID",
@@ -485,7 +485,7 @@ class AttributeDefinitionDate:
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
         },
     )
-    default_value: AttributeDefinitionDate.DefaultValue | None = field(
+    default_value: None | AttributeDefinitionDate.DefaultValue = field(
         default=None,
         metadata={
             "name": "DEFAULT-VALUE",
@@ -493,7 +493,7 @@ class AttributeDefinitionDate:
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
         },
     )
-    type_value: AttributeDefinitionDate.Type | None = field(
+    type_value: None | AttributeDefinitionDate.Type = field(
         default=None,
         metadata={
             "name": "TYPE",
@@ -502,14 +502,14 @@ class AttributeDefinitionDate:
             "required": True,
         },
     )
-    desc: str | None = field(
+    desc: None | str = field(
         default=None,
         metadata={
             "name": "DESC",
             "type": "Attribute",
         },
     )
-    identifier: str | None = field(
+    identifier: None | str = field(
         default=None,
         metadata={
             "name": "IDENTIFIER",
@@ -517,14 +517,14 @@ class AttributeDefinitionDate:
             "required": True,
         },
     )
-    is_editable: bool | None = field(
+    is_editable: None | bool = field(
         default=None,
         metadata={
             "name": "IS-EDITABLE",
             "type": "Attribute",
         },
     )
-    last_change: XmlDateTime | None = field(
+    last_change: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "LAST-CHANGE",
@@ -532,7 +532,7 @@ class AttributeDefinitionDate:
             "required": True,
         },
     )
-    long_name: str | None = field(
+    long_name: None | str = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -542,7 +542,7 @@ class AttributeDefinitionDate:
 
     @dataclass
     class AlternativeId:
-        alternative_id: AlternativeId | None = field(
+        alternative_id: None | AlternativeId = field(
             default=None,
             metadata={
                 "name": "ALTERNATIVE-ID",
@@ -553,7 +553,7 @@ class AttributeDefinitionDate:
 
     @dataclass
     class DefaultValue:
-        attribute_value_date: AttributeValueDate | None = field(
+        attribute_value_date: None | AttributeValueDate = field(
             default=None,
             metadata={
                 "name": "ATTRIBUTE-VALUE-DATE",
@@ -564,7 +564,7 @@ class AttributeDefinitionDate:
 
     @dataclass
     class Type:
-        datatype_definition_date_ref: str | None = field(
+        datatype_definition_date_ref: None | str = field(
             default=None,
             metadata={
                 "name": "DATATYPE-DEFINITION-DATE-REF",
@@ -580,7 +580,7 @@ class AttributeDefinitionEnumeration:
     class Meta:
         name = "ATTRIBUTE-DEFINITION-ENUMERATION"
 
-    default_value: AttributeDefinitionEnumeration.DefaultValue | None = field(
+    default_value: None | AttributeDefinitionEnumeration.DefaultValue = field(
         default=None,
         metadata={
             "name": "DEFAULT-VALUE",
@@ -588,7 +588,7 @@ class AttributeDefinitionEnumeration:
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
         },
     )
-    alternative_id: AttributeDefinitionEnumeration.AlternativeId | None = (
+    alternative_id: None | AttributeDefinitionEnumeration.AlternativeId = (
         field(
             default=None,
             metadata={
@@ -598,7 +598,7 @@ class AttributeDefinitionEnumeration:
             },
         )
     )
-    type_value: AttributeDefinitionEnumeration.Type | None = field(
+    type_value: None | AttributeDefinitionEnumeration.Type = field(
         default=None,
         metadata={
             "name": "TYPE",
@@ -607,14 +607,14 @@ class AttributeDefinitionEnumeration:
             "required": True,
         },
     )
-    desc: str | None = field(
+    desc: None | str = field(
         default=None,
         metadata={
             "name": "DESC",
             "type": "Attribute",
         },
     )
-    identifier: str | None = field(
+    identifier: None | str = field(
         default=None,
         metadata={
             "name": "IDENTIFIER",
@@ -622,14 +622,14 @@ class AttributeDefinitionEnumeration:
             "required": True,
         },
     )
-    is_editable: bool | None = field(
+    is_editable: None | bool = field(
         default=None,
         metadata={
             "name": "IS-EDITABLE",
             "type": "Attribute",
         },
     )
-    last_change: XmlDateTime | None = field(
+    last_change: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "LAST-CHANGE",
@@ -637,14 +637,14 @@ class AttributeDefinitionEnumeration:
             "required": True,
         },
     )
-    long_name: str | None = field(
+    long_name: None | str = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
             "type": "Attribute",
         },
     )
-    multi_valued: bool | None = field(
+    multi_valued: None | bool = field(
         default=None,
         metadata={
             "name": "MULTI-VALUED",
@@ -655,7 +655,7 @@ class AttributeDefinitionEnumeration:
 
     @dataclass
     class DefaultValue:
-        attribute_value_enumeration: AttributeValueEnumeration | None = field(
+        attribute_value_enumeration: None | AttributeValueEnumeration = field(
             default=None,
             metadata={
                 "name": "ATTRIBUTE-VALUE-ENUMERATION",
@@ -666,7 +666,7 @@ class AttributeDefinitionEnumeration:
 
     @dataclass
     class AlternativeId:
-        alternative_id: AlternativeId | None = field(
+        alternative_id: None | AlternativeId = field(
             default=None,
             metadata={
                 "name": "ALTERNATIVE-ID",
@@ -677,7 +677,7 @@ class AttributeDefinitionEnumeration:
 
     @dataclass
     class Type:
-        datatype_definition_enumeration_ref: str | None = field(
+        datatype_definition_enumeration_ref: None | str = field(
             default=None,
             metadata={
                 "name": "DATATYPE-DEFINITION-ENUMERATION-REF",
@@ -693,7 +693,7 @@ class AttributeDefinitionInteger:
     class Meta:
         name = "ATTRIBUTE-DEFINITION-INTEGER"
 
-    alternative_id: AttributeDefinitionInteger.AlternativeId | None = field(
+    alternative_id: None | AttributeDefinitionInteger.AlternativeId = field(
         default=None,
         metadata={
             "name": "ALTERNATIVE-ID",
@@ -701,7 +701,7 @@ class AttributeDefinitionInteger:
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
         },
     )
-    default_value: AttributeDefinitionInteger.DefaultValue | None = field(
+    default_value: None | AttributeDefinitionInteger.DefaultValue = field(
         default=None,
         metadata={
             "name": "DEFAULT-VALUE",
@@ -709,7 +709,7 @@ class AttributeDefinitionInteger:
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
         },
     )
-    type_value: AttributeDefinitionInteger.Type | None = field(
+    type_value: None | AttributeDefinitionInteger.Type = field(
         default=None,
         metadata={
             "name": "TYPE",
@@ -718,14 +718,14 @@ class AttributeDefinitionInteger:
             "required": True,
         },
     )
-    desc: str | None = field(
+    desc: None | str = field(
         default=None,
         metadata={
             "name": "DESC",
             "type": "Attribute",
         },
     )
-    identifier: str | None = field(
+    identifier: None | str = field(
         default=None,
         metadata={
             "name": "IDENTIFIER",
@@ -733,14 +733,14 @@ class AttributeDefinitionInteger:
             "required": True,
         },
     )
-    is_editable: bool | None = field(
+    is_editable: None | bool = field(
         default=None,
         metadata={
             "name": "IS-EDITABLE",
             "type": "Attribute",
         },
     )
-    last_change: XmlDateTime | None = field(
+    last_change: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "LAST-CHANGE",
@@ -748,7 +748,7 @@ class AttributeDefinitionInteger:
             "required": True,
         },
     )
-    long_name: str | None = field(
+    long_name: None | str = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -758,7 +758,7 @@ class AttributeDefinitionInteger:
 
     @dataclass
     class AlternativeId:
-        alternative_id: AlternativeId | None = field(
+        alternative_id: None | AlternativeId = field(
             default=None,
             metadata={
                 "name": "ALTERNATIVE-ID",
@@ -769,7 +769,7 @@ class AttributeDefinitionInteger:
 
     @dataclass
     class DefaultValue:
-        attribute_value_integer: AttributeValueInteger | None = field(
+        attribute_value_integer: None | AttributeValueInteger = field(
             default=None,
             metadata={
                 "name": "ATTRIBUTE-VALUE-INTEGER",
@@ -780,7 +780,7 @@ class AttributeDefinitionInteger:
 
     @dataclass
     class Type:
-        datatype_definition_integer_ref: str | None = field(
+        datatype_definition_integer_ref: None | str = field(
             default=None,
             metadata={
                 "name": "DATATYPE-DEFINITION-INTEGER-REF",
@@ -796,7 +796,7 @@ class AttributeDefinitionReal:
     class Meta:
         name = "ATTRIBUTE-DEFINITION-REAL"
 
-    alternative_id: AttributeDefinitionReal.AlternativeId | None = field(
+    alternative_id: None | AttributeDefinitionReal.AlternativeId = field(
         default=None,
         metadata={
             "name": "ALTERNATIVE-ID",
@@ -804,7 +804,7 @@ class AttributeDefinitionReal:
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
         },
     )
-    default_value: AttributeDefinitionReal.DefaultValue | None = field(
+    default_value: None | AttributeDefinitionReal.DefaultValue = field(
         default=None,
         metadata={
             "name": "DEFAULT-VALUE",
@@ -812,7 +812,7 @@ class AttributeDefinitionReal:
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
         },
     )
-    type_value: AttributeDefinitionReal.Type | None = field(
+    type_value: None | AttributeDefinitionReal.Type = field(
         default=None,
         metadata={
             "name": "TYPE",
@@ -821,14 +821,14 @@ class AttributeDefinitionReal:
             "required": True,
         },
     )
-    desc: str | None = field(
+    desc: None | str = field(
         default=None,
         metadata={
             "name": "DESC",
             "type": "Attribute",
         },
     )
-    identifier: str | None = field(
+    identifier: None | str = field(
         default=None,
         metadata={
             "name": "IDENTIFIER",
@@ -836,14 +836,14 @@ class AttributeDefinitionReal:
             "required": True,
         },
     )
-    is_editable: bool | None = field(
+    is_editable: None | bool = field(
         default=None,
         metadata={
             "name": "IS-EDITABLE",
             "type": "Attribute",
         },
     )
-    last_change: XmlDateTime | None = field(
+    last_change: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "LAST-CHANGE",
@@ -851,7 +851,7 @@ class AttributeDefinitionReal:
             "required": True,
         },
     )
-    long_name: str | None = field(
+    long_name: None | str = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -861,7 +861,7 @@ class AttributeDefinitionReal:
 
     @dataclass
     class AlternativeId:
-        alternative_id: AlternativeId | None = field(
+        alternative_id: None | AlternativeId = field(
             default=None,
             metadata={
                 "name": "ALTERNATIVE-ID",
@@ -872,7 +872,7 @@ class AttributeDefinitionReal:
 
     @dataclass
     class DefaultValue:
-        attribute_value_real: AttributeValueReal | None = field(
+        attribute_value_real: None | AttributeValueReal = field(
             default=None,
             metadata={
                 "name": "ATTRIBUTE-VALUE-REAL",
@@ -883,7 +883,7 @@ class AttributeDefinitionReal:
 
     @dataclass
     class Type:
-        datatype_definition_real_ref: str | None = field(
+        datatype_definition_real_ref: None | str = field(
             default=None,
             metadata={
                 "name": "DATATYPE-DEFINITION-REAL-REF",
@@ -899,7 +899,7 @@ class AttributeDefinitionString:
     class Meta:
         name = "ATTRIBUTE-DEFINITION-STRING"
 
-    alternative_id: AttributeDefinitionString.AlternativeId | None = field(
+    alternative_id: None | AttributeDefinitionString.AlternativeId = field(
         default=None,
         metadata={
             "name": "ALTERNATIVE-ID",
@@ -907,7 +907,7 @@ class AttributeDefinitionString:
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
         },
     )
-    default_value: AttributeDefinitionString.DefaultValue | None = field(
+    default_value: None | AttributeDefinitionString.DefaultValue = field(
         default=None,
         metadata={
             "name": "DEFAULT-VALUE",
@@ -915,7 +915,7 @@ class AttributeDefinitionString:
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
         },
     )
-    type_value: AttributeDefinitionString.Type | None = field(
+    type_value: None | AttributeDefinitionString.Type = field(
         default=None,
         metadata={
             "name": "TYPE",
@@ -924,14 +924,14 @@ class AttributeDefinitionString:
             "required": True,
         },
     )
-    desc: str | None = field(
+    desc: None | str = field(
         default=None,
         metadata={
             "name": "DESC",
             "type": "Attribute",
         },
     )
-    identifier: str | None = field(
+    identifier: None | str = field(
         default=None,
         metadata={
             "name": "IDENTIFIER",
@@ -939,14 +939,14 @@ class AttributeDefinitionString:
             "required": True,
         },
     )
-    is_editable: bool | None = field(
+    is_editable: None | bool = field(
         default=None,
         metadata={
             "name": "IS-EDITABLE",
             "type": "Attribute",
         },
     )
-    last_change: XmlDateTime | None = field(
+    last_change: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "LAST-CHANGE",
@@ -954,7 +954,7 @@ class AttributeDefinitionString:
             "required": True,
         },
     )
-    long_name: str | None = field(
+    long_name: None | str = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -964,7 +964,7 @@ class AttributeDefinitionString:
 
     @dataclass
     class AlternativeId:
-        alternative_id: AlternativeId | None = field(
+        alternative_id: None | AlternativeId = field(
             default=None,
             metadata={
                 "name": "ALTERNATIVE-ID",
@@ -975,7 +975,7 @@ class AttributeDefinitionString:
 
     @dataclass
     class DefaultValue:
-        attribute_value_string: AttributeValueString | None = field(
+        attribute_value_string: None | AttributeValueString = field(
             default=None,
             metadata={
                 "name": "ATTRIBUTE-VALUE-STRING",
@@ -986,7 +986,7 @@ class AttributeDefinitionString:
 
     @dataclass
     class Type:
-        datatype_definition_string_ref: str | None = field(
+        datatype_definition_string_ref: None | str = field(
             default=None,
             metadata={
                 "name": "DATATYPE-DEFINITION-STRING-REF",
@@ -1002,7 +1002,7 @@ class DatatypeDefinitionBoolean:
     class Meta:
         name = "DATATYPE-DEFINITION-BOOLEAN"
 
-    alternative_id: DatatypeDefinitionBoolean.AlternativeId | None = field(
+    alternative_id: None | DatatypeDefinitionBoolean.AlternativeId = field(
         default=None,
         metadata={
             "name": "ALTERNATIVE-ID",
@@ -1010,14 +1010,14 @@ class DatatypeDefinitionBoolean:
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
         },
     )
-    desc: str | None = field(
+    desc: None | str = field(
         default=None,
         metadata={
             "name": "DESC",
             "type": "Attribute",
         },
     )
-    identifier: str | None = field(
+    identifier: None | str = field(
         default=None,
         metadata={
             "name": "IDENTIFIER",
@@ -1025,7 +1025,7 @@ class DatatypeDefinitionBoolean:
             "required": True,
         },
     )
-    last_change: XmlDateTime | None = field(
+    last_change: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "LAST-CHANGE",
@@ -1033,7 +1033,7 @@ class DatatypeDefinitionBoolean:
             "required": True,
         },
     )
-    long_name: str | None = field(
+    long_name: None | str = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -1043,7 +1043,7 @@ class DatatypeDefinitionBoolean:
 
     @dataclass
     class AlternativeId:
-        alternative_id: AlternativeId | None = field(
+        alternative_id: None | AlternativeId = field(
             default=None,
             metadata={
                 "name": "ALTERNATIVE-ID",
@@ -1058,7 +1058,7 @@ class DatatypeDefinitionDate:
     class Meta:
         name = "DATATYPE-DEFINITION-DATE"
 
-    alternative_id: DatatypeDefinitionDate.AlternativeId | None = field(
+    alternative_id: None | DatatypeDefinitionDate.AlternativeId = field(
         default=None,
         metadata={
             "name": "ALTERNATIVE-ID",
@@ -1066,14 +1066,14 @@ class DatatypeDefinitionDate:
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
         },
     )
-    desc: str | None = field(
+    desc: None | str = field(
         default=None,
         metadata={
             "name": "DESC",
             "type": "Attribute",
         },
     )
-    identifier: str | None = field(
+    identifier: None | str = field(
         default=None,
         metadata={
             "name": "IDENTIFIER",
@@ -1081,7 +1081,7 @@ class DatatypeDefinitionDate:
             "required": True,
         },
     )
-    last_change: XmlDateTime | None = field(
+    last_change: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "LAST-CHANGE",
@@ -1089,7 +1089,7 @@ class DatatypeDefinitionDate:
             "required": True,
         },
     )
-    long_name: str | None = field(
+    long_name: None | str = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -1099,7 +1099,7 @@ class DatatypeDefinitionDate:
 
     @dataclass
     class AlternativeId:
-        alternative_id: AlternativeId | None = field(
+        alternative_id: None | AlternativeId = field(
             default=None,
             metadata={
                 "name": "ALTERNATIVE-ID",
@@ -1114,7 +1114,7 @@ class DatatypeDefinitionInteger:
     class Meta:
         name = "DATATYPE-DEFINITION-INTEGER"
 
-    alternative_id: DatatypeDefinitionInteger.AlternativeId | None = field(
+    alternative_id: None | DatatypeDefinitionInteger.AlternativeId = field(
         default=None,
         metadata={
             "name": "ALTERNATIVE-ID",
@@ -1122,14 +1122,14 @@ class DatatypeDefinitionInteger:
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
         },
     )
-    desc: str | None = field(
+    desc: None | str = field(
         default=None,
         metadata={
             "name": "DESC",
             "type": "Attribute",
         },
     )
-    identifier: str | None = field(
+    identifier: None | str = field(
         default=None,
         metadata={
             "name": "IDENTIFIER",
@@ -1137,7 +1137,7 @@ class DatatypeDefinitionInteger:
             "required": True,
         },
     )
-    last_change: XmlDateTime | None = field(
+    last_change: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "LAST-CHANGE",
@@ -1145,14 +1145,14 @@ class DatatypeDefinitionInteger:
             "required": True,
         },
     )
-    long_name: str | None = field(
+    long_name: None | str = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
             "type": "Attribute",
         },
     )
-    max: int | None = field(
+    max: None | int = field(
         default=None,
         metadata={
             "name": "MAX",
@@ -1160,7 +1160,7 @@ class DatatypeDefinitionInteger:
             "required": True,
         },
     )
-    min: int | None = field(
+    min: None | int = field(
         default=None,
         metadata={
             "name": "MIN",
@@ -1171,7 +1171,7 @@ class DatatypeDefinitionInteger:
 
     @dataclass
     class AlternativeId:
-        alternative_id: AlternativeId | None = field(
+        alternative_id: None | AlternativeId = field(
             default=None,
             metadata={
                 "name": "ALTERNATIVE-ID",
@@ -1186,7 +1186,7 @@ class DatatypeDefinitionReal:
     class Meta:
         name = "DATATYPE-DEFINITION-REAL"
 
-    alternative_id: DatatypeDefinitionReal.AlternativeId | None = field(
+    alternative_id: None | DatatypeDefinitionReal.AlternativeId = field(
         default=None,
         metadata={
             "name": "ALTERNATIVE-ID",
@@ -1194,7 +1194,7 @@ class DatatypeDefinitionReal:
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
         },
     )
-    accuracy: int | None = field(
+    accuracy: None | int = field(
         default=None,
         metadata={
             "name": "ACCURACY",
@@ -1202,14 +1202,14 @@ class DatatypeDefinitionReal:
             "required": True,
         },
     )
-    desc: str | None = field(
+    desc: None | str = field(
         default=None,
         metadata={
             "name": "DESC",
             "type": "Attribute",
         },
     )
-    identifier: str | None = field(
+    identifier: None | str = field(
         default=None,
         metadata={
             "name": "IDENTIFIER",
@@ -1217,7 +1217,7 @@ class DatatypeDefinitionReal:
             "required": True,
         },
     )
-    last_change: XmlDateTime | None = field(
+    last_change: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "LAST-CHANGE",
@@ -1225,14 +1225,14 @@ class DatatypeDefinitionReal:
             "required": True,
         },
     )
-    long_name: str | None = field(
+    long_name: None | str = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
             "type": "Attribute",
         },
     )
-    max: float | None = field(
+    max: None | float = field(
         default=None,
         metadata={
             "name": "MAX",
@@ -1240,7 +1240,7 @@ class DatatypeDefinitionReal:
             "required": True,
         },
     )
-    min: float | None = field(
+    min: None | float = field(
         default=None,
         metadata={
             "name": "MIN",
@@ -1251,7 +1251,7 @@ class DatatypeDefinitionReal:
 
     @dataclass
     class AlternativeId:
-        alternative_id: AlternativeId | None = field(
+        alternative_id: None | AlternativeId = field(
             default=None,
             metadata={
                 "name": "ALTERNATIVE-ID",
@@ -1266,7 +1266,7 @@ class DatatypeDefinitionString:
     class Meta:
         name = "DATATYPE-DEFINITION-STRING"
 
-    alternative_id: DatatypeDefinitionString.AlternativeId | None = field(
+    alternative_id: None | DatatypeDefinitionString.AlternativeId = field(
         default=None,
         metadata={
             "name": "ALTERNATIVE-ID",
@@ -1274,14 +1274,14 @@ class DatatypeDefinitionString:
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
         },
     )
-    desc: str | None = field(
+    desc: None | str = field(
         default=None,
         metadata={
             "name": "DESC",
             "type": "Attribute",
         },
     )
-    identifier: str | None = field(
+    identifier: None | str = field(
         default=None,
         metadata={
             "name": "IDENTIFIER",
@@ -1289,7 +1289,7 @@ class DatatypeDefinitionString:
             "required": True,
         },
     )
-    last_change: XmlDateTime | None = field(
+    last_change: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "LAST-CHANGE",
@@ -1297,14 +1297,14 @@ class DatatypeDefinitionString:
             "required": True,
         },
     )
-    long_name: str | None = field(
+    long_name: None | str = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
             "type": "Attribute",
         },
     )
-    max_length: int | None = field(
+    max_length: None | int = field(
         default=None,
         metadata={
             "name": "MAX-LENGTH",
@@ -1315,7 +1315,7 @@ class DatatypeDefinitionString:
 
     @dataclass
     class AlternativeId:
-        alternative_id: AlternativeId | None = field(
+        alternative_id: None | AlternativeId = field(
             default=None,
             metadata={
                 "name": "ALTERNATIVE-ID",
@@ -1330,7 +1330,7 @@ class DatatypeDefinitionXhtml:
     class Meta:
         name = "DATATYPE-DEFINITION-XHTML"
 
-    alternative_id: DatatypeDefinitionXhtml.AlternativeId | None = field(
+    alternative_id: None | DatatypeDefinitionXhtml.AlternativeId = field(
         default=None,
         metadata={
             "name": "ALTERNATIVE-ID",
@@ -1338,14 +1338,14 @@ class DatatypeDefinitionXhtml:
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
         },
     )
-    desc: str | None = field(
+    desc: None | str = field(
         default=None,
         metadata={
             "name": "DESC",
             "type": "Attribute",
         },
     )
-    identifier: str | None = field(
+    identifier: None | str = field(
         default=None,
         metadata={
             "name": "IDENTIFIER",
@@ -1353,7 +1353,7 @@ class DatatypeDefinitionXhtml:
             "required": True,
         },
     )
-    last_change: XmlDateTime | None = field(
+    last_change: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "LAST-CHANGE",
@@ -1361,7 +1361,7 @@ class DatatypeDefinitionXhtml:
             "required": True,
         },
     )
-    long_name: str | None = field(
+    long_name: None | str = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -1371,7 +1371,7 @@ class DatatypeDefinitionXhtml:
 
     @dataclass
     class AlternativeId:
-        alternative_id: AlternativeId | None = field(
+        alternative_id: None | AlternativeId = field(
             default=None,
             metadata={
                 "name": "ALTERNATIVE-ID",
@@ -1386,7 +1386,7 @@ class EnumValue:
     class Meta:
         name = "ENUM-VALUE"
 
-    alternative_id: EnumValue.AlternativeId | None = field(
+    alternative_id: None | EnumValue.AlternativeId = field(
         default=None,
         metadata={
             "name": "ALTERNATIVE-ID",
@@ -1394,7 +1394,7 @@ class EnumValue:
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
         },
     )
-    properties: EnumValue.Properties | None = field(
+    properties: None | EnumValue.Properties = field(
         default=None,
         metadata={
             "name": "PROPERTIES",
@@ -1403,14 +1403,14 @@ class EnumValue:
             "required": True,
         },
     )
-    desc: str | None = field(
+    desc: None | str = field(
         default=None,
         metadata={
             "name": "DESC",
             "type": "Attribute",
         },
     )
-    identifier: str | None = field(
+    identifier: None | str = field(
         default=None,
         metadata={
             "name": "IDENTIFIER",
@@ -1418,7 +1418,7 @@ class EnumValue:
             "required": True,
         },
     )
-    last_change: XmlDateTime | None = field(
+    last_change: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "LAST-CHANGE",
@@ -1426,7 +1426,7 @@ class EnumValue:
             "required": True,
         },
     )
-    long_name: str | None = field(
+    long_name: None | str = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -1436,7 +1436,7 @@ class EnumValue:
 
     @dataclass
     class AlternativeId:
-        alternative_id: AlternativeId | None = field(
+        alternative_id: None | AlternativeId = field(
             default=None,
             metadata={
                 "name": "ALTERNATIVE-ID",
@@ -1447,7 +1447,7 @@ class EnumValue:
 
     @dataclass
     class Properties:
-        embedded_value: EmbeddedValue | None = field(
+        embedded_value: None | EmbeddedValue = field(
             default=None,
             metadata={
                 "name": "EMBEDDED-VALUE",
@@ -1463,7 +1463,7 @@ class RelationGroup:
     class Meta:
         name = "RELATION-GROUP"
 
-    alternative_id: RelationGroup.AlternativeId | None = field(
+    alternative_id: None | RelationGroup.AlternativeId = field(
         default=None,
         metadata={
             "name": "ALTERNATIVE-ID",
@@ -1471,7 +1471,7 @@ class RelationGroup:
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
         },
     )
-    source_specification: RelationGroup.SourceSpecification | None = field(
+    source_specification: None | RelationGroup.SourceSpecification = field(
         default=None,
         metadata={
             "name": "SOURCE-SPECIFICATION",
@@ -1480,7 +1480,7 @@ class RelationGroup:
             "required": True,
         },
     )
-    spec_relations: RelationGroup.SpecRelations | None = field(
+    spec_relations: None | RelationGroup.SpecRelations = field(
         default=None,
         metadata={
             "name": "SPEC-RELATIONS",
@@ -1488,7 +1488,7 @@ class RelationGroup:
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
         },
     )
-    target_specification: RelationGroup.TargetSpecification | None = field(
+    target_specification: None | RelationGroup.TargetSpecification = field(
         default=None,
         metadata={
             "name": "TARGET-SPECIFICATION",
@@ -1497,7 +1497,7 @@ class RelationGroup:
             "required": True,
         },
     )
-    type_value: RelationGroup.Type | None = field(
+    type_value: None | RelationGroup.Type = field(
         default=None,
         metadata={
             "name": "TYPE",
@@ -1506,14 +1506,14 @@ class RelationGroup:
             "required": True,
         },
     )
-    desc: str | None = field(
+    desc: None | str = field(
         default=None,
         metadata={
             "name": "DESC",
             "type": "Attribute",
         },
     )
-    identifier: str | None = field(
+    identifier: None | str = field(
         default=None,
         metadata={
             "name": "IDENTIFIER",
@@ -1521,7 +1521,7 @@ class RelationGroup:
             "required": True,
         },
     )
-    last_change: XmlDateTime | None = field(
+    last_change: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "LAST-CHANGE",
@@ -1529,7 +1529,7 @@ class RelationGroup:
             "required": True,
         },
     )
-    long_name: str | None = field(
+    long_name: None | str = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -1539,7 +1539,7 @@ class RelationGroup:
 
     @dataclass
     class AlternativeId:
-        alternative_id: AlternativeId | None = field(
+        alternative_id: None | AlternativeId = field(
             default=None,
             metadata={
                 "name": "ALTERNATIVE-ID",
@@ -1550,7 +1550,7 @@ class RelationGroup:
 
     @dataclass
     class SourceSpecification:
-        specification_ref: str | None = field(
+        specification_ref: None | str = field(
             default=None,
             metadata={
                 "name": "SPECIFICATION-REF",
@@ -1573,7 +1573,7 @@ class RelationGroup:
 
     @dataclass
     class TargetSpecification:
-        specification_ref: str | None = field(
+        specification_ref: None | str = field(
             default=None,
             metadata={
                 "name": "SPECIFICATION-REF",
@@ -1585,7 +1585,7 @@ class RelationGroup:
 
     @dataclass
     class Type:
-        relation_group_type_ref: str | None = field(
+        relation_group_type_ref: None | str = field(
             default=None,
             metadata={
                 "name": "RELATION-GROUP-TYPE-REF",
@@ -1601,7 +1601,7 @@ class SpecHierarchy:
     class Meta:
         name = "SPEC-HIERARCHY"
 
-    alternative_id: SpecHierarchy.AlternativeId | None = field(
+    alternative_id: None | SpecHierarchy.AlternativeId = field(
         default=None,
         metadata={
             "name": "ALTERNATIVE-ID",
@@ -1609,7 +1609,7 @@ class SpecHierarchy:
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
         },
     )
-    children: SpecHierarchy.Children | None = field(
+    children: None | SpecHierarchy.Children = field(
         default=None,
         metadata={
             "name": "CHILDREN",
@@ -1617,7 +1617,7 @@ class SpecHierarchy:
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
         },
     )
-    editable_atts: SpecHierarchy.EditableAtts | None = field(
+    editable_atts: None | SpecHierarchy.EditableAtts = field(
         default=None,
         metadata={
             "name": "EDITABLE-ATTS",
@@ -1625,7 +1625,7 @@ class SpecHierarchy:
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
         },
     )
-    object_value: SpecHierarchy.Object | None = field(
+    object_value: None | SpecHierarchy.Object = field(
         default=None,
         metadata={
             "name": "OBJECT",
@@ -1634,14 +1634,14 @@ class SpecHierarchy:
             "required": True,
         },
     )
-    desc: str | None = field(
+    desc: None | str = field(
         default=None,
         metadata={
             "name": "DESC",
             "type": "Attribute",
         },
     )
-    identifier: str | None = field(
+    identifier: None | str = field(
         default=None,
         metadata={
             "name": "IDENTIFIER",
@@ -1649,21 +1649,21 @@ class SpecHierarchy:
             "required": True,
         },
     )
-    is_editable: bool | None = field(
+    is_editable: None | bool = field(
         default=None,
         metadata={
             "name": "IS-EDITABLE",
             "type": "Attribute",
         },
     )
-    is_table_internal: bool | None = field(
+    is_table_internal: None | bool = field(
         default=None,
         metadata={
             "name": "IS-TABLE-INTERNAL",
             "type": "Attribute",
         },
     )
-    last_change: XmlDateTime | None = field(
+    last_change: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "LAST-CHANGE",
@@ -1671,7 +1671,7 @@ class SpecHierarchy:
             "required": True,
         },
     )
-    long_name: str | None = field(
+    long_name: None | str = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -1681,7 +1681,7 @@ class SpecHierarchy:
 
     @dataclass
     class AlternativeId:
-        alternative_id: AlternativeId | None = field(
+        alternative_id: None | AlternativeId = field(
             default=None,
             metadata={
                 "name": "ALTERNATIVE-ID",
@@ -1762,7 +1762,7 @@ class SpecHierarchy:
 
     @dataclass
     class Object:
-        spec_object_ref: str | None = field(
+        spec_object_ref: None | str = field(
             default=None,
             metadata={
                 "name": "SPEC-OBJECT-REF",
@@ -1778,14 +1778,14 @@ class XhtmlContent:
     class Meta:
         name = "XHTML-CONTENT"
 
-    p: XhtmlPType | None = field(
+    p: None | XhtmlPType = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.w3.org/1999/xhtml",
         },
     )
-    div: XhtmlDivType | None = field(
+    div: None | XhtmlDivType = field(
         default=None,
         metadata={
             "type": "Element",
@@ -1799,7 +1799,7 @@ class AttributeValueXhtml:
     class Meta:
         name = "ATTRIBUTE-VALUE-XHTML"
 
-    the_value: XhtmlContent | None = field(
+    the_value: None | XhtmlContent = field(
         default=None,
         metadata={
             "name": "THE-VALUE",
@@ -1808,7 +1808,7 @@ class AttributeValueXhtml:
             "required": True,
         },
     )
-    the_original_value: XhtmlContent | None = field(
+    the_original_value: None | XhtmlContent = field(
         default=None,
         metadata={
             "name": "THE-ORIGINAL-VALUE",
@@ -1816,7 +1816,7 @@ class AttributeValueXhtml:
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
         },
     )
-    definition: AttributeValueXhtml.Definition | None = field(
+    definition: None | AttributeValueXhtml.Definition = field(
         default=None,
         metadata={
             "name": "DEFINITION",
@@ -1825,7 +1825,7 @@ class AttributeValueXhtml:
             "required": True,
         },
     )
-    is_simplified: bool | None = field(
+    is_simplified: None | bool = field(
         default=None,
         metadata={
             "name": "IS-SIMPLIFIED",
@@ -1835,7 +1835,7 @@ class AttributeValueXhtml:
 
     @dataclass
     class Definition:
-        attribute_definition_xhtml_ref: str | None = field(
+        attribute_definition_xhtml_ref: None | str = field(
             default=None,
             metadata={
                 "name": "ATTRIBUTE-DEFINITION-XHTML-REF",
@@ -1851,7 +1851,7 @@ class DatatypeDefinitionEnumeration:
     class Meta:
         name = "DATATYPE-DEFINITION-ENUMERATION"
 
-    alternative_id: DatatypeDefinitionEnumeration.AlternativeId | None = field(
+    alternative_id: None | DatatypeDefinitionEnumeration.AlternativeId = field(
         default=None,
         metadata={
             "name": "ALTERNATIVE-ID",
@@ -1859,7 +1859,7 @@ class DatatypeDefinitionEnumeration:
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
         },
     )
-    specified_values: DatatypeDefinitionEnumeration.SpecifiedValues | None = (
+    specified_values: None | DatatypeDefinitionEnumeration.SpecifiedValues = (
         field(
             default=None,
             metadata={
@@ -1869,14 +1869,14 @@ class DatatypeDefinitionEnumeration:
             },
         )
     )
-    desc: str | None = field(
+    desc: None | str = field(
         default=None,
         metadata={
             "name": "DESC",
             "type": "Attribute",
         },
     )
-    identifier: str | None = field(
+    identifier: None | str = field(
         default=None,
         metadata={
             "name": "IDENTIFIER",
@@ -1884,7 +1884,7 @@ class DatatypeDefinitionEnumeration:
             "required": True,
         },
     )
-    last_change: XmlDateTime | None = field(
+    last_change: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "LAST-CHANGE",
@@ -1892,7 +1892,7 @@ class DatatypeDefinitionEnumeration:
             "required": True,
         },
     )
-    long_name: str | None = field(
+    long_name: None | str = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -1902,7 +1902,7 @@ class DatatypeDefinitionEnumeration:
 
     @dataclass
     class AlternativeId:
-        alternative_id: AlternativeId | None = field(
+        alternative_id: None | AlternativeId = field(
             default=None,
             metadata={
                 "name": "ALTERNATIVE-ID",
@@ -1928,7 +1928,7 @@ class AttributeDefinitionXhtml:
     class Meta:
         name = "ATTRIBUTE-DEFINITION-XHTML"
 
-    alternative_id: AttributeDefinitionXhtml.AlternativeId | None = field(
+    alternative_id: None | AttributeDefinitionXhtml.AlternativeId = field(
         default=None,
         metadata={
             "name": "ALTERNATIVE-ID",
@@ -1936,7 +1936,7 @@ class AttributeDefinitionXhtml:
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
         },
     )
-    default_value: AttributeDefinitionXhtml.DefaultValue | None = field(
+    default_value: None | AttributeDefinitionXhtml.DefaultValue = field(
         default=None,
         metadata={
             "name": "DEFAULT-VALUE",
@@ -1944,7 +1944,7 @@ class AttributeDefinitionXhtml:
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
         },
     )
-    type_value: AttributeDefinitionXhtml.Type | None = field(
+    type_value: None | AttributeDefinitionXhtml.Type = field(
         default=None,
         metadata={
             "name": "TYPE",
@@ -1953,14 +1953,14 @@ class AttributeDefinitionXhtml:
             "required": True,
         },
     )
-    desc: str | None = field(
+    desc: None | str = field(
         default=None,
         metadata={
             "name": "DESC",
             "type": "Attribute",
         },
     )
-    identifier: str | None = field(
+    identifier: None | str = field(
         default=None,
         metadata={
             "name": "IDENTIFIER",
@@ -1968,14 +1968,14 @@ class AttributeDefinitionXhtml:
             "required": True,
         },
     )
-    is_editable: bool | None = field(
+    is_editable: None | bool = field(
         default=None,
         metadata={
             "name": "IS-EDITABLE",
             "type": "Attribute",
         },
     )
-    last_change: XmlDateTime | None = field(
+    last_change: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "LAST-CHANGE",
@@ -1983,7 +1983,7 @@ class AttributeDefinitionXhtml:
             "required": True,
         },
     )
-    long_name: str | None = field(
+    long_name: None | str = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -1993,7 +1993,7 @@ class AttributeDefinitionXhtml:
 
     @dataclass
     class AlternativeId:
-        alternative_id: AlternativeId | None = field(
+        alternative_id: None | AlternativeId = field(
             default=None,
             metadata={
                 "name": "ALTERNATIVE-ID",
@@ -2004,7 +2004,7 @@ class AttributeDefinitionXhtml:
 
     @dataclass
     class DefaultValue:
-        attribute_value_xhtml: AttributeValueXhtml | None = field(
+        attribute_value_xhtml: None | AttributeValueXhtml = field(
             default=None,
             metadata={
                 "name": "ATTRIBUTE-VALUE-XHTML",
@@ -2015,7 +2015,7 @@ class AttributeDefinitionXhtml:
 
     @dataclass
     class Type:
-        datatype_definition_xhtml_ref: str | None = field(
+        datatype_definition_xhtml_ref: None | str = field(
             default=None,
             metadata={
                 "name": "DATATYPE-DEFINITION-XHTML-REF",
@@ -2031,7 +2031,7 @@ class SpecObject:
     class Meta:
         name = "SPEC-OBJECT"
 
-    alternative_id: SpecObject.AlternativeId | None = field(
+    alternative_id: None | SpecObject.AlternativeId = field(
         default=None,
         metadata={
             "name": "ALTERNATIVE-ID",
@@ -2039,7 +2039,7 @@ class SpecObject:
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
         },
     )
-    values: SpecObject.Values | None = field(
+    values: None | SpecObject.Values = field(
         default=None,
         metadata={
             "name": "VALUES",
@@ -2047,7 +2047,7 @@ class SpecObject:
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
         },
     )
-    type_value: SpecObject.Type | None = field(
+    type_value: None | SpecObject.Type = field(
         default=None,
         metadata={
             "name": "TYPE",
@@ -2056,14 +2056,14 @@ class SpecObject:
             "required": True,
         },
     )
-    desc: str | None = field(
+    desc: None | str = field(
         default=None,
         metadata={
             "name": "DESC",
             "type": "Attribute",
         },
     )
-    identifier: str | None = field(
+    identifier: None | str = field(
         default=None,
         metadata={
             "name": "IDENTIFIER",
@@ -2071,7 +2071,7 @@ class SpecObject:
             "required": True,
         },
     )
-    last_change: XmlDateTime | None = field(
+    last_change: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "LAST-CHANGE",
@@ -2079,7 +2079,7 @@ class SpecObject:
             "required": True,
         },
     )
-    long_name: str | None = field(
+    long_name: None | str = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -2089,7 +2089,7 @@ class SpecObject:
 
     @dataclass
     class AlternativeId:
-        alternative_id: AlternativeId | None = field(
+        alternative_id: None | AlternativeId = field(
             default=None,
             metadata={
                 "name": "ALTERNATIVE-ID",
@@ -2159,7 +2159,7 @@ class SpecObject:
 
     @dataclass
     class Type:
-        spec_object_type_ref: str | None = field(
+        spec_object_type_ref: None | str = field(
             default=None,
             metadata={
                 "name": "SPEC-OBJECT-TYPE-REF",
@@ -2175,7 +2175,7 @@ class SpecRelation:
     class Meta:
         name = "SPEC-RELATION"
 
-    alternative_id: SpecRelation.AlternativeId | None = field(
+    alternative_id: None | SpecRelation.AlternativeId = field(
         default=None,
         metadata={
             "name": "ALTERNATIVE-ID",
@@ -2183,7 +2183,7 @@ class SpecRelation:
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
         },
     )
-    values: SpecRelation.Values | None = field(
+    values: None | SpecRelation.Values = field(
         default=None,
         metadata={
             "name": "VALUES",
@@ -2191,7 +2191,7 @@ class SpecRelation:
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
         },
     )
-    source: SpecRelation.Source | None = field(
+    source: None | SpecRelation.Source = field(
         default=None,
         metadata={
             "name": "SOURCE",
@@ -2200,7 +2200,7 @@ class SpecRelation:
             "required": True,
         },
     )
-    target: SpecRelation.Target | None = field(
+    target: None | SpecRelation.Target = field(
         default=None,
         metadata={
             "name": "TARGET",
@@ -2209,7 +2209,7 @@ class SpecRelation:
             "required": True,
         },
     )
-    type_value: SpecRelation.Type | None = field(
+    type_value: None | SpecRelation.Type = field(
         default=None,
         metadata={
             "name": "TYPE",
@@ -2218,14 +2218,14 @@ class SpecRelation:
             "required": True,
         },
     )
-    desc: str | None = field(
+    desc: None | str = field(
         default=None,
         metadata={
             "name": "DESC",
             "type": "Attribute",
         },
     )
-    identifier: str | None = field(
+    identifier: None | str = field(
         default=None,
         metadata={
             "name": "IDENTIFIER",
@@ -2233,7 +2233,7 @@ class SpecRelation:
             "required": True,
         },
     )
-    last_change: XmlDateTime | None = field(
+    last_change: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "LAST-CHANGE",
@@ -2241,7 +2241,7 @@ class SpecRelation:
             "required": True,
         },
     )
-    long_name: str | None = field(
+    long_name: None | str = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -2251,7 +2251,7 @@ class SpecRelation:
 
     @dataclass
     class AlternativeId:
-        alternative_id: AlternativeId | None = field(
+        alternative_id: None | AlternativeId = field(
             default=None,
             metadata={
                 "name": "ALTERNATIVE-ID",
@@ -2321,7 +2321,7 @@ class SpecRelation:
 
     @dataclass
     class Source:
-        spec_object_ref: str | None = field(
+        spec_object_ref: None | str = field(
             default=None,
             metadata={
                 "name": "SPEC-OBJECT-REF",
@@ -2333,7 +2333,7 @@ class SpecRelation:
 
     @dataclass
     class Target:
-        spec_object_ref: str | None = field(
+        spec_object_ref: None | str = field(
             default=None,
             metadata={
                 "name": "SPEC-OBJECT-REF",
@@ -2345,7 +2345,7 @@ class SpecRelation:
 
     @dataclass
     class Type:
-        spec_relation_type_ref: str | None = field(
+        spec_relation_type_ref: None | str = field(
             default=None,
             metadata={
                 "name": "SPEC-RELATION-TYPE-REF",
@@ -2361,7 +2361,7 @@ class Specification:
     class Meta:
         name = "SPECIFICATION"
 
-    alternative_id: Specification.AlternativeId | None = field(
+    alternative_id: None | Specification.AlternativeId = field(
         default=None,
         metadata={
             "name": "ALTERNATIVE-ID",
@@ -2369,7 +2369,7 @@ class Specification:
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
         },
     )
-    values: Specification.Values | None = field(
+    values: None | Specification.Values = field(
         default=None,
         metadata={
             "name": "VALUES",
@@ -2377,7 +2377,7 @@ class Specification:
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
         },
     )
-    children: Specification.Children | None = field(
+    children: None | Specification.Children = field(
         default=None,
         metadata={
             "name": "CHILDREN",
@@ -2385,7 +2385,7 @@ class Specification:
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
         },
     )
-    type_value: Specification.Type | None = field(
+    type_value: None | Specification.Type = field(
         default=None,
         metadata={
             "name": "TYPE",
@@ -2394,14 +2394,14 @@ class Specification:
             "required": True,
         },
     )
-    desc: str | None = field(
+    desc: None | str = field(
         default=None,
         metadata={
             "name": "DESC",
             "type": "Attribute",
         },
     )
-    identifier: str | None = field(
+    identifier: None | str = field(
         default=None,
         metadata={
             "name": "IDENTIFIER",
@@ -2409,7 +2409,7 @@ class Specification:
             "required": True,
         },
     )
-    last_change: XmlDateTime | None = field(
+    last_change: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "LAST-CHANGE",
@@ -2417,7 +2417,7 @@ class Specification:
             "required": True,
         },
     )
-    long_name: str | None = field(
+    long_name: None | str = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -2427,7 +2427,7 @@ class Specification:
 
     @dataclass
     class AlternativeId:
-        alternative_id: AlternativeId | None = field(
+        alternative_id: None | AlternativeId = field(
             default=None,
             metadata={
                 "name": "ALTERNATIVE-ID",
@@ -2508,7 +2508,7 @@ class Specification:
 
     @dataclass
     class Type:
-        specification_type_ref: str | None = field(
+        specification_type_ref: None | str = field(
             default=None,
             metadata={
                 "name": "SPECIFICATION-TYPE-REF",
@@ -2524,7 +2524,7 @@ class RelationGroupType:
     class Meta:
         name = "RELATION-GROUP-TYPE"
 
-    alternative_id: RelationGroupType.AlternativeId | None = field(
+    alternative_id: None | RelationGroupType.AlternativeId = field(
         default=None,
         metadata={
             "name": "ALTERNATIVE-ID",
@@ -2532,7 +2532,7 @@ class RelationGroupType:
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
         },
     )
-    spec_attributes: RelationGroupType.SpecAttributes | None = field(
+    spec_attributes: None | RelationGroupType.SpecAttributes = field(
         default=None,
         metadata={
             "name": "SPEC-ATTRIBUTES",
@@ -2540,14 +2540,14 @@ class RelationGroupType:
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
         },
     )
-    desc: str | None = field(
+    desc: None | str = field(
         default=None,
         metadata={
             "name": "DESC",
             "type": "Attribute",
         },
     )
-    identifier: str | None = field(
+    identifier: None | str = field(
         default=None,
         metadata={
             "name": "IDENTIFIER",
@@ -2555,7 +2555,7 @@ class RelationGroupType:
             "required": True,
         },
     )
-    last_change: XmlDateTime | None = field(
+    last_change: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "LAST-CHANGE",
@@ -2563,7 +2563,7 @@ class RelationGroupType:
             "required": True,
         },
     )
-    long_name: str | None = field(
+    long_name: None | str = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -2573,7 +2573,7 @@ class RelationGroupType:
 
     @dataclass
     class AlternativeId:
-        alternative_id: AlternativeId | None = field(
+        alternative_id: None | AlternativeId = field(
             default=None,
             metadata={
                 "name": "ALTERNATIVE-ID",
@@ -2649,7 +2649,7 @@ class SpecObjectType:
     class Meta:
         name = "SPEC-OBJECT-TYPE"
 
-    alternative_id: SpecObjectType.AlternativeId | None = field(
+    alternative_id: None | SpecObjectType.AlternativeId = field(
         default=None,
         metadata={
             "name": "ALTERNATIVE-ID",
@@ -2657,7 +2657,7 @@ class SpecObjectType:
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
         },
     )
-    spec_attributes: SpecObjectType.SpecAttributes | None = field(
+    spec_attributes: None | SpecObjectType.SpecAttributes = field(
         default=None,
         metadata={
             "name": "SPEC-ATTRIBUTES",
@@ -2665,14 +2665,14 @@ class SpecObjectType:
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
         },
     )
-    desc: str | None = field(
+    desc: None | str = field(
         default=None,
         metadata={
             "name": "DESC",
             "type": "Attribute",
         },
     )
-    identifier: str | None = field(
+    identifier: None | str = field(
         default=None,
         metadata={
             "name": "IDENTIFIER",
@@ -2680,7 +2680,7 @@ class SpecObjectType:
             "required": True,
         },
     )
-    last_change: XmlDateTime | None = field(
+    last_change: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "LAST-CHANGE",
@@ -2688,7 +2688,7 @@ class SpecObjectType:
             "required": True,
         },
     )
-    long_name: str | None = field(
+    long_name: None | str = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -2698,7 +2698,7 @@ class SpecObjectType:
 
     @dataclass
     class AlternativeId:
-        alternative_id: AlternativeId | None = field(
+        alternative_id: None | AlternativeId = field(
             default=None,
             metadata={
                 "name": "ALTERNATIVE-ID",
@@ -2774,7 +2774,7 @@ class SpecRelationType:
     class Meta:
         name = "SPEC-RELATION-TYPE"
 
-    alternative_id: SpecRelationType.AlternativeId | None = field(
+    alternative_id: None | SpecRelationType.AlternativeId = field(
         default=None,
         metadata={
             "name": "ALTERNATIVE-ID",
@@ -2782,7 +2782,7 @@ class SpecRelationType:
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
         },
     )
-    spec_attributes: SpecRelationType.SpecAttributes | None = field(
+    spec_attributes: None | SpecRelationType.SpecAttributes = field(
         default=None,
         metadata={
             "name": "SPEC-ATTRIBUTES",
@@ -2790,14 +2790,14 @@ class SpecRelationType:
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
         },
     )
-    desc: str | None = field(
+    desc: None | str = field(
         default=None,
         metadata={
             "name": "DESC",
             "type": "Attribute",
         },
     )
-    identifier: str | None = field(
+    identifier: None | str = field(
         default=None,
         metadata={
             "name": "IDENTIFIER",
@@ -2805,7 +2805,7 @@ class SpecRelationType:
             "required": True,
         },
     )
-    last_change: XmlDateTime | None = field(
+    last_change: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "LAST-CHANGE",
@@ -2813,7 +2813,7 @@ class SpecRelationType:
             "required": True,
         },
     )
-    long_name: str | None = field(
+    long_name: None | str = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -2823,7 +2823,7 @@ class SpecRelationType:
 
     @dataclass
     class AlternativeId:
-        alternative_id: AlternativeId | None = field(
+        alternative_id: None | AlternativeId = field(
             default=None,
             metadata={
                 "name": "ALTERNATIVE-ID",
@@ -2899,7 +2899,7 @@ class SpecificationType:
     class Meta:
         name = "SPECIFICATION-TYPE"
 
-    alternative_id: SpecificationType.AlternativeId | None = field(
+    alternative_id: None | SpecificationType.AlternativeId = field(
         default=None,
         metadata={
             "name": "ALTERNATIVE-ID",
@@ -2907,7 +2907,7 @@ class SpecificationType:
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
         },
     )
-    spec_attributes: SpecificationType.SpecAttributes | None = field(
+    spec_attributes: None | SpecificationType.SpecAttributes = field(
         default=None,
         metadata={
             "name": "SPEC-ATTRIBUTES",
@@ -2915,14 +2915,14 @@ class SpecificationType:
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
         },
     )
-    desc: str | None = field(
+    desc: None | str = field(
         default=None,
         metadata={
             "name": "DESC",
             "type": "Attribute",
         },
     )
-    identifier: str | None = field(
+    identifier: None | str = field(
         default=None,
         metadata={
             "name": "IDENTIFIER",
@@ -2930,7 +2930,7 @@ class SpecificationType:
             "required": True,
         },
     )
-    last_change: XmlDateTime | None = field(
+    last_change: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "LAST-CHANGE",
@@ -2938,7 +2938,7 @@ class SpecificationType:
             "required": True,
         },
     )
-    long_name: str | None = field(
+    long_name: None | str = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -2948,7 +2948,7 @@ class SpecificationType:
 
     @dataclass
     class AlternativeId:
-        alternative_id: AlternativeId | None = field(
+        alternative_id: None | AlternativeId = field(
             default=None,
             metadata={
                 "name": "ALTERNATIVE-ID",
@@ -3024,7 +3024,7 @@ class ReqIfContent:
     class Meta:
         name = "REQ-IF-CONTENT"
 
-    datatypes: ReqIfContent.Datatypes | None = field(
+    datatypes: None | ReqIfContent.Datatypes = field(
         default=None,
         metadata={
             "name": "DATATYPES",
@@ -3032,7 +3032,7 @@ class ReqIfContent:
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
         },
     )
-    spec_types: ReqIfContent.SpecTypes | None = field(
+    spec_types: None | ReqIfContent.SpecTypes = field(
         default=None,
         metadata={
             "name": "SPEC-TYPES",
@@ -3040,7 +3040,7 @@ class ReqIfContent:
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
         },
     )
-    spec_objects: ReqIfContent.SpecObjects | None = field(
+    spec_objects: None | ReqIfContent.SpecObjects = field(
         default=None,
         metadata={
             "name": "SPEC-OBJECTS",
@@ -3048,7 +3048,7 @@ class ReqIfContent:
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
         },
     )
-    spec_relations: ReqIfContent.SpecRelations | None = field(
+    spec_relations: None | ReqIfContent.SpecRelations = field(
         default=None,
         metadata={
             "name": "SPEC-RELATIONS",
@@ -3056,7 +3056,7 @@ class ReqIfContent:
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
         },
     )
-    specifications: ReqIfContent.Specifications | None = field(
+    specifications: None | ReqIfContent.Specifications = field(
         default=None,
         metadata={
             "name": "SPECIFICATIONS",
@@ -3064,7 +3064,7 @@ class ReqIfContent:
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
         },
     )
-    spec_relation_groups: ReqIfContent.SpecRelationGroups | None = field(
+    spec_relation_groups: None | ReqIfContent.SpecRelationGroups = field(
         default=None,
         metadata={
             "name": "SPEC-RELATION-GROUPS",
@@ -3220,7 +3220,7 @@ class ReqIf:
         name = "REQ-IF"
         namespace = "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd"
 
-    the_header: ReqIf.TheHeader | None = field(
+    the_header: None | ReqIf.TheHeader = field(
         default=None,
         metadata={
             "name": "THE-HEADER",
@@ -3228,7 +3228,7 @@ class ReqIf:
             "required": True,
         },
     )
-    core_content: ReqIf.CoreContent | None = field(
+    core_content: None | ReqIf.CoreContent = field(
         default=None,
         metadata={
             "name": "CORE-CONTENT",
@@ -3236,14 +3236,14 @@ class ReqIf:
             "required": True,
         },
     )
-    tool_extensions: ReqIf.ToolExtensions | None = field(
+    tool_extensions: None | ReqIf.ToolExtensions = field(
         default=None,
         metadata={
             "name": "TOOL-EXTENSIONS",
             "type": "Element",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -3253,7 +3253,7 @@ class ReqIf:
 
     @dataclass
     class TheHeader:
-        req_if_header: ReqIfHeader | None = field(
+        req_if_header: None | ReqIfHeader = field(
             default=None,
             metadata={
                 "name": "REQ-IF-HEADER",
@@ -3264,7 +3264,7 @@ class ReqIf:
 
     @dataclass
     class CoreContent:
-        req_if_content: ReqIfContent | None = field(
+        req_if_content: None | ReqIfContent = field(
             default=None,
             metadata={
                 "name": "REQ-IF-CONTENT",

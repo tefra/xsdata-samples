@@ -31,20 +31,20 @@ class SwcToEcuMappingConstraintType:
     class Meta:
         name = "SWC-TO-ECU-MAPPING-CONSTRAINT-TYPE"
 
-    value: SwcToEcuMappingConstraintTypeSimple | None = field(
+    value: None | SwcToEcuMappingConstraintTypeSimple = field(
         default=None,
         metadata={
             "required": True,
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

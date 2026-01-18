@@ -46,14 +46,14 @@ class TdEventOccurrenceExpressionFormula:
     class Meta:
         name = "TD-EVENT-OCCURRENCE-EXPRESSION-FORMULA"
 
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -102,7 +102,7 @@ class TdEventOccurrenceExpressionFormula:
 
     @dataclass
     class ArgumentRef(Ref):
-        dest: AutosarOperationArgumentInstanceSubtypesEnum | None = field(
+        dest: None | AutosarOperationArgumentInstanceSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -113,7 +113,7 @@ class TdEventOccurrenceExpressionFormula:
 
     @dataclass
     class EventRef(Ref):
-        dest: TimingDescriptionEventSubtypesEnum | None = field(
+        dest: None | TimingDescriptionEventSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -124,7 +124,7 @@ class TdEventOccurrenceExpressionFormula:
 
     @dataclass
     class ModeRef(Ref):
-        dest: TimingModeInstanceSubtypesEnum | None = field(
+        dest: None | TimingModeInstanceSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -135,7 +135,7 @@ class TdEventOccurrenceExpressionFormula:
 
     @dataclass
     class VariableRef(Ref):
-        dest: AutosarVariableInstanceSubtypesEnum | None = field(
+        dest: None | AutosarVariableInstanceSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

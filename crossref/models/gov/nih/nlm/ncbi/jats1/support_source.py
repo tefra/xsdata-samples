@@ -54,19 +54,19 @@ class SupportSource:
         name = "support-source"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    country: str | None = field(
+    country: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    hreflang: str | None = field(
+    hreflang: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -79,35 +79,35 @@ class SupportSource:
             "tokens": True,
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    support_type: str | None = field(
+    support_type: None | str = field(
         default=None,
         metadata={
             "name": "support-type",
             "type": "Attribute",
         },
     )
-    actuate: ActuateType | None = field(
+    actuate: None | ActuateType = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    href: str | None = field(
+    href: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    role: str | None = field(
+    role: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -115,14 +115,14 @@ class SupportSource:
             "min_length": 1,
         },
     )
-    show: ShowType | None = field(
+    show: None | ShowType = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    title: str | None = field(
+    title: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -138,14 +138,14 @@ class SupportSource:
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",

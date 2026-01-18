@@ -13,7 +13,7 @@ class ParkingBayStatusValueStructure(TypeOfValueVersionStructure):
     class Meta:
         name = "ParkingBayStatus_ValueStructure"
 
-    status: ParkingBayStatusEnumeration | None = field(
+    status: None | ParkingBayStatusEnumeration = field(
         default=None,
         metadata={
             "name": "Status",

@@ -21,7 +21,7 @@ class NotifyProgramGbmresponseType(BaseGbmtype):
     class Meta:
         name = "NotifyProgramGBMResponseType"
 
-    status: str | None = field(
+    status: None | str = field(
         default=None,
         metadata={
             "name": "Status",
@@ -30,7 +30,7 @@ class NotifyProgramGbmresponseType(BaseGbmtype):
             "required": True,
         },
     )
-    error_message: str | None = field(
+    error_message: None | str = field(
         default=None,
         metadata={
             "name": "ErrorMessage",

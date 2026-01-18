@@ -108,7 +108,7 @@ class DiagnosticEventInfoNeeds:
     class Meta:
         name = "DIAGNOSTIC-EVENT-INFO-NEEDS"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -118,7 +118,7 @@ class DiagnosticEventInfoNeeds:
         },
     )
     short_name_fragments: (
-        DiagnosticEventInfoNeeds.ShortNameFragments | None
+        None | DiagnosticEventInfoNeeds.ShortNameFragments
     ) = field(
         default=None,
         metadata={
@@ -127,7 +127,7 @@ class DiagnosticEventInfoNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -135,7 +135,7 @@ class DiagnosticEventInfoNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -143,7 +143,7 @@ class DiagnosticEventInfoNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -151,7 +151,7 @@ class DiagnosticEventInfoNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -159,7 +159,7 @@ class DiagnosticEventInfoNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -167,7 +167,7 @@ class DiagnosticEventInfoNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: DiagnosticEventInfoNeeds.Annotations | None = field(
+    annotations: None | DiagnosticEventInfoNeeds.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -175,7 +175,7 @@ class DiagnosticEventInfoNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    audiences: DiagnosticEventInfoNeeds.Audiences | None = field(
+    audiences: None | DiagnosticEventInfoNeeds.Audiences = field(
         default=None,
         metadata={
             "name": "AUDIENCES",
@@ -183,7 +183,7 @@ class DiagnosticEventInfoNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    diag_requirement: DiagRequirementIdString | None = field(
+    diag_requirement: None | DiagRequirementIdString = field(
         default=None,
         metadata={
             "name": "DIAG-REQUIREMENT",
@@ -191,7 +191,7 @@ class DiagnosticEventInfoNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    security_access_level: PositiveInteger | None = field(
+    security_access_level: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "SECURITY-ACCESS-LEVEL",
@@ -199,7 +199,7 @@ class DiagnosticEventInfoNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    dtc_kind: DtcKindEnum | None = field(
+    dtc_kind: None | DtcKindEnum = field(
         default=None,
         metadata={
             "name": "DTC-KIND",
@@ -207,7 +207,7 @@ class DiagnosticEventInfoNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    dtc_number: PositiveInteger | None = field(
+    dtc_number: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "DTC-NUMBER",
@@ -215,7 +215,7 @@ class DiagnosticEventInfoNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    obd_dtc_number: PositiveInteger | None = field(
+    obd_dtc_number: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "OBD-DTC-NUMBER",
@@ -223,7 +223,7 @@ class DiagnosticEventInfoNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    uds_dtc_number: PositiveInteger | None = field(
+    uds_dtc_number: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "UDS-DTC-NUMBER",
@@ -231,14 +231,14 @@ class DiagnosticEventInfoNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -246,7 +246,7 @@ class DiagnosticEventInfoNeeds:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",

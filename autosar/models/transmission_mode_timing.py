@@ -39,7 +39,7 @@ class TransmissionModeTiming:
     class Meta:
         name = "TRANSMISSION-MODE-TIMING"
 
-    cyclic_timing: CyclicTiming | None = field(
+    cyclic_timing: None | CyclicTiming = field(
         default=None,
         metadata={
             "name": "CYCLIC-TIMING",
@@ -47,7 +47,7 @@ class TransmissionModeTiming:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    event_controlled_timing: EventControlledTiming | None = field(
+    event_controlled_timing: None | EventControlledTiming = field(
         default=None,
         metadata={
             "name": "EVENT-CONTROLLED-TIMING",
@@ -55,14 +55,14 @@ class TransmissionModeTiming:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

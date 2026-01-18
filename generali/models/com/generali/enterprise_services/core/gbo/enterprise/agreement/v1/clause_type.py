@@ -25,7 +25,7 @@ __NAMESPACE__ = (
 
 @dataclass
 class ClauseType(BaseIdentifiedComponentType):
-    code: CodeType | None = field(
+    code: None | CodeType = field(
         default=None,
         metadata={
             "name": "Code",
@@ -33,7 +33,7 @@ class ClauseType(BaseIdentifiedComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    wording: TextType | None = field(
+    wording: None | TextType = field(
         default=None,
         metadata={
             "name": "Wording",
@@ -41,7 +41,7 @@ class ClauseType(BaseIdentifiedComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    limits: LimitsType | None = field(
+    limits: None | LimitsType = field(
         default=None,
         metadata={
             "name": "Limits",
@@ -49,7 +49,7 @@ class ClauseType(BaseIdentifiedComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    deductibles: DeductiblesType | None = field(
+    deductibles: None | DeductiblesType = field(
         default=None,
         metadata={
             "name": "Deductibles",
@@ -57,14 +57,14 @@ class ClauseType(BaseIdentifiedComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    is_included: bool | None = field(
+    is_included: None | bool = field(
         default=None,
         metadata={
             "name": "IsIncluded",
             "type": "Attribute",
         },
     )
-    is_custom: bool | None = field(
+    is_custom: None | bool = field(
         default=None,
         metadata={
             "name": "IsCustom",

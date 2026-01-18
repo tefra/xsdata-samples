@@ -59,7 +59,7 @@ class ClientServerArrayElementMapping:
         name = "CLIENT-SERVER-ARRAY-ELEMENT-MAPPING"
 
     complex_type_mapping: (
-        ClientServerArrayElementMapping.ComplexTypeMapping | None
+        None | ClientServerArrayElementMapping.ComplexTypeMapping
     ) = field(
         default=None,
         metadata={
@@ -68,7 +68,7 @@ class ClientServerArrayElementMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    indexed_array_element: IndexedArrayElement | None = field(
+    indexed_array_element: None | IndexedArrayElement = field(
         default=None,
         metadata={
             "name": "INDEXED-ARRAY-ELEMENT",
@@ -77,7 +77,7 @@ class ClientServerArrayElementMapping:
         },
     )
     system_signal_ref: (
-        ClientServerArrayElementMapping.SystemSignalRef | None
+        None | ClientServerArrayElementMapping.SystemSignalRef
     ) = field(
         default=None,
         metadata={
@@ -86,14 +86,14 @@ class ClientServerArrayElementMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -105,7 +105,7 @@ class ClientServerArrayElementMapping:
     @dataclass
     class ComplexTypeMapping:
         client_server_array_type_mapping: (
-            ClientServerArrayTypeMapping | None
+            None | ClientServerArrayTypeMapping
         ) = field(
             default=None,
             metadata={
@@ -115,7 +115,7 @@ class ClientServerArrayElementMapping:
             },
         )
         client_server_record_type_mapping: (
-            ClientServerRecordTypeMapping | None
+            None | ClientServerRecordTypeMapping
         ) = field(
             default=None,
             metadata={
@@ -127,7 +127,7 @@ class ClientServerArrayElementMapping:
 
     @dataclass
     class SystemSignalRef(Ref):
-        dest: SystemSignalSubtypesEnum | None = field(
+        dest: None | SystemSignalSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -164,7 +164,7 @@ class ClientServerArrayTypeMapping:
     class Meta:
         name = "CLIENT-SERVER-ARRAY-TYPE-MAPPING"
 
-    argument_ref: ClientServerArrayTypeMapping.ArgumentRef | None = field(
+    argument_ref: None | ClientServerArrayTypeMapping.ArgumentRef = field(
         default=None,
         metadata={
             "name": "ARGUMENT-REF",
@@ -173,7 +173,7 @@ class ClientServerArrayTypeMapping:
         },
     )
     array_element_mappings: (
-        ClientServerArrayTypeMapping.ArrayElementMappings | None
+        None | ClientServerArrayTypeMapping.ArrayElementMappings
     ) = field(
         default=None,
         metadata={
@@ -182,14 +182,14 @@ class ClientServerArrayTypeMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -200,7 +200,7 @@ class ClientServerArrayTypeMapping:
 
     @dataclass
     class ArgumentRef(Ref):
-        dest: ArgumentDataPrototypeSubtypesEnum | None = field(
+        dest: None | ArgumentDataPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -272,7 +272,7 @@ class ClientServerRecordElementMapping:
         name = "CLIENT-SERVER-RECORD-ELEMENT-MAPPING"
 
     application_record_element_ref: (
-        ClientServerRecordElementMapping.ApplicationRecordElementRef | None
+        None | ClientServerRecordElementMapping.ApplicationRecordElementRef
     ) = field(
         default=None,
         metadata={
@@ -282,7 +282,7 @@ class ClientServerRecordElementMapping:
         },
     )
     complex_type_mapping: (
-        ClientServerRecordElementMapping.ComplexTypeMapping | None
+        None | ClientServerRecordElementMapping.ComplexTypeMapping
     ) = field(
         default=None,
         metadata={
@@ -292,7 +292,7 @@ class ClientServerRecordElementMapping:
         },
     )
     implementation_record_element_ref: (
-        ClientServerRecordElementMapping.ImplementationRecordElementRef | None
+        None | ClientServerRecordElementMapping.ImplementationRecordElementRef
     ) = field(
         default=None,
         metadata={
@@ -302,7 +302,7 @@ class ClientServerRecordElementMapping:
         },
     )
     system_signal_ref: (
-        ClientServerRecordElementMapping.SystemSignalRef | None
+        None | ClientServerRecordElementMapping.SystemSignalRef
     ) = field(
         default=None,
         metadata={
@@ -311,14 +311,14 @@ class ClientServerRecordElementMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -329,7 +329,7 @@ class ClientServerRecordElementMapping:
 
     @dataclass
     class ApplicationRecordElementRef(Ref):
-        dest: ApplicationRecordElementSubtypesEnum | None = field(
+        dest: None | ApplicationRecordElementSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -341,7 +341,7 @@ class ClientServerRecordElementMapping:
     @dataclass
     class ComplexTypeMapping:
         client_server_array_type_mapping: (
-            ClientServerArrayTypeMapping | None
+            None | ClientServerArrayTypeMapping
         ) = field(
             default=None,
             metadata={
@@ -351,7 +351,7 @@ class ClientServerRecordElementMapping:
             },
         )
         client_server_record_type_mapping: (
-            ClientServerRecordTypeMapping | None
+            None | ClientServerRecordTypeMapping
         ) = field(
             default=None,
             metadata={
@@ -363,7 +363,7 @@ class ClientServerRecordElementMapping:
 
     @dataclass
     class ImplementationRecordElementRef(Ref):
-        dest: ImplementationDataTypeElementSubtypesEnum | None = field(
+        dest: None | ImplementationDataTypeElementSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -374,7 +374,7 @@ class ClientServerRecordElementMapping:
 
     @dataclass
     class SystemSignalRef(Ref):
-        dest: SystemSignalSubtypesEnum | None = field(
+        dest: None | SystemSignalSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -411,7 +411,7 @@ class ClientServerRecordTypeMapping:
     class Meta:
         name = "CLIENT-SERVER-RECORD-TYPE-MAPPING"
 
-    argument_ref: ClientServerRecordTypeMapping.ArgumentRef | None = field(
+    argument_ref: None | ClientServerRecordTypeMapping.ArgumentRef = field(
         default=None,
         metadata={
             "name": "ARGUMENT-REF",
@@ -420,7 +420,7 @@ class ClientServerRecordTypeMapping:
         },
     )
     record_element_mappings: (
-        ClientServerRecordTypeMapping.RecordElementMappings | None
+        None | ClientServerRecordTypeMapping.RecordElementMappings
     ) = field(
         default=None,
         metadata={
@@ -429,14 +429,14 @@ class ClientServerRecordTypeMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -447,7 +447,7 @@ class ClientServerRecordTypeMapping:
 
     @dataclass
     class ArgumentRef(Ref):
-        dest: ArgumentDataPrototypeSubtypesEnum | None = field(
+        dest: None | ArgumentDataPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

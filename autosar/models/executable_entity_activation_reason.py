@@ -41,7 +41,7 @@ class ExecutableEntityActivationReason:
     class Meta:
         name = "EXECUTABLE-ENTITY-ACTIVATION-REASON"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -51,7 +51,7 @@ class ExecutableEntityActivationReason:
         },
     )
     short_name_fragments: (
-        ExecutableEntityActivationReason.ShortNameFragments | None
+        None | ExecutableEntityActivationReason.ShortNameFragments
     ) = field(
         default=None,
         metadata={
@@ -60,7 +60,7 @@ class ExecutableEntityActivationReason:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    symbol: CIdentifier | None = field(
+    symbol: None | CIdentifier = field(
         default=None,
         metadata={
             "name": "SYMBOL",
@@ -68,7 +68,7 @@ class ExecutableEntityActivationReason:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    bit_position: PositiveInteger | None = field(
+    bit_position: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "BIT-POSITION",
@@ -76,14 +76,14 @@ class ExecutableEntityActivationReason:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

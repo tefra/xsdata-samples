@@ -14,7 +14,7 @@ class TariffZoneVersionStructure(ZoneVersionStructure):
     class Meta:
         name = "TariffZone_VersionStructure"
 
-    presentation: PresentationStructure | None = field(
+    presentation: None | PresentationStructure = field(
         default=None,
         metadata={
             "name": "Presentation",
@@ -22,7 +22,7 @@ class TariffZoneVersionStructure(ZoneVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    printed_presentation: PrintPresentationStructure | None = field(
+    printed_presentation: None | PrintPresentationStructure = field(
         default=None,
         metadata={
             "name": "PrintedPresentation",

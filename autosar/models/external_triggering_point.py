@@ -43,7 +43,7 @@ class ExternalTriggeringPoint:
     class Meta:
         name = "EXTERNAL-TRIGGERING-POINT"
 
-    ident: ExternalTriggeringPointIdent | None = field(
+    ident: None | ExternalTriggeringPointIdent = field(
         default=None,
         metadata={
             "name": "IDENT",
@@ -51,7 +51,7 @@ class ExternalTriggeringPoint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    trigger_iref: ExternalTriggeringPoint.TriggerIref | None = field(
+    trigger_iref: None | ExternalTriggeringPoint.TriggerIref = field(
         default=None,
         metadata={
             "name": "TRIGGER-IREF",
@@ -59,7 +59,7 @@ class ExternalTriggeringPoint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -67,14 +67,14 @@ class ExternalTriggeringPoint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -86,7 +86,7 @@ class ExternalTriggeringPoint:
     @dataclass
     class TriggerIref:
         p_trigger_in_atomic_swc_type_instance_ref: (
-            PTriggerInAtomicSwcTypeInstanceRef | None
+            None | PTriggerInAtomicSwcTypeInstanceRef
         ) = field(
             default=None,
             metadata={

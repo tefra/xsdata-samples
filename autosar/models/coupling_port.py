@@ -149,7 +149,7 @@ class CouplingPort:
     class Meta:
         name = "COUPLING-PORT"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -158,7 +158,7 @@ class CouplingPort:
             "required": True,
         },
     )
-    short_name_fragments: CouplingPort.ShortNameFragments | None = field(
+    short_name_fragments: None | CouplingPort.ShortNameFragments = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -166,7 +166,7 @@ class CouplingPort:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -174,7 +174,7 @@ class CouplingPort:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -182,7 +182,7 @@ class CouplingPort:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -190,7 +190,7 @@ class CouplingPort:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -198,7 +198,7 @@ class CouplingPort:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -206,7 +206,7 @@ class CouplingPort:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: CouplingPort.Annotations | None = field(
+    annotations: None | CouplingPort.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -215,7 +215,7 @@ class CouplingPort:
         },
     )
     connection_negotiation_behavior: (
-        EthernetConnectionNegotiationEnum | None
+        None | EthernetConnectionNegotiationEnum
     ) = field(
         default=None,
         metadata={
@@ -224,7 +224,7 @@ class CouplingPort:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    coupling_port_details: CouplingPortDetails | None = field(
+    coupling_port_details: None | CouplingPortDetails = field(
         default=None,
         metadata={
             "name": "COUPLING-PORT-DETAILS",
@@ -232,7 +232,7 @@ class CouplingPort:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    coupling_port_role: CouplingPortRoleEnum | None = field(
+    coupling_port_role: None | CouplingPortRoleEnum = field(
         default=None,
         metadata={
             "name": "COUPLING-PORT-ROLE",
@@ -240,7 +240,7 @@ class CouplingPort:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    coupling_port_speed: PositiveInteger | None = field(
+    coupling_port_speed: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "COUPLING-PORT-SPEED",
@@ -248,7 +248,7 @@ class CouplingPort:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    default_vlan_ref: CouplingPort.DefaultVlanRef | None = field(
+    default_vlan_ref: None | CouplingPort.DefaultVlanRef = field(
         default=None,
         metadata={
             "name": "DEFAULT-VLAN-REF",
@@ -256,7 +256,7 @@ class CouplingPort:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    mac_layer_type: EthernetMacLayerTypeEnum | None = field(
+    mac_layer_type: None | EthernetMacLayerTypeEnum = field(
         default=None,
         metadata={
             "name": "MAC-LAYER-TYPE",
@@ -264,7 +264,7 @@ class CouplingPort:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    mac_multicast_address_refs: CouplingPort.MacMulticastAddressRefs | None = (
+    mac_multicast_address_refs: None | CouplingPort.MacMulticastAddressRefs = (
         field(
             default=None,
             metadata={
@@ -274,7 +274,7 @@ class CouplingPort:
             },
         )
     )
-    physical_layer_type: EthernetPhysicalLayerTypeEnum | None = field(
+    physical_layer_type: None | EthernetPhysicalLayerTypeEnum = field(
         default=None,
         metadata={
             "name": "PHYSICAL-LAYER-TYPE",
@@ -282,7 +282,7 @@ class CouplingPort:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    plca_props: PlcaProps | None = field(
+    plca_props: None | PlcaProps = field(
         default=None,
         metadata={
             "name": "PLCA-PROPS",
@@ -290,7 +290,7 @@ class CouplingPort:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    pnc_mapping_refs: CouplingPort.PncMappingRefs | None = field(
+    pnc_mapping_refs: None | CouplingPort.PncMappingRefs = field(
         default=None,
         metadata={
             "name": "PNC-MAPPING-REFS",
@@ -298,7 +298,7 @@ class CouplingPort:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    receive_activity: EthernetSwitchVlanIngressTagEnum | None = field(
+    receive_activity: None | EthernetSwitchVlanIngressTagEnum = field(
         default=None,
         metadata={
             "name": "RECEIVE-ACTIVITY",
@@ -306,7 +306,7 @@ class CouplingPort:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    vlan_memberships: CouplingPort.VlanMemberships | None = field(
+    vlan_memberships: None | CouplingPort.VlanMemberships = field(
         default=None,
         metadata={
             "name": "VLAN-MEMBERSHIPS",
@@ -314,7 +314,7 @@ class CouplingPort:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    vlan_modifier_ref: CouplingPort.VlanModifierRef | None = field(
+    vlan_modifier_ref: None | CouplingPort.VlanModifierRef = field(
         default=None,
         metadata={
             "name": "VLAN-MODIFIER-REF",
@@ -323,7 +323,7 @@ class CouplingPort:
         },
     )
     wakeup_sleep_on_dataline_config_ref: (
-        CouplingPort.WakeupSleepOnDatalineConfigRef | None
+        None | CouplingPort.WakeupSleepOnDatalineConfigRef
     ) = field(
         default=None,
         metadata={
@@ -332,7 +332,7 @@ class CouplingPort:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -340,14 +340,14 @@ class CouplingPort:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -355,7 +355,7 @@ class CouplingPort:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -387,7 +387,7 @@ class CouplingPort:
 
     @dataclass
     class DefaultVlanRef(Ref):
-        dest: EthernetPhysicalChannelSubtypesEnum | None = field(
+        dest: None | EthernetPhysicalChannelSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -411,7 +411,7 @@ class CouplingPort:
 
         @dataclass
         class MacMulticastAddressRef(Ref):
-            dest: MacMulticastGroupSubtypesEnum | None = field(
+            dest: None | MacMulticastGroupSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -435,7 +435,7 @@ class CouplingPort:
 
         @dataclass
         class PncMappingRef(Ref):
-            dest: PncMappingIdentSubtypesEnum | None = field(
+            dest: None | PncMappingIdentSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -457,7 +457,7 @@ class CouplingPort:
 
     @dataclass
     class VlanModifierRef(Ref):
-        dest: EthernetPhysicalChannelSubtypesEnum | None = field(
+        dest: None | EthernetPhysicalChannelSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -468,7 +468,7 @@ class CouplingPort:
 
     @dataclass
     class WakeupSleepOnDatalineConfigRef(Ref):
-        dest: EthernetWakeupSleepOnDatalineConfigSubtypesEnum | None = field(
+        dest: None | EthernetWakeupSleepOnDatalineConfigSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

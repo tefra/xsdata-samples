@@ -17,7 +17,7 @@ class CustomerAccountSecurityListingVersionedChildStructure(
     class Meta:
         name = "CustomerAccountSecurityListing_VersionedChildStructure"
 
-    customer_account_ref: CustomerAccountRef | None = field(
+    customer_account_ref: None | CustomerAccountRef = field(
         default=None,
         metadata={
             "name": "CustomerAccountRef",

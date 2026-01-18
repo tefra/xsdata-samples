@@ -21,7 +21,7 @@ class HigherOrderSignature:
     class Meta:
         name = "higherOrderSignature"
 
-    variable_type_info: HigherOrderSignatureVariableTypeInfo | None = field(
+    variable_type_info: None | HigherOrderSignatureVariableTypeInfo = field(
         default=None,
         metadata={
             "name": "variableTypeInfo",
@@ -29,7 +29,7 @@ class HigherOrderSignature:
         },
     )
     function_symbol_type_info: (
-        HigherOrderSignatureFunctionSymbolTypeInfo | None
+        None | HigherOrderSignatureFunctionSymbolTypeInfo
     ) = field(
         default=None,
         metadata={

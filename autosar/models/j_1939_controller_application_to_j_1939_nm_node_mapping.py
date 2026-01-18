@@ -42,8 +42,8 @@ class J1939ControllerApplicationToJ1939NmNodeMapping:
         name = "J-1939-CONTROLLER-APPLICATION-TO-J-1939-NM-NODE-MAPPING"
 
     j_1939_controller_application_ref: (
-        J1939ControllerApplicationToJ1939NmNodeMapping.J1939ControllerApplicationRef
-        | None
+        None
+        | J1939ControllerApplicationToJ1939NmNodeMapping.J1939ControllerApplicationRef
     ) = field(
         default=None,
         metadata={
@@ -53,7 +53,7 @@ class J1939ControllerApplicationToJ1939NmNodeMapping:
         },
     )
     j_1939_nm_node_ref: (
-        J1939ControllerApplicationToJ1939NmNodeMapping.J1939NmNodeRef | None
+        None | J1939ControllerApplicationToJ1939NmNodeMapping.J1939NmNodeRef
     ) = field(
         default=None,
         metadata={
@@ -62,14 +62,14 @@ class J1939ControllerApplicationToJ1939NmNodeMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -80,7 +80,7 @@ class J1939ControllerApplicationToJ1939NmNodeMapping:
 
     @dataclass
     class J1939ControllerApplicationRef(Ref):
-        dest: J1939ControllerApplicationSubtypesEnum | None = field(
+        dest: None | J1939ControllerApplicationSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -91,7 +91,7 @@ class J1939ControllerApplicationToJ1939NmNodeMapping:
 
     @dataclass
     class J1939NmNodeRef(Ref):
-        dest: J1939NmNodeSubtypesEnum | None = field(
+        dest: None | J1939NmNodeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

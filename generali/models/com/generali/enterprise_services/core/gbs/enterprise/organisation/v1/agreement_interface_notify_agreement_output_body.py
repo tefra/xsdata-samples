@@ -17,7 +17,7 @@ class AgreementInterfaceNotifyAgreementOutputBody:
     class Meta:
         global_type = False
 
-    notify_program_gbmresponse: NotifyProgramGbmresponse | None = field(
+    notify_program_gbmresponse: None | NotifyProgramGbmresponse = field(
         default=None,
         metadata={
             "name": "NotifyProgramGBMResponse",
@@ -25,7 +25,7 @@ class AgreementInterfaceNotifyAgreementOutputBody:
             "namespace": "http://generali.com/enterprise-services/core/gbm/enterprise/agreement/v1",
         },
     )
-    fault: AgreementInterfaceNotifyAgreementOutputBodyFault | None = field(
+    fault: None | AgreementInterfaceNotifyAgreementOutputBodyFault = field(
         default=None,
         metadata={
             "name": "Fault",

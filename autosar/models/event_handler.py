@@ -84,7 +84,7 @@ class EventHandler:
     class Meta:
         name = "EVENT-HANDLER"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -93,7 +93,7 @@ class EventHandler:
             "required": True,
         },
     )
-    short_name_fragments: EventHandler.ShortNameFragments | None = field(
+    short_name_fragments: None | EventHandler.ShortNameFragments = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -101,7 +101,7 @@ class EventHandler:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    application_endpoint_ref: EventHandler.ApplicationEndpointRef | None = (
+    application_endpoint_ref: None | EventHandler.ApplicationEndpointRef = (
         field(
             default=None,
             metadata={
@@ -111,7 +111,7 @@ class EventHandler:
             },
         )
     )
-    consumed_event_group_refs: EventHandler.ConsumedEventGroupRefs | None = (
+    consumed_event_group_refs: None | EventHandler.ConsumedEventGroupRefs = (
         field(
             default=None,
             metadata={
@@ -121,7 +121,7 @@ class EventHandler:
             },
         )
     )
-    event_group_identifier: PositiveInteger | None = field(
+    event_group_identifier: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "EVENT-GROUP-IDENTIFIER",
@@ -129,7 +129,7 @@ class EventHandler:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    event_multicast_addresss: EventHandler.EventMulticastAddresss | None = (
+    event_multicast_addresss: None | EventHandler.EventMulticastAddresss = (
         field(
             default=None,
             metadata={
@@ -139,7 +139,7 @@ class EventHandler:
             },
         )
     )
-    multicast_threshold: PositiveInteger | None = field(
+    multicast_threshold: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "MULTICAST-THRESHOLD",
@@ -148,7 +148,7 @@ class EventHandler:
         },
     )
     pdu_activation_routing_groups: (
-        EventHandler.PduActivationRoutingGroups | None
+        None | EventHandler.PduActivationRoutingGroups
     ) = field(
         default=None,
         metadata={
@@ -157,7 +157,7 @@ class EventHandler:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    routing_group_refs: EventHandler.RoutingGroupRefs | None = field(
+    routing_group_refs: None | EventHandler.RoutingGroupRefs = field(
         default=None,
         metadata={
             "name": "ROUTING-GROUP-REFS",
@@ -165,7 +165,7 @@ class EventHandler:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sd_server_config: SdServerConfig | None = field(
+    sd_server_config: None | SdServerConfig = field(
         default=None,
         metadata={
             "name": "SD-SERVER-CONFIG",
@@ -174,7 +174,7 @@ class EventHandler:
         },
     )
     sd_server_eg_timing_configs: (
-        EventHandler.SdServerEgTimingConfigs | None
+        None | EventHandler.SdServerEgTimingConfigs
     ) = field(
         default=None,
         metadata={
@@ -183,7 +183,7 @@ class EventHandler:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -191,14 +191,14 @@ class EventHandler:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -220,7 +220,7 @@ class EventHandler:
 
     @dataclass
     class ApplicationEndpointRef(Ref):
-        dest: ApplicationEndpointSubtypesEnum | None = field(
+        dest: None | ApplicationEndpointSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -244,7 +244,7 @@ class EventHandler:
 
         @dataclass
         class ConsumedEventGroupRef(Ref):
-            dest: ConsumedEventGroupSubtypesEnum | None = field(
+            dest: None | ConsumedEventGroupSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -292,7 +292,7 @@ class EventHandler:
 
         @dataclass
         class RoutingGroupRef(Ref):
-            dest: SoAdRoutingGroupSubtypesEnum | None = field(
+            dest: None | SoAdRoutingGroupSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",

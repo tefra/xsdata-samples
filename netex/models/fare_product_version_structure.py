@@ -50,7 +50,7 @@ class FareProductVersionStructure(ServiceAccessRightVersionStructure):
     class Meta:
         name = "FareProduct_VersionStructure"
 
-    charging_moment_ref: ChargingMomentRef | None = field(
+    charging_moment_ref: None | ChargingMomentRef = field(
         default=None,
         metadata={
             "name": "ChargingMomentRef",
@@ -58,7 +58,7 @@ class FareProductVersionStructure(ServiceAccessRightVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    charging_moment_type: ChargingMomentEnumeration | None = field(
+    charging_moment_type: None | ChargingMomentEnumeration = field(
         default=None,
         metadata={
             "name": "ChargingMomentType",
@@ -67,7 +67,7 @@ class FareProductVersionStructure(ServiceAccessRightVersionStructure):
         },
     )
     type_of_fare_product_ref_or_types_of_fare_product: (
-        TypeOfFareProductRef | TypeOfFareProductRefsRelStructure | None
+        None | TypeOfFareProductRef | TypeOfFareProductRefsRelStructure
     ) = field(
         default=None,
         metadata={
@@ -87,7 +87,8 @@ class FareProductVersionStructure(ServiceAccessRightVersionStructure):
         },
     )
     organisation_ref_or_other_organisation_ref_or_transport_organisation_ref: (
-        RetailConsortiumRef
+        None
+        | RetailConsortiumRef
         | OnlineServiceOperatorRef
         | GeneralOrganisationRef
         | ManagementAgentRef
@@ -97,7 +98,6 @@ class FareProductVersionStructure(ServiceAccessRightVersionStructure):
         | AuthorityRef
         | OperatorRef
         | OrganisationRef
-        | None
     ) = field(
         default=None,
         metadata={
@@ -156,7 +156,7 @@ class FareProductVersionStructure(ServiceAccessRightVersionStructure):
             ),
         },
     )
-    condition_summary: ConditionSummary | None = field(
+    condition_summary: None | ConditionSummary = field(
         default=None,
         metadata={
             "name": "ConditionSummary",
@@ -165,7 +165,8 @@ class FareProductVersionStructure(ServiceAccessRightVersionStructure):
         },
     )
     preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref: (
-        SupplementProductRef
+        None
+        | SupplementProductRef
         | PreassignedFareProductRef
         | AmountOfPriceUnitProductRef
         | UsageDiscountRightRef
@@ -173,7 +174,6 @@ class FareProductVersionStructure(ServiceAccessRightVersionStructure):
         | CappedDiscountRightRef
         | SaleDiscountRightRef
         | FareProductRef
-        | None
     ) = field(
         default=None,
         metadata={
@@ -223,10 +223,10 @@ class FareProductVersionStructure(ServiceAccessRightVersionStructure):
         },
     )
     validity_parameter_assignments_or_generic_parameter_assignment_or_generic_parameter_assignment_in_context: (
-        GenericParameterAssignmentsRelStructure
+        None
+        | GenericParameterAssignmentsRelStructure
         | GenericParameterAssignment
         | GenericParameterAssignmentInContext
-        | None
     ) = field(
         default=None,
         metadata={
@@ -250,7 +250,7 @@ class FareProductVersionStructure(ServiceAccessRightVersionStructure):
             ),
         },
     )
-    validable_elements: ValidableElementsRelStructure | None = field(
+    validable_elements: None | ValidableElementsRelStructure = field(
         default=None,
         metadata={
             "name": "validableElements",
@@ -258,7 +258,7 @@ class FareProductVersionStructure(ServiceAccessRightVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    access_rights_in_product: AccessRightsInProductRelStructure | None = field(
+    access_rights_in_product: None | AccessRightsInProductRelStructure = field(
         default=None,
         metadata={
             "name": "accessRightsInProduct",
@@ -266,14 +266,14 @@ class FareProductVersionStructure(ServiceAccessRightVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    tariffs: TariffRefsRelStructure | None = field(
+    tariffs: None | TariffRefsRelStructure = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    prices: FareProductPricesRelStructure | None = field(
+    prices: None | FareProductPricesRelStructure = field(
         default=None,
         metadata={
             "type": "Element",

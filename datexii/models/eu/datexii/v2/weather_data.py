@@ -15,7 +15,7 @@ class WeatherData(BasicData):
     location or locations.
     """
 
-    weather_data_extension: ExtensionType | None = field(
+    weather_data_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "weatherDataExtension",

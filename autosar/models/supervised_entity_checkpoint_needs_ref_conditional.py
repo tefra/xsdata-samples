@@ -35,8 +35,8 @@ class SupervisedEntityCheckpointNeedsRefConditional:
         name = "SUPERVISED-ENTITY-CHECKPOINT-NEEDS-REF-CONDITIONAL"
 
     supervised_entity_checkpoint_needs_ref: (
-        SupervisedEntityCheckpointNeedsRefConditional.SupervisedEntityCheckpointNeedsRef
-        | None
+        None
+        | SupervisedEntityCheckpointNeedsRefConditional.SupervisedEntityCheckpointNeedsRef
     ) = field(
         default=None,
         metadata={
@@ -45,7 +45,7 @@ class SupervisedEntityCheckpointNeedsRefConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -53,14 +53,14 @@ class SupervisedEntityCheckpointNeedsRefConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -71,7 +71,7 @@ class SupervisedEntityCheckpointNeedsRefConditional:
 
     @dataclass
     class SupervisedEntityCheckpointNeedsRef(Ref):
-        dest: SupervisedEntityCheckpointNeedsSubtypesEnum | None = field(
+        dest: None | SupervisedEntityCheckpointNeedsSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

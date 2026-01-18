@@ -14,7 +14,7 @@ class ParkingRecordStatusParkingSpaceIndexParkingSpaceStatus:
     class Meta:
         name = "_ParkingRecordStatusParkingSpaceIndexParkingSpaceStatus"
 
-    parking_space_status: ParkingSpaceStatus | None = field(
+    parking_space_status: None | ParkingSpaceStatus = field(
         default=None,
         metadata={
             "name": "parkingSpaceStatus",
@@ -23,7 +23,7 @@ class ParkingRecordStatusParkingSpaceIndexParkingSpaceStatus:
             "required": True,
         },
     )
-    parking_space_index: int | None = field(
+    parking_space_index: None | int = field(
         default=None,
         metadata={
             "name": "parkingSpaceIndex",

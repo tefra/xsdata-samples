@@ -23,7 +23,7 @@ class DomainTypeDef:
         name = "domainTypeDef"
         namespace = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
-    type_name: DomainTypeDef.TypeName | None = field(
+    type_name: None | DomainTypeDef.TypeName = field(
         default=None,
         metadata={
             "name": "typeName",
@@ -44,7 +44,7 @@ class DomainTypeDef:
             "type": "Element",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -60,7 +60,7 @@ class DomainTypeDef:
                 "required": True,
             },
         )
-        id: str | None = field(
+        id: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -76,7 +76,7 @@ class DomainTypeDef:
                 "required": True,
             },
         )
-        id: str | None = field(
+        id: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -92,7 +92,7 @@ class DomainTypeDef:
                 "required": True,
             },
         )
-        id: str | None = field(
+        id: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",

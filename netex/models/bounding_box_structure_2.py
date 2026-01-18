@@ -12,7 +12,7 @@ class BoundingBoxStructure2:
     class Meta:
         name = "BoundingBoxStructure"
 
-    upper_left: LocationStructure2 | None = field(
+    upper_left: None | LocationStructure2 = field(
         default=None,
         metadata={
             "name": "UpperLeft",
@@ -21,7 +21,7 @@ class BoundingBoxStructure2:
             "required": True,
         },
     )
-    lower_right: LocationStructure2 | None = field(
+    lower_right: None | LocationStructure2 = field(
         default=None,
         metadata={
             "name": "LowerRight",

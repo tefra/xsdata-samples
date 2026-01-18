@@ -9,32 +9,32 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 @dataclass
 class DistanceMatrixElementRefByValueStructure:
-    name_of_class: str | None = field(
+    name_of_class: None | str = field(
         default=None,
         metadata={
             "name": "nameOfClass",
             "type": "Attribute",
         },
     )
-    created: XmlDateTime | None = field(
+    created: None | XmlDateTime = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    changed: XmlDateTime | None = field(
+    changed: None | XmlDateTime = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    version: str | None = field(
+    version: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    from_ref: str | None = field(
+    from_ref: None | str = field(
         default=None,
         metadata={
             "name": "fromRef",
@@ -42,7 +42,7 @@ class DistanceMatrixElementRefByValueStructure:
             "required": True,
         },
     )
-    to_ref: str | None = field(
+    to_ref: None | str = field(
         default=None,
         metadata={
             "name": "toRef",
@@ -50,7 +50,7 @@ class DistanceMatrixElementRefByValueStructure:
             "required": True,
         },
     )
-    name_of_point_ref_class: str | None = field(
+    name_of_point_ref_class: None | str = field(
         default=None,
         metadata={
             "name": "nameOfPointRefClass",

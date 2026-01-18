@@ -13,7 +13,7 @@ class RefuellingEquipmentVersionStructure(PlaceEquipmentVersionStructure):
     class Meta:
         name = "RefuellingEquipment_VersionStructure"
 
-    fuel_type: FuelTypeEnumeration | None = field(
+    fuel_type: None | FuelTypeEnumeration = field(
         default=None,
         metadata={
             "name": "FuelType",

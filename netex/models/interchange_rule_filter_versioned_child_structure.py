@@ -35,7 +35,7 @@ class InterchangeRuleFilterVersionedChildStructure(VersionedChildStructure):
     class Meta:
         name = "InterchangeRuleFilter_VersionedChildStructure"
 
-    operator_ref: OperatorRef | None = field(
+    operator_ref: None | OperatorRef = field(
         default=None,
         metadata={
             "name": "OperatorRef",
@@ -43,7 +43,7 @@ class InterchangeRuleFilterVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    stop_area_ref: StopAreaRefStructure | None = field(
+    stop_area_ref: None | StopAreaRefStructure = field(
         default=None,
         metadata={
             "name": "StopAreaRef",
@@ -51,7 +51,7 @@ class InterchangeRuleFilterVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    stop_place_ref: TaxiRankRef | StopPlaceRef | None = field(
+    stop_place_ref: None | TaxiRankRef | StopPlaceRef = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -95,7 +95,7 @@ class InterchangeRuleFilterVersionedChildStructure(VersionedChildStructure):
         },
     )
     scheduled_stop_point_ref: (
-        FareScheduledStopPointRef | ScheduledStopPointRef | None
+        None | FareScheduledStopPointRef | ScheduledStopPointRef
     ) = field(
         default=None,
         metadata={
@@ -114,7 +114,7 @@ class InterchangeRuleFilterVersionedChildStructure(VersionedChildStructure):
             ),
         },
     )
-    adjacent_stop_point_ref: ScheduledStopPointRefStructure | None = field(
+    adjacent_stop_point_ref: None | ScheduledStopPointRefStructure = field(
         default=None,
         metadata={
             "name": "AdjacentStopPointRef",
@@ -122,7 +122,7 @@ class InterchangeRuleFilterVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    adjacent_stop_place_ref: StopPlaceRefStructure | None = field(
+    adjacent_stop_place_ref: None | StopPlaceRefStructure = field(
         default=None,
         metadata={
             "name": "AdjacentStopPlaceRef",
@@ -130,7 +130,7 @@ class InterchangeRuleFilterVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    adjacent_point_ref: PointRefStructure | None = field(
+    adjacent_point_ref: None | PointRefStructure = field(
         default=None,
         metadata={
             "name": "AdjacentPointRef",
@@ -138,7 +138,7 @@ class InterchangeRuleFilterVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    end_stop_point_ref: ScheduledStopPointRefStructure | None = field(
+    end_stop_point_ref: None | ScheduledStopPointRefStructure = field(
         default=None,
         metadata={
             "name": "EndStopPointRef",
@@ -146,7 +146,7 @@ class InterchangeRuleFilterVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    time_demand_type_ref: TimeDemandTypeRef | None = field(
+    time_demand_type_ref: None | TimeDemandTypeRef = field(
         default=None,
         metadata={
             "name": "TimeDemandTypeRef",
@@ -155,7 +155,7 @@ class InterchangeRuleFilterVersionedChildStructure(VersionedChildStructure):
         },
     )
     service_journey_ref_or_service_designator: (
-        ServiceJourneyRefStructure | ServiceDesignator | None
+        None | ServiceJourneyRefStructure | ServiceDesignator
     ) = field(
         default=None,
         metadata={
@@ -174,7 +174,7 @@ class InterchangeRuleFilterVersionedChildStructure(VersionedChildStructure):
             ),
         },
     )
-    maximum_interchange_window: XmlDuration | None = field(
+    maximum_interchange_window: None | XmlDuration = field(
         default=None,
         metadata={
             "name": "MaximumInterchangeWindow",
@@ -182,7 +182,7 @@ class InterchangeRuleFilterVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    transport_mode: AllVehicleModesOfTransportEnumeration | None = field(
+    transport_mode: None | AllVehicleModesOfTransportEnumeration = field(
         default=None,
         metadata={
             "name": "TransportMode",
@@ -190,7 +190,7 @@ class InterchangeRuleFilterVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    order: int | None = field(
+    order: None | int = field(
         default=None,
         metadata={
             "type": "Attribute",

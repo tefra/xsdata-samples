@@ -60,20 +60,20 @@ class Notes:
         name = "notes"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    sec_meta: SecMeta | None = field(
+    sec_meta: None | SecMeta = field(
         default=None,
         metadata={
             "name": "sec-meta",
             "type": "Element",
         },
     )
-    label: Label | None = field(
+    label: None | Label = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    title: Title | None = field(
+    title: None | Title = field(
         default=None,
         metadata={
             "type": "Element",
@@ -329,34 +329,34 @@ class Notes:
             "type": "Element",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    notes_type: str | None = field(
+    notes_type: None | str = field(
         default=None,
         metadata={
             "name": "notes-type",
             "type": "Attribute",
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",

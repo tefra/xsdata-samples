@@ -28,7 +28,7 @@ __NAMESPACE__ = (
 
 @dataclass
 class RiskInvolvement(BaseIdentifiedComponentType):
-    exposures_for: ExposuresType | None = field(
+    exposures_for: None | ExposuresType = field(
         default=None,
         metadata={
             "name": "ExposuresFor",
@@ -36,7 +36,7 @@ class RiskInvolvement(BaseIdentifiedComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    limits: LimitsType | None = field(
+    limits: None | LimitsType = field(
         default=None,
         metadata={
             "name": "Limits",
@@ -44,7 +44,7 @@ class RiskInvolvement(BaseIdentifiedComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    deductibles: DeductiblesType | None = field(
+    deductibles: None | DeductiblesType = field(
         default=None,
         metadata={
             "name": "Deductibles",
@@ -52,7 +52,7 @@ class RiskInvolvement(BaseIdentifiedComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    perils_structure: PerilsStructureType | None = field(
+    perils_structure: None | PerilsStructureType = field(
         default=None,
         metadata={
             "name": "PerilsStructure",
@@ -60,7 +60,7 @@ class RiskInvolvement(BaseIdentifiedComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    local_asset_group: CodeType | None = field(
+    local_asset_group: None | CodeType = field(
         default=None,
         metadata={
             "name": "LocalAssetGroup",

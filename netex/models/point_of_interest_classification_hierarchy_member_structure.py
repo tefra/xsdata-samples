@@ -15,7 +15,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 class PointOfInterestClassificationHierarchyMemberStructure(
     VersionedChildStructure
 ):
-    point_of_interest_hierarchy_ref: PointOfInterestHierarchyRef | None = (
+    point_of_interest_hierarchy_ref: None | PointOfInterestHierarchyRef = (
         field(
             default=None,
             metadata={
@@ -26,7 +26,7 @@ class PointOfInterestClassificationHierarchyMemberStructure(
         )
     )
     parent_classification_ref: (
-        PointOfInterestClassificationRefStructure | None
+        None | PointOfInterestClassificationRefStructure
     ) = field(
         default=None,
         metadata={
@@ -37,7 +37,7 @@ class PointOfInterestClassificationHierarchyMemberStructure(
         },
     )
     point_of_interest_classification_ref: (
-        PointOfInterestClassificationRefStructure | None
+        None | PointOfInterestClassificationRefStructure
     ) = field(
         default=None,
         metadata={

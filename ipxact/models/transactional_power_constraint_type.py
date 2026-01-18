@@ -13,7 +13,7 @@ class TransactionalPowerConstraintType:
     class Meta:
         name = "transactionalPowerConstraintType"
 
-    power_domain_ref: PowerDomainRef | None = field(
+    power_domain_ref: None | PowerDomainRef = field(
         default=None,
         metadata={
             "name": "powerDomainRef",
@@ -22,7 +22,7 @@ class TransactionalPowerConstraintType:
             "required": True,
         },
     )
-    vendor_extensions: VendorExtensions | None = field(
+    vendor_extensions: None | VendorExtensions = field(
         default=None,
         metadata={
             "name": "vendorExtensions",
@@ -30,7 +30,7 @@ class TransactionalPowerConstraintType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",

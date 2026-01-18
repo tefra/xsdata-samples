@@ -40,8 +40,8 @@ class ModeDeclarationGroupPrototypeInSystemInstanceRef:
         name = "MODE-DECLARATION-GROUP-PROTOTYPE-IN-SYSTEM-INSTANCE-REF"
 
     context_composition_ref: (
-        ModeDeclarationGroupPrototypeInSystemInstanceRef.ContextCompositionRef
-        | None
+        None
+        | ModeDeclarationGroupPrototypeInSystemInstanceRef.ContextCompositionRef
     ) = field(
         default=None,
         metadata={
@@ -61,7 +61,7 @@ class ModeDeclarationGroupPrototypeInSystemInstanceRef:
         },
     )
     context_port_ref: (
-        ModeDeclarationGroupPrototypeInSystemInstanceRef.ContextPortRef | None
+        None | ModeDeclarationGroupPrototypeInSystemInstanceRef.ContextPortRef
     ) = field(
         default=None,
         metadata={
@@ -71,8 +71,8 @@ class ModeDeclarationGroupPrototypeInSystemInstanceRef:
         },
     )
     target_mode_declaration_group_prototype_ref: (
-        ModeDeclarationGroupPrototypeInSystemInstanceRef.TargetModeDeclarationGroupPrototypeRef
-        | None
+        None
+        | ModeDeclarationGroupPrototypeInSystemInstanceRef.TargetModeDeclarationGroupPrototypeRef
     ) = field(
         default=None,
         metadata={
@@ -81,14 +81,14 @@ class ModeDeclarationGroupPrototypeInSystemInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -99,7 +99,7 @@ class ModeDeclarationGroupPrototypeInSystemInstanceRef:
 
     @dataclass
     class ContextCompositionRef(Ref):
-        dest: RootSwCompositionPrototypeSubtypesEnum | None = field(
+        dest: None | RootSwCompositionPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -110,7 +110,7 @@ class ModeDeclarationGroupPrototypeInSystemInstanceRef:
 
     @dataclass
     class ContextComponentRef(Ref):
-        dest: SwComponentPrototypeSubtypesEnum | None = field(
+        dest: None | SwComponentPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -121,7 +121,7 @@ class ModeDeclarationGroupPrototypeInSystemInstanceRef:
 
     @dataclass
     class ContextPortRef(Ref):
-        dest: PortPrototypeSubtypesEnum | None = field(
+        dest: None | PortPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -132,7 +132,7 @@ class ModeDeclarationGroupPrototypeInSystemInstanceRef:
 
     @dataclass
     class TargetModeDeclarationGroupPrototypeRef(Ref):
-        dest: ModeDeclarationGroupPrototypeSubtypesEnum | None = field(
+        dest: None | ModeDeclarationGroupPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

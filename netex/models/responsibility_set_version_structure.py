@@ -17,7 +17,7 @@ class ResponsibilitySetVersionStructure(DataManagedObjectStructure):
     class Meta:
         name = "ResponsibilitySet_VersionStructure"
 
-    name: MultilingualString | None = field(
+    name: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "Name",
@@ -25,7 +25,7 @@ class ResponsibilitySetVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    private_code: PrivateCode | None = field(
+    private_code: None | PrivateCode = field(
         default=None,
         metadata={
             "name": "PrivateCode",
@@ -33,7 +33,7 @@ class ResponsibilitySetVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    roles: ResponsibilityRoleAssignmentsRelStructure | None = field(
+    roles: None | ResponsibilityRoleAssignmentsRelStructure = field(
         default=None,
         metadata={
             "type": "Element",

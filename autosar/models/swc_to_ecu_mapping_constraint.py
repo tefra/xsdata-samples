@@ -52,7 +52,7 @@ class SwcToEcuMappingConstraint:
     class Meta:
         name = "SWC-TO-ECU-MAPPING-CONSTRAINT"
 
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -60,7 +60,7 @@ class SwcToEcuMappingConstraint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -68,7 +68,7 @@ class SwcToEcuMappingConstraint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    component_iref: ComponentInSystemInstanceRef | None = field(
+    component_iref: None | ComponentInSystemInstanceRef = field(
         default=None,
         metadata={
             "name": "COMPONENT-IREF",
@@ -76,7 +76,7 @@ class SwcToEcuMappingConstraint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ecu_instance_refs: SwcToEcuMappingConstraint.EcuInstanceRefs | None = (
+    ecu_instance_refs: None | SwcToEcuMappingConstraint.EcuInstanceRefs = (
         field(
             default=None,
             metadata={
@@ -87,7 +87,7 @@ class SwcToEcuMappingConstraint:
         )
     )
     swc_to_ecu_mapping_constraint_type: (
-        SwcToEcuMappingConstraintType | None
+        None | SwcToEcuMappingConstraintType
     ) = field(
         default=None,
         metadata={
@@ -96,14 +96,14 @@ class SwcToEcuMappingConstraint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -127,7 +127,7 @@ class SwcToEcuMappingConstraint:
 
         @dataclass
         class EcuInstanceRef(Ref):
-            dest: EcuInstanceSubtypesEnum | None = field(
+            dest: None | EcuInstanceSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",

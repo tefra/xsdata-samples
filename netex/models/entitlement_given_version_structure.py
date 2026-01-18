@@ -27,7 +27,8 @@ class EntitlementGivenVersionStructure(UsageParameterVersionStructure):
         name = "EntitlementGiven_VersionStructure"
 
     choice: (
-        EntitlementProductRef
+        None
+        | EntitlementProductRef
         | SupplementProductRef
         | PreassignedFareProductRef
         | AmountOfPriceUnitProductRef
@@ -37,7 +38,6 @@ class EntitlementGivenVersionStructure(UsageParameterVersionStructure):
         | SaleDiscountRightRef
         | FareProductRef
         | ServiceAccessRightRef
-        | None
     ) = field(
         default=None,
         metadata={
@@ -96,7 +96,7 @@ class EntitlementGivenVersionStructure(UsageParameterVersionStructure):
             ),
         },
     )
-    minimum_qualification_period: XmlDuration | None = field(
+    minimum_qualification_period: None | XmlDuration = field(
         default=None,
         metadata={
             "name": "MinimumQualificationPeriod",
@@ -104,7 +104,7 @@ class EntitlementGivenVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    entitlement_constraint: EntitlementConstraintStructure | None = field(
+    entitlement_constraint: None | EntitlementConstraintStructure = field(
         default=None,
         metadata={
             "name": "EntitlementConstraint",
@@ -112,7 +112,7 @@ class EntitlementGivenVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    entitlement_type: EntitlementTypeEnumeration | None = field(
+    entitlement_type: None | EntitlementTypeEnumeration = field(
         default=None,
         metadata={
             "name": "EntitlementType",

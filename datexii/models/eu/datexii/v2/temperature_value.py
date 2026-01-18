@@ -18,7 +18,7 @@ class TemperatureValue(DataValue):
     :ivar temperature_value_extension:
     """
 
-    temperature: float | None = field(
+    temperature: None | float = field(
         default=None,
         metadata={
             "type": "Element",
@@ -26,7 +26,7 @@ class TemperatureValue(DataValue):
             "required": True,
         },
     )
-    temperature_value_extension: ExtensionType | None = field(
+    temperature_value_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "temperatureValueExtension",

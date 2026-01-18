@@ -32,7 +32,7 @@ class CoctMt030203Uv02LanguageCommunication:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Ii | None = field(
+    type_id: None | Ii = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -48,7 +48,7 @@ class CoctMt030203Uv02LanguageCommunication:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    language_code: Ce | None = field(
+    language_code: None | Ce = field(
         default=None,
         metadata={
             "name": "languageCode",
@@ -56,7 +56,7 @@ class CoctMt030203Uv02LanguageCommunication:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    mode_code: Ce | None = field(
+    mode_code: None | Ce = field(
         default=None,
         metadata={
             "name": "modeCode",
@@ -64,7 +64,7 @@ class CoctMt030203Uv02LanguageCommunication:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    proficiency_level_code: Ce | None = field(
+    proficiency_level_code: None | Ce = field(
         default=None,
         metadata={
             "name": "proficiencyLevelCode",
@@ -72,7 +72,7 @@ class CoctMt030203Uv02LanguageCommunication:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    preference_ind: Bl | None = field(
+    preference_ind: None | Bl = field(
         default=None,
         metadata={
             "name": "preferenceInd",
@@ -80,7 +80,7 @@ class CoctMt030203Uv02LanguageCommunication:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    null_flavor: NullFlavor | None = field(
+    null_flavor: None | NullFlavor = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -102,7 +102,7 @@ class CoctMt030203Uv02Person:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Ii | None = field(
+    type_id: None | Ii = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -133,7 +133,7 @@ class CoctMt030203Uv02Person:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    administrative_gender_code: Ce | None = field(
+    administrative_gender_code: None | Ce = field(
         default=None,
         metadata={
             "name": "administrativeGenderCode",
@@ -141,7 +141,7 @@ class CoctMt030203Uv02Person:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    birth_time: TsExplicit | None = field(
+    birth_time: None | TsExplicit = field(
         default=None,
         metadata={
             "name": "birthTime",
@@ -160,7 +160,7 @@ class CoctMt030203Uv02Person:
             },
         )
     )
-    null_flavor: NullFlavor | None = field(
+    null_flavor: None | NullFlavor = field(
         default=None,
         metadata={
             "name": "nullFlavor",

@@ -31,20 +31,20 @@ class TdEventServiceInstanceDiscoveryTypeEnum:
     class Meta:
         name = "TD-EVENT-SERVICE-INSTANCE-DISCOVERY-TYPE-ENUM"
 
-    value: TdEventServiceInstanceDiscoveryTypeEnumSimple | None = field(
+    value: None | TdEventServiceInstanceDiscoveryTypeEnumSimple = field(
         default=None,
         metadata={
             "required": True,
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

@@ -15,7 +15,7 @@ class DatedCallVersionedChildStructure(CallVersionedChildStructure):
     class Meta:
         name = "DatedCall_VersionedChildStructure"
 
-    driver_ref: DriverRef | None = field(
+    driver_ref: None | DriverRef = field(
         default=None,
         metadata={
             "name": "DriverRef",
@@ -23,7 +23,7 @@ class DatedCallVersionedChildStructure(CallVersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    arrival_date: XmlDate | None = field(
+    arrival_date: None | XmlDate = field(
         default=None,
         metadata={
             "name": "ArrivalDate",
@@ -31,7 +31,7 @@ class DatedCallVersionedChildStructure(CallVersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    departure_date: XmlDate | None = field(
+    departure_date: None | XmlDate = field(
         default=None,
         metadata={
             "name": "DepartureDate",

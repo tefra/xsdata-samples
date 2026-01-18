@@ -23,7 +23,7 @@ class PricingServiceVersionedStructure(DataManagedObjectStructure):
     class Meta:
         name = "PricingService_VersionedStructure"
 
-    name: MultilingualString | None = field(
+    name: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "Name",
@@ -32,7 +32,8 @@ class PricingServiceVersionedStructure(DataManagedObjectStructure):
         },
     )
     organisation_ref_or_other_organisation_ref_or_transport_organisation_ref: (
-        RetailConsortiumRef
+        None
+        | RetailConsortiumRef
         | OnlineServiceOperatorRef
         | GeneralOrganisationRef
         | ManagementAgentRef
@@ -42,7 +43,6 @@ class PricingServiceVersionedStructure(DataManagedObjectStructure):
         | AuthorityRef
         | OperatorRef
         | OrganisationRef
-        | None
     ) = field(
         default=None,
         metadata={
@@ -101,7 +101,7 @@ class PricingServiceVersionedStructure(DataManagedObjectStructure):
             ),
         },
     )
-    url: str | None = field(
+    url: None | str = field(
         default=None,
         metadata={
             "name": "Url",

@@ -16,7 +16,7 @@ class HeaderTypePropertiesProperty:
             "required": True,
         },
     )
-    key: str | None = field(
+    key: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",

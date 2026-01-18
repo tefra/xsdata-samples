@@ -22,7 +22,7 @@ class RegistrationStatusType:
         information.
     """
 
-    registration: RegistrationType | None = field(
+    registration: None | RegistrationType = field(
         default=None,
         metadata={
             "name": "Registration",
@@ -31,7 +31,7 @@ class RegistrationStatusType:
             "required": True,
         },
     )
-    status_message: StatusMessageType2 | None = field(
+    status_message: None | StatusMessageType2 = field(
         default=None,
         metadata={
             "name": "StatusMessage",

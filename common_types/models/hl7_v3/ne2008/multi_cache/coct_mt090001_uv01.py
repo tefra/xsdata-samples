@@ -28,7 +28,7 @@ class CoctMt090001Uv01AssignedEntity:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Ii | None = field(
+    type_id: None | Ii = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -52,21 +52,21 @@ class CoctMt090001Uv01AssignedEntity:
             "min_occurs": 1,
         },
     )
-    code: Ce | None = field(
+    code: None | Ce = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    null_flavor: NullFlavor | None = field(
+    null_flavor: None | NullFlavor = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
         },
     )
-    class_code: RoleClassAssignedEntity | None = field(
+    class_code: None | RoleClassAssignedEntity = field(
         default=None,
         metadata={
             "name": "classCode",

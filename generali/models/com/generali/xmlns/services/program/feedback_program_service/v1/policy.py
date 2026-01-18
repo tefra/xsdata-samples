@@ -19,7 +19,7 @@ class Policy:
     class Meta:
         namespace = "http://xmlns.generali.com/services/program/FeedbackProgramService/v1"
 
-    policy_id: str | None = field(
+    policy_id: None | str = field(
         default=None,
         metadata={
             "name": "PolicyID",
@@ -27,7 +27,7 @@ class Policy:
             "required": True,
         },
     )
-    status: str | None = field(
+    status: None | str = field(
         default=None,
         metadata={
             "name": "Status",
@@ -35,7 +35,7 @@ class Policy:
             "required": True,
         },
     )
-    local_policies: LocalPolicies | None = field(
+    local_policies: None | LocalPolicies = field(
         default=None,
         metadata={
             "name": "LocalPolicies",
@@ -43,7 +43,7 @@ class Policy:
             "required": True,
         },
     )
-    errors: Errors | None = field(
+    errors: None | Errors = field(
         default=None,
         metadata={
             "name": "Errors",

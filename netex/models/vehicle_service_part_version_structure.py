@@ -15,7 +15,7 @@ class VehicleServicePartVersionStructure(DataManagedObjectStructure):
     class Meta:
         name = "VehicleServicePart_VersionStructure"
 
-    name: MultilingualString | None = field(
+    name: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "Name",
@@ -23,7 +23,7 @@ class VehicleServicePartVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    description: MultilingualString | None = field(
+    description: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "Description",
@@ -31,7 +31,7 @@ class VehicleServicePartVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    vehicle_service_ref: VehicleServiceRef | None = field(
+    vehicle_service_ref: None | VehicleServiceRef = field(
         default=None,
         metadata={
             "name": "VehicleServiceRef",
@@ -39,7 +39,7 @@ class VehicleServicePartVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    start_point_ref: GaragePointRefStructure | None = field(
+    start_point_ref: None | GaragePointRefStructure = field(
         default=None,
         metadata={
             "name": "StartPointRef",
@@ -47,7 +47,7 @@ class VehicleServicePartVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    end_point_ref: GaragePointRefStructure | None = field(
+    end_point_ref: None | GaragePointRefStructure = field(
         default=None,
         metadata={
             "name": "EndPointRef",

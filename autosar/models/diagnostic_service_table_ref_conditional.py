@@ -35,7 +35,7 @@ class DiagnosticServiceTableRefConditional:
         name = "DIAGNOSTIC-SERVICE-TABLE-REF-CONDITIONAL"
 
     diagnostic_service_table_ref: (
-        DiagnosticServiceTableRefConditional.DiagnosticServiceTableRef | None
+        None | DiagnosticServiceTableRefConditional.DiagnosticServiceTableRef
     ) = field(
         default=None,
         metadata={
@@ -44,7 +44,7 @@ class DiagnosticServiceTableRefConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -52,14 +52,14 @@ class DiagnosticServiceTableRefConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -70,7 +70,7 @@ class DiagnosticServiceTableRefConditional:
 
     @dataclass
     class DiagnosticServiceTableRef(Ref):
-        dest: DiagnosticServiceTableSubtypesEnum | None = field(
+        dest: None | DiagnosticServiceTableSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

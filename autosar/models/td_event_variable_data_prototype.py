@@ -111,7 +111,7 @@ class TdEventVariableDataPrototype:
     class Meta:
         name = "TD-EVENT-VARIABLE-DATA-PROTOTYPE"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -121,7 +121,7 @@ class TdEventVariableDataPrototype:
         },
     )
     short_name_fragments: (
-        TdEventVariableDataPrototype.ShortNameFragments | None
+        None | TdEventVariableDataPrototype.ShortNameFragments
     ) = field(
         default=None,
         metadata={
@@ -130,7 +130,7 @@ class TdEventVariableDataPrototype:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -138,7 +138,7 @@ class TdEventVariableDataPrototype:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -146,7 +146,7 @@ class TdEventVariableDataPrototype:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -154,7 +154,7 @@ class TdEventVariableDataPrototype:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -162,7 +162,7 @@ class TdEventVariableDataPrototype:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -170,7 +170,7 @@ class TdEventVariableDataPrototype:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: TdEventVariableDataPrototype.Annotations | None = field(
+    annotations: None | TdEventVariableDataPrototype.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -178,7 +178,7 @@ class TdEventVariableDataPrototype:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -186,7 +186,7 @@ class TdEventVariableDataPrototype:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    occurrence_expression: TdEventOccurrenceExpression | None = field(
+    occurrence_expression: None | TdEventOccurrenceExpression = field(
         default=None,
         metadata={
             "name": "OCCURRENCE-EXPRESSION",
@@ -194,7 +194,7 @@ class TdEventVariableDataPrototype:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    component_iref: ComponentInCompositionInstanceRef | None = field(
+    component_iref: None | ComponentInCompositionInstanceRef = field(
         default=None,
         metadata={
             "name": "COMPONENT-IREF",
@@ -202,7 +202,7 @@ class TdEventVariableDataPrototype:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    is_external: Boolean | None = field(
+    is_external: None | Boolean = field(
         default=None,
         metadata={
             "name": "IS-EXTERNAL",
@@ -211,7 +211,7 @@ class TdEventVariableDataPrototype:
         },
     )
     port_prototype_blueprint_ref: (
-        TdEventVariableDataPrototype.PortPrototypeBlueprintRef | None
+        None | TdEventVariableDataPrototype.PortPrototypeBlueprintRef
     ) = field(
         default=None,
         metadata={
@@ -220,7 +220,7 @@ class TdEventVariableDataPrototype:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    port_ref: TdEventVariableDataPrototype.PortRef | None = field(
+    port_ref: None | TdEventVariableDataPrototype.PortRef = field(
         default=None,
         metadata={
             "name": "PORT-REF",
@@ -228,7 +228,7 @@ class TdEventVariableDataPrototype:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    data_element_ref: TdEventVariableDataPrototype.DataElementRef | None = (
+    data_element_ref: None | TdEventVariableDataPrototype.DataElementRef = (
         field(
             default=None,
             metadata={
@@ -239,7 +239,7 @@ class TdEventVariableDataPrototype:
         )
     )
     td_event_variable_data_prototype_type: (
-        TdEventVariableDataPrototypeTypeEnum | None
+        None | TdEventVariableDataPrototypeTypeEnum
     ) = field(
         default=None,
         metadata={
@@ -248,14 +248,14 @@ class TdEventVariableDataPrototype:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -263,7 +263,7 @@ class TdEventVariableDataPrototype:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -295,7 +295,7 @@ class TdEventVariableDataPrototype:
 
     @dataclass
     class PortPrototypeBlueprintRef(Ref):
-        dest: PortPrototypeBlueprintSubtypesEnum | None = field(
+        dest: None | PortPrototypeBlueprintSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -306,7 +306,7 @@ class TdEventVariableDataPrototype:
 
     @dataclass
     class PortRef(Ref):
-        dest: PortPrototypeSubtypesEnum | None = field(
+        dest: None | PortPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -317,7 +317,7 @@ class TdEventVariableDataPrototype:
 
     @dataclass
     class DataElementRef(Ref):
-        dest: VariableDataPrototypeSubtypesEnum | None = field(
+        dest: None | VariableDataPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

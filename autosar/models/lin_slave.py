@@ -84,7 +84,7 @@ class LinSlave:
     class Meta:
         name = "LIN-SLAVE"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -93,7 +93,7 @@ class LinSlave:
             "required": True,
         },
     )
-    short_name_fragments: LinSlave.ShortNameFragments | None = field(
+    short_name_fragments: None | LinSlave.ShortNameFragments = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -101,7 +101,7 @@ class LinSlave:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -109,7 +109,7 @@ class LinSlave:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -117,7 +117,7 @@ class LinSlave:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -125,7 +125,7 @@ class LinSlave:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -133,7 +133,7 @@ class LinSlave:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -141,7 +141,7 @@ class LinSlave:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: LinSlave.Annotations | None = field(
+    annotations: None | LinSlave.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -149,7 +149,7 @@ class LinSlave:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -157,7 +157,7 @@ class LinSlave:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    lin_slave_variants: LinSlave.LinSlaveVariants | None = field(
+    lin_slave_variants: None | LinSlave.LinSlaveVariants = field(
         default=None,
         metadata={
             "name": "LIN-SLAVE-VARIANTS",
@@ -165,14 +165,14 @@ class LinSlave:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -180,7 +180,7 @@ class LinSlave:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",

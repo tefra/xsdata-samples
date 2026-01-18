@@ -31,20 +31,20 @@ class SoftwareClusterDependencyLogicalOperatorEnum:
     class Meta:
         name = "SOFTWARE-CLUSTER-DEPENDENCY-LOGICAL-OPERATOR-ENUM"
 
-    value: SoftwareClusterDependencyLogicalOperatorEnumSimple | None = field(
+    value: None | SoftwareClusterDependencyLogicalOperatorEnumSimple = field(
         default=None,
         metadata={
             "required": True,
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

@@ -20,7 +20,7 @@ class PointOfInterestClassificationHierarchyVersionStructure(
         name = "PointOfInterestClassificationHierarchy_VersionStructure"
 
     members: (
-        PointOfInterestClassificationHierarchyMembersRelStructure | None
+        None | PointOfInterestClassificationHierarchyMembersRelStructure
     ) = field(
         default=None,
         metadata={

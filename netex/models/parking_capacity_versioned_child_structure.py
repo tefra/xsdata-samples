@@ -23,7 +23,7 @@ class ParkingCapacityVersionedChildStructure(VersionedChildStructure):
     class Meta:
         name = "ParkingCapacity_VersionedChildStructure"
 
-    parking_ref: ParkingRef | None = field(
+    parking_ref: None | ParkingRef = field(
         default=None,
         metadata={
             "name": "ParkingRef",
@@ -31,7 +31,7 @@ class ParkingCapacityVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    parent_ref: ParkingPropertiesRefStructure | None = field(
+    parent_ref: None | ParkingPropertiesRefStructure = field(
         default=None,
         metadata={
             "name": "ParentRef",
@@ -39,7 +39,7 @@ class ParkingCapacityVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    parking_properties_ref: ParkingPropertiesRef | None = field(
+    parking_properties_ref: None | ParkingPropertiesRef = field(
         default=None,
         metadata={
             "name": "ParkingPropertiesRef",
@@ -47,7 +47,7 @@ class ParkingCapacityVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    parking_user_type: ParkingUserEnumeration | None = field(
+    parking_user_type: None | ParkingUserEnumeration = field(
         default=None,
         metadata={
             "name": "ParkingUserType",
@@ -55,7 +55,7 @@ class ParkingCapacityVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    parking_vehicle_type: ParkingVehicleEnumeration | None = field(
+    parking_vehicle_type: None | ParkingVehicleEnumeration = field(
         default=None,
         metadata={
             "name": "ParkingVehicleType",
@@ -64,12 +64,12 @@ class ParkingCapacityVersionedChildStructure(VersionedChildStructure):
         },
     )
     transport_type_ref_or_vehicle_type_ref: (
-        SimpleVehicleTypeRef
+        None
+        | SimpleVehicleTypeRef
         | CompoundTrainRef
         | TrainRef
         | VehicleTypeRef
         | TransportTypeRef
-        | None
     ) = field(
         default=None,
         metadata={
@@ -103,7 +103,7 @@ class ParkingCapacityVersionedChildStructure(VersionedChildStructure):
             ),
         },
     )
-    parking_stay_type: ParkingStayEnumeration | None = field(
+    parking_stay_type: None | ParkingStayEnumeration = field(
         default=None,
         metadata={
             "name": "ParkingStayType",
@@ -111,7 +111,7 @@ class ParkingCapacityVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    number_of_spaces: int | None = field(
+    number_of_spaces: None | int = field(
         default=None,
         metadata={
             "name": "NumberOfSpaces",
@@ -119,7 +119,7 @@ class ParkingCapacityVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    number_of_spaces_with_recharge_point: int | None = field(
+    number_of_spaces_with_recharge_point: None | int = field(
         default=None,
         metadata={
             "name": "NumberOfSpacesWithRechargePoint",

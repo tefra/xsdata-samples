@@ -15,14 +15,14 @@ class Count:
         name = "count"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    count: str | None = field(
+    count: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "required": True,
         },
     )
-    count_type: str | None = field(
+    count_type: None | str = field(
         default=None,
         metadata={
             "name": "count-type",
@@ -30,13 +30,13 @@ class Count:
             "required": True,
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",

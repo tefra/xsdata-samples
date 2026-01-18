@@ -11,7 +11,7 @@ __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
 @dataclass
 class ConsumerResponseEndpointStructure(ResponseStructure):
-    consumer_ref: ParticipantRefStructure | None = field(
+    consumer_ref: None | ParticipantRefStructure = field(
         default=None,
         metadata={
             "name": "ConsumerRef",
@@ -19,7 +19,7 @@ class ConsumerResponseEndpointStructure(ResponseStructure):
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    request_message_ref: MessageRefStructure | None = field(
+    request_message_ref: None | MessageRefStructure = field(
         default=None,
         metadata={
             "name": "RequestMessageRef",
@@ -27,7 +27,7 @@ class ConsumerResponseEndpointStructure(ResponseStructure):
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    delegator_address: str | None = field(
+    delegator_address: None | str = field(
         default=None,
         metadata={
             "name": "DelegatorAddress",
@@ -35,7 +35,7 @@ class ConsumerResponseEndpointStructure(ResponseStructure):
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    delegator_ref: ParticipantRefStructure | None = field(
+    delegator_ref: None | ParticipantRefStructure = field(
         default=None,
         metadata={
             "name": "DelegatorRef",

@@ -34,7 +34,7 @@ class RPortInCompositionInstanceRef:
         name = "R-PORT-IN-COMPOSITION-INSTANCE-REF"
 
     context_component_ref: (
-        RPortInCompositionInstanceRef.ContextComponentRef | None
+        None | RPortInCompositionInstanceRef.ContextComponentRef
     ) = field(
         default=None,
         metadata={
@@ -43,7 +43,7 @@ class RPortInCompositionInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    target_r_port_ref: RPortInCompositionInstanceRef.TargetRPortRef | None = (
+    target_r_port_ref: None | RPortInCompositionInstanceRef.TargetRPortRef = (
         field(
             default=None,
             metadata={
@@ -53,14 +53,14 @@ class RPortInCompositionInstanceRef:
             },
         )
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -71,7 +71,7 @@ class RPortInCompositionInstanceRef:
 
     @dataclass
     class ContextComponentRef(Ref):
-        dest: SwComponentPrototypeSubtypesEnum | None = field(
+        dest: None | SwComponentPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -82,7 +82,7 @@ class RPortInCompositionInstanceRef:
 
     @dataclass
     class TargetRPortRef(Ref):
-        dest: AbstractRequiredPortPrototypeSubtypesEnum | None = field(
+        dest: None | AbstractRequiredPortPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

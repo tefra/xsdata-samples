@@ -23,7 +23,7 @@ class NavigationPathAssignmentVersionStructure(StopAssignmentVersionStructure):
         name = "NavigationPathAssignment_VersionStructure"
 
     connection_ref: (
-        DefaultConnectionRef | SiteConnectionRef | ConnectionRef | None
+        None | DefaultConnectionRef | SiteConnectionRef | ConnectionRef
     ) = field(
         default=None,
         metadata={
@@ -48,13 +48,13 @@ class NavigationPathAssignmentVersionStructure(StopAssignmentVersionStructure):
         },
     )
     stop_place_ref_or_site_ref: (
-        TaxiRankRef
+        None
+        | TaxiRankRef
         | StopPlaceRef
         | ParkingRef
         | PointOfInterestRef
         | ServiceSiteRef
         | SiteRef
-        | None
     ) = field(
         default=None,
         metadata={
@@ -93,7 +93,7 @@ class NavigationPathAssignmentVersionStructure(StopAssignmentVersionStructure):
             ),
         },
     )
-    navigation_path_ref: NavigationPathRef | None = field(
+    navigation_path_ref: None | NavigationPathRef = field(
         default=None,
         metadata={
             "name": "NavigationPathRef",

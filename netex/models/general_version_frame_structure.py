@@ -669,7 +669,7 @@ class GeneralVersionFrameStructure(CommonVersionFrameStructure):
     class Meta:
         name = "General_VersionFrameStructure"
 
-    members: GeneralFrameMembersRelStructure | None = field(
+    members: None | GeneralFrameMembersRelStructure = field(
         default=None,
         metadata={
             "type": "Element",
@@ -4489,7 +4489,7 @@ class CompositeVersionFrameStructure(CommonVersionFrameStructure):
     class Meta:
         name = "Composite_VersionFrameStructure"
 
-    frames: FramesRelStructure | None = field(
+    frames: None | FramesRelStructure = field(
         default=None,
         metadata={
             "type": "Element",
@@ -4503,7 +4503,7 @@ class EntityEntityStructure(EntityStructure):
     class Meta:
         name = "Entity_EntityStructure"
 
-    versions: EntitiesInVersionRelStructure | None = field(
+    versions: None | EntitiesInVersionRelStructure = field(
         default=None,
         metadata={
             "type": "Element",
@@ -4511,13 +4511,13 @@ class EntityEntityStructure(EntityStructure):
             "required": True,
         },
     )
-    created: XmlDateTime | None = field(
+    created: None | XmlDateTime = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    changed: XmlDateTime | None = field(
+    changed: None | XmlDateTime = field(
         default=None,
         metadata={
             "type": "Attribute",

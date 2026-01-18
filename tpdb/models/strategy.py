@@ -10,4 +10,4 @@ class Strategy:
     class Meta:
         name = "strategy"
 
-    value: StrategyValue | None = field(default=None)
+    value: None | StrategyValue = field(default=None)

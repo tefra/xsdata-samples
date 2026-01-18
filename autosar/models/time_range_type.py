@@ -33,7 +33,7 @@ class TimeRangeType:
     class Meta:
         name = "TIME-RANGE-TYPE"
 
-    tolerance: TimeRangeType.Tolerance | None = field(
+    tolerance: None | TimeRangeType.Tolerance = field(
         default=None,
         metadata={
             "name": "TOLERANCE",
@@ -41,7 +41,7 @@ class TimeRangeType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    value: TimeValue | None = field(
+    value: None | TimeValue = field(
         default=None,
         metadata={
             "name": "VALUE",
@@ -49,14 +49,14 @@ class TimeRangeType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -67,7 +67,7 @@ class TimeRangeType:
 
     @dataclass
     class Tolerance:
-        absolute_tolerance: AbsoluteTolerance | None = field(
+        absolute_tolerance: None | AbsoluteTolerance = field(
             default=None,
             metadata={
                 "name": "ABSOLUTE-TOLERANCE",
@@ -75,7 +75,7 @@ class TimeRangeType:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        relative_tolerance: RelativeTolerance | None = field(
+        relative_tolerance: None | RelativeTolerance = field(
             default=None,
             metadata={
                 "name": "RELATIVE-TOLERANCE",

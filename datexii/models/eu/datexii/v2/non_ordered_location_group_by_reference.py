@@ -27,7 +27,7 @@ class NonOrderedLocationGroupByReference(NonOrderedLocations):
     """
 
     predefined_non_ordered_location_group_reference: (
-        PredefinedNonOrderedLocationGroupVersionedReference | None
+        None | PredefinedNonOrderedLocationGroupVersionedReference
     ) = field(
         default=None,
         metadata={
@@ -37,7 +37,7 @@ class NonOrderedLocationGroupByReference(NonOrderedLocations):
             "required": True,
         },
     )
-    non_ordered_location_group_by_reference_extension: ExtensionType | None = (
+    non_ordered_location_group_by_reference_extension: None | ExtensionType = (
         field(
             default=None,
             metadata={

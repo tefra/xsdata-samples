@@ -608,7 +608,7 @@ class AggregationType:
             "required": True,
         }
     )
-    aggregation_type_coded_other: AggregationTypeCodedOther | None = field(
+    aggregation_type_coded_other: None | AggregationTypeCodedOther = field(
         default=None,
         metadata={
             "name": "AggregationTypeCodedOther",
@@ -667,14 +667,14 @@ class DropDownMenuValue:
 
 @dataclass(kw_only=True)
 class FormulaAttribute:
-    attribute_name: AttributeName | None = field(
+    attribute_name: None | AttributeName = field(
         default=None,
         metadata={
             "name": "AttributeName",
             "type": "Element",
         },
     )
-    value: Value | None = field(
+    value: None | Value = field(
         default=None,
         metadata={
             "name": "Value",
@@ -729,14 +729,14 @@ class Project:
             "required": True,
         }
     )
-    revision_number: RevisionNumber | None = field(
+    revision_number: None | RevisionNumber = field(
         default=None,
         metadata={
             "name": "RevisionNumber",
             "type": "Element",
         },
     )
-    list_of_structured_note: ListOfStructuredNote | None = field(
+    list_of_structured_note: None | ListOfStructuredNote = field(
         default=None,
         metadata={
             "name": "ListOfStructuredNote",
@@ -813,49 +813,49 @@ class SourcingValidityDates:
 
 @dataclass(kw_only=True)
 class VisibilityOfBuyer:
-    buyer_contact_name: BuyerContactName | None = field(
+    buyer_contact_name: None | BuyerContactName = field(
         default=None,
         metadata={
             "name": "BuyerContactName",
             "type": "Element",
         },
     )
-    contact_phone_number: ContactPhoneNumber | None = field(
+    contact_phone_number: None | ContactPhoneNumber = field(
         default=None,
         metadata={
             "name": "ContactPhoneNumber",
             "type": "Element",
         },
     )
-    contact_mobile: ContactMobile | None = field(
+    contact_mobile: None | ContactMobile = field(
         default=None,
         metadata={
             "name": "ContactMobile",
             "type": "Element",
         },
     )
-    contact_fax_number: ContactFaxNumber | None = field(
+    contact_fax_number: None | ContactFaxNumber = field(
         default=None,
         metadata={
             "name": "ContactFaxNumber",
             "type": "Element",
         },
     )
-    contact_email: ContactEmail | None = field(
+    contact_email: None | ContactEmail = field(
         default=None,
         metadata={
             "name": "ContactEmail",
             "type": "Element",
         },
     )
-    alternative_buyer_contact_name: AlternativeBuyerContactName | None = field(
+    alternative_buyer_contact_name: None | AlternativeBuyerContactName = field(
         default=None,
         metadata={
             "name": "AlternativeBuyerContactName",
             "type": "Element",
         },
     )
-    alternative_contact_phone_number: AlternativeContactPhoneNumber | None = (
+    alternative_contact_phone_number: None | AlternativeContactPhoneNumber = (
         field(
             default=None,
             metadata={
@@ -864,21 +864,21 @@ class VisibilityOfBuyer:
             },
         )
     )
-    alternative_contact_mobile: AlternativeContactMobile | None = field(
+    alternative_contact_mobile: None | AlternativeContactMobile = field(
         default=None,
         metadata={
             "name": "AlternativeContactMobile",
             "type": "Element",
         },
     )
-    alternative_contact_fax_number: AlternativeContactFaxNumber | None = field(
+    alternative_contact_fax_number: None | AlternativeContactFaxNumber = field(
         default=None,
         metadata={
             "name": "AlternativeContactFaxNumber",
             "type": "Element",
         },
     )
-    alternative_contact_email: AlternativeContactEmail | None = field(
+    alternative_contact_email: None | AlternativeContactEmail = field(
         default=None,
         metadata={
             "name": "AlternativeContactEmail",
@@ -889,35 +889,35 @@ class VisibilityOfBuyer:
 
 @dataclass(kw_only=True)
 class VisibilityRules:
-    visibility_indicator: VisibilityIndicator | None = field(
+    visibility_indicator: None | VisibilityIndicator = field(
         default=None,
         metadata={
             "name": "VisibilityIndicator",
             "type": "Element",
         },
     )
-    visibility_of_comments: VisibilityOfComments | None = field(
+    visibility_of_comments: None | VisibilityOfComments = field(
         default=None,
         metadata={
             "name": "VisibilityOfComments",
             "type": "Element",
         },
     )
-    visibility_of_amounts: VisibilityOfAmounts | None = field(
+    visibility_of_amounts: None | VisibilityOfAmounts = field(
         default=None,
         metadata={
             "name": "VisibilityOfAmounts",
             "type": "Element",
         },
     )
-    visibility_of_quantities: VisibilityOfQuantities | None = field(
+    visibility_of_quantities: None | VisibilityOfQuantities = field(
         default=None,
         metadata={
             "name": "VisibilityOfQuantities",
             "type": "Element",
         },
     )
-    visibility_of_participants: VisibilityOfParticipants | None = field(
+    visibility_of_participants: None | VisibilityOfParticipants = field(
         default=None,
         metadata={
             "name": "VisibilityOfParticipants",
@@ -993,42 +993,42 @@ class ListToInform:
 
 @dataclass(kw_only=True)
 class SourcingVisibilityRules:
-    visibility_indicator: VisibilityIndicator | None = field(
+    visibility_indicator: None | VisibilityIndicator = field(
         default=None,
         metadata={
             "name": "VisibilityIndicator",
             "type": "Element",
         },
     )
-    visibility_of_comments: VisibilityOfComments | None = field(
+    visibility_of_comments: None | VisibilityOfComments = field(
         default=None,
         metadata={
             "name": "VisibilityOfComments",
             "type": "Element",
         },
     )
-    visibility_of_amounts: VisibilityOfAmounts | None = field(
+    visibility_of_amounts: None | VisibilityOfAmounts = field(
         default=None,
         metadata={
             "name": "VisibilityOfAmounts",
             "type": "Element",
         },
     )
-    visibility_of_quantities: VisibilityOfQuantities | None = field(
+    visibility_of_quantities: None | VisibilityOfQuantities = field(
         default=None,
         metadata={
             "name": "VisibilityOfQuantities",
             "type": "Element",
         },
     )
-    visibility_of_participants: VisibilityOfParticipants | None = field(
+    visibility_of_participants: None | VisibilityOfParticipants = field(
         default=None,
         metadata={
             "name": "VisibilityOfParticipants",
             "type": "Element",
         },
     )
-    visibility_of_buyer: VisibilityOfBuyer | None = field(
+    visibility_of_buyer: None | VisibilityOfBuyer = field(
         default=None,
         metadata={
             "name": "VisibilityOfBuyer",
@@ -1046,7 +1046,7 @@ class ValidQuoteCurrency:
             "required": True,
         }
     )
-    rate_of_exchange_detail: RateOfExchangeDetail | None = field(
+    rate_of_exchange_detail: None | RateOfExchangeDetail = field(
         default=None,
         metadata={
             "name": "RateOfExchangeDetail",
@@ -1078,7 +1078,7 @@ class Formula:
             "type": "Element",
         },
     )
-    aggregation_type: AggregationType | None = field(
+    aggregation_type: None | AggregationType = field(
         default=None,
         metadata={
             "name": "AggregationType",
@@ -1108,7 +1108,7 @@ class SourcingAttribute:
             "required": True,
         }
     )
-    sourcing_attribute_description: SourcingAttributeDescription | None = (
+    sourcing_attribute_description: None | SourcingAttributeDescription = (
         field(
             default=None,
             metadata={
@@ -1125,7 +1125,7 @@ class SourcingAttribute:
         }
     )
     sourcing_attribute_data_type_coded_other: (
-        SourcingAttributeDataTypeCodedOther | None
+        None | SourcingAttributeDataTypeCodedOther
     ) = field(
         default=None,
         metadata={
@@ -1133,14 +1133,14 @@ class SourcingAttribute:
             "type": "Element",
         },
     )
-    list_of_drop_down_menu_value: ListOfDropDownMenuValue | None = field(
+    list_of_drop_down_menu_value: None | ListOfDropDownMenuValue = field(
         default=None,
         metadata={
             "name": "ListOfDropDownMenuValue",
             "type": "Element",
         },
     )
-    sourcing_attribute_type: SourcingAttributeType | None = field(
+    sourcing_attribute_type: None | SourcingAttributeType = field(
         default=None,
         metadata={
             "name": "SourcingAttributeType",
@@ -1154,21 +1154,21 @@ class SourcingAttribute:
             "required": True,
         }
     )
-    supplier_view: SupplierView | None = field(
+    supplier_view: None | SupplierView = field(
         default=None,
         metadata={
             "name": "SupplierView",
             "type": "Element",
         },
     )
-    weighting: Weighting | None = field(
+    weighting: None | Weighting = field(
         default=None,
         metadata={
             "name": "Weighting",
             "type": "Element",
         },
     )
-    preferred_uom: PreferredUom | None = field(
+    preferred_uom: None | PreferredUom = field(
         default=None,
         metadata={
             "name": "PreferredUOM",
@@ -1182,7 +1182,7 @@ class SourcingAttribute:
             "required": True,
         }
     )
-    sourcing_attribute_field_size: SourcingAttributeFieldSize | None = field(
+    sourcing_attribute_field_size: None | SourcingAttributeFieldSize = field(
         default=None,
         metadata={
             "name": "SourcingAttributeFieldSize",
@@ -1200,56 +1200,56 @@ class SourcingPartners:
             "required": True,
         }
     )
-    list_of_identifier: ListOfIdentifier | None = field(
+    list_of_identifier: None | ListOfIdentifier = field(
         default=None,
         metadata={
             "name": "ListOfIdentifier",
             "type": "Element",
         },
     )
-    mdfbusiness: Mdfbusiness | None = field(
+    mdfbusiness: None | Mdfbusiness = field(
         default=None,
         metadata={
             "name": "MDFBusiness",
             "type": "Element",
         },
     )
-    name_address: NameAddress | None = field(
+    name_address: None | NameAddress = field(
         default=None,
         metadata={
             "name": "NameAddress",
             "type": "Element",
         },
     )
-    order_contact: OrderContact | None = field(
+    order_contact: None | OrderContact = field(
         default=None,
         metadata={
             "name": "OrderContact",
             "type": "Element",
         },
     )
-    receiving_contact: ReceivingContact | None = field(
+    receiving_contact: None | ReceivingContact = field(
         default=None,
         metadata={
             "name": "ReceivingContact",
             "type": "Element",
         },
     )
-    shipping_contact: ShippingContact | None = field(
+    shipping_contact: None | ShippingContact = field(
         default=None,
         metadata={
             "name": "ShippingContact",
             "type": "Element",
         },
     )
-    other_contacts: OtherContacts | None = field(
+    other_contacts: None | OtherContacts = field(
         default=None,
         metadata={
             "name": "OtherContacts",
             "type": "Element",
         },
     )
-    correspondence_language: CorrespondenceLanguage | None = field(
+    correspondence_language: None | CorrespondenceLanguage = field(
         default=None,
         metadata={
             "name": "CorrespondenceLanguage",
@@ -1263,7 +1263,7 @@ class SourcingPartners:
             "required": True,
         }
     )
-    list_of_key_val: ListOfKeyVal | None = field(
+    list_of_key_val: None | ListOfKeyVal = field(
         default=None,
         metadata={
             "name": "ListOfKeyVal",
@@ -1281,14 +1281,14 @@ class SourcingRulesProfile:
             "required": True,
         }
     )
-    quote_win_rule_coded_other: QuoteWinRuleCodedOther | None = field(
+    quote_win_rule_coded_other: None | QuoteWinRuleCodedOther = field(
         default=None,
         metadata={
             "name": "QuoteWinRuleCodedOther",
             "type": "Element",
         },
     )
-    sourcing_visibility_rules: SourcingVisibilityRules | None = field(
+    sourcing_visibility_rules: None | SourcingVisibilityRules = field(
         default=None,
         metadata={
             "name": "SourcingVisibilityRules",
@@ -1318,7 +1318,7 @@ class SourcingCurrency:
             "required": True,
         }
     )
-    list_of_valid_quote_currency: ListOfValidQuoteCurrency | None = field(
+    list_of_valid_quote_currency: None | ListOfValidQuoteCurrency = field(
         default=None,
         metadata={
             "name": "ListOfValidQuoteCurrency",
@@ -1343,28 +1343,28 @@ class SourcingItem:
             "required": True,
         }
     )
-    sourcing_item_description: SourcingItemDescription | None = field(
+    sourcing_item_description: None | SourcingItemDescription = field(
         default=None,
         metadata={
             "name": "SourcingItemDescription",
             "type": "Element",
         },
     )
-    item_number: ItemNumber | None = field(
+    item_number: None | ItemNumber = field(
         default=None,
         metadata={
             "name": "ItemNumber",
             "type": "Element",
         },
     )
-    parent_item_identifier: ParentItemIdentifier | None = field(
+    parent_item_identifier: None | ParentItemIdentifier = field(
         default=None,
         metadata={
             "name": "ParentItemIdentifier",
             "type": "Element",
         },
     )
-    bundle_name: BundleName | None = field(
+    bundle_name: None | BundleName = field(
         default=None,
         metadata={
             "name": "BundleName",
@@ -1385,35 +1385,35 @@ class SourcingItem:
             "type": "Element",
         },
     )
-    sourcing_quantity: SourcingQuantity | None = field(
+    sourcing_quantity: None | SourcingQuantity = field(
         default=None,
         metadata={
             "name": "SourcingQuantity",
             "type": "Element",
         },
     )
-    delivery_date: DeliveryDate | None = field(
+    delivery_date: None | DeliveryDate = field(
         default=None,
         metadata={
             "name": "DeliveryDate",
             "type": "Element",
         },
     )
-    unit_price: UnitPrice | None = field(
+    unit_price: None | UnitPrice = field(
         default=None,
         metadata={
             "name": "UnitPrice",
             "type": "Element",
         },
     )
-    partial_quote_indicator: PartialQuoteIndicator | None = field(
+    partial_quote_indicator: None | PartialQuoteIndicator = field(
         default=None,
         metadata={
             "name": "PartialQuoteIndicator",
             "type": "Element",
         },
     )
-    part_numbers: PartNumbers | None = field(
+    part_numbers: None | PartNumbers = field(
         default=None,
         metadata={
             "name": "PartNumbers",
@@ -1424,35 +1424,35 @@ class SourcingItem:
 
 @dataclass(kw_only=True)
 class SourcingSpecifications:
-    sourcing_create_name: SourcingCreateName | None = field(
+    sourcing_create_name: None | SourcingCreateName = field(
         default=None,
         metadata={
             "name": "SourcingCreateName",
             "type": "Element",
         },
     )
-    sourcing_type: SourcingType | None = field(
+    sourcing_type: None | SourcingType = field(
         default=None,
         metadata={
             "name": "SourcingType",
             "type": "Element",
         },
     )
-    sourcing_status: SourcingStatus | None = field(
+    sourcing_status: None | SourcingStatus = field(
         default=None,
         metadata={
             "name": "SourcingStatus",
             "type": "Element",
         },
     )
-    partial_quote_indicator: PartialQuoteIndicator | None = field(
+    partial_quote_indicator: None | PartialQuoteIndicator = field(
         default=None,
         metadata={
             "name": "PartialQuoteIndicator",
             "type": "Element",
         },
     )
-    all_or_nothing: AllOrNothing | None = field(
+    all_or_nothing: None | AllOrNothing = field(
         default=None,
         metadata={
             "name": "AllOrNothing",
@@ -1478,14 +1478,14 @@ class SourcingCreateDetail:
             "required": True,
         }
     )
-    sourcing_delivery_detail: SourcingDeliveryDetail | None = field(
+    sourcing_delivery_detail: None | SourcingDeliveryDetail = field(
         default=None,
         metadata={
             "name": "SourcingDeliveryDetail",
             "type": "Element",
         },
     )
-    list_of_attachment: ListOfAttachment | None = field(
+    list_of_attachment: None | ListOfAttachment = field(
         default=None,
         metadata={
             "name": "ListOfAttachment",
@@ -1499,7 +1499,7 @@ class SourcingCreateDetail:
             "required": True,
         }
     )
-    list_of_sourcing_item_component: ListOfSourcingItemComponent | None = (
+    list_of_sourcing_item_component: None | ListOfSourcingItemComponent = (
         field(
             default=None,
             metadata={
@@ -1519,21 +1519,21 @@ class SourcingParticipants:
             "required": True,
         }
     )
-    community_id: CommunityId | None = field(
+    community_id: None | CommunityId = field(
         default=None,
         metadata={
             "name": "CommunityID",
             "type": "Element",
         },
     )
-    list_to_inform: ListToInform | None = field(
+    list_to_inform: None | ListToInform = field(
         default=None,
         metadata={
             "name": "ListToInform",
             "type": "Element",
         },
     )
-    list_of_sourcing_partners: ListOfSourcingPartners | None = field(
+    list_of_sourcing_partners: None | ListOfSourcingPartners = field(
         default=None,
         metadata={
             "name": "ListOfSourcingPartners",
@@ -1577,14 +1577,14 @@ class SourcingCreateHeader:
             "required": True,
         }
     )
-    project: Project | None = field(
+    project: None | Project = field(
         default=None,
         metadata={
             "name": "Project",
             "type": "Element",
         },
     )
-    requisition_number: RequisitionNumber | None = field(
+    requisition_number: None | RequisitionNumber = field(
         default=None,
         metadata={
             "name": "RequisitionNumber",
@@ -1598,28 +1598,28 @@ class SourcingCreateHeader:
             "required": True,
         }
     )
-    decision_date: DecisionDate | None = field(
+    decision_date: None | DecisionDate = field(
         default=None,
         metadata={
             "name": "DecisionDate",
             "type": "Element",
         },
     )
-    sourcing_rules_profile: SourcingRulesProfile | None = field(
+    sourcing_rules_profile: None | SourcingRulesProfile = field(
         default=None,
         metadata={
             "name": "SourcingRulesProfile",
             "type": "Element",
         },
     )
-    sourcing_currency: SourcingCurrency | None = field(
+    sourcing_currency: None | SourcingCurrency = field(
         default=None,
         metadata={
             "name": "SourcingCurrency",
             "type": "Element",
         },
     )
-    list_of_bundle: ListOfBundle | None = field(
+    list_of_bundle: None | ListOfBundle = field(
         default=None,
         metadata={
             "name": "ListOfBundle",
@@ -1633,7 +1633,7 @@ class SourcingCreateHeader:
             "required": True,
         }
     )
-    list_of_reference_coded: ListOfReferenceCoded | None = field(
+    list_of_reference_coded: None | ListOfReferenceCoded = field(
         default=None,
         metadata={
             "name": "ListOfReferenceCoded",
@@ -1647,7 +1647,7 @@ class SourcingCreateHeader:
             "required": True,
         }
     )
-    sourcing_create_general_notes: SourcingCreateGeneralNotes | None = field(
+    sourcing_create_general_notes: None | SourcingCreateGeneralNotes = field(
         default=None,
         metadata={
             "name": "SourcingCreateGeneralNotes",
@@ -1655,7 +1655,7 @@ class SourcingCreateHeader:
         },
     )
     sourcing_create_list_of_attachment: (
-        SourcingCreateListOfAttachment | None
+        None | SourcingCreateListOfAttachment
     ) = field(
         default=None,
         metadata={
@@ -1663,7 +1663,7 @@ class SourcingCreateHeader:
             "type": "Element",
         },
     )
-    sourcing_specifications: SourcingSpecifications | None = field(
+    sourcing_specifications: None | SourcingSpecifications = field(
         default=None,
         metadata={
             "name": "SourcingSpecifications",

@@ -62,7 +62,7 @@ class EcucDestinationUriPolicy:
     class Meta:
         name = "ECUC-DESTINATION-URI-POLICY"
 
-    containers: EcucDestinationUriPolicy.Containers | None = field(
+    containers: None | EcucDestinationUriPolicy.Containers = field(
         default=None,
         metadata={
             "name": "CONTAINERS",
@@ -71,7 +71,7 @@ class EcucDestinationUriPolicy:
         },
     )
     destination_uri_nesting_contract: (
-        EcucDestinationUriNestingContractEnum | None
+        None | EcucDestinationUriNestingContractEnum
     ) = field(
         default=None,
         metadata={
@@ -80,7 +80,7 @@ class EcucDestinationUriPolicy:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    parameters: EcucDestinationUriPolicy.Parameters | None = field(
+    parameters: None | EcucDestinationUriPolicy.Parameters = field(
         default=None,
         metadata={
             "name": "PARAMETERS",
@@ -88,7 +88,7 @@ class EcucDestinationUriPolicy:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    references: EcucDestinationUriPolicy.References | None = field(
+    references: None | EcucDestinationUriPolicy.References = field(
         default=None,
         metadata={
             "name": "REFERENCES",
@@ -96,14 +96,14 @@ class EcucDestinationUriPolicy:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

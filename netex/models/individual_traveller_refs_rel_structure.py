@@ -13,7 +13,7 @@ class IndividualTravellerRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "individualTravellerRefs_RelStructure"
 
-    individual_traveller_ref: IndividualTravellerRef | None = field(
+    individual_traveller_ref: None | IndividualTravellerRef = field(
         default=None,
         metadata={
             "name": "IndividualTravellerRef",

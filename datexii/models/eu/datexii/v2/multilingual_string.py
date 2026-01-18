@@ -11,7 +11,7 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 @dataclass
 class MultilingualString:
-    values: MultilingualString.Values | None = field(
+    values: None | MultilingualString.Values = field(
         default=None,
         metadata={
             "type": "Element",

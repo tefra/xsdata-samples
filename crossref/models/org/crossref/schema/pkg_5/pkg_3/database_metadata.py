@@ -44,20 +44,20 @@ class DatabaseMetadata:
         name = "database_metadata"
         namespace = "http://www.crossref.org/schema/5.3.1"
 
-    contributors: Contributors | None = field(
+    contributors: None | Contributors = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    titles: Titles | None = field(
+    titles: None | Titles = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
         },
     )
-    description: Description | None = field(
+    description: None | Description = field(
         default=None,
         metadata={
             "type": "Element",
@@ -70,7 +70,7 @@ class DatabaseMetadata:
             "max_occurs": 10,
         },
     )
-    publisher: Publisher | None = field(
+    publisher: None | Publisher = field(
         default=None,
         metadata={
             "type": "Element",
@@ -83,32 +83,32 @@ class DatabaseMetadata:
             "max_occurs": 10,
         },
     )
-    publisher_item: PublisherItem | None = field(
+    publisher_item: None | PublisherItem = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    archive_locations: ArchiveLocations | None = field(
+    archive_locations: None | ArchiveLocations = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    doi_data: DoiData | None = field(
+    doi_data: None | DoiData = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    program: Program | None = field(
+    program: None | Program = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.crossref.org/relations.xsd",
         },
     )
-    language: DatabaseMetadataLanguage | None = field(
+    language: None | DatabaseMetadataLanguage = field(
         default=None,
         metadata={
             "type": "Attribute",

@@ -21,7 +21,7 @@ class PointOnLineSectionVersionedChildStructure(
     class Meta:
         name = "PointOnLineSection_VersionedChildStructure"
 
-    line_section_point_type: LineSectionPointTypeEnumeration | None = field(
+    line_section_point_type: None | LineSectionPointTypeEnumeration = field(
         default=None,
         metadata={
             "name": "LineSectionPointType",
@@ -29,7 +29,7 @@ class PointOnLineSectionVersionedChildStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    show_as_accessible: bool | None = field(
+    show_as_accessible: None | bool = field(
         default=None,
         metadata={
             "name": "ShowAsAccessible",

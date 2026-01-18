@@ -48,7 +48,7 @@ class PerInstanceMemorySize:
     class Meta:
         name = "PER-INSTANCE-MEMORY-SIZE"
 
-    alignment: PositiveInteger | None = field(
+    alignment: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "ALIGNMENT",
@@ -57,7 +57,7 @@ class PerInstanceMemorySize:
         },
     )
     per_instance_memory_ref: (
-        PerInstanceMemorySize.PerInstanceMemoryRef | None
+        None | PerInstanceMemorySize.PerInstanceMemoryRef
     ) = field(
         default=None,
         metadata={
@@ -66,7 +66,7 @@ class PerInstanceMemorySize:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    size: PositiveIntegerValueVariationPoint | None = field(
+    size: None | PositiveIntegerValueVariationPoint = field(
         default=None,
         metadata={
             "name": "SIZE",
@@ -74,7 +74,7 @@ class PerInstanceMemorySize:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -82,14 +82,14 @@ class PerInstanceMemorySize:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -100,7 +100,7 @@ class PerInstanceMemorySize:
 
     @dataclass
     class PerInstanceMemoryRef(Ref):
-        dest: PerInstanceMemorySubtypesEnum | None = field(
+        dest: None | PerInstanceMemorySubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

@@ -8,13 +8,13 @@ class Type:
     class Meta:
         name = "type"
 
-    basic: str | None = field(
+    basic: None | str = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    arrow: TypeArrow | None = field(
+    arrow: None | TypeArrow = field(
         default=None,
         metadata={
             "type": "Element",

@@ -15,27 +15,27 @@ class Phone:
         name = "phone"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    content_type: str | None = field(
+    content_type: None | str = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",

@@ -15,7 +15,7 @@ class PreassignedFareProductVersionStructure(FareProductVersionStructure):
     class Meta:
         name = "PreassignedFareProduct_VersionStructure"
 
-    product_type: PreassignedFareProductEnumeration | None = field(
+    product_type: None | PreassignedFareProductEnumeration = field(
         default=None,
         metadata={
             "name": "ProductType",

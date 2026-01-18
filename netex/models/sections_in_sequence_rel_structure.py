@@ -95,7 +95,7 @@ class LinkSequenceVersionStructure(DataManagedObjectStructure):
     class Meta:
         name = "LinkSequence_VersionStructure"
 
-    name: MultilingualString | None = field(
+    name: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "Name",
@@ -103,7 +103,7 @@ class LinkSequenceVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    short_name: MultilingualString | None = field(
+    short_name: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "ShortName",
@@ -111,7 +111,7 @@ class LinkSequenceVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    description: MultilingualString | None = field(
+    description: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "Description",
@@ -119,7 +119,7 @@ class LinkSequenceVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    distance: Decimal | None = field(
+    distance: None | Decimal = field(
         default=None,
         metadata={
             "name": "Distance",
@@ -127,7 +127,7 @@ class LinkSequenceVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    private_code: PrivateCode | None = field(
+    private_code: None | PrivateCode = field(
         default=None,
         metadata={
             "name": "PrivateCode",
@@ -135,14 +135,14 @@ class LinkSequenceVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    projections: ProjectionsRelStructure | None = field(
+    projections: None | ProjectionsRelStructure = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    info_links: InfoLinksRelStructure | None = field(
+    info_links: None | InfoLinksRelStructure = field(
         default=None,
         metadata={
             "name": "infoLinks",
@@ -150,7 +150,7 @@ class LinkSequenceVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    sections_in_sequence: SectionsInSequenceRelStructure | None = field(
+    sections_in_sequence: None | SectionsInSequenceRelStructure = field(
         default=None,
         metadata={
             "name": "sectionsInSequence",
@@ -165,7 +165,7 @@ class JourneyPatternVersionStructure(LinkSequenceVersionStructure):
     class Meta:
         name = "JourneyPattern_VersionStructure"
 
-    route_ref_or_route_view: RouteRef | RouteView | None = field(
+    route_ref_or_route_view: None | RouteRef | RouteView = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -183,7 +183,7 @@ class JourneyPatternVersionStructure(LinkSequenceVersionStructure):
             ),
         },
     )
-    direction_type: DirectionTypeEnumeration | None = field(
+    direction_type: None | DirectionTypeEnumeration = field(
         default=None,
         metadata={
             "name": "DirectionType",
@@ -191,7 +191,7 @@ class JourneyPatternVersionStructure(LinkSequenceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    direction_ref_or_direction_view: DirectionRef | DirectionView | None = (
+    direction_ref_or_direction_view: None | DirectionRef | DirectionView = (
         field(
             default=None,
             metadata={
@@ -212,7 +212,7 @@ class JourneyPatternVersionStructure(LinkSequenceVersionStructure):
         )
     )
     destination_display_ref_or_destination_display_view: (
-        DestinationDisplayRef | DestinationDisplayView | None
+        None | DestinationDisplayRef | DestinationDisplayView
     ) = field(
         default=None,
         metadata={
@@ -231,7 +231,7 @@ class JourneyPatternVersionStructure(LinkSequenceVersionStructure):
             ),
         },
     )
-    type_of_journey_pattern_ref: TypeOfJourneyPatternRef | None = field(
+    type_of_journey_pattern_ref: None | TypeOfJourneyPatternRef = field(
         default=None,
         metadata={
             "name": "TypeOfJourneyPatternRef",
@@ -239,7 +239,7 @@ class JourneyPatternVersionStructure(LinkSequenceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    operational_context_ref: OperationalContextRef | None = field(
+    operational_context_ref: None | OperationalContextRef = field(
         default=None,
         metadata={
             "name": "OperationalContextRef",
@@ -247,7 +247,7 @@ class JourneyPatternVersionStructure(LinkSequenceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    timing_pattern_ref: TimingPatternRef | None = field(
+    timing_pattern_ref: None | TimingPatternRef = field(
         default=None,
         metadata={
             "name": "TimingPatternRef",
@@ -255,7 +255,7 @@ class JourneyPatternVersionStructure(LinkSequenceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    notice_assignments: NoticeAssignmentsRelStructure | None = field(
+    notice_assignments: None | NoticeAssignmentsRelStructure = field(
         default=None,
         metadata={
             "name": "noticeAssignments",
@@ -263,7 +263,7 @@ class JourneyPatternVersionStructure(LinkSequenceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    run_times: JourneyPatternRunTimesRelStructure | None = field(
+    run_times: None | JourneyPatternRunTimesRelStructure = field(
         default=None,
         metadata={
             "name": "runTimes",
@@ -271,7 +271,7 @@ class JourneyPatternVersionStructure(LinkSequenceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    wait_times: JourneyPatternWaitTimesRelStructure | None = field(
+    wait_times: None | JourneyPatternWaitTimesRelStructure = field(
         default=None,
         metadata={
             "name": "waitTimes",
@@ -279,21 +279,21 @@ class JourneyPatternVersionStructure(LinkSequenceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    headways: JourneyPatternHeadwaysRelStructure | None = field(
+    headways: None | JourneyPatternHeadwaysRelStructure = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    layovers: JourneyPatternLayoversRelStructure | None = field(
+    layovers: None | JourneyPatternLayoversRelStructure = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    points_in_sequence: PointsInJourneyPatternRelStructure | None = field(
+    points_in_sequence: None | PointsInJourneyPatternRelStructure = field(
         default=None,
         metadata={
             "name": "pointsInSequence",
@@ -301,7 +301,7 @@ class JourneyPatternVersionStructure(LinkSequenceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    links_in_sequence: LinksInJourneyPatternRelStructure | None = field(
+    links_in_sequence: None | LinksInJourneyPatternRelStructure = field(
         default=None,
         metadata={
             "name": "linksInSequence",
@@ -316,7 +316,7 @@ class SectionVersionStructure(LinkSequenceVersionStructure):
     class Meta:
         name = "Section_VersionStructure"
 
-    purpose_of_grouping_ref: PurposeOfGroupingRef | None = field(
+    purpose_of_grouping_ref: None | PurposeOfGroupingRef = field(
         default=None,
         metadata={
             "name": "PurposeOfGroupingRef",
@@ -324,7 +324,7 @@ class SectionVersionStructure(LinkSequenceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    used_in: LinkSequenceRefsRelStructure | None = field(
+    used_in: None | LinkSequenceRefsRelStructure = field(
         default=None,
         metadata={
             "name": "usedIn",
@@ -332,7 +332,7 @@ class SectionVersionStructure(LinkSequenceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    name_of_link_class: str | None = field(
+    name_of_link_class: None | str = field(
         default=None,
         metadata={
             "name": "nameOfLinkClass",
@@ -347,9 +347,9 @@ class CommonSectionVersionStructure(SectionVersionStructure):
         name = "CommonSection_VersionStructure"
 
     points_on_section_or_members: (
-        PointsOnSectionRelStructure
+        None
+        | PointsOnSectionRelStructure
         | CommonSectionPointMembersRelStructure
-        | None
     ) = field(
         default=None,
         metadata={
@@ -375,7 +375,7 @@ class GeneralSectionVersionStructure(SectionVersionStructure):
     class Meta:
         name = "GeneralSection_VersionStructure"
 
-    points_on_section: PointsOnSectionRelStructure | None = field(
+    points_on_section: None | PointsOnSectionRelStructure = field(
         default=None,
         metadata={
             "name": "pointsOnSection",
@@ -383,7 +383,7 @@ class GeneralSectionVersionStructure(SectionVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    links_on_section: LinksOnSectionRelStructure | None = field(
+    links_on_section: None | LinksOnSectionRelStructure = field(
         default=None,
         metadata={
             "name": "linksOnSection",
@@ -405,9 +405,9 @@ class LineSectionVersionStructure(SectionVersionStructure):
         name = "LineSection_VersionStructure"
 
     points_on_section_or_members: (
-        PointOnLineSectionsRelStructure
+        None
+        | PointOnLineSectionsRelStructure
         | CommonSectionPointMembersRelStructure
-        | None
     ) = field(
         default=None,
         metadata={
@@ -427,9 +427,9 @@ class LineSectionVersionStructure(SectionVersionStructure):
         },
     )
     reverse_points_on_section_or_reverse_members: (
-        PointOnLineSectionsRelStructure
+        None
+        | PointOnLineSectionsRelStructure
         | CommonSectionPointMembersRelStructure
-        | None
     ) = field(
         default=None,
         metadata={
@@ -448,7 +448,7 @@ class LineSectionVersionStructure(SectionVersionStructure):
             ),
         },
     )
-    section_type: SectionTypeEnumeration | None = field(
+    section_type: None | SectionTypeEnumeration = field(
         default=None,
         metadata={
             "name": "SectionType",
@@ -456,7 +456,7 @@ class LineSectionVersionStructure(SectionVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    line_ref: FlexibleLineRef | LineRef | None = field(
+    line_ref: None | FlexibleLineRef | LineRef = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -474,7 +474,7 @@ class LineSectionVersionStructure(SectionVersionStructure):
             ),
         },
     )
-    transport_organisation_ref: AuthorityRef | OperatorRef | None = field(
+    transport_organisation_ref: None | AuthorityRef | OperatorRef = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -506,12 +506,12 @@ class FareSectionVersionStructure(GeneralSectionVersionStructure):
         name = "FareSection_VersionStructure"
 
     choice: (
-        ServiceJourneyPatternRef
+        None
+        | ServiceJourneyPatternRef
         | ServicePatternRef
         | DeadRunJourneyPatternRef
         | JourneyPatternRef
         | JourneyPattern
-        | None
     ) = field(
         default=None,
         metadata={
@@ -545,7 +545,7 @@ class FareSectionVersionStructure(GeneralSectionVersionStructure):
             ),
         },
     )
-    from_point_in_pattern_ref: FarePointInPatternRefStructure | None = field(
+    from_point_in_pattern_ref: None | FarePointInPatternRefStructure = field(
         default=None,
         metadata={
             "name": "FromPointInPatternRef",
@@ -553,7 +553,7 @@ class FareSectionVersionStructure(GeneralSectionVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    to_point_in_pattern_ref: FarePointInPatternRefStructure | None = field(
+    to_point_in_pattern_ref: None | FarePointInPatternRefStructure = field(
         default=None,
         metadata={
             "name": "ToPointInPatternRef",
@@ -589,7 +589,8 @@ class SectionInSequenceVersionedChildStructure(
         name = "SectionInSequence_VersionedChildStructure"
 
     section_ref_or_general_section_ref_or_section: (
-        ParentCommonSectionRef
+        None
+        | ParentCommonSectionRef
         | CommonSectionRef
         | LineSectionRef
         | FareSectionRef
@@ -599,7 +600,6 @@ class SectionInSequenceVersionedChildStructure(
         | CommonSection
         | LineSection
         | GeneralSection
-        | None
     ) = field(
         default=None,
         metadata={

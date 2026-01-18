@@ -15,7 +15,7 @@ class Volatile:
         name = "volatile"
         namespace = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
-    value: bool | None = field(
+    value: None | bool = field(
         default=None,
         metadata={
             "required": True,

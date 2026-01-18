@@ -18,7 +18,7 @@ class OnwardServiceLinkDerivedViewStructure(DerivedViewStructure):
     class Meta:
         name = "OnwardServiceLink_DerivedViewStructure"
 
-    service_link_in_journey_pattern: ServiceLinkInJourneyPattern | None = (
+    service_link_in_journey_pattern: None | ServiceLinkInJourneyPattern = (
         field(
             default=None,
             metadata={
@@ -28,7 +28,7 @@ class OnwardServiceLinkDerivedViewStructure(DerivedViewStructure):
             },
         )
     )
-    service_link_ref: ServiceLinkRef | None = field(
+    service_link_ref: None | ServiceLinkRef = field(
         default=None,
         metadata={
             "name": "ServiceLinkRef",
@@ -36,7 +36,7 @@ class OnwardServiceLinkDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    to_point_ref: ScheduledStopPointRefStructure | None = field(
+    to_point_ref: None | ScheduledStopPointRefStructure = field(
         default=None,
         metadata={
             "name": "ToPointRef",
@@ -44,7 +44,7 @@ class OnwardServiceLinkDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    distance: Decimal | None = field(
+    distance: None | Decimal = field(
         default=None,
         metadata={
             "name": "Distance",
@@ -52,7 +52,7 @@ class OnwardServiceLinkDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    run_time: XmlDuration | None = field(
+    run_time: None | XmlDuration = field(
         default=None,
         metadata={
             "name": "RunTime",

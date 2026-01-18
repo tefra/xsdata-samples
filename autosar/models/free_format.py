@@ -36,7 +36,7 @@ class FreeFormat:
     class Meta:
         name = "FREE-FORMAT"
 
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -44,7 +44,7 @@ class FreeFormat:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    delay: TimeValue | None = field(
+    delay: None | TimeValue = field(
         default=None,
         metadata={
             "name": "DELAY",
@@ -52,7 +52,7 @@ class FreeFormat:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    position_in_table: Integer | None = field(
+    position_in_table: None | Integer = field(
         default=None,
         metadata={
             "name": "POSITION-IN-TABLE",
@@ -60,7 +60,7 @@ class FreeFormat:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    byte_values: FreeFormat.ByteValues | None = field(
+    byte_values: None | FreeFormat.ByteValues = field(
         default=None,
         metadata={
             "name": "BYTE-VALUES",
@@ -68,14 +68,14 @@ class FreeFormat:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

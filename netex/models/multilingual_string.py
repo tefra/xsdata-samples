@@ -13,13 +13,13 @@ class MultilingualString:
             "required": True,
         },
     )
-    lang: str | None = field(
+    lang: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    text_id_type: str | None = field(
+    text_id_type: None | str = field(
         default=None,
         metadata={
             "name": "textIdType",

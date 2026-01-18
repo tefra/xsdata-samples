@@ -85,7 +85,7 @@ class SecureCommunicationAuthenticationProps:
     class Meta:
         name = "SECURE-COMMUNICATION-AUTHENTICATION-PROPS"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -95,7 +95,7 @@ class SecureCommunicationAuthenticationProps:
         },
     )
     short_name_fragments: (
-        SecureCommunicationAuthenticationProps.ShortNameFragments | None
+        None | SecureCommunicationAuthenticationProps.ShortNameFragments
     ) = field(
         default=None,
         metadata={
@@ -104,7 +104,7 @@ class SecureCommunicationAuthenticationProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -112,7 +112,7 @@ class SecureCommunicationAuthenticationProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -120,7 +120,7 @@ class SecureCommunicationAuthenticationProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -128,7 +128,7 @@ class SecureCommunicationAuthenticationProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -136,7 +136,7 @@ class SecureCommunicationAuthenticationProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -144,7 +144,7 @@ class SecureCommunicationAuthenticationProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: SecureCommunicationAuthenticationProps.Annotations | None = (
+    annotations: None | SecureCommunicationAuthenticationProps.Annotations = (
         field(
             default=None,
             metadata={
@@ -154,7 +154,7 @@ class SecureCommunicationAuthenticationProps:
             },
         )
     )
-    auth_algorithm: String | None = field(
+    auth_algorithm: None | String = field(
         default=None,
         metadata={
             "name": "AUTH-ALGORITHM",
@@ -162,7 +162,7 @@ class SecureCommunicationAuthenticationProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    auth_info_tx_length: PositiveInteger | None = field(
+    auth_info_tx_length: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "AUTH-INFO-TX-LENGTH",
@@ -170,14 +170,14 @@ class SecureCommunicationAuthenticationProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -185,7 +185,7 @@ class SecureCommunicationAuthenticationProps:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",

@@ -12,7 +12,7 @@ class PassengerCapacity(PassengerCapacityStructure):
     class Meta:
         namespace = "http://www.netex.org.uk/netex"
 
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",

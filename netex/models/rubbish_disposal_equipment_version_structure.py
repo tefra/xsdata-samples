@@ -16,7 +16,7 @@ class RubbishDisposalEquipmentVersionStructure(
     class Meta:
         name = "RubbishDisposalEquipment_VersionStructure"
 
-    sharps_disposal: bool | None = field(
+    sharps_disposal: None | bool = field(
         default=None,
         metadata={
             "name": "SharpsDisposal",
@@ -24,7 +24,7 @@ class RubbishDisposalEquipmentVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    recycling: bool | None = field(
+    recycling: None | bool = field(
         default=None,
         metadata={
             "name": "Recycling",

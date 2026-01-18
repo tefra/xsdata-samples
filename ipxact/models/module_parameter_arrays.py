@@ -28,7 +28,7 @@ class ModuleParameterArrays:
 
     @dataclass
     class Array:
-        left: Left | None = field(
+        left: None | Left = field(
             default=None,
             metadata={
                 "type": "Element",
@@ -36,7 +36,7 @@ class ModuleParameterArrays:
                 "required": True,
             },
         )
-        right: Right | None = field(
+        right: None | Right = field(
             default=None,
             metadata={
                 "type": "Element",
@@ -44,14 +44,14 @@ class ModuleParameterArrays:
                 "required": True,
             },
         )
-        array_id: str | None = field(
+        array_id: None | str = field(
             default=None,
             metadata={
                 "name": "arrayId",
                 "type": "Attribute",
             },
         )
-        id: str | None = field(
+        id: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",

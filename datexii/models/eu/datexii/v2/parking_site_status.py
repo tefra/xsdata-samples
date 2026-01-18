@@ -35,7 +35,7 @@ class ParkingSiteStatus(ParkingRecordStatus):
     :ivar parking_site_status_extension:
     """
 
-    parking_site_status: ParkingSiteStatusEnum | None = field(
+    parking_site_status: None | ParkingSiteStatusEnum = field(
         default=None,
         metadata={
             "name": "parkingSiteStatus",
@@ -43,7 +43,7 @@ class ParkingSiteStatus(ParkingRecordStatus):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    parking_site_opening_status: OpeningStatusEnum | None = field(
+    parking_site_opening_status: None | OpeningStatusEnum = field(
         default=None,
         metadata={
             "name": "parkingSiteOpeningStatus",
@@ -52,7 +52,7 @@ class ParkingSiteStatus(ParkingRecordStatus):
         },
     )
     parking_site_overcrowding_status: (
-        ParkingSiteOvercrowdingStatusEnum | None
+        None | ParkingSiteOvercrowdingStatusEnum
     ) = field(
         default=None,
         metadata={
@@ -69,7 +69,7 @@ class ParkingSiteStatus(ParkingRecordStatus):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    parking_site_status_extension: ExtensionType | None = field(
+    parking_site_status_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "parkingSiteStatusExtension",

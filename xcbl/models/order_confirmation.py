@@ -137,7 +137,7 @@ class ContractAndSystemReference:
             "required": True,
         }
     )
-    system_id: SystemId | None = field(
+    system_id: None | SystemId = field(
         default=None,
         metadata={
             "name": "SystemID",
@@ -156,7 +156,7 @@ class OrderConfirmationAction:
         }
     )
     order_confirmation_action_coded_other: (
-        OrderConfirmationActionCodedOther | None
+        None | OrderConfirmationActionCodedOther
     ) = field(
         default=None,
         metadata={
@@ -168,28 +168,28 @@ class OrderConfirmationAction:
 
 @dataclass(kw_only=True)
 class OrderConfirmationParty:
-    buyer_party: BuyerParty | None = field(
+    buyer_party: None | BuyerParty = field(
         default=None,
         metadata={
             "name": "BuyerParty",
             "type": "Element",
         },
     )
-    seller_party: SellerParty | None = field(
+    seller_party: None | SellerParty = field(
         default=None,
         metadata={
             "name": "SellerParty",
             "type": "Element",
         },
     )
-    ship_to_party: ShipToParty | None = field(
+    ship_to_party: None | ShipToParty = field(
         default=None,
         metadata={
             "name": "ShipToParty",
             "type": "Element",
         },
     )
-    list_of_party_coded: ListOfPartyCoded | None = field(
+    list_of_party_coded: None | ListOfPartyCoded = field(
         default=None,
         metadata={
             "name": "ListOfPartyCoded",
@@ -207,28 +207,28 @@ class OrderConfirmationDetailReferences:
             "required": True,
         }
     )
-    category: Category | None = field(
+    category: None | Category = field(
         default=None,
         metadata={
             "name": "Category",
             "type": "Element",
         },
     )
-    catalog_reference: CatalogReference | None = field(
+    catalog_reference: None | CatalogReference = field(
         default=None,
         metadata={
             "name": "CatalogReference",
             "type": "Element",
         },
     )
-    contract_and_system_reference: ContractAndSystemReference | None = field(
+    contract_and_system_reference: None | ContractAndSystemReference = field(
         default=None,
         metadata={
             "name": "ContractAndSystemReference",
             "type": "Element",
         },
     )
-    list_of_reference_coded: ListOfReferenceCoded | None = field(
+    list_of_reference_coded: None | ListOfReferenceCoded = field(
         default=None,
         metadata={
             "name": "ListOfReferenceCoded",
@@ -260,35 +260,35 @@ class OrderConfirmationHeader:
             "required": True,
         }
     )
-    order_confirmation_type: OrderConfirmationType | None = field(
+    order_confirmation_type: None | OrderConfirmationType = field(
         default=None,
         metadata={
             "name": "OrderConfirmationType",
             "type": "Element",
         },
     )
-    language: Language | None = field(
+    language: None | Language = field(
         default=None,
         metadata={
             "name": "Language",
             "type": "Element",
         },
     )
-    currency: Currency | None = field(
+    currency: None | Currency = field(
         default=None,
         metadata={
             "name": "Currency",
             "type": "Element",
         },
     )
-    order_confirmation_party: OrderConfirmationParty | None = field(
+    order_confirmation_party: None | OrderConfirmationParty = field(
         default=None,
         metadata={
             "name": "OrderConfirmationParty",
             "type": "Element",
         },
     )
-    order_confirmation_action: OrderConfirmationAction | None = field(
+    order_confirmation_action: None | OrderConfirmationAction = field(
         default=None,
         metadata={
             "name": "OrderConfirmationAction",
@@ -296,7 +296,7 @@ class OrderConfirmationHeader:
         },
     )
     order_confirmation_header_short_description: (
-        OrderConfirmationHeaderShortDescription | None
+        None | OrderConfirmationHeaderShortDescription
     ) = field(
         default=None,
         metadata={
@@ -304,28 +304,28 @@ class OrderConfirmationHeader:
             "type": "Element",
         },
     )
-    order_confirmation_header_note: OrderConfirmationHeaderNote | None = field(
+    order_confirmation_header_note: None | OrderConfirmationHeaderNote = field(
         default=None,
         metadata={
             "name": "OrderConfirmationHeaderNote",
             "type": "Element",
         },
     )
-    list_of_structured_note: ListOfStructuredNote | None = field(
+    list_of_structured_note: None | ListOfStructuredNote = field(
         default=None,
         metadata={
             "name": "ListOfStructuredNote",
             "type": "Element",
         },
     )
-    list_of_name_value_set: ListOfNameValueSet | None = field(
+    list_of_name_value_set: None | ListOfNameValueSet = field(
         default=None,
         metadata={
             "name": "ListOfNameValueSet",
             "type": "Element",
         },
     )
-    list_of_attachment: ListOfAttachment | None = field(
+    list_of_attachment: None | ListOfAttachment = field(
         default=None,
         metadata={
             "name": "ListOfAttachment",
@@ -343,7 +343,7 @@ class OrderConfirmationItemDetail:
             "required": True,
         }
     )
-    order_confirmation_action: OrderConfirmationAction | None = field(
+    order_confirmation_action: None | OrderConfirmationAction = field(
         default=None,
         metadata={
             "name": "OrderConfirmationAction",
@@ -351,7 +351,7 @@ class OrderConfirmationItemDetail:
         },
     )
     order_confirmation_detail_short_description: (
-        OrderConfirmationDetailShortDescription | None
+        None | OrderConfirmationDetailShortDescription
     ) = field(
         default=None,
         metadata={
@@ -368,7 +368,7 @@ class OrderConfirmationItemDetail:
             }
         )
     )
-    delivery_complete: DeliveryComplete | None = field(
+    delivery_complete: None | DeliveryComplete = field(
         default=None,
         metadata={
             "name": "DeliveryComplete",
@@ -382,7 +382,7 @@ class OrderConfirmationItemDetail:
             "required": True,
         }
     )
-    list_of_account_assignment: ListOfAccountAssignment | None = field(
+    list_of_account_assignment: None | ListOfAccountAssignment = field(
         default=None,
         metadata={
             "name": "ListOfAccountAssignment",

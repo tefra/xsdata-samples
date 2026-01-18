@@ -60,7 +60,7 @@ class EntityInVersionStructure(EntityStructure):
             ),
         },
     )
-    alternative_texts: AlternativeTextsRelStructure | None = field(
+    alternative_texts: None | AlternativeTextsRelStructure = field(
         default=None,
         metadata={
             "name": "alternativeTexts",
@@ -68,20 +68,20 @@ class EntityInVersionStructure(EntityStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    data_source_ref_attribute: str | None = field(
+    data_source_ref_attribute: None | str = field(
         default=None,
         metadata={
             "name": "dataSourceRef",
             "type": "Attribute",
         },
     )
-    created: XmlDateTime | None = field(
+    created: None | XmlDateTime = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    changed: XmlDateTime | None = field(
+    changed: None | XmlDateTime = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -93,7 +93,7 @@ class EntityInVersionStructure(EntityStructure):
             "type": "Attribute",
         },
     )
-    version: str | None = field(
+    version: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -106,21 +106,21 @@ class EntityInVersionStructure(EntityStructure):
             "type": "Attribute",
         },
     )
-    derived_from_version_ref_attribute: str | None = field(
+    derived_from_version_ref_attribute: None | str = field(
         default=None,
         metadata={
             "name": "derivedFromVersionRef",
             "type": "Attribute",
         },
     )
-    compatible_with_version_frame_version_ref: str | None = field(
+    compatible_with_version_frame_version_ref: None | str = field(
         default=None,
         metadata={
             "name": "compatibleWithVersionFrameVersionRef",
             "type": "Attribute",
         },
     )
-    derived_from_object_ref: str | None = field(
+    derived_from_object_ref: None | str = field(
         default=None,
         metadata={
             "name": "derivedFromObjectRef",
@@ -131,7 +131,7 @@ class EntityInVersionStructure(EntityStructure):
 
 @dataclass
 class DataManagedObjectStructure(EntityInVersionStructure):
-    key_list: KeyList | None = field(
+    key_list: None | KeyList = field(
         default=None,
         metadata={
             "name": "keyList",
@@ -139,7 +139,7 @@ class DataManagedObjectStructure(EntityInVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    extensions: Extensions2 | None = field(
+    extensions: None | Extensions2 = field(
         default=None,
         metadata={
             "name": "Extensions",
@@ -147,7 +147,7 @@ class DataManagedObjectStructure(EntityInVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    branding_ref: BrandingRef | None = field(
+    branding_ref: None | BrandingRef = field(
         default=None,
         metadata={
             "name": "BrandingRef",
@@ -155,7 +155,7 @@ class DataManagedObjectStructure(EntityInVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    responsibility_set_ref_attribute: str | None = field(
+    responsibility_set_ref_attribute: None | str = field(
         default=None,
         metadata={
             "name": "responsibilitySetRef",
@@ -166,7 +166,7 @@ class DataManagedObjectStructure(EntityInVersionStructure):
 
 @dataclass
 class VersionedChildStructure(EntityInVersionStructure):
-    extensions: Extensions2 | None = field(
+    extensions: None | Extensions2 = field(
         default=None,
         metadata={
             "name": "Extensions",
@@ -181,7 +181,7 @@ class AlternativeTextVersionedChildStructure(VersionedChildStructure):
     class Meta:
         name = "AlternativeText_VersionedChildStructure"
 
-    data_managed_object_ref: VersionOfObjectRefStructure | None = field(
+    data_managed_object_ref: None | VersionOfObjectRefStructure = field(
         default=None,
         metadata={
             "name": "DataManagedObjectRef",
@@ -189,7 +189,7 @@ class AlternativeTextVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    text: MultilingualString | None = field(
+    text: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "Text",
@@ -198,21 +198,21 @@ class AlternativeTextVersionedChildStructure(VersionedChildStructure):
             "required": True,
         },
     )
-    attribute_name: str | None = field(
+    attribute_name: None | str = field(
         default=None,
         metadata={
             "name": "attributeName",
             "type": "Attribute",
         },
     )
-    use_for_language: str | None = field(
+    use_for_language: None | str = field(
         default=None,
         metadata={
             "name": "useForLanguage",
             "type": "Attribute",
         },
     )
-    order: int | None = field(
+    order: None | int = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -225,7 +225,7 @@ class OperatingDayVersionStructure(DataManagedObjectStructure):
     class Meta:
         name = "OperatingDay_VersionStructure"
 
-    calendar_date: XmlDate | None = field(
+    calendar_date: None | XmlDate = field(
         default=None,
         metadata={
             "name": "CalendarDate",
@@ -234,7 +234,7 @@ class OperatingDayVersionStructure(DataManagedObjectStructure):
             "required": True,
         },
     )
-    service_calendar_ref: ServiceCalendarRef | None = field(
+    service_calendar_ref: None | ServiceCalendarRef = field(
         default=None,
         metadata={
             "name": "ServiceCalendarRef",
@@ -242,7 +242,7 @@ class OperatingDayVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    name: MultilingualString | None = field(
+    name: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "Name",
@@ -250,7 +250,7 @@ class OperatingDayVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    short_name: MultilingualString | None = field(
+    short_name: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "ShortName",
@@ -258,7 +258,7 @@ class OperatingDayVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    day_number: int | None = field(
+    day_number: None | int = field(
         default=None,
         metadata={
             "name": "DayNumber",
@@ -266,7 +266,7 @@ class OperatingDayVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    private_code: PrivateCode | None = field(
+    private_code: None | PrivateCode = field(
         default=None,
         metadata={
             "name": "PrivateCode",
@@ -274,7 +274,7 @@ class OperatingDayVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    earliest_time: XmlTime | None = field(
+    earliest_time: None | XmlTime = field(
         default=None,
         metadata={
             "name": "EarliestTime",
@@ -282,7 +282,7 @@ class OperatingDayVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    day_length: XmlDuration | None = field(
+    day_length: None | XmlDuration = field(
         default=None,
         metadata={
             "name": "DayLength",
@@ -297,7 +297,7 @@ class TimebandVersionedChildStructure(DataManagedObjectStructure):
     class Meta:
         name = "Timeband_VersionedChildStructure"
 
-    name: MultilingualString | None = field(
+    name: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "Name",
@@ -305,7 +305,7 @@ class TimebandVersionedChildStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    start_time_or_start_event: XmlTime | TimeOfDayEnumeration | None = field(
+    start_time_or_start_event: None | XmlTime | TimeOfDayEnumeration = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -361,7 +361,7 @@ class ValidityConditionVersionStructure(DataManagedObjectStructure):
     class Meta:
         name = "ValidityCondition_VersionStructure"
 
-    name: MultilingualString | None = field(
+    name: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "Name",
@@ -369,7 +369,7 @@ class ValidityConditionVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    description: MultilingualString | None = field(
+    description: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "Description",
@@ -377,7 +377,7 @@ class ValidityConditionVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    conditioned_object_ref: VersionOfObjectRefStructure | None = field(
+    conditioned_object_ref: None | VersionOfObjectRefStructure = field(
         default=None,
         metadata={
             "name": "ConditionedObjectRef",
@@ -385,7 +385,7 @@ class ValidityConditionVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    with_condition_ref: ValidityConditionRefStructure | None = field(
+    with_condition_ref: None | ValidityConditionRefStructure = field(
         default=None,
         metadata={
             "name": "WithConditionRef",
@@ -434,7 +434,7 @@ class ValidBetweenVersionStructure(ValidityConditionVersionStructure):
     class Meta:
         name = "ValidBetween_VersionStructure"
 
-    from_date: XmlDateTime | None = field(
+    from_date: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "FromDate",
@@ -442,7 +442,7 @@ class ValidBetweenVersionStructure(ValidityConditionVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    to_date: XmlDateTime | None = field(
+    to_date: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "ToDate",
@@ -478,7 +478,7 @@ class ValidityRuleParameterVersionStructure(ValidityConditionVersionStructure):
     class Meta:
         name = "ValidityRuleParameter_VersionStructure"
 
-    rule_object_ref: VersionOfObjectRefStructure | None = field(
+    rule_object_ref: None | VersionOfObjectRefStructure = field(
         default=None,
         metadata={
             "name": "RuleObjectRef",
@@ -533,7 +533,7 @@ class ValidityRuleParameterVersionStructure(ValidityConditionVersionStructure):
 
     @dataclass
     class AttributeValue:
-        content: object | None = field(
+        content: None | object = field(
             default=None,
             metadata={
                 "type": "Wildcard",
@@ -544,7 +544,7 @@ class ValidityRuleParameterVersionStructure(ValidityConditionVersionStructure):
 
     @dataclass
     class Method:
-        content: object | None = field(
+        content: None | object = field(
             default=None,
             metadata={
                 "type": "Wildcard",
@@ -559,7 +559,7 @@ class ValidityTriggerVersionStructure(ValidityConditionVersionStructure):
     class Meta:
         name = "ValidityTrigger_VersionStructure"
 
-    trigger_object_ref: VersionOfObjectRefStructure | None = field(
+    trigger_object_ref: None | VersionOfObjectRefStructure = field(
         default=None,
         metadata={
             "name": "TriggerObjectRef",
@@ -567,7 +567,7 @@ class ValidityTriggerVersionStructure(ValidityConditionVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    private_code: PrivateCode | None = field(
+    private_code: None | PrivateCode = field(
         default=None,
         metadata={
             "name": "PrivateCode",
@@ -609,7 +609,7 @@ class DayTypeVersionStructure(DataManagedObjectStructure):
     class Meta:
         name = "DayType_VersionStructure"
 
-    name: MultilingualString | None = field(
+    name: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "Name",
@@ -617,7 +617,7 @@ class DayTypeVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    short_name: MultilingualString | None = field(
+    short_name: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "ShortName",
@@ -625,7 +625,7 @@ class DayTypeVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    description: MultilingualString | None = field(
+    description: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "Description",
@@ -633,7 +633,7 @@ class DayTypeVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    private_code: PrivateCode | None = field(
+    private_code: None | PrivateCode = field(
         default=None,
         metadata={
             "name": "PrivateCode",
@@ -641,7 +641,7 @@ class DayTypeVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    earliest_time: XmlTime | None = field(
+    earliest_time: None | XmlTime = field(
         default=None,
         metadata={
             "name": "EarliestTime",
@@ -649,7 +649,7 @@ class DayTypeVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    day_length: XmlDuration | None = field(
+    day_length: None | XmlDuration = field(
         default=None,
         metadata={
             "name": "DayLength",
@@ -657,14 +657,14 @@ class DayTypeVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    properties: PropertiesOfDayRelStructure | None = field(
+    properties: None | PropertiesOfDayRelStructure = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    timebands: TimebandsRelStructure | None = field(
+    timebands: None | TimebandsRelStructure = field(
         default=None,
         metadata={
             "type": "Element",
@@ -749,11 +749,11 @@ class ValidDuringVersionStructure(ValidBetweenVersionStructure):
         name = "ValidDuring_VersionStructure"
 
     choice: (
-        FareDayTypeRef
+        None
+        | FareDayTypeRef
         | DayTypeRef
         | Iterable[DayOfWeekEnumeration]
         | str
-        | None
     ) = field(
         default=None,
         metadata={
@@ -787,7 +787,7 @@ class ValidDuringVersionStructure(ValidBetweenVersionStructure):
             ),
         },
     )
-    timebands: TimebandsRelStructure | None = field(
+    timebands: None | TimebandsRelStructure = field(
         default=None,
         metadata={
             "type": "Element",
@@ -898,7 +898,7 @@ class OrganisationDayTypeVersionStructure(DayTypeVersionStructure):
     class Meta:
         name = "OrganisationDayType_VersionStructure"
 
-    is_service_day: bool | None = field(
+    is_service_day: None | bool = field(
         default=None,
         metadata={
             "name": "IsServiceDay",
@@ -906,7 +906,7 @@ class OrganisationDayTypeVersionStructure(DayTypeVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    serviced_organisation_ref: ServicedOrganisationRef | None = field(
+    serviced_organisation_ref: None | ServicedOrganisationRef = field(
         default=None,
         metadata={
             "name": "ServicedOrganisationRef",
@@ -1027,7 +1027,7 @@ class AvailabilityConditionVersionStructure(ValidBetweenVersionStructure):
     class Meta:
         name = "AvailabilityCondition_VersionStructure"
 
-    is_available: bool | None = field(
+    is_available: None | bool = field(
         default=None,
         metadata={
             "name": "IsAvailable",
@@ -1035,7 +1035,7 @@ class AvailabilityConditionVersionStructure(ValidBetweenVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    day_types: DayTypesRelStructure | None = field(
+    day_types: None | DayTypesRelStructure = field(
         default=None,
         metadata={
             "name": "dayTypes",
@@ -1043,7 +1043,7 @@ class AvailabilityConditionVersionStructure(ValidBetweenVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    valid_day_bits: str | None = field(
+    valid_day_bits: None | str = field(
         default=None,
         metadata={
             "name": "ValidDayBits",
@@ -1051,14 +1051,14 @@ class AvailabilityConditionVersionStructure(ValidBetweenVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    timebands: TimebandsRelStructure | None = field(
+    timebands: None | TimebandsRelStructure = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    operating_days: OperatingDaysRelStructure | None = field(
+    operating_days: None | OperatingDaysRelStructure = field(
         default=None,
         metadata={
             "name": "operatingDays",

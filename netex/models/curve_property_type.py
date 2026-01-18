@@ -10,7 +10,7 @@ __NAMESPACE__ = "http://www.opengis.net/gml/3.2"
 
 @dataclass
 class CurvePropertyType:
-    line_string: LineString | None = field(
+    line_string: None | LineString = field(
         default=None,
         metadata={
             "name": "LineString",
@@ -18,7 +18,7 @@ class CurvePropertyType:
             "namespace": "http://www.opengis.net/gml/3.2",
         },
     )
-    nil_reason: str | NilReasonEnumerationValue | None = field(
+    nil_reason: None | str | NilReasonEnumerationValue = field(
         default=None,
         metadata={
             "name": "nilReason",

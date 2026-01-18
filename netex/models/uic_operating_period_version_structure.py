@@ -14,7 +14,7 @@ class UicOperatingPeriodVersionStructure(OperatingPeriodVersionStructure):
     class Meta:
         name = "UicOperatingPeriod_VersionStructure"
 
-    valid_day_bits: str | None = field(
+    valid_day_bits: None | str = field(
         default=None,
         metadata={
             "name": "ValidDayBits",

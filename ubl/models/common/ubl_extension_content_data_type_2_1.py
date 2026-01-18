@@ -9,7 +9,7 @@ __NAMESPACE__ = (
 
 @dataclass(frozen=True)
 class ExtensionContentType:
-    other_element: object | None = field(
+    other_element: None | object = field(
         default=None,
         metadata={
             "type": "Wildcard",

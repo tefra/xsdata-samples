@@ -19,7 +19,7 @@ class GenericSituationRecord(SituationRecord):
     :ivar generic_situation_record_extension:
     """
 
-    generic_situation_record_name: str | None = field(
+    generic_situation_record_name: None | str = field(
         default=None,
         metadata={
             "name": "genericSituationRecordName",
@@ -29,7 +29,7 @@ class GenericSituationRecord(SituationRecord):
             "max_length": 1024,
         },
     )
-    generic_situation_record_extension: ExtensionType | None = field(
+    generic_situation_record_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "genericSituationRecordExtension",

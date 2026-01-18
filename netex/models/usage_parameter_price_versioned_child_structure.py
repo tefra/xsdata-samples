@@ -56,7 +56,8 @@ class UsageParameterPriceVersionedChildStructure(
         name = "UsageParameterPrice_VersionedChildStructure"
 
     choice: (
-        AdditionalDriverOptionRef
+        None
+        | AdditionalDriverOptionRef
         | RentalOptionRef
         | RentalPenaltyPolicyRef
         | SalesOfferPackageEntitlementGivenRef
@@ -91,7 +92,6 @@ class UsageParameterPriceVersionedChildStructure(
         | ReservingRef
         | BookingPolicyRef
         | PurchaseWindowRef
-        | None
     ) = field(
         default=None,
         metadata={

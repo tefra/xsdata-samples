@@ -44,7 +44,7 @@ class InternalConstrs:
     class Meta:
         name = "INTERNAL-CONSTRS"
 
-    lower_limit: Limit | None = field(
+    lower_limit: None | Limit = field(
         default=None,
         metadata={
             "name": "LOWER-LIMIT",
@@ -52,7 +52,7 @@ class InternalConstrs:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    upper_limit: Limit | None = field(
+    upper_limit: None | Limit = field(
         default=None,
         metadata={
             "name": "UPPER-LIMIT",
@@ -60,7 +60,7 @@ class InternalConstrs:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    scale_constrs: InternalConstrs.ScaleConstrs | None = field(
+    scale_constrs: None | InternalConstrs.ScaleConstrs = field(
         default=None,
         metadata={
             "name": "SCALE-CONSTRS",
@@ -68,7 +68,7 @@ class InternalConstrs:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    max_gradient: NumericalValue | None = field(
+    max_gradient: None | NumericalValue = field(
         default=None,
         metadata={
             "name": "MAX-GRADIENT",
@@ -76,7 +76,7 @@ class InternalConstrs:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    max_diff: NumericalValue | None = field(
+    max_diff: None | NumericalValue = field(
         default=None,
         metadata={
             "name": "MAX-DIFF",
@@ -84,7 +84,7 @@ class InternalConstrs:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    monotony: MonotonyEnum | None = field(
+    monotony: None | MonotonyEnum = field(
         default=None,
         metadata={
             "name": "MONOTONY",
@@ -92,14 +92,14 @@ class InternalConstrs:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

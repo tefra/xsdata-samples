@@ -58,7 +58,7 @@ class AbstractionTypes:
                 "type": "Element",
             },
         )
-        abstraction_ref: ConfigurableLibraryRefType | None = field(
+        abstraction_ref: None | ConfigurableLibraryRefType = field(
             default=None,
             metadata={
                 "name": "abstractionRef",
@@ -66,14 +66,14 @@ class AbstractionTypes:
                 "required": True,
             },
         )
-        port_maps: AbstractionTypes.AbstractionType.PortMaps | None = field(
+        port_maps: None | AbstractionTypes.AbstractionType.PortMaps = field(
             default=None,
             metadata={
                 "name": "portMaps",
                 "type": "Element",
             },
         )
-        id: str | None = field(
+        id: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -119,8 +119,8 @@ class AbstractionTypes:
                 """
 
                 logical_port: (
-                    AbstractionTypes.AbstractionType.PortMaps.PortMap.LogicalPort
-                    | None
+                    None
+                    | AbstractionTypes.AbstractionType.PortMaps.PortMap.LogicalPort
                 ) = field(
                     default=None,
                     metadata={
@@ -130,8 +130,8 @@ class AbstractionTypes:
                     },
                 )
                 physical_port: (
-                    AbstractionTypes.AbstractionType.PortMaps.PortMap.PhysicalPort
-                    | None
+                    None
+                    | AbstractionTypes.AbstractionType.PortMaps.PortMap.PhysicalPort
                 ) = field(
                     default=None,
                     metadata={
@@ -139,28 +139,28 @@ class AbstractionTypes:
                         "type": "Element",
                     },
                 )
-                logical_tie_off: UnsignedBitVectorExpression | None = field(
+                logical_tie_off: None | UnsignedBitVectorExpression = field(
                     default=None,
                     metadata={
                         "name": "logicalTieOff",
                         "type": "Element",
                     },
                 )
-                is_informative: bool | None = field(
+                is_informative: None | bool = field(
                     default=None,
                     metadata={
                         "name": "isInformative",
                         "type": "Element",
                     },
                 )
-                vendor_extensions: VendorExtensions | None = field(
+                vendor_extensions: None | VendorExtensions = field(
                     default=None,
                     metadata={
                         "name": "vendorExtensions",
                         "type": "Element",
                     },
                 )
-                id: str | None = field(
+                id: None | str = field(
                     default=None,
                     metadata={
                         "type": "Attribute",
@@ -183,20 +183,20 @@ class AbstractionTypes:
                     :ivar id:
                     """
 
-                    name: str | None = field(
+                    name: None | str = field(
                         default=None,
                         metadata={
                             "type": "Element",
                             "required": True,
                         },
                     )
-                    range: Range | None = field(
+                    range: None | Range = field(
                         default=None,
                         metadata={
                             "type": "Element",
                         },
                     )
-                    id: str | None = field(
+                    id: None | str = field(
                         default=None,
                         metadata={
                             "type": "Attribute",
@@ -214,7 +214,7 @@ class AbstractionTypes:
                     :ivar id:
                     """
 
-                    name: str | None = field(
+                    name: None | str = field(
                         default=None,
                         metadata={
                             "type": "Element",
@@ -223,7 +223,7 @@ class AbstractionTypes:
                             "pattern": r"\i[\p{L}\p{N}\.\-:_]*",
                         },
                     )
-                    part_select: PartSelect | None = field(
+                    part_select: None | PartSelect = field(
                         default=None,
                         metadata={
                             "name": "partSelect",
@@ -239,7 +239,7 @@ class AbstractionTypes:
                             "type": "Element",
                         },
                     )
-                    id: str | None = field(
+                    id: None | str = field(
                         default=None,
                         metadata={
                             "type": "Attribute",
@@ -256,7 +256,7 @@ class AbstractionTypes:
                         :ivar id:
                         """
 
-                        name: str | None = field(
+                        name: None | str = field(
                             default=None,
                             metadata={
                                 "type": "Element",
@@ -265,14 +265,14 @@ class AbstractionTypes:
                                 "pattern": r"\i[\p{L}\p{N}\.\-:_]*",
                             },
                         )
-                        part_select: PartSelect | None = field(
+                        part_select: None | PartSelect = field(
                             default=None,
                             metadata={
                                 "name": "partSelect",
                                 "type": "Element",
                             },
                         )
-                        id: str | None = field(
+                        id: None | str = field(
                             default=None,
                             metadata={
                                 "type": "Attribute",

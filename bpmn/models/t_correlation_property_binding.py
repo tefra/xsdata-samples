@@ -14,7 +14,7 @@ class TCorrelationPropertyBinding(TBaseElement):
     class Meta:
         name = "tCorrelationPropertyBinding"
 
-    data_path: TFormalExpression | None = field(
+    data_path: None | TFormalExpression = field(
         default=None,
         metadata={
             "name": "dataPath",
@@ -23,7 +23,7 @@ class TCorrelationPropertyBinding(TBaseElement):
             "required": True,
         },
     )
-    correlation_property_ref: QName | None = field(
+    correlation_property_ref: None | QName = field(
         default=None,
         metadata={
             "name": "correlationPropertyRef",

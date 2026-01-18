@@ -59,7 +59,7 @@ class DiagnosticEnvDataCondition:
     class Meta:
         name = "DIAGNOSTIC-ENV-DATA-CONDITION"
 
-    compare_type: DiagnosticCompareTypeEnum | None = field(
+    compare_type: None | DiagnosticCompareTypeEnum = field(
         default=None,
         metadata={
             "name": "COMPARE-TYPE",
@@ -67,7 +67,7 @@ class DiagnosticEnvDataCondition:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    compare_value: DiagnosticEnvDataCondition.CompareValue | None = field(
+    compare_value: None | DiagnosticEnvDataCondition.CompareValue = field(
         default=None,
         metadata={
             "name": "COMPARE-VALUE",
@@ -75,7 +75,7 @@ class DiagnosticEnvDataCondition:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    data_element_ref: DiagnosticEnvDataCondition.DataElementRef | None = field(
+    data_element_ref: None | DiagnosticEnvDataCondition.DataElementRef = field(
         default=None,
         metadata={
             "name": "DATA-ELEMENT-REF",
@@ -83,14 +83,14 @@ class DiagnosticEnvDataCondition:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -102,7 +102,7 @@ class DiagnosticEnvDataCondition:
     @dataclass
     class CompareValue:
         application_assoc_map_value_specification: (
-            ApplicationAssocMapValueSpecification | None
+            None | ApplicationAssocMapValueSpecification
         ) = field(
             default=None,
             metadata={
@@ -112,7 +112,7 @@ class DiagnosticEnvDataCondition:
             },
         )
         application_rule_based_value_specification: (
-            ApplicationRuleBasedValueSpecification | None
+            None | ApplicationRuleBasedValueSpecification
         ) = field(
             default=None,
             metadata={
@@ -122,7 +122,7 @@ class DiagnosticEnvDataCondition:
             },
         )
         application_value_specification: (
-            ApplicationValueSpecification | None
+            None | ApplicationValueSpecification
         ) = field(
             default=None,
             metadata={
@@ -131,7 +131,7 @@ class DiagnosticEnvDataCondition:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        array_value_specification: ArrayValueSpecification | None = field(
+        array_value_specification: None | ArrayValueSpecification = field(
             default=None,
             metadata={
                 "name": "ARRAY-VALUE-SPECIFICATION",
@@ -140,7 +140,7 @@ class DiagnosticEnvDataCondition:
             },
         )
         composite_rule_based_value_specification: (
-            CompositeRuleBasedValueSpecification | None
+            None | CompositeRuleBasedValueSpecification
         ) = field(
             default=None,
             metadata={
@@ -149,7 +149,7 @@ class DiagnosticEnvDataCondition:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        constant_reference: ConstantReference | None = field(
+        constant_reference: None | ConstantReference = field(
             default=None,
             metadata={
                 "name": "CONSTANT-REFERENCE",
@@ -158,7 +158,7 @@ class DiagnosticEnvDataCondition:
             },
         )
         not_available_value_specification: (
-            NotAvailableValueSpecification | None
+            None | NotAvailableValueSpecification
         ) = field(
             default=None,
             metadata={
@@ -168,7 +168,7 @@ class DiagnosticEnvDataCondition:
             },
         )
         numerical_rule_based_value_specification: (
-            NumericalRuleBasedValueSpecification | None
+            None | NumericalRuleBasedValueSpecification
         ) = field(
             default=None,
             metadata={
@@ -177,7 +177,7 @@ class DiagnosticEnvDataCondition:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        numerical_value_specification: NumericalValueSpecification | None = (
+        numerical_value_specification: None | NumericalValueSpecification = (
             field(
                 default=None,
                 metadata={
@@ -187,7 +187,7 @@ class DiagnosticEnvDataCondition:
                 },
             )
         )
-        record_value_specification: RecordValueSpecification | None = field(
+        record_value_specification: None | RecordValueSpecification = field(
             default=None,
             metadata={
                 "name": "RECORD-VALUE-SPECIFICATION",
@@ -195,7 +195,7 @@ class DiagnosticEnvDataCondition:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        reference_value_specification: ReferenceValueSpecification | None = (
+        reference_value_specification: None | ReferenceValueSpecification = (
             field(
                 default=None,
                 metadata={
@@ -205,7 +205,7 @@ class DiagnosticEnvDataCondition:
                 },
             )
         )
-        text_value_specification: TextValueSpecification | None = field(
+        text_value_specification: None | TextValueSpecification = field(
             default=None,
             metadata={
                 "name": "TEXT-VALUE-SPECIFICATION",
@@ -216,7 +216,7 @@ class DiagnosticEnvDataCondition:
 
     @dataclass
     class DataElementRef(Ref):
-        dest: DiagnosticDataElementSubtypesEnum | None = field(
+        dest: None | DiagnosticDataElementSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

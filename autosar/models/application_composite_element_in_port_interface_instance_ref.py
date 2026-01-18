@@ -39,8 +39,8 @@ class ApplicationCompositeElementInPortInterfaceInstanceRef:
         name = "APPLICATION-COMPOSITE-ELEMENT-IN-PORT-INTERFACE-INSTANCE-REF"
 
     root_data_prototype_ref: (
-        ApplicationCompositeElementInPortInterfaceInstanceRef.RootDataPrototypeRef
-        | None
+        None
+        | ApplicationCompositeElementInPortInterfaceInstanceRef.RootDataPrototypeRef
     ) = field(
         default=None,
         metadata={
@@ -60,8 +60,8 @@ class ApplicationCompositeElementInPortInterfaceInstanceRef:
         },
     )
     target_data_prototype_ref: (
-        ApplicationCompositeElementInPortInterfaceInstanceRef.TargetDataPrototypeRef
-        | None
+        None
+        | ApplicationCompositeElementInPortInterfaceInstanceRef.TargetDataPrototypeRef
     ) = field(
         default=None,
         metadata={
@@ -70,14 +70,14 @@ class ApplicationCompositeElementInPortInterfaceInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -88,7 +88,7 @@ class ApplicationCompositeElementInPortInterfaceInstanceRef:
 
     @dataclass
     class RootDataPrototypeRef(Ref):
-        dest: AutosarDataPrototypeSubtypesEnum | None = field(
+        dest: None | AutosarDataPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -99,7 +99,7 @@ class ApplicationCompositeElementInPortInterfaceInstanceRef:
 
     @dataclass
     class ContextDataPrototypeRef(Ref):
-        dest: ApplicationCompositeElementDataPrototypeSubtypesEnum | None = (
+        dest: None | ApplicationCompositeElementDataPrototypeSubtypesEnum = (
             field(
                 default=None,
                 metadata={
@@ -112,7 +112,7 @@ class ApplicationCompositeElementInPortInterfaceInstanceRef:
 
     @dataclass
     class TargetDataPrototypeRef(Ref):
-        dest: ApplicationCompositeElementDataPrototypeSubtypesEnum | None = (
+        dest: None | ApplicationCompositeElementDataPrototypeSubtypesEnum = (
             field(
                 default=None,
                 metadata={

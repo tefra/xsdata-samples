@@ -24,7 +24,7 @@ class Database:
         name = "database"
         namespace = "http://www.crossref.org/schema/5.3.1"
 
-    database_metadata: DatabaseMetadata | None = field(
+    database_metadata: None | DatabaseMetadata = field(
         default=None,
         metadata={
             "type": "Element",
@@ -37,7 +37,7 @@ class Database:
             "type": "Element",
         },
     )
-    component_list: ComponentList | None = field(
+    component_list: None | ComponentList = field(
         default=None,
         metadata={
             "type": "Element",

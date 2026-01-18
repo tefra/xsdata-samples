@@ -30,20 +30,20 @@ class ContainedIPduCollectionSemanticsEnum:
     class Meta:
         name = "CONTAINED-I-PDU-COLLECTION-SEMANTICS-ENUM"
 
-    value: ContainedIPduCollectionSemanticsEnumSimple | None = field(
+    value: None | ContainedIPduCollectionSemanticsEnumSimple = field(
         default=None,
         metadata={
             "required": True,
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

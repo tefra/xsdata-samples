@@ -16,7 +16,7 @@ class Policies:
     class Meta:
         namespace = "http://xmlns.generali.com/services/program/FeedbackProgramService/v1"
 
-    policy: Policy | None = field(
+    policy: None | Policy = field(
         default=None,
         metadata={
             "name": "Policy",

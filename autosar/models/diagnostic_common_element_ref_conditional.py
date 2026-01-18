@@ -35,7 +35,7 @@ class DiagnosticCommonElementRefConditional:
         name = "DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL"
 
     diagnostic_common_element_ref: (
-        DiagnosticCommonElementRefConditional.DiagnosticCommonElementRef | None
+        None | DiagnosticCommonElementRefConditional.DiagnosticCommonElementRef
     ) = field(
         default=None,
         metadata={
@@ -44,7 +44,7 @@ class DiagnosticCommonElementRefConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -52,14 +52,14 @@ class DiagnosticCommonElementRefConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -70,7 +70,7 @@ class DiagnosticCommonElementRefConditional:
 
     @dataclass
     class DiagnosticCommonElementRef(Ref):
-        dest: DiagnosticCommonElementSubtypesEnum | None = field(
+        dest: None | DiagnosticCommonElementSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

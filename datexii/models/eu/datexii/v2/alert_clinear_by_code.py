@@ -22,7 +22,7 @@ class AlertCLinearByCode(AlertCLinear):
     :ivar alert_clinear_by_code_extension:
     """
 
-    alert_cdirection: AlertCDirection | None = field(
+    alert_cdirection: None | AlertCDirection = field(
         default=None,
         metadata={
             "name": "alertCDirection",
@@ -31,7 +31,7 @@ class AlertCLinearByCode(AlertCLinear):
             "required": True,
         },
     )
-    location_code_for_linear_location: AlertCLocation | None = field(
+    location_code_for_linear_location: None | AlertCLocation = field(
         default=None,
         metadata={
             "name": "locationCodeForLinearLocation",
@@ -40,7 +40,7 @@ class AlertCLinearByCode(AlertCLinear):
             "required": True,
         },
     )
-    alert_clinear_by_code_extension: ExtensionType | None = field(
+    alert_clinear_by_code_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "alertCLinearByCodeExtension",

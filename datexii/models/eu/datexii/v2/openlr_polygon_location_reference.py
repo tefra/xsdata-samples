@@ -20,7 +20,7 @@ class OpenlrPolygonLocationReference(OpenlrAreaLocationReference):
     area.
     """
 
-    openlr_polygon_corners: OpenlrPolygonCorners | None = field(
+    openlr_polygon_corners: None | OpenlrPolygonCorners = field(
         default=None,
         metadata={
             "name": "openlrPolygonCorners",
@@ -29,7 +29,7 @@ class OpenlrPolygonLocationReference(OpenlrAreaLocationReference):
             "required": True,
         },
     )
-    openlr_polygon_location_reference_extension: ExtensionType | None = field(
+    openlr_polygon_location_reference_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "openlrPolygonLocationReferenceExtension",

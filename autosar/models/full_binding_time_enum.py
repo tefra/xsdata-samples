@@ -29,20 +29,20 @@ class FullBindingTimeEnum:
     class Meta:
         name = "FULL-BINDING-TIME-ENUM"
 
-    value: FullBindingTimeEnumSimple | None = field(
+    value: None | FullBindingTimeEnumSimple = field(
         default=None,
         metadata={
             "required": True,
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

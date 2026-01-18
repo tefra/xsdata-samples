@@ -94,7 +94,7 @@ class MetadataConstraintAttachmentType:
 
     @dataclass(frozen=True)
     class MetadataProvider:
-        value: str | None = field(
+        value: None | str = field(
             default=None,
             metadata={
                 "required": True,
@@ -104,7 +104,7 @@ class MetadataConstraintAttachmentType:
 
     @dataclass(frozen=True)
     class MetadataSet:
-        value: str | None = field(
+        value: None | str = field(
             default=None,
             metadata={
                 "required": True,
@@ -114,7 +114,7 @@ class MetadataConstraintAttachmentType:
 
     @dataclass(frozen=True)
     class SimpleDataSource:
-        value: str | None = field(
+        value: None | str = field(
             default=None,
             metadata={
                 "required": True,
@@ -123,7 +123,7 @@ class MetadataConstraintAttachmentType:
 
     @dataclass(frozen=True)
     class MetadataStructure:
-        value: str | None = field(
+        value: None | str = field(
             default=None,
             metadata={
                 "required": True,
@@ -133,7 +133,7 @@ class MetadataConstraintAttachmentType:
 
     @dataclass(frozen=True)
     class Metadataflow:
-        value: str | None = field(
+        value: None | str = field(
             default=None,
             metadata={
                 "required": True,
@@ -143,7 +143,7 @@ class MetadataConstraintAttachmentType:
 
     @dataclass(frozen=True)
     class MetadataProvisionAgreement:
-        value: str | None = field(
+        value: None | str = field(
             default=None,
             metadata={
                 "required": True,

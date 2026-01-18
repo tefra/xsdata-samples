@@ -45,7 +45,7 @@ class BankedDefinitionBankType:
     class Meta:
         name = "bankedDefinitionBankType"
 
-    name: str | None = field(
+    name: None | str = field(
         default=None,
         metadata={
             "type": "Element",
@@ -53,7 +53,7 @@ class BankedDefinitionBankType:
             "required": True,
         },
     )
-    display_name: DisplayName | None = field(
+    display_name: None | DisplayName = field(
         default=None,
         metadata={
             "name": "displayName",
@@ -61,7 +61,7 @@ class BankedDefinitionBankType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    short_description: ShortDescription | None = field(
+    short_description: None | ShortDescription = field(
         default=None,
         metadata={
             "name": "shortDescription",
@@ -69,14 +69,14 @@ class BankedDefinitionBankType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    description: Description | None = field(
+    description: None | Description = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    access_handles: BankedDefinitionBankType.AccessHandles | None = field(
+    access_handles: None | BankedDefinitionBankType.AccessHandles = field(
         default=None,
         metadata={
             "name": "accessHandles",
@@ -84,7 +84,7 @@ class BankedDefinitionBankType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    bank_definition_ref: BankedDefinitionBankType.BankDefinitionRef | None = (
+    bank_definition_ref: None | BankedDefinitionBankType.BankDefinitionRef = (
         field(
             default=None,
             metadata={
@@ -109,21 +109,21 @@ class BankedDefinitionBankType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    usage: UsageType | None = field(
+    usage: None | UsageType = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    volatile: Volatile | None = field(
+    volatile: None | Volatile = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    access_policies: AccessPolicies | None = field(
+    access_policies: None | AccessPolicies = field(
         default=None,
         metadata={
             "name": "accessPolicies",
@@ -131,14 +131,14 @@ class BankedDefinitionBankType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    parameters: Parameters | None = field(
+    parameters: None | Parameters = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    bank_alignment: BankAlignmentType | None = field(
+    bank_alignment: None | BankAlignmentType = field(
         default=None,
         metadata={
             "name": "bankAlignment",
@@ -146,7 +146,7 @@ class BankedDefinitionBankType:
             "required": True,
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -174,7 +174,7 @@ class BankedDefinitionBankType:
                 "required": True,
             },
         )
-        type_definitions: str | None = field(
+        type_definitions: None | str = field(
             default=None,
             metadata={
                 "name": "typeDefinitions",
@@ -185,7 +185,7 @@ class BankedDefinitionBankType:
 
     @dataclass
     class Bank:
-        vendor_extensions: VendorExtensions | None = field(
+        vendor_extensions: None | VendorExtensions = field(
             default=None,
             metadata={
                 "name": "vendorExtensions",

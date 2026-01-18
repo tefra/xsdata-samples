@@ -32,7 +32,7 @@ class TargetIPduRef:
     class Meta:
         name = "TARGET-I-PDU-REF"
 
-    default_value: PduMappingDefaultValue | None = field(
+    default_value: None | PduMappingDefaultValue = field(
         default=None,
         metadata={
             "name": "DEFAULT-VALUE",
@@ -40,7 +40,7 @@ class TargetIPduRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    target_i_pdu_ref: TargetIPduRef.TargetIPduRefInner | None = field(
+    target_i_pdu_ref: None | TargetIPduRef.TargetIPduRefInner = field(
         default=None,
         metadata={
             "name": "TARGET-I-PDU-REF",
@@ -48,14 +48,14 @@ class TargetIPduRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -66,7 +66,7 @@ class TargetIPduRef:
 
     @dataclass
     class TargetIPduRefInner(Ref):
-        dest: PduTriggeringSubtypesEnum | None = field(
+        dest: None | PduTriggeringSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

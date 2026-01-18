@@ -56,7 +56,7 @@ class TdEventOccurrenceExpression:
     class Meta:
         name = "TD-EVENT-OCCURRENCE-EXPRESSION"
 
-    arguments: TdEventOccurrenceExpression.Arguments | None = field(
+    arguments: None | TdEventOccurrenceExpression.Arguments = field(
         default=None,
         metadata={
             "name": "ARGUMENTS",
@@ -64,7 +64,7 @@ class TdEventOccurrenceExpression:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    formula: TdEventOccurrenceExpressionFormula | None = field(
+    formula: None | TdEventOccurrenceExpressionFormula = field(
         default=None,
         metadata={
             "name": "FORMULA",
@@ -72,7 +72,7 @@ class TdEventOccurrenceExpression:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    modes: TdEventOccurrenceExpression.Modes | None = field(
+    modes: None | TdEventOccurrenceExpression.Modes = field(
         default=None,
         metadata={
             "name": "MODES",
@@ -80,7 +80,7 @@ class TdEventOccurrenceExpression:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variables: TdEventOccurrenceExpression.Variables | None = field(
+    variables: None | TdEventOccurrenceExpression.Variables = field(
         default=None,
         metadata={
             "name": "VARIABLES",
@@ -88,14 +88,14 @@ class TdEventOccurrenceExpression:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

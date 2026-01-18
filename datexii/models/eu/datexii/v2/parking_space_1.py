@@ -45,14 +45,14 @@ class ParkingSpace1(ParkingSpaceBasics):
             "max_length": 1024,
         },
     )
-    location: Location | None = field(
+    location: None | Location = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    parking_space_dimension: Dimension | None = field(
+    parking_space_dimension: None | Dimension = field(
         default=None,
         metadata={
             "name": "parkingSpaceDimension",
@@ -60,7 +60,7 @@ class ParkingSpace1(ParkingSpaceBasics):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    parking_space_extension: ExtensionType | None = field(
+    parking_space_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "parkingSpaceExtension",

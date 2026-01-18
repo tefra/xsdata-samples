@@ -23,7 +23,7 @@ class HeightCharacteristic:
     :ivar height_characteristic_extension:
     """
 
-    comparison_operator: ComparisonOperatorEnum | None = field(
+    comparison_operator: None | ComparisonOperatorEnum = field(
         default=None,
         metadata={
             "name": "comparisonOperator",
@@ -32,7 +32,7 @@ class HeightCharacteristic:
             "required": True,
         },
     )
-    vehicle_height: float | None = field(
+    vehicle_height: None | float = field(
         default=None,
         metadata={
             "name": "vehicleHeight",
@@ -41,7 +41,7 @@ class HeightCharacteristic:
             "required": True,
         },
     )
-    height_characteristic_extension: ExtensionType | None = field(
+    height_characteristic_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "heightCharacteristicExtension",

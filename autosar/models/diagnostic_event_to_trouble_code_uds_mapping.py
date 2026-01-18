@@ -91,7 +91,7 @@ class DiagnosticEventToTroubleCodeUdsMapping:
     class Meta:
         name = "DIAGNOSTIC-EVENT-TO-TROUBLE-CODE-UDS-MAPPING"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -101,7 +101,7 @@ class DiagnosticEventToTroubleCodeUdsMapping:
         },
     )
     short_name_fragments: (
-        DiagnosticEventToTroubleCodeUdsMapping.ShortNameFragments | None
+        None | DiagnosticEventToTroubleCodeUdsMapping.ShortNameFragments
     ) = field(
         default=None,
         metadata={
@@ -110,7 +110,7 @@ class DiagnosticEventToTroubleCodeUdsMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -118,7 +118,7 @@ class DiagnosticEventToTroubleCodeUdsMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -126,7 +126,7 @@ class DiagnosticEventToTroubleCodeUdsMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -134,7 +134,7 @@ class DiagnosticEventToTroubleCodeUdsMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -142,7 +142,7 @@ class DiagnosticEventToTroubleCodeUdsMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -150,7 +150,7 @@ class DiagnosticEventToTroubleCodeUdsMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: DiagnosticEventToTroubleCodeUdsMapping.Annotations | None = (
+    annotations: None | DiagnosticEventToTroubleCodeUdsMapping.Annotations = (
         field(
             default=None,
             metadata={
@@ -160,7 +160,7 @@ class DiagnosticEventToTroubleCodeUdsMapping:
             },
         )
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -169,7 +169,7 @@ class DiagnosticEventToTroubleCodeUdsMapping:
         },
     )
     diagnostic_event_ref: (
-        DiagnosticEventToTroubleCodeUdsMapping.DiagnosticEventRef | None
+        None | DiagnosticEventToTroubleCodeUdsMapping.DiagnosticEventRef
     ) = field(
         default=None,
         metadata={
@@ -179,7 +179,7 @@ class DiagnosticEventToTroubleCodeUdsMapping:
         },
     )
     trouble_code_uds_ref: (
-        DiagnosticEventToTroubleCodeUdsMapping.TroubleCodeUdsRef | None
+        None | DiagnosticEventToTroubleCodeUdsMapping.TroubleCodeUdsRef
     ) = field(
         default=None,
         metadata={
@@ -188,14 +188,14 @@ class DiagnosticEventToTroubleCodeUdsMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -203,7 +203,7 @@ class DiagnosticEventToTroubleCodeUdsMapping:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -235,7 +235,7 @@ class DiagnosticEventToTroubleCodeUdsMapping:
 
     @dataclass
     class DiagnosticEventRef(Ref):
-        dest: DiagnosticEventSubtypesEnum | None = field(
+        dest: None | DiagnosticEventSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -246,7 +246,7 @@ class DiagnosticEventToTroubleCodeUdsMapping:
 
     @dataclass
     class TroubleCodeUdsRef(Ref):
-        dest: DiagnosticTroubleCodeUdsSubtypesEnum | None = field(
+        dest: None | DiagnosticTroubleCodeUdsSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

@@ -9,7 +9,7 @@ __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
 @dataclass
 class UnapprovedKeyAccessStructure(ErrorCodeStructure):
-    key: str | None = field(
+    key: None | str = field(
         default=None,
         metadata={
             "name": "Key",

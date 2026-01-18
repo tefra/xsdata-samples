@@ -29,7 +29,7 @@ class FileBuilderType:
     class Meta:
         name = "fileBuilderType"
 
-    file_type: FileType | None = field(
+    file_type: None | FileType = field(
         default=None,
         metadata={
             "name": "fileType",
@@ -38,21 +38,21 @@ class FileBuilderType:
             "required": True,
         },
     )
-    command: StringExpression | None = field(
+    command: None | StringExpression = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    flags: StringExpression | None = field(
+    flags: None | StringExpression = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    replace_default_flags: UnsignedBitExpression | None = field(
+    replace_default_flags: None | UnsignedBitExpression = field(
         default=None,
         metadata={
             "name": "replaceDefaultFlags",
@@ -60,7 +60,7 @@ class FileBuilderType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",

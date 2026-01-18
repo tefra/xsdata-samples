@@ -117,7 +117,7 @@ class ModeSwitchInterface:
     class Meta:
         name = "MODE-SWITCH-INTERFACE"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -126,7 +126,7 @@ class ModeSwitchInterface:
             "required": True,
         },
     )
-    short_name_fragments: ModeSwitchInterface.ShortNameFragments | None = (
+    short_name_fragments: None | ModeSwitchInterface.ShortNameFragments = (
         field(
             default=None,
             metadata={
@@ -136,7 +136,7 @@ class ModeSwitchInterface:
             },
         )
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -144,7 +144,7 @@ class ModeSwitchInterface:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -152,7 +152,7 @@ class ModeSwitchInterface:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -160,7 +160,7 @@ class ModeSwitchInterface:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -168,7 +168,7 @@ class ModeSwitchInterface:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -176,7 +176,7 @@ class ModeSwitchInterface:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: ModeSwitchInterface.Annotations | None = field(
+    annotations: None | ModeSwitchInterface.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -184,7 +184,7 @@ class ModeSwitchInterface:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -192,7 +192,7 @@ class ModeSwitchInterface:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    blueprint_policys: ModeSwitchInterface.BlueprintPolicys | None = field(
+    blueprint_policys: None | ModeSwitchInterface.BlueprintPolicys = field(
         default=None,
         metadata={
             "name": "BLUEPRINT-POLICYS",
@@ -200,7 +200,7 @@ class ModeSwitchInterface:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    short_name_pattern: String | None = field(
+    short_name_pattern: None | String = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-PATTERN",
@@ -208,7 +208,7 @@ class ModeSwitchInterface:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    is_service: Boolean | None = field(
+    is_service: None | Boolean = field(
         default=None,
         metadata={
             "name": "IS-SERVICE",
@@ -216,7 +216,7 @@ class ModeSwitchInterface:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    namespaces: ModeSwitchInterface.Namespaces | None = field(
+    namespaces: None | ModeSwitchInterface.Namespaces = field(
         default=None,
         metadata={
             "name": "NAMESPACES",
@@ -224,7 +224,7 @@ class ModeSwitchInterface:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    service_kind: ServiceProviderEnum | None = field(
+    service_kind: None | ServiceProviderEnum = field(
         default=None,
         metadata={
             "name": "SERVICE-KIND",
@@ -232,7 +232,7 @@ class ModeSwitchInterface:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    mode_group: ModeDeclarationGroupPrototype | None = field(
+    mode_group: None | ModeDeclarationGroupPrototype = field(
         default=None,
         metadata={
             "name": "MODE-GROUP",
@@ -240,14 +240,14 @@ class ModeSwitchInterface:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -255,7 +255,7 @@ class ModeSwitchInterface:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",

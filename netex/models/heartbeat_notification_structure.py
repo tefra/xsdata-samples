@@ -18,7 +18,7 @@ __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
 @dataclass
 class HeartbeatNotificationStructure(ProducerRequestEndpointStructure):
-    status: Status | None = field(
+    status: None | Status = field(
         default=None,
         metadata={
             "name": "Status",
@@ -26,7 +26,7 @@ class HeartbeatNotificationStructure(ProducerRequestEndpointStructure):
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    data_ready: bool | None = field(
+    data_ready: None | bool = field(
         default=None,
         metadata={
             "name": "DataReady",
@@ -34,7 +34,7 @@ class HeartbeatNotificationStructure(ProducerRequestEndpointStructure):
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    error_condition: HeartbeatNotificationStructure.ErrorCondition | None = (
+    error_condition: None | HeartbeatNotificationStructure.ErrorCondition = (
         field(
             default=None,
             metadata={
@@ -44,7 +44,7 @@ class HeartbeatNotificationStructure(ProducerRequestEndpointStructure):
             },
         )
     )
-    valid_until: XmlDateTime | None = field(
+    valid_until: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "ValidUntil",
@@ -52,7 +52,7 @@ class HeartbeatNotificationStructure(ProducerRequestEndpointStructure):
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    shortest_possible_cycle: XmlDuration | None = field(
+    shortest_possible_cycle: None | XmlDuration = field(
         default=None,
         metadata={
             "name": "ShortestPossibleCycle",
@@ -60,7 +60,7 @@ class HeartbeatNotificationStructure(ProducerRequestEndpointStructure):
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    service_started_time: XmlDateTime | None = field(
+    service_started_time: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "ServiceStartedTime",
@@ -68,7 +68,7 @@ class HeartbeatNotificationStructure(ProducerRequestEndpointStructure):
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    extensions: Extensions1 | None = field(
+    extensions: None | Extensions1 = field(
         default=None,
         metadata={
             "name": "Extensions",
@@ -80,7 +80,7 @@ class HeartbeatNotificationStructure(ProducerRequestEndpointStructure):
     @dataclass
     class ErrorCondition:
         service_not_available_error_or_other_error: (
-            ServiceNotAvailableError | OtherError | None
+            None | ServiceNotAvailableError | OtherError
         ) = field(
             default=None,
             metadata={
@@ -99,7 +99,7 @@ class HeartbeatNotificationStructure(ProducerRequestEndpointStructure):
                 ),
             },
         )
-        description: ErrorDescriptionStructure | None = field(
+        description: None | ErrorDescriptionStructure = field(
             default=None,
             metadata={
                 "name": "Description",

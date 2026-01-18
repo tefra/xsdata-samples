@@ -24,7 +24,7 @@ class ConfigurableElementValue(ComplexBaseExpression):
         name = "configurableElementValue"
         namespace = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
-    reference_id: str | None = field(
+    reference_id: None | str = field(
         default=None,
         metadata={
             "name": "referenceId",
@@ -32,7 +32,7 @@ class ConfigurableElementValue(ComplexBaseExpression):
             "required": True,
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",

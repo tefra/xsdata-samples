@@ -32,7 +32,7 @@ class TChoreographyActivity(TFlowNode):
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    initiating_participant_ref: QName | None = field(
+    initiating_participant_ref: None | QName = field(
         default=None,
         metadata={
             "name": "initiatingParticipantRef",

@@ -26,7 +26,7 @@ class VmsTextLine:
     :ivar vms_text_line_extension:
     """
 
-    vms_text_line: str | None = field(
+    vms_text_line: None | str = field(
         default=None,
         metadata={
             "name": "vmsTextLine",
@@ -36,7 +36,7 @@ class VmsTextLine:
             "max_length": 1024,
         },
     )
-    vms_text_line_language: str | None = field(
+    vms_text_line_language: None | str = field(
         default=None,
         metadata={
             "name": "vmsTextLineLanguage",
@@ -44,7 +44,7 @@ class VmsTextLine:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    vms_text_line_colour: ColourEnum | None = field(
+    vms_text_line_colour: None | ColourEnum = field(
         default=None,
         metadata={
             "name": "vmsTextLineColour",
@@ -52,7 +52,7 @@ class VmsTextLine:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    vms_text_line_flashing: bool | None = field(
+    vms_text_line_flashing: None | bool = field(
         default=None,
         metadata={
             "name": "vmsTextLineFlashing",
@@ -60,7 +60,7 @@ class VmsTextLine:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    vms_text_line_html: str | None = field(
+    vms_text_line_html: None | str = field(
         default=None,
         metadata={
             "name": "vmsTextLineHtml",
@@ -69,7 +69,7 @@ class VmsTextLine:
             "max_length": 1024,
         },
     )
-    vms_text_line_extension: ExtensionType | None = field(
+    vms_text_line_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "vmsTextLineExtension",

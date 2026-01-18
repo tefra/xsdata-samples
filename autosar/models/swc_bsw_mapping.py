@@ -111,7 +111,7 @@ class SwcBswMapping:
     class Meta:
         name = "SWC-BSW-MAPPING"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -120,7 +120,7 @@ class SwcBswMapping:
             "required": True,
         },
     )
-    short_name_fragments: SwcBswMapping.ShortNameFragments | None = field(
+    short_name_fragments: None | SwcBswMapping.ShortNameFragments = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -128,7 +128,7 @@ class SwcBswMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -136,7 +136,7 @@ class SwcBswMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -144,7 +144,7 @@ class SwcBswMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -152,7 +152,7 @@ class SwcBswMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -160,7 +160,7 @@ class SwcBswMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -168,7 +168,7 @@ class SwcBswMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: SwcBswMapping.Annotations | None = field(
+    annotations: None | SwcBswMapping.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -176,7 +176,7 @@ class SwcBswMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -184,7 +184,7 @@ class SwcBswMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    bsw_behavior_ref: SwcBswMapping.BswBehaviorRef | None = field(
+    bsw_behavior_ref: None | SwcBswMapping.BswBehaviorRef = field(
         default=None,
         metadata={
             "name": "BSW-BEHAVIOR-REF",
@@ -192,7 +192,7 @@ class SwcBswMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    runnable_mappings: SwcBswMapping.RunnableMappings | None = field(
+    runnable_mappings: None | SwcBswMapping.RunnableMappings = field(
         default=None,
         metadata={
             "name": "RUNNABLE-MAPPINGS",
@@ -200,7 +200,7 @@ class SwcBswMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    swc_behavior_ref: SwcBswMapping.SwcBehaviorRef | None = field(
+    swc_behavior_ref: None | SwcBswMapping.SwcBehaviorRef = field(
         default=None,
         metadata={
             "name": "SWC-BEHAVIOR-REF",
@@ -208,7 +208,7 @@ class SwcBswMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    synchronized_mode_groups: SwcBswMapping.SynchronizedModeGroups | None = (
+    synchronized_mode_groups: None | SwcBswMapping.SynchronizedModeGroups = (
         field(
             default=None,
             metadata={
@@ -218,7 +218,7 @@ class SwcBswMapping:
             },
         )
     )
-    synchronized_triggers: SwcBswMapping.SynchronizedTriggers | None = field(
+    synchronized_triggers: None | SwcBswMapping.SynchronizedTriggers = field(
         default=None,
         metadata={
             "name": "SYNCHRONIZED-TRIGGERS",
@@ -226,14 +226,14 @@ class SwcBswMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -241,7 +241,7 @@ class SwcBswMapping:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -273,7 +273,7 @@ class SwcBswMapping:
 
     @dataclass
     class BswBehaviorRef(Ref):
-        dest: BswInternalBehaviorSubtypesEnum | None = field(
+        dest: None | BswInternalBehaviorSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -295,7 +295,7 @@ class SwcBswMapping:
 
     @dataclass
     class SwcBehaviorRef(Ref):
-        dest: SwcInternalBehaviorSubtypesEnum | None = field(
+        dest: None | SwcInternalBehaviorSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

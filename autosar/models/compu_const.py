@@ -38,7 +38,7 @@ class CompuConst:
     class Meta:
         name = "COMPU-CONST"
 
-    vf: NumericalValueVariationPoint | None = field(
+    vf: None | NumericalValueVariationPoint = field(
         default=None,
         metadata={
             "name": "VF",
@@ -46,7 +46,7 @@ class CompuConst:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    v: NumericalValue | None = field(
+    v: None | NumericalValue = field(
         default=None,
         metadata={
             "name": "V",
@@ -54,7 +54,7 @@ class CompuConst:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    vt: VerbatimString | None = field(
+    vt: None | VerbatimString = field(
         default=None,
         metadata={
             "name": "VT",
@@ -62,14 +62,14 @@ class CompuConst:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

@@ -18,7 +18,7 @@ class TpegPointLocation:
     :ivar tpeg_point_location_extension:
     """
 
-    tpeg_direction: DirectionEnum | None = field(
+    tpeg_direction: None | DirectionEnum = field(
         default=None,
         metadata={
             "name": "tpegDirection",
@@ -27,7 +27,7 @@ class TpegPointLocation:
             "required": True,
         },
     )
-    tpeg_point_location_extension: ExtensionType | None = field(
+    tpeg_point_location_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "tpegPointLocationExtension",

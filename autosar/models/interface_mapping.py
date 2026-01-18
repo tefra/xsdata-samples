@@ -99,7 +99,7 @@ class InterfaceMapping:
     class Meta:
         name = "INTERFACE-MAPPING"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -108,7 +108,7 @@ class InterfaceMapping:
             "required": True,
         },
     )
-    short_name_fragments: InterfaceMapping.ShortNameFragments | None = field(
+    short_name_fragments: None | InterfaceMapping.ShortNameFragments = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -116,7 +116,7 @@ class InterfaceMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -124,7 +124,7 @@ class InterfaceMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -132,7 +132,7 @@ class InterfaceMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -140,7 +140,7 @@ class InterfaceMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -148,7 +148,7 @@ class InterfaceMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -156,7 +156,7 @@ class InterfaceMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: InterfaceMapping.Annotations | None = field(
+    annotations: None | InterfaceMapping.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -164,7 +164,7 @@ class InterfaceMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    event_mappings: InterfaceMapping.EventMappings | None = field(
+    event_mappings: None | InterfaceMapping.EventMappings = field(
         default=None,
         metadata={
             "name": "EVENT-MAPPINGS",
@@ -172,7 +172,7 @@ class InterfaceMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    field_mappings: InterfaceMapping.FieldMappings | None = field(
+    field_mappings: None | InterfaceMapping.FieldMappings = field(
         default=None,
         metadata={
             "name": "FIELD-MAPPINGS",
@@ -180,7 +180,7 @@ class InterfaceMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    fire_and_forget_mappings: InterfaceMapping.FireAndForgetMappings | None = (
+    fire_and_forget_mappings: None | InterfaceMapping.FireAndForgetMappings = (
         field(
             default=None,
             metadata={
@@ -190,7 +190,7 @@ class InterfaceMapping:
             },
         )
     )
-    method_mappings: InterfaceMapping.MethodMappings | None = field(
+    method_mappings: None | InterfaceMapping.MethodMappings = field(
         default=None,
         metadata={
             "name": "METHOD-MAPPINGS",
@@ -198,7 +198,7 @@ class InterfaceMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -206,14 +206,14 @@ class InterfaceMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -221,7 +221,7 @@ class InterfaceMapping:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",

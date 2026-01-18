@@ -28,7 +28,7 @@ __NAMESPACE__ = (
 
 @dataclass
 class DeductibleType(BaseIdentifiedComponentType):
-    value: ValueType | None = field(
+    value: None | ValueType = field(
         default=None,
         metadata={
             "name": "Value",
@@ -36,7 +36,7 @@ class DeductibleType(BaseIdentifiedComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    basis: CodeDescriptionType | None = field(
+    basis: None | CodeDescriptionType = field(
         default=None,
         metadata={
             "name": "Basis",
@@ -44,7 +44,7 @@ class DeductibleType(BaseIdentifiedComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    value_applies_to: CodeDescriptionType | None = field(
+    value_applies_to: None | CodeDescriptionType = field(
         default=None,
         metadata={
             "name": "ValueAppliesTo",
@@ -52,7 +52,7 @@ class DeductibleType(BaseIdentifiedComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    restricted_to_geography: DeductibleTypeRestrictedToGeography | None = (
+    restricted_to_geography: None | DeductibleTypeRestrictedToGeography = (
         field(
             default=None,
             metadata={
@@ -71,7 +71,7 @@ class DeductibleType(BaseIdentifiedComponentType):
             "required": True,
         },
     )
-    maximum: AmountType | None = field(
+    maximum: None | AmountType = field(
         default=None,
         metadata={
             "name": "Maximum",
@@ -79,7 +79,7 @@ class DeductibleType(BaseIdentifiedComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    minimum: AmountType | None = field(
+    minimum: None | AmountType = field(
         default=None,
         metadata={
             "name": "Minimum",
@@ -87,7 +87,7 @@ class DeductibleType(BaseIdentifiedComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    separate_deductible: bool | None = field(
+    separate_deductible: None | bool = field(
         default=None,
         metadata={
             "name": "SeparateDeductible",

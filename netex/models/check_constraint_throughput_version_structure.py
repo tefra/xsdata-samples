@@ -15,7 +15,7 @@ class CheckConstraintThroughputVersionStructure(AssignmentVersionStructure1):
     class Meta:
         name = "CheckConstraintThroughput_VersionStructure"
 
-    check_constraint_ref: CheckConstraintRef | None = field(
+    check_constraint_ref: None | CheckConstraintRef = field(
         default=None,
         metadata={
             "name": "CheckConstraintRef",
@@ -23,7 +23,7 @@ class CheckConstraintThroughputVersionStructure(AssignmentVersionStructure1):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    period: XmlDuration | None = field(
+    period: None | XmlDuration = field(
         default=None,
         metadata={
             "name": "Period",
@@ -31,7 +31,7 @@ class CheckConstraintThroughputVersionStructure(AssignmentVersionStructure1):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    maximum_passengers: int | None = field(
+    maximum_passengers: None | int = field(
         default=None,
         metadata={
             "name": "MaximumPassengers",
@@ -39,7 +39,7 @@ class CheckConstraintThroughputVersionStructure(AssignmentVersionStructure1):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    average_passengers: int | None = field(
+    average_passengers: None | int = field(
         default=None,
         metadata={
             "name": "AveragePassengers",
@@ -47,7 +47,7 @@ class CheckConstraintThroughputVersionStructure(AssignmentVersionStructure1):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    wheelchair_passengers: int | None = field(
+    wheelchair_passengers: None | int = field(
         default=None,
         metadata={
             "name": "WheelchairPassengers",

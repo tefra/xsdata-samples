@@ -35,7 +35,7 @@ class SoConIPduIdentifierRefConditional:
         name = "SO-CON-I-PDU-IDENTIFIER-REF-CONDITIONAL"
 
     so_con_i_pdu_identifier_ref: (
-        SoConIPduIdentifierRefConditional.SoConIPduIdentifierRef | None
+        None | SoConIPduIdentifierRefConditional.SoConIPduIdentifierRef
     ) = field(
         default=None,
         metadata={
@@ -44,7 +44,7 @@ class SoConIPduIdentifierRefConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -52,14 +52,14 @@ class SoConIPduIdentifierRefConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -70,7 +70,7 @@ class SoConIPduIdentifierRefConditional:
 
     @dataclass
     class SoConIPduIdentifierRef(Ref):
-        dest: SoConIPduIdentifierSubtypesEnum | None = field(
+        dest: None | SoConIPduIdentifierSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

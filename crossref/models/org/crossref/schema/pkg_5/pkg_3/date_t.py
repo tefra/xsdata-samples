@@ -17,21 +17,21 @@ class DateT:
     class Meta:
         name = "date_t"
 
-    month: Month | None = field(
+    month: None | Month = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.crossref.org/schema/5.3.1",
         },
     )
-    day: Day | None = field(
+    day: None | Day = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.crossref.org/schema/5.3.1",
         },
     )
-    year: Year | None = field(
+    year: None | Year = field(
         default=None,
         metadata={
             "type": "Element",

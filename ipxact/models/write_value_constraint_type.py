@@ -30,7 +30,7 @@ class WriteValueConstraintType:
     class Meta:
         name = "writeValueConstraintType"
 
-    write_as_read: bool | None = field(
+    write_as_read: None | bool = field(
         default=None,
         metadata={
             "name": "writeAsRead",
@@ -38,7 +38,7 @@ class WriteValueConstraintType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    use_enumerated_values: bool | None = field(
+    use_enumerated_values: None | bool = field(
         default=None,
         metadata={
             "name": "useEnumeratedValues",
@@ -46,14 +46,14 @@ class WriteValueConstraintType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    minimum: UnsignedBitVectorExpression | None = field(
+    minimum: None | UnsignedBitVectorExpression = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    maximum: UnsignedBitVectorExpression | None = field(
+    maximum: None | UnsignedBitVectorExpression = field(
         default=None,
         metadata={
             "type": "Element",

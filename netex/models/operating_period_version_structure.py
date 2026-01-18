@@ -20,7 +20,7 @@ class OperatingPeriodVersionStructure(DataManagedObjectStructure):
     class Meta:
         name = "OperatingPeriod_VersionStructure"
 
-    service_calendar_ref: ServiceCalendarRef | None = field(
+    service_calendar_ref: None | ServiceCalendarRef = field(
         default=None,
         metadata={
             "name": "ServiceCalendarRef",
@@ -28,7 +28,7 @@ class OperatingPeriodVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    name: MultilingualString | None = field(
+    name: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "Name",
@@ -36,7 +36,7 @@ class OperatingPeriodVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    short_name: MultilingualString | None = field(
+    short_name: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "ShortName",
@@ -45,7 +45,7 @@ class OperatingPeriodVersionStructure(DataManagedObjectStructure):
         },
     )
     from_operating_day_ref_or_from_date: (
-        OperatingDayRefStructure | XmlDateTime | None
+        None | OperatingDayRefStructure | XmlDateTime
     ) = field(
         default=None,
         metadata={
@@ -65,7 +65,7 @@ class OperatingPeriodVersionStructure(DataManagedObjectStructure):
         },
     )
     to_operating_day_ref_or_to_date: (
-        OperatingDayRefStructure | XmlDateTime | None
+        None | OperatingDayRefStructure | XmlDateTime
     ) = field(
         default=None,
         metadata={

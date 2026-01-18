@@ -42,7 +42,7 @@ class RptExecutableEntityProperties:
     class Meta:
         name = "RPT-EXECUTABLE-ENTITY-PROPERTIES"
 
-    max_rpt_event_id: PositiveInteger | None = field(
+    max_rpt_event_id: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "MAX-RPT-EVENT-ID",
@@ -50,7 +50,7 @@ class RptExecutableEntityProperties:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    min_rpt_event_id: PositiveInteger | None = field(
+    min_rpt_event_id: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "MIN-RPT-EVENT-ID",
@@ -58,7 +58,7 @@ class RptExecutableEntityProperties:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    rpt_execution_control: RptExecutionControlEnum | None = field(
+    rpt_execution_control: None | RptExecutionControlEnum = field(
         default=None,
         metadata={
             "name": "RPT-EXECUTION-CONTROL",
@@ -66,7 +66,7 @@ class RptExecutableEntityProperties:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    rpt_service_point: RptServicePointEnum | None = field(
+    rpt_service_point: None | RptServicePointEnum = field(
         default=None,
         metadata={
             "name": "RPT-SERVICE-POINT",
@@ -74,14 +74,14 @@ class RptExecutableEntityProperties:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

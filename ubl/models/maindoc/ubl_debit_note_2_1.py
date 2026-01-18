@@ -61,7 +61,7 @@ __NAMESPACE__ = "urn:oasis:names:specification:ubl:schema:xsd:DebitNote-2"
 
 @dataclass(frozen=True)
 class DebitNoteType:
-    ublextensions: Ublextensions | None = field(
+    ublextensions: None | Ublextensions = field(
         default=None,
         metadata={
             "name": "UBLExtensions",
@@ -69,7 +69,7 @@ class DebitNoteType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2",
         },
     )
-    ublversion_id: UblversionId | None = field(
+    ublversion_id: None | UblversionId = field(
         default=None,
         metadata={
             "name": "UBLVersionID",
@@ -77,7 +77,7 @@ class DebitNoteType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    customization_id: CustomizationId | None = field(
+    customization_id: None | CustomizationId = field(
         default=None,
         metadata={
             "name": "CustomizationID",
@@ -85,7 +85,7 @@ class DebitNoteType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    profile_id: ProfileId | None = field(
+    profile_id: None | ProfileId = field(
         default=None,
         metadata={
             "name": "ProfileID",
@@ -93,7 +93,7 @@ class DebitNoteType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    profile_execution_id: ProfileExecutionId | None = field(
+    profile_execution_id: None | ProfileExecutionId = field(
         default=None,
         metadata={
             "name": "ProfileExecutionID",
@@ -101,7 +101,7 @@ class DebitNoteType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    id: Id | None = field(
+    id: None | Id = field(
         default=None,
         metadata={
             "name": "ID",
@@ -110,7 +110,7 @@ class DebitNoteType:
             "required": True,
         },
     )
-    copy_indicator: CopyIndicator | None = field(
+    copy_indicator: None | CopyIndicator = field(
         default=None,
         metadata={
             "name": "CopyIndicator",
@@ -118,7 +118,7 @@ class DebitNoteType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    uuid: Uuid | None = field(
+    uuid: None | Uuid = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -126,7 +126,7 @@ class DebitNoteType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    issue_date: IssueDate | None = field(
+    issue_date: None | IssueDate = field(
         default=None,
         metadata={
             "name": "IssueDate",
@@ -135,7 +135,7 @@ class DebitNoteType:
             "required": True,
         },
     )
-    issue_time: IssueTime | None = field(
+    issue_time: None | IssueTime = field(
         default=None,
         metadata={
             "name": "IssueTime",
@@ -151,7 +151,7 @@ class DebitNoteType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    tax_point_date: TaxPointDate | None = field(
+    tax_point_date: None | TaxPointDate = field(
         default=None,
         metadata={
             "name": "TaxPointDate",
@@ -159,7 +159,7 @@ class DebitNoteType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    document_currency_code: DocumentCurrencyCode | None = field(
+    document_currency_code: None | DocumentCurrencyCode = field(
         default=None,
         metadata={
             "name": "DocumentCurrencyCode",
@@ -167,7 +167,7 @@ class DebitNoteType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    tax_currency_code: TaxCurrencyCode | None = field(
+    tax_currency_code: None | TaxCurrencyCode = field(
         default=None,
         metadata={
             "name": "TaxCurrencyCode",
@@ -175,7 +175,7 @@ class DebitNoteType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    pricing_currency_code: PricingCurrencyCode | None = field(
+    pricing_currency_code: None | PricingCurrencyCode = field(
         default=None,
         metadata={
             "name": "PricingCurrencyCode",
@@ -183,7 +183,7 @@ class DebitNoteType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    payment_currency_code: PaymentCurrencyCode | None = field(
+    payment_currency_code: None | PaymentCurrencyCode = field(
         default=None,
         metadata={
             "name": "PaymentCurrencyCode",
@@ -192,7 +192,7 @@ class DebitNoteType:
         },
     )
     payment_alternative_currency_code: (
-        PaymentAlternativeCurrencyCode | None
+        None | PaymentAlternativeCurrencyCode
     ) = field(
         default=None,
         metadata={
@@ -201,7 +201,7 @@ class DebitNoteType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    accounting_cost_code: AccountingCostCode | None = field(
+    accounting_cost_code: None | AccountingCostCode = field(
         default=None,
         metadata={
             "name": "AccountingCostCode",
@@ -209,7 +209,7 @@ class DebitNoteType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    accounting_cost: AccountingCost | None = field(
+    accounting_cost: None | AccountingCost = field(
         default=None,
         metadata={
             "name": "AccountingCost",
@@ -217,7 +217,7 @@ class DebitNoteType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    line_count_numeric: LineCountNumeric | None = field(
+    line_count_numeric: None | LineCountNumeric = field(
         default=None,
         metadata={
             "name": "LineCountNumeric",
@@ -241,7 +241,7 @@ class DebitNoteType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    order_reference: OrderReference | None = field(
+    order_reference: None | OrderReference = field(
         default=None,
         metadata={
             "name": "OrderReference",
@@ -309,7 +309,7 @@ class DebitNoteType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    accounting_supplier_party: AccountingSupplierParty | None = field(
+    accounting_supplier_party: None | AccountingSupplierParty = field(
         default=None,
         metadata={
             "name": "AccountingSupplierParty",
@@ -318,7 +318,7 @@ class DebitNoteType:
             "required": True,
         },
     )
-    accounting_customer_party: AccountingCustomerParty | None = field(
+    accounting_customer_party: None | AccountingCustomerParty = field(
         default=None,
         metadata={
             "name": "AccountingCustomerParty",
@@ -327,7 +327,7 @@ class DebitNoteType:
             "required": True,
         },
     )
-    payee_party: PayeeParty | None = field(
+    payee_party: None | PayeeParty = field(
         default=None,
         metadata={
             "name": "PayeeParty",
@@ -335,7 +335,7 @@ class DebitNoteType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    buyer_customer_party: BuyerCustomerParty | None = field(
+    buyer_customer_party: None | BuyerCustomerParty = field(
         default=None,
         metadata={
             "name": "BuyerCustomerParty",
@@ -343,7 +343,7 @@ class DebitNoteType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    seller_supplier_party: SellerSupplierParty | None = field(
+    seller_supplier_party: None | SellerSupplierParty = field(
         default=None,
         metadata={
             "name": "SellerSupplierParty",
@@ -351,7 +351,7 @@ class DebitNoteType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    tax_representative_party: TaxRepresentativeParty | None = field(
+    tax_representative_party: None | TaxRepresentativeParty = field(
         default=None,
         metadata={
             "name": "TaxRepresentativeParty",
@@ -407,7 +407,7 @@ class DebitNoteType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    tax_exchange_rate: TaxExchangeRate | None = field(
+    tax_exchange_rate: None | TaxExchangeRate = field(
         default=None,
         metadata={
             "name": "TaxExchangeRate",
@@ -415,7 +415,7 @@ class DebitNoteType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    pricing_exchange_rate: PricingExchangeRate | None = field(
+    pricing_exchange_rate: None | PricingExchangeRate = field(
         default=None,
         metadata={
             "name": "PricingExchangeRate",
@@ -423,7 +423,7 @@ class DebitNoteType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    payment_exchange_rate: PaymentExchangeRate | None = field(
+    payment_exchange_rate: None | PaymentExchangeRate = field(
         default=None,
         metadata={
             "name": "PaymentExchangeRate",
@@ -432,7 +432,7 @@ class DebitNoteType:
         },
     )
     payment_alternative_exchange_rate: (
-        PaymentAlternativeExchangeRate | None
+        None | PaymentAlternativeExchangeRate
     ) = field(
         default=None,
         metadata={
@@ -449,7 +449,7 @@ class DebitNoteType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    requested_monetary_total: RequestedMonetaryTotal | None = field(
+    requested_monetary_total: None | RequestedMonetaryTotal = field(
         default=None,
         metadata={
             "name": "RequestedMonetaryTotal",

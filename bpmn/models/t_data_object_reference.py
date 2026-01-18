@@ -14,7 +14,7 @@ class TDataObjectReference(TFlowElement):
     class Meta:
         name = "tDataObjectReference"
 
-    data_state: DataState | None = field(
+    data_state: None | DataState = field(
         default=None,
         metadata={
             "name": "dataState",
@@ -22,14 +22,14 @@ class TDataObjectReference(TFlowElement):
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    item_subject_ref: QName | None = field(
+    item_subject_ref: None | QName = field(
         default=None,
         metadata={
             "name": "itemSubjectRef",
             "type": "Attribute",
         },
     )
-    data_object_ref: str | None = field(
+    data_object_ref: None | str = field(
         default=None,
         metadata={
             "name": "dataObjectRef",

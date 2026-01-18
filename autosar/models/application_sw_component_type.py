@@ -135,7 +135,7 @@ class ApplicationSwComponentType:
     class Meta:
         name = "APPLICATION-SW-COMPONENT-TYPE"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -145,7 +145,7 @@ class ApplicationSwComponentType:
         },
     )
     short_name_fragments: (
-        ApplicationSwComponentType.ShortNameFragments | None
+        None | ApplicationSwComponentType.ShortNameFragments
     ) = field(
         default=None,
         metadata={
@@ -154,7 +154,7 @@ class ApplicationSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -162,7 +162,7 @@ class ApplicationSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -170,7 +170,7 @@ class ApplicationSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -178,7 +178,7 @@ class ApplicationSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -186,7 +186,7 @@ class ApplicationSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -194,7 +194,7 @@ class ApplicationSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: ApplicationSwComponentType.Annotations | None = field(
+    annotations: None | ApplicationSwComponentType.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -202,7 +202,7 @@ class ApplicationSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -210,7 +210,7 @@ class ApplicationSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    blueprint_policys: ApplicationSwComponentType.BlueprintPolicys | None = (
+    blueprint_policys: None | ApplicationSwComponentType.BlueprintPolicys = (
         field(
             default=None,
             metadata={
@@ -220,7 +220,7 @@ class ApplicationSwComponentType:
             },
         )
     )
-    short_name_pattern: String | None = field(
+    short_name_pattern: None | String = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-PATTERN",
@@ -229,7 +229,7 @@ class ApplicationSwComponentType:
         },
     )
     sw_component_documentations: (
-        ApplicationSwComponentType.SwComponentDocumentations | None
+        None | ApplicationSwComponentType.SwComponentDocumentations
     ) = field(
         default=None,
         metadata={
@@ -238,7 +238,7 @@ class ApplicationSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    consistency_needss: ApplicationSwComponentType.ConsistencyNeedss | None = (
+    consistency_needss: None | ApplicationSwComponentType.ConsistencyNeedss = (
         field(
             default=None,
             metadata={
@@ -248,7 +248,7 @@ class ApplicationSwComponentType:
             },
         )
     )
-    ports: ApplicationSwComponentType.Ports | None = field(
+    ports: None | ApplicationSwComponentType.Ports = field(
         default=None,
         metadata={
             "name": "PORTS",
@@ -256,7 +256,7 @@ class ApplicationSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    port_groups: ApplicationSwComponentType.PortGroups | None = field(
+    port_groups: None | ApplicationSwComponentType.PortGroups = field(
         default=None,
         metadata={
             "name": "PORT-GROUPS",
@@ -264,7 +264,7 @@ class ApplicationSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    unit_group_refs: ApplicationSwComponentType.UnitGroupRefs | None = field(
+    unit_group_refs: None | ApplicationSwComponentType.UnitGroupRefs = field(
         default=None,
         metadata={
             "name": "UNIT-GROUP-REFS",
@@ -272,7 +272,7 @@ class ApplicationSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    internal_behaviors: ApplicationSwComponentType.InternalBehaviors | None = (
+    internal_behaviors: None | ApplicationSwComponentType.InternalBehaviors = (
         field(
             default=None,
             metadata={
@@ -282,7 +282,7 @@ class ApplicationSwComponentType:
             },
         )
     )
-    symbol_props: SymbolProps | None = field(
+    symbol_props: None | SymbolProps = field(
         default=None,
         metadata={
             "name": "SYMBOL-PROPS",
@@ -290,14 +290,14 @@ class ApplicationSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -305,7 +305,7 @@ class ApplicationSwComponentType:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -439,7 +439,7 @@ class ApplicationSwComponentType:
 
         @dataclass
         class UnitGroupRef(Ref):
-            dest: UnitGroupSubtypesEnum | None = field(
+            dest: None | UnitGroupSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",

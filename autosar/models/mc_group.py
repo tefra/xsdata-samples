@@ -98,7 +98,7 @@ class McGroup:
     class Meta:
         name = "MC-GROUP"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -107,7 +107,7 @@ class McGroup:
             "required": True,
         },
     )
-    short_name_fragments: McGroup.ShortNameFragments | None = field(
+    short_name_fragments: None | McGroup.ShortNameFragments = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -115,7 +115,7 @@ class McGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -123,7 +123,7 @@ class McGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -131,7 +131,7 @@ class McGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -139,7 +139,7 @@ class McGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -147,7 +147,7 @@ class McGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -155,7 +155,7 @@ class McGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: McGroup.Annotations | None = field(
+    annotations: None | McGroup.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -163,7 +163,7 @@ class McGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -171,7 +171,7 @@ class McGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sub_group_refs: McGroup.SubGroupRefs | None = field(
+    sub_group_refs: None | McGroup.SubGroupRefs = field(
         default=None,
         metadata={
             "name": "SUB-GROUP-REFS",
@@ -179,7 +179,7 @@ class McGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ref_calprm_set: McGroupDataRefSet | None = field(
+    ref_calprm_set: None | McGroupDataRefSet = field(
         default=None,
         metadata={
             "name": "REF-CALPRM-SET",
@@ -187,7 +187,7 @@ class McGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ref_measurement_set: McGroupDataRefSet | None = field(
+    ref_measurement_set: None | McGroupDataRefSet = field(
         default=None,
         metadata={
             "name": "REF-MEASUREMENT-SET",
@@ -195,7 +195,7 @@ class McGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    mc_function_refs: McGroup.McFunctionRefs | None = field(
+    mc_function_refs: None | McGroup.McFunctionRefs = field(
         default=None,
         metadata={
             "name": "MC-FUNCTION-REFS",
@@ -203,14 +203,14 @@ class McGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -218,7 +218,7 @@ class McGroup:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -261,7 +261,7 @@ class McGroup:
 
         @dataclass
         class SubGroupRef(Ref):
-            dest: McGroupSubtypesEnum | None = field(
+            dest: None | McGroupSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -283,7 +283,7 @@ class McGroup:
 
         @dataclass
         class McFunctionRef(Ref):
-            dest: McFunctionSubtypesEnum | None = field(
+            dest: None | McFunctionSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",

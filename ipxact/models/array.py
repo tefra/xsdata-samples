@@ -28,7 +28,7 @@ class Array:
             "min_occurs": 1,
         },
     )
-    stride: Stride | None = field(
+    stride: None | Stride = field(
         default=None,
         metadata={
             "type": "Element",

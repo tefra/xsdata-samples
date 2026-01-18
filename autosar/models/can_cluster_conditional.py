@@ -54,7 +54,7 @@ class CanClusterConditional:
     class Meta:
         name = "CAN-CLUSTER-CONDITIONAL"
 
-    baudrate: PositiveUnlimitedInteger | None = field(
+    baudrate: None | PositiveUnlimitedInteger = field(
         default=None,
         metadata={
             "name": "BAUDRATE",
@@ -62,7 +62,7 @@ class CanClusterConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    physical_channels: CanClusterConditional.PhysicalChannels | None = field(
+    physical_channels: None | CanClusterConditional.PhysicalChannels = field(
         default=None,
         metadata={
             "name": "PHYSICAL-CHANNELS",
@@ -70,7 +70,7 @@ class CanClusterConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    protocol_name: String | None = field(
+    protocol_name: None | String = field(
         default=None,
         metadata={
             "name": "PROTOCOL-NAME",
@@ -78,7 +78,7 @@ class CanClusterConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    protocol_version: String | None = field(
+    protocol_version: None | String = field(
         default=None,
         metadata={
             "name": "PROTOCOL-VERSION",
@@ -86,7 +86,7 @@ class CanClusterConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    speed: Integer | None = field(
+    speed: None | Integer = field(
         default=None,
         metadata={
             "name": "SPEED",
@@ -94,7 +94,7 @@ class CanClusterConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    bus_off_recovery: CanClusterBusOffRecovery | None = field(
+    bus_off_recovery: None | CanClusterBusOffRecovery = field(
         default=None,
         metadata={
             "name": "BUS-OFF-RECOVERY",
@@ -102,7 +102,7 @@ class CanClusterConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    can_fd_baudrate: PositiveUnlimitedInteger | None = field(
+    can_fd_baudrate: None | PositiveUnlimitedInteger = field(
         default=None,
         metadata={
             "name": "CAN-FD-BAUDRATE",
@@ -110,7 +110,7 @@ class CanClusterConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -118,14 +118,14 @@ class CanClusterConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

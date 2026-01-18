@@ -34,20 +34,20 @@ class Amount:
     class Meta:
         name = "amount"
 
-    type_value: str | None = field(
+    type_value: None | str = field(
         default=None,
         metadata={
             "name": "type",
             "type": "Element",
         },
     )
-    description: object | None = field(
+    description: None | object = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    properties: Properties | None = field(
+    properties: None | Properties = field(
         default=None,
         metadata={
             "type": "Element",
@@ -59,14 +59,14 @@ class Amount:
             "type": "Element",
         },
     )
-    dollar_sign: object | None = field(
+    dollar_sign: None | object = field(
         default=None,
         metadata={
             "name": "$",
             "type": "Element",
         },
     )
-    currency_id: int | None = field(
+    currency_id: None | int = field(
         default=None,
         metadata={
             "name": "@currency-id",
@@ -80,20 +80,20 @@ class Code:
     class Meta:
         name = "code"
 
-    type_value: str | None = field(
+    type_value: None | str = field(
         default=None,
         metadata={
             "name": "type",
             "type": "Element",
         },
     )
-    description: object | None = field(
+    description: None | object = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    properties: Properties | None = field(
+    properties: None | Properties = field(
         default=None,
         metadata={
             "type": "Element",
@@ -105,21 +105,21 @@ class Code:
             "type": "Element",
         },
     )
-    dollar_sign: object | None = field(
+    dollar_sign: None | object = field(
         default=None,
         metadata={
             "name": "$",
             "type": "Element",
         },
     )
-    list_agency_name: str | None = field(
+    list_agency_name: None | str = field(
         default=None,
         metadata={
             "name": "@list-agency-name",
             "type": "Element",
         },
     )
-    list_name: object | None = field(
+    list_name: None | object = field(
         default=None,
         metadata={
             "name": "@list-name",
@@ -133,20 +133,20 @@ class DataRef:
     class Meta:
         name = "data-ref"
 
-    type_value: str | None = field(
+    type_value: None | str = field(
         default=None,
         metadata={
             "name": "type",
             "type": "Element",
         },
     )
-    description: str | None = field(
+    description: None | str = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    properties: Properties | None = field(
+    properties: None | Properties = field(
         default=None,
         metadata={
             "type": "Element",
@@ -159,20 +159,20 @@ class ErrorCode:
     class Meta:
         name = "error-code"
 
-    type_value: str | None = field(
+    type_value: None | str = field(
         default=None,
         metadata={
             "name": "type",
             "type": "Element",
         },
     )
-    properties: Properties | None = field(
+    properties: None | Properties = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    dialect: object | None = field(
+    dialect: None | object = field(
         default=None,
         metadata={
             "name": "@dialect",
@@ -186,20 +186,20 @@ class FaultCause:
     class Meta:
         name = "fault-cause"
 
-    type_value: str | None = field(
+    type_value: None | str = field(
         default=None,
         metadata={
             "name": "type",
             "type": "Element",
         },
     )
-    description: object | None = field(
+    description: None | object = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    properties: Properties | None = field(
+    properties: None | Properties = field(
         default=None,
         metadata={
             "type": "Element",
@@ -212,14 +212,14 @@ class Metadata:
     class Meta:
         name = "metadata"
 
-    type_value: str | None = field(
+    type_value: None | str = field(
         default=None,
         metadata={
             "name": "type",
             "type": "Element",
         },
     )
-    properties: Properties | None = field(
+    properties: None | Properties = field(
         default=None,
         metadata={
             "type": "Element",
@@ -232,20 +232,20 @@ class Quantity:
     class Meta:
         name = "quantity"
 
-    type_value: str | None = field(
+    type_value: None | str = field(
         default=None,
         metadata={
             "name": "type",
             "type": "Element",
         },
     )
-    description: object | None = field(
+    description: None | object = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    properties: Properties | None = field(
+    properties: None | Properties = field(
         default=None,
         metadata={
             "type": "Element",
@@ -257,14 +257,14 @@ class Quantity:
             "type": "Element",
         },
     )
-    dollar_sign: object | None = field(
+    dollar_sign: None | object = field(
         default=None,
         metadata={
             "name": "$",
             "type": "Element",
         },
     )
-    unit_code: object | None = field(
+    unit_code: None | object = field(
         default=None,
         metadata={
             "name": "@unit-code",
@@ -278,14 +278,14 @@ class ReferenceParameters:
     class Meta:
         name = "reference-parameters"
 
-    type_value: str | None = field(
+    type_value: None | str = field(
         default=None,
         metadata={
             "name": "type",
             "type": "Element",
         },
     )
-    properties: Properties | None = field(
+    properties: None | Properties = field(
         default=None,
         metadata={
             "type": "Element",
@@ -298,20 +298,20 @@ class TypeCode:
     class Meta:
         name = "type-code"
 
-    type_value: str | None = field(
+    type_value: None | str = field(
         default=None,
         metadata={
             "name": "type",
             "type": "Element",
         },
     )
-    description: str | None = field(
+    description: None | str = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    properties: Properties | None = field(
+    properties: None | Properties = field(
         default=None,
         metadata={
             "type": "Element",
@@ -323,21 +323,21 @@ class TypeCode:
             "type": "Element",
         },
     )
-    dollar_sign: object | None = field(
+    dollar_sign: None | object = field(
         default=None,
         metadata={
             "name": "$",
             "type": "Element",
         },
     )
-    list_agency_name: str | None = field(
+    list_agency_name: None | str = field(
         default=None,
         metadata={
             "name": "@list-agency-name",
             "type": "Element",
         },
     )
-    list_name: object | None = field(
+    list_name: None | object = field(
         default=None,
         metadata={
             "name": "@list-name",
@@ -351,26 +351,26 @@ class Failure:
     class Meta:
         name = "failure"
 
-    type_value: str | None = field(
+    type_value: None | str = field(
         default=None,
         metadata={
             "name": "type",
             "type": "Element",
         },
     )
-    description: str | None = field(
+    description: None | str = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    properties: Properties | None = field(
+    properties: None | Properties = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    data_ref: DataRef | None = field(
+    data_ref: None | DataRef = field(
         default=None,
         metadata={
             "name": "data-ref",
@@ -384,7 +384,7 @@ class Originator:
     class Meta:
         name = "originator"
 
-    address: object | None = field(
+    address: None | object = field(
         default=None,
         metadata={
             "type": "Element",
@@ -403,14 +403,14 @@ class Originator:
             "type": "Element",
         },
     )
-    type_value: str | None = field(
+    type_value: None | str = field(
         default=None,
         metadata={
             "name": "type",
             "type": "Element",
         },
     )
-    properties: Properties | None = field(
+    properties: None | Properties = field(
         default=None,
         metadata={
             "type": "Element",
@@ -423,87 +423,87 @@ class Value:
     class Meta:
         name = "value"
 
-    text: object | None = field(
+    text: None | object = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    code: Code | None = field(
+    code: None | Code = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    amount: Amount | None = field(
+    amount: None | Amount = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    quantity: Quantity | None = field(
+    quantity: None | Quantity = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    numeric: object | None = field(
+    numeric: None | object = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    percent: int | None = field(
+    percent: None | int = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    indicator: object | None = field(
+    indicator: None | object = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    duration: XmlDuration | None = field(
+    duration: None | XmlDuration = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    time: object | None = field(
+    time: None | object = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    date: XmlDate | None = field(
+    date: None | XmlDate = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    date_time: XmlDateTime | None = field(
+    date_time: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "date-time",
             "type": "Element",
         },
     )
-    type_value: str | None = field(
+    type_value: None | str = field(
         default=None,
         metadata={
             "name": "type",
             "type": "Element",
         },
     )
-    description: str | None = field(
+    description: None | str = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    properties: Properties | None = field(
+    properties: None | Properties = field(
         default=None,
         metadata={
             "type": "Element",
@@ -516,20 +516,20 @@ class Failures:
     class Meta:
         name = "failures"
 
-    type_value: str | None = field(
+    type_value: None | str = field(
         default=None,
         metadata={
             "name": "type",
             "type": "Element",
         },
     )
-    properties: Properties | None = field(
+    properties: None | Properties = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    failure: Failure | None = field(
+    failure: None | Failure = field(
         default=None,
         metadata={
             "type": "Element",
@@ -542,20 +542,20 @@ class Values:
     class Meta:
         name = "values"
 
-    type_value: str | None = field(
+    type_value: None | str = field(
         default=None,
         metadata={
             "name": "type",
             "type": "Element",
         },
     )
-    properties: Properties | None = field(
+    properties: None | Properties = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    value: Value | None = field(
+    value: None | Value = field(
         default=None,
         metadata={
             "type": "Element",
@@ -568,21 +568,21 @@ class Characteristic:
     class Meta:
         name = "characteristic"
 
-    name_text: object | None = field(
+    name_text: None | object = field(
         default=None,
         metadata={
             "name": "name-text",
             "type": "Element",
         },
     )
-    desc_text: object | None = field(
+    desc_text: None | object = field(
         default=None,
         metadata={
             "name": "desc-text",
             "type": "Element",
         },
     )
-    type_code: TypeCode | None = field(
+    type_code: None | TypeCode = field(
         default=None,
         metadata={
             "name": "type-code",
@@ -595,20 +595,20 @@ class Characteristic:
             "type": "Element",
         },
     )
-    type_value: str | None = field(
+    type_value: None | str = field(
         default=None,
         metadata={
             "name": "type",
             "type": "Element",
         },
     )
-    description: str | None = field(
+    description: None | str = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    properties: Properties | None = field(
+    properties: None | Properties = field(
         default=None,
         metadata={
             "type": "Element",
@@ -621,20 +621,20 @@ class Characteristics:
     class Meta:
         name = "characteristics"
 
-    type_value: str | None = field(
+    type_value: None | str = field(
         default=None,
         metadata={
             "name": "type",
             "type": "Element",
         },
     )
-    properties: Properties | None = field(
+    properties: None | Properties = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    characteristic: Characteristic | None = field(
+    characteristic: None | Characteristic = field(
         default=None,
         metadata={
             "type": "Element",
@@ -647,340 +647,340 @@ class Properties:
     class Meta:
         name = "properties"
 
-    ids: Ids | None = field(
+    ids: None | Ids = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    name_text: NameText | None = field(
+    name_text: None | NameText = field(
         default=None,
         metadata={
             "name": "name-text",
             "type": "Element",
         },
     )
-    desc_text: DescText | None = field(
+    desc_text: None | DescText = field(
         default=None,
         metadata={
             "name": "desc-text",
             "type": "Element",
         },
     )
-    type_code: TypeCode | None = field(
+    type_code: None | TypeCode = field(
         default=None,
         metadata={
             "name": "type-code",
             "type": "Element",
         },
     )
-    categories: Categories | None = field(
+    categories: None | Categories = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    status_code: StatusCode | None = field(
+    status_code: None | StatusCode = field(
         default=None,
         metadata={
             "name": "status-code",
             "type": "Element",
         },
     )
-    version_id: VersionId | None = field(
+    version_id: None | VersionId = field(
         default=None,
         metadata={
             "name": "version-id",
             "type": "Element",
         },
     )
-    created_date_time: CreatedDateTime | None = field(
+    created_date_time: None | CreatedDateTime = field(
         default=None,
         metadata={
             "name": "created-date-time",
             "type": "Element",
         },
     )
-    created_by_id: CreatedById | None = field(
+    created_by_id: None | CreatedById = field(
         default=None,
         metadata={
             "name": "created-by-id",
             "type": "Element",
         },
     )
-    last_modified_date_time: LastModifiedDateTime | None = field(
+    last_modified_date_time: None | LastModifiedDateTime = field(
         default=None,
         metadata={
             "name": "last-modified-date-time",
             "type": "Element",
         },
     )
-    last_modified_by_id: LastModifiedById | None = field(
+    last_modified_by_id: None | LastModifiedById = field(
         default=None,
         metadata={
             "name": "last-modified-by-id",
             "type": "Element",
         },
     )
-    validity_period: ValidityPeriod | None = field(
+    validity_period: None | ValidityPeriod = field(
         default=None,
         metadata={
             "name": "validity-period",
             "type": "Element",
         },
     )
-    text: Text | None = field(
+    text: None | Text = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    code: Code | None = field(
+    code: None | Code = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    amount: Amount | None = field(
+    amount: None | Amount = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    quantity: Quantity | None = field(
+    quantity: None | Quantity = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    numeric: Numeric | None = field(
+    numeric: None | Numeric = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    percent: Percent | None = field(
+    percent: None | Percent = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    indicator: Indicator | None = field(
+    indicator: None | Indicator = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    from_date_time: FromDateTime | None = field(
+    from_date_time: None | FromDateTime = field(
         default=None,
         metadata={
             "name": "from-date-time",
             "type": "Element",
         },
     )
-    to_date_time: ToDateTime | None = field(
+    to_date_time: None | ToDateTime = field(
         default=None,
         metadata={
             "name": "to-date-time",
             "type": "Element",
         },
     )
-    duration: Duration | None = field(
+    duration: None | Duration = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    time: Time | None = field(
+    time: None | Time = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    date: Date | None = field(
+    date: None | Date = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    date_time: DateTime | None = field(
+    date_time: None | DateTime = field(
         default=None,
         metadata={
             "name": "date-time",
             "type": "Element",
         },
     )
-    originator: Originator | None = field(
+    originator: None | Originator = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    error_code: ErrorCode | None = field(
+    error_code: None | ErrorCode = field(
         default=None,
         metadata={
             "name": "error-code",
             "type": "Element",
         },
     )
-    description: Description | None = field(
+    description: None | Description = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    fault_cause: FaultCause | None = field(
+    fault_cause: None | FaultCause = field(
         default=None,
         metadata={
             "name": "fault-cause",
             "type": "Element",
         },
     )
-    characteristics: Characteristics | None = field(
+    characteristics: None | Characteristics = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    failures: Failures | None = field(
+    failures: None | Failures = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    values: Values | None = field(
+    values: None | Values = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    dollar_sign: Type | None = field(
+    dollar_sign: None | Type = field(
         default=None,
         metadata={
             "name": "$",
             "type": "Element",
         },
     )
-    list_agency_name: ListAgencyName | None = field(
+    list_agency_name: None | ListAgencyName = field(
         default=None,
         metadata={
             "name": "@list-agency-name",
             "type": "Element",
         },
     )
-    list_name: ListName | None = field(
+    list_name: None | ListName = field(
         default=None,
         metadata={
             "name": "@list-name",
             "type": "Element",
         },
     )
-    address: Address | None = field(
+    address: None | Address = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    reference_parameters: ReferenceParameters | None = field(
+    reference_parameters: None | ReferenceParameters = field(
         default=None,
         metadata={
             "name": "reference-parameters",
             "type": "Element",
         },
     )
-    metadata: Metadata | None = field(
+    metadata: None | Metadata = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    scheme_name: SchemeName | None = field(
+    scheme_name: None | SchemeName = field(
         default=None,
         metadata={
             "name": "@scheme-name",
             "type": "Element",
         },
     )
-    scheme_agency_name: SchemeAgencyName | None = field(
+    scheme_agency_name: None | SchemeAgencyName = field(
         default=None,
         metadata={
             "name": "@scheme-agency-name",
             "type": "Element",
         },
     )
-    unit_code: UnitCode | None = field(
+    unit_code: None | UnitCode = field(
         default=None,
         metadata={
             "name": "@unit-code",
             "type": "Element",
         },
     )
-    currency_id: CurrencyId | None = field(
+    currency_id: None | CurrencyId = field(
         default=None,
         metadata={
             "name": "@currency-id",
             "type": "Element",
         },
     )
-    value_expression: ValueExpression | None = field(
+    value_expression: None | ValueExpression = field(
         default=None,
         metadata={
             "name": "value-expression",
             "type": "Element",
         },
     )
-    query_expression: QueryExpression | None = field(
+    query_expression: None | QueryExpression = field(
         default=None,
         metadata={
             "name": "query-expression",
             "type": "Element",
         },
     )
-    identification: Identification | None = field(
+    identification: None | Identification = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    criteria: Criteria | None = field(
+    criteria: None | Criteria = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    data_ref: DataRef | None = field(
+    data_ref: None | DataRef = field(
         default=None,
         metadata={
             "name": "data-ref",
             "type": "Element",
         },
     )
-    failure: Failure | None = field(
+    failure: None | Failure = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    value: Value | None = field(
+    value: None | Value = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    characteristic: Characteristic | None = field(
+    characteristic: None | Characteristic = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    category_code: CategoryCode | None = field(
+    category_code: None | CategoryCode = field(
         default=None,
         metadata={
             "name": "category-code",
             "type": "Element",
         },
     )
-    id: Id | None = field(
+    id: None | Id = field(
         default=None,
         metadata={
             "type": "Element",
@@ -993,7 +993,7 @@ class Categories:
     class Meta:
         name = "categories"
 
-    type_value: str | None = field(
+    type_value: None | str = field(
         default=None,
         metadata={
             "name": "type",
@@ -1001,7 +1001,7 @@ class Categories:
             "required": True,
         },
     )
-    properties: Properties | None = field(
+    properties: None | Properties = field(
         default=None,
         metadata={
             "type": "Element",
@@ -1015,7 +1015,7 @@ class CategoryCode:
     class Meta:
         name = "category-code"
 
-    type_value: str | None = field(
+    type_value: None | str = field(
         default=None,
         metadata={
             "name": "type",
@@ -1023,14 +1023,14 @@ class CategoryCode:
             "required": True,
         },
     )
-    description: str | None = field(
+    description: None | str = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
         },
     )
-    properties: Properties | None = field(
+    properties: None | Properties = field(
         default=None,
         metadata={
             "type": "Element",
@@ -1044,7 +1044,7 @@ class CreatedById:
     class Meta:
         name = "created-by-id"
 
-    type_value: str | None = field(
+    type_value: None | str = field(
         default=None,
         metadata={
             "name": "type",
@@ -1052,14 +1052,14 @@ class CreatedById:
             "required": True,
         },
     )
-    description: str | None = field(
+    description: None | str = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
         },
     )
-    properties: Properties | None = field(
+    properties: None | Properties = field(
         default=None,
         metadata={
             "type": "Element",
@@ -1080,7 +1080,7 @@ class Criteria:
     class Meta:
         name = "criteria"
 
-    type_value: str | None = field(
+    type_value: None | str = field(
         default=None,
         metadata={
             "name": "type",
@@ -1088,13 +1088,13 @@ class Criteria:
             "required": True,
         },
     )
-    description: object | None = field(
+    description: None | object = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    properties: Properties | None = field(
+    properties: None | Properties = field(
         default=None,
         metadata={
             "type": "Element",
@@ -1108,7 +1108,7 @@ class Id:
     class Meta:
         name = "id"
 
-    type_value: str | None = field(
+    type_value: None | str = field(
         default=None,
         metadata={
             "name": "type",
@@ -1116,14 +1116,14 @@ class Id:
             "required": True,
         },
     )
-    description: str | None = field(
+    description: None | str = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
         },
     )
-    properties: Properties | None = field(
+    properties: None | Properties = field(
         default=None,
         metadata={
             "type": "Element",
@@ -1144,7 +1144,7 @@ class Identification:
     class Meta:
         name = "identification"
 
-    type_value: str | None = field(
+    type_value: None | str = field(
         default=None,
         metadata={
             "name": "type",
@@ -1152,14 +1152,14 @@ class Identification:
             "required": True,
         },
     )
-    description: str | None = field(
+    description: None | str = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
         },
     )
-    properties: Properties | None = field(
+    properties: None | Properties = field(
         default=None,
         metadata={
             "type": "Element",
@@ -1173,7 +1173,7 @@ class Ids:
     class Meta:
         name = "ids"
 
-    type_value: str | None = field(
+    type_value: None | str = field(
         default=None,
         metadata={
             "name": "type",
@@ -1181,7 +1181,7 @@ class Ids:
             "required": True,
         },
     )
-    properties: Properties | None = field(
+    properties: None | Properties = field(
         default=None,
         metadata={
             "type": "Element",
@@ -1195,7 +1195,7 @@ class LastModifiedById:
     class Meta:
         name = "last-modified-by-id"
 
-    type_value: str | None = field(
+    type_value: None | str = field(
         default=None,
         metadata={
             "name": "type",
@@ -1203,14 +1203,14 @@ class LastModifiedById:
             "required": True,
         },
     )
-    description: str | None = field(
+    description: None | str = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
         },
     )
-    properties: Properties | None = field(
+    properties: None | Properties = field(
         default=None,
         metadata={
             "type": "Element",
@@ -1231,7 +1231,7 @@ class QueryExpression:
     class Meta:
         name = "query-expression"
 
-    type_value: str | None = field(
+    type_value: None | str = field(
         default=None,
         metadata={
             "name": "type",
@@ -1239,7 +1239,7 @@ class QueryExpression:
             "required": True,
         },
     )
-    properties: Properties | None = field(
+    properties: None | Properties = field(
         default=None,
         metadata={
             "type": "Element",
@@ -1253,7 +1253,7 @@ class StatusCode:
     class Meta:
         name = "status-code"
 
-    type_value: str | None = field(
+    type_value: None | str = field(
         default=None,
         metadata={
             "name": "type",
@@ -1261,14 +1261,14 @@ class StatusCode:
             "required": True,
         },
     )
-    description: str | None = field(
+    description: None | str = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
         },
     )
-    properties: Properties | None = field(
+    properties: None | Properties = field(
         default=None,
         metadata={
             "type": "Element",
@@ -1289,7 +1289,7 @@ class ValidityPeriod:
     class Meta:
         name = "validity-period"
 
-    type_value: str | None = field(
+    type_value: None | str = field(
         default=None,
         metadata={
             "name": "type",
@@ -1297,14 +1297,14 @@ class ValidityPeriod:
             "required": True,
         },
     )
-    description: str | None = field(
+    description: None | str = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
         },
     )
-    properties: Properties | None = field(
+    properties: None | Properties = field(
         default=None,
         metadata={
             "type": "Element",
@@ -1318,7 +1318,7 @@ class ValueExpression:
     class Meta:
         name = "value-expression"
 
-    type_value: str | None = field(
+    type_value: None | str = field(
         default=None,
         metadata={
             "name": "type",
@@ -1326,7 +1326,7 @@ class ValueExpression:
             "required": True,
         },
     )
-    properties: Properties | None = field(
+    properties: None | Properties = field(
         default=None,
         metadata={
             "type": "Element",
@@ -1340,7 +1340,7 @@ class VersionId:
     class Meta:
         name = "version-id"
 
-    type_value: str | None = field(
+    type_value: None | str = field(
         default=None,
         metadata={
             "name": "type",
@@ -1348,14 +1348,14 @@ class VersionId:
             "required": True,
         },
     )
-    description: str | None = field(
+    description: None | str = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
         },
     )
-    properties: Properties | None = field(
+    properties: None | Properties = field(
         default=None,
         metadata={
             "type": "Element",

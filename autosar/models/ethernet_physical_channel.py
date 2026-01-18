@@ -117,7 +117,7 @@ class EthernetPhysicalChannel:
     class Meta:
         name = "ETHERNET-PHYSICAL-CHANNEL"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -126,7 +126,7 @@ class EthernetPhysicalChannel:
             "required": True,
         },
     )
-    short_name_fragments: EthernetPhysicalChannel.ShortNameFragments | None = (
+    short_name_fragments: None | EthernetPhysicalChannel.ShortNameFragments = (
         field(
             default=None,
             metadata={
@@ -136,7 +136,7 @@ class EthernetPhysicalChannel:
             },
         )
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -144,7 +144,7 @@ class EthernetPhysicalChannel:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -152,7 +152,7 @@ class EthernetPhysicalChannel:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -160,7 +160,7 @@ class EthernetPhysicalChannel:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -168,7 +168,7 @@ class EthernetPhysicalChannel:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -176,7 +176,7 @@ class EthernetPhysicalChannel:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: EthernetPhysicalChannel.Annotations | None = field(
+    annotations: None | EthernetPhysicalChannel.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -184,7 +184,7 @@ class EthernetPhysicalChannel:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    comm_connectors: EthernetPhysicalChannel.CommConnectors | None = field(
+    comm_connectors: None | EthernetPhysicalChannel.CommConnectors = field(
         default=None,
         metadata={
             "name": "COMM-CONNECTORS",
@@ -192,7 +192,7 @@ class EthernetPhysicalChannel:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    frame_triggerings: EthernetPhysicalChannel.FrameTriggerings | None = field(
+    frame_triggerings: None | EthernetPhysicalChannel.FrameTriggerings = field(
         default=None,
         metadata={
             "name": "FRAME-TRIGGERINGS",
@@ -200,7 +200,7 @@ class EthernetPhysicalChannel:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    i_signal_triggerings: EthernetPhysicalChannel.ISignalTriggerings | None = (
+    i_signal_triggerings: None | EthernetPhysicalChannel.ISignalTriggerings = (
         field(
             default=None,
             metadata={
@@ -211,7 +211,7 @@ class EthernetPhysicalChannel:
         )
     )
     managed_physical_channel_refs: (
-        EthernetPhysicalChannel.ManagedPhysicalChannelRefs | None
+        None | EthernetPhysicalChannel.ManagedPhysicalChannelRefs
     ) = field(
         default=None,
         metadata={
@@ -220,7 +220,7 @@ class EthernetPhysicalChannel:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    pdu_triggerings: EthernetPhysicalChannel.PduTriggerings | None = field(
+    pdu_triggerings: None | EthernetPhysicalChannel.PduTriggerings = field(
         default=None,
         metadata={
             "name": "PDU-TRIGGERINGS",
@@ -228,7 +228,7 @@ class EthernetPhysicalChannel:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -236,7 +236,7 @@ class EthernetPhysicalChannel:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    network_endpoints: EthernetPhysicalChannel.NetworkEndpoints | None = field(
+    network_endpoints: None | EthernetPhysicalChannel.NetworkEndpoints = field(
         default=None,
         metadata={
             "name": "NETWORK-ENDPOINTS",
@@ -244,7 +244,7 @@ class EthernetPhysicalChannel:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    so_ad_config: SoAdConfig | None = field(
+    so_ad_config: None | SoAdConfig = field(
         default=None,
         metadata={
             "name": "SO-AD-CONFIG",
@@ -252,7 +252,7 @@ class EthernetPhysicalChannel:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    vlan: VlanConfig | None = field(
+    vlan: None | VlanConfig = field(
         default=None,
         metadata={
             "name": "VLAN",
@@ -260,14 +260,14 @@ class EthernetPhysicalChannel:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -275,7 +275,7 @@ class EthernetPhysicalChannel:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -379,7 +379,7 @@ class EthernetPhysicalChannel:
 
         @dataclass
         class ManagedPhysicalChannelRef(Ref):
-            dest: PhysicalChannelSubtypesEnum | None = field(
+            dest: None | PhysicalChannelSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",

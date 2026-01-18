@@ -17,7 +17,7 @@ class ConstraintSetRef:
         name = "constraintSetRef"
         namespace = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
-    local_name: str | None = field(
+    local_name: None | str = field(
         default=None,
         metadata={
             "name": "localName",
@@ -25,14 +25,14 @@ class ConstraintSetRef:
             "required": True,
         },
     )
-    vendor_extensions: VendorExtensions | None = field(
+    vendor_extensions: None | VendorExtensions = field(
         default=None,
         metadata={
             "name": "vendorExtensions",
             "type": "Element",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",

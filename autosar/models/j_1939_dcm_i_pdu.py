@@ -101,7 +101,7 @@ class J1939DcmIPdu:
     class Meta:
         name = "J-1939-DCM-I-PDU"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -110,7 +110,7 @@ class J1939DcmIPdu:
             "required": True,
         },
     )
-    short_name_fragments: J1939DcmIPdu.ShortNameFragments | None = field(
+    short_name_fragments: None | J1939DcmIPdu.ShortNameFragments = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -118,7 +118,7 @@ class J1939DcmIPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -126,7 +126,7 @@ class J1939DcmIPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -134,7 +134,7 @@ class J1939DcmIPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -142,7 +142,7 @@ class J1939DcmIPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -150,7 +150,7 @@ class J1939DcmIPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -158,7 +158,7 @@ class J1939DcmIPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: J1939DcmIPdu.Annotations | None = field(
+    annotations: None | J1939DcmIPdu.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -166,7 +166,7 @@ class J1939DcmIPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -174,7 +174,7 @@ class J1939DcmIPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    has_dynamic_length: Boolean | None = field(
+    has_dynamic_length: None | Boolean = field(
         default=None,
         metadata={
             "name": "HAS-DYNAMIC-LENGTH",
@@ -182,7 +182,7 @@ class J1939DcmIPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    length: Integer | None = field(
+    length: None | Integer = field(
         default=None,
         metadata={
             "name": "LENGTH",
@@ -190,7 +190,7 @@ class J1939DcmIPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    meta_data_length: PositiveInteger | None = field(
+    meta_data_length: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "META-DATA-LENGTH",
@@ -198,7 +198,7 @@ class J1939DcmIPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    contained_i_pdu_props: ContainedIPduProps | None = field(
+    contained_i_pdu_props: None | ContainedIPduProps = field(
         default=None,
         metadata={
             "name": "CONTAINED-I-PDU-PROPS",
@@ -206,7 +206,7 @@ class J1939DcmIPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    diagnostic_message_type: PositiveInteger | None = field(
+    diagnostic_message_type: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "DIAGNOSTIC-MESSAGE-TYPE",
@@ -214,14 +214,14 @@ class J1939DcmIPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -229,7 +229,7 @@ class J1939DcmIPdu:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",

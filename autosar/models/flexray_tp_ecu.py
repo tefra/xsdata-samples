@@ -47,7 +47,7 @@ class FlexrayTpEcu:
     class Meta:
         name = "FLEXRAY-TP-ECU"
 
-    cancellation: Boolean | None = field(
+    cancellation: None | Boolean = field(
         default=None,
         metadata={
             "name": "CANCELLATION",
@@ -55,7 +55,7 @@ class FlexrayTpEcu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    cycle_time_main_function: TimeValue | None = field(
+    cycle_time_main_function: None | TimeValue = field(
         default=None,
         metadata={
             "name": "CYCLE-TIME-MAIN-FUNCTION",
@@ -63,7 +63,7 @@ class FlexrayTpEcu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ecu_instance_ref: FlexrayTpEcu.EcuInstanceRef | None = field(
+    ecu_instance_ref: None | FlexrayTpEcu.EcuInstanceRef = field(
         default=None,
         metadata={
             "name": "ECU-INSTANCE-REF",
@@ -71,7 +71,7 @@ class FlexrayTpEcu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    full_duplex_enabled: Boolean | None = field(
+    full_duplex_enabled: None | Boolean = field(
         default=None,
         metadata={
             "name": "FULL-DUPLEX-ENABLED",
@@ -79,7 +79,7 @@ class FlexrayTpEcu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    transmit_cancellation: Boolean | None = field(
+    transmit_cancellation: None | Boolean = field(
         default=None,
         metadata={
             "name": "TRANSMIT-CANCELLATION",
@@ -87,7 +87,7 @@ class FlexrayTpEcu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -95,14 +95,14 @@ class FlexrayTpEcu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -113,7 +113,7 @@ class FlexrayTpEcu:
 
     @dataclass
     class EcuInstanceRef(Ref):
-        dest: EcuInstanceSubtypesEnum | None = field(
+        dest: None | EcuInstanceSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

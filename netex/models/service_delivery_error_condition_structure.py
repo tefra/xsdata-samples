@@ -29,7 +29,8 @@ __NAMESPACE__ = "http://www.siri.org.uk/siri"
 @dataclass
 class ServiceDeliveryErrorConditionStructure:
     choice: (
-        UnapprovedKeyAccessError
+        None
+        | UnapprovedKeyAccessError
         | UnknownParticipantError
         | UnknownEndpointError
         | EndpointDeniedAccessError
@@ -44,7 +45,6 @@ class ServiceDeliveryErrorConditionStructure:
         | UnknownExtensionsError
         | AllowedResourceUsageExceededError
         | OtherError
-        | None
     ) = field(
         default=None,
         metadata={
@@ -128,7 +128,7 @@ class ServiceDeliveryErrorConditionStructure:
             ),
         },
     )
-    description: ErrorDescriptionStructure | None = field(
+    description: None | ErrorDescriptionStructure = field(
         default=None,
         metadata={
             "name": "Description",

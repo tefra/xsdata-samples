@@ -574,7 +574,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 @dataclass
 class GeneralFrameMemberStructure(VersionedChildStructure):
-    name: MultilingualString | None = field(
+    name: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "Name",
@@ -583,7 +583,8 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
         },
     )
     choice: (
-        TripLegRef
+        None
+        | TripLegRef
         | IndividualPassengerInfoRef
         | VehiclePoolingDriverInfoRef
         | IndividualTravellerRef
@@ -1103,7 +1104,6 @@ class GeneralFrameMemberStructure(VersionedChildStructure):
         | DataSourceRef
         | VersionRef
         | VersionOfObjectRef
-        | None
     ) = field(
         default=None,
         metadata={

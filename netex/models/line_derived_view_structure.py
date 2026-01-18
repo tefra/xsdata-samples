@@ -21,7 +21,7 @@ class LineDerivedViewStructure(DerivedViewStructure):
     class Meta:
         name = "Line_DerivedViewStructure"
 
-    line_ref: FlexibleLineRef | LineRef | None = field(
+    line_ref: None | FlexibleLineRef | LineRef = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -39,7 +39,7 @@ class LineDerivedViewStructure(DerivedViewStructure):
             ),
         },
     )
-    public_code: str | None = field(
+    public_code: None | str = field(
         default=None,
         metadata={
             "name": "PublicCode",
@@ -47,7 +47,7 @@ class LineDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    name: MultilingualString | None = field(
+    name: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "Name",
@@ -55,7 +55,7 @@ class LineDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    short_name: MultilingualString | None = field(
+    short_name: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "ShortName",
@@ -63,7 +63,7 @@ class LineDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    transport_mode: AllVehicleModesOfTransportEnumeration | None = field(
+    transport_mode: None | AllVehicleModesOfTransportEnumeration = field(
         default=None,
         metadata={
             "name": "TransportMode",
@@ -71,7 +71,7 @@ class LineDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    transport_submode: TransportSubmode | None = field(
+    transport_submode: None | TransportSubmode = field(
         default=None,
         metadata={
             "name": "TransportSubmode",
@@ -79,7 +79,7 @@ class LineDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    operator_ref: OperatorRef | None = field(
+    operator_ref: None | OperatorRef = field(
         default=None,
         metadata={
             "name": "OperatorRef",
@@ -87,7 +87,7 @@ class LineDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    type_of_line_ref: TypeOfLineRef | None = field(
+    type_of_line_ref: None | TypeOfLineRef = field(
         default=None,
         metadata={
             "name": "TypeOfLineRef",

@@ -38,7 +38,7 @@ class RoadSurfaceConditionInformation(WeatherData):
         },
     )
     road_surface_condition_measurements: (
-        RoadSurfaceConditionMeasurements | None
+        None | RoadSurfaceConditionMeasurements
     ) = field(
         default=None,
         metadata={
@@ -48,7 +48,7 @@ class RoadSurfaceConditionInformation(WeatherData):
             "required": True,
         },
     )
-    road_surface_condition_information_extension: ExtensionType | None = field(
+    road_surface_condition_information_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "roadSurfaceConditionInformationExtension",

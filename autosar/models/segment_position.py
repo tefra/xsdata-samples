@@ -50,7 +50,7 @@ class SegmentPosition:
     class Meta:
         name = "SEGMENT-POSITION"
 
-    segment_byte_order: ByteOrderEnum | None = field(
+    segment_byte_order: None | ByteOrderEnum = field(
         default=None,
         metadata={
             "name": "SEGMENT-BYTE-ORDER",
@@ -58,7 +58,7 @@ class SegmentPosition:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    segment_length: Integer | None = field(
+    segment_length: None | Integer = field(
         default=None,
         metadata={
             "name": "SEGMENT-LENGTH",
@@ -66,7 +66,7 @@ class SegmentPosition:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    segment_position: Integer | None = field(
+    segment_position: None | Integer = field(
         default=None,
         metadata={
             "name": "SEGMENT-POSITION",
@@ -74,14 +74,14 @@ class SegmentPosition:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

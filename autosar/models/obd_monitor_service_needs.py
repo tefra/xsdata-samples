@@ -115,7 +115,7 @@ class ObdMonitorServiceNeeds:
     class Meta:
         name = "OBD-MONITOR-SERVICE-NEEDS"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -124,7 +124,7 @@ class ObdMonitorServiceNeeds:
             "required": True,
         },
     )
-    short_name_fragments: ObdMonitorServiceNeeds.ShortNameFragments | None = (
+    short_name_fragments: None | ObdMonitorServiceNeeds.ShortNameFragments = (
         field(
             default=None,
             metadata={
@@ -134,7 +134,7 @@ class ObdMonitorServiceNeeds:
             },
         )
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -142,7 +142,7 @@ class ObdMonitorServiceNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -150,7 +150,7 @@ class ObdMonitorServiceNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -158,7 +158,7 @@ class ObdMonitorServiceNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -166,7 +166,7 @@ class ObdMonitorServiceNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -174,7 +174,7 @@ class ObdMonitorServiceNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: ObdMonitorServiceNeeds.Annotations | None = field(
+    annotations: None | ObdMonitorServiceNeeds.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -182,7 +182,7 @@ class ObdMonitorServiceNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    audiences: ObdMonitorServiceNeeds.Audiences | None = field(
+    audiences: None | ObdMonitorServiceNeeds.Audiences = field(
         default=None,
         metadata={
             "name": "AUDIENCES",
@@ -190,7 +190,7 @@ class ObdMonitorServiceNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    diag_requirement: DiagRequirementIdString | None = field(
+    diag_requirement: None | DiagRequirementIdString = field(
         default=None,
         metadata={
             "name": "DIAG-REQUIREMENT",
@@ -198,7 +198,7 @@ class ObdMonitorServiceNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    security_access_level: PositiveInteger | None = field(
+    security_access_level: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "SECURITY-ACCESS-LEVEL",
@@ -207,7 +207,7 @@ class ObdMonitorServiceNeeds:
         },
     )
     application_data_type_ref: (
-        ObdMonitorServiceNeeds.ApplicationDataTypeRef | None
+        None | ObdMonitorServiceNeeds.ApplicationDataTypeRef
     ) = field(
         default=None,
         metadata={
@@ -216,7 +216,7 @@ class ObdMonitorServiceNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    event_needs_ref: ObdMonitorServiceNeeds.EventNeedsRef | None = field(
+    event_needs_ref: None | ObdMonitorServiceNeeds.EventNeedsRef = field(
         default=None,
         metadata={
             "name": "EVENT-NEEDS-REF",
@@ -224,7 +224,7 @@ class ObdMonitorServiceNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    on_board_monitor_id: PositiveInteger | None = field(
+    on_board_monitor_id: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "ON-BOARD-MONITOR-ID",
@@ -232,7 +232,7 @@ class ObdMonitorServiceNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    test_id: PositiveInteger | None = field(
+    test_id: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "TEST-ID",
@@ -240,7 +240,7 @@ class ObdMonitorServiceNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    unit_and_scaling_id: PositiveInteger | None = field(
+    unit_and_scaling_id: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "UNIT-AND-SCALING-ID",
@@ -248,7 +248,7 @@ class ObdMonitorServiceNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    update_kind: DiagnosticMonitorUpdateKindEnum | None = field(
+    update_kind: None | DiagnosticMonitorUpdateKindEnum = field(
         default=None,
         metadata={
             "name": "UPDATE-KIND",
@@ -256,14 +256,14 @@ class ObdMonitorServiceNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -271,7 +271,7 @@ class ObdMonitorServiceNeeds:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -321,7 +321,7 @@ class ObdMonitorServiceNeeds:
 
     @dataclass
     class ApplicationDataTypeRef(Ref):
-        dest: ApplicationDataTypeSubtypesEnum | None = field(
+        dest: None | ApplicationDataTypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -332,7 +332,7 @@ class ObdMonitorServiceNeeds:
 
     @dataclass
     class EventNeedsRef(Ref):
-        dest: DiagnosticEventNeedsSubtypesEnum | None = field(
+        dest: None | DiagnosticEventNeedsSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

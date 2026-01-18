@@ -39,7 +39,7 @@ class AnnotationType:
         an annotation. It can be used to disambiguate annotations.
     """
 
-    annotation_title: str | None = field(
+    annotation_title: None | str = field(
         default=None,
         metadata={
             "name": "AnnotationTitle",
@@ -47,7 +47,7 @@ class AnnotationType:
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common",
         },
     )
-    annotation_type: str | None = field(
+    annotation_type: None | str = field(
         default=None,
         metadata={
             "name": "AnnotationType",
@@ -71,7 +71,7 @@ class AnnotationType:
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common",
         },
     )
-    annotation_value: str | None = field(
+    annotation_value: None | str = field(
         default=None,
         metadata={
             "name": "AnnotationValue",
@@ -79,7 +79,7 @@ class AnnotationType:
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",

@@ -13,7 +13,7 @@ __NAMESPACE__ = "http://www.opengis.net/gml/3.2"
 
 @dataclass
 class GeometryPropertyType:
-    choice: MultiSurface | Polygon | LineString | Point1 | None = field(
+    choice: None | MultiSurface | Polygon | LineString | Point1 = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -41,7 +41,7 @@ class GeometryPropertyType:
             ),
         },
     )
-    nil_reason: str | NilReasonEnumerationValue | None = field(
+    nil_reason: None | str | NilReasonEnumerationValue = field(
         default=None,
         metadata={
             "name": "nilReason",

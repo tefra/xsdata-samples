@@ -114,7 +114,7 @@ class BswInternalTriggerOccurredEvent:
     class Meta:
         name = "BSW-INTERNAL-TRIGGER-OCCURRED-EVENT"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -124,7 +124,7 @@ class BswInternalTriggerOccurredEvent:
         },
     )
     short_name_fragments: (
-        BswInternalTriggerOccurredEvent.ShortNameFragments | None
+        None | BswInternalTriggerOccurredEvent.ShortNameFragments
     ) = field(
         default=None,
         metadata={
@@ -133,7 +133,7 @@ class BswInternalTriggerOccurredEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -141,7 +141,7 @@ class BswInternalTriggerOccurredEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -149,7 +149,7 @@ class BswInternalTriggerOccurredEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -157,7 +157,7 @@ class BswInternalTriggerOccurredEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -165,7 +165,7 @@ class BswInternalTriggerOccurredEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -173,7 +173,7 @@ class BswInternalTriggerOccurredEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: BswInternalTriggerOccurredEvent.Annotations | None = field(
+    annotations: None | BswInternalTriggerOccurredEvent.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -182,8 +182,8 @@ class BswInternalTriggerOccurredEvent:
         },
     )
     activation_reason_representation_ref: (
-        BswInternalTriggerOccurredEvent.ActivationReasonRepresentationRef
-        | None
+        None
+        | BswInternalTriggerOccurredEvent.ActivationReasonRepresentationRef
     ) = field(
         default=None,
         metadata={
@@ -193,7 +193,7 @@ class BswInternalTriggerOccurredEvent:
         },
     )
     context_limitation_refs: (
-        BswInternalTriggerOccurredEvent.ContextLimitationRefs | None
+        None | BswInternalTriggerOccurredEvent.ContextLimitationRefs
     ) = field(
         default=None,
         metadata={
@@ -203,7 +203,7 @@ class BswInternalTriggerOccurredEvent:
         },
     )
     disabled_in_mode_irefs: (
-        BswInternalTriggerOccurredEvent.DisabledInModeIrefs | None
+        None | BswInternalTriggerOccurredEvent.DisabledInModeIrefs
     ) = field(
         default=None,
         metadata={
@@ -213,7 +213,7 @@ class BswInternalTriggerOccurredEvent:
         },
     )
     starts_on_event_ref: (
-        BswInternalTriggerOccurredEvent.StartsOnEventRef | None
+        None | BswInternalTriggerOccurredEvent.StartsOnEventRef
     ) = field(
         default=None,
         metadata={
@@ -222,7 +222,7 @@ class BswInternalTriggerOccurredEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -230,7 +230,7 @@ class BswInternalTriggerOccurredEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    event_source_ref: BswInternalTriggerOccurredEvent.EventSourceRef | None = (
+    event_source_ref: None | BswInternalTriggerOccurredEvent.EventSourceRef = (
         field(
             default=None,
             metadata={
@@ -240,14 +240,14 @@ class BswInternalTriggerOccurredEvent:
             },
         )
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -255,7 +255,7 @@ class BswInternalTriggerOccurredEvent:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -287,7 +287,7 @@ class BswInternalTriggerOccurredEvent:
 
     @dataclass
     class ActivationReasonRepresentationRef(Ref):
-        dest: ExecutableEntityActivationReasonSubtypesEnum | None = field(
+        dest: None | ExecutableEntityActivationReasonSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -311,7 +311,7 @@ class BswInternalTriggerOccurredEvent:
 
         @dataclass
         class ContextLimitationRef(Ref):
-            dest: BswDistinguishedPartitionSubtypesEnum | None = field(
+            dest: None | BswDistinguishedPartitionSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -335,7 +335,7 @@ class BswInternalTriggerOccurredEvent:
 
     @dataclass
     class StartsOnEventRef(Ref):
-        dest: BswModuleEntitySubtypesEnum | None = field(
+        dest: None | BswModuleEntitySubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -346,7 +346,7 @@ class BswInternalTriggerOccurredEvent:
 
     @dataclass
     class EventSourceRef(Ref):
-        dest: BswInternalTriggeringPointSubtypesEnum | None = field(
+        dest: None | BswInternalTriggeringPointSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

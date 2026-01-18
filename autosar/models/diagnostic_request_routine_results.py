@@ -88,7 +88,7 @@ class DiagnosticRequestRoutineResults:
     class Meta:
         name = "DIAGNOSTIC-REQUEST-ROUTINE-RESULTS"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -98,7 +98,7 @@ class DiagnosticRequestRoutineResults:
         },
     )
     short_name_fragments: (
-        DiagnosticRequestRoutineResults.ShortNameFragments | None
+        None | DiagnosticRequestRoutineResults.ShortNameFragments
     ) = field(
         default=None,
         metadata={
@@ -107,7 +107,7 @@ class DiagnosticRequestRoutineResults:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -115,7 +115,7 @@ class DiagnosticRequestRoutineResults:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -123,7 +123,7 @@ class DiagnosticRequestRoutineResults:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -131,7 +131,7 @@ class DiagnosticRequestRoutineResults:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -139,7 +139,7 @@ class DiagnosticRequestRoutineResults:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -147,7 +147,7 @@ class DiagnosticRequestRoutineResults:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: DiagnosticRequestRoutineResults.Annotations | None = field(
+    annotations: None | DiagnosticRequestRoutineResults.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -156,7 +156,7 @@ class DiagnosticRequestRoutineResults:
         },
     )
     access_permission_ref: (
-        DiagnosticRequestRoutineResults.AccessPermissionRef | None
+        None | DiagnosticRequestRoutineResults.AccessPermissionRef
     ) = field(
         default=None,
         metadata={
@@ -165,7 +165,7 @@ class DiagnosticRequestRoutineResults:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    requests: DiagnosticRequestRoutineResults.Requests | None = field(
+    requests: None | DiagnosticRequestRoutineResults.Requests = field(
         default=None,
         metadata={
             "name": "REQUESTS",
@@ -173,7 +173,7 @@ class DiagnosticRequestRoutineResults:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    responses: DiagnosticRequestRoutineResults.Responses | None = field(
+    responses: None | DiagnosticRequestRoutineResults.Responses = field(
         default=None,
         metadata={
             "name": "RESPONSES",
@@ -181,14 +181,14 @@ class DiagnosticRequestRoutineResults:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -196,7 +196,7 @@ class DiagnosticRequestRoutineResults:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -228,7 +228,7 @@ class DiagnosticRequestRoutineResults:
 
     @dataclass
     class AccessPermissionRef(Ref):
-        dest: DiagnosticAccessPermissionSubtypesEnum | None = field(
+        dest: None | DiagnosticAccessPermissionSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

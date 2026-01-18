@@ -95,7 +95,7 @@ class EcuMapping:
     class Meta:
         name = "ECU-MAPPING"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -104,7 +104,7 @@ class EcuMapping:
             "required": True,
         },
     )
-    short_name_fragments: EcuMapping.ShortNameFragments | None = field(
+    short_name_fragments: None | EcuMapping.ShortNameFragments = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -112,7 +112,7 @@ class EcuMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -120,7 +120,7 @@ class EcuMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -128,7 +128,7 @@ class EcuMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -136,7 +136,7 @@ class EcuMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -144,7 +144,7 @@ class EcuMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -152,7 +152,7 @@ class EcuMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: EcuMapping.Annotations | None = field(
+    annotations: None | EcuMapping.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -160,7 +160,7 @@ class EcuMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    comm_controller_mappings: EcuMapping.CommControllerMappings | None = field(
+    comm_controller_mappings: None | EcuMapping.CommControllerMappings = field(
         default=None,
         metadata={
             "name": "COMM-CONTROLLER-MAPPINGS",
@@ -168,7 +168,7 @@ class EcuMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ecu_instance_ref: EcuMapping.EcuInstanceRef | None = field(
+    ecu_instance_ref: None | EcuMapping.EcuInstanceRef = field(
         default=None,
         metadata={
             "name": "ECU-INSTANCE-REF",
@@ -176,7 +176,7 @@ class EcuMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ecu_ref: EcuMapping.EcuRef | None = field(
+    ecu_ref: None | EcuMapping.EcuRef = field(
         default=None,
         metadata={
             "name": "ECU-REF",
@@ -184,7 +184,7 @@ class EcuMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    hw_port_mappings: EcuMapping.HwPortMappings | None = field(
+    hw_port_mappings: None | EcuMapping.HwPortMappings = field(
         default=None,
         metadata={
             "name": "HW-PORT-MAPPINGS",
@@ -192,7 +192,7 @@ class EcuMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -200,14 +200,14 @@ class EcuMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -215,7 +215,7 @@ class EcuMapping:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -260,7 +260,7 @@ class EcuMapping:
 
     @dataclass
     class EcuInstanceRef(Ref):
-        dest: EcuInstanceSubtypesEnum | None = field(
+        dest: None | EcuInstanceSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -271,7 +271,7 @@ class EcuMapping:
 
     @dataclass
     class EcuRef(Ref):
-        dest: HwElementSubtypesEnum | None = field(
+        dest: None | HwElementSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

@@ -38,7 +38,7 @@ class IdsmSignatureSupportAp:
     class Meta:
         name = "IDSM-SIGNATURE-SUPPORT-AP"
 
-    crypto_primitive: String | None = field(
+    crypto_primitive: None | String = field(
         default=None,
         metadata={
             "name": "CRYPTO-PRIMITIVE",
@@ -46,7 +46,7 @@ class IdsmSignatureSupportAp:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    key_slot_ref: IdsmSignatureSupportAp.KeySlotRef | None = field(
+    key_slot_ref: None | IdsmSignatureSupportAp.KeySlotRef = field(
         default=None,
         metadata={
             "name": "KEY-SLOT-REF",
@@ -54,14 +54,14 @@ class IdsmSignatureSupportAp:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -72,7 +72,7 @@ class IdsmSignatureSupportAp:
 
     @dataclass
     class KeySlotRef(Ref):
-        dest: CryptoKeySlotSubtypesEnum | None = field(
+        dest: None | CryptoKeySlotSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

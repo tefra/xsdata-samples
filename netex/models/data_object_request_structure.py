@@ -16,7 +16,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 @dataclass
 class DataObjectRequestStructure(AbstractFunctionalServiceRequestStructure):
-    topics: DataObjectRequestStructure.Topics | None = field(
+    topics: None | DataObjectRequestStructure.Topics = field(
         default=None,
         metadata={
             "type": "Element",
@@ -24,7 +24,7 @@ class DataObjectRequestStructure(AbstractFunctionalServiceRequestStructure):
             "required": True,
         },
     )
-    policy: NetworkFrameRequestPolicyStructure | None = field(
+    policy: None | NetworkFrameRequestPolicyStructure = field(
         default=None,
         metadata={
             "name": "Policy",
@@ -32,7 +32,7 @@ class DataObjectRequestStructure(AbstractFunctionalServiceRequestStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    extensions: Extensions1 | None = field(
+    extensions: None | Extensions1 = field(
         default=None,
         metadata={
             "name": "Extensions",
@@ -43,7 +43,7 @@ class DataObjectRequestStructure(AbstractFunctionalServiceRequestStructure):
 
     @dataclass
     class Topics:
-        network_frame_topic: NetworkFrameTopic | None = field(
+        network_frame_topic: None | NetworkFrameTopic = field(
             default=None,
             metadata={
                 "name": "NetworkFrameTopic",

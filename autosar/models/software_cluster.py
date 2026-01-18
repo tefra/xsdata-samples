@@ -163,7 +163,7 @@ class SoftwareCluster:
     class Meta:
         name = "SOFTWARE-CLUSTER"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -172,7 +172,7 @@ class SoftwareCluster:
             "required": True,
         },
     )
-    short_name_fragments: SoftwareCluster.ShortNameFragments | None = field(
+    short_name_fragments: None | SoftwareCluster.ShortNameFragments = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -180,7 +180,7 @@ class SoftwareCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -188,7 +188,7 @@ class SoftwareCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -196,7 +196,7 @@ class SoftwareCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -204,7 +204,7 @@ class SoftwareCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -212,7 +212,7 @@ class SoftwareCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -220,7 +220,7 @@ class SoftwareCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: SoftwareCluster.Annotations | None = field(
+    annotations: None | SoftwareCluster.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -228,7 +228,7 @@ class SoftwareCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -237,7 +237,7 @@ class SoftwareCluster:
         },
     )
     claimed_function_group_refs: (
-        SoftwareCluster.ClaimedFunctionGroupRefs | None
+        None | SoftwareCluster.ClaimedFunctionGroupRefs
     ) = field(
         default=None,
         metadata={
@@ -246,7 +246,7 @@ class SoftwareCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    conflicts_to: SoftwareClusterDependencyFormula | None = field(
+    conflicts_to: None | SoftwareClusterDependencyFormula = field(
         default=None,
         metadata={
             "name": "CONFLICTS-TO",
@@ -255,7 +255,7 @@ class SoftwareCluster:
         },
     )
     contained_ar_element_refs: (
-        SoftwareCluster.ContainedArElementRefs | None
+        None | SoftwareCluster.ContainedArElementRefs
     ) = field(
         default=None,
         metadata={
@@ -265,7 +265,7 @@ class SoftwareCluster:
         },
     )
     contained_fibex_element_refs: (
-        SoftwareCluster.ContainedFibexElementRefs | None
+        None | SoftwareCluster.ContainedFibexElementRefs
     ) = field(
         default=None,
         metadata={
@@ -275,7 +275,7 @@ class SoftwareCluster:
         },
     )
     contained_package_element_refs: (
-        SoftwareCluster.ContainedPackageElementRefs | None
+        None | SoftwareCluster.ContainedPackageElementRefs
     ) = field(
         default=None,
         metadata={
@@ -284,7 +284,7 @@ class SoftwareCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    contained_process_refs: SoftwareCluster.ContainedProcessRefs | None = (
+    contained_process_refs: None | SoftwareCluster.ContainedProcessRefs = (
         field(
             default=None,
             metadata={
@@ -294,7 +294,7 @@ class SoftwareCluster:
             },
         )
     )
-    depends_on: SoftwareClusterDependencyFormula | None = field(
+    depends_on: None | SoftwareClusterDependencyFormula = field(
         default=None,
         metadata={
             "name": "DEPENDS-ON",
@@ -302,7 +302,7 @@ class SoftwareCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    design_refs: SoftwareCluster.DesignRefs | None = field(
+    design_refs: None | SoftwareCluster.DesignRefs = field(
         default=None,
         metadata={
             "name": "DESIGN-REFS",
@@ -310,7 +310,7 @@ class SoftwareCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    diagnostic_addresss: SoftwareCluster.DiagnosticAddresss | None = field(
+    diagnostic_addresss: None | SoftwareCluster.DiagnosticAddresss = field(
         default=None,
         metadata={
             "name": "DIAGNOSTIC-ADDRESSS",
@@ -318,7 +318,7 @@ class SoftwareCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    diagnostic_extract_ref: SoftwareCluster.DiagnosticExtractRef | None = (
+    diagnostic_extract_ref: None | SoftwareCluster.DiagnosticExtractRef = (
         field(
             default=None,
             metadata={
@@ -328,7 +328,7 @@ class SoftwareCluster:
             },
         )
     )
-    license_refs: SoftwareCluster.LicenseRefs | None = field(
+    license_refs: None | SoftwareCluster.LicenseRefs = field(
         default=None,
         metadata={
             "name": "LICENSE-REFS",
@@ -337,7 +337,7 @@ class SoftwareCluster:
         },
     )
     module_instantiation_refs: (
-        SoftwareCluster.ModuleInstantiationRefs | None
+        None | SoftwareCluster.ModuleInstantiationRefs
     ) = field(
         default=None,
         metadata={
@@ -346,7 +346,7 @@ class SoftwareCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    release_notes_ref: SoftwareCluster.ReleaseNotesRef | None = field(
+    release_notes_ref: None | SoftwareCluster.ReleaseNotesRef = field(
         default=None,
         metadata={
             "name": "RELEASE-NOTES-REF",
@@ -354,7 +354,7 @@ class SoftwareCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    type_approval: String | None = field(
+    type_approval: None | String = field(
         default=None,
         metadata={
             "name": "TYPE-APPROVAL",
@@ -362,7 +362,7 @@ class SoftwareCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    vendor_id: PositiveInteger | None = field(
+    vendor_id: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "VENDOR-ID",
@@ -370,7 +370,7 @@ class SoftwareCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    vendor_signature_ref: SoftwareCluster.VendorSignatureRef | None = field(
+    vendor_signature_ref: None | SoftwareCluster.VendorSignatureRef = field(
         default=None,
         metadata={
             "name": "VENDOR-SIGNATURE-REF",
@@ -378,7 +378,7 @@ class SoftwareCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    version: StrongRevisionLabelString | None = field(
+    version: None | StrongRevisionLabelString = field(
         default=None,
         metadata={
             "name": "VERSION",
@@ -386,14 +386,14 @@ class SoftwareCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -401,7 +401,7 @@ class SoftwareCluster:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -446,7 +446,7 @@ class SoftwareCluster:
 
         @dataclass
         class ClaimedFunctionGroupRef(Ref):
-            dest: ModeDeclarationGroupPrototypeSubtypesEnum | None = field(
+            dest: None | ModeDeclarationGroupPrototypeSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -470,7 +470,7 @@ class SoftwareCluster:
 
         @dataclass
         class ContainedArElementRef(Ref):
-            dest: ArElementSubtypesEnum | None = field(
+            dest: None | ArElementSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -494,7 +494,7 @@ class SoftwareCluster:
 
         @dataclass
         class ContainedFibexElementRef(Ref):
-            dest: FibexElementSubtypesEnum | None = field(
+            dest: None | FibexElementSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -518,7 +518,7 @@ class SoftwareCluster:
 
         @dataclass
         class ContainedPackageElementRef(Ref):
-            dest: UploadablePackageElementSubtypesEnum | None = field(
+            dest: None | UploadablePackageElementSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -542,7 +542,7 @@ class SoftwareCluster:
 
         @dataclass
         class ContainedProcessRef(Ref):
-            dest: ProcessSubtypesEnum | None = field(
+            dest: None | ProcessSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -564,7 +564,7 @@ class SoftwareCluster:
 
         @dataclass
         class DesignRef(Ref):
-            dest: SoftwareClusterDesignSubtypesEnum | None = field(
+            dest: None | SoftwareClusterDesignSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -588,7 +588,7 @@ class SoftwareCluster:
 
     @dataclass
     class DiagnosticExtractRef(Ref):
-        dest: DiagnosticContributionSetSubtypesEnum | None = field(
+        dest: None | DiagnosticContributionSetSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -610,7 +610,7 @@ class SoftwareCluster:
 
         @dataclass
         class LicenseRef(Ref):
-            dest: DocumentationSubtypesEnum | None = field(
+            dest: None | DocumentationSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -634,7 +634,7 @@ class SoftwareCluster:
 
         @dataclass
         class ModuleInstantiationRef(Ref):
-            dest: AdaptiveModuleInstantiationSubtypesEnum | None = field(
+            dest: None | AdaptiveModuleInstantiationSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -645,7 +645,7 @@ class SoftwareCluster:
 
     @dataclass
     class ReleaseNotesRef(Ref):
-        dest: DocumentationSubtypesEnum | None = field(
+        dest: None | DocumentationSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -656,7 +656,7 @@ class SoftwareCluster:
 
     @dataclass
     class VendorSignatureRef(Ref):
-        dest: CryptoServiceCertificateSubtypesEnum | None = field(
+        dest: None | CryptoServiceCertificateSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

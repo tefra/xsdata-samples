@@ -87,7 +87,7 @@ class RestArrayPropertyDef:
     class Meta:
         name = "REST-ARRAY-PROPERTY-DEF"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -96,7 +96,7 @@ class RestArrayPropertyDef:
             "required": True,
         },
     )
-    short_name_fragments: RestArrayPropertyDef.ShortNameFragments | None = (
+    short_name_fragments: None | RestArrayPropertyDef.ShortNameFragments = (
         field(
             default=None,
             metadata={
@@ -106,7 +106,7 @@ class RestArrayPropertyDef:
             },
         )
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -114,7 +114,7 @@ class RestArrayPropertyDef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -122,7 +122,7 @@ class RestArrayPropertyDef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -130,7 +130,7 @@ class RestArrayPropertyDef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -138,7 +138,7 @@ class RestArrayPropertyDef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -146,7 +146,7 @@ class RestArrayPropertyDef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: RestArrayPropertyDef.Annotations | None = field(
+    annotations: None | RestArrayPropertyDef.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -154,7 +154,7 @@ class RestArrayPropertyDef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    element: RestArrayPropertyDef.Element | None = field(
+    element: None | RestArrayPropertyDef.Element = field(
         default=None,
         metadata={
             "name": "ELEMENT",
@@ -162,14 +162,14 @@ class RestArrayPropertyDef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -177,7 +177,7 @@ class RestArrayPropertyDef:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -209,7 +209,7 @@ class RestArrayPropertyDef:
 
     @dataclass
     class Element:
-        rest_boolean_property_def: RestBooleanPropertyDef | None = field(
+        rest_boolean_property_def: None | RestBooleanPropertyDef = field(
             default=None,
             metadata={
                 "name": "REST-BOOLEAN-PROPERTY-DEF",
@@ -217,7 +217,7 @@ class RestArrayPropertyDef:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        rest_integer_property_def: RestIntegerPropertyDef | None = field(
+        rest_integer_property_def: None | RestIntegerPropertyDef = field(
             default=None,
             metadata={
                 "name": "REST-INTEGER-PROPERTY-DEF",
@@ -225,7 +225,7 @@ class RestArrayPropertyDef:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        rest_number_property_def: RestNumberPropertyDef | None = field(
+        rest_number_property_def: None | RestNumberPropertyDef = field(
             default=None,
             metadata={
                 "name": "REST-NUMBER-PROPERTY-DEF",
@@ -233,7 +233,7 @@ class RestArrayPropertyDef:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        rest_object_ref: RestObjectRef | None = field(
+        rest_object_ref: None | RestObjectRef = field(
             default=None,
             metadata={
                 "name": "REST-OBJECT-REF",
@@ -241,7 +241,7 @@ class RestArrayPropertyDef:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        rest_string_property_def: RestStringPropertyDef | None = field(
+        rest_string_property_def: None | RestStringPropertyDef = field(
             default=None,
             metadata={
                 "name": "REST-STRING-PROPERTY-DEF",

@@ -34,7 +34,7 @@ class RptImplPolicy:
     class Meta:
         name = "RPT-IMPL-POLICY"
 
-    rpt_enabler_impl_type: RptEnablerImplTypeEnum | None = field(
+    rpt_enabler_impl_type: None | RptEnablerImplTypeEnum = field(
         default=None,
         metadata={
             "name": "RPT-ENABLER-IMPL-TYPE",
@@ -42,7 +42,7 @@ class RptImplPolicy:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    rpt_preparation_level: RptPreparationEnum | None = field(
+    rpt_preparation_level: None | RptPreparationEnum = field(
         default=None,
         metadata={
             "name": "RPT-PREPARATION-LEVEL",
@@ -50,14 +50,14 @@ class RptImplPolicy:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

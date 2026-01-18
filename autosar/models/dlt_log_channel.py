@@ -139,7 +139,7 @@ class DltLogChannel:
     class Meta:
         name = "DLT-LOG-CHANNEL"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -148,7 +148,7 @@ class DltLogChannel:
             "required": True,
         },
     )
-    short_name_fragments: DltLogChannel.ShortNameFragments | None = field(
+    short_name_fragments: None | DltLogChannel.ShortNameFragments = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -156,7 +156,7 @@ class DltLogChannel:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -164,7 +164,7 @@ class DltLogChannel:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -172,7 +172,7 @@ class DltLogChannel:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -180,7 +180,7 @@ class DltLogChannel:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -188,7 +188,7 @@ class DltLogChannel:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -196,7 +196,7 @@ class DltLogChannel:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: DltLogChannel.Annotations | None = field(
+    annotations: None | DltLogChannel.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -204,7 +204,7 @@ class DltLogChannel:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    application_description: String | None = field(
+    application_description: None | String = field(
         default=None,
         metadata={
             "name": "APPLICATION-DESCRIPTION",
@@ -212,7 +212,7 @@ class DltLogChannel:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    application_id: String | None = field(
+    application_id: None | String = field(
         default=None,
         metadata={
             "name": "APPLICATION-ID",
@@ -220,7 +220,7 @@ class DltLogChannel:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    context_description: String | None = field(
+    context_description: None | String = field(
         default=None,
         metadata={
             "name": "CONTEXT-DESCRIPTION",
@@ -228,7 +228,7 @@ class DltLogChannel:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    context_id: String | None = field(
+    context_id: None | String = field(
         default=None,
         metadata={
             "name": "CONTEXT-ID",
@@ -236,7 +236,7 @@ class DltLogChannel:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    dlt_log_channel_design_ref: DltLogChannel.DltLogChannelDesignRef | None = (
+    dlt_log_channel_design_ref: None | DltLogChannel.DltLogChannelDesignRef = (
         field(
             default=None,
             metadata={
@@ -246,7 +246,7 @@ class DltLogChannel:
             },
         )
     )
-    dlt_message_refs: DltLogChannel.DltMessageRefs | None = field(
+    dlt_message_refs: None | DltLogChannel.DltMessageRefs = field(
         default=None,
         metadata={
             "name": "DLT-MESSAGE-REFS",
@@ -255,7 +255,7 @@ class DltLogChannel:
         },
     )
     endpoint_configuration_ref: (
-        DltLogChannel.EndpointConfigurationRef | None
+        None | DltLogChannel.EndpointConfigurationRef
     ) = field(
         default=None,
         metadata={
@@ -264,7 +264,7 @@ class DltLogChannel:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    log_trace_default_log_level: LogTraceDefaultLogLevelEnum | None = field(
+    log_trace_default_log_level: None | LogTraceDefaultLogLevelEnum = field(
         default=None,
         metadata={
             "name": "LOG-TRACE-DEFAULT-LOG-LEVEL",
@@ -272,7 +272,7 @@ class DltLogChannel:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    log_trace_file_path: UriString | None = field(
+    log_trace_file_path: None | UriString = field(
         default=None,
         metadata={
             "name": "LOG-TRACE-FILE-PATH",
@@ -280,7 +280,7 @@ class DltLogChannel:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    log_trace_log_modes: DltLogChannel.LogTraceLogModes | None = field(
+    log_trace_log_modes: None | DltLogChannel.LogTraceLogModes = field(
         default=None,
         metadata={
             "name": "LOG-TRACE-LOG-MODES",
@@ -288,7 +288,7 @@ class DltLogChannel:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    non_verbose_mode: Boolean | None = field(
+    non_verbose_mode: None | Boolean = field(
         default=None,
         metadata={
             "name": "NON-VERBOSE-MODE",
@@ -296,7 +296,7 @@ class DltLogChannel:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    rx_pdu_triggering_ref: DltLogChannel.RxPduTriggeringRef | None = field(
+    rx_pdu_triggering_ref: None | DltLogChannel.RxPduTriggeringRef = field(
         default=None,
         metadata={
             "name": "RX-PDU-TRIGGERING-REF",
@@ -305,7 +305,7 @@ class DltLogChannel:
         },
     )
     service_instance_to_port_prototype_mapping_ref: (
-        DltLogChannel.ServiceInstanceToPortPrototypeMappingRef | None
+        None | DltLogChannel.ServiceInstanceToPortPrototypeMappingRef
     ) = field(
         default=None,
         metadata={
@@ -314,7 +314,7 @@ class DltLogChannel:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    session_id: PositiveInteger | None = field(
+    session_id: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "SESSION-ID",
@@ -322,7 +322,7 @@ class DltLogChannel:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tx_pdu_triggering_ref: DltLogChannel.TxPduTriggeringRef | None = field(
+    tx_pdu_triggering_ref: None | DltLogChannel.TxPduTriggeringRef = field(
         default=None,
         metadata={
             "name": "TX-PDU-TRIGGERING-REF",
@@ -330,14 +330,14 @@ class DltLogChannel:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -345,7 +345,7 @@ class DltLogChannel:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -377,7 +377,7 @@ class DltLogChannel:
 
     @dataclass
     class DltLogChannelDesignRef(Ref):
-        dest: DltLogChannelDesignSubtypesEnum | None = field(
+        dest: None | DltLogChannelDesignSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -401,7 +401,7 @@ class DltLogChannel:
 
         @dataclass
         class DltMessageRef(Ref):
-            dest: DltMessageSubtypesEnum | None = field(
+            dest: None | DltMessageSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -413,7 +413,7 @@ class DltLogChannel:
     @dataclass
     class EndpointConfigurationRef(Ref):
         dest: (
-            PlatformModuleEthernetEndpointConfigurationSubtypesEnum | None
+            None | PlatformModuleEthernetEndpointConfigurationSubtypesEnum
         ) = field(
             default=None,
             metadata={
@@ -441,7 +441,7 @@ class DltLogChannel:
 
     @dataclass
     class RxPduTriggeringRef(Ref):
-        dest: PduTriggeringSubtypesEnum | None = field(
+        dest: None | PduTriggeringSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -452,7 +452,7 @@ class DltLogChannel:
 
     @dataclass
     class ServiceInstanceToPortPrototypeMappingRef(Ref):
-        dest: ServiceInstanceToPortPrototypeMappingSubtypesEnum | None = field(
+        dest: None | ServiceInstanceToPortPrototypeMappingSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -463,7 +463,7 @@ class DltLogChannel:
 
     @dataclass
     class TxPduTriggeringRef(Ref):
-        dest: PduTriggeringSubtypesEnum | None = field(
+        dest: None | PduTriggeringSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

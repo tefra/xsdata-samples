@@ -36,14 +36,14 @@ class PortAccessHandle:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    indices: PortAccessHandle.Indices | None = field(
+    indices: None | PortAccessHandle.Indices = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    slices: PortSlicesType | None = field(
+    slices: None | PortSlicesType = field(
         default=None,
         metadata={
             "type": "Element",
@@ -51,7 +51,7 @@ class PortAccessHandle:
             "required": True,
         },
     )
-    vendor_extensions: VendorExtensions | None = field(
+    vendor_extensions: None | VendorExtensions = field(
         default=None,
         metadata={
             "name": "vendorExtensions",
@@ -65,7 +65,7 @@ class PortAccessHandle:
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -81,7 +81,7 @@ class PortAccessHandle:
                 "required": True,
             },
         )
-        id: str | None = field(
+        id: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -106,7 +106,7 @@ class PortAccessHandle:
 
         @dataclass
         class Index(UnsignedIntExpression):
-            id: str | None = field(
+            id: None | str = field(
                 default=None,
                 metadata={
                     "type": "Attribute",

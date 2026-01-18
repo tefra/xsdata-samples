@@ -38,7 +38,8 @@ class PointInJourneyPatternVersionedChildStructure(
         name = "PointInJourneyPattern_VersionedChildStructure"
 
     choice_1: (
-        VehicleMeetingPointRef
+        None
+        | VehicleMeetingPointRef
         | WirePointRef
         | RoadPointRef
         | RailwayPointRef
@@ -54,7 +55,6 @@ class PointInJourneyPatternVersionedChildStructure(
         | TimingPointRef
         | RoutePointRef
         | PointRef
-        | None
     ) = field(
         default=None,
         metadata={
@@ -144,7 +144,7 @@ class PointInJourneyPatternVersionedChildStructure(
         },
     )
     destination_display_ref_or_destination_display_view: (
-        DestinationDisplayRef | DestinationDisplayView | None
+        None | DestinationDisplayRef | DestinationDisplayView
     ) = field(
         default=None,
         metadata={
@@ -163,14 +163,14 @@ class PointInJourneyPatternVersionedChildStructure(
             ),
         },
     )
-    vias: ViasRelStructure | None = field(
+    vias: None | ViasRelStructure = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    flexible_point_properties: FlexiblePointProperties | None = field(
+    flexible_point_properties: None | FlexiblePointProperties = field(
         default=None,
         metadata={
             "name": "FlexiblePointProperties",
@@ -178,7 +178,7 @@ class PointInJourneyPatternVersionedChildStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    change_of_destination_display: bool | None = field(
+    change_of_destination_display: None | bool = field(
         default=None,
         metadata={
             "name": "ChangeOfDestinationDisplay",
@@ -186,7 +186,7 @@ class PointInJourneyPatternVersionedChildStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    change_of_service_requirements: bool | None = field(
+    change_of_service_requirements: None | bool = field(
         default=None,
         metadata={
             "name": "ChangeOfServiceRequirements",
@@ -194,7 +194,7 @@ class PointInJourneyPatternVersionedChildStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    notice_assignments: NoticeAssignmentsRelStructure | None = field(
+    notice_assignments: None | NoticeAssignmentsRelStructure = field(
         default=None,
         metadata={
             "name": "noticeAssignments",

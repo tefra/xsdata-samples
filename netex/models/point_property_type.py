@@ -10,7 +10,7 @@ __NAMESPACE__ = "http://www.opengis.net/gml/3.2"
 
 @dataclass
 class PointPropertyType:
-    point: Point1 | None = field(
+    point: None | Point1 = field(
         default=None,
         metadata={
             "name": "Point",
@@ -18,7 +18,7 @@ class PointPropertyType:
             "namespace": "http://www.opengis.net/gml/3.2",
         },
     )
-    nil_reason: str | NilReasonEnumerationValue | None = field(
+    nil_reason: None | str | NilReasonEnumerationValue = field(
         default=None,
         metadata={
             "name": "nilReason",

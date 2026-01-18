@@ -35,7 +35,7 @@ class CycleCounter:
     class Meta:
         name = "CYCLE-COUNTER"
 
-    cycle_counter: Integer | None = field(
+    cycle_counter: None | Integer = field(
         default=None,
         metadata={
             "name": "CYCLE-COUNTER",
@@ -43,14 +43,14 @@ class CycleCounter:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

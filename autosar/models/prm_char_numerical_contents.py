@@ -37,7 +37,7 @@ class PrmCharNumericalContents:
     class Meta:
         name = "PRM-CHAR-NUMERICAL-CONTENTS"
 
-    abs: NumericalValue | None = field(
+    abs: None | NumericalValue = field(
         default=None,
         metadata={
             "name": "ABS",
@@ -45,7 +45,7 @@ class PrmCharNumericalContents:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tol: NumericalValue | None = field(
+    tol: None | NumericalValue = field(
         default=None,
         metadata={
             "name": "TOL",
@@ -53,7 +53,7 @@ class PrmCharNumericalContents:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    min: NumericalValue | None = field(
+    min: None | NumericalValue = field(
         default=None,
         metadata={
             "name": "MIN",
@@ -61,7 +61,7 @@ class PrmCharNumericalContents:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    typ: NumericalValue | None = field(
+    typ: None | NumericalValue = field(
         default=None,
         metadata={
             "name": "TYP",
@@ -69,7 +69,7 @@ class PrmCharNumericalContents:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    max: NumericalValue | None = field(
+    max: None | NumericalValue = field(
         default=None,
         metadata={
             "name": "MAX",
@@ -77,7 +77,7 @@ class PrmCharNumericalContents:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    prm_unit: SingleLanguageUnitNames | None = field(
+    prm_unit: None | SingleLanguageUnitNames = field(
         default=None,
         metadata={
             "name": "PRM-UNIT",
@@ -85,14 +85,14 @@ class PrmCharNumericalContents:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

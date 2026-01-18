@@ -31,20 +31,20 @@ class DataTransformationErrorHandlingEnum:
     class Meta:
         name = "DATA-TRANSFORMATION-ERROR-HANDLING-ENUM"
 
-    value: DataTransformationErrorHandlingEnumSimple | None = field(
+    value: None | DataTransformationErrorHandlingEnumSimple = field(
         default=None,
         metadata={
             "required": True,
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

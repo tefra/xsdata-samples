@@ -25,73 +25,73 @@ class Response:
         name = "response"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    processing_meta: ProcessingMeta | None = field(
+    processing_meta: None | ProcessingMeta = field(
         default=None,
         metadata={
             "name": "processing-meta",
             "type": "Element",
         },
     )
-    front: Front | None = field(
+    front: None | Front = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    front_stub: FrontStub | None = field(
+    front_stub: None | FrontStub = field(
         default=None,
         metadata={
             "name": "front-stub",
             "type": "Element",
         },
     )
-    body: Body | None = field(
+    body: None | Body = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    back: Back | None = field(
+    back: None | Back = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    floats_group: FloatsGroup | None = field(
+    floats_group: None | FloatsGroup = field(
         default=None,
         metadata={
             "name": "floats-group",
             "type": "Element",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    response_type: str | None = field(
+    response_type: None | str = field(
         default=None,
         metadata={
             "name": "response-type",
             "type": "Attribute",
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",

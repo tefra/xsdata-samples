@@ -19,14 +19,14 @@ class FleetVersionStructure(GroupOfEntitiesVersionStructure):
     class Meta:
         name = "Fleet_VersionStructure"
 
-    members: VehiclesRelStructure | None = field(
+    members: None | VehiclesRelStructure = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    transport_organisation_ref: AuthorityRef | OperatorRef | None = field(
+    transport_organisation_ref: None | AuthorityRef | OperatorRef = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -44,7 +44,7 @@ class FleetVersionStructure(GroupOfEntitiesVersionStructure):
             ),
         },
     )
-    type_of_fleet_ref: TypeOfFleetRef | None = field(
+    type_of_fleet_ref: None | TypeOfFleetRef = field(
         default=None,
         metadata={
             "name": "TypeOfFleetRef",
@@ -52,7 +52,7 @@ class FleetVersionStructure(GroupOfEntitiesVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    transport_types: TransportTypeRefsRelStructure | None = field(
+    transport_types: None | TransportTypeRefsRelStructure = field(
         default=None,
         metadata={
             "name": "transportTypes",

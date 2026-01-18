@@ -19,7 +19,7 @@ class OpenlrGridAttributes:
     :ivar openlr_grid_attributes_extension:
     """
 
-    openlr_num_columns: int | None = field(
+    openlr_num_columns: None | int = field(
         default=None,
         metadata={
             "name": "openlrNumColumns",
@@ -28,7 +28,7 @@ class OpenlrGridAttributes:
             "required": True,
         },
     )
-    openlr_num_rows: int | None = field(
+    openlr_num_rows: None | int = field(
         default=None,
         metadata={
             "name": "openlrNumRows",
@@ -37,7 +37,7 @@ class OpenlrGridAttributes:
             "required": True,
         },
     )
-    openlr_grid_attributes_extension: ExtensionType | None = field(
+    openlr_grid_attributes_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "openlrGridAttributesExtension",

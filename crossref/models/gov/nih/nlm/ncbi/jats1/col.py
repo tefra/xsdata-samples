@@ -14,32 +14,32 @@ class Col:
         name = "col"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    align: ColAlign | None = field(
+    align: None | ColAlign = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    char: str | None = field(
+    char: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    charoff: str | None = field(
+    charoff: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    content_type: str | None = field(
+    content_type: None | str = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -51,25 +51,25 @@ class Col:
             "type": "Attribute",
         },
     )
-    style: str | None = field(
+    style: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    valign: ColValign | None = field(
+    valign: None | ColValign = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    width: str | None = field(
+    width: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",

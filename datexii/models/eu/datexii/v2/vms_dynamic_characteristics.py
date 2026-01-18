@@ -27,7 +27,7 @@ class VmsDynamicCharacteristics:
     :ivar vms_dynamic_characteristics_extension:
     """
 
-    number_of_pictogram_display_areas: int | None = field(
+    number_of_pictogram_display_areas: None | int = field(
         default=None,
         metadata={
             "name": "numberOfPictogramDisplayAreas",
@@ -35,7 +35,7 @@ class VmsDynamicCharacteristics:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    vms_text_display_characteristics: VmsTextDisplayCharacteristics | None = (
+    vms_text_display_characteristics: None | VmsTextDisplayCharacteristics = (
         field(
             default=None,
             metadata={
@@ -55,7 +55,7 @@ class VmsDynamicCharacteristics:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    vms_dynamic_characteristics_extension: ExtensionType | None = field(
+    vms_dynamic_characteristics_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "vmsDynamicCharacteristicsExtension",

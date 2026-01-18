@@ -17,45 +17,45 @@ class VersionOfObjectRefStructure:
             "required": True,
         },
     )
-    name_of_ref_class: str | None = field(
+    name_of_ref_class: None | str = field(
         default=None,
         metadata={
             "name": "nameOfRefClass",
             "type": "Attribute",
         },
     )
-    created: XmlDateTime | None = field(
+    created: None | XmlDateTime = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    changed: XmlDateTime | None = field(
+    changed: None | XmlDateTime = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    version: str | None = field(
+    version: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    modification: ModificationEnumeration | None = field(
+    modification: None | ModificationEnumeration = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    ref: str | None = field(
+    ref: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "required": True,
         },
     )
-    version_ref: str | None = field(
+    version_ref: None | str = field(
         default=None,
         metadata={
             "name": "versionRef",

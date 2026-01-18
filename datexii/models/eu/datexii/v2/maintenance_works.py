@@ -30,7 +30,7 @@ class MaintenanceWorks(Roadworks):
             "min_occurs": 1,
         },
     )
-    maintenance_works_extension: ExtensionType | None = field(
+    maintenance_works_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "maintenanceWorksExtension",

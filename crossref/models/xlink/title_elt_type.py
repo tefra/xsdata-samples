@@ -31,7 +31,7 @@ class TitleEltType:
             "required": True,
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",

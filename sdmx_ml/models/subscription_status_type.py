@@ -24,7 +24,7 @@ class SubscriptionStatusType:
         information.
     """
 
-    subscription_urn: str | None = field(
+    subscription_urn: None | str = field(
         default=None,
         metadata={
             "name": "SubscriptionURN",
@@ -32,7 +32,7 @@ class SubscriptionStatusType:
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry",
         },
     )
-    subscriber_assigned_id: str | None = field(
+    subscriber_assigned_id: None | str = field(
         default=None,
         metadata={
             "name": "SubscriberAssignedID",
@@ -41,7 +41,7 @@ class SubscriptionStatusType:
             "pattern": r"[A-Za-z0-9_@$\-]+",
         },
     )
-    status_message: StatusMessageType2 | None = field(
+    status_message: None | StatusMessageType2 = field(
         default=None,
         metadata={
             "name": "StatusMessage",

@@ -7,14 +7,14 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 @dataclass
 class EntityStructure:
-    name_of_class_attribute: str | None = field(
+    name_of_class_attribute: None | str = field(
         default=None,
         metadata={
             "name": "nameOfClass",
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",

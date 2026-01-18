@@ -31,21 +31,21 @@ class ModelType:
     class Meta:
         name = "modelType"
 
-    views: ModelType.Views | None = field(
+    views: None | ModelType.Views = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    instantiations: ModelType.Instantiations | None = field(
+    instantiations: None | ModelType.Instantiations = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    ports: ModelType.Ports | None = field(
+    ports: None | ModelType.Ports = field(
         default=None,
         metadata={
             "type": "Element",
@@ -92,7 +92,7 @@ class ModelType:
             :ivar id:
             """
 
-            name: str | None = field(
+            name: None | str = field(
                 default=None,
                 metadata={
                     "type": "Element",
@@ -100,7 +100,7 @@ class ModelType:
                     "required": True,
                 },
             )
-            display_name: DisplayName | None = field(
+            display_name: None | DisplayName = field(
                 default=None,
                 metadata={
                     "name": "displayName",
@@ -108,7 +108,7 @@ class ModelType:
                     "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
                 },
             )
-            short_description: ShortDescription | None = field(
+            short_description: None | ShortDescription = field(
                 default=None,
                 metadata={
                     "name": "shortDescription",
@@ -116,7 +116,7 @@ class ModelType:
                     "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
                 },
             )
-            description: Description | None = field(
+            description: None | Description = field(
                 default=None,
                 metadata={
                     "type": "Element",
@@ -131,7 +131,7 @@ class ModelType:
                     "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
                 },
             )
-            component_instantiation_ref: str | None = field(
+            component_instantiation_ref: None | str = field(
                 default=None,
                 metadata={
                     "name": "componentInstantiationRef",
@@ -139,7 +139,7 @@ class ModelType:
                     "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
                 },
             )
-            design_instantiation_ref: str | None = field(
+            design_instantiation_ref: None | str = field(
                 default=None,
                 metadata={
                     "name": "designInstantiationRef",
@@ -147,7 +147,7 @@ class ModelType:
                     "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
                 },
             )
-            design_configuration_instantiation_ref: str | None = field(
+            design_configuration_instantiation_ref: None | str = field(
                 default=None,
                 metadata={
                     "name": "designConfigurationInstantiationRef",
@@ -155,7 +155,7 @@ class ModelType:
                     "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
                 },
             )
-            vendor_extensions: VendorExtensions | None = field(
+            vendor_extensions: None | VendorExtensions = field(
                 default=None,
                 metadata={
                     "name": "vendorExtensions",
@@ -163,7 +163,7 @@ class ModelType:
                     "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
                 },
             )
-            id: str | None = field(
+            id: None | str = field(
                 default=None,
                 metadata={
                     "type": "Attribute",
@@ -180,7 +180,7 @@ class ModelType:
                         "pattern": r"[a-zA-Z0-9_+\*\.]*:[a-zA-Z0-9_+\*\.]*:[a-zA-Z0-9_+\*\.]*",
                     },
                 )
-                id: str | None = field(
+                id: None | str = field(
                     default=None,
                     metadata={
                         "type": "Attribute",

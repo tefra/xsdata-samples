@@ -17,7 +17,7 @@ class ControllableElementPriceVersionedChildStructure(
     class Meta:
         name = "ControllableElementPrice_VersionedChildStructure"
 
-    controllable_element_ref: ControllableElementRef | None = field(
+    controllable_element_ref: None | ControllableElementRef = field(
         default=None,
         metadata={
             "name": "ControllableElementRef",

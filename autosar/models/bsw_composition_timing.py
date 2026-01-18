@@ -150,7 +150,7 @@ class BswCompositionTiming:
     class Meta:
         name = "BSW-COMPOSITION-TIMING"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -159,7 +159,7 @@ class BswCompositionTiming:
             "required": True,
         },
     )
-    short_name_fragments: BswCompositionTiming.ShortNameFragments | None = (
+    short_name_fragments: None | BswCompositionTiming.ShortNameFragments = (
         field(
             default=None,
             metadata={
@@ -169,7 +169,7 @@ class BswCompositionTiming:
             },
         )
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -177,7 +177,7 @@ class BswCompositionTiming:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -185,7 +185,7 @@ class BswCompositionTiming:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -193,7 +193,7 @@ class BswCompositionTiming:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -201,7 +201,7 @@ class BswCompositionTiming:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -209,7 +209,7 @@ class BswCompositionTiming:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: BswCompositionTiming.Annotations | None = field(
+    annotations: None | BswCompositionTiming.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -217,7 +217,7 @@ class BswCompositionTiming:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -225,7 +225,7 @@ class BswCompositionTiming:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    timing_conditions: BswCompositionTiming.TimingConditions | None = field(
+    timing_conditions: None | BswCompositionTiming.TimingConditions = field(
         default=None,
         metadata={
             "name": "TIMING-CONDITIONS",
@@ -233,7 +233,7 @@ class BswCompositionTiming:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    timing_descriptions: BswCompositionTiming.TimingDescriptions | None = (
+    timing_descriptions: None | BswCompositionTiming.TimingDescriptions = (
         field(
             default=None,
             metadata={
@@ -243,7 +243,7 @@ class BswCompositionTiming:
             },
         )
     )
-    timing_guarantees: BswCompositionTiming.TimingGuarantees | None = field(
+    timing_guarantees: None | BswCompositionTiming.TimingGuarantees = field(
         default=None,
         metadata={
             "name": "TIMING-GUARANTEES",
@@ -251,7 +251,7 @@ class BswCompositionTiming:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    timing_requirements: BswCompositionTiming.TimingRequirements | None = (
+    timing_requirements: None | BswCompositionTiming.TimingRequirements = (
         field(
             default=None,
             metadata={
@@ -261,7 +261,7 @@ class BswCompositionTiming:
             },
         )
     )
-    timing_resource: TimingExtensionResource | None = field(
+    timing_resource: None | TimingExtensionResource = field(
         default=None,
         metadata={
             "name": "TIMING-RESOURCE",
@@ -269,7 +269,7 @@ class BswCompositionTiming:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    implementation_refs: BswCompositionTiming.ImplementationRefs | None = (
+    implementation_refs: None | BswCompositionTiming.ImplementationRefs = (
         field(
             default=None,
             metadata={
@@ -279,14 +279,14 @@ class BswCompositionTiming:
             },
         )
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -294,7 +294,7 @@ class BswCompositionTiming:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -763,7 +763,7 @@ class BswCompositionTiming:
 
         @dataclass
         class ImplementationRef(Ref):
-            dest: BswImplementationSubtypesEnum | None = field(
+            dest: None | BswImplementationSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",

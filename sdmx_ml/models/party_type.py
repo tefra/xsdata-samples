@@ -36,7 +36,7 @@ class PartyType:
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/message",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",

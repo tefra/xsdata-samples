@@ -11,7 +11,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 @dataclass
 class LocaleStructure:
-    time_zone_offset: Decimal | None = field(
+    time_zone_offset: None | Decimal = field(
         default=None,
         metadata={
             "name": "TimeZoneOffset",
@@ -19,7 +19,7 @@ class LocaleStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    time_zone: str | None = field(
+    time_zone: None | str = field(
         default=None,
         metadata={
             "name": "TimeZone",
@@ -27,7 +27,7 @@ class LocaleStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    summer_time_zone_offset: Decimal | None = field(
+    summer_time_zone_offset: None | Decimal = field(
         default=None,
         metadata={
             "name": "SummerTimeZoneOffset",
@@ -35,7 +35,7 @@ class LocaleStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    summer_time_zone: str | None = field(
+    summer_time_zone: None | str = field(
         default=None,
         metadata={
             "name": "SummerTimeZone",
@@ -43,7 +43,7 @@ class LocaleStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    default_language: str | None = field(
+    default_language: None | str = field(
         default=None,
         metadata={
             "name": "DefaultLanguage",
@@ -51,7 +51,7 @@ class LocaleStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    languages: LocaleStructure.Languages | None = field(
+    languages: None | LocaleStructure.Languages = field(
         default=None,
         metadata={
             "type": "Element",

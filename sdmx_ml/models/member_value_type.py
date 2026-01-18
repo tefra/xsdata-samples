@@ -28,7 +28,7 @@ class MemberValueType:
             "pattern": r"[A-Za-z0-9_@$-%]+",
         },
     )
-    cascade_values: bool | ExcludeRootType | None = field(
+    cascade_values: None | bool | ExcludeRootType = field(
         default=None,
         metadata={
             "name": "cascadeValues",

@@ -57,49 +57,49 @@ class GeneratorChain:
         name = "generatorChain"
         namespace = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
-    vendor: str | None = field(
+    vendor: None | str = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
         },
     )
-    library: str | None = field(
+    library: None | str = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
         },
     )
-    name: str | None = field(
+    name: None | str = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
         },
     )
-    version: str | None = field(
+    version: None | str = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
         },
     )
-    display_name: str | None = field(
+    display_name: None | str = field(
         default=None,
         metadata={
             "name": "displayName",
             "type": "Element",
         },
     )
-    short_description: ShortDescription | None = field(
+    short_description: None | ShortDescription = field(
         default=None,
         metadata={
             "name": "shortDescription",
             "type": "Element",
         },
     )
-    description: Description | None = field(
+    description: None | Description = field(
         default=None,
         metadata={
             "type": "Element",
@@ -134,25 +134,25 @@ class GeneratorChain:
             "type": "Element",
         },
     )
-    choices: Choices | None = field(
+    choices: None | Choices = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    parameters: Parameters | None = field(
+    parameters: None | Parameters = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    assertions: Assertions | None = field(
+    assertions: None | Assertions = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    vendor_extensions: VendorExtensions | None = field(
+    vendor_extensions: None | VendorExtensions = field(
         default=None,
         metadata={
             "name": "vendorExtensions",
@@ -165,7 +165,7 @@ class GeneratorChain:
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -181,7 +181,7 @@ class GeneratorChain:
                 "required": True,
             },
         )
-        id: str | None = field(
+        id: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -202,14 +202,14 @@ class GeneratorChain:
         :ivar id:
         """
 
-        group_selector: GroupSelector | None = field(
+        group_selector: None | GroupSelector = field(
             default=None,
             metadata={
                 "name": "groupSelector",
                 "type": "Element",
             },
         )
-        generator_chain_ref: ConfigurableLibraryRefType | None = field(
+        generator_chain_ref: None | ConfigurableLibraryRefType = field(
             default=None,
             metadata={
                 "name": "generatorChainRef",
@@ -222,7 +222,7 @@ class GeneratorChain:
                 "type": "Attribute",
             },
         )
-        id: str | None = field(
+        id: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",

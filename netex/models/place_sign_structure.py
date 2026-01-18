@@ -11,7 +11,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 @dataclass
 class PlaceSignStructure(SignEquipmentVersionStructure):
-    place_name: MultilingualString | None = field(
+    place_name: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "PlaceName",
@@ -20,7 +20,7 @@ class PlaceSignStructure(SignEquipmentVersionStructure):
             "required": True,
         },
     )
-    place_ref: PlaceRef | None = field(
+    place_ref: None | PlaceRef = field(
         default=None,
         metadata={
             "name": "PlaceRef",

@@ -20,7 +20,7 @@ class OvertakingPossibilityVersionStructure(
     class Meta:
         name = "OvertakingPossibility_VersionStructure"
 
-    overtaking_width: Decimal | None = field(
+    overtaking_width: None | Decimal = field(
         default=None,
         metadata={
             "name": "OvertakingWidth",
@@ -28,7 +28,7 @@ class OvertakingPossibilityVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    overtaking_on_link_ref: LinkRefStructure | None = field(
+    overtaking_on_link_ref: None | LinkRefStructure = field(
         default=None,
         metadata={
             "name": "OvertakingOnLinkRef",
@@ -37,7 +37,7 @@ class OvertakingPossibilityVersionStructure(
             "required": True,
         },
     )
-    overtaking_at_point_ref: PointRefStructure | None = field(
+    overtaking_at_point_ref: None | PointRefStructure = field(
         default=None,
         metadata={
             "name": "OvertakingAtPointRef",
@@ -45,7 +45,7 @@ class OvertakingPossibilityVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    overtaking_vehicle_type_ref: TransportTypeRefStructure | None = field(
+    overtaking_vehicle_type_ref: None | TransportTypeRefStructure = field(
         default=None,
         metadata={
             "name": "OvertakingVehicleTypeRef",
@@ -53,7 +53,7 @@ class OvertakingPossibilityVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    overtaken_vehicle_type_ref: TransportTypeRefStructure | None = field(
+    overtaken_vehicle_type_ref: None | TransportTypeRefStructure = field(
         default=None,
         metadata={
             "name": "OvertakenVehicleTypeRef",

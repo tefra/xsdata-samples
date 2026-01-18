@@ -14,7 +14,7 @@ class MultilingualStringValue:
             "max_length": 1024,
         },
     )
-    lang: str | None = field(
+    lang: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",

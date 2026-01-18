@@ -46,7 +46,7 @@ class RegistryInterfaceType:
     various dedicated registry interface message types.
     """
 
-    header: BasicHeaderType | None = field(
+    header: None | BasicHeaderType = field(
         default=None,
         metadata={
             "name": "Header",
@@ -56,7 +56,8 @@ class RegistryInterfaceType:
         },
     )
     choice: (
-        SubmitRegistrationsRequestType
+        None
+        | SubmitRegistrationsRequestType
         | SubmitRegistrationsResponseType
         | QueryRegistrationRequestType
         | QueryRegistrationResponseType
@@ -67,7 +68,6 @@ class RegistryInterfaceType:
         | QuerySubscriptionRequestType
         | QuerySubscriptionResponseType
         | NotifyRegistryEventType
-        | None
     ) = field(
         default=None,
         metadata={
@@ -131,7 +131,7 @@ class RegistryInterfaceType:
             ),
         },
     )
-    footer: Footer | None = field(
+    footer: None | Footer = field(
         default=None,
         metadata={
             "name": "Footer",

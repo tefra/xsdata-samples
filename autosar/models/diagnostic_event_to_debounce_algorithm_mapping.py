@@ -90,7 +90,7 @@ class DiagnosticEventToDebounceAlgorithmMapping:
     class Meta:
         name = "DIAGNOSTIC-EVENT-TO-DEBOUNCE-ALGORITHM-MAPPING"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -100,7 +100,7 @@ class DiagnosticEventToDebounceAlgorithmMapping:
         },
     )
     short_name_fragments: (
-        DiagnosticEventToDebounceAlgorithmMapping.ShortNameFragments | None
+        None | DiagnosticEventToDebounceAlgorithmMapping.ShortNameFragments
     ) = field(
         default=None,
         metadata={
@@ -109,7 +109,7 @@ class DiagnosticEventToDebounceAlgorithmMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -117,7 +117,7 @@ class DiagnosticEventToDebounceAlgorithmMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -125,7 +125,7 @@ class DiagnosticEventToDebounceAlgorithmMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -133,7 +133,7 @@ class DiagnosticEventToDebounceAlgorithmMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -141,7 +141,7 @@ class DiagnosticEventToDebounceAlgorithmMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -150,7 +150,7 @@ class DiagnosticEventToDebounceAlgorithmMapping:
         },
     )
     annotations: (
-        DiagnosticEventToDebounceAlgorithmMapping.Annotations | None
+        None | DiagnosticEventToDebounceAlgorithmMapping.Annotations
     ) = field(
         default=None,
         metadata={
@@ -159,7 +159,7 @@ class DiagnosticEventToDebounceAlgorithmMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -168,7 +168,7 @@ class DiagnosticEventToDebounceAlgorithmMapping:
         },
     )
     debounce_algorithm_ref: (
-        DiagnosticEventToDebounceAlgorithmMapping.DebounceAlgorithmRef | None
+        None | DiagnosticEventToDebounceAlgorithmMapping.DebounceAlgorithmRef
     ) = field(
         default=None,
         metadata={
@@ -178,7 +178,7 @@ class DiagnosticEventToDebounceAlgorithmMapping:
         },
     )
     diagnostic_event_ref: (
-        DiagnosticEventToDebounceAlgorithmMapping.DiagnosticEventRef | None
+        None | DiagnosticEventToDebounceAlgorithmMapping.DiagnosticEventRef
     ) = field(
         default=None,
         metadata={
@@ -187,14 +187,14 @@ class DiagnosticEventToDebounceAlgorithmMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -202,7 +202,7 @@ class DiagnosticEventToDebounceAlgorithmMapping:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -234,7 +234,7 @@ class DiagnosticEventToDebounceAlgorithmMapping:
 
     @dataclass
     class DebounceAlgorithmRef(Ref):
-        dest: DiagnosticDebounceAlgorithmPropsSubtypesEnum | None = field(
+        dest: None | DiagnosticDebounceAlgorithmPropsSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -245,7 +245,7 @@ class DiagnosticEventToDebounceAlgorithmMapping:
 
     @dataclass
     class DiagnosticEventRef(Ref):
-        dest: DiagnosticEventSubtypesEnum | None = field(
+        dest: None | DiagnosticEventSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

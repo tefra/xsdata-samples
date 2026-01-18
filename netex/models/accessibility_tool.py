@@ -12,7 +12,7 @@ class AccessibilityTool:
     class Meta:
         namespace = "http://www.netex.org.uk/netex"
 
-    value: AccessibilityToolEnumeration | None = field(
+    value: None | AccessibilityToolEnumeration = field(
         default=None,
         metadata={
             "required": True,

@@ -17,14 +17,14 @@ class GroupOfPlacesVersionStructure(GroupOfEntitiesVersionStructure):
     class Meta:
         name = "GroupOfPlaces_VersionStructure"
 
-    members: PlaceRefsRelStructure | None = field(
+    members: None | PlaceRefsRelStructure = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    country_ref: CountryRef | None = field(
+    country_ref: None | CountryRef = field(
         default=None,
         metadata={
             "name": "CountryRef",
@@ -32,7 +32,7 @@ class GroupOfPlacesVersionStructure(GroupOfEntitiesVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    main_place_ref: PlaceRefStructure | None = field(
+    main_place_ref: None | PlaceRefStructure = field(
         default=None,
         metadata={
             "name": "MainPlaceRef",

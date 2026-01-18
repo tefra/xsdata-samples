@@ -114,7 +114,7 @@ class FlexrayTpConfig:
     class Meta:
         name = "FLEXRAY-TP-CONFIG"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -123,7 +123,7 @@ class FlexrayTpConfig:
             "required": True,
         },
     )
-    short_name_fragments: FlexrayTpConfig.ShortNameFragments | None = field(
+    short_name_fragments: None | FlexrayTpConfig.ShortNameFragments = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -131,7 +131,7 @@ class FlexrayTpConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -139,7 +139,7 @@ class FlexrayTpConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -147,7 +147,7 @@ class FlexrayTpConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -155,7 +155,7 @@ class FlexrayTpConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -163,7 +163,7 @@ class FlexrayTpConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -171,7 +171,7 @@ class FlexrayTpConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: FlexrayTpConfig.Annotations | None = field(
+    annotations: None | FlexrayTpConfig.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -179,7 +179,7 @@ class FlexrayTpConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -188,7 +188,7 @@ class FlexrayTpConfig:
         },
     )
     communication_cluster_ref: (
-        FlexrayTpConfig.CommunicationClusterRef | None
+        None | FlexrayTpConfig.CommunicationClusterRef
     ) = field(
         default=None,
         metadata={
@@ -197,7 +197,7 @@ class FlexrayTpConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    pdu_pools: FlexrayTpConfig.PduPools | None = field(
+    pdu_pools: None | FlexrayTpConfig.PduPools = field(
         default=None,
         metadata={
             "name": "PDU-POOLS",
@@ -205,7 +205,7 @@ class FlexrayTpConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tp_addresss: FlexrayTpConfig.TpAddresss | None = field(
+    tp_addresss: None | FlexrayTpConfig.TpAddresss = field(
         default=None,
         metadata={
             "name": "TP-ADDRESSS",
@@ -213,7 +213,7 @@ class FlexrayTpConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tp_connections: FlexrayTpConfig.TpConnections | None = field(
+    tp_connections: None | FlexrayTpConfig.TpConnections = field(
         default=None,
         metadata={
             "name": "TP-CONNECTIONS",
@@ -221,7 +221,7 @@ class FlexrayTpConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tp_connection_controls: FlexrayTpConfig.TpConnectionControls | None = (
+    tp_connection_controls: None | FlexrayTpConfig.TpConnectionControls = (
         field(
             default=None,
             metadata={
@@ -231,7 +231,7 @@ class FlexrayTpConfig:
             },
         )
     )
-    tp_ecus: FlexrayTpConfig.TpEcus | None = field(
+    tp_ecus: None | FlexrayTpConfig.TpEcus = field(
         default=None,
         metadata={
             "name": "TP-ECUS",
@@ -239,7 +239,7 @@ class FlexrayTpConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tp_nodes: FlexrayTpConfig.TpNodes | None = field(
+    tp_nodes: None | FlexrayTpConfig.TpNodes = field(
         default=None,
         metadata={
             "name": "TP-NODES",
@@ -247,14 +247,14 @@ class FlexrayTpConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -262,7 +262,7 @@ class FlexrayTpConfig:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -294,7 +294,7 @@ class FlexrayTpConfig:
 
     @dataclass
     class CommunicationClusterRef(Ref):
-        dest: CommunicationClusterSubtypesEnum | None = field(
+        dest: None | CommunicationClusterSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

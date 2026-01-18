@@ -37,7 +37,7 @@ class EcucDerivationSpecification:
     class Meta:
         name = "ECUC-DERIVATION-SPECIFICATION"
 
-    calculation_formula: EcucParameterDerivationFormula | None = field(
+    calculation_formula: None | EcucParameterDerivationFormula = field(
         default=None,
         metadata={
             "name": "CALCULATION-FORMULA",
@@ -45,7 +45,7 @@ class EcucDerivationSpecification:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ecuc_querys: EcucDerivationSpecification.EcucQuerys | None = field(
+    ecuc_querys: None | EcucDerivationSpecification.EcucQuerys = field(
         default=None,
         metadata={
             "name": "ECUC-QUERYS",
@@ -53,7 +53,7 @@ class EcucDerivationSpecification:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    informal_formula: MlFormula | None = field(
+    informal_formula: None | MlFormula = field(
         default=None,
         metadata={
             "name": "INFORMAL-FORMULA",
@@ -61,14 +61,14 @@ class EcucDerivationSpecification:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

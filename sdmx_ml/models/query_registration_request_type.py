@@ -40,7 +40,7 @@ class QueryRegistrationRequestType:
         metadata sets returned should also be sent the results.
     """
 
-    query_type: QueryTypeType | None = field(
+    query_type: None | QueryTypeType = field(
         default=None,
         metadata={
             "name": "QueryType",
@@ -50,12 +50,12 @@ class QueryRegistrationRequestType:
         },
     )
     choice: (
-        EmptyType
+        None
+        | EmptyType
         | QueryRegistrationRequestType.ProvisionAgreement
         | QueryRegistrationRequestType.DataProvider
         | QueryRegistrationRequestType.Dataflow
         | QueryRegistrationRequestType.Metadataflow
-        | None
     ) = field(
         default=None,
         metadata={
@@ -97,7 +97,7 @@ class QueryRegistrationRequestType:
             ),
         },
     )
-    reference_period: ReferencePeriodType | None = field(
+    reference_period: None | ReferencePeriodType = field(
         default=None,
         metadata={
             "name": "ReferencePeriod",
@@ -140,7 +140,7 @@ class QueryRegistrationRequestType:
 
     @dataclass(frozen=True)
     class ProvisionAgreement:
-        value: str | None = field(
+        value: None | str = field(
             default=None,
             metadata={
                 "required": True,
@@ -150,7 +150,7 @@ class QueryRegistrationRequestType:
 
     @dataclass(frozen=True)
     class DataProvider:
-        value: str | None = field(
+        value: None | str = field(
             default=None,
             metadata={
                 "required": True,
@@ -160,7 +160,7 @@ class QueryRegistrationRequestType:
 
     @dataclass(frozen=True)
     class Dataflow:
-        value: str | None = field(
+        value: None | str = field(
             default=None,
             metadata={
                 "required": True,
@@ -170,7 +170,7 @@ class QueryRegistrationRequestType:
 
     @dataclass(frozen=True)
     class Metadataflow:
-        value: str | None = field(
+        value: None | str = field(
             default=None,
             metadata={
                 "required": True,

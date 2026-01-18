@@ -103,7 +103,7 @@ class AgreementType(BaseGbotype):
         for local data tab.
     """
 
-    expiry_date: DateTimeType | None = field(
+    expiry_date: None | DateTimeType = field(
         default=None,
         metadata={
             "name": "ExpiryDate",
@@ -112,7 +112,7 @@ class AgreementType(BaseGbotype):
             "required": True,
         },
     )
-    inception_date: DateTimeType | None = field(
+    inception_date: None | DateTimeType = field(
         default=None,
         metadata={
             "name": "InceptionDate",
@@ -121,7 +121,7 @@ class AgreementType(BaseGbotype):
             "required": True,
         },
     )
-    renewable: bool | None = field(
+    renewable: None | bool = field(
         default=None,
         metadata={
             "name": "Renewable",
@@ -129,7 +129,7 @@ class AgreementType(BaseGbotype):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    issue_date: DateTimeType | None = field(
+    issue_date: None | DateTimeType = field(
         default=None,
         metadata={
             "name": "IssueDate",
@@ -137,7 +137,7 @@ class AgreementType(BaseGbotype):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    layer_attachment_point: AmountType | None = field(
+    layer_attachment_point: None | AmountType = field(
         default=None,
         metadata={
             "name": "LayerAttachmentPoint",
@@ -145,7 +145,7 @@ class AgreementType(BaseGbotype):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    last_renewal_date: DateTimeType | None = field(
+    last_renewal_date: None | DateTimeType = field(
         default=None,
         metadata={
             "name": "LastRenewalDate",
@@ -153,7 +153,7 @@ class AgreementType(BaseGbotype):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    endorsed: bool | None = field(
+    endorsed: None | bool = field(
         default=None,
         metadata={
             "name": "Endorsed",
@@ -161,7 +161,7 @@ class AgreementType(BaseGbotype):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    endorsment_version: str | None = field(
+    endorsment_version: None | str = field(
         default=None,
         metadata={
             "name": "EndorsmentVersion",
@@ -169,7 +169,7 @@ class AgreementType(BaseGbotype):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    status: str | None = field(
+    status: None | str = field(
         default=None,
         metadata={
             "name": "Status",
@@ -178,7 +178,7 @@ class AgreementType(BaseGbotype):
             "required": True,
         },
     )
-    status_date: DateTimeType | None = field(
+    status_date: None | DateTimeType = field(
         default=None,
         metadata={
             "name": "StatusDate",
@@ -186,7 +186,7 @@ class AgreementType(BaseGbotype):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    status_notes: TextType | None = field(
+    status_notes: None | TextType = field(
         default=None,
         metadata={
             "name": "StatusNotes",
@@ -194,7 +194,7 @@ class AgreementType(BaseGbotype):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    sum_insured: AmountType | None = field(
+    sum_insured: None | AmountType = field(
         default=None,
         metadata={
             "name": "SumInsured",
@@ -202,7 +202,7 @@ class AgreementType(BaseGbotype):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    total_layers: NumberType | None = field(
+    total_layers: None | NumberType = field(
         default=None,
         metadata={
             "name": "TotalLayers",
@@ -210,7 +210,7 @@ class AgreementType(BaseGbotype):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    renewed_from: Idtype | None = field(
+    renewed_from: None | Idtype = field(
         default=None,
         metadata={
             "name": "RenewedFrom",
@@ -218,7 +218,7 @@ class AgreementType(BaseGbotype):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    underwriting_year: int | None = field(
+    underwriting_year: None | int = field(
         default=None,
         metadata={
             "name": "UnderwritingYear",
@@ -227,7 +227,7 @@ class AgreementType(BaseGbotype):
             "required": True,
         },
     )
-    version: int | None = field(
+    version: None | int = field(
         default=None,
         metadata={
             "name": "Version",
@@ -236,7 +236,7 @@ class AgreementType(BaseGbotype):
             "required": True,
         },
     )
-    account_managers: AgreementTypeAccountManagers | None = field(
+    account_managers: None | AgreementTypeAccountManagers = field(
         default=None,
         metadata={
             "name": "AccountManagers",
@@ -244,7 +244,7 @@ class AgreementType(BaseGbotype):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    business_origin: BusinessOriginEnum | None = field(
+    business_origin: None | BusinessOriginEnum = field(
         default=None,
         metadata={
             "name": "BusinessOrigin",
@@ -252,7 +252,7 @@ class AgreementType(BaseGbotype):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    classification_code: ClassificationCodeEnum | None = field(
+    classification_code: None | ClassificationCodeEnum = field(
         default=None,
         metadata={
             "name": "ClassificationCode",
@@ -260,7 +260,7 @@ class AgreementType(BaseGbotype):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    coinsurer_involvements: AgreementTypeCoinsurerInvolvements | None = field(
+    coinsurer_involvements: None | AgreementTypeCoinsurerInvolvements = field(
         default=None,
         metadata={
             "name": "CoinsurerInvolvements",
@@ -268,7 +268,7 @@ class AgreementType(BaseGbotype):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    contacts: ContactsInvolvement | None = field(
+    contacts: None | ContactsInvolvement = field(
         default=None,
         metadata={
             "name": "Contacts",
@@ -276,7 +276,7 @@ class AgreementType(BaseGbotype):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    insured_involvement: AgreementTypeInsuredInvolvement | None = field(
+    insured_involvement: None | AgreementTypeInsuredInvolvement = field(
         default=None,
         metadata={
             "name": "InsuredInvolvement",
@@ -292,7 +292,7 @@ class AgreementType(BaseGbotype):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    underwriters: AgreementTypeUnderwriters | None = field(
+    underwriters: None | AgreementTypeUnderwriters = field(
         default=None,
         metadata={
             "name": "Underwriters",
@@ -300,7 +300,7 @@ class AgreementType(BaseGbotype):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    layer_type: LayerTypeEnum | None = field(
+    layer_type: None | LayerTypeEnum = field(
         default=None,
         metadata={
             "name": "LayerType",
@@ -309,7 +309,7 @@ class AgreementType(BaseGbotype):
             "required": True,
         },
     )
-    line_of_business: LineOfBusinessType | None = field(
+    line_of_business: None | LineOfBusinessType = field(
         default=None,
         metadata={
             "name": "LineOfBusiness",
@@ -318,7 +318,7 @@ class AgreementType(BaseGbotype):
             "required": True,
         },
     )
-    payout_benefits: AgreementTypePayoutBenefits | None = field(
+    payout_benefits: None | AgreementTypePayoutBenefits = field(
         default=None,
         metadata={
             "name": "PayoutBenefits",
@@ -326,7 +326,7 @@ class AgreementType(BaseGbotype):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    local_currency: CodeType | None = field(
+    local_currency: None | CodeType = field(
         default=None,
         metadata={
             "name": "LocalCurrency",
@@ -335,7 +335,7 @@ class AgreementType(BaseGbotype):
             "required": True,
         },
     )
-    remittance_currency: CodeType | None = field(
+    remittance_currency: None | CodeType = field(
         default=None,
         metadata={
             "name": "RemittanceCurrency",
@@ -344,7 +344,7 @@ class AgreementType(BaseGbotype):
             "required": True,
         },
     )
-    local_data: LocalDataType | None = field(
+    local_data: None | LocalDataType = field(
         default=None,
         metadata={
             "name": "LocalData",

@@ -22,92 +22,92 @@ class PubDate:
         name = "pub-date"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    day: Day | None = field(
+    day: None | Day = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    month: Month | None = field(
+    month: None | Month = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    season: Season | None = field(
+    season: None | Season = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    year: Year | None = field(
+    year: None | Year = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
         },
     )
-    era: Era | None = field(
+    era: None | Era = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    assigning_authority: str | None = field(
+    assigning_authority: None | str = field(
         default=None,
         metadata={
             "name": "assigning-authority",
             "type": "Attribute",
         },
     )
-    calendar: str | None = field(
+    calendar: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    date_type: str | None = field(
+    date_type: None | str = field(
         default=None,
         metadata={
             "name": "date-type",
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    iso_8601_date: str | None = field(
+    iso_8601_date: None | str = field(
         default=None,
         metadata={
             "name": "iso-8601-date",
             "type": "Attribute",
         },
     )
-    pub_type: str | None = field(
+    pub_type: None | str = field(
         default=None,
         metadata={
             "name": "pub-type",
             "type": "Attribute",
         },
     )
-    publication_format: str | None = field(
+    publication_format: None | str = field(
         default=None,
         metadata={
             "name": "publication-format",
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",

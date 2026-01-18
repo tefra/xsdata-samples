@@ -16,7 +16,7 @@ __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
 @dataclass
 class TerminateSubscriptionRequestStructure(AuthenticatedRequestStructure):
-    address: str | None = field(
+    address: None | str = field(
         default=None,
         metadata={
             "name": "Address",
@@ -24,7 +24,7 @@ class TerminateSubscriptionRequestStructure(AuthenticatedRequestStructure):
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    requestor_ref: RequestorRef | None = field(
+    requestor_ref: None | RequestorRef = field(
         default=None,
         metadata={
             "name": "RequestorRef",
@@ -33,7 +33,7 @@ class TerminateSubscriptionRequestStructure(AuthenticatedRequestStructure):
             "required": True,
         },
     )
-    message_identifier: MessageQualifierStructure | None = field(
+    message_identifier: None | MessageQualifierStructure = field(
         default=None,
         metadata={
             "name": "MessageIdentifier",
@@ -41,7 +41,7 @@ class TerminateSubscriptionRequestStructure(AuthenticatedRequestStructure):
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    delegator_address: str | None = field(
+    delegator_address: None | str = field(
         default=None,
         metadata={
             "name": "DelegatorAddress",
@@ -49,7 +49,7 @@ class TerminateSubscriptionRequestStructure(AuthenticatedRequestStructure):
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    delegator_ref: ParticipantRefStructure | None = field(
+    delegator_ref: None | ParticipantRefStructure = field(
         default=None,
         metadata={
             "name": "DelegatorRef",
@@ -57,7 +57,7 @@ class TerminateSubscriptionRequestStructure(AuthenticatedRequestStructure):
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    subscriber_ref: ParticipantRefStructure | None = field(
+    subscriber_ref: None | ParticipantRefStructure = field(
         default=None,
         metadata={
             "name": "SubscriberRef",
@@ -85,7 +85,7 @@ class TerminateSubscriptionRequestStructure(AuthenticatedRequestStructure):
             ),
         },
     )
-    extensions: Extensions1 | None = field(
+    extensions: None | Extensions1 = field(
         default=None,
         metadata={
             "name": "Extensions",

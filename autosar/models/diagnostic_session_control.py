@@ -100,7 +100,7 @@ class DiagnosticSessionControl:
     class Meta:
         name = "DIAGNOSTIC-SESSION-CONTROL"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -110,7 +110,7 @@ class DiagnosticSessionControl:
         },
     )
     short_name_fragments: (
-        DiagnosticSessionControl.ShortNameFragments | None
+        None | DiagnosticSessionControl.ShortNameFragments
     ) = field(
         default=None,
         metadata={
@@ -119,7 +119,7 @@ class DiagnosticSessionControl:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -127,7 +127,7 @@ class DiagnosticSessionControl:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -135,7 +135,7 @@ class DiagnosticSessionControl:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -143,7 +143,7 @@ class DiagnosticSessionControl:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -151,7 +151,7 @@ class DiagnosticSessionControl:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -159,7 +159,7 @@ class DiagnosticSessionControl:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: DiagnosticSessionControl.Annotations | None = field(
+    annotations: None | DiagnosticSessionControl.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -167,7 +167,7 @@ class DiagnosticSessionControl:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -176,7 +176,7 @@ class DiagnosticSessionControl:
         },
     )
     access_permission_ref: (
-        DiagnosticSessionControl.AccessPermissionRef | None
+        None | DiagnosticSessionControl.AccessPermissionRef
     ) = field(
         default=None,
         metadata={
@@ -186,7 +186,7 @@ class DiagnosticSessionControl:
         },
     )
     diagnostic_session_ref: (
-        DiagnosticSessionControl.DiagnosticSessionRef | None
+        None | DiagnosticSessionControl.DiagnosticSessionRef
     ) = field(
         default=None,
         metadata={
@@ -196,7 +196,7 @@ class DiagnosticSessionControl:
         },
     )
     session_control_class_ref: (
-        DiagnosticSessionControl.SessionControlClassRef | None
+        None | DiagnosticSessionControl.SessionControlClassRef
     ) = field(
         default=None,
         metadata={
@@ -205,14 +205,14 @@ class DiagnosticSessionControl:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -220,7 +220,7 @@ class DiagnosticSessionControl:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -252,7 +252,7 @@ class DiagnosticSessionControl:
 
     @dataclass
     class AccessPermissionRef(Ref):
-        dest: DiagnosticAccessPermissionSubtypesEnum | None = field(
+        dest: None | DiagnosticAccessPermissionSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -263,7 +263,7 @@ class DiagnosticSessionControl:
 
     @dataclass
     class DiagnosticSessionRef(Ref):
-        dest: DiagnosticSessionSubtypesEnum | None = field(
+        dest: None | DiagnosticSessionSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -274,7 +274,7 @@ class DiagnosticSessionControl:
 
     @dataclass
     class SessionControlClassRef(Ref):
-        dest: DiagnosticSessionControlClassSubtypesEnum | None = field(
+        dest: None | DiagnosticSessionControlClassSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

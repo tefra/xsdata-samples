@@ -44,7 +44,7 @@ class RptSupportData:
     class Meta:
         name = "RPT-SUPPORT-DATA"
 
-    execution_contexts: RptSupportData.ExecutionContexts | None = field(
+    execution_contexts: None | RptSupportData.ExecutionContexts = field(
         default=None,
         metadata={
             "name": "EXECUTION-CONTEXTS",
@@ -52,7 +52,7 @@ class RptSupportData:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    rpt_components: RptSupportData.RptComponents | None = field(
+    rpt_components: None | RptSupportData.RptComponents = field(
         default=None,
         metadata={
             "name": "RPT-COMPONENTS",
@@ -60,7 +60,7 @@ class RptSupportData:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    rpt_service_points: RptSupportData.RptServicePoints | None = field(
+    rpt_service_points: None | RptSupportData.RptServicePoints = field(
         default=None,
         metadata={
             "name": "RPT-SERVICE-POINTS",
@@ -68,14 +68,14 @@ class RptSupportData:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

@@ -46,7 +46,7 @@ class ApplicationAssocMapElementValueSpecification:
     class Meta:
         name = "APPLICATION-ASSOC-MAP-ELEMENT-VALUE-SPECIFICATION"
 
-    key: ApplicationAssocMapElementValueSpecification.Key | None = field(
+    key: None | ApplicationAssocMapElementValueSpecification.Key = field(
         default=None,
         metadata={
             "name": "KEY",
@@ -54,7 +54,7 @@ class ApplicationAssocMapElementValueSpecification:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    value: ApplicationAssocMapElementValueSpecification.Value | None = field(
+    value: None | ApplicationAssocMapElementValueSpecification.Value = field(
         default=None,
         metadata={
             "name": "VALUE",
@@ -62,14 +62,14 @@ class ApplicationAssocMapElementValueSpecification:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -81,7 +81,7 @@ class ApplicationAssocMapElementValueSpecification:
     @dataclass
     class Key:
         application_assoc_map_value_specification: (
-            ApplicationAssocMapValueSpecification | None
+            None | ApplicationAssocMapValueSpecification
         ) = field(
             default=None,
             metadata={
@@ -91,7 +91,7 @@ class ApplicationAssocMapElementValueSpecification:
             },
         )
         application_rule_based_value_specification: (
-            ApplicationRuleBasedValueSpecification | None
+            None | ApplicationRuleBasedValueSpecification
         ) = field(
             default=None,
             metadata={
@@ -101,7 +101,7 @@ class ApplicationAssocMapElementValueSpecification:
             },
         )
         application_value_specification: (
-            ApplicationValueSpecification | None
+            None | ApplicationValueSpecification
         ) = field(
             default=None,
             metadata={
@@ -110,7 +110,7 @@ class ApplicationAssocMapElementValueSpecification:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        array_value_specification: ArrayValueSpecification | None = field(
+        array_value_specification: None | ArrayValueSpecification = field(
             default=None,
             metadata={
                 "name": "ARRAY-VALUE-SPECIFICATION",
@@ -119,7 +119,7 @@ class ApplicationAssocMapElementValueSpecification:
             },
         )
         composite_rule_based_value_specification: (
-            CompositeRuleBasedValueSpecification | None
+            None | CompositeRuleBasedValueSpecification
         ) = field(
             default=None,
             metadata={
@@ -128,7 +128,7 @@ class ApplicationAssocMapElementValueSpecification:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        constant_reference: ConstantReference | None = field(
+        constant_reference: None | ConstantReference = field(
             default=None,
             metadata={
                 "name": "CONSTANT-REFERENCE",
@@ -137,7 +137,7 @@ class ApplicationAssocMapElementValueSpecification:
             },
         )
         not_available_value_specification: (
-            NotAvailableValueSpecification | None
+            None | NotAvailableValueSpecification
         ) = field(
             default=None,
             metadata={
@@ -147,7 +147,7 @@ class ApplicationAssocMapElementValueSpecification:
             },
         )
         numerical_rule_based_value_specification: (
-            NumericalRuleBasedValueSpecification | None
+            None | NumericalRuleBasedValueSpecification
         ) = field(
             default=None,
             metadata={
@@ -156,7 +156,7 @@ class ApplicationAssocMapElementValueSpecification:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        numerical_value_specification: NumericalValueSpecification | None = (
+        numerical_value_specification: None | NumericalValueSpecification = (
             field(
                 default=None,
                 metadata={
@@ -166,7 +166,7 @@ class ApplicationAssocMapElementValueSpecification:
                 },
             )
         )
-        record_value_specification: RecordValueSpecification | None = field(
+        record_value_specification: None | RecordValueSpecification = field(
             default=None,
             metadata={
                 "name": "RECORD-VALUE-SPECIFICATION",
@@ -174,7 +174,7 @@ class ApplicationAssocMapElementValueSpecification:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        reference_value_specification: ReferenceValueSpecification | None = (
+        reference_value_specification: None | ReferenceValueSpecification = (
             field(
                 default=None,
                 metadata={
@@ -184,7 +184,7 @@ class ApplicationAssocMapElementValueSpecification:
                 },
             )
         )
-        text_value_specification: TextValueSpecification | None = field(
+        text_value_specification: None | TextValueSpecification = field(
             default=None,
             metadata={
                 "name": "TEXT-VALUE-SPECIFICATION",
@@ -196,7 +196,7 @@ class ApplicationAssocMapElementValueSpecification:
     @dataclass
     class Value:
         application_assoc_map_value_specification: (
-            ApplicationAssocMapValueSpecification | None
+            None | ApplicationAssocMapValueSpecification
         ) = field(
             default=None,
             metadata={
@@ -206,7 +206,7 @@ class ApplicationAssocMapElementValueSpecification:
             },
         )
         application_rule_based_value_specification: (
-            ApplicationRuleBasedValueSpecification | None
+            None | ApplicationRuleBasedValueSpecification
         ) = field(
             default=None,
             metadata={
@@ -216,7 +216,7 @@ class ApplicationAssocMapElementValueSpecification:
             },
         )
         application_value_specification: (
-            ApplicationValueSpecification | None
+            None | ApplicationValueSpecification
         ) = field(
             default=None,
             metadata={
@@ -225,7 +225,7 @@ class ApplicationAssocMapElementValueSpecification:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        array_value_specification: ArrayValueSpecification | None = field(
+        array_value_specification: None | ArrayValueSpecification = field(
             default=None,
             metadata={
                 "name": "ARRAY-VALUE-SPECIFICATION",
@@ -234,7 +234,7 @@ class ApplicationAssocMapElementValueSpecification:
             },
         )
         composite_rule_based_value_specification: (
-            CompositeRuleBasedValueSpecification | None
+            None | CompositeRuleBasedValueSpecification
         ) = field(
             default=None,
             metadata={
@@ -243,7 +243,7 @@ class ApplicationAssocMapElementValueSpecification:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        constant_reference: ConstantReference | None = field(
+        constant_reference: None | ConstantReference = field(
             default=None,
             metadata={
                 "name": "CONSTANT-REFERENCE",
@@ -252,7 +252,7 @@ class ApplicationAssocMapElementValueSpecification:
             },
         )
         not_available_value_specification: (
-            NotAvailableValueSpecification | None
+            None | NotAvailableValueSpecification
         ) = field(
             default=None,
             metadata={
@@ -262,7 +262,7 @@ class ApplicationAssocMapElementValueSpecification:
             },
         )
         numerical_rule_based_value_specification: (
-            NumericalRuleBasedValueSpecification | None
+            None | NumericalRuleBasedValueSpecification
         ) = field(
             default=None,
             metadata={
@@ -271,7 +271,7 @@ class ApplicationAssocMapElementValueSpecification:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        numerical_value_specification: NumericalValueSpecification | None = (
+        numerical_value_specification: None | NumericalValueSpecification = (
             field(
                 default=None,
                 metadata={
@@ -281,7 +281,7 @@ class ApplicationAssocMapElementValueSpecification:
                 },
             )
         )
-        record_value_specification: RecordValueSpecification | None = field(
+        record_value_specification: None | RecordValueSpecification = field(
             default=None,
             metadata={
                 "name": "RECORD-VALUE-SPECIFICATION",
@@ -289,7 +289,7 @@ class ApplicationAssocMapElementValueSpecification:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        reference_value_specification: ReferenceValueSpecification | None = (
+        reference_value_specification: None | ReferenceValueSpecification = (
             field(
                 default=None,
                 metadata={
@@ -299,7 +299,7 @@ class ApplicationAssocMapElementValueSpecification:
                 },
             )
         )
-        text_value_specification: TextValueSpecification | None = field(
+        text_value_specification: None | TextValueSpecification = field(
             default=None,
             metadata={
                 "name": "TEXT-VALUE-SPECIFICATION",
@@ -338,7 +338,7 @@ class ApplicationAssocMapValueSpecification:
     class Meta:
         name = "APPLICATION-ASSOC-MAP-VALUE-SPECIFICATION"
 
-    short_label: Identifier | None = field(
+    short_label: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-LABEL",
@@ -346,7 +346,7 @@ class ApplicationAssocMapValueSpecification:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -355,7 +355,7 @@ class ApplicationAssocMapValueSpecification:
         },
     )
     map_element_tuples: (
-        ApplicationAssocMapValueSpecification.MapElementTuples | None
+        None | ApplicationAssocMapValueSpecification.MapElementTuples
     ) = field(
         default=None,
         metadata={
@@ -364,14 +364,14 @@ class ApplicationAssocMapValueSpecification:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -430,7 +430,7 @@ class ArrayValueSpecification:
     class Meta:
         name = "ARRAY-VALUE-SPECIFICATION"
 
-    short_label: Identifier | None = field(
+    short_label: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-LABEL",
@@ -438,7 +438,7 @@ class ArrayValueSpecification:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -446,7 +446,7 @@ class ArrayValueSpecification:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    elements: ArrayValueSpecification.Elements | None = field(
+    elements: None | ArrayValueSpecification.Elements = field(
         default=None,
         metadata={
             "name": "ELEMENTS",
@@ -454,7 +454,7 @@ class ArrayValueSpecification:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    intended_partial_initialization_count: PositiveInteger | None = field(
+    intended_partial_initialization_count: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "INTENDED-PARTIAL-INITIALIZATION-COUNT",
@@ -462,14 +462,14 @@ class ArrayValueSpecification:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -630,7 +630,7 @@ class CompositeRuleBasedValueSpecification:
     class Meta:
         name = "COMPOSITE-RULE-BASED-VALUE-SPECIFICATION"
 
-    short_label: Identifier | None = field(
+    short_label: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-LABEL",
@@ -638,7 +638,7 @@ class CompositeRuleBasedValueSpecification:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -646,7 +646,7 @@ class CompositeRuleBasedValueSpecification:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    rule: Identifier | None = field(
+    rule: None | Identifier = field(
         default=None,
         metadata={
             "name": "RULE",
@@ -654,7 +654,7 @@ class CompositeRuleBasedValueSpecification:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    arguments: CompositeRuleBasedValueSpecification.Arguments | None = field(
+    arguments: None | CompositeRuleBasedValueSpecification.Arguments = field(
         default=None,
         metadata={
             "name": "ARGUMENTS",
@@ -662,7 +662,7 @@ class CompositeRuleBasedValueSpecification:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    max_size_to_fill: PositiveInteger | None = field(
+    max_size_to_fill: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "MAX-SIZE-TO-FILL",
@@ -670,14 +670,14 @@ class CompositeRuleBasedValueSpecification:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -750,7 +750,7 @@ class RecordValueSpecification:
     class Meta:
         name = "RECORD-VALUE-SPECIFICATION"
 
-    short_label: Identifier | None = field(
+    short_label: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-LABEL",
@@ -758,7 +758,7 @@ class RecordValueSpecification:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -766,7 +766,7 @@ class RecordValueSpecification:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    fields: RecordValueSpecification.Fields | None = field(
+    fields: None | RecordValueSpecification.Fields = field(
         default=None,
         metadata={
             "name": "FIELDS",
@@ -774,14 +774,14 @@ class RecordValueSpecification:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

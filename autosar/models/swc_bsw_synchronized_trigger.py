@@ -38,7 +38,7 @@ class SwcBswSynchronizedTrigger:
     class Meta:
         name = "SWC-BSW-SYNCHRONIZED-TRIGGER"
 
-    bsw_trigger_ref: SwcBswSynchronizedTrigger.BswTriggerRef | None = field(
+    bsw_trigger_ref: None | SwcBswSynchronizedTrigger.BswTriggerRef = field(
         default=None,
         metadata={
             "name": "BSW-TRIGGER-REF",
@@ -46,7 +46,7 @@ class SwcBswSynchronizedTrigger:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    swc_trigger_iref: PTriggerInAtomicSwcTypeInstanceRef | None = field(
+    swc_trigger_iref: None | PTriggerInAtomicSwcTypeInstanceRef = field(
         default=None,
         metadata={
             "name": "SWC-TRIGGER-IREF",
@@ -54,7 +54,7 @@ class SwcBswSynchronizedTrigger:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -62,14 +62,14 @@ class SwcBswSynchronizedTrigger:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -80,7 +80,7 @@ class SwcBswSynchronizedTrigger:
 
     @dataclass
     class BswTriggerRef(Ref):
-        dest: TriggerSubtypesEnum | None = field(
+        dest: None | TriggerSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

@@ -17,7 +17,7 @@ class GeographicalIntervalPriceVersionedChildStructure(
     class Meta:
         name = "GeographicalIntervalPrice_VersionedChildStructure"
 
-    geographical_interval_ref: GeographicalIntervalRef | None = field(
+    geographical_interval_ref: None | GeographicalIntervalRef = field(
         default=None,
         metadata={
             "name": "GeographicalIntervalRef",

@@ -53,7 +53,7 @@ class EndToEndProtectionISignalIPdu:
     class Meta:
         name = "END-TO-END-PROTECTION-I-SIGNAL-I-PDU"
 
-    data_offset: Integer | None = field(
+    data_offset: None | Integer = field(
         default=None,
         metadata={
             "name": "DATA-OFFSET",
@@ -62,7 +62,7 @@ class EndToEndProtectionISignalIPdu:
         },
     )
     i_signal_group_ref: (
-        EndToEndProtectionISignalIPdu.ISignalGroupRef | None
+        None | EndToEndProtectionISignalIPdu.ISignalGroupRef
     ) = field(
         default=None,
         metadata={
@@ -71,7 +71,7 @@ class EndToEndProtectionISignalIPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    i_signal_i_pdu_ref: EndToEndProtectionISignalIPdu.ISignalIPduRef | None = (
+    i_signal_i_pdu_ref: None | EndToEndProtectionISignalIPdu.ISignalIPduRef = (
         field(
             default=None,
             metadata={
@@ -81,7 +81,7 @@ class EndToEndProtectionISignalIPdu:
             },
         )
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -89,14 +89,14 @@ class EndToEndProtectionISignalIPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -107,7 +107,7 @@ class EndToEndProtectionISignalIPdu:
 
     @dataclass
     class ISignalGroupRef(Ref):
-        dest: ISignalGroupSubtypesEnum | None = field(
+        dest: None | ISignalGroupSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -118,7 +118,7 @@ class EndToEndProtectionISignalIPdu:
 
     @dataclass
     class ISignalIPduRef(Ref):
-        dest: ISignalIPduSubtypesEnum | None = field(
+        dest: None | ISignalIPduSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

@@ -15,7 +15,7 @@ class A:
         name = "a"
         namespace = "http://www.crossref.org/schema/5.3.1"
 
-    href: str | None = field(
+    href: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",

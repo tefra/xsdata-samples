@@ -32,7 +32,7 @@ class PrecipitationDetail:
     :ivar precipitation_detail_extension:
     """
 
-    precipitation_type: PrecipitationTypeEnum | None = field(
+    precipitation_type: None | PrecipitationTypeEnum = field(
         default=None,
         metadata={
             "name": "precipitationType",
@@ -40,7 +40,7 @@ class PrecipitationDetail:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    precipitation_intensity: PrecipitationIntensityValue | None = field(
+    precipitation_intensity: None | PrecipitationIntensityValue = field(
         default=None,
         metadata={
             "name": "precipitationIntensity",
@@ -48,7 +48,7 @@ class PrecipitationDetail:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    deposition_depth: FloatingPointMetreDistanceValue | None = field(
+    deposition_depth: None | FloatingPointMetreDistanceValue = field(
         default=None,
         metadata={
             "name": "depositionDepth",
@@ -56,7 +56,7 @@ class PrecipitationDetail:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    precipitation_detail_extension: ExtensionType | None = field(
+    precipitation_detail_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "precipitationDetailExtension",

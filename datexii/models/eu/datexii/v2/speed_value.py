@@ -17,7 +17,7 @@ class SpeedValue(DataValue):
     :ivar speed_value_extension:
     """
 
-    speed: float | None = field(
+    speed: None | float = field(
         default=None,
         metadata={
             "type": "Element",
@@ -25,7 +25,7 @@ class SpeedValue(DataValue):
             "required": True,
         },
     )
-    speed_value_extension: ExtensionType | None = field(
+    speed_value_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "speedValueExtension",

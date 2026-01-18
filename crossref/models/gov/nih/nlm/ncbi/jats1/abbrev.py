@@ -229,54 +229,54 @@ class CompoundKwd:
             "min_occurs": 1,
         },
     )
-    assigning_authority: str | None = field(
+    assigning_authority: None | str = field(
         default=None,
         metadata={
             "name": "assigning-authority",
             "type": "Attribute",
         },
     )
-    content_type: str | None = field(
+    content_type: None | str = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    vocab: str | None = field(
+    vocab: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    vocab_identifier: str | None = field(
+    vocab_identifier: None | str = field(
         default=None,
         metadata={
             "name": "vocab-identifier",
             "type": "Attribute",
         },
     )
-    vocab_term: str | None = field(
+    vocab_term: None | str = field(
         default=None,
         metadata={
             "name": "vocab-term",
             "type": "Attribute",
         },
     )
-    vocab_term_identifier: str | None = field(
+    vocab_term_identifier: None | str = field(
         default=None,
         metadata={
             "name": "vocab-term-identifier",
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -303,54 +303,54 @@ class CompoundSubject:
             "min_occurs": 1,
         },
     )
-    assigning_authority: str | None = field(
+    assigning_authority: None | str = field(
         default=None,
         metadata={
             "name": "assigning-authority",
             "type": "Attribute",
         },
     )
-    content_type: str | None = field(
+    content_type: None | str = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    vocab: str | None = field(
+    vocab: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    vocab_identifier: str | None = field(
+    vocab_identifier: None | str = field(
         default=None,
         metadata={
             "name": "vocab-identifier",
             "type": "Attribute",
         },
     )
-    vocab_term: str | None = field(
+    vocab_term: None | str = field(
         default=None,
         metadata={
             "name": "vocab-term",
             "type": "Attribute",
         },
     )
-    vocab_term_identifier: str | None = field(
+    vocab_term_identifier: None | str = field(
         default=None,
         metadata={
             "name": "vocab-term-identifier",
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -369,53 +369,53 @@ class Abbrev:
         name = "abbrev"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    alt: str | None = field(
+    alt: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    content_type: str | None = field(
+    content_type: None | str = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    hreflang: str | None = field(
+    hreflang: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    actuate: ActuateType | None = field(
+    actuate: None | ActuateType = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    href: str | None = field(
+    href: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    role: str | None = field(
+    role: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -423,14 +423,14 @@ class Abbrev:
             "min_length": 1,
         },
     )
-    show: ShowType | None = field(
+    show: None | ShowType = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    title: str | None = field(
+    title: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -446,14 +446,14 @@ class Abbrev:
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -493,13 +493,13 @@ class Abstract:
             "type": "Element",
         },
     )
-    label: Label | None = field(
+    label: None | Label = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    title: Title | None = field(
+    title: None | Title = field(
         default=None,
         metadata={
             "type": "Element",
@@ -517,34 +517,34 @@ class Abstract:
             "type": "Element",
         },
     )
-    abstract_type: str | None = field(
+    abstract_type: None | str = field(
         default=None,
         metadata={
             "name": "abstract-type",
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -669,13 +669,13 @@ class Alternatives:
             "namespace": "http://www.w3.org/1998/Math/MathML",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -701,34 +701,34 @@ class Annotation:
             "min_occurs": 1,
         },
     )
-    content_type: str | None = field(
+    content_type: None | str = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -747,7 +747,7 @@ class AuthorComment:
         name = "author-comment"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    title: Title | None = field(
+    title: None | Title = field(
         default=None,
         metadata={
             "type": "Element",
@@ -760,34 +760,34 @@ class AuthorComment:
             "min_occurs": 1,
         },
     )
-    content_type: str | None = field(
+    content_type: None | str = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -847,13 +847,13 @@ class BlockAlternatives:
             "type": "Element",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -872,7 +872,7 @@ class Caption:
         name = "caption"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    title: Title | None = field(
+    title: None | Title = field(
         default=None,
         metadata={
             "type": "Element",
@@ -884,40 +884,40 @@ class Caption:
             "type": "Element",
         },
     )
-    content_type: str | None = field(
+    content_type: None | str = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    style: str | None = field(
+    style: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -964,13 +964,13 @@ class CitationAlternatives:
             "type": "Element",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -989,34 +989,34 @@ class ConfSponsor:
         name = "conf-sponsor"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    content_type: str | None = field(
+    content_type: None | str = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -1053,34 +1053,34 @@ class CopyrightHolder:
         name = "copyright-holder"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    content_type: str | None = field(
+    content_type: None | str = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -1132,7 +1132,7 @@ class Def:
             "min_occurs": 1,
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -1145,21 +1145,21 @@ class Def:
             "tokens": True,
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -1178,40 +1178,40 @@ class Edition:
         name = "edition"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    content_type: str | None = field(
+    content_type: None | str = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    designator: str | None = field(
+    designator: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -1248,7 +1248,7 @@ class Fn:
         name = "fn"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    label: Label | None = field(
+    label: None | Label = field(
         default=None,
         metadata={
             "type": "Element",
@@ -1261,47 +1261,47 @@ class Fn:
             "min_occurs": 1,
         },
     )
-    custom_type: str | None = field(
+    custom_type: None | str = field(
         default=None,
         metadata={
             "name": "custom-type",
             "type": "Attribute",
         },
     )
-    fn_type: FnFnType | None = field(
+    fn_type: None | FnFnType = field(
         default=None,
         metadata={
             "name": "fn-type",
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    symbol: str | None = field(
+    symbol: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -1320,14 +1320,14 @@ class IndexTerm:
         name = "index-term"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    term: Term | None = field(
+    term: None | Term = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
         },
     )
-    index_term: IndexTerm | None = field(
+    index_term: None | IndexTerm = field(
         default=None,
         metadata={
             "name": "index-term",
@@ -1347,14 +1347,14 @@ class IndexTerm:
             "type": "Element",
         },
     )
-    content_type: str | None = field(
+    content_type: None | str = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -1368,48 +1368,48 @@ class IndexTerm:
             "tokens": True,
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    vocab: str | None = field(
+    vocab: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    vocab_identifier: str | None = field(
+    vocab_identifier: None | str = field(
         default=None,
         metadata={
             "name": "vocab-identifier",
             "type": "Attribute",
         },
     )
-    vocab_term: str | None = field(
+    vocab_term: None | str = field(
         default=None,
         metadata={
             "name": "vocab-term",
             "type": "Attribute",
         },
     )
-    vocab_term_identifier: str | None = field(
+    vocab_term_identifier: None | str = field(
         default=None,
         metadata={
             "name": "vocab-term-identifier",
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -1428,47 +1428,47 @@ class Institution:
         name = "institution"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    content_type: str | None = field(
+    content_type: None | str = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    hreflang: str | None = field(
+    hreflang: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    actuate: ActuateType | None = field(
+    actuate: None | ActuateType = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    href: str | None = field(
+    href: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    role: str | None = field(
+    role: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -1476,14 +1476,14 @@ class Institution:
             "min_length": 1,
         },
     )
-    show: ShowType | None = field(
+    show: None | ShowType = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    title: str | None = field(
+    title: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -1499,14 +1499,14 @@ class Institution:
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -1557,47 +1557,47 @@ class License:
             "type": "Element",
         },
     )
-    hreflang: str | None = field(
+    hreflang: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    license_type: str | None = field(
+    license_type: None | str = field(
         default=None,
         metadata={
             "name": "license-type",
             "type": "Attribute",
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    actuate: ActuateType | None = field(
+    actuate: None | ActuateType = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    href: str | None = field(
+    href: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    role: str | None = field(
+    role: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -1605,14 +1605,14 @@ class License:
             "min_length": 1,
         },
     )
-    show: ShowType | None = field(
+    show: None | ShowType = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    title: str | None = field(
+    title: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -1628,14 +1628,14 @@ class License:
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -1661,27 +1661,27 @@ class OpenAccess:
             "min_occurs": 1,
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -1700,34 +1700,34 @@ class AddrLine:
         name = "addr-line"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    content_type: str | None = field(
+    content_type: None | str = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -1892,34 +1892,34 @@ class AltTitle:
         name = "alt-title"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    alt_title_type: str | None = field(
+    alt_title_type: None | str = field(
         default=None,
         metadata={
             "name": "alt-title-type",
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -2152,7 +2152,7 @@ class Array:
             "type": "Element",
         },
     )
-    tbody: Tbody | None = field(
+    tbody: None | Tbody = field(
         default=None,
         metadata={
             "type": "Element",
@@ -2170,14 +2170,14 @@ class Array:
             "type": "Element",
         },
     )
-    content_type: str | None = field(
+    content_type: None | str = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -2189,21 +2189,21 @@ class Array:
             "type": "Attribute",
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -2222,20 +2222,20 @@ class ArticleTitle:
         name = "article-title"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -2417,27 +2417,27 @@ class Attrib:
         name = "attrib"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -2615,34 +2615,34 @@ class AwardId:
         name = "award-id"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    assigning_authority: str | None = field(
+    assigning_authority: None | str = field(
         default=None,
         metadata={
             "name": "assigning-authority",
             "type": "Attribute",
         },
     )
-    award_id_type: str | None = field(
+    award_id_type: None | str = field(
         default=None,
         metadata={
             "name": "award-id-type",
             "type": "Attribute",
         },
     )
-    award_type: str | None = field(
+    award_type: None | str = field(
         default=None,
         metadata={
             "name": "award-type",
             "type": "Attribute",
         },
     )
-    hreflang: str | None = field(
+    hreflang: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -2655,28 +2655,28 @@ class AwardId:
             "tokens": True,
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    actuate: ActuateType | None = field(
+    actuate: None | ActuateType = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    href: str | None = field(
+    href: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    role: str | None = field(
+    role: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -2684,14 +2684,14 @@ class AwardId:
             "min_length": 1,
         },
     )
-    show: ShowType | None = field(
+    show: None | ShowType = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    title: str | None = field(
+    title: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -2707,14 +2707,14 @@ class AwardId:
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -2847,26 +2847,26 @@ class Bold:
         name = "bold"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    toggle: BoldToggle | None = field(
+    toggle: None | BoldToggle = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -3044,7 +3044,7 @@ class DefItem:
         name = "def-item"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    term: Term | None = field(
+    term: None | Term = field(
         default=None,
         metadata={
             "type": "Element",
@@ -3058,27 +3058,27 @@ class DefItem:
             "type": "Element",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -3097,13 +3097,13 @@ class FnGroup:
         name = "fn-group"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    label: Label | None = field(
+    label: None | Label = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    title: Title | None = field(
+    title: None | Title = field(
         default=None,
         metadata={
             "type": "Element",
@@ -3116,34 +3116,34 @@ class FnGroup:
             "min_occurs": 1,
         },
     )
-    content_type: str | None = field(
+    content_type: None | str = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -3175,13 +3175,13 @@ class InstitutionWrap:
             "type": "Element",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -3200,34 +3200,34 @@ class Speaker:
         name = "speaker"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    content_type: str | None = field(
+    content_type: None | str = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -3364,34 +3364,34 @@ class Address:
             "type": "Element",
         },
     )
-    content_type: str | None = field(
+    content_type: None | str = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -3410,14 +3410,14 @@ class Aff:
         name = "aff"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    content_type: str | None = field(
+    content_type: None | str = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -3430,21 +3430,21 @@ class Aff:
             "tokens": True,
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -3605,27 +3605,27 @@ class ChapterTitle:
         name = "chapter-title"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -3775,47 +3775,47 @@ class ChemStruct:
         name = "chem-struct"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    content_type: str | None = field(
+    content_type: None | str = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    hreflang: str | None = field(
+    hreflang: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    actuate: ActuateType | None = field(
+    actuate: None | ActuateType = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    href: str | None = field(
+    href: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    role: str | None = field(
+    role: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -3823,14 +3823,14 @@ class ChemStruct:
             "min_length": 1,
         },
     )
-    show: ShowType | None = field(
+    show: None | ShowType = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    title: str | None = field(
+    title: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -3846,14 +3846,14 @@ class ChemStruct:
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -4023,39 +4023,39 @@ class Code:
         name = "code"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    code_type: str | None = field(
+    code_type: None | str = field(
         default=None,
         metadata={
             "name": "code-type",
             "type": "Attribute",
         },
     )
-    code_version: str | None = field(
+    code_version: None | str = field(
         default=None,
         metadata={
             "name": "code-version",
             "type": "Attribute",
         },
     )
-    executable: CodeExecutable | None = field(
+    executable: None | CodeExecutable = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    language: str | None = field(
+    language: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    language_version: str | None = field(
+    language_version: None | str = field(
         default=None,
         metadata={
             "name": "language-version",
@@ -4068,7 +4068,7 @@ class Code:
             "type": "Attribute",
         },
     )
-    platforms: str | None = field(
+    platforms: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -4080,21 +4080,21 @@ class Code:
             "type": "Attribute",
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -4247,34 +4247,34 @@ class ConfLoc:
         name = "conf-loc"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    content_type: str | None = field(
+    content_type: None | str = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -4339,34 +4339,34 @@ class CopyrightStatement:
         name = "copyright-statement"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    content_type: str | None = field(
+    content_type: None | str = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -4467,34 +4467,34 @@ class DataTitle:
         name = "data-title"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    content_type: str | None = field(
+    content_type: None | str = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -4607,54 +4607,54 @@ class ExtLink:
         name = "ext-link"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    assigning_authority: str | None = field(
+    assigning_authority: None | str = field(
         default=None,
         metadata={
             "name": "assigning-authority",
             "type": "Attribute",
         },
     )
-    ext_link_type: str | None = field(
+    ext_link_type: None | str = field(
         default=None,
         metadata={
             "name": "ext-link-type",
             "type": "Attribute",
         },
     )
-    hreflang: str | None = field(
+    hreflang: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    actuate: ActuateType | None = field(
+    actuate: None | ActuateType = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    href: str | None = field(
+    href: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    role: str | None = field(
+    role: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -4662,14 +4662,14 @@ class ExtLink:
             "min_length": 1,
         },
     )
-    show: ShowType | None = field(
+    show: None | ShowType = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    title: str | None = field(
+    title: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -4685,14 +4685,14 @@ class ExtLink:
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -4781,27 +4781,27 @@ class PublisherName:
         name = "publisher-name"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -4845,13 +4845,13 @@ class AffAlternatives:
             "min_occurs": 1,
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -4877,13 +4877,13 @@ class Answer:
             "type": "Element",
         },
     )
-    label: Label | None = field(
+    label: None | Label = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    title: Title | None = field(
+    title: None | Title = field(
         default=None,
         metadata={
             "type": "Element",
@@ -5152,14 +5152,14 @@ class Answer:
             "type": "Element",
         },
     )
-    content_type: str | None = field(
+    content_type: None | str = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -5173,21 +5173,21 @@ class Answer:
             "tokens": True,
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -5213,13 +5213,13 @@ class ChemStructWrap:
             "type": "Element",
         },
     )
-    label: Label | None = field(
+    label: None | Label = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    caption: Caption | None = field(
+    caption: None | Caption = field(
         default=None,
         metadata={
             "type": "Element",
@@ -5334,14 +5334,14 @@ class ChemStructWrap:
             "type": "Element",
         },
     )
-    content_type: str | None = field(
+    content_type: None | str = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -5359,21 +5359,21 @@ class ChemStructWrap:
             "type": "Attribute",
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -5392,34 +5392,34 @@ class Comment:
         name = "comment"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    content_type: str | None = field(
+    content_type: None | str = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -5597,13 +5597,13 @@ class DefHead:
         name = "def-head"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -5781,34 +5781,34 @@ class DispFormula:
         name = "disp-formula"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    content_type: str | None = field(
+    content_type: None | str = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -5998,27 +5998,27 @@ class FixedCase:
         name = "fixed-case"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    content_type: str | None = field(
+    content_type: None | str = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -6286,33 +6286,33 @@ class Graphic:
             "type": "Element",
         },
     )
-    content_type: str | None = field(
+    content_type: None | str = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    hreflang: str | None = field(
+    hreflang: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    mime_subtype: str | None = field(
+    mime_subtype: None | str = field(
         default=None,
         metadata={
             "name": "mime-subtype",
             "type": "Attribute",
         },
     )
-    mimetype: str | None = field(
+    mimetype: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -6330,21 +6330,21 @@ class Graphic:
             "type": "Attribute",
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    actuate: ActuateType | None = field(
+    actuate: None | ActuateType = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    href: str | None = field(
+    href: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -6352,7 +6352,7 @@ class Graphic:
             "required": True,
         },
     )
-    role: str | None = field(
+    role: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -6360,14 +6360,14 @@ class Graphic:
             "min_length": 1,
         },
     )
-    show: ShowType | None = field(
+    show: None | ShowType = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    title: str | None = field(
+    title: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -6383,14 +6383,14 @@ class Graphic:
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -6443,13 +6443,13 @@ class Permissions:
             "type": "Element",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -6468,27 +6468,27 @@ class PublisherLoc:
         name = "publisher-loc"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -6572,13 +6572,13 @@ class AnswerSet:
             "type": "Element",
         },
     )
-    label: Label | None = field(
+    label: None | Label = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    title: Title | None = field(
+    title: None | Title = field(
         default=None,
         metadata={
             "type": "Element",
@@ -6615,34 +6615,34 @@ class AnswerSet:
             "type": "Element",
         },
     )
-    content_type: str | None = field(
+    content_type: None | str = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -6661,26 +6661,26 @@ class DefList:
         name = "def-list"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    label: Label | None = field(
+    label: None | Label = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    title: Title | None = field(
+    title: None | Title = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    term_head: TermHead | None = field(
+    term_head: None | TermHead = field(
         default=None,
         metadata={
             "name": "term-head",
             "type": "Element",
         },
     )
-    def_head: DefHead | None = field(
+    def_head: None | DefHead = field(
         default=None,
         metadata={
             "name": "def-head",
@@ -6701,55 +6701,55 @@ class DefList:
             "type": "Element",
         },
     )
-    continued_from: str | None = field(
+    continued_from: None | str = field(
         default=None,
         metadata={
             "name": "continued-from",
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    list_content: str | None = field(
+    list_content: None | str = field(
         default=None,
         metadata={
             "name": "list-content",
             "type": "Attribute",
         },
     )
-    list_type: str | None = field(
+    list_type: None | str = field(
         default=None,
         metadata={
             "name": "list-type",
             "type": "Attribute",
         },
     )
-    prefix_word: str | None = field(
+    prefix_word: None | str = field(
         default=None,
         metadata={
             "name": "prefix-word",
             "type": "Attribute",
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -6775,13 +6775,13 @@ class DispFormulaGroup:
             "type": "Element",
         },
     )
-    label: Label | None = field(
+    label: None | Label = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    caption: Caption | None = field(
+    caption: None | Caption = field(
         default=None,
         metadata={
             "type": "Element",
@@ -6854,34 +6854,34 @@ class DispFormulaGroup:
             "type": "Element",
         },
     )
-    content_type: str | None = field(
+    content_type: None | str = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -6900,19 +6900,19 @@ class FundingSource:
         name = "funding-source"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    country: str | None = field(
+    country: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    hreflang: str | None = field(
+    hreflang: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -6925,35 +6925,35 @@ class FundingSource:
             "tokens": True,
         },
     )
-    source_type: str | None = field(
+    source_type: None | str = field(
         default=None,
         metadata={
             "name": "source-type",
             "type": "Attribute",
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    actuate: ActuateType | None = field(
+    actuate: None | ActuateType = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    href: str | None = field(
+    href: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    role: str | None = field(
+    role: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -6961,14 +6961,14 @@ class FundingSource:
             "min_length": 1,
         },
     )
-    show: ShowType | None = field(
+    show: None | ShowType = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    title: str | None = field(
+    title: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -6984,14 +6984,14 @@ class FundingSource:
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -7132,34 +7132,34 @@ class Gov:
         name = "gov"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    content_type: str | None = field(
+    content_type: None | str = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -7248,34 +7248,34 @@ class InlineFormula:
         name = "inline-formula"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    content_type: str | None = field(
+    content_type: None | str = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -7405,80 +7405,80 @@ class InlineMedia:
         name = "inline-media"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    content_type: str | None = field(
+    content_type: None | str = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    hreflang: str | None = field(
+    hreflang: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    mime_subtype: str | None = field(
+    mime_subtype: None | str = field(
         default=None,
         metadata={
             "name": "mime-subtype",
             "type": "Attribute",
         },
     )
-    mimetype: str | None = field(
+    mimetype: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    vocab: str | None = field(
+    vocab: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    vocab_identifier: str | None = field(
+    vocab_identifier: None | str = field(
         default=None,
         metadata={
             "name": "vocab-identifier",
             "type": "Attribute",
         },
     )
-    vocab_term: str | None = field(
+    vocab_term: None | str = field(
         default=None,
         metadata={
             "name": "vocab-term",
             "type": "Attribute",
         },
     )
-    vocab_term_identifier: str | None = field(
+    vocab_term_identifier: None | str = field(
         default=None,
         metadata={
             "name": "vocab-term-identifier",
             "type": "Attribute",
         },
     )
-    actuate: ActuateType | None = field(
+    actuate: None | ActuateType = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    href: str | None = field(
+    href: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -7486,7 +7486,7 @@ class InlineMedia:
             "required": True,
         },
     )
-    role: str | None = field(
+    role: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -7494,14 +7494,14 @@ class InlineMedia:
             "min_length": 1,
         },
     )
-    show: ShowType | None = field(
+    show: None | ShowType = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    title: str | None = field(
+    title: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -7517,14 +7517,14 @@ class InlineMedia:
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -7633,60 +7633,60 @@ class InlineSupplementaryMaterial:
         name = "inline-supplementary-material"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    content_type: str | None = field(
+    content_type: None | str = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    hreflang: str | None = field(
+    hreflang: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    mime_subtype: str | None = field(
+    mime_subtype: None | str = field(
         default=None,
         metadata={
             "name": "mime-subtype",
             "type": "Attribute",
         },
     )
-    mimetype: str | None = field(
+    mimetype: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    actuate: ActuateType | None = field(
+    actuate: None | ActuateType = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    href: str | None = field(
+    href: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    role: str | None = field(
+    role: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -7694,14 +7694,14 @@ class InlineSupplementaryMaterial:
             "min_length": 1,
         },
     )
-    show: ShowType | None = field(
+    show: None | ShowType = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    title: str | None = field(
+    title: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -7717,14 +7717,14 @@ class InlineSupplementaryMaterial:
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -7833,20 +7833,20 @@ class Bio:
         name = "bio"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    sec_meta: SecMeta | None = field(
+    sec_meta: None | SecMeta = field(
         default=None,
         metadata={
             "name": "sec-meta",
             "type": "Element",
         },
     )
-    label: Label | None = field(
+    label: None | Label = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    title: Title | None = field(
+    title: None | Title = field(
         default=None,
         metadata={
             "type": "Element",
@@ -8102,20 +8102,20 @@ class Bio:
             "type": "Element",
         },
     )
-    content_type: str | None = field(
+    content_type: None | str = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    hreflang: str | None = field(
+    hreflang: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -8128,28 +8128,28 @@ class Bio:
             "tokens": True,
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    actuate: ActuateType | None = field(
+    actuate: None | ActuateType = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    href: str | None = field(
+    href: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    role: str | None = field(
+    role: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -8157,14 +8157,14 @@ class Bio:
             "min_length": 1,
         },
     )
-    show: ShowType | None = field(
+    show: None | ShowType = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    title_attribute: str | None = field(
+    title_attribute: None | str = field(
         default=None,
         metadata={
             "name": "title",
@@ -8181,14 +8181,14 @@ class Bio:
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -8214,20 +8214,20 @@ class BoxedText:
             "type": "Element",
         },
     )
-    sec_meta: SecMeta | None = field(
+    sec_meta: None | SecMeta = field(
         default=None,
         metadata={
             "name": "sec-meta",
             "type": "Element",
         },
     )
-    label: Label | None = field(
+    label: None | Label = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    caption: Caption | None = field(
+    caption: None | Caption = field(
         default=None,
         metadata={
             "type": "Element",
@@ -8495,14 +8495,14 @@ class BoxedText:
             "type": "Element",
         },
     )
-    content_type: str | None = field(
+    content_type: None | str = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -8520,21 +8520,21 @@ class BoxedText:
             "type": "Attribute",
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -8553,13 +8553,13 @@ class Italic:
         name = "italic"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
@@ -8572,7 +8572,7 @@ class Italic:
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -8750,53 +8750,53 @@ class Collab:
         name = "collab"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    collab_type: str | None = field(
+    collab_type: None | str = field(
         default=None,
         metadata={
             "name": "collab-type",
             "type": "Attribute",
         },
     )
-    hreflang: str | None = field(
+    hreflang: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    symbol: str | None = field(
+    symbol: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    actuate: ActuateType | None = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-            "namespace": "http://www.w3.org/1999/xlink",
-        },
-    )
-    href: str | None = field(
+    actuate: None | ActuateType = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    role: str | None = field(
+    href: None | str = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+            "namespace": "http://www.w3.org/1999/xlink",
+        },
+    )
+    role: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -8804,14 +8804,14 @@ class Collab:
             "min_length": 1,
         },
     )
-    show: ShowType | None = field(
+    show: None | ShowType = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    title: str | None = field(
+    title: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -8827,14 +8827,14 @@ class Collab:
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -9055,13 +9055,13 @@ class DispQuote:
         name = "disp-quote"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    label: Label | None = field(
+    label: None | Label = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    title: Title | None = field(
+    title: None | Title = field(
         default=None,
         metadata={
             "type": "Element",
@@ -9303,34 +9303,34 @@ class DispQuote:
             "type": "Element",
         },
     )
-    content_type: str | None = field(
+    content_type: None | str = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -9349,54 +9349,54 @@ class Kwd:
         name = "kwd"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    assigning_authority: str | None = field(
+    assigning_authority: None | str = field(
         default=None,
         metadata={
             "name": "assigning-authority",
             "type": "Attribute",
         },
     )
-    content_type: str | None = field(
+    content_type: None | str = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    vocab: str | None = field(
+    vocab: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    vocab_identifier: str | None = field(
+    vocab_identifier: None | str = field(
         default=None,
         metadata={
             "name": "vocab-identifier",
             "type": "Attribute",
         },
     )
-    vocab_term: str | None = field(
+    vocab_term: None | str = field(
         default=None,
         metadata={
             "name": "vocab-term",
             "type": "Attribute",
         },
     )
-    vocab_term_identifier: str | None = field(
+    vocab_term_identifier: None | str = field(
         default=None,
         metadata={
             "name": "vocab-term-identifier",
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -9485,26 +9485,26 @@ class Label:
         name = "label"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    alt: str | None = field(
+    alt: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -9609,26 +9609,26 @@ class Monospace:
         name = "monospace"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    toggle: MonospaceToggle | None = field(
+    toggle: None | MonospaceToggle = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -9813,13 +9813,13 @@ class CollabAlternatives:
             "min_occurs": 1,
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -9845,13 +9845,13 @@ class Explanation:
             "type": "Element",
         },
     )
-    label: Label | None = field(
+    label: None | Label = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    title: Title | None = field(
+    title: None | Title = field(
         default=None,
         metadata={
             "type": "Element",
@@ -10114,14 +10114,14 @@ class Explanation:
             "type": "Element",
         },
     )
-    content_type: str | None = field(
+    content_type: None | str = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -10135,21 +10135,21 @@ class Explanation:
             "tokens": True,
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -10368,14 +10368,14 @@ class Fig:
             "type": "Element",
         },
     )
-    fig_type: str | None = field(
+    fig_type: None | str = field(
         default=None,
         metadata={
             "name": "fig-type",
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -10393,21 +10393,21 @@ class Fig:
             "type": "Attribute",
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -10433,13 +10433,13 @@ class List:
             "type": "Element",
         },
     )
-    label: Label | None = field(
+    label: None | Label = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    title: Title | None = field(
+    title: None | Title = field(
         default=None,
         metadata={
             "type": "Element",
@@ -10453,55 +10453,55 @@ class List:
             "min_occurs": 1,
         },
     )
-    continued_from: str | None = field(
+    continued_from: None | str = field(
         default=None,
         metadata={
             "name": "continued-from",
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    list_content: str | None = field(
+    list_content: None | str = field(
         default=None,
         metadata={
             "name": "list-content",
             "type": "Attribute",
         },
     )
-    list_type: str | None = field(
+    list_type: None | str = field(
         default=None,
         metadata={
             "name": "list-type",
             "type": "Attribute",
         },
     )
-    prefix_word: str | None = field(
+    prefix_word: None | str = field(
         default=None,
         metadata={
             "name": "prefix-word",
             "type": "Attribute",
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -10540,54 +10540,54 @@ class NestedKwd:
             "type": "Element",
         },
     )
-    assigning_authority: str | None = field(
+    assigning_authority: None | str = field(
         default=None,
         metadata={
             "name": "assigning-authority",
             "type": "Attribute",
         },
     )
-    content_type: str | None = field(
+    content_type: None | str = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    vocab: str | None = field(
+    vocab: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    vocab_identifier: str | None = field(
+    vocab_identifier: None | str = field(
         default=None,
         metadata={
             "name": "vocab-identifier",
             "type": "Attribute",
         },
     )
-    vocab_term: str | None = field(
+    vocab_term: None | str = field(
         default=None,
         metadata={
             "name": "vocab-term",
             "type": "Attribute",
         },
     )
-    vocab_term_identifier: str | None = field(
+    vocab_term_identifier: None | str = field(
         default=None,
         metadata={
             "name": "vocab-term-identifier",
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -10633,90 +10633,90 @@ class NlmCitation:
             "type": "Element",
         },
     )
-    source: Source | None = field(
+    source: None | Source = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    patent: Patent | None = field(
+    patent: None | Patent = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    trans_source: TransSource | None = field(
+    trans_source: None | TransSource = field(
         default=None,
         metadata={
             "name": "trans-source",
             "type": "Element",
         },
     )
-    year: Year | None = field(
+    year: None | Year = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    month: Month | None = field(
+    month: None | Month = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    day: Day | None = field(
+    day: None | Day = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    time_stamp: TimeStamp | None = field(
+    time_stamp: None | TimeStamp = field(
         default=None,
         metadata={
             "name": "time-stamp",
             "type": "Element",
         },
     )
-    season: Season | None = field(
+    season: None | Season = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    access_date: AccessDate | None = field(
+    access_date: None | AccessDate = field(
         default=None,
         metadata={
             "name": "access-date",
             "type": "Element",
         },
     )
-    volume: Volume | None = field(
+    volume: None | Volume = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    edition: Edition | None = field(
+    edition: None | Edition = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    conf_name: ConfName | None = field(
+    conf_name: None | ConfName = field(
         default=None,
         metadata={
             "name": "conf-name",
             "type": "Element",
         },
     )
-    conf_date: ConfDate | None = field(
+    conf_date: None | ConfDate = field(
         default=None,
         metadata={
             "name": "conf-date",
             "type": "Element",
         },
     )
-    conf_loc: ConfLoc | None = field(
+    conf_loc: None | ConfLoc = field(
         default=None,
         metadata={
             "name": "conf-loc",
@@ -10735,14 +10735,14 @@ class NlmCitation:
             "type": "Element",
         },
     )
-    publisher_loc: PublisherLoc | None = field(
+    publisher_loc: None | PublisherLoc = field(
         default=None,
         metadata={
             "name": "publisher-loc",
             "type": "Element",
         },
     )
-    publisher_name: PublisherName | None = field(
+    publisher_name: None | PublisherName = field(
         default=None,
         metadata={
             "name": "publisher-name",
@@ -10761,14 +10761,14 @@ class NlmCitation:
             "type": "Element",
         },
     )
-    page_count: PageCount | None = field(
+    page_count: None | PageCount = field(
         default=None,
         metadata={
             "name": "page-count",
             "type": "Element",
         },
     )
-    series: Series | None = field(
+    series: None | Series = field(
         default=None,
         metadata={
             "type": "Element",
@@ -10787,67 +10787,67 @@ class NlmCitation:
             "type": "Element",
         },
     )
-    annotation: Annotation | None = field(
+    annotation: None | Annotation = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    hreflang: str | None = field(
+    hreflang: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    publication_format: str | None = field(
+    publication_format: None | str = field(
         default=None,
         metadata={
             "name": "publication-format",
             "type": "Attribute",
         },
     )
-    publication_type: str | None = field(
+    publication_type: None | str = field(
         default=None,
         metadata={
             "name": "publication-type",
             "type": "Attribute",
         },
     )
-    publisher_type: str | None = field(
+    publisher_type: None | str = field(
         default=None,
         metadata={
             "name": "publisher-type",
             "type": "Attribute",
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    actuate: ActuateType | None = field(
+    actuate: None | ActuateType = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    href: str | None = field(
+    href: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    role: str | None = field(
+    role: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -10855,14 +10855,14 @@ class NlmCitation:
             "min_length": 1,
         },
     )
-    show: ShowType | None = field(
+    show: None | ShowType = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    title: str | None = field(
+    title: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -10878,14 +10878,14 @@ class NlmCitation:
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -10904,7 +10904,7 @@ class Note:
         name = "note"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    label: Label | None = field(
+    label: None | Label = field(
         default=None,
         metadata={
             "type": "Element",
@@ -10922,34 +10922,34 @@ class Note:
             "type": "Element",
         },
     )
-    content_type: str | None = field(
+    content_type: None | str = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -11090,39 +11090,39 @@ class Contrib:
             "type": "Element",
         },
     )
-    contrib_type: str | None = field(
+    contrib_type: None | str = field(
         default=None,
         metadata={
             "name": "contrib-type",
             "type": "Attribute",
         },
     )
-    corresp: ContribCorresp | None = field(
+    corresp: None | ContribCorresp = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    deceased: ContribDeceased | None = field(
+    deceased: None | ContribDeceased = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    equal_contrib: ContribEqualContrib | None = field(
+    equal_contrib: None | ContribEqualContrib = field(
         default=None,
         metadata={
             "name": "equal-contrib",
             "type": "Attribute",
         },
     )
-    hreflang: str | None = field(
+    hreflang: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -11135,28 +11135,28 @@ class Contrib:
             "tokens": True,
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    actuate: ActuateType | None = field(
+    actuate: None | ActuateType = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    href: str | None = field(
+    href: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    role_attribute: str | None = field(
+    role_attribute: None | str = field(
         default=None,
         metadata={
             "name": "role",
@@ -11165,14 +11165,14 @@ class Contrib:
             "min_length": 1,
         },
     )
-    show: ShowType | None = field(
+    show: None | ShowType = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    title: str | None = field(
+    title: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -11188,7 +11188,7 @@ class Contrib:
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -11773,68 +11773,68 @@ class ElementCitation:
             "type": "Element",
         },
     )
-    hreflang: str | None = field(
+    hreflang: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    publication_format: str | None = field(
+    publication_format: None | str = field(
         default=None,
         metadata={
             "name": "publication-format",
             "type": "Attribute",
         },
     )
-    publication_type: str | None = field(
+    publication_type: None | str = field(
         default=None,
         metadata={
             "name": "publication-type",
             "type": "Attribute",
         },
     )
-    publisher_type: str | None = field(
+    publisher_type: None | str = field(
         default=None,
         metadata={
             "name": "publisher-type",
             "type": "Attribute",
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    use_type: str | None = field(
+    use_type: None | str = field(
         default=None,
         metadata={
             "name": "use-type",
             "type": "Attribute",
         },
     )
-    actuate: ActuateType | None = field(
+    actuate: None | ActuateType = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    href: str | None = field(
+    href: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    role_attribute: str | None = field(
+    role_attribute: None | str = field(
         default=None,
         metadata={
             "name": "role",
@@ -11843,14 +11843,14 @@ class ElementCitation:
             "min_length": 1,
         },
     )
-    show: ShowType | None = field(
+    show: None | ShowType = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    title: str | None = field(
+    title: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -11866,14 +11866,14 @@ class ElementCitation:
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -12001,14 +12001,14 @@ class FigGroup:
             "type": "Element",
         },
     )
-    content_type: str | None = field(
+    content_type: None | str = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -12026,21 +12026,21 @@ class FigGroup:
             "type": "Attribute",
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -12059,13 +12059,13 @@ class KwdGroup:
         name = "kwd-group"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    label: Label | None = field(
+    label: None | Label = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    title: Title | None = field(
+    title: None | Title = field(
         default=None,
         metadata={
             "type": "Element",
@@ -12091,54 +12091,54 @@ class KwdGroup:
             "type": "Element",
         },
     )
-    assigning_authority: str | None = field(
+    assigning_authority: None | str = field(
         default=None,
         metadata={
             "name": "assigning-authority",
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    kwd_group_type: str | None = field(
+    kwd_group_type: None | str = field(
         default=None,
         metadata={
             "name": "kwd-group-type",
             "type": "Attribute",
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    vocab: str | None = field(
+    vocab: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    vocab_identifier: str | None = field(
+    vocab_identifier: None | str = field(
         default=None,
         metadata={
             "name": "vocab-identifier",
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -12157,68 +12157,68 @@ class MixedCitation:
         name = "mixed-citation"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    hreflang: str | None = field(
+    hreflang: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    publication_format: str | None = field(
+    publication_format: None | str = field(
         default=None,
         metadata={
             "name": "publication-format",
             "type": "Attribute",
         },
     )
-    publication_type: str | None = field(
+    publication_type: None | str = field(
         default=None,
         metadata={
             "name": "publication-type",
             "type": "Attribute",
         },
     )
-    publisher_type: str | None = field(
+    publisher_type: None | str = field(
         default=None,
         metadata={
             "name": "publisher-type",
             "type": "Attribute",
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    use_type: str | None = field(
+    use_type: None | str = field(
         default=None,
         metadata={
             "name": "use-type",
             "type": "Attribute",
         },
     )
-    actuate: ActuateType | None = field(
+    actuate: None | ActuateType = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    href: str | None = field(
+    href: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    role: str | None = field(
+    role: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -12226,14 +12226,14 @@ class MixedCitation:
             "min_length": 1,
         },
     )
-    show: ShowType | None = field(
+    show: None | ShowType = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    title: str | None = field(
+    title: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -12249,14 +12249,14 @@ class MixedCitation:
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -12633,41 +12633,41 @@ class PersonGroup:
         name = "person-group"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    custom_type: str | None = field(
+    custom_type: None | str = field(
         default=None,
         metadata={
             "name": "custom-type",
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    person_group_type: PersonGroupPersonGroupType | None = field(
+    person_group_type: None | PersonGroupPersonGroupType = field(
         default=None,
         metadata={
             "name": "person-group-type",
             "type": "Attribute",
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -12813,27 +12813,27 @@ class ContribGroup:
             "type": "Element",
         },
     )
-    content_type: str | None = field(
+    content_type: None | str = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -12859,13 +12859,13 @@ class Glossary:
             "type": "Element",
         },
     )
-    label: Label | None = field(
+    label: None | Label = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    title: Title | None = field(
+    title: None | Title = field(
         default=None,
         metadata={
             "type": "Element",
@@ -13101,34 +13101,34 @@ class Glossary:
             "type": "Element",
         },
     )
-    content_type: str | None = field(
+    content_type: None | str = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -13237,33 +13237,33 @@ class Media:
             "type": "Element",
         },
     )
-    content_type: str | None = field(
+    content_type: None | str = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    hreflang: str | None = field(
+    hreflang: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    mime_subtype: str | None = field(
+    mime_subtype: None | str = field(
         default=None,
         metadata={
             "name": "mime-subtype",
             "type": "Attribute",
         },
     )
-    mimetype: str | None = field(
+    mimetype: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -13281,21 +13281,21 @@ class Media:
             "type": "Attribute",
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    actuate: ActuateType | None = field(
+    actuate: None | ActuateType = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    href: str | None = field(
+    href: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -13303,7 +13303,7 @@ class Media:
             "required": True,
         },
     )
-    role: str | None = field(
+    role: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -13311,14 +13311,14 @@ class Media:
             "min_length": 1,
         },
     )
-    show: ShowType | None = field(
+    show: None | ShowType = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    title: str | None = field(
+    title: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -13334,14 +13334,14 @@ class Media:
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -13360,7 +13360,7 @@ class Ref:
         name = "ref"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    label: Label | None = field(
+    label: None | Label = field(
         default=None,
         metadata={
             "type": "Element",
@@ -13400,34 +13400,34 @@ class Ref:
             "type": "Element",
         },
     )
-    content_type: str | None = field(
+    content_type: None | str = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -13446,13 +13446,13 @@ class NamedContent:
         name = "named-content"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    alt: str | None = field(
+    alt: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    content_type: str | None = field(
+    content_type: None | str = field(
         default=None,
         metadata={
             "name": "content-type",
@@ -13460,13 +13460,13 @@ class NamedContent:
             "required": True,
         },
     )
-    hreflang: str | None = field(
+    hreflang: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -13479,55 +13479,55 @@ class NamedContent:
             "tokens": True,
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    vocab: str | None = field(
+    vocab: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    vocab_identifier: str | None = field(
+    vocab_identifier: None | str = field(
         default=None,
         metadata={
             "name": "vocab-identifier",
             "type": "Attribute",
         },
     )
-    vocab_term: str | None = field(
+    vocab_term: None | str = field(
         default=None,
         metadata={
             "name": "vocab-term",
             "type": "Attribute",
         },
     )
-    vocab_term_identifier: str | None = field(
+    vocab_term_identifier: None | str = field(
         default=None,
         metadata={
             "name": "vocab-term-identifier",
             "type": "Attribute",
         },
     )
-    actuate: ActuateType | None = field(
+    actuate: None | ActuateType = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    href: str | None = field(
+    href: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    role: str | None = field(
+    role: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -13535,14 +13535,14 @@ class NamedContent:
             "min_length": 1,
         },
     )
-    show: ShowType | None = field(
+    show: None | ShowType = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    title: str | None = field(
+    title: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -13558,14 +13558,14 @@ class NamedContent:
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -13862,13 +13862,13 @@ class Option:
             "type": "Element",
         },
     )
-    label: Label | None = field(
+    label: None | Label = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    title: Title | None = field(
+    title: None | Title = field(
         default=None,
         metadata={
             "type": "Element",
@@ -14137,40 +14137,40 @@ class Option:
             "type": "Element",
         },
     )
-    content_type: str | None = field(
+    content_type: None | str = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    correct: OptionCorrect | None = field(
+    correct: None | OptionCorrect = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -14189,26 +14189,26 @@ class Overline:
         name = "overline"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    toggle: OverlineToggle | None = field(
+    toggle: None | OverlineToggle = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -14386,34 +14386,34 @@ class P:
         name = "p"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    content_type: str | None = field(
+    content_type: None | str = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -14731,27 +14731,27 @@ class PartTitle:
         name = "part-title"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -14901,7 +14901,7 @@ class Preformat:
         name = "preformat"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -14919,28 +14919,28 @@ class Preformat:
             "type": "Attribute",
         },
     )
-    preformat_type: str | None = field(
+    preformat_type: None | str = field(
         default=None,
         metadata={
             "name": "preformat-type",
             "type": "Attribute",
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -15085,34 +15085,34 @@ class Rb:
         name = "rb"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    content_type: str | None = field(
+    content_type: None | str = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -15188,20 +15188,20 @@ class Question:
             "type": "Element",
         },
     )
-    sec_meta: SecMeta | None = field(
+    sec_meta: None | SecMeta = field(
         default=None,
         metadata={
             "name": "sec-meta",
             "type": "Element",
         },
     )
-    label: Label | None = field(
+    label: None | Label = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    title: Title | None = field(
+    title: None | Title = field(
         default=None,
         metadata={
             "type": "Element",
@@ -15476,41 +15476,41 @@ class Question:
             "type": "Element",
         },
     )
-    content_type: str | None = field(
+    content_type: None | str = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    question_response_type: QuestionQuestionResponseType | None = field(
+    question_response_type: None | QuestionQuestionResponseType = field(
         default=None,
         metadata={
             "name": "question-response-type",
             "type": "Attribute",
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -15529,41 +15529,41 @@ class Ruby:
         name = "ruby"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    rb: Rb | None = field(
+    rb: None | Rb = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
         },
     )
-    rt: Rt | None = field(
+    rt: None | Rt = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
         },
     )
-    content_type: str | None = field(
+    content_type: None | str = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -15589,7 +15589,7 @@ class Speech:
             "type": "Element",
         },
     )
-    speaker: Speaker | None = field(
+    speaker: None | Speaker = field(
         default=None,
         metadata={
             "type": "Element",
@@ -15603,34 +15603,34 @@ class Speech:
             "min_occurs": 1,
         },
     )
-    content_type: str | None = field(
+    content_type: None | str = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -15649,13 +15649,13 @@ class Statement:
         name = "statement"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    label: Label | None = field(
+    label: None | Label = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    title: Title | None = field(
+    title: None | Title = field(
         default=None,
         metadata={
             "type": "Element",
@@ -15705,34 +15705,34 @@ class Statement:
             "type": "Element",
         },
     )
-    content_type: str | None = field(
+    content_type: None | str = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -15758,20 +15758,20 @@ class QuestionWrap:
             "type": "Element",
         },
     )
-    question: Question | None = field(
+    question: None | Question = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
         },
     )
-    answer: Answer | None = field(
+    answer: None | Answer = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    answer_set: AnswerSet | None = field(
+    answer_set: None | AnswerSet = field(
         default=None,
         metadata={
             "name": "answer-set",
@@ -15784,40 +15784,40 @@ class QuestionWrap:
             "type": "Element",
         },
     )
-    audience: str | None = field(
+    audience: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    content_type: str | None = field(
+    content_type: None | str = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -15836,59 +15836,59 @@ class RelatedArticle:
         name = "related-article"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    elocation_id: str | None = field(
+    elocation_id: None | str = field(
         default=None,
         metadata={
             "name": "elocation-id",
             "type": "Attribute",
         },
     )
-    ext_link_type: str | None = field(
+    ext_link_type: None | str = field(
         default=None,
         metadata={
             "name": "ext-link-type",
             "type": "Attribute",
         },
     )
-    hreflang: str | None = field(
+    hreflang: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    issue: str | None = field(
+    issue: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    journal_id: str | None = field(
+    journal_id: None | str = field(
         default=None,
         metadata={
             "name": "journal-id",
             "type": "Attribute",
         },
     )
-    journal_id_type: str | None = field(
+    journal_id_type: None | str = field(
         default=None,
         metadata={
             "name": "journal-id-type",
             "type": "Attribute",
         },
     )
-    page: str | None = field(
+    page: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    related_article_type: str | None = field(
+    related_article_type: None | str = field(
         default=None,
         metadata={
             "name": "related-article-type",
@@ -15896,34 +15896,34 @@ class RelatedArticle:
             "required": True,
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    vol: str | None = field(
+    vol: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    actuate: ActuateType | None = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-            "namespace": "http://www.w3.org/1999/xlink",
-        },
-    )
-    href: str | None = field(
+    actuate: None | ActuateType = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    role: str | None = field(
+    href: None | str = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+            "namespace": "http://www.w3.org/1999/xlink",
+        },
+    )
+    role: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -15931,14 +15931,14 @@ class RelatedArticle:
             "min_length": 1,
         },
     )
-    show: ShowType | None = field(
+    show: None | ShowType = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    title: str | None = field(
+    title: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -15954,14 +15954,14 @@ class RelatedArticle:
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -16294,124 +16294,124 @@ class RelatedObject:
         name = "related-object"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    content_type: str | None = field(
+    content_type: None | str = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    document_id: str | None = field(
+    document_id: None | str = field(
         default=None,
         metadata={
             "name": "document-id",
             "type": "Attribute",
         },
     )
-    document_id_type: str | None = field(
+    document_id_type: None | str = field(
         default=None,
         metadata={
             "name": "document-id-type",
             "type": "Attribute",
         },
     )
-    document_type: str | None = field(
+    document_type: None | str = field(
         default=None,
         metadata={
             "name": "document-type",
             "type": "Attribute",
         },
     )
-    ext_link_type: str | None = field(
+    ext_link_type: None | str = field(
         default=None,
         metadata={
             "name": "ext-link-type",
             "type": "Attribute",
         },
     )
-    hreflang: str | None = field(
+    hreflang: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    link_type: str | None = field(
+    link_type: None | str = field(
         default=None,
         metadata={
             "name": "link-type",
             "type": "Attribute",
         },
     )
-    object_id: str | None = field(
+    object_id: None | str = field(
         default=None,
         metadata={
             "name": "object-id",
             "type": "Attribute",
         },
     )
-    object_id_type: str | None = field(
+    object_id_type: None | str = field(
         default=None,
         metadata={
             "name": "object-id-type",
             "type": "Attribute",
         },
     )
-    object_type: str | None = field(
+    object_type: None | str = field(
         default=None,
         metadata={
             "name": "object-type",
             "type": "Attribute",
         },
     )
-    source_id: str | None = field(
+    source_id: None | str = field(
         default=None,
         metadata={
             "name": "source-id",
             "type": "Attribute",
         },
     )
-    source_id_type: str | None = field(
+    source_id_type: None | str = field(
         default=None,
         metadata={
             "name": "source-id-type",
             "type": "Attribute",
         },
     )
-    source_type: str | None = field(
+    source_type: None | str = field(
         default=None,
         metadata={
             "name": "source-type",
             "type": "Attribute",
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    actuate: ActuateType | None = field(
+    actuate: None | ActuateType = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    href: str | None = field(
+    href: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    role: str | None = field(
+    role: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -16419,14 +16419,14 @@ class RelatedObject:
             "min_length": 1,
         },
     )
-    show: ShowType | None = field(
+    show: None | ShowType = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    title: str | None = field(
+    title: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -16442,14 +16442,14 @@ class RelatedObject:
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -16785,13 +16785,13 @@ class QuestionPreamble:
             "type": "Element",
         },
     )
-    label: Label | None = field(
+    label: None | Label = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    title: Title | None = field(
+    title: None | Title = field(
         default=None,
         metadata={
             "type": "Element",
@@ -17040,34 +17040,34 @@ class QuestionPreamble:
             "type": "Element",
         },
     )
-    content_type: str | None = field(
+    content_type: None | str = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -17086,13 +17086,13 @@ class Roman:
         name = "roman"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
@@ -17105,7 +17105,7 @@ class Roman:
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -17290,13 +17290,13 @@ class QuestionWrapGroup:
             "type": "Element",
         },
     )
-    label: Label | None = field(
+    label: None | Label = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    title: Title | None = field(
+    title: None | Title = field(
         default=None,
         metadata={
             "type": "Element",
@@ -17315,7 +17315,7 @@ class QuestionWrapGroup:
             "type": "Element",
         },
     )
-    question_preamble: QuestionPreamble | None = field(
+    question_preamble: None | QuestionPreamble = field(
         default=None,
         metadata={
             "name": "question-preamble",
@@ -17330,40 +17330,40 @@ class QuestionWrapGroup:
             "min_occurs": 1,
         },
     )
-    audience: str | None = field(
+    audience: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    content_type: str | None = field(
+    content_type: None | str = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -17382,26 +17382,26 @@ class SansSerif:
         name = "sans-serif"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    toggle: SansSerifToggle | None = field(
+    toggle: None | SansSerifToggle = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -17579,26 +17579,26 @@ class Sc:
         name = "sc"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    toggle: ScToggle | None = field(
+    toggle: None | ScToggle = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -17776,26 +17776,26 @@ class Strike:
         name = "strike"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    toggle: StrikeToggle | None = field(
+    toggle: None | StrikeToggle = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -17973,59 +17973,59 @@ class StyledContent:
         name = "styled-content"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    alt: str | None = field(
+    alt: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    style: str | None = field(
+    style: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    style_detail: str | None = field(
+    style_detail: None | str = field(
         default=None,
         metadata={
             "name": "style-detail",
             "type": "Attribute",
         },
     )
-    style_type: str | None = field(
+    style_type: None | str = field(
         default=None,
         metadata={
             "name": "style-type",
             "type": "Attribute",
         },
     )
-    toggle: StyledContentToggle | None = field(
+    toggle: None | StyledContentToggle = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -18315,26 +18315,26 @@ class Sub:
         name = "sub"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    arrange: SubArrange | None = field(
+    arrange: None | SubArrange = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -18512,26 +18512,26 @@ class Sup:
         name = "sup"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    arrange: SupArrange | None = field(
+    arrange: None | SupArrange = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -18709,34 +18709,34 @@ class StdOrganization:
         name = "std-organization"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    content_type: str | None = field(
+    content_type: None | str = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -18781,35 +18781,35 @@ class Target:
         name = "target"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "required": True,
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    target_type: str | None = field(
+    target_type: None | str = field(
         default=None,
         metadata={
             "name": "target-type",
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -18898,40 +18898,40 @@ class Version:
         name = "version"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    content_type: str | None = field(
+    content_type: None | str = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    designator: str | None = field(
+    designator: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -18968,33 +18968,33 @@ class Underline:
         name = "underline"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    toggle: UnderlineToggle | None = field(
+    toggle: None | UnderlineToggle = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    underline_style: str | None = field(
+    underline_style: None | str = field(
         default=None,
         metadata={
             "name": "underline-style",
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -19172,20 +19172,20 @@ class CompoundSubjectPart:
         name = "compound-subject-part"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    content_type: str | None = field(
+    content_type: None | str = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -19298,40 +19298,40 @@ class Price:
         name = "price"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    content_type: str | None = field(
+    content_type: None | str = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    currency: str | None = field(
+    currency: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -19404,75 +19404,75 @@ class Role:
         name = "role"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    assigning_authority: str | None = field(
+    assigning_authority: None | str = field(
         default=None,
         metadata={
             "name": "assigning-authority",
             "type": "Attribute",
         },
     )
-    content_type: str | None = field(
+    content_type: None | str = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    degree_contribution: str | None = field(
+    degree_contribution: None | str = field(
         default=None,
         metadata={
             "name": "degree-contribution",
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    vocab: str | None = field(
+    vocab: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    vocab_identifier: str | None = field(
+    vocab_identifier: None | str = field(
         default=None,
         metadata={
             "name": "vocab-identifier",
             "type": "Attribute",
         },
     )
-    vocab_term: str | None = field(
+    vocab_term: None | str = field(
         default=None,
         metadata={
             "name": "vocab-term",
             "type": "Attribute",
         },
     )
-    vocab_term_identifier: str | None = field(
+    vocab_term_identifier: None | str = field(
         default=None,
         metadata={
             "name": "vocab-term-identifier",
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -19561,34 +19561,34 @@ class Series:
         name = "series"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    content_type: str | None = field(
+    content_type: None | str = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -19677,54 +19677,54 @@ class Subject:
         name = "subject"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    assigning_authority: str | None = field(
+    assigning_authority: None | str = field(
         default=None,
         metadata={
             "name": "assigning-authority",
             "type": "Attribute",
         },
     )
-    content_type: str | None = field(
+    content_type: None | str = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    vocab: str | None = field(
+    vocab: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    vocab_identifier: str | None = field(
+    vocab_identifier: None | str = field(
         default=None,
         metadata={
             "name": "vocab-identifier",
             "type": "Attribute",
         },
     )
-    vocab_term: str | None = field(
+    vocab_term: None | str = field(
         default=None,
         metadata={
             "name": "vocab-term",
             "type": "Attribute",
         },
     )
-    vocab_term_identifier: str | None = field(
+    vocab_term_identifier: None | str = field(
         default=None,
         metadata={
             "name": "vocab-term-identifier",
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -19837,27 +19837,27 @@ class TextualForm:
         name = "textual-form"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -19967,26 +19967,26 @@ class Xref:
         name = "xref"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    alt: str | None = field(
+    alt: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    custom_type: str | None = field(
+    custom_type: None | str = field(
         default=None,
         metadata={
             "name": "custom-type",
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    ref_type: XrefRefType | None = field(
+    ref_type: None | XrefRefType = field(
         default=None,
         metadata={
             "name": "ref-type",
@@ -20000,21 +20000,21 @@ class Xref:
             "tokens": True,
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -20103,20 +20103,20 @@ class CompoundKwdPart:
         name = "compound-kwd-part"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    content_type: str | None = field(
+    content_type: None | str = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -20241,27 +20241,27 @@ class OnBehalfOf:
         name = "on-behalf-of"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -20370,14 +20370,14 @@ class See:
         name = "see"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    content_type: str | None = field(
+    content_type: None | str = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -20390,21 +20390,21 @@ class See:
             "tokens": True,
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -20610,14 +20610,14 @@ class SeeAlso:
         name = "see-also"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    content_type: str | None = field(
+    content_type: None | str = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -20630,48 +20630,48 @@ class SeeAlso:
             "tokens": True,
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    vocab: str | None = field(
+    vocab: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    vocab_identifier: str | None = field(
+    vocab_identifier: None | str = field(
         default=None,
         metadata={
             "name": "vocab-identifier",
             "type": "Attribute",
         },
     )
-    vocab_term: str | None = field(
+    vocab_term: None | str = field(
         default=None,
         metadata={
             "name": "vocab-term",
             "type": "Attribute",
         },
     )
-    vocab_term_identifier: str | None = field(
+    vocab_term_identifier: None | str = field(
         default=None,
         metadata={
             "name": "vocab-term-identifier",
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -20877,34 +20877,34 @@ class Source:
         name = "source"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    content_type: str | None = field(
+    content_type: None | str = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -21070,54 +21070,54 @@ class SubjGroup:
             "type": "Element",
         },
     )
-    assigning_authority: str | None = field(
+    assigning_authority: None | str = field(
         default=None,
         metadata={
             "name": "assigning-authority",
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    subj_group_type: str | None = field(
+    subj_group_type: None | str = field(
         default=None,
         metadata={
             "name": "subj-group-type",
             "type": "Attribute",
         },
     )
-    vocab: str | None = field(
+    vocab: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    vocab_identifier: str | None = field(
+    vocab_identifier: None | str = field(
         default=None,
         metadata={
             "name": "vocab-identifier",
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -21136,34 +21136,34 @@ class Subtitle:
         name = "subtitle"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    content_type: str | None = field(
+    content_type: None | str = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -21345,7 +21345,7 @@ class Term:
         name = "term"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -21358,62 +21358,62 @@ class Term:
             "tokens": True,
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    term_status: str | None = field(
+    term_status: None | str = field(
         default=None,
         metadata={
             "name": "term-status",
             "type": "Attribute",
         },
     )
-    term_type: str | None = field(
+    term_type: None | str = field(
         default=None,
         metadata={
             "name": "term-type",
             "type": "Attribute",
         },
     )
-    vocab: str | None = field(
+    vocab: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    vocab_identifier: str | None = field(
+    vocab_identifier: None | str = field(
         default=None,
         metadata={
             "name": "vocab-identifier",
             "type": "Attribute",
         },
     )
-    vocab_term: str | None = field(
+    vocab_term: None | str = field(
         default=None,
         metadata={
             "name": "vocab-term",
             "type": "Attribute",
         },
     )
-    vocab_term_identifier: str | None = field(
+    vocab_term_identifier: None | str = field(
         default=None,
         metadata={
             "name": "vocab-term-identifier",
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -21619,13 +21619,13 @@ class TermHead:
         name = "term-head"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -21803,27 +21803,27 @@ class Title:
         name = "title"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    content_type: str | None = field(
+    content_type: None | str = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -22021,34 +22021,34 @@ class TransSource:
         name = "trans-source"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    content_type: str | None = field(
+    content_type: None | str = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -22198,34 +22198,34 @@ class TransTitle:
         name = "trans-title"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    content_type: str | None = field(
+    content_type: None | str = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -22407,61 +22407,61 @@ class VerseLine:
         name = "verse-line"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    content_type: str | None = field(
+    content_type: None | str = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    indent_level: str | None = field(
+    indent_level: None | str = field(
         default=None,
         metadata={
             "name": "indent-level",
             "type": "Attribute",
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    style: str | None = field(
+    style: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    style_detail: str | None = field(
+    style_detail: None | str = field(
         default=None,
         metadata={
             "name": "style-detail",
             "type": "Attribute",
         },
     )
-    style_type: str | None = field(
+    style_type: None | str = field(
         default=None,
         metadata={
             "name": "style-type",
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -22606,13 +22606,13 @@ class ListItem:
         name = "list-item"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    label: Label | None = field(
+    label: None | Label = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    title: Title | None = field(
+    title: None | Title = field(
         default=None,
         metadata={
             "type": "Element",
@@ -22638,27 +22638,27 @@ class ListItem:
             "type": "Element",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -22711,19 +22711,19 @@ class SecMeta:
             "type": "Element",
         },
     )
-    permissions: Permissions | None = field(
+    permissions: None | Permissions = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -22742,34 +22742,34 @@ class Std:
         name = "std"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    content_type: str | None = field(
+    content_type: None | str = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -22894,34 +22894,34 @@ class Supplement:
         name = "supplement"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    supplement_type: str | None = field(
+    supplement_type: None | str = field(
         default=None,
         metadata={
             "name": "supplement-type",
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -23062,7 +23062,7 @@ class TableWrapFoot:
         name = "table-wrap-foot"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    title: Title | None = field(
+    title: None | Title = field(
         default=None,
         metadata={
             "type": "Element",
@@ -23099,13 +23099,13 @@ class TableWrapFoot:
             "type": "Element",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -23124,19 +23124,19 @@ class VerseGroup:
         name = "verse-group"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    label: Label | None = field(
+    label: None | Label = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    title: Title | None = field(
+    title: None | Title = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    subtitle: Subtitle | None = field(
+    subtitle: None | Subtitle = field(
         default=None,
         metadata={
             "type": "Element",
@@ -23168,54 +23168,54 @@ class VerseGroup:
             "type": "Element",
         },
     )
-    content_type: str | None = field(
+    content_type: None | str = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    style: str | None = field(
+    style: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    style_detail: str | None = field(
+    style_detail: None | str = field(
         default=None,
         metadata={
             "name": "style-detail",
             "type": "Attribute",
         },
     )
-    style_type: str | None = field(
+    style_type: None | str = field(
         default=None,
         metadata={
             "name": "style-type",
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -23234,47 +23234,47 @@ class Product:
         name = "product"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    hreflang: str | None = field(
+    hreflang: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    product_type: str | None = field(
+    product_type: None | str = field(
         default=None,
         metadata={
             "name": "product-type",
             "type": "Attribute",
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    actuate: ActuateType | None = field(
+    actuate: None | ActuateType = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    href: str | None = field(
+    href: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    role: str | None = field(
+    role: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -23282,14 +23282,14 @@ class Product:
             "min_length": 1,
         },
     )
-    show: ShowType | None = field(
+    show: None | ShowType = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    title: str | None = field(
+    title: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -23305,14 +23305,14 @@ class Product:
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -23713,31 +23713,31 @@ class Td:
         name = "td"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    abbr: str | None = field(
+    abbr: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    align: TdAlign | None = field(
+    align: None | TdAlign = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    axis: str | None = field(
+    axis: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    char: str | None = field(
+    char: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    charoff: str | None = field(
+    charoff: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -23749,7 +23749,7 @@ class Td:
             "type": "Attribute",
         },
     )
-    content_type: str | None = field(
+    content_type: None | str = field(
         default=None,
         metadata={
             "name": "content-type",
@@ -23763,7 +23763,7 @@ class Td:
             "tokens": True,
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -23775,25 +23775,25 @@ class Td:
             "type": "Attribute",
         },
     )
-    scope: TdScope | None = field(
+    scope: None | TdScope = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    style: str | None = field(
+    style: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    valign: TdValign | None = field(
+    valign: None | TdValign = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -24071,31 +24071,31 @@ class Th:
         name = "th"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    abbr: str | None = field(
+    abbr: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    align: ThAlign | None = field(
+    align: None | ThAlign = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    axis: str | None = field(
+    axis: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    char: str | None = field(
+    char: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    charoff: str | None = field(
+    charoff: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -24107,7 +24107,7 @@ class Th:
             "type": "Attribute",
         },
     )
-    content_type: str | None = field(
+    content_type: None | str = field(
         default=None,
         metadata={
             "name": "content-type",
@@ -24121,7 +24121,7 @@ class Th:
             "tokens": True,
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -24133,25 +24133,25 @@ class Th:
             "type": "Attribute",
         },
     )
-    scope: ThScope | None = field(
+    scope: None | ThScope = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    style: str | None = field(
+    style: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    valign: ThValign | None = field(
+    valign: None | ThValign = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -24441,50 +24441,50 @@ class Tr:
             "type": "Element",
         },
     )
-    align: TrAlign | None = field(
+    align: None | TrAlign = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    char: str | None = field(
+    char: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    charoff: str | None = field(
+    charoff: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    content_type: str | None = field(
+    content_type: None | str = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    style: str | None = field(
+    style: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    valign: TrValign | None = field(
+    valign: None | TrValign = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -24506,50 +24506,50 @@ class Tbody:
             "min_occurs": 1,
         },
     )
-    align: TbodyAlign | None = field(
+    align: None | TbodyAlign = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    char: str | None = field(
+    char: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    charoff: str | None = field(
+    charoff: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    content_type: str | None = field(
+    content_type: None | str = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    style: str | None = field(
+    style: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    valign: TbodyValign | None = field(
+    valign: None | TbodyValign = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -24571,50 +24571,50 @@ class Tfoot:
             "min_occurs": 1,
         },
     )
-    align: TfootAlign | None = field(
+    align: None | TfootAlign = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    char: str | None = field(
+    char: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    charoff: str | None = field(
+    charoff: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    content_type: str | None = field(
+    content_type: None | str = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    style: str | None = field(
+    style: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    valign: TfootValign | None = field(
+    valign: None | TfootValign = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -24636,50 +24636,50 @@ class Thead:
             "min_occurs": 1,
         },
     )
-    align: TheadAlign | None = field(
+    align: None | TheadAlign = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    char: str | None = field(
+    char: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    charoff: str | None = field(
+    charoff: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    content_type: str | None = field(
+    content_type: None | str = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    style: str | None = field(
+    style: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    valign: TheadValign | None = field(
+    valign: None | TheadValign = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -24711,13 +24711,13 @@ class Table:
             "type": "Element",
         },
     )
-    thead: Thead | None = field(
+    thead: None | Thead = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    tfoot: Tfoot | None = field(
+    tfoot: None | Tfoot = field(
         default=None,
         metadata={
             "type": "Element",
@@ -24735,75 +24735,75 @@ class Table:
             "type": "Element",
         },
     )
-    border: str | None = field(
+    border: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    cellpadding: str | None = field(
+    cellpadding: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    cellspacing: str | None = field(
+    cellspacing: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    content_type: str | None = field(
+    content_type: None | str = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    frame: TableFrame | None = field(
+    frame: None | TableFrame = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    rules: TableRules | None = field(
+    rules: None | TableRules = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    style: str | None = field(
+    style: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    summary: str | None = field(
+    summary: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    width: str | None = field(
+    width: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -25009,14 +25009,14 @@ class TableWrap:
             "type": "Element",
         },
     )
-    content_type: str | None = field(
+    content_type: None | str = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -25034,21 +25034,21 @@ class TableWrap:
             "type": "Attribute",
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -25267,33 +25267,33 @@ class SupplementaryMaterial:
             "type": "Element",
         },
     )
-    content_type: str | None = field(
+    content_type: None | str = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    hreflang: str | None = field(
+    hreflang: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    mime_subtype: str | None = field(
+    mime_subtype: None | str = field(
         default=None,
         metadata={
             "name": "mime-subtype",
             "type": "Attribute",
         },
     )
-    mimetype: str | None = field(
+    mimetype: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -25311,28 +25311,28 @@ class SupplementaryMaterial:
             "type": "Attribute",
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    actuate: ActuateType | None = field(
+    actuate: None | ActuateType = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    href: str | None = field(
+    href: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    role: str | None = field(
+    role: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -25340,14 +25340,14 @@ class SupplementaryMaterial:
             "min_length": 1,
         },
     )
-    show: ShowType | None = field(
+    show: None | ShowType = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    title: str | None = field(
+    title: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -25363,14 +25363,14 @@ class SupplementaryMaterial:
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -25474,14 +25474,14 @@ class TableWrapGroup:
             "type": "Element",
         },
     )
-    content_type: str | None = field(
+    content_type: None | str = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -25499,21 +25499,21 @@ class TableWrapGroup:
             "type": "Attribute",
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -25532,27 +25532,27 @@ class LicenseP:
         name = "license-p"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    content_type: str | None = field(
+    content_type: None | str = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -25881,13 +25881,13 @@ class RefList:
             "type": "Element",
         },
     )
-    label: Label | None = field(
+    label: None | Label = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    title: Title | None = field(
+    title: None | Title = field(
         default=None,
         metadata={
             "type": "Element",
@@ -26130,34 +26130,34 @@ class RefList:
             "type": "Element",
         },
     )
-    content_type: str | None = field(
+    content_type: None | str = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -26176,14 +26176,14 @@ class Sec:
         name = "sec"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    sec_meta: SecMeta | None = field(
+    sec_meta: None | SecMeta = field(
         default=None,
         metadata={
             "name": "sec-meta",
             "type": "Element",
         },
     )
-    label: Label | None = field(
+    label: None | Label = field(
         default=None,
         metadata={
             "type": "Element",
@@ -26449,34 +26449,34 @@ class Sec:
             "type": "Element",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    sec_type: str | None = field(
+    sec_type: None | str = field(
         default=None,
         metadata={
             "name": "sec-type",
             "type": "Attribute",
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",

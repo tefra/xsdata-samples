@@ -37,7 +37,7 @@ class SomeipMethodProps:
     class Meta:
         name = "SOMEIP-METHOD-PROPS"
 
-    collection_props: SomeipCollectionProps | None = field(
+    collection_props: None | SomeipCollectionProps = field(
         default=None,
         metadata={
             "name": "COLLECTION-PROPS",
@@ -45,7 +45,7 @@ class SomeipMethodProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    method_ref: SomeipMethodProps.MethodRef | None = field(
+    method_ref: None | SomeipMethodProps.MethodRef = field(
         default=None,
         metadata={
             "name": "METHOD-REF",
@@ -53,14 +53,14 @@ class SomeipMethodProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -71,7 +71,7 @@ class SomeipMethodProps:
 
     @dataclass
     class MethodRef(Ref):
-        dest: SomeipMethodDeploymentSubtypesEnum | None = field(
+        dest: None | SomeipMethodDeploymentSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

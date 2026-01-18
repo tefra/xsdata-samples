@@ -91,7 +91,7 @@ class GlobalTimeGateway:
     class Meta:
         name = "GLOBAL-TIME-GATEWAY"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -100,7 +100,7 @@ class GlobalTimeGateway:
             "required": True,
         },
     )
-    short_name_fragments: GlobalTimeGateway.ShortNameFragments | None = field(
+    short_name_fragments: None | GlobalTimeGateway.ShortNameFragments = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -108,7 +108,7 @@ class GlobalTimeGateway:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -116,7 +116,7 @@ class GlobalTimeGateway:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -124,7 +124,7 @@ class GlobalTimeGateway:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -132,7 +132,7 @@ class GlobalTimeGateway:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -140,7 +140,7 @@ class GlobalTimeGateway:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -148,7 +148,7 @@ class GlobalTimeGateway:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: GlobalTimeGateway.Annotations | None = field(
+    annotations: None | GlobalTimeGateway.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -156,7 +156,7 @@ class GlobalTimeGateway:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    host_ref: GlobalTimeGateway.HostRef | None = field(
+    host_ref: None | GlobalTimeGateway.HostRef = field(
         default=None,
         metadata={
             "name": "HOST-REF",
@@ -164,7 +164,7 @@ class GlobalTimeGateway:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    master_ref: GlobalTimeGateway.MasterRef | None = field(
+    master_ref: None | GlobalTimeGateway.MasterRef = field(
         default=None,
         metadata={
             "name": "MASTER-REF",
@@ -172,7 +172,7 @@ class GlobalTimeGateway:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    slave_ref: GlobalTimeGateway.SlaveRef | None = field(
+    slave_ref: None | GlobalTimeGateway.SlaveRef = field(
         default=None,
         metadata={
             "name": "SLAVE-REF",
@@ -180,7 +180,7 @@ class GlobalTimeGateway:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -188,14 +188,14 @@ class GlobalTimeGateway:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -203,7 +203,7 @@ class GlobalTimeGateway:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -235,7 +235,7 @@ class GlobalTimeGateway:
 
     @dataclass
     class HostRef(Ref):
-        dest: EcuInstanceSubtypesEnum | None = field(
+        dest: None | EcuInstanceSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -246,7 +246,7 @@ class GlobalTimeGateway:
 
     @dataclass
     class MasterRef(Ref):
-        dest: GlobalTimeMasterSubtypesEnum | None = field(
+        dest: None | GlobalTimeMasterSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -257,7 +257,7 @@ class GlobalTimeGateway:
 
     @dataclass
     class SlaveRef(Ref):
-        dest: GlobalTimeSlaveSubtypesEnum | None = field(
+        dest: None | GlobalTimeSlaveSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

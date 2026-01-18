@@ -149,7 +149,7 @@ class NvBlockSwComponentType:
     class Meta:
         name = "NV-BLOCK-SW-COMPONENT-TYPE"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -158,7 +158,7 @@ class NvBlockSwComponentType:
             "required": True,
         },
     )
-    short_name_fragments: NvBlockSwComponentType.ShortNameFragments | None = (
+    short_name_fragments: None | NvBlockSwComponentType.ShortNameFragments = (
         field(
             default=None,
             metadata={
@@ -168,7 +168,7 @@ class NvBlockSwComponentType:
             },
         )
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -176,7 +176,7 @@ class NvBlockSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -184,7 +184,7 @@ class NvBlockSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -192,7 +192,7 @@ class NvBlockSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -200,7 +200,7 @@ class NvBlockSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -208,7 +208,7 @@ class NvBlockSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: NvBlockSwComponentType.Annotations | None = field(
+    annotations: None | NvBlockSwComponentType.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -216,7 +216,7 @@ class NvBlockSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -224,7 +224,7 @@ class NvBlockSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    blueprint_policys: NvBlockSwComponentType.BlueprintPolicys | None = field(
+    blueprint_policys: None | NvBlockSwComponentType.BlueprintPolicys = field(
         default=None,
         metadata={
             "name": "BLUEPRINT-POLICYS",
@@ -232,7 +232,7 @@ class NvBlockSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    short_name_pattern: String | None = field(
+    short_name_pattern: None | String = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-PATTERN",
@@ -241,7 +241,7 @@ class NvBlockSwComponentType:
         },
     )
     sw_component_documentations: (
-        NvBlockSwComponentType.SwComponentDocumentations | None
+        None | NvBlockSwComponentType.SwComponentDocumentations
     ) = field(
         default=None,
         metadata={
@@ -250,7 +250,7 @@ class NvBlockSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    consistency_needss: NvBlockSwComponentType.ConsistencyNeedss | None = (
+    consistency_needss: None | NvBlockSwComponentType.ConsistencyNeedss = (
         field(
             default=None,
             metadata={
@@ -260,7 +260,7 @@ class NvBlockSwComponentType:
             },
         )
     )
-    ports: NvBlockSwComponentType.Ports | None = field(
+    ports: None | NvBlockSwComponentType.Ports = field(
         default=None,
         metadata={
             "name": "PORTS",
@@ -268,7 +268,7 @@ class NvBlockSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    port_groups: NvBlockSwComponentType.PortGroups | None = field(
+    port_groups: None | NvBlockSwComponentType.PortGroups = field(
         default=None,
         metadata={
             "name": "PORT-GROUPS",
@@ -276,7 +276,7 @@ class NvBlockSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    unit_group_refs: NvBlockSwComponentType.UnitGroupRefs | None = field(
+    unit_group_refs: None | NvBlockSwComponentType.UnitGroupRefs = field(
         default=None,
         metadata={
             "name": "UNIT-GROUP-REFS",
@@ -284,7 +284,7 @@ class NvBlockSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    internal_behaviors: NvBlockSwComponentType.InternalBehaviors | None = (
+    internal_behaviors: None | NvBlockSwComponentType.InternalBehaviors = (
         field(
             default=None,
             metadata={
@@ -294,7 +294,7 @@ class NvBlockSwComponentType:
             },
         )
     )
-    symbol_props: SymbolProps | None = field(
+    symbol_props: None | SymbolProps = field(
         default=None,
         metadata={
             "name": "SYMBOL-PROPS",
@@ -303,7 +303,7 @@ class NvBlockSwComponentType:
         },
     )
     bulk_nv_data_descriptors: (
-        NvBlockSwComponentType.BulkNvDataDescriptors | None
+        None | NvBlockSwComponentType.BulkNvDataDescriptors
     ) = field(
         default=None,
         metadata={
@@ -312,7 +312,7 @@ class NvBlockSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nv_block_descriptors: NvBlockSwComponentType.NvBlockDescriptors | None = (
+    nv_block_descriptors: None | NvBlockSwComponentType.NvBlockDescriptors = (
         field(
             default=None,
             metadata={
@@ -322,14 +322,14 @@ class NvBlockSwComponentType:
             },
         )
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -337,7 +337,7 @@ class NvBlockSwComponentType:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -471,7 +471,7 @@ class NvBlockSwComponentType:
 
         @dataclass
         class UnitGroupRef(Ref):
-            dest: UnitGroupSubtypesEnum | None = field(
+            dest: None | UnitGroupSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",

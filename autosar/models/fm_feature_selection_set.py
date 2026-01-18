@@ -97,7 +97,7 @@ class FmFeatureSelectionSet:
     class Meta:
         name = "FM-FEATURE-SELECTION-SET"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -106,7 +106,7 @@ class FmFeatureSelectionSet:
             "required": True,
         },
     )
-    short_name_fragments: FmFeatureSelectionSet.ShortNameFragments | None = (
+    short_name_fragments: None | FmFeatureSelectionSet.ShortNameFragments = (
         field(
             default=None,
             metadata={
@@ -116,7 +116,7 @@ class FmFeatureSelectionSet:
             },
         )
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -124,7 +124,7 @@ class FmFeatureSelectionSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -132,7 +132,7 @@ class FmFeatureSelectionSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -140,7 +140,7 @@ class FmFeatureSelectionSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -148,7 +148,7 @@ class FmFeatureSelectionSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -156,7 +156,7 @@ class FmFeatureSelectionSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: FmFeatureSelectionSet.Annotations | None = field(
+    annotations: None | FmFeatureSelectionSet.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -164,7 +164,7 @@ class FmFeatureSelectionSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -172,7 +172,7 @@ class FmFeatureSelectionSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    feature_model_refs: FmFeatureSelectionSet.FeatureModelRefs | None = field(
+    feature_model_refs: None | FmFeatureSelectionSet.FeatureModelRefs = field(
         default=None,
         metadata={
             "name": "FEATURE-MODEL-REFS",
@@ -180,7 +180,7 @@ class FmFeatureSelectionSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    include_refs: FmFeatureSelectionSet.IncludeRefs | None = field(
+    include_refs: None | FmFeatureSelectionSet.IncludeRefs = field(
         default=None,
         metadata={
             "name": "INCLUDE-REFS",
@@ -188,7 +188,7 @@ class FmFeatureSelectionSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    selections: FmFeatureSelectionSet.Selections | None = field(
+    selections: None | FmFeatureSelectionSet.Selections = field(
         default=None,
         metadata={
             "name": "SELECTIONS",
@@ -196,14 +196,14 @@ class FmFeatureSelectionSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -211,7 +211,7 @@ class FmFeatureSelectionSet:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -256,7 +256,7 @@ class FmFeatureSelectionSet:
 
         @dataclass
         class FeatureModelRef(Ref):
-            dest: FmFeatureModelSubtypesEnum | None = field(
+            dest: None | FmFeatureModelSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -280,7 +280,7 @@ class FmFeatureSelectionSet:
 
         @dataclass
         class IncludeRef(Ref):
-            dest: FmFeatureSelectionSetSubtypesEnum | None = field(
+            dest: None | FmFeatureSelectionSetSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",

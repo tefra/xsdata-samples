@@ -51,7 +51,7 @@ class RuleBasedAxisCont:
     class Meta:
         name = "RULE-BASED-AXIS-CONT"
 
-    category: CalprmAxisCategoryEnum | None = field(
+    category: None | CalprmAxisCategoryEnum = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -59,7 +59,7 @@ class RuleBasedAxisCont:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    unit_ref: RuleBasedAxisCont.UnitRef | None = field(
+    unit_ref: None | RuleBasedAxisCont.UnitRef = field(
         default=None,
         metadata={
             "name": "UNIT-REF",
@@ -67,7 +67,7 @@ class RuleBasedAxisCont:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_arraysize: ValueList | None = field(
+    sw_arraysize: None | ValueList = field(
         default=None,
         metadata={
             "name": "SW-ARRAYSIZE",
@@ -75,7 +75,7 @@ class RuleBasedAxisCont:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_axis_index: AxisIndexType | None = field(
+    sw_axis_index: None | AxisIndexType = field(
         default=None,
         metadata={
             "name": "SW-AXIS-INDEX",
@@ -83,7 +83,7 @@ class RuleBasedAxisCont:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    rule_based_values: RuleBasedValueSpecification | None = field(
+    rule_based_values: None | RuleBasedValueSpecification = field(
         default=None,
         metadata={
             "name": "RULE-BASED-VALUES",
@@ -91,14 +91,14 @@ class RuleBasedAxisCont:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -109,7 +109,7 @@ class RuleBasedAxisCont:
 
     @dataclass
     class UnitRef(Ref):
-        dest: UnitSubtypesEnum | None = field(
+        dest: None | UnitSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

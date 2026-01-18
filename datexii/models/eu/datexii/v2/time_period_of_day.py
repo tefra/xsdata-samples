@@ -13,7 +13,7 @@ class TimePeriodOfDay:
     Specification of a continuous period of time within a 24 hour period.
     """
 
-    time_period_of_day_extension: ExtensionType | None = field(
+    time_period_of_day_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "timePeriodOfDayExtension",

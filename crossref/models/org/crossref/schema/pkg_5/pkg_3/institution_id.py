@@ -29,7 +29,7 @@ class InstitutionId:
             "pattern": r"[hH][tT][tT][pP][sS]://.{1,50}",
         },
     )
-    type_value: InstitutionIdType | None = field(
+    type_value: None | InstitutionIdType = field(
         default=None,
         metadata={
             "name": "type",

@@ -50,7 +50,7 @@ class VariableDataPrototypeInSystemInstanceRef:
         },
     )
     context_composition_ref: (
-        VariableDataPrototypeInSystemInstanceRef.ContextCompositionRef | None
+        None | VariableDataPrototypeInSystemInstanceRef.ContextCompositionRef
     ) = field(
         default=None,
         metadata={
@@ -60,7 +60,7 @@ class VariableDataPrototypeInSystemInstanceRef:
         },
     )
     context_port_ref: (
-        VariableDataPrototypeInSystemInstanceRef.ContextPortRef | None
+        None | VariableDataPrototypeInSystemInstanceRef.ContextPortRef
     ) = field(
         default=None,
         metadata={
@@ -70,7 +70,7 @@ class VariableDataPrototypeInSystemInstanceRef:
         },
     )
     target_data_prototype_ref: (
-        VariableDataPrototypeInSystemInstanceRef.TargetDataPrototypeRef | None
+        None | VariableDataPrototypeInSystemInstanceRef.TargetDataPrototypeRef
     ) = field(
         default=None,
         metadata={
@@ -79,14 +79,14 @@ class VariableDataPrototypeInSystemInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -97,7 +97,7 @@ class VariableDataPrototypeInSystemInstanceRef:
 
     @dataclass
     class ContextComponentRef(Ref):
-        dest: SwComponentPrototypeSubtypesEnum | None = field(
+        dest: None | SwComponentPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -108,7 +108,7 @@ class VariableDataPrototypeInSystemInstanceRef:
 
     @dataclass
     class ContextCompositionRef(Ref):
-        dest: RootSwCompositionPrototypeSubtypesEnum | None = field(
+        dest: None | RootSwCompositionPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -119,7 +119,7 @@ class VariableDataPrototypeInSystemInstanceRef:
 
     @dataclass
     class ContextPortRef(Ref):
-        dest: PortPrototypeSubtypesEnum | None = field(
+        dest: None | PortPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -130,7 +130,7 @@ class VariableDataPrototypeInSystemInstanceRef:
 
     @dataclass
     class TargetDataPrototypeRef(Ref):
-        dest: VariableDataPrototypeSubtypesEnum | None = field(
+        dest: None | VariableDataPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

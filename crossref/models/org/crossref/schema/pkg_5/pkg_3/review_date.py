@@ -19,21 +19,21 @@ class ReviewDate:
         name = "review_date"
         namespace = "http://www.crossref.org/schema/5.3.1"
 
-    month: Month | None = field(
+    month: None | Month = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
         },
     )
-    day: Day | None = field(
+    day: None | Day = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
         },
     )
-    year: Year | None = field(
+    year: None | Year = field(
         default=None,
         metadata={
             "type": "Element",

@@ -52,7 +52,7 @@ class DataDumpEntry:
     class Meta:
         name = "DATA-DUMP-ENTRY"
 
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -60,7 +60,7 @@ class DataDumpEntry:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    delay: TimeValue | None = field(
+    delay: None | TimeValue = field(
         default=None,
         metadata={
             "name": "DELAY",
@@ -68,7 +68,7 @@ class DataDumpEntry:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    position_in_table: Integer | None = field(
+    position_in_table: None | Integer = field(
         default=None,
         metadata={
             "name": "POSITION-IN-TABLE",
@@ -76,7 +76,7 @@ class DataDumpEntry:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    assigned_controller_ref: DataDumpEntry.AssignedControllerRef | None = (
+    assigned_controller_ref: None | DataDumpEntry.AssignedControllerRef = (
         field(
             default=None,
             metadata={
@@ -87,7 +87,7 @@ class DataDumpEntry:
         )
     )
     assigned_lin_slave_config_ref: (
-        DataDumpEntry.AssignedLinSlaveConfigRef | None
+        None | DataDumpEntry.AssignedLinSlaveConfigRef
     ) = field(
         default=None,
         metadata={
@@ -96,7 +96,7 @@ class DataDumpEntry:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    byte_values: DataDumpEntry.ByteValues | None = field(
+    byte_values: None | DataDumpEntry.ByteValues = field(
         default=None,
         metadata={
             "name": "BYTE-VALUES",
@@ -104,14 +104,14 @@ class DataDumpEntry:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -122,7 +122,7 @@ class DataDumpEntry:
 
     @dataclass
     class AssignedControllerRef(Ref):
-        dest: LinSlaveSubtypesEnum | None = field(
+        dest: None | LinSlaveSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -133,7 +133,7 @@ class DataDumpEntry:
 
     @dataclass
     class AssignedLinSlaveConfigRef(Ref):
-        dest: LinSlaveConfigIdentSubtypesEnum | None = field(
+        dest: None | LinSlaveConfigIdentSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

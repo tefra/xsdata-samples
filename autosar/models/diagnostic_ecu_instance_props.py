@@ -105,7 +105,7 @@ class DiagnosticEcuInstanceProps:
     class Meta:
         name = "DIAGNOSTIC-ECU-INSTANCE-PROPS"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -115,7 +115,7 @@ class DiagnosticEcuInstanceProps:
         },
     )
     short_name_fragments: (
-        DiagnosticEcuInstanceProps.ShortNameFragments | None
+        None | DiagnosticEcuInstanceProps.ShortNameFragments
     ) = field(
         default=None,
         metadata={
@@ -124,7 +124,7 @@ class DiagnosticEcuInstanceProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -132,7 +132,7 @@ class DiagnosticEcuInstanceProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -140,7 +140,7 @@ class DiagnosticEcuInstanceProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -148,7 +148,7 @@ class DiagnosticEcuInstanceProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -156,7 +156,7 @@ class DiagnosticEcuInstanceProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -164,7 +164,7 @@ class DiagnosticEcuInstanceProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: DiagnosticEcuInstanceProps.Annotations | None = field(
+    annotations: None | DiagnosticEcuInstanceProps.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -172,7 +172,7 @@ class DiagnosticEcuInstanceProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -180,7 +180,7 @@ class DiagnosticEcuInstanceProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    dtc_status_availability_mask: PositiveInteger | None = field(
+    dtc_status_availability_mask: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "DTC-STATUS-AVAILABILITY-MASK",
@@ -188,7 +188,7 @@ class DiagnosticEcuInstanceProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ecu_instance_refs: DiagnosticEcuInstanceProps.EcuInstanceRefs | None = (
+    ecu_instance_refs: None | DiagnosticEcuInstanceProps.EcuInstanceRefs = (
         field(
             default=None,
             metadata={
@@ -198,7 +198,7 @@ class DiagnosticEcuInstanceProps:
             },
         )
     )
-    obd_support: DiagnosticObdSupportEnum | None = field(
+    obd_support: None | DiagnosticObdSupportEnum = field(
         default=None,
         metadata={
             "name": "OBD-SUPPORT",
@@ -206,7 +206,7 @@ class DiagnosticEcuInstanceProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    send_resp_pend_on_trans_to_boot: Boolean | None = field(
+    send_resp_pend_on_trans_to_boot: None | Boolean = field(
         default=None,
         metadata={
             "name": "SEND-RESP-PEND-ON-TRANS-TO-BOOT",
@@ -214,14 +214,14 @@ class DiagnosticEcuInstanceProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -229,7 +229,7 @@ class DiagnosticEcuInstanceProps:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -274,7 +274,7 @@ class DiagnosticEcuInstanceProps:
 
         @dataclass
         class EcuInstanceRef(Ref):
-            dest: EcuInstanceSubtypesEnum | None = field(
+            dest: None | EcuInstanceSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",

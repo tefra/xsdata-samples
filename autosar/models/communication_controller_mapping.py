@@ -38,7 +38,7 @@ class CommunicationControllerMapping:
         name = "COMMUNICATION-CONTROLLER-MAPPING"
 
     communication_controller_ref: (
-        CommunicationControllerMapping.CommunicationControllerRef | None
+        None | CommunicationControllerMapping.CommunicationControllerRef
     ) = field(
         default=None,
         metadata={
@@ -48,7 +48,7 @@ class CommunicationControllerMapping:
         },
     )
     hw_communication_controller_ref: (
-        CommunicationControllerMapping.HwCommunicationControllerRef | None
+        None | CommunicationControllerMapping.HwCommunicationControllerRef
     ) = field(
         default=None,
         metadata={
@@ -57,14 +57,14 @@ class CommunicationControllerMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -75,7 +75,7 @@ class CommunicationControllerMapping:
 
     @dataclass
     class CommunicationControllerRef(Ref):
-        dest: CommunicationControllerSubtypesEnum | None = field(
+        dest: None | CommunicationControllerSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -86,7 +86,7 @@ class CommunicationControllerMapping:
 
     @dataclass
     class HwCommunicationControllerRef(Ref):
-        dest: HwElementSubtypesEnum | None = field(
+        dest: None | HwElementSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

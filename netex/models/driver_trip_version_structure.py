@@ -17,7 +17,7 @@ class DriverTripVersionStructure(DataManagedObjectStructure):
     class Meta:
         name = "DriverTrip_VersionStructure"
 
-    description: MultilingualString | None = field(
+    description: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "Description",
@@ -25,7 +25,7 @@ class DriverTripVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    start_point_ref: TimingPointRefStructure | None = field(
+    start_point_ref: None | TimingPointRefStructure = field(
         default=None,
         metadata={
             "name": "StartPointRef",
@@ -33,7 +33,7 @@ class DriverTripVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    end_point_ref: TimingPointRefStructure | None = field(
+    end_point_ref: None | TimingPointRefStructure = field(
         default=None,
         metadata={
             "name": "EndPointRef",
@@ -41,7 +41,7 @@ class DriverTripVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    accounting_time: XmlDuration | None = field(
+    accounting_time: None | XmlDuration = field(
         default=None,
         metadata={
             "name": "AccountingTime",
@@ -49,7 +49,7 @@ class DriverTripVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    accounting_factor: XmlDuration | None = field(
+    accounting_factor: None | XmlDuration = field(
         default=None,
         metadata={
             "name": "AccountingFactor",
@@ -57,7 +57,7 @@ class DriverTripVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    trip_times: DriverTripTimesRelStructure | None = field(
+    trip_times: None | DriverTripTimesRelStructure = field(
         default=None,
         metadata={
             "name": "tripTimes",

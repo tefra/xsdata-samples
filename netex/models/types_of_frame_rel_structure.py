@@ -51,7 +51,7 @@ class TypeOfFrameValueStructure(TypeOfEntityVersionStructure):
     class Meta:
         name = "TypeOfFrame_ValueStructure"
 
-    type_of_validity_ref: TypeOfValidityRef | None = field(
+    type_of_validity_ref: None | TypeOfValidityRef = field(
         default=None,
         metadata={
             "name": "TypeOfValidityRef",
@@ -59,7 +59,7 @@ class TypeOfFrameValueStructure(TypeOfEntityVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    frame_class_ref: ClassRefStructure | None = field(
+    frame_class_ref: None | ClassRefStructure = field(
         default=None,
         metadata={
             "name": "FrameClassRef",
@@ -67,14 +67,14 @@ class TypeOfFrameValueStructure(TypeOfEntityVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    classes: ClassesInRepositoryRelStructure | None = field(
+    classes: None | ClassesInRepositoryRelStructure = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    types_of_entity: TypeOfEntityRefsRelStructure | None = field(
+    types_of_entity: None | TypeOfEntityRefsRelStructure = field(
         default=None,
         metadata={
             "name": "typesOfEntity",
@@ -82,14 +82,14 @@ class TypeOfFrameValueStructure(TypeOfEntityVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    includes: TypesOfFrameRelStructure | None = field(
+    includes: None | TypesOfFrameRelStructure = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    locating_system_ref: str | None = field(
+    locating_system_ref: None | str = field(
         default=None,
         metadata={
             "name": "LocatingSystemRef",
@@ -97,7 +97,7 @@ class TypeOfFrameValueStructure(TypeOfEntityVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    modification_set: ModificationSetEnumeration | None = field(
+    modification_set: None | ModificationSetEnumeration = field(
         default=None,
         metadata={
             "name": "ModificationSet",
@@ -105,7 +105,7 @@ class TypeOfFrameValueStructure(TypeOfEntityVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    layer_ref: LayerRef | None = field(
+    layer_ref: None | LayerRef = field(
         default=None,
         metadata={
             "name": "LayerRef",

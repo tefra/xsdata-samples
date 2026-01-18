@@ -43,7 +43,7 @@ __NAMESPACE__ = (
 
 @dataclass(frozen=True)
 class CatalogueRequestType:
-    ublextensions: Ublextensions | None = field(
+    ublextensions: None | Ublextensions = field(
         default=None,
         metadata={
             "name": "UBLExtensions",
@@ -51,7 +51,7 @@ class CatalogueRequestType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2",
         },
     )
-    ublversion_id: UblversionId | None = field(
+    ublversion_id: None | UblversionId = field(
         default=None,
         metadata={
             "name": "UBLVersionID",
@@ -59,7 +59,7 @@ class CatalogueRequestType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    customization_id: CustomizationId | None = field(
+    customization_id: None | CustomizationId = field(
         default=None,
         metadata={
             "name": "CustomizationID",
@@ -67,7 +67,7 @@ class CatalogueRequestType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    profile_id: ProfileId | None = field(
+    profile_id: None | ProfileId = field(
         default=None,
         metadata={
             "name": "ProfileID",
@@ -75,7 +75,7 @@ class CatalogueRequestType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    profile_execution_id: ProfileExecutionId | None = field(
+    profile_execution_id: None | ProfileExecutionId = field(
         default=None,
         metadata={
             "name": "ProfileExecutionID",
@@ -83,7 +83,7 @@ class CatalogueRequestType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    id: Id | None = field(
+    id: None | Id = field(
         default=None,
         metadata={
             "name": "ID",
@@ -92,7 +92,7 @@ class CatalogueRequestType:
             "required": True,
         },
     )
-    uuid: Uuid | None = field(
+    uuid: None | Uuid = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -100,7 +100,7 @@ class CatalogueRequestType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    name: Name | None = field(
+    name: None | Name = field(
         default=None,
         metadata={
             "name": "Name",
@@ -108,7 +108,7 @@ class CatalogueRequestType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    issue_date: IssueDate | None = field(
+    issue_date: None | IssueDate = field(
         default=None,
         metadata={
             "name": "IssueDate",
@@ -117,7 +117,7 @@ class CatalogueRequestType:
             "required": True,
         },
     )
-    issue_time: IssueTime | None = field(
+    issue_time: None | IssueTime = field(
         default=None,
         metadata={
             "name": "IssueTime",
@@ -141,7 +141,7 @@ class CatalogueRequestType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    pricing_update_request_indicator: PricingUpdateRequestIndicator | None = (
+    pricing_update_request_indicator: None | PricingUpdateRequestIndicator = (
         field(
             default=None,
             metadata={
@@ -151,7 +151,7 @@ class CatalogueRequestType:
             },
         )
     )
-    item_update_request_indicator: ItemUpdateRequestIndicator | None = field(
+    item_update_request_indicator: None | ItemUpdateRequestIndicator = field(
         default=None,
         metadata={
             "name": "ItemUpdateRequestIndicator",
@@ -159,7 +159,7 @@ class CatalogueRequestType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    line_count_numeric: LineCountNumeric | None = field(
+    line_count_numeric: None | LineCountNumeric = field(
         default=None,
         metadata={
             "name": "LineCountNumeric",
@@ -183,7 +183,7 @@ class CatalogueRequestType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    receiver_party: ReceiverParty | None = field(
+    receiver_party: None | ReceiverParty = field(
         default=None,
         metadata={
             "name": "ReceiverParty",
@@ -192,7 +192,7 @@ class CatalogueRequestType:
             "required": True,
         },
     )
-    provider_party: ProviderParty | None = field(
+    provider_party: None | ProviderParty = field(
         default=None,
         metadata={
             "name": "ProviderParty",
@@ -201,7 +201,7 @@ class CatalogueRequestType:
             "required": True,
         },
     )
-    seller_supplier_party: SellerSupplierParty | None = field(
+    seller_supplier_party: None | SellerSupplierParty = field(
         default=None,
         metadata={
             "name": "SellerSupplierParty",
@@ -209,7 +209,7 @@ class CatalogueRequestType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    contractor_customer_party: ContractorCustomerParty | None = field(
+    contractor_customer_party: None | ContractorCustomerParty = field(
         default=None,
         metadata={
             "name": "ContractorCustomerParty",
@@ -217,7 +217,7 @@ class CatalogueRequestType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    requested_catalogue_reference: RequestedCatalogueReference | None = field(
+    requested_catalogue_reference: None | RequestedCatalogueReference = field(
         default=None,
         metadata={
             "name": "RequestedCatalogueReference",
@@ -233,7 +233,7 @@ class CatalogueRequestType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    trading_terms: TradingTerms | None = field(
+    trading_terms: None | TradingTerms = field(
         default=None,
         metadata={
             "name": "TradingTerms",
@@ -259,7 +259,7 @@ class CatalogueRequestType:
             },
         )
     )
-    requested_language: RequestedLanguage | None = field(
+    requested_language: None | RequestedLanguage = field(
         default=None,
         metadata={
             "name": "RequestedLanguage",

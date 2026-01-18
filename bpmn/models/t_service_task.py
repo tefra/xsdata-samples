@@ -20,7 +20,7 @@ class TServiceTask(TTask):
             "type": "Attribute",
         },
     )
-    operation_ref: QName | None = field(
+    operation_ref: None | QName = field(
         default=None,
         metadata={
             "name": "operationRef",

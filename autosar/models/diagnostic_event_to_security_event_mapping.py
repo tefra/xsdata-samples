@@ -92,7 +92,7 @@ class DiagnosticEventToSecurityEventMapping:
     class Meta:
         name = "DIAGNOSTIC-EVENT-TO-SECURITY-EVENT-MAPPING"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -102,7 +102,7 @@ class DiagnosticEventToSecurityEventMapping:
         },
     )
     short_name_fragments: (
-        DiagnosticEventToSecurityEventMapping.ShortNameFragments | None
+        None | DiagnosticEventToSecurityEventMapping.ShortNameFragments
     ) = field(
         default=None,
         metadata={
@@ -111,7 +111,7 @@ class DiagnosticEventToSecurityEventMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -119,7 +119,7 @@ class DiagnosticEventToSecurityEventMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -127,7 +127,7 @@ class DiagnosticEventToSecurityEventMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -135,7 +135,7 @@ class DiagnosticEventToSecurityEventMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -143,7 +143,7 @@ class DiagnosticEventToSecurityEventMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -151,7 +151,7 @@ class DiagnosticEventToSecurityEventMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: DiagnosticEventToSecurityEventMapping.Annotations | None = (
+    annotations: None | DiagnosticEventToSecurityEventMapping.Annotations = (
         field(
             default=None,
             metadata={
@@ -161,7 +161,7 @@ class DiagnosticEventToSecurityEventMapping:
             },
         )
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -170,7 +170,7 @@ class DiagnosticEventToSecurityEventMapping:
         },
     )
     diagnostic_event_ref: (
-        DiagnosticEventToSecurityEventMapping.DiagnosticEventRef | None
+        None | DiagnosticEventToSecurityEventMapping.DiagnosticEventRef
     ) = field(
         default=None,
         metadata={
@@ -180,7 +180,7 @@ class DiagnosticEventToSecurityEventMapping:
         },
     )
     security_event_props_ref: (
-        DiagnosticEventToSecurityEventMapping.SecurityEventPropsRef | None
+        None | DiagnosticEventToSecurityEventMapping.SecurityEventPropsRef
     ) = field(
         default=None,
         metadata={
@@ -189,14 +189,14 @@ class DiagnosticEventToSecurityEventMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -204,7 +204,7 @@ class DiagnosticEventToSecurityEventMapping:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -236,7 +236,7 @@ class DiagnosticEventToSecurityEventMapping:
 
     @dataclass
     class DiagnosticEventRef(Ref):
-        dest: DiagnosticEventSubtypesEnum | None = field(
+        dest: None | DiagnosticEventSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -247,7 +247,7 @@ class DiagnosticEventToSecurityEventMapping:
 
     @dataclass
     class SecurityEventPropsRef(Ref):
-        dest: SecurityEventContextPropsSubtypesEnum | None = field(
+        dest: None | SecurityEventContextPropsSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

@@ -30,7 +30,7 @@ class Standard:
         name = "standard"
         namespace = "http://www.crossref.org/schema/5.3.1"
 
-    standard_metadata: StandardMetadata | None = field(
+    standard_metadata: None | StandardMetadata = field(
         default=None,
         metadata={
             "type": "Element",
@@ -43,7 +43,7 @@ class Standard:
             "type": "Element",
         },
     )
-    component_list: ComponentList | None = field(
+    component_list: None | ComponentList = field(
         default=None,
         metadata={
             "type": "Element",

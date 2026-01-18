@@ -57,7 +57,7 @@ class MemberSelectionType:
             ),
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -71,14 +71,14 @@ class MemberSelectionType:
             "type": "Attribute",
         },
     )
-    remove_prefix: bool | None = field(
+    remove_prefix: None | bool = field(
         default=None,
         metadata={
             "name": "removePrefix",
             "type": "Attribute",
         },
     )
-    valid_from: XmlPeriod | XmlDate | XmlDateTime | str | None = field(
+    valid_from: None | XmlPeriod | XmlDate | XmlDateTime | str = field(
         default=None,
         metadata={
             "name": "validFrom",
@@ -86,7 +86,7 @@ class MemberSelectionType:
             "pattern": r".{5}A1.*",
         },
     )
-    valid_to: XmlPeriod | XmlDate | XmlDateTime | str | None = field(
+    valid_to: None | XmlPeriod | XmlDate | XmlDateTime | str = field(
         default=None,
         metadata={
             "name": "validTo",

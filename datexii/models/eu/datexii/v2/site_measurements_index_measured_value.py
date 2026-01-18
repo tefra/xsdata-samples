@@ -12,7 +12,7 @@ class SiteMeasurementsIndexMeasuredValue:
     class Meta:
         name = "_SiteMeasurementsIndexMeasuredValue"
 
-    measured_value: MeasuredValue | None = field(
+    measured_value: None | MeasuredValue = field(
         default=None,
         metadata={
             "name": "measuredValue",
@@ -21,7 +21,7 @@ class SiteMeasurementsIndexMeasuredValue:
             "required": True,
         },
     )
-    index: int | None = field(
+    index: None | int = field(
         default=None,
         metadata={
             "type": "Attribute",

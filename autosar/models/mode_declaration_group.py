@@ -123,7 +123,7 @@ class ModeDeclarationGroup:
     class Meta:
         name = "MODE-DECLARATION-GROUP"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -132,7 +132,7 @@ class ModeDeclarationGroup:
             "required": True,
         },
     )
-    short_name_fragments: ModeDeclarationGroup.ShortNameFragments | None = (
+    short_name_fragments: None | ModeDeclarationGroup.ShortNameFragments = (
         field(
             default=None,
             metadata={
@@ -142,7 +142,7 @@ class ModeDeclarationGroup:
             },
         )
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -150,7 +150,7 @@ class ModeDeclarationGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -158,7 +158,7 @@ class ModeDeclarationGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -166,7 +166,7 @@ class ModeDeclarationGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -174,7 +174,7 @@ class ModeDeclarationGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -182,7 +182,7 @@ class ModeDeclarationGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: ModeDeclarationGroup.Annotations | None = field(
+    annotations: None | ModeDeclarationGroup.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -190,7 +190,7 @@ class ModeDeclarationGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -198,7 +198,7 @@ class ModeDeclarationGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    blueprint_policys: ModeDeclarationGroup.BlueprintPolicys | None = field(
+    blueprint_policys: None | ModeDeclarationGroup.BlueprintPolicys = field(
         default=None,
         metadata={
             "name": "BLUEPRINT-POLICYS",
@@ -206,7 +206,7 @@ class ModeDeclarationGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    short_name_pattern: String | None = field(
+    short_name_pattern: None | String = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-PATTERN",
@@ -214,7 +214,7 @@ class ModeDeclarationGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    initial_mode_ref: ModeDeclarationGroup.InitialModeRef | None = field(
+    initial_mode_ref: None | ModeDeclarationGroup.InitialModeRef = field(
         default=None,
         metadata={
             "name": "INITIAL-MODE-REF",
@@ -222,7 +222,7 @@ class ModeDeclarationGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    mode_declarations: ModeDeclarationGroup.ModeDeclarations | None = field(
+    mode_declarations: None | ModeDeclarationGroup.ModeDeclarations = field(
         default=None,
         metadata={
             "name": "MODE-DECLARATIONS",
@@ -230,7 +230,7 @@ class ModeDeclarationGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    mode_manager_error_behavior: ModeErrorBehavior | None = field(
+    mode_manager_error_behavior: None | ModeErrorBehavior = field(
         default=None,
         metadata={
             "name": "MODE-MANAGER-ERROR-BEHAVIOR",
@@ -238,7 +238,7 @@ class ModeDeclarationGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    mode_transitions: ModeDeclarationGroup.ModeTransitions | None = field(
+    mode_transitions: None | ModeDeclarationGroup.ModeTransitions = field(
         default=None,
         metadata={
             "name": "MODE-TRANSITIONS",
@@ -246,7 +246,7 @@ class ModeDeclarationGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    mode_user_error_behavior: ModeErrorBehavior | None = field(
+    mode_user_error_behavior: None | ModeErrorBehavior = field(
         default=None,
         metadata={
             "name": "MODE-USER-ERROR-BEHAVIOR",
@@ -254,7 +254,7 @@ class ModeDeclarationGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    on_transition_value: PositiveInteger | None = field(
+    on_transition_value: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "ON-TRANSITION-VALUE",
@@ -262,14 +262,14 @@ class ModeDeclarationGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -277,7 +277,7 @@ class ModeDeclarationGroup:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -338,7 +338,7 @@ class ModeDeclarationGroup:
 
     @dataclass
     class InitialModeRef(Ref):
-        dest: ModeDeclarationSubtypesEnum | None = field(
+        dest: None | ModeDeclarationSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

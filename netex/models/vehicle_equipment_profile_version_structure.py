@@ -83,7 +83,7 @@ class VehicleEquipmentProfileVersionStructure(DataManagedObjectStructure):
     class Meta:
         name = "VehicleEquipmentProfile_VersionStructure"
 
-    name: MultilingualString | None = field(
+    name: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "Name",
@@ -91,7 +91,7 @@ class VehicleEquipmentProfileVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    description: MultilingualString | None = field(
+    description: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "Description",
@@ -100,7 +100,8 @@ class VehicleEquipmentProfileVersionStructure(DataManagedObjectStructure):
         },
     )
     choice: (
-        RetailDeviceRef
+        None
+        | RetailDeviceRef
         | OnlineServiceRef
         | VehicleRentalServiceRef
         | VehicleSharingServiceRef
@@ -163,7 +164,6 @@ class VehicleEquipmentProfileVersionStructure(DataManagedObjectStructure):
         | VehicleEquipmentRef
         | PassengerEquipmentRef
         | EquipmentRef
-        | None
     ) = field(
         default=None,
         metadata={
@@ -487,7 +487,7 @@ class VehicleEquipmentProfileVersionStructure(DataManagedObjectStructure):
             ),
         },
     )
-    units: int | None = field(
+    units: None | int = field(
         default=None,
         metadata={
             "name": "Units",
@@ -495,7 +495,7 @@ class VehicleEquipmentProfileVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    manufacturer: MultilingualString | None = field(
+    manufacturer: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "Manufacturer",
@@ -503,7 +503,7 @@ class VehicleEquipmentProfileVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    type_of_equipment_ref: TypeOfEquipmentRef | None = field(
+    type_of_equipment_ref: None | TypeOfEquipmentRef = field(
         default=None,
         metadata={
             "name": "TypeOfEquipmentRef",
@@ -511,7 +511,7 @@ class VehicleEquipmentProfileVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    purpose_of_equipment_profile_ref: PurposeOfEquipmentProfileRef | None = (
+    purpose_of_equipment_profile_ref: None | PurposeOfEquipmentProfileRef = (
         field(
             default=None,
             metadata={
@@ -522,7 +522,7 @@ class VehicleEquipmentProfileVersionStructure(DataManagedObjectStructure):
         )
     )
     vehicle_equipment_profile_members: (
-        VehicleEquipmentProfileMembersRelStructure | None
+        None | VehicleEquipmentProfileMembersRelStructure
     ) = field(
         default=None,
         metadata={

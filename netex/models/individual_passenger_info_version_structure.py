@@ -16,7 +16,7 @@ class IndividualPassengerInfoVersionStructure(DataManagedObjectStructure):
     class Meta:
         name = "IndividualPassengerInfo_VersionStructure"
 
-    individual_traveller_ref: IndividualTravellerRef | None = field(
+    individual_traveller_ref: None | IndividualTravellerRef = field(
         default=None,
         metadata={
             "name": "IndividualTravellerRef",
@@ -24,7 +24,7 @@ class IndividualPassengerInfoVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    ranking: int | None = field(
+    ranking: None | int = field(
         default=None,
         metadata={
             "name": "Ranking",
@@ -32,7 +32,7 @@ class IndividualPassengerInfoVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    last_trip_date: XmlDateTime | None = field(
+    last_trip_date: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "LastTripDate",
@@ -40,7 +40,7 @@ class IndividualPassengerInfoVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    comments_about: MultilingualString | None = field(
+    comments_about: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "CommentsAbout",
@@ -48,7 +48,7 @@ class IndividualPassengerInfoVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    travelling_with_pet: bool | None = field(
+    travelling_with_pet: None | bool = field(
         default=None,
         metadata={
             "name": "TravellingWithPet",

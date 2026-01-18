@@ -152,7 +152,7 @@ class IpSecRule:
     class Meta:
         name = "IP-SEC-RULE"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -161,7 +161,7 @@ class IpSecRule:
             "required": True,
         },
     )
-    short_name_fragments: IpSecRule.ShortNameFragments | None = field(
+    short_name_fragments: None | IpSecRule.ShortNameFragments = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -169,7 +169,7 @@ class IpSecRule:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -177,7 +177,7 @@ class IpSecRule:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -185,7 +185,7 @@ class IpSecRule:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -193,7 +193,7 @@ class IpSecRule:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -201,7 +201,7 @@ class IpSecRule:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -209,7 +209,7 @@ class IpSecRule:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: IpSecRule.Annotations | None = field(
+    annotations: None | IpSecRule.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -217,7 +217,7 @@ class IpSecRule:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    direction: CommunicationDirectionType | None = field(
+    direction: None | CommunicationDirectionType = field(
         default=None,
         metadata={
             "name": "DIRECTION",
@@ -225,7 +225,7 @@ class IpSecRule:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    header_type: IPsecHeaderTypeEnum | None = field(
+    header_type: None | IPsecHeaderTypeEnum = field(
         default=None,
         metadata={
             "name": "HEADER-TYPE",
@@ -233,7 +233,7 @@ class IpSecRule:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ike_authentication_method: IkeAuthenticationMethodEnum | None = field(
+    ike_authentication_method: None | IkeAuthenticationMethodEnum = field(
         default=None,
         metadata={
             "name": "IKE-AUTHENTICATION-METHOD",
@@ -241,7 +241,7 @@ class IpSecRule:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ip_protocol: IPsecIpProtocolEnum | None = field(
+    ip_protocol: None | IPsecIpProtocolEnum = field(
         default=None,
         metadata={
             "name": "IP-PROTOCOL",
@@ -249,7 +249,7 @@ class IpSecRule:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    local_certificate_refs: IpSecRule.LocalCertificateRefs | None = field(
+    local_certificate_refs: None | IpSecRule.LocalCertificateRefs = field(
         default=None,
         metadata={
             "name": "LOCAL-CERTIFICATE-REFS",
@@ -257,7 +257,7 @@ class IpSecRule:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    local_id: String | None = field(
+    local_id: None | String = field(
         default=None,
         metadata={
             "name": "LOCAL-ID",
@@ -265,7 +265,7 @@ class IpSecRule:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    local_port_range_end: PositiveInteger | None = field(
+    local_port_range_end: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "LOCAL-PORT-RANGE-END",
@@ -273,7 +273,7 @@ class IpSecRule:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    local_port_range_start: PositiveInteger | None = field(
+    local_port_range_start: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "LOCAL-PORT-RANGE-START",
@@ -281,7 +281,7 @@ class IpSecRule:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    mode: IPsecModeEnum | None = field(
+    mode: None | IPsecModeEnum = field(
         default=None,
         metadata={
             "name": "MODE",
@@ -289,7 +289,7 @@ class IpSecRule:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    policy: IPsecPolicyEnum | None = field(
+    policy: None | IPsecPolicyEnum = field(
         default=None,
         metadata={
             "name": "POLICY",
@@ -297,7 +297,7 @@ class IpSecRule:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    pre_shared_key_ref: IpSecRule.PreSharedKeyRef | None = field(
+    pre_shared_key_ref: None | IpSecRule.PreSharedKeyRef = field(
         default=None,
         metadata={
             "name": "PRE-SHARED-KEY-REF",
@@ -305,7 +305,7 @@ class IpSecRule:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    priority: PositiveInteger | None = field(
+    priority: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "PRIORITY",
@@ -313,7 +313,7 @@ class IpSecRule:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    remote_certificate_refs: IpSecRule.RemoteCertificateRefs | None = field(
+    remote_certificate_refs: None | IpSecRule.RemoteCertificateRefs = field(
         default=None,
         metadata={
             "name": "REMOTE-CERTIFICATE-REFS",
@@ -321,7 +321,7 @@ class IpSecRule:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    remote_id: String | None = field(
+    remote_id: None | String = field(
         default=None,
         metadata={
             "name": "REMOTE-ID",
@@ -329,7 +329,7 @@ class IpSecRule:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    remote_ip_address_refs: IpSecRule.RemoteIpAddressRefs | None = field(
+    remote_ip_address_refs: None | IpSecRule.RemoteIpAddressRefs = field(
         default=None,
         metadata={
             "name": "REMOTE-IP-ADDRESS-REFS",
@@ -337,7 +337,7 @@ class IpSecRule:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    remote_port_range_end: PositiveInteger | None = field(
+    remote_port_range_end: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "REMOTE-PORT-RANGE-END",
@@ -345,7 +345,7 @@ class IpSecRule:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    remote_port_range_start: PositiveInteger | None = field(
+    remote_port_range_start: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "REMOTE-PORT-RANGE-START",
@@ -353,14 +353,14 @@ class IpSecRule:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -368,7 +368,7 @@ class IpSecRule:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -413,7 +413,7 @@ class IpSecRule:
 
         @dataclass
         class LocalCertificateRef(Ref):
-            dest: CryptoServiceCertificateSubtypesEnum | None = field(
+            dest: None | CryptoServiceCertificateSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -424,7 +424,7 @@ class IpSecRule:
 
     @dataclass
     class PreSharedKeyRef(Ref):
-        dest: CryptoServiceKeySubtypesEnum | None = field(
+        dest: None | CryptoServiceKeySubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -448,7 +448,7 @@ class IpSecRule:
 
         @dataclass
         class RemoteCertificateRef(Ref):
-            dest: CryptoServiceCertificateSubtypesEnum | None = field(
+            dest: None | CryptoServiceCertificateSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -472,7 +472,7 @@ class IpSecRule:
 
         @dataclass
         class RemoteIpAddressRef(Ref):
-            dest: NetworkEndpointSubtypesEnum | None = field(
+            dest: None | NetworkEndpointSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",

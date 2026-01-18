@@ -11,7 +11,7 @@ class Uzo:
     class Meta:
         name = "uzo"
 
-    tip: UzoTip | None = field(
+    tip: None | UzoTip = field(
         default=None,
         metadata={
             "type": "Attribute",

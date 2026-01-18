@@ -53,7 +53,7 @@ class BswSynchronousServerCallPoint:
     class Meta:
         name = "BSW-SYNCHRONOUS-SERVER-CALL-POINT"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -63,7 +63,7 @@ class BswSynchronousServerCallPoint:
         },
     )
     short_name_fragments: (
-        BswSynchronousServerCallPoint.ShortNameFragments | None
+        None | BswSynchronousServerCallPoint.ShortNameFragments
     ) = field(
         default=None,
         metadata={
@@ -73,7 +73,7 @@ class BswSynchronousServerCallPoint:
         },
     )
     context_limitation_refs: (
-        BswSynchronousServerCallPoint.ContextLimitationRefs | None
+        None | BswSynchronousServerCallPoint.ContextLimitationRefs
     ) = field(
         default=None,
         metadata={
@@ -82,7 +82,7 @@ class BswSynchronousServerCallPoint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -90,7 +90,7 @@ class BswSynchronousServerCallPoint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    called_entry_ref: BswSynchronousServerCallPoint.CalledEntryRef | None = (
+    called_entry_ref: None | BswSynchronousServerCallPoint.CalledEntryRef = (
         field(
             default=None,
             metadata={
@@ -101,7 +101,7 @@ class BswSynchronousServerCallPoint:
         )
     )
     called_from_within_exclusive_area_ref: (
-        BswSynchronousServerCallPoint.CalledFromWithinExclusiveAreaRef | None
+        None | BswSynchronousServerCallPoint.CalledFromWithinExclusiveAreaRef
     ) = field(
         default=None,
         metadata={
@@ -110,14 +110,14 @@ class BswSynchronousServerCallPoint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -152,7 +152,7 @@ class BswSynchronousServerCallPoint:
 
         @dataclass
         class ContextLimitationRef(Ref):
-            dest: BswDistinguishedPartitionSubtypesEnum | None = field(
+            dest: None | BswDistinguishedPartitionSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -163,7 +163,7 @@ class BswSynchronousServerCallPoint:
 
     @dataclass
     class CalledEntryRef(Ref):
-        dest: BswModuleClientServerEntrySubtypesEnum | None = field(
+        dest: None | BswModuleClientServerEntrySubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -174,7 +174,7 @@ class BswSynchronousServerCallPoint:
 
     @dataclass
     class CalledFromWithinExclusiveAreaRef(Ref):
-        dest: ExclusiveAreaNestingOrderSubtypesEnum | None = field(
+        dest: None | ExclusiveAreaNestingOrderSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

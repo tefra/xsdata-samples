@@ -21,11 +21,11 @@ class JourneyPatternWaitTimeVersionedChildStructure(
         name = "JourneyPatternWaitTime_VersionedChildStructure"
 
     journey_pattern_ref: (
-        ServiceJourneyPatternRef
+        None
+        | ServiceJourneyPatternRef
         | ServicePatternRef
         | DeadRunJourneyPatternRef
         | JourneyPatternRef
-        | None
     ) = field(
         default=None,
         metadata={

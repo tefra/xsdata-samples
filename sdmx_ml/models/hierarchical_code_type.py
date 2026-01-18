@@ -43,7 +43,7 @@ class HierarchicalCodeType(HierarchicalCodeBaseType):
         be used to track the historicity of codes changing over time.
     """
 
-    code: str | None = field(
+    code: None | str = field(
         default=None,
         metadata={
             "name": "Code",
@@ -61,7 +61,7 @@ class HierarchicalCodeType(HierarchicalCodeBaseType):
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
         },
     )
-    level: str | None = field(
+    level: None | str = field(
         default=None,
         metadata={
             "name": "Level",
@@ -70,14 +70,14 @@ class HierarchicalCodeType(HierarchicalCodeBaseType):
             "pattern": r"[A-Za-z0-9_@$\-]+",
         },
     )
-    valid_from: XmlDateTime | None = field(
+    valid_from: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "validFrom",
             "type": "Attribute",
         },
     )
-    valid_to: XmlDateTime | None = field(
+    valid_to: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "validTo",

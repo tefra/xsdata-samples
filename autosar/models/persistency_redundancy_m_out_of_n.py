@@ -41,7 +41,7 @@ class PersistencyRedundancyMOutOfN:
     class Meta:
         name = "PERSISTENCY-REDUNDANCY-M-OUT-OF-N"
 
-    scope: PersistencyRedundancyHandlingScopeEnum | None = field(
+    scope: None | PersistencyRedundancyHandlingScopeEnum = field(
         default=None,
         metadata={
             "name": "SCOPE",
@@ -49,7 +49,7 @@ class PersistencyRedundancyMOutOfN:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    m: PositiveInteger | None = field(
+    m: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "M",
@@ -57,7 +57,7 @@ class PersistencyRedundancyMOutOfN:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    n: PositiveInteger | None = field(
+    n: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "N",
@@ -65,14 +65,14 @@ class PersistencyRedundancyMOutOfN:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

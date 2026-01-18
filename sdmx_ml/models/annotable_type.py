@@ -16,7 +16,7 @@ class AnnotableType:
     Any type that provides for annotations should extend this type.
     """
 
-    annotations: Annotations | None = field(
+    annotations: None | Annotations = field(
         default=None,
         metadata={
             "name": "Annotations",

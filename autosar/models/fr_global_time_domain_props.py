@@ -32,7 +32,7 @@ class FrGlobalTimeDomainProps:
     class Meta:
         name = "FR-GLOBAL-TIME-DOMAIN-PROPS"
 
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -40,7 +40,7 @@ class FrGlobalTimeDomainProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ofs_data_id_lists: FrGlobalTimeDomainProps.OfsDataIdLists | None = field(
+    ofs_data_id_lists: None | FrGlobalTimeDomainProps.OfsDataIdLists = field(
         default=None,
         metadata={
             "name": "OFS-DATA-ID-LISTS",
@@ -48,7 +48,7 @@ class FrGlobalTimeDomainProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sync_data_id_lists: FrGlobalTimeDomainProps.SyncDataIdLists | None = field(
+    sync_data_id_lists: None | FrGlobalTimeDomainProps.SyncDataIdLists = field(
         default=None,
         metadata={
             "name": "SYNC-DATA-ID-LISTS",
@@ -56,14 +56,14 @@ class FrGlobalTimeDomainProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

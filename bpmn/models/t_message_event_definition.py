@@ -13,7 +13,7 @@ class TMessageEventDefinition(TEventDefinition):
     class Meta:
         name = "tMessageEventDefinition"
 
-    operation_ref: QName | None = field(
+    operation_ref: None | QName = field(
         default=None,
         metadata={
             "name": "operationRef",
@@ -21,7 +21,7 @@ class TMessageEventDefinition(TEventDefinition):
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    message_ref: QName | None = field(
+    message_ref: None | QName = field(
         default=None,
         metadata={
             "name": "messageRef",

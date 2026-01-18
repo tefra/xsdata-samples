@@ -14,7 +14,7 @@ class TProperty(TBaseElement):
     class Meta:
         name = "tProperty"
 
-    data_state: DataState | None = field(
+    data_state: None | DataState = field(
         default=None,
         metadata={
             "name": "dataState",
@@ -22,13 +22,13 @@ class TProperty(TBaseElement):
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    name: str | None = field(
+    name: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    item_subject_ref: QName | None = field(
+    item_subject_ref: None | QName = field(
         default=None,
         metadata={
             "name": "itemSubjectRef",

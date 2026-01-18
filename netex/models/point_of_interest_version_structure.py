@@ -25,7 +25,7 @@ class PointOfInterestVersionStructure(SiteVersionStructure):
     class Meta:
         name = "PointOfInterest_VersionStructure"
 
-    classifications: PointOfInterestClassificationsViewsRelStructure | None = (
+    classifications: None | PointOfInterestClassificationsViewsRelStructure = (
         field(
             default=None,
             metadata={
@@ -34,14 +34,14 @@ class PointOfInterestVersionStructure(SiteVersionStructure):
             },
         )
     )
-    spaces: PointOfInterestSpacesRelStructure | None = field(
+    spaces: None | PointOfInterestSpacesRelStructure = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    near_topographic_places: TopographicPlaceRefsRelStructure | None = field(
+    near_topographic_places: None | TopographicPlaceRefsRelStructure = field(
         default=None,
         metadata={
             "name": "nearTopographicPlaces",
@@ -49,7 +49,7 @@ class PointOfInterestVersionStructure(SiteVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    path_links: SitePathLinksRelStructure | None = field(
+    path_links: None | SitePathLinksRelStructure = field(
         default=None,
         metadata={
             "name": "pathLinks",
@@ -57,7 +57,7 @@ class PointOfInterestVersionStructure(SiteVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    path_junctions: PathJunctionsRelStructure | None = field(
+    path_junctions: None | PathJunctionsRelStructure = field(
         default=None,
         metadata={
             "name": "pathJunctions",
@@ -65,14 +65,14 @@ class PointOfInterestVersionStructure(SiteVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    accesses: AccessesRelStructure | None = field(
+    accesses: None | AccessesRelStructure = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    navigation_paths: NavigationPathsRelStructure | None = field(
+    navigation_paths: None | NavigationPathsRelStructure = field(
         default=None,
         metadata={
             "name": "navigationPaths",

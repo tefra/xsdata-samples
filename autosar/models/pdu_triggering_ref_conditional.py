@@ -32,7 +32,7 @@ class PduTriggeringRefConditional:
     class Meta:
         name = "PDU-TRIGGERING-REF-CONDITIONAL"
 
-    pdu_triggering_ref: PduTriggeringRefConditional.PduTriggeringRef | None = (
+    pdu_triggering_ref: None | PduTriggeringRefConditional.PduTriggeringRef = (
         field(
             default=None,
             metadata={
@@ -42,7 +42,7 @@ class PduTriggeringRefConditional:
             },
         )
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -50,14 +50,14 @@ class PduTriggeringRefConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -68,7 +68,7 @@ class PduTriggeringRefConditional:
 
     @dataclass
     class PduTriggeringRef(Ref):
-        dest: PduTriggeringSubtypesEnum | None = field(
+        dest: None | PduTriggeringSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

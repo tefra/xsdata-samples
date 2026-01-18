@@ -32,7 +32,7 @@ class CommunicationBufferLocking:
     class Meta:
         name = "COMMUNICATION-BUFFER-LOCKING"
 
-    support_buffer_locking: SupportBufferLockingEnum | None = field(
+    support_buffer_locking: None | SupportBufferLockingEnum = field(
         default=None,
         metadata={
             "name": "SUPPORT-BUFFER-LOCKING",
@@ -40,14 +40,14 @@ class CommunicationBufferLocking:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

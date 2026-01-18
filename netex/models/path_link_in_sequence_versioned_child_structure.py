@@ -21,7 +21,7 @@ class PathLinkInSequenceVersionedChildStructure(
     class Meta:
         name = "PathLinkInSequence_VersionedChildStructure"
 
-    path_link_ref: PathLinkRef | None = field(
+    path_link_ref: None | PathLinkRef = field(
         default=None,
         metadata={
             "name": "PathLinkRef",
@@ -30,7 +30,7 @@ class PathLinkInSequenceVersionedChildStructure(
             "required": True,
         },
     )
-    reverse: bool | None = field(
+    reverse: None | bool = field(
         default=None,
         metadata={
             "name": "Reverse",
@@ -38,7 +38,7 @@ class PathLinkInSequenceVersionedChildStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    heading: PathHeadingEnumeration | None = field(
+    heading: None | PathHeadingEnumeration = field(
         default=None,
         metadata={
             "name": "Heading",
@@ -46,7 +46,7 @@ class PathLinkInSequenceVersionedChildStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    transition: TransitionEnumeration | None = field(
+    transition: None | TransitionEnumeration = field(
         default=None,
         metadata={
             "name": "Transition",
@@ -54,7 +54,7 @@ class PathLinkInSequenceVersionedChildStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    instruction: MultilingualString | None = field(
+    instruction: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "Instruction",
@@ -62,7 +62,7 @@ class PathLinkInSequenceVersionedChildStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    label: MultilingualString | None = field(
+    label: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "Label",
@@ -70,7 +70,7 @@ class PathLinkInSequenceVersionedChildStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    views: PathLinkInSequenceVersionedChildStructure.Views | None = field(
+    views: None | PathLinkInSequenceVersionedChildStructure.Views = field(
         default=None,
         metadata={
             "type": "Element",
@@ -80,7 +80,7 @@ class PathLinkInSequenceVersionedChildStructure(
 
     @dataclass
     class Views:
-        path_link_view: PathLinkView | None = field(
+        path_link_view: None | PathLinkView = field(
             default=None,
             metadata={
                 "name": "PathLinkView",

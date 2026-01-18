@@ -34,7 +34,7 @@ class StopPlaceComponentVersionStructure(SiteComponentVersionStructure):
     class Meta:
         name = "StopPlaceComponent_VersionStructure"
 
-    transport_mode: AllVehicleModesOfTransportEnumeration | None = field(
+    transport_mode: None | AllVehicleModesOfTransportEnumeration = field(
         default=None,
         metadata={
             "name": "TransportMode",
@@ -43,7 +43,8 @@ class StopPlaceComponentVersionStructure(SiteComponentVersionStructure):
         },
     )
     choice: (
-        AirSubmode
+        None
+        | AirSubmode
         | BusSubmode
         | CoachSubmode
         | FunicularSubmode
@@ -53,7 +54,6 @@ class StopPlaceComponentVersionStructure(SiteComponentVersionStructure):
         | RailSubmode
         | WaterSubmode
         | SnowAndIceSubmode
-        | None
     ) = field(
         default=None,
         metadata={
@@ -113,13 +113,13 @@ class StopPlaceComponentVersionStructure(SiteComponentVersionStructure):
         },
     )
     mode_of_operation_ref_or_alternative_mode_of_operation_ref_or_conventional_mode_of_operation_ref: (
-        PersonalModeOfOperationRef
+        None
+        | PersonalModeOfOperationRef
         | VehiclePoolingRef
         | VehicleSharingRef
         | VehicleRentalRef
         | FlexibleModeOfOperationRef
         | ScheduledModeOfOperationRef
-        | None
     ) = field(
         default=None,
         metadata={
@@ -167,7 +167,7 @@ class StopPlaceComponentVersionStructure(SiteComponentVersionStructure):
             "tokens": True,
         },
     )
-    tariff_zones: TariffZoneRefsRelStructure | None = field(
+    tariff_zones: None | TariffZoneRefsRelStructure = field(
         default=None,
         metadata={
             "name": "tariffZones",

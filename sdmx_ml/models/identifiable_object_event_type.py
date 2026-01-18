@@ -20,10 +20,10 @@ class IdentifiableObjectEventType:
     """
 
     all_or_urn_or_id: (
-        EmptyType
+        None
+        | EmptyType
         | IdentifiableObjectEventType.Urn
         | IdentifiableObjectEventType.Id
-        | None
     ) = field(
         default=None,
         metadata={
@@ -50,7 +50,7 @@ class IdentifiableObjectEventType:
 
     @dataclass(frozen=True)
     class Urn:
-        value: str | None = field(
+        value: None | str = field(
             default=None,
             metadata={
                 "required": True,
@@ -59,7 +59,7 @@ class IdentifiableObjectEventType:
 
     @dataclass(frozen=True)
     class Id:
-        value: str | WildCardValueType | None = field(
+        value: None | str | WildCardValueType = field(
             default=None,
             metadata={
                 "required": True,

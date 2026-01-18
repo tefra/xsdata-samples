@@ -60,7 +60,7 @@ class AbstractorType:
     class Meta:
         name = "abstractorType"
 
-    vendor: str | None = field(
+    vendor: None | str = field(
         default=None,
         metadata={
             "type": "Element",
@@ -68,7 +68,7 @@ class AbstractorType:
             "required": True,
         },
     )
-    library: str | None = field(
+    library: None | str = field(
         default=None,
         metadata={
             "type": "Element",
@@ -76,7 +76,7 @@ class AbstractorType:
             "required": True,
         },
     )
-    name: str | None = field(
+    name: None | str = field(
         default=None,
         metadata={
             "type": "Element",
@@ -84,7 +84,7 @@ class AbstractorType:
             "required": True,
         },
     )
-    version: str | None = field(
+    version: None | str = field(
         default=None,
         metadata={
             "type": "Element",
@@ -92,7 +92,7 @@ class AbstractorType:
             "required": True,
         },
     )
-    display_name: str | None = field(
+    display_name: None | str = field(
         default=None,
         metadata={
             "name": "displayName",
@@ -100,7 +100,7 @@ class AbstractorType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    short_description: ShortDescription | None = field(
+    short_description: None | ShortDescription = field(
         default=None,
         metadata={
             "name": "shortDescription",
@@ -108,14 +108,14 @@ class AbstractorType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    description: Description | None = field(
+    description: None | Description = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    abstractor_mode: AbstractorType.AbstractorMode | None = field(
+    abstractor_mode: None | AbstractorType.AbstractorMode = field(
         default=None,
         metadata={
             "name": "abstractorMode",
@@ -124,7 +124,7 @@ class AbstractorType:
             "required": True,
         },
     )
-    bus_type: LibraryRefType | None = field(
+    bus_type: None | LibraryRefType = field(
         default=None,
         metadata={
             "name": "busType",
@@ -133,7 +133,7 @@ class AbstractorType:
             "required": True,
         },
     )
-    abstractor_interfaces: AbstractorType.AbstractorInterfaces | None = field(
+    abstractor_interfaces: None | AbstractorType.AbstractorInterfaces = field(
         default=None,
         metadata={
             "name": "abstractorInterfaces",
@@ -142,14 +142,14 @@ class AbstractorType:
             "required": True,
         },
     )
-    model: AbstractorModelType | None = field(
+    model: None | AbstractorModelType = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    abstractor_generators: AbstractorGenerators | None = field(
+    abstractor_generators: None | AbstractorGenerators = field(
         default=None,
         metadata={
             "name": "abstractorGenerators",
@@ -157,14 +157,14 @@ class AbstractorType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    choices: Choices | None = field(
+    choices: None | Choices = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    file_sets: FileSets | None = field(
+    file_sets: None | FileSets = field(
         default=None,
         metadata={
             "name": "fileSets",
@@ -172,21 +172,21 @@ class AbstractorType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    parameters: Parameters | None = field(
+    parameters: None | Parameters = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    assertions: Assertions | None = field(
+    assertions: None | Assertions = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    vendor_extensions: VendorExtensions | None = field(
+    vendor_extensions: None | VendorExtensions = field(
         default=None,
         metadata={
             "name": "vendorExtensions",
@@ -194,7 +194,7 @@ class AbstractorType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -210,13 +210,13 @@ class AbstractorType:
             system
         """
 
-        value: AbstractorModeType | None = field(
+        value: None | AbstractorModeType = field(
             default=None,
             metadata={
                 "required": True,
             },
         )
-        group: str | None = field(
+        group: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",

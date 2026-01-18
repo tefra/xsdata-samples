@@ -30,7 +30,7 @@ class RunnableEntityArgument:
     class Meta:
         name = "RUNNABLE-ENTITY-ARGUMENT"
 
-    symbol: CIdentifier | None = field(
+    symbol: None | CIdentifier = field(
         default=None,
         metadata={
             "name": "SYMBOL",
@@ -38,14 +38,14 @@ class RunnableEntityArgument:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

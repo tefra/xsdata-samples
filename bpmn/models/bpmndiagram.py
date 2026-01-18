@@ -15,7 +15,7 @@ class Bpmndiagram(Diagram):
         name = "BPMNDiagram"
         namespace = "http://www.omg.org/spec/BPMN/20100524/DI"
 
-    bpmnplane: Bpmnplane | None = field(
+    bpmnplane: None | Bpmnplane = field(
         default=None,
         metadata={
             "name": "BPMNPlane",

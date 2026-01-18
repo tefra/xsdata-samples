@@ -22,7 +22,7 @@ class TransmissionRequestType(BaseGbmheaderType):
         retrieve</description>
     """
 
-    payload: PayloadType | None = field(
+    payload: None | PayloadType = field(
         default=None,
         metadata={
             "name": "Payload",

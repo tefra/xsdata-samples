@@ -113,7 +113,7 @@ class PersistencyKeyValuePair:
     class Meta:
         name = "PERSISTENCY-KEY-VALUE-PAIR"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -122,7 +122,7 @@ class PersistencyKeyValuePair:
             "required": True,
         },
     )
-    short_name_fragments: PersistencyKeyValuePair.ShortNameFragments | None = (
+    short_name_fragments: None | PersistencyKeyValuePair.ShortNameFragments = (
         field(
             default=None,
             metadata={
@@ -132,7 +132,7 @@ class PersistencyKeyValuePair:
             },
         )
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -140,7 +140,7 @@ class PersistencyKeyValuePair:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -148,7 +148,7 @@ class PersistencyKeyValuePair:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -156,7 +156,7 @@ class PersistencyKeyValuePair:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -164,7 +164,7 @@ class PersistencyKeyValuePair:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -172,7 +172,7 @@ class PersistencyKeyValuePair:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: PersistencyKeyValuePair.Annotations | None = field(
+    annotations: None | PersistencyKeyValuePair.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -180,7 +180,7 @@ class PersistencyKeyValuePair:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    update_strategy: PersistencyElementLevelUpdateStrategyEnum | None = field(
+    update_strategy: None | PersistencyElementLevelUpdateStrategyEnum = field(
         default=None,
         metadata={
             "name": "UPDATE-STRATEGY",
@@ -188,7 +188,7 @@ class PersistencyKeyValuePair:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    init_value: PersistencyKeyValuePair.InitValue | None = field(
+    init_value: None | PersistencyKeyValuePair.InitValue = field(
         default=None,
         metadata={
             "name": "INIT-VALUE",
@@ -196,7 +196,7 @@ class PersistencyKeyValuePair:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    value_data_type_ref: PersistencyKeyValuePair.ValueDataTypeRef | None = (
+    value_data_type_ref: None | PersistencyKeyValuePair.ValueDataTypeRef = (
         field(
             default=None,
             metadata={
@@ -206,14 +206,14 @@ class PersistencyKeyValuePair:
             },
         )
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -221,7 +221,7 @@ class PersistencyKeyValuePair:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -254,7 +254,7 @@ class PersistencyKeyValuePair:
     @dataclass
     class InitValue:
         application_assoc_map_value_specification: (
-            ApplicationAssocMapValueSpecification | None
+            None | ApplicationAssocMapValueSpecification
         ) = field(
             default=None,
             metadata={
@@ -264,7 +264,7 @@ class PersistencyKeyValuePair:
             },
         )
         application_rule_based_value_specification: (
-            ApplicationRuleBasedValueSpecification | None
+            None | ApplicationRuleBasedValueSpecification
         ) = field(
             default=None,
             metadata={
@@ -274,7 +274,7 @@ class PersistencyKeyValuePair:
             },
         )
         application_value_specification: (
-            ApplicationValueSpecification | None
+            None | ApplicationValueSpecification
         ) = field(
             default=None,
             metadata={
@@ -283,7 +283,7 @@ class PersistencyKeyValuePair:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        array_value_specification: ArrayValueSpecification | None = field(
+        array_value_specification: None | ArrayValueSpecification = field(
             default=None,
             metadata={
                 "name": "ARRAY-VALUE-SPECIFICATION",
@@ -292,7 +292,7 @@ class PersistencyKeyValuePair:
             },
         )
         composite_rule_based_value_specification: (
-            CompositeRuleBasedValueSpecification | None
+            None | CompositeRuleBasedValueSpecification
         ) = field(
             default=None,
             metadata={
@@ -301,7 +301,7 @@ class PersistencyKeyValuePair:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        constant_reference: ConstantReference | None = field(
+        constant_reference: None | ConstantReference = field(
             default=None,
             metadata={
                 "name": "CONSTANT-REFERENCE",
@@ -310,7 +310,7 @@ class PersistencyKeyValuePair:
             },
         )
         not_available_value_specification: (
-            NotAvailableValueSpecification | None
+            None | NotAvailableValueSpecification
         ) = field(
             default=None,
             metadata={
@@ -320,7 +320,7 @@ class PersistencyKeyValuePair:
             },
         )
         numerical_rule_based_value_specification: (
-            NumericalRuleBasedValueSpecification | None
+            None | NumericalRuleBasedValueSpecification
         ) = field(
             default=None,
             metadata={
@@ -329,7 +329,7 @@ class PersistencyKeyValuePair:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        numerical_value_specification: NumericalValueSpecification | None = (
+        numerical_value_specification: None | NumericalValueSpecification = (
             field(
                 default=None,
                 metadata={
@@ -339,7 +339,7 @@ class PersistencyKeyValuePair:
                 },
             )
         )
-        record_value_specification: RecordValueSpecification | None = field(
+        record_value_specification: None | RecordValueSpecification = field(
             default=None,
             metadata={
                 "name": "RECORD-VALUE-SPECIFICATION",
@@ -347,7 +347,7 @@ class PersistencyKeyValuePair:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        reference_value_specification: ReferenceValueSpecification | None = (
+        reference_value_specification: None | ReferenceValueSpecification = (
             field(
                 default=None,
                 metadata={
@@ -357,7 +357,7 @@ class PersistencyKeyValuePair:
                 },
             )
         )
-        text_value_specification: TextValueSpecification | None = field(
+        text_value_specification: None | TextValueSpecification = field(
             default=None,
             metadata={
                 "name": "TEXT-VALUE-SPECIFICATION",
@@ -368,7 +368,7 @@ class PersistencyKeyValuePair:
 
     @dataclass
     class ValueDataTypeRef(Ref):
-        dest: AbstractImplementationDataTypeSubtypesEnum | None = field(
+        dest: None | AbstractImplementationDataTypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

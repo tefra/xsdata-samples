@@ -14,7 +14,7 @@ class ConnectionVersionStructure(TransferVersionStructure):
     class Meta:
         name = "Connection_VersionStructure"
 
-    external_connection_link_ref: ExternalObjectRefStructure | None = field(
+    external_connection_link_ref: None | ExternalObjectRefStructure = field(
         default=None,
         metadata={
             "name": "ExternalConnectionLinkRef",
@@ -22,7 +22,7 @@ class ConnectionVersionStructure(TransferVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    from_value: ConnectionEndStructure | None = field(
+    from_value: None | ConnectionEndStructure = field(
         default=None,
         metadata={
             "name": "From",
@@ -30,7 +30,7 @@ class ConnectionVersionStructure(TransferVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    to: ConnectionEndStructure | None = field(
+    to: None | ConnectionEndStructure = field(
         default=None,
         metadata={
             "name": "To",
@@ -38,7 +38,7 @@ class ConnectionVersionStructure(TransferVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    transfer_only: bool | None = field(
+    transfer_only: None | bool = field(
         default=None,
         metadata={
             "name": "TransferOnly",

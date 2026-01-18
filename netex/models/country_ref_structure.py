@@ -15,13 +15,13 @@ class CountryRefStructure:
             "required": True,
         },
     )
-    ref: IanaCountryTldEnumeration | None = field(
+    ref: None | IanaCountryTldEnumeration = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    ref_principality: str | None = field(
+    ref_principality: None | str = field(
         default=None,
         metadata={
             "name": "refPrincipality",

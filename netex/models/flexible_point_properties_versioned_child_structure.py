@@ -30,7 +30,8 @@ class FlexiblePointPropertiesVersionedChildStructure(VersionedChildStructure):
         name = "FlexiblePointProperties_VersionedChildStructure"
 
     choice: (
-        PointOnRouteRef
+        None
+        | PointOnRouteRef
         | VehicleMeetingPointRef
         | WirePointRef
         | RoadPointRef
@@ -47,7 +48,6 @@ class FlexiblePointPropertiesVersionedChildStructure(VersionedChildStructure):
         | TimingPointRef
         | RoutePointRef
         | PointRef
-        | None
     ) = field(
         default=None,
         metadata={
@@ -141,7 +141,7 @@ class FlexiblePointPropertiesVersionedChildStructure(VersionedChildStructure):
             ),
         },
     )
-    may_be_skipped: bool | None = field(
+    may_be_skipped: None | bool = field(
         default=None,
         metadata={
             "name": "MayBeSkipped",
@@ -149,7 +149,7 @@ class FlexiblePointPropertiesVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    on_main_route: bool | None = field(
+    on_main_route: None | bool = field(
         default=None,
         metadata={
             "name": "OnMainRoute",
@@ -157,7 +157,7 @@ class FlexiblePointPropertiesVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    point_standing_for_azone: bool | None = field(
+    point_standing_for_azone: None | bool = field(
         default=None,
         metadata={
             "name": "PointStandingForAZone",
@@ -165,7 +165,7 @@ class FlexiblePointPropertiesVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    zone_containing_stops: bool | None = field(
+    zone_containing_stops: None | bool = field(
         default=None,
         metadata={
             "name": "ZoneContainingStops",

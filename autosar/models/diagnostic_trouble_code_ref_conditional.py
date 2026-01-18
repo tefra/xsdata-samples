@@ -35,7 +35,7 @@ class DiagnosticTroubleCodeRefConditional:
         name = "DIAGNOSTIC-TROUBLE-CODE-REF-CONDITIONAL"
 
     diagnostic_trouble_code_ref: (
-        DiagnosticTroubleCodeRefConditional.DiagnosticTroubleCodeRef | None
+        None | DiagnosticTroubleCodeRefConditional.DiagnosticTroubleCodeRef
     ) = field(
         default=None,
         metadata={
@@ -44,7 +44,7 @@ class DiagnosticTroubleCodeRefConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -52,14 +52,14 @@ class DiagnosticTroubleCodeRefConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -70,7 +70,7 @@ class DiagnosticTroubleCodeRefConditional:
 
     @dataclass
     class DiagnosticTroubleCodeRef(Ref):
-        dest: DiagnosticTroubleCodeSubtypesEnum | None = field(
+        dest: None | DiagnosticTroubleCodeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

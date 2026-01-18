@@ -111,7 +111,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 @dataclass
 class FareTableSpecificsStructure:
-    transport_organisation_ref: AuthorityRef | OperatorRef | None = field(
+    transport_organisation_ref: None | AuthorityRef | OperatorRef = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -129,7 +129,7 @@ class FareTableSpecificsStructure:
             ),
         },
     )
-    group_of_lines_ref: NetworkRef | GroupOfLinesRef | None = field(
+    group_of_lines_ref: None | NetworkRef | GroupOfLinesRef = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -147,7 +147,7 @@ class FareTableSpecificsStructure:
             ),
         },
     )
-    line_ref: FlexibleLineRef | LineRef | None = field(
+    line_ref: None | FlexibleLineRef | LineRef = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -166,13 +166,13 @@ class FareTableSpecificsStructure:
         },
     )
     stop_place_ref_or_site_ref: (
-        TaxiRankRef
+        None
+        | TaxiRankRef
         | StopPlaceRef
         | ParkingRef
         | PointOfInterestRef
         | ServiceSiteRef
         | SiteRef
-        | None
     ) = field(
         default=None,
         metadata={
@@ -212,7 +212,7 @@ class FareTableSpecificsStructure:
         },
     )
     vehicle_meeting_place_ref: (
-        VehiclePoolingMeetingPlaceRef | VehicleMeetingPlaceRef | None
+        None | VehiclePoolingMeetingPlaceRef | VehicleMeetingPlaceRef
     ) = field(
         default=None,
         metadata={
@@ -231,7 +231,7 @@ class FareTableSpecificsStructure:
             ),
         },
     )
-    type_of_parking_ref: TypeOfParkingRef | None = field(
+    type_of_parking_ref: None | TypeOfParkingRef = field(
         default=None,
         metadata={
             "name": "TypeOfParkingRef",
@@ -239,7 +239,7 @@ class FareTableSpecificsStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    tariff_zone_ref: TariffZoneRef | None = field(
+    tariff_zone_ref: None | TariffZoneRef = field(
         default=None,
         metadata={
             "name": "TariffZoneRef",
@@ -247,7 +247,7 @@ class FareTableSpecificsStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    fare_section_ref: FareSectionRef | None = field(
+    fare_section_ref: None | FareSectionRef = field(
         default=None,
         metadata={
             "name": "FareSectionRef",
@@ -255,7 +255,7 @@ class FareTableSpecificsStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    direction_type: RelativeDirectionEnumeration | None = field(
+    direction_type: None | RelativeDirectionEnumeration = field(
         default=None,
         metadata={
             "name": "DirectionType",
@@ -263,7 +263,7 @@ class FareTableSpecificsStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    routing_type: RoutingTypeEnumeration | None = field(
+    routing_type: None | RoutingTypeEnumeration = field(
         default=None,
         metadata={
             "name": "RoutingType",
@@ -271,7 +271,7 @@ class FareTableSpecificsStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    fare_class: FareClass | None = field(
+    fare_class: None | FareClass = field(
         default=None,
         metadata={
             "name": "FareClass",
@@ -279,7 +279,7 @@ class FareTableSpecificsStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    class_of_use_ref: ClassOfUseRef | None = field(
+    class_of_use_ref: None | ClassOfUseRef = field(
         default=None,
         metadata={
             "name": "ClassOfUseRef",
@@ -288,7 +288,7 @@ class FareTableSpecificsStructure:
         },
     )
     facility_set_ref: (
-        ServiceFacilitySetRef | SiteFacilitySetRef | FacilitySetRef | None
+        None | ServiceFacilitySetRef | SiteFacilitySetRef | FacilitySetRef
     ) = field(
         default=None,
         metadata={
@@ -312,7 +312,7 @@ class FareTableSpecificsStructure:
             ),
         },
     )
-    type_of_product_category_ref: TypeOfProductCategoryRef | None = field(
+    type_of_product_category_ref: None | TypeOfProductCategoryRef = field(
         default=None,
         metadata={
             "name": "TypeOfProductCategoryRef",
@@ -320,7 +320,7 @@ class FareTableSpecificsStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    type_of_service_ref: TypeOfServiceRef | None = field(
+    type_of_service_ref: None | TypeOfServiceRef = field(
         default=None,
         metadata={
             "name": "TypeOfServiceRef",
@@ -329,13 +329,13 @@ class FareTableSpecificsStructure:
         },
     )
     choice: (
-        TemplateServiceJourneyRef
+        None
+        | TemplateServiceJourneyRef
         | ServiceJourneyRef
         | SingleJourneyRef
         | TrainNumberRef
         | GroupOfServicesRef
         | GroupOfSingleJourneysRef
-        | None
     ) = field(
         default=None,
         metadata={
@@ -375,7 +375,8 @@ class FareTableSpecificsStructure:
         },
     )
     choice_1: (
-        RetailDeviceRef
+        None
+        | RetailDeviceRef
         | OnlineServiceRef
         | VehicleRentalServiceRef
         | VehicleSharingServiceRef
@@ -438,7 +439,6 @@ class FareTableSpecificsStructure:
         | VehicleEquipmentRef
         | PassengerEquipmentRef
         | EquipmentRef
-        | None
     ) = field(
         default=None,
         metadata={
@@ -762,7 +762,7 @@ class FareTableSpecificsStructure:
             ),
         },
     )
-    type_of_fare_product_ref: TypeOfFareProductRef | None = field(
+    type_of_fare_product_ref: None | TypeOfFareProductRef = field(
         default=None,
         metadata={
             "name": "TypeOfFareProductRef",
@@ -771,7 +771,7 @@ class FareTableSpecificsStructure:
         },
     )
     distribution_channel_ref_or_group_of_distribution_channels_ref: (
-        DistributionChannelRef | GroupOfDistributionChannelsRef | None
+        None | DistributionChannelRef | GroupOfDistributionChannelsRef
     ) = field(
         default=None,
         metadata={
@@ -790,7 +790,7 @@ class FareTableSpecificsStructure:
             ),
         },
     )
-    payment_method: PaymentMethodEnumeration | None = field(
+    payment_method: None | PaymentMethodEnumeration = field(
         default=None,
         metadata={
             "name": "PaymentMethod",
@@ -798,7 +798,7 @@ class FareTableSpecificsStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    type_of_payment_method_ref: TypeOfPaymentMethodRef | None = field(
+    type_of_payment_method_ref: None | TypeOfPaymentMethodRef = field(
         default=None,
         metadata={
             "name": "TypeOfPaymentMethodRef",
@@ -806,7 +806,7 @@ class FareTableSpecificsStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    type_of_travel_document_ref: TypeOfTravelDocumentRef | None = field(
+    type_of_travel_document_ref: None | TypeOfTravelDocumentRef = field(
         default=None,
         metadata={
             "name": "TypeOfTravelDocumentRef",

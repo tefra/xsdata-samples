@@ -96,7 +96,7 @@ class RptExecutableEntity:
     class Meta:
         name = "RPT-EXECUTABLE-ENTITY"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -105,7 +105,7 @@ class RptExecutableEntity:
             "required": True,
         },
     )
-    short_name_fragments: RptExecutableEntity.ShortNameFragments | None = (
+    short_name_fragments: None | RptExecutableEntity.ShortNameFragments = (
         field(
             default=None,
             metadata={
@@ -115,7 +115,7 @@ class RptExecutableEntity:
             },
         )
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -123,7 +123,7 @@ class RptExecutableEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -131,7 +131,7 @@ class RptExecutableEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -139,7 +139,7 @@ class RptExecutableEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -147,7 +147,7 @@ class RptExecutableEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -155,7 +155,7 @@ class RptExecutableEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: RptExecutableEntity.Annotations | None = field(
+    annotations: None | RptExecutableEntity.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -164,7 +164,7 @@ class RptExecutableEntity:
         },
     )
     rpt_executable_entity_events: (
-        RptExecutableEntity.RptExecutableEntityEvents | None
+        None | RptExecutableEntity.RptExecutableEntityEvents
     ) = field(
         default=None,
         metadata={
@@ -173,7 +173,7 @@ class RptExecutableEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    rpt_reads: RptExecutableEntity.RptReads | None = field(
+    rpt_reads: None | RptExecutableEntity.RptReads = field(
         default=None,
         metadata={
             "name": "RPT-READS",
@@ -181,7 +181,7 @@ class RptExecutableEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    rpt_writes: RptExecutableEntity.RptWrites | None = field(
+    rpt_writes: None | RptExecutableEntity.RptWrites = field(
         default=None,
         metadata={
             "name": "RPT-WRITES",
@@ -189,7 +189,7 @@ class RptExecutableEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    symbol: CIdentifier | None = field(
+    symbol: None | CIdentifier = field(
         default=None,
         metadata={
             "name": "SYMBOL",
@@ -197,7 +197,7 @@ class RptExecutableEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -205,14 +205,14 @@ class RptExecutableEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -220,7 +220,7 @@ class RptExecutableEntity:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",

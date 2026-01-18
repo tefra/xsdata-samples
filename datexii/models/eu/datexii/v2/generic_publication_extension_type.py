@@ -20,7 +20,7 @@ class GenericPublicationExtensionType:
     class Meta:
         name = "_GenericPublicationExtensionType"
 
-    parking_table_publication: ParkingTablePublication | None = field(
+    parking_table_publication: None | ParkingTablePublication = field(
         default=None,
         metadata={
             "name": "parkingTablePublication",
@@ -28,7 +28,7 @@ class GenericPublicationExtensionType:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    parking_status_publication: ParkingStatusPublication | None = field(
+    parking_status_publication: None | ParkingStatusPublication = field(
         default=None,
         metadata={
             "name": "parkingStatusPublication",
@@ -36,7 +36,7 @@ class GenericPublicationExtensionType:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    parking_vehicles_publication: ParkingVehiclesPublication | None = field(
+    parking_vehicles_publication: None | ParkingVehiclesPublication = field(
         default=None,
         metadata={
             "name": "parkingVehiclesPublication",

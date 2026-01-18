@@ -91,7 +91,7 @@ class CryptoModuleInstantiation:
     class Meta:
         name = "CRYPTO-MODULE-INSTANTIATION"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -101,7 +101,7 @@ class CryptoModuleInstantiation:
         },
     )
     short_name_fragments: (
-        CryptoModuleInstantiation.ShortNameFragments | None
+        None | CryptoModuleInstantiation.ShortNameFragments
     ) = field(
         default=None,
         metadata={
@@ -110,7 +110,7 @@ class CryptoModuleInstantiation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -118,7 +118,7 @@ class CryptoModuleInstantiation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -126,7 +126,7 @@ class CryptoModuleInstantiation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -134,7 +134,7 @@ class CryptoModuleInstantiation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -142,7 +142,7 @@ class CryptoModuleInstantiation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -150,7 +150,7 @@ class CryptoModuleInstantiation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: CryptoModuleInstantiation.Annotations | None = field(
+    annotations: None | CryptoModuleInstantiation.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -159,7 +159,7 @@ class CryptoModuleInstantiation:
         },
     )
     certificate_to_key_slot_mappings: (
-        CryptoModuleInstantiation.CertificateToKeySlotMappings | None
+        None | CryptoModuleInstantiation.CertificateToKeySlotMappings
     ) = field(
         default=None,
         metadata={
@@ -169,7 +169,7 @@ class CryptoModuleInstantiation:
         },
     )
     crypto_certificates: (
-        CryptoModuleInstantiation.CryptoCertificates | None
+        None | CryptoModuleInstantiation.CryptoCertificates
     ) = field(
         default=None,
         metadata={
@@ -178,7 +178,7 @@ class CryptoModuleInstantiation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    crypto_providers: CryptoModuleInstantiation.CryptoProviders | None = field(
+    crypto_providers: None | CryptoModuleInstantiation.CryptoProviders = field(
         default=None,
         metadata={
             "name": "CRYPTO-PROVIDERS",
@@ -186,14 +186,14 @@ class CryptoModuleInstantiation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -201,7 +201,7 @@ class CryptoModuleInstantiation:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",

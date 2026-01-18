@@ -107,7 +107,7 @@ class VehiclePackage:
     class Meta:
         name = "VEHICLE-PACKAGE"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -116,7 +116,7 @@ class VehiclePackage:
             "required": True,
         },
     )
-    short_name_fragments: VehiclePackage.ShortNameFragments | None = field(
+    short_name_fragments: None | VehiclePackage.ShortNameFragments = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -124,7 +124,7 @@ class VehiclePackage:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -132,7 +132,7 @@ class VehiclePackage:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -140,7 +140,7 @@ class VehiclePackage:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -148,7 +148,7 @@ class VehiclePackage:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -156,7 +156,7 @@ class VehiclePackage:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -164,7 +164,7 @@ class VehiclePackage:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: VehiclePackage.Annotations | None = field(
+    annotations: None | VehiclePackage.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -172,7 +172,7 @@ class VehiclePackage:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -180,7 +180,7 @@ class VehiclePackage:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    driver_notifications: VehiclePackage.DriverNotifications | None = field(
+    driver_notifications: None | VehiclePackage.DriverNotifications = field(
         default=None,
         metadata={
             "name": "DRIVER-NOTIFICATIONS",
@@ -188,7 +188,7 @@ class VehiclePackage:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    packager_signature_ref: VehiclePackage.PackagerSignatureRef | None = field(
+    packager_signature_ref: None | VehiclePackage.PackagerSignatureRef = field(
         default=None,
         metadata={
             "name": "PACKAGER-SIGNATURE-REF",
@@ -196,7 +196,7 @@ class VehiclePackage:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    repository: UriString | None = field(
+    repository: None | UriString = field(
         default=None,
         metadata={
             "name": "REPOSITORY",
@@ -204,7 +204,7 @@ class VehiclePackage:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    rollout_qualifications: VehiclePackage.RolloutQualifications | None = (
+    rollout_qualifications: None | VehiclePackage.RolloutQualifications = (
         field(
             default=None,
             metadata={
@@ -214,7 +214,7 @@ class VehiclePackage:
             },
         )
     )
-    ucms: VehiclePackage.Ucms | None = field(
+    ucms: None | VehiclePackage.Ucms = field(
         default=None,
         metadata={
             "name": "UCMS",
@@ -222,7 +222,7 @@ class VehiclePackage:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ucm_master_fallback_refs: VehiclePackage.UcmMasterFallbackRefs | None = (
+    ucm_master_fallback_refs: None | VehiclePackage.UcmMasterFallbackRefs = (
         field(
             default=None,
             metadata={
@@ -232,7 +232,7 @@ class VehiclePackage:
             },
         )
     )
-    vehicle_description_ref: VehiclePackage.VehicleDescriptionRef | None = (
+    vehicle_description_ref: None | VehiclePackage.VehicleDescriptionRef = (
         field(
             default=None,
             metadata={
@@ -242,14 +242,14 @@ class VehiclePackage:
             },
         )
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -257,7 +257,7 @@ class VehiclePackage:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -300,7 +300,7 @@ class VehiclePackage:
 
     @dataclass
     class PackagerSignatureRef(Ref):
-        dest: CryptoServiceCertificateSubtypesEnum | None = field(
+        dest: None | CryptoServiceCertificateSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -346,7 +346,7 @@ class VehiclePackage:
 
         @dataclass
         class UcmMasterFallbackRef(Ref):
-            dest: UcmDescriptionSubtypesEnum | None = field(
+            dest: None | UcmDescriptionSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -357,7 +357,7 @@ class VehiclePackage:
 
     @dataclass
     class VehicleDescriptionRef(Ref):
-        dest: DocumentationSubtypesEnum | None = field(
+        dest: None | DocumentationSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

@@ -57,7 +57,7 @@ class ParkingSite(ParkingRecord):
     :ivar parking_site_extension:
     """
 
-    parking_reservation: ReservationTypeEnum | None = field(
+    parking_reservation: None | ReservationTypeEnum = field(
         default=None,
         metadata={
             "name": "parkingReservation",
@@ -73,7 +73,7 @@ class ParkingSite(ParkingRecord):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    highest_floor: int | None = field(
+    highest_floor: None | int = field(
         default=None,
         metadata={
             "name": "highestFloor",
@@ -81,7 +81,7 @@ class ParkingSite(ParkingRecord):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    lowest_floor: int | None = field(
+    lowest_floor: None | int = field(
         default=None,
         metadata={
             "name": "lowestFloor",
@@ -89,7 +89,7 @@ class ParkingSite(ParkingRecord):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    temporary_parking: bool | None = field(
+    temporary_parking: None | bool = field(
         default=None,
         metadata={
             "name": "temporaryParking",
@@ -123,7 +123,7 @@ class ParkingSite(ParkingRecord):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    opening_times: OpeningTimes | None = field(
+    opening_times: None | OpeningTimes = field(
         default=None,
         metadata={
             "name": "openingTimes",
@@ -139,7 +139,7 @@ class ParkingSite(ParkingRecord):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    parking_standards_and_security: ParkingStandardsAndSecurity | None = field(
+    parking_standards_and_security: None | ParkingStandardsAndSecurity = field(
         default=None,
         metadata={
             "name": "parkingStandardsAndSecurity",
@@ -147,7 +147,7 @@ class ParkingSite(ParkingRecord):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    parking_site_extension: ExtensionType | None = field(
+    parking_site_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "parkingSiteExtension",

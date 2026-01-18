@@ -25,7 +25,7 @@ class ServiceFacilitySetVersionStructure(FacilitySetVersionStructure):
     class Meta:
         name = "ServiceFacilitySet_VersionStructure"
 
-    vehicle_access_facility_list: VehicleAccessFacilityList | None = field(
+    vehicle_access_facility_list: None | VehicleAccessFacilityList = field(
         default=None,
         metadata={
             "name": "VehicleAccessFacilityList",
@@ -33,7 +33,7 @@ class ServiceFacilitySetVersionStructure(FacilitySetVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    accommodation_access_list: AccommodationAccessList | None = field(
+    accommodation_access_list: None | AccommodationAccessList = field(
         default=None,
         metadata={
             "name": "AccommodationAccessList",
@@ -41,7 +41,7 @@ class ServiceFacilitySetVersionStructure(FacilitySetVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    accommodation_facility_list: AccommodationFacilityList | None = field(
+    accommodation_facility_list: None | AccommodationFacilityList = field(
         default=None,
         metadata={
             "name": "AccommodationFacilityList",
@@ -49,7 +49,7 @@ class ServiceFacilitySetVersionStructure(FacilitySetVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    boarding_permission: BoardingPermission | None = field(
+    boarding_permission: None | BoardingPermission = field(
         default=None,
         metadata={
             "name": "BoardingPermission",
@@ -57,7 +57,7 @@ class ServiceFacilitySetVersionStructure(FacilitySetVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    booking_process_facility_list: BookingProcessFacilityList | None = field(
+    booking_process_facility_list: None | BookingProcessFacilityList = field(
         default=None,
         metadata={
             "name": "BookingProcessFacilityList",
@@ -65,7 +65,7 @@ class ServiceFacilitySetVersionStructure(FacilitySetVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    couchette_facility_list: CouchetteFacilityList | None = field(
+    couchette_facility_list: None | CouchetteFacilityList = field(
         default=None,
         metadata={
             "name": "CouchetteFacilityList",
@@ -73,7 +73,7 @@ class ServiceFacilitySetVersionStructure(FacilitySetVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    group_booking_facility: GroupBookingFacility | None = field(
+    group_booking_facility: None | GroupBookingFacility = field(
         default=None,
         metadata={
             "name": "GroupBookingFacility",
@@ -81,7 +81,7 @@ class ServiceFacilitySetVersionStructure(FacilitySetVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    luggage_carriage_facility_list: LuggageCarriageFacilityList | None = field(
+    luggage_carriage_facility_list: None | LuggageCarriageFacilityList = field(
         default=None,
         metadata={
             "name": "LuggageCarriageFacilityList",
@@ -90,7 +90,7 @@ class ServiceFacilitySetVersionStructure(FacilitySetVersionStructure):
         },
     )
     service_reservation_facility_list: (
-        ServiceReservationFacilityList | None
+        None | ServiceReservationFacilityList
     ) = field(
         default=None,
         metadata={
@@ -99,7 +99,7 @@ class ServiceFacilitySetVersionStructure(FacilitySetVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    uic_product_characteristic_list: UicProductCharacteristicList | None = (
+    uic_product_characteristic_list: None | UicProductCharacteristicList = (
         field(
             default=None,
             metadata={
@@ -109,7 +109,7 @@ class ServiceFacilitySetVersionStructure(FacilitySetVersionStructure):
             },
         )
     )
-    uic_train_rate: UicTrainRate | None = field(
+    uic_train_rate: None | UicTrainRate = field(
         default=None,
         metadata={
             "name": "UicTrainRate",
@@ -117,14 +117,14 @@ class ServiceFacilitySetVersionStructure(FacilitySetVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    accommodations: AccommodationsRelStructure | None = field(
+    accommodations: None | AccommodationsRelStructure = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    onboard_stays: OnboardStaysRelStructure | None = field(
+    onboard_stays: None | OnboardStaysRelStructure = field(
         default=None,
         metadata={
             "name": "onboardStays",

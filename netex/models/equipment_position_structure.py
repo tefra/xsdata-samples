@@ -79,7 +79,8 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 @dataclass
 class EquipmentPositionStructure(DataManagedObjectStructure):
     choice: (
-        RetailDeviceRef
+        None
+        | RetailDeviceRef
         | OnlineServiceRef
         | VehicleRentalServiceRef
         | VehicleSharingServiceRef
@@ -142,7 +143,6 @@ class EquipmentPositionStructure(DataManagedObjectStructure):
         | VehicleEquipmentRef
         | PassengerEquipmentRef
         | EquipmentRef
-        | None
     ) = field(
         default=None,
         metadata={
@@ -466,7 +466,7 @@ class EquipmentPositionStructure(DataManagedObjectStructure):
             ),
         },
     )
-    description: MultilingualString | None = field(
+    description: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "Description",
@@ -474,7 +474,7 @@ class EquipmentPositionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    location: LocationStructure2 | None = field(
+    location: None | LocationStructure2 = field(
         default=None,
         metadata={
             "name": "Location",
@@ -482,7 +482,7 @@ class EquipmentPositionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    reference_point_ref: PointRefStructure | None = field(
+    reference_point_ref: None | PointRefStructure = field(
         default=None,
         metadata={
             "name": "ReferencePointRef",
@@ -490,7 +490,7 @@ class EquipmentPositionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    xoffset: Decimal | None = field(
+    xoffset: None | Decimal = field(
         default=None,
         metadata={
             "name": "XOffset",
@@ -498,7 +498,7 @@ class EquipmentPositionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    yoffset: Decimal | None = field(
+    yoffset: None | Decimal = field(
         default=None,
         metadata={
             "name": "YOffset",

@@ -45,7 +45,7 @@ class SomeipServiceDiscovery:
         name = "SOMEIP-SERVICE-DISCOVERY"
 
     multicast_sd_ip_address_ref: (
-        SomeipServiceDiscovery.MulticastSdIpAddressRef | None
+        None | SomeipServiceDiscovery.MulticastSdIpAddressRef
     ) = field(
         default=None,
         metadata={
@@ -55,7 +55,7 @@ class SomeipServiceDiscovery:
         },
     )
     multicast_secure_com_props_ref: (
-        SomeipServiceDiscovery.MulticastSecureComPropsRef | None
+        None | SomeipServiceDiscovery.MulticastSecureComPropsRef
     ) = field(
         default=None,
         metadata={
@@ -64,7 +64,7 @@ class SomeipServiceDiscovery:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    someip_service_discovery_port: PositiveInteger | None = field(
+    someip_service_discovery_port: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "SOMEIP-SERVICE-DISCOVERY-PORT",
@@ -73,7 +73,7 @@ class SomeipServiceDiscovery:
         },
     )
     unicast_secure_com_props_refs: (
-        SomeipServiceDiscovery.UnicastSecureComPropsRefs | None
+        None | SomeipServiceDiscovery.UnicastSecureComPropsRefs
     ) = field(
         default=None,
         metadata={
@@ -82,14 +82,14 @@ class SomeipServiceDiscovery:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -100,7 +100,7 @@ class SomeipServiceDiscovery:
 
     @dataclass
     class MulticastSdIpAddressRef(Ref):
-        dest: NetworkEndpointSubtypesEnum | None = field(
+        dest: None | NetworkEndpointSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -111,7 +111,7 @@ class SomeipServiceDiscovery:
 
     @dataclass
     class MulticastSecureComPropsRef(Ref):
-        dest: SecureComPropsSubtypesEnum | None = field(
+        dest: None | SecureComPropsSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -135,7 +135,7 @@ class SomeipServiceDiscovery:
 
         @dataclass
         class UnicastSecureComPropsRef(Ref):
-            dest: SecureComPropsSubtypesEnum | None = field(
+            dest: None | SecureComPropsSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",

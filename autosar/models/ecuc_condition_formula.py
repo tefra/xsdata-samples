@@ -34,14 +34,14 @@ class EcucConditionFormula:
     class Meta:
         name = "ECUC-CONDITION-FORMULA"
 
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -74,7 +74,7 @@ class EcucConditionFormula:
 
     @dataclass
     class EcucQueryRef(Ref):
-        dest: EcucQuerySubtypesEnum | None = field(
+        dest: None | EcucQuerySubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -85,7 +85,7 @@ class EcucConditionFormula:
 
     @dataclass
     class EcucQueryStringRef(Ref):
-        dest: EcucQuerySubtypesEnum | None = field(
+        dest: None | EcucQuerySubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

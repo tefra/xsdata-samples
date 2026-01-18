@@ -20,7 +20,7 @@ class TimePeriodByHour(TimePeriodOfDay):
     :ivar time_period_by_hour_extension:
     """
 
-    start_time_of_period: XmlTime | None = field(
+    start_time_of_period: None | XmlTime = field(
         default=None,
         metadata={
             "name": "startTimeOfPeriod",
@@ -29,7 +29,7 @@ class TimePeriodByHour(TimePeriodOfDay):
             "required": True,
         },
     )
-    end_time_of_period: XmlTime | None = field(
+    end_time_of_period: None | XmlTime = field(
         default=None,
         metadata={
             "name": "endTimeOfPeriod",
@@ -38,7 +38,7 @@ class TimePeriodByHour(TimePeriodOfDay):
             "required": True,
         },
     )
-    time_period_by_hour_extension: ExtensionType | None = field(
+    time_period_by_hour_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "timePeriodByHourExtension",

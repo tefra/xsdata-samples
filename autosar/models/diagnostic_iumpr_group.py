@@ -96,7 +96,7 @@ class DiagnosticIumprGroup:
     class Meta:
         name = "DIAGNOSTIC-IUMPR-GROUP"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -105,7 +105,7 @@ class DiagnosticIumprGroup:
             "required": True,
         },
     )
-    short_name_fragments: DiagnosticIumprGroup.ShortNameFragments | None = (
+    short_name_fragments: None | DiagnosticIumprGroup.ShortNameFragments = (
         field(
             default=None,
             metadata={
@@ -115,7 +115,7 @@ class DiagnosticIumprGroup:
             },
         )
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -123,7 +123,7 @@ class DiagnosticIumprGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -131,7 +131,7 @@ class DiagnosticIumprGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -139,7 +139,7 @@ class DiagnosticIumprGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -147,7 +147,7 @@ class DiagnosticIumprGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -155,7 +155,7 @@ class DiagnosticIumprGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: DiagnosticIumprGroup.Annotations | None = field(
+    annotations: None | DiagnosticIumprGroup.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -163,7 +163,7 @@ class DiagnosticIumprGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -171,7 +171,7 @@ class DiagnosticIumprGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    group_identifier: NameTokenValueVariationPoint | None = field(
+    group_identifier: None | NameTokenValueVariationPoint = field(
         default=None,
         metadata={
             "name": "GROUP-IDENTIFIER",
@@ -180,7 +180,7 @@ class DiagnosticIumprGroup:
         },
     )
     iumpr_group_identifiers: (
-        DiagnosticIumprGroup.IumprGroupIdentifiers | None
+        None | DiagnosticIumprGroup.IumprGroupIdentifiers
     ) = field(
         default=None,
         metadata={
@@ -189,7 +189,7 @@ class DiagnosticIumprGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    iumpr_refs: DiagnosticIumprGroup.IumprRefs | None = field(
+    iumpr_refs: None | DiagnosticIumprGroup.IumprRefs = field(
         default=None,
         metadata={
             "name": "IUMPR-REFS",
@@ -197,14 +197,14 @@ class DiagnosticIumprGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -212,7 +212,7 @@ class DiagnosticIumprGroup:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -268,7 +268,7 @@ class DiagnosticIumprGroup:
 
         @dataclass
         class IumprRef(Ref):
-            dest: DiagnosticIumprSubtypesEnum | None = field(
+            dest: None | DiagnosticIumprSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",

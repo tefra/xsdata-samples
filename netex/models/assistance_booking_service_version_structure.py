@@ -30,7 +30,7 @@ class AssistanceBookingServiceVersionStructure(LocalServiceVersionStructure):
     class Meta:
         name = "AssistanceBookingService_VersionStructure"
 
-    assistance_availability: AssistanceAvailabilityEnumeration | None = field(
+    assistance_availability: None | AssistanceAvailabilityEnumeration = field(
         default=None,
         metadata={
             "name": "AssistanceAvailability",
@@ -38,7 +38,7 @@ class AssistanceBookingServiceVersionStructure(LocalServiceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    wheelchair_booking_required: bool | None = field(
+    wheelchair_booking_required: None | bool = field(
         default=None,
         metadata={
             "name": "WheelchairBookingRequired",
@@ -46,7 +46,7 @@ class AssistanceBookingServiceVersionStructure(LocalServiceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    booking_contact: ContactStructure | None = field(
+    booking_contact: None | ContactStructure = field(
         default=None,
         metadata={
             "name": "BookingContact",
@@ -54,7 +54,7 @@ class AssistanceBookingServiceVersionStructure(LocalServiceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    booking_arrangements: BookingArrangementsStructure | None = field(
+    booking_arrangements: None | BookingArrangementsStructure = field(
         default=None,
         metadata={
             "name": "BookingArrangements",
@@ -62,7 +62,7 @@ class AssistanceBookingServiceVersionStructure(LocalServiceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    vehicle_mode: VehicleMode | None = field(
+    vehicle_mode: None | VehicleMode = field(
         default=None,
         metadata={
             "name": "VehicleMode",
@@ -71,13 +71,13 @@ class AssistanceBookingServiceVersionStructure(LocalServiceVersionStructure):
         },
     )
     mode_of_operation_ref_or_alternative_mode_of_operation_ref_or_conventional_mode_of_operation_ref: (
-        PersonalModeOfOperationRef
+        None
+        | PersonalModeOfOperationRef
         | VehiclePoolingRef
         | VehicleSharingRef
         | VehicleRentalRef
         | FlexibleModeOfOperationRef
         | ScheduledModeOfOperationRef
-        | None
     ) = field(
         default=None,
         metadata={
@@ -116,7 +116,7 @@ class AssistanceBookingServiceVersionStructure(LocalServiceVersionStructure):
             ),
         },
     )
-    transport_organisation_ref: AuthorityRef | OperatorRef | None = field(
+    transport_organisation_ref: None | AuthorityRef | OperatorRef = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -134,7 +134,7 @@ class AssistanceBookingServiceVersionStructure(LocalServiceVersionStructure):
             ),
         },
     )
-    line_ref: FlexibleLineRef | LineRef | None = field(
+    line_ref: None | FlexibleLineRef | LineRef = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -152,7 +152,7 @@ class AssistanceBookingServiceVersionStructure(LocalServiceVersionStructure):
             ),
         },
     )
-    booked_object_ref: VersionOfObjectRefStructure | None = field(
+    booked_object_ref: None | VersionOfObjectRefStructure = field(
         default=None,
         metadata={
             "name": "BookedObjectRef",
@@ -160,7 +160,7 @@ class AssistanceBookingServiceVersionStructure(LocalServiceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    notice_assignments: NoticeAssignmentsRelStructure | None = field(
+    notice_assignments: None | NoticeAssignmentsRelStructure = field(
         default=None,
         metadata={
             "name": "noticeAssignments",

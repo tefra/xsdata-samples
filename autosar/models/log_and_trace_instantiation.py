@@ -97,7 +97,7 @@ class LogAndTraceInstantiation:
     class Meta:
         name = "LOG-AND-TRACE-INSTANTIATION"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -107,7 +107,7 @@ class LogAndTraceInstantiation:
         },
     )
     short_name_fragments: (
-        LogAndTraceInstantiation.ShortNameFragments | None
+        None | LogAndTraceInstantiation.ShortNameFragments
     ) = field(
         default=None,
         metadata={
@@ -116,7 +116,7 @@ class LogAndTraceInstantiation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -124,7 +124,7 @@ class LogAndTraceInstantiation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -132,7 +132,7 @@ class LogAndTraceInstantiation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -140,7 +140,7 @@ class LogAndTraceInstantiation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -148,7 +148,7 @@ class LogAndTraceInstantiation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -156,7 +156,7 @@ class LogAndTraceInstantiation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: LogAndTraceInstantiation.Annotations | None = field(
+    annotations: None | LogAndTraceInstantiation.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -164,7 +164,7 @@ class LogAndTraceInstantiation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    dlt_ecu_id: String | None = field(
+    dlt_ecu_id: None | String = field(
         default=None,
         metadata={
             "name": "DLT-ECU-ID",
@@ -172,7 +172,7 @@ class LogAndTraceInstantiation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    dlt_log_channels: LogAndTraceInstantiation.DltLogChannels | None = field(
+    dlt_log_channels: None | LogAndTraceInstantiation.DltLogChannels = field(
         default=None,
         metadata={
             "name": "DLT-LOG-CHANNELS",
@@ -180,7 +180,7 @@ class LogAndTraceInstantiation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    queue_size: PositiveInteger | None = field(
+    queue_size: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "QUEUE-SIZE",
@@ -188,7 +188,7 @@ class LogAndTraceInstantiation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    session_id_support: Boolean | None = field(
+    session_id_support: None | Boolean = field(
         default=None,
         metadata={
             "name": "SESSION-ID-SUPPORT",
@@ -197,7 +197,7 @@ class LogAndTraceInstantiation:
         },
     )
     time_base_resource_ref: (
-        LogAndTraceInstantiation.TimeBaseResourceRef | None
+        None | LogAndTraceInstantiation.TimeBaseResourceRef
     ) = field(
         default=None,
         metadata={
@@ -206,14 +206,14 @@ class LogAndTraceInstantiation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -221,7 +221,7 @@ class LogAndTraceInstantiation:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -264,7 +264,7 @@ class LogAndTraceInstantiation:
 
     @dataclass
     class TimeBaseResourceRef(Ref):
-        dest: TimeBaseResourceSubtypesEnum | None = field(
+        dest: None | TimeBaseResourceSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

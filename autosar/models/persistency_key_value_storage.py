@@ -107,7 +107,7 @@ class PersistencyKeyValueStorage:
     class Meta:
         name = "PERSISTENCY-KEY-VALUE-STORAGE"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -117,7 +117,7 @@ class PersistencyKeyValueStorage:
         },
     )
     short_name_fragments: (
-        PersistencyKeyValueStorage.ShortNameFragments | None
+        None | PersistencyKeyValueStorage.ShortNameFragments
     ) = field(
         default=None,
         metadata={
@@ -126,7 +126,7 @@ class PersistencyKeyValueStorage:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -134,7 +134,7 @@ class PersistencyKeyValueStorage:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -142,7 +142,7 @@ class PersistencyKeyValueStorage:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -150,7 +150,7 @@ class PersistencyKeyValueStorage:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -158,7 +158,7 @@ class PersistencyKeyValueStorage:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -166,7 +166,7 @@ class PersistencyKeyValueStorage:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: PersistencyKeyValueStorage.Annotations | None = field(
+    annotations: None | PersistencyKeyValueStorage.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -174,7 +174,7 @@ class PersistencyKeyValueStorage:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -182,7 +182,7 @@ class PersistencyKeyValueStorage:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    maximum_allowed_size: PositiveUnlimitedInteger | None = field(
+    maximum_allowed_size: None | PositiveUnlimitedInteger = field(
         default=None,
         metadata={
             "name": "MAXIMUM-ALLOWED-SIZE",
@@ -190,7 +190,7 @@ class PersistencyKeyValueStorage:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    minimum_sustained_size: PositiveInteger | None = field(
+    minimum_sustained_size: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "MINIMUM-SUSTAINED-SIZE",
@@ -199,7 +199,7 @@ class PersistencyKeyValueStorage:
         },
     )
     redundancy_handlings: (
-        PersistencyKeyValueStorage.RedundancyHandlings | None
+        None | PersistencyKeyValueStorage.RedundancyHandlings
     ) = field(
         default=None,
         metadata={
@@ -208,7 +208,7 @@ class PersistencyKeyValueStorage:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    update_strategy: PersistencyCollectionLevelUpdateStrategyEnum | None = (
+    update_strategy: None | PersistencyCollectionLevelUpdateStrategyEnum = (
         field(
             default=None,
             metadata={
@@ -218,7 +218,7 @@ class PersistencyKeyValueStorage:
             },
         )
     )
-    key_value_pairs: PersistencyKeyValueStorage.KeyValuePairs | None = field(
+    key_value_pairs: None | PersistencyKeyValueStorage.KeyValuePairs = field(
         default=None,
         metadata={
             "name": "KEY-VALUE-PAIRS",
@@ -226,7 +226,7 @@ class PersistencyKeyValueStorage:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    uri: UriString | None = field(
+    uri: None | UriString = field(
         default=None,
         metadata={
             "name": "URI",
@@ -234,14 +234,14 @@ class PersistencyKeyValueStorage:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -249,7 +249,7 @@ class PersistencyKeyValueStorage:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",

@@ -22,14 +22,14 @@ class TpegHeight:
     :ivar tpeg_height_extension:
     """
 
-    height: float | None = field(
+    height: None | float = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    height_type: TpegLoc04HeightTypeEnum | None = field(
+    height_type: None | TpegLoc04HeightTypeEnum = field(
         default=None,
         metadata={
             "name": "heightType",
@@ -38,7 +38,7 @@ class TpegHeight:
             "required": True,
         },
     )
-    tpeg_height_extension: ExtensionType | None = field(
+    tpeg_height_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "tpegHeightExtension",

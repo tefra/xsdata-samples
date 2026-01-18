@@ -31,7 +31,7 @@ class Extended:
             "required": True,
         },
     )
-    role: str | None = field(
+    role: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -39,7 +39,7 @@ class Extended:
             "min_length": 1,
         },
     )
-    title: str | None = field(
+    title: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",

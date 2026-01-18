@@ -28,7 +28,7 @@ class PrmCharTextualContents:
     class Meta:
         name = "PRM-CHAR-TEXTUAL-CONTENTS"
 
-    text: String | None = field(
+    text: None | String = field(
         default=None,
         metadata={
             "name": "TEXT",
@@ -36,14 +36,14 @@ class PrmCharTextualContents:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

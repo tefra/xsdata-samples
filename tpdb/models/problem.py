@@ -26,39 +26,39 @@ class Problem:
     class Meta:
         name = "problem"
 
-    trs: Trs | None = field(
+    trs: None | Trs = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
         },
     )
-    strategy: Strategy | None = field(
+    strategy: None | Strategy = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
         },
     )
-    startterm: Startterm | None = field(
+    startterm: None | Startterm = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    status: Status | None = field(
+    status: None | Status = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    metainformation: Metainformation | None = field(
+    metainformation: None | Metainformation = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    type_value: ProblemType | None = field(
+    type_value: None | ProblemType = field(
         default=None,
         metadata={
             "name": "type",

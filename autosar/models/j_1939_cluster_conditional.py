@@ -67,7 +67,7 @@ class J1939ClusterConditional:
     class Meta:
         name = "J-1939-CLUSTER-CONDITIONAL"
 
-    baudrate: PositiveUnlimitedInteger | None = field(
+    baudrate: None | PositiveUnlimitedInteger = field(
         default=None,
         metadata={
             "name": "BAUDRATE",
@@ -75,7 +75,7 @@ class J1939ClusterConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    physical_channels: J1939ClusterConditional.PhysicalChannels | None = field(
+    physical_channels: None | J1939ClusterConditional.PhysicalChannels = field(
         default=None,
         metadata={
             "name": "PHYSICAL-CHANNELS",
@@ -83,7 +83,7 @@ class J1939ClusterConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    protocol_name: String | None = field(
+    protocol_name: None | String = field(
         default=None,
         metadata={
             "name": "PROTOCOL-NAME",
@@ -91,7 +91,7 @@ class J1939ClusterConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    protocol_version: String | None = field(
+    protocol_version: None | String = field(
         default=None,
         metadata={
             "name": "PROTOCOL-VERSION",
@@ -99,7 +99,7 @@ class J1939ClusterConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    speed: Integer | None = field(
+    speed: None | Integer = field(
         default=None,
         metadata={
             "name": "SPEED",
@@ -107,7 +107,7 @@ class J1939ClusterConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    bus_off_recovery: CanClusterBusOffRecovery | None = field(
+    bus_off_recovery: None | CanClusterBusOffRecovery = field(
         default=None,
         metadata={
             "name": "BUS-OFF-RECOVERY",
@@ -115,7 +115,7 @@ class J1939ClusterConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    can_fd_baudrate: PositiveUnlimitedInteger | None = field(
+    can_fd_baudrate: None | PositiveUnlimitedInteger = field(
         default=None,
         metadata={
             "name": "CAN-FD-BAUDRATE",
@@ -123,7 +123,7 @@ class J1939ClusterConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    network_id: PositiveInteger | None = field(
+    network_id: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "NETWORK-ID",
@@ -131,7 +131,7 @@ class J1939ClusterConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    request_2_support: Boolean | None = field(
+    request_2_support: None | Boolean = field(
         default=None,
         metadata={
             "name": "REQUEST-2-SUPPORT",
@@ -139,7 +139,7 @@ class J1939ClusterConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    uses_address_arbitration: Boolean | None = field(
+    uses_address_arbitration: None | Boolean = field(
         default=None,
         metadata={
             "name": "USES-ADDRESS-ARBITRATION",
@@ -147,7 +147,7 @@ class J1939ClusterConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -155,14 +155,14 @@ class J1939ClusterConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

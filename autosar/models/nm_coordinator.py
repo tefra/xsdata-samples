@@ -51,7 +51,7 @@ class NmCoordinator:
     class Meta:
         name = "NM-COORDINATOR"
 
-    index: Integer | None = field(
+    index: None | Integer = field(
         default=None,
         metadata={
             "name": "INDEX",
@@ -59,7 +59,7 @@ class NmCoordinator:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nm_active_coordinator: Boolean | None = field(
+    nm_active_coordinator: None | Boolean = field(
         default=None,
         metadata={
             "name": "NM-ACTIVE-COORDINATOR",
@@ -67,7 +67,7 @@ class NmCoordinator:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nm_coord_sync_support: Boolean | None = field(
+    nm_coord_sync_support: None | Boolean = field(
         default=None,
         metadata={
             "name": "NM-COORD-SYNC-SUPPORT",
@@ -75,7 +75,7 @@ class NmCoordinator:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nm_global_coordinator_time: TimeValue | None = field(
+    nm_global_coordinator_time: None | TimeValue = field(
         default=None,
         metadata={
             "name": "NM-GLOBAL-COORDINATOR-TIME",
@@ -83,7 +83,7 @@ class NmCoordinator:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nm_node_refs: NmCoordinator.NmNodeRefs | None = field(
+    nm_node_refs: None | NmCoordinator.NmNodeRefs = field(
         default=None,
         metadata={
             "name": "NM-NODE-REFS",
@@ -91,7 +91,7 @@ class NmCoordinator:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nm_shutdown_delay_timer: TimeValue | None = field(
+    nm_shutdown_delay_timer: None | TimeValue = field(
         default=None,
         metadata={
             "name": "NM-SHUTDOWN-DELAY-TIMER",
@@ -99,14 +99,14 @@ class NmCoordinator:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -128,7 +128,7 @@ class NmCoordinator:
 
         @dataclass
         class NmNodeRef(Ref):
-            dest: NmNodeSubtypesEnum | None = field(
+            dest: None | NmNodeSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",

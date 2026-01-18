@@ -26,7 +26,7 @@ class PredefinedNonOrderedLocationGroup(PredefinedLocationContainer):
     :ivar version:
     """
 
-    predefined_non_ordered_location_group_name: MultilingualString | None = (
+    predefined_non_ordered_location_group_name: None | MultilingualString = (
         field(
             default=None,
             metadata={
@@ -45,7 +45,7 @@ class PredefinedNonOrderedLocationGroup(PredefinedLocationContainer):
             "min_occurs": 2,
         },
     )
-    predefined_non_ordered_location_group_extension: ExtensionType | None = (
+    predefined_non_ordered_location_group_extension: None | ExtensionType = (
         field(
             default=None,
             metadata={
@@ -55,14 +55,14 @@ class PredefinedNonOrderedLocationGroup(PredefinedLocationContainer):
             },
         )
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "required": True,
         },
     )
-    version: str | None = field(
+    version: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",

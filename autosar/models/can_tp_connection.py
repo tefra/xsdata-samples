@@ -92,7 +92,7 @@ class CanTpConnection:
     class Meta:
         name = "CAN-TP-CONNECTION"
 
-    ident: TpConnectionIdent | None = field(
+    ident: None | TpConnectionIdent = field(
         default=None,
         metadata={
             "name": "IDENT",
@@ -100,7 +100,7 @@ class CanTpConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    addressing_format: CanTpAddressingFormatType | None = field(
+    addressing_format: None | CanTpAddressingFormatType = field(
         default=None,
         metadata={
             "name": "ADDRESSING-FORMAT",
@@ -108,7 +108,7 @@ class CanTpConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    can_tp_channel_ref: CanTpConnection.CanTpChannelRef | None = field(
+    can_tp_channel_ref: None | CanTpConnection.CanTpChannelRef = field(
         default=None,
         metadata={
             "name": "CAN-TP-CHANNEL-REF",
@@ -116,7 +116,7 @@ class CanTpConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    cancellation: Boolean | None = field(
+    cancellation: None | Boolean = field(
         default=None,
         metadata={
             "name": "CANCELLATION",
@@ -124,7 +124,7 @@ class CanTpConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    data_pdu_ref: CanTpConnection.DataPduRef | None = field(
+    data_pdu_ref: None | CanTpConnection.DataPduRef = field(
         default=None,
         metadata={
             "name": "DATA-PDU-REF",
@@ -132,7 +132,7 @@ class CanTpConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    flow_control_pdu_ref: CanTpConnection.FlowControlPduRef | None = field(
+    flow_control_pdu_ref: None | CanTpConnection.FlowControlPduRef = field(
         default=None,
         metadata={
             "name": "FLOW-CONTROL-PDU-REF",
@@ -140,7 +140,7 @@ class CanTpConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    max_block_size: Integer | None = field(
+    max_block_size: None | Integer = field(
         default=None,
         metadata={
             "name": "MAX-BLOCK-SIZE",
@@ -148,7 +148,7 @@ class CanTpConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    multicast_ref: CanTpConnection.MulticastRef | None = field(
+    multicast_ref: None | CanTpConnection.MulticastRef = field(
         default=None,
         metadata={
             "name": "MULTICAST-REF",
@@ -156,7 +156,7 @@ class CanTpConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    padding_activation: Boolean | None = field(
+    padding_activation: None | Boolean = field(
         default=None,
         metadata={
             "name": "PADDING-ACTIVATION",
@@ -164,7 +164,7 @@ class CanTpConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    receiver_refs: CanTpConnection.ReceiverRefs | None = field(
+    receiver_refs: None | CanTpConnection.ReceiverRefs = field(
         default=None,
         metadata={
             "name": "RECEIVER-REFS",
@@ -172,7 +172,7 @@ class CanTpConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ta_type: NetworkTargetAddressType | None = field(
+    ta_type: None | NetworkTargetAddressType = field(
         default=None,
         metadata={
             "name": "TA-TYPE",
@@ -180,7 +180,7 @@ class CanTpConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    timeout_br: TimeValue | None = field(
+    timeout_br: None | TimeValue = field(
         default=None,
         metadata={
             "name": "TIMEOUT-BR",
@@ -188,7 +188,7 @@ class CanTpConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    timeout_bs: TimeValue | None = field(
+    timeout_bs: None | TimeValue = field(
         default=None,
         metadata={
             "name": "TIMEOUT-BS",
@@ -196,7 +196,7 @@ class CanTpConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    timeout_cr: TimeValue | None = field(
+    timeout_cr: None | TimeValue = field(
         default=None,
         metadata={
             "name": "TIMEOUT-CR",
@@ -204,7 +204,7 @@ class CanTpConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    timeout_cs: TimeValue | None = field(
+    timeout_cs: None | TimeValue = field(
         default=None,
         metadata={
             "name": "TIMEOUT-CS",
@@ -212,7 +212,7 @@ class CanTpConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tp_sdu_ref: CanTpConnection.TpSduRef | None = field(
+    tp_sdu_ref: None | CanTpConnection.TpSduRef = field(
         default=None,
         metadata={
             "name": "TP-SDU-REF",
@@ -220,7 +220,7 @@ class CanTpConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    transmit_cancellation: Boolean | None = field(
+    transmit_cancellation: None | Boolean = field(
         default=None,
         metadata={
             "name": "TRANSMIT-CANCELLATION",
@@ -228,7 +228,7 @@ class CanTpConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    transmitter_ref: CanTpConnection.TransmitterRef | None = field(
+    transmitter_ref: None | CanTpConnection.TransmitterRef = field(
         default=None,
         metadata={
             "name": "TRANSMITTER-REF",
@@ -236,7 +236,7 @@ class CanTpConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -244,14 +244,14 @@ class CanTpConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -262,7 +262,7 @@ class CanTpConnection:
 
     @dataclass
     class CanTpChannelRef(Ref):
-        dest: CanTpChannelSubtypesEnum | None = field(
+        dest: None | CanTpChannelSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -273,7 +273,7 @@ class CanTpConnection:
 
     @dataclass
     class DataPduRef(Ref):
-        dest: NPduSubtypesEnum | None = field(
+        dest: None | NPduSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -284,7 +284,7 @@ class CanTpConnection:
 
     @dataclass
     class FlowControlPduRef(Ref):
-        dest: NPduSubtypesEnum | None = field(
+        dest: None | NPduSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -295,7 +295,7 @@ class CanTpConnection:
 
     @dataclass
     class MulticastRef(Ref):
-        dest: CanTpAddressSubtypesEnum | None = field(
+        dest: None | CanTpAddressSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -317,7 +317,7 @@ class CanTpConnection:
 
         @dataclass
         class ReceiverRef(Ref):
-            dest: CanTpNodeSubtypesEnum | None = field(
+            dest: None | CanTpNodeSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -328,7 +328,7 @@ class CanTpConnection:
 
     @dataclass
     class TpSduRef(Ref):
-        dest: IPduSubtypesEnum | None = field(
+        dest: None | IPduSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -339,7 +339,7 @@ class CanTpConnection:
 
     @dataclass
     class TransmitterRef(Ref):
-        dest: CanTpNodeSubtypesEnum | None = field(
+        dest: None | CanTpNodeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

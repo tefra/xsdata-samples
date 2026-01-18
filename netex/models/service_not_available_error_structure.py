@@ -11,7 +11,7 @@ __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
 @dataclass
 class ServiceNotAvailableErrorStructure(ErrorCodeStructure):
-    expected_restart_time: XmlDateTime | None = field(
+    expected_restart_time: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "ExpectedRestartTime",

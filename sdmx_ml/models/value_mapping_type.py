@@ -44,14 +44,14 @@ class ValueMappingType(AnnotableType):
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
         },
     )
-    valid_from: XmlDate | None = field(
+    valid_from: None | XmlDate = field(
         default=None,
         metadata={
             "name": "validFrom",
             "type": "Attribute",
         },
     )
-    valid_to: XmlDate | None = field(
+    valid_to: None | XmlDate = field(
         default=None,
         metadata={
             "name": "validTo",

@@ -40,8 +40,8 @@ class RequiredMethodInExecutableInstanceRef:
         name = "REQUIRED-METHOD-IN-EXECUTABLE-INSTANCE-REF"
 
     context_root_sw_component_prototype_ref: (
-        RequiredMethodInExecutableInstanceRef.ContextRootSwComponentPrototypeRef
-        | None
+        None
+        | RequiredMethodInExecutableInstanceRef.ContextRootSwComponentPrototypeRef
     ) = field(
         default=None,
         metadata={
@@ -61,7 +61,7 @@ class RequiredMethodInExecutableInstanceRef:
         },
     )
     context_r_port_prototype_ref: (
-        RequiredMethodInExecutableInstanceRef.ContextRPortPrototypeRef | None
+        None | RequiredMethodInExecutableInstanceRef.ContextRPortPrototypeRef
     ) = field(
         default=None,
         metadata={
@@ -71,7 +71,7 @@ class RequiredMethodInExecutableInstanceRef:
         },
     )
     target_method_ref: (
-        RequiredMethodInExecutableInstanceRef.TargetMethodRef | None
+        None | RequiredMethodInExecutableInstanceRef.TargetMethodRef
     ) = field(
         default=None,
         metadata={
@@ -80,14 +80,14 @@ class RequiredMethodInExecutableInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -98,7 +98,7 @@ class RequiredMethodInExecutableInstanceRef:
 
     @dataclass
     class ContextRootSwComponentPrototypeRef(Ref):
-        dest: RootSwComponentPrototypeSubtypesEnum | None = field(
+        dest: None | RootSwComponentPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -109,7 +109,7 @@ class RequiredMethodInExecutableInstanceRef:
 
     @dataclass
     class ContextComponentPrototypeRef(Ref):
-        dest: SwComponentPrototypeSubtypesEnum | None = field(
+        dest: None | SwComponentPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -120,7 +120,7 @@ class RequiredMethodInExecutableInstanceRef:
 
     @dataclass
     class ContextRPortPrototypeRef(Ref):
-        dest: RPortPrototypeSubtypesEnum | None = field(
+        dest: None | RPortPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -131,7 +131,7 @@ class RequiredMethodInExecutableInstanceRef:
 
     @dataclass
     class TargetMethodRef(Ref):
-        dest: ClientServerOperationSubtypesEnum | None = field(
+        dest: None | ClientServerOperationSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

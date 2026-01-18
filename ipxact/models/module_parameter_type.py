@@ -100,7 +100,7 @@ class ModuleParameterType:
     class Meta:
         name = "moduleParameterType"
 
-    name: str | None = field(
+    name: None | str = field(
         default=None,
         metadata={
             "type": "Element",
@@ -108,7 +108,7 @@ class ModuleParameterType:
             "required": True,
         },
     )
-    display_name: DisplayName | None = field(
+    display_name: None | DisplayName = field(
         default=None,
         metadata={
             "name": "displayName",
@@ -116,7 +116,7 @@ class ModuleParameterType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    short_description: ShortDescription | None = field(
+    short_description: None | ShortDescription = field(
         default=None,
         metadata={
             "name": "shortDescription",
@@ -124,28 +124,28 @@ class ModuleParameterType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    description: Description | None = field(
+    description: None | Description = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    vectors: ModuleParameterType.Vectors | None = field(
+    vectors: None | ModuleParameterType.Vectors = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    arrays: ModuleParameterArrays | None = field(
+    arrays: None | ModuleParameterArrays = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    value: Value | None = field(
+    value: None | Value = field(
         default=None,
         metadata={
             "type": "Element",
@@ -153,7 +153,7 @@ class ModuleParameterType:
             "required": True,
         },
     )
-    vendor_extensions: VendorExtensions | None = field(
+    vendor_extensions: None | VendorExtensions = field(
         default=None,
         metadata={
             "name": "vendorExtensions",
@@ -161,34 +161,34 @@ class ModuleParameterType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    parameter_id: str | None = field(
+    parameter_id: None | str = field(
         default=None,
         metadata={
             "name": "parameterId",
             "type": "Attribute",
         },
     )
-    prompt: str | None = field(
+    prompt: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    choice_ref: str | None = field(
+    choice_ref: None | str = field(
         default=None,
         metadata={
             "name": "choiceRef",
             "type": "Attribute",
         },
     )
-    order: float | None = field(
+    order: None | float = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -202,13 +202,13 @@ class ModuleParameterType:
             "tokens": True,
         },
     )
-    minimum: str | None = field(
+    minimum: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    maximum: str | None = field(
+    maximum: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -221,19 +221,19 @@ class ModuleParameterType:
             "type": "Attribute",
         },
     )
-    sign: SignType | None = field(
+    sign: None | SignType = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    prefix: ModuleParameterTypePrefix | None = field(
+    prefix: None | ModuleParameterTypePrefix = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    unit: ModuleParameterTypeUnit | None = field(
+    unit: None | ModuleParameterTypeUnit = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -252,7 +252,7 @@ class ModuleParameterType:
             "namespace": "##other",
         },
     )
-    data_type: str | None = field(
+    data_type: None | str = field(
         default=None,
         metadata={
             "name": "dataType",
@@ -266,7 +266,7 @@ class ModuleParameterType:
             "type": "Attribute",
         },
     )
-    data_type_definition: str | None = field(
+    data_type_definition: None | str = field(
         default=None,
         metadata={
             "name": "dataTypeDefinition",
@@ -298,7 +298,7 @@ class ModuleParameterType:
 
         @dataclass
         class Vector:
-            left: Left | None = field(
+            left: None | Left = field(
                 default=None,
                 metadata={
                     "type": "Element",
@@ -306,7 +306,7 @@ class ModuleParameterType:
                     "required": True,
                 },
             )
-            right: Right | None = field(
+            right: None | Right = field(
                 default=None,
                 metadata={
                     "type": "Element",
@@ -314,14 +314,14 @@ class ModuleParameterType:
                     "required": True,
                 },
             )
-            vector_id: str | None = field(
+            vector_id: None | str = field(
                 default=None,
                 metadata={
                     "name": "vectorId",
                     "type": "Attribute",
                 },
             )
-            id: str | None = field(
+            id: None | str = field(
                 default=None,
                 metadata={
                     "type": "Attribute",

@@ -97,7 +97,7 @@ class PerInstanceMemory:
     class Meta:
         name = "PER-INSTANCE-MEMORY"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -106,7 +106,7 @@ class PerInstanceMemory:
             "required": True,
         },
     )
-    short_name_fragments: PerInstanceMemory.ShortNameFragments | None = field(
+    short_name_fragments: None | PerInstanceMemory.ShortNameFragments = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -114,7 +114,7 @@ class PerInstanceMemory:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -122,7 +122,7 @@ class PerInstanceMemory:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -130,7 +130,7 @@ class PerInstanceMemory:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -138,7 +138,7 @@ class PerInstanceMemory:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -146,7 +146,7 @@ class PerInstanceMemory:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -154,7 +154,7 @@ class PerInstanceMemory:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: PerInstanceMemory.Annotations | None = field(
+    annotations: None | PerInstanceMemory.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -162,7 +162,7 @@ class PerInstanceMemory:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    init_value: String | None = field(
+    init_value: None | String = field(
         default=None,
         metadata={
             "name": "INIT-VALUE",
@@ -170,7 +170,7 @@ class PerInstanceMemory:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_data_def_props: SwDataDefProps | None = field(
+    sw_data_def_props: None | SwDataDefProps = field(
         default=None,
         metadata={
             "name": "SW-DATA-DEF-PROPS",
@@ -178,7 +178,7 @@ class PerInstanceMemory:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    type_value: CIdentifier | None = field(
+    type_value: None | CIdentifier = field(
         default=None,
         metadata={
             "name": "TYPE",
@@ -186,7 +186,7 @@ class PerInstanceMemory:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    type_definition: String | None = field(
+    type_definition: None | String = field(
         default=None,
         metadata={
             "name": "TYPE-DEFINITION",
@@ -194,7 +194,7 @@ class PerInstanceMemory:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -202,14 +202,14 @@ class PerInstanceMemory:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -217,7 +217,7 @@ class PerInstanceMemory:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",

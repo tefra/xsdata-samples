@@ -26,7 +26,7 @@ class LinearTrafficView:
     """
 
     linear_predefined_location_reference: (
-        PredefinedLocationVersionedReference | None
+        None | PredefinedLocationVersionedReference
     ) = field(
         default=None,
         metadata={
@@ -45,7 +45,7 @@ class LinearTrafficView:
             "min_occurs": 1,
         },
     )
-    linear_traffic_view_extension: ExtensionType | None = field(
+    linear_traffic_view_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "linearTrafficViewExtension",
@@ -53,7 +53,7 @@ class LinearTrafficView:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",

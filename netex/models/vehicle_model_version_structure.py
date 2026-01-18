@@ -23,7 +23,7 @@ class VehicleModelVersionStructure(DataManagedObjectStructure):
     class Meta:
         name = "VehicleModel_VersionStructure"
 
-    name: MultilingualString | None = field(
+    name: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "Name",
@@ -31,7 +31,7 @@ class VehicleModelVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    description: MultilingualString | None = field(
+    description: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "Description",
@@ -39,7 +39,7 @@ class VehicleModelVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    manufacturer: MultilingualString | None = field(
+    manufacturer: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "Manufacturer",
@@ -48,12 +48,12 @@ class VehicleModelVersionStructure(DataManagedObjectStructure):
         },
     )
     transport_type_ref_or_vehicle_type_ref: (
-        SimpleVehicleTypeRef
+        None
+        | SimpleVehicleTypeRef
         | CompoundTrainRef
         | TrainRef
         | VehicleTypeRef
         | TransportTypeRef
-        | None
     ) = field(
         default=None,
         metadata={
@@ -87,7 +87,7 @@ class VehicleModelVersionStructure(DataManagedObjectStructure):
             ),
         },
     )
-    equipment_profiles: VehicleEquipmentProfileRefsRelStructure | None = field(
+    equipment_profiles: None | VehicleEquipmentProfileRefsRelStructure = field(
         default=None,
         metadata={
             "name": "equipmentProfiles",
@@ -96,7 +96,7 @@ class VehicleModelVersionStructure(DataManagedObjectStructure):
         },
     )
     vehicle_model_profile_ref: (
-        CycleModelProfileRef | CarModelProfileRef | None
+        None | CycleModelProfileRef | CarModelProfileRef
     ) = field(
         default=None,
         metadata={

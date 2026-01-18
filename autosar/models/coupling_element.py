@@ -101,7 +101,7 @@ class CouplingElement:
     class Meta:
         name = "COUPLING-ELEMENT"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -110,7 +110,7 @@ class CouplingElement:
             "required": True,
         },
     )
-    short_name_fragments: CouplingElement.ShortNameFragments | None = field(
+    short_name_fragments: None | CouplingElement.ShortNameFragments = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -118,7 +118,7 @@ class CouplingElement:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -126,7 +126,7 @@ class CouplingElement:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -134,7 +134,7 @@ class CouplingElement:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -142,7 +142,7 @@ class CouplingElement:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -150,7 +150,7 @@ class CouplingElement:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -158,7 +158,7 @@ class CouplingElement:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: CouplingElement.Annotations | None = field(
+    annotations: None | CouplingElement.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -166,7 +166,7 @@ class CouplingElement:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -175,7 +175,7 @@ class CouplingElement:
         },
     )
     communication_cluster_ref: (
-        CouplingElement.CommunicationClusterRef | None
+        None | CouplingElement.CommunicationClusterRef
     ) = field(
         default=None,
         metadata={
@@ -184,7 +184,7 @@ class CouplingElement:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    coupling_ports: CouplingElement.CouplingPorts | None = field(
+    coupling_ports: None | CouplingElement.CouplingPorts = field(
         default=None,
         metadata={
             "name": "COUPLING-PORTS",
@@ -192,7 +192,7 @@ class CouplingElement:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    coupling_type: CouplingElementEnum | None = field(
+    coupling_type: None | CouplingElementEnum = field(
         default=None,
         metadata={
             "name": "COUPLING-TYPE",
@@ -200,7 +200,7 @@ class CouplingElement:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ecu_instance_ref: CouplingElement.EcuInstanceRef | None = field(
+    ecu_instance_ref: None | CouplingElement.EcuInstanceRef = field(
         default=None,
         metadata={
             "name": "ECU-INSTANCE-REF",
@@ -208,14 +208,14 @@ class CouplingElement:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -223,7 +223,7 @@ class CouplingElement:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -255,7 +255,7 @@ class CouplingElement:
 
     @dataclass
     class CommunicationClusterRef(Ref):
-        dest: EthernetClusterSubtypesEnum | None = field(
+        dest: None | EthernetClusterSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -277,7 +277,7 @@ class CouplingElement:
 
     @dataclass
     class EcuInstanceRef(Ref):
-        dest: EcuInstanceSubtypesEnum | None = field(
+        dest: None | EcuInstanceSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

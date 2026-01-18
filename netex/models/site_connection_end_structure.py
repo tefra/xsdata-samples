@@ -37,7 +37,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 @dataclass
 class SiteConnectionEndStructure:
-    transport_mode: AllVehicleModesOfTransportEnumeration | None = field(
+    transport_mode: None | AllVehicleModesOfTransportEnumeration = field(
         default=None,
         metadata={
             "name": "TransportMode",
@@ -45,7 +45,7 @@ class SiteConnectionEndStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    stop_area_ref: StopAreaRefStructure | None = field(
+    stop_area_ref: None | StopAreaRefStructure = field(
         default=None,
         metadata={
             "name": "StopAreaRef",
@@ -54,7 +54,7 @@ class SiteConnectionEndStructure:
         },
     )
     scheduled_stop_point_ref_or_vehicle_meeting_point_ref: (
-        ScheduledStopPointRefStructure | PointRefStructure | None
+        None | ScheduledStopPointRefStructure | PointRefStructure
     ) = field(
         default=None,
         metadata={
@@ -192,7 +192,7 @@ class SiteConnectionEndStructure:
         },
     )
     authority_ref_or_operator_ref_or_operator_view: (
-        AuthorityRef | OperatorRef | OperatorView | None
+        None | AuthorityRef | OperatorRef | OperatorView
     ) = field(
         default=None,
         metadata={
@@ -216,7 +216,7 @@ class SiteConnectionEndStructure:
             ),
         },
     )
-    label: MultilingualString | None = field(
+    label: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "Label",

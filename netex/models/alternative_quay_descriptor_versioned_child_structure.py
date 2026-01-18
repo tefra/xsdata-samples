@@ -17,7 +17,7 @@ class AlternativeQuayDescriptorVersionedChildStructure(
     class Meta:
         name = "AlternativeQuayDescriptor_VersionedChildStructure"
 
-    cross_road: MultilingualString | None = field(
+    cross_road: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "CrossRoad",
@@ -25,7 +25,7 @@ class AlternativeQuayDescriptorVersionedChildStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    landmark: MultilingualString | None = field(
+    landmark: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "Landmark",

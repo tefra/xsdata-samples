@@ -96,7 +96,7 @@ class RptProfile:
     class Meta:
         name = "RPT-PROFILE"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -105,7 +105,7 @@ class RptProfile:
             "required": True,
         },
     )
-    short_name_fragments: RptProfile.ShortNameFragments | None = field(
+    short_name_fragments: None | RptProfile.ShortNameFragments = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -113,7 +113,7 @@ class RptProfile:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -121,7 +121,7 @@ class RptProfile:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -129,7 +129,7 @@ class RptProfile:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -137,7 +137,7 @@ class RptProfile:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -145,7 +145,7 @@ class RptProfile:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -153,7 +153,7 @@ class RptProfile:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: RptProfile.Annotations | None = field(
+    annotations: None | RptProfile.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -161,7 +161,7 @@ class RptProfile:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    max_service_point_id: PositiveInteger | None = field(
+    max_service_point_id: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "MAX-SERVICE-POINT-ID",
@@ -169,7 +169,7 @@ class RptProfile:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    min_service_point_id: PositiveInteger | None = field(
+    min_service_point_id: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "MIN-SERVICE-POINT-ID",
@@ -177,7 +177,7 @@ class RptProfile:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    service_point_symbol_post: CIdentifier | None = field(
+    service_point_symbol_post: None | CIdentifier = field(
         default=None,
         metadata={
             "name": "SERVICE-POINT-SYMBOL-POST",
@@ -185,7 +185,7 @@ class RptProfile:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    service_point_symbol_pre: CIdentifier | None = field(
+    service_point_symbol_pre: None | CIdentifier = field(
         default=None,
         metadata={
             "name": "SERVICE-POINT-SYMBOL-PRE",
@@ -193,7 +193,7 @@ class RptProfile:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    stim_enabler: RptEnablerImplTypeEnum | None = field(
+    stim_enabler: None | RptEnablerImplTypeEnum = field(
         default=None,
         metadata={
             "name": "STIM-ENABLER",
@@ -201,14 +201,14 @@ class RptProfile:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -216,7 +216,7 @@ class RptProfile:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",

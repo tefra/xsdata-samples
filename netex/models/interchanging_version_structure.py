@@ -20,7 +20,7 @@ class InterchangingVersionStructure(UsageParameterVersionStructure):
     class Meta:
         name = "Interchanging_VersionStructure"
 
-    can_interchange: bool | None = field(
+    can_interchange: None | bool = field(
         default=None,
         metadata={
             "name": "CanInterchange",
@@ -28,7 +28,7 @@ class InterchangingVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    from_mode: AllVehicleModesOfTransportEnumeration | None = field(
+    from_mode: None | AllVehicleModesOfTransportEnumeration = field(
         default=None,
         metadata={
             "name": "FromMode",
@@ -36,7 +36,7 @@ class InterchangingVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    to_mode: AllVehicleModesOfTransportEnumeration | None = field(
+    to_mode: None | AllVehicleModesOfTransportEnumeration = field(
         default=None,
         metadata={
             "name": "ToMode",
@@ -44,7 +44,7 @@ class InterchangingVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    maximum_number_of_interchanges: int | None = field(
+    maximum_number_of_interchanges: None | int = field(
         default=None,
         metadata={
             "name": "MaximumNumberOfInterchanges",
@@ -52,7 +52,7 @@ class InterchangingVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    maximum_time_to_make_atransfer: XmlDuration | None = field(
+    maximum_time_to_make_atransfer: None | XmlDuration = field(
         default=None,
         metadata={
             "name": "MaximumTimeToMakeATransfer",
@@ -60,7 +60,7 @@ class InterchangingVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    can_break_journey: bool | None = field(
+    can_break_journey: None | bool = field(
         default=None,
         metadata={
             "name": "CanBreakJourney",
@@ -68,7 +68,7 @@ class InterchangingVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    cross_border: bool | None = field(
+    cross_border: None | bool = field(
         default=None,
         metadata={
             "name": "CrossBorder",
@@ -76,7 +76,7 @@ class InterchangingVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    register_break_of_journey: RegisterBreakOfJourneyEnumeration | None = (
+    register_break_of_journey: None | RegisterBreakOfJourneyEnumeration = (
         field(
             default=None,
             metadata={

@@ -19,7 +19,7 @@ class InternationalIdentifier:
     :ivar international_identifier_extension:
     """
 
-    country: CountryEnum | None = field(
+    country: None | CountryEnum = field(
         default=None,
         metadata={
             "type": "Element",
@@ -27,7 +27,7 @@ class InternationalIdentifier:
             "required": True,
         },
     )
-    national_identifier: str | None = field(
+    national_identifier: None | str = field(
         default=None,
         metadata={
             "name": "nationalIdentifier",
@@ -37,7 +37,7 @@ class InternationalIdentifier:
             "max_length": 1024,
         },
     )
-    international_identifier_extension: ExtensionType | None = field(
+    international_identifier_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "internationalIdentifierExtension",

@@ -20,7 +20,7 @@ class DefaultServiceJourneyRunTimeVersionedChildStructure(
     class Meta:
         name = "DefaultServiceJourneyRunTime_VersionedChildStructure"
 
-    run_time: XmlDuration | None = field(
+    run_time: None | XmlDuration = field(
         default=None,
         metadata={
             "name": "RunTime",
@@ -30,7 +30,7 @@ class DefaultServiceJourneyRunTimeVersionedChildStructure(
         },
     )
     service_journey_ref: (
-        TemplateServiceJourneyRef | ServiceJourneyRef | None
+        None | TemplateServiceJourneyRef | ServiceJourneyRef
     ) = field(
         default=None,
         metadata={

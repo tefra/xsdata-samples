@@ -93,7 +93,7 @@ class DiagnosticTroubleCodeUdsToTroubleCodeObdMapping:
     class Meta:
         name = "DIAGNOSTIC-TROUBLE-CODE-UDS-TO-TROUBLE-CODE-OBD-MAPPING"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -103,8 +103,8 @@ class DiagnosticTroubleCodeUdsToTroubleCodeObdMapping:
         },
     )
     short_name_fragments: (
-        DiagnosticTroubleCodeUdsToTroubleCodeObdMapping.ShortNameFragments
-        | None
+        None
+        | DiagnosticTroubleCodeUdsToTroubleCodeObdMapping.ShortNameFragments
     ) = field(
         default=None,
         metadata={
@@ -113,7 +113,7 @@ class DiagnosticTroubleCodeUdsToTroubleCodeObdMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -121,7 +121,7 @@ class DiagnosticTroubleCodeUdsToTroubleCodeObdMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -129,7 +129,7 @@ class DiagnosticTroubleCodeUdsToTroubleCodeObdMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -137,7 +137,7 @@ class DiagnosticTroubleCodeUdsToTroubleCodeObdMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -145,7 +145,7 @@ class DiagnosticTroubleCodeUdsToTroubleCodeObdMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -154,7 +154,7 @@ class DiagnosticTroubleCodeUdsToTroubleCodeObdMapping:
         },
     )
     annotations: (
-        DiagnosticTroubleCodeUdsToTroubleCodeObdMapping.Annotations | None
+        None | DiagnosticTroubleCodeUdsToTroubleCodeObdMapping.Annotations
     ) = field(
         default=None,
         metadata={
@@ -163,7 +163,7 @@ class DiagnosticTroubleCodeUdsToTroubleCodeObdMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -172,8 +172,8 @@ class DiagnosticTroubleCodeUdsToTroubleCodeObdMapping:
         },
     )
     trouble_code_obd_ref: (
-        DiagnosticTroubleCodeUdsToTroubleCodeObdMapping.TroubleCodeObdRef
-        | None
+        None
+        | DiagnosticTroubleCodeUdsToTroubleCodeObdMapping.TroubleCodeObdRef
     ) = field(
         default=None,
         metadata={
@@ -183,8 +183,8 @@ class DiagnosticTroubleCodeUdsToTroubleCodeObdMapping:
         },
     )
     trouble_code_uds_ref: (
-        DiagnosticTroubleCodeUdsToTroubleCodeObdMapping.TroubleCodeUdsRef
-        | None
+        None
+        | DiagnosticTroubleCodeUdsToTroubleCodeObdMapping.TroubleCodeUdsRef
     ) = field(
         default=None,
         metadata={
@@ -193,14 +193,14 @@ class DiagnosticTroubleCodeUdsToTroubleCodeObdMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -208,7 +208,7 @@ class DiagnosticTroubleCodeUdsToTroubleCodeObdMapping:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -240,7 +240,7 @@ class DiagnosticTroubleCodeUdsToTroubleCodeObdMapping:
 
     @dataclass
     class TroubleCodeObdRef(Ref):
-        dest: DiagnosticTroubleCodeObdSubtypesEnum | None = field(
+        dest: None | DiagnosticTroubleCodeObdSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -251,7 +251,7 @@ class DiagnosticTroubleCodeUdsToTroubleCodeObdMapping:
 
     @dataclass
     class TroubleCodeUdsRef(Ref):
-        dest: DiagnosticTroubleCodeUdsSubtypesEnum | None = field(
+        dest: None | DiagnosticTroubleCodeUdsSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

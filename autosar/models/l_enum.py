@@ -29,20 +29,20 @@ class LEnum:
     class Meta:
         name = "L-ENUM"
 
-    value: LEnumSimple | None = field(
+    value: None | LEnumSimple = field(
         default=None,
         metadata={
             "required": True,
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

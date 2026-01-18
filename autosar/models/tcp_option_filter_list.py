@@ -80,7 +80,7 @@ class TcpOptionFilterList:
     class Meta:
         name = "TCP-OPTION-FILTER-LIST"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -89,7 +89,7 @@ class TcpOptionFilterList:
             "required": True,
         },
     )
-    short_name_fragments: TcpOptionFilterList.ShortNameFragments | None = (
+    short_name_fragments: None | TcpOptionFilterList.ShortNameFragments = (
         field(
             default=None,
             metadata={
@@ -99,7 +99,7 @@ class TcpOptionFilterList:
             },
         )
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -107,7 +107,7 @@ class TcpOptionFilterList:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -115,7 +115,7 @@ class TcpOptionFilterList:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -123,7 +123,7 @@ class TcpOptionFilterList:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -131,7 +131,7 @@ class TcpOptionFilterList:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -139,7 +139,7 @@ class TcpOptionFilterList:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: TcpOptionFilterList.Annotations | None = field(
+    annotations: None | TcpOptionFilterList.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -147,7 +147,7 @@ class TcpOptionFilterList:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    allowed_tcp_options: TcpOptionFilterList.AllowedTcpOptions | None = field(
+    allowed_tcp_options: None | TcpOptionFilterList.AllowedTcpOptions = field(
         default=None,
         metadata={
             "name": "ALLOWED-TCP-OPTIONS",
@@ -155,14 +155,14 @@ class TcpOptionFilterList:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -170,7 +170,7 @@ class TcpOptionFilterList:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",

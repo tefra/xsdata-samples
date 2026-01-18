@@ -118,7 +118,7 @@ class BuildActionManifest:
     class Meta:
         name = "BUILD-ACTION-MANIFEST"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -127,7 +127,7 @@ class BuildActionManifest:
             "required": True,
         },
     )
-    short_name_fragments: BuildActionManifest.ShortNameFragments | None = (
+    short_name_fragments: None | BuildActionManifest.ShortNameFragments = (
         field(
             default=None,
             metadata={
@@ -137,7 +137,7 @@ class BuildActionManifest:
             },
         )
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -145,7 +145,7 @@ class BuildActionManifest:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -153,7 +153,7 @@ class BuildActionManifest:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -161,7 +161,7 @@ class BuildActionManifest:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -169,7 +169,7 @@ class BuildActionManifest:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -177,7 +177,7 @@ class BuildActionManifest:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: BuildActionManifest.Annotations | None = field(
+    annotations: None | BuildActionManifest.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -185,7 +185,7 @@ class BuildActionManifest:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -193,7 +193,7 @@ class BuildActionManifest:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    blueprint_policys: BuildActionManifest.BlueprintPolicys | None = field(
+    blueprint_policys: None | BuildActionManifest.BlueprintPolicys = field(
         default=None,
         metadata={
             "name": "BLUEPRINT-POLICYS",
@@ -201,7 +201,7 @@ class BuildActionManifest:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    short_name_pattern: String | None = field(
+    short_name_pattern: None | String = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-PATTERN",
@@ -209,7 +209,7 @@ class BuildActionManifest:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    start_action_refs: BuildActionManifest.StartActionRefs | None = field(
+    start_action_refs: None | BuildActionManifest.StartActionRefs = field(
         default=None,
         metadata={
             "name": "START-ACTION-REFS",
@@ -217,7 +217,7 @@ class BuildActionManifest:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tear_down_action_refs: BuildActionManifest.TearDownActionRefs | None = (
+    tear_down_action_refs: None | BuildActionManifest.TearDownActionRefs = (
         field(
             default=None,
             metadata={
@@ -227,7 +227,7 @@ class BuildActionManifest:
             },
         )
     )
-    build_actions: BuildActionManifest.BuildActions | None = field(
+    build_actions: None | BuildActionManifest.BuildActions = field(
         default=None,
         metadata={
             "name": "BUILD-ACTIONS",
@@ -236,7 +236,7 @@ class BuildActionManifest:
         },
     )
     build_action_environments: (
-        BuildActionManifest.BuildActionEnvironments | None
+        None | BuildActionManifest.BuildActionEnvironments
     ) = field(
         default=None,
         metadata={
@@ -245,7 +245,7 @@ class BuildActionManifest:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    dynamic_action_refs: BuildActionManifest.DynamicActionRefs | None = field(
+    dynamic_action_refs: None | BuildActionManifest.DynamicActionRefs = field(
         default=None,
         metadata={
             "name": "DYNAMIC-ACTION-REFS",
@@ -253,14 +253,14 @@ class BuildActionManifest:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -268,7 +268,7 @@ class BuildActionManifest:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -342,7 +342,7 @@ class BuildActionManifest:
 
         @dataclass
         class StartActionRef(Ref):
-            dest: BuildActionSubtypesEnum | None = field(
+            dest: None | BuildActionSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -366,7 +366,7 @@ class BuildActionManifest:
 
         @dataclass
         class TearDownActionRef(Ref):
-            dest: BuildActionSubtypesEnum | None = field(
+            dest: None | BuildActionSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -412,7 +412,7 @@ class BuildActionManifest:
 
         @dataclass
         class DynamicActionRef(Ref):
-            dest: BuildActionSubtypesEnum | None = field(
+            dest: None | BuildActionSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",

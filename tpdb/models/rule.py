@@ -12,21 +12,21 @@ class Rule:
     class Meta:
         name = "rule"
 
-    lhs: Lhs | None = field(
+    lhs: None | Lhs = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
         },
     )
-    rhs: Rhs | None = field(
+    rhs: None | Rhs = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
         },
     )
-    conditions: Conditions | None = field(
+    conditions: None | Conditions = field(
         default=None,
         metadata={
             "type": "Element",

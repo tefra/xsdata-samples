@@ -39,7 +39,7 @@ class UdpNmClusterCoupling:
     class Meta:
         name = "UDP-NM-CLUSTER-COUPLING"
 
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -47,7 +47,7 @@ class UdpNmClusterCoupling:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    coupled_cluster_refs: UdpNmClusterCoupling.CoupledClusterRefs | None = (
+    coupled_cluster_refs: None | UdpNmClusterCoupling.CoupledClusterRefs = (
         field(
             default=None,
             metadata={
@@ -57,7 +57,7 @@ class UdpNmClusterCoupling:
             },
         )
     )
-    nm_bus_load_reduction_enabled: Boolean | None = field(
+    nm_bus_load_reduction_enabled: None | Boolean = field(
         default=None,
         metadata={
             "name": "NM-BUS-LOAD-REDUCTION-ENABLED",
@@ -65,7 +65,7 @@ class UdpNmClusterCoupling:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nm_immediate_restart_enabled: Boolean | None = field(
+    nm_immediate_restart_enabled: None | Boolean = field(
         default=None,
         metadata={
             "name": "NM-IMMEDIATE-RESTART-ENABLED",
@@ -73,14 +73,14 @@ class UdpNmClusterCoupling:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -104,7 +104,7 @@ class UdpNmClusterCoupling:
 
         @dataclass
         class CoupledClusterRef(Ref):
-            dest: UdpNmClusterSubtypesEnum | None = field(
+            dest: None | UdpNmClusterSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",

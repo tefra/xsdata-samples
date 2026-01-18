@@ -23,7 +23,7 @@ class AccessibilityLimitationVersionedChildStructure(VersionedChildStructure):
     class Meta:
         name = "AccessibilityLimitation_VersionedChildStructure"
 
-    wheelchair_access: WheelchairAccess | None = field(
+    wheelchair_access: None | WheelchairAccess = field(
         default=None,
         metadata={
             "name": "WheelchairAccess",
@@ -32,7 +32,7 @@ class AccessibilityLimitationVersionedChildStructure(VersionedChildStructure):
             "required": True,
         },
     )
-    step_free_access: StepFreeAccess | None = field(
+    step_free_access: None | StepFreeAccess = field(
         default=None,
         metadata={
             "name": "StepFreeAccess",
@@ -40,7 +40,7 @@ class AccessibilityLimitationVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    stair_free_access: StairFreeAccess | None = field(
+    stair_free_access: None | StairFreeAccess = field(
         default=None,
         metadata={
             "name": "StairFreeAccess",
@@ -48,7 +48,7 @@ class AccessibilityLimitationVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    escalator_free_access: EscalatorFreeAccess | None = field(
+    escalator_free_access: None | EscalatorFreeAccess = field(
         default=None,
         metadata={
             "name": "EscalatorFreeAccess",
@@ -56,7 +56,7 @@ class AccessibilityLimitationVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    lift_free_access: LiftFreeAccess | None = field(
+    lift_free_access: None | LiftFreeAccess = field(
         default=None,
         metadata={
             "name": "LiftFreeAccess",
@@ -64,7 +64,7 @@ class AccessibilityLimitationVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    ramp_free_access: RampFreeAccess | None = field(
+    ramp_free_access: None | RampFreeAccess = field(
         default=None,
         metadata={
             "name": "RampFreeAccess",
@@ -72,7 +72,7 @@ class AccessibilityLimitationVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    level_access_into_vehicle: LevelAccessIntoVehicle | None = field(
+    level_access_into_vehicle: None | LevelAccessIntoVehicle = field(
         default=None,
         metadata={
             "name": "LevelAccessIntoVehicle",
@@ -80,7 +80,7 @@ class AccessibilityLimitationVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    audible_signals_available: AudibleSignalsAvailable | None = field(
+    audible_signals_available: None | AudibleSignalsAvailable = field(
         default=None,
         metadata={
             "name": "AudibleSignalsAvailable",
@@ -88,7 +88,7 @@ class AccessibilityLimitationVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    visual_signs_available: VisualSignsAvailable | None = field(
+    visual_signs_available: None | VisualSignsAvailable = field(
         default=None,
         metadata={
             "name": "VisualSignsAvailable",
@@ -96,7 +96,7 @@ class AccessibilityLimitationVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    tactile_guidance_available: TactileGuidanceAvailable | None = field(
+    tactile_guidance_available: None | TactileGuidanceAvailable = field(
         default=None,
         metadata={
             "name": "TactileGuidanceAvailable",
@@ -104,7 +104,7 @@ class AccessibilityLimitationVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    guide_dog_access: GuideDogAccess | None = field(
+    guide_dog_access: None | GuideDogAccess = field(
         default=None,
         metadata={
             "name": "GuideDogAccess",

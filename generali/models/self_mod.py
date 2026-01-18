@@ -8,7 +8,7 @@ class Self:
     class Meta:
         name = "self"
 
-    href: str | None = field(
+    href: None | str = field(
         default=None,
         metadata={
             "type": "Element",

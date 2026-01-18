@@ -14,7 +14,7 @@ class TpegPointDescriptor(TpegDescriptor):
     A descriptor for describing a point location.
     """
 
-    tpeg_point_descriptor_extension: ExtensionType | None = field(
+    tpeg_point_descriptor_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "tpegPointDescriptorExtension",

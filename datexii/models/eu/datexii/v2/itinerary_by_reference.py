@@ -25,7 +25,7 @@ class ItineraryByReference(Itinerary):
     """
 
     predefined_itinerary_reference: (
-        PredefinedItineraryVersionedReference | None
+        None | PredefinedItineraryVersionedReference
     ) = field(
         default=None,
         metadata={
@@ -35,7 +35,7 @@ class ItineraryByReference(Itinerary):
             "required": True,
         },
     )
-    itinerary_by_reference_extension: ExtensionType | None = field(
+    itinerary_by_reference_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "itineraryByReferenceExtension",

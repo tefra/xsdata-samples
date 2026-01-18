@@ -13,7 +13,7 @@ class TrainBlockVersionStructure(BlockVersionStructure):
     class Meta:
         name = "TrainBlock_VersionStructure"
 
-    coupled_journeys: CoupledJourneysRelStructure | None = field(
+    coupled_journeys: None | CoupledJourneysRelStructure = field(
         default=None,
         metadata={
             "name": "coupledJourneys",

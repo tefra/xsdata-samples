@@ -38,7 +38,7 @@ class LinOrderedConfigurableFrame:
     class Meta:
         name = "LIN-ORDERED-CONFIGURABLE-FRAME"
 
-    frame_ref: LinOrderedConfigurableFrame.FrameRef | None = field(
+    frame_ref: None | LinOrderedConfigurableFrame.FrameRef = field(
         default=None,
         metadata={
             "name": "FRAME-REF",
@@ -46,7 +46,7 @@ class LinOrderedConfigurableFrame:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    index: Integer | None = field(
+    index: None | Integer = field(
         default=None,
         metadata={
             "name": "INDEX",
@@ -54,14 +54,14 @@ class LinOrderedConfigurableFrame:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -72,7 +72,7 @@ class LinOrderedConfigurableFrame:
 
     @dataclass
     class FrameRef(Ref):
-        dest: LinFrameSubtypesEnum | None = field(
+        dest: None | LinFrameSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

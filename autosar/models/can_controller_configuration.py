@@ -52,7 +52,7 @@ class CanControllerConfiguration:
     class Meta:
         name = "CAN-CONTROLLER-CONFIGURATION"
 
-    can_controller_fd_attributes: CanControllerFdConfiguration | None = field(
+    can_controller_fd_attributes: None | CanControllerFdConfiguration = field(
         default=None,
         metadata={
             "name": "CAN-CONTROLLER-FD-ATTRIBUTES",
@@ -61,7 +61,7 @@ class CanControllerConfiguration:
         },
     )
     can_controller_fd_requirements: (
-        CanControllerFdConfigurationRequirements | None
+        None | CanControllerFdConfigurationRequirements
     ) = field(
         default=None,
         metadata={
@@ -70,7 +70,7 @@ class CanControllerConfiguration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    prop_seg: Integer | None = field(
+    prop_seg: None | Integer = field(
         default=None,
         metadata={
             "name": "PROP-SEG",
@@ -78,7 +78,7 @@ class CanControllerConfiguration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sync_jump_width: Integer | None = field(
+    sync_jump_width: None | Integer = field(
         default=None,
         metadata={
             "name": "SYNC-JUMP-WIDTH",
@@ -86,7 +86,7 @@ class CanControllerConfiguration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    time_seg_1: Integer | None = field(
+    time_seg_1: None | Integer = field(
         default=None,
         metadata={
             "name": "TIME-SEG-1",
@@ -94,7 +94,7 @@ class CanControllerConfiguration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    time_seg_2: Integer | None = field(
+    time_seg_2: None | Integer = field(
         default=None,
         metadata={
             "name": "TIME-SEG-2",
@@ -102,14 +102,14 @@ class CanControllerConfiguration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

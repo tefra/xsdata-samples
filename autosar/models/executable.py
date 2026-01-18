@@ -104,7 +104,7 @@ class Executable:
     class Meta:
         name = "EXECUTABLE"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -113,7 +113,7 @@ class Executable:
             "required": True,
         },
     )
-    short_name_fragments: Executable.ShortNameFragments | None = field(
+    short_name_fragments: None | Executable.ShortNameFragments = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -121,7 +121,7 @@ class Executable:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -129,7 +129,7 @@ class Executable:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -137,7 +137,7 @@ class Executable:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -145,7 +145,7 @@ class Executable:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -153,7 +153,7 @@ class Executable:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -161,7 +161,7 @@ class Executable:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Executable.Annotations | None = field(
+    annotations: None | Executable.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -169,7 +169,7 @@ class Executable:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -177,7 +177,7 @@ class Executable:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    build_type: BuildTypeEnum | None = field(
+    build_type: None | BuildTypeEnum = field(
         default=None,
         metadata={
             "name": "BUILD-TYPE",
@@ -185,7 +185,7 @@ class Executable:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    logging_behavior: LoggingBehaviorEnum | None = field(
+    logging_behavior: None | LoggingBehaviorEnum = field(
         default=None,
         metadata={
             "name": "LOGGING-BEHAVIOR",
@@ -193,7 +193,7 @@ class Executable:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    minimum_timer_granularity: TimeValue | None = field(
+    minimum_timer_granularity: None | TimeValue = field(
         default=None,
         metadata={
             "name": "MINIMUM-TIMER-GRANULARITY",
@@ -201,7 +201,7 @@ class Executable:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    reporting_behavior: ExecutionStateReportingBehaviorEnum | None = field(
+    reporting_behavior: None | ExecutionStateReportingBehaviorEnum = field(
         default=None,
         metadata={
             "name": "REPORTING-BEHAVIOR",
@@ -209,7 +209,7 @@ class Executable:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    root_sw_component_prototype: RootSwComponentPrototype | None = field(
+    root_sw_component_prototype: None | RootSwComponentPrototype = field(
         default=None,
         metadata={
             "name": "ROOT-SW-COMPONENT-PROTOTYPE",
@@ -217,7 +217,7 @@ class Executable:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    version: StrongRevisionLabelString | None = field(
+    version: None | StrongRevisionLabelString = field(
         default=None,
         metadata={
             "name": "VERSION",
@@ -225,14 +225,14 @@ class Executable:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -240,7 +240,7 @@ class Executable:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",

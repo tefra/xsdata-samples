@@ -11,7 +11,7 @@ __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/common/v1"
 
 @dataclass
 class CrestaZoneType:
-    cresta_zone_identifier: Idtype | None = field(
+    cresta_zone_identifier: None | Idtype = field(
         default=None,
         metadata={
             "name": "CrestaZoneIdentifier",
@@ -20,7 +20,7 @@ class CrestaZoneType:
             "required": True,
         },
     )
-    cresta_zone_name: Idtype | None = field(
+    cresta_zone_name: None | Idtype = field(
         default=None,
         metadata={
             "name": "CrestaZoneName",
@@ -28,7 +28,7 @@ class CrestaZoneType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
         },
     )
-    cresta_sub_zone_identifier: Idtype | None = field(
+    cresta_sub_zone_identifier: None | Idtype = field(
         default=None,
         metadata={
             "name": "CrestaSubZoneIdentifier",
@@ -36,7 +36,7 @@ class CrestaZoneType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
         },
     )
-    cresta_sub_zone_name: Idtype | None = field(
+    cresta_sub_zone_name: None | Idtype = field(
         default=None,
         metadata={
             "name": "CrestaSubZoneName",

@@ -61,7 +61,7 @@ class VmsTextDisplayCharacteristics:
     :ivar vms_text_display_characteristics_extension:
     """
 
-    text_lanterns_present: bool | None = field(
+    text_lanterns_present: None | bool = field(
         default=None,
         metadata={
             "name": "textLanternsPresent",
@@ -69,7 +69,7 @@ class VmsTextDisplayCharacteristics:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    text_page_sequencing_capable: bool | None = field(
+    text_page_sequencing_capable: None | bool = field(
         default=None,
         metadata={
             "name": "textPageSequencingCapable",
@@ -77,7 +77,7 @@ class VmsTextDisplayCharacteristics:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    text_pixels_across: int | None = field(
+    text_pixels_across: None | int = field(
         default=None,
         metadata={
             "name": "textPixelsAcross",
@@ -85,7 +85,7 @@ class VmsTextDisplayCharacteristics:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    text_pixels_down: int | None = field(
+    text_pixels_down: None | int = field(
         default=None,
         metadata={
             "name": "textPixelsDown",
@@ -93,7 +93,7 @@ class VmsTextDisplayCharacteristics:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    text_display_height: float | None = field(
+    text_display_height: None | float = field(
         default=None,
         metadata={
             "name": "textDisplayHeight",
@@ -101,7 +101,7 @@ class VmsTextDisplayCharacteristics:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    text_display_width: float | None = field(
+    text_display_width: None | float = field(
         default=None,
         metadata={
             "name": "textDisplayWidth",
@@ -109,7 +109,7 @@ class VmsTextDisplayCharacteristics:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    max_number_of_characters: int | None = field(
+    max_number_of_characters: None | int = field(
         default=None,
         metadata={
             "name": "maxNumberOfCharacters",
@@ -117,7 +117,7 @@ class VmsTextDisplayCharacteristics:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    max_number_of_rows: int | None = field(
+    max_number_of_rows: None | int = field(
         default=None,
         metadata={
             "name": "maxNumberOfRows",
@@ -125,7 +125,7 @@ class VmsTextDisplayCharacteristics:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    legend_code_list_identifier: str | None = field(
+    legend_code_list_identifier: None | str = field(
         default=None,
         metadata={
             "name": "legendCodeListIdentifier",
@@ -134,7 +134,7 @@ class VmsTextDisplayCharacteristics:
             "max_length": 1024,
         },
     )
-    max_font_height: int | None = field(
+    max_font_height: None | int = field(
         default=None,
         metadata={
             "name": "maxFontHeight",
@@ -142,7 +142,7 @@ class VmsTextDisplayCharacteristics:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    min_font_height: int | None = field(
+    min_font_height: None | int = field(
         default=None,
         metadata={
             "name": "minFontHeight",
@@ -150,7 +150,7 @@ class VmsTextDisplayCharacteristics:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    max_font_width: int | None = field(
+    max_font_width: None | int = field(
         default=None,
         metadata={
             "name": "maxFontWidth",
@@ -158,7 +158,7 @@ class VmsTextDisplayCharacteristics:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    min_font_width: int | None = field(
+    min_font_width: None | int = field(
         default=None,
         metadata={
             "name": "minFontWidth",
@@ -166,7 +166,7 @@ class VmsTextDisplayCharacteristics:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    max_font_spacing: int | None = field(
+    max_font_spacing: None | int = field(
         default=None,
         metadata={
             "name": "maxFontSpacing",
@@ -174,7 +174,7 @@ class VmsTextDisplayCharacteristics:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    min_font_spacing: int | None = field(
+    min_font_spacing: None | int = field(
         default=None,
         metadata={
             "name": "minFontSpacing",
@@ -182,7 +182,7 @@ class VmsTextDisplayCharacteristics:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    max_text_luminance_level: int | None = field(
+    max_text_luminance_level: None | int = field(
         default=None,
         metadata={
             "name": "maxTextLuminanceLevel",
@@ -190,7 +190,7 @@ class VmsTextDisplayCharacteristics:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    max_number_of_sequential_pages: int | None = field(
+    max_number_of_sequential_pages: None | int = field(
         default=None,
         metadata={
             "name": "maxNumberOfSequentialPages",
@@ -198,7 +198,7 @@ class VmsTextDisplayCharacteristics:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    text_position_absolute: PositionAbsoluteEnum | None = field(
+    text_position_absolute: None | PositionAbsoluteEnum = field(
         default=None,
         metadata={
             "name": "textPositionAbsolute",
@@ -206,7 +206,7 @@ class VmsTextDisplayCharacteristics:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    text_position_x: float | None = field(
+    text_position_x: None | float = field(
         default=None,
         metadata={
             "name": "textPositionX",
@@ -214,7 +214,7 @@ class VmsTextDisplayCharacteristics:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    text_position_y: float | None = field(
+    text_position_y: None | float = field(
         default=None,
         metadata={
             "name": "textPositionY",
@@ -222,7 +222,7 @@ class VmsTextDisplayCharacteristics:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    vms_text_display_characteristics_extension: ExtensionType | None = field(
+    vms_text_display_characteristics_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "vmsTextDisplayCharacteristicsExtension",

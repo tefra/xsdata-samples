@@ -27,7 +27,7 @@ class CustomerPurchasePackageElementAccessVersionedChildStructure(
         name = "CustomerPurchasePackageElementAccess_VersionedChildStructure"
 
     customer_purchase_package_element_ref: (
-        CustomerPurchasePackageElementRef | None
+        None | CustomerPurchasePackageElementRef
     ) = field(
         default=None,
         metadata={
@@ -36,7 +36,7 @@ class CustomerPurchasePackageElementAccessVersionedChildStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    validable_element_ref: ValidableElementRef | None = field(
+    validable_element_ref: None | ValidableElementRef = field(
         default=None,
         metadata={
             "name": "ValidableElementRef",
@@ -44,7 +44,7 @@ class CustomerPurchasePackageElementAccessVersionedChildStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    fare_structure_element_ref: FareStructureElementRef | None = field(
+    fare_structure_element_ref: None | FareStructureElementRef = field(
         default=None,
         metadata={
             "name": "FareStructureElementRef",
@@ -53,7 +53,7 @@ class CustomerPurchasePackageElementAccessVersionedChildStructure(
         },
     )
     fare_structure_element_in_sequence_ref: (
-        FareStructureElementInSequenceRef | None
+        None | FareStructureElementInSequenceRef
     ) = field(
         default=None,
         metadata={
@@ -62,7 +62,7 @@ class CustomerPurchasePackageElementAccessVersionedChildStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    marked_as: MarkedAsEnumeration | None = field(
+    marked_as: None | MarkedAsEnumeration = field(
         default=None,
         metadata={
             "name": "MarkedAs",
@@ -70,7 +70,7 @@ class CustomerPurchasePackageElementAccessVersionedChildStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    access_number: int | None = field(
+    access_number: None | int = field(
         default=None,
         metadata={
             "name": "AccessNumber",
@@ -79,7 +79,7 @@ class CustomerPurchasePackageElementAccessVersionedChildStructure(
         },
     )
     validity_parameter_assignments: (
-        CustomerPurchaseParameterAssignmentsRelStructure | None
+        None | CustomerPurchaseParameterAssignmentsRelStructure
     ) = field(
         default=None,
         metadata={

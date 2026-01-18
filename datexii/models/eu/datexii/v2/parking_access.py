@@ -61,7 +61,7 @@ class ParkingAccess:
             "min_occurs": 1,
         },
     )
-    access_name: MultilingualString | None = field(
+    access_name: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "accessName",
@@ -84,7 +84,7 @@ class ParkingAccess:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    photo_url: str | None = field(
+    photo_url: None | str = field(
         default=None,
         metadata={
             "name": "photoUrl",
@@ -92,7 +92,7 @@ class ParkingAccess:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    access_only_assigned_for: ParkingAssignment | None = field(
+    access_only_assigned_for: None | ParkingAssignment = field(
         default=None,
         metadata={
             "name": "accessOnlyAssignedFor",
@@ -100,7 +100,7 @@ class ParkingAccess:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    access_assigned_among_others: ParkingAssignment | None = field(
+    access_assigned_among_others: None | ParkingAssignment = field(
         default=None,
         metadata={
             "name": "accessAssignedAmongOthers",
@@ -108,7 +108,7 @@ class ParkingAccess:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    access_prohibited_for: ParkingAssignment | None = field(
+    access_prohibited_for: None | ParkingAssignment = field(
         default=None,
         metadata={
             "name": "accessProhibitedFor",
@@ -124,14 +124,14 @@ class ParkingAccess:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    location: Location | None = field(
+    location: None | Location = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    opening_times: OpeningTimes | None = field(
+    opening_times: None | OpeningTimes = field(
         default=None,
         metadata={
             "name": "openingTimes",
@@ -139,7 +139,7 @@ class ParkingAccess:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    parking_access_extension: ExtensionType | None = field(
+    parking_access_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "parkingAccessExtension",
@@ -147,7 +147,7 @@ class ParkingAccess:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",

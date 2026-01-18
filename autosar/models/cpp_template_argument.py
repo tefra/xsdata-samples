@@ -48,7 +48,7 @@ class CppTemplateArgument:
     class Meta:
         name = "CPP-TEMPLATE-ARGUMENT"
 
-    allocator_ref: CppTemplateArgument.AllocatorRef | None = field(
+    allocator_ref: None | CppTemplateArgument.AllocatorRef = field(
         default=None,
         metadata={
             "name": "ALLOCATOR-REF",
@@ -56,7 +56,7 @@ class CppTemplateArgument:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -64,7 +64,7 @@ class CppTemplateArgument:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    inplace: Boolean | None = field(
+    inplace: None | Boolean = field(
         default=None,
         metadata={
             "name": "INPLACE",
@@ -72,7 +72,7 @@ class CppTemplateArgument:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    template_type_ref: CppTemplateArgument.TemplateTypeRef | None = field(
+    template_type_ref: None | CppTemplateArgument.TemplateTypeRef = field(
         default=None,
         metadata={
             "name": "TEMPLATE-TYPE-REF",
@@ -80,14 +80,14 @@ class CppTemplateArgument:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -98,7 +98,7 @@ class CppTemplateArgument:
 
     @dataclass
     class AllocatorRef(Ref):
-        dest: AllocatorSubtypesEnum | None = field(
+        dest: None | AllocatorSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -109,7 +109,7 @@ class CppTemplateArgument:
 
     @dataclass
     class TemplateTypeRef(Ref):
-        dest: CppImplementationDataTypeSubtypesEnum | None = field(
+        dest: None | CppImplementationDataTypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

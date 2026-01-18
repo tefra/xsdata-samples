@@ -24,7 +24,7 @@ class DurationType:
     xmlns:ns1="urn:un:unece:uncefact:documentation:standard:CoreComponentsTechnicalSpecification:2">Duration</ns1:PrimitiveType>.
     """
 
-    value: XmlDuration | None = field(
+    value: None | XmlDuration = field(
         default=None,
         metadata={
             "required": True,

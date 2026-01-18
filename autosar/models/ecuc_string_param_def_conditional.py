@@ -38,7 +38,7 @@ class EcucStringParamDefConditional:
     class Meta:
         name = "ECUC-STRING-PARAM-DEF-CONDITIONAL"
 
-    default_value: VerbatimString | None = field(
+    default_value: None | VerbatimString = field(
         default=None,
         metadata={
             "name": "DEFAULT-VALUE",
@@ -46,7 +46,7 @@ class EcucStringParamDefConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    max_length: PositiveInteger | None = field(
+    max_length: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "MAX-LENGTH",
@@ -54,7 +54,7 @@ class EcucStringParamDefConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    min_length: PositiveInteger | None = field(
+    min_length: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "MIN-LENGTH",
@@ -62,7 +62,7 @@ class EcucStringParamDefConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    regular_expression: RegularExpression | None = field(
+    regular_expression: None | RegularExpression = field(
         default=None,
         metadata={
             "name": "REGULAR-EXPRESSION",
@@ -70,7 +70,7 @@ class EcucStringParamDefConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -78,14 +78,14 @@ class EcucStringParamDefConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

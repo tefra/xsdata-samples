@@ -109,7 +109,7 @@ class ServiceInstanceToPortPrototypeMapping:
     class Meta:
         name = "SERVICE-INSTANCE-TO-PORT-PROTOTYPE-MAPPING"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -119,7 +119,7 @@ class ServiceInstanceToPortPrototypeMapping:
         },
     )
     short_name_fragments: (
-        ServiceInstanceToPortPrototypeMapping.ShortNameFragments | None
+        None | ServiceInstanceToPortPrototypeMapping.ShortNameFragments
     ) = field(
         default=None,
         metadata={
@@ -128,7 +128,7 @@ class ServiceInstanceToPortPrototypeMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -136,7 +136,7 @@ class ServiceInstanceToPortPrototypeMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -144,7 +144,7 @@ class ServiceInstanceToPortPrototypeMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -152,7 +152,7 @@ class ServiceInstanceToPortPrototypeMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -160,7 +160,7 @@ class ServiceInstanceToPortPrototypeMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -168,7 +168,7 @@ class ServiceInstanceToPortPrototypeMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: ServiceInstanceToPortPrototypeMapping.Annotations | None = (
+    annotations: None | ServiceInstanceToPortPrototypeMapping.Annotations = (
         field(
             default=None,
             metadata={
@@ -178,7 +178,7 @@ class ServiceInstanceToPortPrototypeMapping:
             },
         )
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -186,7 +186,7 @@ class ServiceInstanceToPortPrototypeMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    enables_log_trace: Boolean | None = field(
+    enables_log_trace: None | Boolean = field(
         default=None,
         metadata={
             "name": "ENABLES-LOG-TRACE",
@@ -194,7 +194,7 @@ class ServiceInstanceToPortPrototypeMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    port_prototype_iref: PortPrototypeInExecutableInstanceRef | None = field(
+    port_prototype_iref: None | PortPrototypeInExecutableInstanceRef = field(
         default=None,
         metadata={
             "name": "PORT-PROTOTYPE-IREF",
@@ -203,7 +203,7 @@ class ServiceInstanceToPortPrototypeMapping:
         },
     )
     process_design_ref: (
-        ServiceInstanceToPortPrototypeMapping.ProcessDesignRef | None
+        None | ServiceInstanceToPortPrototypeMapping.ProcessDesignRef
     ) = field(
         default=None,
         metadata={
@@ -212,7 +212,7 @@ class ServiceInstanceToPortPrototypeMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    process_ref: ServiceInstanceToPortPrototypeMapping.ProcessRef | None = (
+    process_ref: None | ServiceInstanceToPortPrototypeMapping.ProcessRef = (
         field(
             default=None,
             metadata={
@@ -223,7 +223,7 @@ class ServiceInstanceToPortPrototypeMapping:
         )
     )
     service_instance_ref: (
-        ServiceInstanceToPortPrototypeMapping.ServiceInstanceRef | None
+        None | ServiceInstanceToPortPrototypeMapping.ServiceInstanceRef
     ) = field(
         default=None,
         metadata={
@@ -232,14 +232,14 @@ class ServiceInstanceToPortPrototypeMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -247,7 +247,7 @@ class ServiceInstanceToPortPrototypeMapping:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -279,7 +279,7 @@ class ServiceInstanceToPortPrototypeMapping:
 
     @dataclass
     class ProcessDesignRef(Ref):
-        dest: ProcessDesignSubtypesEnum | None = field(
+        dest: None | ProcessDesignSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -290,7 +290,7 @@ class ServiceInstanceToPortPrototypeMapping:
 
     @dataclass
     class ProcessRef(Ref):
-        dest: ProcessSubtypesEnum | None = field(
+        dest: None | ProcessSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -301,7 +301,7 @@ class ServiceInstanceToPortPrototypeMapping:
 
     @dataclass
     class ServiceInstanceRef(Ref):
-        dest: AdaptivePlatformServiceInstanceSubtypesEnum | None = field(
+        dest: None | AdaptivePlatformServiceInstanceSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

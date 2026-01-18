@@ -47,7 +47,7 @@ class DiagnosticEnvConditionFormula:
     class Meta:
         name = "DIAGNOSTIC-ENV-CONDITION-FORMULA"
 
-    nrc_value: PositiveInteger | None = field(
+    nrc_value: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "NRC-VALUE",
@@ -55,7 +55,7 @@ class DiagnosticEnvConditionFormula:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    op: DiagnosticLogicalOperatorEnum | None = field(
+    op: None | DiagnosticLogicalOperatorEnum = field(
         default=None,
         metadata={
             "name": "OP",
@@ -63,7 +63,7 @@ class DiagnosticEnvConditionFormula:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    parts: DiagnosticEnvConditionFormula.Parts | None = field(
+    parts: None | DiagnosticEnvConditionFormula.Parts = field(
         default=None,
         metadata={
             "name": "PARTS",
@@ -71,14 +71,14 @@ class DiagnosticEnvConditionFormula:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

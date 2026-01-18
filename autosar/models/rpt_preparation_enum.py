@@ -29,20 +29,20 @@ class RptPreparationEnum:
     class Meta:
         name = "RPT-PREPARATION-ENUM"
 
-    value: RptPreparationEnumSimple | None = field(
+    value: None | RptPreparationEnumSimple = field(
         default=None,
         metadata={
             "required": True,
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

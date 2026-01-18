@@ -43,14 +43,14 @@ class SlOverviewParagraph:
     class Meta:
         name = "SL-OVERVIEW-PARAGRAPH"
 
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -58,7 +58,7 @@ class SlOverviewParagraph:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    l: LEnumSimple | None = field(
+    l: None | LEnumSimple = field(
         default=None,
         metadata={
             "name": "L",
@@ -128,7 +128,7 @@ class SlOverviewParagraph:
 
     @dataclass
     class TraceRef(Ref):
-        dest: TraceableSubtypesEnum | None = field(
+        dest: None | TraceableSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

@@ -152,7 +152,7 @@ class DiagnosticEvent:
     class Meta:
         name = "DIAGNOSTIC-EVENT"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -161,7 +161,7 @@ class DiagnosticEvent:
             "required": True,
         },
     )
-    short_name_fragments: DiagnosticEvent.ShortNameFragments | None = field(
+    short_name_fragments: None | DiagnosticEvent.ShortNameFragments = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -169,7 +169,7 @@ class DiagnosticEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -177,7 +177,7 @@ class DiagnosticEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -185,7 +185,7 @@ class DiagnosticEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -193,7 +193,7 @@ class DiagnosticEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -201,7 +201,7 @@ class DiagnosticEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -209,7 +209,7 @@ class DiagnosticEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: DiagnosticEvent.Annotations | None = field(
+    annotations: None | DiagnosticEvent.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -217,7 +217,7 @@ class DiagnosticEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -225,7 +225,7 @@ class DiagnosticEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    aging_allowed: Boolean | None = field(
+    aging_allowed: None | Boolean = field(
         default=None,
         metadata={
             "name": "AGING-ALLOWED",
@@ -233,7 +233,7 @@ class DiagnosticEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    associated_event_identification: PositiveInteger | None = field(
+    associated_event_identification: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "ASSOCIATED-EVENT-IDENTIFICATION",
@@ -242,7 +242,7 @@ class DiagnosticEvent:
         },
     )
     clear_event_allowed_behavior: (
-        DiagnosticClearEventAllowedBehaviorEnum | None
+        None | DiagnosticClearEventAllowedBehaviorEnum
     ) = field(
         default=None,
         metadata={
@@ -251,7 +251,7 @@ class DiagnosticEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    clear_event_behavior: DiagnosticClearEventBehaviorEnum | None = field(
+    clear_event_behavior: None | DiagnosticClearEventBehaviorEnum = field(
         default=None,
         metadata={
             "name": "CLEAR-EVENT-BEHAVIOR",
@@ -259,7 +259,7 @@ class DiagnosticEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    confirmation_threshold: PositiveIntegerValueVariationPoint | None = field(
+    confirmation_threshold: None | PositiveIntegerValueVariationPoint = field(
         default=None,
         metadata={
             "name": "CONFIRMATION-THRESHOLD",
@@ -267,7 +267,7 @@ class DiagnosticEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    connected_indicators: DiagnosticEvent.ConnectedIndicators | None = field(
+    connected_indicators: None | DiagnosticEvent.ConnectedIndicators = field(
         default=None,
         metadata={
             "name": "CONNECTED-INDICATORS",
@@ -275,7 +275,7 @@ class DiagnosticEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    event_clear_allowed: DiagnosticEventClearAllowedEnum | None = field(
+    event_clear_allowed: None | DiagnosticEventClearAllowedEnum = field(
         default=None,
         metadata={
             "name": "EVENT-CLEAR-ALLOWED",
@@ -284,7 +284,7 @@ class DiagnosticEvent:
         },
     )
     event_failure_cycle_counter_threshold: (
-        PositiveIntegerValueVariationPoint | None
+        None | PositiveIntegerValueVariationPoint
     ) = field(
         default=None,
         metadata={
@@ -293,7 +293,7 @@ class DiagnosticEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    event_kind: DiagnosticEventKindEnum | None = field(
+    event_kind: None | DiagnosticEventKindEnum = field(
         default=None,
         metadata={
             "name": "EVENT-KIND",
@@ -301,7 +301,7 @@ class DiagnosticEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    prestorage_freeze_frame: Boolean | None = field(
+    prestorage_freeze_frame: None | Boolean = field(
         default=None,
         metadata={
             "name": "PRESTORAGE-FREEZE-FRAME",
@@ -309,7 +309,7 @@ class DiagnosticEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    prestored_freezeframe_stored_in_nvm: Boolean | None = field(
+    prestored_freezeframe_stored_in_nvm: None | Boolean = field(
         default=None,
         metadata={
             "name": "PRESTORED-FREEZEFRAME-STORED-IN-NVM",
@@ -317,7 +317,7 @@ class DiagnosticEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    recoverable_in_same_operation_cycle: Boolean | None = field(
+    recoverable_in_same_operation_cycle: None | Boolean = field(
         default=None,
         metadata={
             "name": "RECOVERABLE-IN-SAME-OPERATION-CYCLE",
@@ -325,14 +325,14 @@ class DiagnosticEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -340,7 +340,7 @@ class DiagnosticEvent:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",

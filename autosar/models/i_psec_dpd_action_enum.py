@@ -28,20 +28,20 @@ class IPsecDpdActionEnum:
     class Meta:
         name = "I-PSEC-DPD-ACTION-ENUM"
 
-    value: IPsecDpdActionEnumSimple | None = field(
+    value: None | IPsecDpdActionEnumSimple = field(
         default=None,
         metadata={
             "required": True,
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

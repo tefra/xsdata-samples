@@ -120,7 +120,7 @@ class DiagnosticEventPortMapping:
     class Meta:
         name = "DIAGNOSTIC-EVENT-PORT-MAPPING"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -130,7 +130,7 @@ class DiagnosticEventPortMapping:
         },
     )
     short_name_fragments: (
-        DiagnosticEventPortMapping.ShortNameFragments | None
+        None | DiagnosticEventPortMapping.ShortNameFragments
     ) = field(
         default=None,
         metadata={
@@ -139,7 +139,7 @@ class DiagnosticEventPortMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -147,7 +147,7 @@ class DiagnosticEventPortMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -155,7 +155,7 @@ class DiagnosticEventPortMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -163,7 +163,7 @@ class DiagnosticEventPortMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -171,7 +171,7 @@ class DiagnosticEventPortMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -179,7 +179,7 @@ class DiagnosticEventPortMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: DiagnosticEventPortMapping.Annotations | None = field(
+    annotations: None | DiagnosticEventPortMapping.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -187,7 +187,7 @@ class DiagnosticEventPortMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -196,7 +196,7 @@ class DiagnosticEventPortMapping:
         },
     )
     bsw_service_dependency_ref: (
-        DiagnosticEventPortMapping.BswServiceDependencyRef | None
+        None | DiagnosticEventPortMapping.BswServiceDependencyRef
     ) = field(
         default=None,
         metadata={
@@ -206,7 +206,7 @@ class DiagnosticEventPortMapping:
         },
     )
     diagnostic_event_ref: (
-        DiagnosticEventPortMapping.DiagnosticEventRef | None
+        None | DiagnosticEventPortMapping.DiagnosticEventRef
     ) = field(
         default=None,
         metadata={
@@ -215,7 +215,7 @@ class DiagnosticEventPortMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    process_ref: DiagnosticEventPortMapping.ProcessRef | None = field(
+    process_ref: None | DiagnosticEventPortMapping.ProcessRef = field(
         default=None,
         metadata={
             "name": "PROCESS-REF",
@@ -224,7 +224,7 @@ class DiagnosticEventPortMapping:
         },
     )
     swc_flat_service_dependency_ref: (
-        DiagnosticEventPortMapping.SwcFlatServiceDependencyRef | None
+        None | DiagnosticEventPortMapping.SwcFlatServiceDependencyRef
     ) = field(
         default=None,
         metadata={
@@ -234,7 +234,7 @@ class DiagnosticEventPortMapping:
         },
     )
     swc_service_dependency_in_executable_iref: (
-        SwcServiceDependencyInExecutableInstanceRef | None
+        None | SwcServiceDependencyInExecutableInstanceRef
     ) = field(
         default=None,
         metadata={
@@ -244,7 +244,7 @@ class DiagnosticEventPortMapping:
         },
     )
     swc_service_dependency_in_system_iref: (
-        SwcServiceDependencyInSystemInstanceRef | None
+        None | SwcServiceDependencyInSystemInstanceRef
     ) = field(
         default=None,
         metadata={
@@ -254,7 +254,7 @@ class DiagnosticEventPortMapping:
         },
     )
     swc_service_dependency_iref: (
-        SwcServiceDependencyInCompositionInstanceRef | None
+        None | SwcServiceDependencyInCompositionInstanceRef
     ) = field(
         default=None,
         metadata={
@@ -263,14 +263,14 @@ class DiagnosticEventPortMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -278,7 +278,7 @@ class DiagnosticEventPortMapping:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -310,7 +310,7 @@ class DiagnosticEventPortMapping:
 
     @dataclass
     class BswServiceDependencyRef(Ref):
-        dest: BswServiceDependencyIdentSubtypesEnum | None = field(
+        dest: None | BswServiceDependencyIdentSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -321,7 +321,7 @@ class DiagnosticEventPortMapping:
 
     @dataclass
     class DiagnosticEventRef(Ref):
-        dest: DiagnosticEventSubtypesEnum | None = field(
+        dest: None | DiagnosticEventSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -332,7 +332,7 @@ class DiagnosticEventPortMapping:
 
     @dataclass
     class ProcessRef(Ref):
-        dest: ProcessDesignSubtypesEnum | None = field(
+        dest: None | ProcessDesignSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -343,7 +343,7 @@ class DiagnosticEventPortMapping:
 
     @dataclass
     class SwcFlatServiceDependencyRef(Ref):
-        dest: SwcServiceDependencySubtypesEnum | None = field(
+        dest: None | SwcServiceDependencySubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

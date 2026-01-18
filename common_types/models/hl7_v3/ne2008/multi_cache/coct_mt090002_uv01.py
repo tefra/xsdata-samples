@@ -36,7 +36,7 @@ class CoctMt090002Uv01Device:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Ii | None = field(
+    type_id: None | Ii = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -59,7 +59,7 @@ class CoctMt090002Uv01Device:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    manufacturer_model_name: Sc | None = field(
+    manufacturer_model_name: None | Sc = field(
         default=None,
         metadata={
             "name": "manufacturerModelName",
@@ -67,7 +67,7 @@ class CoctMt090002Uv01Device:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    software_name: Sc | None = field(
+    software_name: None | Sc = field(
         default=None,
         metadata={
             "name": "softwareName",
@@ -75,14 +75,14 @@ class CoctMt090002Uv01Device:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    null_flavor: NullFlavor | None = field(
+    null_flavor: None | NullFlavor = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
         },
     )
-    class_code: EntityClassDevice | None = field(
+    class_code: None | EntityClassDevice = field(
         default=None,
         metadata={
             "name": "classCode",
@@ -114,7 +114,7 @@ class CoctMt090002Uv01Organization:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Ii | None = field(
+    type_id: None | Ii = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -138,14 +138,14 @@ class CoctMt090002Uv01Organization:
             "min_occurs": 1,
         },
     )
-    null_flavor: NullFlavor | None = field(
+    null_flavor: None | NullFlavor = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
         },
     )
-    class_code: EntityClassOrganization | None = field(
+    class_code: None | EntityClassOrganization = field(
         default=None,
         metadata={
             "name": "classCode",
@@ -177,7 +177,7 @@ class CoctMt090002Uv01Person:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Ii | None = field(
+    type_id: None | Ii = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -201,7 +201,7 @@ class CoctMt090002Uv01Person:
             "min_occurs": 1,
         },
     )
-    null_flavor: NullFlavor | None = field(
+    null_flavor: None | NullFlavor = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -241,7 +241,7 @@ class CoctMt090002Uv01AssignedEntity:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Ii | None = field(
+    type_id: None | Ii = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -265,7 +265,7 @@ class CoctMt090002Uv01AssignedEntity:
             "min_occurs": 1,
         },
     )
-    code: Ce | None = field(
+    code: None | Ce = field(
         default=None,
         metadata={
             "type": "Element",
@@ -279,7 +279,7 @@ class CoctMt090002Uv01AssignedEntity:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    assigned_person: CoctMt090002Uv01Person | None = field(
+    assigned_person: None | CoctMt090002Uv01Person = field(
         default=None,
         metadata={
             "name": "assignedPerson",
@@ -288,7 +288,7 @@ class CoctMt090002Uv01AssignedEntity:
             "nillable": True,
         },
     )
-    assigned_device: CoctMt090002Uv01Device | None = field(
+    assigned_device: None | CoctMt090002Uv01Device = field(
         default=None,
         metadata={
             "name": "assignedDevice",
@@ -297,7 +297,7 @@ class CoctMt090002Uv01AssignedEntity:
             "nillable": True,
         },
     )
-    assigned_organization: CoctMt090002Uv01Organization | None = field(
+    assigned_organization: None | CoctMt090002Uv01Organization = field(
         default=None,
         metadata={
             "name": "assignedOrganization",
@@ -306,7 +306,7 @@ class CoctMt090002Uv01AssignedEntity:
             "nillable": True,
         },
     )
-    represented_organization: CoctMt150002Uv01Organization | None = field(
+    represented_organization: None | CoctMt150002Uv01Organization = field(
         default=None,
         metadata={
             "name": "representedOrganization",
@@ -315,14 +315,14 @@ class CoctMt090002Uv01AssignedEntity:
             "nillable": True,
         },
     )
-    null_flavor: NullFlavor | None = field(
+    null_flavor: None | NullFlavor = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
         },
     )
-    class_code: RoleClassAssignedEntity | None = field(
+    class_code: None | RoleClassAssignedEntity = field(
         default=None,
         metadata={
             "name": "classCode",

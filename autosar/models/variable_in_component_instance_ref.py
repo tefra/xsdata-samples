@@ -52,7 +52,7 @@ class VariableInComponentInstanceRef:
         },
     )
     context_port_prototype_ref: (
-        VariableInComponentInstanceRef.ContextPortPrototypeRef | None
+        None | VariableInComponentInstanceRef.ContextPortPrototypeRef
     ) = field(
         default=None,
         metadata={
@@ -62,7 +62,7 @@ class VariableInComponentInstanceRef:
         },
     )
     root_variable_data_prototype_ref: (
-        VariableInComponentInstanceRef.RootVariableDataPrototypeRef | None
+        None | VariableInComponentInstanceRef.RootVariableDataPrototypeRef
     ) = field(
         default=None,
         metadata={
@@ -82,7 +82,7 @@ class VariableInComponentInstanceRef:
         },
     )
     target_data_protoype_ref: (
-        VariableInComponentInstanceRef.TargetDataProtoypeRef | None
+        None | VariableInComponentInstanceRef.TargetDataProtoypeRef
     ) = field(
         default=None,
         metadata={
@@ -91,14 +91,14 @@ class VariableInComponentInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -109,7 +109,7 @@ class VariableInComponentInstanceRef:
 
     @dataclass
     class ContextComponentRef(Ref):
-        dest: SwComponentPrototypeSubtypesEnum | None = field(
+        dest: None | SwComponentPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -120,7 +120,7 @@ class VariableInComponentInstanceRef:
 
     @dataclass
     class ContextPortPrototypeRef(Ref):
-        dest: PortPrototypeSubtypesEnum | None = field(
+        dest: None | PortPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -131,7 +131,7 @@ class VariableInComponentInstanceRef:
 
     @dataclass
     class RootVariableDataPrototypeRef(Ref):
-        dest: VariableDataPrototypeSubtypesEnum | None = field(
+        dest: None | VariableDataPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -142,7 +142,7 @@ class VariableInComponentInstanceRef:
 
     @dataclass
     class ContextDataPrototypeRef(Ref):
-        dest: ApplicationCompositeElementDataPrototypeSubtypesEnum | None = (
+        dest: None | ApplicationCompositeElementDataPrototypeSubtypesEnum = (
             field(
                 default=None,
                 metadata={
@@ -155,7 +155,7 @@ class VariableInComponentInstanceRef:
 
     @dataclass
     class TargetDataProtoypeRef(Ref):
-        dest: DataPrototypeSubtypesEnum | None = field(
+        dest: None | DataPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

@@ -43,7 +43,7 @@ class SwGenericAxisParam:
         name = "SW-GENERIC-AXIS-PARAM"
 
     sw_generic_axis_param_type_ref: (
-        SwGenericAxisParam.SwGenericAxisParamTypeRef | None
+        None | SwGenericAxisParam.SwGenericAxisParamTypeRef
     ) = field(
         default=None,
         metadata={
@@ -60,14 +60,14 @@ class SwGenericAxisParam:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -78,7 +78,7 @@ class SwGenericAxisParam:
 
     @dataclass
     class SwGenericAxisParamTypeRef(Ref):
-        dest: SwGenericAxisParamTypeSubtypesEnum | None = field(
+        dest: None | SwGenericAxisParamTypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

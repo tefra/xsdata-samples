@@ -39,7 +39,7 @@ __NAMESPACE__ = "urn:oasis:names:specification:ubl:schema:xsd:CatalogueItemSpeci
 
 @dataclass(frozen=True)
 class CatalogueItemSpecificationUpdateType:
-    ublextensions: Ublextensions | None = field(
+    ublextensions: None | Ublextensions = field(
         default=None,
         metadata={
             "name": "UBLExtensions",
@@ -47,7 +47,7 @@ class CatalogueItemSpecificationUpdateType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2",
         },
     )
-    ublversion_id: UblversionId | None = field(
+    ublversion_id: None | UblversionId = field(
         default=None,
         metadata={
             "name": "UBLVersionID",
@@ -55,7 +55,7 @@ class CatalogueItemSpecificationUpdateType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    customization_id: CustomizationId | None = field(
+    customization_id: None | CustomizationId = field(
         default=None,
         metadata={
             "name": "CustomizationID",
@@ -63,7 +63,7 @@ class CatalogueItemSpecificationUpdateType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    profile_id: ProfileId | None = field(
+    profile_id: None | ProfileId = field(
         default=None,
         metadata={
             "name": "ProfileID",
@@ -71,7 +71,7 @@ class CatalogueItemSpecificationUpdateType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    profile_execution_id: ProfileExecutionId | None = field(
+    profile_execution_id: None | ProfileExecutionId = field(
         default=None,
         metadata={
             "name": "ProfileExecutionID",
@@ -79,7 +79,7 @@ class CatalogueItemSpecificationUpdateType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    id: Id | None = field(
+    id: None | Id = field(
         default=None,
         metadata={
             "name": "ID",
@@ -88,7 +88,7 @@ class CatalogueItemSpecificationUpdateType:
             "required": True,
         },
     )
-    uuid: Uuid | None = field(
+    uuid: None | Uuid = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -96,7 +96,7 @@ class CatalogueItemSpecificationUpdateType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    name: Name | None = field(
+    name: None | Name = field(
         default=None,
         metadata={
             "name": "Name",
@@ -104,7 +104,7 @@ class CatalogueItemSpecificationUpdateType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    issue_date: IssueDate | None = field(
+    issue_date: None | IssueDate = field(
         default=None,
         metadata={
             "name": "IssueDate",
@@ -113,7 +113,7 @@ class CatalogueItemSpecificationUpdateType:
             "required": True,
         },
     )
-    issue_time: IssueTime | None = field(
+    issue_time: None | IssueTime = field(
         default=None,
         metadata={
             "name": "IssueTime",
@@ -121,7 +121,7 @@ class CatalogueItemSpecificationUpdateType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    revision_date: RevisionDate | None = field(
+    revision_date: None | RevisionDate = field(
         default=None,
         metadata={
             "name": "RevisionDate",
@@ -129,7 +129,7 @@ class CatalogueItemSpecificationUpdateType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    revision_time: RevisionTime | None = field(
+    revision_time: None | RevisionTime = field(
         default=None,
         metadata={
             "name": "RevisionTime",
@@ -153,7 +153,7 @@ class CatalogueItemSpecificationUpdateType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    version_id: VersionId | None = field(
+    version_id: None | VersionId = field(
         default=None,
         metadata={
             "name": "VersionID",
@@ -161,7 +161,7 @@ class CatalogueItemSpecificationUpdateType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    line_count_numeric: LineCountNumeric | None = field(
+    line_count_numeric: None | LineCountNumeric = field(
         default=None,
         metadata={
             "name": "LineCountNumeric",
@@ -177,7 +177,7 @@ class CatalogueItemSpecificationUpdateType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    related_catalogue_reference: RelatedCatalogueReference | None = field(
+    related_catalogue_reference: None | RelatedCatalogueReference = field(
         default=None,
         metadata={
             "name": "RelatedCatalogueReference",
@@ -202,7 +202,7 @@ class CatalogueItemSpecificationUpdateType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    provider_party: ProviderParty | None = field(
+    provider_party: None | ProviderParty = field(
         default=None,
         metadata={
             "name": "ProviderParty",
@@ -211,7 +211,7 @@ class CatalogueItemSpecificationUpdateType:
             "required": True,
         },
     )
-    receiver_party: ReceiverParty | None = field(
+    receiver_party: None | ReceiverParty = field(
         default=None,
         metadata={
             "name": "ReceiverParty",
@@ -220,7 +220,7 @@ class CatalogueItemSpecificationUpdateType:
             "required": True,
         },
     )
-    seller_supplier_party: SellerSupplierParty | None = field(
+    seller_supplier_party: None | SellerSupplierParty = field(
         default=None,
         metadata={
             "name": "SellerSupplierParty",
@@ -228,7 +228,7 @@ class CatalogueItemSpecificationUpdateType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    contractor_customer_party: ContractorCustomerParty | None = field(
+    contractor_customer_party: None | ContractorCustomerParty = field(
         default=None,
         metadata={
             "name": "ContractorCustomerParty",
@@ -236,7 +236,7 @@ class CatalogueItemSpecificationUpdateType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    trading_terms: TradingTerms | None = field(
+    trading_terms: None | TradingTerms = field(
         default=None,
         metadata={
             "name": "TradingTerms",
@@ -244,7 +244,7 @@ class CatalogueItemSpecificationUpdateType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    default_language: DefaultLanguage | None = field(
+    default_language: None | DefaultLanguage = field(
         default=None,
         metadata={
             "name": "DefaultLanguage",

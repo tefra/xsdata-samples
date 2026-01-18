@@ -127,7 +127,7 @@ class DiagnosticCommonPropsConditional:
     class Meta:
         name = "DIAGNOSTIC-COMMON-PROPS-CONDITIONAL"
 
-    aging_requires_tested_cycle: Boolean | None = field(
+    aging_requires_tested_cycle: None | Boolean = field(
         default=None,
         metadata={
             "name": "AGING-REQUIRES-TESTED-CYCLE",
@@ -135,7 +135,7 @@ class DiagnosticCommonPropsConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    clear_dtc_limitation: DiagnosticClearDtcLimitationEnum | None = field(
+    clear_dtc_limitation: None | DiagnosticClearDtcLimitationEnum = field(
         default=None,
         metadata={
             "name": "CLEAR-DTC-LIMITATION",
@@ -144,7 +144,7 @@ class DiagnosticCommonPropsConditional:
         },
     )
     debounce_algorithm_propss: (
-        DiagnosticCommonPropsConditional.DebounceAlgorithmPropss | None
+        None | DiagnosticCommonPropsConditional.DebounceAlgorithmPropss
     ) = field(
         default=None,
         metadata={
@@ -153,7 +153,7 @@ class DiagnosticCommonPropsConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    default_endianness: ByteOrderEnum | None = field(
+    default_endianness: None | ByteOrderEnum = field(
         default=None,
         metadata={
             "name": "DEFAULT-ENDIANNESS",
@@ -161,7 +161,7 @@ class DiagnosticCommonPropsConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    dtc_status_availability_mask: PositiveInteger | None = field(
+    dtc_status_availability_mask: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "DTC-STATUS-AVAILABILITY-MASK",
@@ -169,7 +169,7 @@ class DiagnosticCommonPropsConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    environment_data_capture: DiagnosticDataCaptureEnum | None = field(
+    environment_data_capture: None | DiagnosticDataCaptureEnum = field(
         default=None,
         metadata={
             "name": "ENVIRONMENT-DATA-CAPTURE",
@@ -178,7 +178,7 @@ class DiagnosticCommonPropsConditional:
         },
     )
     event_displacement_strategy: (
-        DiagnosticEventDisplacementStrategyEnum | None
+        None | DiagnosticEventDisplacementStrategyEnum
     ) = field(
         default=None,
         metadata={
@@ -187,7 +187,7 @@ class DiagnosticCommonPropsConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    max_number_of_event_entries: PositiveInteger | None = field(
+    max_number_of_event_entries: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "MAX-NUMBER-OF-EVENT-ENTRIES",
@@ -196,7 +196,7 @@ class DiagnosticCommonPropsConditional:
         },
     )
     max_number_of_request_correctly_received_response_pending: (
-        PositiveInteger | None
+        None | PositiveInteger
     ) = field(
         default=None,
         metadata={
@@ -206,7 +206,7 @@ class DiagnosticCommonPropsConditional:
         },
     )
     memory_entry_storage_trigger: (
-        DiagnosticMemoryEntryStorageTriggerEnum | None
+        None | DiagnosticMemoryEntryStorageTriggerEnum
     ) = field(
         default=None,
         metadata={
@@ -216,7 +216,7 @@ class DiagnosticCommonPropsConditional:
         },
     )
     occurrence_counter_processing: (
-        DiagnosticOccurrenceCounterProcessingEnum | None
+        None | DiagnosticOccurrenceCounterProcessingEnum
     ) = field(
         default=None,
         metadata={
@@ -225,7 +225,7 @@ class DiagnosticCommonPropsConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    reset_confirmed_bit_on_overflow: Boolean | None = field(
+    reset_confirmed_bit_on_overflow: None | Boolean = field(
         default=None,
         metadata={
             "name": "RESET-CONFIRMED-BIT-ON-OVERFLOW",
@@ -233,7 +233,7 @@ class DiagnosticCommonPropsConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    response_on_all_request_sids: Boolean | None = field(
+    response_on_all_request_sids: None | Boolean = field(
         default=None,
         metadata={
             "name": "RESPONSE-ON-ALL-REQUEST-SIDS",
@@ -241,7 +241,7 @@ class DiagnosticCommonPropsConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    response_on_second_declined_request: Boolean | None = field(
+    response_on_second_declined_request: None | Boolean = field(
         default=None,
         metadata={
             "name": "RESPONSE-ON-SECOND-DECLINED-REQUEST",
@@ -249,7 +249,7 @@ class DiagnosticCommonPropsConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    security_delay_time_on_boot: TimeValue | None = field(
+    security_delay_time_on_boot: None | TimeValue = field(
         default=None,
         metadata={
             "name": "SECURITY-DELAY-TIME-ON-BOOT",
@@ -258,7 +258,7 @@ class DiagnosticCommonPropsConditional:
         },
     )
     status_bit_handling_test_failed_since_last_clear: (
-        DiagnosticStatusBitHandlingTestFailedSinceLastClearEnum | None
+        None | DiagnosticStatusBitHandlingTestFailedSinceLastClearEnum
     ) = field(
         default=None,
         metadata={
@@ -267,7 +267,7 @@ class DiagnosticCommonPropsConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    status_bit_storage_test_failed: Boolean | None = field(
+    status_bit_storage_test_failed: None | Boolean = field(
         default=None,
         metadata={
             "name": "STATUS-BIT-STORAGE-TEST-FAILED",
@@ -275,7 +275,7 @@ class DiagnosticCommonPropsConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    type_of_dtc_supported: DiagnosticTypeOfDtcSupportedEnum | None = field(
+    type_of_dtc_supported: None | DiagnosticTypeOfDtcSupportedEnum = field(
         default=None,
         metadata={
             "name": "TYPE-OF-DTC-SUPPORTED",
@@ -284,7 +284,7 @@ class DiagnosticCommonPropsConditional:
         },
     )
     type_of_freeze_frame_record_numeration: (
-        DiagnosticTypeOfFreezeFrameRecordNumerationEnum | None
+        None | DiagnosticTypeOfFreezeFrameRecordNumerationEnum
     ) = field(
         default=None,
         metadata={
@@ -293,7 +293,7 @@ class DiagnosticCommonPropsConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -301,14 +301,14 @@ class DiagnosticCommonPropsConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

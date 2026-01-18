@@ -18,7 +18,7 @@ class TurnaroundTimeLimitTimeVersionedChildStructure(
     class Meta:
         name = "TurnaroundTimeLimitTime_VersionedChildStructure"
 
-    minimum_duration: XmlDuration | None = field(
+    minimum_duration: None | XmlDuration = field(
         default=None,
         metadata={
             "name": "MinimumDuration",
@@ -26,7 +26,7 @@ class TurnaroundTimeLimitTimeVersionedChildStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    maximum_duration: XmlDuration | None = field(
+    maximum_duration: None | XmlDuration = field(
         default=None,
         metadata={
             "name": "MaximumDuration",

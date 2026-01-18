@@ -110,7 +110,7 @@ class DiagnosticServiceDataMapping:
     class Meta:
         name = "DIAGNOSTIC-SERVICE-DATA-MAPPING"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -120,7 +120,7 @@ class DiagnosticServiceDataMapping:
         },
     )
     short_name_fragments: (
-        DiagnosticServiceDataMapping.ShortNameFragments | None
+        None | DiagnosticServiceDataMapping.ShortNameFragments
     ) = field(
         default=None,
         metadata={
@@ -129,7 +129,7 @@ class DiagnosticServiceDataMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -137,7 +137,7 @@ class DiagnosticServiceDataMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -145,7 +145,7 @@ class DiagnosticServiceDataMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -153,7 +153,7 @@ class DiagnosticServiceDataMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -161,7 +161,7 @@ class DiagnosticServiceDataMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -169,7 +169,7 @@ class DiagnosticServiceDataMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: DiagnosticServiceDataMapping.Annotations | None = field(
+    annotations: None | DiagnosticServiceDataMapping.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -177,7 +177,7 @@ class DiagnosticServiceDataMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -186,7 +186,7 @@ class DiagnosticServiceDataMapping:
         },
     )
     diagnostic_data_element_ref: (
-        DiagnosticServiceDataMapping.DiagnosticDataElementRef | None
+        None | DiagnosticServiceDataMapping.DiagnosticDataElementRef
     ) = field(
         default=None,
         metadata={
@@ -196,7 +196,7 @@ class DiagnosticServiceDataMapping:
         },
     )
     mapped_ap_data_element_iref: (
-        DataPrototypeInExecutableInstanceRef | None
+        None | DataPrototypeInExecutableInstanceRef
     ) = field(
         default=None,
         metadata={
@@ -205,7 +205,7 @@ class DiagnosticServiceDataMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    mapped_data_element_iref: DataPrototypeInSystemInstanceRef | None = field(
+    mapped_data_element_iref: None | DataPrototypeInSystemInstanceRef = field(
         default=None,
         metadata={
             "name": "MAPPED-DATA-ELEMENT-IREF",
@@ -213,7 +213,7 @@ class DiagnosticServiceDataMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    process_ref: DiagnosticServiceDataMapping.ProcessRef | None = field(
+    process_ref: None | DiagnosticServiceDataMapping.ProcessRef = field(
         default=None,
         metadata={
             "name": "PROCESS-REF",
@@ -221,14 +221,14 @@ class DiagnosticServiceDataMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -236,7 +236,7 @@ class DiagnosticServiceDataMapping:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -268,7 +268,7 @@ class DiagnosticServiceDataMapping:
 
     @dataclass
     class DiagnosticDataElementRef(Ref):
-        dest: DiagnosticDataElementSubtypesEnum | None = field(
+        dest: None | DiagnosticDataElementSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -279,7 +279,7 @@ class DiagnosticServiceDataMapping:
 
     @dataclass
     class ProcessRef(Ref):
-        dest: ProcessDesignSubtypesEnum | None = field(
+        dest: None | ProcessDesignSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

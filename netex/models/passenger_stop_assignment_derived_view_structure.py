@@ -22,10 +22,10 @@ class PassengerStopAssignmentDerivedViewStructure(DerivedViewStructure):
         name = "PassengerStopAssignment_DerivedViewStructure"
 
     passenger_stop_assignment_ref: (
-        VehicleJourneyStopAssignmentRef
+        None
+        | VehicleJourneyStopAssignmentRef
         | DynamicStopAssignmentRef
         | PassengerStopAssignmentRef
-        | None
     ) = field(
         default=None,
         metadata={
@@ -49,7 +49,7 @@ class PassengerStopAssignmentDerivedViewStructure(DerivedViewStructure):
             ),
         },
     )
-    stop_place_ref: TaxiRankRef | StopPlaceRef | None = field(
+    stop_place_ref: None | TaxiRankRef | StopPlaceRef = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -67,7 +67,7 @@ class PassengerStopAssignmentDerivedViewStructure(DerivedViewStructure):
             ),
         },
     )
-    quay_ref: QuayRefStructure | None = field(
+    quay_ref: None | QuayRefStructure = field(
         default=None,
         metadata={
             "name": "QuayRef",
@@ -75,7 +75,7 @@ class PassengerStopAssignmentDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    quay_name: MultilingualString | None = field(
+    quay_name: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "QuayName",
@@ -83,7 +83,7 @@ class PassengerStopAssignmentDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    label: str | None = field(
+    label: None | str = field(
         default=None,
         metadata={
             "name": "Label",
@@ -91,7 +91,7 @@ class PassengerStopAssignmentDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    order: int | None = field(
+    order: None | int = field(
         default=None,
         metadata={
             "type": "Attribute",

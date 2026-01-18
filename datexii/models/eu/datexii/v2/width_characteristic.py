@@ -22,7 +22,7 @@ class WidthCharacteristic:
     :ivar width_characteristic_extension:
     """
 
-    comparison_operator: ComparisonOperatorEnum | None = field(
+    comparison_operator: None | ComparisonOperatorEnum = field(
         default=None,
         metadata={
             "name": "comparisonOperator",
@@ -31,7 +31,7 @@ class WidthCharacteristic:
             "required": True,
         },
     )
-    vehicle_width: float | None = field(
+    vehicle_width: None | float = field(
         default=None,
         metadata={
             "name": "vehicleWidth",
@@ -40,7 +40,7 @@ class WidthCharacteristic:
             "required": True,
         },
     )
-    width_characteristic_extension: ExtensionType | None = field(
+    width_characteristic_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "widthCharacteristicExtension",

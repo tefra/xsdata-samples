@@ -13,7 +13,7 @@ class WaitingEquipmentVersionStructure(SiteEquipmentVersionStructure):
     class Meta:
         name = "WaitingEquipment_VersionStructure"
 
-    seats: int | None = field(
+    seats: None | int = field(
         default=None,
         metadata={
             "name": "Seats",
@@ -21,7 +21,7 @@ class WaitingEquipmentVersionStructure(SiteEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    width: Decimal | None = field(
+    width: None | Decimal = field(
         default=None,
         metadata={
             "name": "Width",
@@ -29,7 +29,7 @@ class WaitingEquipmentVersionStructure(SiteEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    length: Decimal | None = field(
+    length: None | Decimal = field(
         default=None,
         metadata={
             "name": "Length",
@@ -37,7 +37,7 @@ class WaitingEquipmentVersionStructure(SiteEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    step_free: bool | None = field(
+    step_free: None | bool = field(
         default=None,
         metadata={
             "name": "StepFree",
@@ -45,7 +45,7 @@ class WaitingEquipmentVersionStructure(SiteEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    wheelchair_area_width: Decimal | None = field(
+    wheelchair_area_width: None | Decimal = field(
         default=None,
         metadata={
             "name": "WheelchairAreaWidth",
@@ -53,7 +53,7 @@ class WaitingEquipmentVersionStructure(SiteEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    wheelchair_area_length: Decimal | None = field(
+    wheelchair_area_length: None | Decimal = field(
         default=None,
         metadata={
             "name": "WheelchairAreaLength",
@@ -61,7 +61,7 @@ class WaitingEquipmentVersionStructure(SiteEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    smoking_allowed: bool | None = field(
+    smoking_allowed: None | bool = field(
         default=None,
         metadata={
             "name": "SmokingAllowed",
@@ -69,7 +69,7 @@ class WaitingEquipmentVersionStructure(SiteEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    heated: bool | None = field(
+    heated: None | bool = field(
         default=None,
         metadata={
             "name": "Heated",
@@ -77,7 +77,7 @@ class WaitingEquipmentVersionStructure(SiteEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    air_conditioned: bool | None = field(
+    air_conditioned: None | bool = field(
         default=None,
         metadata={
             "name": "AirConditioned",

@@ -21,7 +21,7 @@ class CourseOfJourneysVersionStructure(DataManagedObjectStructure):
     class Meta:
         name = "CourseOfJourneys_VersionStructure"
 
-    name: MultilingualString | None = field(
+    name: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "Name",
@@ -29,7 +29,7 @@ class CourseOfJourneysVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    description: MultilingualString | None = field(
+    description: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "Description",
@@ -37,7 +37,7 @@ class CourseOfJourneysVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    course_of_journeys_number: int | None = field(
+    course_of_journeys_number: None | int = field(
         default=None,
         metadata={
             "name": "CourseOfJourneysNumber",
@@ -45,7 +45,7 @@ class CourseOfJourneysVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    private_code: PrivateCode | None = field(
+    private_code: None | PrivateCode = field(
         default=None,
         metadata={
             "name": "PrivateCode",
@@ -53,7 +53,7 @@ class CourseOfJourneysVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    preparation_duration: XmlDuration | None = field(
+    preparation_duration: None | XmlDuration = field(
         default=None,
         metadata={
             "name": "PreparationDuration",
@@ -61,7 +61,7 @@ class CourseOfJourneysVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    start_time_in_block: XmlTime | None = field(
+    start_time_in_block: None | XmlTime = field(
         default=None,
         metadata={
             "name": "StartTimeInBlock",
@@ -69,7 +69,7 @@ class CourseOfJourneysVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    start_time_day_offset: int | None = field(
+    start_time_day_offset: None | int = field(
         default=None,
         metadata={
             "name": "StartTimeDayOffset",
@@ -77,7 +77,7 @@ class CourseOfJourneysVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    finishing_duration: XmlDuration | None = field(
+    finishing_duration: None | XmlDuration = field(
         default=None,
         metadata={
             "name": "FinishingDuration",
@@ -85,7 +85,7 @@ class CourseOfJourneysVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    block_ref: TrainBlockRef | BlockRef | None = field(
+    block_ref: None | TrainBlockRef | BlockRef = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -103,7 +103,7 @@ class CourseOfJourneysVersionStructure(DataManagedObjectStructure):
             ),
         },
     )
-    line_ref: FlexibleLineRef | LineRef | None = field(
+    line_ref: None | FlexibleLineRef | LineRef = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -121,7 +121,7 @@ class CourseOfJourneysVersionStructure(DataManagedObjectStructure):
             ),
         },
     )
-    journeys: JourneyRefsRelStructure | None = field(
+    journeys: None | JourneyRefsRelStructure = field(
         default=None,
         metadata={
             "type": "Element",

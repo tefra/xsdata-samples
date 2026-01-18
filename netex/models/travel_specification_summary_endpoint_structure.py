@@ -25,7 +25,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 @dataclass
 class TravelSpecificationSummaryEndpointStructure:
-    topographic_place_view: TopographicPlaceView | None = field(
+    topographic_place_view: None | TopographicPlaceView = field(
         default=None,
         metadata={
             "name": "TopographicPlaceView",
@@ -34,13 +34,13 @@ class TravelSpecificationSummaryEndpointStructure:
         },
     )
     stop_place_ref_or_site_ref: (
-        TaxiRankRef
+        None
+        | TaxiRankRef
         | StopPlaceRef
         | ParkingRef
         | PointOfInterestRef
         | ServiceSiteRef
         | SiteRef
-        | None
     ) = field(
         default=None,
         metadata={
@@ -79,7 +79,7 @@ class TravelSpecificationSummaryEndpointStructure:
             ),
         },
     )
-    address_ref: PostalAddressRef | RoadAddressRef | AddressRef | None = field(
+    address_ref: None | PostalAddressRef | RoadAddressRef | AddressRef = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -102,7 +102,7 @@ class TravelSpecificationSummaryEndpointStructure:
             ),
         },
     )
-    scheduled_stop_point_view: ScheduledStopPointView | None = field(
+    scheduled_stop_point_view: None | ScheduledStopPointView = field(
         default=None,
         metadata={
             "name": "ScheduledStopPointView",
@@ -110,7 +110,7 @@ class TravelSpecificationSummaryEndpointStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    vehicle_meeting_point_ref: VehicleMeetingPointRef | None = field(
+    vehicle_meeting_point_ref: None | VehicleMeetingPointRef = field(
         default=None,
         metadata={
             "name": "VehicleMeetingPointRef",
@@ -118,7 +118,7 @@ class TravelSpecificationSummaryEndpointStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    quay_ref: TaxiStandRef | QuayRef | None = field(
+    quay_ref: None | TaxiStandRef | QuayRef = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -136,7 +136,7 @@ class TravelSpecificationSummaryEndpointStructure:
             ),
         },
     )
-    boarding_position_ref: BoardingPositionRef | None = field(
+    boarding_position_ref: None | BoardingPositionRef = field(
         default=None,
         metadata={
             "name": "BoardingPositionRef",

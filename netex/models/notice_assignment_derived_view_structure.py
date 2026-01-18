@@ -17,7 +17,7 @@ class NoticeAssignmentDerivedViewStructure(DerivedViewStructure):
     class Meta:
         name = "NoticeAssignment_DerivedViewStructure"
 
-    name: MultilingualString | None = field(
+    name: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "Name",
@@ -25,7 +25,7 @@ class NoticeAssignmentDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    notice_ref: NoticeRef | None = field(
+    notice_ref: None | NoticeRef = field(
         default=None,
         metadata={
             "name": "NoticeRef",
@@ -33,7 +33,7 @@ class NoticeAssignmentDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    mark: str | None = field(
+    mark: None | str = field(
         default=None,
         metadata={
             "name": "Mark",
@@ -41,7 +41,7 @@ class NoticeAssignmentDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    mark_url: str | None = field(
+    mark_url: None | str = field(
         default=None,
         metadata={
             "name": "MarkUrl",
@@ -49,7 +49,7 @@ class NoticeAssignmentDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    publicity_channel: PublicityChannelEnumeration | None = field(
+    publicity_channel: None | PublicityChannelEnumeration = field(
         default=None,
         metadata={
             "name": "PublicityChannel",
@@ -57,7 +57,7 @@ class NoticeAssignmentDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    advertised: bool | None = field(
+    advertised: None | bool = field(
         default=None,
         metadata={
             "name": "Advertised",
@@ -65,7 +65,7 @@ class NoticeAssignmentDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    text: MultilingualString | None = field(
+    text: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "Text",
@@ -73,7 +73,7 @@ class NoticeAssignmentDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    public_code: str | None = field(
+    public_code: None | str = field(
         default=None,
         metadata={
             "name": "PublicCode",
@@ -81,7 +81,7 @@ class NoticeAssignmentDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    short_code: str | None = field(
+    short_code: None | str = field(
         default=None,
         metadata={
             "name": "ShortCode",
@@ -89,7 +89,7 @@ class NoticeAssignmentDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    private_code: PrivateCode | None = field(
+    private_code: None | PrivateCode = field(
         default=None,
         metadata={
             "name": "PrivateCode",
@@ -97,7 +97,7 @@ class NoticeAssignmentDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    type_of_notice_ref: TypeOfNoticeRef | None = field(
+    type_of_notice_ref: None | TypeOfNoticeRef = field(
         default=None,
         metadata={
             "name": "TypeOfNoticeRef",
@@ -105,7 +105,7 @@ class NoticeAssignmentDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    can_be_advertised: bool | None = field(
+    can_be_advertised: None | bool = field(
         default=None,
         metadata={
             "name": "CanBeAdvertised",
@@ -113,7 +113,7 @@ class NoticeAssignmentDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    order: int | None = field(
+    order: None | int = field(
         default=None,
         metadata={
             "type": "Attribute",

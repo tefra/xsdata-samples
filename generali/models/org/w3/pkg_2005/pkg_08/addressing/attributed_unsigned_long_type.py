@@ -7,7 +7,7 @@ __NAMESPACE__ = "http://www.w3.org/2005/08/addressing"
 
 @dataclass
 class AttributedUnsignedLongType:
-    value: int | None = field(
+    value: None | int = field(
         default=None,
         metadata={
             "required": True,

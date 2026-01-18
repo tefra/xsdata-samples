@@ -38,7 +38,7 @@ class RtePluginProps:
         name = "RTE-PLUGIN-PROPS"
 
     associated_cross_sw_cluster_com_rte_plugin_ref: (
-        RtePluginProps.AssociatedCrossSwClusterComRtePluginRef | None
+        None | RtePluginProps.AssociatedCrossSwClusterComRtePluginRef
     ) = field(
         default=None,
         metadata={
@@ -47,7 +47,7 @@ class RtePluginProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    associated_rte_plugin_ref: RtePluginProps.AssociatedRtePluginRef | None = (
+    associated_rte_plugin_ref: None | RtePluginProps.AssociatedRtePluginRef = (
         field(
             default=None,
             metadata={
@@ -57,14 +57,14 @@ class RtePluginProps:
             },
         )
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -75,7 +75,7 @@ class RtePluginProps:
 
     @dataclass
     class AssociatedCrossSwClusterComRtePluginRef(Ref):
-        dest: EcucContainerValueSubtypesEnum | None = field(
+        dest: None | EcucContainerValueSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -86,7 +86,7 @@ class RtePluginProps:
 
     @dataclass
     class AssociatedRtePluginRef(Ref):
-        dest: EcucContainerValueSubtypesEnum | None = field(
+        dest: None | EcucContainerValueSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

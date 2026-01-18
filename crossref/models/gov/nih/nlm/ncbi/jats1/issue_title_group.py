@@ -22,7 +22,7 @@ class IssueTitleGroup:
         name = "issue-title-group"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    issue_title: IssueTitle | None = field(
+    issue_title: None | IssueTitle = field(
         default=None,
         metadata={
             "name": "issue-title",
@@ -44,34 +44,34 @@ class IssueTitleGroup:
             "type": "Element",
         },
     )
-    content_type: str | None = field(
+    content_type: None | str = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",

@@ -85,7 +85,7 @@ class ActualVehicleEquipmentVersionStructure(
     class Meta:
         name = "ActualVehicleEquipment_VersionStructure"
 
-    units: int | None = field(
+    units: None | int = field(
         default=None,
         metadata={
             "name": "Units",
@@ -93,7 +93,7 @@ class ActualVehicleEquipmentVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    vehicle_type_ref: CompoundTrainRef | TrainRef | VehicleTypeRef | None = (
+    vehicle_type_ref: None | CompoundTrainRef | TrainRef | VehicleTypeRef = (
         field(
             default=None,
             metadata={
@@ -119,7 +119,8 @@ class ActualVehicleEquipmentVersionStructure(
         )
     )
     choice: (
-        RetailDeviceRef
+        None
+        | RetailDeviceRef
         | OnlineServiceRef
         | VehicleRentalServiceRef
         | VehicleSharingServiceRef
@@ -182,7 +183,6 @@ class ActualVehicleEquipmentVersionStructure(
         | VehicleEquipmentRef
         | PassengerEquipmentRef
         | EquipmentRef
-        | None
     ) = field(
         default=None,
         metadata={
@@ -506,7 +506,7 @@ class ActualVehicleEquipmentVersionStructure(
             ),
         },
     )
-    accessibility_assessment: AccessibilityAssessment | None = field(
+    accessibility_assessment: None | AccessibilityAssessment = field(
         default=None,
         metadata={
             "name": "AccessibilityAssessment",

@@ -85,7 +85,7 @@ class OsModuleInstantiation:
     class Meta:
         name = "OS-MODULE-INSTANTIATION"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -94,7 +94,7 @@ class OsModuleInstantiation:
             "required": True,
         },
     )
-    short_name_fragments: OsModuleInstantiation.ShortNameFragments | None = (
+    short_name_fragments: None | OsModuleInstantiation.ShortNameFragments = (
         field(
             default=None,
             metadata={
@@ -104,7 +104,7 @@ class OsModuleInstantiation:
             },
         )
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -112,7 +112,7 @@ class OsModuleInstantiation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -120,7 +120,7 @@ class OsModuleInstantiation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -128,7 +128,7 @@ class OsModuleInstantiation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -136,7 +136,7 @@ class OsModuleInstantiation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -144,7 +144,7 @@ class OsModuleInstantiation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: OsModuleInstantiation.Annotations | None = field(
+    annotations: None | OsModuleInstantiation.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -152,7 +152,7 @@ class OsModuleInstantiation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    resource_groups: OsModuleInstantiation.ResourceGroups | None = field(
+    resource_groups: None | OsModuleInstantiation.ResourceGroups = field(
         default=None,
         metadata={
             "name": "RESOURCE-GROUPS",
@@ -160,7 +160,7 @@ class OsModuleInstantiation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    supported_timer_granularity: TimeValue | None = field(
+    supported_timer_granularity: None | TimeValue = field(
         default=None,
         metadata={
             "name": "SUPPORTED-TIMER-GRANULARITY",
@@ -168,14 +168,14 @@ class OsModuleInstantiation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -183,7 +183,7 @@ class OsModuleInstantiation:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",

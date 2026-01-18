@@ -21,11 +21,11 @@ class ParkingBayConditionVersionStructure(LogEntryVersionStructure):
         name = "ParkingBayCondition_VersionStructure"
 
     parking_bay_ref_or_vehicle_sharing_parking_bay_ref: (
-        VehiclePoolingParkingBayRef
+        None
+        | VehiclePoolingParkingBayRef
         | MonitoredVehicleSharingParkingBayRef
         | VehicleSharingParkingBayRef
         | ParkingBayRef
-        | None
     ) = field(
         default=None,
         metadata={
@@ -54,7 +54,7 @@ class ParkingBayConditionVersionStructure(LogEntryVersionStructure):
             ),
         },
     )
-    status: ParkingBayStatusEnumeration | None = field(
+    status: None | ParkingBayStatusEnumeration = field(
         default=None,
         metadata={
             "name": "Status",
@@ -62,7 +62,7 @@ class ParkingBayConditionVersionStructure(LogEntryVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    parking_bay_status_ref: ParkingBayStatusRef | None = field(
+    parking_bay_status_ref: None | ParkingBayStatusRef = field(
         default=None,
         metadata={
             "name": "ParkingBayStatusRef",

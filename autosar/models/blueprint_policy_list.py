@@ -45,7 +45,7 @@ class BlueprintPolicyList:
     class Meta:
         name = "BLUEPRINT-POLICY-LIST"
 
-    attribute_name: String | None = field(
+    attribute_name: None | String = field(
         default=None,
         metadata={
             "name": "ATTRIBUTE-NAME",
@@ -53,7 +53,7 @@ class BlueprintPolicyList:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    blueprint_derivation_guide: DocumentationBlock | None = field(
+    blueprint_derivation_guide: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "BLUEPRINT-DERIVATION-GUIDE",
@@ -61,7 +61,7 @@ class BlueprintPolicyList:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    max_number_of_elements: PositiveIntegerValueVariationPoint | None = field(
+    max_number_of_elements: None | PositiveIntegerValueVariationPoint = field(
         default=None,
         metadata={
             "name": "MAX-NUMBER-OF-ELEMENTS",
@@ -69,7 +69,7 @@ class BlueprintPolicyList:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    min_number_of_elements: PositiveIntegerValueVariationPoint | None = field(
+    min_number_of_elements: None | PositiveIntegerValueVariationPoint = field(
         default=None,
         metadata={
             "name": "MIN-NUMBER-OF-ELEMENTS",
@@ -77,14 +77,14 @@ class BlueprintPolicyList:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

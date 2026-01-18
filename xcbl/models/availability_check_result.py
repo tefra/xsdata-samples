@@ -128,7 +128,7 @@ class AvailabilityCheckResultHeader:
             "required": True,
         }
     )
-    supplier_idreference_date: SupplierIdreferenceDate | None = field(
+    supplier_idreference_date: None | SupplierIdreferenceDate = field(
         default=None,
         metadata={
             "name": "SupplierIDReferenceDate",
@@ -142,7 +142,7 @@ class AvailabilityCheckResultHeader:
             "required": True,
         }
     )
-    buyer_idreference_date: BuyerIdreferenceDate | None = field(
+    buyer_idreference_date: None | BuyerIdreferenceDate = field(
         default=None,
         metadata={
             "name": "BuyerIDReferenceDate",
@@ -157,7 +157,7 @@ class AvailabilityCheckResultHeader:
         }
     )
     availability_check_result_language: (
-        AvailabilityCheckResultLanguage | None
+        None | AvailabilityCheckResultLanguage
     ) = field(
         default=None,
         metadata={
@@ -165,14 +165,14 @@ class AvailabilityCheckResultHeader:
             "type": "Element",
         },
     )
-    availability_check_result_note: AvailabilityCheckResultNote | None = field(
+    availability_check_result_note: None | AvailabilityCheckResultNote = field(
         default=None,
         metadata={
             "name": "AvailabilityCheckResultNote",
             "type": "Element",
         },
     )
-    result_list_of_attachment: ResultListOfAttachment | None = field(
+    result_list_of_attachment: None | ResultListOfAttachment = field(
         default=None,
         metadata={
             "name": "ResultListOfAttachment",
@@ -197,28 +197,28 @@ class AvailabilityCheckResultItemDetail:
             "required": True,
         }
     )
-    delivery_date: DeliveryDate | None = field(
+    delivery_date: None | DeliveryDate = field(
         default=None,
         metadata={
             "name": "DeliveryDate",
             "type": "Element",
         },
     )
-    availability_error_info: AvailabilityErrorInfo | None = field(
+    availability_error_info: None | AvailabilityErrorInfo = field(
         default=None,
         metadata={
             "name": "AvailabilityErrorInfo",
             "type": "Element",
         },
     )
-    general_line_item_note: GeneralLineItemNote | None = field(
+    general_line_item_note: None | GeneralLineItemNote = field(
         default=None,
         metadata={
             "name": "GeneralLineItemNote",
             "type": "Element",
         },
     )
-    line_item_attachment: LineItemAttachment | None = field(
+    line_item_attachment: None | LineItemAttachment = field(
         default=None,
         metadata={
             "name": "LineItemAttachment",
@@ -236,14 +236,14 @@ class AvailabilityCheckResultSummary:
             "required": True,
         }
     )
-    summary_error_info: SummaryErrorInfo | None = field(
+    summary_error_info: None | SummaryErrorInfo = field(
         default=None,
         metadata={
             "name": "SummaryErrorInfo",
             "type": "Element",
         },
     )
-    total_number_of_line_item: TotalNumberOfLineItem | None = field(
+    total_number_of_line_item: None | TotalNumberOfLineItem = field(
         default=None,
         metadata={
             "name": "TotalNumberOfLineItem",
@@ -286,7 +286,7 @@ class AvailabilityCheckResult:
             "required": True,
         }
     )
-    availability_check_result_detail: AvailabilityCheckResultDetail | None = (
+    availability_check_result_detail: None | AvailabilityCheckResultDetail = (
         field(
             default=None,
             metadata={
@@ -296,7 +296,7 @@ class AvailabilityCheckResult:
         )
     )
     availability_check_result_summary: (
-        AvailabilityCheckResultSummary | None
+        None | AvailabilityCheckResultSummary
     ) = field(
         default=None,
         metadata={

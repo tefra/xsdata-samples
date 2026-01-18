@@ -124,7 +124,7 @@ class ISignalIPdu:
     class Meta:
         name = "I-SIGNAL-I-PDU"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -133,7 +133,7 @@ class ISignalIPdu:
             "required": True,
         },
     )
-    short_name_fragments: ISignalIPdu.ShortNameFragments | None = field(
+    short_name_fragments: None | ISignalIPdu.ShortNameFragments = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -141,7 +141,7 @@ class ISignalIPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -149,7 +149,7 @@ class ISignalIPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -157,7 +157,7 @@ class ISignalIPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -165,7 +165,7 @@ class ISignalIPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -173,7 +173,7 @@ class ISignalIPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -181,7 +181,7 @@ class ISignalIPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: ISignalIPdu.Annotations | None = field(
+    annotations: None | ISignalIPdu.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -189,7 +189,7 @@ class ISignalIPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -197,7 +197,7 @@ class ISignalIPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    has_dynamic_length: Boolean | None = field(
+    has_dynamic_length: None | Boolean = field(
         default=None,
         metadata={
             "name": "HAS-DYNAMIC-LENGTH",
@@ -205,7 +205,7 @@ class ISignalIPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    length: Integer | None = field(
+    length: None | Integer = field(
         default=None,
         metadata={
             "name": "LENGTH",
@@ -213,7 +213,7 @@ class ISignalIPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    meta_data_length: PositiveInteger | None = field(
+    meta_data_length: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "META-DATA-LENGTH",
@@ -221,7 +221,7 @@ class ISignalIPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    contained_i_pdu_props: ContainedIPduProps | None = field(
+    contained_i_pdu_props: None | ContainedIPduProps = field(
         default=None,
         metadata={
             "name": "CONTAINED-I-PDU-PROPS",
@@ -230,7 +230,7 @@ class ISignalIPdu:
         },
     )
     i_pdu_timing_specifications: (
-        ISignalIPdu.IPduTimingSpecifications | None
+        None | ISignalIPdu.IPduTimingSpecifications
     ) = field(
         default=None,
         metadata={
@@ -239,7 +239,7 @@ class ISignalIPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    i_signal_to_pdu_mappings: ISignalIPdu.ISignalToPduMappings | None = field(
+    i_signal_to_pdu_mappings: None | ISignalIPdu.ISignalToPduMappings = field(
         default=None,
         metadata={
             "name": "I-SIGNAL-TO-PDU-MAPPINGS",
@@ -247,7 +247,7 @@ class ISignalIPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    pdu_counters: ISignalIPdu.PduCounters | None = field(
+    pdu_counters: None | ISignalIPdu.PduCounters = field(
         default=None,
         metadata={
             "name": "PDU-COUNTERS",
@@ -255,7 +255,7 @@ class ISignalIPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    pdu_replications: ISignalIPdu.PduReplications | None = field(
+    pdu_replications: None | ISignalIPdu.PduReplications = field(
         default=None,
         metadata={
             "name": "PDU-REPLICATIONS",
@@ -263,7 +263,7 @@ class ISignalIPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    unused_bit_pattern: Integer | None = field(
+    unused_bit_pattern: None | Integer = field(
         default=None,
         metadata={
             "name": "UNUSED-BIT-PATTERN",
@@ -271,14 +271,14 @@ class ISignalIPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -286,7 +286,7 @@ class ISignalIPdu:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",

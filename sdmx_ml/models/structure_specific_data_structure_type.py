@@ -25,14 +25,14 @@ class StructureSpecificDataStructureType(DataStructureTypeAbstract):
     dimension or the flat data format is used.
     """
 
-    namespace: str | None = field(
+    namespace: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "required": True,
         },
     )
-    dimension_at_observation: str | ObsDimensionsCodeType | None = field(
+    dimension_at_observation: None | str | ObsDimensionsCodeType = field(
         default=None,
         metadata={
             "name": "dimensionAtObservation",

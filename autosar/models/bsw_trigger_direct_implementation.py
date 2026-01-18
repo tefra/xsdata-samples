@@ -51,7 +51,7 @@ class BswTriggerDirectImplementation:
     class Meta:
         name = "BSW-TRIGGER-DIRECT-IMPLEMENTATION"
 
-    cat_2_isr: Identifier | None = field(
+    cat_2_isr: None | Identifier = field(
         default=None,
         metadata={
             "name": "CAT-2-ISR",
@@ -60,7 +60,7 @@ class BswTriggerDirectImplementation:
         },
     )
     mastered_trigger_ref: (
-        BswTriggerDirectImplementation.MasteredTriggerRef | None
+        None | BswTriggerDirectImplementation.MasteredTriggerRef
     ) = field(
         default=None,
         metadata={
@@ -69,7 +69,7 @@ class BswTriggerDirectImplementation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    task: Identifier | None = field(
+    task: None | Identifier = field(
         default=None,
         metadata={
             "name": "TASK",
@@ -77,7 +77,7 @@ class BswTriggerDirectImplementation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -85,14 +85,14 @@ class BswTriggerDirectImplementation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -103,7 +103,7 @@ class BswTriggerDirectImplementation:
 
     @dataclass
     class MasteredTriggerRef(Ref):
-        dest: TriggerSubtypesEnum | None = field(
+        dest: None | TriggerSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

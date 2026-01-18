@@ -19,7 +19,7 @@ __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
 @dataclass
 class StatusResponseStructure(ResponseStructure):
-    request_message_ref: MessageQualifierStructure | None = field(
+    request_message_ref: None | MessageQualifierStructure = field(
         default=None,
         metadata={
             "name": "RequestMessageRef",
@@ -27,7 +27,7 @@ class StatusResponseStructure(ResponseStructure):
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    subscriber_ref: ParticipantRefStructure | None = field(
+    subscriber_ref: None | ParticipantRefStructure = field(
         default=None,
         metadata={
             "name": "SubscriberRef",
@@ -35,7 +35,7 @@ class StatusResponseStructure(ResponseStructure):
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    subscription_filter_ref: SubscriptionFilterRefStructure | None = field(
+    subscription_filter_ref: None | SubscriptionFilterRefStructure = field(
         default=None,
         metadata={
             "name": "SubscriptionFilterRef",
@@ -43,7 +43,7 @@ class StatusResponseStructure(ResponseStructure):
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    subscription_ref: SubscriptionQualifierStructure | None = field(
+    subscription_ref: None | SubscriptionQualifierStructure = field(
         default=None,
         metadata={
             "name": "SubscriptionRef",
@@ -51,7 +51,7 @@ class StatusResponseStructure(ResponseStructure):
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    status: Status | None = field(
+    status: None | Status = field(
         default=None,
         metadata={
             "name": "Status",
@@ -59,7 +59,7 @@ class StatusResponseStructure(ResponseStructure):
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    error_condition: ServiceDeliveryErrorConditionStructure | None = field(
+    error_condition: None | ServiceDeliveryErrorConditionStructure = field(
         default=None,
         metadata={
             "name": "ErrorCondition",
@@ -67,7 +67,7 @@ class StatusResponseStructure(ResponseStructure):
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    valid_until: XmlDateTime | None = field(
+    valid_until: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "ValidUntil",
@@ -75,7 +75,7 @@ class StatusResponseStructure(ResponseStructure):
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    shortest_possible_cycle: XmlDuration | None = field(
+    shortest_possible_cycle: None | XmlDuration = field(
         default=None,
         metadata={
             "name": "ShortestPossibleCycle",

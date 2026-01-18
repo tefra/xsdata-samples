@@ -96,7 +96,7 @@ class RestEndpointGet:
     class Meta:
         name = "REST-ENDPOINT-GET"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -105,7 +105,7 @@ class RestEndpointGet:
             "required": True,
         },
     )
-    short_name_fragments: RestEndpointGet.ShortNameFragments | None = field(
+    short_name_fragments: None | RestEndpointGet.ShortNameFragments = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -113,7 +113,7 @@ class RestEndpointGet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -121,7 +121,7 @@ class RestEndpointGet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -129,7 +129,7 @@ class RestEndpointGet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -137,7 +137,7 @@ class RestEndpointGet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -145,7 +145,7 @@ class RestEndpointGet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -153,7 +153,7 @@ class RestEndpointGet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: RestEndpointGet.Annotations | None = field(
+    annotations: None | RestEndpointGet.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -161,7 +161,7 @@ class RestEndpointGet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    blueprint_policys: RestEndpointGet.BlueprintPolicys | None = field(
+    blueprint_policys: None | RestEndpointGet.BlueprintPolicys = field(
         default=None,
         metadata={
             "name": "BLUEPRINT-POLICYS",
@@ -169,7 +169,7 @@ class RestEndpointGet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    short_name_pattern: String | None = field(
+    short_name_pattern: None | String = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-PATTERN",
@@ -177,7 +177,7 @@ class RestEndpointGet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    arguments: RestEndpointGet.Arguments | None = field(
+    arguments: None | RestEndpointGet.Arguments = field(
         default=None,
         metadata={
             "name": "ARGUMENTS",
@@ -185,14 +185,14 @@ class RestEndpointGet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -200,7 +200,7 @@ class RestEndpointGet:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",

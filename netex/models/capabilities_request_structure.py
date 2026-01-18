@@ -10,7 +10,7 @@ __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
 @dataclass
 class CapabilitiesRequestStructure(RequestStructure):
-    data_object_capabilities_request: DataObjectCapabilitiesRequest | None = (
+    data_object_capabilities_request: None | DataObjectCapabilitiesRequest = (
         field(
             default=None,
             metadata={

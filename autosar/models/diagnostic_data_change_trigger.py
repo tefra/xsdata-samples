@@ -38,7 +38,7 @@ class DiagnosticDataChangeTrigger:
     class Meta:
         name = "DIAGNOSTIC-DATA-CHANGE-TRIGGER"
 
-    initial_event_status: DiagnosticInitialEventStatusEnum | None = field(
+    initial_event_status: None | DiagnosticInitialEventStatusEnum = field(
         default=None,
         metadata={
             "name": "INITIAL-EVENT-STATUS",
@@ -47,7 +47,7 @@ class DiagnosticDataChangeTrigger:
         },
     )
     data_identifier_ref: (
-        DiagnosticDataChangeTrigger.DataIdentifierRef | None
+        None | DiagnosticDataChangeTrigger.DataIdentifierRef
     ) = field(
         default=None,
         metadata={
@@ -56,14 +56,14 @@ class DiagnosticDataChangeTrigger:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -74,7 +74,7 @@ class DiagnosticDataChangeTrigger:
 
     @dataclass
     class DataIdentifierRef(Ref):
-        dest: DiagnosticDataIdentifierSubtypesEnum | None = field(
+        dest: None | DiagnosticDataIdentifierSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

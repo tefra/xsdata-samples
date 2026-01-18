@@ -15,7 +15,7 @@ class LocalServiceVersionStructure(EquipmentVersionStructure):
     class Meta:
         name = "LocalService_VersionStructure"
 
-    types_of_service_feature: TypeOfServiceFeatureRefsRelStructure | None = (
+    types_of_service_feature: None | TypeOfServiceFeatureRefsRelStructure = (
         field(
             default=None,
             metadata={

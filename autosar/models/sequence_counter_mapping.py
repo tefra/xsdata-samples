@@ -34,7 +34,7 @@ class SequenceCounterMapping:
     class Meta:
         name = "SEQUENCE-COUNTER-MAPPING"
 
-    system_signal_ref: SequenceCounterMapping.SystemSignalRef | None = field(
+    system_signal_ref: None | SequenceCounterMapping.SystemSignalRef = field(
         default=None,
         metadata={
             "name": "SYSTEM-SIGNAL-REF",
@@ -42,14 +42,14 @@ class SequenceCounterMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -60,7 +60,7 @@ class SequenceCounterMapping:
 
     @dataclass
     class SystemSignalRef(Ref):
-        dest: SystemSignalSubtypesEnum | None = field(
+        dest: None | SystemSignalSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

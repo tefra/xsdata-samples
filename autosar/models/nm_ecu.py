@@ -127,7 +127,7 @@ class NmEcu:
     class Meta:
         name = "NM-ECU"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -136,7 +136,7 @@ class NmEcu:
             "required": True,
         },
     )
-    short_name_fragments: NmEcu.ShortNameFragments | None = field(
+    short_name_fragments: None | NmEcu.ShortNameFragments = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -144,7 +144,7 @@ class NmEcu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -152,7 +152,7 @@ class NmEcu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -160,7 +160,7 @@ class NmEcu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -168,7 +168,7 @@ class NmEcu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -176,7 +176,7 @@ class NmEcu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -184,7 +184,7 @@ class NmEcu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: NmEcu.Annotations | None = field(
+    annotations: None | NmEcu.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -192,7 +192,7 @@ class NmEcu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    bus_dependent_nm_ecus: NmEcu.BusDependentNmEcus | None = field(
+    bus_dependent_nm_ecus: None | NmEcu.BusDependentNmEcus = field(
         default=None,
         metadata={
             "name": "BUS-DEPENDENT-NM-ECUS",
@@ -200,7 +200,7 @@ class NmEcu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    bus_specific_nm_ecu: NmEcu.BusSpecificNmEcu | None = field(
+    bus_specific_nm_ecu: None | NmEcu.BusSpecificNmEcu = field(
         default=None,
         metadata={
             "name": "BUS-SPECIFIC-NM-ECU",
@@ -208,7 +208,7 @@ class NmEcu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ecu_instance_ref: NmEcu.EcuInstanceRef | None = field(
+    ecu_instance_ref: None | NmEcu.EcuInstanceRef = field(
         default=None,
         metadata={
             "name": "ECU-INSTANCE-REF",
@@ -216,7 +216,7 @@ class NmEcu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nm_bus_synchronization_enabled: Boolean | None = field(
+    nm_bus_synchronization_enabled: None | Boolean = field(
         default=None,
         metadata={
             "name": "NM-BUS-SYNCHRONIZATION-ENABLED",
@@ -224,7 +224,7 @@ class NmEcu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nm_com_control_enabled: Boolean | None = field(
+    nm_com_control_enabled: None | Boolean = field(
         default=None,
         metadata={
             "name": "NM-COM-CONTROL-ENABLED",
@@ -232,7 +232,7 @@ class NmEcu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nm_coordinator: NmCoordinator | None = field(
+    nm_coordinator: None | NmCoordinator = field(
         default=None,
         metadata={
             "name": "NM-COORDINATOR",
@@ -240,7 +240,7 @@ class NmEcu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nm_cycletime_main_function: TimeValue | None = field(
+    nm_cycletime_main_function: None | TimeValue = field(
         default=None,
         metadata={
             "name": "NM-CYCLETIME-MAIN-FUNCTION",
@@ -248,7 +248,7 @@ class NmEcu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nm_multiple_channels_enabled: Boolean | None = field(
+    nm_multiple_channels_enabled: None | Boolean = field(
         default=None,
         metadata={
             "name": "NM-MULTIPLE-CHANNELS-ENABLED",
@@ -256,7 +256,7 @@ class NmEcu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nm_node_detection_enabled: Boolean | None = field(
+    nm_node_detection_enabled: None | Boolean = field(
         default=None,
         metadata={
             "name": "NM-NODE-DETECTION-ENABLED",
@@ -264,7 +264,7 @@ class NmEcu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nm_node_id_enabled: Boolean | None = field(
+    nm_node_id_enabled: None | Boolean = field(
         default=None,
         metadata={
             "name": "NM-NODE-ID-ENABLED",
@@ -272,7 +272,7 @@ class NmEcu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nm_passive_mode_enabled: Boolean | None = field(
+    nm_passive_mode_enabled: None | Boolean = field(
         default=None,
         metadata={
             "name": "NM-PASSIVE-MODE-ENABLED",
@@ -280,7 +280,7 @@ class NmEcu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nm_pdu_rx_indication_enabled: Boolean | None = field(
+    nm_pdu_rx_indication_enabled: None | Boolean = field(
         default=None,
         metadata={
             "name": "NM-PDU-RX-INDICATION-ENABLED",
@@ -288,7 +288,7 @@ class NmEcu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nm_remote_sleep_ind_enabled: Boolean | None = field(
+    nm_remote_sleep_ind_enabled: None | Boolean = field(
         default=None,
         metadata={
             "name": "NM-REMOTE-SLEEP-IND-ENABLED",
@@ -296,7 +296,7 @@ class NmEcu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nm_repeat_msg_ind_enabled: Boolean | None = field(
+    nm_repeat_msg_ind_enabled: None | Boolean = field(
         default=None,
         metadata={
             "name": "NM-REPEAT-MSG-IND-ENABLED",
@@ -304,7 +304,7 @@ class NmEcu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nm_state_change_ind_enabled: Boolean | None = field(
+    nm_state_change_ind_enabled: None | Boolean = field(
         default=None,
         metadata={
             "name": "NM-STATE-CHANGE-IND-ENABLED",
@@ -312,7 +312,7 @@ class NmEcu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nm_user_data_enabled: Boolean | None = field(
+    nm_user_data_enabled: None | Boolean = field(
         default=None,
         metadata={
             "name": "NM-USER-DATA-ENABLED",
@@ -320,7 +320,7 @@ class NmEcu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -328,14 +328,14 @@ class NmEcu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -343,7 +343,7 @@ class NmEcu:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -410,7 +410,7 @@ class NmEcu:
 
     @dataclass
     class BusSpecificNmEcu:
-        can_nm_ecu: CanNmEcu | None = field(
+        can_nm_ecu: None | CanNmEcu = field(
             default=None,
             metadata={
                 "name": "CAN-NM-ECU",
@@ -418,7 +418,7 @@ class NmEcu:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        flexray_nm_ecu: FlexrayNmEcu | None = field(
+        flexray_nm_ecu: None | FlexrayNmEcu = field(
             default=None,
             metadata={
                 "name": "FLEXRAY-NM-ECU",
@@ -426,7 +426,7 @@ class NmEcu:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        j_1939_nm_ecu: J1939NmEcu | None = field(
+        j_1939_nm_ecu: None | J1939NmEcu = field(
             default=None,
             metadata={
                 "name": "J-1939-NM-ECU",
@@ -434,7 +434,7 @@ class NmEcu:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        udp_nm_ecu: UdpNmEcu | None = field(
+        udp_nm_ecu: None | UdpNmEcu = field(
             default=None,
             metadata={
                 "name": "UDP-NM-ECU",
@@ -445,7 +445,7 @@ class NmEcu:
 
     @dataclass
     class EcuInstanceRef(Ref):
-        dest: EcuInstanceSubtypesEnum | None = field(
+        dest: None | EcuInstanceSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

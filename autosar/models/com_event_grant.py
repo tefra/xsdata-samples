@@ -105,7 +105,7 @@ class ComEventGrant:
     class Meta:
         name = "COM-EVENT-GRANT"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -114,7 +114,7 @@ class ComEventGrant:
             "required": True,
         },
     )
-    short_name_fragments: ComEventGrant.ShortNameFragments | None = field(
+    short_name_fragments: None | ComEventGrant.ShortNameFragments = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -122,7 +122,7 @@ class ComEventGrant:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -130,7 +130,7 @@ class ComEventGrant:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -138,7 +138,7 @@ class ComEventGrant:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -146,7 +146,7 @@ class ComEventGrant:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -154,7 +154,7 @@ class ComEventGrant:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -162,7 +162,7 @@ class ComEventGrant:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: ComEventGrant.Annotations | None = field(
+    annotations: None | ComEventGrant.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -170,7 +170,7 @@ class ComEventGrant:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -178,7 +178,7 @@ class ComEventGrant:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    remote_subject_refs: ComEventGrant.RemoteSubjectRefs | None = field(
+    remote_subject_refs: None | ComEventGrant.RemoteSubjectRefs = field(
         default=None,
         metadata={
             "name": "REMOTE-SUBJECT-REFS",
@@ -186,7 +186,7 @@ class ComEventGrant:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    service_instance_ref: ComEventGrant.ServiceInstanceRef | None = field(
+    service_instance_ref: None | ComEventGrant.ServiceInstanceRef = field(
         default=None,
         metadata={
             "name": "SERVICE-INSTANCE-REF",
@@ -194,7 +194,7 @@ class ComEventGrant:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    design_ref: ComEventGrant.DesignRef | None = field(
+    design_ref: None | ComEventGrant.DesignRef = field(
         default=None,
         metadata={
             "name": "DESIGN-REF",
@@ -202,7 +202,7 @@ class ComEventGrant:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    service_deployment_ref: ComEventGrant.ServiceDeploymentRef | None = field(
+    service_deployment_ref: None | ComEventGrant.ServiceDeploymentRef = field(
         default=None,
         metadata={
             "name": "SERVICE-DEPLOYMENT-REF",
@@ -210,14 +210,14 @@ class ComEventGrant:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -225,7 +225,7 @@ class ComEventGrant:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -270,7 +270,7 @@ class ComEventGrant:
 
         @dataclass
         class RemoteSubjectRef(Ref):
-            dest: AbstractIamRemoteSubjectSubtypesEnum | None = field(
+            dest: None | AbstractIamRemoteSubjectSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -281,7 +281,7 @@ class ComEventGrant:
 
     @dataclass
     class ServiceInstanceRef(Ref):
-        dest: AdaptivePlatformServiceInstanceSubtypesEnum | None = field(
+        dest: None | AdaptivePlatformServiceInstanceSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -292,7 +292,7 @@ class ComEventGrant:
 
     @dataclass
     class DesignRef(Ref):
-        dest: ComEventGrantDesignSubtypesEnum | None = field(
+        dest: None | ComEventGrantDesignSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -303,7 +303,7 @@ class ComEventGrant:
 
     @dataclass
     class ServiceDeploymentRef(Ref):
-        dest: ServiceEventDeploymentSubtypesEnum | None = field(
+        dest: None | ServiceEventDeploymentSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

@@ -37,7 +37,7 @@ __NAMESPACE__ = (
 
 @dataclass(frozen=True)
 class FulfilmentCancellationType:
-    ublextensions: Ublextensions | None = field(
+    ublextensions: None | Ublextensions = field(
         default=None,
         metadata={
             "name": "UBLExtensions",
@@ -45,7 +45,7 @@ class FulfilmentCancellationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2",
         },
     )
-    ublversion_id: UblversionId | None = field(
+    ublversion_id: None | UblversionId = field(
         default=None,
         metadata={
             "name": "UBLVersionID",
@@ -53,7 +53,7 @@ class FulfilmentCancellationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    customization_id: CustomizationId | None = field(
+    customization_id: None | CustomizationId = field(
         default=None,
         metadata={
             "name": "CustomizationID",
@@ -61,7 +61,7 @@ class FulfilmentCancellationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    profile_id: ProfileId | None = field(
+    profile_id: None | ProfileId = field(
         default=None,
         metadata={
             "name": "ProfileID",
@@ -69,7 +69,7 @@ class FulfilmentCancellationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    profile_execution_id: ProfileExecutionId | None = field(
+    profile_execution_id: None | ProfileExecutionId = field(
         default=None,
         metadata={
             "name": "ProfileExecutionID",
@@ -77,7 +77,7 @@ class FulfilmentCancellationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    id: Id | None = field(
+    id: None | Id = field(
         default=None,
         metadata={
             "name": "ID",
@@ -86,7 +86,7 @@ class FulfilmentCancellationType:
             "required": True,
         },
     )
-    copy_indicator: CopyIndicator | None = field(
+    copy_indicator: None | CopyIndicator = field(
         default=None,
         metadata={
             "name": "CopyIndicator",
@@ -94,7 +94,7 @@ class FulfilmentCancellationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    uuid: Uuid | None = field(
+    uuid: None | Uuid = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -102,7 +102,7 @@ class FulfilmentCancellationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    issue_date: IssueDate | None = field(
+    issue_date: None | IssueDate = field(
         default=None,
         metadata={
             "name": "IssueDate",
@@ -111,7 +111,7 @@ class FulfilmentCancellationType:
             "required": True,
         },
     )
-    issue_time: IssueTime | None = field(
+    issue_time: None | IssueTime = field(
         default=None,
         metadata={
             "name": "IssueTime",
@@ -186,7 +186,7 @@ class FulfilmentCancellationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    buyer_customer_party: BuyerCustomerParty | None = field(
+    buyer_customer_party: None | BuyerCustomerParty = field(
         default=None,
         metadata={
             "name": "BuyerCustomerParty",
@@ -195,7 +195,7 @@ class FulfilmentCancellationType:
             "required": True,
         },
     )
-    seller_supplier_party: SellerSupplierParty | None = field(
+    seller_supplier_party: None | SellerSupplierParty = field(
         default=None,
         metadata={
             "name": "SellerSupplierParty",
@@ -204,7 +204,7 @@ class FulfilmentCancellationType:
             "required": True,
         },
     )
-    delivery_customer_party: DeliveryCustomerParty | None = field(
+    delivery_customer_party: None | DeliveryCustomerParty = field(
         default=None,
         metadata={
             "name": "DeliveryCustomerParty",
@@ -212,7 +212,7 @@ class FulfilmentCancellationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    despatch_supplier_party: DespatchSupplierParty | None = field(
+    despatch_supplier_party: None | DespatchSupplierParty = field(
         default=None,
         metadata={
             "name": "DespatchSupplierParty",
@@ -220,7 +220,7 @@ class FulfilmentCancellationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    originator_customer_party: OriginatorCustomerParty | None = field(
+    originator_customer_party: None | OriginatorCustomerParty = field(
         default=None,
         metadata={
             "name": "OriginatorCustomerParty",

@@ -16,4 +16,4 @@ class Status:
     class Meta:
         namespace = "http://xmlns.generali.com/services/program/FeedbackProgramService/v1"
 
-    value: StatusValue | None = field(default=None)
+    value: None | StatusValue = field(default=None)

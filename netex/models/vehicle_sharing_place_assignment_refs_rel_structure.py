@@ -18,7 +18,7 @@ class VehicleSharingPlaceAssignmentRefsRelStructure(
         name = "VehicleSharingPlaceAssignmentRefs_RelStructure"
 
     vehicle_sharing_place_assignment_ref: (
-        VehicleSharingPlaceAssignmentRef | None
+        None | VehicleSharingPlaceAssignmentRef
     ) = field(
         default=None,
         metadata={

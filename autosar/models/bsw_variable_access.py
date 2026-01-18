@@ -51,7 +51,7 @@ class BswVariableAccess:
     class Meta:
         name = "BSW-VARIABLE-ACCESS"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -60,7 +60,7 @@ class BswVariableAccess:
             "required": True,
         },
     )
-    short_name_fragments: BswVariableAccess.ShortNameFragments | None = field(
+    short_name_fragments: None | BswVariableAccess.ShortNameFragments = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -68,7 +68,7 @@ class BswVariableAccess:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    accessed_variable_ref: BswVariableAccess.AccessedVariableRef | None = (
+    accessed_variable_ref: None | BswVariableAccess.AccessedVariableRef = (
         field(
             default=None,
             metadata={
@@ -78,7 +78,7 @@ class BswVariableAccess:
             },
         )
     )
-    context_limitation_refs: BswVariableAccess.ContextLimitationRefs | None = (
+    context_limitation_refs: None | BswVariableAccess.ContextLimitationRefs = (
         field(
             default=None,
             metadata={
@@ -88,7 +88,7 @@ class BswVariableAccess:
             },
         )
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -96,14 +96,14 @@ class BswVariableAccess:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -125,7 +125,7 @@ class BswVariableAccess:
 
     @dataclass
     class AccessedVariableRef(Ref):
-        dest: VariableDataPrototypeSubtypesEnum | None = field(
+        dest: None | VariableDataPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -149,7 +149,7 @@ class BswVariableAccess:
 
         @dataclass
         class ContextLimitationRef(Ref):
-            dest: BswDistinguishedPartitionSubtypesEnum | None = field(
+            dest: None | BswDistinguishedPartitionSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",

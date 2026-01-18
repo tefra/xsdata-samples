@@ -33,14 +33,14 @@ class FmConditionByFeaturesAndSwSystemconsts:
     class Meta:
         name = "FM-CONDITION-BY-FEATURES-AND-SW-SYSTEMCONSTS"
 
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -82,7 +82,7 @@ class FmConditionByFeaturesAndSwSystemconsts:
 
     @dataclass
     class SyscStringRef(Ref):
-        dest: SwSystemconstSubtypesEnum | None = field(
+        dest: None | SwSystemconstSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -93,7 +93,7 @@ class FmConditionByFeaturesAndSwSystemconsts:
 
     @dataclass
     class SyscRef(Ref):
-        dest: SwSystemconstSubtypesEnum | None = field(
+        dest: None | SwSystemconstSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -104,7 +104,7 @@ class FmConditionByFeaturesAndSwSystemconsts:
 
     @dataclass
     class FeatureRef(Ref):
-        dest: FmFeatureSubtypesEnum | None = field(
+        dest: None | FmFeatureSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

@@ -15,7 +15,7 @@ __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
 @dataclass
 class DataReceivedResponseStructure(ConsumerResponseEndpointStructure):
-    status: Status | None = field(
+    status: None | Status = field(
         default=None,
         metadata={
             "name": "Status",
@@ -24,7 +24,7 @@ class DataReceivedResponseStructure(ConsumerResponseEndpointStructure):
             "required": True,
         },
     )
-    error_condition: DataReceivedResponseStructure.ErrorCondition | None = (
+    error_condition: None | DataReceivedResponseStructure.ErrorCondition = (
         field(
             default=None,
             metadata={
@@ -38,7 +38,7 @@ class DataReceivedResponseStructure(ConsumerResponseEndpointStructure):
     @dataclass
     class ErrorCondition:
         unknown_subscription_error_or_other_error: (
-            UnknownSubscriptionError | OtherError | None
+            None | UnknownSubscriptionError | OtherError
         ) = field(
             default=None,
             metadata={
@@ -57,7 +57,7 @@ class DataReceivedResponseStructure(ConsumerResponseEndpointStructure):
                 ),
             },
         )
-        description: ErrorDescriptionStructure | None = field(
+        description: None | ErrorDescriptionStructure = field(
             default=None,
             metadata={
                 "name": "Description",

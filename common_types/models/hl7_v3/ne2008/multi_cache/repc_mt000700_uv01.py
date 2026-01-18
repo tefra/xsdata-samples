@@ -54,7 +54,7 @@ class RepcMt000700Uv01LocatedEntity:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Ii | None = field(
+    type_id: None | Ii = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -77,7 +77,7 @@ class RepcMt000700Uv01LocatedEntity:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    effective_time: IvlTs | None = field(
+    effective_time: None | IvlTs = field(
         default=None,
         metadata={
             "name": "effectiveTime",
@@ -85,7 +85,7 @@ class RepcMt000700Uv01LocatedEntity:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    location: CoctMt710000Uv01Place | None = field(
+    location: None | CoctMt710000Uv01Place = field(
         default=None,
         metadata={
             "type": "Element",
@@ -93,14 +93,14 @@ class RepcMt000700Uv01LocatedEntity:
             "nillable": True,
         },
     )
-    null_flavor: NullFlavor | None = field(
+    null_flavor: None | NullFlavor = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
         },
     )
-    class_code: RoleClassLocatedEntity | None = field(
+    class_code: None | RoleClassLocatedEntity = field(
         default=None,
         metadata={
             "name": "classCode",
@@ -123,7 +123,7 @@ class RepcMt000700Uv01Organization:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Ii | None = field(
+    type_id: None | Ii = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -167,14 +167,14 @@ class RepcMt000700Uv01Organization:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    null_flavor: NullFlavor | None = field(
+    null_flavor: None | NullFlavor = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
         },
     )
-    class_code: EntityClassOrganization | None = field(
+    class_code: None | EntityClassOrganization = field(
         default=None,
         metadata={
             "name": "classCode",
@@ -206,7 +206,7 @@ class RepcMt000700Uv01Device:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Ii | None = field(
+    type_id: None | Ii = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -229,14 +229,14 @@ class RepcMt000700Uv01Device:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    desc: EdExplicit | None = field(
+    desc: None | EdExplicit = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    manufacturer_model_name: Sc | None = field(
+    manufacturer_model_name: None | Sc = field(
         default=None,
         metadata={
             "name": "manufacturerModelName",
@@ -253,14 +253,14 @@ class RepcMt000700Uv01Device:
             "nillable": True,
         },
     )
-    null_flavor: NullFlavor | None = field(
+    null_flavor: None | NullFlavor = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
         },
     )
-    class_code: EntityClassDevice | None = field(
+    class_code: None | EntityClassDevice = field(
         default=None,
         metadata={
             "name": "classCode",
@@ -292,7 +292,7 @@ class RepcMt000700Uv01MaintainedEntity:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Ii | None = field(
+    type_id: None | Ii = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -315,7 +315,7 @@ class RepcMt000700Uv01MaintainedEntity:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    code: Ce | None = field(
+    code: None | Ce = field(
         default=None,
         metadata={
             "type": "Element",
@@ -336,7 +336,7 @@ class RepcMt000700Uv01MaintainedEntity:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    maintained_device: RepcMt000700Uv01Device | None = field(
+    maintained_device: None | RepcMt000700Uv01Device = field(
         default=None,
         metadata={
             "name": "maintainedDevice",
@@ -345,7 +345,7 @@ class RepcMt000700Uv01MaintainedEntity:
             "nillable": True,
         },
     )
-    maintained_place: CoctMt710000Uv01Place | None = field(
+    maintained_place: None | CoctMt710000Uv01Place = field(
         default=None,
         metadata={
             "name": "maintainedPlace",
@@ -354,7 +354,7 @@ class RepcMt000700Uv01MaintainedEntity:
             "nillable": True,
         },
     )
-    maintaining_organization: RepcMt000700Uv01Organization | None = field(
+    maintaining_organization: None | RepcMt000700Uv01Organization = field(
         default=None,
         metadata={
             "name": "maintainingOrganization",
@@ -363,7 +363,7 @@ class RepcMt000700Uv01MaintainedEntity:
             "nillable": True,
         },
     )
-    null_flavor: NullFlavor | None = field(
+    null_flavor: None | NullFlavor = field(
         default=None,
         metadata={
             "name": "nullFlavor",

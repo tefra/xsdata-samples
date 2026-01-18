@@ -15,7 +15,7 @@ class ThirdPartyProductVersionStructure(FareProductVersionStructure):
         name = "ThirdPartyProduct_VersionStructure"
 
     general_group_of_entities_ref_or_general_group_of_entities: (
-        GeneralGroupOfEntitiesRef | GeneralGroupOfEntities | None
+        None | GeneralGroupOfEntitiesRef | GeneralGroupOfEntities
     ) = field(
         default=None,
         metadata={

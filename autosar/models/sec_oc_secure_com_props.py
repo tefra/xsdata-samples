@@ -94,7 +94,7 @@ class SecOcSecureComProps:
     class Meta:
         name = "SEC-OC-SECURE-COM-PROPS"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -103,7 +103,7 @@ class SecOcSecureComProps:
             "required": True,
         },
     )
-    short_name_fragments: SecOcSecureComProps.ShortNameFragments | None = (
+    short_name_fragments: None | SecOcSecureComProps.ShortNameFragments = (
         field(
             default=None,
             metadata={
@@ -113,7 +113,7 @@ class SecOcSecureComProps:
             },
         )
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -121,7 +121,7 @@ class SecOcSecureComProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -129,7 +129,7 @@ class SecOcSecureComProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -137,7 +137,7 @@ class SecOcSecureComProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -145,7 +145,7 @@ class SecOcSecureComProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -153,7 +153,7 @@ class SecOcSecureComProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: SecOcSecureComProps.Annotations | None = field(
+    annotations: None | SecOcSecureComProps.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -161,7 +161,7 @@ class SecOcSecureComProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    auth_algorithm: String | None = field(
+    auth_algorithm: None | String = field(
         default=None,
         metadata={
             "name": "AUTH-ALGORITHM",
@@ -169,7 +169,7 @@ class SecOcSecureComProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    auth_info_tx_length: PositiveInteger | None = field(
+    auth_info_tx_length: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "AUTH-INFO-TX-LENGTH",
@@ -177,7 +177,7 @@ class SecOcSecureComProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    freshness_value_length: PositiveInteger | None = field(
+    freshness_value_length: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "FRESHNESS-VALUE-LENGTH",
@@ -185,7 +185,7 @@ class SecOcSecureComProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    freshness_value_tx_length: PositiveInteger | None = field(
+    freshness_value_tx_length: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "FRESHNESS-VALUE-TX-LENGTH",
@@ -193,7 +193,7 @@ class SecOcSecureComProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    job_requirements: SecOcSecureComProps.JobRequirements | None = field(
+    job_requirements: None | SecOcSecureComProps.JobRequirements = field(
         default=None,
         metadata={
             "name": "JOB-REQUIREMENTS",
@@ -201,14 +201,14 @@ class SecOcSecureComProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -216,7 +216,7 @@ class SecOcSecureComProps:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",

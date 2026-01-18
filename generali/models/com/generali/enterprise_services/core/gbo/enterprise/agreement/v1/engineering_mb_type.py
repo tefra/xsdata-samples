@@ -16,7 +16,7 @@ __NAMESPACE__ = (
 
 @dataclass
 class EngineeringMbType:
-    machinery_manufacturer: str | None = field(
+    machinery_manufacturer: None | str = field(
         default=None,
         metadata={
             "name": "MachineryManufacturer",
@@ -24,7 +24,7 @@ class EngineeringMbType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    machinery_model: str | None = field(
+    machinery_model: None | str = field(
         default=None,
         metadata={
             "name": "MachineryModel",
@@ -32,7 +32,7 @@ class EngineeringMbType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    machinery_serial_number: str | None = field(
+    machinery_serial_number: None | str = field(
         default=None,
         metadata={
             "name": "MachinerySerialNumber",
@@ -40,7 +40,7 @@ class EngineeringMbType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    insured_values_machinery: AmountType | None = field(
+    insured_values_machinery: None | AmountType = field(
         default=None,
         metadata={
             "name": "InsuredValuesMachinery",
@@ -48,7 +48,7 @@ class EngineeringMbType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    rate_mbmachinery: NumericType | None = field(
+    rate_mbmachinery: None | NumericType = field(
         default=None,
         metadata={
             "name": "RateMBMachinery",
@@ -56,7 +56,7 @@ class EngineeringMbType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    mflmachinery: AmountType | None = field(
+    mflmachinery: None | AmountType = field(
         default=None,
         metadata={
             "name": "MFLMachinery",
@@ -64,7 +64,7 @@ class EngineeringMbType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    rate_all_risks_machinery: NumericType | None = field(
+    rate_all_risks_machinery: None | NumericType = field(
         default=None,
         metadata={
             "name": "RateAllRisksMachinery",
@@ -72,7 +72,7 @@ class EngineeringMbType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    rate_mbbi: NumericType | None = field(
+    rate_mbbi: None | NumericType = field(
         default=None,
         metadata={
             "name": "RateMBBI",
@@ -80,7 +80,7 @@ class EngineeringMbType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    rate_all_risks_bi: NumericType | None = field(
+    rate_all_risks_bi: None | NumericType = field(
         default=None,
         metadata={
             "name": "RateAllRisksBI",
@@ -88,7 +88,7 @@ class EngineeringMbType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    mflother: NumericType | None = field(
+    mflother: None | NumericType = field(
         default=None,
         metadata={
             "name": "MFLOther",

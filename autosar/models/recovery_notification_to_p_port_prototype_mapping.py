@@ -98,7 +98,7 @@ class RecoveryNotificationToPPortPrototypeMapping:
     class Meta:
         name = "RECOVERY-NOTIFICATION-TO-P-PORT-PROTOTYPE-MAPPING"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -108,7 +108,7 @@ class RecoveryNotificationToPPortPrototypeMapping:
         },
     )
     short_name_fragments: (
-        RecoveryNotificationToPPortPrototypeMapping.ShortNameFragments | None
+        None | RecoveryNotificationToPPortPrototypeMapping.ShortNameFragments
     ) = field(
         default=None,
         metadata={
@@ -117,7 +117,7 @@ class RecoveryNotificationToPPortPrototypeMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -125,7 +125,7 @@ class RecoveryNotificationToPPortPrototypeMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -133,7 +133,7 @@ class RecoveryNotificationToPPortPrototypeMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -141,7 +141,7 @@ class RecoveryNotificationToPPortPrototypeMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -149,7 +149,7 @@ class RecoveryNotificationToPPortPrototypeMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -158,7 +158,7 @@ class RecoveryNotificationToPPortPrototypeMapping:
         },
     )
     annotations: (
-        RecoveryNotificationToPPortPrototypeMapping.Annotations | None
+        None | RecoveryNotificationToPPortPrototypeMapping.Annotations
     ) = field(
         default=None,
         metadata={
@@ -167,7 +167,7 @@ class RecoveryNotificationToPPortPrototypeMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -176,7 +176,7 @@ class RecoveryNotificationToPPortPrototypeMapping:
         },
     )
     process_ref: (
-        RecoveryNotificationToPPortPrototypeMapping.ProcessRef | None
+        None | RecoveryNotificationToPPortPrototypeMapping.ProcessRef
     ) = field(
         default=None,
         metadata={
@@ -185,7 +185,7 @@ class RecoveryNotificationToPPortPrototypeMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    recovery_action_iref: PPortPrototypeInExecutableInstanceRef | None = field(
+    recovery_action_iref: None | PPortPrototypeInExecutableInstanceRef = field(
         default=None,
         metadata={
             "name": "RECOVERY-ACTION-IREF",
@@ -194,8 +194,8 @@ class RecoveryNotificationToPPortPrototypeMapping:
         },
     )
     recovery_notification_ref: (
-        RecoveryNotificationToPPortPrototypeMapping.RecoveryNotificationRef
-        | None
+        None
+        | RecoveryNotificationToPPortPrototypeMapping.RecoveryNotificationRef
     ) = field(
         default=None,
         metadata={
@@ -204,14 +204,14 @@ class RecoveryNotificationToPPortPrototypeMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -219,7 +219,7 @@ class RecoveryNotificationToPPortPrototypeMapping:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -251,7 +251,7 @@ class RecoveryNotificationToPPortPrototypeMapping:
 
     @dataclass
     class ProcessRef(Ref):
-        dest: ProcessSubtypesEnum | None = field(
+        dest: None | ProcessSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -262,7 +262,7 @@ class RecoveryNotificationToPPortPrototypeMapping:
 
     @dataclass
     class RecoveryNotificationRef(Ref):
-        dest: RecoveryNotificationSubtypesEnum | None = field(
+        dest: None | RecoveryNotificationSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

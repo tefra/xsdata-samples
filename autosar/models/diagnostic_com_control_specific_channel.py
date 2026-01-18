@@ -38,7 +38,7 @@ class DiagnosticComControlSpecificChannel:
         name = "DIAGNOSTIC-COM-CONTROL-SPECIFIC-CHANNEL"
 
     specific_channel_ref: (
-        DiagnosticComControlSpecificChannel.SpecificChannelRef | None
+        None | DiagnosticComControlSpecificChannel.SpecificChannelRef
     ) = field(
         default=None,
         metadata={
@@ -47,7 +47,7 @@ class DiagnosticComControlSpecificChannel:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    subnet_number: PositiveInteger | None = field(
+    subnet_number: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "SUBNET-NUMBER",
@@ -55,14 +55,14 @@ class DiagnosticComControlSpecificChannel:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -73,7 +73,7 @@ class DiagnosticComControlSpecificChannel:
 
     @dataclass
     class SpecificChannelRef(Ref):
-        dest: CommunicationClusterSubtypesEnum | None = field(
+        dest: None | CommunicationClusterSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

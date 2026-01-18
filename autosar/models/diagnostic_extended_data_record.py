@@ -98,7 +98,7 @@ class DiagnosticExtendedDataRecord:
     class Meta:
         name = "DIAGNOSTIC-EXTENDED-DATA-RECORD"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -108,7 +108,7 @@ class DiagnosticExtendedDataRecord:
         },
     )
     short_name_fragments: (
-        DiagnosticExtendedDataRecord.ShortNameFragments | None
+        None | DiagnosticExtendedDataRecord.ShortNameFragments
     ) = field(
         default=None,
         metadata={
@@ -117,7 +117,7 @@ class DiagnosticExtendedDataRecord:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -125,7 +125,7 @@ class DiagnosticExtendedDataRecord:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -133,7 +133,7 @@ class DiagnosticExtendedDataRecord:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -141,7 +141,7 @@ class DiagnosticExtendedDataRecord:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -149,7 +149,7 @@ class DiagnosticExtendedDataRecord:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -157,7 +157,7 @@ class DiagnosticExtendedDataRecord:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: DiagnosticExtendedDataRecord.Annotations | None = field(
+    annotations: None | DiagnosticExtendedDataRecord.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -165,7 +165,7 @@ class DiagnosticExtendedDataRecord:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -173,7 +173,7 @@ class DiagnosticExtendedDataRecord:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    custom_trigger: String | None = field(
+    custom_trigger: None | String = field(
         default=None,
         metadata={
             "name": "CUSTOM-TRIGGER",
@@ -181,7 +181,7 @@ class DiagnosticExtendedDataRecord:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    record_elements: DiagnosticExtendedDataRecord.RecordElements | None = (
+    record_elements: None | DiagnosticExtendedDataRecord.RecordElements = (
         field(
             default=None,
             metadata={
@@ -191,7 +191,7 @@ class DiagnosticExtendedDataRecord:
             },
         )
     )
-    record_number: PositiveInteger | None = field(
+    record_number: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "RECORD-NUMBER",
@@ -199,7 +199,7 @@ class DiagnosticExtendedDataRecord:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    trigger: DiagnosticRecordTriggerEnum | None = field(
+    trigger: None | DiagnosticRecordTriggerEnum = field(
         default=None,
         metadata={
             "name": "TRIGGER",
@@ -207,7 +207,7 @@ class DiagnosticExtendedDataRecord:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    update: Boolean | None = field(
+    update: None | Boolean = field(
         default=None,
         metadata={
             "name": "UPDATE",
@@ -215,14 +215,14 @@ class DiagnosticExtendedDataRecord:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -230,7 +230,7 @@ class DiagnosticExtendedDataRecord:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",

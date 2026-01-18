@@ -24,7 +24,7 @@ class NonManagedCause(Cause):
     :ivar non_managed_cause_extension:
     """
 
-    cause_description: MultilingualString | None = field(
+    cause_description: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "causeDescription",
@@ -32,7 +32,7 @@ class NonManagedCause(Cause):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    cause_type: CauseTypeEnum | None = field(
+    cause_type: None | CauseTypeEnum = field(
         default=None,
         metadata={
             "name": "causeType",
@@ -40,7 +40,7 @@ class NonManagedCause(Cause):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    non_managed_cause_extension: ExtensionType | None = field(
+    non_managed_cause_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "nonManagedCauseExtension",

@@ -45,14 +45,14 @@ class Collection:
             "type": "Element",
         },
     )
-    property: CollectionProperty | None = field(
+    property: None | CollectionProperty = field(
         default=None,
         metadata={
             "type": "Attribute",
             "required": True,
         },
     )
-    multi_resolution: CollectionMultiResolution | None = field(
+    multi_resolution: None | CollectionMultiResolution = field(
         default=None,
         metadata={
             "name": "multi-resolution",

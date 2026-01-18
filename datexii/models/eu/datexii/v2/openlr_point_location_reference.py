@@ -23,7 +23,7 @@ class OpenlrPointLocationReference:
     a geometric location.
     """
 
-    openlr_geo_coordinate: OpenlrGeoCoordinate | None = field(
+    openlr_geo_coordinate: None | OpenlrGeoCoordinate = field(
         default=None,
         metadata={
             "name": "openlrGeoCoordinate",
@@ -31,7 +31,7 @@ class OpenlrPointLocationReference:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    openlr_poi_with_access_point: OpenlrPoiWithAccessPoint | None = field(
+    openlr_poi_with_access_point: None | OpenlrPoiWithAccessPoint = field(
         default=None,
         metadata={
             "name": "openlrPoiWithAccessPoint",
@@ -39,7 +39,7 @@ class OpenlrPointLocationReference:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    openlr_point_along_line: OpenlrPointAlongLine | None = field(
+    openlr_point_along_line: None | OpenlrPointAlongLine = field(
         default=None,
         metadata={
             "name": "openlrPointAlongLine",
@@ -47,7 +47,7 @@ class OpenlrPointLocationReference:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    openlr_point_location_reference_extension: ExtensionType | None = field(
+    openlr_point_location_reference_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "openlrPointLocationReferenceExtension",

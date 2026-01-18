@@ -18,7 +18,7 @@ class VehiclePoolingDriverInfoVersionStructure(DataManagedObjectStructure):
     class Meta:
         name = "VehiclePoolingDriverInfo_VersionStructure"
 
-    individual_traveller_ref: IndividualTravellerRef | None = field(
+    individual_traveller_ref: None | IndividualTravellerRef = field(
         default=None,
         metadata={
             "name": "IndividualTravellerRef",
@@ -26,7 +26,7 @@ class VehiclePoolingDriverInfoVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    ranking: int | None = field(
+    ranking: None | int = field(
         default=None,
         metadata={
             "name": "Ranking",
@@ -34,7 +34,7 @@ class VehiclePoolingDriverInfoVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    last_trip_date: XmlDateTime | None = field(
+    last_trip_date: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "LastTripDate",
@@ -42,7 +42,7 @@ class VehiclePoolingDriverInfoVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    comments_about: MultilingualString | None = field(
+    comments_about: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "CommentsAbout",
@@ -50,7 +50,7 @@ class VehiclePoolingDriverInfoVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    travelling_with_pet: bool | None = field(
+    travelling_with_pet: None | bool = field(
         default=None,
         metadata={
             "name": "TravellingWithPet",
@@ -58,7 +58,7 @@ class VehiclePoolingDriverInfoVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    driving_licence_verified: bool | None = field(
+    driving_licence_verified: None | bool = field(
         default=None,
         metadata={
             "name": "DrivingLicenceVerified",
@@ -66,7 +66,7 @@ class VehiclePoolingDriverInfoVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    insurance_verified: bool | None = field(
+    insurance_verified: None | bool = field(
         default=None,
         metadata={
             "name": "InsuranceVerified",
@@ -74,7 +74,7 @@ class VehiclePoolingDriverInfoVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    driving_style: DrivingStyleEnumeration | None = field(
+    driving_style: None | DrivingStyleEnumeration = field(
         default=None,
         metadata={
             "name": "DrivingStyle",
@@ -82,7 +82,7 @@ class VehiclePoolingDriverInfoVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    number_of_proposed_trips: int | None = field(
+    number_of_proposed_trips: None | int = field(
         default=None,
         metadata={
             "name": "NumberOfProposedTrips",
@@ -90,7 +90,7 @@ class VehiclePoolingDriverInfoVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    number_of_travellers_carried: int | None = field(
+    number_of_travellers_carried: None | int = field(
         default=None,
         metadata={
             "name": "NumberOfTravellersCarried",
@@ -98,7 +98,7 @@ class VehiclePoolingDriverInfoVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    vehicle_ref: VehicleRef | None = field(
+    vehicle_ref: None | VehicleRef = field(
         default=None,
         metadata={
             "name": "VehicleRef",

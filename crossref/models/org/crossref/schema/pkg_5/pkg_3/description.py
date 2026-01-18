@@ -34,7 +34,7 @@ class Description:
         name = "description"
         namespace = "http://www.crossref.org/schema/5.3.1"
 
-    language: DescriptionLanguage | None = field(
+    language: None | DescriptionLanguage = field(
         default=None,
         metadata={
             "type": "Attribute",

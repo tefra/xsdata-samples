@@ -17,7 +17,7 @@ class MaintainableBaseType(VersionableType):
     the id attribute.
     """
 
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",

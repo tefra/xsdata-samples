@@ -44,7 +44,7 @@ class BswModeReceiverPolicy:
     class Meta:
         name = "BSW-MODE-RECEIVER-POLICY"
 
-    enhanced_mode_api: Boolean | None = field(
+    enhanced_mode_api: None | Boolean = field(
         default=None,
         metadata={
             "name": "ENHANCED-MODE-API",
@@ -53,7 +53,7 @@ class BswModeReceiverPolicy:
         },
     )
     required_mode_group_ref: (
-        BswModeReceiverPolicy.RequiredModeGroupRef | None
+        None | BswModeReceiverPolicy.RequiredModeGroupRef
     ) = field(
         default=None,
         metadata={
@@ -62,7 +62,7 @@ class BswModeReceiverPolicy:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    supports_asynchronous_mode_switch: Boolean | None = field(
+    supports_asynchronous_mode_switch: None | Boolean = field(
         default=None,
         metadata={
             "name": "SUPPORTS-ASYNCHRONOUS-MODE-SWITCH",
@@ -70,7 +70,7 @@ class BswModeReceiverPolicy:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -78,14 +78,14 @@ class BswModeReceiverPolicy:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -96,7 +96,7 @@ class BswModeReceiverPolicy:
 
     @dataclass
     class RequiredModeGroupRef(Ref):
-        dest: ModeDeclarationGroupPrototypeSubtypesEnum | None = field(
+        dest: None | ModeDeclarationGroupPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

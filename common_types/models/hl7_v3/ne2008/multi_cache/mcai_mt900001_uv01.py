@@ -60,7 +60,7 @@ class McaiMt900001Uv01DetectedIssueManagement:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Ii | None = field(
+    type_id: None | Ii = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -76,28 +76,28 @@ class McaiMt900001Uv01DetectedIssueManagement:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    code: Cd | None = field(
+    code: None | Cd = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    text: EdExplicit | None = field(
+    text: None | EdExplicit = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    null_flavor: NullFlavor | None = field(
+    null_flavor: None | NullFlavor = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
         },
     )
-    class_code: ActClassRoot | None = field(
+    class_code: None | ActClassRoot = field(
         default=None,
         metadata={
             "name": "classCode",
@@ -105,7 +105,7 @@ class McaiMt900001Uv01DetectedIssueManagement:
             "required": True,
         },
     )
-    mood_code: XActMoodDefEvn | None = field(
+    mood_code: None | XActMoodDefEvn = field(
         default=None,
         metadata={
             "name": "moodCode",
@@ -128,7 +128,7 @@ class McaiMt900001Uv01Role:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Ii | None = field(
+    type_id: None | Ii = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -144,14 +144,14 @@ class McaiMt900001Uv01Role:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    code: Ce | None = field(
+    code: None | Ce = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    null_flavor: NullFlavor | None = field(
+    null_flavor: None | NullFlavor = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -159,13 +159,13 @@ class McaiMt900001Uv01Role:
         },
     )
     class_code: (
-        RoleClassMutualRelationship
+        None
+        | RoleClassMutualRelationship
         | RoleClassPassive
         | str
         | RoleClassOntological
         | RoleClassPartitive
         | RoleClassRootValue
-        | None
     ) = field(
         default=None,
         metadata={
@@ -190,7 +190,7 @@ class McaiMt900001Uv01SourceOf:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Ii | None = field(
+    type_id: None | Ii = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -207,7 +207,7 @@ class McaiMt900001Uv01SourceOf:
         },
     )
     detected_issue_management: (
-        McaiMt900001Uv01DetectedIssueManagement | None
+        None | McaiMt900001Uv01DetectedIssueManagement
     ) = field(
         default=None,
         metadata={
@@ -217,14 +217,14 @@ class McaiMt900001Uv01SourceOf:
             "nillable": True,
         },
     )
-    null_flavor: NullFlavor | None = field(
+    null_flavor: None | NullFlavor = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
         },
     )
-    type_code: ActRelationshipMitigates | None = field(
+    type_code: None | ActRelationshipMitigates = field(
         default=None,
         metadata={
             "name": "typeCode",
@@ -255,7 +255,7 @@ class McaiMt900001Uv01Subject:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Ii | None = field(
+    type_id: None | Ii = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -271,7 +271,7 @@ class McaiMt900001Uv01Subject:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    role: McaiMt900001Uv01Role | None = field(
+    role: None | McaiMt900001Uv01Role = field(
         default=None,
         metadata={
             "type": "Element",
@@ -279,14 +279,14 @@ class McaiMt900001Uv01Subject:
             "nillable": True,
         },
     )
-    null_flavor: NullFlavor | None = field(
+    null_flavor: None | NullFlavor = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
         },
     )
-    type_code: ParticipationTargetSubject | None = field(
+    type_code: None | ParticipationTargetSubject = field(
         default=None,
         metadata={
             "name": "typeCode",
@@ -309,7 +309,7 @@ class McaiMt900001Uv01ActOrderRequired:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Ii | None = field(
+    type_id: None | Ii = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -325,7 +325,7 @@ class McaiMt900001Uv01ActOrderRequired:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    code: Ce | None = field(
+    code: None | Ce = field(
         default=None,
         metadata={
             "type": "Element",
@@ -348,14 +348,14 @@ class McaiMt900001Uv01ActOrderRequired:
             "nillable": True,
         },
     )
-    null_flavor: NullFlavor | None = field(
+    null_flavor: None | NullFlavor = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
         },
     )
-    class_code: ActClassRoot | None = field(
+    class_code: None | ActClassRoot = field(
         default=None,
         metadata={
             "name": "classCode",
@@ -387,7 +387,7 @@ class McaiMt900001Uv01Requires:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Ii | None = field(
+    type_id: None | Ii = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -403,7 +403,7 @@ class McaiMt900001Uv01Requires:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    act_order_required: McaiMt900001Uv01ActOrderRequired | None = field(
+    act_order_required: None | McaiMt900001Uv01ActOrderRequired = field(
         default=None,
         metadata={
             "name": "actOrderRequired",
@@ -412,7 +412,7 @@ class McaiMt900001Uv01Requires:
             "nillable": True,
         },
     )
-    null_flavor: NullFlavor | None = field(
+    null_flavor: None | NullFlavor = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -449,7 +449,7 @@ class McaiMt900001Uv01Requires:
             "pattern": r"[^\s]+",
         },
     )
-    context_conduction_ind: str | None = field(
+    context_conduction_ind: None | str = field(
         default=None,
         metadata={
             "name": "contextConductionInd",
@@ -457,7 +457,7 @@ class McaiMt900001Uv01Requires:
             "pattern": r"true|false",
         },
     )
-    negation_ind: str | None = field(
+    negation_ind: None | str = field(
         default=None,
         metadata={
             "name": "negationInd",
@@ -480,7 +480,7 @@ class McaiMt900001Uv01DetectedIssueEvent:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Ii | None = field(
+    type_id: None | Ii = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -503,7 +503,7 @@ class McaiMt900001Uv01DetectedIssueEvent:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    code: Cd | None = field(
+    code: None | Cd = field(
         default=None,
         metadata={
             "type": "Element",
@@ -511,14 +511,14 @@ class McaiMt900001Uv01DetectedIssueEvent:
             "required": True,
         },
     )
-    text: EdExplicit | None = field(
+    text: None | EdExplicit = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    value: AnyType | None = field(
+    value: None | AnyType = field(
         default=None,
         metadata={
             "type": "Element",
@@ -543,7 +543,7 @@ class McaiMt900001Uv01DetectedIssueEvent:
             "nillable": True,
         },
     )
-    null_flavor: NullFlavor | None = field(
+    null_flavor: None | NullFlavor = field(
         default=None,
         metadata={
             "name": "nullFlavor",

@@ -22,7 +22,7 @@ class GrossWeightCharacteristic:
     :ivar gross_weight_characteristic_extension:
     """
 
-    comparison_operator: ComparisonOperatorEnum | None = field(
+    comparison_operator: None | ComparisonOperatorEnum = field(
         default=None,
         metadata={
             "name": "comparisonOperator",
@@ -31,7 +31,7 @@ class GrossWeightCharacteristic:
             "required": True,
         },
     )
-    gross_vehicle_weight: float | None = field(
+    gross_vehicle_weight: None | float = field(
         default=None,
         metadata={
             "name": "grossVehicleWeight",
@@ -40,7 +40,7 @@ class GrossWeightCharacteristic:
             "required": True,
         },
     )
-    gross_weight_characteristic_extension: ExtensionType | None = field(
+    gross_weight_characteristic_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "grossWeightCharacteristicExtension",

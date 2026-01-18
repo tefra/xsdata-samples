@@ -25,7 +25,7 @@ class ToVtlMappingType:
         default is Basic.
     """
 
-    to_vtl_sub_space: SpaceKeyType | None = field(
+    to_vtl_sub_space: None | SpaceKeyType = field(
         default=None,
         metadata={
             "name": "ToVtlSubSpace",
@@ -33,7 +33,7 @@ class ToVtlMappingType:
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
         },
     )
-    method: StandardToVtlMappingMethodType | str | None = field(
+    method: None | StandardToVtlMappingMethodType | str = field(
         default=None,
         metadata={
             "type": "Attribute",

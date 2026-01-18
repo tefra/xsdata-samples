@@ -48,7 +48,7 @@ class FlexrayFifoConfiguration:
     class Meta:
         name = "FLEXRAY-FIFO-CONFIGURATION"
 
-    admit_without_message_id: Boolean | None = field(
+    admit_without_message_id: None | Boolean = field(
         default=None,
         metadata={
             "name": "ADMIT-WITHOUT-MESSAGE-ID",
@@ -56,7 +56,7 @@ class FlexrayFifoConfiguration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    base_cycle: Integer | None = field(
+    base_cycle: None | Integer = field(
         default=None,
         metadata={
             "name": "BASE-CYCLE",
@@ -64,7 +64,7 @@ class FlexrayFifoConfiguration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    channel_ref: FlexrayFifoConfiguration.ChannelRef | None = field(
+    channel_ref: None | FlexrayFifoConfiguration.ChannelRef = field(
         default=None,
         metadata={
             "name": "CHANNEL-REF",
@@ -72,7 +72,7 @@ class FlexrayFifoConfiguration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    cycle_repetition: Integer | None = field(
+    cycle_repetition: None | Integer = field(
         default=None,
         metadata={
             "name": "CYCLE-REPETITION",
@@ -80,7 +80,7 @@ class FlexrayFifoConfiguration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    fifo_depth: Integer | None = field(
+    fifo_depth: None | Integer = field(
         default=None,
         metadata={
             "name": "FIFO-DEPTH",
@@ -88,7 +88,7 @@ class FlexrayFifoConfiguration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    fifo_ranges: FlexrayFifoConfiguration.FifoRanges | None = field(
+    fifo_ranges: None | FlexrayFifoConfiguration.FifoRanges = field(
         default=None,
         metadata={
             "name": "FIFO-RANGES",
@@ -96,7 +96,7 @@ class FlexrayFifoConfiguration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    msg_id_mask: Integer | None = field(
+    msg_id_mask: None | Integer = field(
         default=None,
         metadata={
             "name": "MSG-ID-MASK",
@@ -104,7 +104,7 @@ class FlexrayFifoConfiguration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    msg_id_match: Integer | None = field(
+    msg_id_match: None | Integer = field(
         default=None,
         metadata={
             "name": "MSG-ID-MATCH",
@@ -112,14 +112,14 @@ class FlexrayFifoConfiguration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -130,7 +130,7 @@ class FlexrayFifoConfiguration:
 
     @dataclass
     class ChannelRef(Ref):
-        dest: FlexrayPhysicalChannelSubtypesEnum | None = field(
+        dest: None | FlexrayPhysicalChannelSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

@@ -73,7 +73,7 @@ class VmsMessage:
     :ivar vms_message_extension:
     """
 
-    associated_management_or_diversion_plan: str | None = field(
+    associated_management_or_diversion_plan: None | str = field(
         default=None,
         metadata={
             "name": "associatedManagementOrDiversionPlan",
@@ -82,7 +82,7 @@ class VmsMessage:
             "max_length": 1024,
         },
     )
-    message_set_by: MultilingualString | None = field(
+    message_set_by: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "messageSetBy",
@@ -90,7 +90,7 @@ class VmsMessage:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    set_by_system: bool | None = field(
+    set_by_system: None | bool = field(
         default=None,
         metadata={
             "name": "setBySystem",
@@ -98,7 +98,7 @@ class VmsMessage:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    reason_for_setting: MultilingualString | None = field(
+    reason_for_setting: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "reasonForSetting",
@@ -106,7 +106,7 @@ class VmsMessage:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    coded_reason_for_setting: CodedReasonForSettingMessageEnum | None = field(
+    coded_reason_for_setting: None | CodedReasonForSettingMessageEnum = field(
         default=None,
         metadata={
             "name": "codedReasonForSetting",
@@ -122,7 +122,7 @@ class VmsMessage:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    primary_setting: bool | None = field(
+    primary_setting: None | bool = field(
         default=None,
         metadata={
             "name": "primarySetting",
@@ -130,7 +130,7 @@ class VmsMessage:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    mare_nostrum_compliant: bool | None = field(
+    mare_nostrum_compliant: None | bool = field(
         default=None,
         metadata={
             "name": "mareNostrumCompliant",
@@ -138,7 +138,7 @@ class VmsMessage:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    time_last_set: XmlDateTime | None = field(
+    time_last_set: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "timeLastSet",
@@ -147,7 +147,7 @@ class VmsMessage:
             "required": True,
         },
     )
-    requested_by: MultilingualString | None = field(
+    requested_by: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "requestedBy",
@@ -155,7 +155,7 @@ class VmsMessage:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    situation_to_which_message_is_related: VersionedReference | None = field(
+    situation_to_which_message_is_related: None | VersionedReference = field(
         default=None,
         metadata={
             "name": "situationToWhichMessageIsRelated",
@@ -163,7 +163,7 @@ class VmsMessage:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    situation_record_to_which_message_is_related: VersionedReference | None = (
+    situation_record_to_which_message_is_related: None | VersionedReference = (
         field(
             default=None,
             metadata={
@@ -173,7 +173,7 @@ class VmsMessage:
             },
         )
     )
-    distance_from_situation_record: float | None = field(
+    distance_from_situation_record: None | float = field(
         default=None,
         metadata={
             "name": "distanceFromSituationRecord",
@@ -181,7 +181,7 @@ class VmsMessage:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    text_pictogram_sequencing_interval: float | None = field(
+    text_pictogram_sequencing_interval: None | float = field(
         default=None,
         metadata={
             "name": "textPictogramSequencingInterval",
@@ -207,7 +207,7 @@ class VmsMessage:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    vms_message_extension: ExtensionType | None = field(
+    vms_message_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "vmsMessageExtension",

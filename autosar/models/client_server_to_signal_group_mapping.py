@@ -96,7 +96,7 @@ class ClientServerToSignalGroupMapping:
     class Meta:
         name = "CLIENT-SERVER-TO-SIGNAL-GROUP-MAPPING"
 
-    communication_direction: CommunicationDirectionType | None = field(
+    communication_direction: None | CommunicationDirectionType = field(
         default=None,
         metadata={
             "name": "COMMUNICATION-DIRECTION",
@@ -105,7 +105,7 @@ class ClientServerToSignalGroupMapping:
         },
     )
     event_group_refs: (
-        ClientServerToSignalGroupMapping.EventGroupRefs | None
+        None | ClientServerToSignalGroupMapping.EventGroupRefs
     ) = field(
         default=None,
         metadata={
@@ -115,7 +115,7 @@ class ClientServerToSignalGroupMapping:
         },
     )
     event_handler_refs: (
-        ClientServerToSignalGroupMapping.EventHandlerRefs | None
+        None | ClientServerToSignalGroupMapping.EventHandlerRefs
     ) = field(
         default=None,
         metadata={
@@ -124,7 +124,7 @@ class ClientServerToSignalGroupMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -133,7 +133,7 @@ class ClientServerToSignalGroupMapping:
         },
     )
     service_instance_refs: (
-        ClientServerToSignalGroupMapping.ServiceInstanceRefs | None
+        None | ClientServerToSignalGroupMapping.ServiceInstanceRefs
     ) = field(
         default=None,
         metadata={
@@ -142,7 +142,7 @@ class ClientServerToSignalGroupMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -150,7 +150,7 @@ class ClientServerToSignalGroupMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    application_error: ApplicationErrorMapping | None = field(
+    application_error: None | ApplicationErrorMapping = field(
         default=None,
         metadata={
             "name": "APPLICATION-ERROR",
@@ -158,7 +158,7 @@ class ClientServerToSignalGroupMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    client_id: ClientIdMapping | None = field(
+    client_id: None | ClientIdMapping = field(
         default=None,
         metadata={
             "name": "CLIENT-ID",
@@ -167,7 +167,7 @@ class ClientServerToSignalGroupMapping:
         },
     )
     composite_type_mappings: (
-        ClientServerToSignalGroupMapping.CompositeTypeMappings | None
+        None | ClientServerToSignalGroupMapping.CompositeTypeMappings
     ) = field(
         default=None,
         metadata={
@@ -176,7 +176,7 @@ class ClientServerToSignalGroupMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    empty_signal: EmptySignalMapping | None = field(
+    empty_signal: None | EmptySignalMapping = field(
         default=None,
         metadata={
             "name": "EMPTY-SIGNAL",
@@ -184,7 +184,7 @@ class ClientServerToSignalGroupMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    mapped_operation_iref: OperationInSystemInstanceRef | None = field(
+    mapped_operation_iref: None | OperationInSystemInstanceRef = field(
         default=None,
         metadata={
             "name": "MAPPED-OPERATION-IREF",
@@ -193,7 +193,7 @@ class ClientServerToSignalGroupMapping:
         },
     )
     primitive_type_mappings: (
-        ClientServerToSignalGroupMapping.PrimitiveTypeMappings | None
+        None | ClientServerToSignalGroupMapping.PrimitiveTypeMappings
     ) = field(
         default=None,
         metadata={
@@ -203,7 +203,7 @@ class ClientServerToSignalGroupMapping:
         },
     )
     request_group_ref: (
-        ClientServerToSignalGroupMapping.RequestGroupRef | None
+        None | ClientServerToSignalGroupMapping.RequestGroupRef
     ) = field(
         default=None,
         metadata={
@@ -213,7 +213,7 @@ class ClientServerToSignalGroupMapping:
         },
     )
     response_group_ref: (
-        ClientServerToSignalGroupMapping.ResponseGroupRef | None
+        None | ClientServerToSignalGroupMapping.ResponseGroupRef
     ) = field(
         default=None,
         metadata={
@@ -222,7 +222,7 @@ class ClientServerToSignalGroupMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sequence_counter: SequenceCounterMapping | None = field(
+    sequence_counter: None | SequenceCounterMapping = field(
         default=None,
         metadata={
             "name": "SEQUENCE-COUNTER",
@@ -230,14 +230,14 @@ class ClientServerToSignalGroupMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -261,7 +261,7 @@ class ClientServerToSignalGroupMapping:
 
         @dataclass
         class EventGroupRef(Ref):
-            dest: ConsumedEventGroupSubtypesEnum | None = field(
+            dest: None | ConsumedEventGroupSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -285,7 +285,7 @@ class ClientServerToSignalGroupMapping:
 
         @dataclass
         class EventHandlerRef(Ref):
-            dest: EventHandlerSubtypesEnum | None = field(
+            dest: None | EventHandlerSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -309,7 +309,7 @@ class ClientServerToSignalGroupMapping:
 
         @dataclass
         class ServiceInstanceRef(Ref):
-            dest: AbstractServiceInstanceSubtypesEnum | None = field(
+            dest: None | AbstractServiceInstanceSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -356,7 +356,7 @@ class ClientServerToSignalGroupMapping:
 
     @dataclass
     class RequestGroupRef(Ref):
-        dest: SystemSignalGroupSubtypesEnum | None = field(
+        dest: None | SystemSignalGroupSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -367,7 +367,7 @@ class ClientServerToSignalGroupMapping:
 
     @dataclass
     class ResponseGroupRef(Ref):
-        dest: SystemSignalGroupSubtypesEnum | None = field(
+        dest: None | SystemSignalGroupSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

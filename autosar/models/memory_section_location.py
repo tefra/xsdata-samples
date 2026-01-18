@@ -34,7 +34,7 @@ class MemorySectionLocation:
     class Meta:
         name = "MEMORY-SECTION-LOCATION"
 
-    provided_memory_ref: MemorySectionLocation.ProvidedMemoryRef | None = (
+    provided_memory_ref: None | MemorySectionLocation.ProvidedMemoryRef = (
         field(
             default=None,
             metadata={
@@ -45,7 +45,7 @@ class MemorySectionLocation:
         )
     )
     software_memory_section_ref: (
-        MemorySectionLocation.SoftwareMemorySectionRef | None
+        None | MemorySectionLocation.SoftwareMemorySectionRef
     ) = field(
         default=None,
         metadata={
@@ -54,14 +54,14 @@ class MemorySectionLocation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -72,7 +72,7 @@ class MemorySectionLocation:
 
     @dataclass
     class ProvidedMemoryRef(Ref):
-        dest: HwElementSubtypesEnum | None = field(
+        dest: None | HwElementSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -83,7 +83,7 @@ class MemorySectionLocation:
 
     @dataclass
     class SoftwareMemorySectionRef(Ref):
-        dest: MemorySectionSubtypesEnum | None = field(
+        dest: None | MemorySectionSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

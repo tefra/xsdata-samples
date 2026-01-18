@@ -35,7 +35,7 @@ class SecurityEventDefinitionRefConditional:
         name = "SECURITY-EVENT-DEFINITION-REF-CONDITIONAL"
 
     security_event_definition_ref: (
-        SecurityEventDefinitionRefConditional.SecurityEventDefinitionRef | None
+        None | SecurityEventDefinitionRefConditional.SecurityEventDefinitionRef
     ) = field(
         default=None,
         metadata={
@@ -44,7 +44,7 @@ class SecurityEventDefinitionRefConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -52,14 +52,14 @@ class SecurityEventDefinitionRefConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -70,7 +70,7 @@ class SecurityEventDefinitionRefConditional:
 
     @dataclass
     class SecurityEventDefinitionRef(Ref):
-        dest: SecurityEventDefinitionSubtypesEnum | None = field(
+        dest: None | SecurityEventDefinitionSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

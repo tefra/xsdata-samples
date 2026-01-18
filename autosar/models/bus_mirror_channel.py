@@ -33,7 +33,7 @@ class BusMirrorChannel:
     class Meta:
         name = "BUS-MIRROR-CHANNEL"
 
-    bus_mirror_network_id: PositiveInteger | None = field(
+    bus_mirror_network_id: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "BUS-MIRROR-NETWORK-ID",
@@ -41,7 +41,7 @@ class BusMirrorChannel:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    channels: BusMirrorChannel.Channels | None = field(
+    channels: None | BusMirrorChannel.Channels = field(
         default=None,
         metadata={
             "name": "CHANNELS",
@@ -49,14 +49,14 @@ class BusMirrorChannel:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

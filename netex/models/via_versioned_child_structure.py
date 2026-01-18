@@ -25,10 +25,10 @@ class ViaVersionedChildStructure(VersionedChildStructure):
         name = "Via_VersionedChildStructure"
 
     destination_display_ref_or_destination_display_view_or_name: (
-        DestinationDisplayRef
+        None
+        | DestinationDisplayRef
         | DestinationDisplayView
         | MultilingualString
-        | None
     ) = field(
         default=None,
         metadata={
@@ -53,7 +53,8 @@ class ViaVersionedChildStructure(VersionedChildStructure):
         },
     )
     choice: (
-        BorderPointRef
+        None
+        | BorderPointRef
         | FareScheduledStopPointRef
         | ScheduledStopPointRef
         | GaragePointRef
@@ -61,7 +62,6 @@ class ViaVersionedChildStructure(VersionedChildStructure):
         | ReliefPointRef
         | TimingPointRef
         | RoutePointRef
-        | None
     ) = field(
         default=None,
         metadata={
@@ -110,7 +110,7 @@ class ViaVersionedChildStructure(VersionedChildStructure):
             ),
         },
     )
-    via_type: ViaTypeEnumeration | None = field(
+    via_type: None | ViaTypeEnumeration = field(
         default=None,
         metadata={
             "name": "ViaType",

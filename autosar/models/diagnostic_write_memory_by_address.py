@@ -103,7 +103,7 @@ class DiagnosticWriteMemoryByAddress:
     class Meta:
         name = "DIAGNOSTIC-WRITE-MEMORY-BY-ADDRESS"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -113,7 +113,7 @@ class DiagnosticWriteMemoryByAddress:
         },
     )
     short_name_fragments: (
-        DiagnosticWriteMemoryByAddress.ShortNameFragments | None
+        None | DiagnosticWriteMemoryByAddress.ShortNameFragments
     ) = field(
         default=None,
         metadata={
@@ -122,7 +122,7 @@ class DiagnosticWriteMemoryByAddress:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -130,7 +130,7 @@ class DiagnosticWriteMemoryByAddress:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -138,7 +138,7 @@ class DiagnosticWriteMemoryByAddress:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -146,7 +146,7 @@ class DiagnosticWriteMemoryByAddress:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -154,7 +154,7 @@ class DiagnosticWriteMemoryByAddress:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -162,7 +162,7 @@ class DiagnosticWriteMemoryByAddress:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: DiagnosticWriteMemoryByAddress.Annotations | None = field(
+    annotations: None | DiagnosticWriteMemoryByAddress.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -170,7 +170,7 @@ class DiagnosticWriteMemoryByAddress:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -179,7 +179,7 @@ class DiagnosticWriteMemoryByAddress:
         },
     )
     access_permission_ref: (
-        DiagnosticWriteMemoryByAddress.AccessPermissionRef | None
+        None | DiagnosticWriteMemoryByAddress.AccessPermissionRef
     ) = field(
         default=None,
         metadata={
@@ -189,7 +189,7 @@ class DiagnosticWriteMemoryByAddress:
         },
     )
     memory_range_refs: (
-        DiagnosticWriteMemoryByAddress.MemoryRangeRefs | None
+        None | DiagnosticWriteMemoryByAddress.MemoryRangeRefs
     ) = field(
         default=None,
         metadata={
@@ -198,7 +198,7 @@ class DiagnosticWriteMemoryByAddress:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    write_class_ref: DiagnosticWriteMemoryByAddress.WriteClassRef | None = (
+    write_class_ref: None | DiagnosticWriteMemoryByAddress.WriteClassRef = (
         field(
             default=None,
             metadata={
@@ -208,14 +208,14 @@ class DiagnosticWriteMemoryByAddress:
             },
         )
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -223,7 +223,7 @@ class DiagnosticWriteMemoryByAddress:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -255,7 +255,7 @@ class DiagnosticWriteMemoryByAddress:
 
     @dataclass
     class AccessPermissionRef(Ref):
-        dest: DiagnosticAccessPermissionSubtypesEnum | None = field(
+        dest: None | DiagnosticAccessPermissionSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -279,7 +279,7 @@ class DiagnosticWriteMemoryByAddress:
 
         @dataclass
         class MemoryRangeRef(Ref):
-            dest: DiagnosticMemoryIdentifierSubtypesEnum | None = field(
+            dest: None | DiagnosticMemoryIdentifierSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -290,7 +290,7 @@ class DiagnosticWriteMemoryByAddress:
 
     @dataclass
     class WriteClassRef(Ref):
-        dest: DiagnosticWriteMemoryByAddressClassSubtypesEnum | None = field(
+        dest: None | DiagnosticWriteMemoryByAddressClassSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

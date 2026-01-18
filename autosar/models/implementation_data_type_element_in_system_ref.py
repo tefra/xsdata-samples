@@ -69,7 +69,7 @@ class ImplementationDataTypeElementInSystemRef:
     class Meta:
         name = "IMPLEMENTATION-DATA-TYPE-ELEMENT-IN-SYSTEM-REF"
 
-    tag_id: PositiveInteger | None = field(
+    tag_id: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "TAG-ID",
@@ -77,7 +77,7 @@ class ImplementationDataTypeElementInSystemRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    base_ref: ImplementationDataTypeElementInSystemRef.BaseRef | None = field(
+    base_ref: None | ImplementationDataTypeElementInSystemRef.BaseRef = field(
         default=None,
         metadata={
             "name": "BASE-REF",
@@ -86,7 +86,7 @@ class ImplementationDataTypeElementInSystemRef:
         },
     )
     context_swc_prototype_refs: (
-        ImplementationDataTypeElementInSystemRef.ContextSwcPrototypeRefs | None
+        None | ImplementationDataTypeElementInSystemRef.ContextSwcPrototypeRefs
     ) = field(
         default=None,
         metadata={
@@ -96,7 +96,7 @@ class ImplementationDataTypeElementInSystemRef:
         },
     )
     context_port_prototype_ref: (
-        ImplementationDataTypeElementInSystemRef.ContextPortPrototypeRef | None
+        None | ImplementationDataTypeElementInSystemRef.ContextPortPrototypeRef
     ) = field(
         default=None,
         metadata={
@@ -106,7 +106,7 @@ class ImplementationDataTypeElementInSystemRef:
         },
     )
     root_data_prototype_ref: (
-        ImplementationDataTypeElementInSystemRef.RootDataPrototypeRef | None
+        None | ImplementationDataTypeElementInSystemRef.RootDataPrototypeRef
     ) = field(
         default=None,
         metadata={
@@ -116,8 +116,8 @@ class ImplementationDataTypeElementInSystemRef:
         },
     )
     context_implementation_data_element_refs: (
-        ImplementationDataTypeElementInSystemRef.ContextImplementationDataElementRefs
-        | None
+        None
+        | ImplementationDataTypeElementInSystemRef.ContextImplementationDataElementRefs
     ) = field(
         default=None,
         metadata={
@@ -127,8 +127,8 @@ class ImplementationDataTypeElementInSystemRef:
         },
     )
     target_implementation_data_type_element_ref: (
-        ImplementationDataTypeElementInSystemRef.TargetImplementationDataTypeElementRef
-        | None
+        None
+        | ImplementationDataTypeElementInSystemRef.TargetImplementationDataTypeElementRef
     ) = field(
         default=None,
         metadata={
@@ -137,14 +137,14 @@ class ImplementationDataTypeElementInSystemRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -155,7 +155,7 @@ class ImplementationDataTypeElementInSystemRef:
 
     @dataclass
     class BaseRef(Ref):
-        dest: SystemSubtypesEnum | None = field(
+        dest: None | SystemSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -179,7 +179,7 @@ class ImplementationDataTypeElementInSystemRef:
 
         @dataclass
         class ContextSwcPrototypeRef(Ref):
-            dest: SwComponentPrototypeSubtypesEnum | None = field(
+            dest: None | SwComponentPrototypeSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -190,7 +190,7 @@ class ImplementationDataTypeElementInSystemRef:
 
     @dataclass
     class ContextPortPrototypeRef(Ref):
-        dest: PortPrototypeSubtypesEnum | None = field(
+        dest: None | PortPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -201,7 +201,7 @@ class ImplementationDataTypeElementInSystemRef:
 
     @dataclass
     class RootDataPrototypeRef(Ref):
-        dest: AutosarDataPrototypeSubtypesEnum | None = field(
+        dest: None | AutosarDataPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -225,7 +225,7 @@ class ImplementationDataTypeElementInSystemRef:
 
         @dataclass
         class ContextImplementationDataElementRef(Ref):
-            dest: ImplementationDataTypeElementSubtypesEnum | None = field(
+            dest: None | ImplementationDataTypeElementSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -236,7 +236,7 @@ class ImplementationDataTypeElementInSystemRef:
 
     @dataclass
     class TargetImplementationDataTypeElementRef(Ref):
-        dest: ImplementationDataTypeElementSubtypesEnum | None = field(
+        dest: None | ImplementationDataTypeElementSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

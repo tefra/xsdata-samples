@@ -22,14 +22,14 @@ class TInterface(TRootElement):
             "min_occurs": 1,
         },
     )
-    name: str | None = field(
+    name: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "required": True,
         },
     )
-    implementation_ref: QName | None = field(
+    implementation_ref: None | QName = field(
         default=None,
         metadata={
             "name": "implementationRef",

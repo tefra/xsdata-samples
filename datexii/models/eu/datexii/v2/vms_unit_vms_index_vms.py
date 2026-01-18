@@ -12,7 +12,7 @@ class VmsUnitVmsIndexVms:
     class Meta:
         name = "_VmsUnitVmsIndexVms"
 
-    vms: Vms | None = field(
+    vms: None | Vms = field(
         default=None,
         metadata={
             "type": "Element",
@@ -20,7 +20,7 @@ class VmsUnitVmsIndexVms:
             "required": True,
         },
     )
-    vms_index: int | None = field(
+    vms_index: None | int = field(
         default=None,
         metadata={
             "name": "vmsIndex",

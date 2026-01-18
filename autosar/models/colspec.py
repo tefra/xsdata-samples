@@ -41,14 +41,14 @@ class Colspec:
     class Meta:
         name = "COLSPEC"
 
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -56,28 +56,28 @@ class Colspec:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    align: AlignEnumSimple | None = field(
+    align: None | AlignEnumSimple = field(
         default=None,
         metadata={
             "name": "ALIGN",
             "type": "Attribute",
         },
     )
-    colname: str | None = field(
+    colname: None | str = field(
         default=None,
         metadata={
             "name": "COLNAME",
             "type": "Attribute",
         },
     )
-    colnum: str | None = field(
+    colnum: None | str = field(
         default=None,
         metadata={
             "name": "COLNUM",
             "type": "Attribute",
         },
     )
-    colsep: str | None = field(
+    colsep: None | str = field(
         default=None,
         metadata={
             "name": "COLSEP",
@@ -85,14 +85,14 @@ class Colspec:
             "pattern": r"[0-1]",
         },
     )
-    colwidth: str | None = field(
+    colwidth: None | str = field(
         default=None,
         metadata={
             "name": "COLWIDTH",
             "type": "Attribute",
         },
     )
-    rowsep: str | None = field(
+    rowsep: None | str = field(
         default=None,
         metadata={
             "name": "ROWSEP",

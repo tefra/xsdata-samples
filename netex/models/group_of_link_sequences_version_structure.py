@@ -15,7 +15,7 @@ class GroupOfLinkSequencesVersionStructure(GroupOfEntitiesVersionStructure):
     class Meta:
         name = "GroupOfLinkSequences_VersionStructure"
 
-    members: LinkSequenceRefsRelStructure | None = field(
+    members: None | LinkSequenceRefsRelStructure = field(
         default=None,
         metadata={
             "type": "Element",

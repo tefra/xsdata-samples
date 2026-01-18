@@ -20,7 +20,7 @@ class OccupancyChangeValue(DataValue):
     :ivar occupancy_change_value_extension:
     """
 
-    occupancy_change: int | None = field(
+    occupancy_change: None | int = field(
         default=None,
         metadata={
             "name": "occupancyChange",
@@ -29,7 +29,7 @@ class OccupancyChangeValue(DataValue):
             "required": True,
         },
     )
-    occupancy_change_value_extension: ExtensionType | None = field(
+    occupancy_change_value_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "occupancyChangeValueExtension",

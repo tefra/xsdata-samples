@@ -38,8 +38,8 @@ class SwcServiceDependencyInExecutableInstanceRef:
         name = "SWC-SERVICE-DEPENDENCY-IN-EXECUTABLE-INSTANCE-REF"
 
     context_root_component_ref: (
-        SwcServiceDependencyInExecutableInstanceRef.ContextRootComponentRef
-        | None
+        None
+        | SwcServiceDependencyInExecutableInstanceRef.ContextRootComponentRef
     ) = field(
         default=None,
         metadata={
@@ -59,8 +59,8 @@ class SwcServiceDependencyInExecutableInstanceRef:
         },
     )
     target_swc_service_dependency_ref: (
-        SwcServiceDependencyInExecutableInstanceRef.TargetSwcServiceDependencyRef
-        | None
+        None
+        | SwcServiceDependencyInExecutableInstanceRef.TargetSwcServiceDependencyRef
     ) = field(
         default=None,
         metadata={
@@ -69,14 +69,14 @@ class SwcServiceDependencyInExecutableInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -87,7 +87,7 @@ class SwcServiceDependencyInExecutableInstanceRef:
 
     @dataclass
     class ContextRootComponentRef(Ref):
-        dest: RootSwComponentPrototypeSubtypesEnum | None = field(
+        dest: None | RootSwComponentPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -98,7 +98,7 @@ class SwcServiceDependencyInExecutableInstanceRef:
 
     @dataclass
     class ContextComponentRef(Ref):
-        dest: SwComponentPrototypeSubtypesEnum | None = field(
+        dest: None | SwComponentPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -109,7 +109,7 @@ class SwcServiceDependencyInExecutableInstanceRef:
 
     @dataclass
     class TargetSwcServiceDependencyRef(Ref):
-        dest: SwcServiceDependencySubtypesEnum | None = field(
+        dest: None | SwcServiceDependencySubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

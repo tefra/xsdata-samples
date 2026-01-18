@@ -24,7 +24,7 @@ class SubscribingVersionStructure(UsageParameterVersionStructure):
     class Meta:
         name = "Subscribing_VersionStructure"
 
-    subscription_term_type: SubscriptionTermTypeEnumeration | None = field(
+    subscription_term_type: None | SubscriptionTermTypeEnumeration = field(
         default=None,
         metadata={
             "name": "SubscriptionTermType",
@@ -32,7 +32,7 @@ class SubscribingVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    minimum_subscription_period: XmlDuration | None = field(
+    minimum_subscription_period: None | XmlDuration = field(
         default=None,
         metadata={
             "name": "MinimumSubscriptionPeriod",
@@ -40,7 +40,7 @@ class SubscribingVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    maximum_subscription_period: XmlDuration | None = field(
+    maximum_subscription_period: None | XmlDuration = field(
         default=None,
         metadata={
             "name": "MaximumSubscriptionPeriod",
@@ -49,7 +49,7 @@ class SubscribingVersionStructure(UsageParameterVersionStructure):
         },
     )
     subscription_renewal_policy: (
-        SubscriptionRenewalPolicyEnumeration | None
+        None | SubscriptionRenewalPolicyEnumeration
     ) = field(
         default=None,
         metadata={
@@ -58,7 +58,7 @@ class SubscribingVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    possible_installmentt_intervals: TimeIntervalRefsRelStructure | None = (
+    possible_installmentt_intervals: None | TimeIntervalRefsRelStructure = (
         field(
             default=None,
             metadata={
@@ -78,7 +78,7 @@ class SubscribingVersionStructure(UsageParameterVersionStructure):
         },
     )
     installment_types_of_payment_method: (
-        TypeOfPaymentMethodRefsRelStructure | None
+        None | TypeOfPaymentMethodRefsRelStructure
     ) = field(
         default=None,
         metadata={

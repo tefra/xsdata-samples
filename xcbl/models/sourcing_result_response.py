@@ -101,7 +101,7 @@ class Purpose:
             "required": True,
         }
     )
-    purpose_coded_other: PurposeCodedOther | None = field(
+    purpose_coded_other: None | PurposeCodedOther = field(
         default=None,
         metadata={
             "name": "PurposeCodedOther",
@@ -180,7 +180,7 @@ class SourcingResultResponse:
             "required": True,
         }
     )
-    sourcing_result_reference: SourcingResultReference | None = field(
+    sourcing_result_reference: None | SourcingResultReference = field(
         default=None,
         metadata={
             "name": "SourcingResultReference",
@@ -195,7 +195,7 @@ class SourcingResultResponse:
         }
     )
     sourcing_result_response_coded_other: (
-        SourcingResultResponseCodedOther | None
+        None | SourcingResultResponseCodedOther
     ) = field(
         default=None,
         metadata={
@@ -210,7 +210,7 @@ class SourcingResultResponse:
             "required": True,
         }
     )
-    general_note: GeneralNote | None = field(
+    general_note: None | GeneralNote = field(
         default=None,
         metadata={
             "name": "GeneralNote",

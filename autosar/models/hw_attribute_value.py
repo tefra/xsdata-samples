@@ -45,7 +45,7 @@ class HwAttributeValue:
     class Meta:
         name = "HW-ATTRIBUTE-VALUE"
 
-    annotation: Annotation | None = field(
+    annotation: None | Annotation = field(
         default=None,
         metadata={
             "name": "ANNOTATION",
@@ -53,7 +53,7 @@ class HwAttributeValue:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    hw_attribute_def_ref: HwAttributeValue.HwAttributeDefRef | None = field(
+    hw_attribute_def_ref: None | HwAttributeValue.HwAttributeDefRef = field(
         default=None,
         metadata={
             "name": "HW-ATTRIBUTE-DEF-REF",
@@ -61,7 +61,7 @@ class HwAttributeValue:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    v: NumericalValueVariationPoint | None = field(
+    v: None | NumericalValueVariationPoint = field(
         default=None,
         metadata={
             "name": "V",
@@ -69,7 +69,7 @@ class HwAttributeValue:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    vt: VerbatimString | None = field(
+    vt: None | VerbatimString = field(
         default=None,
         metadata={
             "name": "VT",
@@ -77,7 +77,7 @@ class HwAttributeValue:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -85,14 +85,14 @@ class HwAttributeValue:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -103,7 +103,7 @@ class HwAttributeValue:
 
     @dataclass
     class HwAttributeDefRef(Ref):
-        dest: HwAttributeDefSubtypesEnum | None = field(
+        dest: None | HwAttributeDefSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

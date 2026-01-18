@@ -14,7 +14,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 @dataclass
 class DeltaStructure:
-    simple_object_ref: SimpleObjectRef | None = field(
+    simple_object_ref: None | SimpleObjectRef = field(
         default=None,
         metadata={
             "name": "SimpleObjectRef",
@@ -22,7 +22,7 @@ class DeltaStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    from_version_ref: SimpleObjectRefStructure | None = field(
+    from_version_ref: None | SimpleObjectRefStructure = field(
         default=None,
         metadata={
             "name": "FromVersionRef",
@@ -30,7 +30,7 @@ class DeltaStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    to_version_ref: SimpleObjectRefStructure | None = field(
+    to_version_ref: None | SimpleObjectRefStructure = field(
         default=None,
         metadata={
             "name": "ToVersionRef",
@@ -39,7 +39,7 @@ class DeltaStructure:
             "required": True,
         },
     )
-    modification: ModificationEnumeration | None = field(
+    modification: None | ModificationEnumeration = field(
         default=None,
         metadata={
             "name": "Modification",
@@ -47,7 +47,7 @@ class DeltaStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    delta_values: DeltaValuesRelStructure | None = field(
+    delta_values: None | DeltaValuesRelStructure = field(
         default=None,
         metadata={
             "name": "deltaValues",
@@ -55,13 +55,13 @@ class DeltaStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    created: XmlDateTime | None = field(
+    created: None | XmlDateTime = field(
         default=None,
         metadata={
             "type": "Attribute",

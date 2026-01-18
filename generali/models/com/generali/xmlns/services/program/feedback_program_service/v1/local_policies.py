@@ -16,7 +16,7 @@ class LocalPolicies:
     class Meta:
         namespace = "http://xmlns.generali.com/services/program/FeedbackProgramService/v1"
 
-    local_policy: LocalPolicy | None = field(
+    local_policy: None | LocalPolicy = field(
         default=None,
         metadata={
             "name": "LocalPolicy",

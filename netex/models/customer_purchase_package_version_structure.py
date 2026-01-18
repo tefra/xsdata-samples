@@ -45,7 +45,7 @@ class CustomerPurchasePackageVersionStructure(PriceableObjectVersionStructure):
     class Meta:
         name = "CustomerPurchasePackage_VersionStructure"
 
-    private_code: PrivateCode | None = field(
+    private_code: None | PrivateCode = field(
         default=None,
         metadata={
             "name": "PrivateCode",
@@ -53,7 +53,7 @@ class CustomerPurchasePackageVersionStructure(PriceableObjectVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    sales_offer_package_ref: SalesOfferPackageRef | None = field(
+    sales_offer_package_ref: None | SalesOfferPackageRef = field(
         default=None,
         metadata={
             "name": "SalesOfferPackageRef",
@@ -61,7 +61,7 @@ class CustomerPurchasePackageVersionStructure(PriceableObjectVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    customer_ref: CustomerRef | None = field(
+    customer_ref: None | CustomerRef = field(
         default=None,
         metadata={
             "name": "CustomerRef",
@@ -69,7 +69,7 @@ class CustomerPurchasePackageVersionStructure(PriceableObjectVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    customer_account_ref: CustomerAccountRef | None = field(
+    customer_account_ref: None | CustomerAccountRef = field(
         default=None,
         metadata={
             "name": "CustomerAccountRef",
@@ -77,7 +77,7 @@ class CustomerPurchasePackageVersionStructure(PriceableObjectVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    fare_contract_ref: FareContractRef | None = field(
+    fare_contract_ref: None | FareContractRef = field(
         default=None,
         metadata={
             "name": "FareContractRef",
@@ -86,7 +86,7 @@ class CustomerPurchasePackageVersionStructure(PriceableObjectVersionStructure):
         },
     )
     customer_purchase_package_status: (
-        CustomerPurchasePackageStatusEnumeration | None
+        None | CustomerPurchasePackageStatusEnumeration
     ) = field(
         default=None,
         metadata={
@@ -96,7 +96,7 @@ class CustomerPurchasePackageVersionStructure(PriceableObjectVersionStructure):
         },
     )
     travel_specification_summary_view: (
-        TravelSpecificationSummaryView | None
+        None | TravelSpecificationSummaryView
     ) = field(
         default=None,
         metadata={
@@ -105,7 +105,7 @@ class CustomerPurchasePackageVersionStructure(PriceableObjectVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    travel_specifications: TravelSpecificationsRelStructure | None = field(
+    travel_specifications: None | TravelSpecificationsRelStructure = field(
         default=None,
         metadata={
             "name": "travelSpecifications",
@@ -114,7 +114,7 @@ class CustomerPurchasePackageVersionStructure(PriceableObjectVersionStructure):
         },
     )
     validity_parameter_assignments: (
-        CustomerPurchaseParameterAssignmentsRelStructure | None
+        None | CustomerPurchaseParameterAssignmentsRelStructure
     ) = field(
         default=None,
         metadata={
@@ -123,7 +123,7 @@ class CustomerPurchasePackageVersionStructure(PriceableObjectVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    distribution_assignments: DistributionAssignmentsRelStructure | None = (
+    distribution_assignments: None | DistributionAssignmentsRelStructure = (
         field(
             default=None,
             metadata={
@@ -134,7 +134,7 @@ class CustomerPurchasePackageVersionStructure(PriceableObjectVersionStructure):
         )
     )
     customer_purchase_package_elements: (
-        CustomerPurchasePackageElementsRelStructure | None
+        None | CustomerPurchasePackageElementsRelStructure
     ) = field(
         default=None,
         metadata={
@@ -143,7 +143,7 @@ class CustomerPurchasePackageVersionStructure(PriceableObjectVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    sales_transaction_ref: SalesTransactionRef | None = field(
+    sales_transaction_ref: None | SalesTransactionRef = field(
         default=None,
         metadata={
             "name": "SalesTransactionRef",
@@ -151,7 +151,7 @@ class CustomerPurchasePackageVersionStructure(PriceableObjectVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    sales_transactions: SalesTransactionRefsRelStructure | None = field(
+    sales_transactions: None | SalesTransactionRefsRelStructure = field(
         default=None,
         metadata={
             "name": "salesTransactions",
@@ -159,14 +159,14 @@ class CustomerPurchasePackageVersionStructure(PriceableObjectVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    prices: CustomerPurchasePackagePricesRelStructure | None = field(
+    prices: None | CustomerPurchasePackagePricesRelStructure = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    travel_documents: TravelDocumentsRelStructure | None = field(
+    travel_documents: None | TravelDocumentsRelStructure = field(
         default=None,
         metadata={
             "name": "travelDocuments",
@@ -175,7 +175,7 @@ class CustomerPurchasePackageVersionStructure(PriceableObjectVersionStructure):
         },
     )
     medium_access_device_ref: (
-        MobileDeviceRef | EmvCardRef | SmartcardRef | None
+        None | MobileDeviceRef | EmvCardRef | SmartcardRef
     ) = field(
         default=None,
         metadata={
@@ -199,7 +199,7 @@ class CustomerPurchasePackageVersionStructure(PriceableObjectVersionStructure):
             ),
         },
     )
-    medium_application_instance_ref: MediumApplicationInstanceRef | None = (
+    medium_application_instance_ref: None | MediumApplicationInstanceRef = (
         field(
             default=None,
             metadata={

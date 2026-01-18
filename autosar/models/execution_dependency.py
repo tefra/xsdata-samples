@@ -31,7 +31,7 @@ class ExecutionDependency:
     class Meta:
         name = "EXECUTION-DEPENDENCY"
 
-    process_state_iref: ModeInProcessInstanceRef | None = field(
+    process_state_iref: None | ModeInProcessInstanceRef = field(
         default=None,
         metadata={
             "name": "PROCESS-STATE-IREF",
@@ -39,14 +39,14 @@ class ExecutionDependency:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

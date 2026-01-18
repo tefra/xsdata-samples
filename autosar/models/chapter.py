@@ -180,7 +180,7 @@ class Chapter:
     class Meta:
         name = "CHAPTER"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -189,7 +189,7 @@ class Chapter:
             "required": True,
         },
     )
-    short_name_fragments: Chapter.ShortNameFragments | None = field(
+    short_name_fragments: None | Chapter.ShortNameFragments = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -197,7 +197,7 @@ class Chapter:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -205,7 +205,7 @@ class Chapter:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -213,7 +213,7 @@ class Chapter:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -221,7 +221,7 @@ class Chapter:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -229,7 +229,7 @@ class Chapter:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -237,7 +237,7 @@ class Chapter:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Chapter.Annotations | None = field(
+    annotations: None | Chapter.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -397,7 +397,7 @@ class Chapter:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -405,14 +405,14 @@ class Chapter:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -420,7 +420,7 @@ class Chapter:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -435,7 +435,7 @@ class Chapter:
             "tokens": True,
         },
     )
-    view: str | None = field(
+    view: None | str = field(
         default=None,
         metadata={
             "name": "VIEW",
@@ -443,21 +443,21 @@ class Chapter:
             "pattern": r"(-?[a-zA-Z_]+)(( )+-?[a-zA-Z_]+)*",
         },
     )
-    break_value: ChapterEnumBreakSimple | None = field(
+    break_value: None | ChapterEnumBreakSimple = field(
         default=None,
         metadata={
             "name": "BREAK",
             "type": "Attribute",
         },
     )
-    keep_with_previous: KeepWithPreviousEnumSimple | None = field(
+    keep_with_previous: None | KeepWithPreviousEnumSimple = field(
         default=None,
         metadata={
             "name": "KEEP-WITH-PREVIOUS",
             "type": "Attribute",
         },
     )
-    help_entry: str | None = field(
+    help_entry: None | str = field(
         default=None,
         metadata={
             "name": "HELP-ENTRY",
@@ -518,14 +518,14 @@ class MsrQueryResultChapter:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -572,7 +572,7 @@ class MsrQueryChapter:
     class Meta:
         name = "MSR-QUERY-CHAPTER"
 
-    msr_query_props: MsrQueryProps | None = field(
+    msr_query_props: None | MsrQueryProps = field(
         default=None,
         metadata={
             "name": "MSR-QUERY-PROPS",
@@ -580,7 +580,7 @@ class MsrQueryChapter:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    msr_query_result_chapter: MsrQueryResultChapter | None = field(
+    msr_query_result_chapter: None | MsrQueryResultChapter = field(
         default=None,
         metadata={
             "name": "MSR-QUERY-RESULT-CHAPTER",
@@ -588,14 +588,14 @@ class MsrQueryChapter:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -611,7 +611,7 @@ class MsrQueryChapter:
             "tokens": True,
         },
     )
-    view: str | None = field(
+    view: None | str = field(
         default=None,
         metadata={
             "name": "VIEW",
@@ -619,14 +619,14 @@ class MsrQueryChapter:
             "pattern": r"(-?[a-zA-Z_]+)(( )+-?[a-zA-Z_]+)*",
         },
     )
-    break_value: ChapterEnumBreakSimple | None = field(
+    break_value: None | ChapterEnumBreakSimple = field(
         default=None,
         metadata={
             "name": "BREAK",
             "type": "Attribute",
         },
     )
-    keep_with_previous: KeepWithPreviousEnumSimple | None = field(
+    keep_with_previous: None | KeepWithPreviousEnumSimple = field(
         default=None,
         metadata={
             "name": "KEEP-WITH-PREVIOUS",

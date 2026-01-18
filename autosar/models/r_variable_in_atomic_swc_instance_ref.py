@@ -34,7 +34,7 @@ class RVariableInAtomicSwcInstanceRef:
         name = "R-VARIABLE-IN-ATOMIC-SWC-INSTANCE-REF"
 
     context_r_port_ref: (
-        RVariableInAtomicSwcInstanceRef.ContextRPortRef | None
+        None | RVariableInAtomicSwcInstanceRef.ContextRPortRef
     ) = field(
         default=None,
         metadata={
@@ -44,7 +44,7 @@ class RVariableInAtomicSwcInstanceRef:
         },
     )
     target_data_element_ref: (
-        RVariableInAtomicSwcInstanceRef.TargetDataElementRef | None
+        None | RVariableInAtomicSwcInstanceRef.TargetDataElementRef
     ) = field(
         default=None,
         metadata={
@@ -53,14 +53,14 @@ class RVariableInAtomicSwcInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -71,7 +71,7 @@ class RVariableInAtomicSwcInstanceRef:
 
     @dataclass
     class ContextRPortRef(Ref):
-        dest: AbstractRequiredPortPrototypeSubtypesEnum | None = field(
+        dest: None | AbstractRequiredPortPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -82,7 +82,7 @@ class RVariableInAtomicSwcInstanceRef:
 
     @dataclass
     class TargetDataElementRef(Ref):
-        dest: VariableDataPrototypeSubtypesEnum | None = field(
+        dest: None | VariableDataPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

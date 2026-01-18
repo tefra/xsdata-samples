@@ -21,7 +21,7 @@ class CodespaceAssignmentVersionedChildStructure(VersionedChildStructure):
     class Meta:
         name = "CodespaceAssignment_VersionedChildStructure"
 
-    codespace_ref_or_codespace: CodespaceRef | Codespace | None = field(
+    codespace_ref_or_codespace: None | CodespaceRef | Codespace = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -39,7 +39,7 @@ class CodespaceAssignmentVersionedChildStructure(VersionedChildStructure):
             ),
         },
     )
-    administrative_zone_ref: AdministrativeZoneRef | None = field(
+    administrative_zone_ref: None | AdministrativeZoneRef = field(
         default=None,
         metadata={
             "name": "AdministrativeZoneRef",
@@ -47,7 +47,7 @@ class CodespaceAssignmentVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    start_date: XmlDate | None = field(
+    start_date: None | XmlDate = field(
         default=None,
         metadata={
             "name": "StartDate",
@@ -55,7 +55,7 @@ class CodespaceAssignmentVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    end_date: XmlDate | None = field(
+    end_date: None | XmlDate = field(
         default=None,
         metadata={
             "name": "EndDate",
@@ -63,7 +63,7 @@ class CodespaceAssignmentVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    name_of_class: str | None = field(
+    name_of_class: None | str = field(
         default=None,
         metadata={
             "name": "NameOfClass",
@@ -105,7 +105,7 @@ class CodespaceAssignmentVersionedChildStructure(VersionedChildStructure):
             "max_occurs": 2,
         },
     )
-    maximum_length: int | None = field(
+    maximum_length: None | int = field(
         default=None,
         metadata={
             "name": "MaximumLength",
@@ -113,7 +113,7 @@ class CodespaceAssignmentVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    description: MultilingualString | None = field(
+    description: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "Description",
@@ -121,7 +121,7 @@ class CodespaceAssignmentVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    type_of_codespace_assignment_ref: TypeOfCodespaceAssignmentRef | None = (
+    type_of_codespace_assignment_ref: None | TypeOfCodespaceAssignmentRef = (
         field(
             default=None,
             metadata={
@@ -134,7 +134,7 @@ class CodespaceAssignmentVersionedChildStructure(VersionedChildStructure):
 
     @dataclass
     class StartValue:
-        value: str | None = field(
+        value: None | str = field(
             default=None,
             metadata={
                 "required": True,
@@ -143,7 +143,7 @@ class CodespaceAssignmentVersionedChildStructure(VersionedChildStructure):
 
     @dataclass
     class EndValue:
-        value: str | None = field(
+        value: None | str = field(
             default=None,
             metadata={
                 "required": True,

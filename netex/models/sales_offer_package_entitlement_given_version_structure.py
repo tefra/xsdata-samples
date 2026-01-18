@@ -19,7 +19,7 @@ class SalesOfferPackageEntitlementGivenVersionStructure(
     class Meta:
         name = "SalesOfferPackageEntitlementGiven_VersionStructure"
 
-    sales_offer_package_ref: SalesOfferPackageRef | None = field(
+    sales_offer_package_ref: None | SalesOfferPackageRef = field(
         default=None,
         metadata={
             "name": "SalesOfferPackageRef",
@@ -27,7 +27,7 @@ class SalesOfferPackageEntitlementGivenVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    minimum_qualification_period: XmlDuration | None = field(
+    minimum_qualification_period: None | XmlDuration = field(
         default=None,
         metadata={
             "name": "MinimumQualificationPeriod",
@@ -35,7 +35,7 @@ class SalesOfferPackageEntitlementGivenVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    entitlement_constraint: EntitlementConstraintStructure | None = field(
+    entitlement_constraint: None | EntitlementConstraintStructure = field(
         default=None,
         metadata={
             "name": "EntitlementConstraint",
@@ -43,7 +43,7 @@ class SalesOfferPackageEntitlementGivenVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    entitlement_type: EntitlementTypeEnumeration | None = field(
+    entitlement_type: None | EntitlementTypeEnumeration = field(
         default=None,
         metadata={
             "name": "EntitlementType",

@@ -37,34 +37,34 @@ class ExternalTypeDefinitions:
         name = "externalTypeDefinitions"
         namespace = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
-    name: str | None = field(
+    name: None | str = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
         },
     )
-    display_name: DisplayName | None = field(
+    display_name: None | DisplayName = field(
         default=None,
         metadata={
             "name": "displayName",
             "type": "Element",
         },
     )
-    short_description: ShortDescription | None = field(
+    short_description: None | ShortDescription = field(
         default=None,
         metadata={
             "name": "shortDescription",
             "type": "Element",
         },
     )
-    description: Description | None = field(
+    description: None | Description = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    type_definitions_ref: ConfigurableLibraryRefType | None = field(
+    type_definitions_ref: None | ConfigurableLibraryRefType = field(
         default=None,
         metadata={
             "name": "typeDefinitionsRef",
@@ -72,35 +72,35 @@ class ExternalTypeDefinitions:
             "required": True,
         },
     )
-    view_links: ViewLinks | None = field(
+    view_links: None | ViewLinks = field(
         default=None,
         metadata={
             "name": "viewLinks",
             "type": "Element",
         },
     )
-    mode_links: ModeLinks | None = field(
+    mode_links: None | ModeLinks = field(
         default=None,
         metadata={
             "name": "modeLinks",
             "type": "Element",
         },
     )
-    reset_type_links: ResetTypeLinks | None = field(
+    reset_type_links: None | ResetTypeLinks = field(
         default=None,
         metadata={
             "name": "resetTypeLinks",
             "type": "Element",
         },
     )
-    vendor_extensions: VendorExtensions | None = field(
+    vendor_extensions: None | VendorExtensions = field(
         default=None,
         metadata={
             "name": "vendorExtensions",
             "type": "Element",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",

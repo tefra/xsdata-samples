@@ -11,7 +11,7 @@ class AlternateRegisterRef:
         name = "alternateRegisterRef"
         namespace = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
-    alternate_register_ref: str | None = field(
+    alternate_register_ref: None | str = field(
         default=None,
         metadata={
             "name": "alternateRegisterRef",

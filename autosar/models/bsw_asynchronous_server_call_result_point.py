@@ -49,7 +49,7 @@ class BswAsynchronousServerCallResultPoint:
     class Meta:
         name = "BSW-ASYNCHRONOUS-SERVER-CALL-RESULT-POINT"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -59,7 +59,7 @@ class BswAsynchronousServerCallResultPoint:
         },
     )
     short_name_fragments: (
-        BswAsynchronousServerCallResultPoint.ShortNameFragments | None
+        None | BswAsynchronousServerCallResultPoint.ShortNameFragments
     ) = field(
         default=None,
         metadata={
@@ -69,7 +69,7 @@ class BswAsynchronousServerCallResultPoint:
         },
     )
     context_limitation_refs: (
-        BswAsynchronousServerCallResultPoint.ContextLimitationRefs | None
+        None | BswAsynchronousServerCallResultPoint.ContextLimitationRefs
     ) = field(
         default=None,
         metadata={
@@ -78,7 +78,7 @@ class BswAsynchronousServerCallResultPoint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -87,8 +87,8 @@ class BswAsynchronousServerCallResultPoint:
         },
     )
     asynchronous_server_call_point_ref: (
-        BswAsynchronousServerCallResultPoint.AsynchronousServerCallPointRef
-        | None
+        None
+        | BswAsynchronousServerCallResultPoint.AsynchronousServerCallPointRef
     ) = field(
         default=None,
         metadata={
@@ -97,14 +97,14 @@ class BswAsynchronousServerCallResultPoint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -139,7 +139,7 @@ class BswAsynchronousServerCallResultPoint:
 
         @dataclass
         class ContextLimitationRef(Ref):
-            dest: BswDistinguishedPartitionSubtypesEnum | None = field(
+            dest: None | BswDistinguishedPartitionSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -150,7 +150,7 @@ class BswAsynchronousServerCallResultPoint:
 
     @dataclass
     class AsynchronousServerCallPointRef(Ref):
-        dest: BswAsynchronousServerCallPointSubtypesEnum | None = field(
+        dest: None | BswAsynchronousServerCallPointSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

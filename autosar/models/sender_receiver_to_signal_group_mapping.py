@@ -67,7 +67,7 @@ class SenderReceiverToSignalGroupMapping:
     class Meta:
         name = "SENDER-RECEIVER-TO-SIGNAL-GROUP-MAPPING"
 
-    communication_direction: CommunicationDirectionType | None = field(
+    communication_direction: None | CommunicationDirectionType = field(
         default=None,
         metadata={
             "name": "COMMUNICATION-DIRECTION",
@@ -76,7 +76,7 @@ class SenderReceiverToSignalGroupMapping:
         },
     )
     event_group_refs: (
-        SenderReceiverToSignalGroupMapping.EventGroupRefs | None
+        None | SenderReceiverToSignalGroupMapping.EventGroupRefs
     ) = field(
         default=None,
         metadata={
@@ -86,7 +86,7 @@ class SenderReceiverToSignalGroupMapping:
         },
     )
     event_handler_refs: (
-        SenderReceiverToSignalGroupMapping.EventHandlerRefs | None
+        None | SenderReceiverToSignalGroupMapping.EventHandlerRefs
     ) = field(
         default=None,
         metadata={
@@ -95,7 +95,7 @@ class SenderReceiverToSignalGroupMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -104,7 +104,7 @@ class SenderReceiverToSignalGroupMapping:
         },
     )
     service_instance_refs: (
-        SenderReceiverToSignalGroupMapping.ServiceInstanceRefs | None
+        None | SenderReceiverToSignalGroupMapping.ServiceInstanceRefs
     ) = field(
         default=None,
         metadata={
@@ -113,7 +113,7 @@ class SenderReceiverToSignalGroupMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -121,7 +121,7 @@ class SenderReceiverToSignalGroupMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    data_element_iref: VariableDataPrototypeInSystemInstanceRef | None = field(
+    data_element_iref: None | VariableDataPrototypeInSystemInstanceRef = field(
         default=None,
         metadata={
             "name": "DATA-ELEMENT-IREF",
@@ -130,7 +130,7 @@ class SenderReceiverToSignalGroupMapping:
         },
     )
     signal_group_ref: (
-        SenderReceiverToSignalGroupMapping.SignalGroupRef | None
+        None | SenderReceiverToSignalGroupMapping.SignalGroupRef
     ) = field(
         default=None,
         metadata={
@@ -139,7 +139,7 @@ class SenderReceiverToSignalGroupMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    type_mapping: SenderReceiverToSignalGroupMapping.TypeMapping | None = (
+    type_mapping: None | SenderReceiverToSignalGroupMapping.TypeMapping = (
         field(
             default=None,
             metadata={
@@ -149,14 +149,14 @@ class SenderReceiverToSignalGroupMapping:
             },
         )
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -180,7 +180,7 @@ class SenderReceiverToSignalGroupMapping:
 
         @dataclass
         class EventGroupRef(Ref):
-            dest: ConsumedEventGroupSubtypesEnum | None = field(
+            dest: None | ConsumedEventGroupSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -204,7 +204,7 @@ class SenderReceiverToSignalGroupMapping:
 
         @dataclass
         class EventHandlerRef(Ref):
-            dest: EventHandlerSubtypesEnum | None = field(
+            dest: None | EventHandlerSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -228,7 +228,7 @@ class SenderReceiverToSignalGroupMapping:
 
         @dataclass
         class ServiceInstanceRef(Ref):
-            dest: AbstractServiceInstanceSubtypesEnum | None = field(
+            dest: None | AbstractServiceInstanceSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -239,7 +239,7 @@ class SenderReceiverToSignalGroupMapping:
 
     @dataclass
     class SignalGroupRef(Ref):
-        dest: SystemSignalGroupSubtypesEnum | None = field(
+        dest: None | SystemSignalGroupSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -250,7 +250,7 @@ class SenderReceiverToSignalGroupMapping:
 
     @dataclass
     class TypeMapping:
-        sender_rec_array_type_mapping: SenderRecArrayTypeMapping | None = (
+        sender_rec_array_type_mapping: None | SenderRecArrayTypeMapping = (
             field(
                 default=None,
                 metadata={
@@ -260,7 +260,7 @@ class SenderReceiverToSignalGroupMapping:
                 },
             )
         )
-        sender_rec_record_type_mapping: SenderRecRecordTypeMapping | None = (
+        sender_rec_record_type_mapping: None | SenderRecRecordTypeMapping = (
             field(
                 default=None,
                 metadata={

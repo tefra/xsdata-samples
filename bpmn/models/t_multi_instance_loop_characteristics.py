@@ -18,7 +18,7 @@ class TMultiInstanceLoopCharacteristics(TLoopCharacteristics):
     class Meta:
         name = "tMultiInstanceLoopCharacteristics"
 
-    loop_cardinality: TExpression | None = field(
+    loop_cardinality: None | TExpression = field(
         default=None,
         metadata={
             "name": "loopCardinality",
@@ -26,7 +26,7 @@ class TMultiInstanceLoopCharacteristics(TLoopCharacteristics):
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    loop_data_input_ref: QName | None = field(
+    loop_data_input_ref: None | QName = field(
         default=None,
         metadata={
             "name": "loopDataInputRef",
@@ -34,7 +34,7 @@ class TMultiInstanceLoopCharacteristics(TLoopCharacteristics):
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    loop_data_output_ref: QName | None = field(
+    loop_data_output_ref: None | QName = field(
         default=None,
         metadata={
             "name": "loopDataOutputRef",
@@ -42,7 +42,7 @@ class TMultiInstanceLoopCharacteristics(TLoopCharacteristics):
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    input_data_item: TDataInput | None = field(
+    input_data_item: None | TDataInput = field(
         default=None,
         metadata={
             "name": "inputDataItem",
@@ -50,7 +50,7 @@ class TMultiInstanceLoopCharacteristics(TLoopCharacteristics):
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    output_data_item: TDataOutput | None = field(
+    output_data_item: None | TDataOutput = field(
         default=None,
         metadata={
             "name": "outputDataItem",
@@ -66,7 +66,7 @@ class TMultiInstanceLoopCharacteristics(TLoopCharacteristics):
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    completion_condition: TExpression | None = field(
+    completion_condition: None | TExpression = field(
         default=None,
         metadata={
             "name": "completionCondition",
@@ -87,14 +87,14 @@ class TMultiInstanceLoopCharacteristics(TLoopCharacteristics):
             "type": "Attribute",
         },
     )
-    one_behavior_event_ref: QName | None = field(
+    one_behavior_event_ref: None | QName = field(
         default=None,
         metadata={
             "name": "oneBehaviorEventRef",
             "type": "Attribute",
         },
     )
-    none_behavior_event_ref: QName | None = field(
+    none_behavior_event_ref: None | QName = field(
         default=None,
         metadata={
             "name": "noneBehaviorEventRef",

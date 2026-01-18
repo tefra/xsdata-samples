@@ -92,7 +92,7 @@ class ContactType1:
             ),
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -102,7 +102,7 @@ class ContactType1:
 
     @dataclass(frozen=True)
     class Telephone:
-        value: str | None = field(
+        value: None | str = field(
             default=None,
             metadata={
                 "required": True,
@@ -111,7 +111,7 @@ class ContactType1:
 
     @dataclass(frozen=True)
     class Fax:
-        value: str | None = field(
+        value: None | str = field(
             default=None,
             metadata={
                 "required": True,
@@ -120,7 +120,7 @@ class ContactType1:
 
     @dataclass(frozen=True)
     class X400:
-        value: str | None = field(
+        value: None | str = field(
             default=None,
             metadata={
                 "required": True,
@@ -129,7 +129,7 @@ class ContactType1:
 
     @dataclass(frozen=True)
     class Uri:
-        value: str | None = field(
+        value: None | str = field(
             default=None,
             metadata={
                 "required": True,
@@ -138,7 +138,7 @@ class ContactType1:
 
     @dataclass(frozen=True)
     class Email:
-        value: str | None = field(
+        value: None | str = field(
             default=None,
             metadata={
                 "required": True,

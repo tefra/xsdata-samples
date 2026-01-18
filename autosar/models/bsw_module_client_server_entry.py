@@ -56,7 +56,7 @@ class BswModuleClientServerEntry:
     class Meta:
         name = "BSW-MODULE-CLIENT-SERVER-ENTRY"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -66,7 +66,7 @@ class BswModuleClientServerEntry:
         },
     )
     short_name_fragments: (
-        BswModuleClientServerEntry.ShortNameFragments | None
+        None | BswModuleClientServerEntry.ShortNameFragments
     ) = field(
         default=None,
         metadata={
@@ -76,7 +76,7 @@ class BswModuleClientServerEntry:
         },
     )
     encapsulated_entry_ref: (
-        BswModuleClientServerEntry.EncapsulatedEntryRef | None
+        None | BswModuleClientServerEntry.EncapsulatedEntryRef
     ) = field(
         default=None,
         metadata={
@@ -85,7 +85,7 @@ class BswModuleClientServerEntry:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    is_reentrant: Boolean | None = field(
+    is_reentrant: None | Boolean = field(
         default=None,
         metadata={
             "name": "IS-REENTRANT",
@@ -93,7 +93,7 @@ class BswModuleClientServerEntry:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    is_synchronous: Boolean | None = field(
+    is_synchronous: None | Boolean = field(
         default=None,
         metadata={
             "name": "IS-SYNCHRONOUS",
@@ -101,7 +101,7 @@ class BswModuleClientServerEntry:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -109,14 +109,14 @@ class BswModuleClientServerEntry:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -138,7 +138,7 @@ class BswModuleClientServerEntry:
 
     @dataclass
     class EncapsulatedEntryRef(Ref):
-        dest: BswModuleEntrySubtypesEnum | None = field(
+        dest: None | BswModuleEntrySubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

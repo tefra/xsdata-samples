@@ -22,12 +22,12 @@ class RestrictedManoeuvreVersionStructure(
         name = "RestrictedManoeuvre_VersionStructure"
 
     transport_type_ref_or_vehicle_type_ref: (
-        SimpleVehicleTypeRef
+        None
+        | SimpleVehicleTypeRef
         | CompoundTrainRef
         | TrainRef
         | VehicleTypeRef
         | TransportTypeRef
-        | None
     ) = field(
         default=None,
         metadata={

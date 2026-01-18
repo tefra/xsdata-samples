@@ -122,7 +122,7 @@ class LinEventTriggeredFrame:
     class Meta:
         name = "LIN-EVENT-TRIGGERED-FRAME"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -131,7 +131,7 @@ class LinEventTriggeredFrame:
             "required": True,
         },
     )
-    short_name_fragments: LinEventTriggeredFrame.ShortNameFragments | None = (
+    short_name_fragments: None | LinEventTriggeredFrame.ShortNameFragments = (
         field(
             default=None,
             metadata={
@@ -141,7 +141,7 @@ class LinEventTriggeredFrame:
             },
         )
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -149,7 +149,7 @@ class LinEventTriggeredFrame:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -157,7 +157,7 @@ class LinEventTriggeredFrame:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -165,7 +165,7 @@ class LinEventTriggeredFrame:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -173,7 +173,7 @@ class LinEventTriggeredFrame:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -181,7 +181,7 @@ class LinEventTriggeredFrame:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: LinEventTriggeredFrame.Annotations | None = field(
+    annotations: None | LinEventTriggeredFrame.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -189,7 +189,7 @@ class LinEventTriggeredFrame:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -197,7 +197,7 @@ class LinEventTriggeredFrame:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    frame_length: Integer | None = field(
+    frame_length: None | Integer = field(
         default=None,
         metadata={
             "name": "FRAME-LENGTH",
@@ -205,7 +205,7 @@ class LinEventTriggeredFrame:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    pdu_to_frame_mappings: LinEventTriggeredFrame.PduToFrameMappings | None = (
+    pdu_to_frame_mappings: None | LinEventTriggeredFrame.PduToFrameMappings = (
         field(
             default=None,
             metadata={
@@ -216,7 +216,7 @@ class LinEventTriggeredFrame:
         )
     )
     collision_resolving_schedule_ref: (
-        LinEventTriggeredFrame.CollisionResolvingScheduleRef | None
+        None | LinEventTriggeredFrame.CollisionResolvingScheduleRef
     ) = field(
         default=None,
         metadata={
@@ -226,7 +226,7 @@ class LinEventTriggeredFrame:
         },
     )
     lin_unconditional_frame_refs: (
-        LinEventTriggeredFrame.LinUnconditionalFrameRefs | None
+        None | LinEventTriggeredFrame.LinUnconditionalFrameRefs
     ) = field(
         default=None,
         metadata={
@@ -235,14 +235,14 @@ class LinEventTriggeredFrame:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -250,7 +250,7 @@ class LinEventTriggeredFrame:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -293,7 +293,7 @@ class LinEventTriggeredFrame:
 
     @dataclass
     class CollisionResolvingScheduleRef(Ref):
-        dest: LinScheduleTableSubtypesEnum | None = field(
+        dest: None | LinScheduleTableSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -317,7 +317,7 @@ class LinEventTriggeredFrame:
 
         @dataclass
         class LinUnconditionalFrameRef(Ref):
-            dest: LinUnconditionalFrameSubtypesEnum | None = field(
+            dest: None | LinUnconditionalFrameSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",

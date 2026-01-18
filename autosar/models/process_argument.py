@@ -30,7 +30,7 @@ class ProcessArgument:
     class Meta:
         name = "PROCESS-ARGUMENT"
 
-    argument: String | None = field(
+    argument: None | String = field(
         default=None,
         metadata={
             "name": "ARGUMENT",
@@ -38,14 +38,14 @@ class ProcessArgument:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

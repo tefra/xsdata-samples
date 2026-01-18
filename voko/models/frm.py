@@ -13,7 +13,7 @@ class Frm:
     class Meta:
         name = "frm"
 
-    am: str | None = field(
+    am: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",

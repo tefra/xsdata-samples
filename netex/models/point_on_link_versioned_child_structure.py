@@ -48,7 +48,7 @@ class PointOnLinkVersionedChildStructure(VersionedChildStructure):
     class Meta:
         name = "PointOnLink_VersionedChildStructure"
 
-    name: MultilingualString | None = field(
+    name: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "Name",
@@ -56,7 +56,7 @@ class PointOnLinkVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    link_ref: LinkRefStructure | None = field(
+    link_ref: None | LinkRefStructure = field(
         default=None,
         metadata={
             "name": "LinkRef",
@@ -64,7 +64,7 @@ class PointOnLinkVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    distance_from_start: Decimal | None = field(
+    distance_from_start: None | Decimal = field(
         default=None,
         metadata={
             "name": "DistanceFromStart",
@@ -73,7 +73,8 @@ class PointOnLinkVersionedChildStructure(VersionedChildStructure):
         },
     )
     choice: (
-        VehicleMeetingPointRef
+        None
+        | VehicleMeetingPointRef
         | WirePointRef
         | RoadPointRef
         | RailwayPointRef
@@ -106,7 +107,6 @@ class PointOnLinkVersionedChildStructure(VersionedChildStructure):
         | BeaconPoint
         | ActivationPoint
         | Point2
-        | None
     ) = field(
         default=None,
         metadata={
@@ -280,7 +280,7 @@ class PointOnLinkVersionedChildStructure(VersionedChildStructure):
             ),
         },
     )
-    order: int | None = field(
+    order: None | int = field(
         default=None,
         metadata={
             "type": "Attribute",

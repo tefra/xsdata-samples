@@ -11,20 +11,20 @@ class Cbytes:
         name = "cbytes"
         namespace = "http://www.w3.org/1998/Math/MathML"
 
-    value: bytes | None = field(
+    value: None | bytes = field(
         default=None,
         metadata={
             "required": True,
             "format": "base64",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    xref: object | None = field(
+    xref: None | object = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -38,19 +38,19 @@ class Cbytes:
             "tokens": True,
         },
     )
-    style: str | None = field(
+    style: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    href: str | None = field(
+    href: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    other: object | None = field(
+    other: None | object = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -63,13 +63,13 @@ class Cbytes:
             "namespace": "##other",
         },
     )
-    encoding: str | None = field(
+    encoding: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    definition_url: str | None = field(
+    definition_url: None | str = field(
         default=None,
         metadata={
             "name": "definitionURL",

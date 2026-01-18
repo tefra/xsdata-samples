@@ -86,7 +86,7 @@ class FunctionInhibitionAvailabilityNeeds:
     class Meta:
         name = "FUNCTION-INHIBITION-AVAILABILITY-NEEDS"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -96,7 +96,7 @@ class FunctionInhibitionAvailabilityNeeds:
         },
     )
     short_name_fragments: (
-        FunctionInhibitionAvailabilityNeeds.ShortNameFragments | None
+        None | FunctionInhibitionAvailabilityNeeds.ShortNameFragments
     ) = field(
         default=None,
         metadata={
@@ -105,7 +105,7 @@ class FunctionInhibitionAvailabilityNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -113,7 +113,7 @@ class FunctionInhibitionAvailabilityNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -121,7 +121,7 @@ class FunctionInhibitionAvailabilityNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -129,7 +129,7 @@ class FunctionInhibitionAvailabilityNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -137,7 +137,7 @@ class FunctionInhibitionAvailabilityNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -145,7 +145,7 @@ class FunctionInhibitionAvailabilityNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: FunctionInhibitionAvailabilityNeeds.Annotations | None = (
+    annotations: None | FunctionInhibitionAvailabilityNeeds.Annotations = (
         field(
             default=None,
             metadata={
@@ -156,7 +156,7 @@ class FunctionInhibitionAvailabilityNeeds:
         )
     )
     controlled_fid_ref: (
-        FunctionInhibitionAvailabilityNeeds.ControlledFidRef | None
+        None | FunctionInhibitionAvailabilityNeeds.ControlledFidRef
     ) = field(
         default=None,
         metadata={
@@ -165,14 +165,14 @@ class FunctionInhibitionAvailabilityNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -180,7 +180,7 @@ class FunctionInhibitionAvailabilityNeeds:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -212,7 +212,7 @@ class FunctionInhibitionAvailabilityNeeds:
 
     @dataclass
     class ControlledFidRef(Ref):
-        dest: FunctionInhibitionNeedsSubtypesEnum | None = field(
+        dest: None | FunctionInhibitionNeedsSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

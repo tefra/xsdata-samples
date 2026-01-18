@@ -10,25 +10,25 @@ class Diagram:
     class Meta:
         namespace = "http://www.omg.org/spec/DD/20100524/DI"
 
-    name: str | None = field(
+    name: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    documentation: str | None = field(
+    documentation: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    resolution: float | None = field(
+    resolution: None | float = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",

@@ -20,7 +20,7 @@ class ClockDriver(ClockDriverType):
         name = "clockDriver"
         namespace = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
-    clock_name: str | None = field(
+    clock_name: None | str = field(
         default=None,
         metadata={
             "name": "clockName",

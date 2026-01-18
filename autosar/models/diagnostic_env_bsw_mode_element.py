@@ -40,7 +40,7 @@ class DiagnosticEnvBswModeElement:
     class Meta:
         name = "DIAGNOSTIC-ENV-BSW-MODE-ELEMENT"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -50,7 +50,7 @@ class DiagnosticEnvBswModeElement:
         },
     )
     short_name_fragments: (
-        DiagnosticEnvBswModeElement.ShortNameFragments | None
+        None | DiagnosticEnvBswModeElement.ShortNameFragments
     ) = field(
         default=None,
         metadata={
@@ -59,7 +59,7 @@ class DiagnosticEnvBswModeElement:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    mode_iref: ModeInBswModuleDescriptionInstanceRef | None = field(
+    mode_iref: None | ModeInBswModuleDescriptionInstanceRef = field(
         default=None,
         metadata={
             "name": "MODE-IREF",
@@ -67,14 +67,14 @@ class DiagnosticEnvBswModeElement:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

@@ -109,7 +109,7 @@ class RestHttpPortPrototypeMapping:
     class Meta:
         name = "REST-HTTP-PORT-PROTOTYPE-MAPPING"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -119,7 +119,7 @@ class RestHttpPortPrototypeMapping:
         },
     )
     short_name_fragments: (
-        RestHttpPortPrototypeMapping.ShortNameFragments | None
+        None | RestHttpPortPrototypeMapping.ShortNameFragments
     ) = field(
         default=None,
         metadata={
@@ -128,7 +128,7 @@ class RestHttpPortPrototypeMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -136,7 +136,7 @@ class RestHttpPortPrototypeMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -144,7 +144,7 @@ class RestHttpPortPrototypeMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -152,7 +152,7 @@ class RestHttpPortPrototypeMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -160,7 +160,7 @@ class RestHttpPortPrototypeMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -168,7 +168,7 @@ class RestHttpPortPrototypeMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: RestHttpPortPrototypeMapping.Annotations | None = field(
+    annotations: None | RestHttpPortPrototypeMapping.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -176,7 +176,7 @@ class RestHttpPortPrototypeMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -184,7 +184,7 @@ class RestHttpPortPrototypeMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    accepts_encodings: RestHttpPortPrototypeMapping.AcceptsEncodings | None = (
+    accepts_encodings: None | RestHttpPortPrototypeMapping.AcceptsEncodings = (
         field(
             default=None,
             metadata={
@@ -194,7 +194,7 @@ class RestHttpPortPrototypeMapping:
             },
         )
     )
-    host_ref: RestHttpPortPrototypeMapping.HostRef | None = field(
+    host_ref: None | RestHttpPortPrototypeMapping.HostRef = field(
         default=None,
         metadata={
             "name": "HOST-REF",
@@ -202,7 +202,7 @@ class RestHttpPortPrototypeMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    port_prototype_iref: PortPrototypeInExecutableInstanceRef | None = field(
+    port_prototype_iref: None | PortPrototypeInExecutableInstanceRef = field(
         default=None,
         metadata={
             "name": "PORT-PROTOTYPE-IREF",
@@ -210,7 +210,7 @@ class RestHttpPortPrototypeMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    port_prototype_slug_fragment: String | None = field(
+    port_prototype_slug_fragment: None | String = field(
         default=None,
         metadata={
             "name": "PORT-PROTOTYPE-SLUG-FRAGMENT",
@@ -218,7 +218,7 @@ class RestHttpPortPrototypeMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    process_ref: RestHttpPortPrototypeMapping.ProcessRef | None = field(
+    process_ref: None | RestHttpPortPrototypeMapping.ProcessRef = field(
         default=None,
         metadata={
             "name": "PROCESS-REF",
@@ -226,7 +226,7 @@ class RestHttpPortPrototypeMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tcp_port: PositiveInteger | None = field(
+    tcp_port: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "TCP-PORT",
@@ -235,7 +235,7 @@ class RestHttpPortPrototypeMapping:
         },
     )
     tls_secure_com_props_ref: (
-        RestHttpPortPrototypeMapping.TlsSecureComPropsRef | None
+        None | RestHttpPortPrototypeMapping.TlsSecureComPropsRef
     ) = field(
         default=None,
         metadata={
@@ -244,14 +244,14 @@ class RestHttpPortPrototypeMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -259,7 +259,7 @@ class RestHttpPortPrototypeMapping:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -302,7 +302,7 @@ class RestHttpPortPrototypeMapping:
 
     @dataclass
     class HostRef(Ref):
-        dest: NetworkEndpointSubtypesEnum | None = field(
+        dest: None | NetworkEndpointSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -313,7 +313,7 @@ class RestHttpPortPrototypeMapping:
 
     @dataclass
     class ProcessRef(Ref):
-        dest: ProcessSubtypesEnum | None = field(
+        dest: None | ProcessSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -324,7 +324,7 @@ class RestHttpPortPrototypeMapping:
 
     @dataclass
     class TlsSecureComPropsRef(Ref):
-        dest: TlsSecureComPropsSubtypesEnum | None = field(
+        dest: None | TlsSecureComPropsSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

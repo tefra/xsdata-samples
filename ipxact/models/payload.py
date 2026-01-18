@@ -25,13 +25,13 @@ class Payload:
         name = "payload"
         namespace = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
-    name: str | None = field(
+    name: None | str = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    type_value: PayloadType | None = field(
+    type_value: None | PayloadType = field(
         default=None,
         metadata={
             "name": "type",
@@ -39,13 +39,13 @@ class Payload:
             "required": True,
         },
     )
-    extension: Payload.Extension | None = field(
+    extension: None | Payload.Extension = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    vendor_extensions: VendorExtensions | None = field(
+    vendor_extensions: None | VendorExtensions = field(
         default=None,
         metadata={
             "name": "vendorExtensions",

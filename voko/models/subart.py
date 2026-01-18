@@ -31,7 +31,7 @@ class Subart:
     class Meta:
         name = "subart"
 
-    mrk: str | None = field(
+    mrk: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",

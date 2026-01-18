@@ -20,7 +20,7 @@ class ContribId:
         name = "contrib-id"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    assigning_authority: str | None = field(
+    assigning_authority: None | str = field(
         default=None,
         metadata={
             "name": "assigning-authority",
@@ -33,41 +33,41 @@ class ContribId:
             "type": "Attribute",
         },
     )
-    content_type: str | None = field(
+    content_type: None | str = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    contrib_id_type: str | None = field(
+    contrib_id_type: None | str = field(
         default=None,
         metadata={
             "name": "contrib-id-type",
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",

@@ -21,7 +21,7 @@ class NetworkVersionStructure(GroupOfLinesVersionStructure):
     class Meta:
         name = "Network_VersionStructure"
 
-    transport_organisation_ref: AuthorityRef | OperatorRef | None = field(
+    transport_organisation_ref: None | AuthorityRef | OperatorRef = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -39,7 +39,7 @@ class NetworkVersionStructure(GroupOfLinesVersionStructure):
             ),
         },
     )
-    groups_of_operators: GroupsOfOperatorsRefsRelStructure | None = field(
+    groups_of_operators: None | GroupsOfOperatorsRefsRelStructure = field(
         default=None,
         metadata={
             "name": "groupsOfOperators",
@@ -47,7 +47,7 @@ class NetworkVersionStructure(GroupOfLinesVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    groups_of_lines: GroupsOfLinesInFrameRelStructure | None = field(
+    groups_of_lines: None | GroupsOfLinesInFrameRelStructure = field(
         default=None,
         metadata={
             "name": "groupsOfLines",
@@ -55,7 +55,7 @@ class NetworkVersionStructure(GroupOfLinesVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    tariff_zones: TariffZoneRefsRelStructure | None = field(
+    tariff_zones: None | TariffZoneRefsRelStructure = field(
         default=None,
         metadata={
             "name": "tariffZones",

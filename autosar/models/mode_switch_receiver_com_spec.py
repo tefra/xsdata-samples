@@ -44,7 +44,7 @@ class ModeSwitchReceiverComSpec:
     class Meta:
         name = "MODE-SWITCH-RECEIVER-COM-SPEC"
 
-    enhanced_mode_api: Boolean | None = field(
+    enhanced_mode_api: None | Boolean = field(
         default=None,
         metadata={
             "name": "ENHANCED-MODE-API",
@@ -52,7 +52,7 @@ class ModeSwitchReceiverComSpec:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    mode_group_ref: ModeSwitchReceiverComSpec.ModeGroupRef | None = field(
+    mode_group_ref: None | ModeSwitchReceiverComSpec.ModeGroupRef = field(
         default=None,
         metadata={
             "name": "MODE-GROUP-REF",
@@ -60,7 +60,7 @@ class ModeSwitchReceiverComSpec:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    supports_asynchronous_mode_switch: Boolean | None = field(
+    supports_asynchronous_mode_switch: None | Boolean = field(
         default=None,
         metadata={
             "name": "SUPPORTS-ASYNCHRONOUS-MODE-SWITCH",
@@ -68,14 +68,14 @@ class ModeSwitchReceiverComSpec:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -86,7 +86,7 @@ class ModeSwitchReceiverComSpec:
 
     @dataclass
     class ModeGroupRef(Ref):
-        dest: ModeDeclarationGroupPrototypeSubtypesEnum | None = field(
+        dest: None | ModeDeclarationGroupPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

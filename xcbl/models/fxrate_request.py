@@ -89,21 +89,21 @@ class FxrateRequestHeader:
             "required": True,
         }
     )
-    payment_mean_coded: PaymentMeanCoded | None = field(
+    payment_mean_coded: None | PaymentMeanCoded = field(
         default=None,
         metadata={
             "name": "PaymentMeanCoded",
             "type": "Element",
         },
     )
-    payment_mean_coded_other: PaymentMeanCodedOther | None = field(
+    payment_mean_coded_other: None | PaymentMeanCodedOther = field(
         default=None,
         metadata={
             "name": "PaymentMeanCodedOther",
             "type": "Element",
         },
     )
-    payer_party: PayerParty | None = field(
+    payer_party: None | PayerParty = field(
         default=None,
         metadata={
             "name": "PayerParty",
@@ -117,7 +117,7 @@ class FxrateRequestHeader:
             "required": True,
         }
     )
-    general_note: GeneralNote | None = field(
+    general_note: None | GeneralNote = field(
         default=None,
         metadata={
             "name": "GeneralNote",
@@ -145,14 +145,14 @@ class FxrateRequestDetail:
     class Meta:
         name = "FXRateRequestDetail"
 
-    sequence_number: SequenceNumber | None = field(
+    sequence_number: None | SequenceNumber = field(
         default=None,
         metadata={
             "name": "SequenceNumber",
             "type": "Element",
         },
     )
-    rate_quote_id: RateQuoteId | None = field(
+    rate_quote_id: None | RateQuoteId = field(
         default=None,
         metadata={
             "name": "RateQuoteID",
@@ -180,14 +180,14 @@ class FxrateRequestDetail:
             "required": True,
         }
     )
-    debit_amount: DebitAmount | None = field(
+    debit_amount: None | DebitAmount = field(
         default=None,
         metadata={
             "name": "DebitAmount",
             "type": "Element",
         },
     )
-    credit_amount: CreditAmount | None = field(
+    credit_amount: None | CreditAmount = field(
         default=None,
         metadata={
             "name": "CreditAmount",
@@ -195,7 +195,7 @@ class FxrateRequestDetail:
         },
     )
     originating_financial_institution: (
-        OriginatingFinancialInstitution | None
+        None | OriginatingFinancialInstitution
     ) = field(
         default=None,
         metadata={
@@ -203,21 +203,21 @@ class FxrateRequestDetail:
             "type": "Element",
         },
     )
-    card_info: CardInfo | None = field(
+    card_info: None | CardInfo = field(
         default=None,
         metadata={
             "name": "CardInfo",
             "type": "Element",
         },
     )
-    computational_method_coded: ComputationalMethodCoded | None = field(
+    computational_method_coded: None | ComputationalMethodCoded = field(
         default=None,
         metadata={
             "name": "ComputationalMethodCoded",
             "type": "Element",
         },
     )
-    computational_method_coded_other: ComputationalMethodCodedOther | None = (
+    computational_method_coded_other: None | ComputationalMethodCodedOther = (
         field(
             default=None,
             metadata={
@@ -226,42 +226,42 @@ class FxrateRequestDetail:
             },
         )
     )
-    fxquote_type_coded: FxquoteTypeCoded | None = field(
+    fxquote_type_coded: None | FxquoteTypeCoded = field(
         default=None,
         metadata={
             "name": "FXQuoteTypeCoded",
             "type": "Element",
         },
     )
-    fxquote_type_coded_other: FxquoteTypeCodedOther | None = field(
+    fxquote_type_coded_other: None | FxquoteTypeCodedOther = field(
         default=None,
         metadata={
             "name": "FXQuoteTypeCodedOther",
             "type": "Element",
         },
     )
-    list_of_reference: ListOfReference | None = field(
+    list_of_reference: None | ListOfReference = field(
         default=None,
         metadata={
             "name": "ListOfReference",
             "type": "Element",
         },
     )
-    payee_party: PayeeParty | None = field(
+    payee_party: None | PayeeParty = field(
         default=None,
         metadata={
             "name": "PayeeParty",
             "type": "Element",
         },
     )
-    payer_party: PayerParty | None = field(
+    payer_party: None | PayerParty = field(
         default=None,
         metadata={
             "name": "PayerParty",
             "type": "Element",
         },
     )
-    fxrate_request_note: FxrateRequestNote | None = field(
+    fxrate_request_note: None | FxrateRequestNote = field(
         default=None,
         metadata={
             "name": "FXRateRequestNote",
@@ -297,14 +297,14 @@ class FxrateRequest:
             "required": True,
         }
     )
-    list_of_fxrate_request_detail: ListOfFxrateRequestDetail | None = field(
+    list_of_fxrate_request_detail: None | ListOfFxrateRequestDetail = field(
         default=None,
         metadata={
             "name": "ListOfFXRateRequestDetail",
             "type": "Element",
         },
     )
-    fxrate_request_summary: FxrateRequestSummary | None = field(
+    fxrate_request_summary: None | FxrateRequestSummary = field(
         default=None,
         metadata={
             "name": "FXRateRequestSummary",

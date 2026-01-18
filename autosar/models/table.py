@@ -69,7 +69,7 @@ class Table:
     class Meta:
         name = "TABLE"
 
-    table_caption: Caption | None = field(
+    table_caption: None | Caption = field(
         default=None,
         metadata={
             "name": "TABLE-CAPTION",
@@ -85,7 +85,7 @@ class Table:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -93,14 +93,14 @@ class Table:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -116,7 +116,7 @@ class Table:
             "tokens": True,
         },
     )
-    view: str | None = field(
+    view: None | str = field(
         default=None,
         metadata={
             "name": "VIEW",
@@ -124,21 +124,21 @@ class Table:
             "pattern": r"(-?[a-zA-Z_]+)(( )+-?[a-zA-Z_]+)*",
         },
     )
-    break_value: ChapterEnumBreakSimple | None = field(
+    break_value: None | ChapterEnumBreakSimple = field(
         default=None,
         metadata={
             "name": "BREAK",
             "type": "Attribute",
         },
     )
-    keep_with_previous: KeepWithPreviousEnumSimple | None = field(
+    keep_with_previous: None | KeepWithPreviousEnumSimple = field(
         default=None,
         metadata={
             "name": "KEEP-WITH-PREVIOUS",
             "type": "Attribute",
         },
     )
-    colsep: str | None = field(
+    colsep: None | str = field(
         default=None,
         metadata={
             "name": "COLSEP",
@@ -146,42 +146,42 @@ class Table:
             "pattern": r"[0-1]",
         },
     )
-    float_value: FloatEnumSimple | None = field(
+    float_value: None | FloatEnumSimple = field(
         default=None,
         metadata={
             "name": "FLOAT",
             "type": "Attribute",
         },
     )
-    frame: FrameEnumSimple | None = field(
+    frame: None | FrameEnumSimple = field(
         default=None,
         metadata={
             "name": "FRAME",
             "type": "Attribute",
         },
     )
-    help_entry: str | None = field(
+    help_entry: None | str = field(
         default=None,
         metadata={
             "name": "HELP-ENTRY",
             "type": "Attribute",
         },
     )
-    orient: OrientEnumSimple | None = field(
+    orient: None | OrientEnumSimple = field(
         default=None,
         metadata={
             "name": "ORIENT",
             "type": "Attribute",
         },
     )
-    pgwide: str | None = field(
+    pgwide: None | str = field(
         default=None,
         metadata={
             "name": "PGWIDE",
             "type": "Attribute",
         },
     )
-    rowsep: str | None = field(
+    rowsep: None | str = field(
         default=None,
         metadata={
             "name": "ROWSEP",
@@ -189,7 +189,7 @@ class Table:
             "pattern": r"[0-1]",
         },
     )
-    tabstyle: str | None = field(
+    tabstyle: None | str = field(
         default=None,
         metadata={
             "name": "TABSTYLE",

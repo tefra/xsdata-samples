@@ -117,7 +117,7 @@ class DdsServiceInterfaceDeployment:
     class Meta:
         name = "DDS-SERVICE-INTERFACE-DEPLOYMENT"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -127,7 +127,7 @@ class DdsServiceInterfaceDeployment:
         },
     )
     short_name_fragments: (
-        DdsServiceInterfaceDeployment.ShortNameFragments | None
+        None | DdsServiceInterfaceDeployment.ShortNameFragments
     ) = field(
         default=None,
         metadata={
@@ -136,7 +136,7 @@ class DdsServiceInterfaceDeployment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -144,7 +144,7 @@ class DdsServiceInterfaceDeployment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -152,7 +152,7 @@ class DdsServiceInterfaceDeployment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -160,7 +160,7 @@ class DdsServiceInterfaceDeployment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -168,7 +168,7 @@ class DdsServiceInterfaceDeployment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -176,7 +176,7 @@ class DdsServiceInterfaceDeployment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: DdsServiceInterfaceDeployment.Annotations | None = field(
+    annotations: None | DdsServiceInterfaceDeployment.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -184,7 +184,7 @@ class DdsServiceInterfaceDeployment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -193,7 +193,7 @@ class DdsServiceInterfaceDeployment:
         },
     )
     event_deployments: (
-        DdsServiceInterfaceDeployment.EventDeployments | None
+        None | DdsServiceInterfaceDeployment.EventDeployments
     ) = field(
         default=None,
         metadata={
@@ -203,7 +203,7 @@ class DdsServiceInterfaceDeployment:
         },
     )
     field_deployments: (
-        DdsServiceInterfaceDeployment.FieldDeployments | None
+        None | DdsServiceInterfaceDeployment.FieldDeployments
     ) = field(
         default=None,
         metadata={
@@ -213,7 +213,7 @@ class DdsServiceInterfaceDeployment:
         },
     )
     method_deployments: (
-        DdsServiceInterfaceDeployment.MethodDeployments | None
+        None | DdsServiceInterfaceDeployment.MethodDeployments
     ) = field(
         default=None,
         metadata={
@@ -223,7 +223,7 @@ class DdsServiceInterfaceDeployment:
         },
     )
     service_interface_ref: (
-        DdsServiceInterfaceDeployment.ServiceInterfaceRef | None
+        None | DdsServiceInterfaceDeployment.ServiceInterfaceRef
     ) = field(
         default=None,
         metadata={
@@ -232,7 +232,7 @@ class DdsServiceInterfaceDeployment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    field_reply_topic_name: String | None = field(
+    field_reply_topic_name: None | String = field(
         default=None,
         metadata={
             "name": "FIELD-REPLY-TOPIC-NAME",
@@ -240,7 +240,7 @@ class DdsServiceInterfaceDeployment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    field_request_topic_name: String | None = field(
+    field_request_topic_name: None | String = field(
         default=None,
         metadata={
             "name": "FIELD-REQUEST-TOPIC-NAME",
@@ -248,7 +248,7 @@ class DdsServiceInterfaceDeployment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    method_reply_topic_name: String | None = field(
+    method_reply_topic_name: None | String = field(
         default=None,
         metadata={
             "name": "METHOD-REPLY-TOPIC-NAME",
@@ -256,7 +256,7 @@ class DdsServiceInterfaceDeployment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    method_request_topic_name: String | None = field(
+    method_request_topic_name: None | String = field(
         default=None,
         metadata={
             "name": "METHOD-REQUEST-TOPIC-NAME",
@@ -264,7 +264,7 @@ class DdsServiceInterfaceDeployment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    service_interface_id: String | None = field(
+    service_interface_id: None | String = field(
         default=None,
         metadata={
             "name": "SERVICE-INTERFACE-ID",
@@ -273,7 +273,7 @@ class DdsServiceInterfaceDeployment:
         },
     )
     transport_protocols: (
-        DdsServiceInterfaceDeployment.TransportProtocols | None
+        None | DdsServiceInterfaceDeployment.TransportProtocols
     ) = field(
         default=None,
         metadata={
@@ -282,14 +282,14 @@ class DdsServiceInterfaceDeployment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -297,7 +297,7 @@ class DdsServiceInterfaceDeployment:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -408,7 +408,7 @@ class DdsServiceInterfaceDeployment:
 
     @dataclass
     class ServiceInterfaceRef(Ref):
-        dest: ServiceInterfaceSubtypesEnum | None = field(
+        dest: None | ServiceInterfaceSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

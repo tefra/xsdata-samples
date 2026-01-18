@@ -112,7 +112,7 @@ class FlexrayNmNode:
     class Meta:
         name = "FLEXRAY-NM-NODE"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -121,7 +121,7 @@ class FlexrayNmNode:
             "required": True,
         },
     )
-    short_name_fragments: FlexrayNmNode.ShortNameFragments | None = field(
+    short_name_fragments: None | FlexrayNmNode.ShortNameFragments = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -129,7 +129,7 @@ class FlexrayNmNode:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -137,7 +137,7 @@ class FlexrayNmNode:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -145,7 +145,7 @@ class FlexrayNmNode:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -153,7 +153,7 @@ class FlexrayNmNode:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -161,7 +161,7 @@ class FlexrayNmNode:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -169,7 +169,7 @@ class FlexrayNmNode:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: FlexrayNmNode.Annotations | None = field(
+    annotations: None | FlexrayNmNode.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -177,7 +177,7 @@ class FlexrayNmNode:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    controller_ref: FlexrayNmNode.ControllerRef | None = field(
+    controller_ref: None | FlexrayNmNode.ControllerRef = field(
         default=None,
         metadata={
             "name": "CONTROLLER-REF",
@@ -185,7 +185,7 @@ class FlexrayNmNode:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    machine_ref: FlexrayNmNode.MachineRef | None = field(
+    machine_ref: None | FlexrayNmNode.MachineRef = field(
         default=None,
         metadata={
             "name": "MACHINE-REF",
@@ -193,7 +193,7 @@ class FlexrayNmNode:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nm_coord_cluster: PositiveInteger | None = field(
+    nm_coord_cluster: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "NM-COORD-CLUSTER",
@@ -201,7 +201,7 @@ class FlexrayNmNode:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nm_coordinator_role: NmCoordinatorRoleEnum | None = field(
+    nm_coordinator_role: None | NmCoordinatorRoleEnum = field(
         default=None,
         metadata={
             "name": "NM-COORDINATOR-ROLE",
@@ -209,7 +209,7 @@ class FlexrayNmNode:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nm_if_ecu_ref: FlexrayNmNode.NmIfEcuRef | None = field(
+    nm_if_ecu_ref: None | FlexrayNmNode.NmIfEcuRef = field(
         default=None,
         metadata={
             "name": "NM-IF-ECU-REF",
@@ -217,7 +217,7 @@ class FlexrayNmNode:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nm_node_id: Integer | None = field(
+    nm_node_id: None | Integer = field(
         default=None,
         metadata={
             "name": "NM-NODE-ID",
@@ -225,7 +225,7 @@ class FlexrayNmNode:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nm_passive_mode_enabled: Boolean | None = field(
+    nm_passive_mode_enabled: None | Boolean = field(
         default=None,
         metadata={
             "name": "NM-PASSIVE-MODE-ENABLED",
@@ -233,7 +233,7 @@ class FlexrayNmNode:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    rx_nm_pdu_refs: FlexrayNmNode.RxNmPduRefs | None = field(
+    rx_nm_pdu_refs: None | FlexrayNmNode.RxNmPduRefs = field(
         default=None,
         metadata={
             "name": "RX-NM-PDU-REFS",
@@ -241,7 +241,7 @@ class FlexrayNmNode:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tx_nm_pdu_refs: FlexrayNmNode.TxNmPduRefs | None = field(
+    tx_nm_pdu_refs: None | FlexrayNmNode.TxNmPduRefs = field(
         default=None,
         metadata={
             "name": "TX-NM-PDU-REFS",
@@ -249,7 +249,7 @@ class FlexrayNmNode:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -257,7 +257,7 @@ class FlexrayNmNode:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nm_instance_id: PositiveInteger | None = field(
+    nm_instance_id: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "NM-INSTANCE-ID",
@@ -265,14 +265,14 @@ class FlexrayNmNode:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -280,7 +280,7 @@ class FlexrayNmNode:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -312,7 +312,7 @@ class FlexrayNmNode:
 
     @dataclass
     class ControllerRef(Ref):
-        dest: CommunicationControllerSubtypesEnum | None = field(
+        dest: None | CommunicationControllerSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -323,7 +323,7 @@ class FlexrayNmNode:
 
     @dataclass
     class MachineRef(Ref):
-        dest: MachineDesignSubtypesEnum | None = field(
+        dest: None | MachineDesignSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -334,7 +334,7 @@ class FlexrayNmNode:
 
     @dataclass
     class NmIfEcuRef(Ref):
-        dest: NmEcuSubtypesEnum | None = field(
+        dest: None | NmEcuSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -356,7 +356,7 @@ class FlexrayNmNode:
 
         @dataclass
         class RxNmPduRef(Ref):
-            dest: NmPduSubtypesEnum | None = field(
+            dest: None | NmPduSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -378,7 +378,7 @@ class FlexrayNmNode:
 
         @dataclass
         class TxNmPduRef(Ref):
-            dest: NmPduSubtypesEnum | None = field(
+            dest: None | NmPduSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",

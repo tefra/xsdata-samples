@@ -52,7 +52,7 @@ class TimeDimensionType(BaseDimensionType):
             "type": "Ignore",
         },
     )
-    local_representation: TimeDimensionRepresentationType | None = field(
+    local_representation: None | TimeDimensionRepresentationType = field(
         default=None,
         metadata={
             "name": "LocalRepresentation",

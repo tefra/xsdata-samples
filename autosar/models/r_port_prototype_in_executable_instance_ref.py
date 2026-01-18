@@ -36,8 +36,8 @@ class RPortPrototypeInExecutableInstanceRef:
         name = "R-PORT-PROTOTYPE-IN-EXECUTABLE-INSTANCE-REF"
 
     context_root_sw_component_prototype_ref: (
-        RPortPrototypeInExecutableInstanceRef.ContextRootSwComponentPrototypeRef
-        | None
+        None
+        | RPortPrototypeInExecutableInstanceRef.ContextRootSwComponentPrototypeRef
     ) = field(
         default=None,
         metadata={
@@ -57,7 +57,7 @@ class RPortPrototypeInExecutableInstanceRef:
         },
     )
     target_r_port_prototype_ref: (
-        RPortPrototypeInExecutableInstanceRef.TargetRPortPrototypeRef | None
+        None | RPortPrototypeInExecutableInstanceRef.TargetRPortPrototypeRef
     ) = field(
         default=None,
         metadata={
@@ -66,14 +66,14 @@ class RPortPrototypeInExecutableInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -84,7 +84,7 @@ class RPortPrototypeInExecutableInstanceRef:
 
     @dataclass
     class ContextRootSwComponentPrototypeRef(Ref):
-        dest: RootSwComponentPrototypeSubtypesEnum | None = field(
+        dest: None | RootSwComponentPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -95,7 +95,7 @@ class RPortPrototypeInExecutableInstanceRef:
 
     @dataclass
     class ContextComponentPrototypeRef(Ref):
-        dest: SwComponentPrototypeSubtypesEnum | None = field(
+        dest: None | SwComponentPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -106,7 +106,7 @@ class RPortPrototypeInExecutableInstanceRef:
 
     @dataclass
     class TargetRPortPrototypeRef(Ref):
-        dest: RPortPrototypeSubtypesEnum | None = field(
+        dest: None | RPortPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

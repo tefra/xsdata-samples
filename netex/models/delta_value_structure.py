@@ -9,7 +9,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 @dataclass
 class DeltaValueStructure:
-    delta_ref: str | None = field(
+    delta_ref: None | str = field(
         default=None,
         metadata={
             "name": "DeltaRef",
@@ -17,7 +17,7 @@ class DeltaValueStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    modification: ModificationEnumeration | None = field(
+    modification: None | ModificationEnumeration = field(
         default=None,
         metadata={
             "name": "Modification",
@@ -25,7 +25,7 @@ class DeltaValueStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    value_name: str | None = field(
+    value_name: None | str = field(
         default=None,
         metadata={
             "name": "ValueName",
@@ -33,7 +33,7 @@ class DeltaValueStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    old_value: object | None = field(
+    old_value: None | object = field(
         default=None,
         metadata={
             "name": "OldValue",
@@ -41,7 +41,7 @@ class DeltaValueStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    new_value: object | None = field(
+    new_value: None | object = field(
         default=None,
         metadata={
             "name": "NewValue",
@@ -49,7 +49,7 @@ class DeltaValueStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",

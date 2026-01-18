@@ -23,13 +23,13 @@ class RealExpression(ComplexBaseExpression):
     class Meta:
         name = "realExpression"
 
-    minimum: float | None = field(
+    minimum: None | float = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    maximum: float | None = field(
+    maximum: None | float = field(
         default=None,
         metadata={
             "type": "Attribute",

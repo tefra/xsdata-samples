@@ -26,20 +26,20 @@ class BswEntryRelationshipEnum:
     class Meta:
         name = "BSW-ENTRY-RELATIONSHIP-ENUM"
 
-    value: BswEntryRelationshipEnumSimple | None = field(
+    value: None | BswEntryRelationshipEnumSimple = field(
         default=None,
         metadata={
             "required": True,
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

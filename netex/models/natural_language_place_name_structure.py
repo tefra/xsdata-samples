@@ -15,7 +15,7 @@ class NaturalLanguagePlaceNameStructure:
             "pattern": r"[^,\[\]\{\}\?$%\^=@#;:]+",
         },
     )
-    lang: str | None = field(
+    lang: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",

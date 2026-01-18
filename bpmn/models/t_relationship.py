@@ -30,7 +30,7 @@ class TRelationship(TBaseElement):
             "min_occurs": 1,
         },
     )
-    type_value: str | None = field(
+    type_value: None | str = field(
         default=None,
         metadata={
             "name": "type",
@@ -38,7 +38,7 @@ class TRelationship(TBaseElement):
             "required": True,
         },
     )
-    direction: TRelationshipDirection | None = field(
+    direction: None | TRelationshipDirection = field(
         default=None,
         metadata={
             "type": "Attribute",

@@ -25,7 +25,7 @@ class EnumeratedValues:
         namespace = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
     enumeration_definition_ref: (
-        EnumeratedValues.EnumerationDefinitionRef | None
+        None | EnumeratedValues.EnumerationDefinitionRef
     ) = field(
         default=None,
         metadata={
@@ -49,7 +49,7 @@ class EnumeratedValues:
                 "required": True,
             },
         )
-        type_definitions: str | None = field(
+        type_definitions: None | str = field(
             default=None,
             metadata={
                 "name": "typeDefinitions",

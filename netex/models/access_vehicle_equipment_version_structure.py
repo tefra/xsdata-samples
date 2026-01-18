@@ -23,7 +23,7 @@ class AccessVehicleEquipmentVersionStructure(
     class Meta:
         name = "AccessVehicleEquipment_VersionStructure"
 
-    low_floor: bool | None = field(
+    low_floor: None | bool = field(
         default=None,
         metadata={
             "name": "LowFloor",
@@ -31,7 +31,7 @@ class AccessVehicleEquipmentVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    high_floor: bool | None = field(
+    high_floor: None | bool = field(
         default=None,
         metadata={
             "name": "HighFloor",
@@ -39,7 +39,7 @@ class AccessVehicleEquipmentVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    hoist: bool | None = field(
+    hoist: None | bool = field(
         default=None,
         metadata={
             "name": "Hoist",
@@ -47,7 +47,7 @@ class AccessVehicleEquipmentVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    ramp: bool | None = field(
+    ramp: None | bool = field(
         default=None,
         metadata={
             "name": "Ramp",
@@ -55,7 +55,7 @@ class AccessVehicleEquipmentVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    bearing_capacity: Decimal | None = field(
+    bearing_capacity: None | Decimal = field(
         default=None,
         metadata={
             "name": "BearingCapacity",
@@ -63,7 +63,7 @@ class AccessVehicleEquipmentVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    number_of_steps: int | None = field(
+    number_of_steps: None | int = field(
         default=None,
         metadata={
             "name": "NumberOfSteps",
@@ -71,7 +71,7 @@ class AccessVehicleEquipmentVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    boarding_height: Decimal | None = field(
+    boarding_height: None | Decimal = field(
         default=None,
         metadata={
             "name": "BoardingHeight",
@@ -79,7 +79,7 @@ class AccessVehicleEquipmentVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    equipment_length: Decimal | None = field(
+    equipment_length: None | Decimal = field(
         default=None,
         metadata={
             "name": "EquipmentLength",
@@ -87,7 +87,7 @@ class AccessVehicleEquipmentVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    equipment_width: Decimal | None = field(
+    equipment_width: None | Decimal = field(
         default=None,
         metadata={
             "name": "EquipmentWidth",
@@ -95,7 +95,7 @@ class AccessVehicleEquipmentVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    gap_to_platform: Decimal | None = field(
+    gap_to_platform: None | Decimal = field(
         default=None,
         metadata={
             "name": "GapToPlatform",
@@ -103,7 +103,7 @@ class AccessVehicleEquipmentVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    width_of_access_area: Decimal | None = field(
+    width_of_access_area: None | Decimal = field(
         default=None,
         metadata={
             "name": "WidthOfAccessArea",
@@ -111,7 +111,7 @@ class AccessVehicleEquipmentVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    height_of_access_area: Decimal | None = field(
+    height_of_access_area: None | Decimal = field(
         default=None,
         metadata={
             "name": "HeightOfAccessArea",
@@ -119,7 +119,7 @@ class AccessVehicleEquipmentVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    automatic_doors: bool | None = field(
+    automatic_doors: None | bool = field(
         default=None,
         metadata={
             "name": "AutomaticDoors",
@@ -136,7 +136,7 @@ class AccessVehicleEquipmentVersionStructure(
             "tokens": True,
         },
     )
-    assistance_needed: AssistanceNeededEnumeration | None = field(
+    assistance_needed: None | AssistanceNeededEnumeration = field(
         default=None,
         metadata={
             "name": "AssistanceNeeded",
@@ -144,7 +144,7 @@ class AccessVehicleEquipmentVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    assisted_boarding_location: AssistedBoardingLocationEnumeration | None = (
+    assisted_boarding_location: None | AssistedBoardingLocationEnumeration = (
         field(
             default=None,
             metadata={
@@ -154,7 +154,7 @@ class AccessVehicleEquipmentVersionStructure(
             },
         )
     )
-    guide_dogs_allowed: bool | None = field(
+    guide_dogs_allowed: None | bool = field(
         default=None,
         metadata={
             "name": "GuideDogsAllowed",

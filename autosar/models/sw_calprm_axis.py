@@ -49,7 +49,7 @@ class SwCalprmAxis:
     class Meta:
         name = "SW-CALPRM-AXIS"
 
-    sw_axis_index: AxisIndexType | None = field(
+    sw_axis_index: None | AxisIndexType = field(
         default=None,
         metadata={
             "name": "SW-AXIS-INDEX",
@@ -57,7 +57,7 @@ class SwCalprmAxis:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CalprmAxisCategoryEnum | None = field(
+    category: None | CalprmAxisCategoryEnum = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -65,7 +65,7 @@ class SwCalprmAxis:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_axis_grouped: SwAxisGrouped | None = field(
+    sw_axis_grouped: None | SwAxisGrouped = field(
         default=None,
         metadata={
             "name": "SW-AXIS-GROUPED",
@@ -73,7 +73,7 @@ class SwCalprmAxis:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_axis_individual: SwAxisIndividual | None = field(
+    sw_axis_individual: None | SwAxisIndividual = field(
         default=None,
         metadata={
             "name": "SW-AXIS-INDIVIDUAL",
@@ -81,7 +81,7 @@ class SwCalprmAxis:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_calibration_access: SwCalibrationAccessEnum | None = field(
+    sw_calibration_access: None | SwCalibrationAccessEnum = field(
         default=None,
         metadata={
             "name": "SW-CALIBRATION-ACCESS",
@@ -89,7 +89,7 @@ class SwCalprmAxis:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    display_format: DisplayFormatString | None = field(
+    display_format: None | DisplayFormatString = field(
         default=None,
         metadata={
             "name": "DISPLAY-FORMAT",
@@ -97,7 +97,7 @@ class SwCalprmAxis:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    base_type_ref: SwCalprmAxis.BaseTypeRef | None = field(
+    base_type_ref: None | SwCalprmAxis.BaseTypeRef = field(
         default=None,
         metadata={
             "name": "BASE-TYPE-REF",
@@ -105,14 +105,14 @@ class SwCalprmAxis:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -123,7 +123,7 @@ class SwCalprmAxis:
 
     @dataclass
     class BaseTypeRef(Ref):
-        dest: SwBaseTypeSubtypesEnum | None = field(
+        dest: None | SwBaseTypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

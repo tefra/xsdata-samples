@@ -31,7 +31,7 @@ class ValidableElementVersionStructure(PriceableObjectVersionStructure):
     class Meta:
         name = "ValidableElement_VersionStructure"
 
-    fare_structure_elements: FareStructureElementRefsRelStructure | None = (
+    fare_structure_elements: None | FareStructureElementRefsRelStructure = (
         field(
             default=None,
             metadata={
@@ -41,7 +41,7 @@ class ValidableElementVersionStructure(PriceableObjectVersionStructure):
             },
         )
     )
-    fare_elements_in_sequence: FareElementInSequenceRefsRelStructure | None = (
+    fare_elements_in_sequence: None | FareElementInSequenceRefsRelStructure = (
         field(
             default=None,
             metadata={
@@ -51,7 +51,7 @@ class ValidableElementVersionStructure(PriceableObjectVersionStructure):
             },
         )
     )
-    discount_rights: DiscountRightRefsRelStructure | None = field(
+    discount_rights: None | DiscountRightRefsRelStructure = field(
         default=None,
         metadata={
             "name": "discountRights",
@@ -59,7 +59,7 @@ class ValidableElementVersionStructure(PriceableObjectVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    amount_of_price_units: AmountOfPriceUnitRefsRelStructure | None = field(
+    amount_of_price_units: None | AmountOfPriceUnitRefsRelStructure = field(
         default=None,
         metadata={
             "name": "amountOfPriceUnits",
@@ -67,7 +67,7 @@ class ValidableElementVersionStructure(PriceableObjectVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    third_party_products: ThirdPartyProductRefsRelStructure | None = field(
+    third_party_products: None | ThirdPartyProductRefsRelStructure = field(
         default=None,
         metadata={
             "name": "thirdPartyProducts",
@@ -76,7 +76,7 @@ class ValidableElementVersionStructure(PriceableObjectVersionStructure):
         },
     )
     validity_parameter_assignments: (
-        ValidityParameterAssignmentsRelStructure | None
+        None | ValidityParameterAssignmentsRelStructure
     ) = field(
         default=None,
         metadata={
@@ -85,7 +85,7 @@ class ValidableElementVersionStructure(PriceableObjectVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    prices: ValidableElementPricesRelStructure | None = field(
+    prices: None | ValidableElementPricesRelStructure = field(
         default=None,
         metadata={
             "type": "Element",

@@ -34,7 +34,7 @@ class ServiceFacility(ParkingEquipmentOrServiceFacility):
     :ivar service_facility_extension:
     """
 
-    service_facility_type: ServiceFacilityTypeEnum | None = field(
+    service_facility_type: None | ServiceFacilityTypeEnum = field(
         default=None,
         metadata={
             "name": "serviceFacilityType",
@@ -43,7 +43,7 @@ class ServiceFacility(ParkingEquipmentOrServiceFacility):
             "required": True,
         },
     )
-    number_of_subitems: int | None = field(
+    number_of_subitems: None | int = field(
         default=None,
         metadata={
             "name": "numberOfSubitems",
@@ -51,7 +51,7 @@ class ServiceFacility(ParkingEquipmentOrServiceFacility):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    distance_from_parking_site: int | None = field(
+    distance_from_parking_site: None | int = field(
         default=None,
         metadata={
             "name": "distanceFromParkingSite",
@@ -59,7 +59,7 @@ class ServiceFacility(ParkingEquipmentOrServiceFacility):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    service_facility_extension: ExtensionType | None = field(
+    service_facility_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "serviceFacilityExtension",

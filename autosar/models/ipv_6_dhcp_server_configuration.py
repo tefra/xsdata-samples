@@ -60,7 +60,7 @@ class Ipv6DhcpServerConfiguration:
     class Meta:
         name = "IPV-6-DHCP-SERVER-CONFIGURATION"
 
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -68,7 +68,7 @@ class Ipv6DhcpServerConfiguration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -76,7 +76,7 @@ class Ipv6DhcpServerConfiguration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -84,7 +84,7 @@ class Ipv6DhcpServerConfiguration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -92,7 +92,7 @@ class Ipv6DhcpServerConfiguration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    address_range_lower_bound: Ip6AddressString | None = field(
+    address_range_lower_bound: None | Ip6AddressString = field(
         default=None,
         metadata={
             "name": "ADDRESS-RANGE-LOWER-BOUND",
@@ -100,7 +100,7 @@ class Ipv6DhcpServerConfiguration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    address_range_upper_bound: Ip6AddressString | None = field(
+    address_range_upper_bound: None | Ip6AddressString = field(
         default=None,
         metadata={
             "name": "ADDRESS-RANGE-UPPER-BOUND",
@@ -108,7 +108,7 @@ class Ipv6DhcpServerConfiguration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    default_gateway: Ip6AddressString | None = field(
+    default_gateway: None | Ip6AddressString = field(
         default=None,
         metadata={
             "name": "DEFAULT-GATEWAY",
@@ -116,7 +116,7 @@ class Ipv6DhcpServerConfiguration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    default_lease_time: TimeValue | None = field(
+    default_lease_time: None | TimeValue = field(
         default=None,
         metadata={
             "name": "DEFAULT-LEASE-TIME",
@@ -125,7 +125,7 @@ class Ipv6DhcpServerConfiguration:
         },
     )
     dns_server_addresses: (
-        Ipv6DhcpServerConfiguration.DnsServerAddresses | None
+        None | Ipv6DhcpServerConfiguration.DnsServerAddresses
     ) = field(
         default=None,
         metadata={
@@ -134,7 +134,7 @@ class Ipv6DhcpServerConfiguration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    network_mask: Ip6AddressString | None = field(
+    network_mask: None | Ip6AddressString = field(
         default=None,
         metadata={
             "name": "NETWORK-MASK",
@@ -142,14 +142,14 @@ class Ipv6DhcpServerConfiguration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

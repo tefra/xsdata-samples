@@ -49,7 +49,7 @@ class PrpaIn900300Uv02QuqiMt021001Uv01ControlActProcess:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Ii | None = field(
+    type_id: None | Ii = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -72,21 +72,21 @@ class PrpaIn900300Uv02QuqiMt021001Uv01ControlActProcess:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    code: Cd | None = field(
+    code: None | Cd = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    text: EdExplicit | None = field(
+    text: None | EdExplicit = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    effective_time: IvlTsExplicit | None = field(
+    effective_time: None | IvlTsExplicit = field(
         default=None,
         metadata={
             "name": "effectiveTime",
@@ -110,7 +110,7 @@ class PrpaIn900300Uv02QuqiMt021001Uv01ControlActProcess:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    language_code: Ce | None = field(
+    language_code: None | Ce = field(
         default=None,
         metadata={
             "name": "languageCode",
@@ -163,7 +163,7 @@ class PrpaIn900300Uv02QuqiMt021001Uv01ControlActProcess:
         },
     )
     query_by_parameter_payload: (
-        PrpaMt900300Uv02QueryByParameterPayload | None
+        None | PrpaMt900300Uv02QueryByParameterPayload
     ) = field(
         default=None,
         metadata={
@@ -173,14 +173,14 @@ class PrpaIn900300Uv02QuqiMt021001Uv01ControlActProcess:
             "nillable": True,
         },
     )
-    null_flavor: NullFlavor | None = field(
+    null_flavor: None | NullFlavor = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
         },
     )
-    class_code: ActClassControlAct | None = field(
+    class_code: None | ActClassControlAct = field(
         default=None,
         metadata={
             "name": "classCode",
@@ -188,7 +188,7 @@ class PrpaIn900300Uv02QuqiMt021001Uv01ControlActProcess:
             "required": True,
         },
     )
-    mood_code: XActMoodIntentEvent | None = field(
+    mood_code: None | XActMoodIntentEvent = field(
         default=None,
         metadata={
             "name": "moodCode",
@@ -211,7 +211,7 @@ class PrpaIn900300Uv02McciMt000100Uv01Message:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Ii | None = field(
+    type_id: None | Ii = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -227,7 +227,7 @@ class PrpaIn900300Uv02McciMt000100Uv01Message:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    id: Ii | None = field(
+    id: None | Ii = field(
         default=None,
         metadata={
             "type": "Element",
@@ -235,7 +235,7 @@ class PrpaIn900300Uv02McciMt000100Uv01Message:
             "required": True,
         },
     )
-    creation_time: TsExplicit | None = field(
+    creation_time: None | TsExplicit = field(
         default=None,
         metadata={
             "name": "creationTime",
@@ -244,7 +244,7 @@ class PrpaIn900300Uv02McciMt000100Uv01Message:
             "required": True,
         },
     )
-    security_text: St | None = field(
+    security_text: None | St = field(
         default=None,
         metadata={
             "name": "securityText",
@@ -252,7 +252,7 @@ class PrpaIn900300Uv02McciMt000100Uv01Message:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    version_code: Cs | None = field(
+    version_code: None | Cs = field(
         default=None,
         metadata={
             "name": "versionCode",
@@ -260,7 +260,7 @@ class PrpaIn900300Uv02McciMt000100Uv01Message:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    interaction_id: Ii | None = field(
+    interaction_id: None | Ii = field(
         default=None,
         metadata={
             "name": "interactionId",
@@ -277,7 +277,7 @@ class PrpaIn900300Uv02McciMt000100Uv01Message:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    processing_code: Cs | None = field(
+    processing_code: None | Cs = field(
         default=None,
         metadata={
             "name": "processingCode",
@@ -286,7 +286,7 @@ class PrpaIn900300Uv02McciMt000100Uv01Message:
             "required": True,
         },
     )
-    processing_mode_code: Cs | None = field(
+    processing_mode_code: None | Cs = field(
         default=None,
         metadata={
             "name": "processingModeCode",
@@ -295,7 +295,7 @@ class PrpaIn900300Uv02McciMt000100Uv01Message:
             "required": True,
         },
     )
-    accept_ack_code: Cs | None = field(
+    accept_ack_code: None | Cs = field(
         default=None,
         metadata={
             "name": "acceptAckCode",
@@ -304,7 +304,7 @@ class PrpaIn900300Uv02McciMt000100Uv01Message:
             "required": True,
         },
     )
-    sequence_number: Int | None = field(
+    sequence_number: None | Int = field(
         default=None,
         metadata={
             "name": "sequenceNumber",
@@ -337,7 +337,7 @@ class PrpaIn900300Uv02McciMt000100Uv01Message:
             "nillable": True,
         },
     )
-    sender: McciMt000100Uv01Sender | None = field(
+    sender: None | McciMt000100Uv01Sender = field(
         default=None,
         metadata={
             "type": "Element",
@@ -355,7 +355,7 @@ class PrpaIn900300Uv02McciMt000100Uv01Message:
         },
     )
     control_act_process: (
-        PrpaIn900300Uv02QuqiMt021001Uv01ControlActProcess | None
+        None | PrpaIn900300Uv02QuqiMt021001Uv01ControlActProcess
     ) = field(
         default=None,
         metadata={
@@ -365,7 +365,7 @@ class PrpaIn900300Uv02McciMt000100Uv01Message:
             "required": True,
         },
     )
-    null_flavor: NullFlavor | None = field(
+    null_flavor: None | NullFlavor = field(
         default=None,
         metadata={
             "name": "nullFlavor",

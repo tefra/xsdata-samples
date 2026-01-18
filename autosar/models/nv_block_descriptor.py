@@ -154,7 +154,7 @@ class NvBlockDescriptor:
     class Meta:
         name = "NV-BLOCK-DESCRIPTOR"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -163,7 +163,7 @@ class NvBlockDescriptor:
             "required": True,
         },
     )
-    short_name_fragments: NvBlockDescriptor.ShortNameFragments | None = field(
+    short_name_fragments: None | NvBlockDescriptor.ShortNameFragments = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -171,7 +171,7 @@ class NvBlockDescriptor:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -179,7 +179,7 @@ class NvBlockDescriptor:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -187,7 +187,7 @@ class NvBlockDescriptor:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -195,7 +195,7 @@ class NvBlockDescriptor:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -203,7 +203,7 @@ class NvBlockDescriptor:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -211,7 +211,7 @@ class NvBlockDescriptor:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: NvBlockDescriptor.Annotations | None = field(
+    annotations: None | NvBlockDescriptor.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -219,7 +219,7 @@ class NvBlockDescriptor:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    client_server_ports: NvBlockDescriptor.ClientServerPorts | None = field(
+    client_server_ports: None | NvBlockDescriptor.ClientServerPorts = field(
         default=None,
         metadata={
             "name": "CLIENT-SERVER-PORTS",
@@ -228,7 +228,7 @@ class NvBlockDescriptor:
         },
     )
     constant_value_mapping_refs: (
-        NvBlockDescriptor.ConstantValueMappingRefs | None
+        None | NvBlockDescriptor.ConstantValueMappingRefs
     ) = field(
         default=None,
         metadata={
@@ -237,7 +237,7 @@ class NvBlockDescriptor:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    data_type_mapping_refs: NvBlockDescriptor.DataTypeMappingRefs | None = (
+    data_type_mapping_refs: None | NvBlockDescriptor.DataTypeMappingRefs = (
         field(
             default=None,
             metadata={
@@ -248,7 +248,7 @@ class NvBlockDescriptor:
         )
     )
     instantiation_data_def_propss: (
-        NvBlockDescriptor.InstantiationDataDefPropss | None
+        None | NvBlockDescriptor.InstantiationDataDefPropss
     ) = field(
         default=None,
         metadata={
@@ -258,7 +258,7 @@ class NvBlockDescriptor:
         },
     )
     mode_switch_event_triggered_activitys: (
-        NvBlockDescriptor.ModeSwitchEventTriggeredActivitys | None
+        None | NvBlockDescriptor.ModeSwitchEventTriggeredActivitys
     ) = field(
         default=None,
         metadata={
@@ -267,7 +267,7 @@ class NvBlockDescriptor:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nv_block_data_mappings: NvBlockDescriptor.NvBlockDataMappings | None = (
+    nv_block_data_mappings: None | NvBlockDescriptor.NvBlockDataMappings = (
         field(
             default=None,
             metadata={
@@ -277,7 +277,7 @@ class NvBlockDescriptor:
             },
         )
     )
-    nv_block_needs: NvBlockNeeds | None = field(
+    nv_block_needs: None | NvBlockNeeds = field(
         default=None,
         metadata={
             "name": "NV-BLOCK-NEEDS",
@@ -285,7 +285,7 @@ class NvBlockDescriptor:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ram_block: VariableDataPrototype | None = field(
+    ram_block: None | VariableDataPrototype = field(
         default=None,
         metadata={
             "name": "RAM-BLOCK",
@@ -293,7 +293,7 @@ class NvBlockDescriptor:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    rom_block: ParameterDataPrototype | None = field(
+    rom_block: None | ParameterDataPrototype = field(
         default=None,
         metadata={
             "name": "ROM-BLOCK",
@@ -301,7 +301,7 @@ class NvBlockDescriptor:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    support_dirty_flag: Boolean | None = field(
+    support_dirty_flag: None | Boolean = field(
         default=None,
         metadata={
             "name": "SUPPORT-DIRTY-FLAG",
@@ -309,7 +309,7 @@ class NvBlockDescriptor:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    timing_event_ref: NvBlockDescriptor.TimingEventRef | None = field(
+    timing_event_ref: None | NvBlockDescriptor.TimingEventRef = field(
         default=None,
         metadata={
             "name": "TIMING-EVENT-REF",
@@ -317,7 +317,7 @@ class NvBlockDescriptor:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    writing_strategy_role: RoleBasedDataAssignment | None = field(
+    writing_strategy_role: None | RoleBasedDataAssignment = field(
         default=None,
         metadata={
             "name": "WRITING-STRATEGY-ROLE",
@@ -325,7 +325,7 @@ class NvBlockDescriptor:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -333,14 +333,14 @@ class NvBlockDescriptor:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -348,7 +348,7 @@ class NvBlockDescriptor:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -404,7 +404,7 @@ class NvBlockDescriptor:
 
         @dataclass
         class ConstantValueMappingRef(Ref):
-            dest: ConstantSpecificationMappingSetSubtypesEnum | None = field(
+            dest: None | ConstantSpecificationMappingSetSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -428,7 +428,7 @@ class NvBlockDescriptor:
 
         @dataclass
         class DataTypeMappingRef(Ref):
-            dest: DataTypeMappingSetSubtypesEnum | None = field(
+            dest: None | DataTypeMappingSetSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -474,7 +474,7 @@ class NvBlockDescriptor:
 
     @dataclass
     class TimingEventRef(Ref):
-        dest: TimingEventSubtypesEnum | None = field(
+        dest: None | TimingEventSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

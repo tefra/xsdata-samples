@@ -42,7 +42,7 @@ class PostBuildVariantCondition:
         name = "POST-BUILD-VARIANT-CONDITION"
 
     matching_criterion_ref: (
-        PostBuildVariantCondition.MatchingCriterionRef | None
+        None | PostBuildVariantCondition.MatchingCriterionRef
     ) = field(
         default=None,
         metadata={
@@ -51,7 +51,7 @@ class PostBuildVariantCondition:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    value: IntegerValueVariationPoint | None = field(
+    value: None | IntegerValueVariationPoint = field(
         default=None,
         metadata={
             "name": "VALUE",
@@ -59,14 +59,14 @@ class PostBuildVariantCondition:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -77,7 +77,7 @@ class PostBuildVariantCondition:
 
     @dataclass
     class MatchingCriterionRef(Ref):
-        dest: PostBuildVariantCriterionSubtypesEnum | None = field(
+        dest: None | PostBuildVariantCriterionSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

@@ -12,7 +12,7 @@ class PassingTimeViewStructure(DataManagedObjectViewStructure):
     class Meta:
         name = "PassingTime_ViewStructure"
 
-    day_offset: int | None = field(
+    day_offset: None | int = field(
         default=None,
         metadata={
             "name": "DayOffset",

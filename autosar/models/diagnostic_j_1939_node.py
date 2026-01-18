@@ -87,7 +87,7 @@ class DiagnosticJ1939Node:
     class Meta:
         name = "DIAGNOSTIC-J-1939-NODE"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -96,7 +96,7 @@ class DiagnosticJ1939Node:
             "required": True,
         },
     )
-    short_name_fragments: DiagnosticJ1939Node.ShortNameFragments | None = (
+    short_name_fragments: None | DiagnosticJ1939Node.ShortNameFragments = (
         field(
             default=None,
             metadata={
@@ -106,7 +106,7 @@ class DiagnosticJ1939Node:
             },
         )
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -114,7 +114,7 @@ class DiagnosticJ1939Node:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -122,7 +122,7 @@ class DiagnosticJ1939Node:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -130,7 +130,7 @@ class DiagnosticJ1939Node:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -138,7 +138,7 @@ class DiagnosticJ1939Node:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -146,7 +146,7 @@ class DiagnosticJ1939Node:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: DiagnosticJ1939Node.Annotations | None = field(
+    annotations: None | DiagnosticJ1939Node.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -154,7 +154,7 @@ class DiagnosticJ1939Node:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -162,7 +162,7 @@ class DiagnosticJ1939Node:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nm_node_ref: DiagnosticJ1939Node.NmNodeRef | None = field(
+    nm_node_ref: None | DiagnosticJ1939Node.NmNodeRef = field(
         default=None,
         metadata={
             "name": "NM-NODE-REF",
@@ -170,14 +170,14 @@ class DiagnosticJ1939Node:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -185,7 +185,7 @@ class DiagnosticJ1939Node:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -217,7 +217,7 @@ class DiagnosticJ1939Node:
 
     @dataclass
     class NmNodeRef(Ref):
-        dest: J1939NmNodeSubtypesEnum | None = field(
+        dest: None | J1939NmNodeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

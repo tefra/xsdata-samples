@@ -20,7 +20,7 @@ class JourneyFrequencyGroupVersionStructure(GroupOfEntitiesVersionStructure):
     class Meta:
         name = "JourneyFrequencyGroup_VersionStructure"
 
-    first_departure_time: XmlTime | None = field(
+    first_departure_time: None | XmlTime = field(
         default=None,
         metadata={
             "name": "FirstDepartureTime",
@@ -29,7 +29,7 @@ class JourneyFrequencyGroupVersionStructure(GroupOfEntitiesVersionStructure):
             "required": True,
         },
     )
-    first_day_offset: int | None = field(
+    first_day_offset: None | int = field(
         default=None,
         metadata={
             "name": "FirstDayOffset",
@@ -37,7 +37,7 @@ class JourneyFrequencyGroupVersionStructure(GroupOfEntitiesVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    last_departure_time: XmlTime | None = field(
+    last_departure_time: None | XmlTime = field(
         default=None,
         metadata={
             "name": "LastDepartureTime",
@@ -45,7 +45,7 @@ class JourneyFrequencyGroupVersionStructure(GroupOfEntitiesVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    last_day_offset: int | None = field(
+    last_day_offset: None | int = field(
         default=None,
         metadata={
             "name": "LastDayOffset",
@@ -53,7 +53,7 @@ class JourneyFrequencyGroupVersionStructure(GroupOfEntitiesVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    time_demand_types: TimeDemandTypeRefsRelStructure | None = field(
+    time_demand_types: None | TimeDemandTypeRefsRelStructure = field(
         default=None,
         metadata={
             "name": "timeDemandTypes",
@@ -61,7 +61,7 @@ class JourneyFrequencyGroupVersionStructure(GroupOfEntitiesVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    journeys: ExplicitJourneyRefsRelStructure | None = field(
+    journeys: None | ExplicitJourneyRefsRelStructure = field(
         default=None,
         metadata={
             "type": "Element",

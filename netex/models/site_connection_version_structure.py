@@ -14,7 +14,7 @@ class SiteConnectionVersionStructure(TransferVersionStructure):
     class Meta:
         name = "SiteConnection_VersionStructure"
 
-    from_value: SiteConnectionEndStructure | None = field(
+    from_value: None | SiteConnectionEndStructure = field(
         default=None,
         metadata={
             "name": "From",
@@ -22,7 +22,7 @@ class SiteConnectionVersionStructure(TransferVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    to: SiteConnectionEndStructure | None = field(
+    to: None | SiteConnectionEndStructure = field(
         default=None,
         metadata={
             "name": "To",
@@ -30,7 +30,7 @@ class SiteConnectionVersionStructure(TransferVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    navigation_paths: NavigationPathsRelStructure | None = field(
+    navigation_paths: None | NavigationPathsRelStructure = field(
         default=None,
         metadata={
             "name": "navigationPaths",

@@ -24,7 +24,7 @@ class PortSliceType:
     class Meta:
         name = "portSliceType"
 
-    path_segments: PortSliceType.PathSegments | None = field(
+    path_segments: None | PortSliceType.PathSegments = field(
         default=None,
         metadata={
             "name": "pathSegments",
@@ -33,14 +33,14 @@ class PortSliceType:
             "required": True,
         },
     )
-    range: Range | None = field(
+    range: None | Range = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",

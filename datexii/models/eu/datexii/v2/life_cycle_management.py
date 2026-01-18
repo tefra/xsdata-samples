@@ -22,21 +22,21 @@ class LifeCycleManagement:
     :ivar life_cycle_management_extension:
     """
 
-    cancel: bool | None = field(
+    cancel: None | bool = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    end: bool | None = field(
+    end: None | bool = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    life_cycle_management_extension: ExtensionType | None = field(
+    life_cycle_management_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "lifeCycleManagementExtension",

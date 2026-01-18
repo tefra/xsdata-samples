@@ -48,7 +48,7 @@ class BankedBankType:
     class Meta:
         name = "bankedBankType"
 
-    name: str | None = field(
+    name: None | str = field(
         default=None,
         metadata={
             "type": "Element",
@@ -56,7 +56,7 @@ class BankedBankType:
             "required": True,
         },
     )
-    display_name: DisplayName | None = field(
+    display_name: None | DisplayName = field(
         default=None,
         metadata={
             "name": "displayName",
@@ -64,7 +64,7 @@ class BankedBankType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    short_description: ShortDescription | None = field(
+    short_description: None | ShortDescription = field(
         default=None,
         metadata={
             "name": "shortDescription",
@@ -72,14 +72,14 @@ class BankedBankType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    description: Description | None = field(
+    description: None | Description = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    access_handles: BankedBankType.AccessHandles | None = field(
+    access_handles: None | BankedBankType.AccessHandles = field(
         default=None,
         metadata={
             "name": "accessHandles",
@@ -87,7 +87,7 @@ class BankedBankType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    bank_definition_ref: BankedBankType.BankDefinitionRef | None = field(
+    bank_definition_ref: None | BankedBankType.BankDefinitionRef = field(
         default=None,
         metadata={
             "name": "bankDefinitionRef",
@@ -118,21 +118,21 @@ class BankedBankType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    usage: UsageType | None = field(
+    usage: None | UsageType = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    volatile: Volatile | None = field(
+    volatile: None | Volatile = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    access_policies: AccessPolicies | None = field(
+    access_policies: None | AccessPolicies = field(
         default=None,
         metadata={
             "name": "accessPolicies",
@@ -140,14 +140,14 @@ class BankedBankType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    parameters: Parameters | None = field(
+    parameters: None | Parameters = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    bank_alignment: BankAlignmentType | None = field(
+    bank_alignment: None | BankAlignmentType = field(
         default=None,
         metadata={
             "name": "bankAlignment",
@@ -155,7 +155,7 @@ class BankedBankType:
             "required": True,
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -183,7 +183,7 @@ class BankedBankType:
                 "required": True,
             },
         )
-        type_definitions: str | None = field(
+        type_definitions: None | str = field(
             default=None,
             metadata={
                 "name": "typeDefinitions",
@@ -194,7 +194,7 @@ class BankedBankType:
 
     @dataclass
     class Bank:
-        vendor_extensions: VendorExtensions | None = field(
+        vendor_extensions: None | VendorExtensions = field(
             default=None,
             metadata={
                 "name": "vendorExtensions",

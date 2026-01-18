@@ -15,7 +15,7 @@ class LeftLuggageServiceVersionStructure(CustomerServiceVersionStructure):
     class Meta:
         name = "LeftLuggageService_VersionStructure"
 
-    counter_service: bool | None = field(
+    counter_service: None | bool = field(
         default=None,
         metadata={
             "name": "CounterService",
@@ -23,7 +23,7 @@ class LeftLuggageServiceVersionStructure(CustomerServiceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    self_service_lockers: bool | None = field(
+    self_service_lockers: None | bool = field(
         default=None,
         metadata={
             "name": "SelfServiceLockers",
@@ -31,7 +31,7 @@ class LeftLuggageServiceVersionStructure(CustomerServiceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    fee_per_bag: bool | None = field(
+    fee_per_bag: None | bool = field(
         default=None,
         metadata={
             "name": "FeePerBag",
@@ -39,7 +39,7 @@ class LeftLuggageServiceVersionStructure(CustomerServiceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    locker_fee: bool | None = field(
+    locker_fee: None | bool = field(
         default=None,
         metadata={
             "name": "LockerFee",
@@ -47,7 +47,7 @@ class LeftLuggageServiceVersionStructure(CustomerServiceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    maximum_bag_width: Decimal | None = field(
+    maximum_bag_width: None | Decimal = field(
         default=None,
         metadata={
             "name": "MaximumBagWidth",
@@ -55,7 +55,7 @@ class LeftLuggageServiceVersionStructure(CustomerServiceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    maximum_bag_height: Decimal | None = field(
+    maximum_bag_height: None | Decimal = field(
         default=None,
         metadata={
             "name": "MaximumBagHeight",
@@ -63,7 +63,7 @@ class LeftLuggageServiceVersionStructure(CustomerServiceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    maximum_bag_depth: Decimal | None = field(
+    maximum_bag_depth: None | Decimal = field(
         default=None,
         metadata={
             "name": "MaximumBagDepth",
@@ -71,7 +71,7 @@ class LeftLuggageServiceVersionStructure(CustomerServiceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    maximum_bag_weight: Decimal | None = field(
+    maximum_bag_weight: None | Decimal = field(
         default=None,
         metadata={
             "name": "MaximumBagWeight",
@@ -79,7 +79,7 @@ class LeftLuggageServiceVersionStructure(CustomerServiceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    maximum_duration: XmlDuration | None = field(
+    maximum_duration: None | XmlDuration = field(
         default=None,
         metadata={
             "name": "MaximumDuration",

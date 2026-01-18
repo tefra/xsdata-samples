@@ -83,7 +83,7 @@ class DoIpActivationLineNeeds:
     class Meta:
         name = "DO-IP-ACTIVATION-LINE-NEEDS"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -92,7 +92,7 @@ class DoIpActivationLineNeeds:
             "required": True,
         },
     )
-    short_name_fragments: DoIpActivationLineNeeds.ShortNameFragments | None = (
+    short_name_fragments: None | DoIpActivationLineNeeds.ShortNameFragments = (
         field(
             default=None,
             metadata={
@@ -102,7 +102,7 @@ class DoIpActivationLineNeeds:
             },
         )
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -110,7 +110,7 @@ class DoIpActivationLineNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -118,7 +118,7 @@ class DoIpActivationLineNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -126,7 +126,7 @@ class DoIpActivationLineNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -134,7 +134,7 @@ class DoIpActivationLineNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -142,7 +142,7 @@ class DoIpActivationLineNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: DoIpActivationLineNeeds.Annotations | None = field(
+    annotations: None | DoIpActivationLineNeeds.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -150,14 +150,14 @@ class DoIpActivationLineNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -165,7 +165,7 @@ class DoIpActivationLineNeeds:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",

@@ -17,7 +17,7 @@ class HailAndRideAreaVersionStructure(FlexibleQuayVersionStructure):
     class Meta:
         name = "HailAndRideArea_VersionStructure"
 
-    bearing_compass: CompassBearing16Enumeration | None = field(
+    bearing_compass: None | CompassBearing16Enumeration = field(
         default=None,
         metadata={
             "name": "BearingCompass",
@@ -25,7 +25,7 @@ class HailAndRideAreaVersionStructure(FlexibleQuayVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    bearing_degrees: int | None = field(
+    bearing_degrees: None | int = field(
         default=None,
         metadata={
             "name": "BearingDegrees",
@@ -33,14 +33,14 @@ class HailAndRideAreaVersionStructure(FlexibleQuayVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    destinations: DestinationDisplayViewsRelStructure | None = field(
+    destinations: None | DestinationDisplayViewsRelStructure = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    start_point_ref: PointRefStructure | None = field(
+    start_point_ref: None | PointRefStructure = field(
         default=None,
         metadata={
             "name": "StartPointRef",
@@ -49,7 +49,7 @@ class HailAndRideAreaVersionStructure(FlexibleQuayVersionStructure):
             "required": True,
         },
     )
-    end_point_ref: PointRefStructure | None = field(
+    end_point_ref: None | PointRefStructure = field(
         default=None,
         metadata={
             "name": "EndPointRef",

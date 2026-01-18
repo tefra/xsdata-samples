@@ -109,7 +109,7 @@ class LinTpNode:
     class Meta:
         name = "LIN-TP-NODE"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -118,7 +118,7 @@ class LinTpNode:
             "required": True,
         },
     )
-    short_name_fragments: LinTpNode.ShortNameFragments | None = field(
+    short_name_fragments: None | LinTpNode.ShortNameFragments = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -126,7 +126,7 @@ class LinTpNode:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -134,7 +134,7 @@ class LinTpNode:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -142,7 +142,7 @@ class LinTpNode:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -150,7 +150,7 @@ class LinTpNode:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -158,7 +158,7 @@ class LinTpNode:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -166,7 +166,7 @@ class LinTpNode:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: LinTpNode.Annotations | None = field(
+    annotations: None | LinTpNode.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -174,7 +174,7 @@ class LinTpNode:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    connector_ref: LinTpNode.ConnectorRef | None = field(
+    connector_ref: None | LinTpNode.ConnectorRef = field(
         default=None,
         metadata={
             "name": "CONNECTOR-REF",
@@ -182,7 +182,7 @@ class LinTpNode:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    max_number_of_resp_pending_frames: Integer | None = field(
+    max_number_of_resp_pending_frames: None | Integer = field(
         default=None,
         metadata={
             "name": "MAX-NUMBER-OF-RESP-PENDING-FRAMES",
@@ -190,7 +190,7 @@ class LinTpNode:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    p_2_max: TimeValue | None = field(
+    p_2_max: None | TimeValue = field(
         default=None,
         metadata={
             "name": "P-2-MAX",
@@ -198,7 +198,7 @@ class LinTpNode:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    p_2_timing: TimeValue | None = field(
+    p_2_timing: None | TimeValue = field(
         default=None,
         metadata={
             "name": "P-2-TIMING",
@@ -206,7 +206,7 @@ class LinTpNode:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tp_address_ref: LinTpNode.TpAddressRef | None = field(
+    tp_address_ref: None | LinTpNode.TpAddressRef = field(
         default=None,
         metadata={
             "name": "TP-ADDRESS-REF",
@@ -214,7 +214,7 @@ class LinTpNode:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -222,14 +222,14 @@ class LinTpNode:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -237,7 +237,7 @@ class LinTpNode:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -269,7 +269,7 @@ class LinTpNode:
 
     @dataclass
     class ConnectorRef(Ref):
-        dest: CommunicationConnectorSubtypesEnum | None = field(
+        dest: None | CommunicationConnectorSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -280,7 +280,7 @@ class LinTpNode:
 
     @dataclass
     class TpAddressRef(Ref):
-        dest: TpAddressSubtypesEnum | None = field(
+        dest: None | TpAddressSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

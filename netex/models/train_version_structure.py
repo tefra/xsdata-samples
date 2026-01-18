@@ -14,7 +14,7 @@ class TrainVersionStructure(VehicleTypeVersionStructure):
     class Meta:
         name = "Train_VersionStructure"
 
-    train_size: TrainSize | None = field(
+    train_size: None | TrainSize = field(
         default=None,
         metadata={
             "name": "TrainSize",
@@ -22,7 +22,7 @@ class TrainVersionStructure(VehicleTypeVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    components: TrainComponentsRelStructure | None = field(
+    components: None | TrainComponentsRelStructure = field(
         default=None,
         metadata={
             "type": "Element",

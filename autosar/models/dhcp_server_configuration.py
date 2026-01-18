@@ -36,7 +36,7 @@ class DhcpServerConfiguration:
     class Meta:
         name = "DHCP-SERVER-CONFIGURATION"
 
-    ipv_4_dhcp_server_configuration: Ipv4DhcpServerConfiguration | None = (
+    ipv_4_dhcp_server_configuration: None | Ipv4DhcpServerConfiguration = (
         field(
             default=None,
             metadata={
@@ -46,7 +46,7 @@ class DhcpServerConfiguration:
             },
         )
     )
-    ipv_6_dhcp_server_configuration: Ipv6DhcpServerConfiguration | None = (
+    ipv_6_dhcp_server_configuration: None | Ipv6DhcpServerConfiguration = (
         field(
             default=None,
             metadata={
@@ -56,14 +56,14 @@ class DhcpServerConfiguration:
             },
         )
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

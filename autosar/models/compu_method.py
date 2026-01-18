@@ -114,7 +114,7 @@ class CompuMethod:
     class Meta:
         name = "COMPU-METHOD"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -123,7 +123,7 @@ class CompuMethod:
             "required": True,
         },
     )
-    short_name_fragments: CompuMethod.ShortNameFragments | None = field(
+    short_name_fragments: None | CompuMethod.ShortNameFragments = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -131,7 +131,7 @@ class CompuMethod:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -139,7 +139,7 @@ class CompuMethod:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -147,7 +147,7 @@ class CompuMethod:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -155,7 +155,7 @@ class CompuMethod:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -163,7 +163,7 @@ class CompuMethod:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -171,7 +171,7 @@ class CompuMethod:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: CompuMethod.Annotations | None = field(
+    annotations: None | CompuMethod.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -179,7 +179,7 @@ class CompuMethod:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -187,7 +187,7 @@ class CompuMethod:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    blueprint_policys: CompuMethod.BlueprintPolicys | None = field(
+    blueprint_policys: None | CompuMethod.BlueprintPolicys = field(
         default=None,
         metadata={
             "name": "BLUEPRINT-POLICYS",
@@ -195,7 +195,7 @@ class CompuMethod:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    short_name_pattern: String | None = field(
+    short_name_pattern: None | String = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-PATTERN",
@@ -203,7 +203,7 @@ class CompuMethod:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    display_format: DisplayFormatString | None = field(
+    display_format: None | DisplayFormatString = field(
         default=None,
         metadata={
             "name": "DISPLAY-FORMAT",
@@ -211,7 +211,7 @@ class CompuMethod:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    unit_ref: CompuMethod.UnitRef | None = field(
+    unit_ref: None | CompuMethod.UnitRef = field(
         default=None,
         metadata={
             "name": "UNIT-REF",
@@ -219,7 +219,7 @@ class CompuMethod:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    compu_internal_to_phys: Compu | None = field(
+    compu_internal_to_phys: None | Compu = field(
         default=None,
         metadata={
             "name": "COMPU-INTERNAL-TO-PHYS",
@@ -227,7 +227,7 @@ class CompuMethod:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    compu_phys_to_internal: Compu | None = field(
+    compu_phys_to_internal: None | Compu = field(
         default=None,
         metadata={
             "name": "COMPU-PHYS-TO-INTERNAL",
@@ -235,14 +235,14 @@ class CompuMethod:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -250,7 +250,7 @@ class CompuMethod:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -311,7 +311,7 @@ class CompuMethod:
 
     @dataclass
     class UnitRef(Ref):
-        dest: UnitSubtypesEnum | None = field(
+        dest: None | UnitSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

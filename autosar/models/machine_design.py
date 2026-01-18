@@ -112,7 +112,7 @@ class MachineDesign:
     class Meta:
         name = "MACHINE-DESIGN"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -121,7 +121,7 @@ class MachineDesign:
             "required": True,
         },
     )
-    short_name_fragments: MachineDesign.ShortNameFragments | None = field(
+    short_name_fragments: None | MachineDesign.ShortNameFragments = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -129,7 +129,7 @@ class MachineDesign:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -137,7 +137,7 @@ class MachineDesign:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -145,7 +145,7 @@ class MachineDesign:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -153,7 +153,7 @@ class MachineDesign:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -161,7 +161,7 @@ class MachineDesign:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -169,7 +169,7 @@ class MachineDesign:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: MachineDesign.Annotations | None = field(
+    annotations: None | MachineDesign.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -177,7 +177,7 @@ class MachineDesign:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -185,7 +185,7 @@ class MachineDesign:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    access_control: AccessControlEnum | None = field(
+    access_control: None | AccessControlEnum = field(
         default=None,
         metadata={
             "name": "ACCESS-CONTROL",
@@ -193,7 +193,7 @@ class MachineDesign:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    communication_connectors: MachineDesign.CommunicationConnectors | None = (
+    communication_connectors: None | MachineDesign.CommunicationConnectors = (
         field(
             default=None,
             metadata={
@@ -203,7 +203,7 @@ class MachineDesign:
             },
         )
     )
-    eth_ip_props_ref: MachineDesign.EthIpPropsRef | None = field(
+    eth_ip_props_ref: None | MachineDesign.EthIpPropsRef = field(
         default=None,
         metadata={
             "name": "ETH-IP-PROPS-REF",
@@ -211,7 +211,7 @@ class MachineDesign:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    pn_reset_timer: TimeValue | None = field(
+    pn_reset_timer: None | TimeValue = field(
         default=None,
         metadata={
             "name": "PN-RESET-TIMER",
@@ -219,7 +219,7 @@ class MachineDesign:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    pnc_prepare_sleep_timer: TimeValue | None = field(
+    pnc_prepare_sleep_timer: None | TimeValue = field(
         default=None,
         metadata={
             "name": "PNC-PREPARE-SLEEP-TIMER",
@@ -227,7 +227,7 @@ class MachineDesign:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    service_discover_configs: MachineDesign.ServiceDiscoverConfigs | None = (
+    service_discover_configs: None | MachineDesign.ServiceDiscoverConfigs = (
         field(
             default=None,
             metadata={
@@ -237,7 +237,7 @@ class MachineDesign:
             },
         )
     )
-    tcp_ip_icmp_props_ref: MachineDesign.TcpIpIcmpPropsRef | None = field(
+    tcp_ip_icmp_props_ref: None | MachineDesign.TcpIpIcmpPropsRef = field(
         default=None,
         metadata={
             "name": "TCP-IP-ICMP-PROPS-REF",
@@ -245,7 +245,7 @@ class MachineDesign:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tcp_ip_props_ref: MachineDesign.TcpIpPropsRef | None = field(
+    tcp_ip_props_ref: None | MachineDesign.TcpIpPropsRef = field(
         default=None,
         metadata={
             "name": "TCP-IP-PROPS-REF",
@@ -253,14 +253,14 @@ class MachineDesign:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -268,7 +268,7 @@ class MachineDesign:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -359,7 +359,7 @@ class MachineDesign:
 
     @dataclass
     class EthIpPropsRef(Ref):
-        dest: EthIpPropsSubtypesEnum | None = field(
+        dest: None | EthIpPropsSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -381,7 +381,7 @@ class MachineDesign:
 
     @dataclass
     class TcpIpIcmpPropsRef(Ref):
-        dest: EthTcpIpIcmpPropsSubtypesEnum | None = field(
+        dest: None | EthTcpIpIcmpPropsSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -392,7 +392,7 @@ class MachineDesign:
 
     @dataclass
     class TcpIpPropsRef(Ref):
-        dest: EthTcpIpPropsSubtypesEnum | None = field(
+        dest: None | EthTcpIpPropsSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

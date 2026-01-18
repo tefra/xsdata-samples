@@ -52,7 +52,7 @@ class LifeCycleInfo:
     class Meta:
         name = "LIFE-CYCLE-INFO"
 
-    lc_object_ref: LifeCycleInfo.LcObjectRef | None = field(
+    lc_object_ref: None | LifeCycleInfo.LcObjectRef = field(
         default=None,
         metadata={
             "name": "LC-OBJECT-REF",
@@ -60,7 +60,7 @@ class LifeCycleInfo:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    lc_state_ref: LifeCycleInfo.LcStateRef | None = field(
+    lc_state_ref: None | LifeCycleInfo.LcStateRef = field(
         default=None,
         metadata={
             "name": "LC-STATE-REF",
@@ -68,7 +68,7 @@ class LifeCycleInfo:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    period_begin: LifeCyclePeriod | None = field(
+    period_begin: None | LifeCyclePeriod = field(
         default=None,
         metadata={
             "name": "PERIOD-BEGIN",
@@ -76,7 +76,7 @@ class LifeCycleInfo:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    period_end: LifeCyclePeriod | None = field(
+    period_end: None | LifeCyclePeriod = field(
         default=None,
         metadata={
             "name": "PERIOD-END",
@@ -84,7 +84,7 @@ class LifeCycleInfo:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    remark: DocumentationBlock | None = field(
+    remark: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "REMARK",
@@ -92,7 +92,7 @@ class LifeCycleInfo:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    use_instead_refs: LifeCycleInfo.UseInsteadRefs | None = field(
+    use_instead_refs: None | LifeCycleInfo.UseInsteadRefs = field(
         default=None,
         metadata={
             "name": "USE-INSTEAD-REFS",
@@ -100,14 +100,14 @@ class LifeCycleInfo:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -118,7 +118,7 @@ class LifeCycleInfo:
 
     @dataclass
     class LcObjectRef(Ref):
-        dest: ReferrableSubtypesEnum | None = field(
+        dest: None | ReferrableSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -129,7 +129,7 @@ class LifeCycleInfo:
 
     @dataclass
     class LcStateRef(Ref):
-        dest: LifeCycleStateSubtypesEnum | None = field(
+        dest: None | LifeCycleStateSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -153,7 +153,7 @@ class LifeCycleInfo:
 
         @dataclass
         class UseInsteadRef(Ref):
-            dest: ReferrableSubtypesEnum | None = field(
+            dest: None | ReferrableSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",

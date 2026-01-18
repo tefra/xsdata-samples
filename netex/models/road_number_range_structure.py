@@ -7,7 +7,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 @dataclass
 class RoadNumberRangeStructure:
-    from_number: int | None = field(
+    from_number: None | int = field(
         default=None,
         metadata={
             "name": "FromNumber",
@@ -15,7 +15,7 @@ class RoadNumberRangeStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    to_number: int | None = field(
+    to_number: None | int = field(
         default=None,
         metadata={
             "name": "ToNumber",

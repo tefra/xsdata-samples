@@ -15,13 +15,13 @@ class Hr:
         name = "hr"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",

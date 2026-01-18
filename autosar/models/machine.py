@@ -119,7 +119,7 @@ class Machine:
     class Meta:
         name = "MACHINE"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -128,7 +128,7 @@ class Machine:
             "required": True,
         },
     )
-    short_name_fragments: Machine.ShortNameFragments | None = field(
+    short_name_fragments: None | Machine.ShortNameFragments = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -136,7 +136,7 @@ class Machine:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -144,7 +144,7 @@ class Machine:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -152,7 +152,7 @@ class Machine:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -160,7 +160,7 @@ class Machine:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -168,7 +168,7 @@ class Machine:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -176,7 +176,7 @@ class Machine:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Machine.Annotations | None = field(
+    annotations: None | Machine.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -184,7 +184,7 @@ class Machine:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -192,7 +192,7 @@ class Machine:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    default_application_timeout: EnterExitTimeout | None = field(
+    default_application_timeout: None | EnterExitTimeout = field(
         default=None,
         metadata={
             "name": "DEFAULT-APPLICATION-TIMEOUT",
@@ -200,7 +200,7 @@ class Machine:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    environment_variables: Machine.EnvironmentVariables | None = field(
+    environment_variables: None | Machine.EnvironmentVariables = field(
         default=None,
         metadata={
             "name": "ENVIRONMENT-VARIABLES",
@@ -208,7 +208,7 @@ class Machine:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    machine_design_ref: Machine.MachineDesignRef | None = field(
+    machine_design_ref: None | Machine.MachineDesignRef = field(
         default=None,
         metadata={
             "name": "MACHINE-DESIGN-REF",
@@ -216,7 +216,7 @@ class Machine:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    module_instantiations: Machine.ModuleInstantiations | None = field(
+    module_instantiations: None | Machine.ModuleInstantiations = field(
         default=None,
         metadata={
             "name": "MODULE-INSTANTIATIONS",
@@ -224,7 +224,7 @@ class Machine:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    processors: Machine.Processors | None = field(
+    processors: None | Machine.Processors = field(
         default=None,
         metadata={
             "name": "PROCESSORS",
@@ -233,7 +233,7 @@ class Machine:
         },
     )
     secure_communication_deployments: (
-        Machine.SecureCommunicationDeployments | None
+        None | Machine.SecureCommunicationDeployments
     ) = field(
         default=None,
         metadata={
@@ -243,7 +243,7 @@ class Machine:
         },
     )
     trusted_platform_executable_launch_behavior: (
-        TrustedPlatformExecutableLaunchBehaviorEnum | None
+        None | TrustedPlatformExecutableLaunchBehaviorEnum
     ) = field(
         default=None,
         metadata={
@@ -252,14 +252,14 @@ class Machine:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -267,7 +267,7 @@ class Machine:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -310,7 +310,7 @@ class Machine:
 
     @dataclass
     class MachineDesignRef(Ref):
-        dest: MachineDesignSubtypesEnum | None = field(
+        dest: None | MachineDesignSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

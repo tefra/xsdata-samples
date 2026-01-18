@@ -36,7 +36,7 @@ class QueryCriteriaTypeQueryExpression:
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
         },
     )
-    query_expression: QueryExpressionType | None = field(
+    query_expression: None | QueryExpressionType = field(
         default=None,
         metadata={
             "name": "QueryExpression",

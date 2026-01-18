@@ -106,7 +106,7 @@ class SupervisedEntityNeeds:
     class Meta:
         name = "SUPERVISED-ENTITY-NEEDS"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -115,7 +115,7 @@ class SupervisedEntityNeeds:
             "required": True,
         },
     )
-    short_name_fragments: SupervisedEntityNeeds.ShortNameFragments | None = (
+    short_name_fragments: None | SupervisedEntityNeeds.ShortNameFragments = (
         field(
             default=None,
             metadata={
@@ -125,7 +125,7 @@ class SupervisedEntityNeeds:
             },
         )
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -133,7 +133,7 @@ class SupervisedEntityNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -141,7 +141,7 @@ class SupervisedEntityNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -149,7 +149,7 @@ class SupervisedEntityNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -157,7 +157,7 @@ class SupervisedEntityNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -165,7 +165,7 @@ class SupervisedEntityNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: SupervisedEntityNeeds.Annotations | None = field(
+    annotations: None | SupervisedEntityNeeds.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -173,7 +173,7 @@ class SupervisedEntityNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    activate_at_start: Boolean | None = field(
+    activate_at_start: None | Boolean = field(
         default=None,
         metadata={
             "name": "ACTIVATE-AT-START",
@@ -181,7 +181,7 @@ class SupervisedEntityNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    checkpointss: SupervisedEntityNeeds.Checkpointss | None = field(
+    checkpointss: None | SupervisedEntityNeeds.Checkpointss = field(
         default=None,
         metadata={
             "name": "CHECKPOINTSS",
@@ -189,7 +189,7 @@ class SupervisedEntityNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    enable_deactivation: Boolean | None = field(
+    enable_deactivation: None | Boolean = field(
         default=None,
         metadata={
             "name": "ENABLE-DEACTIVATION",
@@ -197,7 +197,7 @@ class SupervisedEntityNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    expected_alive_cycle: TimeValue | None = field(
+    expected_alive_cycle: None | TimeValue = field(
         default=None,
         metadata={
             "name": "EXPECTED-ALIVE-CYCLE",
@@ -205,7 +205,7 @@ class SupervisedEntityNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    max_alive_cycle: TimeValue | None = field(
+    max_alive_cycle: None | TimeValue = field(
         default=None,
         metadata={
             "name": "MAX-ALIVE-CYCLE",
@@ -213,7 +213,7 @@ class SupervisedEntityNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    min_alive_cycle: TimeValue | None = field(
+    min_alive_cycle: None | TimeValue = field(
         default=None,
         metadata={
             "name": "MIN-ALIVE-CYCLE",
@@ -221,7 +221,7 @@ class SupervisedEntityNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tolerated_failed_cycles: PositiveInteger | None = field(
+    tolerated_failed_cycles: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "TOLERATED-FAILED-CYCLES",
@@ -229,14 +229,14 @@ class SupervisedEntityNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -244,7 +244,7 @@ class SupervisedEntityNeeds:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",

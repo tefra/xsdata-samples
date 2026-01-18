@@ -96,7 +96,7 @@ class CryptoServiceNeeds:
     class Meta:
         name = "CRYPTO-SERVICE-NEEDS"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -105,7 +105,7 @@ class CryptoServiceNeeds:
             "required": True,
         },
     )
-    short_name_fragments: CryptoServiceNeeds.ShortNameFragments | None = field(
+    short_name_fragments: None | CryptoServiceNeeds.ShortNameFragments = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -113,7 +113,7 @@ class CryptoServiceNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -121,7 +121,7 @@ class CryptoServiceNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -129,7 +129,7 @@ class CryptoServiceNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -137,7 +137,7 @@ class CryptoServiceNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -145,7 +145,7 @@ class CryptoServiceNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -153,7 +153,7 @@ class CryptoServiceNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: CryptoServiceNeeds.Annotations | None = field(
+    annotations: None | CryptoServiceNeeds.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -161,7 +161,7 @@ class CryptoServiceNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    algorithm_family: String | None = field(
+    algorithm_family: None | String = field(
         default=None,
         metadata={
             "name": "ALGORITHM-FAMILY",
@@ -169,7 +169,7 @@ class CryptoServiceNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    algorithm_mode: String | None = field(
+    algorithm_mode: None | String = field(
         default=None,
         metadata={
             "name": "ALGORITHM-MODE",
@@ -177,7 +177,7 @@ class CryptoServiceNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    crypto_key_description: String | None = field(
+    crypto_key_description: None | String = field(
         default=None,
         metadata={
             "name": "CRYPTO-KEY-DESCRIPTION",
@@ -185,7 +185,7 @@ class CryptoServiceNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    maximum_key_length: PositiveInteger | None = field(
+    maximum_key_length: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "MAXIMUM-KEY-LENGTH",
@@ -193,14 +193,14 @@ class CryptoServiceNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -208,7 +208,7 @@ class CryptoServiceNeeds:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",

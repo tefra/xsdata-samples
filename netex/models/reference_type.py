@@ -15,7 +15,7 @@ class ReferenceType:
             "type": "Attribute",
         },
     )
-    nil_reason: str | NilReasonEnumerationValue | None = field(
+    nil_reason: None | str | NilReasonEnumerationValue = field(
         default=None,
         metadata={
             "name": "nilReason",

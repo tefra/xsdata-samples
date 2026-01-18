@@ -19,7 +19,7 @@ class PricingRuleVersionedStructure(DataManagedObjectStructure):
     class Meta:
         name = "PricingRule_VersionedStructure"
 
-    name: MultilingualString | None = field(
+    name: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "Name",
@@ -27,7 +27,7 @@ class PricingRuleVersionedStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    description: MultilingualString | None = field(
+    description: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "Description",
@@ -35,7 +35,7 @@ class PricingRuleVersionedStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    method_name: str | None = field(
+    method_name: None | str = field(
         default=None,
         metadata={
             "name": "MethodName",
@@ -43,7 +43,7 @@ class PricingRuleVersionedStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    type_of_pricing_rule_ref: TypeOfPricingRuleRef | None = field(
+    type_of_pricing_rule_ref: None | TypeOfPricingRuleRef = field(
         default=None,
         metadata={
             "name": "TypeOfPricingRuleRef",
@@ -52,7 +52,7 @@ class PricingRuleVersionedStructure(DataManagedObjectStructure):
         },
     )
     discounting_rule_ref_or_pricing_rule_ref: (
-        LimitingRuleRef | DiscountingRuleRef | PricingRuleRef | None
+        None | LimitingRuleRef | DiscountingRuleRef | PricingRuleRef
     ) = field(
         default=None,
         metadata={
@@ -76,7 +76,7 @@ class PricingRuleVersionedStructure(DataManagedObjectStructure):
             ),
         },
     )
-    factor: Decimal | None = field(
+    factor: None | Decimal = field(
         default=None,
         metadata={
             "name": "Factor",
@@ -84,7 +84,7 @@ class PricingRuleVersionedStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    currency: str | None = field(
+    currency: None | str = field(
         default=None,
         metadata={
             "name": "Currency",
@@ -95,7 +95,7 @@ class PricingRuleVersionedStructure(DataManagedObjectStructure):
             "pattern": r"[A-Z][A-Z][A-Z]",
         },
     )
-    price_unit_ref: PriceUnitRef | None = field(
+    price_unit_ref: None | PriceUnitRef = field(
         default=None,
         metadata={
             "name": "PriceUnitRef",
@@ -103,7 +103,7 @@ class PricingRuleVersionedStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    url: str | None = field(
+    url: None | str = field(
         default=None,
         metadata={
             "type": "Element",

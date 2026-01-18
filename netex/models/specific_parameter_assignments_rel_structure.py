@@ -42,7 +42,7 @@ class SpecificParameterAssignmentVersionStructure(
     class Meta:
         name = "SpecificParameterAssignment_VersionStructure"
 
-    access_number: int | None = field(
+    access_number: None | int = field(
         default=None,
         metadata={
             "name": "AccessNumber",
@@ -50,7 +50,7 @@ class SpecificParameterAssignmentVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    includes_grouping_type: LogicalOperationEnumeration | None = field(
+    includes_grouping_type: None | LogicalOperationEnumeration = field(
         default=None,
         metadata={
             "name": "IncludesGroupingType",
@@ -58,14 +58,14 @@ class SpecificParameterAssignmentVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    includes: SpecificParameterAssignmentsRelStructure | None = field(
+    includes: None | SpecificParameterAssignmentsRelStructure = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    distribution_assignment_ref: DistributionAssignmentRef | None = field(
+    distribution_assignment_ref: None | DistributionAssignmentRef = field(
         default=None,
         metadata={
             "name": "DistributionAssignmentRef",
@@ -73,7 +73,7 @@ class SpecificParameterAssignmentVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    retailing_organization_ref: OrganisationRefStructure | None = field(
+    retailing_organization_ref: None | OrganisationRefStructure = field(
         default=None,
         metadata={
             "name": "RetailingOrganizationRef",
@@ -81,7 +81,7 @@ class SpecificParameterAssignmentVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    collection_point_ref: PointRefStructure | None = field(
+    collection_point_ref: None | PointRefStructure = field(
         default=None,
         metadata={
             "name": "CollectionPointRef",

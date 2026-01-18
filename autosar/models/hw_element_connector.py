@@ -69,7 +69,7 @@ class HwElementConnector:
     class Meta:
         name = "HW-ELEMENT-CONNECTOR"
 
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -77,7 +77,7 @@ class HwElementConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -85,7 +85,7 @@ class HwElementConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -93,7 +93,7 @@ class HwElementConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -101,7 +101,7 @@ class HwElementConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    hw_element_refs: HwElementConnector.HwElementRefs | None = field(
+    hw_element_refs: None | HwElementConnector.HwElementRefs = field(
         default=None,
         metadata={
             "name": "HW-ELEMENT-REFS",
@@ -110,7 +110,7 @@ class HwElementConnector:
         },
     )
     hw_pin_group_connections: (
-        HwElementConnector.HwPinGroupConnections | None
+        None | HwElementConnector.HwPinGroupConnections
     ) = field(
         default=None,
         metadata={
@@ -119,7 +119,7 @@ class HwElementConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    hw_pin_connections: HwElementConnector.HwPinConnections | None = field(
+    hw_pin_connections: None | HwElementConnector.HwPinConnections = field(
         default=None,
         metadata={
             "name": "HW-PIN-CONNECTIONS",
@@ -127,7 +127,7 @@ class HwElementConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -135,14 +135,14 @@ class HwElementConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -167,7 +167,7 @@ class HwElementConnector:
 
         @dataclass
         class HwElementRef(Ref):
-            dest: HwElementSubtypesEnum | None = field(
+            dest: None | HwElementSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",

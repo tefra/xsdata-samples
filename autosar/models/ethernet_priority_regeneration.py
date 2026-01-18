@@ -42,7 +42,7 @@ class EthernetPriorityRegeneration:
     class Meta:
         name = "ETHERNET-PRIORITY-REGENERATION"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -52,7 +52,7 @@ class EthernetPriorityRegeneration:
         },
     )
     short_name_fragments: (
-        EthernetPriorityRegeneration.ShortNameFragments | None
+        None | EthernetPriorityRegeneration.ShortNameFragments
     ) = field(
         default=None,
         metadata={
@@ -61,7 +61,7 @@ class EthernetPriorityRegeneration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ingress_priority: PositiveInteger | None = field(
+    ingress_priority: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "INGRESS-PRIORITY",
@@ -69,7 +69,7 @@ class EthernetPriorityRegeneration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    regenerated_priority: PositiveInteger | None = field(
+    regenerated_priority: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "REGENERATED-PRIORITY",
@@ -77,14 +77,14 @@ class EthernetPriorityRegeneration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

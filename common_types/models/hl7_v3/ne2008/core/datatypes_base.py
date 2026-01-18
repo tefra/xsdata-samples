@@ -48,7 +48,7 @@ class AdxpExplicit:
     class Meta:
         name = "ADXP_explicit"
 
-    part_type: AddressPartType | None = field(
+    part_type: None | AddressPartType = field(
         default=None,
         metadata={
             "name": "partType",
@@ -82,7 +82,7 @@ class AnyType:
     class Meta:
         name = "ANY"
 
-    null_flavor: NullFlavor | None = field(
+    null_flavor: None | NullFlavor = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -113,7 +113,7 @@ class EnxpExplicit:
     class Meta:
         name = "ENXP_explicit"
 
-    part_type: EntityNamePartType | None = field(
+    part_type: None | EntityNamePartType = field(
         default=None,
         metadata={
             "name": "partType",
@@ -152,14 +152,14 @@ class IvxbTsExplicit:
     class Meta:
         name = "IVXB_TS_explicit"
 
-    null_flavor: NullFlavor | None = field(
+    null_flavor: None | NullFlavor = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
         },
     )
-    value: str | None = field(
+    value: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -192,14 +192,14 @@ class SxcmTsExplicit:
     class Meta:
         name = "SXCM_TS_explicit"
 
-    null_flavor: NullFlavor | None = field(
+    null_flavor: None | NullFlavor = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
         },
     )
-    value: str | None = field(
+    value: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -230,14 +230,14 @@ class TsExplicit:
     class Meta:
         name = "TS_explicit"
 
-    null_flavor: NullFlavor | None = field(
+    null_flavor: None | NullFlavor = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
         },
     )
-    value: str | None = field(
+    value: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -311,7 +311,7 @@ class Bl(AnyType):
     class Meta:
         name = "BL"
 
-    value: str | None = field(
+    value: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -349,21 +349,21 @@ class Ii(AnyType):
     class Meta:
         name = "II"
 
-    root: str | None = field(
+    root: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"[0-2](\.(0|[1-9][0-9]*))*",
         },
     )
-    extension: str | None = field(
+    extension: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "min_length": 1,
         },
     )
-    assigning_authority_name: str | None = field(
+    assigning_authority_name: None | str = field(
         default=None,
         metadata={
             "name": "assigningAuthorityName",
@@ -371,7 +371,7 @@ class Ii(AnyType):
             "min_length": 1,
         },
     )
-    displayable: str | None = field(
+    displayable: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -432,14 +432,14 @@ class TelExplicit:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    null_flavor: NullFlavor | None = field(
+    null_flavor: None | NullFlavor = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
         },
     )
-    value: str | None = field(
+    value: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -469,7 +469,7 @@ class Url(AnyType):
     class Meta:
         name = "URL"
 
-    value: str | None = field(
+    value: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -981,7 +981,7 @@ class AdExplicit:
     class Meta:
         name = "AD_explicit"
 
-    null_flavor: NullFlavor | None = field(
+    null_flavor: None | NullFlavor = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -995,7 +995,7 @@ class AdExplicit:
             "tokens": True,
         },
     )
-    is_not_ordered: str | None = field(
+    is_not_ordered: None | str = field(
         default=None,
         metadata={
             "name": "isNotOrdered",
@@ -1167,7 +1167,7 @@ class Bn(AnynonNull):
     class Meta:
         name = "BN"
 
-    value: str | None = field(
+    value: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -1216,20 +1216,20 @@ class Ed(Bin):
             "pattern": r"[^\s]+",
         },
     )
-    language: str | None = field(
+    language: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"[^\s]+",
         },
     )
-    compression: CompressionAlgorithm | None = field(
+    compression: None | CompressionAlgorithm = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    integrity_check: bytes | None = field(
+    integrity_check: None | bytes = field(
         default=None,
         metadata={
             "name": "integrityCheck",
@@ -1261,7 +1261,7 @@ class Int(Qty):
     class Meta:
         name = "INT"
 
-    value: int | None = field(
+    value: None | int = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -1290,13 +1290,13 @@ class Mo(Qty):
     class Meta:
         name = "MO"
 
-    value: Decimal | float | None = field(
+    value: None | Decimal | float = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    currency: str | None = field(
+    currency: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -1323,7 +1323,7 @@ class Real(Qty):
     class Meta:
         name = "REAL"
 
-    value: Decimal | float | None = field(
+    value: None | Decimal | float = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -1344,7 +1344,7 @@ class RtoQtyQty(Qty):
     class Meta:
         name = "RTO_QTY_QTY"
 
-    numerator: Qty | None = field(
+    numerator: None | Qty = field(
         default=None,
         metadata={
             "type": "Element",
@@ -1352,7 +1352,7 @@ class RtoQtyQty(Qty):
             "required": True,
         },
     )
-    denominator: Qty | None = field(
+    denominator: None | Qty = field(
         default=None,
         metadata={
             "type": "Element",
@@ -1373,7 +1373,7 @@ class Ts(Qty):
     class Meta:
         name = "TS"
 
-    value: str | None = field(
+    value: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -1419,7 +1419,7 @@ class ThumbnailExplicit:
     class Meta:
         name = "thumbnail_explicit"
 
-    null_flavor: NullFlavor | None = field(
+    null_flavor: None | NullFlavor = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -1440,20 +1440,20 @@ class ThumbnailExplicit:
             "pattern": r"[^\s]+",
         },
     )
-    language: str | None = field(
+    language: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"[^\s]+",
         },
     )
-    compression: CompressionAlgorithm | None = field(
+    compression: None | CompressionAlgorithm = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    integrity_check: bytes | None = field(
+    integrity_check: None | bytes = field(
         default=None,
         metadata={
             "name": "integrityCheck",
@@ -1521,7 +1521,7 @@ class Cd(AnyType):
     class Meta:
         name = "CD"
 
-    original_text: Ed | None = field(
+    original_text: None | Ed = field(
         default=None,
         metadata={
             "name": "originalText",
@@ -1543,14 +1543,14 @@ class Cd(AnyType):
             "namespace": "urn:hl7-org:v3",
         },
     )
-    code: str | None = field(
+    code: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"[^\s]+",
         },
     )
-    code_system: str | None = field(
+    code_system: None | str = field(
         default=None,
         metadata={
             "name": "codeSystem",
@@ -1558,7 +1558,7 @@ class Cd(AnyType):
             "pattern": r"[0-2](\.(0|[1-9][0-9]*))*",
         },
     )
-    code_system_name: str | None = field(
+    code_system_name: None | str = field(
         default=None,
         metadata={
             "name": "codeSystemName",
@@ -1566,7 +1566,7 @@ class Cd(AnyType):
             "min_length": 1,
         },
     )
-    code_system_version: str | None = field(
+    code_system_version: None | str = field(
         default=None,
         metadata={
             "name": "codeSystemVersion",
@@ -1574,7 +1574,7 @@ class Cd(AnyType):
             "min_length": 1,
         },
     )
-    display_name: str | None = field(
+    display_name: None | str = field(
         default=None,
         metadata={
             "name": "displayName",
@@ -1582,7 +1582,7 @@ class Cd(AnyType):
             "min_length": 1,
         },
     )
-    value_set: str | None = field(
+    value_set: None | str = field(
         default=None,
         metadata={
             "name": "valueSet",
@@ -1591,7 +1591,7 @@ class Cd(AnyType):
             "pattern": r"[0-2](\.(0|[1-9][0-9]*))*",
         },
     )
-    value_set_version: str | None = field(
+    value_set_version: None | str = field(
         default=None,
         metadata={
             "name": "valueSetVersion",
@@ -1640,7 +1640,7 @@ class EdExplicit:
     class Meta:
         name = "ED_explicit"
 
-    null_flavor: NullFlavor | None = field(
+    null_flavor: None | NullFlavor = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -1661,20 +1661,20 @@ class EdExplicit:
             "pattern": r"[^\s]+",
         },
     )
-    language: str | None = field(
+    language: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"[^\s]+",
         },
     )
-    compression: CompressionAlgorithm | None = field(
+    compression: None | CompressionAlgorithm = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    integrity_check: bytes | None = field(
+    integrity_check: None | bytes = field(
         default=None,
         metadata={
             "name": "integrityCheck",
@@ -1792,7 +1792,7 @@ class ScExplicit:
     class Meta:
         name = "SC_explicit"
 
-    null_flavor: NullFlavor | None = field(
+    null_flavor: None | NullFlavor = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -1813,20 +1813,20 @@ class ScExplicit:
             "pattern": r"[^\s]+",
         },
     )
-    language: str | None = field(
+    language: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"[^\s]+",
         },
     )
-    compression: CompressionAlgorithm | None = field(
+    compression: None | CompressionAlgorithm = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    integrity_check: bytes | None = field(
+    integrity_check: None | bytes = field(
         default=None,
         metadata={
             "name": "integrityCheck",
@@ -1841,14 +1841,14 @@ class ScExplicit:
             "type": "Attribute",
         },
     )
-    code: str | None = field(
+    code: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"[^\s]+",
         },
     )
-    code_system: str | None = field(
+    code_system: None | str = field(
         default=None,
         metadata={
             "name": "codeSystem",
@@ -1856,7 +1856,7 @@ class ScExplicit:
             "pattern": r"[0-2](\.(0|[1-9][0-9]*))*",
         },
     )
-    code_system_name: str | None = field(
+    code_system_name: None | str = field(
         default=None,
         metadata={
             "name": "codeSystemName",
@@ -1864,7 +1864,7 @@ class ScExplicit:
             "min_length": 1,
         },
     )
-    code_system_version: str | None = field(
+    code_system_version: None | str = field(
         default=None,
         metadata={
             "name": "codeSystemVersion",
@@ -1872,7 +1872,7 @@ class ScExplicit:
             "min_length": 1,
         },
     )
-    display_name: str | None = field(
+    display_name: None | str = field(
         default=None,
         metadata={
             "name": "displayName",
@@ -1996,20 +1996,20 @@ class StExplicit:
             "pattern": r"[^\s]+",
         },
     )
-    language: str | None = field(
+    language: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"[^\s]+",
         },
     )
-    compression: CompressionAlgorithm | None = field(
+    compression: None | CompressionAlgorithm = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    integrity_check: bytes | None = field(
+    integrity_check: None | bytes = field(
         default=None,
         metadata={
             "name": "integrityCheck",
@@ -2104,7 +2104,7 @@ class Adxp(St):
     class Meta:
         name = "ADXP"
 
-    part_type: AddressPartType | None = field(
+    part_type: None | AddressPartType = field(
         default=None,
         metadata={
             "name": "partType",
@@ -2155,7 +2155,7 @@ class Enxp(St):
     class Meta:
         name = "ENXP"
 
-    part_type: EntityNamePartType | None = field(
+    part_type: None | EntityNamePartType = field(
         default=None,
         metadata={
             "name": "partType",
@@ -2199,7 +2199,7 @@ class PqrExplicit:
     class Meta:
         name = "PQR_explicit"
 
-    original_text: EdExplicit | None = field(
+    original_text: None | EdExplicit = field(
         default=None,
         metadata={
             "name": "originalText",
@@ -2207,21 +2207,21 @@ class PqrExplicit:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    null_flavor: NullFlavor | None = field(
+    null_flavor: None | NullFlavor = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
         },
     )
-    code: str | None = field(
+    code: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"[^\s]+",
         },
     )
-    code_system: str | None = field(
+    code_system: None | str = field(
         default=None,
         metadata={
             "name": "codeSystem",
@@ -2229,7 +2229,7 @@ class PqrExplicit:
             "pattern": r"[0-2](\.(0|[1-9][0-9]*))*",
         },
     )
-    code_system_name: str | None = field(
+    code_system_name: None | str = field(
         default=None,
         metadata={
             "name": "codeSystemName",
@@ -2237,7 +2237,7 @@ class PqrExplicit:
             "min_length": 1,
         },
     )
-    code_system_version: str | None = field(
+    code_system_version: None | str = field(
         default=None,
         metadata={
             "name": "codeSystemVersion",
@@ -2245,7 +2245,7 @@ class PqrExplicit:
             "min_length": 1,
         },
     )
-    display_name: str | None = field(
+    display_name: None | str = field(
         default=None,
         metadata={
             "name": "displayName",
@@ -2253,7 +2253,7 @@ class PqrExplicit:
             "min_length": 1,
         },
     )
-    value: Decimal | float | None = field(
+    value: None | Decimal | float = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -2283,14 +2283,14 @@ class Sc(St):
     class Meta:
         name = "SC"
 
-    code: str | None = field(
+    code: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"[^\s]+",
         },
     )
-    code_system: str | None = field(
+    code_system: None | str = field(
         default=None,
         metadata={
             "name": "codeSystem",
@@ -2298,7 +2298,7 @@ class Sc(St):
             "pattern": r"[0-2](\.(0|[1-9][0-9]*))*",
         },
     )
-    code_system_name: str | None = field(
+    code_system_name: None | str = field(
         default=None,
         metadata={
             "name": "codeSystemName",
@@ -2306,7 +2306,7 @@ class Sc(St):
             "min_length": 1,
         },
     )
-    code_system_version: str | None = field(
+    code_system_version: None | str = field(
         default=None,
         metadata={
             "name": "codeSystemVersion",
@@ -2314,7 +2314,7 @@ class Sc(St):
             "min_length": 1,
         },
     )
-    display_name: str | None = field(
+    display_name: None | str = field(
         default=None,
         metadata={
             "name": "displayName",
@@ -2480,14 +2480,14 @@ class PqExplicit:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    null_flavor: NullFlavor | None = field(
+    null_flavor: None | NullFlavor = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
         },
     )
-    value: Decimal | float | None = field(
+    value: None | Decimal | float = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -3010,7 +3010,7 @@ class Ad(AnyType):
             "tokens": True,
         },
     )
-    is_not_ordered: str | None = field(
+    is_not_ordered: None | str = field(
         default=None,
         metadata={
             "name": "isNotOrdered",
@@ -3217,14 +3217,14 @@ class Cr(AnyType):
     class Meta:
         name = "CR"
 
-    name: Cv | None = field(
+    name: None | Cv = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    value: Cd | None = field(
+    value: None | Cd = field(
         default=None,
         metadata={
             "type": "Element",
@@ -3340,7 +3340,7 @@ class IvlTsExplicit:
     class Meta:
         name = "IVL_TS_explicit"
 
-    low: IvxbTsExplicit | None = field(
+    low: None | IvxbTsExplicit = field(
         default=None,
         metadata={
             "type": "Element",
@@ -3363,21 +3363,21 @@ class IvlTsExplicit:
             "max_occurs": 3,
         },
     )
-    center: TsExplicit | None = field(
+    center: None | TsExplicit = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    null_flavor: NullFlavor | None = field(
+    null_flavor: None | NullFlavor = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
         },
     )
-    value: str | None = field(
+    value: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -3406,7 +3406,7 @@ class Pqr(Cv):
     class Meta:
         name = "PQR"
 
-    value: Decimal | float | None = field(
+    value: None | Decimal | float = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -3450,7 +3450,7 @@ class CdExplicit(AnyType):
     class Meta:
         name = "CD_explicit"
 
-    original_text: EdExplicit | None = field(
+    original_text: None | EdExplicit = field(
         default=None,
         metadata={
             "name": "originalText",
@@ -3472,14 +3472,14 @@ class CdExplicit(AnyType):
             "namespace": "urn:hl7-org:v3",
         },
     )
-    code: str | None = field(
+    code: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"[^\s]+",
         },
     )
-    code_system: str | None = field(
+    code_system: None | str = field(
         default=None,
         metadata={
             "name": "codeSystem",
@@ -3487,7 +3487,7 @@ class CdExplicit(AnyType):
             "pattern": r"[0-2](\.(0|[1-9][0-9]*))*",
         },
     )
-    code_system_name: str | None = field(
+    code_system_name: None | str = field(
         default=None,
         metadata={
             "name": "codeSystemName",
@@ -3495,7 +3495,7 @@ class CdExplicit(AnyType):
             "min_length": 1,
         },
     )
-    code_system_version: str | None = field(
+    code_system_version: None | str = field(
         default=None,
         metadata={
             "name": "codeSystemVersion",
@@ -3503,7 +3503,7 @@ class CdExplicit(AnyType):
             "min_length": 1,
         },
     )
-    display_name: str | None = field(
+    display_name: None | str = field(
         default=None,
         metadata={
             "name": "displayName",
@@ -3511,7 +3511,7 @@ class CdExplicit(AnyType):
             "min_length": 1,
         },
     )
-    value_set: str | None = field(
+    value_set: None | str = field(
         default=None,
         metadata={
             "name": "valueSet",
@@ -3520,7 +3520,7 @@ class CdExplicit(AnyType):
             "pattern": r"[0-2](\.(0|[1-9][0-9]*))*",
         },
     )
-    value_set_version: str | None = field(
+    value_set_version: None | str = field(
         default=None,
         metadata={
             "name": "valueSetVersion",
@@ -3554,7 +3554,7 @@ class EnExplicit:
     class Meta:
         name = "EN_explicit"
 
-    null_flavor: NullFlavor | None = field(
+    null_flavor: None | NullFlavor = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -3633,7 +3633,7 @@ class OnExplicit:
     class Meta:
         name = "ON_explicit"
 
-    null_flavor: NullFlavor | None = field(
+    null_flavor: None | NullFlavor = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -3702,7 +3702,7 @@ class PnExplicit:
     class Meta:
         name = "PN_explicit"
 
-    null_flavor: NullFlavor | None = field(
+    null_flavor: None | NullFlavor = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -3782,7 +3782,7 @@ class Pq(Qty):
             "namespace": "urn:hl7-org:v3",
         },
     )
-    value: Decimal | float | None = field(
+    value: None | Decimal | float = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -3837,7 +3837,7 @@ class IvlTs(SxcmTs):
     class Meta:
         name = "IVL_TS"
 
-    low: IvxbTs | None = field(
+    low: None | IvxbTs = field(
         default=None,
         metadata={
             "type": "Element",
@@ -3860,7 +3860,7 @@ class IvlTs(SxcmTs):
             "max_occurs": 3,
         },
     )
-    center: Ts | None = field(
+    center: None | Ts = field(
         default=None,
         metadata={
             "type": "Element",

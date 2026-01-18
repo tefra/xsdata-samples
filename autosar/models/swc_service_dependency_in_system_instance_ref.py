@@ -39,7 +39,7 @@ class SwcServiceDependencyInSystemInstanceRef:
     class Meta:
         name = "SWC-SERVICE-DEPENDENCY-IN-SYSTEM-INSTANCE-REF"
 
-    base_ref: SwcServiceDependencyInSystemInstanceRef.BaseRef | None = field(
+    base_ref: None | SwcServiceDependencyInSystemInstanceRef.BaseRef = field(
         default=None,
         metadata={
             "name": "BASE-REF",
@@ -48,8 +48,8 @@ class SwcServiceDependencyInSystemInstanceRef:
         },
     )
     context_root_sw_composition_ref: (
-        SwcServiceDependencyInSystemInstanceRef.ContextRootSwCompositionRef
-        | None
+        None
+        | SwcServiceDependencyInSystemInstanceRef.ContextRootSwCompositionRef
     ) = field(
         default=None,
         metadata={
@@ -69,8 +69,8 @@ class SwcServiceDependencyInSystemInstanceRef:
         },
     )
     target_swc_service_dependency_ref: (
-        SwcServiceDependencyInSystemInstanceRef.TargetSwcServiceDependencyRef
-        | None
+        None
+        | SwcServiceDependencyInSystemInstanceRef.TargetSwcServiceDependencyRef
     ) = field(
         default=None,
         metadata={
@@ -79,14 +79,14 @@ class SwcServiceDependencyInSystemInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -97,7 +97,7 @@ class SwcServiceDependencyInSystemInstanceRef:
 
     @dataclass
     class BaseRef(Ref):
-        dest: SystemSubtypesEnum | None = field(
+        dest: None | SystemSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -108,7 +108,7 @@ class SwcServiceDependencyInSystemInstanceRef:
 
     @dataclass
     class ContextRootSwCompositionRef(Ref):
-        dest: RootSwCompositionPrototypeSubtypesEnum | None = field(
+        dest: None | RootSwCompositionPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -119,7 +119,7 @@ class SwcServiceDependencyInSystemInstanceRef:
 
     @dataclass
     class ContextSwComponentPrototypeRef(Ref):
-        dest: SwComponentPrototypeSubtypesEnum | None = field(
+        dest: None | SwComponentPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -130,7 +130,7 @@ class SwcServiceDependencyInSystemInstanceRef:
 
     @dataclass
     class TargetSwcServiceDependencyRef(Ref):
-        dest: SwcServiceDependencySubtypesEnum | None = field(
+        dest: None | SwcServiceDependencySubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

@@ -40,7 +40,7 @@ class HwPortMapping:
         name = "HW-PORT-MAPPING"
 
     communication_connector_ref: (
-        HwPortMapping.CommunicationConnectorRef | None
+        None | HwPortMapping.CommunicationConnectorRef
     ) = field(
         default=None,
         metadata={
@@ -49,7 +49,7 @@ class HwPortMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    hw_communication_port_ref: HwPortMapping.HwCommunicationPortRef | None = (
+    hw_communication_port_ref: None | HwPortMapping.HwCommunicationPortRef = (
         field(
             default=None,
             metadata={
@@ -59,14 +59,14 @@ class HwPortMapping:
             },
         )
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -77,7 +77,7 @@ class HwPortMapping:
 
     @dataclass
     class CommunicationConnectorRef(Ref):
-        dest: CommunicationConnectorSubtypesEnum | None = field(
+        dest: None | CommunicationConnectorSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -88,7 +88,7 @@ class HwPortMapping:
 
     @dataclass
     class HwCommunicationPortRef(Ref):
-        dest: HwPinGroupSubtypesEnum | None = field(
+        dest: None | HwPinGroupSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

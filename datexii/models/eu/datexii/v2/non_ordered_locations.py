@@ -15,7 +15,7 @@ class NonOrderedLocations(GroupOfLocations):
     no specific order.
     """
 
-    non_ordered_locations_extension: ExtensionType | None = field(
+    non_ordered_locations_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "nonOrderedLocationsExtension",

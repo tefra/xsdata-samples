@@ -92,7 +92,7 @@ class PhmContributionToMachineMapping:
     class Meta:
         name = "PHM-CONTRIBUTION-TO-MACHINE-MAPPING"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -102,7 +102,7 @@ class PhmContributionToMachineMapping:
         },
     )
     short_name_fragments: (
-        PhmContributionToMachineMapping.ShortNameFragments | None
+        None | PhmContributionToMachineMapping.ShortNameFragments
     ) = field(
         default=None,
         metadata={
@@ -111,7 +111,7 @@ class PhmContributionToMachineMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -119,7 +119,7 @@ class PhmContributionToMachineMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -127,7 +127,7 @@ class PhmContributionToMachineMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -135,7 +135,7 @@ class PhmContributionToMachineMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -143,7 +143,7 @@ class PhmContributionToMachineMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -151,7 +151,7 @@ class PhmContributionToMachineMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: PhmContributionToMachineMapping.Annotations | None = field(
+    annotations: None | PhmContributionToMachineMapping.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -159,7 +159,7 @@ class PhmContributionToMachineMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -167,7 +167,7 @@ class PhmContributionToMachineMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    machine_ref: PhmContributionToMachineMapping.MachineRef | None = field(
+    machine_ref: None | PhmContributionToMachineMapping.MachineRef = field(
         default=None,
         metadata={
             "name": "MACHINE-REF",
@@ -176,7 +176,7 @@ class PhmContributionToMachineMapping:
         },
     )
     phm_contribution_refs: (
-        PhmContributionToMachineMapping.PhmContributionRefs | None
+        None | PhmContributionToMachineMapping.PhmContributionRefs
     ) = field(
         default=None,
         metadata={
@@ -185,14 +185,14 @@ class PhmContributionToMachineMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -200,7 +200,7 @@ class PhmContributionToMachineMapping:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -232,7 +232,7 @@ class PhmContributionToMachineMapping:
 
     @dataclass
     class MachineRef(Ref):
-        dest: MachineSubtypesEnum | None = field(
+        dest: None | MachineSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -256,7 +256,7 @@ class PhmContributionToMachineMapping:
 
         @dataclass
         class PhmContributionRef(Ref):
-            dest: PlatformHealthManagementContributionSubtypesEnum | None = (
+            dest: None | PlatformHealthManagementContributionSubtypesEnum = (
                 field(
                     default=None,
                     metadata={

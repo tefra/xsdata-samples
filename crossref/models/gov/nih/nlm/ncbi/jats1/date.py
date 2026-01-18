@@ -21,78 +21,78 @@ class Date:
         name = "date"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    day: Day | None = field(
+    day: None | Day = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    month: Month | None = field(
+    month: None | Month = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    season: Season | None = field(
+    season: None | Season = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    year: Year | None = field(
+    year: None | Year = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
         },
     )
-    era: Era | None = field(
+    era: None | Era = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    calendar: str | None = field(
+    calendar: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    date_type: str | None = field(
+    date_type: None | str = field(
         default=None,
         metadata={
             "name": "date-type",
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    iso_8601_date: str | None = field(
+    iso_8601_date: None | str = field(
         default=None,
         metadata={
             "name": "iso-8601-date",
             "type": "Attribute",
         },
     )
-    publication_format: str | None = field(
+    publication_format: None | str = field(
         default=None,
         metadata={
             "name": "publication-format",
             "type": "Attribute",
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",

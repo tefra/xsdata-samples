@@ -113,7 +113,7 @@ class CanTpNode:
     class Meta:
         name = "CAN-TP-NODE"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -122,7 +122,7 @@ class CanTpNode:
             "required": True,
         },
     )
-    short_name_fragments: CanTpNode.ShortNameFragments | None = field(
+    short_name_fragments: None | CanTpNode.ShortNameFragments = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -130,7 +130,7 @@ class CanTpNode:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -138,7 +138,7 @@ class CanTpNode:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -146,7 +146,7 @@ class CanTpNode:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -154,7 +154,7 @@ class CanTpNode:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -162,7 +162,7 @@ class CanTpNode:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -170,7 +170,7 @@ class CanTpNode:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: CanTpNode.Annotations | None = field(
+    annotations: None | CanTpNode.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -178,7 +178,7 @@ class CanTpNode:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    connector_ref: CanTpNode.ConnectorRef | None = field(
+    connector_ref: None | CanTpNode.ConnectorRef = field(
         default=None,
         metadata={
             "name": "CONNECTOR-REF",
@@ -186,7 +186,7 @@ class CanTpNode:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    max_fc_wait: Integer | None = field(
+    max_fc_wait: None | Integer = field(
         default=None,
         metadata={
             "name": "MAX-FC-WAIT",
@@ -194,7 +194,7 @@ class CanTpNode:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    st_min: TimeValue | None = field(
+    st_min: None | TimeValue = field(
         default=None,
         metadata={
             "name": "ST-MIN",
@@ -202,7 +202,7 @@ class CanTpNode:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    timeout_ar: TimeValue | None = field(
+    timeout_ar: None | TimeValue = field(
         default=None,
         metadata={
             "name": "TIMEOUT-AR",
@@ -210,7 +210,7 @@ class CanTpNode:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    timeout_as: TimeValue | None = field(
+    timeout_as: None | TimeValue = field(
         default=None,
         metadata={
             "name": "TIMEOUT-AS",
@@ -218,7 +218,7 @@ class CanTpNode:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tp_address_ref: CanTpNode.TpAddressRef | None = field(
+    tp_address_ref: None | CanTpNode.TpAddressRef = field(
         default=None,
         metadata={
             "name": "TP-ADDRESS-REF",
@@ -226,7 +226,7 @@ class CanTpNode:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -234,14 +234,14 @@ class CanTpNode:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -249,7 +249,7 @@ class CanTpNode:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -281,7 +281,7 @@ class CanTpNode:
 
     @dataclass
     class ConnectorRef(Ref):
-        dest: CommunicationConnectorSubtypesEnum | None = field(
+        dest: None | CommunicationConnectorSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -292,7 +292,7 @@ class CanTpNode:
 
     @dataclass
     class TpAddressRef(Ref):
-        dest: CanTpAddressSubtypesEnum | None = field(
+        dest: None | CanTpAddressSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

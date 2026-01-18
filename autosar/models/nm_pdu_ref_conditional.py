@@ -32,7 +32,7 @@ class NmPduRefConditional:
     class Meta:
         name = "NM-PDU-REF-CONDITIONAL"
 
-    nm_pdu_ref: NmPduRefConditional.NmPduRef | None = field(
+    nm_pdu_ref: None | NmPduRefConditional.NmPduRef = field(
         default=None,
         metadata={
             "name": "NM-PDU-REF",
@@ -40,7 +40,7 @@ class NmPduRefConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -48,14 +48,14 @@ class NmPduRefConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -66,7 +66,7 @@ class NmPduRefConditional:
 
     @dataclass
     class NmPduRef(Ref):
-        dest: NmPduSubtypesEnum | None = field(
+        dest: None | NmPduSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

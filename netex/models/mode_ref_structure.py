@@ -12,7 +12,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 @dataclass
 class ModeRefStructure(SubmodeRefStructure):
-    mode: AllVehicleModesOfTransportEnumeration | None = field(
+    mode: None | AllVehicleModesOfTransportEnumeration = field(
         default=None,
         metadata={
             "type": "Attribute",

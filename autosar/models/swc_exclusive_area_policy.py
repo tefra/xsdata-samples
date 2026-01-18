@@ -42,7 +42,7 @@ class SwcExclusiveAreaPolicy:
     class Meta:
         name = "SWC-EXCLUSIVE-AREA-POLICY"
 
-    api_principle: ApiPrincipleEnum | None = field(
+    api_principle: None | ApiPrincipleEnum = field(
         default=None,
         metadata={
             "name": "API-PRINCIPLE",
@@ -50,7 +50,7 @@ class SwcExclusiveAreaPolicy:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    exclusive_area_ref: SwcExclusiveAreaPolicy.ExclusiveAreaRef | None = field(
+    exclusive_area_ref: None | SwcExclusiveAreaPolicy.ExclusiveAreaRef = field(
         default=None,
         metadata={
             "name": "EXCLUSIVE-AREA-REF",
@@ -58,7 +58,7 @@ class SwcExclusiveAreaPolicy:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -66,14 +66,14 @@ class SwcExclusiveAreaPolicy:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -84,7 +84,7 @@ class SwcExclusiveAreaPolicy:
 
     @dataclass
     class ExclusiveAreaRef(Ref):
-        dest: ExclusiveAreaSubtypesEnum | None = field(
+        dest: None | ExclusiveAreaSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

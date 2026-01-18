@@ -17,7 +17,7 @@ class RetailDeviceSecurityListingVersionedChildStructure(
     class Meta:
         name = "RetailDeviceSecurityListing_VersionedChildStructure"
 
-    retail_device_ref: RetailDeviceRef | None = field(
+    retail_device_ref: None | RetailDeviceRef = field(
         default=None,
         metadata={
             "name": "RetailDeviceRef",

@@ -133,7 +133,7 @@ class AclObjectSet:
     class Meta:
         name = "ACL-OBJECT-SET"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -142,7 +142,7 @@ class AclObjectSet:
             "required": True,
         },
     )
-    short_name_fragments: AclObjectSet.ShortNameFragments | None = field(
+    short_name_fragments: None | AclObjectSet.ShortNameFragments = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -150,7 +150,7 @@ class AclObjectSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -158,7 +158,7 @@ class AclObjectSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -166,7 +166,7 @@ class AclObjectSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -174,7 +174,7 @@ class AclObjectSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -182,7 +182,7 @@ class AclObjectSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -190,7 +190,7 @@ class AclObjectSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: AclObjectSet.Annotations | None = field(
+    annotations: None | AclObjectSet.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -198,7 +198,7 @@ class AclObjectSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -206,7 +206,7 @@ class AclObjectSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    blueprint_policys: AclObjectSet.BlueprintPolicys | None = field(
+    blueprint_policys: None | AclObjectSet.BlueprintPolicys = field(
         default=None,
         metadata={
             "name": "BLUEPRINT-POLICYS",
@@ -214,7 +214,7 @@ class AclObjectSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    short_name_pattern: String | None = field(
+    short_name_pattern: None | String = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-PATTERN",
@@ -222,7 +222,7 @@ class AclObjectSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    acl_object_classs: AclObjectSet.AclObjectClasss | None = field(
+    acl_object_classs: None | AclObjectSet.AclObjectClasss = field(
         default=None,
         metadata={
             "name": "ACL-OBJECT-CLASSS",
@@ -230,7 +230,7 @@ class AclObjectSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    acl_scope: AclScopeEnum | None = field(
+    acl_scope: None | AclScopeEnum = field(
         default=None,
         metadata={
             "name": "ACL-SCOPE",
@@ -238,7 +238,7 @@ class AclObjectSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    collection_ref: AclObjectSet.CollectionRef | None = field(
+    collection_ref: None | AclObjectSet.CollectionRef = field(
         default=None,
         metadata={
             "name": "COLLECTION-REF",
@@ -247,7 +247,7 @@ class AclObjectSet:
         },
     )
     derived_from_blueprint_refs: (
-        AclObjectSet.DerivedFromBlueprintRefs | None
+        None | AclObjectSet.DerivedFromBlueprintRefs
     ) = field(
         default=None,
         metadata={
@@ -256,7 +256,7 @@ class AclObjectSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    engineering_objects: AclObjectSet.EngineeringObjects | None = field(
+    engineering_objects: None | AclObjectSet.EngineeringObjects = field(
         default=None,
         metadata={
             "name": "ENGINEERING-OBJECTS",
@@ -264,7 +264,7 @@ class AclObjectSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    object_definition_refs: AclObjectSet.ObjectDefinitionRefs | None = field(
+    object_definition_refs: None | AclObjectSet.ObjectDefinitionRefs = field(
         default=None,
         metadata={
             "name": "OBJECT-DEFINITION-REFS",
@@ -272,7 +272,7 @@ class AclObjectSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    object_defintion_refs: AclObjectSet.ObjectDefintionRefs | None = field(
+    object_defintion_refs: None | AclObjectSet.ObjectDefintionRefs = field(
         default=None,
         metadata={
             "name": "OBJECT-DEFINTION-REFS",
@@ -280,7 +280,7 @@ class AclObjectSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    object_refs: AclObjectSet.ObjectRefs | None = field(
+    object_refs: None | AclObjectSet.ObjectRefs = field(
         default=None,
         metadata={
             "name": "OBJECT-REFS",
@@ -288,14 +288,14 @@ class AclObjectSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -303,7 +303,7 @@ class AclObjectSet:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -380,7 +380,7 @@ class AclObjectSet:
 
     @dataclass
     class CollectionRef(Ref):
-        dest: CollectionSubtypesEnum | None = field(
+        dest: None | CollectionSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -404,7 +404,7 @@ class AclObjectSet:
 
         @dataclass
         class DerivedFromBlueprintRef(Ref):
-            dest: AtpBlueprintSubtypesEnum | None = field(
+            dest: None | AtpBlueprintSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -439,7 +439,7 @@ class AclObjectSet:
 
         @dataclass
         class ObjectDefinitionRef(Ref):
-            dest: AtpDefinitionSubtypesEnum | None = field(
+            dest: None | AtpDefinitionSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -463,7 +463,7 @@ class AclObjectSet:
 
         @dataclass
         class ObjectDefintionRef(Ref):
-            dest: AtpDefinitionSubtypesEnum | None = field(
+            dest: None | AtpDefinitionSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -485,7 +485,7 @@ class AclObjectSet:
 
         @dataclass
         class ObjectRef(Ref):
-            dest: ReferrableSubtypesEnum | None = field(
+            dest: None | ReferrableSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",

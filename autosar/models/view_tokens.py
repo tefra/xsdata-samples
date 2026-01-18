@@ -33,14 +33,14 @@ class ViewTokens:
             "pattern": r"(-?[a-zA-Z_]+)(( )+-?[a-zA-Z_]+)*",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

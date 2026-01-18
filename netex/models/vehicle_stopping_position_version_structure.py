@@ -22,7 +22,7 @@ class VehicleStoppingPositionVersionStructure(
     class Meta:
         name = "VehicleStoppingPosition_VersionStructure"
 
-    vehicle_stopping_place_ref: VehicleStoppingPlaceRef | None = field(
+    vehicle_stopping_place_ref: None | VehicleStoppingPlaceRef = field(
         default=None,
         metadata={
             "name": "VehicleStoppingPlaceRef",
@@ -30,7 +30,7 @@ class VehicleStoppingPositionVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    label: MultilingualString | None = field(
+    label: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "Label",
@@ -38,7 +38,7 @@ class VehicleStoppingPositionVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    relation_to_vehicle: RelationToVehicleEnumeration | None = field(
+    relation_to_vehicle: None | RelationToVehicleEnumeration = field(
         default=None,
         metadata={
             "name": "RelationToVehicle",
@@ -46,7 +46,7 @@ class VehicleStoppingPositionVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    bearing: int | None = field(
+    bearing: None | int = field(
         default=None,
         metadata={
             "name": "Bearing",
@@ -55,7 +55,7 @@ class VehicleStoppingPositionVersionStructure(
         },
     )
     vehicle_position_alignments: (
-        VehiclePositionAlignmentsRelStructure | None
+        None | VehiclePositionAlignmentsRelStructure
     ) = field(
         default=None,
         metadata={

@@ -17,7 +17,7 @@ class ServiceAccessCodeVersionStructure(TravelDocumentVersionStructure):
     class Meta:
         name = "ServiceAccessCode_VersionStructure"
 
-    access_code: str | None = field(
+    access_code: None | str = field(
         default=None,
         metadata={
             "name": "AccessCode",
@@ -26,7 +26,7 @@ class ServiceAccessCodeVersionStructure(TravelDocumentVersionStructure):
             "required": True,
         },
     )
-    expiry_date: XmlDateTime | None = field(
+    expiry_date: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "ExpiryDate",
@@ -35,7 +35,7 @@ class ServiceAccessCodeVersionStructure(TravelDocumentVersionStructure):
         },
     )
     vehicle_access_credentials_assignment_ref: (
-        VehicleAccessCredentialsAssignmentRef | None
+        None | VehicleAccessCredentialsAssignmentRef
     ) = field(
         default=None,
         metadata={

@@ -33,7 +33,7 @@ class BlueprintMapping:
     class Meta:
         name = "BLUEPRINT-MAPPING"
 
-    blueprint_ref: BlueprintMapping.BlueprintRef | None = field(
+    blueprint_ref: None | BlueprintMapping.BlueprintRef = field(
         default=None,
         metadata={
             "name": "BLUEPRINT-REF",
@@ -41,7 +41,7 @@ class BlueprintMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    derived_object_ref: BlueprintMapping.DerivedObjectRef | None = field(
+    derived_object_ref: None | BlueprintMapping.DerivedObjectRef = field(
         default=None,
         metadata={
             "name": "DERIVED-OBJECT-REF",
@@ -49,14 +49,14 @@ class BlueprintMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -67,7 +67,7 @@ class BlueprintMapping:
 
     @dataclass
     class BlueprintRef(Ref):
-        dest: AtpBlueprintSubtypesEnum | None = field(
+        dest: None | AtpBlueprintSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -78,7 +78,7 @@ class BlueprintMapping:
 
     @dataclass
     class DerivedObjectRef(Ref):
-        dest: AtpBlueprintableSubtypesEnum | None = field(
+        dest: None | AtpBlueprintableSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

@@ -154,7 +154,7 @@ class FlexrayCommunicationControllerConditional:
     class Meta:
         name = "FLEXRAY-COMMUNICATION-CONTROLLER-CONDITIONAL"
 
-    wake_up_by_controller_supported: Boolean | None = field(
+    wake_up_by_controller_supported: None | Boolean = field(
         default=None,
         metadata={
             "name": "WAKE-UP-BY-CONTROLLER-SUPPORTED",
@@ -162,7 +162,7 @@ class FlexrayCommunicationControllerConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    accepted_startup_range: Integer | None = field(
+    accepted_startup_range: None | Integer = field(
         default=None,
         metadata={
             "name": "ACCEPTED-STARTUP-RANGE",
@@ -170,7 +170,7 @@ class FlexrayCommunicationControllerConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    allow_halt_due_to_clock: Boolean | None = field(
+    allow_halt_due_to_clock: None | Boolean = field(
         default=None,
         metadata={
             "name": "ALLOW-HALT-DUE-TO-CLOCK",
@@ -178,7 +178,7 @@ class FlexrayCommunicationControllerConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    allow_passive_to_active: Integer | None = field(
+    allow_passive_to_active: None | Integer = field(
         default=None,
         metadata={
             "name": "ALLOW-PASSIVE-TO-ACTIVE",
@@ -186,7 +186,7 @@ class FlexrayCommunicationControllerConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    cluster_drift_damping: Integer | None = field(
+    cluster_drift_damping: None | Integer = field(
         default=None,
         metadata={
             "name": "CLUSTER-DRIFT-DAMPING",
@@ -194,7 +194,7 @@ class FlexrayCommunicationControllerConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    decoding_correction: Integer | None = field(
+    decoding_correction: None | Integer = field(
         default=None,
         metadata={
             "name": "DECODING-CORRECTION",
@@ -202,7 +202,7 @@ class FlexrayCommunicationControllerConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    delay_compensation_a: Integer | None = field(
+    delay_compensation_a: None | Integer = field(
         default=None,
         metadata={
             "name": "DELAY-COMPENSATION-A",
@@ -210,7 +210,7 @@ class FlexrayCommunicationControllerConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    delay_compensation_b: Integer | None = field(
+    delay_compensation_b: None | Integer = field(
         default=None,
         metadata={
             "name": "DELAY-COMPENSATION-B",
@@ -218,7 +218,7 @@ class FlexrayCommunicationControllerConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    extern_offset_correction: Integer | None = field(
+    extern_offset_correction: None | Integer = field(
         default=None,
         metadata={
             "name": "EXTERN-OFFSET-CORRECTION",
@@ -226,7 +226,7 @@ class FlexrayCommunicationControllerConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    extern_rate_correction: Integer | None = field(
+    extern_rate_correction: None | Integer = field(
         default=None,
         metadata={
             "name": "EXTERN-RATE-CORRECTION",
@@ -234,7 +234,7 @@ class FlexrayCommunicationControllerConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    external_sync: Boolean | None = field(
+    external_sync: None | Boolean = field(
         default=None,
         metadata={
             "name": "EXTERNAL-SYNC",
@@ -242,7 +242,7 @@ class FlexrayCommunicationControllerConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    fall_back_internal: Boolean | None = field(
+    fall_back_internal: None | Boolean = field(
         default=None,
         metadata={
             "name": "FALL-BACK-INTERNAL",
@@ -251,7 +251,7 @@ class FlexrayCommunicationControllerConditional:
         },
     )
     flexray_fifos: (
-        FlexrayCommunicationControllerConditional.FlexrayFifos | None
+        None | FlexrayCommunicationControllerConditional.FlexrayFifos
     ) = field(
         default=None,
         metadata={
@@ -260,7 +260,7 @@ class FlexrayCommunicationControllerConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    key_slot_id: PositiveInteger | None = field(
+    key_slot_id: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "KEY-SLOT-ID",
@@ -268,7 +268,7 @@ class FlexrayCommunicationControllerConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    key_slot_only_enabled: Boolean | None = field(
+    key_slot_only_enabled: None | Boolean = field(
         default=None,
         metadata={
             "name": "KEY-SLOT-ONLY-ENABLED",
@@ -276,7 +276,7 @@ class FlexrayCommunicationControllerConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    key_slot_used_for_start_up: Boolean | None = field(
+    key_slot_used_for_start_up: None | Boolean = field(
         default=None,
         metadata={
             "name": "KEY-SLOT-USED-FOR-START-UP",
@@ -284,7 +284,7 @@ class FlexrayCommunicationControllerConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    key_slot_used_for_sync: Boolean | None = field(
+    key_slot_used_for_sync: None | Boolean = field(
         default=None,
         metadata={
             "name": "KEY-SLOT-USED-FOR-SYNC",
@@ -292,7 +292,7 @@ class FlexrayCommunicationControllerConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    latest_tx: Integer | None = field(
+    latest_tx: None | Integer = field(
         default=None,
         metadata={
             "name": "LATEST-TX",
@@ -300,7 +300,7 @@ class FlexrayCommunicationControllerConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    listen_timeout: Integer | None = field(
+    listen_timeout: None | Integer = field(
         default=None,
         metadata={
             "name": "LISTEN-TIMEOUT",
@@ -308,7 +308,7 @@ class FlexrayCommunicationControllerConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    macro_initial_offset_a: Integer | None = field(
+    macro_initial_offset_a: None | Integer = field(
         default=None,
         metadata={
             "name": "MACRO-INITIAL-OFFSET-A",
@@ -316,7 +316,7 @@ class FlexrayCommunicationControllerConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    macro_initial_offset_b: Integer | None = field(
+    macro_initial_offset_b: None | Integer = field(
         default=None,
         metadata={
             "name": "MACRO-INITIAL-OFFSET-B",
@@ -324,7 +324,7 @@ class FlexrayCommunicationControllerConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    maximum_dynamic_payload_length: Integer | None = field(
+    maximum_dynamic_payload_length: None | Integer = field(
         default=None,
         metadata={
             "name": "MAXIMUM-DYNAMIC-PAYLOAD-LENGTH",
@@ -332,7 +332,7 @@ class FlexrayCommunicationControllerConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    micro_initial_offset_a: Integer | None = field(
+    micro_initial_offset_a: None | Integer = field(
         default=None,
         metadata={
             "name": "MICRO-INITIAL-OFFSET-A",
@@ -340,7 +340,7 @@ class FlexrayCommunicationControllerConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    micro_initial_offset_b: Integer | None = field(
+    micro_initial_offset_b: None | Integer = field(
         default=None,
         metadata={
             "name": "MICRO-INITIAL-OFFSET-B",
@@ -348,7 +348,7 @@ class FlexrayCommunicationControllerConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    micro_per_cycle: Integer | None = field(
+    micro_per_cycle: None | Integer = field(
         default=None,
         metadata={
             "name": "MICRO-PER-CYCLE",
@@ -356,7 +356,7 @@ class FlexrayCommunicationControllerConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    microtick_duration: TimeValue | None = field(
+    microtick_duration: None | TimeValue = field(
         default=None,
         metadata={
             "name": "MICROTICK-DURATION",
@@ -364,7 +364,7 @@ class FlexrayCommunicationControllerConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nm_vector_early_update: Boolean | None = field(
+    nm_vector_early_update: None | Boolean = field(
         default=None,
         metadata={
             "name": "NM-VECTOR-EARLY-UPDATE",
@@ -372,7 +372,7 @@ class FlexrayCommunicationControllerConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    offset_correction_out: Integer | None = field(
+    offset_correction_out: None | Integer = field(
         default=None,
         metadata={
             "name": "OFFSET-CORRECTION-OUT",
@@ -380,7 +380,7 @@ class FlexrayCommunicationControllerConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    rate_correction_out: Integer | None = field(
+    rate_correction_out: None | Integer = field(
         default=None,
         metadata={
             "name": "RATE-CORRECTION-OUT",
@@ -388,7 +388,7 @@ class FlexrayCommunicationControllerConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    samples_per_microtick: Integer | None = field(
+    samples_per_microtick: None | Integer = field(
         default=None,
         metadata={
             "name": "SAMPLES-PER-MICROTICK",
@@ -396,7 +396,7 @@ class FlexrayCommunicationControllerConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    second_key_slot_id: PositiveInteger | None = field(
+    second_key_slot_id: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "SECOND-KEY-SLOT-ID",
@@ -404,7 +404,7 @@ class FlexrayCommunicationControllerConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    two_key_slot_mode: Boolean | None = field(
+    two_key_slot_mode: None | Boolean = field(
         default=None,
         metadata={
             "name": "TWO-KEY-SLOT-MODE",
@@ -412,7 +412,7 @@ class FlexrayCommunicationControllerConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    wake_up_pattern: Integer | None = field(
+    wake_up_pattern: None | Integer = field(
         default=None,
         metadata={
             "name": "WAKE-UP-PATTERN",
@@ -420,7 +420,7 @@ class FlexrayCommunicationControllerConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -428,14 +428,14 @@ class FlexrayCommunicationControllerConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

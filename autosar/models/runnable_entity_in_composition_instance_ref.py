@@ -50,7 +50,7 @@ class RunnableEntityInCompositionInstanceRef:
         },
     )
     target_runnable_entity_ref: (
-        RunnableEntityInCompositionInstanceRef.TargetRunnableEntityRef | None
+        None | RunnableEntityInCompositionInstanceRef.TargetRunnableEntityRef
     ) = field(
         default=None,
         metadata={
@@ -59,7 +59,7 @@ class RunnableEntityInCompositionInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -67,14 +67,14 @@ class RunnableEntityInCompositionInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -85,7 +85,7 @@ class RunnableEntityInCompositionInstanceRef:
 
     @dataclass
     class ContextSwComponentPrototypeRef(Ref):
-        dest: SwComponentPrototypeSubtypesEnum | None = field(
+        dest: None | SwComponentPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -96,7 +96,7 @@ class RunnableEntityInCompositionInstanceRef:
 
     @dataclass
     class TargetRunnableEntityRef(Ref):
-        dest: RunnableEntitySubtypesEnum | None = field(
+        dest: None | RunnableEntitySubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

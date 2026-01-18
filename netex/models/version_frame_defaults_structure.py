@@ -13,7 +13,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 @dataclass
 class VersionFrameDefaultsStructure:
-    default_codespace_ref: CodespaceRefStructure | None = field(
+    default_codespace_ref: None | CodespaceRefStructure = field(
         default=None,
         metadata={
             "name": "DefaultCodespaceRef",
@@ -21,7 +21,7 @@ class VersionFrameDefaultsStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    default_data_source_ref: DataSourceRefStructure | None = field(
+    default_data_source_ref: None | DataSourceRefStructure = field(
         default=None,
         metadata={
             "name": "DefaultDataSourceRef",
@@ -29,7 +29,7 @@ class VersionFrameDefaultsStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    default_responsibility_set_ref: ResponsibilitySetRefStructure | None = (
+    default_responsibility_set_ref: None | ResponsibilitySetRefStructure = (
         field(
             default=None,
             metadata={
@@ -39,7 +39,7 @@ class VersionFrameDefaultsStructure:
             },
         )
     )
-    default_locale: LocaleStructure | None = field(
+    default_locale: None | LocaleStructure = field(
         default=None,
         metadata={
             "name": "DefaultLocale",
@@ -47,7 +47,7 @@ class VersionFrameDefaultsStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    default_location_system: str | None = field(
+    default_location_system: None | str = field(
         default=None,
         metadata={
             "name": "DefaultLocationSystem",
@@ -55,7 +55,7 @@ class VersionFrameDefaultsStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    default_system_of_units: SystemOfUnits | None = field(
+    default_system_of_units: None | SystemOfUnits = field(
         default=None,
         metadata={
             "name": "DefaultSystemOfUnits",
@@ -63,7 +63,7 @@ class VersionFrameDefaultsStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    default_currency: str | None = field(
+    default_currency: None | str = field(
         default=None,
         metadata={
             "name": "DefaultCurrency",

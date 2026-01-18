@@ -45,42 +45,42 @@ class Autosar:
         name = "AUTOSAR"
         namespace = "http://autosar.org/schema/r4.0"
 
-    file_info_comment: FileInfoComment | None = field(
+    file_info_comment: None | FileInfoComment = field(
         default=None,
         metadata={
             "name": "FILE-INFO-COMMENT",
             "type": "Element",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
             "type": "Element",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
             "type": "Element",
         },
     )
-    ar_packages: Autosar.ArPackages | None = field(
+    ar_packages: None | Autosar.ArPackages = field(
         default=None,
         metadata={
             "name": "AR-PACKAGES",
             "type": "Element",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

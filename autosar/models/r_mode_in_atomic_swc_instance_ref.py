@@ -35,7 +35,7 @@ class RModeInAtomicSwcInstanceRef:
     class Meta:
         name = "R-MODE-IN-ATOMIC-SWC-INSTANCE-REF"
 
-    context_port_ref: RModeInAtomicSwcInstanceRef.ContextPortRef | None = (
+    context_port_ref: None | RModeInAtomicSwcInstanceRef.ContextPortRef = (
         field(
             default=None,
             metadata={
@@ -46,8 +46,8 @@ class RModeInAtomicSwcInstanceRef:
         )
     )
     context_mode_declaration_group_prototype_ref: (
-        RModeInAtomicSwcInstanceRef.ContextModeDeclarationGroupPrototypeRef
-        | None
+        None
+        | RModeInAtomicSwcInstanceRef.ContextModeDeclarationGroupPrototypeRef
     ) = field(
         default=None,
         metadata={
@@ -57,7 +57,7 @@ class RModeInAtomicSwcInstanceRef:
         },
     )
     target_mode_declaration_ref: (
-        RModeInAtomicSwcInstanceRef.TargetModeDeclarationRef | None
+        None | RModeInAtomicSwcInstanceRef.TargetModeDeclarationRef
     ) = field(
         default=None,
         metadata={
@@ -66,14 +66,14 @@ class RModeInAtomicSwcInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -84,7 +84,7 @@ class RModeInAtomicSwcInstanceRef:
 
     @dataclass
     class ContextPortRef(Ref):
-        dest: AbstractRequiredPortPrototypeSubtypesEnum | None = field(
+        dest: None | AbstractRequiredPortPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -95,7 +95,7 @@ class RModeInAtomicSwcInstanceRef:
 
     @dataclass
     class ContextModeDeclarationGroupPrototypeRef(Ref):
-        dest: ModeDeclarationGroupPrototypeSubtypesEnum | None = field(
+        dest: None | ModeDeclarationGroupPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -106,7 +106,7 @@ class RModeInAtomicSwcInstanceRef:
 
     @dataclass
     class TargetModeDeclarationRef(Ref):
-        dest: ModeDeclarationSubtypesEnum | None = field(
+        dest: None | ModeDeclarationSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

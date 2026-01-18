@@ -45,7 +45,7 @@ class ComponentInCompositionInstanceRef:
         },
     )
     target_component_ref: (
-        ComponentInCompositionInstanceRef.TargetComponentRef | None
+        None | ComponentInCompositionInstanceRef.TargetComponentRef
     ) = field(
         default=None,
         metadata={
@@ -54,14 +54,14 @@ class ComponentInCompositionInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -72,7 +72,7 @@ class ComponentInCompositionInstanceRef:
 
     @dataclass
     class ContextComponentRef(Ref):
-        dest: SwComponentPrototypeSubtypesEnum | None = field(
+        dest: None | SwComponentPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -83,7 +83,7 @@ class ComponentInCompositionInstanceRef:
 
     @dataclass
     class TargetComponentRef(Ref):
-        dest: SwComponentPrototypeSubtypesEnum | None = field(
+        dest: None | SwComponentPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

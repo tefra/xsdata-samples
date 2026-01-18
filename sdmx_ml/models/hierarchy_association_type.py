@@ -22,7 +22,7 @@ class HierarchyAssociationType(MaintainableType):
         performed.
     """
 
-    linked_hierarchy: str | None = field(
+    linked_hierarchy: None | str = field(
         default=None,
         metadata={
             "name": "LinkedHierarchy",
@@ -32,7 +32,7 @@ class HierarchyAssociationType(MaintainableType):
             "pattern": r".+\.codelist\.Hierarchy=.+",
         },
     )
-    linked_object: str | None = field(
+    linked_object: None | str = field(
         default=None,
         metadata={
             "name": "LinkedObject",
@@ -42,7 +42,7 @@ class HierarchyAssociationType(MaintainableType):
             "pattern": r".+\)(\.[A-Za-z0-9_@$\-]+(\.[A-Za-z0-9_@$\-]+)*)?",
         },
     )
-    context_object: str | None = field(
+    context_object: None | str = field(
         default=None,
         metadata={
             "name": "ContextObject",

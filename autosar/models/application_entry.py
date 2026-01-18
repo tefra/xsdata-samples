@@ -39,7 +39,7 @@ class ApplicationEntry:
     class Meta:
         name = "APPLICATION-ENTRY"
 
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -47,7 +47,7 @@ class ApplicationEntry:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    delay: TimeValue | None = field(
+    delay: None | TimeValue = field(
         default=None,
         metadata={
             "name": "DELAY",
@@ -55,7 +55,7 @@ class ApplicationEntry:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    position_in_table: Integer | None = field(
+    position_in_table: None | Integer = field(
         default=None,
         metadata={
             "name": "POSITION-IN-TABLE",
@@ -63,7 +63,7 @@ class ApplicationEntry:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    frame_triggering_ref: ApplicationEntry.FrameTriggeringRef | None = field(
+    frame_triggering_ref: None | ApplicationEntry.FrameTriggeringRef = field(
         default=None,
         metadata={
             "name": "FRAME-TRIGGERING-REF",
@@ -71,14 +71,14 @@ class ApplicationEntry:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -89,7 +89,7 @@ class ApplicationEntry:
 
     @dataclass
     class FrameTriggeringRef(Ref):
-        dest: LinFrameTriggeringSubtypesEnum | None = field(
+        dest: None | LinFrameTriggeringSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

@@ -38,7 +38,7 @@ class DataTypeMap:
     class Meta:
         name = "DATA-TYPE-MAP"
 
-    application_data_type_ref: DataTypeMap.ApplicationDataTypeRef | None = (
+    application_data_type_ref: None | DataTypeMap.ApplicationDataTypeRef = (
         field(
             default=None,
             metadata={
@@ -49,7 +49,7 @@ class DataTypeMap:
         )
     )
     implementation_data_type_ref: (
-        DataTypeMap.ImplementationDataTypeRef | None
+        None | DataTypeMap.ImplementationDataTypeRef
     ) = field(
         default=None,
         metadata={
@@ -58,14 +58,14 @@ class DataTypeMap:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -76,7 +76,7 @@ class DataTypeMap:
 
     @dataclass
     class ApplicationDataTypeRef(Ref):
-        dest: ApplicationDataTypeSubtypesEnum | None = field(
+        dest: None | ApplicationDataTypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -87,7 +87,7 @@ class DataTypeMap:
 
     @dataclass
     class ImplementationDataTypeRef(Ref):
-        dest: AbstractImplementationDataTypeSubtypesEnum | None = field(
+        dest: None | AbstractImplementationDataTypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

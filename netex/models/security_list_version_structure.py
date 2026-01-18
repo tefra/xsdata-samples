@@ -25,7 +25,7 @@ class SecurityListVersionStructure(DataManagedObjectStructure):
     class Meta:
         name = "SecurityList_VersionStructure"
 
-    name: MultilingualString | None = field(
+    name: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "Name",
@@ -33,7 +33,7 @@ class SecurityListVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    description: MultilingualString | None = field(
+    description: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "Description",
@@ -41,7 +41,7 @@ class SecurityListVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    type_of_security_list_ref: TypeOfSecurityListRef | None = field(
+    type_of_security_list_ref: None | TypeOfSecurityListRef = field(
         default=None,
         metadata={
             "name": "TypeOfSecurityListRef",
@@ -50,7 +50,8 @@ class SecurityListVersionStructure(DataManagedObjectStructure):
         },
     )
     organisation_ref_or_other_organisation_ref_or_transport_organisation_ref: (
-        RetailConsortiumRef
+        None
+        | RetailConsortiumRef
         | OnlineServiceOperatorRef
         | GeneralOrganisationRef
         | ManagementAgentRef
@@ -60,7 +61,6 @@ class SecurityListVersionStructure(DataManagedObjectStructure):
         | AuthorityRef
         | OperatorRef
         | OrganisationRef
-        | None
     ) = field(
         default=None,
         metadata={
@@ -119,7 +119,7 @@ class SecurityListVersionStructure(DataManagedObjectStructure):
             ),
         },
     )
-    security_listings: SecurityListingsRelStructure | None = field(
+    security_listings: None | SecurityListingsRelStructure = field(
         default=None,
         metadata={
             "name": "securityListings",

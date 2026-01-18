@@ -28,7 +28,7 @@ class ConfigurableArrays:
 
     @dataclass
     class Array:
-        left: Left | None = field(
+        left: None | Left = field(
             default=None,
             metadata={
                 "type": "Element",
@@ -36,7 +36,7 @@ class ConfigurableArrays:
                 "required": True,
             },
         )
-        right: Right | None = field(
+        right: None | Right = field(
             default=None,
             metadata={
                 "type": "Element",
@@ -44,7 +44,7 @@ class ConfigurableArrays:
                 "required": True,
             },
         )
-        id: str | None = field(
+        id: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",

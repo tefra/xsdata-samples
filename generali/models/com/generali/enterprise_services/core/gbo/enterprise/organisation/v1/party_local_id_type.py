@@ -7,7 +7,7 @@ __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/enterprise/org
 
 @dataclass
 class PartyLocalIdType:
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "name": "Id",
@@ -16,7 +16,7 @@ class PartyLocalIdType:
             "required": True,
         },
     )
-    sender: str | None = field(
+    sender: None | str = field(
         default=None,
         metadata={
             "name": "Sender",
@@ -25,7 +25,7 @@ class PartyLocalIdType:
             "required": True,
         },
     )
-    party_type: str | None = field(
+    party_type: None | str = field(
         default=None,
         metadata={
             "name": "PartyType",

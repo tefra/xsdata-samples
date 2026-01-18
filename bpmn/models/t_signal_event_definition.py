@@ -13,7 +13,7 @@ class TSignalEventDefinition(TEventDefinition):
     class Meta:
         name = "tSignalEventDefinition"
 
-    signal_ref: QName | None = field(
+    signal_ref: None | QName = field(
         default=None,
         metadata={
             "name": "signalRef",

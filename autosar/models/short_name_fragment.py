@@ -33,7 +33,7 @@ class ShortNameFragment:
     class Meta:
         name = "SHORT-NAME-FRAGMENT"
 
-    role: String | None = field(
+    role: None | String = field(
         default=None,
         metadata={
             "name": "ROLE",
@@ -41,7 +41,7 @@ class ShortNameFragment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    fragment: Identifier | None = field(
+    fragment: None | Identifier = field(
         default=None,
         metadata={
             "name": "FRAGMENT",
@@ -49,14 +49,14 @@ class ShortNameFragment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

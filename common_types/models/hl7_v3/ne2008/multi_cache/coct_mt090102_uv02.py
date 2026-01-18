@@ -33,7 +33,7 @@ class CoctMt090102Uv02Person:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Ii | None = field(
+    type_id: None | Ii = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -57,7 +57,7 @@ class CoctMt090102Uv02Person:
             "min_occurs": 1,
         },
     )
-    null_flavor: NullFlavor | None = field(
+    null_flavor: None | NullFlavor = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -97,7 +97,7 @@ class CoctMt090102Uv02AssignedPerson:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Ii | None = field(
+    type_id: None | Ii = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -121,7 +121,7 @@ class CoctMt090102Uv02AssignedPerson:
             "min_occurs": 1,
         },
     )
-    code: Ce | None = field(
+    code: None | Ce = field(
         default=None,
         metadata={
             "type": "Element",
@@ -135,7 +135,7 @@ class CoctMt090102Uv02AssignedPerson:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    assigned_person: CoctMt090102Uv02Person | None = field(
+    assigned_person: None | CoctMt090102Uv02Person = field(
         default=None,
         metadata={
             "name": "assignedPerson",
@@ -144,7 +144,7 @@ class CoctMt090102Uv02AssignedPerson:
             "nillable": True,
         },
     )
-    represented_organization: CoctMt150002Uv01Organization | None = field(
+    represented_organization: None | CoctMt150002Uv01Organization = field(
         default=None,
         metadata={
             "name": "representedOrganization",
@@ -153,14 +153,14 @@ class CoctMt090102Uv02AssignedPerson:
             "nillable": True,
         },
     )
-    null_flavor: NullFlavor | None = field(
+    null_flavor: None | NullFlavor = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
         },
     )
-    class_code: RoleClassAssignedEntity | None = field(
+    class_code: None | RoleClassAssignedEntity = field(
         default=None,
         metadata={
             "name": "classCode",

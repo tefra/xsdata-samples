@@ -43,14 +43,14 @@ class ProceedingsSeriesMetadata:
         name = "proceedings_series_metadata"
         namespace = "http://www.crossref.org/schema/5.3.1"
 
-    series_metadata: SeriesMetadata | None = field(
+    series_metadata: None | SeriesMetadata = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
         },
     )
-    proceedings_title: ProceedingsTitle | None = field(
+    proceedings_title: None | ProceedingsTitle = field(
         default=None,
         metadata={
             "type": "Element",
@@ -94,25 +94,25 @@ class ProceedingsSeriesMetadata:
             "max_occurs": 6,
         },
     )
-    noisbn: Noisbn | None = field(
+    noisbn: None | Noisbn = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    publisher_item: PublisherItem | None = field(
+    publisher_item: None | PublisherItem = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    archive_locations: ArchiveLocations | None = field(
+    archive_locations: None | ArchiveLocations = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    doi_data: DoiData | None = field(
+    doi_data: None | DoiData = field(
         default=None,
         metadata={
             "type": "Element",

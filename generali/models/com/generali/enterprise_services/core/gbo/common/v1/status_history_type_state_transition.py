@@ -44,7 +44,7 @@ class StatusHistoryTypeStateTransition(BaseSimpleComponentType):
     class Meta:
         global_type = False
 
-    from_status_code: CodeType | None = field(
+    from_status_code: None | CodeType = field(
         default=None,
         metadata={
             "name": "FromStatusCode",
@@ -52,7 +52,7 @@ class StatusHistoryTypeStateTransition(BaseSimpleComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
         },
     )
-    to_status_code: CodeType | None = field(
+    to_status_code: None | CodeType = field(
         default=None,
         metadata={
             "name": "ToStatusCode",
@@ -60,7 +60,7 @@ class StatusHistoryTypeStateTransition(BaseSimpleComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
         },
     )
-    effective_date_time: DateTimeType | None = field(
+    effective_date_time: None | DateTimeType = field(
         default=None,
         metadata={
             "name": "EffectiveDateTime",
@@ -68,7 +68,7 @@ class StatusHistoryTypeStateTransition(BaseSimpleComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
         },
     )
-    reasons: StatusHistoryTypeStateTransitionReasons | None = field(
+    reasons: None | StatusHistoryTypeStateTransitionReasons = field(
         default=None,
         metadata={
             "name": "Reasons",
@@ -76,7 +76,7 @@ class StatusHistoryTypeStateTransition(BaseSimpleComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
         },
     )
-    changed_by_user_id: Idtype | None = field(
+    changed_by_user_id: None | Idtype = field(
         default=None,
         metadata={
             "name": "ChangedByUserID",

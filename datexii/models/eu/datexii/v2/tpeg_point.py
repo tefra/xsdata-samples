@@ -14,7 +14,7 @@ class TpegPoint:
     junction point.
     """
 
-    tpeg_point_extension: ExtensionType | None = field(
+    tpeg_point_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "tpegPointExtension",

@@ -116,7 +116,7 @@ class CryptoServiceKey:
     class Meta:
         name = "CRYPTO-SERVICE-KEY"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -125,7 +125,7 @@ class CryptoServiceKey:
             "required": True,
         },
     )
-    short_name_fragments: CryptoServiceKey.ShortNameFragments | None = field(
+    short_name_fragments: None | CryptoServiceKey.ShortNameFragments = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -133,7 +133,7 @@ class CryptoServiceKey:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -141,7 +141,7 @@ class CryptoServiceKey:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -149,7 +149,7 @@ class CryptoServiceKey:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -157,7 +157,7 @@ class CryptoServiceKey:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -165,7 +165,7 @@ class CryptoServiceKey:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -173,7 +173,7 @@ class CryptoServiceKey:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: CryptoServiceKey.Annotations | None = field(
+    annotations: None | CryptoServiceKey.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -181,7 +181,7 @@ class CryptoServiceKey:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -189,7 +189,7 @@ class CryptoServiceKey:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    algorithm_family: String | None = field(
+    algorithm_family: None | String = field(
         default=None,
         metadata={
             "name": "ALGORITHM-FAMILY",
@@ -197,7 +197,7 @@ class CryptoServiceKey:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    development_value: CryptoServiceKey.DevelopmentValue | None = field(
+    development_value: None | CryptoServiceKey.DevelopmentValue = field(
         default=None,
         metadata={
             "name": "DEVELOPMENT-VALUE",
@@ -205,7 +205,7 @@ class CryptoServiceKey:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    key_generation: CryptoServiceKeyGenerationEnum | None = field(
+    key_generation: None | CryptoServiceKeyGenerationEnum = field(
         default=None,
         metadata={
             "name": "KEY-GENERATION",
@@ -213,7 +213,7 @@ class CryptoServiceKey:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    key_storage_type: String | None = field(
+    key_storage_type: None | String = field(
         default=None,
         metadata={
             "name": "KEY-STORAGE-TYPE",
@@ -221,7 +221,7 @@ class CryptoServiceKey:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    length: PositiveInteger | None = field(
+    length: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "LENGTH",
@@ -229,14 +229,14 @@ class CryptoServiceKey:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -244,7 +244,7 @@ class CryptoServiceKey:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -277,7 +277,7 @@ class CryptoServiceKey:
     @dataclass
     class DevelopmentValue:
         application_assoc_map_value_specification: (
-            ApplicationAssocMapValueSpecification | None
+            None | ApplicationAssocMapValueSpecification
         ) = field(
             default=None,
             metadata={
@@ -287,7 +287,7 @@ class CryptoServiceKey:
             },
         )
         application_rule_based_value_specification: (
-            ApplicationRuleBasedValueSpecification | None
+            None | ApplicationRuleBasedValueSpecification
         ) = field(
             default=None,
             metadata={
@@ -297,7 +297,7 @@ class CryptoServiceKey:
             },
         )
         application_value_specification: (
-            ApplicationValueSpecification | None
+            None | ApplicationValueSpecification
         ) = field(
             default=None,
             metadata={
@@ -306,7 +306,7 @@ class CryptoServiceKey:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        array_value_specification: ArrayValueSpecification | None = field(
+        array_value_specification: None | ArrayValueSpecification = field(
             default=None,
             metadata={
                 "name": "ARRAY-VALUE-SPECIFICATION",
@@ -315,7 +315,7 @@ class CryptoServiceKey:
             },
         )
         composite_rule_based_value_specification: (
-            CompositeRuleBasedValueSpecification | None
+            None | CompositeRuleBasedValueSpecification
         ) = field(
             default=None,
             metadata={
@@ -324,7 +324,7 @@ class CryptoServiceKey:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        constant_reference: ConstantReference | None = field(
+        constant_reference: None | ConstantReference = field(
             default=None,
             metadata={
                 "name": "CONSTANT-REFERENCE",
@@ -333,7 +333,7 @@ class CryptoServiceKey:
             },
         )
         not_available_value_specification: (
-            NotAvailableValueSpecification | None
+            None | NotAvailableValueSpecification
         ) = field(
             default=None,
             metadata={
@@ -343,7 +343,7 @@ class CryptoServiceKey:
             },
         )
         numerical_rule_based_value_specification: (
-            NumericalRuleBasedValueSpecification | None
+            None | NumericalRuleBasedValueSpecification
         ) = field(
             default=None,
             metadata={
@@ -352,7 +352,7 @@ class CryptoServiceKey:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        numerical_value_specification: NumericalValueSpecification | None = (
+        numerical_value_specification: None | NumericalValueSpecification = (
             field(
                 default=None,
                 metadata={
@@ -362,7 +362,7 @@ class CryptoServiceKey:
                 },
             )
         )
-        record_value_specification: RecordValueSpecification | None = field(
+        record_value_specification: None | RecordValueSpecification = field(
             default=None,
             metadata={
                 "name": "RECORD-VALUE-SPECIFICATION",
@@ -370,7 +370,7 @@ class CryptoServiceKey:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        reference_value_specification: ReferenceValueSpecification | None = (
+        reference_value_specification: None | ReferenceValueSpecification = (
             field(
                 default=None,
                 metadata={
@@ -380,7 +380,7 @@ class CryptoServiceKey:
                 },
             )
         )
-        text_value_specification: TextValueSpecification | None = field(
+        text_value_specification: None | TextValueSpecification = field(
             default=None,
             metadata={
                 "name": "TEXT-VALUE-SPECIFICATION",

@@ -13,7 +13,7 @@ class ParkingPassengerEntranceVersionStructure(SiteEntranceVersionStructure):
     class Meta:
         name = "ParkingPassengerEntrance_VersionStructure"
 
-    areas: ParkingAreaRefsRelStructure | None = field(
+    areas: None | ParkingAreaRefsRelStructure = field(
         default=None,
         metadata={
             "type": "Element",

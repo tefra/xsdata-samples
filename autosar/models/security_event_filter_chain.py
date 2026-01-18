@@ -98,7 +98,7 @@ class SecurityEventFilterChain:
     class Meta:
         name = "SECURITY-EVENT-FILTER-CHAIN"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -108,7 +108,7 @@ class SecurityEventFilterChain:
         },
     )
     short_name_fragments: (
-        SecurityEventFilterChain.ShortNameFragments | None
+        None | SecurityEventFilterChain.ShortNameFragments
     ) = field(
         default=None,
         metadata={
@@ -117,7 +117,7 @@ class SecurityEventFilterChain:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -125,7 +125,7 @@ class SecurityEventFilterChain:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -133,7 +133,7 @@ class SecurityEventFilterChain:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -141,7 +141,7 @@ class SecurityEventFilterChain:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -149,7 +149,7 @@ class SecurityEventFilterChain:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -157,7 +157,7 @@ class SecurityEventFilterChain:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: SecurityEventFilterChain.Annotations | None = field(
+    annotations: None | SecurityEventFilterChain.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -165,7 +165,7 @@ class SecurityEventFilterChain:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -173,7 +173,7 @@ class SecurityEventFilterChain:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    aggregation: SecurityEventAggregationFilter | None = field(
+    aggregation: None | SecurityEventAggregationFilter = field(
         default=None,
         metadata={
             "name": "AGGREGATION",
@@ -181,7 +181,7 @@ class SecurityEventFilterChain:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    one_every_n: SecurityEventOneEveryNFilter | None = field(
+    one_every_n: None | SecurityEventOneEveryNFilter = field(
         default=None,
         metadata={
             "name": "ONE-EVERY-N",
@@ -189,7 +189,7 @@ class SecurityEventFilterChain:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    state: SecurityEventStateFilter | None = field(
+    state: None | SecurityEventStateFilter = field(
         default=None,
         metadata={
             "name": "STATE",
@@ -197,7 +197,7 @@ class SecurityEventFilterChain:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    threshold: SecurityEventThresholdFilter | None = field(
+    threshold: None | SecurityEventThresholdFilter = field(
         default=None,
         metadata={
             "name": "THRESHOLD",
@@ -205,14 +205,14 @@ class SecurityEventFilterChain:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -220,7 +220,7 @@ class SecurityEventFilterChain:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",

@@ -47,7 +47,7 @@ class GenericParameterAssignmentVersionStructure(
     class Meta:
         name = "GenericParameterAssignment_VersionStructure"
 
-    includes_grouping_type: LogicalOperationEnumeration | None = field(
+    includes_grouping_type: None | LogicalOperationEnumeration = field(
         default=None,
         metadata={
             "name": "IncludesGroupingType",
@@ -55,7 +55,7 @@ class GenericParameterAssignmentVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    includes: GenericParameterAssignmentsRelStructure | None = field(
+    includes: None | GenericParameterAssignmentsRelStructure = field(
         default=None,
         metadata={
             "type": "Element",

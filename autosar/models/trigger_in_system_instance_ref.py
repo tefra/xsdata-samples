@@ -42,7 +42,7 @@ class TriggerInSystemInstanceRef:
         name = "TRIGGER-IN-SYSTEM-INSTANCE-REF"
 
     context_composition_ref: (
-        TriggerInSystemInstanceRef.ContextCompositionRef | None
+        None | TriggerInSystemInstanceRef.ContextCompositionRef
     ) = field(
         default=None,
         metadata={
@@ -61,7 +61,7 @@ class TriggerInSystemInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    context_port_ref: TriggerInSystemInstanceRef.ContextPortRef | None = field(
+    context_port_ref: None | TriggerInSystemInstanceRef.ContextPortRef = field(
         default=None,
         metadata={
             "name": "CONTEXT-PORT-REF",
@@ -69,7 +69,7 @@ class TriggerInSystemInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    target_trigger_ref: TriggerInSystemInstanceRef.TargetTriggerRef | None = (
+    target_trigger_ref: None | TriggerInSystemInstanceRef.TargetTriggerRef = (
         field(
             default=None,
             metadata={
@@ -79,14 +79,14 @@ class TriggerInSystemInstanceRef:
             },
         )
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -97,7 +97,7 @@ class TriggerInSystemInstanceRef:
 
     @dataclass
     class ContextCompositionRef(Ref):
-        dest: RootSwCompositionPrototypeSubtypesEnum | None = field(
+        dest: None | RootSwCompositionPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -108,7 +108,7 @@ class TriggerInSystemInstanceRef:
 
     @dataclass
     class ContextComponentRef(Ref):
-        dest: SwComponentPrototypeSubtypesEnum | None = field(
+        dest: None | SwComponentPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -119,7 +119,7 @@ class TriggerInSystemInstanceRef:
 
     @dataclass
     class ContextPortRef(Ref):
-        dest: PortPrototypeSubtypesEnum | None = field(
+        dest: None | PortPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -130,7 +130,7 @@ class TriggerInSystemInstanceRef:
 
     @dataclass
     class TargetTriggerRef(Ref):
-        dest: TriggerSubtypesEnum | None = field(
+        dest: None | TriggerSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

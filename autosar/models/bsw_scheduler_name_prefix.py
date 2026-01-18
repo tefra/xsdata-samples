@@ -40,7 +40,7 @@ class BswSchedulerNamePrefix:
     class Meta:
         name = "BSW-SCHEDULER-NAME-PREFIX"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -49,7 +49,7 @@ class BswSchedulerNamePrefix:
             "required": True,
         },
     )
-    short_name_fragments: BswSchedulerNamePrefix.ShortNameFragments | None = (
+    short_name_fragments: None | BswSchedulerNamePrefix.ShortNameFragments = (
         field(
             default=None,
             metadata={
@@ -59,7 +59,7 @@ class BswSchedulerNamePrefix:
             },
         )
     )
-    symbol: CIdentifier | None = field(
+    symbol: None | CIdentifier = field(
         default=None,
         metadata={
             "name": "SYMBOL",
@@ -67,7 +67,7 @@ class BswSchedulerNamePrefix:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -75,14 +75,14 @@ class BswSchedulerNamePrefix:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

@@ -43,14 +43,14 @@ class LLongName:
     class Meta:
         name = "L-LONG-NAME"
 
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -58,7 +58,7 @@ class LLongName:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    l: LEnumSimple | None = field(
+    l: None | LEnumSimple = field(
         default=None,
         metadata={
             "name": "L",
@@ -66,7 +66,7 @@ class LLongName:
             "required": True,
         },
     )
-    blueprint_value: str | None = field(
+    blueprint_value: None | str = field(
         default=None,
         metadata={
             "name": "BLUEPRINT-VALUE",

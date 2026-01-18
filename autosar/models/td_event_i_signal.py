@@ -97,7 +97,7 @@ class TdEventISignal:
     class Meta:
         name = "TD-EVENT-I-SIGNAL"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -106,7 +106,7 @@ class TdEventISignal:
             "required": True,
         },
     )
-    short_name_fragments: TdEventISignal.ShortNameFragments | None = field(
+    short_name_fragments: None | TdEventISignal.ShortNameFragments = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -114,7 +114,7 @@ class TdEventISignal:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -122,7 +122,7 @@ class TdEventISignal:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -130,7 +130,7 @@ class TdEventISignal:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -138,7 +138,7 @@ class TdEventISignal:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -146,7 +146,7 @@ class TdEventISignal:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -154,7 +154,7 @@ class TdEventISignal:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: TdEventISignal.Annotations | None = field(
+    annotations: None | TdEventISignal.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -162,7 +162,7 @@ class TdEventISignal:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -170,7 +170,7 @@ class TdEventISignal:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    occurrence_expression: TdEventOccurrenceExpression | None = field(
+    occurrence_expression: None | TdEventOccurrenceExpression = field(
         default=None,
         metadata={
             "name": "OCCURRENCE-EXPRESSION",
@@ -178,7 +178,7 @@ class TdEventISignal:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ecu_instance_ref: TdEventISignal.EcuInstanceRef | None = field(
+    ecu_instance_ref: None | TdEventISignal.EcuInstanceRef = field(
         default=None,
         metadata={
             "name": "ECU-INSTANCE-REF",
@@ -186,7 +186,7 @@ class TdEventISignal:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    i_signal_ref: TdEventISignal.ISignalRef | None = field(
+    i_signal_ref: None | TdEventISignal.ISignalRef = field(
         default=None,
         metadata={
             "name": "I-SIGNAL-REF",
@@ -194,7 +194,7 @@ class TdEventISignal:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    physical_channel_ref: TdEventISignal.PhysicalChannelRef | None = field(
+    physical_channel_ref: None | TdEventISignal.PhysicalChannelRef = field(
         default=None,
         metadata={
             "name": "PHYSICAL-CHANNEL-REF",
@@ -202,7 +202,7 @@ class TdEventISignal:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    td_event_type: TdEventISignalTypeEnum | None = field(
+    td_event_type: None | TdEventISignalTypeEnum = field(
         default=None,
         metadata={
             "name": "TD-EVENT-TYPE",
@@ -210,14 +210,14 @@ class TdEventISignal:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -225,7 +225,7 @@ class TdEventISignal:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -257,7 +257,7 @@ class TdEventISignal:
 
     @dataclass
     class EcuInstanceRef(Ref):
-        dest: EcuInstanceSubtypesEnum | None = field(
+        dest: None | EcuInstanceSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -268,7 +268,7 @@ class TdEventISignal:
 
     @dataclass
     class ISignalRef(Ref):
-        dest: ISignalSubtypesEnum | None = field(
+        dest: None | ISignalSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -279,7 +279,7 @@ class TdEventISignal:
 
     @dataclass
     class PhysicalChannelRef(Ref):
-        dest: PhysicalChannelSubtypesEnum | None = field(
+        dest: None | PhysicalChannelSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

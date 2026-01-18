@@ -13,7 +13,7 @@ class TInputOutputBinding(TBaseElement):
     class Meta:
         name = "tInputOutputBinding"
 
-    operation_ref: QName | None = field(
+    operation_ref: None | QName = field(
         default=None,
         metadata={
             "name": "operationRef",
@@ -21,7 +21,7 @@ class TInputOutputBinding(TBaseElement):
             "required": True,
         },
     )
-    input_data_ref: str | None = field(
+    input_data_ref: None | str = field(
         default=None,
         metadata={
             "name": "inputDataRef",
@@ -29,7 +29,7 @@ class TInputOutputBinding(TBaseElement):
             "required": True,
         },
     )
-    output_data_ref: str | None = field(
+    output_data_ref: None | str = field(
         default=None,
         metadata={
             "name": "outputDataRef",

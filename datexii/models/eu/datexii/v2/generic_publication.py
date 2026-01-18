@@ -19,7 +19,7 @@ class GenericPublication(PayloadPublication):
     :ivar generic_publication_extension:
     """
 
-    generic_publication_name: str | None = field(
+    generic_publication_name: None | str = field(
         default=None,
         metadata={
             "name": "genericPublicationName",
@@ -29,7 +29,7 @@ class GenericPublication(PayloadPublication):
             "max_length": 1024,
         },
     )
-    generic_publication_extension: GenericPublicationExtensionType | None = (
+    generic_publication_extension: None | GenericPublicationExtensionType = (
         field(
             default=None,
             metadata={

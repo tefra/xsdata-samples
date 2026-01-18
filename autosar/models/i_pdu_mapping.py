@@ -47,7 +47,7 @@ class IPduMapping:
     class Meta:
         name = "I-PDU-MAPPING"
 
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -55,7 +55,7 @@ class IPduMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    pdu_max_length: PositiveInteger | None = field(
+    pdu_max_length: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "PDU-MAX-LENGTH",
@@ -63,7 +63,7 @@ class IPduMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    pdur_tp_chunk_size: PositiveInteger | None = field(
+    pdur_tp_chunk_size: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "PDUR-TP-CHUNK-SIZE",
@@ -71,7 +71,7 @@ class IPduMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    source_i_pdu_ref: IPduMapping.SourceIPduRef | None = field(
+    source_i_pdu_ref: None | IPduMapping.SourceIPduRef = field(
         default=None,
         metadata={
             "name": "SOURCE-I-PDU-REF",
@@ -79,7 +79,7 @@ class IPduMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    target_i_pdu: TargetIPduRef | None = field(
+    target_i_pdu: None | TargetIPduRef = field(
         default=None,
         metadata={
             "name": "TARGET-I-PDU",
@@ -87,7 +87,7 @@ class IPduMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -95,14 +95,14 @@ class IPduMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -113,7 +113,7 @@ class IPduMapping:
 
     @dataclass
     class SourceIPduRef(Ref):
-        dest: PduTriggeringSubtypesEnum | None = field(
+        dest: None | PduTriggeringSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

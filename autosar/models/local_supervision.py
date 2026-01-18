@@ -95,7 +95,7 @@ class LocalSupervision:
     class Meta:
         name = "LOCAL-SUPERVISION"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -104,7 +104,7 @@ class LocalSupervision:
             "required": True,
         },
     )
-    short_name_fragments: LocalSupervision.ShortNameFragments | None = field(
+    short_name_fragments: None | LocalSupervision.ShortNameFragments = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -112,7 +112,7 @@ class LocalSupervision:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -120,7 +120,7 @@ class LocalSupervision:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -128,7 +128,7 @@ class LocalSupervision:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -136,7 +136,7 @@ class LocalSupervision:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -144,7 +144,7 @@ class LocalSupervision:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -152,7 +152,7 @@ class LocalSupervision:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: LocalSupervision.Annotations | None = field(
+    annotations: None | LocalSupervision.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -160,7 +160,7 @@ class LocalSupervision:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    alive_supervisions: LocalSupervision.AliveSupervisions | None = field(
+    alive_supervisions: None | LocalSupervision.AliveSupervisions = field(
         default=None,
         metadata={
             "name": "ALIVE-SUPERVISIONS",
@@ -168,7 +168,7 @@ class LocalSupervision:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    deadline_supervisions: LocalSupervision.DeadlineSupervisions | None = (
+    deadline_supervisions: None | LocalSupervision.DeadlineSupervisions = (
         field(
             default=None,
             metadata={
@@ -178,7 +178,7 @@ class LocalSupervision:
             },
         )
     )
-    failed_supervision_cycles_tolerance: PositiveInteger | None = field(
+    failed_supervision_cycles_tolerance: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "FAILED-SUPERVISION-CYCLES-TOLERANCE",
@@ -186,7 +186,7 @@ class LocalSupervision:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    logical_supervisions: LocalSupervision.LogicalSupervisions | None = field(
+    logical_supervisions: None | LocalSupervision.LogicalSupervisions = field(
         default=None,
         metadata={
             "name": "LOGICAL-SUPERVISIONS",
@@ -194,7 +194,7 @@ class LocalSupervision:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    transitions: LocalSupervision.Transitions | None = field(
+    transitions: None | LocalSupervision.Transitions = field(
         default=None,
         metadata={
             "name": "TRANSITIONS",
@@ -202,14 +202,14 @@ class LocalSupervision:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -217,7 +217,7 @@ class LocalSupervision:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",

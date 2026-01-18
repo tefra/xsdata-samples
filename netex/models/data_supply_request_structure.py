@@ -12,7 +12,7 @@ __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
 @dataclass
 class DataSupplyRequestStructure(ConsumerRequestEndpointStructure):
-    notification_ref: MessageRefStructure | None = field(
+    notification_ref: None | MessageRefStructure = field(
         default=None,
         metadata={
             "name": "NotificationRef",
@@ -20,7 +20,7 @@ class DataSupplyRequestStructure(ConsumerRequestEndpointStructure):
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    all_data: bool | None = field(
+    all_data: None | bool = field(
         default=None,
         metadata={
             "name": "AllData",

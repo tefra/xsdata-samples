@@ -33,7 +33,7 @@ class PhysicalChannelRefConditional:
         name = "PHYSICAL-CHANNEL-REF-CONDITIONAL"
 
     physical_channel_ref: (
-        PhysicalChannelRefConditional.PhysicalChannelRef | None
+        None | PhysicalChannelRefConditional.PhysicalChannelRef
     ) = field(
         default=None,
         metadata={
@@ -42,7 +42,7 @@ class PhysicalChannelRefConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -50,14 +50,14 @@ class PhysicalChannelRefConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -68,7 +68,7 @@ class PhysicalChannelRefConditional:
 
     @dataclass
     class PhysicalChannelRef(Ref):
-        dest: PhysicalChannelSubtypesEnum | None = field(
+        dest: None | PhysicalChannelSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

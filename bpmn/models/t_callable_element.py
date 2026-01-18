@@ -23,7 +23,7 @@ class TCallableElement(TRootElement):
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    io_specification: IoSpecification | None = field(
+    io_specification: None | IoSpecification = field(
         default=None,
         metadata={
             "name": "ioSpecification",
@@ -39,7 +39,7 @@ class TCallableElement(TRootElement):
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    name: str | None = field(
+    name: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",

@@ -55,7 +55,7 @@ class BswDirectCallPoint:
     class Meta:
         name = "BSW-DIRECT-CALL-POINT"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -64,7 +64,7 @@ class BswDirectCallPoint:
             "required": True,
         },
     )
-    short_name_fragments: BswDirectCallPoint.ShortNameFragments | None = field(
+    short_name_fragments: None | BswDirectCallPoint.ShortNameFragments = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -73,7 +73,7 @@ class BswDirectCallPoint:
         },
     )
     context_limitation_refs: (
-        BswDirectCallPoint.ContextLimitationRefs | None
+        None | BswDirectCallPoint.ContextLimitationRefs
     ) = field(
         default=None,
         metadata={
@@ -82,7 +82,7 @@ class BswDirectCallPoint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -90,7 +90,7 @@ class BswDirectCallPoint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    called_entry_ref: BswDirectCallPoint.CalledEntryRef | None = field(
+    called_entry_ref: None | BswDirectCallPoint.CalledEntryRef = field(
         default=None,
         metadata={
             "name": "CALLED-ENTRY-REF",
@@ -99,7 +99,7 @@ class BswDirectCallPoint:
         },
     )
     called_from_within_exclusive_area_ref: (
-        BswDirectCallPoint.CalledFromWithinExclusiveAreaRef | None
+        None | BswDirectCallPoint.CalledFromWithinExclusiveAreaRef
     ) = field(
         default=None,
         metadata={
@@ -108,14 +108,14 @@ class BswDirectCallPoint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -150,7 +150,7 @@ class BswDirectCallPoint:
 
         @dataclass
         class ContextLimitationRef(Ref):
-            dest: BswDistinguishedPartitionSubtypesEnum | None = field(
+            dest: None | BswDistinguishedPartitionSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -161,7 +161,7 @@ class BswDirectCallPoint:
 
     @dataclass
     class CalledEntryRef(Ref):
-        dest: BswModuleEntrySubtypesEnum | None = field(
+        dest: None | BswModuleEntrySubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -172,7 +172,7 @@ class BswDirectCallPoint:
 
     @dataclass
     class CalledFromWithinExclusiveAreaRef(Ref):
-        dest: ExclusiveAreaNestingOrderSubtypesEnum | None = field(
+        dest: None | ExclusiveAreaNestingOrderSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

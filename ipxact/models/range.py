@@ -18,14 +18,14 @@ class Range:
         name = "range"
         namespace = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
-    left: Left | None = field(
+    left: None | Left = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
         },
     )
-    right: Right | None = field(
+    right: None | Right = field(
         default=None,
         metadata={
             "type": "Element",

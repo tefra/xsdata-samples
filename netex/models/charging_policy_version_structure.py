@@ -17,7 +17,7 @@ class ChargingPolicyVersionStructure(UsageParameterVersionStructure):
     class Meta:
         name = "ChargingPolicy_VersionStructure"
 
-    credit_policy: TravelCreditPolicyEnumeration | None = field(
+    credit_policy: None | TravelCreditPolicyEnumeration = field(
         default=None,
         metadata={
             "name": "CreditPolicy",
@@ -25,7 +25,7 @@ class ChargingPolicyVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    expire_after_period: XmlDuration | None = field(
+    expire_after_period: None | XmlDuration = field(
         default=None,
         metadata={
             "name": "ExpireAfterPeriod",
@@ -33,7 +33,7 @@ class ChargingPolicyVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    payment_grace_period: XmlDuration | None = field(
+    payment_grace_period: None | XmlDuration = field(
         default=None,
         metadata={
             "name": "PaymentGracePeriod",
@@ -41,7 +41,7 @@ class ChargingPolicyVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    billing_policy: TravelBillingPolicyEnumeration | None = field(
+    billing_policy: None | TravelBillingPolicyEnumeration = field(
         default=None,
         metadata={
             "name": "BillingPolicy",
@@ -49,7 +49,7 @@ class ChargingPolicyVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    deposit_policy: DepositPolicyEnumeration | None = field(
+    deposit_policy: None | DepositPolicyEnumeration = field(
         default=None,
         metadata={
             "name": "DepositPolicy",

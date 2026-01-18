@@ -26,7 +26,8 @@ class OrganisationDerivedViewStructure(DerivedViewStructure):
         name = "Organisation_DerivedViewStructure"
 
     organisation_ref_or_other_organisation_ref_or_transport_organisation_ref: (
-        RetailConsortiumRef
+        None
+        | RetailConsortiumRef
         | OnlineServiceOperatorRef
         | GeneralOrganisationRef
         | ManagementAgentRef
@@ -36,7 +37,6 @@ class OrganisationDerivedViewStructure(DerivedViewStructure):
         | AuthorityRef
         | OperatorRef
         | OrganisationRef
-        | None
     ) = field(
         default=None,
         metadata={
@@ -95,7 +95,7 @@ class OrganisationDerivedViewStructure(DerivedViewStructure):
             ),
         },
     )
-    name: MultilingualString | None = field(
+    name: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "Name",
@@ -103,7 +103,7 @@ class OrganisationDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    short_name: MultilingualString | None = field(
+    short_name: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "ShortName",
@@ -111,7 +111,7 @@ class OrganisationDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    legal_name: MultilingualString | None = field(
+    legal_name: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "LegalName",
@@ -119,7 +119,7 @@ class OrganisationDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    trading_name: MultilingualString | None = field(
+    trading_name: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "TradingName",
@@ -127,7 +127,7 @@ class OrganisationDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    alternative_names: AlternativeNamesRelStructure | None = field(
+    alternative_names: None | AlternativeNamesRelStructure = field(
         default=None,
         metadata={
             "name": "alternativeNames",
@@ -135,7 +135,7 @@ class OrganisationDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    contact_details: ContactStructure | None = field(
+    contact_details: None | ContactStructure = field(
         default=None,
         metadata={
             "name": "ContactDetails",

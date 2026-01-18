@@ -11,7 +11,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 @dataclass
 class PassengerAccessibilityNeedsStructure:
-    accompanied_by_carer: bool | None = field(
+    accompanied_by_carer: None | bool = field(
         default=None,
         metadata={
             "name": "AccompaniedByCarer",
@@ -19,7 +19,7 @@ class PassengerAccessibilityNeedsStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    user_needs: PassengerAccessibilityNeedsStructure.UserNeeds | None = field(
+    user_needs: None | PassengerAccessibilityNeedsStructure.UserNeeds = field(
         default=None,
         metadata={
             "name": "userNeeds",
@@ -28,7 +28,7 @@ class PassengerAccessibilityNeedsStructure:
         },
     )
     suitabilities: (
-        PassengerAccessibilityNeedsStructure.Suitabilities | None
+        None | PassengerAccessibilityNeedsStructure.Suitabilities
     ) = field(
         default=None,
         metadata={

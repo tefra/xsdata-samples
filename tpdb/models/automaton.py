@@ -10,7 +10,7 @@ class Automaton:
     class Meta:
         name = "automaton"
 
-    automatonstuff: Automatonstuff | None = field(
+    automatonstuff: None | Automatonstuff = field(
         default=None,
         metadata={
             "type": "Element",

@@ -26,7 +26,7 @@ class UrlLink:
     :ivar url_link_extension:
     """
 
-    url_link_address: str | None = field(
+    url_link_address: None | str = field(
         default=None,
         metadata={
             "name": "urlLinkAddress",
@@ -35,7 +35,7 @@ class UrlLink:
             "required": True,
         },
     )
-    url_link_description: MultilingualString | None = field(
+    url_link_description: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "urlLinkDescription",
@@ -43,7 +43,7 @@ class UrlLink:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    url_link_type: UrlLinkTypeEnum | None = field(
+    url_link_type: None | UrlLinkTypeEnum = field(
         default=None,
         metadata={
             "name": "urlLinkType",
@@ -51,7 +51,7 @@ class UrlLink:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    url_link_extension: ExtensionType | None = field(
+    url_link_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "urlLinkExtension",

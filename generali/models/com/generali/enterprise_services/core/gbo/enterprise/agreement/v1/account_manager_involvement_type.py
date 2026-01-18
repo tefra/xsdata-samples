@@ -17,7 +17,7 @@ __NAMESPACE__ = (
 @dataclass
 class AccountManagerInvolvementType:
     multinational_fronting_office_role: (
-        MultinationalFrontingOfficeRoleType | None
+        None | MultinationalFrontingOfficeRoleType
     ) = field(
         default=None,
         metadata={
@@ -28,7 +28,7 @@ class AccountManagerInvolvementType:
         },
     )
     account_manager_type: (
-        AccountManagerInvolvementTypeAccountManagerType | None
+        None | AccountManagerInvolvementTypeAccountManagerType
     ) = field(
         default=None,
         metadata={

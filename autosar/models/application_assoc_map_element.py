@@ -87,7 +87,7 @@ class ApplicationAssocMapElement:
     class Meta:
         name = "APPLICATION-ASSOC-MAP-ELEMENT"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -97,7 +97,7 @@ class ApplicationAssocMapElement:
         },
     )
     short_name_fragments: (
-        ApplicationAssocMapElement.ShortNameFragments | None
+        None | ApplicationAssocMapElement.ShortNameFragments
     ) = field(
         default=None,
         metadata={
@@ -106,7 +106,7 @@ class ApplicationAssocMapElement:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -114,7 +114,7 @@ class ApplicationAssocMapElement:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -122,7 +122,7 @@ class ApplicationAssocMapElement:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -130,7 +130,7 @@ class ApplicationAssocMapElement:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -138,7 +138,7 @@ class ApplicationAssocMapElement:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -146,7 +146,7 @@ class ApplicationAssocMapElement:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: ApplicationAssocMapElement.Annotations | None = field(
+    annotations: None | ApplicationAssocMapElement.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -154,7 +154,7 @@ class ApplicationAssocMapElement:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_data_def_props: SwDataDefProps | None = field(
+    sw_data_def_props: None | SwDataDefProps = field(
         default=None,
         metadata={
             "name": "SW-DATA-DEF-PROPS",
@@ -162,7 +162,7 @@ class ApplicationAssocMapElement:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    type_tref: ApplicationAssocMapElement.TypeTref | None = field(
+    type_tref: None | ApplicationAssocMapElement.TypeTref = field(
         default=None,
         metadata={
             "name": "TYPE-TREF",
@@ -170,14 +170,14 @@ class ApplicationAssocMapElement:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -185,7 +185,7 @@ class ApplicationAssocMapElement:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -217,7 +217,7 @@ class ApplicationAssocMapElement:
 
     @dataclass
     class TypeTref(Ref):
-        dest: ApplicationDataTypeSubtypesEnum | None = field(
+        dest: None | ApplicationDataTypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

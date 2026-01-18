@@ -19,19 +19,19 @@ class Metainformation:
             "type": "Element",
         },
     )
-    author: Author | None = field(
+    author: None | Author = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    date: Date | None = field(
+    date: None | Date = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    comment: Comment | None = field(
+    comment: None | Comment = field(
         default=None,
         metadata={
             "type": "Element",

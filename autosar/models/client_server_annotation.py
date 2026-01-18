@@ -41,7 +41,7 @@ class ClientServerAnnotation:
     class Meta:
         name = "CLIENT-SERVER-ANNOTATION"
 
-    label: MultilanguageLongName | None = field(
+    label: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LABEL",
@@ -49,7 +49,7 @@ class ClientServerAnnotation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotation_origin: String | None = field(
+    annotation_origin: None | String = field(
         default=None,
         metadata={
             "name": "ANNOTATION-ORIGIN",
@@ -57,7 +57,7 @@ class ClientServerAnnotation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotation_text: DocumentationBlock | None = field(
+    annotation_text: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "ANNOTATION-TEXT",
@@ -65,7 +65,7 @@ class ClientServerAnnotation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    operation_ref: ClientServerAnnotation.OperationRef | None = field(
+    operation_ref: None | ClientServerAnnotation.OperationRef = field(
         default=None,
         metadata={
             "name": "OPERATION-REF",
@@ -73,14 +73,14 @@ class ClientServerAnnotation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -91,7 +91,7 @@ class ClientServerAnnotation:
 
     @dataclass
     class OperationRef(Ref):
-        dest: ClientServerOperationSubtypesEnum | None = field(
+        dest: None | ClientServerOperationSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

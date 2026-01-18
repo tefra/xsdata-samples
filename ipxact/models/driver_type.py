@@ -27,7 +27,7 @@ class DriverType:
     class Meta:
         name = "driverType"
 
-    range: Range | None = field(
+    range: None | Range = field(
         default=None,
         metadata={
             "type": "Element",
@@ -42,7 +42,7 @@ class DriverType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    default_value: DefaultValue | None = field(
+    default_value: None | DefaultValue = field(
         default=None,
         metadata={
             "name": "defaultValue",
@@ -50,7 +50,7 @@ class DriverType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    clock_driver: ClockDriver | None = field(
+    clock_driver: None | ClockDriver = field(
         default=None,
         metadata={
             "name": "clockDriver",
@@ -58,7 +58,7 @@ class DriverType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    single_shot_driver: SingleShotDriver | None = field(
+    single_shot_driver: None | SingleShotDriver = field(
         default=None,
         metadata={
             "name": "singleShotDriver",
@@ -66,7 +66,7 @@ class DriverType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -82,7 +82,7 @@ class DriverType:
                 "required": True,
             },
         )
-        id: str | None = field(
+        id: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",

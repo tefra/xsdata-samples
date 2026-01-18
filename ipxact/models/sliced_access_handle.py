@@ -31,7 +31,7 @@ class SlicedAccessHandle:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    slices: SlicesType | None = field(
+    slices: None | SlicesType = field(
         default=None,
         metadata={
             "type": "Element",
@@ -39,7 +39,7 @@ class SlicedAccessHandle:
             "required": True,
         },
     )
-    vendor_extensions: VendorExtensions | None = field(
+    vendor_extensions: None | VendorExtensions = field(
         default=None,
         metadata={
             "name": "vendorExtensions",
@@ -53,7 +53,7 @@ class SlicedAccessHandle:
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -69,7 +69,7 @@ class SlicedAccessHandle:
                 "required": True,
             },
         )
-        id: str | None = field(
+        id: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",

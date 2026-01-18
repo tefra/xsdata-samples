@@ -34,7 +34,7 @@ class DiagnosticTestIdentifier:
     class Meta:
         name = "DIAGNOSTIC-TEST-IDENTIFIER"
 
-    id: PositiveIntegerValueVariationPoint | None = field(
+    id: None | PositiveIntegerValueVariationPoint = field(
         default=None,
         metadata={
             "name": "ID",
@@ -42,7 +42,7 @@ class DiagnosticTestIdentifier:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    uas_id: PositiveIntegerValueVariationPoint | None = field(
+    uas_id: None | PositiveIntegerValueVariationPoint = field(
         default=None,
         metadata={
             "name": "UAS-ID",
@@ -50,14 +50,14 @@ class DiagnosticTestIdentifier:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

@@ -32,7 +32,7 @@ class CouplingPortRefConditional:
     class Meta:
         name = "COUPLING-PORT-REF-CONDITIONAL"
 
-    coupling_port_ref: CouplingPortRefConditional.CouplingPortRef | None = (
+    coupling_port_ref: None | CouplingPortRefConditional.CouplingPortRef = (
         field(
             default=None,
             metadata={
@@ -42,7 +42,7 @@ class CouplingPortRefConditional:
             },
         )
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -50,14 +50,14 @@ class CouplingPortRefConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -68,7 +68,7 @@ class CouplingPortRefConditional:
 
     @dataclass
     class CouplingPortRef(Ref):
-        dest: CouplingPortSubtypesEnum | None = field(
+        dest: None | CouplingPortSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

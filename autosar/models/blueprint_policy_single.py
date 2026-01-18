@@ -36,7 +36,7 @@ class BlueprintPolicySingle:
     class Meta:
         name = "BLUEPRINT-POLICY-SINGLE"
 
-    attribute_name: String | None = field(
+    attribute_name: None | String = field(
         default=None,
         metadata={
             "name": "ATTRIBUTE-NAME",
@@ -44,7 +44,7 @@ class BlueprintPolicySingle:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    blueprint_derivation_guide: DocumentationBlock | None = field(
+    blueprint_derivation_guide: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "BLUEPRINT-DERIVATION-GUIDE",
@@ -52,14 +52,14 @@ class BlueprintPolicySingle:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

@@ -24,7 +24,7 @@ class ResponsibilityRoleAssignmentVersionedChildStructure(
     class Meta:
         name = "ResponsibilityRoleAssignment_VersionedChildStructure"
 
-    responsibility_set_ref: ResponsibilitySetRef | None = field(
+    responsibility_set_ref: None | ResponsibilitySetRef = field(
         default=None,
         metadata={
             "name": "ResponsibilitySetRef",
@@ -32,7 +32,7 @@ class ResponsibilityRoleAssignmentVersionedChildStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    description: MultilingualString | None = field(
+    description: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "Description",
@@ -59,7 +59,7 @@ class ResponsibilityRoleAssignmentVersionedChildStructure(
         },
     )
     type_of_responsibility_role_ref_or_responsibility_role_ref: (
-        TypeOfResponsibilityRoleRef | ResponsibilityRoleRef | None
+        None | TypeOfResponsibilityRoleRef | ResponsibilityRoleRef
     ) = field(
         default=None,
         metadata={
@@ -78,7 +78,7 @@ class ResponsibilityRoleAssignmentVersionedChildStructure(
             ),
         },
     )
-    responsible_organisation_ref: OrganisationRefStructure | None = field(
+    responsible_organisation_ref: None | OrganisationRefStructure = field(
         default=None,
         metadata={
             "name": "ResponsibleOrganisationRef",
@@ -86,7 +86,7 @@ class ResponsibilityRoleAssignmentVersionedChildStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    responsible_part_ref: OrganisationPartRefStructure | None = field(
+    responsible_part_ref: None | OrganisationPartRefStructure = field(
         default=None,
         metadata={
             "name": "ResponsiblePartRef",
@@ -94,7 +94,7 @@ class ResponsibilityRoleAssignmentVersionedChildStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    responsible_area_ref: VersionOfObjectRefStructure | None = field(
+    responsible_area_ref: None | VersionOfObjectRefStructure = field(
         default=None,
         metadata={
             "name": "ResponsibleAreaRef",

@@ -33,7 +33,7 @@ class TimeSyncClientConfiguration:
         name = "TIME-SYNC-CLIENT-CONFIGURATION"
 
     ordered_master_list: (
-        TimeSyncClientConfiguration.OrderedMasterList | None
+        None | TimeSyncClientConfiguration.OrderedMasterList
     ) = field(
         default=None,
         metadata={
@@ -42,7 +42,7 @@ class TimeSyncClientConfiguration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    time_sync_technology: TimeSyncTechnologyEnum | None = field(
+    time_sync_technology: None | TimeSyncTechnologyEnum = field(
         default=None,
         metadata={
             "name": "TIME-SYNC-TECHNOLOGY",
@@ -50,14 +50,14 @@ class TimeSyncClientConfiguration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

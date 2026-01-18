@@ -13,14 +13,14 @@ class TCompensateEventDefinition(TEventDefinition):
     class Meta:
         name = "tCompensateEventDefinition"
 
-    wait_for_completion: bool | None = field(
+    wait_for_completion: None | bool = field(
         default=None,
         metadata={
             "name": "waitForCompletion",
             "type": "Attribute",
         },
     )
-    activity_ref: QName | None = field(
+    activity_ref: None | QName = field(
         default=None,
         metadata={
             "name": "activityRef",

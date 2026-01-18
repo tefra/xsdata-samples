@@ -101,7 +101,7 @@ class DiagnosticOperationCycleNeeds:
     class Meta:
         name = "DIAGNOSTIC-OPERATION-CYCLE-NEEDS"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -111,7 +111,7 @@ class DiagnosticOperationCycleNeeds:
         },
     )
     short_name_fragments: (
-        DiagnosticOperationCycleNeeds.ShortNameFragments | None
+        None | DiagnosticOperationCycleNeeds.ShortNameFragments
     ) = field(
         default=None,
         metadata={
@@ -120,7 +120,7 @@ class DiagnosticOperationCycleNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -128,7 +128,7 @@ class DiagnosticOperationCycleNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -136,7 +136,7 @@ class DiagnosticOperationCycleNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -144,7 +144,7 @@ class DiagnosticOperationCycleNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -152,7 +152,7 @@ class DiagnosticOperationCycleNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -160,7 +160,7 @@ class DiagnosticOperationCycleNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: DiagnosticOperationCycleNeeds.Annotations | None = field(
+    annotations: None | DiagnosticOperationCycleNeeds.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -168,7 +168,7 @@ class DiagnosticOperationCycleNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    audiences: DiagnosticOperationCycleNeeds.Audiences | None = field(
+    audiences: None | DiagnosticOperationCycleNeeds.Audiences = field(
         default=None,
         metadata={
             "name": "AUDIENCES",
@@ -176,7 +176,7 @@ class DiagnosticOperationCycleNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    diag_requirement: DiagRequirementIdString | None = field(
+    diag_requirement: None | DiagRequirementIdString = field(
         default=None,
         metadata={
             "name": "DIAG-REQUIREMENT",
@@ -184,7 +184,7 @@ class DiagnosticOperationCycleNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    security_access_level: PositiveInteger | None = field(
+    security_access_level: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "SECURITY-ACCESS-LEVEL",
@@ -192,7 +192,7 @@ class DiagnosticOperationCycleNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    operation_cycle: OperationCycleTypeEnum | None = field(
+    operation_cycle: None | OperationCycleTypeEnum = field(
         default=None,
         metadata={
             "name": "OPERATION-CYCLE",
@@ -200,7 +200,7 @@ class DiagnosticOperationCycleNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    operation_cycle_automatic_end: Boolean | None = field(
+    operation_cycle_automatic_end: None | Boolean = field(
         default=None,
         metadata={
             "name": "OPERATION-CYCLE-AUTOMATIC-END",
@@ -208,7 +208,7 @@ class DiagnosticOperationCycleNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    operation_cycle_autostart: Boolean | None = field(
+    operation_cycle_autostart: None | Boolean = field(
         default=None,
         metadata={
             "name": "OPERATION-CYCLE-AUTOSTART",
@@ -216,14 +216,14 @@ class DiagnosticOperationCycleNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -231,7 +231,7 @@ class DiagnosticOperationCycleNeeds:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",

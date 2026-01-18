@@ -51,7 +51,7 @@ class Xdoc:
     class Meta:
         name = "XDOC"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -60,7 +60,7 @@ class Xdoc:
             "required": True,
         },
     )
-    short_name_fragments: Xdoc.ShortNameFragments | None = field(
+    short_name_fragments: None | Xdoc.ShortNameFragments = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -68,7 +68,7 @@ class Xdoc:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name_1: SingleLanguageLongName | None = field(
+    long_name_1: None | SingleLanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME-1",
@@ -76,7 +76,7 @@ class Xdoc:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    number: String | None = field(
+    number: None | String = field(
         default=None,
         metadata={
             "name": "NUMBER",
@@ -84,7 +84,7 @@ class Xdoc:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    state: String | None = field(
+    state: None | String = field(
         default=None,
         metadata={
             "name": "STATE",
@@ -92,7 +92,7 @@ class Xdoc:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    date: Date | None = field(
+    date: None | Date = field(
         default=None,
         metadata={
             "name": "DATE",
@@ -100,7 +100,7 @@ class Xdoc:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    publisher: String | None = field(
+    publisher: None | String = field(
         default=None,
         metadata={
             "name": "PUBLISHER",
@@ -108,7 +108,7 @@ class Xdoc:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    url: Url | None = field(
+    url: None | Url = field(
         default=None,
         metadata={
             "name": "URL",
@@ -116,7 +116,7 @@ class Xdoc:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    position: String | None = field(
+    position: None | String = field(
         default=None,
         metadata={
             "name": "POSITION",
@@ -124,14 +124,14 @@ class Xdoc:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

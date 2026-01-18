@@ -43,10 +43,10 @@ class VehicleJourneyStopAssignmentVersionStructure(
         },
     )
     passenger_stop_assignment_ref: (
-        VehicleJourneyStopAssignmentRef
+        None
+        | VehicleJourneyStopAssignmentRef
         | DynamicStopAssignmentRef
         | PassengerStopAssignmentRef
-        | None
     ) = field(
         default=None,
         metadata={

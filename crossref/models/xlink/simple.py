@@ -28,22 +28,14 @@ class Simple:
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    href: str | None = field(
+    href: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    role: str | None = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-            "namespace": "http://www.w3.org/1999/xlink",
-            "min_length": 1,
-        },
-    )
-    arcrole: str | None = field(
+    role: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -51,21 +43,29 @@ class Simple:
             "min_length": 1,
         },
     )
-    title: str | None = field(
+    arcrole: None | str = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+            "namespace": "http://www.w3.org/1999/xlink",
+            "min_length": 1,
+        },
+    )
+    title: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    show: ShowType | None = field(
+    show: None | ShowType = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    actuate: ActuateType | None = field(
+    actuate: None | ActuateType = field(
         default=None,
         metadata={
             "type": "Attribute",

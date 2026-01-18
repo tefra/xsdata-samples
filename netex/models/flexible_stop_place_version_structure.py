@@ -23,7 +23,7 @@ class FlexibleStopPlaceVersionStructure(PlaceVersionStructure):
     class Meta:
         name = "FlexibleStopPlace_VersionStructure"
 
-    name_suffix: MultilingualString | None = field(
+    name_suffix: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "NameSuffix",
@@ -31,7 +31,7 @@ class FlexibleStopPlaceVersionStructure(PlaceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    alternative_names: AlternativeNamesRelStructure | None = field(
+    alternative_names: None | AlternativeNamesRelStructure = field(
         default=None,
         metadata={
             "name": "alternativeNames",
@@ -39,7 +39,7 @@ class FlexibleStopPlaceVersionStructure(PlaceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    transport_mode: AllVehicleModesOfTransportEnumeration | None = field(
+    transport_mode: None | AllVehicleModesOfTransportEnumeration = field(
         default=None,
         metadata={
             "name": "TransportMode",
@@ -47,7 +47,7 @@ class FlexibleStopPlaceVersionStructure(PlaceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    public_code: str | None = field(
+    public_code: None | str = field(
         default=None,
         metadata={
             "name": "PublicCode",
@@ -55,14 +55,14 @@ class FlexibleStopPlaceVersionStructure(PlaceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    areas: FlexibleStopPlaceVersionStructure.Areas | None = field(
+    areas: None | FlexibleStopPlaceVersionStructure.Areas = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    lines: LineRefsRelStructure | None = field(
+    lines: None | LineRefsRelStructure = field(
         default=None,
         metadata={
             "type": "Element",

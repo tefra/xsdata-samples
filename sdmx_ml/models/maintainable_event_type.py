@@ -15,7 +15,7 @@ class MaintainableEventType:
     potentially wild-carded reference fields.
     """
 
-    urn_or_ref: str | MaintainableQueryType | None = field(
+    urn_or_ref: None | str | MaintainableQueryType = field(
         default=None,
         metadata={
             "type": "Elements",

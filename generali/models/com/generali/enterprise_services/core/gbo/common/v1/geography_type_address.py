@@ -17,7 +17,7 @@ class GeographyTypeAddress:
     class Meta:
         global_type = False
 
-    address: AddressType | None = field(
+    address: None | AddressType = field(
         default=None,
         metadata={
             "name": "Address",
@@ -25,7 +25,7 @@ class GeographyTypeAddress:
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
         },
     )
-    geocoded_address: GeoCodedAddressType | None = field(
+    geocoded_address: None | GeoCodedAddressType = field(
         default=None,
         metadata={
             "name": "GeocodedAddress",

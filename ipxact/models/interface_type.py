@@ -20,7 +20,7 @@ class InterfaceType:
     class Meta:
         name = "interfaceType"
 
-    component_instance_ref: str | None = field(
+    component_instance_ref: None | str = field(
         default=None,
         metadata={
             "name": "componentInstanceRef",
@@ -28,7 +28,7 @@ class InterfaceType:
             "required": True,
         },
     )
-    bus_ref: str | None = field(
+    bus_ref: None | str = field(
         default=None,
         metadata={
             "name": "busRef",
@@ -36,7 +36,7 @@ class InterfaceType:
             "required": True,
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",

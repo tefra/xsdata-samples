@@ -65,7 +65,7 @@ class EthernetClusterConditional:
     class Meta:
         name = "ETHERNET-CLUSTER-CONDITIONAL"
 
-    baudrate: PositiveUnlimitedInteger | None = field(
+    baudrate: None | PositiveUnlimitedInteger = field(
         default=None,
         metadata={
             "name": "BAUDRATE",
@@ -73,7 +73,7 @@ class EthernetClusterConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    physical_channels: EthernetClusterConditional.PhysicalChannels | None = (
+    physical_channels: None | EthernetClusterConditional.PhysicalChannels = (
         field(
             default=None,
             metadata={
@@ -83,7 +83,7 @@ class EthernetClusterConditional:
             },
         )
     )
-    protocol_name: String | None = field(
+    protocol_name: None | String = field(
         default=None,
         metadata={
             "name": "PROTOCOL-NAME",
@@ -91,7 +91,7 @@ class EthernetClusterConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    protocol_version: String | None = field(
+    protocol_version: None | String = field(
         default=None,
         metadata={
             "name": "PROTOCOL-VERSION",
@@ -99,7 +99,7 @@ class EthernetClusterConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    speed: Integer | None = field(
+    speed: None | Integer = field(
         default=None,
         metadata={
             "name": "SPEED",
@@ -108,7 +108,7 @@ class EthernetClusterConditional:
         },
     )
     coupling_port_connections: (
-        EthernetClusterConditional.CouplingPortConnections | None
+        None | EthernetClusterConditional.CouplingPortConnections
     ) = field(
         default=None,
         metadata={
@@ -117,7 +117,7 @@ class EthernetClusterConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    coupling_port_startup_active_time: TimeValue | None = field(
+    coupling_port_startup_active_time: None | TimeValue = field(
         default=None,
         metadata={
             "name": "COUPLING-PORT-STARTUP-ACTIVE-TIME",
@@ -125,7 +125,7 @@ class EthernetClusterConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    coupling_port_switchoff_delay: TimeValue | None = field(
+    coupling_port_switchoff_delay: None | TimeValue = field(
         default=None,
         metadata={
             "name": "COUPLING-PORT-SWITCHOFF-DELAY",
@@ -134,7 +134,7 @@ class EthernetClusterConditional:
         },
     )
     mac_multicast_groups: (
-        EthernetClusterConditional.MacMulticastGroups | None
+        None | EthernetClusterConditional.MacMulticastGroups
     ) = field(
         default=None,
         metadata={
@@ -143,7 +143,7 @@ class EthernetClusterConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -151,14 +151,14 @@ class EthernetClusterConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

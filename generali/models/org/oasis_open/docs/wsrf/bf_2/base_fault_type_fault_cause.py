@@ -10,7 +10,7 @@ class BaseFaultTypeFaultCause:
     class Meta:
         global_type = False
 
-    other_element: object | None = field(
+    other_element: None | object = field(
         default=None,
         metadata={
             "type": "Wildcard",

@@ -12,7 +12,7 @@ __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
 @dataclass
 class AbstractSubscriptionStructure:
-    subscriber_ref: ParticipantRefStructure | None = field(
+    subscriber_ref: None | ParticipantRefStructure = field(
         default=None,
         metadata={
             "name": "SubscriberRef",
@@ -20,7 +20,7 @@ class AbstractSubscriptionStructure:
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    subscription_identifier: SubscriptionQualifierStructure | None = field(
+    subscription_identifier: None | SubscriptionQualifierStructure = field(
         default=None,
         metadata={
             "name": "SubscriptionIdentifier",
@@ -29,7 +29,7 @@ class AbstractSubscriptionStructure:
             "required": True,
         },
     )
-    initial_termination_time: XmlDateTime | None = field(
+    initial_termination_time: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "InitialTerminationTime",

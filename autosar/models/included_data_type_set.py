@@ -44,7 +44,7 @@ class IncludedDataTypeSet:
     class Meta:
         name = "INCLUDED-DATA-TYPE-SET"
 
-    data_type_refs: IncludedDataTypeSet.DataTypeRefs | None = field(
+    data_type_refs: None | IncludedDataTypeSet.DataTypeRefs = field(
         default=None,
         metadata={
             "name": "DATA-TYPE-REFS",
@@ -52,7 +52,7 @@ class IncludedDataTypeSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    literal_prefix: Identifier | None = field(
+    literal_prefix: None | Identifier = field(
         default=None,
         metadata={
             "name": "LITERAL-PREFIX",
@@ -60,14 +60,14 @@ class IncludedDataTypeSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -91,7 +91,7 @@ class IncludedDataTypeSet:
 
         @dataclass
         class DataTypeRef(Ref):
-            dest: AutosarDataTypeSubtypesEnum | None = field(
+            dest: None | AutosarDataTypeSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",

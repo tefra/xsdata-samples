@@ -23,13 +23,13 @@ class UnsignedPositiveLongintExpression(ComplexBaseExpression):
     class Meta:
         name = "unsignedPositiveLongintExpression"
 
-    minimum: int | None = field(
+    minimum: None | int = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    maximum: int | None = field(
+    maximum: None | int = field(
         default=None,
         metadata={
             "type": "Attribute",

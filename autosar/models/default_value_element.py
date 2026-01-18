@@ -34,7 +34,7 @@ class DefaultValueElement:
     class Meta:
         name = "DEFAULT-VALUE-ELEMENT"
 
-    element_byte_value: Integer | None = field(
+    element_byte_value: None | Integer = field(
         default=None,
         metadata={
             "name": "ELEMENT-BYTE-VALUE",
@@ -42,7 +42,7 @@ class DefaultValueElement:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    element_position: Integer | None = field(
+    element_position: None | Integer = field(
         default=None,
         metadata={
             "name": "ELEMENT-POSITION",
@@ -50,14 +50,14 @@ class DefaultValueElement:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

@@ -38,7 +38,7 @@ class SwCalprmRefProxy:
     class Meta:
         name = "SW-CALPRM-REF-PROXY"
 
-    ar_parameter: AutosarParameterRef | None = field(
+    ar_parameter: None | AutosarParameterRef = field(
         default=None,
         metadata={
             "name": "AR-PARAMETER",
@@ -46,7 +46,7 @@ class SwCalprmRefProxy:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    mc_data_instance_ref: SwCalprmRefProxy.McDataInstanceRef | None = field(
+    mc_data_instance_ref: None | SwCalprmRefProxy.McDataInstanceRef = field(
         default=None,
         metadata={
             "name": "MC-DATA-INSTANCE-REF",
@@ -54,14 +54,14 @@ class SwCalprmRefProxy:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -72,7 +72,7 @@ class SwCalprmRefProxy:
 
     @dataclass
     class McDataInstanceRef(Ref):
-        dest: McDataInstanceSubtypesEnum | None = field(
+        dest: None | McDataInstanceSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

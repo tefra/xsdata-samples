@@ -35,7 +35,7 @@ class HttpTp:
     class Meta:
         name = "HTTP-TP"
 
-    content_type: String | None = field(
+    content_type: None | String = field(
         default=None,
         metadata={
             "name": "CONTENT-TYPE",
@@ -43,7 +43,7 @@ class HttpTp:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    protocol_version: String | None = field(
+    protocol_version: None | String = field(
         default=None,
         metadata={
             "name": "PROTOCOL-VERSION",
@@ -51,7 +51,7 @@ class HttpTp:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    request_method: RequestMethodEnum | None = field(
+    request_method: None | RequestMethodEnum = field(
         default=None,
         metadata={
             "name": "REQUEST-METHOD",
@@ -59,7 +59,7 @@ class HttpTp:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tcp_tp_config: TcpTp | None = field(
+    tcp_tp_config: None | TcpTp = field(
         default=None,
         metadata={
             "name": "TCP-TP-CONFIG",
@@ -67,7 +67,7 @@ class HttpTp:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    uri: UriString | None = field(
+    uri: None | UriString = field(
         default=None,
         metadata={
             "name": "URI",
@@ -75,14 +75,14 @@ class HttpTp:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

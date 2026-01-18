@@ -34,7 +34,7 @@ class EthTpConnection:
     class Meta:
         name = "ETH-TP-CONNECTION"
 
-    ident: TpConnectionIdent | None = field(
+    ident: None | TpConnectionIdent = field(
         default=None,
         metadata={
             "name": "IDENT",
@@ -42,7 +42,7 @@ class EthTpConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tp_sdu_refs: EthTpConnection.TpSduRefs | None = field(
+    tp_sdu_refs: None | EthTpConnection.TpSduRefs = field(
         default=None,
         metadata={
             "name": "TP-SDU-REFS",
@@ -50,14 +50,14 @@ class EthTpConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -79,7 +79,7 @@ class EthTpConnection:
 
         @dataclass
         class TpSduRef(Ref):
-            dest: PduTriggeringSubtypesEnum | None = field(
+            dest: None | PduTriggeringSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",

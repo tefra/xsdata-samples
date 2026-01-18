@@ -56,25 +56,25 @@ class JournalMetadata:
             "max_occurs": 6,
         },
     )
-    coden: Coden | None = field(
+    coden: None | Coden = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    archive_locations: ArchiveLocations | None = field(
+    archive_locations: None | ArchiveLocations = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    doi_data: DoiData | None = field(
+    doi_data: None | DoiData = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    language: JournalMetadataLanguage | None = field(
+    language: None | JournalMetadataLanguage = field(
         default=None,
         metadata={
             "type": "Attribute",

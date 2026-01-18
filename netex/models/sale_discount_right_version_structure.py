@@ -15,7 +15,7 @@ class SaleDiscountRightVersionStructure(FareProductVersionStructure):
     class Meta:
         name = "SaleDiscountRight_VersionStructure"
 
-    product_type: SaleDiscountRightEnumeration | None = field(
+    product_type: None | SaleDiscountRightEnumeration = field(
         default=None,
         metadata={
             "name": "ProductType",
@@ -24,7 +24,7 @@ class SaleDiscountRightVersionStructure(FareProductVersionStructure):
         },
     )
     general_group_of_entities_ref_or_general_group_of_entities: (
-        GeneralGroupOfEntitiesRef | GeneralGroupOfEntities | None
+        None | GeneralGroupOfEntitiesRef | GeneralGroupOfEntities
     ) = field(
         default=None,
         metadata={

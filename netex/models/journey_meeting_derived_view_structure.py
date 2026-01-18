@@ -34,7 +34,7 @@ class JourneyMeetingDerivedViewStructure(DerivedViewStructure):
     class Meta:
         name = "JourneyMeeting_DerivedViewStructure"
 
-    journey_meeting_ref: JourneyMeetingRef | None = field(
+    journey_meeting_ref: None | JourneyMeetingRef = field(
         default=None,
         metadata={
             "name": "JourneyMeetingRef",
@@ -42,7 +42,7 @@ class JourneyMeetingDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    description: MultilingualString | None = field(
+    description: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "Description",
@@ -50,7 +50,7 @@ class JourneyMeetingDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    earliest_time: XmlTime | None = field(
+    earliest_time: None | XmlTime = field(
         default=None,
         metadata={
             "name": "EarliestTime",
@@ -58,7 +58,7 @@ class JourneyMeetingDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    earliest_time_day_offset: int | None = field(
+    earliest_time_day_offset: None | int = field(
         default=None,
         metadata={
             "name": "EarliestTimeDayOffset",
@@ -66,7 +66,7 @@ class JourneyMeetingDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    latest_time: XmlTime | None = field(
+    latest_time: None | XmlTime = field(
         default=None,
         metadata={
             "name": "LatestTime",
@@ -74,7 +74,7 @@ class JourneyMeetingDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    latest_time_day_offset: int | None = field(
+    latest_time_day_offset: None | int = field(
         default=None,
         metadata={
             "name": "LatestTimeDayOffset",
@@ -82,7 +82,7 @@ class JourneyMeetingDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    reason: ReasonForMeetingEnumeration | None = field(
+    reason: None | ReasonForMeetingEnumeration = field(
         default=None,
         metadata={
             "name": "Reason",
@@ -90,7 +90,7 @@ class JourneyMeetingDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    maximum_wait_time: XmlDuration | None = field(
+    maximum_wait_time: None | XmlDuration = field(
         default=None,
         metadata={
             "name": "MaximumWaitTime",
@@ -98,7 +98,7 @@ class JourneyMeetingDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    connection_ref: ConnectionRefStructure | None = field(
+    connection_ref: None | ConnectionRefStructure = field(
         default=None,
         metadata={
             "name": "ConnectionRef",
@@ -125,7 +125,8 @@ class JourneyMeetingDerivedViewStructure(DerivedViewStructure):
         },
     )
     choice: (
-        SingleJourneyRef
+        None
+        | SingleJourneyRef
         | DatedVehicleJourneyRef
         | DatedSpecialServiceRef
         | SpecialServiceRef
@@ -134,7 +135,6 @@ class JourneyMeetingDerivedViewStructure(DerivedViewStructure):
         | DeadRunRef
         | VehicleJourneyRef
         | ConnectingJourneyView
-        | None
     ) = field(
         default=None,
         metadata={
@@ -189,7 +189,7 @@ class JourneyMeetingDerivedViewStructure(DerivedViewStructure):
         },
     )
     flexible_line_ref_or_line_ref_or_connecting_line_view: (
-        FlexibleLineRef | LineRef | LineDerivedViewStructure | None
+        None | FlexibleLineRef | LineRef | LineDerivedViewStructure
     ) = field(
         default=None,
         metadata={
@@ -213,7 +213,7 @@ class JourneyMeetingDerivedViewStructure(DerivedViewStructure):
             ),
         },
     )
-    stay_seated: bool | None = field(
+    stay_seated: None | bool = field(
         default=None,
         metadata={
             "name": "StaySeated",
@@ -221,7 +221,7 @@ class JourneyMeetingDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    cross_border: bool | None = field(
+    cross_border: None | bool = field(
         default=None,
         metadata={
             "name": "CrossBorder",
@@ -229,7 +229,7 @@ class JourneyMeetingDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    planned: bool | None = field(
+    planned: None | bool = field(
         default=None,
         metadata={
             "name": "Planned",
@@ -237,7 +237,7 @@ class JourneyMeetingDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    guaranteed: bool | None = field(
+    guaranteed: None | bool = field(
         default=None,
         metadata={
             "name": "Guaranteed",
@@ -245,7 +245,7 @@ class JourneyMeetingDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    advertised: bool | None = field(
+    advertised: None | bool = field(
         default=None,
         metadata={
             "name": "Advertised",
@@ -253,7 +253,7 @@ class JourneyMeetingDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    controlled: bool | None = field(
+    controlled: None | bool = field(
         default=None,
         metadata={
             "name": "Controlled",
@@ -261,7 +261,7 @@ class JourneyMeetingDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    connection_certainty: ConnectionCertaintyEnumeration | None = field(
+    connection_certainty: None | ConnectionCertaintyEnumeration = field(
         default=None,
         metadata={
             "name": "ConnectionCertainty",
@@ -269,7 +269,7 @@ class JourneyMeetingDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    transfer_duration: TransferDurationStructure | None = field(
+    transfer_duration: None | TransferDurationStructure = field(
         default=None,
         metadata={
             "name": "TransferDuration",

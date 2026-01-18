@@ -17,7 +17,7 @@ class CappingRulePriceVersionedChildStructure(
     class Meta:
         name = "CappingRulePrice_VersionedChildStructure"
 
-    capping_rule_ref: CappingRuleRef | None = field(
+    capping_rule_ref: None | CappingRuleRef = field(
         default=None,
         metadata={
             "name": "CappingRuleRef",

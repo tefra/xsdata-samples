@@ -59,14 +59,14 @@ class SiteVersionFrameStructure(CommonVersionFrameStructure):
     class Meta:
         name = "Site_VersionFrameStructure"
 
-    countries: CountriesInFrameRelStructure | None = field(
+    countries: None | CountriesInFrameRelStructure = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    topographic_places: TopographicPlacesInFrameRelStructure | None = field(
+    topographic_places: None | TopographicPlacesInFrameRelStructure = field(
         default=None,
         metadata={
             "name": "topographicPlaces",
@@ -74,21 +74,21 @@ class SiteVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    addresses: AddressesInFrameRelStructure | None = field(
+    addresses: None | AddressesInFrameRelStructure = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    accesses: AccessesInFrameRelStructure | None = field(
+    accesses: None | AccessesInFrameRelStructure = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    groups_of_stop_places: GroupsOfStopPlacesInFrameRelStructure | None = (
+    groups_of_stop_places: None | GroupsOfStopPlacesInFrameRelStructure = (
         field(
             default=None,
             metadata={
@@ -98,7 +98,7 @@ class SiteVersionFrameStructure(CommonVersionFrameStructure):
             },
         )
     )
-    stop_places: StopPlacesInFrameRelStructure | None = field(
+    stop_places: None | StopPlacesInFrameRelStructure = field(
         default=None,
         metadata={
             "name": "stopPlaces",
@@ -106,7 +106,7 @@ class SiteVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    flexible_stop_places: FlexibleStopPlacesInFrameRelStructure | None = field(
+    flexible_stop_places: None | FlexibleStopPlacesInFrameRelStructure = field(
         default=None,
         metadata={
             "name": "flexibleStopPlaces",
@@ -114,7 +114,7 @@ class SiteVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    taxi_ranks: TaxiRanksInFrameRelStructure | None = field(
+    taxi_ranks: None | TaxiRanksInFrameRelStructure = field(
         default=None,
         metadata={
             "name": "taxiRanks",
@@ -122,7 +122,7 @@ class SiteVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    points_of_interest: PointsOfInterestInFrameRelStructure | None = field(
+    points_of_interest: None | PointsOfInterestInFrameRelStructure = field(
         default=None,
         metadata={
             "name": "pointsOfInterest",
@@ -130,14 +130,14 @@ class SiteVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    parkings: ParkingsInFrameRelStructure | None = field(
+    parkings: None | ParkingsInFrameRelStructure = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    navigation_paths: NavigationPathsInFrameRelStructure | None = field(
+    navigation_paths: None | NavigationPathsInFrameRelStructure = field(
         default=None,
         metadata={
             "name": "navigationPaths",
@@ -145,7 +145,7 @@ class SiteVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    path_links: PathLinksInFrameRelStructure | None = field(
+    path_links: None | PathLinksInFrameRelStructure = field(
         default=None,
         metadata={
             "name": "pathLinks",
@@ -153,7 +153,7 @@ class SiteVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    path_junctions: PathJunctionsInFrameRelStructure | None = field(
+    path_junctions: None | PathJunctionsInFrameRelStructure = field(
         default=None,
         metadata={
             "name": "pathJunctions",
@@ -161,7 +161,7 @@ class SiteVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    check_constraints: CheckConstraintInFrameRelStructure | None = field(
+    check_constraints: None | CheckConstraintInFrameRelStructure = field(
         default=None,
         metadata={
             "name": "checkConstraints",
@@ -170,7 +170,7 @@ class SiteVersionFrameStructure(CommonVersionFrameStructure):
         },
     )
     check_constraint_delays: (
-        CheckConstraintDelaysInFrameRelStructure | None
+        None | CheckConstraintDelaysInFrameRelStructure
     ) = field(
         default=None,
         metadata={
@@ -180,7 +180,7 @@ class SiteVersionFrameStructure(CommonVersionFrameStructure):
         },
     )
     check_constraint_throughputs: (
-        CheckConstraintThroughputsInFrameRelStructure | None
+        None | CheckConstraintThroughputsInFrameRelStructure
     ) = field(
         default=None,
         metadata={
@@ -190,7 +190,7 @@ class SiteVersionFrameStructure(CommonVersionFrameStructure):
         },
     )
     point_of_interest_classifications: (
-        PointOfInterestClassificationsInFrameRelStructure | None
+        None | PointOfInterestClassificationsInFrameRelStructure
     ) = field(
         default=None,
         metadata={
@@ -200,7 +200,7 @@ class SiteVersionFrameStructure(CommonVersionFrameStructure):
         },
     )
     point_of_interest_classification_hierarchies: (
-        PointOfInterestClassificationHierarchiesInFrameRelStructure | None
+        None | PointOfInterestClassificationHierarchiesInFrameRelStructure
     ) = field(
         default=None,
         metadata={
@@ -209,7 +209,7 @@ class SiteVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    tariff_zones: TariffZonesInFrameRelStructure | None = field(
+    tariff_zones: None | TariffZonesInFrameRelStructure = field(
         default=None,
         metadata={
             "name": "tariffZones",
@@ -217,7 +217,7 @@ class SiteVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    groups_of_tariff_zones: GroupsOfTariffZonesInFrameRelStructure | None = (
+    groups_of_tariff_zones: None | GroupsOfTariffZonesInFrameRelStructure = (
         field(
             default=None,
             metadata={
@@ -227,7 +227,7 @@ class SiteVersionFrameStructure(CommonVersionFrameStructure):
             },
         )
     )
-    site_facility_sets: SiteFacilitySetsInFrameRelStructure | None = field(
+    site_facility_sets: None | SiteFacilitySetsInFrameRelStructure = field(
         default=None,
         metadata={
             "name": "siteFacilitySets",

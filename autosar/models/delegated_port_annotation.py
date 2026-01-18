@@ -39,7 +39,7 @@ class DelegatedPortAnnotation:
     class Meta:
         name = "DELEGATED-PORT-ANNOTATION"
 
-    label: MultilanguageLongName | None = field(
+    label: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LABEL",
@@ -47,7 +47,7 @@ class DelegatedPortAnnotation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotation_origin: String | None = field(
+    annotation_origin: None | String = field(
         default=None,
         metadata={
             "name": "ANNOTATION-ORIGIN",
@@ -55,7 +55,7 @@ class DelegatedPortAnnotation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotation_text: DocumentationBlock | None = field(
+    annotation_text: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "ANNOTATION-TEXT",
@@ -63,7 +63,7 @@ class DelegatedPortAnnotation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    signal_fan: SignalFanEnum | None = field(
+    signal_fan: None | SignalFanEnum = field(
         default=None,
         metadata={
             "name": "SIGNAL-FAN",
@@ -71,14 +71,14 @@ class DelegatedPortAnnotation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

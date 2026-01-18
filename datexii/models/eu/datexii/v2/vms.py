@@ -55,7 +55,7 @@ class Vms:
     :ivar vms_extension:
     """
 
-    vms_working: bool | None = field(
+    vms_working: None | bool = field(
         default=None,
         metadata={
             "name": "vmsWorking",
@@ -64,7 +64,7 @@ class Vms:
             "required": True,
         },
     )
-    vms_message_sequencing_interval: float | None = field(
+    vms_message_sequencing_interval: None | float = field(
         default=None,
         metadata={
             "name": "vmsMessageSequencingInterval",
@@ -80,7 +80,7 @@ class Vms:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    text_display_area_settings: TextDisplayAreaSettings | None = field(
+    text_display_area_settings: None | TextDisplayAreaSettings = field(
         default=None,
         metadata={
             "name": "textDisplayAreaSettings",
@@ -98,7 +98,7 @@ class Vms:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    vms_location_override: Location | None = field(
+    vms_location_override: None | Location = field(
         default=None,
         metadata={
             "name": "vmsLocationOverride",
@@ -106,7 +106,7 @@ class Vms:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    managed_logical_location_override: VmsManagedLogicalLocation | None = (
+    managed_logical_location_override: None | VmsManagedLogicalLocation = (
         field(
             default=None,
             metadata={
@@ -116,7 +116,7 @@ class Vms:
             },
         )
     )
-    vms_dynamic_characteristics: VmsDynamicCharacteristics | None = field(
+    vms_dynamic_characteristics: None | VmsDynamicCharacteristics = field(
         default=None,
         metadata={
             "name": "vmsDynamicCharacteristics",
@@ -132,7 +132,7 @@ class Vms:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    vms_extension: ExtensionType | None = field(
+    vms_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "vmsExtension",

@@ -25,7 +25,7 @@ class SubscriptionRequestType:
         addition, a modification, or a deletion of a subscription.
     """
 
-    subscription: SubscriptionType | None = field(
+    subscription: None | SubscriptionType = field(
         default=None,
         metadata={
             "name": "Subscription",
@@ -34,7 +34,7 @@ class SubscriptionRequestType:
             "required": True,
         },
     )
-    action: ActionType | None = field(
+    action: None | ActionType = field(
         default=None,
         metadata={
             "type": "Attribute",

@@ -124,7 +124,7 @@ class ClientServerInterfaceToBswModuleEntryBlueprintMapping:
     class Meta:
         name = "CLIENT-SERVER-INTERFACE-TO-BSW-MODULE-ENTRY-BLUEPRINT-MAPPING"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -134,8 +134,8 @@ class ClientServerInterfaceToBswModuleEntryBlueprintMapping:
         },
     )
     short_name_fragments: (
-        ClientServerInterfaceToBswModuleEntryBlueprintMapping.ShortNameFragments
-        | None
+        None
+        | ClientServerInterfaceToBswModuleEntryBlueprintMapping.ShortNameFragments
     ) = field(
         default=None,
         metadata={
@@ -144,7 +144,7 @@ class ClientServerInterfaceToBswModuleEntryBlueprintMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -152,7 +152,7 @@ class ClientServerInterfaceToBswModuleEntryBlueprintMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -160,7 +160,7 @@ class ClientServerInterfaceToBswModuleEntryBlueprintMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -168,7 +168,7 @@ class ClientServerInterfaceToBswModuleEntryBlueprintMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -176,7 +176,7 @@ class ClientServerInterfaceToBswModuleEntryBlueprintMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -185,8 +185,8 @@ class ClientServerInterfaceToBswModuleEntryBlueprintMapping:
         },
     )
     annotations: (
-        ClientServerInterfaceToBswModuleEntryBlueprintMapping.Annotations
-        | None
+        None
+        | ClientServerInterfaceToBswModuleEntryBlueprintMapping.Annotations
     ) = field(
         default=None,
         metadata={
@@ -195,7 +195,7 @@ class ClientServerInterfaceToBswModuleEntryBlueprintMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -204,8 +204,8 @@ class ClientServerInterfaceToBswModuleEntryBlueprintMapping:
         },
     )
     blueprint_policys: (
-        ClientServerInterfaceToBswModuleEntryBlueprintMapping.BlueprintPolicys
-        | None
+        None
+        | ClientServerInterfaceToBswModuleEntryBlueprintMapping.BlueprintPolicys
     ) = field(
         default=None,
         metadata={
@@ -214,7 +214,7 @@ class ClientServerInterfaceToBswModuleEntryBlueprintMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    short_name_pattern: String | None = field(
+    short_name_pattern: None | String = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-PATTERN",
@@ -223,8 +223,8 @@ class ClientServerInterfaceToBswModuleEntryBlueprintMapping:
         },
     )
     client_server_interface_ref: (
-        ClientServerInterfaceToBswModuleEntryBlueprintMapping.ClientServerInterfaceRef
-        | None
+        None
+        | ClientServerInterfaceToBswModuleEntryBlueprintMapping.ClientServerInterfaceRef
     ) = field(
         default=None,
         metadata={
@@ -234,8 +234,8 @@ class ClientServerInterfaceToBswModuleEntryBlueprintMapping:
         },
     )
     operation_mappings: (
-        ClientServerInterfaceToBswModuleEntryBlueprintMapping.OperationMappings
-        | None
+        None
+        | ClientServerInterfaceToBswModuleEntryBlueprintMapping.OperationMappings
     ) = field(
         default=None,
         metadata={
@@ -245,8 +245,8 @@ class ClientServerInterfaceToBswModuleEntryBlueprintMapping:
         },
     )
     port_defined_argument_blueprints: (
-        ClientServerInterfaceToBswModuleEntryBlueprintMapping.PortDefinedArgumentBlueprints
-        | None
+        None
+        | ClientServerInterfaceToBswModuleEntryBlueprintMapping.PortDefinedArgumentBlueprints
     ) = field(
         default=None,
         metadata={
@@ -255,14 +255,14 @@ class ClientServerInterfaceToBswModuleEntryBlueprintMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -270,7 +270,7 @@ class ClientServerInterfaceToBswModuleEntryBlueprintMapping:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -331,7 +331,7 @@ class ClientServerInterfaceToBswModuleEntryBlueprintMapping:
 
     @dataclass
     class ClientServerInterfaceRef(Ref):
-        dest: ClientServerInterfaceSubtypesEnum | None = field(
+        dest: None | ClientServerInterfaceSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

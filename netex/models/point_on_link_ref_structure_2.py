@@ -12,7 +12,7 @@ class PointOnLinkRefStructure2(PointRefStructure):
     class Meta:
         name = "PointOnLinkRefStructure_"
 
-    order: int | None = field(
+    order: None | int = field(
         default=None,
         metadata={
             "type": "Attribute",

@@ -94,7 +94,7 @@ class DiagnosticEnableConditionNeeds:
     class Meta:
         name = "DIAGNOSTIC-ENABLE-CONDITION-NEEDS"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -104,7 +104,7 @@ class DiagnosticEnableConditionNeeds:
         },
     )
     short_name_fragments: (
-        DiagnosticEnableConditionNeeds.ShortNameFragments | None
+        None | DiagnosticEnableConditionNeeds.ShortNameFragments
     ) = field(
         default=None,
         metadata={
@@ -113,7 +113,7 @@ class DiagnosticEnableConditionNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -121,7 +121,7 @@ class DiagnosticEnableConditionNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -129,7 +129,7 @@ class DiagnosticEnableConditionNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -137,7 +137,7 @@ class DiagnosticEnableConditionNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -145,7 +145,7 @@ class DiagnosticEnableConditionNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -153,7 +153,7 @@ class DiagnosticEnableConditionNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: DiagnosticEnableConditionNeeds.Annotations | None = field(
+    annotations: None | DiagnosticEnableConditionNeeds.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -161,7 +161,7 @@ class DiagnosticEnableConditionNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    audiences: DiagnosticEnableConditionNeeds.Audiences | None = field(
+    audiences: None | DiagnosticEnableConditionNeeds.Audiences = field(
         default=None,
         metadata={
             "name": "AUDIENCES",
@@ -169,7 +169,7 @@ class DiagnosticEnableConditionNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    diag_requirement: DiagRequirementIdString | None = field(
+    diag_requirement: None | DiagRequirementIdString = field(
         default=None,
         metadata={
             "name": "DIAG-REQUIREMENT",
@@ -177,7 +177,7 @@ class DiagnosticEnableConditionNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    security_access_level: PositiveInteger | None = field(
+    security_access_level: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "SECURITY-ACCESS-LEVEL",
@@ -185,7 +185,7 @@ class DiagnosticEnableConditionNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    initial_status: EventAcceptanceStatusEnum | None = field(
+    initial_status: None | EventAcceptanceStatusEnum = field(
         default=None,
         metadata={
             "name": "INITIAL-STATUS",
@@ -193,14 +193,14 @@ class DiagnosticEnableConditionNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -208,7 +208,7 @@ class DiagnosticEnableConditionNeeds:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",

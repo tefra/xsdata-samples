@@ -37,7 +37,7 @@ class CouplingPortTrafficClassAssignment:
     class Meta:
         name = "COUPLING-PORT-TRAFFIC-CLASS-ASSIGNMENT"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -47,7 +47,7 @@ class CouplingPortTrafficClassAssignment:
         },
     )
     short_name_fragments: (
-        CouplingPortTrafficClassAssignment.ShortNameFragments | None
+        None | CouplingPortTrafficClassAssignment.ShortNameFragments
     ) = field(
         default=None,
         metadata={
@@ -56,7 +56,7 @@ class CouplingPortTrafficClassAssignment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    prioritys: CouplingPortTrafficClassAssignment.Prioritys | None = field(
+    prioritys: None | CouplingPortTrafficClassAssignment.Prioritys = field(
         default=None,
         metadata={
             "name": "PRIORITYS",
@@ -64,7 +64,7 @@ class CouplingPortTrafficClassAssignment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    traffic_class: PositiveInteger | None = field(
+    traffic_class: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "TRAFFIC-CLASS",
@@ -72,14 +72,14 @@ class CouplingPortTrafficClassAssignment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

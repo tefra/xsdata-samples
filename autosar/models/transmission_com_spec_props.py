@@ -36,7 +36,7 @@ class TransmissionComSpecProps:
     class Meta:
         name = "TRANSMISSION-COM-SPEC-PROPS"
 
-    data_update_period: TimeValue | None = field(
+    data_update_period: None | TimeValue = field(
         default=None,
         metadata={
             "name": "DATA-UPDATE-PERIOD",
@@ -44,7 +44,7 @@ class TransmissionComSpecProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    minimum_send_interval: TimeValue | None = field(
+    minimum_send_interval: None | TimeValue = field(
         default=None,
         metadata={
             "name": "MINIMUM-SEND-INTERVAL",
@@ -52,7 +52,7 @@ class TransmissionComSpecProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    transmission_mode: TransmissionModeDefinitionEnum | None = field(
+    transmission_mode: None | TransmissionModeDefinitionEnum = field(
         default=None,
         metadata={
             "name": "TRANSMISSION-MODE",
@@ -60,14 +60,14 @@ class TransmissionComSpecProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

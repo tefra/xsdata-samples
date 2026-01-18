@@ -42,7 +42,7 @@ class Baseline:
     class Meta:
         name = "BASELINE"
 
-    standard_revisions: Baseline.StandardRevisions | None = field(
+    standard_revisions: None | Baseline.StandardRevisions = field(
         default=None,
         metadata={
             "name": "STANDARD-REVISIONS",
@@ -50,7 +50,7 @@ class Baseline:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    custom_specification_refs: Baseline.CustomSpecificationRefs | None = field(
+    custom_specification_refs: None | Baseline.CustomSpecificationRefs = field(
         default=None,
         metadata={
             "name": "CUSTOM-SPECIFICATION-REFS",
@@ -58,7 +58,7 @@ class Baseline:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    custom_sdg_def_refs: Baseline.CustomSdgDefRefs | None = field(
+    custom_sdg_def_refs: None | Baseline.CustomSdgDefRefs = field(
         default=None,
         metadata={
             "name": "CUSTOM-SDG-DEF-REFS",
@@ -66,14 +66,14 @@ class Baseline:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -117,7 +117,7 @@ class Baseline:
 
         @dataclass
         class CustomSpecificationRef(Ref):
-            dest: DocumentationSubtypesEnum | None = field(
+            dest: None | DocumentationSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -141,7 +141,7 @@ class Baseline:
 
         @dataclass
         class CustomSdgDefRef(Ref):
-            dest: SdgDefSubtypesEnum | None = field(
+            dest: None | SdgDefSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",

@@ -18,7 +18,7 @@ class MonitoredVehicleSharingParkingBayVersionStructure(
     class Meta:
         name = "MonitoredVehicleSharingParkingBay_VersionStructure"
 
-    status: ParkingBayStatusEnumeration | None = field(
+    status: None | ParkingBayStatusEnumeration = field(
         default=None,
         metadata={
             "name": "Status",
@@ -26,7 +26,7 @@ class MonitoredVehicleSharingParkingBayVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    parking_bay_status_ref: ParkingBayStatusRef | None = field(
+    parking_bay_status_ref: None | ParkingBayStatusRef = field(
         default=None,
         metadata={
             "name": "ParkingBayStatusRef",

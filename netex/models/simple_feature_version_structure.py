@@ -23,7 +23,8 @@ class SimpleFeatureVersionStructure(GroupOfPointsVersionStructure):
         name = "SimpleFeature_VersionStructure"
 
     zone_ref_or_tariff_zone_ref: (
-        MobilityServiceConstraintZoneRef
+        None
+        | MobilityServiceConstraintZoneRef
         | StopAreaRef
         | TransportAdministrativeZoneRef
         | AccessZoneRef
@@ -31,7 +32,6 @@ class SimpleFeatureVersionStructure(GroupOfPointsVersionStructure):
         | FareZoneRef
         | TariffZoneRef
         | ZoneRef
-        | None
     ) = field(
         default=None,
         metadata={

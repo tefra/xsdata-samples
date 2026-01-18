@@ -15,7 +15,7 @@ class TaxiServicePlaceAssignmentRefsRelStructure(
     class Meta:
         name = "TaxiServicePlaceAssignmentRefs_RelStructure"
 
-    taxi_service_place_assignment_ref: TaxiServicePlaceAssignmentRef | None = (
+    taxi_service_place_assignment_ref: None | TaxiServicePlaceAssignmentRef = (
         field(
             default=None,
             metadata={

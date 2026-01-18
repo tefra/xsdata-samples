@@ -30,7 +30,8 @@ __NAMESPACE__ = "http://www.siri.org.uk/siri"
 @dataclass
 class ErrorConditionElementStructure:
     choice: (
-        UnapprovedKeyAccessError
+        None
+        | UnapprovedKeyAccessError
         | UnknownParticipantError
         | UnknownEndpointError
         | EndpointDeniedAccessError
@@ -46,7 +47,6 @@ class ErrorConditionElementStructure:
         | AllowedResourceUsageExceededError
         | OtherError
         | UnknownSubscriptionError
-        | None
     ) = field(
         default=None,
         metadata={
@@ -135,7 +135,7 @@ class ErrorConditionElementStructure:
             ),
         },
     )
-    description: ErrorDescriptionStructure | None = field(
+    description: None | ErrorDescriptionStructure = field(
         default=None,
         metadata={
             "name": "Description",

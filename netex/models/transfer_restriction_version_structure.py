@@ -17,7 +17,7 @@ class TransferRestrictionVersionStructure(AssignmentVersionStructure1):
     class Meta:
         name = "TransferRestriction_VersionStructure"
 
-    type_of_transfer_ref: TypeOfTransferRef | None = field(
+    type_of_transfer_ref: None | TypeOfTransferRef = field(
         default=None,
         metadata={
             "name": "TypeOfTransferRef",
@@ -25,7 +25,7 @@ class TransferRestrictionVersionStructure(AssignmentVersionStructure1):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    both_ways: bool | None = field(
+    both_ways: None | bool = field(
         default=None,
         metadata={
             "name": "BothWays",
@@ -33,7 +33,7 @@ class TransferRestrictionVersionStructure(AssignmentVersionStructure1):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    restriction_type: TransferConstraintTypeEnumeration | None = field(
+    restriction_type: None | TransferConstraintTypeEnumeration = field(
         default=None,
         metadata={
             "name": "RestrictionType",
@@ -42,7 +42,7 @@ class TransferRestrictionVersionStructure(AssignmentVersionStructure1):
             "required": True,
         },
     )
-    from_point_ref: ScheduledStopPointRefStructure | None = field(
+    from_point_ref: None | ScheduledStopPointRefStructure = field(
         default=None,
         metadata={
             "name": "FromPointRef",
@@ -50,7 +50,7 @@ class TransferRestrictionVersionStructure(AssignmentVersionStructure1):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    to_point_ref: ScheduledStopPointRefStructure | None = field(
+    to_point_ref: None | ScheduledStopPointRefStructure = field(
         default=None,
         metadata={
             "name": "ToPointRef",

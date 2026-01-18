@@ -33,14 +33,14 @@ class FmConditionByFeaturesAndAttributes:
     class Meta:
         name = "FM-CONDITION-BY-FEATURES-AND-ATTRIBUTES"
 
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -75,7 +75,7 @@ class FmConditionByFeaturesAndAttributes:
 
     @dataclass
     class AttributeRef(Ref):
-        dest: FmAttributeDefSubtypesEnum | None = field(
+        dest: None | FmAttributeDefSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -86,7 +86,7 @@ class FmConditionByFeaturesAndAttributes:
 
     @dataclass
     class FeatureRef(Ref):
-        dest: FmFeatureSubtypesEnum | None = field(
+        dest: None | FmFeatureSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

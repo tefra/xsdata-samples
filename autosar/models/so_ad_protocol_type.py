@@ -28,20 +28,20 @@ class SoAdProtocolType:
     class Meta:
         name = "SO-AD-PROTOCOL-TYPE"
 
-    value: SoAdProtocolTypeSimple | None = field(
+    value: None | SoAdProtocolTypeSimple = field(
         default=None,
         metadata={
             "required": True,
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

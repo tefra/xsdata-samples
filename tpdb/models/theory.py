@@ -10,4 +10,4 @@ class Theory:
     class Meta:
         name = "theory"
 
-    value: TheoryValue | None = field(default=None)
+    value: None | TheoryValue = field(default=None)

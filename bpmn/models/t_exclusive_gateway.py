@@ -12,7 +12,7 @@ class TExclusiveGateway(TGateway):
     class Meta:
         name = "tExclusiveGateway"
 
-    default: str | None = field(
+    default: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",

@@ -44,7 +44,7 @@ class SubElementMapping:
     class Meta:
         name = "SUB-ELEMENT-MAPPING"
 
-    first_elements: SubElementMapping.FirstElements | None = field(
+    first_elements: None | SubElementMapping.FirstElements = field(
         default=None,
         metadata={
             "name": "FIRST-ELEMENTS",
@@ -52,7 +52,7 @@ class SubElementMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    second_elements: SubElementMapping.SecondElements | None = field(
+    second_elements: None | SubElementMapping.SecondElements = field(
         default=None,
         metadata={
             "name": "SECOND-ELEMENTS",
@@ -60,7 +60,7 @@ class SubElementMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    text_table_mappings: SubElementMapping.TextTableMappings | None = field(
+    text_table_mappings: None | SubElementMapping.TextTableMappings = field(
         default=None,
         metadata={
             "name": "TEXT-TABLE-MAPPINGS",
@@ -68,14 +68,14 @@ class SubElementMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

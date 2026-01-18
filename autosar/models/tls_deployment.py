@@ -86,7 +86,7 @@ class TlsDeployment:
     class Meta:
         name = "TLS-DEPLOYMENT"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -95,7 +95,7 @@ class TlsDeployment:
             "required": True,
         },
     )
-    short_name_fragments: TlsDeployment.ShortNameFragments | None = field(
+    short_name_fragments: None | TlsDeployment.ShortNameFragments = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -103,7 +103,7 @@ class TlsDeployment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -111,7 +111,7 @@ class TlsDeployment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -119,7 +119,7 @@ class TlsDeployment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -127,7 +127,7 @@ class TlsDeployment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -135,7 +135,7 @@ class TlsDeployment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -143,7 +143,7 @@ class TlsDeployment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: TlsDeployment.Annotations | None = field(
+    annotations: None | TlsDeployment.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -152,7 +152,7 @@ class TlsDeployment:
         },
     )
     psk_identity_to_key_slot_mappings: (
-        TlsDeployment.PskIdentityToKeySlotMappings | None
+        None | TlsDeployment.PskIdentityToKeySlotMappings
     ) = field(
         default=None,
         metadata={
@@ -161,7 +161,7 @@ class TlsDeployment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tls_job_mappings: TlsDeployment.TlsJobMappings | None = field(
+    tls_job_mappings: None | TlsDeployment.TlsJobMappings = field(
         default=None,
         metadata={
             "name": "TLS-JOB-MAPPINGS",
@@ -169,14 +169,14 @@ class TlsDeployment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -184,7 +184,7 @@ class TlsDeployment:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",

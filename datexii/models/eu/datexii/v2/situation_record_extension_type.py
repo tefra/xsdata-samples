@@ -15,7 +15,7 @@ class SituationRecordExtensionType:
         name = "_SituationRecordExtensionType"
 
     situation_record_extended_approved: (
-        SituationRecordExtendedApproved | None
+        None | SituationRecordExtendedApproved
     ) = field(
         default=None,
         metadata={

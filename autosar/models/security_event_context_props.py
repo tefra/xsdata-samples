@@ -110,7 +110,7 @@ class SecurityEventContextProps:
     class Meta:
         name = "SECURITY-EVENT-CONTEXT-PROPS"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -120,7 +120,7 @@ class SecurityEventContextProps:
         },
     )
     short_name_fragments: (
-        SecurityEventContextProps.ShortNameFragments | None
+        None | SecurityEventContextProps.ShortNameFragments
     ) = field(
         default=None,
         metadata={
@@ -129,7 +129,7 @@ class SecurityEventContextProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -137,7 +137,7 @@ class SecurityEventContextProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -145,7 +145,7 @@ class SecurityEventContextProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -153,7 +153,7 @@ class SecurityEventContextProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -161,7 +161,7 @@ class SecurityEventContextProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -169,7 +169,7 @@ class SecurityEventContextProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: SecurityEventContextProps.Annotations | None = field(
+    annotations: None | SecurityEventContextProps.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -177,7 +177,7 @@ class SecurityEventContextProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    context_datas: SecurityEventContextProps.ContextDatas | None = field(
+    context_datas: None | SecurityEventContextProps.ContextDatas = field(
         default=None,
         metadata={
             "name": "CONTEXT-DATAS",
@@ -185,7 +185,7 @@ class SecurityEventContextProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    default_reporting_mode: SecurityEventReportingModeEnum | None = field(
+    default_reporting_mode: None | SecurityEventReportingModeEnum = field(
         default=None,
         metadata={
             "name": "DEFAULT-REPORTING-MODE",
@@ -193,7 +193,7 @@ class SecurityEventContextProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    persistent_storage: Boolean | None = field(
+    persistent_storage: None | Boolean = field(
         default=None,
         metadata={
             "name": "PERSISTENT-STORAGE",
@@ -201,7 +201,7 @@ class SecurityEventContextProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    security_events: SecurityEventContextProps.SecurityEvents | None = field(
+    security_events: None | SecurityEventContextProps.SecurityEvents = field(
         default=None,
         metadata={
             "name": "SECURITY-EVENTS",
@@ -209,7 +209,7 @@ class SecurityEventContextProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sensor_instance_id: PositiveInteger | None = field(
+    sensor_instance_id: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "SENSOR-INSTANCE-ID",
@@ -217,7 +217,7 @@ class SecurityEventContextProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    severity: PositiveInteger | None = field(
+    severity: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "SEVERITY",
@@ -225,7 +225,7 @@ class SecurityEventContextProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -233,14 +233,14 @@ class SecurityEventContextProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -248,7 +248,7 @@ class SecurityEventContextProps:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",

@@ -109,7 +109,7 @@ class ParameterDataPrototype:
     class Meta:
         name = "PARAMETER-DATA-PROTOTYPE"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -118,7 +118,7 @@ class ParameterDataPrototype:
             "required": True,
         },
     )
-    short_name_fragments: ParameterDataPrototype.ShortNameFragments | None = (
+    short_name_fragments: None | ParameterDataPrototype.ShortNameFragments = (
         field(
             default=None,
             metadata={
@@ -128,7 +128,7 @@ class ParameterDataPrototype:
             },
         )
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -136,7 +136,7 @@ class ParameterDataPrototype:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -144,7 +144,7 @@ class ParameterDataPrototype:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -152,7 +152,7 @@ class ParameterDataPrototype:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -160,7 +160,7 @@ class ParameterDataPrototype:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -168,7 +168,7 @@ class ParameterDataPrototype:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: ParameterDataPrototype.Annotations | None = field(
+    annotations: None | ParameterDataPrototype.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -176,7 +176,7 @@ class ParameterDataPrototype:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_data_def_props: SwDataDefProps | None = field(
+    sw_data_def_props: None | SwDataDefProps = field(
         default=None,
         metadata={
             "name": "SW-DATA-DEF-PROPS",
@@ -184,7 +184,7 @@ class ParameterDataPrototype:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    type_tref: ParameterDataPrototype.TypeTref | None = field(
+    type_tref: None | ParameterDataPrototype.TypeTref = field(
         default=None,
         metadata={
             "name": "TYPE-TREF",
@@ -192,7 +192,7 @@ class ParameterDataPrototype:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    init_value: ParameterDataPrototype.InitValue | None = field(
+    init_value: None | ParameterDataPrototype.InitValue = field(
         default=None,
         metadata={
             "name": "INIT-VALUE",
@@ -200,7 +200,7 @@ class ParameterDataPrototype:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -208,14 +208,14 @@ class ParameterDataPrototype:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -223,7 +223,7 @@ class ParameterDataPrototype:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -255,7 +255,7 @@ class ParameterDataPrototype:
 
     @dataclass
     class TypeTref(Ref):
-        dest: AutosarDataTypeSubtypesEnum | None = field(
+        dest: None | AutosarDataTypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -267,7 +267,7 @@ class ParameterDataPrototype:
     @dataclass
     class InitValue:
         application_assoc_map_value_specification: (
-            ApplicationAssocMapValueSpecification | None
+            None | ApplicationAssocMapValueSpecification
         ) = field(
             default=None,
             metadata={
@@ -277,7 +277,7 @@ class ParameterDataPrototype:
             },
         )
         application_rule_based_value_specification: (
-            ApplicationRuleBasedValueSpecification | None
+            None | ApplicationRuleBasedValueSpecification
         ) = field(
             default=None,
             metadata={
@@ -287,7 +287,7 @@ class ParameterDataPrototype:
             },
         )
         application_value_specification: (
-            ApplicationValueSpecification | None
+            None | ApplicationValueSpecification
         ) = field(
             default=None,
             metadata={
@@ -296,7 +296,7 @@ class ParameterDataPrototype:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        array_value_specification: ArrayValueSpecification | None = field(
+        array_value_specification: None | ArrayValueSpecification = field(
             default=None,
             metadata={
                 "name": "ARRAY-VALUE-SPECIFICATION",
@@ -305,7 +305,7 @@ class ParameterDataPrototype:
             },
         )
         composite_rule_based_value_specification: (
-            CompositeRuleBasedValueSpecification | None
+            None | CompositeRuleBasedValueSpecification
         ) = field(
             default=None,
             metadata={
@@ -314,7 +314,7 @@ class ParameterDataPrototype:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        constant_reference: ConstantReference | None = field(
+        constant_reference: None | ConstantReference = field(
             default=None,
             metadata={
                 "name": "CONSTANT-REFERENCE",
@@ -323,7 +323,7 @@ class ParameterDataPrototype:
             },
         )
         not_available_value_specification: (
-            NotAvailableValueSpecification | None
+            None | NotAvailableValueSpecification
         ) = field(
             default=None,
             metadata={
@@ -333,7 +333,7 @@ class ParameterDataPrototype:
             },
         )
         numerical_rule_based_value_specification: (
-            NumericalRuleBasedValueSpecification | None
+            None | NumericalRuleBasedValueSpecification
         ) = field(
             default=None,
             metadata={
@@ -342,7 +342,7 @@ class ParameterDataPrototype:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        numerical_value_specification: NumericalValueSpecification | None = (
+        numerical_value_specification: None | NumericalValueSpecification = (
             field(
                 default=None,
                 metadata={
@@ -352,7 +352,7 @@ class ParameterDataPrototype:
                 },
             )
         )
-        record_value_specification: RecordValueSpecification | None = field(
+        record_value_specification: None | RecordValueSpecification = field(
             default=None,
             metadata={
                 "name": "RECORD-VALUE-SPECIFICATION",
@@ -360,7 +360,7 @@ class ParameterDataPrototype:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        reference_value_specification: ReferenceValueSpecification | None = (
+        reference_value_specification: None | ReferenceValueSpecification = (
             field(
                 default=None,
                 metadata={
@@ -370,7 +370,7 @@ class ParameterDataPrototype:
                 },
             )
         )
-        text_value_specification: TextValueSpecification | None = field(
+        text_value_specification: None | TextValueSpecification = field(
             default=None,
             metadata={
                 "name": "TEXT-VALUE-SPECIFICATION",

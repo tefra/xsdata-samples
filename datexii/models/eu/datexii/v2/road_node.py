@@ -19,7 +19,7 @@ class RoadNode(Road):
     :ivar road_node_extension:
     """
 
-    junction_name: MultilingualString | None = field(
+    junction_name: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "junctionName",
@@ -28,7 +28,7 @@ class RoadNode(Road):
             "required": True,
         },
     )
-    road_node_extension: ExtensionType | None = field(
+    road_node_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "roadNodeExtension",

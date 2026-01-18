@@ -14,7 +14,7 @@ class AccessEquipmentVersionStructure(PlaceEquipmentVersionStructure):
     class Meta:
         name = "AccessEquipment_VersionStructure"
 
-    width: Decimal | None = field(
+    width: None | Decimal = field(
         default=None,
         metadata={
             "name": "Width",
@@ -22,7 +22,7 @@ class AccessEquipmentVersionStructure(PlaceEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    height: Decimal | None = field(
+    height: None | Decimal = field(
         default=None,
         metadata={
             "name": "Height",
@@ -30,7 +30,7 @@ class AccessEquipmentVersionStructure(PlaceEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    direction_of_use: DirectionOfUseEnumeration | None = field(
+    direction_of_use: None | DirectionOfUseEnumeration = field(
         default=None,
         metadata={
             "name": "DirectionOfUse",
@@ -38,7 +38,7 @@ class AccessEquipmentVersionStructure(PlaceEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    passengers_per_minute: int | None = field(
+    passengers_per_minute: None | int = field(
         default=None,
         metadata={
             "name": "PassengersPerMinute",
@@ -46,7 +46,7 @@ class AccessEquipmentVersionStructure(PlaceEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    relative_weighting: int | None = field(
+    relative_weighting: None | int = field(
         default=None,
         metadata={
             "name": "RelativeWeighting",
@@ -54,7 +54,7 @@ class AccessEquipmentVersionStructure(PlaceEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    safe_for_guide_dog: bool | None = field(
+    safe_for_guide_dog: None | bool = field(
         default=None,
         metadata={
             "name": "SafeForGuideDog",

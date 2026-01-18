@@ -40,8 +40,8 @@ class PhmHealthChannelInExecutableInstanceRef:
         name = "PHM-HEALTH-CHANNEL-IN-EXECUTABLE-INSTANCE-REF"
 
     context_root_sw_component_prototype_ref: (
-        PhmHealthChannelInExecutableInstanceRef.ContextRootSwComponentPrototypeRef
-        | None
+        None
+        | PhmHealthChannelInExecutableInstanceRef.ContextRootSwComponentPrototypeRef
     ) = field(
         default=None,
         metadata={
@@ -61,7 +61,7 @@ class PhmHealthChannelInExecutableInstanceRef:
         },
     )
     context_r_port_prototype_ref: (
-        PhmHealthChannelInExecutableInstanceRef.ContextRPortPrototypeRef | None
+        None | PhmHealthChannelInExecutableInstanceRef.ContextRPortPrototypeRef
     ) = field(
         default=None,
         metadata={
@@ -71,7 +71,7 @@ class PhmHealthChannelInExecutableInstanceRef:
         },
     )
     target_health_channel_ref: (
-        PhmHealthChannelInExecutableInstanceRef.TargetHealthChannelRef | None
+        None | PhmHealthChannelInExecutableInstanceRef.TargetHealthChannelRef
     ) = field(
         default=None,
         metadata={
@@ -80,14 +80,14 @@ class PhmHealthChannelInExecutableInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -98,7 +98,7 @@ class PhmHealthChannelInExecutableInstanceRef:
 
     @dataclass
     class ContextRootSwComponentPrototypeRef(Ref):
-        dest: RootSwComponentPrototypeSubtypesEnum | None = field(
+        dest: None | RootSwComponentPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -109,7 +109,7 @@ class PhmHealthChannelInExecutableInstanceRef:
 
     @dataclass
     class ContextComponentPrototypeRef(Ref):
-        dest: SwComponentPrototypeSubtypesEnum | None = field(
+        dest: None | SwComponentPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -120,7 +120,7 @@ class PhmHealthChannelInExecutableInstanceRef:
 
     @dataclass
     class ContextRPortPrototypeRef(Ref):
-        dest: RPortPrototypeSubtypesEnum | None = field(
+        dest: None | RPortPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -131,7 +131,7 @@ class PhmHealthChannelInExecutableInstanceRef:
 
     @dataclass
     class TargetHealthChannelRef(Ref):
-        dest: PhmHealthChannelInterfaceSubtypesEnum | None = field(
+        dest: None | PhmHealthChannelInterfaceSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

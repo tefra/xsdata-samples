@@ -30,20 +30,20 @@ class CanTpAddressingFormatType:
     class Meta:
         name = "CAN-TP-ADDRESSING-FORMAT-TYPE"
 
-    value: CanTpAddressingFormatTypeSimple | None = field(
+    value: None | CanTpAddressingFormatTypeSimple = field(
         default=None,
         metadata={
             "required": True,
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

@@ -11,7 +11,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 @dataclass
 class GeneralSignStructure(SignEquipmentVersionStructure):
-    content: MultilingualString | None = field(
+    content: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "Content",
@@ -19,7 +19,7 @@ class GeneralSignStructure(SignEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    sign_content_type: SignContentEnumeration | None = field(
+    sign_content_type: None | SignContentEnumeration = field(
         default=None,
         metadata={
             "name": "SignContentType",

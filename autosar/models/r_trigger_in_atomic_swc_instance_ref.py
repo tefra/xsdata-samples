@@ -32,7 +32,7 @@ class RTriggerInAtomicSwcInstanceRef:
         name = "R-TRIGGER-IN-ATOMIC-SWC-INSTANCE-REF"
 
     context_r_port_ref: (
-        RTriggerInAtomicSwcInstanceRef.ContextRPortRef | None
+        None | RTriggerInAtomicSwcInstanceRef.ContextRPortRef
     ) = field(
         default=None,
         metadata={
@@ -42,7 +42,7 @@ class RTriggerInAtomicSwcInstanceRef:
         },
     )
     target_trigger_ref: (
-        RTriggerInAtomicSwcInstanceRef.TargetTriggerRef | None
+        None | RTriggerInAtomicSwcInstanceRef.TargetTriggerRef
     ) = field(
         default=None,
         metadata={
@@ -51,14 +51,14 @@ class RTriggerInAtomicSwcInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -69,7 +69,7 @@ class RTriggerInAtomicSwcInstanceRef:
 
     @dataclass
     class ContextRPortRef(Ref):
-        dest: AbstractRequiredPortPrototypeSubtypesEnum | None = field(
+        dest: None | AbstractRequiredPortPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -80,7 +80,7 @@ class RTriggerInAtomicSwcInstanceRef:
 
     @dataclass
     class TargetTriggerRef(Ref):
-        dest: TriggerSubtypesEnum | None = field(
+        dest: None | TriggerSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

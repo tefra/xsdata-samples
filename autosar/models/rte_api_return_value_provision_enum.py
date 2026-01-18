@@ -31,20 +31,20 @@ class RteApiReturnValueProvisionEnum:
     class Meta:
         name = "RTE-API-RETURN-VALUE-PROVISION-ENUM"
 
-    value: RteApiReturnValueProvisionEnumSimple | None = field(
+    value: None | RteApiReturnValueProvisionEnumSimple = field(
         default=None,
         metadata={
             "required": True,
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

@@ -42,7 +42,7 @@ class ParameterInAtomicSwcTypeInstanceRef:
         name = "PARAMETER-IN-ATOMIC-SWC-TYPE-INSTANCE-REF"
 
     port_prototype_ref: (
-        ParameterInAtomicSwcTypeInstanceRef.PortPrototypeRef | None
+        None | ParameterInAtomicSwcTypeInstanceRef.PortPrototypeRef
     ) = field(
         default=None,
         metadata={
@@ -52,8 +52,8 @@ class ParameterInAtomicSwcTypeInstanceRef:
         },
     )
     root_parameter_data_prototype_ref: (
-        ParameterInAtomicSwcTypeInstanceRef.RootParameterDataPrototypeRef
-        | None
+        None
+        | ParameterInAtomicSwcTypeInstanceRef.RootParameterDataPrototypeRef
     ) = field(
         default=None,
         metadata={
@@ -73,7 +73,7 @@ class ParameterInAtomicSwcTypeInstanceRef:
         },
     )
     target_data_prototype_ref: (
-        ParameterInAtomicSwcTypeInstanceRef.TargetDataPrototypeRef | None
+        None | ParameterInAtomicSwcTypeInstanceRef.TargetDataPrototypeRef
     ) = field(
         default=None,
         metadata={
@@ -82,14 +82,14 @@ class ParameterInAtomicSwcTypeInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -100,7 +100,7 @@ class ParameterInAtomicSwcTypeInstanceRef:
 
     @dataclass
     class PortPrototypeRef(Ref):
-        dest: PortPrototypeSubtypesEnum | None = field(
+        dest: None | PortPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -111,7 +111,7 @@ class ParameterInAtomicSwcTypeInstanceRef:
 
     @dataclass
     class RootParameterDataPrototypeRef(Ref):
-        dest: DataPrototypeSubtypesEnum | None = field(
+        dest: None | DataPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -122,7 +122,7 @@ class ParameterInAtomicSwcTypeInstanceRef:
 
     @dataclass
     class ContextDataPrototypeRef(Ref):
-        dest: ApplicationCompositeElementDataPrototypeSubtypesEnum | None = (
+        dest: None | ApplicationCompositeElementDataPrototypeSubtypesEnum = (
             field(
                 default=None,
                 metadata={
@@ -135,7 +135,7 @@ class ParameterInAtomicSwcTypeInstanceRef:
 
     @dataclass
     class TargetDataPrototypeRef(Ref):
-        dest: DataPrototypeSubtypesEnum | None = field(
+        dest: None | DataPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

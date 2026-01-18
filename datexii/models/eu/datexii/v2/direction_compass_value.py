@@ -21,7 +21,7 @@ class DirectionCompassValue(DataValue):
     :ivar direction_compass_value_extension:
     """
 
-    direction_compass: DirectionCompassEnum | None = field(
+    direction_compass: None | DirectionCompassEnum = field(
         default=None,
         metadata={
             "name": "directionCompass",
@@ -30,7 +30,7 @@ class DirectionCompassValue(DataValue):
             "required": True,
         },
     )
-    direction_compass_value_extension: ExtensionType | None = field(
+    direction_compass_value_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "directionCompassValueExtension",

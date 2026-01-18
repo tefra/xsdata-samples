@@ -13,7 +13,7 @@ class TMessageFlowAssociation(TBaseElement):
     class Meta:
         name = "tMessageFlowAssociation"
 
-    inner_message_flow_ref: QName | None = field(
+    inner_message_flow_ref: None | QName = field(
         default=None,
         metadata={
             "name": "innerMessageFlowRef",
@@ -21,7 +21,7 @@ class TMessageFlowAssociation(TBaseElement):
             "required": True,
         },
     )
-    outer_message_flow_ref: QName | None = field(
+    outer_message_flow_ref: None | QName = field(
         default=None,
         metadata={
             "name": "outerMessageFlowRef",

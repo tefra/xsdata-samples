@@ -34,7 +34,7 @@ class LinSlaveConfigIdent:
     class Meta:
         name = "LIN-SLAVE-CONFIG-IDENT"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -43,7 +43,7 @@ class LinSlaveConfigIdent:
             "required": True,
         },
     )
-    short_name_fragments: LinSlaveConfigIdent.ShortNameFragments | None = (
+    short_name_fragments: None | LinSlaveConfigIdent.ShortNameFragments = (
         field(
             default=None,
             metadata={
@@ -53,14 +53,14 @@ class LinSlaveConfigIdent:
             },
         )
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

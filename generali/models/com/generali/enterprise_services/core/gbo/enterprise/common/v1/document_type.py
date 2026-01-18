@@ -19,7 +19,7 @@ __NAMESPACE__ = (
 
 @dataclass
 class DocumentType(BaseReferenceComponentType):
-    note: str | None = field(
+    note: None | str = field(
         default=None,
         metadata={
             "name": "Note",
@@ -27,7 +27,7 @@ class DocumentType(BaseReferenceComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
         },
     )
-    document_location: str | None = field(
+    document_location: None | str = field(
         default=None,
         metadata={
             "name": "DocumentLocation",
@@ -35,7 +35,7 @@ class DocumentType(BaseReferenceComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
         },
     )
-    file_type: str | None = field(
+    file_type: None | str = field(
         default=None,
         metadata={
             "name": "FileType",
@@ -43,7 +43,7 @@ class DocumentType(BaseReferenceComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
         },
     )
-    author: TextType | None = field(
+    author: None | TextType = field(
         default=None,
         metadata={
             "name": "Author",
@@ -51,7 +51,7 @@ class DocumentType(BaseReferenceComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
         },
     )
-    doc_type: TextType | None = field(
+    doc_type: None | TextType = field(
         default=None,
         metadata={
             "name": "DocType",
@@ -59,7 +59,7 @@ class DocumentType(BaseReferenceComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
         },
     )
-    local_policy_ref: TextType | None = field(
+    local_policy_ref: None | TextType = field(
         default=None,
         metadata={
             "name": "LocalPolicyRef",
@@ -67,7 +67,7 @@ class DocumentType(BaseReferenceComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
         },
     )
-    issue_date: DateTimeType | None = field(
+    issue_date: None | DateTimeType = field(
         default=None,
         metadata={
             "name": "IssueDate",
@@ -75,7 +75,7 @@ class DocumentType(BaseReferenceComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
         },
     )
-    producing_office_ref: TextType | None = field(
+    producing_office_ref: None | TextType = field(
         default=None,
         metadata={
             "name": "ProducingOfficeRef",
@@ -83,7 +83,7 @@ class DocumentType(BaseReferenceComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
         },
     )
-    additional_information: TextType | None = field(
+    additional_information: None | TextType = field(
         default=None,
         metadata={
             "name": "AdditionalInformation",
@@ -91,7 +91,7 @@ class DocumentType(BaseReferenceComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
         },
     )
-    cdmsdocument_location: str | None = field(
+    cdmsdocument_location: None | str = field(
         default=None,
         metadata={
             "name": "CDMSDocumentLocation",
@@ -99,7 +99,7 @@ class DocumentType(BaseReferenceComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
         },
     )
-    reinsurance_policy_ref: TextType | None = field(
+    reinsurance_policy_ref: None | TextType = field(
         default=None,
         metadata={
             "name": "ReinsurancePolicyRef",

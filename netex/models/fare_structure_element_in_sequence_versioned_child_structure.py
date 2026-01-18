@@ -23,7 +23,7 @@ class FareStructureElementInSequenceVersionedChildStructure(
     class Meta:
         name = "FareStructureElementInSequence_VersionedChildStructure"
 
-    fare_structure_element_ref: FareStructureElementRef | None = field(
+    fare_structure_element_ref: None | FareStructureElementRef = field(
         default=None,
         metadata={
             "name": "FareStructureElementRef",
@@ -31,7 +31,7 @@ class FareStructureElementInSequenceVersionedChildStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    validable_element_ref: ValidableElementRef | None = field(
+    validable_element_ref: None | ValidableElementRef = field(
         default=None,
         metadata={
             "name": "ValidableElementRef",
@@ -40,10 +40,10 @@ class FareStructureElementInSequenceVersionedChildStructure(
         },
     )
     validity_parameter_assignments_or_generic_parameter_assignment_or_generic_parameter_assignment_in_context: (
-        GenericParameterAssignmentsRelStructure
+        None
+        | GenericParameterAssignmentsRelStructure
         | GenericParameterAssignment
         | GenericParameterAssignmentInContext
-        | None
     ) = field(
         default=None,
         metadata={

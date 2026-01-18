@@ -13,7 +13,7 @@ class SingleJourneyRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "singleJourneyRefs_RelStructure"
 
-    single_journey_ref: SingleJourneyRef | None = field(
+    single_journey_ref: None | SingleJourneyRef = field(
         default=None,
         metadata={
             "name": "SingleJourneyRef",

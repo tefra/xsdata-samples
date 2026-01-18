@@ -13,7 +13,7 @@ class TErrorEventDefinition(TEventDefinition):
     class Meta:
         name = "tErrorEventDefinition"
 
-    error_ref: QName | None = field(
+    error_ref: None | QName = field(
         default=None,
         metadata={
             "name": "errorRef",

@@ -55,7 +55,7 @@ class LinSlaveConfig:
     class Meta:
         name = "LIN-SLAVE-CONFIG"
 
-    configured_nad: Integer | None = field(
+    configured_nad: None | Integer = field(
         default=None,
         metadata={
             "name": "CONFIGURED-NAD",
@@ -63,7 +63,7 @@ class LinSlaveConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    function_id: PositiveInteger | None = field(
+    function_id: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "FUNCTION-ID",
@@ -71,7 +71,7 @@ class LinSlaveConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ident: LinSlaveConfigIdent | None = field(
+    ident: None | LinSlaveConfigIdent = field(
         default=None,
         metadata={
             "name": "IDENT",
@@ -79,7 +79,7 @@ class LinSlaveConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    initial_nad: Integer | None = field(
+    initial_nad: None | Integer = field(
         default=None,
         metadata={
             "name": "INITIAL-NAD",
@@ -87,7 +87,7 @@ class LinSlaveConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    lin_error_response: LinErrorResponse | None = field(
+    lin_error_response: None | LinErrorResponse = field(
         default=None,
         metadata={
             "name": "LIN-ERROR-RESPONSE",
@@ -95,7 +95,7 @@ class LinSlaveConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    lin_slave_ecu_ref: LinSlaveConfig.LinSlaveEcuRef | None = field(
+    lin_slave_ecu_ref: None | LinSlaveConfig.LinSlaveEcuRef = field(
         default=None,
         metadata={
             "name": "LIN-SLAVE-ECU-REF",
@@ -103,7 +103,7 @@ class LinSlaveConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    protocol_version: String | None = field(
+    protocol_version: None | String = field(
         default=None,
         metadata={
             "name": "PROTOCOL-VERSION",
@@ -111,7 +111,7 @@ class LinSlaveConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    supplier_id: PositiveInteger | None = field(
+    supplier_id: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "SUPPLIER-ID",
@@ -119,7 +119,7 @@ class LinSlaveConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variant_id: PositiveInteger | None = field(
+    variant_id: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "VARIANT-ID",
@@ -127,14 +127,14 @@ class LinSlaveConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -145,7 +145,7 @@ class LinSlaveConfig:
 
     @dataclass
     class LinSlaveEcuRef(Ref):
-        dest: LinSlaveSubtypesEnum | None = field(
+        dest: None | LinSlaveSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

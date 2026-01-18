@@ -32,7 +32,7 @@ class HwElementRefConditional:
     class Meta:
         name = "HW-ELEMENT-REF-CONDITIONAL"
 
-    hw_element_ref: HwElementRefConditional.HwElementRef | None = field(
+    hw_element_ref: None | HwElementRefConditional.HwElementRef = field(
         default=None,
         metadata={
             "name": "HW-ELEMENT-REF",
@@ -40,7 +40,7 @@ class HwElementRefConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -48,14 +48,14 @@ class HwElementRefConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -66,7 +66,7 @@ class HwElementRefConditional:
 
     @dataclass
     class HwElementRef(Ref):
-        dest: HwElementSubtypesEnum | None = field(
+        dest: None | HwElementSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

@@ -35,8 +35,8 @@ class EcucModuleConfigurationValuesRefConditional:
         name = "ECUC-MODULE-CONFIGURATION-VALUES-REF-CONDITIONAL"
 
     ecuc_module_configuration_values_ref: (
-        EcucModuleConfigurationValuesRefConditional.EcucModuleConfigurationValuesRef
-        | None
+        None
+        | EcucModuleConfigurationValuesRefConditional.EcucModuleConfigurationValuesRef
     ) = field(
         default=None,
         metadata={
@@ -45,7 +45,7 @@ class EcucModuleConfigurationValuesRefConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -53,14 +53,14 @@ class EcucModuleConfigurationValuesRefConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -71,7 +71,7 @@ class EcucModuleConfigurationValuesRefConditional:
 
     @dataclass
     class EcucModuleConfigurationValuesRef(Ref):
-        dest: EcucModuleConfigurationValuesSubtypesEnum | None = field(
+        dest: None | EcucModuleConfigurationValuesSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

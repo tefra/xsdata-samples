@@ -43,14 +43,14 @@ class TimingConditionFormula:
     class Meta:
         name = "TIMING-CONDITION-FORMULA"
 
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -104,7 +104,7 @@ class TimingConditionFormula:
 
     @dataclass
     class TimingArgumentRef(Ref):
-        dest: AutosarOperationArgumentInstanceSubtypesEnum | None = field(
+        dest: None | AutosarOperationArgumentInstanceSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -115,7 +115,7 @@ class TimingConditionFormula:
 
     @dataclass
     class TimingConditionRef(Ref):
-        dest: TimingConditionSubtypesEnum | None = field(
+        dest: None | TimingConditionSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -126,7 +126,7 @@ class TimingConditionFormula:
 
     @dataclass
     class TimingEventRef(Ref):
-        dest: TimingDescriptionEventSubtypesEnum | None = field(
+        dest: None | TimingDescriptionEventSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -137,7 +137,7 @@ class TimingConditionFormula:
 
     @dataclass
     class TimingModeRef(Ref):
-        dest: TimingModeInstanceSubtypesEnum | None = field(
+        dest: None | TimingModeInstanceSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -148,7 +148,7 @@ class TimingConditionFormula:
 
     @dataclass
     class TimingVariableRef(Ref):
-        dest: AutosarVariableInstanceSubtypesEnum | None = field(
+        dest: None | AutosarVariableInstanceSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

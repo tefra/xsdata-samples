@@ -30,7 +30,7 @@ class ConstraintType(ConstraintBaseType):
         attachment, or if it defines what content is allowed.
     """
 
-    constraint_attachment: ConstraintAttachmentType | None = field(
+    constraint_attachment: None | ConstraintAttachmentType = field(
         default=None,
         metadata={
             "name": "ConstraintAttachment",
@@ -38,7 +38,7 @@ class ConstraintType(ConstraintBaseType):
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
         },
     )
-    release_calendar: ReleaseCalendarType | None = field(
+    release_calendar: None | ReleaseCalendarType = field(
         default=None,
         metadata={
             "name": "ReleaseCalendar",
@@ -46,7 +46,7 @@ class ConstraintType(ConstraintBaseType):
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
         },
     )
-    role: ConstraintRoleType | None = field(
+    role: None | ConstraintRoleType = field(
         default=None,
         metadata={
             "type": "Attribute",

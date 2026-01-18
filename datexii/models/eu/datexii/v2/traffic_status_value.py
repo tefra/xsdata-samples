@@ -20,7 +20,7 @@ class TrafficStatusValue(DataValue):
     :ivar traffic_status_value_extension:
     """
 
-    traffic_status_value: TrafficStatusEnum | None = field(
+    traffic_status_value: None | TrafficStatusEnum = field(
         default=None,
         metadata={
             "name": "trafficStatusValue",
@@ -29,7 +29,7 @@ class TrafficStatusValue(DataValue):
             "required": True,
         },
     )
-    traffic_status_value_extension: ExtensionType | None = field(
+    traffic_status_value_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "trafficStatusValueExtension",

@@ -35,7 +35,7 @@ class ProvidedServiceInstanceRefConditional:
         name = "PROVIDED-SERVICE-INSTANCE-REF-CONDITIONAL"
 
     provided_service_instance_ref: (
-        ProvidedServiceInstanceRefConditional.ProvidedServiceInstanceRef | None
+        None | ProvidedServiceInstanceRefConditional.ProvidedServiceInstanceRef
     ) = field(
         default=None,
         metadata={
@@ -44,7 +44,7 @@ class ProvidedServiceInstanceRefConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -52,14 +52,14 @@ class ProvidedServiceInstanceRefConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -70,7 +70,7 @@ class ProvidedServiceInstanceRefConditional:
 
     @dataclass
     class ProvidedServiceInstanceRef(Ref):
-        dest: ProvidedServiceInstanceSubtypesEnum | None = field(
+        dest: None | ProvidedServiceInstanceSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

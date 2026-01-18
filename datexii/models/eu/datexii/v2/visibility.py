@@ -21,7 +21,7 @@ class Visibility:
     :ivar visibility_extension:
     """
 
-    minimum_visibility_distance: IntegerMetreDistanceValue | None = field(
+    minimum_visibility_distance: None | IntegerMetreDistanceValue = field(
         default=None,
         metadata={
             "name": "minimumVisibilityDistance",
@@ -30,7 +30,7 @@ class Visibility:
             "required": True,
         },
     )
-    visibility_extension: ExtensionType | None = field(
+    visibility_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "visibilityExtension",

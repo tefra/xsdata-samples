@@ -26,7 +26,7 @@ class MobilityServiceConstraintZoneVersionStructure(ZoneVersionStructure):
     class Meta:
         name = "MobilityServiceConstraintZone_VersionStructure"
 
-    rule_applicability: ZoneRuleApplicabilityEnumeration | None = field(
+    rule_applicability: None | ZoneRuleApplicabilityEnumeration = field(
         default=None,
         metadata={
             "name": "RuleApplicability",
@@ -34,7 +34,7 @@ class MobilityServiceConstraintZoneVersionStructure(ZoneVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    zone_use: TransportZoneUseEnumeration | None = field(
+    zone_use: None | TransportZoneUseEnumeration = field(
         default=None,
         metadata={
             "name": "ZoneUse",
@@ -42,7 +42,7 @@ class MobilityServiceConstraintZoneVersionStructure(ZoneVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    maximum_speed: Decimal | None = field(
+    maximum_speed: None | Decimal = field(
         default=None,
         metadata={
             "name": "MaximumSpeed",
@@ -51,13 +51,13 @@ class MobilityServiceConstraintZoneVersionStructure(ZoneVersionStructure):
         },
     )
     mobility_service_ref_or_common_vehicle_service_ref_or_vehicle_pooling_service_ref: (
-        OnlineServiceRef
+        None
+        | OnlineServiceRef
         | VehicleRentalServiceRef
         | VehicleSharingServiceRef
         | ChauffeuredVehicleServiceRef
         | TaxiServiceRef
         | CarPoolingServiceRef
-        | None
     ) = field(
         default=None,
         metadata={
@@ -96,7 +96,7 @@ class MobilityServiceConstraintZoneVersionStructure(ZoneVersionStructure):
             ),
         },
     )
-    vehicle_restrictions: VehicleTypeZoneRestrictionsRelStructure | None = (
+    vehicle_restrictions: None | VehicleTypeZoneRestrictionsRelStructure = (
         field(
             default=None,
             metadata={

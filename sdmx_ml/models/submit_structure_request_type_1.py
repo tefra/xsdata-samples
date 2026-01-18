@@ -51,7 +51,7 @@ class SubmitStructureRequestType1:
     class Meta:
         name = "SubmitStructureRequestType"
 
-    structure_location_or_structures: str | Structures | None = field(
+    structure_location_or_structures: None | str | Structures = field(
         default=None,
         metadata={
             "type": "Elements",

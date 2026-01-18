@@ -20,7 +20,7 @@ class Protocol:
         name = "protocol"
         namespace = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
-    protocol_type: Protocol.ProtocolType | None = field(
+    protocol_type: None | Protocol.ProtocolType = field(
         default=None,
         metadata={
             "name": "protocolType",
@@ -28,7 +28,7 @@ class Protocol:
             "required": True,
         },
     )
-    payload: Payload | None = field(
+    payload: None | Payload = field(
         default=None,
         metadata={
             "type": "Element",
@@ -37,13 +37,13 @@ class Protocol:
 
     @dataclass
     class ProtocolType:
-        value: ProtocolTypeType | None = field(
+        value: None | ProtocolTypeType = field(
             default=None,
             metadata={
                 "required": True,
             },
         )
-        custom: str | None = field(
+        custom: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",

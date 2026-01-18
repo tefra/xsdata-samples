@@ -21,7 +21,7 @@ class Titles:
         name = "titles"
         namespace = "http://www.crossref.org/schema/5.3.1"
 
-    title: Title | None = field(
+    title: None | Title = field(
         default=None,
         metadata={
             "type": "Element",
@@ -35,7 +35,7 @@ class Titles:
             "max_occurs": 2,
         },
     )
-    original_language_title: OriginalLanguageTitle | None = field(
+    original_language_title: None | OriginalLanguageTitle = field(
         default=None,
         metadata={
             "type": "Element",

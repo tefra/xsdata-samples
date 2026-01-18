@@ -40,7 +40,7 @@ class SwcBswRunnableMapping:
     class Meta:
         name = "SWC-BSW-RUNNABLE-MAPPING"
 
-    bsw_entity_ref: SwcBswRunnableMapping.BswEntityRef | None = field(
+    bsw_entity_ref: None | SwcBswRunnableMapping.BswEntityRef = field(
         default=None,
         metadata={
             "name": "BSW-ENTITY-REF",
@@ -48,7 +48,7 @@ class SwcBswRunnableMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    swc_runnable_ref: SwcBswRunnableMapping.SwcRunnableRef | None = field(
+    swc_runnable_ref: None | SwcBswRunnableMapping.SwcRunnableRef = field(
         default=None,
         metadata={
             "name": "SWC-RUNNABLE-REF",
@@ -56,7 +56,7 @@ class SwcBswRunnableMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -64,14 +64,14 @@ class SwcBswRunnableMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -82,7 +82,7 @@ class SwcBswRunnableMapping:
 
     @dataclass
     class BswEntityRef(Ref):
-        dest: BswModuleEntitySubtypesEnum | None = field(
+        dest: None | BswModuleEntitySubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -93,7 +93,7 @@ class SwcBswRunnableMapping:
 
     @dataclass
     class SwcRunnableRef(Ref):
-        dest: RunnableEntitySubtypesEnum | None = field(
+        dest: None | RunnableEntitySubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

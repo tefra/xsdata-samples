@@ -85,7 +85,7 @@ class DdsFieldDeployment:
     class Meta:
         name = "DDS-FIELD-DEPLOYMENT"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -94,7 +94,7 @@ class DdsFieldDeployment:
             "required": True,
         },
     )
-    short_name_fragments: DdsFieldDeployment.ShortNameFragments | None = field(
+    short_name_fragments: None | DdsFieldDeployment.ShortNameFragments = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -102,7 +102,7 @@ class DdsFieldDeployment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -110,7 +110,7 @@ class DdsFieldDeployment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -118,7 +118,7 @@ class DdsFieldDeployment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -126,7 +126,7 @@ class DdsFieldDeployment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -134,7 +134,7 @@ class DdsFieldDeployment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -142,7 +142,7 @@ class DdsFieldDeployment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: DdsFieldDeployment.Annotations | None = field(
+    annotations: None | DdsFieldDeployment.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -150,7 +150,7 @@ class DdsFieldDeployment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    field_ref: DdsFieldDeployment.FieldRef | None = field(
+    field_ref: None | DdsFieldDeployment.FieldRef = field(
         default=None,
         metadata={
             "name": "FIELD-REF",
@@ -158,7 +158,7 @@ class DdsFieldDeployment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    notifier: DdsEventDeployment | None = field(
+    notifier: None | DdsEventDeployment = field(
         default=None,
         metadata={
             "name": "NOTIFIER",
@@ -166,14 +166,14 @@ class DdsFieldDeployment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -181,7 +181,7 @@ class DdsFieldDeployment:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -213,7 +213,7 @@ class DdsFieldDeployment:
 
     @dataclass
     class FieldRef(Ref):
-        dest: FieldSubtypesEnum | None = field(
+        dest: None | FieldSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

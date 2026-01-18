@@ -45,7 +45,7 @@ class PoorEnvironmentConditions(Conditions):
             "min_occurs": 1,
         },
     )
-    precipitation_detail: PrecipitationDetail | None = field(
+    precipitation_detail: None | PrecipitationDetail = field(
         default=None,
         metadata={
             "name": "precipitationDetail",
@@ -53,42 +53,42 @@ class PoorEnvironmentConditions(Conditions):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    visibility: Visibility | None = field(
+    visibility: None | Visibility = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    pollution: Pollution | None = field(
+    pollution: None | Pollution = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    temperature: Temperature | None = field(
+    temperature: None | Temperature = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    wind: Wind | None = field(
+    wind: None | Wind = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    humidity: Humidity | None = field(
+    humidity: None | Humidity = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    poor_environment_conditions_extension: ExtensionType | None = field(
+    poor_environment_conditions_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "poorEnvironmentConditionsExtension",

@@ -104,7 +104,7 @@ class PredefinedVariant:
     class Meta:
         name = "PREDEFINED-VARIANT"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -113,7 +113,7 @@ class PredefinedVariant:
             "required": True,
         },
     )
-    short_name_fragments: PredefinedVariant.ShortNameFragments | None = field(
+    short_name_fragments: None | PredefinedVariant.ShortNameFragments = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -121,7 +121,7 @@ class PredefinedVariant:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -129,7 +129,7 @@ class PredefinedVariant:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -137,7 +137,7 @@ class PredefinedVariant:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -145,7 +145,7 @@ class PredefinedVariant:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -153,7 +153,7 @@ class PredefinedVariant:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -161,7 +161,7 @@ class PredefinedVariant:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: PredefinedVariant.Annotations | None = field(
+    annotations: None | PredefinedVariant.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -169,7 +169,7 @@ class PredefinedVariant:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -177,7 +177,7 @@ class PredefinedVariant:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    included_variant_refs: PredefinedVariant.IncludedVariantRefs | None = (
+    included_variant_refs: None | PredefinedVariant.IncludedVariantRefs = (
         field(
             default=None,
             metadata={
@@ -188,7 +188,7 @@ class PredefinedVariant:
         )
     )
     post_build_variant_criterion_value_set_refs: (
-        PredefinedVariant.PostBuildVariantCriterionValueSetRefs | None
+        None | PredefinedVariant.PostBuildVariantCriterionValueSetRefs
     ) = field(
         default=None,
         metadata={
@@ -198,7 +198,7 @@ class PredefinedVariant:
         },
     )
     sw_systemconstant_value_set_refs: (
-        PredefinedVariant.SwSystemconstantValueSetRefs | None
+        None | PredefinedVariant.SwSystemconstantValueSetRefs
     ) = field(
         default=None,
         metadata={
@@ -207,14 +207,14 @@ class PredefinedVariant:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -222,7 +222,7 @@ class PredefinedVariant:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -267,7 +267,7 @@ class PredefinedVariant:
 
         @dataclass
         class IncludedVariantRef(Ref):
-            dest: PredefinedVariantSubtypesEnum | None = field(
+            dest: None | PredefinedVariantSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -291,7 +291,7 @@ class PredefinedVariant:
 
         @dataclass
         class PostBuildVariantCriterionValueSetRef(Ref):
-            dest: PostBuildVariantCriterionValueSetSubtypesEnum | None = field(
+            dest: None | PostBuildVariantCriterionValueSetSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -315,7 +315,7 @@ class PredefinedVariant:
 
         @dataclass
         class SwSystemconstantValueSetRef(Ref):
-            dest: SwSystemconstantValueSetSubtypesEnum | None = field(
+            dest: None | SwSystemconstantValueSetSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",

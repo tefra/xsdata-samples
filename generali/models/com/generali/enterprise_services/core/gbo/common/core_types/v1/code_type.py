@@ -106,62 +106,62 @@ class CodeType:
             "required": True,
         },
     )
-    list_id: str | None = field(
+    list_id: None | str = field(
         default=None,
         metadata={
             "name": "listID",
             "type": "Attribute",
         },
     )
-    list_agency_id: str | None = field(
+    list_agency_id: None | str = field(
         default=None,
         metadata={
             "name": "listAgencyID",
             "type": "Attribute",
         },
     )
-    list_agency_name: str | None = field(
+    list_agency_name: None | str = field(
         default=None,
         metadata={
             "name": "listAgencyName",
             "type": "Attribute",
         },
     )
-    list_name: str | None = field(
+    list_name: None | str = field(
         default=None,
         metadata={
             "name": "listName",
             "type": "Attribute",
         },
     )
-    list_version_id: str | None = field(
+    list_version_id: None | str = field(
         default=None,
         metadata={
             "name": "listVersionID",
             "type": "Attribute",
         },
     )
-    name: str | None = field(
+    name: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    language_id: str | None = field(
+    language_id: None | str = field(
         default=None,
         metadata={
             "name": "languageID",
             "type": "Attribute",
         },
     )
-    list_uri: str | None = field(
+    list_uri: None | str = field(
         default=None,
         metadata={
             "name": "listURI",
             "type": "Attribute",
         },
     )
-    list_scheme_uri: str | None = field(
+    list_scheme_uri: None | str = field(
         default=None,
         metadata={
             "name": "listSchemeURI",

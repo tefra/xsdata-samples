@@ -15,7 +15,7 @@ class ZoneProjectionVersionStructure(ProjectionVersionStructure):
     class Meta:
         name = "ZoneProjection_VersionStructure"
 
-    projected_zone_ref: ZoneRefStructure | None = field(
+    projected_zone_ref: None | ZoneRefStructure = field(
         default=None,
         metadata={
             "name": "ProjectedZoneRef",
@@ -24,7 +24,7 @@ class ZoneProjectionVersionStructure(ProjectionVersionStructure):
             "required": True,
         },
     )
-    project_to_zone_ref: ZoneRefStructure | None = field(
+    project_to_zone_ref: None | ZoneRefStructure = field(
         default=None,
         metadata={
             "name": "ProjectToZoneRef",
@@ -32,7 +32,7 @@ class ZoneProjectionVersionStructure(ProjectionVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    project_to_point_ref: PointRefStructure | None = field(
+    project_to_point_ref: None | PointRefStructure = field(
         default=None,
         metadata={
             "name": "ProjectToPointRef",
@@ -40,7 +40,7 @@ class ZoneProjectionVersionStructure(ProjectionVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    points: PointRefsRelStructure | None = field(
+    points: None | PointRefsRelStructure = field(
         default=None,
         metadata={
             "type": "Element",

@@ -59,7 +59,7 @@ class HwPinGroupConnector:
     class Meta:
         name = "HW-PIN-GROUP-CONNECTOR"
 
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -67,7 +67,7 @@ class HwPinGroupConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -75,7 +75,7 @@ class HwPinGroupConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -83,7 +83,7 @@ class HwPinGroupConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -91,7 +91,7 @@ class HwPinGroupConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    hw_pin_connections: HwPinGroupConnector.HwPinConnections | None = field(
+    hw_pin_connections: None | HwPinGroupConnector.HwPinConnections = field(
         default=None,
         metadata={
             "name": "HW-PIN-CONNECTIONS",
@@ -99,7 +99,7 @@ class HwPinGroupConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    hw_pin_group_refs: HwPinGroupConnector.HwPinGroupRefs | None = field(
+    hw_pin_group_refs: None | HwPinGroupConnector.HwPinGroupRefs = field(
         default=None,
         metadata={
             "name": "HW-PIN-GROUP-REFS",
@@ -107,7 +107,7 @@ class HwPinGroupConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -115,14 +115,14 @@ class HwPinGroupConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -158,7 +158,7 @@ class HwPinGroupConnector:
 
         @dataclass
         class HwPinGroupRef(Ref):
-            dest: HwPinGroupSubtypesEnum | None = field(
+            dest: None | HwPinGroupSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",

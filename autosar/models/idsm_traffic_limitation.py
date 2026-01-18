@@ -93,7 +93,7 @@ class IdsmTrafficLimitation:
     class Meta:
         name = "IDSM-TRAFFIC-LIMITATION"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -102,7 +102,7 @@ class IdsmTrafficLimitation:
             "required": True,
         },
     )
-    short_name_fragments: IdsmTrafficLimitation.ShortNameFragments | None = (
+    short_name_fragments: None | IdsmTrafficLimitation.ShortNameFragments = (
         field(
             default=None,
             metadata={
@@ -112,7 +112,7 @@ class IdsmTrafficLimitation:
             },
         )
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -120,7 +120,7 @@ class IdsmTrafficLimitation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -128,7 +128,7 @@ class IdsmTrafficLimitation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -136,7 +136,7 @@ class IdsmTrafficLimitation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -144,7 +144,7 @@ class IdsmTrafficLimitation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -152,7 +152,7 @@ class IdsmTrafficLimitation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: IdsmTrafficLimitation.Annotations | None = field(
+    annotations: None | IdsmTrafficLimitation.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -160,7 +160,7 @@ class IdsmTrafficLimitation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    max_bytes_in_interval: PositiveInteger | None = field(
+    max_bytes_in_interval: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "MAX-BYTES-IN-INTERVAL",
@@ -168,7 +168,7 @@ class IdsmTrafficLimitation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    time_interval: Float | None = field(
+    time_interval: None | Float = field(
         default=None,
         metadata={
             "name": "TIME-INTERVAL",
@@ -176,14 +176,14 @@ class IdsmTrafficLimitation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -191,7 +191,7 @@ class IdsmTrafficLimitation:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",

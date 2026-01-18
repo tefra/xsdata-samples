@@ -106,7 +106,7 @@ class DocumentElementScope:
     class Meta:
         name = "DOCUMENT-ELEMENT-SCOPE"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -115,7 +115,7 @@ class DocumentElementScope:
             "required": True,
         },
     )
-    short_name_fragments: DocumentElementScope.ShortNameFragments | None = (
+    short_name_fragments: None | DocumentElementScope.ShortNameFragments = (
         field(
             default=None,
             metadata={
@@ -125,7 +125,7 @@ class DocumentElementScope:
             },
         )
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -133,7 +133,7 @@ class DocumentElementScope:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -141,7 +141,7 @@ class DocumentElementScope:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -149,7 +149,7 @@ class DocumentElementScope:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -157,7 +157,7 @@ class DocumentElementScope:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -165,7 +165,7 @@ class DocumentElementScope:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: DocumentElementScope.Annotations | None = field(
+    annotations: None | DocumentElementScope.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -173,7 +173,7 @@ class DocumentElementScope:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    alternative_name: String | None = field(
+    alternative_name: None | String = field(
         default=None,
         metadata={
             "name": "ALTERNATIVE-NAME",
@@ -181,7 +181,7 @@ class DocumentElementScope:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    in_scope: Boolean | None = field(
+    in_scope: None | Boolean = field(
         default=None,
         metadata={
             "name": "IN-SCOPE",
@@ -190,7 +190,7 @@ class DocumentElementScope:
         },
     )
     custom_document_element_ref: (
-        DocumentElementScope.CustomDocumentElementRef | None
+        None | DocumentElementScope.CustomDocumentElementRef
     ) = field(
         default=None,
         metadata={
@@ -199,7 +199,7 @@ class DocumentElementScope:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tailoring_refs: DocumentElementScope.TailoringRefs | None = field(
+    tailoring_refs: None | DocumentElementScope.TailoringRefs = field(
         default=None,
         metadata={
             "name": "TAILORING-REFS",
@@ -207,14 +207,14 @@ class DocumentElementScope:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -222,7 +222,7 @@ class DocumentElementScope:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -254,7 +254,7 @@ class DocumentElementScope:
 
     @dataclass
     class CustomDocumentElementRef(Ref):
-        dest: TraceableSubtypesEnum | None = field(
+        dest: None | TraceableSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -278,7 +278,7 @@ class DocumentElementScope:
 
         @dataclass
         class TailoringRef(Ref):
-            dest: DataFormatElementReferenceSubtypesEnum | None = field(
+            dest: None | DataFormatElementReferenceSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",

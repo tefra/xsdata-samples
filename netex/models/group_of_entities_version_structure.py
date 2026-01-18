@@ -16,7 +16,7 @@ class GroupOfEntitiesVersionStructure(DataManagedObjectStructure):
     class Meta:
         name = "GroupOfEntities_VersionStructure"
 
-    name: MultilingualString | None = field(
+    name: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "Name",
@@ -24,7 +24,7 @@ class GroupOfEntitiesVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    short_name: MultilingualString | None = field(
+    short_name: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "ShortName",
@@ -32,7 +32,7 @@ class GroupOfEntitiesVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    description: MultilingualString | None = field(
+    description: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "Description",
@@ -40,7 +40,7 @@ class GroupOfEntitiesVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    purpose_of_grouping_ref: PurposeOfGroupingRef | None = field(
+    purpose_of_grouping_ref: None | PurposeOfGroupingRef = field(
         default=None,
         metadata={
             "name": "PurposeOfGroupingRef",
@@ -48,7 +48,7 @@ class GroupOfEntitiesVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    private_code: PrivateCode | None = field(
+    private_code: None | PrivateCode = field(
         default=None,
         metadata={
             "name": "PrivateCode",
@@ -56,7 +56,7 @@ class GroupOfEntitiesVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    info_links: InfoLinksRelStructure | None = field(
+    info_links: None | InfoLinksRelStructure = field(
         default=None,
         metadata={
             "name": "infoLinks",

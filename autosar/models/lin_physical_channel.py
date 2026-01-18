@@ -113,7 +113,7 @@ class LinPhysicalChannel:
     class Meta:
         name = "LIN-PHYSICAL-CHANNEL"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -122,7 +122,7 @@ class LinPhysicalChannel:
             "required": True,
         },
     )
-    short_name_fragments: LinPhysicalChannel.ShortNameFragments | None = field(
+    short_name_fragments: None | LinPhysicalChannel.ShortNameFragments = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -130,7 +130,7 @@ class LinPhysicalChannel:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -138,7 +138,7 @@ class LinPhysicalChannel:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -146,7 +146,7 @@ class LinPhysicalChannel:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -154,7 +154,7 @@ class LinPhysicalChannel:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -162,7 +162,7 @@ class LinPhysicalChannel:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -170,7 +170,7 @@ class LinPhysicalChannel:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: LinPhysicalChannel.Annotations | None = field(
+    annotations: None | LinPhysicalChannel.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -178,7 +178,7 @@ class LinPhysicalChannel:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    comm_connectors: LinPhysicalChannel.CommConnectors | None = field(
+    comm_connectors: None | LinPhysicalChannel.CommConnectors = field(
         default=None,
         metadata={
             "name": "COMM-CONNECTORS",
@@ -186,7 +186,7 @@ class LinPhysicalChannel:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    frame_triggerings: LinPhysicalChannel.FrameTriggerings | None = field(
+    frame_triggerings: None | LinPhysicalChannel.FrameTriggerings = field(
         default=None,
         metadata={
             "name": "FRAME-TRIGGERINGS",
@@ -194,7 +194,7 @@ class LinPhysicalChannel:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    i_signal_triggerings: LinPhysicalChannel.ISignalTriggerings | None = field(
+    i_signal_triggerings: None | LinPhysicalChannel.ISignalTriggerings = field(
         default=None,
         metadata={
             "name": "I-SIGNAL-TRIGGERINGS",
@@ -203,7 +203,7 @@ class LinPhysicalChannel:
         },
     )
     managed_physical_channel_refs: (
-        LinPhysicalChannel.ManagedPhysicalChannelRefs | None
+        None | LinPhysicalChannel.ManagedPhysicalChannelRefs
     ) = field(
         default=None,
         metadata={
@@ -212,7 +212,7 @@ class LinPhysicalChannel:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    pdu_triggerings: LinPhysicalChannel.PduTriggerings | None = field(
+    pdu_triggerings: None | LinPhysicalChannel.PduTriggerings = field(
         default=None,
         metadata={
             "name": "PDU-TRIGGERINGS",
@@ -220,7 +220,7 @@ class LinPhysicalChannel:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -228,7 +228,7 @@ class LinPhysicalChannel:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    bus_idle_timeout_period: TimeValue | None = field(
+    bus_idle_timeout_period: None | TimeValue = field(
         default=None,
         metadata={
             "name": "BUS-IDLE-TIMEOUT-PERIOD",
@@ -236,7 +236,7 @@ class LinPhysicalChannel:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    schedule_tables: LinPhysicalChannel.ScheduleTables | None = field(
+    schedule_tables: None | LinPhysicalChannel.ScheduleTables = field(
         default=None,
         metadata={
             "name": "SCHEDULE-TABLES",
@@ -244,14 +244,14 @@ class LinPhysicalChannel:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -259,7 +259,7 @@ class LinPhysicalChannel:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -363,7 +363,7 @@ class LinPhysicalChannel:
 
         @dataclass
         class ManagedPhysicalChannelRef(Ref):
-            dest: PhysicalChannelSubtypesEnum | None = field(
+            dest: None | PhysicalChannelSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",

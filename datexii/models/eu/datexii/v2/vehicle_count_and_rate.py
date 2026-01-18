@@ -48,7 +48,7 @@ class VehicleCountAndRate:
     """
 
     measurement_site_reference: (
-        MeasurementSiteRecordVersionedReference | None
+        None | MeasurementSiteRecordVersionedReference
     ) = field(
         default=None,
         metadata={
@@ -57,7 +57,7 @@ class VehicleCountAndRate:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    measured_value_index: int | None = field(
+    measured_value_index: None | int = field(
         default=None,
         metadata={
             "name": "measuredValueIndex",
@@ -65,7 +65,7 @@ class VehicleCountAndRate:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    dedicated_access: ParkingAccessReference | None = field(
+    dedicated_access: None | ParkingAccessReference = field(
         default=None,
         metadata={
             "name": "dedicatedAccess",
@@ -73,7 +73,7 @@ class VehicleCountAndRate:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    measurement_time_default: XmlDateTime | None = field(
+    measurement_time_default: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "measurementTimeDefault",
@@ -81,7 +81,7 @@ class VehicleCountAndRate:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    last_calibration: XmlDateTime | None = field(
+    last_calibration: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "lastCalibration",
@@ -89,7 +89,7 @@ class VehicleCountAndRate:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    covering_petrol_station_area: bool | None = field(
+    covering_petrol_station_area: None | bool = field(
         default=None,
         metadata={
             "name": "coveringPetrolStationArea",
@@ -113,7 +113,7 @@ class VehicleCountAndRate:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    vehicle_count_and_rate_extension: ExtensionType | None = field(
+    vehicle_count_and_rate_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "vehicleCountAndRateExtension",

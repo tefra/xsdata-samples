@@ -44,14 +44,14 @@ class ValueExpressionType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
         },
     )
-    operator_code: QueryOperatorCodeType | None = field(
+    operator_code: None | QueryOperatorCodeType = field(
         default=None,
         metadata={
             "name": "operatorCode",
             "type": "Attribute",
         },
     )
-    path: str | None = field(
+    path: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",

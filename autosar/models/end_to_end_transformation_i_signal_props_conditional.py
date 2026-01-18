@@ -61,7 +61,7 @@ class EndToEndTransformationISignalPropsConditional:
     class Meta:
         name = "END-TO-END-TRANSFORMATION-I-SIGNAL-PROPS-CONDITIONAL"
 
-    cs_error_reaction: CsTransformerErrorReactionEnum | None = field(
+    cs_error_reaction: None | CsTransformerErrorReactionEnum = field(
         default=None,
         metadata={
             "name": "CS-ERROR-REACTION",
@@ -70,8 +70,8 @@ class EndToEndTransformationISignalPropsConditional:
         },
     )
     data_prototype_transformation_propss: (
-        EndToEndTransformationISignalPropsConditional.DataPrototypeTransformationPropss
-        | None
+        None
+        | EndToEndTransformationISignalPropsConditional.DataPrototypeTransformationPropss
     ) = field(
         default=None,
         metadata={
@@ -81,7 +81,7 @@ class EndToEndTransformationISignalPropsConditional:
         },
     )
     transformer_ref: (
-        EndToEndTransformationISignalPropsConditional.TransformerRef | None
+        None | EndToEndTransformationISignalPropsConditional.TransformerRef
     ) = field(
         default=None,
         metadata={
@@ -90,7 +90,7 @@ class EndToEndTransformationISignalPropsConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    data_ids: EndToEndTransformationISignalPropsConditional.DataIds | None = (
+    data_ids: None | EndToEndTransformationISignalPropsConditional.DataIds = (
         field(
             default=None,
             metadata={
@@ -100,7 +100,7 @@ class EndToEndTransformationISignalPropsConditional:
             },
         )
     )
-    data_length: PositiveInteger | None = field(
+    data_length: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "DATA-LENGTH",
@@ -108,7 +108,7 @@ class EndToEndTransformationISignalPropsConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    max_data_length: PositiveInteger | None = field(
+    max_data_length: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "MAX-DATA-LENGTH",
@@ -116,7 +116,7 @@ class EndToEndTransformationISignalPropsConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    min_data_length: PositiveInteger | None = field(
+    min_data_length: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "MIN-DATA-LENGTH",
@@ -124,7 +124,7 @@ class EndToEndTransformationISignalPropsConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    source_id: PositiveInteger | None = field(
+    source_id: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "SOURCE-ID",
@@ -132,7 +132,7 @@ class EndToEndTransformationISignalPropsConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -140,14 +140,14 @@ class EndToEndTransformationISignalPropsConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -171,7 +171,7 @@ class EndToEndTransformationISignalPropsConditional:
 
     @dataclass
     class TransformerRef(Ref):
-        dest: TransformationTechnologySubtypesEnum | None = field(
+        dest: None | TransformationTechnologySubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

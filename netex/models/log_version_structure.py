@@ -15,7 +15,7 @@ class LogVersionStructure(GroupOfEntitiesVersionStructure):
     class Meta:
         name = "Log_VersionStructure"
 
-    log_entries: LogEntriesRelStructure | None = field(
+    log_entries: None | LogEntriesRelStructure = field(
         default=None,
         metadata={
             "name": "logEntries",
@@ -23,7 +23,7 @@ class LogVersionStructure(GroupOfEntitiesVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    name_of_log_entry_class: str | None = field(
+    name_of_log_entry_class: None | str = field(
         default=None,
         metadata={
             "name": "nameOfLogEntryClass",

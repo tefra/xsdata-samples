@@ -19,19 +19,19 @@ class Status:
     class Meta:
         name = "status"
 
-    no: No | None = field(
+    no: None | No = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    maybe: Maybe | None = field(
+    maybe: None | Maybe = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    yes: Yes | None = field(
+    yes: None | Yes = field(
         default=None,
         metadata={
             "type": "Element",

@@ -33,7 +33,7 @@ class VehicleRate:
     :ivar vehicle_rate_extension:
     """
 
-    measurement_or_calculation_time: XmlDateTime | None = field(
+    measurement_or_calculation_time: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "measurementOrCalculationTime",
@@ -41,7 +41,7 @@ class VehicleRate:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    fill_rate: VehicleFlowValue | None = field(
+    fill_rate: None | VehicleFlowValue = field(
         default=None,
         metadata={
             "name": "fillRate",
@@ -49,7 +49,7 @@ class VehicleRate:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    exit_rate: VehicleFlowValue | None = field(
+    exit_rate: None | VehicleFlowValue = field(
         default=None,
         metadata={
             "name": "exitRate",
@@ -57,7 +57,7 @@ class VehicleRate:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    vehicle_flow_rate: VehicleFlowValue | None = field(
+    vehicle_flow_rate: None | VehicleFlowValue = field(
         default=None,
         metadata={
             "name": "vehicleFlowRate",
@@ -65,7 +65,7 @@ class VehicleRate:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    measured_vehicles: VehicleCharacteristics | None = field(
+    measured_vehicles: None | VehicleCharacteristics = field(
         default=None,
         metadata={
             "name": "measuredVehicles",
@@ -73,7 +73,7 @@ class VehicleRate:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    vehicle_rate_extension: ExtensionType | None = field(
+    vehicle_rate_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "vehicleRateExtension",

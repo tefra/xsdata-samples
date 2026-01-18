@@ -35,8 +35,8 @@ class DiagnosticOperationCycleRefConditional:
         name = "DIAGNOSTIC-OPERATION-CYCLE-REF-CONDITIONAL"
 
     diagnostic_operation_cycle_ref: (
-        DiagnosticOperationCycleRefConditional.DiagnosticOperationCycleRef
-        | None
+        None
+        | DiagnosticOperationCycleRefConditional.DiagnosticOperationCycleRef
     ) = field(
         default=None,
         metadata={
@@ -45,7 +45,7 @@ class DiagnosticOperationCycleRefConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -53,14 +53,14 @@ class DiagnosticOperationCycleRefConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -71,7 +71,7 @@ class DiagnosticOperationCycleRefConditional:
 
     @dataclass
     class DiagnosticOperationCycleRef(Ref):
-        dest: DiagnosticOperationCycleSubtypesEnum | None = field(
+        dest: None | DiagnosticOperationCycleSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

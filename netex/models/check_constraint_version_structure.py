@@ -93,7 +93,7 @@ class CheckConstraintVersionStructure(AssignmentVersionStructure1):
     class Meta:
         name = "CheckConstraint_VersionStructure"
 
-    place_ref: PlaceRef | None = field(
+    place_ref: None | PlaceRef = field(
         default=None,
         metadata={
             "name": "PlaceRef",
@@ -101,7 +101,7 @@ class CheckConstraintVersionStructure(AssignmentVersionStructure1):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    check_direction: CheckDirectionEnumeration | None = field(
+    check_direction: None | CheckDirectionEnumeration = field(
         default=None,
         metadata={
             "name": "CheckDirection",
@@ -109,7 +109,7 @@ class CheckConstraintVersionStructure(AssignmentVersionStructure1):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    check_process: CheckProcessTypeEnumeration | None = field(
+    check_process: None | CheckProcessTypeEnumeration = field(
         default=None,
         metadata={
             "name": "CheckProcess",
@@ -117,7 +117,7 @@ class CheckConstraintVersionStructure(AssignmentVersionStructure1):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    check_service: CheckServiceEnumeration | None = field(
+    check_service: None | CheckServiceEnumeration = field(
         default=None,
         metadata={
             "name": "CheckService",
@@ -125,7 +125,7 @@ class CheckConstraintVersionStructure(AssignmentVersionStructure1):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    access_feature_type: AccessFeatureEnumeration | None = field(
+    access_feature_type: None | AccessFeatureEnumeration = field(
         default=None,
         metadata={
             "name": "AccessFeatureType",
@@ -133,7 +133,7 @@ class CheckConstraintVersionStructure(AssignmentVersionStructure1):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    congestion: CongestionEnumeration | None = field(
+    congestion: None | CongestionEnumeration = field(
         default=None,
         metadata={
             "name": "Congestion",
@@ -141,7 +141,7 @@ class CheckConstraintVersionStructure(AssignmentVersionStructure1):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    type_of_congestion_ref: TypeOfCongestionRef | None = field(
+    type_of_congestion_ref: None | TypeOfCongestionRef = field(
         default=None,
         metadata={
             "name": "TypeOfCongestionRef",
@@ -149,7 +149,7 @@ class CheckConstraintVersionStructure(AssignmentVersionStructure1):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    class_of_use_ref: ClassOfUseRef | None = field(
+    class_of_use_ref: None | ClassOfUseRef = field(
         default=None,
         metadata={
             "name": "ClassOfUseRef",
@@ -157,7 +157,7 @@ class CheckConstraintVersionStructure(AssignmentVersionStructure1):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    type_of_equipment_ref: TypeOfEquipmentRef | None = field(
+    type_of_equipment_ref: None | TypeOfEquipmentRef = field(
         default=None,
         metadata={
             "name": "TypeOfEquipmentRef",
@@ -165,7 +165,7 @@ class CheckConstraintVersionStructure(AssignmentVersionStructure1):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    facility_ref: FacilityRef | None = field(
+    facility_ref: None | FacilityRef = field(
         default=None,
         metadata={
             "name": "FacilityRef",
@@ -174,7 +174,8 @@ class CheckConstraintVersionStructure(AssignmentVersionStructure1):
         },
     )
     choice: (
-        RetailDeviceRef
+        None
+        | RetailDeviceRef
         | OnlineServiceRef
         | VehicleRentalServiceRef
         | VehicleSharingServiceRef
@@ -237,7 +238,6 @@ class CheckConstraintVersionStructure(AssignmentVersionStructure1):
         | VehicleEquipmentRef
         | PassengerEquipmentRef
         | EquipmentRef
-        | None
     ) = field(
         default=None,
         metadata={
@@ -561,14 +561,14 @@ class CheckConstraintVersionStructure(AssignmentVersionStructure1):
             ),
         },
     )
-    delays: CheckConstraintDelaysRelStructure | None = field(
+    delays: None | CheckConstraintDelaysRelStructure = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    throughput: CheckConstraintThroughputsRelStructure | None = field(
+    throughput: None | CheckConstraintThroughputsRelStructure = field(
         default=None,
         metadata={
             "type": "Element",

@@ -35,7 +35,8 @@ class PointOnRouteVersionedChildStructure(
         name = "PointOnRoute_VersionedChildStructure"
 
     choice_1: (
-        VehicleMeetingPointRef
+        None
+        | VehicleMeetingPointRef
         | WirePointRef
         | RoadPointRef
         | RailwayPointRef
@@ -51,7 +52,6 @@ class PointOnRouteVersionedChildStructure(
         | TimingPointRef
         | RoutePointRef
         | PointRef
-        | None
     ) = field(
         default=None,
         metadata={
@@ -140,7 +140,7 @@ class PointOnRouteVersionedChildStructure(
             ),
         },
     )
-    onward_route_link_ref: RouteLinkRefStructure | None = field(
+    onward_route_link_ref: None | RouteLinkRefStructure = field(
         default=None,
         metadata={
             "name": "OnwardRouteLinkRef",
@@ -148,7 +148,7 @@ class PointOnRouteVersionedChildStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    route_instructions: RouteInstructionsRelStructure | None = field(
+    route_instructions: None | RouteInstructionsRelStructure = field(
         default=None,
         metadata={
             "name": "routeInstructions",

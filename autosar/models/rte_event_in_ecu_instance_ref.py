@@ -36,7 +36,7 @@ class RteEventInEcuInstanceRef:
         name = "RTE-EVENT-IN-ECU-INSTANCE-REF"
 
     context_root_composition_ref: (
-        RteEventInEcuInstanceRef.ContextRootCompositionRef | None
+        None | RteEventInEcuInstanceRef.ContextRootCompositionRef
     ) = field(
         default=None,
         metadata={
@@ -46,7 +46,7 @@ class RteEventInEcuInstanceRef:
         },
     )
     context_atomic_component_ref: (
-        RteEventInEcuInstanceRef.ContextAtomicComponentRef | None
+        None | RteEventInEcuInstanceRef.ContextAtomicComponentRef
     ) = field(
         default=None,
         metadata={
@@ -55,7 +55,7 @@ class RteEventInEcuInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    target_rte_event_ref: RteEventInEcuInstanceRef.TargetRteEventRef | None = (
+    target_rte_event_ref: None | RteEventInEcuInstanceRef.TargetRteEventRef = (
         field(
             default=None,
             metadata={
@@ -65,14 +65,14 @@ class RteEventInEcuInstanceRef:
             },
         )
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -83,7 +83,7 @@ class RteEventInEcuInstanceRef:
 
     @dataclass
     class ContextRootCompositionRef(Ref):
-        dest: RootSwCompositionPrototypeSubtypesEnum | None = field(
+        dest: None | RootSwCompositionPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -94,7 +94,7 @@ class RteEventInEcuInstanceRef:
 
     @dataclass
     class ContextAtomicComponentRef(Ref):
-        dest: SwComponentPrototypeSubtypesEnum | None = field(
+        dest: None | SwComponentPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -105,7 +105,7 @@ class RteEventInEcuInstanceRef:
 
     @dataclass
     class TargetRteEventRef(Ref):
-        dest: RteEventSubtypesEnum | None = field(
+        dest: None | RteEventSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

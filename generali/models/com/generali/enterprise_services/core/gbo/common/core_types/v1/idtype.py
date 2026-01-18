@@ -93,49 +93,49 @@ class Idtype:
             "required": True,
         },
     )
-    scheme_id: str | None = field(
+    scheme_id: None | str = field(
         default=None,
         metadata={
             "name": "schemeID",
             "type": "Attribute",
         },
     )
-    scheme_name: str | None = field(
+    scheme_name: None | str = field(
         default=None,
         metadata={
             "name": "schemeName",
             "type": "Attribute",
         },
     )
-    scheme_agency_id: str | None = field(
+    scheme_agency_id: None | str = field(
         default=None,
         metadata={
             "name": "schemeAgencyID",
             "type": "Attribute",
         },
     )
-    scheme_agency_name: str | None = field(
+    scheme_agency_name: None | str = field(
         default=None,
         metadata={
             "name": "schemeAgencyName",
             "type": "Attribute",
         },
     )
-    scheme_version_id: str | None = field(
+    scheme_version_id: None | str = field(
         default=None,
         metadata={
             "name": "schemeVersionID",
             "type": "Attribute",
         },
     )
-    scheme_data_uri: str | None = field(
+    scheme_data_uri: None | str = field(
         default=None,
         metadata={
             "name": "schemeDataURI",
             "type": "Attribute",
         },
     )
-    scheme_uri: str | None = field(
+    scheme_uri: None | str = field(
         default=None,
         metadata={
             "name": "schemeURI",

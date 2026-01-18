@@ -25,7 +25,7 @@ class TreeBelowType:
     :ivar tree_below_sites_excluding_branch:
     """
 
-    assigned_turnover_tree_below: AmountType | None = field(
+    assigned_turnover_tree_below: None | AmountType = field(
         default=None,
         metadata={
             "name": "AssignedTurnoverTreeBelow",
@@ -34,7 +34,7 @@ class TreeBelowType:
             "nillable": True,
         },
     )
-    assigned_number_of_employees_tree_below: Decimal | None = field(
+    assigned_number_of_employees_tree_below: None | Decimal = field(
         default=None,
         metadata={
             "name": "AssignedNumberOfEmployeesTreeBelow",
@@ -42,7 +42,7 @@ class TreeBelowType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v2",
         },
     )
-    tree_below_sites: Decimal | None = field(
+    tree_below_sites: None | Decimal = field(
         default=None,
         metadata={
             "name": "TreeBelowSites",
@@ -50,7 +50,7 @@ class TreeBelowType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v2",
         },
     )
-    tree_below_sites_excluding_branch: Decimal | None = field(
+    tree_below_sites_excluding_branch: None | Decimal = field(
         default=None,
         metadata={
             "name": "TreeBelowSitesExcludingBranch",

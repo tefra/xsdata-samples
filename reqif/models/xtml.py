@@ -191,20 +191,20 @@ class XhtmlBrType:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    class_value: str | None = field(
+    class_value: None | str = field(
         default=None,
         metadata={
             "name": "class",
             "type": "Attribute",
         },
     )
-    title: str | None = field(
+    title: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -225,33 +225,33 @@ class XhtmlColType:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    class_value: str | None = field(
+    class_value: None | str = field(
         default=None,
         metadata={
             "name": "class",
             "type": "Attribute",
         },
     )
-    title: str | None = field(
+    title: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    style: str | None = field(
+    style: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -263,34 +263,34 @@ class XhtmlColType:
             "type": "Attribute",
         },
     )
-    width: str | None = field(
+    width: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\d*\*",
         },
     )
-    align: XhtmlColTypeAlign | None = field(
+    align: None | XhtmlColTypeAlign = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    char: str | None = field(
+    char: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "length": 1,
         },
     )
-    charoff: str | None = field(
+    charoff: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\d+[%]|\d*\.\d+[%]",
         },
     )
-    valign: XhtmlColTypeValign | None = field(
+    valign: None | XhtmlColTypeValign = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -311,33 +311,33 @@ class XhtmlHrType:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    class_value: str | None = field(
+    class_value: None | str = field(
         default=None,
         metadata={
             "name": "class",
             "type": "Attribute",
         },
     )
-    title: str | None = field(
+    title: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    style: str | None = field(
+    style: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -350,20 +350,20 @@ class XhtmlParamType:
     class Meta:
         name = "xhtml.param.type"
 
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    name: str | None = field(
+    name: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "required": True,
         },
     )
-    value: str | None = field(
+    value: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -375,7 +375,7 @@ class XhtmlParamType:
             "type": "Attribute",
         },
     )
-    type_value: str | None = field(
+    type_value: None | str = field(
         default=None,
         metadata={
             "name": "type",
@@ -397,33 +397,33 @@ class XhtmlInlPresType:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    class_value: str | None = field(
+    class_value: None | str = field(
         default=None,
         metadata={
             "name": "class",
             "type": "Attribute",
         },
     )
-    title: str | None = field(
+    title: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    style: str | None = field(
+    style: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -574,33 +574,33 @@ class XhtmlAddressType:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    class_value: str | None = field(
+    class_value: None | str = field(
         default=None,
         metadata={
             "name": "class",
             "type": "Attribute",
         },
     )
-    title: str | None = field(
+    title: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    style: str | None = field(
+    style: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -758,33 +758,33 @@ class XhtmlColgroupType:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    class_value: str | None = field(
+    class_value: None | str = field(
         default=None,
         metadata={
             "name": "class",
             "type": "Attribute",
         },
     )
-    title: str | None = field(
+    title: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    style: str | None = field(
+    style: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -796,34 +796,34 @@ class XhtmlColgroupType:
             "type": "Attribute",
         },
     )
-    width: str | None = field(
+    width: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\d*\*",
         },
     )
-    align: XhtmlColgroupTypeAlign | None = field(
+    align: None | XhtmlColgroupTypeAlign = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    char: str | None = field(
+    char: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "length": 1,
         },
     )
-    charoff: str | None = field(
+    charoff: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\d+[%]|\d*\.\d+[%]",
         },
     )
-    valign: XhtmlColgroupTypeValign | None = field(
+    valign: None | XhtmlColgroupTypeValign = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -886,45 +886,45 @@ class XhtmlEditType:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    class_value: str | None = field(
+    class_value: None | str = field(
         default=None,
         metadata={
             "name": "class",
             "type": "Attribute",
         },
     )
-    title: str | None = field(
+    title: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    style: str | None = field(
+    style: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    cite: str | None = field(
+    cite: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    datetime: XmlDateTime | None = field(
+    datetime: None | XmlDateTime = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -1195,33 +1195,33 @@ class XhtmlAbbrType:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    class_value: str | None = field(
+    class_value: None | str = field(
         default=None,
         metadata={
             "name": "class",
             "type": "Attribute",
         },
     )
-    title: str | None = field(
+    title: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    style: str | None = field(
+    style: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -1535,39 +1535,39 @@ class XhtmlBlockquoteType:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    class_value: str | None = field(
+    class_value: None | str = field(
         default=None,
         metadata={
             "name": "class",
             "type": "Attribute",
         },
     )
-    title: str | None = field(
+    title: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    style: str | None = field(
+    style: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    cite: str | None = field(
+    cite: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -1588,33 +1588,33 @@ class XhtmlH1Type:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    class_value: str | None = field(
+    class_value: None | str = field(
         default=None,
         metadata={
             "name": "class",
             "type": "Attribute",
         },
     )
-    title: str | None = field(
+    title: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    style: str | None = field(
+    style: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -1801,33 +1801,33 @@ class XhtmlH2Type:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    class_value: str | None = field(
+    class_value: None | str = field(
         default=None,
         metadata={
             "name": "class",
             "type": "Attribute",
         },
     )
-    title: str | None = field(
+    title: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    style: str | None = field(
+    style: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -2014,33 +2014,33 @@ class XhtmlH3Type:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    class_value: str | None = field(
+    class_value: None | str = field(
         default=None,
         metadata={
             "name": "class",
             "type": "Attribute",
         },
     )
-    title: str | None = field(
+    title: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    style: str | None = field(
+    style: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -2227,33 +2227,33 @@ class XhtmlH4Type:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    class_value: str | None = field(
+    class_value: None | str = field(
         default=None,
         metadata={
             "name": "class",
             "type": "Attribute",
         },
     )
-    title: str | None = field(
+    title: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    style: str | None = field(
+    style: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -2440,33 +2440,33 @@ class XhtmlH5Type:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    class_value: str | None = field(
+    class_value: None | str = field(
         default=None,
         metadata={
             "name": "class",
             "type": "Attribute",
         },
     )
-    title: str | None = field(
+    title: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    style: str | None = field(
+    style: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -2653,33 +2653,33 @@ class XhtmlH6Type:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    class_value: str | None = field(
+    class_value: None | str = field(
         default=None,
         metadata={
             "name": "class",
             "type": "Attribute",
         },
     )
-    title: str | None = field(
+    title: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    style: str | None = field(
+    style: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -2866,33 +2866,33 @@ class XhtmlPType:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    class_value: str | None = field(
+    class_value: None | str = field(
         default=None,
         metadata={
             "name": "class",
             "type": "Attribute",
         },
     )
-    title: str | None = field(
+    title: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    style: str | None = field(
+    style: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -3079,33 +3079,33 @@ class XhtmlPreType:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    class_value: str | None = field(
+    class_value: None | str = field(
         default=None,
         metadata={
             "name": "class",
             "type": "Attribute",
         },
     )
-    title: str | None = field(
+    title: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    style: str | None = field(
+    style: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -3251,33 +3251,33 @@ class XhtmlAcronymType:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    class_value: str | None = field(
+    class_value: None | str = field(
         default=None,
         metadata={
             "name": "class",
             "type": "Attribute",
         },
     )
-    title: str | None = field(
+    title: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    style: str | None = field(
+    style: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -3464,33 +3464,33 @@ class XhtmlDivType:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    class_value: str | None = field(
+    class_value: None | str = field(
         default=None,
         metadata={
             "name": "class",
             "type": "Attribute",
         },
     )
-    title: str | None = field(
+    title: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    style: str | None = field(
+    style: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -3757,33 +3757,33 @@ class XhtmlCiteType:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    class_value: str | None = field(
+    class_value: None | str = field(
         default=None,
         metadata={
             "name": "class",
             "type": "Attribute",
         },
     )
-    title: str | None = field(
+    title: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    style: str | None = field(
+    style: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -3970,33 +3970,33 @@ class XhtmlCodeType:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    class_value: str | None = field(
+    class_value: None | str = field(
         default=None,
         metadata={
             "name": "class",
             "type": "Attribute",
         },
     )
-    title: str | None = field(
+    title: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    style: str | None = field(
+    style: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -4183,33 +4183,33 @@ class XhtmlDfnType:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    class_value: str | None = field(
+    class_value: None | str = field(
         default=None,
         metadata={
             "name": "class",
             "type": "Attribute",
         },
     )
-    title: str | None = field(
+    title: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    style: str | None = field(
+    style: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -4396,33 +4396,33 @@ class XhtmlEmType:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    class_value: str | None = field(
+    class_value: None | str = field(
         default=None,
         metadata={
             "name": "class",
             "type": "Attribute",
         },
     )
-    title: str | None = field(
+    title: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    style: str | None = field(
+    style: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -4609,33 +4609,33 @@ class XhtmlKbdType:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    class_value: str | None = field(
+    class_value: None | str = field(
         default=None,
         metadata={
             "name": "class",
             "type": "Attribute",
         },
     )
-    title: str | None = field(
+    title: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    style: str | None = field(
+    style: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -4822,33 +4822,33 @@ class XhtmlSampType:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    class_value: str | None = field(
+    class_value: None | str = field(
         default=None,
         metadata={
             "name": "class",
             "type": "Attribute",
         },
     )
-    title: str | None = field(
+    title: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    style: str | None = field(
+    style: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -5035,33 +5035,33 @@ class XhtmlStrongType:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    class_value: str | None = field(
+    class_value: None | str = field(
         default=None,
         metadata={
             "name": "class",
             "type": "Attribute",
         },
     )
-    title: str | None = field(
+    title: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    style: str | None = field(
+    style: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -5248,33 +5248,33 @@ class XhtmlVarType:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    class_value: str | None = field(
+    class_value: None | str = field(
         default=None,
         metadata={
             "name": "class",
             "type": "Attribute",
         },
     )
-    title: str | None = field(
+    title: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    style: str | None = field(
+    style: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -5461,39 +5461,39 @@ class XhtmlQType:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    class_value: str | None = field(
+    class_value: None | str = field(
         default=None,
         metadata={
             "name": "class",
             "type": "Attribute",
         },
     )
-    title: str | None = field(
+    title: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    style: str | None = field(
+    style: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    cite: str | None = field(
+    cite: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -5680,33 +5680,33 @@ class XhtmlSpanType:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    class_value: str | None = field(
+    class_value: None | str = field(
         default=None,
         metadata={
             "name": "class",
             "type": "Attribute",
         },
     )
-    title: str | None = field(
+    title: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    style: str | None = field(
+    style: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -5893,58 +5893,58 @@ class XhtmlAType:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    class_value: str | None = field(
+    class_value: None | str = field(
         default=None,
         metadata={
             "name": "class",
             "type": "Attribute",
         },
     )
-    title: str | None = field(
+    title: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    style: str | None = field(
+    style: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    href: str | None = field(
+    href: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    charset: str | None = field(
+    charset: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    type_value: str | None = field(
+    type_value: None | str = field(
         default=None,
         metadata={
             "name": "type",
             "type": "Attribute",
         },
     )
-    hreflang: str | None = field(
+    hreflang: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -5964,14 +5964,14 @@ class XhtmlAType:
             "tokens": True,
         },
     )
-    accesskey: str | None = field(
+    accesskey: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "length": 1,
         },
     )
-    tabindex: int | None = field(
+    tabindex: None | int = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -6153,33 +6153,33 @@ class XhtmlDdType:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    class_value: str | None = field(
+    class_value: None | str = field(
         default=None,
         metadata={
             "name": "class",
             "type": "Attribute",
         },
     )
-    title: str | None = field(
+    title: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    style: str | None = field(
+    style: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -6446,33 +6446,33 @@ class XhtmlDtType:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    class_value: str | None = field(
+    class_value: None | str = field(
         default=None,
         metadata={
             "name": "class",
             "type": "Attribute",
         },
     )
-    title: str | None = field(
+    title: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    style: str | None = field(
+    style: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -6673,33 +6673,33 @@ class XhtmlDlType:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    class_value: str | None = field(
+    class_value: None | str = field(
         default=None,
         metadata={
             "name": "class",
             "type": "Attribute",
         },
     )
-    title: str | None = field(
+    title: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    style: str | None = field(
+    style: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -6720,33 +6720,33 @@ class XhtmlLiType:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    class_value: str | None = field(
+    class_value: None | str = field(
         default=None,
         metadata={
             "name": "class",
             "type": "Attribute",
         },
     )
-    title: str | None = field(
+    title: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    style: str | None = field(
+    style: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -7021,33 +7021,33 @@ class XhtmlOlType:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    class_value: str | None = field(
+    class_value: None | str = field(
         default=None,
         metadata={
             "name": "class",
             "type": "Attribute",
         },
     )
-    title: str | None = field(
+    title: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    style: str | None = field(
+    style: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -7076,33 +7076,33 @@ class XhtmlUlType:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    class_value: str | None = field(
+    class_value: None | str = field(
         default=None,
         metadata={
             "name": "class",
             "type": "Attribute",
         },
     )
-    title: str | None = field(
+    title: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    style: str | None = field(
+    style: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -7123,70 +7123,70 @@ class XhtmlObjectType:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    class_value: str | None = field(
+    class_value: None | str = field(
         default=None,
         metadata={
             "name": "class",
             "type": "Attribute",
         },
     )
-    title: str | None = field(
+    title: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    style: str | None = field(
+    style: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    declare: XhtmlObjectTypeDeclare | None = field(
+    declare: None | XhtmlObjectTypeDeclare = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    classid: str | None = field(
+    classid: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    codebase: str | None = field(
+    codebase: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    data: str | None = field(
+    data: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    type_value: str | None = field(
+    type_value: None | str = field(
         default=None,
         metadata={
             "name": "type",
             "type": "Attribute",
         },
     )
-    codetype: str | None = field(
+    codetype: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -7199,33 +7199,33 @@ class XhtmlObjectType:
             "tokens": True,
         },
     )
-    standby: str | None = field(
+    standby: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    height: str | None = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-            "pattern": r"\d+[%]|\d*\.\d+[%]",
-        },
-    )
-    width: str | None = field(
+    height: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\d+[%]|\d*\.\d+[%]",
         },
     )
-    name: str | None = field(
+    width: None | str = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+            "pattern": r"\d+[%]|\d*\.\d+[%]",
+        },
+    )
+    name: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    tabindex: int | None = field(
+    tabindex: None | int = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -7497,33 +7497,33 @@ class XhtmlCaptionType:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    class_value: str | None = field(
+    class_value: None | str = field(
         default=None,
         metadata={
             "name": "class",
             "type": "Attribute",
         },
     )
-    title: str | None = field(
+    title: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    style: str | None = field(
+    style: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -7710,33 +7710,33 @@ class XhtmlHeadingType:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    class_value: str | None = field(
+    class_value: None | str = field(
         default=None,
         metadata={
             "name": "class",
             "type": "Attribute",
         },
     )
-    title: str | None = field(
+    title: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    style: str | None = field(
+    style: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -7923,45 +7923,45 @@ class XhtmlTdType:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    class_value: str | None = field(
+    class_value: None | str = field(
         default=None,
         metadata={
             "name": "class",
             "type": "Attribute",
         },
     )
-    title: str | None = field(
+    title: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    style: str | None = field(
+    style: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    abbr: str | None = field(
+    abbr: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    axis: str | None = field(
+    axis: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -7974,7 +7974,7 @@ class XhtmlTdType:
             "tokens": True,
         },
     )
-    scope: XhtmlTdTypeScope | None = field(
+    scope: None | XhtmlTdTypeScope = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -7992,27 +7992,27 @@ class XhtmlTdType:
             "type": "Attribute",
         },
     )
-    align: XhtmlTdTypeAlign | None = field(
+    align: None | XhtmlTdTypeAlign = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    char: str | None = field(
+    char: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "length": 1,
         },
     )
-    charoff: str | None = field(
+    charoff: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\d+[%]|\d*\.\d+[%]",
         },
     )
-    valign: XhtmlTdTypeValign | None = field(
+    valign: None | XhtmlTdTypeValign = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -8279,45 +8279,45 @@ class XhtmlThType:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    class_value: str | None = field(
+    class_value: None | str = field(
         default=None,
         metadata={
             "name": "class",
             "type": "Attribute",
         },
     )
-    title: str | None = field(
+    title: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    style: str | None = field(
+    style: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    abbr: str | None = field(
+    abbr: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    axis: str | None = field(
+    axis: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -8330,7 +8330,7 @@ class XhtmlThType:
             "tokens": True,
         },
     )
-    scope: XhtmlThTypeScope | None = field(
+    scope: None | XhtmlThTypeScope = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -8348,27 +8348,27 @@ class XhtmlThType:
             "type": "Attribute",
         },
     )
-    align: XhtmlThTypeAlign | None = field(
+    align: None | XhtmlThTypeAlign = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    char: str | None = field(
+    char: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "length": 1,
         },
     )
-    charoff: str | None = field(
+    charoff: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\d+[%]|\d*\.\d+[%]",
         },
     )
-    valign: XhtmlThTypeValign | None = field(
+    valign: None | XhtmlThTypeValign = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -8649,59 +8649,59 @@ class XhtmlTrType:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    class_value: str | None = field(
+    class_value: None | str = field(
         default=None,
         metadata={
             "name": "class",
             "type": "Attribute",
         },
     )
-    title: str | None = field(
+    title: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    style: str | None = field(
+    style: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    align: XhtmlTrTypeAlign | None = field(
+    align: None | XhtmlTrTypeAlign = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    char: str | None = field(
+    char: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "length": 1,
         },
     )
-    charoff: str | None = field(
+    charoff: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\d+[%]|\d*\.\d+[%]",
         },
     )
-    valign: XhtmlTrTypeValign | None = field(
+    valign: None | XhtmlTrTypeValign = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -8730,59 +8730,59 @@ class XhtmlTbodyType:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    class_value: str | None = field(
+    class_value: None | str = field(
         default=None,
         metadata={
             "name": "class",
             "type": "Attribute",
         },
     )
-    title: str | None = field(
+    title: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    style: str | None = field(
+    style: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    align: XhtmlTbodyTypeAlign | None = field(
+    align: None | XhtmlTbodyTypeAlign = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    char: str | None = field(
+    char: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "length": 1,
         },
     )
-    charoff: str | None = field(
+    charoff: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\d+[%]|\d*\.\d+[%]",
         },
     )
-    valign: XhtmlTbodyTypeValign | None = field(
+    valign: None | XhtmlTbodyTypeValign = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -8811,59 +8811,59 @@ class XhtmlTfootType:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    class_value: str | None = field(
+    class_value: None | str = field(
         default=None,
         metadata={
             "name": "class",
             "type": "Attribute",
         },
     )
-    title: str | None = field(
+    title: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    style: str | None = field(
+    style: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    align: XhtmlTfootTypeAlign | None = field(
+    align: None | XhtmlTfootTypeAlign = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    char: str | None = field(
+    char: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "length": 1,
         },
     )
-    charoff: str | None = field(
+    charoff: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\d+[%]|\d*\.\d+[%]",
         },
     )
-    valign: XhtmlTfootTypeValign | None = field(
+    valign: None | XhtmlTfootTypeValign = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -8892,59 +8892,59 @@ class XhtmlTheadType:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    class_value: str | None = field(
+    class_value: None | str = field(
         default=None,
         metadata={
             "name": "class",
             "type": "Attribute",
         },
     )
-    title: str | None = field(
+    title: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    style: str | None = field(
+    style: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    align: XhtmlTheadTypeAlign | None = field(
+    align: None | XhtmlTheadTypeAlign = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    char: str | None = field(
+    char: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "length": 1,
         },
     )
-    charoff: str | None = field(
+    charoff: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\d+[%]|\d*\.\d+[%]",
         },
     )
-    valign: XhtmlTheadTypeValign | None = field(
+    valign: None | XhtmlTheadTypeValign = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -8957,7 +8957,7 @@ class XhtmlTableType:
     class Meta:
         name = "xhtml.table.type"
 
-    caption: XhtmlCaptionType | None = field(
+    caption: None | XhtmlCaptionType = field(
         default=None,
         metadata={
             "type": "Element",
@@ -8978,14 +8978,14 @@ class XhtmlTableType:
             "namespace": "http://www.w3.org/1999/xhtml",
         },
     )
-    thead: XhtmlTheadType | None = field(
+    thead: None | XhtmlTheadType = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.w3.org/1999/xhtml",
         },
     )
-    tfoot: XhtmlTfootType | None = field(
+    tfoot: None | XhtmlTfootType = field(
         default=None,
         metadata={
             "type": "Element",
@@ -9014,77 +9014,77 @@ class XhtmlTableType:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    class_value: str | None = field(
+    class_value: None | str = field(
         default=None,
         metadata={
             "name": "class",
             "type": "Attribute",
         },
     )
-    title: str | None = field(
+    title: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    style: str | None = field(
+    style: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    summary: str | None = field(
+    summary: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    width: str | None = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-            "pattern": r"\d+[%]|\d*\.\d+[%]",
-        },
-    )
-    border: int | None = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        },
-    )
-    frame: XhtmlTableTypeFrame | None = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        },
-    )
-    rules: XhtmlTableTypeRules | None = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        },
-    )
-    cellspacing: str | None = field(
+    width: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\d+[%]|\d*\.\d+[%]",
         },
     )
-    cellpadding: str | None = field(
+    border: None | int = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        },
+    )
+    frame: None | XhtmlTableTypeFrame = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        },
+    )
+    rules: None | XhtmlTableTypeRules = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        },
+    )
+    cellspacing: None | str = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+            "pattern": r"\d+[%]|\d*\.\d+[%]",
+        },
+    )
+    cellpadding: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",

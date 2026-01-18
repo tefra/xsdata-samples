@@ -50,7 +50,7 @@ class AddressBankDefinitionType:
     class Meta:
         name = "addressBankDefinitionType"
 
-    name: str | None = field(
+    name: None | str = field(
         default=None,
         metadata={
             "type": "Element",
@@ -58,7 +58,7 @@ class AddressBankDefinitionType:
             "required": True,
         },
     )
-    display_name: DisplayName | None = field(
+    display_name: None | DisplayName = field(
         default=None,
         metadata={
             "name": "displayName",
@@ -66,7 +66,7 @@ class AddressBankDefinitionType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    short_description: ShortDescription | None = field(
+    short_description: None | ShortDescription = field(
         default=None,
         metadata={
             "name": "shortDescription",
@@ -74,14 +74,14 @@ class AddressBankDefinitionType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    description: Description | None = field(
+    description: None | Description = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    access_handles: AddressBankDefinitionType.AccessHandles | None = field(
+    access_handles: None | AddressBankDefinitionType.AccessHandles = field(
         default=None,
         metadata={
             "name": "accessHandles",
@@ -89,7 +89,7 @@ class AddressBankDefinitionType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    base_address: BaseAddress | None = field(
+    base_address: None | BaseAddress = field(
         default=None,
         metadata={
             "name": "baseAddress",
@@ -98,7 +98,7 @@ class AddressBankDefinitionType:
             "required": True,
         },
     )
-    bank_definition_ref: AddressBankDefinitionType.BankDefinitionRef | None = (
+    bank_definition_ref: None | AddressBankDefinitionType.BankDefinitionRef = (
         field(
             default=None,
             metadata={
@@ -123,21 +123,21 @@ class AddressBankDefinitionType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    usage: UsageType | None = field(
+    usage: None | UsageType = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    volatile: Volatile | None = field(
+    volatile: None | Volatile = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    access_policies: AccessPolicies | None = field(
+    access_policies: None | AccessPolicies = field(
         default=None,
         metadata={
             "name": "accessPolicies",
@@ -145,14 +145,14 @@ class AddressBankDefinitionType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    parameters: Parameters | None = field(
+    parameters: None | Parameters = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    vendor_extensions: VendorExtensions | None = field(
+    vendor_extensions: None | VendorExtensions = field(
         default=None,
         metadata={
             "name": "vendorExtensions",
@@ -160,7 +160,7 @@ class AddressBankDefinitionType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    bank_alignment: BankAlignmentType | None = field(
+    bank_alignment: None | BankAlignmentType = field(
         default=None,
         metadata={
             "name": "bankAlignment",
@@ -168,7 +168,7 @@ class AddressBankDefinitionType:
             "required": True,
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -196,7 +196,7 @@ class AddressBankDefinitionType:
                 "required": True,
             },
         )
-        type_definitions: str | None = field(
+        type_definitions: None | str = field(
             default=None,
             metadata={
                 "name": "typeDefinitions",
@@ -207,7 +207,7 @@ class AddressBankDefinitionType:
 
     @dataclass
     class Bank(BankedDefinitionBankType):
-        vendor_extensions: VendorExtensions | None = field(
+        vendor_extensions: None | VendorExtensions = field(
             default=None,
             metadata={
                 "name": "vendorExtensions",

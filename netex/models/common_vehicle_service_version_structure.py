@@ -13,7 +13,7 @@ class CommonVehicleServiceVersionStructure(MobilityServiceVersionStructure):
     class Meta:
         name = "CommonVehicleService_VersionStructure"
 
-    booking_required: bool | None = field(
+    booking_required: None | bool = field(
         default=None,
         metadata={
             "name": "BookingRequired",
@@ -21,7 +21,7 @@ class CommonVehicleServiceVersionStructure(MobilityServiceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    registration_required: bool | None = field(
+    registration_required: None | bool = field(
         default=None,
         metadata={
             "name": "RegistrationRequired",
@@ -29,7 +29,7 @@ class CommonVehicleServiceVersionStructure(MobilityServiceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    proposed_by_services: OnlineServiceRefsRelStructure | None = field(
+    proposed_by_services: None | OnlineServiceRefsRelStructure = field(
         default=None,
         metadata={
             "name": "proposedByServices",

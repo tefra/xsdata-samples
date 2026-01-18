@@ -16,7 +16,7 @@ __NAMESPACE__ = (
 
 @dataclass
 class OrganisationReferenceType(BaseIdentifiedComponentType):
-    sender: OrganisationReferenceTypeSender | None = field(
+    sender: None | OrganisationReferenceTypeSender = field(
         default=None,
         metadata={
             "name": "Sender",
@@ -24,13 +24,13 @@ class OrganisationReferenceType(BaseIdentifiedComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
         },
     )
-    active: bool | None = field(
+    active: None | bool = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    external: bool | None = field(
+    external: None | bool = field(
         default=None,
         metadata={
             "type": "Attribute",

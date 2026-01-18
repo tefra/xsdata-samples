@@ -12,7 +12,7 @@ class RhsFunapp:
     class Meta:
         global_type = False
 
-    name: Name | None = field(
+    name: None | Name = field(
         default=None,
         metadata={
             "type": "Element",
@@ -49,7 +49,7 @@ class RhsLambda:
             "max_occurs": 2,
         },
     )
-    type_value: Type | None = field(
+    type_value: None | Type = field(
         default=None,
         metadata={
             "name": "type",
@@ -57,20 +57,20 @@ class RhsLambda:
             "required": True,
         },
     )
-    funapp: RhsFunapp | None = field(
+    funapp: None | RhsFunapp = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    lambda_value: RhsLambda | None = field(
+    lambda_value: None | RhsLambda = field(
         default=None,
         metadata={
             "name": "lambda",
             "type": "Element",
         },
     )
-    application: RhsApplication | None = field(
+    application: None | RhsApplication = field(
         default=None,
         metadata={
             "type": "Element",
@@ -143,26 +143,26 @@ class RhsFunappArg:
     class Meta:
         global_type = False
 
-    funapp: RhsFunapp | None = field(
+    funapp: None | RhsFunapp = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    var: Var | None = field(
+    var: None | Var = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    lambda_value: RhsLambda | None = field(
+    lambda_value: None | RhsLambda = field(
         default=None,
         metadata={
             "name": "lambda",
             "type": "Element",
         },
     )
-    application: RhsApplication | None = field(
+    application: None | RhsApplication = field(
         default=None,
         metadata={
             "type": "Element",

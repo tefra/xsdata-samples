@@ -22,7 +22,7 @@ __NAMESPACE__ = (
 
 @dataclass
 class VesselType(VehicleType):
-    passenger_capacity: NumberType | None = field(
+    passenger_capacity: None | NumberType = field(
         default=None,
         metadata={
             "name": "PassengerCapacity",
@@ -30,7 +30,7 @@ class VesselType(VehicleType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
         },
     )
-    primary_port: TextType | None = field(
+    primary_port: None | TextType = field(
         default=None,
         metadata={
             "name": "PrimaryPort",
@@ -38,7 +38,7 @@ class VesselType(VehicleType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
         },
     )
-    vehicle_capacity: NumberType | None = field(
+    vehicle_capacity: None | NumberType = field(
         default=None,
         metadata={
             "name": "VehicleCapacity",
@@ -46,7 +46,7 @@ class VesselType(VehicleType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
         },
     )
-    waters_navigated: CodeDescriptionType | None = field(
+    waters_navigated: None | CodeDescriptionType = field(
         default=None,
         metadata={
             "name": "WatersNavigated",

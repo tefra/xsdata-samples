@@ -39,7 +39,7 @@ class DiagnosticControlEnableMaskBit:
     class Meta:
         name = "DIAGNOSTIC-CONTROL-ENABLE-MASK-BIT"
 
-    bit_number: PositiveInteger | None = field(
+    bit_number: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "BIT-NUMBER",
@@ -48,7 +48,7 @@ class DiagnosticControlEnableMaskBit:
         },
     )
     controlled_data_element_refs: (
-        DiagnosticControlEnableMaskBit.ControlledDataElementRefs | None
+        None | DiagnosticControlEnableMaskBit.ControlledDataElementRefs
     ) = field(
         default=None,
         metadata={
@@ -57,14 +57,14 @@ class DiagnosticControlEnableMaskBit:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -88,7 +88,7 @@ class DiagnosticControlEnableMaskBit:
 
         @dataclass
         class ControlledDataElementRef(Ref):
-            dest: DiagnosticDataElementSubtypesEnum | None = field(
+            dest: None | DiagnosticDataElementSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",

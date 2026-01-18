@@ -34,7 +34,7 @@ class Ieee1722Tp:
     class Meta:
         name = "IEEE-1722-TP"
 
-    relative_representation_time: TimeValue | None = field(
+    relative_representation_time: None | TimeValue = field(
         default=None,
         metadata={
             "name": "RELATIVE-REPRESENTATION-TIME",
@@ -42,7 +42,7 @@ class Ieee1722Tp:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    stream_identifier: PositiveInteger | None = field(
+    stream_identifier: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "STREAM-IDENTIFIER",
@@ -50,7 +50,7 @@ class Ieee1722Tp:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sub_type: PositiveInteger | None = field(
+    sub_type: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "SUB-TYPE",
@@ -58,7 +58,7 @@ class Ieee1722Tp:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    version: PositiveInteger | None = field(
+    version: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "VERSION",
@@ -66,14 +66,14 @@ class Ieee1722Tp:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

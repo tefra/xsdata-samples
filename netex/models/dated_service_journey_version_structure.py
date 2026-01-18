@@ -16,7 +16,7 @@ class DatedServiceJourneyVersionStructure(ServiceJourneyVersionStructure):
         name = "DatedServiceJourney_VersionStructure"
 
     operating_day_ref_or_uic_operating_period: (
-        OperatingDayRef | UicOperatingPeriod | None
+        None | OperatingDayRef | UicOperatingPeriod
     ) = field(
         default=None,
         metadata={
@@ -35,7 +35,7 @@ class DatedServiceJourneyVersionStructure(ServiceJourneyVersionStructure):
             ),
         },
     )
-    driver_ref: DriverRef | None = field(
+    driver_ref: None | DriverRef = field(
         default=None,
         metadata={
             "name": "DriverRef",

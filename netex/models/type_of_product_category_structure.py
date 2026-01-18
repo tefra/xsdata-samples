@@ -11,7 +11,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 @dataclass
 class TypeOfProductCategoryStructure(TypeOfEntityVersionStructure):
-    external_product_category_ref: ExternalObjectRefStructure | None = field(
+    external_product_category_ref: None | ExternalObjectRefStructure = field(
         default=None,
         metadata={
             "name": "ExternalProductCategoryRef",
@@ -19,7 +19,7 @@ class TypeOfProductCategoryStructure(TypeOfEntityVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    presentation: PresentationStructure | None = field(
+    presentation: None | PresentationStructure = field(
         default=None,
         metadata={
             "name": "Presentation",

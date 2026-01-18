@@ -88,7 +88,7 @@ class ServiceInterfaceMethodMapping:
     class Meta:
         name = "SERVICE-INTERFACE-METHOD-MAPPING"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -98,7 +98,7 @@ class ServiceInterfaceMethodMapping:
         },
     )
     short_name_fragments: (
-        ServiceInterfaceMethodMapping.ShortNameFragments | None
+        None | ServiceInterfaceMethodMapping.ShortNameFragments
     ) = field(
         default=None,
         metadata={
@@ -107,7 +107,7 @@ class ServiceInterfaceMethodMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -115,7 +115,7 @@ class ServiceInterfaceMethodMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -123,7 +123,7 @@ class ServiceInterfaceMethodMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -131,7 +131,7 @@ class ServiceInterfaceMethodMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -139,7 +139,7 @@ class ServiceInterfaceMethodMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -147,7 +147,7 @@ class ServiceInterfaceMethodMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: ServiceInterfaceMethodMapping.Annotations | None = field(
+    annotations: None | ServiceInterfaceMethodMapping.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -155,7 +155,7 @@ class ServiceInterfaceMethodMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    source_method_ref: ServiceInterfaceMethodMapping.SourceMethodRef | None = (
+    source_method_ref: None | ServiceInterfaceMethodMapping.SourceMethodRef = (
         field(
             default=None,
             metadata={
@@ -165,7 +165,7 @@ class ServiceInterfaceMethodMapping:
             },
         )
     )
-    target_method_ref: ServiceInterfaceMethodMapping.TargetMethodRef | None = (
+    target_method_ref: None | ServiceInterfaceMethodMapping.TargetMethodRef = (
         field(
             default=None,
             metadata={
@@ -175,14 +175,14 @@ class ServiceInterfaceMethodMapping:
             },
         )
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -190,7 +190,7 @@ class ServiceInterfaceMethodMapping:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -222,7 +222,7 @@ class ServiceInterfaceMethodMapping:
 
     @dataclass
     class SourceMethodRef(Ref):
-        dest: ClientServerOperationSubtypesEnum | None = field(
+        dest: None | ClientServerOperationSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -233,7 +233,7 @@ class ServiceInterfaceMethodMapping:
 
     @dataclass
     class TargetMethodRef(Ref):
-        dest: ClientServerOperationSubtypesEnum | None = field(
+        dest: None | ClientServerOperationSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

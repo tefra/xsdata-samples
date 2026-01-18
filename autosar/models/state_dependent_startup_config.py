@@ -48,7 +48,7 @@ class StateDependentStartupConfig:
         name = "STATE-DEPENDENT-STARTUP-CONFIG"
 
     execution_dependencys: (
-        StateDependentStartupConfig.ExecutionDependencys | None
+        None | StateDependentStartupConfig.ExecutionDependencys
     ) = field(
         default=None,
         metadata={
@@ -58,7 +58,7 @@ class StateDependentStartupConfig:
         },
     )
     function_group_state_irefs: (
-        StateDependentStartupConfig.FunctionGroupStateIrefs | None
+        None | StateDependentStartupConfig.FunctionGroupStateIrefs
     ) = field(
         default=None,
         metadata={
@@ -67,7 +67,7 @@ class StateDependentStartupConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    resource_consumption: ResourceConsumption | None = field(
+    resource_consumption: None | ResourceConsumption = field(
         default=None,
         metadata={
             "name": "RESOURCE-CONSUMPTION",
@@ -75,7 +75,7 @@ class StateDependentStartupConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    resource_group_ref: StateDependentStartupConfig.ResourceGroupRef | None = (
+    resource_group_ref: None | StateDependentStartupConfig.ResourceGroupRef = (
         field(
             default=None,
             metadata={
@@ -85,7 +85,7 @@ class StateDependentStartupConfig:
             },
         )
     )
-    startup_config_ref: StateDependentStartupConfig.StartupConfigRef | None = (
+    startup_config_ref: None | StateDependentStartupConfig.StartupConfigRef = (
         field(
             default=None,
             metadata={
@@ -95,14 +95,14 @@ class StateDependentStartupConfig:
             },
         )
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -137,7 +137,7 @@ class StateDependentStartupConfig:
 
     @dataclass
     class ResourceGroupRef(Ref):
-        dest: ResourceGroupSubtypesEnum | None = field(
+        dest: None | ResourceGroupSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -148,7 +148,7 @@ class StateDependentStartupConfig:
 
     @dataclass
     class StartupConfigRef(Ref):
-        dest: StartupConfigSubtypesEnum | None = field(
+        dest: None | StartupConfigSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

@@ -112,7 +112,7 @@ class BswModeSwitchedAckEvent:
     class Meta:
         name = "BSW-MODE-SWITCHED-ACK-EVENT"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -121,7 +121,7 @@ class BswModeSwitchedAckEvent:
             "required": True,
         },
     )
-    short_name_fragments: BswModeSwitchedAckEvent.ShortNameFragments | None = (
+    short_name_fragments: None | BswModeSwitchedAckEvent.ShortNameFragments = (
         field(
             default=None,
             metadata={
@@ -131,7 +131,7 @@ class BswModeSwitchedAckEvent:
             },
         )
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -139,7 +139,7 @@ class BswModeSwitchedAckEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -147,7 +147,7 @@ class BswModeSwitchedAckEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -155,7 +155,7 @@ class BswModeSwitchedAckEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -163,7 +163,7 @@ class BswModeSwitchedAckEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -171,7 +171,7 @@ class BswModeSwitchedAckEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: BswModeSwitchedAckEvent.Annotations | None = field(
+    annotations: None | BswModeSwitchedAckEvent.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -180,7 +180,7 @@ class BswModeSwitchedAckEvent:
         },
     )
     activation_reason_representation_ref: (
-        BswModeSwitchedAckEvent.ActivationReasonRepresentationRef | None
+        None | BswModeSwitchedAckEvent.ActivationReasonRepresentationRef
     ) = field(
         default=None,
         metadata={
@@ -190,7 +190,7 @@ class BswModeSwitchedAckEvent:
         },
     )
     context_limitation_refs: (
-        BswModeSwitchedAckEvent.ContextLimitationRefs | None
+        None | BswModeSwitchedAckEvent.ContextLimitationRefs
     ) = field(
         default=None,
         metadata={
@@ -200,7 +200,7 @@ class BswModeSwitchedAckEvent:
         },
     )
     disabled_in_mode_irefs: (
-        BswModeSwitchedAckEvent.DisabledInModeIrefs | None
+        None | BswModeSwitchedAckEvent.DisabledInModeIrefs
     ) = field(
         default=None,
         metadata={
@@ -209,7 +209,7 @@ class BswModeSwitchedAckEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    starts_on_event_ref: BswModeSwitchedAckEvent.StartsOnEventRef | None = (
+    starts_on_event_ref: None | BswModeSwitchedAckEvent.StartsOnEventRef = (
         field(
             default=None,
             metadata={
@@ -219,7 +219,7 @@ class BswModeSwitchedAckEvent:
             },
         )
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -227,7 +227,7 @@ class BswModeSwitchedAckEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    mode_group_ref: BswModeSwitchedAckEvent.ModeGroupRef | None = field(
+    mode_group_ref: None | BswModeSwitchedAckEvent.ModeGroupRef = field(
         default=None,
         metadata={
             "name": "MODE-GROUP-REF",
@@ -235,14 +235,14 @@ class BswModeSwitchedAckEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -250,7 +250,7 @@ class BswModeSwitchedAckEvent:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -282,7 +282,7 @@ class BswModeSwitchedAckEvent:
 
     @dataclass
     class ActivationReasonRepresentationRef(Ref):
-        dest: ExecutableEntityActivationReasonSubtypesEnum | None = field(
+        dest: None | ExecutableEntityActivationReasonSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -306,7 +306,7 @@ class BswModeSwitchedAckEvent:
 
         @dataclass
         class ContextLimitationRef(Ref):
-            dest: BswDistinguishedPartitionSubtypesEnum | None = field(
+            dest: None | BswDistinguishedPartitionSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -330,7 +330,7 @@ class BswModeSwitchedAckEvent:
 
     @dataclass
     class StartsOnEventRef(Ref):
-        dest: BswModuleEntitySubtypesEnum | None = field(
+        dest: None | BswModuleEntitySubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -341,7 +341,7 @@ class BswModeSwitchedAckEvent:
 
     @dataclass
     class ModeGroupRef(Ref):
-        dest: ModeDeclarationGroupPrototypeSubtypesEnum | None = field(
+        dest: None | ModeDeclarationGroupPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

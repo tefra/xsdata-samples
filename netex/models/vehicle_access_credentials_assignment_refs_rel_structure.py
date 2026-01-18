@@ -18,7 +18,7 @@ class VehicleAccessCredentialsAssignmentRefsRelStructure(
         name = "vehicleAccessCredentialsAssignmentRefs_RelStructure"
 
     vehicle_access_credentials_assignment_ref: (
-        VehicleAccessCredentialsAssignmentRef | None
+        None | VehicleAccessCredentialsAssignmentRef
     ) = field(
         default=None,
         metadata={

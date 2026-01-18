@@ -42,7 +42,7 @@ class DataPrototypeInExecutableInstanceRef:
         name = "DATA-PROTOTYPE-IN-EXECUTABLE-INSTANCE-REF"
 
     context_root_component_ref: (
-        DataPrototypeInExecutableInstanceRef.ContextRootComponentRef | None
+        None | DataPrototypeInExecutableInstanceRef.ContextRootComponentRef
     ) = field(
         default=None,
         metadata={
@@ -62,7 +62,7 @@ class DataPrototypeInExecutableInstanceRef:
         },
     )
     context_port_ref: (
-        DataPrototypeInExecutableInstanceRef.ContextPortRef | None
+        None | DataPrototypeInExecutableInstanceRef.ContextPortRef
     ) = field(
         default=None,
         metadata={
@@ -82,7 +82,7 @@ class DataPrototypeInExecutableInstanceRef:
         },
     )
     target_data_prototype_ref: (
-        DataPrototypeInExecutableInstanceRef.TargetDataPrototypeRef | None
+        None | DataPrototypeInExecutableInstanceRef.TargetDataPrototypeRef
     ) = field(
         default=None,
         metadata={
@@ -91,14 +91,14 @@ class DataPrototypeInExecutableInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -109,7 +109,7 @@ class DataPrototypeInExecutableInstanceRef:
 
     @dataclass
     class ContextRootComponentRef(Ref):
-        dest: RootSwComponentPrototypeSubtypesEnum | None = field(
+        dest: None | RootSwComponentPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -120,7 +120,7 @@ class DataPrototypeInExecutableInstanceRef:
 
     @dataclass
     class ContextComponentRef(Ref):
-        dest: SwComponentPrototypeSubtypesEnum | None = field(
+        dest: None | SwComponentPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -131,7 +131,7 @@ class DataPrototypeInExecutableInstanceRef:
 
     @dataclass
     class ContextPortRef(Ref):
-        dest: PortPrototypeSubtypesEnum | None = field(
+        dest: None | PortPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -142,7 +142,7 @@ class DataPrototypeInExecutableInstanceRef:
 
     @dataclass
     class ContextDataPrototypeRef(Ref):
-        dest: ApplicationCompositeElementDataPrototypeSubtypesEnum | None = (
+        dest: None | ApplicationCompositeElementDataPrototypeSubtypesEnum = (
             field(
                 default=None,
                 metadata={
@@ -155,7 +155,7 @@ class DataPrototypeInExecutableInstanceRef:
 
     @dataclass
     class TargetDataPrototypeRef(Ref):
-        dest: DataPrototypeSubtypesEnum | None = field(
+        dest: None | DataPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

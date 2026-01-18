@@ -19,7 +19,7 @@ __NAMESPACE__ = (
 
 @dataclass
 class PricingLayerType(BaseIdentifiedComponentType):
-    primary: bool | None = field(
+    primary: None | bool = field(
         default=None,
         metadata={
             "name": "Primary",
@@ -27,7 +27,7 @@ class PricingLayerType(BaseIdentifiedComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    attachment_point: NumericType | None = field(
+    attachment_point: None | NumericType = field(
         default=None,
         metadata={
             "name": "AttachmentPoint",
@@ -35,7 +35,7 @@ class PricingLayerType(BaseIdentifiedComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    limit: PricingLayerTypeLimit | None = field(
+    limit: None | PricingLayerTypeLimit = field(
         default=None,
         metadata={
             "name": "Limit",
@@ -43,7 +43,7 @@ class PricingLayerType(BaseIdentifiedComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    poshare: NumericType | None = field(
+    poshare: None | NumericType = field(
         default=None,
         metadata={
             "name": "POShare",

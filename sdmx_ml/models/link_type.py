@@ -16,27 +16,27 @@ class LinkType:
         metadata).
     """
 
-    rel: str | None = field(
+    rel: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "required": True,
         },
     )
-    url: str | None = field(
+    url: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "required": True,
         },
     )
-    urn: str | None = field(
+    urn: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    type_value: str | None = field(
+    type_value: None | str = field(
         default=None,
         metadata={
             "name": "type",

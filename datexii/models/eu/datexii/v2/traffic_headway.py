@@ -33,7 +33,7 @@ class TrafficHeadway(TrafficData):
     :ivar traffic_headway_extension:
     """
 
-    average_distance_headway: FloatingPointMetreDistanceValue | None = field(
+    average_distance_headway: None | FloatingPointMetreDistanceValue = field(
         default=None,
         metadata={
             "name": "averageDistanceHeadway",
@@ -41,7 +41,7 @@ class TrafficHeadway(TrafficData):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    average_time_headway: DurationValue | None = field(
+    average_time_headway: None | DurationValue = field(
         default=None,
         metadata={
             "name": "averageTimeHeadway",
@@ -49,7 +49,7 @@ class TrafficHeadway(TrafficData):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    traffic_headway_extension: ExtensionType | None = field(
+    traffic_headway_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "trafficHeadwayExtension",

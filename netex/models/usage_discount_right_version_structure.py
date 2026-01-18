@@ -13,7 +13,7 @@ class UsageDiscountRightVersionStructure(FareProductVersionStructure):
     class Meta:
         name = "UsageDiscountRight_VersionStructure"
 
-    product_type: UsageDiscountRightEnumeration | None = field(
+    product_type: None | UsageDiscountRightEnumeration = field(
         default=None,
         metadata={
             "name": "ProductType",

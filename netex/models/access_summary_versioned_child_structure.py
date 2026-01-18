@@ -14,7 +14,7 @@ class AccessSummaryVersionedChildStructure(VersionedChildStructure):
     class Meta:
         name = "AccessSummary_VersionedChildStructure"
 
-    access_feature_type: AccessFeatureEnumeration | None = field(
+    access_feature_type: None | AccessFeatureEnumeration = field(
         default=None,
         metadata={
             "name": "AccessFeatureType",
@@ -23,7 +23,7 @@ class AccessSummaryVersionedChildStructure(VersionedChildStructure):
             "required": True,
         },
     )
-    count: int | None = field(
+    count: None | int = field(
         default=None,
         metadata={
             "name": "Count",
@@ -32,7 +32,7 @@ class AccessSummaryVersionedChildStructure(VersionedChildStructure):
             "required": True,
         },
     )
-    transition: TransitionEnumeration | None = field(
+    transition: None | TransitionEnumeration = field(
         default=None,
         metadata={
             "name": "Transition",

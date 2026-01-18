@@ -17,7 +17,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 @dataclass
 class SiteFacilitySetStructure(FacilitySetVersionStructure):
-    access_facility_list: AccessFacilityList | None = field(
+    access_facility_list: None | AccessFacilityList = field(
         default=None,
         metadata={
             "name": "AccessFacilityList",
@@ -25,7 +25,7 @@ class SiteFacilitySetStructure(FacilitySetVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    emergency_service_list: EmergencyServiceList | None = field(
+    emergency_service_list: None | EmergencyServiceList = field(
         default=None,
         metadata={
             "name": "EmergencyServiceList",
@@ -33,7 +33,7 @@ class SiteFacilitySetStructure(FacilitySetVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    hire_facility_list: HireFacilityList | None = field(
+    hire_facility_list: None | HireFacilityList = field(
         default=None,
         metadata={
             "name": "HireFacilityList",
@@ -41,7 +41,7 @@ class SiteFacilitySetStructure(FacilitySetVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    luggage_locker_facility_list: LuggageLockerFacilityList | None = field(
+    luggage_locker_facility_list: None | LuggageLockerFacilityList = field(
         default=None,
         metadata={
             "name": "LuggageLockerFacilityList",
@@ -49,7 +49,7 @@ class SiteFacilitySetStructure(FacilitySetVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    luggage_service_facility_list: LuggageServiceFacilityList | None = field(
+    luggage_service_facility_list: None | LuggageServiceFacilityList = field(
         default=None,
         metadata={
             "name": "LuggageServiceFacilityList",
@@ -57,7 +57,7 @@ class SiteFacilitySetStructure(FacilitySetVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    money_facility_list: MoneyFacilityList | None = field(
+    money_facility_list: None | MoneyFacilityList = field(
         default=None,
         metadata={
             "name": "MoneyFacilityList",
@@ -65,7 +65,7 @@ class SiteFacilitySetStructure(FacilitySetVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    parking_facility_list: ParkingFacilityList | None = field(
+    parking_facility_list: None | ParkingFacilityList = field(
         default=None,
         metadata={
             "name": "ParkingFacilityList",
@@ -73,7 +73,7 @@ class SiteFacilitySetStructure(FacilitySetVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    staffing: Staffing | None = field(
+    staffing: None | Staffing = field(
         default=None,
         metadata={
             "name": "Staffing",

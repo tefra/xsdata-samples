@@ -16,7 +16,7 @@ class RoundingVersionedStructure(DataManagedObjectStructure):
     class Meta:
         name = "Rounding_VersionedStructure"
 
-    name: MultilingualString | None = field(
+    name: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "Name",
@@ -24,7 +24,7 @@ class RoundingVersionedStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    rounding_method: RoundingMethodEnumeration | None = field(
+    rounding_method: None | RoundingMethodEnumeration = field(
         default=None,
         metadata={
             "name": "RoundingMethod",
@@ -32,7 +32,7 @@ class RoundingVersionedStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    rounding_modulus: Decimal | None = field(
+    rounding_modulus: None | Decimal = field(
         default=None,
         metadata={
             "name": "RoundingModulus",
@@ -40,7 +40,7 @@ class RoundingVersionedStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    rounding_steps: RoundingStepsRelStructure | None = field(
+    rounding_steps: None | RoundingStepsRelStructure = field(
         default=None,
         metadata={
             "name": "roundingSteps",

@@ -64,7 +64,7 @@ class SwAxisGrouped:
     class Meta:
         name = "SW-AXIS-GROUPED"
 
-    max_gradient: Float | None = field(
+    max_gradient: None | Float = field(
         default=None,
         metadata={
             "name": "MAX-GRADIENT",
@@ -72,7 +72,7 @@ class SwAxisGrouped:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    monotony: MonotonyEnum | None = field(
+    monotony: None | MonotonyEnum = field(
         default=None,
         metadata={
             "name": "MONOTONY",
@@ -80,7 +80,7 @@ class SwAxisGrouped:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    shared_axis_type_ref: SwAxisGrouped.SharedAxisTypeRef | None = field(
+    shared_axis_type_ref: None | SwAxisGrouped.SharedAxisTypeRef = field(
         default=None,
         metadata={
             "name": "SHARED-AXIS-TYPE-REF",
@@ -88,7 +88,7 @@ class SwAxisGrouped:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_axis_index: AxisIndexType | None = field(
+    sw_axis_index: None | AxisIndexType = field(
         default=None,
         metadata={
             "name": "SW-AXIS-INDEX",
@@ -96,7 +96,7 @@ class SwAxisGrouped:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ar_parameter: AutosarParameterRef | None = field(
+    ar_parameter: None | AutosarParameterRef = field(
         default=None,
         metadata={
             "name": "AR-PARAMETER",
@@ -104,7 +104,7 @@ class SwAxisGrouped:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    mc_data_instance_ref: SwAxisGrouped.McDataInstanceRef | None = field(
+    mc_data_instance_ref: None | SwAxisGrouped.McDataInstanceRef = field(
         default=None,
         metadata={
             "name": "MC-DATA-INSTANCE-REF",
@@ -112,14 +112,14 @@ class SwAxisGrouped:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -130,7 +130,7 @@ class SwAxisGrouped:
 
     @dataclass
     class SharedAxisTypeRef(Ref):
-        dest: ApplicationPrimitiveDataTypeSubtypesEnum | None = field(
+        dest: None | ApplicationPrimitiveDataTypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -141,7 +141,7 @@ class SwAxisGrouped:
 
     @dataclass
     class McDataInstanceRef(Ref):
-        dest: McDataInstanceSubtypesEnum | None = field(
+        dest: None | McDataInstanceSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

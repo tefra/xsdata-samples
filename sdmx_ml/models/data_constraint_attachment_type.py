@@ -86,7 +86,7 @@ class DataConstraintAttachmentType:
 
     @dataclass(frozen=True)
     class DataProvider:
-        value: str | None = field(
+        value: None | str = field(
             default=None,
             metadata={
                 "required": True,
@@ -96,7 +96,7 @@ class DataConstraintAttachmentType:
 
     @dataclass(frozen=True)
     class SimpleDataSource:
-        value: str | None = field(
+        value: None | str = field(
             default=None,
             metadata={
                 "required": True,
@@ -105,7 +105,7 @@ class DataConstraintAttachmentType:
 
     @dataclass(frozen=True)
     class DataStructure:
-        value: str | None = field(
+        value: None | str = field(
             default=None,
             metadata={
                 "required": True,
@@ -115,7 +115,7 @@ class DataConstraintAttachmentType:
 
     @dataclass(frozen=True)
     class Dataflow:
-        value: str | None = field(
+        value: None | str = field(
             default=None,
             metadata={
                 "required": True,
@@ -125,7 +125,7 @@ class DataConstraintAttachmentType:
 
     @dataclass(frozen=True)
     class ProvisionAgreement:
-        value: str | None = field(
+        value: None | str = field(
             default=None,
             metadata={
                 "required": True,

@@ -86,7 +86,7 @@ class SwAxisIndividual:
     class Meta:
         name = "SW-AXIS-INDIVIDUAL"
 
-    max_gradient: Float | None = field(
+    max_gradient: None | Float = field(
         default=None,
         metadata={
             "name": "MAX-GRADIENT",
@@ -94,7 +94,7 @@ class SwAxisIndividual:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    monotony: MonotonyEnum | None = field(
+    monotony: None | MonotonyEnum = field(
         default=None,
         metadata={
             "name": "MONOTONY",
@@ -102,7 +102,7 @@ class SwAxisIndividual:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    input_variable_type_ref: SwAxisIndividual.InputVariableTypeRef | None = (
+    input_variable_type_ref: None | SwAxisIndividual.InputVariableTypeRef = (
         field(
             default=None,
             metadata={
@@ -112,7 +112,7 @@ class SwAxisIndividual:
             },
         )
     )
-    sw_variable_refs: SwAxisIndividual.SwVariableRefs | None = field(
+    sw_variable_refs: None | SwAxisIndividual.SwVariableRefs = field(
         default=None,
         metadata={
             "name": "SW-VARIABLE-REFS",
@@ -120,7 +120,7 @@ class SwAxisIndividual:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    compu_method_ref: SwAxisIndividual.CompuMethodRef | None = field(
+    compu_method_ref: None | SwAxisIndividual.CompuMethodRef = field(
         default=None,
         metadata={
             "name": "COMPU-METHOD-REF",
@@ -128,7 +128,7 @@ class SwAxisIndividual:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    unit_ref: SwAxisIndividual.UnitRef | None = field(
+    unit_ref: None | SwAxisIndividual.UnitRef = field(
         default=None,
         metadata={
             "name": "UNIT-REF",
@@ -136,7 +136,7 @@ class SwAxisIndividual:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_max_axis_points: IntegerValueVariationPoint | None = field(
+    sw_max_axis_points: None | IntegerValueVariationPoint = field(
         default=None,
         metadata={
             "name": "SW-MAX-AXIS-POINTS",
@@ -144,7 +144,7 @@ class SwAxisIndividual:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_min_axis_points: IntegerValueVariationPoint | None = field(
+    sw_min_axis_points: None | IntegerValueVariationPoint = field(
         default=None,
         metadata={
             "name": "SW-MIN-AXIS-POINTS",
@@ -152,7 +152,7 @@ class SwAxisIndividual:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    data_constr_ref: SwAxisIndividual.DataConstrRef | None = field(
+    data_constr_ref: None | SwAxisIndividual.DataConstrRef = field(
         default=None,
         metadata={
             "name": "DATA-CONSTR-REF",
@@ -160,7 +160,7 @@ class SwAxisIndividual:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_axis_generic: SwAxisGeneric | None = field(
+    sw_axis_generic: None | SwAxisGeneric = field(
         default=None,
         metadata={
             "name": "SW-AXIS-GENERIC",
@@ -168,14 +168,14 @@ class SwAxisIndividual:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -186,7 +186,7 @@ class SwAxisIndividual:
 
     @dataclass
     class InputVariableTypeRef(Ref):
-        dest: ApplicationPrimitiveDataTypeSubtypesEnum | None = field(
+        dest: None | ApplicationPrimitiveDataTypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -232,7 +232,7 @@ class SwAxisIndividual:
 
         @dataclass
         class McDataInstanceVarRef(Ref):
-            dest: McDataInstanceSubtypesEnum | None = field(
+            dest: None | McDataInstanceSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -243,7 +243,7 @@ class SwAxisIndividual:
 
     @dataclass
     class CompuMethodRef(Ref):
-        dest: CompuMethodSubtypesEnum | None = field(
+        dest: None | CompuMethodSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -254,7 +254,7 @@ class SwAxisIndividual:
 
     @dataclass
     class UnitRef(Ref):
-        dest: UnitSubtypesEnum | None = field(
+        dest: None | UnitSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -265,7 +265,7 @@ class SwAxisIndividual:
 
     @dataclass
     class DataConstrRef(Ref):
-        dest: DataConstrSubtypesEnum | None = field(
+        dest: None | DataConstrSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

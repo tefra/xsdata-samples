@@ -85,7 +85,7 @@ class TargetPassingTimeVersionedChildStructure(
             "max_occurs": 5,
         },
     )
-    aimed_headway: HeadwayIntervalStructure | None = field(
+    aimed_headway: None | HeadwayIntervalStructure = field(
         default=None,
         metadata={
             "name": "AimedHeadway",
@@ -96,7 +96,7 @@ class TargetPassingTimeVersionedChildStructure(
 
     @dataclass
     class AimedArrivalTime:
-        value: XmlTime | None = field(
+        value: None | XmlTime = field(
             default=None,
             metadata={
                 "required": True,
@@ -105,7 +105,7 @@ class TargetPassingTimeVersionedChildStructure(
 
     @dataclass
     class ArrivalDayOffset:
-        value: int | None = field(
+        value: None | int = field(
             default=None,
             metadata={
                 "required": True,
@@ -114,7 +114,7 @@ class TargetPassingTimeVersionedChildStructure(
 
     @dataclass
     class AimedDepartureTime:
-        value: XmlTime | None = field(
+        value: None | XmlTime = field(
             default=None,
             metadata={
                 "required": True,
@@ -123,7 +123,7 @@ class TargetPassingTimeVersionedChildStructure(
 
     @dataclass
     class DepartureDayOffset:
-        value: int | None = field(
+        value: None | int = field(
             default=None,
             metadata={
                 "required": True,
@@ -132,7 +132,7 @@ class TargetPassingTimeVersionedChildStructure(
 
     @dataclass
     class AimedNonstopPassingTime:
-        value: XmlTime | None = field(
+        value: None | XmlTime = field(
             default=None,
             metadata={
                 "required": True,
@@ -141,7 +141,7 @@ class TargetPassingTimeVersionedChildStructure(
 
     @dataclass
     class PassingDayOffset:
-        value: int | None = field(
+        value: None | int = field(
             default=None,
             metadata={
                 "required": True,

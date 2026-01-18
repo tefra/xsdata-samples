@@ -20,7 +20,7 @@ class CustomerPurchaseParameterAssignmentVersionStructure(
     class Meta:
         name = "CustomerPurchaseParameterAssignment_VersionStructure"
 
-    individual_traveller_ref: IndividualTravellerRef | None = field(
+    individual_traveller_ref: None | IndividualTravellerRef = field(
         default=None,
         metadata={
             "name": "IndividualTravellerRef",
@@ -28,7 +28,7 @@ class CustomerPurchaseParameterAssignmentVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    vehicle_pooling_driver_info_ref: VehiclePoolingDriverInfoRef | None = (
+    vehicle_pooling_driver_info_ref: None | VehiclePoolingDriverInfoRef = (
         field(
             default=None,
             metadata={
@@ -38,7 +38,7 @@ class CustomerPurchaseParameterAssignmentVersionStructure(
             },
         )
     )
-    trip_ref: TripRef | None = field(
+    trip_ref: None | TripRef = field(
         default=None,
         metadata={
             "name": "TripRef",
@@ -46,7 +46,7 @@ class CustomerPurchaseParameterAssignmentVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    trip_leg_ref: TripLegRef | None = field(
+    trip_leg_ref: None | TripLegRef = field(
         default=None,
         metadata={
             "name": "TripLegRef",

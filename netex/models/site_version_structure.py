@@ -41,7 +41,7 @@ class SiteVersionStructure(SiteElementVersionStructure):
         name = "Site_VersionStructure"
 
     topographic_place_ref_or_topographic_place_view: (
-        TopographicPlaceRef | TopographicPlaceView | None
+        None | TopographicPlaceRef | TopographicPlaceView
     ) = field(
         default=None,
         metadata={
@@ -60,7 +60,7 @@ class SiteVersionStructure(SiteElementVersionStructure):
             ),
         },
     )
-    additional_topographic_places: TopographicPlaceRefsRelStructure | None = (
+    additional_topographic_places: None | TopographicPlaceRefsRelStructure = (
         field(
             default=None,
             metadata={
@@ -70,7 +70,7 @@ class SiteVersionStructure(SiteElementVersionStructure):
             },
         )
     )
-    site_type: SiteTypeEnumeration | None = field(
+    site_type: None | SiteTypeEnumeration = field(
         default=None,
         metadata={
             "name": "SiteType",
@@ -78,7 +78,7 @@ class SiteVersionStructure(SiteElementVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    at_centre: bool | None = field(
+    at_centre: None | bool = field(
         default=None,
         metadata={
             "name": "AtCentre",
@@ -86,7 +86,7 @@ class SiteVersionStructure(SiteElementVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    locale: Locale | None = field(
+    locale: None | Locale = field(
         default=None,
         metadata={
             "name": "Locale",
@@ -95,7 +95,8 @@ class SiteVersionStructure(SiteElementVersionStructure):
         },
     )
     choice: (
-        RetailConsortiumRef
+        None
+        | RetailConsortiumRef
         | OnlineServiceOperatorRef
         | GeneralOrganisationRef
         | ManagementAgentRef
@@ -106,7 +107,6 @@ class SiteVersionStructure(SiteElementVersionStructure):
         | OperatorRef
         | OrganisationRef
         | OrganisationDerivedViewStructure
-        | None
     ) = field(
         default=None,
         metadata={
@@ -170,7 +170,7 @@ class SiteVersionStructure(SiteElementVersionStructure):
             ),
         },
     )
-    parent_site_ref: SiteRefStructure | None = field(
+    parent_site_ref: None | SiteRefStructure = field(
         default=None,
         metadata={
             "name": "ParentSiteRef",
@@ -178,7 +178,7 @@ class SiteVersionStructure(SiteElementVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    adjacent_sites: SiteRefsRelStructure | None = field(
+    adjacent_sites: None | SiteRefsRelStructure = field(
         default=None,
         metadata={
             "name": "adjacentSites",
@@ -186,7 +186,7 @@ class SiteVersionStructure(SiteElementVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    contained_in_place_ref: TopographicPlaceRefStructure | None = field(
+    contained_in_place_ref: None | TopographicPlaceRefStructure = field(
         default=None,
         metadata={
             "name": "ContainedInPlaceRef",
@@ -194,21 +194,21 @@ class SiteVersionStructure(SiteElementVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    levels: LevelsRelStructure | None = field(
+    levels: None | LevelsRelStructure = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    entrances: SiteEntrancesRelStructure | None = field(
+    entrances: None | SiteEntrancesRelStructure = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    equipment_places: EquipmentPlacesRelStructure | None = field(
+    equipment_places: None | EquipmentPlacesRelStructure = field(
         default=None,
         metadata={
             "name": "equipmentPlaces",
@@ -216,7 +216,7 @@ class SiteVersionStructure(SiteElementVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    place_equipments: PlaceEquipmentsRelStructure | None = field(
+    place_equipments: None | PlaceEquipmentsRelStructure = field(
         default=None,
         metadata={
             "name": "placeEquipments",
@@ -224,7 +224,7 @@ class SiteVersionStructure(SiteElementVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    local_services: LocalServicesRelStructure | None = field(
+    local_services: None | LocalServicesRelStructure = field(
         default=None,
         metadata={
             "name": "localServices",

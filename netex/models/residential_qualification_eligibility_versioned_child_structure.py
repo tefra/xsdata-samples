@@ -20,7 +20,7 @@ class ResidentialQualificationEligibilityVersionedChildStructure(
     class Meta:
         name = "ResidentialQualificationEligibility_VersionedChildStructure"
 
-    residential_qualification_ref: ResidentialQualificationRef | None = field(
+    residential_qualification_ref: None | ResidentialQualificationRef = field(
         default=None,
         metadata={
             "name": "ResidentialQualificationRef",
@@ -28,7 +28,7 @@ class ResidentialQualificationEligibilityVersionedChildStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    residency_type: ResidenceTypeEnumeration | None = field(
+    residency_type: None | ResidenceTypeEnumeration = field(
         default=None,
         metadata={
             "name": "ResidencyType",
@@ -36,7 +36,7 @@ class ResidentialQualificationEligibilityVersionedChildStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    start_date: XmlDate | None = field(
+    start_date: None | XmlDate = field(
         default=None,
         metadata={
             "name": "StartDate",
@@ -44,7 +44,7 @@ class ResidentialQualificationEligibilityVersionedChildStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    end_date: XmlDate | None = field(
+    end_date: None | XmlDate = field(
         default=None,
         metadata={
             "name": "EndDate",

@@ -321,7 +321,7 @@ class Severity:
             "required": True,
         }
     )
-    severity_coded_other: SeverityCodedOther | None = field(
+    severity_coded_other: None | SeverityCodedOther = field(
         default=None,
         metadata={
             "name": "SeverityCodedOther",
@@ -339,119 +339,119 @@ class CheckResultBaseItemDetail:
             "required": True,
         }
     )
-    line_item_type: LineItemType | None = field(
+    line_item_type: None | LineItemType = field(
         default=None,
         metadata={
             "name": "LineItemType",
             "type": "Element",
         },
     )
-    parent_item_number: ParentItemNumber | None = field(
+    parent_item_number: None | ParentItemNumber = field(
         default=None,
         metadata={
             "name": "ParentItemNumber",
             "type": "Element",
         },
     )
-    item_identifiers: ItemIdentifiers | None = field(
+    item_identifiers: None | ItemIdentifiers = field(
         default=None,
         metadata={
             "name": "ItemIdentifiers",
             "type": "Element",
         },
     )
-    list_of_dimension: ListOfDimension | None = field(
+    list_of_dimension: None | ListOfDimension = field(
         default=None,
         metadata={
             "name": "ListOfDimension",
             "type": "Element",
         },
     )
-    total_quantity: TotalQuantity | None = field(
+    total_quantity: None | TotalQuantity = field(
         default=None,
         metadata={
             "name": "TotalQuantity",
             "type": "Element",
         },
     )
-    max_back_order_quantity: MaxBackOrderQuantity | None = field(
+    max_back_order_quantity: None | MaxBackOrderQuantity = field(
         default=None,
         metadata={
             "name": "MaxBackOrderQuantity",
             "type": "Element",
         },
     )
-    list_of_quantity_coded: ListOfQuantityCoded | None = field(
+    list_of_quantity_coded: None | ListOfQuantityCoded = field(
         default=None,
         metadata={
             "name": "ListOfQuantityCoded",
             "type": "Element",
         },
     )
-    off_catalog_flag: OffCatalogFlag | None = field(
+    off_catalog_flag: None | OffCatalogFlag = field(
         default=None,
         metadata={
             "name": "OffCatalogFlag",
             "type": "Element",
         },
     )
-    catalog_reference: CatalogReference | None = field(
+    catalog_reference: None | CatalogReference = field(
         default=None,
         metadata={
             "name": "CatalogReference",
             "type": "Element",
         },
     )
-    item_contract_references: ItemContractReferences | None = field(
+    item_contract_references: None | ItemContractReferences = field(
         default=None,
         metadata={
             "name": "ItemContractReferences",
             "type": "Element",
         },
     )
-    list_of_item_references: ListOfItemReferences | None = field(
+    list_of_item_references: None | ListOfItemReferences = field(
         default=None,
         metadata={
             "name": "ListOfItemReferences",
             "type": "Element",
         },
     )
-    country_of_origin: CountryOfOrigin | None = field(
+    country_of_origin: None | CountryOfOrigin = field(
         default=None,
         metadata={
             "name": "CountryOfOrigin",
             "type": "Element",
         },
     )
-    country_of_destination: CountryOfDestination | None = field(
+    country_of_destination: None | CountryOfDestination = field(
         default=None,
         metadata={
             "name": "CountryOfDestination",
             "type": "Element",
         },
     )
-    final_recipient: FinalRecipient | None = field(
+    final_recipient: None | FinalRecipient = field(
         default=None,
         metadata={
             "name": "FinalRecipient",
             "type": "Element",
         },
     )
-    list_of_party_coded: ListOfPartyCoded | None = field(
+    list_of_party_coded: None | ListOfPartyCoded = field(
         default=None,
         metadata={
             "name": "ListOfPartyCoded",
             "type": "Element",
         },
     )
-    conditions_of_sale: ConditionsOfSale | None = field(
+    conditions_of_sale: None | ConditionsOfSale = field(
         default=None,
         metadata={
             "name": "ConditionsOfSale",
             "type": "Element",
         },
     )
-    hazardous_materials: HazardousMaterials | None = field(
+    hazardous_materials: None | HazardousMaterials = field(
         default=None,
         metadata={
             "name": "HazardousMaterials",
@@ -502,7 +502,7 @@ class PriceCheckResultHeader:
             "required": True,
         }
     )
-    supplier_idreference_date: SupplierIdreferenceDate | None = field(
+    supplier_idreference_date: None | SupplierIdreferenceDate = field(
         default=None,
         metadata={
             "name": "SupplierIDReferenceDate",
@@ -516,7 +516,7 @@ class PriceCheckResultHeader:
             "required": True,
         }
     )
-    buyer_idreference_date: BuyerIdreferenceDate | None = field(
+    buyer_idreference_date: None | BuyerIdreferenceDate = field(
         default=None,
         metadata={
             "name": "BuyerIDReferenceDate",
@@ -530,35 +530,35 @@ class PriceCheckResultHeader:
             "required": True,
         }
     )
-    price_check_currency: PriceCheckCurrency | None = field(
+    price_check_currency: None | PriceCheckCurrency = field(
         default=None,
         metadata={
             "name": "PriceCheckCurrency",
             "type": "Element",
         },
     )
-    quote_date: QuoteDate | None = field(
+    quote_date: None | QuoteDate = field(
         default=None,
         metadata={
             "name": "QuoteDate",
             "type": "Element",
         },
     )
-    price_check_result_language: PriceCheckResultLanguage | None = field(
+    price_check_result_language: None | PriceCheckResultLanguage = field(
         default=None,
         metadata={
             "name": "PriceCheckResultLanguage",
             "type": "Element",
         },
     )
-    price_check_result_note: PriceCheckResultNote | None = field(
+    price_check_result_note: None | PriceCheckResultNote = field(
         default=None,
         metadata={
             "name": "PriceCheckResultNote",
             "type": "Element",
         },
     )
-    result_list_of_attachment: ResultListOfAttachment | None = field(
+    result_list_of_attachment: None | ResultListOfAttachment = field(
         default=None,
         metadata={
             "name": "ResultListOfAttachment",
@@ -590,21 +590,21 @@ class ErrorInfo:
             "required": True,
         }
     )
-    list_of_parameter: ListOfParameter | None = field(
+    list_of_parameter: None | ListOfParameter = field(
         default=None,
         metadata={
             "name": "ListOfParameter",
             "type": "Element",
         },
     )
-    min_retry_secs: MinRetrySecs | None = field(
+    min_retry_secs: None | MinRetrySecs = field(
         default=None,
         metadata={
             "name": "MinRetrySecs",
             "type": "Element",
         },
     )
-    sw_vendor_error_ref: SwVendorErrorRef | None = field(
+    sw_vendor_error_ref: None | SwVendorErrorRef = field(
         default=None,
         metadata={
             "name": "SwVendorErrorRef",
@@ -662,21 +662,21 @@ class PriceCheckResultItemDetail:
             "required": True,
         }
     )
-    price_error_info: PriceErrorInfo | None = field(
+    price_error_info: None | PriceErrorInfo = field(
         default=None,
         metadata={
             "name": "PriceErrorInfo",
             "type": "Element",
         },
     )
-    general_line_item_note: GeneralLineItemNote | None = field(
+    general_line_item_note: None | GeneralLineItemNote = field(
         default=None,
         metadata={
             "name": "GeneralLineItemNote",
             "type": "Element",
         },
     )
-    line_item_attachment: LineItemAttachment | None = field(
+    line_item_attachment: None | LineItemAttachment = field(
         default=None,
         metadata={
             "name": "LineItemAttachment",
@@ -694,14 +694,14 @@ class PriceCheckResultSummary:
             "required": True,
         }
     )
-    price_check_summary_error_info: PriceCheckSummaryErrorInfo | None = field(
+    price_check_summary_error_info: None | PriceCheckSummaryErrorInfo = field(
         default=None,
         metadata={
             "name": "PriceCheckSummaryErrorInfo",
             "type": "Element",
         },
     )
-    total_number_of_line_item: TotalNumberOfLineItem | None = field(
+    total_number_of_line_item: None | TotalNumberOfLineItem = field(
         default=None,
         metadata={
             "name": "TotalNumberOfLineItem",
@@ -742,14 +742,14 @@ class PriceCheckResult:
             "required": True,
         }
     )
-    price_check_result_detail: PriceCheckResultDetail | None = field(
+    price_check_result_detail: None | PriceCheckResultDetail = field(
         default=None,
         metadata={
             "name": "PriceCheckResultDetail",
             "type": "Element",
         },
     )
-    price_check_result_summary: PriceCheckResultSummary | None = field(
+    price_check_result_summary: None | PriceCheckResultSummary = field(
         default=None,
         metadata={
             "name": "PriceCheckResultSummary",

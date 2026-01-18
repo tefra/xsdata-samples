@@ -19,7 +19,7 @@ class CapabilityRequestPolicyStructure:
             "min_occurs": 1,
         },
     )
-    translations: bool | None = field(
+    translations: None | bool = field(
         default=None,
         metadata={
             "name": "Translations",
@@ -27,7 +27,7 @@ class CapabilityRequestPolicyStructure:
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    gml_coordinate_format_or_wgs_decimal_degrees: str | EmptyType1 | None = (
+    gml_coordinate_format_or_wgs_decimal_degrees: None | str | EmptyType1 = (
         field(
             default=None,
             metadata={

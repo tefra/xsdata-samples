@@ -37,7 +37,7 @@ class PowerDomainLinks:
         :ivar id:
         """
 
-        external_power_domain_reference: StringExpression | None = field(
+        external_power_domain_reference: None | StringExpression = field(
             default=None,
             metadata={
                 "name": "externalPowerDomainReference",
@@ -55,7 +55,7 @@ class PowerDomainLinks:
                 "min_occurs": 1,
             },
         )
-        id: str | None = field(
+        id: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -71,7 +71,7 @@ class PowerDomainLinks:
                     "required": True,
                 },
             )
-            id: str | None = field(
+            id: None | str = field(
                 default=None,
                 metadata={
                     "type": "Attribute",

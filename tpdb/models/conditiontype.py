@@ -10,4 +10,4 @@ class Conditiontype:
     class Meta:
         name = "conditiontype"
 
-    value: ConditiontypeValue | None = field(default=None)
+    value: None | ConditiontypeValue = field(default=None)

@@ -51,7 +51,7 @@ class File:
         name = "file"
         namespace = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
-    name: IpxactUri | None = field(
+    name: None | IpxactUri = field(
         default=None,
         metadata={
             "type": "Element",
@@ -66,21 +66,21 @@ class File:
             "min_occurs": 1,
         },
     )
-    is_structural: bool | None = field(
+    is_structural: None | bool = field(
         default=None,
         metadata={
             "name": "isStructural",
             "type": "Element",
         },
     )
-    is_include_file: File.IsIncludeFile | None = field(
+    is_include_file: None | File.IsIncludeFile = field(
         default=None,
         metadata={
             "name": "isIncludeFile",
             "type": "Element",
         },
     )
-    logical_name: File.LogicalName | None = field(
+    logical_name: None | File.LogicalName = field(
         default=None,
         metadata={
             "name": "logicalName",
@@ -94,7 +94,7 @@ class File:
             "type": "Element",
         },
     )
-    build_command: File.BuildCommand | None = field(
+    build_command: None | File.BuildCommand = field(
         default=None,
         metadata={
             "name": "buildCommand",
@@ -120,20 +120,20 @@ class File:
             "type": "Element",
         },
     )
-    description: str | None = field(
+    description: None | str = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    vendor_extensions: VendorExtensions | None = field(
+    vendor_extensions: None | VendorExtensions = field(
         default=None,
         metadata={
             "name": "vendorExtensions",
             "type": "Element",
         },
     )
-    file_id: str | None = field(
+    file_id: None | str = field(
         default=None,
         metadata={
             "name": "fileId",
@@ -147,7 +147,7 @@ class File:
             "namespace": "##other",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -163,7 +163,7 @@ class File:
             that are needed in top file
         """
 
-        value: bool | None = field(
+        value: None | bool = field(
             default=None,
             metadata={
                 "required": True,
@@ -206,7 +206,7 @@ class File:
                 "required": True,
             },
         )
-        id: str | None = field(
+        id: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -231,26 +231,26 @@ class File:
             from the source file.
         """
 
-        command: StringExpression | None = field(
+        command: None | StringExpression = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        flags: File.BuildCommand.Flags | None = field(
+        flags: None | File.BuildCommand.Flags = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        replace_default_flags: UnsignedBitExpression | None = field(
+        replace_default_flags: None | UnsignedBitExpression = field(
             default=None,
             metadata={
                 "name": "replaceDefaultFlags",
                 "type": "Element",
             },
         )
-        target_name: IpxactUri | None = field(
+        target_name: None | IpxactUri = field(
             default=None,
             metadata={
                 "name": "targetName",
@@ -266,7 +266,7 @@ class File:
                 flags will replace any existing default flags.
             """
 
-            append: bool | None = field(
+            append: None | bool = field(
                 default=None,
                 metadata={
                     "type": "Attribute",
@@ -281,7 +281,7 @@ class File:
                 "required": True,
             },
         )
-        id: str | None = field(
+        id: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",

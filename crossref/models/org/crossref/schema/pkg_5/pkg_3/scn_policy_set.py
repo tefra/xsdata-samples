@@ -27,7 +27,7 @@ class ScnPolicySet:
             "type": "Element",
         },
     )
-    start_date: XmlDate | None = field(
+    start_date: None | XmlDate = field(
         default=None,
         metadata={
             "type": "Attribute",

@@ -396,14 +396,14 @@ class ChangeOrderNumber:
             "required": True,
         }
     )
-    seller_change_order_number: SellerChangeOrderNumber | None = field(
+    seller_change_order_number: None | SellerChangeOrderNumber = field(
         default=None,
         metadata={
             "name": "SellerChangeOrderNumber",
             "type": "Element",
         },
     )
-    list_of_message_id: ListOfMessageId | None = field(
+    list_of_message_id: None | ListOfMessageId = field(
         default=None,
         metadata={
             "name": "ListOfMessageID",
@@ -432,7 +432,7 @@ class ChangeType:
             "required": True,
         }
     )
-    change_type_coded_other: ChangeTypeCodedOther | None = field(
+    change_type_coded_other: None | ChangeTypeCodedOther = field(
         default=None,
         metadata={
             "name": "ChangeTypeCodedOther",
@@ -573,14 +573,14 @@ class OrderResponseNumber:
             "required": True,
         }
     )
-    seller_order_response_number: SellerOrderResponseNumber | None = field(
+    seller_order_response_number: None | SellerOrderResponseNumber = field(
         default=None,
         metadata={
             "name": "SellerOrderResponseNumber",
             "type": "Element",
         },
     )
-    list_of_message_id: ListOfMessageId | None = field(
+    list_of_message_id: None | ListOfMessageId = field(
         default=None,
         metadata={
             "name": "ListOfMessageID",
@@ -730,42 +730,42 @@ class ChangeOrderItemDetail:
             "required": True,
         }
     )
-    item_detail_change_coded_other: ItemDetailChangeCodedOther | None = field(
+    item_detail_change_coded_other: None | ItemDetailChangeCodedOther = field(
         default=None,
         metadata={
             "name": "ItemDetailChangeCodedOther",
             "type": "Element",
         },
     )
-    list_of_reference_coded: ListOfReferenceCoded | None = field(
+    list_of_reference_coded: None | ListOfReferenceCoded = field(
         default=None,
         metadata={
             "name": "ListOfReferenceCoded",
             "type": "Element",
         },
     )
-    original_item_detail: OriginalItemDetail | None = field(
+    original_item_detail: None | OriginalItemDetail = field(
         default=None,
         metadata={
             "name": "OriginalItemDetail",
             "type": "Element",
         },
     )
-    item_detail_changes: ItemDetailChanges | None = field(
+    item_detail_changes: None | ItemDetailChanges = field(
         default=None,
         metadata={
             "name": "ItemDetailChanges",
             "type": "Element",
         },
     )
-    line_item_note: LineItemNote | None = field(
+    line_item_note: None | LineItemNote = field(
         default=None,
         metadata={
             "name": "LineItemNote",
             "type": "Element",
         },
     )
-    list_of_structured_note: ListOfStructuredNote | None = field(
+    list_of_structured_note: None | ListOfStructuredNote = field(
         default=None,
         metadata={
             "name": "ListOfStructuredNote",
@@ -783,7 +783,7 @@ class ChangeOrderPackageDetail:
             "required": True,
         }
     )
-    package_detail_change_coded_other: PackageDetailChangeCodedOther | None = (
+    package_detail_change_coded_other: None | PackageDetailChangeCodedOther = (
         field(
             default=None,
             metadata={
@@ -792,21 +792,21 @@ class ChangeOrderPackageDetail:
             },
         )
     )
-    original_package_detail: OriginalPackageDetail | None = field(
+    original_package_detail: None | OriginalPackageDetail = field(
         default=None,
         metadata={
             "name": "OriginalPackageDetail",
             "type": "Element",
         },
     )
-    package_detail_changes: PackageDetailChanges | None = field(
+    package_detail_changes: None | PackageDetailChanges = field(
         default=None,
         metadata={
             "name": "PackageDetailChanges",
             "type": "Element",
         },
     )
-    package_detail_note: PackageDetailNote | None = field(
+    package_detail_note: None | PackageDetailNote = field(
         default=None,
         metadata={
             "name": "PackageDetailNote",
@@ -831,14 +831,14 @@ class OrderHeader:
             "required": True,
         }
     )
-    order_references: OrderReferences | None = field(
+    order_references: None | OrderReferences = field(
         default=None,
         metadata={
             "name": "OrderReferences",
             "type": "Element",
         },
     )
-    release_number: ReleaseNumber | None = field(
+    release_number: None | ReleaseNumber = field(
         default=None,
         metadata={
             "name": "ReleaseNumber",
@@ -852,14 +852,14 @@ class OrderHeader:
             "required": True,
         }
     )
-    requested_response: RequestedResponse | None = field(
+    requested_response: None | RequestedResponse = field(
         default=None,
         metadata={
             "name": "RequestedResponse",
             "type": "Element",
         },
     )
-    order_type: OrderType | None = field(
+    order_type: None | OrderType = field(
         default=None,
         metadata={
             "name": "OrderType",
@@ -873,7 +873,7 @@ class OrderHeader:
             "required": True,
         }
     )
-    tax_accounting_currency: TaxAccountingCurrency | None = field(
+    tax_accounting_currency: None | TaxAccountingCurrency = field(
         default=None,
         metadata={
             "name": "TaxAccountingCurrency",
@@ -887,14 +887,14 @@ class OrderHeader:
             "required": True,
         }
     )
-    order_tax_reference: OrderTaxReference | None = field(
+    order_tax_reference: None | OrderTaxReference = field(
         default=None,
         metadata={
             "name": "OrderTaxReference",
             "type": "Element",
         },
     )
-    order_invoice_medium_type_coded: OrderInvoiceMediumTypeCoded | None = (
+    order_invoice_medium_type_coded: None | OrderInvoiceMediumTypeCoded = (
         field(
             default=None,
             metadata={
@@ -904,7 +904,7 @@ class OrderHeader:
         )
     )
     order_invoice_medium_type_coded_other: (
-        OrderInvoiceMediumTypeCodedOther | None
+        None | OrderInvoiceMediumTypeCodedOther
     ) = field(
         default=None,
         metadata={
@@ -912,14 +912,14 @@ class OrderHeader:
             "type": "Element",
         },
     )
-    order_dates: OrderDates | None = field(
+    order_dates: None | OrderDates = field(
         default=None,
         metadata={
             "name": "OrderDates",
             "type": "Element",
         },
     )
-    partial_shipment_allowed: PartialShipmentAllowed | None = field(
+    partial_shipment_allowed: None | PartialShipmentAllowed = field(
         default=None,
         metadata={
             "name": "PartialShipmentAllowed",
@@ -933,14 +933,14 @@ class OrderHeader:
             "required": True,
         }
     )
-    part_location: PartLocation | None = field(
+    part_location: None | PartLocation = field(
         default=None,
         metadata={
             "name": "PartLocation",
             "type": "Element",
         },
     )
-    list_of_transport: ListOfTransport | None = field(
+    list_of_transport: None | ListOfTransport = field(
         default=None,
         metadata={
             "name": "ListOfTransport",
@@ -954,56 +954,56 @@ class OrderHeader:
             "type": "Element",
         },
     )
-    order_header_price: OrderHeaderPrice | None = field(
+    order_header_price: None | OrderHeaderPrice = field(
         default=None,
         metadata={
             "name": "OrderHeaderPrice",
             "type": "Element",
         },
     )
-    order_payment_instructions: OrderPaymentInstructions | None = field(
+    order_payment_instructions: None | OrderPaymentInstructions = field(
         default=None,
         metadata={
             "name": "OrderPaymentInstructions",
             "type": "Element",
         },
     )
-    order_allowances_or_charges: OrderAllowancesOrCharges | None = field(
+    order_allowances_or_charges: None | OrderAllowancesOrCharges = field(
         default=None,
         metadata={
             "name": "OrderAllowancesOrCharges",
             "type": "Element",
         },
     )
-    round_trip_information: RoundTripInformation | None = field(
+    round_trip_information: None | RoundTripInformation = field(
         default=None,
         metadata={
             "name": "RoundTripInformation",
             "type": "Element",
         },
     )
-    order_header_note: OrderHeaderNote | None = field(
+    order_header_note: None | OrderHeaderNote = field(
         default=None,
         metadata={
             "name": "OrderHeaderNote",
             "type": "Element",
         },
     )
-    list_of_structured_note: ListOfStructuredNote | None = field(
+    list_of_structured_note: None | ListOfStructuredNote = field(
         default=None,
         metadata={
             "name": "ListOfStructuredNote",
             "type": "Element",
         },
     )
-    list_of_name_value_set: ListOfNameValueSet | None = field(
+    list_of_name_value_set: None | ListOfNameValueSet = field(
         default=None,
         metadata={
             "name": "ListOfNameValueSet",
             "type": "Element",
         },
     )
-    order_header_attachments: OrderHeaderAttachments | None = field(
+    order_header_attachments: None | OrderHeaderAttachments = field(
         default=None,
         metadata={
             "name": "OrderHeaderAttachments",
@@ -1014,56 +1014,56 @@ class OrderHeader:
 
 @dataclass(kw_only=True)
 class TransportPackagingTotals:
-    total_packages: TotalPackages | None = field(
+    total_packages: None | TotalPackages = field(
         default=None,
         metadata={
             "name": "TotalPackages",
             "type": "Element",
         },
     )
-    total_package_depth: TotalPackageDepth | None = field(
+    total_package_depth: None | TotalPackageDepth = field(
         default=None,
         metadata={
             "name": "TotalPackageDepth",
             "type": "Element",
         },
     )
-    total_transport: TotalTransport | None = field(
+    total_transport: None | TotalTransport = field(
         default=None,
         metadata={
             "name": "TotalTransport",
             "type": "Element",
         },
     )
-    total_gross_weight: TotalGrossWeight | None = field(
+    total_gross_weight: None | TotalGrossWeight = field(
         default=None,
         metadata={
             "name": "TotalGrossWeight",
             "type": "Element",
         },
     )
-    total_net_weight: TotalNetWeight | None = field(
+    total_net_weight: None | TotalNetWeight = field(
         default=None,
         metadata={
             "name": "TotalNetWeight",
             "type": "Element",
         },
     )
-    total_net_net_weight: TotalNetNetWeight | None = field(
+    total_net_net_weight: None | TotalNetNetWeight = field(
         default=None,
         metadata={
             "name": "TotalNetNetWeight",
             "type": "Element",
         },
     )
-    total_tare_weight: TotalTareWeight | None = field(
+    total_tare_weight: None | TotalTareWeight = field(
         default=None,
         metadata={
             "name": "TotalTareWeight",
             "type": "Element",
         },
     )
-    gross_volume: GrossVolume | None = field(
+    gross_volume: None | GrossVolume = field(
         default=None,
         metadata={
             "name": "GrossVolume",
@@ -1092,7 +1092,7 @@ class OrderResponseItemDetail:
             "required": True,
         }
     )
-    item_detail_response_coded_other: ItemDetailResponseCodedOther | None = (
+    item_detail_response_coded_other: None | ItemDetailResponseCodedOther = (
         field(
             default=None,
             metadata={
@@ -1101,91 +1101,91 @@ class OrderResponseItemDetail:
             },
         )
     )
-    item_status_event: ItemStatusEvent | None = field(
+    item_status_event: None | ItemStatusEvent = field(
         default=None,
         metadata={
             "name": "ItemStatusEvent",
             "type": "Element",
         },
     )
-    shipment_status_event: ShipmentStatusEvent | None = field(
+    shipment_status_event: None | ShipmentStatusEvent = field(
         default=None,
         metadata={
             "name": "ShipmentStatusEvent",
             "type": "Element",
         },
     )
-    payment_status_event: PaymentStatusEvent | None = field(
+    payment_status_event: None | PaymentStatusEvent = field(
         default=None,
         metadata={
             "name": "PaymentStatusEvent",
             "type": "Element",
         },
     )
-    price_error_info: PriceErrorInfo | None = field(
+    price_error_info: None | PriceErrorInfo = field(
         default=None,
         metadata={
             "name": "PriceErrorInfo",
             "type": "Element",
         },
     )
-    availability_error_info: AvailabilityErrorInfo | None = field(
+    availability_error_info: None | AvailabilityErrorInfo = field(
         default=None,
         metadata={
             "name": "AvailabilityErrorInfo",
             "type": "Element",
         },
     )
-    list_of_error_info: ListOfErrorInfo | None = field(
+    list_of_error_info: None | ListOfErrorInfo = field(
         default=None,
         metadata={
             "name": "ListOfErrorInfo",
             "type": "Element",
         },
     )
-    tracking_url: TrackingUrl | None = field(
+    tracking_url: None | TrackingUrl = field(
         default=None,
         metadata={
             "name": "TrackingURL",
             "type": "Element",
         },
     )
-    list_of_reference_coded: ListOfReferenceCoded | None = field(
+    list_of_reference_coded: None | ListOfReferenceCoded = field(
         default=None,
         metadata={
             "name": "ListOfReferenceCoded",
             "type": "Element",
         },
     )
-    original_item_detail: OriginalItemDetail | None = field(
+    original_item_detail: None | OriginalItemDetail = field(
         default=None,
         metadata={
             "name": "OriginalItemDetail",
             "type": "Element",
         },
     )
-    change_order_item_detail: ChangeOrderItemDetail | None = field(
+    change_order_item_detail: None | ChangeOrderItemDetail = field(
         default=None,
         metadata={
             "name": "ChangeOrderItemDetail",
             "type": "Element",
         },
     )
-    item_detail_changes: ItemDetailChanges | None = field(
+    item_detail_changes: None | ItemDetailChanges = field(
         default=None,
         metadata={
             "name": "ItemDetailChanges",
             "type": "Element",
         },
     )
-    line_item_note: LineItemNote | None = field(
+    line_item_note: None | LineItemNote = field(
         default=None,
         metadata={
             "name": "LineItemNote",
             "type": "Element",
         },
     )
-    list_of_structured_note: ListOfStructuredNote | None = field(
+    list_of_structured_note: None | ListOfStructuredNote = field(
         default=None,
         metadata={
             "name": "ListOfStructuredNote",
@@ -1204,7 +1204,7 @@ class OrderResponsePackageDetail:
         }
     )
     package_detail_response_coded_other: (
-        PackageDetailResponseCodedOther | None
+        None | PackageDetailResponseCodedOther
     ) = field(
         default=None,
         metadata={
@@ -1212,28 +1212,28 @@ class OrderResponsePackageDetail:
             "type": "Element",
         },
     )
-    original_package_detail: OriginalPackageDetail | None = field(
+    original_package_detail: None | OriginalPackageDetail = field(
         default=None,
         metadata={
             "name": "OriginalPackageDetail",
             "type": "Element",
         },
     )
-    change_order_package_detail: ChangeOrderPackageDetail | None = field(
+    change_order_package_detail: None | ChangeOrderPackageDetail = field(
         default=None,
         metadata={
             "name": "ChangeOrderPackageDetail",
             "type": "Element",
         },
     )
-    package_detail_changes: PackageDetailChanges | None = field(
+    package_detail_changes: None | PackageDetailChanges = field(
         default=None,
         metadata={
             "name": "PackageDetailChanges",
             "type": "Element",
         },
     )
-    package_detail_note: PackageDetailNote | None = field(
+    package_detail_note: None | PackageDetailNote = field(
         default=None,
         metadata={
             "name": "PackageDetailNote",
@@ -1244,35 +1244,35 @@ class OrderResponsePackageDetail:
 
 @dataclass(kw_only=True)
 class OrderSummary:
-    number_of_lines: NumberOfLines | None = field(
+    number_of_lines: None | NumberOfLines = field(
         default=None,
         metadata={
             "name": "NumberOfLines",
             "type": "Element",
         },
     )
-    total_tax: TotalTax | None = field(
+    total_tax: None | TotalTax = field(
         default=None,
         metadata={
             "name": "TotalTax",
             "type": "Element",
         },
     )
-    total_amount: TotalAmount | None = field(
+    total_amount: None | TotalAmount = field(
         default=None,
         metadata={
             "name": "TotalAmount",
             "type": "Element",
         },
     )
-    transport_packaging_totals: TransportPackagingTotals | None = field(
+    transport_packaging_totals: None | TransportPackagingTotals = field(
         default=None,
         metadata={
             "name": "TransportPackagingTotals",
             "type": "Element",
         },
     )
-    summary_note: SummaryNote | None = field(
+    summary_note: None | SummaryNote = field(
         default=None,
         metadata={
             "name": "SummaryNote",
@@ -1336,7 +1336,7 @@ class ChangeOrderHeader:
             "required": True,
         }
     )
-    list_of_reference_coded: ListOfReferenceCoded | None = field(
+    list_of_reference_coded: None | ListOfReferenceCoded = field(
         default=None,
         metadata={
             "name": "ListOfReferenceCoded",
@@ -1350,7 +1350,7 @@ class ChangeOrderHeader:
             "required": True,
         }
     )
-    requested_response: RequestedResponse | None = field(
+    requested_response: None | RequestedResponse = field(
         default=None,
         metadata={
             "name": "RequestedResponse",
@@ -1364,35 +1364,35 @@ class ChangeOrderHeader:
             "required": True,
         }
     )
-    order_type: OrderType | None = field(
+    order_type: None | OrderType = field(
         default=None,
         metadata={
             "name": "OrderType",
             "type": "Element",
         },
     )
-    original_order_header: OriginalOrderHeader | None = field(
+    original_order_header: None | OriginalOrderHeader = field(
         default=None,
         metadata={
             "name": "OriginalOrderHeader",
             "type": "Element",
         },
     )
-    order_header_changes: OrderHeaderChanges | None = field(
+    order_header_changes: None | OrderHeaderChanges = field(
         default=None,
         metadata={
             "name": "OrderHeaderChanges",
             "type": "Element",
         },
     )
-    change_order_header_note: ChangeOrderHeaderNote | None = field(
+    change_order_header_note: None | ChangeOrderHeaderNote = field(
         default=None,
         metadata={
             "name": "ChangeOrderHeaderNote",
             "type": "Element",
         },
     )
-    list_of_structured_note: ListOfStructuredNote | None = field(
+    list_of_structured_note: None | ListOfStructuredNote = field(
         default=None,
         metadata={
             "name": "ListOfStructuredNote",
@@ -1450,7 +1450,7 @@ class RevisedOrderSummary:
 @dataclass(kw_only=True)
 class OrderResponseDetail:
     list_of_order_response_item_detail: (
-        ListOfOrderResponseItemDetail | None
+        None | ListOfOrderResponseItemDetail
     ) = field(
         default=None,
         metadata={
@@ -1459,7 +1459,7 @@ class OrderResponseDetail:
         },
     )
     list_of_order_response_package_detail: (
-        ListOfOrderResponsePackageDetail | None
+        None | ListOfOrderResponsePackageDetail
     ) = field(
         default=None,
         metadata={
@@ -1493,7 +1493,7 @@ class OrderResponseHeader:
         }
     )
     order_response_doc_type_coded_other: (
-        OrderResponseDocTypeCodedOther | None
+        None | OrderResponseDocTypeCodedOther
     ) = field(
         default=None,
         metadata={
@@ -1508,7 +1508,7 @@ class OrderResponseHeader:
             "required": True,
         }
     )
-    change_order_reference: ChangeOrderReference | None = field(
+    change_order_reference: None | ChangeOrderReference = field(
         default=None,
         metadata={
             "name": "ChangeOrderReference",
@@ -1529,14 +1529,14 @@ class OrderResponseHeader:
             "required": True,
         }
     )
-    tracking_url: TrackingUrl | None = field(
+    tracking_url: None | TrackingUrl = field(
         default=None,
         metadata={
             "name": "TrackingURL",
             "type": "Element",
         },
     )
-    list_of_reference_coded: ListOfReferenceCoded | None = field(
+    list_of_reference_coded: None | ListOfReferenceCoded = field(
         default=None,
         metadata={
             "name": "ListOfReferenceCoded",
@@ -1557,56 +1557,56 @@ class OrderResponseHeader:
             "required": True,
         }
     )
-    order_status: OrderStatus | None = field(
+    order_status: None | OrderStatus = field(
         default=None,
         metadata={
             "name": "OrderStatus",
             "type": "Element",
         },
     )
-    shipment_status_event: ShipmentStatusEvent | None = field(
+    shipment_status_event: None | ShipmentStatusEvent = field(
         default=None,
         metadata={
             "name": "ShipmentStatusEvent",
             "type": "Element",
         },
     )
-    payment_status_event: PaymentStatusEvent | None = field(
+    payment_status_event: None | PaymentStatusEvent = field(
         default=None,
         metadata={
             "name": "PaymentStatusEvent",
             "type": "Element",
         },
     )
-    original_order_header: OriginalOrderHeader | None = field(
+    original_order_header: None | OriginalOrderHeader = field(
         default=None,
         metadata={
             "name": "OriginalOrderHeader",
             "type": "Element",
         },
     )
-    change_order_header: ChangeOrderHeader | None = field(
+    change_order_header: None | ChangeOrderHeader = field(
         default=None,
         metadata={
             "name": "ChangeOrderHeader",
             "type": "Element",
         },
     )
-    order_header_changes: OrderHeaderChanges | None = field(
+    order_header_changes: None | OrderHeaderChanges = field(
         default=None,
         metadata={
             "name": "OrderHeaderChanges",
             "type": "Element",
         },
     )
-    order_response_header_note: OrderResponseHeaderNote | None = field(
+    order_response_header_note: None | OrderResponseHeaderNote = field(
         default=None,
         metadata={
             "name": "OrderResponseHeaderNote",
             "type": "Element",
         },
     )
-    list_of_structured_note: ListOfStructuredNote | None = field(
+    list_of_structured_note: None | ListOfStructuredNote = field(
         default=None,
         metadata={
             "name": "ListOfStructuredNote",
@@ -1617,21 +1617,21 @@ class OrderResponseHeader:
 
 @dataclass(kw_only=True)
 class OrderResponseSummary:
-    error_info: ErrorInfo | None = field(
+    error_info: None | ErrorInfo = field(
         default=None,
         metadata={
             "name": "ErrorInfo",
             "type": "Element",
         },
     )
-    original_order_summary: OriginalOrderSummary | None = field(
+    original_order_summary: None | OriginalOrderSummary = field(
         default=None,
         metadata={
             "name": "OriginalOrderSummary",
             "type": "Element",
         },
     )
-    revised_order_summary: RevisedOrderSummary | None = field(
+    revised_order_summary: None | RevisedOrderSummary = field(
         default=None,
         metadata={
             "name": "RevisedOrderSummary",
@@ -1649,14 +1649,14 @@ class OrderResponse:
             "required": True,
         }
     )
-    order_response_detail: OrderResponseDetail | None = field(
+    order_response_detail: None | OrderResponseDetail = field(
         default=None,
         metadata={
             "name": "OrderResponseDetail",
             "type": "Element",
         },
     )
-    order_response_summary: OrderResponseSummary | None = field(
+    order_response_summary: None | OrderResponseSummary = field(
         default=None,
         metadata={
             "name": "OrderResponseSummary",

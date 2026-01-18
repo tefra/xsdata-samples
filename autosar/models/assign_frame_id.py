@@ -54,7 +54,7 @@ class AssignFrameId:
     class Meta:
         name = "ASSIGN-FRAME-ID"
 
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -62,7 +62,7 @@ class AssignFrameId:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    delay: TimeValue | None = field(
+    delay: None | TimeValue = field(
         default=None,
         metadata={
             "name": "DELAY",
@@ -70,7 +70,7 @@ class AssignFrameId:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    position_in_table: Integer | None = field(
+    position_in_table: None | Integer = field(
         default=None,
         metadata={
             "name": "POSITION-IN-TABLE",
@@ -78,7 +78,7 @@ class AssignFrameId:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    assigned_controller_ref: AssignFrameId.AssignedControllerRef | None = (
+    assigned_controller_ref: None | AssignFrameId.AssignedControllerRef = (
         field(
             default=None,
             metadata={
@@ -89,7 +89,7 @@ class AssignFrameId:
         )
     )
     assigned_lin_slave_config_ref: (
-        AssignFrameId.AssignedLinSlaveConfigRef | None
+        None | AssignFrameId.AssignedLinSlaveConfigRef
     ) = field(
         default=None,
         metadata={
@@ -99,7 +99,7 @@ class AssignFrameId:
         },
     )
     assigned_frame_triggering_ref: (
-        AssignFrameId.AssignedFrameTriggeringRef | None
+        None | AssignFrameId.AssignedFrameTriggeringRef
     ) = field(
         default=None,
         metadata={
@@ -108,7 +108,7 @@ class AssignFrameId:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    message_id: PositiveInteger | None = field(
+    message_id: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "MESSAGE-ID",
@@ -116,14 +116,14 @@ class AssignFrameId:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -134,7 +134,7 @@ class AssignFrameId:
 
     @dataclass
     class AssignedControllerRef(Ref):
-        dest: LinSlaveSubtypesEnum | None = field(
+        dest: None | LinSlaveSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -145,7 +145,7 @@ class AssignFrameId:
 
     @dataclass
     class AssignedLinSlaveConfigRef(Ref):
-        dest: LinSlaveConfigIdentSubtypesEnum | None = field(
+        dest: None | LinSlaveConfigIdentSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -156,7 +156,7 @@ class AssignFrameId:
 
     @dataclass
     class AssignedFrameTriggeringRef(Ref):
-        dest: LinFrameTriggeringSubtypesEnum | None = field(
+        dest: None | LinFrameTriggeringSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

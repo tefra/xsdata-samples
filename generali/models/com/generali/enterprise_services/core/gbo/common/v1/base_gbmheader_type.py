@@ -19,7 +19,7 @@ class BaseGbmheaderType:
     class Meta:
         name = "BaseGBMHeaderType"
 
-    header: HeaderType | None = field(
+    header: None | HeaderType = field(
         default=None,
         metadata={
             "name": "Header",

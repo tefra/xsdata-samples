@@ -17,7 +17,7 @@ class SalesNoticeAssignmentVersionStructure(NoticeAssignmentVersionStructure):
     class Meta:
         name = "SalesNoticeAssignment_VersionStructure"
 
-    country_ref: CountryRef | None = field(
+    country_ref: None | CountryRef = field(
         default=None,
         metadata={
             "name": "CountryRef",
@@ -25,7 +25,7 @@ class SalesNoticeAssignmentVersionStructure(NoticeAssignmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    sales_offer_package_ref: SalesOfferPackageRef | None = field(
+    sales_offer_package_ref: None | SalesOfferPackageRef = field(
         default=None,
         metadata={
             "name": "SalesOfferPackageRef",
@@ -33,7 +33,7 @@ class SalesNoticeAssignmentVersionStructure(NoticeAssignmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    group_of_sales_offer_packages_ref: GroupOfSalesOfferPackagesRef | None = (
+    group_of_sales_offer_packages_ref: None | GroupOfSalesOfferPackagesRef = (
         field(
             default=None,
             metadata={

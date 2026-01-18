@@ -10,7 +10,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 @dataclass
 class ContactStructure(ContactDetailsStructure):
-    contact_ref: ContactRef | None = field(
+    contact_ref: None | ContactRef = field(
         default=None,
         metadata={
             "name": "ContactRef",

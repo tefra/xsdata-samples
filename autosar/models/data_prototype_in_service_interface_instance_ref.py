@@ -36,7 +36,7 @@ class DataPrototypeInServiceInterfaceInstanceRef:
         name = "DATA-PROTOTYPE-IN-SERVICE-INTERFACE-INSTANCE-REF"
 
     root_data_prototype_ref: (
-        DataPrototypeInServiceInterfaceInstanceRef.RootDataPrototypeRef | None
+        None | DataPrototypeInServiceInterfaceInstanceRef.RootDataPrototypeRef
     ) = field(
         default=None,
         metadata={
@@ -56,8 +56,8 @@ class DataPrototypeInServiceInterfaceInstanceRef:
         },
     )
     target_data_prototype_ref: (
-        DataPrototypeInServiceInterfaceInstanceRef.TargetDataPrototypeRef
-        | None
+        None
+        | DataPrototypeInServiceInterfaceInstanceRef.TargetDataPrototypeRef
     ) = field(
         default=None,
         metadata={
@@ -66,14 +66,14 @@ class DataPrototypeInServiceInterfaceInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -84,7 +84,7 @@ class DataPrototypeInServiceInterfaceInstanceRef:
 
     @dataclass
     class RootDataPrototypeRef(Ref):
-        dest: AutosarDataPrototypeSubtypesEnum | None = field(
+        dest: None | AutosarDataPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -95,7 +95,7 @@ class DataPrototypeInServiceInterfaceInstanceRef:
 
     @dataclass
     class ContextDataPrototypeRef(Ref):
-        dest: ApplicationCompositeElementDataPrototypeSubtypesEnum | None = (
+        dest: None | ApplicationCompositeElementDataPrototypeSubtypesEnum = (
             field(
                 default=None,
                 metadata={
@@ -108,7 +108,7 @@ class DataPrototypeInServiceInterfaceInstanceRef:
 
     @dataclass
     class TargetDataPrototypeRef(Ref):
-        dest: DataPrototypeSubtypesEnum | None = field(
+        dest: None | DataPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

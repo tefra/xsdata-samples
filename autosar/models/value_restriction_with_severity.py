@@ -43,7 +43,7 @@ class ValueRestrictionWithSeverity:
     class Meta:
         name = "VALUE-RESTRICTION-WITH-SEVERITY"
 
-    severity: SeverityEnum | None = field(
+    severity: None | SeverityEnum = field(
         default=None,
         metadata={
             "name": "SEVERITY",
@@ -51,7 +51,7 @@ class ValueRestrictionWithSeverity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    max: LimitValue | None = field(
+    max: None | LimitValue = field(
         default=None,
         metadata={
             "name": "MAX",
@@ -59,7 +59,7 @@ class ValueRestrictionWithSeverity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    max_length: PositiveInteger | None = field(
+    max_length: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "MAX-LENGTH",
@@ -67,7 +67,7 @@ class ValueRestrictionWithSeverity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    min: LimitValue | None = field(
+    min: None | LimitValue = field(
         default=None,
         metadata={
             "name": "MIN",
@@ -75,7 +75,7 @@ class ValueRestrictionWithSeverity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    min_length: PositiveInteger | None = field(
+    min_length: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "MIN-LENGTH",
@@ -83,7 +83,7 @@ class ValueRestrictionWithSeverity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    pattern: RegularExpression | None = field(
+    pattern: None | RegularExpression = field(
         default=None,
         metadata={
             "name": "PATTERN",
@@ -91,14 +91,14 @@ class ValueRestrictionWithSeverity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

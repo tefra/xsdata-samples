@@ -39,7 +39,7 @@ class SwSystemconstValue:
     class Meta:
         name = "SW-SYSTEMCONST-VALUE"
 
-    sw_systemconst_ref: SwSystemconstValue.SwSystemconstRef | None = field(
+    sw_systemconst_ref: None | SwSystemconstValue.SwSystemconstRef = field(
         default=None,
         metadata={
             "name": "SW-SYSTEMCONST-REF",
@@ -47,7 +47,7 @@ class SwSystemconstValue:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    value: NumericalValueVariationPoint | None = field(
+    value: None | NumericalValueVariationPoint = field(
         default=None,
         metadata={
             "name": "VALUE",
@@ -55,7 +55,7 @@ class SwSystemconstValue:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: SwSystemconstValue.Annotations | None = field(
+    annotations: None | SwSystemconstValue.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -63,14 +63,14 @@ class SwSystemconstValue:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -81,7 +81,7 @@ class SwSystemconstValue:
 
     @dataclass
     class SwSystemconstRef(Ref):
-        dest: SwSystemconstSubtypesEnum | None = field(
+        dest: None | SwSystemconstSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

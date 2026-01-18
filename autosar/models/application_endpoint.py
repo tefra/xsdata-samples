@@ -119,7 +119,7 @@ class ApplicationEndpoint:
     class Meta:
         name = "APPLICATION-ENDPOINT"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -128,7 +128,7 @@ class ApplicationEndpoint:
             "required": True,
         },
     )
-    short_name_fragments: ApplicationEndpoint.ShortNameFragments | None = (
+    short_name_fragments: None | ApplicationEndpoint.ShortNameFragments = (
         field(
             default=None,
             metadata={
@@ -138,7 +138,7 @@ class ApplicationEndpoint:
             },
         )
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -146,7 +146,7 @@ class ApplicationEndpoint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -154,7 +154,7 @@ class ApplicationEndpoint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -162,7 +162,7 @@ class ApplicationEndpoint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -170,7 +170,7 @@ class ApplicationEndpoint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -178,7 +178,7 @@ class ApplicationEndpoint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: ApplicationEndpoint.Annotations | None = field(
+    annotations: None | ApplicationEndpoint.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -187,7 +187,7 @@ class ApplicationEndpoint:
         },
     )
     consumed_service_instances: (
-        ApplicationEndpoint.ConsumedServiceInstances | None
+        None | ApplicationEndpoint.ConsumedServiceInstances
     ) = field(
         default=None,
         metadata={
@@ -196,7 +196,7 @@ class ApplicationEndpoint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    discovery_technology: DiscoveryTechnology | None = field(
+    discovery_technology: None | DiscoveryTechnology = field(
         default=None,
         metadata={
             "name": "DISCOVERY-TECHNOLOGY",
@@ -204,7 +204,7 @@ class ApplicationEndpoint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    max_number_of_connections: PositiveInteger | None = field(
+    max_number_of_connections: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "MAX-NUMBER-OF-CONNECTIONS",
@@ -212,7 +212,7 @@ class ApplicationEndpoint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    network_endpoint_ref: ApplicationEndpoint.NetworkEndpointRef | None = (
+    network_endpoint_ref: None | ApplicationEndpoint.NetworkEndpointRef = (
         field(
             default=None,
             metadata={
@@ -222,7 +222,7 @@ class ApplicationEndpoint:
             },
         )
     )
-    priority: PositiveInteger | None = field(
+    priority: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "PRIORITY",
@@ -231,7 +231,7 @@ class ApplicationEndpoint:
         },
     )
     provided_service_instances: (
-        ApplicationEndpoint.ProvidedServiceInstances | None
+        None | ApplicationEndpoint.ProvidedServiceInstances
     ) = field(
         default=None,
         metadata={
@@ -240,7 +240,7 @@ class ApplicationEndpoint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    remoting_technology: RemotingTechnology | None = field(
+    remoting_technology: None | RemotingTechnology = field(
         default=None,
         metadata={
             "name": "REMOTING-TECHNOLOGY",
@@ -249,7 +249,7 @@ class ApplicationEndpoint:
         },
     )
     serialization_technology_ref: (
-        ApplicationEndpoint.SerializationTechnologyRef | None
+        None | ApplicationEndpoint.SerializationTechnologyRef
     ) = field(
         default=None,
         metadata={
@@ -258,7 +258,7 @@ class ApplicationEndpoint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tls_crypto_mapping_ref: ApplicationEndpoint.TlsCryptoMappingRef | None = (
+    tls_crypto_mapping_ref: None | ApplicationEndpoint.TlsCryptoMappingRef = (
         field(
             default=None,
             metadata={
@@ -268,7 +268,7 @@ class ApplicationEndpoint:
             },
         )
     )
-    tp_configuration: ApplicationEndpoint.TpConfiguration | None = field(
+    tp_configuration: None | ApplicationEndpoint.TpConfiguration = field(
         default=None,
         metadata={
             "name": "TP-CONFIGURATION",
@@ -276,14 +276,14 @@ class ApplicationEndpoint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -291,7 +291,7 @@ class ApplicationEndpoint:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -334,7 +334,7 @@ class ApplicationEndpoint:
 
     @dataclass
     class NetworkEndpointRef(Ref):
-        dest: NetworkEndpointSubtypesEnum | None = field(
+        dest: None | NetworkEndpointSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -356,7 +356,7 @@ class ApplicationEndpoint:
 
     @dataclass
     class SerializationTechnologyRef(Ref):
-        dest: SerializationTechnologySubtypesEnum | None = field(
+        dest: None | SerializationTechnologySubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -367,7 +367,7 @@ class ApplicationEndpoint:
 
     @dataclass
     class TlsCryptoMappingRef(Ref):
-        dest: TlsCryptoServiceMappingSubtypesEnum | None = field(
+        dest: None | TlsCryptoServiceMappingSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -378,7 +378,7 @@ class ApplicationEndpoint:
 
     @dataclass
     class TpConfiguration:
-        generic_tp: GenericTp | None = field(
+        generic_tp: None | GenericTp = field(
             default=None,
             metadata={
                 "name": "GENERIC-TP",
@@ -386,7 +386,7 @@ class ApplicationEndpoint:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        http_tp: HttpTp | None = field(
+        http_tp: None | HttpTp = field(
             default=None,
             metadata={
                 "name": "HTTP-TP",
@@ -394,7 +394,7 @@ class ApplicationEndpoint:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        ieee_1722_tp: Ieee1722Tp | None = field(
+        ieee_1722_tp: None | Ieee1722Tp = field(
             default=None,
             metadata={
                 "name": "IEEE-1722-TP",
@@ -402,7 +402,7 @@ class ApplicationEndpoint:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        rtp_tp: RtpTp | None = field(
+        rtp_tp: None | RtpTp = field(
             default=None,
             metadata={
                 "name": "RTP-TP",
@@ -410,7 +410,7 @@ class ApplicationEndpoint:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        tcp_tp: TcpTp | None = field(
+        tcp_tp: None | TcpTp = field(
             default=None,
             metadata={
                 "name": "TCP-TP",
@@ -418,7 +418,7 @@ class ApplicationEndpoint:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        udp_tp: UdpTp | None = field(
+        udp_tp: None | UdpTp = field(
             default=None,
             metadata={
                 "name": "UDP-TP",

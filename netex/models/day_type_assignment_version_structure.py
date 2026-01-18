@@ -22,7 +22,7 @@ class DayTypeAssignmentVersionStructure(AssignmentVersionStructure1):
     class Meta:
         name = "DayTypeAssignment_VersionStructure"
 
-    service_calendar_ref: ServiceCalendarRef | None = field(
+    service_calendar_ref: None | ServiceCalendarRef = field(
         default=None,
         metadata={
             "name": "ServiceCalendarRef",
@@ -31,11 +31,11 @@ class DayTypeAssignmentVersionStructure(AssignmentVersionStructure1):
         },
     )
     choice: (
-        UicOperatingPeriodRef
+        None
+        | UicOperatingPeriodRef
         | OperatingPeriodRef
         | OperatingDayRef
         | XmlDate
-        | None
     ) = field(
         default=None,
         metadata={
@@ -64,7 +64,7 @@ class DayTypeAssignmentVersionStructure(AssignmentVersionStructure1):
             ),
         },
     )
-    day_type_ref: FareDayTypeRef | DayTypeRef | None = field(
+    day_type_ref: None | FareDayTypeRef | DayTypeRef = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -91,7 +91,7 @@ class DayTypeAssignmentVersionStructure(AssignmentVersionStructure1):
             "max_occurs": 5,
         },
     )
-    is_available: bool | None = field(
+    is_available: None | bool = field(
         default=None,
         metadata={
             "name": "isAvailable",

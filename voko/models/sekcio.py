@@ -10,7 +10,7 @@ class Sekcio:
     class Meta:
         name = "sekcio"
 
-    lit: str | None = field(
+    lit: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",

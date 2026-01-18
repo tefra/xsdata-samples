@@ -28,20 +28,20 @@ class FmFeatureSelectionState:
     class Meta:
         name = "FM-FEATURE-SELECTION-STATE"
 
-    value: FmFeatureSelectionStateSimple | None = field(
+    value: None | FmFeatureSelectionStateSimple = field(
         default=None,
         metadata={
             "required": True,
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

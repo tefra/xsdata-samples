@@ -42,7 +42,7 @@ class InterpolationRoutine:
     class Meta:
         name = "INTERPOLATION-ROUTINE"
 
-    short_label: Identifier | None = field(
+    short_label: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-LABEL",
@@ -50,7 +50,7 @@ class InterpolationRoutine:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    is_default: Boolean | None = field(
+    is_default: None | Boolean = field(
         default=None,
         metadata={
             "name": "IS-DEFAULT",
@@ -59,7 +59,7 @@ class InterpolationRoutine:
         },
     )
     interpolation_routine_ref: (
-        InterpolationRoutine.InterpolationRoutineRef | None
+        None | InterpolationRoutine.InterpolationRoutineRef
     ) = field(
         default=None,
         metadata={
@@ -68,14 +68,14 @@ class InterpolationRoutine:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -86,7 +86,7 @@ class InterpolationRoutine:
 
     @dataclass
     class InterpolationRoutineRef(Ref):
-        dest: BswModuleEntrySubtypesEnum | None = field(
+        dest: None | BswModuleEntrySubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

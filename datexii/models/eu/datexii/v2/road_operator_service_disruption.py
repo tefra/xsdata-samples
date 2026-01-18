@@ -34,7 +34,7 @@ class RoadOperatorServiceDisruption(NonRoadEventInformation):
             "min_occurs": 1,
         },
     )
-    road_operator_service_disruption_extension: ExtensionType | None = field(
+    road_operator_service_disruption_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "roadOperatorServiceDisruptionExtension",

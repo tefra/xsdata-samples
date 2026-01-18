@@ -76,7 +76,7 @@ class FlexrayTpConnection:
     class Meta:
         name = "FLEXRAY-TP-CONNECTION"
 
-    ident: TpConnectionIdent | None = field(
+    ident: None | TpConnectionIdent = field(
         default=None,
         metadata={
             "name": "IDENT",
@@ -84,7 +84,7 @@ class FlexrayTpConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    bandwidth_limitation: Boolean | None = field(
+    bandwidth_limitation: None | Boolean = field(
         default=None,
         metadata={
             "name": "BANDWIDTH-LIMITATION",
@@ -92,7 +92,7 @@ class FlexrayTpConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    direct_tp_sdu_ref: FlexrayTpConnection.DirectTpSduRef | None = field(
+    direct_tp_sdu_ref: None | FlexrayTpConnection.DirectTpSduRef = field(
         default=None,
         metadata={
             "name": "DIRECT-TP-SDU-REF",
@@ -100,7 +100,7 @@ class FlexrayTpConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    multicast_ref: FlexrayTpConnection.MulticastRef | None = field(
+    multicast_ref: None | FlexrayTpConnection.MulticastRef = field(
         default=None,
         metadata={
             "name": "MULTICAST-REF",
@@ -108,7 +108,7 @@ class FlexrayTpConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    receiver_refs: FlexrayTpConnection.ReceiverRefs | None = field(
+    receiver_refs: None | FlexrayTpConnection.ReceiverRefs = field(
         default=None,
         metadata={
             "name": "RECEIVER-REFS",
@@ -116,7 +116,7 @@ class FlexrayTpConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    reversed_tp_sdu_ref: FlexrayTpConnection.ReversedTpSduRef | None = field(
+    reversed_tp_sdu_ref: None | FlexrayTpConnection.ReversedTpSduRef = field(
         default=None,
         metadata={
             "name": "REVERSED-TP-SDU-REF",
@@ -124,7 +124,7 @@ class FlexrayTpConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    rx_pdu_pool_ref: FlexrayTpConnection.RxPduPoolRef | None = field(
+    rx_pdu_pool_ref: None | FlexrayTpConnection.RxPduPoolRef = field(
         default=None,
         metadata={
             "name": "RX-PDU-POOL-REF",
@@ -133,7 +133,7 @@ class FlexrayTpConnection:
         },
     )
     tp_connection_control_ref: (
-        FlexrayTpConnection.TpConnectionControlRef | None
+        None | FlexrayTpConnection.TpConnectionControlRef
     ) = field(
         default=None,
         metadata={
@@ -142,7 +142,7 @@ class FlexrayTpConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    transmitter_ref: FlexrayTpConnection.TransmitterRef | None = field(
+    transmitter_ref: None | FlexrayTpConnection.TransmitterRef = field(
         default=None,
         metadata={
             "name": "TRANSMITTER-REF",
@@ -150,7 +150,7 @@ class FlexrayTpConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tx_pdu_pool_ref: FlexrayTpConnection.TxPduPoolRef | None = field(
+    tx_pdu_pool_ref: None | FlexrayTpConnection.TxPduPoolRef = field(
         default=None,
         metadata={
             "name": "TX-PDU-POOL-REF",
@@ -158,7 +158,7 @@ class FlexrayTpConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -166,14 +166,14 @@ class FlexrayTpConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -184,7 +184,7 @@ class FlexrayTpConnection:
 
     @dataclass
     class DirectTpSduRef(Ref):
-        dest: IPduSubtypesEnum | None = field(
+        dest: None | IPduSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -195,7 +195,7 @@ class FlexrayTpConnection:
 
     @dataclass
     class MulticastRef(Ref):
-        dest: TpAddressSubtypesEnum | None = field(
+        dest: None | TpAddressSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -219,7 +219,7 @@ class FlexrayTpConnection:
 
         @dataclass
         class ReceiverRef(Ref):
-            dest: FlexrayTpNodeSubtypesEnum | None = field(
+            dest: None | FlexrayTpNodeSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -230,7 +230,7 @@ class FlexrayTpConnection:
 
     @dataclass
     class ReversedTpSduRef(Ref):
-        dest: IPduSubtypesEnum | None = field(
+        dest: None | IPduSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -241,7 +241,7 @@ class FlexrayTpConnection:
 
     @dataclass
     class RxPduPoolRef(Ref):
-        dest: FlexrayTpPduPoolSubtypesEnum | None = field(
+        dest: None | FlexrayTpPduPoolSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -252,7 +252,7 @@ class FlexrayTpConnection:
 
     @dataclass
     class TpConnectionControlRef(Ref):
-        dest: FlexrayTpConnectionControlSubtypesEnum | None = field(
+        dest: None | FlexrayTpConnectionControlSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -263,7 +263,7 @@ class FlexrayTpConnection:
 
     @dataclass
     class TransmitterRef(Ref):
-        dest: FlexrayTpNodeSubtypesEnum | None = field(
+        dest: None | FlexrayTpNodeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -274,7 +274,7 @@ class FlexrayTpConnection:
 
     @dataclass
     class TxPduPoolRef(Ref):
-        dest: FlexrayTpPduPoolSubtypesEnum | None = field(
+        dest: None | FlexrayTpPduPoolSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

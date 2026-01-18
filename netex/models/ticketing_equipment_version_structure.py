@@ -32,7 +32,7 @@ class TicketingEquipmentVersionStructure(PassengerEquipmentVersionStructure):
             "tokens": True,
         },
     )
-    ticket_machines: bool | None = field(
+    ticket_machines: None | bool = field(
         default=None,
         metadata={
             "name": "TicketMachines",
@@ -40,7 +40,7 @@ class TicketingEquipmentVersionStructure(PassengerEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    number_of_machines: int | None = field(
+    number_of_machines: None | int = field(
         default=None,
         metadata={
             "name": "NumberOfMachines",
@@ -48,7 +48,7 @@ class TicketingEquipmentVersionStructure(PassengerEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    height_of_machine_interface: Decimal | None = field(
+    height_of_machine_interface: None | Decimal = field(
         default=None,
         metadata={
             "name": "HeightOfMachineInterface",
@@ -56,7 +56,7 @@ class TicketingEquipmentVersionStructure(PassengerEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    ticketing_facility_list: TicketingFacilityList | None = field(
+    ticketing_facility_list: None | TicketingFacilityList = field(
         default=None,
         metadata={
             "name": "TicketingFacilityList",
@@ -64,7 +64,7 @@ class TicketingEquipmentVersionStructure(PassengerEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    ticketing_service_facility_list: TicketingServiceFacilityList | None = (
+    ticketing_service_facility_list: None | TicketingServiceFacilityList = (
         field(
             default=None,
             metadata={
@@ -74,7 +74,7 @@ class TicketingEquipmentVersionStructure(PassengerEquipmentVersionStructure):
             },
         )
     )
-    ticket_office: bool | None = field(
+    ticket_office: None | bool = field(
         default=None,
         metadata={
             "name": "TicketOffice",
@@ -82,7 +82,7 @@ class TicketingEquipmentVersionStructure(PassengerEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    ticket_counter: bool | None = field(
+    ticket_counter: None | bool = field(
         default=None,
         metadata={
             "name": "TicketCounter",
@@ -90,7 +90,7 @@ class TicketingEquipmentVersionStructure(PassengerEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    number_of_tills: int | None = field(
+    number_of_tills: None | int = field(
         default=None,
         metadata={
             "name": "NumberOfTills",
@@ -98,7 +98,7 @@ class TicketingEquipmentVersionStructure(PassengerEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    queue_management: QueueManagementEnumeration | None = field(
+    queue_management: None | QueueManagementEnumeration = field(
         default=None,
         metadata={
             "name": "QueueManagement",
@@ -133,7 +133,7 @@ class TicketingEquipmentVersionStructure(PassengerEquipmentVersionStructure):
             "tokens": True,
         },
     )
-    low_counter_access: bool | None = field(
+    low_counter_access: None | bool = field(
         default=None,
         metadata={
             "name": "LowCounterAccess",
@@ -141,7 +141,7 @@ class TicketingEquipmentVersionStructure(PassengerEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    height_of_low_counter: Decimal | None = field(
+    height_of_low_counter: None | Decimal = field(
         default=None,
         metadata={
             "name": "HeightOfLowCounter",
@@ -149,7 +149,7 @@ class TicketingEquipmentVersionStructure(PassengerEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    induction_loops: bool | None = field(
+    induction_loops: None | bool = field(
         default=None,
         metadata={
             "name": "InductionLoops",
@@ -157,7 +157,7 @@ class TicketingEquipmentVersionStructure(PassengerEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    tactile_interface_available: bool | None = field(
+    tactile_interface_available: None | bool = field(
         default=None,
         metadata={
             "name": "TactileInterfaceAvailable",
@@ -165,7 +165,7 @@ class TicketingEquipmentVersionStructure(PassengerEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    audio_interface_available: bool | None = field(
+    audio_interface_available: None | bool = field(
         default=None,
         metadata={
             "name": "AudioInterfaceAvailable",
@@ -173,7 +173,7 @@ class TicketingEquipmentVersionStructure(PassengerEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    disabled_priority: bool | None = field(
+    disabled_priority: None | bool = field(
         default=None,
         metadata={
             "name": "DisabledPriority",
@@ -181,7 +181,7 @@ class TicketingEquipmentVersionStructure(PassengerEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    wheelchair_suitable: bool | None = field(
+    wheelchair_suitable: None | bool = field(
         default=None,
         metadata={
             "name": "WheelchairSuitable",

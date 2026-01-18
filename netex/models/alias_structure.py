@@ -9,7 +9,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 @dataclass
 class AliasStructure:
-    private_code: PrivateCode | None = field(
+    private_code: None | PrivateCode = field(
         default=None,
         metadata={
             "name": "PrivateCode",
@@ -18,7 +18,7 @@ class AliasStructure:
             "required": True,
         },
     )
-    identifier_type: str | None = field(
+    identifier_type: None | str = field(
         default=None,
         metadata={
             "name": "IdentifierType",

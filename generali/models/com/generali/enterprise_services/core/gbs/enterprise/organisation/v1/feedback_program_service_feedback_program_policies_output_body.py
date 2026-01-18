@@ -18,7 +18,7 @@ class FeedbackProgramServiceFeedbackProgramPoliciesOutputBody:
         global_type = False
 
     feedback_program_policies_response: (
-        FeedbackProgramPoliciesResponse | None
+        None | FeedbackProgramPoliciesResponse
     ) = field(
         default=None,
         metadata={
@@ -28,7 +28,7 @@ class FeedbackProgramServiceFeedbackProgramPoliciesOutputBody:
         },
     )
     fault: (
-        FeedbackProgramServiceFeedbackProgramPoliciesOutputBodyFault | None
+        None | FeedbackProgramServiceFeedbackProgramPoliciesOutputBodyFault
     ) = field(
         default=None,
         metadata={

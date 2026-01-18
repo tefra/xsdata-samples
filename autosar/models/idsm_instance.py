@@ -139,7 +139,7 @@ class IdsmInstance:
     class Meta:
         name = "IDSM-INSTANCE"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -148,7 +148,7 @@ class IdsmInstance:
             "required": True,
         },
     )
-    short_name_fragments: IdsmInstance.ShortNameFragments | None = field(
+    short_name_fragments: None | IdsmInstance.ShortNameFragments = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -156,7 +156,7 @@ class IdsmInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -164,7 +164,7 @@ class IdsmInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -172,7 +172,7 @@ class IdsmInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -180,7 +180,7 @@ class IdsmInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -188,7 +188,7 @@ class IdsmInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -196,7 +196,7 @@ class IdsmInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: IdsmInstance.Annotations | None = field(
+    annotations: None | IdsmInstance.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -204,7 +204,7 @@ class IdsmInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -212,7 +212,7 @@ class IdsmInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    block_states: IdsmInstance.BlockStates | None = field(
+    block_states: None | IdsmInstance.BlockStates = field(
         default=None,
         metadata={
             "name": "BLOCK-STATES",
@@ -220,7 +220,7 @@ class IdsmInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ecu_instances: IdsmInstance.EcuInstances | None = field(
+    ecu_instances: None | IdsmInstance.EcuInstances = field(
         default=None,
         metadata={
             "name": "ECU-INSTANCES",
@@ -228,7 +228,7 @@ class IdsmInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    idsm_instance_id: PositiveInteger | None = field(
+    idsm_instance_id: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "IDSM-INSTANCE-ID",
@@ -237,7 +237,7 @@ class IdsmInstance:
         },
     )
     idsm_module_instantiation_ref: (
-        IdsmInstance.IdsmModuleInstantiationRef | None
+        None | IdsmInstance.IdsmModuleInstantiationRef
     ) = field(
         default=None,
         metadata={
@@ -246,7 +246,7 @@ class IdsmInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    rate_limitation_filters: IdsmInstance.RateLimitationFilters | None = field(
+    rate_limitation_filters: None | IdsmInstance.RateLimitationFilters = field(
         default=None,
         metadata={
             "name": "RATE-LIMITATION-FILTERS",
@@ -254,7 +254,7 @@ class IdsmInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    signature_support_ap: IdsmSignatureSupportAp | None = field(
+    signature_support_ap: None | IdsmSignatureSupportAp = field(
         default=None,
         metadata={
             "name": "SIGNATURE-SUPPORT-AP",
@@ -262,7 +262,7 @@ class IdsmInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    signature_support_cp: IdsmSignatureSupportCp | None = field(
+    signature_support_cp: None | IdsmSignatureSupportCp = field(
         default=None,
         metadata={
             "name": "SIGNATURE-SUPPORT-CP",
@@ -270,7 +270,7 @@ class IdsmInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    timestamp_format: String | None = field(
+    timestamp_format: None | String = field(
         default=None,
         metadata={
             "name": "TIMESTAMP-FORMAT",
@@ -279,7 +279,7 @@ class IdsmInstance:
         },
     )
     traffic_limitation_filters: (
-        IdsmInstance.TrafficLimitationFilters | None
+        None | IdsmInstance.TrafficLimitationFilters
     ) = field(
         default=None,
         metadata={
@@ -288,14 +288,14 @@ class IdsmInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -303,7 +303,7 @@ class IdsmInstance:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -357,7 +357,7 @@ class IdsmInstance:
 
     @dataclass
     class IdsmModuleInstantiationRef(Ref):
-        dest: IdsmModuleInstantiationSubtypesEnum | None = field(
+        dest: None | IdsmModuleInstantiationSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

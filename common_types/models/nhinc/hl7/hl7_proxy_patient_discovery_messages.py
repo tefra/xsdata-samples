@@ -19,7 +19,7 @@ class PixconsumerPrpaIn201301UvproxyRequestType:
     class Meta:
         name = "PIXConsumer_PRPA_IN201301UVProxyRequestType"
 
-    prpa_in201301_uv02: PrpaIn201301Uv02 | None = field(
+    prpa_in201301_uv02: None | PrpaIn201301Uv02 = field(
         default=None,
         metadata={
             "name": "PRPA_IN201301UV02",
@@ -28,7 +28,7 @@ class PixconsumerPrpaIn201301UvproxyRequestType:
             "required": True,
         },
     )
-    assertion: AssertionType | None = field(
+    assertion: None | AssertionType = field(
         default=None,
         metadata={
             "type": "Element",
@@ -36,7 +36,7 @@ class PixconsumerPrpaIn201301UvproxyRequestType:
             "required": True,
         },
     )
-    nhin_target_system: NhinTargetSystemType | None = field(
+    nhin_target_system: None | NhinTargetSystemType = field(
         default=None,
         metadata={
             "name": "nhinTargetSystem",
@@ -52,7 +52,7 @@ class PixconsumerPrpaIn201301UvproxySecuredRequestType:
     class Meta:
         name = "PIXConsumer_PRPA_IN201301UVProxySecuredRequestType"
 
-    prpa_in201301_uv02: PrpaIn201301Uv02 | None = field(
+    prpa_in201301_uv02: None | PrpaIn201301Uv02 = field(
         default=None,
         metadata={
             "name": "PRPA_IN201301UV02",
@@ -61,7 +61,7 @@ class PixconsumerPrpaIn201301UvproxySecuredRequestType:
             "required": True,
         },
     )
-    nhin_target_system: NhinTargetSystemType | None = field(
+    nhin_target_system: None | NhinTargetSystemType = field(
         default=None,
         metadata={
             "name": "nhinTargetSystem",
@@ -77,7 +77,7 @@ class PixconsumerPrpaIn201302UvproxyRequestType:
     class Meta:
         name = "PIXConsumer_PRPA_IN201302UVProxyRequestType"
 
-    prpa_in201302_uv02: PrpaIn201302Uv02 | None = field(
+    prpa_in201302_uv02: None | PrpaIn201302Uv02 = field(
         default=None,
         metadata={
             "name": "PRPA_IN201302UV02",
@@ -86,7 +86,7 @@ class PixconsumerPrpaIn201302UvproxyRequestType:
             "required": True,
         },
     )
-    assertion: AssertionType | None = field(
+    assertion: None | AssertionType = field(
         default=None,
         metadata={
             "type": "Element",
@@ -94,7 +94,7 @@ class PixconsumerPrpaIn201302UvproxyRequestType:
             "required": True,
         },
     )
-    nhin_target_system: NhinTargetSystemType | None = field(
+    nhin_target_system: None | NhinTargetSystemType = field(
         default=None,
         metadata={
             "name": "nhinTargetSystem",
@@ -110,7 +110,7 @@ class PixconsumerPrpaIn201302UvproxySecuredRequestType:
     class Meta:
         name = "PIXConsumer_PRPA_IN201302UVProxySecuredRequestType"
 
-    prpa_in201302_uv02: PrpaIn201302Uv02 | None = field(
+    prpa_in201302_uv02: None | PrpaIn201302Uv02 = field(
         default=None,
         metadata={
             "name": "PRPA_IN201302UV02",
@@ -119,7 +119,7 @@ class PixconsumerPrpaIn201302UvproxySecuredRequestType:
             "required": True,
         },
     )
-    nhin_target_system: NhinTargetSystemType | None = field(
+    nhin_target_system: None | NhinTargetSystemType = field(
         default=None,
         metadata={
             "name": "nhinTargetSystem",
@@ -135,7 +135,7 @@ class PixconsumerPrpaIn201304UvproxyRequestType:
     class Meta:
         name = "PIXConsumer_PRPA_IN201304UVProxyRequestType"
 
-    prpa_in201304_uv02: PrpaIn201304Uv02 | None = field(
+    prpa_in201304_uv02: None | PrpaIn201304Uv02 = field(
         default=None,
         metadata={
             "name": "PRPA_IN201304UV02",
@@ -144,7 +144,7 @@ class PixconsumerPrpaIn201304UvproxyRequestType:
             "required": True,
         },
     )
-    assertion: AssertionType | None = field(
+    assertion: None | AssertionType = field(
         default=None,
         metadata={
             "type": "Element",
@@ -152,7 +152,7 @@ class PixconsumerPrpaIn201304UvproxyRequestType:
             "required": True,
         },
     )
-    nhin_target_system: NhinTargetSystemType | None = field(
+    nhin_target_system: None | NhinTargetSystemType = field(
         default=None,
         metadata={
             "name": "nhinTargetSystem",
@@ -168,7 +168,7 @@ class PixconsumerPrpaIn201304UvproxySecuredRequestType:
     class Meta:
         name = "PIXConsumer_PRPA_IN201304UVProxySecuredRequestType"
 
-    prpa_in201304_uv02: PrpaIn201304Uv02 | None = field(
+    prpa_in201304_uv02: None | PrpaIn201304Uv02 = field(
         default=None,
         metadata={
             "name": "PRPA_IN201304UV02",
@@ -177,7 +177,7 @@ class PixconsumerPrpaIn201304UvproxySecuredRequestType:
             "required": True,
         },
     )
-    nhin_target_system: NhinTargetSystemType | None = field(
+    nhin_target_system: None | NhinTargetSystemType = field(
         default=None,
         metadata={
             "name": "nhinTargetSystem",
@@ -193,7 +193,7 @@ class PixconsumerPrpaIn201309UvproxyRequestType:
     class Meta:
         name = "PIXConsumer_PRPA_IN201309UVProxyRequestType"
 
-    prpa_in201309_uv02: PrpaIn201309Uv02 | None = field(
+    prpa_in201309_uv02: None | PrpaIn201309Uv02 = field(
         default=None,
         metadata={
             "name": "PRPA_IN201309UV02",
@@ -202,7 +202,7 @@ class PixconsumerPrpaIn201309UvproxyRequestType:
             "required": True,
         },
     )
-    assertion: AssertionType | None = field(
+    assertion: None | AssertionType = field(
         default=None,
         metadata={
             "type": "Element",
@@ -210,7 +210,7 @@ class PixconsumerPrpaIn201309UvproxyRequestType:
             "required": True,
         },
     )
-    nhin_target_system: NhinTargetSystemType | None = field(
+    nhin_target_system: None | NhinTargetSystemType = field(
         default=None,
         metadata={
             "name": "nhinTargetSystem",
@@ -226,7 +226,7 @@ class PixconsumerPrpaIn201309UvproxySecuredRequestType:
     class Meta:
         name = "PIXConsumer_PRPA_IN201309UVProxySecuredRequestType"
 
-    prpa_in201309_uv02: PrpaIn201309Uv02 | None = field(
+    prpa_in201309_uv02: None | PrpaIn201309Uv02 = field(
         default=None,
         metadata={
             "name": "PRPA_IN201309UV02",
@@ -235,7 +235,7 @@ class PixconsumerPrpaIn201309UvproxySecuredRequestType:
             "required": True,
         },
     )
-    nhin_target_system: NhinTargetSystemType | None = field(
+    nhin_target_system: None | NhinTargetSystemType = field(
         default=None,
         metadata={
             "name": "nhinTargetSystem",

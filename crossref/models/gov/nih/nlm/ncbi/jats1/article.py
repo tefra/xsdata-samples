@@ -29,33 +29,33 @@ class Article:
         name = "article"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    processing_meta: ProcessingMeta | None = field(
+    processing_meta: None | ProcessingMeta = field(
         default=None,
         metadata={
             "name": "processing-meta",
             "type": "Element",
         },
     )
-    front: Front | None = field(
+    front: None | Front = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
         },
     )
-    body: Body | None = field(
+    body: None | Body = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    back: Back | None = field(
+    back: None | Back = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    floats_group: FloatsGroup | None = field(
+    floats_group: None | FloatsGroup = field(
         default=None,
         metadata={
             "name": "floats-group",
@@ -75,34 +75,34 @@ class Article:
             "type": "Element",
         },
     )
-    article_type: str | None = field(
+    article_type: None | str = field(
         default=None,
         metadata={
             "name": "article-type",
             "type": "Attribute",
         },
     )
-    dtd_version: ArticleDtdVersion | None = field(
+    dtd_version: None | ArticleDtdVersion = field(
         default=None,
         metadata={
             "name": "dtd-version",
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",

@@ -20,7 +20,7 @@ class ParkingPermit:
     :ivar parking_permit_extension:
     """
 
-    parking_permit_type: PermitTypeEnum | None = field(
+    parking_permit_type: None | PermitTypeEnum = field(
         default=None,
         metadata={
             "name": "parkingPermitType",
@@ -29,7 +29,7 @@ class ParkingPermit:
             "required": True,
         },
     )
-    parking_permit_scheme: str | None = field(
+    parking_permit_scheme: None | str = field(
         default=None,
         metadata={
             "name": "parkingPermitScheme",
@@ -38,7 +38,7 @@ class ParkingPermit:
             "max_length": 1024,
         },
     )
-    parking_permit_identifier: str | None = field(
+    parking_permit_identifier: None | str = field(
         default=None,
         metadata={
             "name": "parkingPermitIdentifier",
@@ -47,7 +47,7 @@ class ParkingPermit:
             "max_length": 1024,
         },
     )
-    parking_permit_extension: ExtensionType | None = field(
+    parking_permit_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "parkingPermitExtension",

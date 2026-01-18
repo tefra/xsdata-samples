@@ -11,19 +11,19 @@ class Parto:
     class Meta:
         name = "parto"
 
-    lng: str | None = field(
+    lng: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    sekcio: Sekcio | None = field(
+    sekcio: None | Sekcio = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    art: Art | None = field(
+    art: None | Art = field(
         default=None,
         metadata={
             "type": "Element",

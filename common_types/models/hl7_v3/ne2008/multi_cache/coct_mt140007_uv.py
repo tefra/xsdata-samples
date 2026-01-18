@@ -30,7 +30,7 @@ class CoctMt140007UvDevice:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Ii | None = field(
+    type_id: None | Ii = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -53,14 +53,14 @@ class CoctMt140007UvDevice:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    code: Ce | None = field(
+    code: None | Ce = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    manufacturer_model_name: Sc | None = field(
+    manufacturer_model_name: None | Sc = field(
         default=None,
         metadata={
             "name": "manufacturerModelName",
@@ -68,7 +68,7 @@ class CoctMt140007UvDevice:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    software_name: Sc | None = field(
+    software_name: None | Sc = field(
         default=None,
         metadata={
             "name": "softwareName",
@@ -76,14 +76,14 @@ class CoctMt140007UvDevice:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    null_flavor: NullFlavor | None = field(
+    null_flavor: None | NullFlavor = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
         },
     )
-    class_code: EntityClassDevice | None = field(
+    class_code: None | EntityClassDevice = field(
         default=None,
         metadata={
             "name": "classCode",

@@ -584,7 +584,7 @@ class SchematicMapMemberVersionedChildStructure(VersionedChildStructure):
     class Meta:
         name = "SchematicMapMember_VersionedChildStructure"
 
-    name: MultilingualString | None = field(
+    name: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "Name",
@@ -593,7 +593,8 @@ class SchematicMapMemberVersionedChildStructure(VersionedChildStructure):
         },
     )
     choice: (
-        TripLegRef
+        None
+        | TripLegRef
         | IndividualPassengerInfoRef
         | VehiclePoolingDriverInfoRef
         | IndividualTravellerRef
@@ -1113,7 +1114,6 @@ class SchematicMapMemberVersionedChildStructure(VersionedChildStructure):
         | DataSourceRef
         | VersionRef
         | VersionOfObjectRef
-        | None
     ) = field(
         default=None,
         metadata={
@@ -3722,7 +3722,7 @@ class SchematicMapMemberVersionedChildStructure(VersionedChildStructure):
             ),
         },
     )
-    hide: bool | None = field(
+    hide: None | bool = field(
         default=None,
         metadata={
             "name": "Hide",
@@ -3730,7 +3730,7 @@ class SchematicMapMemberVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    display_as_icon: bool | None = field(
+    display_as_icon: None | bool = field(
         default=None,
         metadata={
             "name": "DisplayAsIcon",
@@ -3738,7 +3738,7 @@ class SchematicMapMemberVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    info_link: InfoLink | None = field(
+    info_link: None | InfoLink = field(
         default=None,
         metadata={
             "name": "InfoLink",
@@ -3746,14 +3746,14 @@ class SchematicMapMemberVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    x: float | None = field(
+    x: None | float = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    y: float | None = field(
+    y: None | float = field(
         default=None,
         metadata={
             "type": "Element",
@@ -3761,13 +3761,13 @@ class SchematicMapMemberVersionedChildStructure(VersionedChildStructure):
         },
     )
     projection: (
-        TopographicProjection
+        None
+        | TopographicProjection
         | ZoneProjection
         | ComplexFeatureProjection
         | LinkSequenceProjection
         | LinkProjection
         | PointProjection
-        | None
     ) = field(
         default=None,
         metadata={

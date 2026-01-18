@@ -104,7 +104,7 @@ class VariableAndParameterInterfaceMapping:
     class Meta:
         name = "VARIABLE-AND-PARAMETER-INTERFACE-MAPPING"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -114,7 +114,7 @@ class VariableAndParameterInterfaceMapping:
         },
     )
     short_name_fragments: (
-        VariableAndParameterInterfaceMapping.ShortNameFragments | None
+        None | VariableAndParameterInterfaceMapping.ShortNameFragments
     ) = field(
         default=None,
         metadata={
@@ -123,7 +123,7 @@ class VariableAndParameterInterfaceMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -131,7 +131,7 @@ class VariableAndParameterInterfaceMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -139,7 +139,7 @@ class VariableAndParameterInterfaceMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -147,7 +147,7 @@ class VariableAndParameterInterfaceMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -155,7 +155,7 @@ class VariableAndParameterInterfaceMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -163,7 +163,7 @@ class VariableAndParameterInterfaceMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: VariableAndParameterInterfaceMapping.Annotations | None = (
+    annotations: None | VariableAndParameterInterfaceMapping.Annotations = (
         field(
             default=None,
             metadata={
@@ -174,7 +174,7 @@ class VariableAndParameterInterfaceMapping:
         )
     )
     blueprint_policys: (
-        VariableAndParameterInterfaceMapping.BlueprintPolicys | None
+        None | VariableAndParameterInterfaceMapping.BlueprintPolicys
     ) = field(
         default=None,
         metadata={
@@ -183,7 +183,7 @@ class VariableAndParameterInterfaceMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    short_name_pattern: String | None = field(
+    short_name_pattern: None | String = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-PATTERN",
@@ -191,7 +191,7 @@ class VariableAndParameterInterfaceMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -199,7 +199,7 @@ class VariableAndParameterInterfaceMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    data_mappings: VariableAndParameterInterfaceMapping.DataMappings | None = (
+    data_mappings: None | VariableAndParameterInterfaceMapping.DataMappings = (
         field(
             default=None,
             metadata={
@@ -209,14 +209,14 @@ class VariableAndParameterInterfaceMapping:
             },
         )
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -224,7 +224,7 @@ class VariableAndParameterInterfaceMapping:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",

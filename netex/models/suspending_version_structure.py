@@ -26,7 +26,7 @@ class SuspendingVersionStructure(UsageParameterVersionStructure):
             "tokens": True,
         },
     )
-    qualification_period: XmlDuration | None = field(
+    qualification_period: None | XmlDuration = field(
         default=None,
         metadata={
             "name": "QualificationPeriod",
@@ -34,7 +34,7 @@ class SuspendingVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    qualification_percent: Decimal | None = field(
+    qualification_percent: None | Decimal = field(
         default=None,
         metadata={
             "name": "QualificationPercent",
@@ -42,7 +42,7 @@ class SuspendingVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    minimum_suspension_period: XmlDuration | None = field(
+    minimum_suspension_period: None | XmlDuration = field(
         default=None,
         metadata={
             "name": "MinimumSuspensionPeriod",
@@ -50,7 +50,7 @@ class SuspendingVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    maximum_suspension_period: XmlDuration | None = field(
+    maximum_suspension_period: None | XmlDuration = field(
         default=None,
         metadata={
             "name": "MaximumSuspensionPeriod",
@@ -58,7 +58,7 @@ class SuspendingVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    maximum_number_of_suspensions_per_term: int | None = field(
+    maximum_number_of_suspensions_per_term: None | int = field(
         default=None,
         metadata={
             "name": "MaximumNumberOfSuspensionsPerTerm",

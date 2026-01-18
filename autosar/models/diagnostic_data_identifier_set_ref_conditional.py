@@ -35,8 +35,8 @@ class DiagnosticDataIdentifierSetRefConditional:
         name = "DIAGNOSTIC-DATA-IDENTIFIER-SET-REF-CONDITIONAL"
 
     diagnostic_data_identifier_set_ref: (
-        DiagnosticDataIdentifierSetRefConditional.DiagnosticDataIdentifierSetRef
-        | None
+        None
+        | DiagnosticDataIdentifierSetRefConditional.DiagnosticDataIdentifierSetRef
     ) = field(
         default=None,
         metadata={
@@ -45,7 +45,7 @@ class DiagnosticDataIdentifierSetRefConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -53,14 +53,14 @@ class DiagnosticDataIdentifierSetRefConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -71,7 +71,7 @@ class DiagnosticDataIdentifierSetRefConditional:
 
     @dataclass
     class DiagnosticDataIdentifierSetRef(Ref):
-        dest: DiagnosticDataIdentifierSetSubtypesEnum | None = field(
+        dest: None | DiagnosticDataIdentifierSetSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

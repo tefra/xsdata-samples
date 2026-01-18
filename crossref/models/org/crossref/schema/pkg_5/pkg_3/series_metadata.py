@@ -55,13 +55,13 @@ class SeriesMetadata:
         name = "series_metadata"
         namespace = "http://www.crossref.org/schema/5.3.1"
 
-    contributors: Contributors | None = field(
+    contributors: None | Contributors = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    titles: Titles | None = field(
+    titles: None | Titles = field(
         default=None,
         metadata={
             "type": "Element",
@@ -83,38 +83,38 @@ class SeriesMetadata:
             "max_occurs": 6,
         },
     )
-    coden: Coden | None = field(
+    coden: None | Coden = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    series_number: SeriesNumber | None = field(
+    series_number: None | SeriesNumber = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    publisher_item: PublisherItem | None = field(
+    publisher_item: None | PublisherItem = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    crossmark: Crossmark | None = field(
+    crossmark: None | Crossmark = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    program: FundrefProgram | None = field(
+    program: None | FundrefProgram = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.crossref.org/fundref.xsd",
         },
     )
-    crossref_org_access_indicators_program: AccessIndicatorsProgram | None = (
+    crossref_org_access_indicators_program: None | AccessIndicatorsProgram = (
         field(
             default=None,
             metadata={
@@ -124,13 +124,13 @@ class SeriesMetadata:
             },
         )
     )
-    archive_locations: ArchiveLocations | None = field(
+    archive_locations: None | ArchiveLocations = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    doi_data: DoiData | None = field(
+    doi_data: None | DoiData = field(
         default=None,
         metadata={
             "type": "Element",

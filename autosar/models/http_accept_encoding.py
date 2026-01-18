@@ -31,7 +31,7 @@ class HttpAcceptEncoding:
     class Meta:
         name = "HTTP-ACCEPT-ENCODING"
 
-    accept_encoding: HttpAcceptEncodingEnum | None = field(
+    accept_encoding: None | HttpAcceptEncodingEnum = field(
         default=None,
         metadata={
             "name": "ACCEPT-ENCODING",
@@ -39,14 +39,14 @@ class HttpAcceptEncoding:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

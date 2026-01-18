@@ -95,7 +95,7 @@ class ComManagementMapping:
     class Meta:
         name = "COM-MANAGEMENT-MAPPING"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -104,7 +104,7 @@ class ComManagementMapping:
             "required": True,
         },
     )
-    short_name_fragments: ComManagementMapping.ShortNameFragments | None = (
+    short_name_fragments: None | ComManagementMapping.ShortNameFragments = (
         field(
             default=None,
             metadata={
@@ -114,7 +114,7 @@ class ComManagementMapping:
             },
         )
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -122,7 +122,7 @@ class ComManagementMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -130,7 +130,7 @@ class ComManagementMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -138,7 +138,7 @@ class ComManagementMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -146,7 +146,7 @@ class ComManagementMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -154,7 +154,7 @@ class ComManagementMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: ComManagementMapping.Annotations | None = field(
+    annotations: None | ComManagementMapping.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -163,7 +163,7 @@ class ComManagementMapping:
         },
     )
     com_management_group_refs: (
-        ComManagementMapping.ComManagementGroupRefs | None
+        None | ComManagementMapping.ComManagementGroupRefs
     ) = field(
         default=None,
         metadata={
@@ -173,7 +173,7 @@ class ComManagementMapping:
         },
     )
     com_management_port_group_irefs: (
-        ComManagementMapping.ComManagementPortGroupIrefs | None
+        None | ComManagementMapping.ComManagementPortGroupIrefs
     ) = field(
         default=None,
         metadata={
@@ -182,7 +182,7 @@ class ComManagementMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    physical_channel_refs: ComManagementMapping.PhysicalChannelRefs | None = (
+    physical_channel_refs: None | ComManagementMapping.PhysicalChannelRefs = (
         field(
             default=None,
             metadata={
@@ -192,7 +192,7 @@ class ComManagementMapping:
             },
         )
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -200,14 +200,14 @@ class ComManagementMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -215,7 +215,7 @@ class ComManagementMapping:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -260,7 +260,7 @@ class ComManagementMapping:
 
         @dataclass
         class ComManagementGroupRef(Ref):
-            dest: ISignalIPduGroupSubtypesEnum | None = field(
+            dest: None | ISignalIPduGroupSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -297,7 +297,7 @@ class ComManagementMapping:
 
         @dataclass
         class PhysicalChannelRef(Ref):
-            dest: PhysicalChannelSubtypesEnum | None = field(
+            dest: None | PhysicalChannelSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",

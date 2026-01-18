@@ -12,7 +12,7 @@ class PriceUnitVersionStructure(TypeOfValueVersionStructure):
     class Meta:
         name = "PriceUnit_VersionStructure"
 
-    precision: int | None = field(
+    precision: None | int = field(
         default=None,
         metadata={
             "name": "Precision",

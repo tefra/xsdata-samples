@@ -16,7 +16,7 @@ class NotifyOrganisationGbmresponseType:
     class Meta:
         name = "NotifyOrganisationGBMResponseType"
 
-    acknowledgement: str | None = field(
+    acknowledgement: None | str = field(
         default=None,
         metadata={
             "name": "Acknowledgement",

@@ -100,7 +100,7 @@ class TimingDescriptionEventChain:
     class Meta:
         name = "TIMING-DESCRIPTION-EVENT-CHAIN"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -110,7 +110,7 @@ class TimingDescriptionEventChain:
         },
     )
     short_name_fragments: (
-        TimingDescriptionEventChain.ShortNameFragments | None
+        None | TimingDescriptionEventChain.ShortNameFragments
     ) = field(
         default=None,
         metadata={
@@ -119,7 +119,7 @@ class TimingDescriptionEventChain:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -127,7 +127,7 @@ class TimingDescriptionEventChain:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -135,7 +135,7 @@ class TimingDescriptionEventChain:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -143,7 +143,7 @@ class TimingDescriptionEventChain:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -151,7 +151,7 @@ class TimingDescriptionEventChain:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -159,7 +159,7 @@ class TimingDescriptionEventChain:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: TimingDescriptionEventChain.Annotations | None = field(
+    annotations: None | TimingDescriptionEventChain.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -167,7 +167,7 @@ class TimingDescriptionEventChain:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -175,7 +175,7 @@ class TimingDescriptionEventChain:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    stimulus_ref: TimingDescriptionEventChain.StimulusRef | None = field(
+    stimulus_ref: None | TimingDescriptionEventChain.StimulusRef = field(
         default=None,
         metadata={
             "name": "STIMULUS-REF",
@@ -183,7 +183,7 @@ class TimingDescriptionEventChain:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    response_ref: TimingDescriptionEventChain.ResponseRef | None = field(
+    response_ref: None | TimingDescriptionEventChain.ResponseRef = field(
         default=None,
         metadata={
             "name": "RESPONSE-REF",
@@ -191,7 +191,7 @@ class TimingDescriptionEventChain:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    segment_refs: TimingDescriptionEventChain.SegmentRefs | None = field(
+    segment_refs: None | TimingDescriptionEventChain.SegmentRefs = field(
         default=None,
         metadata={
             "name": "SEGMENT-REFS",
@@ -199,14 +199,14 @@ class TimingDescriptionEventChain:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -214,7 +214,7 @@ class TimingDescriptionEventChain:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -246,7 +246,7 @@ class TimingDescriptionEventChain:
 
     @dataclass
     class StimulusRef(Ref):
-        dest: TimingDescriptionEventSubtypesEnum | None = field(
+        dest: None | TimingDescriptionEventSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -257,7 +257,7 @@ class TimingDescriptionEventChain:
 
     @dataclass
     class ResponseRef(Ref):
-        dest: TimingDescriptionEventSubtypesEnum | None = field(
+        dest: None | TimingDescriptionEventSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -281,7 +281,7 @@ class TimingDescriptionEventChain:
 
         @dataclass
         class SegmentRef(Ref):
-            dest: TimingDescriptionEventChainSubtypesEnum | None = field(
+            dest: None | TimingDescriptionEventChainSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",

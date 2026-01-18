@@ -12,7 +12,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 @dataclass
 class TopicStructure:
-    description: MultilingualString | None = field(
+    description: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "Description",
@@ -20,14 +20,14 @@ class TopicStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    sources: DataSourcesRelStructure | None = field(
+    sources: None | DataSourcesRelStructure = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    codespace_ref: CodespaceRef | None = field(
+    codespace_ref: None | CodespaceRef = field(
         default=None,
         metadata={
             "name": "CodespaceRef",
@@ -35,7 +35,7 @@ class TopicStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    responsibility_role_assignment: ResponsibilityRoleAssignment | None = (
+    responsibility_role_assignment: None | ResponsibilityRoleAssignment = (
         field(
             default=None,
             metadata={

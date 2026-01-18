@@ -32,8 +32,8 @@ class FunctionGroupStateInFunctionGroupSetInstanceRef:
         name = "FUNCTION-GROUP-STATE-IN-FUNCTION-GROUP-SET-INSTANCE-REF"
 
     context_mode_declaration_group_prototype_ref: (
-        FunctionGroupStateInFunctionGroupSetInstanceRef.ContextModeDeclarationGroupPrototypeRef
-        | None
+        None
+        | FunctionGroupStateInFunctionGroupSetInstanceRef.ContextModeDeclarationGroupPrototypeRef
     ) = field(
         default=None,
         metadata={
@@ -43,8 +43,8 @@ class FunctionGroupStateInFunctionGroupSetInstanceRef:
         },
     )
     target_mode_declaration_ref: (
-        FunctionGroupStateInFunctionGroupSetInstanceRef.TargetModeDeclarationRef
-        | None
+        None
+        | FunctionGroupStateInFunctionGroupSetInstanceRef.TargetModeDeclarationRef
     ) = field(
         default=None,
         metadata={
@@ -53,14 +53,14 @@ class FunctionGroupStateInFunctionGroupSetInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -71,7 +71,7 @@ class FunctionGroupStateInFunctionGroupSetInstanceRef:
 
     @dataclass
     class ContextModeDeclarationGroupPrototypeRef(Ref):
-        dest: ModeDeclarationGroupPrototypeSubtypesEnum | None = field(
+        dest: None | ModeDeclarationGroupPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -82,7 +82,7 @@ class FunctionGroupStateInFunctionGroupSetInstanceRef:
 
     @dataclass
     class TargetModeDeclarationRef(Ref):
-        dest: ModeDeclarationSubtypesEnum | None = field(
+        dest: None | ModeDeclarationSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

@@ -20,7 +20,7 @@ class InterchangeRuleVersionStructure(InterchangeVersionStructure):
     class Meta:
         name = "InterchangeRule_VersionStructure"
 
-    connection_zone_ref: ZoneRefStructure | None = field(
+    connection_zone_ref: None | ZoneRefStructure = field(
         default=None,
         metadata={
             "name": "ConnectionZoneRef",
@@ -28,7 +28,7 @@ class InterchangeRuleVersionStructure(InterchangeVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    control_centre_ref: ControlCentreRef | None = field(
+    control_centre_ref: None | ControlCentreRef = field(
         default=None,
         metadata={
             "name": "ControlCentreRef",
@@ -36,7 +36,7 @@ class InterchangeRuleVersionStructure(InterchangeVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    exclude: bool | None = field(
+    exclude: None | bool = field(
         default=None,
         metadata={
             "name": "Exclude",
@@ -44,14 +44,14 @@ class InterchangeRuleVersionStructure(InterchangeVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    timings: InterchangeRuleTimingsRelStructure | None = field(
+    timings: None | InterchangeRuleTimingsRelStructure = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    feeder_filter: InterchangeRuleParameterStructure | None = field(
+    feeder_filter: None | InterchangeRuleParameterStructure = field(
         default=None,
         metadata={
             "name": "FeederFilter",
@@ -59,7 +59,7 @@ class InterchangeRuleVersionStructure(InterchangeVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    distributor_filter: InterchangeRuleParameterStructure | None = field(
+    distributor_filter: None | InterchangeRuleParameterStructure = field(
         default=None,
         metadata={
             "name": "DistributorFilter",

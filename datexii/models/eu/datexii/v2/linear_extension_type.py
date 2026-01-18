@@ -14,7 +14,7 @@ class LinearExtensionType:
     class Meta:
         name = "_LinearExtensionType"
 
-    openlr_extended_linear: OpenlrExtendedLinear | None = field(
+    openlr_extended_linear: None | OpenlrExtendedLinear = field(
         default=None,
         metadata={
             "name": "openlrExtendedLinear",

@@ -24,7 +24,7 @@ class PassengerStopAssignmentVersionStructure(StopAssignmentVersionStructure):
         name = "PassengerStopAssignment_VersionStructure"
 
     taxi_rank_ref_or_stop_place_ref_or_stop_place: (
-        TaxiRankRef | StopPlaceRef | StopPlace | None
+        None | TaxiRankRef | StopPlaceRef | StopPlace
     ) = field(
         default=None,
         metadata={
@@ -49,7 +49,7 @@ class PassengerStopAssignmentVersionStructure(StopAssignmentVersionStructure):
         },
     )
     taxi_stand_ref_or_quay_ref_or_quay: (
-        TaxiStandRef | QuayRef | Quay | None
+        None | TaxiStandRef | QuayRef | Quay
     ) = field(
         default=None,
         metadata={
@@ -74,7 +74,7 @@ class PassengerStopAssignmentVersionStructure(StopAssignmentVersionStructure):
         },
     )
     boarding_position_ref_or_boarding_position: (
-        BoardingPositionRef | BoardingPosition | None
+        None | BoardingPositionRef | BoardingPosition
     ) = field(
         default=None,
         metadata={
@@ -93,7 +93,7 @@ class PassengerStopAssignmentVersionStructure(StopAssignmentVersionStructure):
             ),
         },
     )
-    train_elements: TrainStopAssignmentsRelStructure | None = field(
+    train_elements: None | TrainStopAssignmentsRelStructure = field(
         default=None,
         metadata={
             "name": "trainElements",

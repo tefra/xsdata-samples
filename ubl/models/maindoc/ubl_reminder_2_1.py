@@ -52,7 +52,7 @@ __NAMESPACE__ = "urn:oasis:names:specification:ubl:schema:xsd:Reminder-2"
 
 @dataclass(frozen=True)
 class ReminderType:
-    ublextensions: Ublextensions | None = field(
+    ublextensions: None | Ublextensions = field(
         default=None,
         metadata={
             "name": "UBLExtensions",
@@ -60,7 +60,7 @@ class ReminderType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2",
         },
     )
-    ublversion_id: UblversionId | None = field(
+    ublversion_id: None | UblversionId = field(
         default=None,
         metadata={
             "name": "UBLVersionID",
@@ -68,7 +68,7 @@ class ReminderType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    customization_id: CustomizationId | None = field(
+    customization_id: None | CustomizationId = field(
         default=None,
         metadata={
             "name": "CustomizationID",
@@ -76,7 +76,7 @@ class ReminderType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    profile_id: ProfileId | None = field(
+    profile_id: None | ProfileId = field(
         default=None,
         metadata={
             "name": "ProfileID",
@@ -84,7 +84,7 @@ class ReminderType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    profile_execution_id: ProfileExecutionId | None = field(
+    profile_execution_id: None | ProfileExecutionId = field(
         default=None,
         metadata={
             "name": "ProfileExecutionID",
@@ -92,7 +92,7 @@ class ReminderType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    id: Id | None = field(
+    id: None | Id = field(
         default=None,
         metadata={
             "name": "ID",
@@ -101,7 +101,7 @@ class ReminderType:
             "required": True,
         },
     )
-    copy_indicator: CopyIndicator | None = field(
+    copy_indicator: None | CopyIndicator = field(
         default=None,
         metadata={
             "name": "CopyIndicator",
@@ -109,7 +109,7 @@ class ReminderType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    uuid: Uuid | None = field(
+    uuid: None | Uuid = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -117,7 +117,7 @@ class ReminderType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    issue_date: IssueDate | None = field(
+    issue_date: None | IssueDate = field(
         default=None,
         metadata={
             "name": "IssueDate",
@@ -126,7 +126,7 @@ class ReminderType:
             "required": True,
         },
     )
-    issue_time: IssueTime | None = field(
+    issue_time: None | IssueTime = field(
         default=None,
         metadata={
             "name": "IssueTime",
@@ -134,7 +134,7 @@ class ReminderType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    reminder_type_code: ReminderTypeCode | None = field(
+    reminder_type_code: None | ReminderTypeCode = field(
         default=None,
         metadata={
             "name": "ReminderTypeCode",
@@ -142,7 +142,7 @@ class ReminderType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    reminder_sequence_numeric: ReminderSequenceNumeric | None = field(
+    reminder_sequence_numeric: None | ReminderSequenceNumeric = field(
         default=None,
         metadata={
             "name": "ReminderSequenceNumeric",
@@ -158,7 +158,7 @@ class ReminderType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    tax_point_date: TaxPointDate | None = field(
+    tax_point_date: None | TaxPointDate = field(
         default=None,
         metadata={
             "name": "TaxPointDate",
@@ -166,7 +166,7 @@ class ReminderType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    document_currency_code: DocumentCurrencyCode | None = field(
+    document_currency_code: None | DocumentCurrencyCode = field(
         default=None,
         metadata={
             "name": "DocumentCurrencyCode",
@@ -174,7 +174,7 @@ class ReminderType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    tax_currency_code: TaxCurrencyCode | None = field(
+    tax_currency_code: None | TaxCurrencyCode = field(
         default=None,
         metadata={
             "name": "TaxCurrencyCode",
@@ -182,7 +182,7 @@ class ReminderType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    pricing_currency_code: PricingCurrencyCode | None = field(
+    pricing_currency_code: None | PricingCurrencyCode = field(
         default=None,
         metadata={
             "name": "PricingCurrencyCode",
@@ -190,7 +190,7 @@ class ReminderType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    payment_currency_code: PaymentCurrencyCode | None = field(
+    payment_currency_code: None | PaymentCurrencyCode = field(
         default=None,
         metadata={
             "name": "PaymentCurrencyCode",
@@ -199,7 +199,7 @@ class ReminderType:
         },
     )
     payment_alternative_currency_code: (
-        PaymentAlternativeCurrencyCode | None
+        None | PaymentAlternativeCurrencyCode
     ) = field(
         default=None,
         metadata={
@@ -208,7 +208,7 @@ class ReminderType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    accounting_cost_code: AccountingCostCode | None = field(
+    accounting_cost_code: None | AccountingCostCode = field(
         default=None,
         metadata={
             "name": "AccountingCostCode",
@@ -216,7 +216,7 @@ class ReminderType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    accounting_cost: AccountingCost | None = field(
+    accounting_cost: None | AccountingCost = field(
         default=None,
         metadata={
             "name": "AccountingCost",
@@ -224,7 +224,7 @@ class ReminderType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    line_count_numeric: LineCountNumeric | None = field(
+    line_count_numeric: None | LineCountNumeric = field(
         default=None,
         metadata={
             "name": "LineCountNumeric",
@@ -258,7 +258,7 @@ class ReminderType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    accounting_supplier_party: AccountingSupplierParty | None = field(
+    accounting_supplier_party: None | AccountingSupplierParty = field(
         default=None,
         metadata={
             "name": "AccountingSupplierParty",
@@ -267,7 +267,7 @@ class ReminderType:
             "required": True,
         },
     )
-    accounting_customer_party: AccountingCustomerParty | None = field(
+    accounting_customer_party: None | AccountingCustomerParty = field(
         default=None,
         metadata={
             "name": "AccountingCustomerParty",
@@ -276,7 +276,7 @@ class ReminderType:
             "required": True,
         },
     )
-    payee_party: PayeeParty | None = field(
+    payee_party: None | PayeeParty = field(
         default=None,
         metadata={
             "name": "PayeeParty",
@@ -284,7 +284,7 @@ class ReminderType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    tax_representative_party: TaxRepresentativeParty | None = field(
+    tax_representative_party: None | TaxRepresentativeParty = field(
         default=None,
         metadata={
             "name": "TaxRepresentativeParty",
@@ -324,7 +324,7 @@ class ReminderType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    tax_exchange_rate: TaxExchangeRate | None = field(
+    tax_exchange_rate: None | TaxExchangeRate = field(
         default=None,
         metadata={
             "name": "TaxExchangeRate",
@@ -332,7 +332,7 @@ class ReminderType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    pricing_exchange_rate: PricingExchangeRate | None = field(
+    pricing_exchange_rate: None | PricingExchangeRate = field(
         default=None,
         metadata={
             "name": "PricingExchangeRate",
@@ -340,7 +340,7 @@ class ReminderType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    payment_exchange_rate: PaymentExchangeRate | None = field(
+    payment_exchange_rate: None | PaymentExchangeRate = field(
         default=None,
         metadata={
             "name": "PaymentExchangeRate",
@@ -349,7 +349,7 @@ class ReminderType:
         },
     )
     payment_alternative_exchange_rate: (
-        PaymentAlternativeExchangeRate | None
+        None | PaymentAlternativeExchangeRate
     ) = field(
         default=None,
         metadata={
@@ -366,7 +366,7 @@ class ReminderType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    legal_monetary_total: LegalMonetaryTotal | None = field(
+    legal_monetary_total: None | LegalMonetaryTotal = field(
         default=None,
         metadata={
             "name": "LegalMonetaryTotal",

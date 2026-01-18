@@ -109,7 +109,7 @@ class SwRecordLayoutGroup:
     class Meta:
         name = "SW-RECORD-LAYOUT-GROUP"
 
-    short_label: Identifier | None = field(
+    short_label: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-LABEL",
@@ -117,7 +117,7 @@ class SwRecordLayoutGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: AsamRecordLayoutSemantics | None = field(
+    category: None | AsamRecordLayoutSemantics = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -125,7 +125,7 @@ class SwRecordLayoutGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -133,7 +133,7 @@ class SwRecordLayoutGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_record_layout_group_axis: AxisIndexType | None = field(
+    sw_record_layout_group_axis: None | AxisIndexType = field(
         default=None,
         metadata={
             "name": "SW-RECORD-LAYOUT-GROUP-AXIS",
@@ -141,7 +141,7 @@ class SwRecordLayoutGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_record_layout_group_index: NmtokenString | None = field(
+    sw_record_layout_group_index: None | NmtokenString = field(
         default=None,
         metadata={
             "name": "SW-RECORD-LAYOUT-GROUP-INDEX",
@@ -150,7 +150,7 @@ class SwRecordLayoutGroup:
         },
     )
     sw_generic_axis_param_type_ref: (
-        SwRecordLayoutGroup.SwGenericAxisParamTypeRef | None
+        None | SwRecordLayoutGroup.SwGenericAxisParamTypeRef
     ) = field(
         default=None,
         metadata={
@@ -159,7 +159,7 @@ class SwRecordLayoutGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_record_layout_group_from: RecordLayoutIteratorPoint | None = field(
+    sw_record_layout_group_from: None | RecordLayoutIteratorPoint = field(
         default=None,
         metadata={
             "name": "SW-RECORD-LAYOUT-GROUP-FROM",
@@ -167,7 +167,7 @@ class SwRecordLayoutGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_record_layout_group_to: RecordLayoutIteratorPoint | None = field(
+    sw_record_layout_group_to: None | RecordLayoutIteratorPoint = field(
         default=None,
         metadata={
             "name": "SW-RECORD-LAYOUT-GROUP-TO",
@@ -175,7 +175,7 @@ class SwRecordLayoutGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_record_layout_group_step: Integer | None = field(
+    sw_record_layout_group_step: None | Integer = field(
         default=None,
         metadata={
             "name": "SW-RECORD-LAYOUT-GROUP-STEP",
@@ -183,7 +183,7 @@ class SwRecordLayoutGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_record_layout_component: Identifier | None = field(
+    sw_record_layout_component: None | Identifier = field(
         default=None,
         metadata={
             "name": "SW-RECORD-LAYOUT-COMPONENT",
@@ -215,14 +215,14 @@ class SwRecordLayoutGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -233,7 +233,7 @@ class SwRecordLayoutGroup:
 
     @dataclass
     class SwGenericAxisParamTypeRef(Ref):
-        dest: SwGenericAxisParamTypeSubtypesEnum | None = field(
+        dest: None | SwGenericAxisParamTypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -244,7 +244,7 @@ class SwRecordLayoutGroup:
 
     @dataclass
     class SwRecordLayoutRef(Ref):
-        dest: SwRecordLayoutSubtypesEnum | None = field(
+        dest: None | SwRecordLayoutSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

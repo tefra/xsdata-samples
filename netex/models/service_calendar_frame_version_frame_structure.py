@@ -27,7 +27,7 @@ class ServiceCalendarFrameVersionFrameStructure(CommonVersionFrameStructure):
     class Meta:
         name = "ServiceCalendarFrame_VersionFrameStructure"
 
-    service_calendar: ServiceCalendar | None = field(
+    service_calendar: None | ServiceCalendar = field(
         default=None,
         metadata={
             "name": "ServiceCalendar",
@@ -35,7 +35,7 @@ class ServiceCalendarFrameVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    day_types: DayTypesInFrameRelStructure | None = field(
+    day_types: None | DayTypesInFrameRelStructure = field(
         default=None,
         metadata={
             "name": "dayTypes",
@@ -43,14 +43,14 @@ class ServiceCalendarFrameVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    timebands: TimebandsInFrameRelStructure | None = field(
+    timebands: None | TimebandsInFrameRelStructure = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    group_of_timebands: GroupOfTimebandsInFrameRelStructure | None = field(
+    group_of_timebands: None | GroupOfTimebandsInFrameRelStructure = field(
         default=None,
         metadata={
             "name": "groupOfTimebands",
@@ -58,7 +58,7 @@ class ServiceCalendarFrameVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    operating_days: OperatingDaysInFrameRelStructure | None = field(
+    operating_days: None | OperatingDaysInFrameRelStructure = field(
         default=None,
         metadata={
             "name": "operatingDays",
@@ -66,7 +66,7 @@ class ServiceCalendarFrameVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    operating_periods: OperatingPeriodsInFrameRelStructure | None = field(
+    operating_periods: None | OperatingPeriodsInFrameRelStructure = field(
         default=None,
         metadata={
             "name": "operatingPeriods",
@@ -74,7 +74,7 @@ class ServiceCalendarFrameVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    day_type_assignments: DayTypeAssignmentsInFrameRelStructure | None = field(
+    day_type_assignments: None | DayTypeAssignmentsInFrameRelStructure = field(
         default=None,
         metadata={
             "name": "dayTypeAssignments",

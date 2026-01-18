@@ -114,7 +114,7 @@ class BaseProductNumber:
 
 @dataclass(kw_only=True)
 class Buyer:
-    partner_ref: str | None = field(
+    partner_ref: None | str = field(
         default=None,
         metadata={
             "name": "PartnerRef",
@@ -388,7 +388,7 @@ class LongDescription:
             "required": True,
         },
     )
-    description_purpose: str | None = field(
+    description_purpose: None | str = field(
         default=None,
         metadata={
             "name": "DescriptionPurpose",
@@ -425,7 +425,7 @@ class ManuPartNumber:
 
 @dataclass(kw_only=True)
 class Manufacturer:
-    partner_ref: str | None = field(
+    partner_ref: None | str = field(
         default=None,
         metadata={
             "name": "PartnerRef",
@@ -778,7 +778,7 @@ class AttributeType:
             "required": True,
         },
     )
-    max_size: str | None = field(
+    max_size: None | str = field(
         default=None,
         metadata={
             "name": "MaxSize",
@@ -874,28 +874,28 @@ class DefaultCurrency:
 
 @dataclass(kw_only=True)
 class ExternalItemRef:
-    catalog_provider_idref: CatalogProviderIdref | None = field(
+    catalog_provider_idref: None | CatalogProviderIdref = field(
         default=None,
         metadata={
             "name": "CatalogProviderIDRef",
             "type": "Element",
         },
     )
-    catalog_idref: CatalogIdref | None = field(
+    catalog_idref: None | CatalogIdref = field(
         default=None,
         metadata={
             "name": "CatalogIDRef",
             "type": "Element",
         },
     )
-    product_idref: ProductIdref | None = field(
+    product_idref: None | ProductIdref = field(
         default=None,
         metadata={
             "name": "ProductIDRef",
             "type": "Element",
         },
     )
-    item_guid: ItemGuid | None = field(
+    item_guid: None | ItemGuid = field(
         default=None,
         metadata={
             "name": "ItemGUID",
@@ -925,7 +925,7 @@ class PartnerRelationship:
             "required": True,
         }
     )
-    partner_relationship_coded_other: PartnerRelationshipCodedOther | None = (
+    partner_relationship_coded_other: None | PartnerRelationshipCodedOther = (
         field(
             default=None,
             metadata={
@@ -945,14 +945,14 @@ class ProductAttachment:
             "required": True,
         }
     )
-    attachment_purpose: AttachmentPurpose | None = field(
+    attachment_purpose: None | AttachmentPurpose = field(
         default=None,
         metadata={
             "name": "AttachmentPurpose",
             "type": "Element",
         },
     )
-    attachment_mimetype: AttachmentMimetype | None = field(
+    attachment_mimetype: None | AttachmentMimetype = field(
         default=None,
         metadata={
             "name": "AttachmentMIMEType",
@@ -1059,7 +1059,7 @@ class Uom:
             "required": True,
         }
     )
-    uomcoded_other: UomcodedOther | None = field(
+    uomcoded_other: None | UomcodedOther = field(
         default=None,
         metadata={
             "name": "UOMCodedOther",
@@ -1081,21 +1081,21 @@ class AttributeUnit:
 
 @dataclass(kw_only=True)
 class CatalogProvider:
-    provider_id: str | None = field(
+    provider_id: None | str = field(
         default=None,
         metadata={
             "name": "ProviderID",
             "type": "Attribute",
         },
     )
-    party: Party | None = field(
+    party: None | Party = field(
         default=None,
         metadata={
             "name": "Party",
             "type": "Element",
         },
     )
-    catalog_system: CatalogSystem | None = field(
+    catalog_system: None | CatalogSystem = field(
         default=None,
         metadata={
             "name": "CatalogSystem",
@@ -1148,7 +1148,7 @@ class LeadTimeUom:
 
 @dataclass(kw_only=True)
 class Partner:
-    partner_id: str | None = field(
+    partner_id: None | str = field(
         default=None,
         metadata={
             "name": "PartnerID",
@@ -1163,14 +1163,14 @@ class Partner:
             "required": True,
         },
     )
-    action: Action | None = field(
+    action: None | Action = field(
         default=None,
         metadata={
             "name": "Action",
             "type": "Element",
         },
     )
-    party: Party | None = field(
+    party: None | Party = field(
         default=None,
         metadata={
             "name": "Party",
@@ -1188,7 +1188,7 @@ class Partner:
 
 @dataclass(kw_only=True)
 class PriceCatalog:
-    action: Action | None = field(
+    action: None | Action = field(
         default=None,
         metadata={
             "name": "Action",
@@ -1202,14 +1202,14 @@ class PriceCatalog:
             "required": True,
         }
     )
-    valid_from: ValidFrom | None = field(
+    valid_from: None | ValidFrom = field(
         default=None,
         metadata={
             "name": "ValidFrom",
             "type": "Element",
         },
     )
-    valid_until: ValidUntil | None = field(
+    valid_until: None | ValidUntil = field(
         default=None,
         metadata={
             "name": "ValidUntil",
@@ -1227,63 +1227,63 @@ class ProductPrice:
             "required": True,
         }
     )
-    price_type: PriceType | None = field(
+    price_type: None | PriceType = field(
         default=None,
         metadata={
             "name": "PriceType",
             "type": "Element",
         },
     )
-    currency: Currency | None = field(
+    currency: None | Currency = field(
         default=None,
         metadata={
             "name": "Currency",
             "type": "Element",
         },
     )
-    uom: Uom | None = field(
+    uom: None | Uom = field(
         default=None,
         metadata={
             "name": "UOM",
             "type": "Element",
         },
     )
-    minimum_quantity: MinimumQuantity | None = field(
+    minimum_quantity: None | MinimumQuantity = field(
         default=None,
         metadata={
             "name": "MinimumQuantity",
             "type": "Element",
         },
     )
-    short_description: ShortDescription | None = field(
+    short_description: None | ShortDescription = field(
         default=None,
         metadata={
             "name": "ShortDescription",
             "type": "Element",
         },
     )
-    valid_from: ValidFrom | None = field(
+    valid_from: None | ValidFrom = field(
         default=None,
         metadata={
             "name": "ValidFrom",
             "type": "Element",
         },
     )
-    valid_until: ValidUntil | None = field(
+    valid_until: None | ValidUntil = field(
         default=None,
         metadata={
             "name": "ValidUntil",
             "type": "Element",
         },
     )
-    buyer: Buyer | None = field(
+    buyer: None | Buyer = field(
         default=None,
         metadata={
             "name": "Buyer",
             "type": "Element",
         },
     )
-    price_basis_quant: PriceBasisQuant | None = field(
+    price_basis_quant: None | PriceBasisQuant = field(
         default=None,
         metadata={
             "name": "PriceBasisQuant",
@@ -1294,28 +1294,28 @@ class ProductPrice:
 
 @dataclass(kw_only=True)
 class SupplierAccount:
-    action: Action | None = field(
+    action: None | Action = field(
         default=None,
         metadata={
             "name": "Action",
             "type": "Element",
         },
     )
-    supplier_account_id: SupplierAccountId | None = field(
+    supplier_account_id: None | SupplierAccountId = field(
         default=None,
         metadata={
             "name": "SupplierAccountID",
             "type": "Element",
         },
     )
-    buyer_identifier: BuyerIdentifier | None = field(
+    buyer_identifier: None | BuyerIdentifier = field(
         default=None,
         metadata={
             "name": "BuyerIdentifier",
             "type": "Element",
         },
     )
-    is_public_account: IsPublicAccount | None = field(
+    is_public_account: None | IsPublicAccount = field(
         default=None,
         metadata={
             "name": "IsPublicAccount",
@@ -1354,14 +1354,14 @@ class CategoryAttribute:
             "required": True,
         }
     )
-    default_uom: DefaultUom | None = field(
+    default_uom: None | DefaultUom = field(
         default=None,
         metadata={
             "name": "DefaultUOM",
             "type": "Element",
         },
     )
-    is_required: IsRequired | None = field(
+    is_required: None | IsRequired = field(
         default=None,
         metadata={
             "name": "IsRequired",
@@ -1391,7 +1391,7 @@ class ObjectAttribute:
             "required": True,
         }
     )
-    attribute_unit: AttributeUnit | None = field(
+    attribute_unit: None | AttributeUnit = field(
         default=None,
         metadata={
             "name": "AttributeUnit",
@@ -1453,42 +1453,42 @@ class ProductVendorData:
             "required": True,
         }
     )
-    vendor_idref: VendorIdref | None = field(
+    vendor_idref: None | VendorIdref = field(
         default=None,
         metadata={
             "name": "VendorIDRef",
             "type": "Element",
         },
     )
-    vendor_part_number: VendorPartNumber | None = field(
+    vendor_part_number: None | VendorPartNumber = field(
         default=None,
         metadata={
             "name": "VendorPartNumber",
             "type": "Element",
         },
     )
-    lead_time: LeadTime | None = field(
+    lead_time: None | LeadTime = field(
         default=None,
         metadata={
             "name": "LeadTime",
             "type": "Element",
         },
     )
-    lead_time_uom: LeadTimeUom | None = field(
+    lead_time_uom: None | LeadTimeUom = field(
         default=None,
         metadata={
             "name": "LeadTimeUOM",
             "type": "Element",
         },
     )
-    catalog_contract: CatalogContract | None = field(
+    catalog_contract: None | CatalogContract = field(
         default=None,
         metadata={
             "name": "CatalogContract",
             "type": "Element",
         },
     )
-    min_order: MinOrder | None = field(
+    min_order: None | MinOrder = field(
         default=None,
         metadata={
             "name": "MinOrder",
@@ -1525,7 +1525,7 @@ class CatalogHeader:
             "required": True,
         }
     )
-    catalog_date: CatalogDate | None = field(
+    catalog_date: None | CatalogDate = field(
         default=None,
         metadata={
             "name": "CatalogDate",
@@ -1539,98 +1539,98 @@ class CatalogHeader:
             "required": True,
         }
     )
-    catalog_pretty_name: CatalogPrettyName | None = field(
+    catalog_pretty_name: None | CatalogPrettyName = field(
         default=None,
         metadata={
             "name": "CatalogPrettyName",
             "type": "Element",
         },
     )
-    catalog_logo_url: CatalogLogoUrl | None = field(
+    catalog_logo_url: None | CatalogLogoUrl = field(
         default=None,
         metadata={
             "name": "CatalogLogoURL",
             "type": "Element",
         },
     )
-    list_of_partners: ListOfPartners | None = field(
+    list_of_partners: None | ListOfPartners = field(
         default=None,
         metadata={
             "name": "ListOfPartners",
             "type": "Element",
         },
     )
-    catalog_audience: CatalogAudience | None = field(
+    catalog_audience: None | CatalogAudience = field(
         default=None,
         metadata={
             "name": "CatalogAudience",
             "type": "Element",
         },
     )
-    pricing_information: PricingInformation | None = field(
+    pricing_information: None | PricingInformation = field(
         default=None,
         metadata={
             "name": "PricingInformation",
             "type": "Element",
         },
     )
-    supplier_account_information: SupplierAccountInformation | None = field(
+    supplier_account_information: None | SupplierAccountInformation = field(
         default=None,
         metadata={
             "name": "SupplierAccountInformation",
             "type": "Element",
         },
     )
-    valid_from: ValidFrom | None = field(
+    valid_from: None | ValidFrom = field(
         default=None,
         metadata={
             "name": "ValidFrom",
             "type": "Element",
         },
     )
-    valid_until: ValidUntil | None = field(
+    valid_until: None | ValidUntil = field(
         default=None,
         metadata={
             "name": "ValidUntil",
             "type": "Element",
         },
     )
-    catalog_version: CatalogVersion | None = field(
+    catalog_version: None | CatalogVersion = field(
         default=None,
         metadata={
             "name": "CatalogVersion",
             "type": "Element",
         },
     )
-    default_language: DefaultLanguage | None = field(
+    default_language: None | DefaultLanguage = field(
         default=None,
         metadata={
             "name": "DefaultLanguage",
             "type": "Element",
         },
     )
-    default_currency: DefaultCurrency | None = field(
+    default_currency: None | DefaultCurrency = field(
         default=None,
         metadata={
             "name": "DefaultCurrency",
             "type": "Element",
         },
     )
-    is_replacement: IsReplacement | None = field(
+    is_replacement: None | IsReplacement = field(
         default=None,
         metadata={
             "name": "IsReplacement",
             "type": "Element",
         },
     )
-    is_price_update: IsPriceUpdate | None = field(
+    is_price_update: None | IsPriceUpdate = field(
         default=None,
         metadata={
             "name": "IsPriceUpdate",
             "type": "Element",
         },
     )
-    is_multi_vendor: IsMultiVendor | None = field(
+    is_multi_vendor: None | IsMultiVendor = field(
         default=None,
         metadata={
             "name": "IsMultiVendor",
@@ -1678,7 +1678,7 @@ class Product:
             "tokens": True,
         },
     )
-    action: Action | None = field(
+    action: None | Action = field(
         default=None,
         metadata={
             "name": "Action",
@@ -1692,21 +1692,21 @@ class Product:
             "required": True,
         }
     )
-    base_product_number: BaseProductNumber | None = field(
+    base_product_number: None | BaseProductNumber = field(
         default=None,
         metadata={
             "name": "BaseProductNumber",
             "type": "Element",
         },
     )
-    schema_category_ref_list: SchemaCategoryRefList | None = field(
+    schema_category_ref_list: None | SchemaCategoryRefList = field(
         default=None,
         metadata={
             "name": "SchemaCategoryRefList",
             "type": "Element",
         },
     )
-    product_idextension: ProductIdextension | None = field(
+    product_idextension: None | ProductIdextension = field(
         default=None,
         metadata={
             "name": "ProductIDExtension",
@@ -1720,7 +1720,7 @@ class Product:
             "type": "Element",
         },
     )
-    product_idstandard: ProductIdstandard | None = field(
+    product_idstandard: None | ProductIdstandard = field(
         default=None,
         metadata={
             "name": "ProductIDStandard",
@@ -1734,21 +1734,21 @@ class Product:
             "type": "Element",
         },
     )
-    uom: Uom | None = field(
+    uom: None | Uom = field(
         default=None,
         metadata={
             "name": "UOM",
             "type": "Element",
         },
     )
-    comparable_uom: ComparableUom | None = field(
+    comparable_uom: None | ComparableUom = field(
         default=None,
         metadata={
             "name": "ComparableUOM",
             "type": "Element",
         },
     )
-    comparable_uomconversion_factor: ComparableUomconversionFactor | None = (
+    comparable_uomconversion_factor: None | ComparableUomconversionFactor = (
         field(
             default=None,
             metadata={
@@ -1757,63 +1757,63 @@ class Product:
             },
         )
     )
-    manufacturer: Manufacturer | None = field(
+    manufacturer: None | Manufacturer = field(
         default=None,
         metadata={
             "name": "Manufacturer",
             "type": "Element",
         },
     )
-    manu_part_number: ManuPartNumber | None = field(
+    manu_part_number: None | ManuPartNumber = field(
         default=None,
         metadata={
             "name": "ManuPartNumber",
             "type": "Element",
         },
     )
-    lead_time: LeadTime | None = field(
+    lead_time: None | LeadTime = field(
         default=None,
         metadata={
             "name": "LeadTime",
             "type": "Element",
         },
     )
-    lead_time_uom: LeadTimeUom | None = field(
+    lead_time_uom: None | LeadTimeUom = field(
         default=None,
         metadata={
             "name": "LeadTimeUOM",
             "type": "Element",
         },
     )
-    valid_from: ValidFrom | None = field(
+    valid_from: None | ValidFrom = field(
         default=None,
         metadata={
             "name": "ValidFrom",
             "type": "Element",
         },
     )
-    valid_until: ValidUntil | None = field(
+    valid_until: None | ValidUntil = field(
         default=None,
         metadata={
             "name": "ValidUntil",
             "type": "Element",
         },
     )
-    country_of_origin: CountryOfOrigin | None = field(
+    country_of_origin: None | CountryOfOrigin = field(
         default=None,
         metadata={
             "name": "CountryOfOrigin",
             "type": "Element",
         },
     )
-    min_order: MinOrder | None = field(
+    min_order: None | MinOrder = field(
         default=None,
         metadata={
             "name": "MinOrder",
             "type": "Element",
         },
     )
-    lot_size: LotSize | None = field(
+    lot_size: None | LotSize = field(
         default=None,
         metadata={
             "name": "LotSize",
@@ -1887,7 +1887,7 @@ class Product:
 
 @dataclass(kw_only=True)
 class SchemaCategory:
-    category_id_attribute: str | None = field(
+    category_id_attribute: None | str = field(
         default=None,
         metadata={
             "name": "CategoryID",
@@ -1909,7 +1909,7 @@ class SchemaCategory:
             "required": True,
         }
     )
-    parent_category_ref_list: ParentCategoryRefList | None = field(
+    parent_category_ref_list: None | ParentCategoryRefList = field(
         default=None,
         metadata={
             "name": "ParentCategoryRefList",
@@ -1981,21 +1981,21 @@ class CatalogSchema:
             "required": True,
         }
     )
-    schema_version: SchemaVersion | None = field(
+    schema_version: None | SchemaVersion = field(
         default=None,
         metadata={
             "name": "SchemaVersion",
             "type": "Element",
         },
     )
-    schema_standard: SchemaStandard | None = field(
+    schema_standard: None | SchemaStandard = field(
         default=None,
         metadata={
             "name": "SchemaStandard",
             "type": "Element",
         },
     )
-    validate_attributes: ValidateAttributes | None = field(
+    validate_attributes: None | ValidateAttributes = field(
         default=None,
         metadata={
             "name": "ValidateAttributes",
@@ -2016,21 +2016,21 @@ class CatalogSchema:
             "type": "Element",
         },
     )
-    schema_source: SchemaSource | None = field(
+    schema_source: None | SchemaSource = field(
         default=None,
         metadata={
             "name": "SchemaSource",
             "type": "Element",
         },
     )
-    schema_urn: SchemaUrn | None = field(
+    schema_urn: None | SchemaUrn = field(
         default=None,
         metadata={
             "name": "SchemaURN",
             "type": "Element",
         },
     )
-    extension_to_schemas_urn: ExtensionToSchemasUrn | None = field(
+    extension_to_schemas_urn: None | ExtensionToSchemasUrn = field(
         default=None,
         metadata={
             "name": "ExtensionToSchemasURN",
@@ -2055,14 +2055,14 @@ class ProductCatalog:
             "required": True,
         }
     )
-    catalog_schema: CatalogSchema | None = field(
+    catalog_schema: None | CatalogSchema = field(
         default=None,
         metadata={
             "name": "CatalogSchema",
             "type": "Element",
         },
     )
-    catalog_data: CatalogData | None = field(
+    catalog_data: None | CatalogData = field(
         default=None,
         metadata={
             "name": "CatalogData",

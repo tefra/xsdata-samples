@@ -122,7 +122,7 @@ class ObdRatioServiceNeeds:
     class Meta:
         name = "OBD-RATIO-SERVICE-NEEDS"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -131,7 +131,7 @@ class ObdRatioServiceNeeds:
             "required": True,
         },
     )
-    short_name_fragments: ObdRatioServiceNeeds.ShortNameFragments | None = (
+    short_name_fragments: None | ObdRatioServiceNeeds.ShortNameFragments = (
         field(
             default=None,
             metadata={
@@ -141,7 +141,7 @@ class ObdRatioServiceNeeds:
             },
         )
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -149,7 +149,7 @@ class ObdRatioServiceNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -157,7 +157,7 @@ class ObdRatioServiceNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -165,7 +165,7 @@ class ObdRatioServiceNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -173,7 +173,7 @@ class ObdRatioServiceNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -181,7 +181,7 @@ class ObdRatioServiceNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: ObdRatioServiceNeeds.Annotations | None = field(
+    annotations: None | ObdRatioServiceNeeds.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -189,7 +189,7 @@ class ObdRatioServiceNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    audiences: ObdRatioServiceNeeds.Audiences | None = field(
+    audiences: None | ObdRatioServiceNeeds.Audiences = field(
         default=None,
         metadata={
             "name": "AUDIENCES",
@@ -197,7 +197,7 @@ class ObdRatioServiceNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    diag_requirement: DiagRequirementIdString | None = field(
+    diag_requirement: None | DiagRequirementIdString = field(
         default=None,
         metadata={
             "name": "DIAG-REQUIREMENT",
@@ -205,7 +205,7 @@ class ObdRatioServiceNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    security_access_level: PositiveInteger | None = field(
+    security_access_level: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "SECURITY-ACCESS-LEVEL",
@@ -213,7 +213,7 @@ class ObdRatioServiceNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    connection_type: ObdRatioConnectionKindEnum | None = field(
+    connection_type: None | ObdRatioConnectionKindEnum = field(
         default=None,
         metadata={
             "name": "CONNECTION-TYPE",
@@ -221,7 +221,7 @@ class ObdRatioServiceNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    denominator_group: DiagnosticDenominatorConditionEnum | None = field(
+    denominator_group: None | DiagnosticDenominatorConditionEnum = field(
         default=None,
         metadata={
             "name": "DENOMINATOR-GROUP",
@@ -229,7 +229,7 @@ class ObdRatioServiceNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    iumpr_group: NmtokenString | None = field(
+    iumpr_group: None | NmtokenString = field(
         default=None,
         metadata={
             "name": "IUMPR-GROUP",
@@ -238,7 +238,7 @@ class ObdRatioServiceNeeds:
         },
     )
     rate_based_monitored_event_ref: (
-        ObdRatioServiceNeeds.RateBasedMonitoredEventRef | None
+        None | ObdRatioServiceNeeds.RateBasedMonitoredEventRef
     ) = field(
         default=None,
         metadata={
@@ -247,7 +247,7 @@ class ObdRatioServiceNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    used_fid_ref: ObdRatioServiceNeeds.UsedFidRef | None = field(
+    used_fid_ref: None | ObdRatioServiceNeeds.UsedFidRef = field(
         default=None,
         metadata={
             "name": "USED-FID-REF",
@@ -256,7 +256,7 @@ class ObdRatioServiceNeeds:
         },
     )
     used_secondary_fid_refs: (
-        ObdRatioServiceNeeds.UsedSecondaryFidRefs | None
+        None | ObdRatioServiceNeeds.UsedSecondaryFidRefs
     ) = field(
         default=None,
         metadata={
@@ -265,14 +265,14 @@ class ObdRatioServiceNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -280,7 +280,7 @@ class ObdRatioServiceNeeds:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -330,7 +330,7 @@ class ObdRatioServiceNeeds:
 
     @dataclass
     class RateBasedMonitoredEventRef(Ref):
-        dest: DiagnosticEventNeedsSubtypesEnum | None = field(
+        dest: None | DiagnosticEventNeedsSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -341,7 +341,7 @@ class ObdRatioServiceNeeds:
 
     @dataclass
     class UsedFidRef(Ref):
-        dest: FunctionInhibitionNeedsSubtypesEnum | None = field(
+        dest: None | FunctionInhibitionNeedsSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -365,7 +365,7 @@ class ObdRatioServiceNeeds:
 
         @dataclass
         class UsedSecondaryFidRef(Ref):
-            dest: FunctionInhibitionNeedsSubtypesEnum | None = field(
+            dest: None | FunctionInhibitionNeedsSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",

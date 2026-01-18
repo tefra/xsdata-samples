@@ -99,7 +99,7 @@ class AliveSupervision:
     class Meta:
         name = "ALIVE-SUPERVISION"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -108,7 +108,7 @@ class AliveSupervision:
             "required": True,
         },
     )
-    short_name_fragments: AliveSupervision.ShortNameFragments | None = field(
+    short_name_fragments: None | AliveSupervision.ShortNameFragments = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -116,7 +116,7 @@ class AliveSupervision:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -124,7 +124,7 @@ class AliveSupervision:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -132,7 +132,7 @@ class AliveSupervision:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -140,7 +140,7 @@ class AliveSupervision:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -148,7 +148,7 @@ class AliveSupervision:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -156,7 +156,7 @@ class AliveSupervision:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: AliveSupervision.Annotations | None = field(
+    annotations: None | AliveSupervision.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -164,7 +164,7 @@ class AliveSupervision:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    alive_reference_cycle: TimeValue | None = field(
+    alive_reference_cycle: None | TimeValue = field(
         default=None,
         metadata={
             "name": "ALIVE-REFERENCE-CYCLE",
@@ -172,7 +172,7 @@ class AliveSupervision:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    checkpoint_ref: AliveSupervision.CheckpointRef | None = field(
+    checkpoint_ref: None | AliveSupervision.CheckpointRef = field(
         default=None,
         metadata={
             "name": "CHECKPOINT-REF",
@@ -180,7 +180,7 @@ class AliveSupervision:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    expected_alive_indications: PositiveInteger | None = field(
+    expected_alive_indications: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "EXPECTED-ALIVE-INDICATIONS",
@@ -188,7 +188,7 @@ class AliveSupervision:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    max_margin: PositiveInteger | None = field(
+    max_margin: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "MAX-MARGIN",
@@ -196,7 +196,7 @@ class AliveSupervision:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    min_margin: PositiveInteger | None = field(
+    min_margin: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "MIN-MARGIN",
@@ -204,14 +204,14 @@ class AliveSupervision:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -219,7 +219,7 @@ class AliveSupervision:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -251,7 +251,7 @@ class AliveSupervision:
 
     @dataclass
     class CheckpointRef(Ref):
-        dest: SupervisionCheckpointSubtypesEnum | None = field(
+        dest: None | SupervisionCheckpointSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

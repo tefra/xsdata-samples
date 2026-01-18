@@ -81,7 +81,7 @@ class ObservedPassingTimeViewStructure(PassingTimeViewStructure):
             "max_occurs": 5,
         },
     )
-    actual_headway: HeadwayIntervalStructure | None = field(
+    actual_headway: None | HeadwayIntervalStructure = field(
         default=None,
         metadata={
             "name": "ActualHeadway",
@@ -92,7 +92,7 @@ class ObservedPassingTimeViewStructure(PassingTimeViewStructure):
 
     @dataclass
     class ActualArrivalTime:
-        value: XmlTime | None = field(
+        value: None | XmlTime = field(
             default=None,
             metadata={
                 "required": True,
@@ -101,7 +101,7 @@ class ObservedPassingTimeViewStructure(PassingTimeViewStructure):
 
     @dataclass
     class ArrivalDayOffset:
-        value: int | None = field(
+        value: None | int = field(
             default=None,
             metadata={
                 "required": True,
@@ -110,7 +110,7 @@ class ObservedPassingTimeViewStructure(PassingTimeViewStructure):
 
     @dataclass
     class ActualDepartureTime:
-        value: XmlTime | None = field(
+        value: None | XmlTime = field(
             default=None,
             metadata={
                 "required": True,
@@ -119,7 +119,7 @@ class ObservedPassingTimeViewStructure(PassingTimeViewStructure):
 
     @dataclass
     class DepartureDayOffset:
-        value: int | None = field(
+        value: None | int = field(
             default=None,
             metadata={
                 "required": True,
@@ -128,7 +128,7 @@ class ObservedPassingTimeViewStructure(PassingTimeViewStructure):
 
     @dataclass
     class ActualNonstopPassingTime:
-        value: XmlTime | None = field(
+        value: None | XmlTime = field(
             default=None,
             metadata={
                 "required": True,
@@ -137,7 +137,7 @@ class ObservedPassingTimeViewStructure(PassingTimeViewStructure):
 
     @dataclass
     class PassingTimeDayOffset:
-        value: int | None = field(
+        value: None | int = field(
             default=None,
             metadata={
                 "required": True,

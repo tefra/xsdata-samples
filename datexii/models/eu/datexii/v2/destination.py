@@ -15,7 +15,7 @@ class Destination:
     This may be either a point location or an area location.
     """
 
-    destination_extension: ExtensionType | None = field(
+    destination_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "destinationExtension",

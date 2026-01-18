@@ -29,14 +29,14 @@ class SingleLanguageUnitNames:
     class Meta:
         name = "SINGLE-LANGUAGE-UNIT-NAMES"
 
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

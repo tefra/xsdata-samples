@@ -41,7 +41,7 @@ class ModeInBswInstanceRef:
         name = "MODE-IN-BSW-INSTANCE-REF"
 
     context_bsw_implementation_ref: (
-        ModeInBswInstanceRef.ContextBswImplementationRef | None
+        None | ModeInBswInstanceRef.ContextBswImplementationRef
     ) = field(
         default=None,
         metadata={
@@ -51,7 +51,7 @@ class ModeInBswInstanceRef:
         },
     )
     context_mode_declaration_group_prototype_ref: (
-        ModeInBswInstanceRef.ContextModeDeclarationGroupPrototypeRef | None
+        None | ModeInBswInstanceRef.ContextModeDeclarationGroupPrototypeRef
     ) = field(
         default=None,
         metadata={
@@ -61,7 +61,7 @@ class ModeInBswInstanceRef:
         },
     )
     target_mode_declaration_ref: (
-        ModeInBswInstanceRef.TargetModeDeclarationRef | None
+        None | ModeInBswInstanceRef.TargetModeDeclarationRef
     ) = field(
         default=None,
         metadata={
@@ -70,14 +70,14 @@ class ModeInBswInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -88,7 +88,7 @@ class ModeInBswInstanceRef:
 
     @dataclass
     class ContextBswImplementationRef(Ref):
-        dest: BswImplementationSubtypesEnum | None = field(
+        dest: None | BswImplementationSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -99,7 +99,7 @@ class ModeInBswInstanceRef:
 
     @dataclass
     class ContextModeDeclarationGroupPrototypeRef(Ref):
-        dest: ModeDeclarationGroupPrototypeSubtypesEnum | None = field(
+        dest: None | ModeDeclarationGroupPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -110,7 +110,7 @@ class ModeInBswInstanceRef:
 
     @dataclass
     class TargetModeDeclarationRef(Ref):
-        dest: ModeDeclarationSubtypesEnum | None = field(
+        dest: None | ModeDeclarationSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

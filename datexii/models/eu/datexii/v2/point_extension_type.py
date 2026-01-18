@@ -15,7 +15,7 @@ class PointExtensionType:
     class Meta:
         name = "_PointExtensionType"
 
-    openlr_extended_point: OpenlrExtendedPoint | None = field(
+    openlr_extended_point: None | OpenlrExtendedPoint = field(
         default=None,
         metadata={
             "name": "openlrExtendedPoint",
@@ -23,7 +23,7 @@ class PointExtensionType:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    point_extended: PointExtended | None = field(
+    point_extended: None | PointExtended = field(
         default=None,
         metadata={
             "name": "pointExtended",

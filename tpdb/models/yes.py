@@ -10,14 +10,14 @@ class Yes:
     class Meta:
         name = "yes"
 
-    lowerbound: str | BoundValue | None = field(
+    lowerbound: None | str | BoundValue = field(
         default=None,
         metadata={
             "type": "Element",
             "pattern": r"O\(n\^[0-9]+\)",
         },
     )
-    upperbound: str | BoundValue | None = field(
+    upperbound: None | str | BoundValue = field(
         default=None,
         metadata={
             "type": "Element",

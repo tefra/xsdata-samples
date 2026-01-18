@@ -93,7 +93,7 @@ class CpSoftwareClusterResourceToApplicationPartitionMapping:
     class Meta:
         name = "CP-SOFTWARE-CLUSTER-RESOURCE-TO-APPLICATION-PARTITION-MAPPING"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -103,8 +103,8 @@ class CpSoftwareClusterResourceToApplicationPartitionMapping:
         },
     )
     short_name_fragments: (
-        CpSoftwareClusterResourceToApplicationPartitionMapping.ShortNameFragments
-        | None
+        None
+        | CpSoftwareClusterResourceToApplicationPartitionMapping.ShortNameFragments
     ) = field(
         default=None,
         metadata={
@@ -113,7 +113,7 @@ class CpSoftwareClusterResourceToApplicationPartitionMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -121,7 +121,7 @@ class CpSoftwareClusterResourceToApplicationPartitionMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -129,7 +129,7 @@ class CpSoftwareClusterResourceToApplicationPartitionMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -137,7 +137,7 @@ class CpSoftwareClusterResourceToApplicationPartitionMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -145,7 +145,7 @@ class CpSoftwareClusterResourceToApplicationPartitionMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -154,8 +154,8 @@ class CpSoftwareClusterResourceToApplicationPartitionMapping:
         },
     )
     annotations: (
-        CpSoftwareClusterResourceToApplicationPartitionMapping.Annotations
-        | None
+        None
+        | CpSoftwareClusterResourceToApplicationPartitionMapping.Annotations
     ) = field(
         default=None,
         metadata={
@@ -165,8 +165,8 @@ class CpSoftwareClusterResourceToApplicationPartitionMapping:
         },
     )
     application_partition_ref: (
-        CpSoftwareClusterResourceToApplicationPartitionMapping.ApplicationPartitionRef
-        | None
+        None
+        | CpSoftwareClusterResourceToApplicationPartitionMapping.ApplicationPartitionRef
     ) = field(
         default=None,
         metadata={
@@ -176,8 +176,8 @@ class CpSoftwareClusterResourceToApplicationPartitionMapping:
         },
     )
     resource_ref: (
-        CpSoftwareClusterResourceToApplicationPartitionMapping.ResourceRef
-        | None
+        None
+        | CpSoftwareClusterResourceToApplicationPartitionMapping.ResourceRef
     ) = field(
         default=None,
         metadata={
@@ -186,7 +186,7 @@ class CpSoftwareClusterResourceToApplicationPartitionMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -194,14 +194,14 @@ class CpSoftwareClusterResourceToApplicationPartitionMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -209,7 +209,7 @@ class CpSoftwareClusterResourceToApplicationPartitionMapping:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -241,7 +241,7 @@ class CpSoftwareClusterResourceToApplicationPartitionMapping:
 
     @dataclass
     class ApplicationPartitionRef(Ref):
-        dest: ApplicationPartitionSubtypesEnum | None = field(
+        dest: None | ApplicationPartitionSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -252,7 +252,7 @@ class CpSoftwareClusterResourceToApplicationPartitionMapping:
 
     @dataclass
     class ResourceRef(Ref):
-        dest: CpSoftwareClusterResourceSubtypesEnum | None = field(
+        dest: None | CpSoftwareClusterResourceSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

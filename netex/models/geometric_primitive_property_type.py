@@ -13,7 +13,7 @@ __NAMESPACE__ = "http://www.opengis.net/gml/3.2"
 @dataclass
 class GeometricPrimitivePropertyType:
     abstract_surface_or_abstract_curve_or_abstract_geometric_primitive: (
-        Polygon | LineString | Point1 | None
+        None | Polygon | LineString | Point1
     ) = field(
         default=None,
         metadata={
@@ -43,7 +43,7 @@ class GeometricPrimitivePropertyType:
             "type": "Attribute",
         },
     )
-    nil_reason: str | NilReasonEnumerationValue | None = field(
+    nil_reason: None | str | NilReasonEnumerationValue = field(
         default=None,
         metadata={
             "name": "nilReason",

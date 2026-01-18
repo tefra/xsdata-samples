@@ -1081,14 +1081,14 @@ class PackageDoc:
             "required": True,
         }
     )
-    document_type_coded_other: str | None = field(
+    document_type_coded_other: None | str = field(
         default=None,
         metadata={
             "name": "DocumentTypeCodedOther",
             "type": "Attribute",
         },
     )
-    document_title: DocumentTitle | None = field(
+    document_title: None | DocumentTitle = field(
         default=None,
         metadata={
             "name": "DocumentTitle",
@@ -1106,14 +1106,14 @@ class PackageIdentifier:
             "required": True,
         }
     )
-    package_identifier_coded_other: PackageIdentifierCodedOther | None = field(
+    package_identifier_coded_other: None | PackageIdentifierCodedOther = field(
         default=None,
         metadata={
             "name": "PackageIdentifierCodedOther",
             "type": "Element",
         },
     )
-    package_identifier_value: PackageIdentifierValue | None = field(
+    package_identifier_value: None | PackageIdentifierValue = field(
         default=None,
         metadata={
             "name": "PackageIdentifierValue",
@@ -1131,14 +1131,14 @@ class PackageMark:
             "required": True,
         }
     )
-    package_mark_coded_other: PackageMarkCodedOther | None = field(
+    package_mark_coded_other: None | PackageMarkCodedOther = field(
         default=None,
         metadata={
             "name": "PackageMarkCodedOther",
             "type": "Element",
         },
     )
-    package_mark_value: PackageMarkValue | None = field(
+    package_mark_value: None | PackageMarkValue = field(
         default=None,
         metadata={
             "name": "PackageMarkValue",
@@ -1189,14 +1189,14 @@ class SpecialHandling:
             "required": True,
         }
     )
-    special_handling_coded_other: SpecialHandlingCodedOther | None = field(
+    special_handling_coded_other: None | SpecialHandlingCodedOther = field(
         default=None,
         metadata={
             "name": "SpecialHandlingCodedOther",
             "type": "Element",
         },
     )
-    special_handling_note: SpecialHandlingNote | None = field(
+    special_handling_note: None | SpecialHandlingNote = field(
         default=None,
         metadata={
             "name": "SpecialHandlingNote",
@@ -1253,28 +1253,28 @@ class ListOfPackageMark:
 
 @dataclass(kw_only=True)
 class OrderReferences:
-    account_code: AccountCode | None = field(
+    account_code: None | AccountCode = field(
         default=None,
         metadata={
             "name": "AccountCode",
             "type": "Element",
         },
     )
-    contract_references: ContractReferences | None = field(
+    contract_references: None | ContractReferences = field(
         default=None,
         metadata={
             "name": "ContractReferences",
             "type": "Element",
         },
     )
-    quote_reference: QuoteReference | None = field(
+    quote_reference: None | QuoteReference = field(
         default=None,
         metadata={
             "name": "QuoteReference",
             "type": "Element",
         },
     )
-    other_order_references: OtherOrderReferences | None = field(
+    other_order_references: None | OtherOrderReferences = field(
         default=None,
         metadata={
             "name": "OtherOrderReferences",
@@ -1293,7 +1293,7 @@ class PackageCharacteristic:
         }
     )
     package_characteristic_coded_other: (
-        PackageCharacteristicCodedOther | None
+        None | PackageCharacteristicCodedOther
     ) = field(
         default=None,
         metadata={
@@ -1321,14 +1321,14 @@ class PackageType:
             "required": True,
         }
     )
-    package_type_coded_other: PackageTypeCodedOther | None = field(
+    package_type_coded_other: None | PackageTypeCodedOther = field(
         default=None,
         metadata={
             "name": "PackageTypeCodedOther",
             "type": "Element",
         },
     )
-    package_type_description: PackageTypeDescription | None = field(
+    package_type_description: None | PackageTypeDescription = field(
         default=None,
         metadata={
             "name": "PackageTypeDescription",
@@ -1339,7 +1339,7 @@ class PackageType:
 
 @dataclass(kw_only=True)
 class ReturnableContainerInfo:
-    returnable_container_part_number: ReturnableContainerPartNumber | None = (
+    returnable_container_part_number: None | ReturnableContainerPartNumber = (
         field(
             default=None,
             metadata={
@@ -1348,7 +1348,7 @@ class ReturnableContainerInfo:
             },
         )
     )
-    payment_responsibility_coded: PaymentResponsibilityCoded | None = field(
+    payment_responsibility_coded: None | PaymentResponsibilityCoded = field(
         default=None,
         metadata={
             "name": "PaymentResponsibilityCoded",
@@ -1356,7 +1356,7 @@ class ReturnableContainerInfo:
         },
     )
     payment_responsibility_coded_other: (
-        PaymentResponsibilityCodedOther | None
+        None | PaymentResponsibilityCodedOther
     ) = field(
         default=None,
         metadata={
@@ -1364,21 +1364,21 @@ class ReturnableContainerInfo:
             "type": "Element",
         },
     )
-    return_load_coded: ReturnLoadCoded | None = field(
+    return_load_coded: None | ReturnLoadCoded = field(
         default=None,
         metadata={
             "name": "ReturnLoadCoded",
             "type": "Element",
         },
     )
-    return_load_coded_other: ReturnLoadCodedOther | None = field(
+    return_load_coded_other: None | ReturnLoadCodedOther = field(
         default=None,
         metadata={
             "name": "ReturnLoadCodedOther",
             "type": "Element",
         },
     )
-    return_note: ReturnNote | None = field(
+    return_note: None | ReturnNote = field(
         default=None,
         metadata={
             "name": "ReturnNote",
@@ -1437,21 +1437,21 @@ class ListOfPackageCharacteristic:
 
 @dataclass(kw_only=True)
 class PackageDescription:
-    list_of_package_identifier: ListOfPackageIdentifier | None = field(
+    list_of_package_identifier: None | ListOfPackageIdentifier = field(
         default=None,
         metadata={
             "name": "ListOfPackageIdentifier",
             "type": "Element",
         },
     )
-    container_counter: ContainerCounter | None = field(
+    container_counter: None | ContainerCounter = field(
         default=None,
         metadata={
             "name": "ContainerCounter",
             "type": "Element",
         },
     )
-    load_order_counter: LoadOrderCounter | None = field(
+    load_order_counter: None | LoadOrderCounter = field(
         default=None,
         metadata={
             "name": "LoadOrderCounter",
@@ -1476,7 +1476,7 @@ class PackageDetail:
             "required": True,
         }
     )
-    list_of_package: ListOfPackage | None = field(
+    list_of_package: None | ListOfPackage = field(
         default=None,
         metadata={
             "name": "ListOfPackage",
@@ -1487,14 +1487,14 @@ class PackageDetail:
 
 @dataclass(kw_only=True)
 class AssociatedDocuments:
-    list_of_document_loose: ListOfDocumentLoose | None = field(
+    list_of_document_loose: None | ListOfDocumentLoose = field(
         default=None,
         metadata={
             "name": "ListOfDocumentLoose",
             "type": "Element",
         },
     )
-    list_of_document_attached: ListOfDocumentAttached | None = field(
+    list_of_document_attached: None | ListOfDocumentAttached = field(
         default=None,
         metadata={
             "name": "ListOfDocumentAttached",
@@ -1547,77 +1547,77 @@ class Package:
             "required": True,
         }
     )
-    list_of_item_reference: ListOfItemReference | None = field(
+    list_of_item_reference: None | ListOfItemReference = field(
         default=None,
         metadata={
             "name": "ListOfItemReference",
             "type": "Element",
         },
     )
-    list_of_package_mark: ListOfPackageMark | None = field(
+    list_of_package_mark: None | ListOfPackageMark = field(
         default=None,
         metadata={
             "name": "ListOfPackageMark",
             "type": "Element",
         },
     )
-    list_of_package_characteristic: ListOfPackageCharacteristic | None = field(
+    list_of_package_characteristic: None | ListOfPackageCharacteristic = field(
         default=None,
         metadata={
             "name": "ListOfPackageCharacteristic",
             "type": "Element",
         },
     )
-    list_of_dimension: ListOfDimension | None = field(
+    list_of_dimension: None | ListOfDimension = field(
         default=None,
         metadata={
             "name": "ListOfDimension",
             "type": "Element",
         },
     )
-    list_of_package_description: ListOfPackageDescription | None = field(
+    list_of_package_description: None | ListOfPackageDescription = field(
         default=None,
         metadata={
             "name": "ListOfPackageDescription",
             "type": "Element",
         },
     )
-    transport_reference: TransportReference | None = field(
+    transport_reference: None | TransportReference = field(
         default=None,
         metadata={
             "name": "TransportReference",
             "type": "Element",
         },
     )
-    special_handling: SpecialHandling | None = field(
+    special_handling: None | SpecialHandling = field(
         default=None,
         metadata={
             "name": "SpecialHandling",
             "type": "Element",
         },
     )
-    hazardous_packaging: HazardousPackaging | None = field(
+    hazardous_packaging: None | HazardousPackaging = field(
         default=None,
         metadata={
             "name": "HazardousPackaging",
             "type": "Element",
         },
     )
-    associated_documents: AssociatedDocuments | None = field(
+    associated_documents: None | AssociatedDocuments = field(
         default=None,
         metadata={
             "name": "AssociatedDocuments",
             "type": "Element",
         },
     )
-    shipping_instructions: ShippingInstructions | None = field(
+    shipping_instructions: None | ShippingInstructions = field(
         default=None,
         metadata={
             "name": "ShippingInstructions",
             "type": "Element",
         },
     )
-    returnable_container_info: ReturnableContainerInfo | None = field(
+    returnable_container_info: None | ReturnableContainerInfo = field(
         default=None,
         metadata={
             "name": "ReturnableContainerInfo",
@@ -1643,7 +1643,7 @@ class ShippingSchedule:
         }
     )
     list_of_location_grouped_shipping_detail: (
-        ListOfLocationGroupedShippingDetail | None
+        None | ListOfLocationGroupedShippingDetail
     ) = field(
         default=None,
         metadata={
@@ -1652,7 +1652,7 @@ class ShippingSchedule:
         },
     )
     list_of_material_grouped_shipping_detail: (
-        ListOfMaterialGroupedShippingDetail | None
+        None | ListOfMaterialGroupedShippingDetail
     ) = field(
         default=None,
         metadata={
@@ -1660,14 +1660,14 @@ class ShippingSchedule:
             "type": "Element",
         },
     )
-    list_of_package_detail: ListOfPackageDetail | None = field(
+    list_of_package_detail: None | ListOfPackageDetail = field(
         default=None,
         metadata={
             "name": "ListOfPackageDetail",
             "type": "Element",
         },
     )
-    shipping_schedule_summary: ShippingScheduleSummary | None = field(
+    shipping_schedule_summary: None | ShippingScheduleSummary = field(
         default=None,
         metadata={
             "name": "ShippingScheduleSummary",

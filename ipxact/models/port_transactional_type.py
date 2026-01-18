@@ -44,7 +44,7 @@ class PortTransactionalType:
     class Meta:
         name = "portTransactionalType"
 
-    initiative: Initiative | None = field(
+    initiative: None | Initiative = field(
         default=None,
         metadata={
             "type": "Element",
@@ -52,14 +52,14 @@ class PortTransactionalType:
             "required": True,
         },
     )
-    kind: Kind | None = field(
+    kind: None | Kind = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    bus_width: BusWidth | None = field(
+    bus_width: None | BusWidth = field(
         default=None,
         metadata={
             "name": "busWidth",
@@ -67,21 +67,21 @@ class PortTransactionalType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    qualifier: QualifierType | None = field(
+    qualifier: None | QualifierType = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    protocol: Protocol | None = field(
+    protocol: None | Protocol = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    trans_type_defs: TransTypeDefs | None = field(
+    trans_type_defs: None | TransTypeDefs = field(
         default=None,
         metadata={
             "name": "transTypeDefs",
@@ -89,14 +89,14 @@ class PortTransactionalType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    connection: PortTransactionalType.Connection | None = field(
+    connection: None | PortTransactionalType.Connection = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    power_constraints: PortTransactionalType.PowerConstraints | None = field(
+    power_constraints: None | PortTransactionalType.PowerConstraints = field(
         default=None,
         metadata={
             "name": "powerConstraints",
@@ -124,7 +124,7 @@ class PortTransactionalType:
             present, the minimum number of allowed connections is 1.
         """
 
-        max_connections: UnsignedIntExpression | None = field(
+        max_connections: None | UnsignedIntExpression = field(
             default=None,
             metadata={
                 "name": "maxConnections",
@@ -132,7 +132,7 @@ class PortTransactionalType:
                 "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
             },
         )
-        min_connections: UnsignedIntExpression | None = field(
+        min_connections: None | UnsignedIntExpression = field(
             default=None,
             metadata={
                 "name": "minConnections",

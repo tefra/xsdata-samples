@@ -125,7 +125,7 @@ class QueuedReceiverComSpec:
         name = "QUEUED-RECEIVER-COM-SPEC"
 
     composite_network_representations: (
-        QueuedReceiverComSpec.CompositeNetworkRepresentations | None
+        None | QueuedReceiverComSpec.CompositeNetworkRepresentations
     ) = field(
         default=None,
         metadata={
@@ -134,7 +134,7 @@ class QueuedReceiverComSpec:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    data_element_ref: QueuedReceiverComSpec.DataElementRef | None = field(
+    data_element_ref: None | QueuedReceiverComSpec.DataElementRef = field(
         default=None,
         metadata={
             "name": "DATA-ELEMENT-REF",
@@ -142,7 +142,7 @@ class QueuedReceiverComSpec:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    data_update_period: TimeValue | None = field(
+    data_update_period: None | TimeValue = field(
         default=None,
         metadata={
             "name": "DATA-UPDATE-PERIOD",
@@ -151,7 +151,7 @@ class QueuedReceiverComSpec:
         },
     )
     external_replacement_ref: (
-        QueuedReceiverComSpec.ExternalReplacementRef | None
+        None | QueuedReceiverComSpec.ExternalReplacementRef
     ) = field(
         default=None,
         metadata={
@@ -160,7 +160,7 @@ class QueuedReceiverComSpec:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    handle_out_of_range: HandleOutOfRangeEnum | None = field(
+    handle_out_of_range: None | HandleOutOfRangeEnum = field(
         default=None,
         metadata={
             "name": "HANDLE-OUT-OF-RANGE",
@@ -168,7 +168,7 @@ class QueuedReceiverComSpec:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    handle_out_of_range_status: HandleOutOfRangeStatusEnum | None = field(
+    handle_out_of_range_status: None | HandleOutOfRangeStatusEnum = field(
         default=None,
         metadata={
             "name": "HANDLE-OUT-OF-RANGE-STATUS",
@@ -176,7 +176,7 @@ class QueuedReceiverComSpec:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    max_delta_counter_init: PositiveIntegerValueVariationPoint | None = field(
+    max_delta_counter_init: None | PositiveIntegerValueVariationPoint = field(
         default=None,
         metadata={
             "name": "MAX-DELTA-COUNTER-INIT",
@@ -184,7 +184,7 @@ class QueuedReceiverComSpec:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    max_no_new_or_repeated_data: PositiveInteger | None = field(
+    max_no_new_or_repeated_data: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "MAX-NO-NEW-OR-REPEATED-DATA",
@@ -192,7 +192,7 @@ class QueuedReceiverComSpec:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    network_representation: SwDataDefProps | None = field(
+    network_representation: None | SwDataDefProps = field(
         default=None,
         metadata={
             "name": "NETWORK-REPRESENTATION",
@@ -200,7 +200,7 @@ class QueuedReceiverComSpec:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    receiver_intent: ReceiverIntentEnum | None = field(
+    receiver_intent: None | ReceiverIntentEnum = field(
         default=None,
         metadata={
             "name": "RECEIVER-INTENT",
@@ -208,7 +208,7 @@ class QueuedReceiverComSpec:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    reception_props: ReceptionComSpecProps | None = field(
+    reception_props: None | ReceptionComSpecProps = field(
         default=None,
         metadata={
             "name": "RECEPTION-PROPS",
@@ -216,7 +216,7 @@ class QueuedReceiverComSpec:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    replace_with: VariableAccess | None = field(
+    replace_with: None | VariableAccess = field(
         default=None,
         metadata={
             "name": "REPLACE-WITH",
@@ -224,7 +224,7 @@ class QueuedReceiverComSpec:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sync_counter_init: PositiveInteger | None = field(
+    sync_counter_init: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "SYNC-COUNTER-INIT",
@@ -233,7 +233,7 @@ class QueuedReceiverComSpec:
         },
     )
     transformation_com_spec_propss: (
-        QueuedReceiverComSpec.TransformationComSpecPropss | None
+        None | QueuedReceiverComSpec.TransformationComSpecPropss
     ) = field(
         default=None,
         metadata={
@@ -242,7 +242,7 @@ class QueuedReceiverComSpec:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    uses_end_to_end_protection: BooleanValueVariationPoint | None = field(
+    uses_end_to_end_protection: None | BooleanValueVariationPoint = field(
         default=None,
         metadata={
             "name": "USES-END-TO-END-PROTECTION",
@@ -250,7 +250,7 @@ class QueuedReceiverComSpec:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    queue_length: PositiveInteger | None = field(
+    queue_length: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "QUEUE-LENGTH",
@@ -258,14 +258,14 @@ class QueuedReceiverComSpec:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -289,7 +289,7 @@ class QueuedReceiverComSpec:
 
     @dataclass
     class DataElementRef(Ref):
-        dest: AutosarDataPrototypeSubtypesEnum | None = field(
+        dest: None | AutosarDataPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -300,7 +300,7 @@ class QueuedReceiverComSpec:
 
     @dataclass
     class ExternalReplacementRef(Ref):
-        dest: AutosarDataPrototypeSubtypesEnum | None = field(
+        dest: None | AutosarDataPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

@@ -42,7 +42,7 @@ class HeaderType:
     :ivar event:
     """
 
-    source_system: str | None = field(
+    source_system: None | str = field(
         default=None,
         metadata={
             "name": "SourceSystem",
@@ -50,7 +50,7 @@ class HeaderType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
         },
     )
-    target_systems: HeaderTypeTargetSystems | None = field(
+    target_systems: None | HeaderTypeTargetSystems = field(
         default=None,
         metadata={
             "name": "TargetSystems",
@@ -58,7 +58,7 @@ class HeaderType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
         },
     )
-    conversation_id: str | None = field(
+    conversation_id: None | str = field(
         default=None,
         metadata={
             "name": "ConversationID",
@@ -66,7 +66,7 @@ class HeaderType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
         },
     )
-    message_id: str | None = field(
+    message_id: None | str = field(
         default=None,
         metadata={
             "name": "MessageID",
@@ -74,7 +74,7 @@ class HeaderType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
         },
     )
-    properties: HeaderTypeProperties | None = field(
+    properties: None | HeaderTypeProperties = field(
         default=None,
         metadata={
             "name": "Properties",
@@ -82,7 +82,7 @@ class HeaderType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
         },
     )
-    creation_date_time: DateTimeType | None = field(
+    creation_date_time: None | DateTimeType = field(
         default=None,
         metadata={
             "name": "CreationDateTime",
@@ -90,7 +90,7 @@ class HeaderType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
         },
     )
-    event: str | None = field(
+    event: None | str = field(
         default=None,
         metadata={
             "name": "Event",

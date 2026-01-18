@@ -37,7 +37,7 @@ class McGroupDataRefSet:
         name = "MC-GROUP-DATA-REF-SET"
 
     mc_group_data_ref_set_variants: (
-        McGroupDataRefSet.McGroupDataRefSetVariants | None
+        None | McGroupDataRefSet.McGroupDataRefSetVariants
     ) = field(
         default=None,
         metadata={
@@ -46,14 +46,14 @@ class McGroupDataRefSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

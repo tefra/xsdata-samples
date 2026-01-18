@@ -32,7 +32,7 @@ class Modification:
     class Meta:
         name = "MODIFICATION"
 
-    change: MultiLanguageOverviewParagraph | None = field(
+    change: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "CHANGE",
@@ -40,7 +40,7 @@ class Modification:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    reason: MultiLanguageOverviewParagraph | None = field(
+    reason: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "REASON",
@@ -48,14 +48,14 @@ class Modification:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

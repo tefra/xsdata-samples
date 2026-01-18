@@ -13,7 +13,7 @@ class ContactsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "contacts_RelStructure"
 
-    contact: Contact | None = field(
+    contact: None | Contact = field(
         default=None,
         metadata={
             "name": "Contact",

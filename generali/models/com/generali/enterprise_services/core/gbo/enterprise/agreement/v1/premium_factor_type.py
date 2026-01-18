@@ -22,7 +22,7 @@ __NAMESPACE__ = (
 
 @dataclass
 class PremiumFactorType(BaseComponentType):
-    amount: AmountType | None = field(
+    amount: None | AmountType = field(
         default=None,
         metadata={
             "name": "Amount",
@@ -31,7 +31,7 @@ class PremiumFactorType(BaseComponentType):
             "required": True,
         },
     )
-    description: TextType | None = field(
+    description: None | TextType = field(
         default=None,
         metadata={
             "name": "Description",
@@ -40,7 +40,7 @@ class PremiumFactorType(BaseComponentType):
             "required": True,
         },
     )
-    percentage: PercentType | None = field(
+    percentage: None | PercentType = field(
         default=None,
         metadata={
             "name": "Percentage",

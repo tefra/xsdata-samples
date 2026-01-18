@@ -32,7 +32,7 @@ class Institution:
         name = "institution"
         namespace = "http://www.crossref.org/schema/5.3.1"
 
-    institution_name: InstitutionName | None = field(
+    institution_name: None | InstitutionName = field(
         default=None,
         metadata={
             "type": "Element",

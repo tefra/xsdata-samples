@@ -25,7 +25,7 @@ __NAMESPACE__ = (
 
 @dataclass
 class CedantInvolvementType(OrganisationInvolvementType):
-    organisation_role: InsurerRoleType | None = field(
+    organisation_role: None | InsurerRoleType = field(
         default=None,
         metadata={
             "name": "OrganisationRole",
@@ -34,7 +34,7 @@ class CedantInvolvementType(OrganisationInvolvementType):
             "required": True,
         },
     )
-    policy_identifier: Idtype | None = field(
+    policy_identifier: None | Idtype = field(
         default=None,
         metadata={
             "name": "PolicyIdentifier",
@@ -42,7 +42,7 @@ class CedantInvolvementType(OrganisationInvolvementType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    sequence_number: NumericType | None = field(
+    sequence_number: None | NumericType = field(
         default=None,
         metadata={
             "name": "SequenceNumber",
@@ -50,7 +50,7 @@ class CedantInvolvementType(OrganisationInvolvementType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    ceded_risk_share: PercentType | None = field(
+    ceded_risk_share: None | PercentType = field(
         default=None,
         metadata={
             "name": "CededRiskShare",
@@ -58,7 +58,7 @@ class CedantInvolvementType(OrganisationInvolvementType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    retained_risk_share: PercentType | None = field(
+    retained_risk_share: None | PercentType = field(
         default=None,
         metadata={
             "name": "RetainedRiskShare",

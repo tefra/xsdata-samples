@@ -102,7 +102,7 @@ class UserDefinedGlobalTimeSlave:
     class Meta:
         name = "USER-DEFINED-GLOBAL-TIME-SLAVE"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -112,7 +112,7 @@ class UserDefinedGlobalTimeSlave:
         },
     )
     short_name_fragments: (
-        UserDefinedGlobalTimeSlave.ShortNameFragments | None
+        None | UserDefinedGlobalTimeSlave.ShortNameFragments
     ) = field(
         default=None,
         metadata={
@@ -121,7 +121,7 @@ class UserDefinedGlobalTimeSlave:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -129,7 +129,7 @@ class UserDefinedGlobalTimeSlave:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -137,7 +137,7 @@ class UserDefinedGlobalTimeSlave:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -145,7 +145,7 @@ class UserDefinedGlobalTimeSlave:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -153,7 +153,7 @@ class UserDefinedGlobalTimeSlave:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -161,7 +161,7 @@ class UserDefinedGlobalTimeSlave:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: UserDefinedGlobalTimeSlave.Annotations | None = field(
+    annotations: None | UserDefinedGlobalTimeSlave.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -170,7 +170,7 @@ class UserDefinedGlobalTimeSlave:
         },
     )
     communication_connector_ref: (
-        UserDefinedGlobalTimeSlave.CommunicationConnectorRef | None
+        None | UserDefinedGlobalTimeSlave.CommunicationConnectorRef
     ) = field(
         default=None,
         metadata={
@@ -179,7 +179,7 @@ class UserDefinedGlobalTimeSlave:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    follow_up_timeout_value: TimeValue | None = field(
+    follow_up_timeout_value: None | TimeValue = field(
         default=None,
         metadata={
             "name": "FOLLOW-UP-TIMEOUT-VALUE",
@@ -187,7 +187,7 @@ class UserDefinedGlobalTimeSlave:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    time_leap_future_threshold: TimeValue | None = field(
+    time_leap_future_threshold: None | TimeValue = field(
         default=None,
         metadata={
             "name": "TIME-LEAP-FUTURE-THRESHOLD",
@@ -195,7 +195,7 @@ class UserDefinedGlobalTimeSlave:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    time_leap_healing_counter: PositiveInteger | None = field(
+    time_leap_healing_counter: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "TIME-LEAP-HEALING-COUNTER",
@@ -203,7 +203,7 @@ class UserDefinedGlobalTimeSlave:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    time_leap_past_threshold: TimeValue | None = field(
+    time_leap_past_threshold: None | TimeValue = field(
         default=None,
         metadata={
             "name": "TIME-LEAP-PAST-THRESHOLD",
@@ -211,7 +211,7 @@ class UserDefinedGlobalTimeSlave:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -219,14 +219,14 @@ class UserDefinedGlobalTimeSlave:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -234,7 +234,7 @@ class UserDefinedGlobalTimeSlave:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -266,7 +266,7 @@ class UserDefinedGlobalTimeSlave:
 
     @dataclass
     class CommunicationConnectorRef(Ref):
-        dest: CommunicationConnectorSubtypesEnum | None = field(
+        dest: None | CommunicationConnectorSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

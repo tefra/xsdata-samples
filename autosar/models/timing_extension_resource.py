@@ -96,7 +96,7 @@ class TimingExtensionResource:
     class Meta:
         name = "TIMING-EXTENSION-RESOURCE"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -105,7 +105,7 @@ class TimingExtensionResource:
             "required": True,
         },
     )
-    short_name_fragments: TimingExtensionResource.ShortNameFragments | None = (
+    short_name_fragments: None | TimingExtensionResource.ShortNameFragments = (
         field(
             default=None,
             metadata={
@@ -115,7 +115,7 @@ class TimingExtensionResource:
             },
         )
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -123,7 +123,7 @@ class TimingExtensionResource:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -131,7 +131,7 @@ class TimingExtensionResource:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -139,7 +139,7 @@ class TimingExtensionResource:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -147,7 +147,7 @@ class TimingExtensionResource:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -155,7 +155,7 @@ class TimingExtensionResource:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: TimingExtensionResource.Annotations | None = field(
+    annotations: None | TimingExtensionResource.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -163,7 +163,7 @@ class TimingExtensionResource:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    timing_arguments: TimingExtensionResource.TimingArguments | None = field(
+    timing_arguments: None | TimingExtensionResource.TimingArguments = field(
         default=None,
         metadata={
             "name": "TIMING-ARGUMENTS",
@@ -171,7 +171,7 @@ class TimingExtensionResource:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    timing_modes: TimingExtensionResource.TimingModes | None = field(
+    timing_modes: None | TimingExtensionResource.TimingModes = field(
         default=None,
         metadata={
             "name": "TIMING-MODES",
@@ -179,7 +179,7 @@ class TimingExtensionResource:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    timing_variables: TimingExtensionResource.TimingVariables | None = field(
+    timing_variables: None | TimingExtensionResource.TimingVariables = field(
         default=None,
         metadata={
             "name": "TIMING-VARIABLES",
@@ -187,14 +187,14 @@ class TimingExtensionResource:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -202,7 +202,7 @@ class TimingExtensionResource:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",

@@ -83,7 +83,7 @@ class SeriesType(AnnotableType):
             "namespace": "",
         },
     )
-    metadata: MetadataSetType | None = field(
+    metadata: None | MetadataSetType = field(
         default=None,
         metadata={
             "name": "Metadata",
@@ -91,7 +91,7 @@ class SeriesType(AnnotableType):
             "namespace": "",
         },
     )
-    time_period: XmlPeriod | XmlDate | XmlDateTime | str | None = field(
+    time_period: None | XmlPeriod | XmlDate | XmlDateTime | str = field(
         default=None,
         metadata={
             "name": "TIME_PERIOD",

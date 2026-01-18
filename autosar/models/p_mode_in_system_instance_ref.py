@@ -44,7 +44,7 @@ class PModeInSystemInstanceRef:
         name = "P-MODE-IN-SYSTEM-INSTANCE-REF"
 
     context_composition_ref: (
-        PModeInSystemInstanceRef.ContextCompositionRef | None
+        None | PModeInSystemInstanceRef.ContextCompositionRef
     ) = field(
         default=None,
         metadata={
@@ -63,7 +63,7 @@ class PModeInSystemInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    context_p_port_ref: PModeInSystemInstanceRef.ContextPPortRef | None = (
+    context_p_port_ref: None | PModeInSystemInstanceRef.ContextPPortRef = (
         field(
             default=None,
             metadata={
@@ -74,7 +74,7 @@ class PModeInSystemInstanceRef:
         )
     )
     context_mode_declaration_group_ref: (
-        PModeInSystemInstanceRef.ContextModeDeclarationGroupRef | None
+        None | PModeInSystemInstanceRef.ContextModeDeclarationGroupRef
     ) = field(
         default=None,
         metadata={
@@ -83,7 +83,7 @@ class PModeInSystemInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    target_mode_ref: PModeInSystemInstanceRef.TargetModeRef | None = field(
+    target_mode_ref: None | PModeInSystemInstanceRef.TargetModeRef = field(
         default=None,
         metadata={
             "name": "TARGET-MODE-REF",
@@ -91,14 +91,14 @@ class PModeInSystemInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -109,7 +109,7 @@ class PModeInSystemInstanceRef:
 
     @dataclass
     class ContextCompositionRef(Ref):
-        dest: RootSwCompositionPrototypeSubtypesEnum | None = field(
+        dest: None | RootSwCompositionPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -120,7 +120,7 @@ class PModeInSystemInstanceRef:
 
     @dataclass
     class ContextComponentRef(Ref):
-        dest: SwComponentPrototypeSubtypesEnum | None = field(
+        dest: None | SwComponentPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -131,7 +131,7 @@ class PModeInSystemInstanceRef:
 
     @dataclass
     class ContextPPortRef(Ref):
-        dest: AbstractProvidedPortPrototypeSubtypesEnum | None = field(
+        dest: None | AbstractProvidedPortPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -142,7 +142,7 @@ class PModeInSystemInstanceRef:
 
     @dataclass
     class ContextModeDeclarationGroupRef(Ref):
-        dest: ModeDeclarationGroupPrototypeSubtypesEnum | None = field(
+        dest: None | ModeDeclarationGroupPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -153,7 +153,7 @@ class PModeInSystemInstanceRef:
 
     @dataclass
     class TargetModeRef(Ref):
-        dest: ModeDeclarationSubtypesEnum | None = field(
+        dest: None | ModeDeclarationSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

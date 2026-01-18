@@ -16,7 +16,7 @@ class PricingLayerTypeLimit:
     class Meta:
         global_type = False
 
-    value: ValueType | None = field(
+    value: None | ValueType = field(
         default=None,
         metadata={
             "name": "Value",

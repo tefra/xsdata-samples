@@ -46,7 +46,7 @@ class IpIamAuthenticConnectionProps:
     class Meta:
         name = "IP-IAM-AUTHENTIC-CONNECTION-PROPS"
 
-    ip_protocol: IpTransportProtocolEnum | None = field(
+    ip_protocol: None | IpTransportProtocolEnum = field(
         default=None,
         metadata={
             "name": "IP-PROTOCOL",
@@ -55,7 +55,7 @@ class IpIamAuthenticConnectionProps:
         },
     )
     local_network_endpoint_ref: (
-        IpIamAuthenticConnectionProps.LocalNetworkEndpointRef | None
+        None | IpIamAuthenticConnectionProps.LocalNetworkEndpointRef
     ) = field(
         default=None,
         metadata={
@@ -64,7 +64,7 @@ class IpIamAuthenticConnectionProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    local_port_range_end: PositiveInteger | None = field(
+    local_port_range_end: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "LOCAL-PORT-RANGE-END",
@@ -72,7 +72,7 @@ class IpIamAuthenticConnectionProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    local_port_range_start: PositiveInteger | None = field(
+    local_port_range_start: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "LOCAL-PORT-RANGE-START",
@@ -81,7 +81,7 @@ class IpIamAuthenticConnectionProps:
         },
     )
     remote_network_endpoint_ref: (
-        IpIamAuthenticConnectionProps.RemoteNetworkEndpointRef | None
+        None | IpIamAuthenticConnectionProps.RemoteNetworkEndpointRef
     ) = field(
         default=None,
         metadata={
@@ -90,7 +90,7 @@ class IpIamAuthenticConnectionProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    remote_port_range_end: PositiveInteger | None = field(
+    remote_port_range_end: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "REMOTE-PORT-RANGE-END",
@@ -98,7 +98,7 @@ class IpIamAuthenticConnectionProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    remote_port_range_start: PositiveInteger | None = field(
+    remote_port_range_start: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "REMOTE-PORT-RANGE-START",
@@ -106,14 +106,14 @@ class IpIamAuthenticConnectionProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -124,7 +124,7 @@ class IpIamAuthenticConnectionProps:
 
     @dataclass
     class LocalNetworkEndpointRef(Ref):
-        dest: EthernetPhysicalChannelSubtypesEnum | None = field(
+        dest: None | EthernetPhysicalChannelSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -135,7 +135,7 @@ class IpIamAuthenticConnectionProps:
 
     @dataclass
     class RemoteNetworkEndpointRef(Ref):
-        dest: EthernetPhysicalChannelSubtypesEnum | None = field(
+        dest: None | EthernetPhysicalChannelSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

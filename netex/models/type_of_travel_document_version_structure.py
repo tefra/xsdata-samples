@@ -19,7 +19,7 @@ class TypeOfTravelDocumentVersionStructure(TypeOfEntityVersionStructure):
     class Meta:
         name = "TypeOfTravelDocument_VersionStructure"
 
-    is_card: bool | None = field(
+    is_card: None | bool = field(
         default=None,
         metadata={
             "name": "IsCard",
@@ -27,7 +27,7 @@ class TypeOfTravelDocumentVersionStructure(TypeOfEntityVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    is_smart_card: bool | None = field(
+    is_smart_card: None | bool = field(
         default=None,
         metadata={
             "name": "IsSmartCard",
@@ -35,7 +35,7 @@ class TypeOfTravelDocumentVersionStructure(TypeOfEntityVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    has_photo: bool | None = field(
+    has_photo: None | bool = field(
         default=None,
         metadata={
             "name": "HasPhoto",
@@ -43,7 +43,7 @@ class TypeOfTravelDocumentVersionStructure(TypeOfEntityVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    media_type: MediaTypeEnumeration | None = field(
+    media_type: None | MediaTypeEnumeration = field(
         default=None,
         metadata={
             "name": "MediaType",
@@ -61,7 +61,7 @@ class TypeOfTravelDocumentVersionStructure(TypeOfEntityVersionStructure):
         },
     )
     types_of_machine_readabilities: (
-        TypesOfMachineReadabilitiesRelStructure | None
+        None | TypesOfMachineReadabilitiesRelStructure
     ) = field(
         default=None,
         metadata={
@@ -70,7 +70,7 @@ class TypeOfTravelDocumentVersionStructure(TypeOfEntityVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    alternative_names: AlternativeNamesRelStructure | None = field(
+    alternative_names: None | AlternativeNamesRelStructure = field(
         default=None,
         metadata={
             "name": "alternativeNames",

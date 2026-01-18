@@ -13,7 +13,7 @@ class AccessVersionStructure(TransferVersionStructure):
     class Meta:
         name = "Access_VersionStructure"
 
-    from_value: AccessEndStructure | None = field(
+    from_value: None | AccessEndStructure = field(
         default=None,
         metadata={
             "name": "From",
@@ -22,7 +22,7 @@ class AccessVersionStructure(TransferVersionStructure):
             "required": True,
         },
     )
-    to: AccessEndStructure | None = field(
+    to: None | AccessEndStructure = field(
         default=None,
         metadata={
             "name": "To",

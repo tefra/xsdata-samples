@@ -14,7 +14,7 @@ class PlaceLightingVersionStructure(AccessEquipmentVersionStructure):
     class Meta:
         name = "PlaceLighting_VersionStructure"
 
-    lighting: LightingEnumeration | None = field(
+    lighting: None | LightingEnumeration = field(
         default=None,
         metadata={
             "name": "Lighting",
@@ -22,7 +22,7 @@ class PlaceLightingVersionStructure(AccessEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    always_lit: bool | None = field(
+    always_lit: None | bool = field(
         default=None,
         metadata={
             "name": "AlwaysLit",
@@ -30,7 +30,7 @@ class PlaceLightingVersionStructure(AccessEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    lighting_on_method: LightingOnMethodEnumeration | None = field(
+    lighting_on_method: None | LightingOnMethodEnumeration = field(
         default=None,
         metadata={
             "name": "LightingOnMethod",

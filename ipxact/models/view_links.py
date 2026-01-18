@@ -41,7 +41,7 @@ class ViewLinks:
         """
 
         external_view_reference: (
-            ViewLinks.ViewLink.ExternalViewReference | None
+            None | ViewLinks.ViewLink.ExternalViewReference
         ) = field(
             default=None,
             metadata={
@@ -50,7 +50,7 @@ class ViewLinks:
                 "required": True,
             },
         )
-        view_reference: ViewLinks.ViewLink.ViewReference | None = field(
+        view_reference: None | ViewLinks.ViewLink.ViewReference = field(
             default=None,
             metadata={
                 "name": "viewReference",
@@ -58,14 +58,14 @@ class ViewLinks:
                 "required": True,
             },
         )
-        vendor_extensions: VendorExtensions | None = field(
+        vendor_extensions: None | VendorExtensions = field(
             default=None,
             metadata={
                 "name": "vendorExtensions",
                 "type": "Element",
             },
         )
-        id: str | None = field(
+        id: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -79,7 +79,7 @@ class ViewLinks:
             :ivar view_ref: Reference to a specific view.
             """
 
-            view_ref: str | None = field(
+            view_ref: None | str = field(
                 default=None,
                 metadata={
                     "name": "viewRef",
@@ -94,7 +94,7 @@ class ViewLinks:
             :ivar view_ref: Reference to a specific view.
             """
 
-            view_ref: str | None = field(
+            view_ref: None | str = field(
                 default=None,
                 metadata={
                     "name": "viewRef",

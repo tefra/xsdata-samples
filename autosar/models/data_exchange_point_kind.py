@@ -28,20 +28,20 @@ class DataExchangePointKind:
     class Meta:
         name = "DATA-EXCHANGE-POINT-KIND"
 
-    value: DataExchangePointKindSimple | None = field(
+    value: None | DataExchangePointKindSimple = field(
         default=None,
         metadata={
             "required": True,
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

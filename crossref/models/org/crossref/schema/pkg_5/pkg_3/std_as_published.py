@@ -20,19 +20,19 @@ class StdAsPublished(StdDesignatorT):
         name = "std_as_published"
         namespace = "http://www.crossref.org/schema/5.3.1"
 
-    family: str | None = field(
+    family: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    set: str | None = field(
+    set: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    undated: str | None = field(
+    undated: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",

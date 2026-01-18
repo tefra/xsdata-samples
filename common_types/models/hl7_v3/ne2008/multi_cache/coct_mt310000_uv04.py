@@ -46,7 +46,7 @@ class CoctMt310000Uv04AcommodationRequestor:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Ii | None = field(
+    type_id: None | Ii = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -62,7 +62,7 @@ class CoctMt310000Uv04AcommodationRequestor:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    name: PnExplicit | None = field(
+    name: None | PnExplicit = field(
         default=None,
         metadata={
             "type": "Element",
@@ -70,7 +70,7 @@ class CoctMt310000Uv04AcommodationRequestor:
             "required": True,
         },
     )
-    null_flavor: NullFlavor | None = field(
+    null_flavor: None | NullFlavor = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -110,7 +110,7 @@ class CoctMt310000Uv04Location:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Ii | None = field(
+    type_id: None | Ii = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -127,7 +127,7 @@ class CoctMt310000Uv04Location:
         },
     )
     service_delivery_location: (
-        CoctMt240003Uv02ServiceDeliveryLocation | None
+        None | CoctMt240003Uv02ServiceDeliveryLocation
     ) = field(
         default=None,
         metadata={
@@ -137,14 +137,14 @@ class CoctMt310000Uv04Location:
             "required": True,
         },
     )
-    null_flavor: NullFlavor | None = field(
+    null_flavor: None | NullFlavor = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
         },
     )
-    type_code: ParticipationTargetLocation | None = field(
+    type_code: None | ParticipationTargetLocation = field(
         default=None,
         metadata={
             "name": "typeCode",
@@ -167,7 +167,7 @@ class CoctMt310000Uv04MedicalService:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Ii | None = field(
+    type_id: None | Ii = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -183,7 +183,7 @@ class CoctMt310000Uv04MedicalService:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    code: Cs | None = field(
+    code: None | Cs = field(
         default=None,
         metadata={
             "type": "Element",
@@ -191,14 +191,14 @@ class CoctMt310000Uv04MedicalService:
             "required": True,
         },
     )
-    null_flavor: NullFlavor | None = field(
+    null_flavor: None | NullFlavor = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
         },
     )
-    class_code: ActClassObservation | None = field(
+    class_code: None | ActClassObservation = field(
         default=None,
         metadata={
             "name": "classCode",
@@ -230,7 +230,7 @@ class CoctMt310000Uv04MinimumAvailableAccommodation:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Ii | None = field(
+    type_id: None | Ii = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -246,7 +246,7 @@ class CoctMt310000Uv04MinimumAvailableAccommodation:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    code: Cs | None = field(
+    code: None | Cs = field(
         default=None,
         metadata={
             "type": "Element",
@@ -254,14 +254,14 @@ class CoctMt310000Uv04MinimumAvailableAccommodation:
             "required": True,
         },
     )
-    null_flavor: NullFlavor | None = field(
+    null_flavor: None | NullFlavor = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
         },
     )
-    class_code: ActClassRoot | None = field(
+    class_code: None | ActClassRoot = field(
         default=None,
         metadata={
             "name": "classCode",
@@ -293,7 +293,7 @@ class CoctMt310000Uv04AccommodationRequestorRole:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Ii | None = field(
+    type_id: None | Ii = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -309,14 +309,14 @@ class CoctMt310000Uv04AccommodationRequestorRole:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    code: Cs | None = field(
+    code: None | Cs = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    accommodation_requestor: CoctMt310000Uv04AcommodationRequestor | None = (
+    accommodation_requestor: None | CoctMt310000Uv04AcommodationRequestor = (
         field(
             default=None,
             metadata={
@@ -327,14 +327,14 @@ class CoctMt310000Uv04AccommodationRequestorRole:
             },
         )
     )
-    null_flavor: NullFlavor | None = field(
+    null_flavor: None | NullFlavor = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
         },
     )
-    class_code: XRoleClassAccommodationRequestor | None = field(
+    class_code: None | XRoleClassAccommodationRequestor = field(
         default=None,
         metadata={
             "name": "classCode",
@@ -357,7 +357,7 @@ class CoctMt310000Uv04PertinentInformation1:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Ii | None = field(
+    type_id: None | Ii = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -374,7 +374,7 @@ class CoctMt310000Uv04PertinentInformation1:
         },
     )
     minimum_available_accommodation: (
-        CoctMt310000Uv04MinimumAvailableAccommodation | None
+        None | CoctMt310000Uv04MinimumAvailableAccommodation
     ) = field(
         default=None,
         metadata={
@@ -384,7 +384,7 @@ class CoctMt310000Uv04PertinentInformation1:
             "nillable": True,
         },
     )
-    null_flavor: NullFlavor | None = field(
+    null_flavor: None | NullFlavor = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -392,13 +392,13 @@ class CoctMt310000Uv04PertinentInformation1:
         },
     )
     type_code: (
-        ActRelationshipCostTracking
+        None
+        | ActRelationshipCostTracking
         | ActRelationshipPosting
         | str
         | ActRelationshipHasSupport
         | ActRelationshipTemporallyPertains
         | ActRelationshipPertainsValue
-        | None
     ) = field(
         default=None,
         metadata={
@@ -423,7 +423,7 @@ class CoctMt310000Uv04PertinentInformation3:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Ii | None = field(
+    type_id: None | Ii = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -439,7 +439,7 @@ class CoctMt310000Uv04PertinentInformation3:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    medical_service: CoctMt310000Uv04MedicalService | None = field(
+    medical_service: None | CoctMt310000Uv04MedicalService = field(
         default=None,
         metadata={
             "name": "medicalService",
@@ -448,7 +448,7 @@ class CoctMt310000Uv04PertinentInformation3:
             "required": True,
         },
     )
-    null_flavor: NullFlavor | None = field(
+    null_flavor: None | NullFlavor = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -456,13 +456,13 @@ class CoctMt310000Uv04PertinentInformation3:
         },
     )
     type_code: (
-        ActRelationshipCostTracking
+        None
+        | ActRelationshipCostTracking
         | ActRelationshipPosting
         | str
         | ActRelationshipHasSupport
         | ActRelationshipTemporallyPertains
         | ActRelationshipPertainsValue
-        | None
     ) = field(
         default=None,
         metadata={
@@ -487,7 +487,7 @@ class CoctMt310000Uv04Author:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Ii | None = field(
+    type_id: None | Ii = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -504,7 +504,7 @@ class CoctMt310000Uv04Author:
         },
     )
     accommodation_requestor_role: (
-        CoctMt310000Uv04AccommodationRequestorRole | None
+        None | CoctMt310000Uv04AccommodationRequestorRole
     ) = field(
         default=None,
         metadata={
@@ -514,7 +514,7 @@ class CoctMt310000Uv04Author:
             "required": True,
         },
     )
-    null_flavor: NullFlavor | None = field(
+    null_flavor: None | NullFlavor = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -545,7 +545,7 @@ class CoctMt310000Uv04Encounter:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Ii | None = field(
+    type_id: None | Ii = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -561,14 +561,14 @@ class CoctMt310000Uv04Encounter:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    id: Ii | None = field(
+    id: None | Ii = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    effective_time: IvlTsExplicit | None = field(
+    effective_time: None | IvlTsExplicit = field(
         default=None,
         metadata={
             "name": "effectiveTime",
@@ -577,7 +577,7 @@ class CoctMt310000Uv04Encounter:
             "required": True,
         },
     )
-    pertinent_information: CoctMt310000Uv04PertinentInformation3 | None = (
+    pertinent_information: None | CoctMt310000Uv04PertinentInformation3 = (
         field(
             default=None,
             metadata={
@@ -588,7 +588,7 @@ class CoctMt310000Uv04Encounter:
             },
         )
     )
-    null_flavor: NullFlavor | None = field(
+    null_flavor: None | NullFlavor = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -628,7 +628,7 @@ class CoctMt310000Uv04AccommodationRequested:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Ii | None = field(
+    type_id: None | Ii = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -644,7 +644,7 @@ class CoctMt310000Uv04AccommodationRequested:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    code: Cs | None = field(
+    code: None | Cs = field(
         default=None,
         metadata={
             "type": "Element",
@@ -652,7 +652,7 @@ class CoctMt310000Uv04AccommodationRequested:
             "required": True,
         },
     )
-    effective_time: TsExplicit | None = field(
+    effective_time: None | TsExplicit = field(
         default=None,
         metadata={
             "name": "effectiveTime",
@@ -660,7 +660,7 @@ class CoctMt310000Uv04AccommodationRequested:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    author: CoctMt310000Uv04Author | None = field(
+    author: None | CoctMt310000Uv04Author = field(
         default=None,
         metadata={
             "type": "Element",
@@ -668,14 +668,14 @@ class CoctMt310000Uv04AccommodationRequested:
             "required": True,
         },
     )
-    null_flavor: NullFlavor | None = field(
+    null_flavor: None | NullFlavor = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
         },
     )
-    class_code: ActClassRoot | None = field(
+    class_code: None | ActClassRoot = field(
         default=None,
         metadata={
             "name": "classCode",
@@ -707,7 +707,7 @@ class CoctMt310000Uv04PertinentInformation2:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Ii | None = field(
+    type_id: None | Ii = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -723,7 +723,7 @@ class CoctMt310000Uv04PertinentInformation2:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    encounter: CoctMt310000Uv04Encounter | None = field(
+    encounter: None | CoctMt310000Uv04Encounter = field(
         default=None,
         metadata={
             "type": "Element",
@@ -731,7 +731,7 @@ class CoctMt310000Uv04PertinentInformation2:
             "required": True,
         },
     )
-    null_flavor: NullFlavor | None = field(
+    null_flavor: None | NullFlavor = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -739,13 +739,13 @@ class CoctMt310000Uv04PertinentInformation2:
         },
     )
     type_code: (
-        ActRelationshipCostTracking
+        None
+        | ActRelationshipCostTracking
         | ActRelationshipPosting
         | str
         | ActRelationshipHasSupport
         | ActRelationshipTemporallyPertains
         | ActRelationshipPertainsValue
-        | None
     ) = field(
         default=None,
         metadata={
@@ -770,7 +770,7 @@ class CoctMt310000Uv04InFulfillmentOf:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Ii | None = field(
+    type_id: None | Ii = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -786,7 +786,7 @@ class CoctMt310000Uv04InFulfillmentOf:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    accommodation_requested: CoctMt310000Uv04AccommodationRequested | None = (
+    accommodation_requested: None | CoctMt310000Uv04AccommodationRequested = (
         field(
             default=None,
             metadata={
@@ -797,14 +797,14 @@ class CoctMt310000Uv04InFulfillmentOf:
             },
         )
     )
-    null_flavor: NullFlavor | None = field(
+    null_flavor: None | NullFlavor = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
         },
     )
-    type_code: ActRelationshipFulfills | None = field(
+    type_code: None | ActRelationshipFulfills = field(
         default=None,
         metadata={
             "name": "typeCode",
@@ -827,7 +827,7 @@ class CoctMt310000Uv04AccomodationSupplied:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Ii | None = field(
+    type_id: None | Ii = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -843,7 +843,7 @@ class CoctMt310000Uv04AccomodationSupplied:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    code: Cs | None = field(
+    code: None | Cs = field(
         default=None,
         metadata={
             "type": "Element",
@@ -851,7 +851,7 @@ class CoctMt310000Uv04AccomodationSupplied:
             "required": True,
         },
     )
-    effective_time: IvlTsExplicit | None = field(
+    effective_time: None | IvlTsExplicit = field(
         default=None,
         metadata={
             "name": "effectiveTime",
@@ -860,7 +860,7 @@ class CoctMt310000Uv04AccomodationSupplied:
             "required": True,
         },
     )
-    reason_code: Cs | None = field(
+    reason_code: None | Cs = field(
         default=None,
         metadata={
             "name": "reasonCode",
@@ -869,7 +869,7 @@ class CoctMt310000Uv04AccomodationSupplied:
             "required": True,
         },
     )
-    location: CoctMt310000Uv04Location | None = field(
+    location: None | CoctMt310000Uv04Location = field(
         default=None,
         metadata={
             "type": "Element",
@@ -877,7 +877,7 @@ class CoctMt310000Uv04AccomodationSupplied:
             "required": True,
         },
     )
-    in_fulfillment_of: CoctMt310000Uv04InFulfillmentOf | None = field(
+    in_fulfillment_of: None | CoctMt310000Uv04InFulfillmentOf = field(
         default=None,
         metadata={
             "name": "inFulfillmentOf",
@@ -886,7 +886,7 @@ class CoctMt310000Uv04AccomodationSupplied:
             "required": True,
         },
     )
-    pertinent_information1: CoctMt310000Uv04PertinentInformation1 | None = (
+    pertinent_information1: None | CoctMt310000Uv04PertinentInformation1 = (
         field(
             default=None,
             metadata={
@@ -897,7 +897,7 @@ class CoctMt310000Uv04AccomodationSupplied:
             },
         )
     )
-    pertinent_information2: CoctMt310000Uv04PertinentInformation2 | None = (
+    pertinent_information2: None | CoctMt310000Uv04PertinentInformation2 = (
         field(
             default=None,
             metadata={
@@ -908,7 +908,7 @@ class CoctMt310000Uv04AccomodationSupplied:
             },
         )
     )
-    null_flavor: NullFlavor | None = field(
+    null_flavor: None | NullFlavor = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -924,7 +924,7 @@ class CoctMt310000Uv04AccomodationSupplied:
             "required": True,
         },
     )
-    mood_code: XActMoodIntentEvent | None = field(
+    mood_code: None | XActMoodIntentEvent = field(
         default=None,
         metadata={
             "name": "moodCode",

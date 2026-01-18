@@ -23,9 +23,9 @@ class DynamicVehicleMeetingPointAssignmentVersionStructure(
         name = "DynamicVehicleMeetingPointAssignment_VersionStructure"
 
     vehicle_meeting_point_assignment_ref: (
-        DynamicVehicleMeetingPointAssignmentRef
+        None
+        | DynamicVehicleMeetingPointAssignmentRef
         | VehicleMeetingPointAssignmentRef
-        | None
     ) = field(
         default=None,
         metadata={

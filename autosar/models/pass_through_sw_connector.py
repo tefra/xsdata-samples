@@ -100,7 +100,7 @@ class PassThroughSwConnector:
     class Meta:
         name = "PASS-THROUGH-SW-CONNECTOR"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -109,7 +109,7 @@ class PassThroughSwConnector:
             "required": True,
         },
     )
-    short_name_fragments: PassThroughSwConnector.ShortNameFragments | None = (
+    short_name_fragments: None | PassThroughSwConnector.ShortNameFragments = (
         field(
             default=None,
             metadata={
@@ -119,7 +119,7 @@ class PassThroughSwConnector:
             },
         )
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -127,7 +127,7 @@ class PassThroughSwConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -135,7 +135,7 @@ class PassThroughSwConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -143,7 +143,7 @@ class PassThroughSwConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -151,7 +151,7 @@ class PassThroughSwConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -159,7 +159,7 @@ class PassThroughSwConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: PassThroughSwConnector.Annotations | None = field(
+    annotations: None | PassThroughSwConnector.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -167,7 +167,7 @@ class PassThroughSwConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    mapping_ref: PassThroughSwConnector.MappingRef | None = field(
+    mapping_ref: None | PassThroughSwConnector.MappingRef = field(
         default=None,
         metadata={
             "name": "MAPPING-REF",
@@ -175,7 +175,7 @@ class PassThroughSwConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -184,7 +184,7 @@ class PassThroughSwConnector:
         },
     )
     provided_outer_port_ref: (
-        PassThroughSwConnector.ProvidedOuterPortRef | None
+        None | PassThroughSwConnector.ProvidedOuterPortRef
     ) = field(
         default=None,
         metadata={
@@ -194,7 +194,7 @@ class PassThroughSwConnector:
         },
     )
     required_outer_port_ref: (
-        PassThroughSwConnector.RequiredOuterPortRef | None
+        None | PassThroughSwConnector.RequiredOuterPortRef
     ) = field(
         default=None,
         metadata={
@@ -203,14 +203,14 @@ class PassThroughSwConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -218,7 +218,7 @@ class PassThroughSwConnector:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -250,7 +250,7 @@ class PassThroughSwConnector:
 
     @dataclass
     class MappingRef(Ref):
-        dest: PortInterfaceMappingSubtypesEnum | None = field(
+        dest: None | PortInterfaceMappingSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -261,7 +261,7 @@ class PassThroughSwConnector:
 
     @dataclass
     class ProvidedOuterPortRef(Ref):
-        dest: AbstractProvidedPortPrototypeSubtypesEnum | None = field(
+        dest: None | AbstractProvidedPortPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -272,7 +272,7 @@ class PassThroughSwConnector:
 
     @dataclass
     class RequiredOuterPortRef(Ref):
-        dest: AbstractRequiredPortPrototypeSubtypesEnum | None = field(
+        dest: None | AbstractRequiredPortPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

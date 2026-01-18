@@ -10,7 +10,7 @@ class Style:
     class Meta:
         namespace = "http://www.omg.org/spec/DD/20100524/DI"
 
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",

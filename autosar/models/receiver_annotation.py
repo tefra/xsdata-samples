@@ -64,7 +64,7 @@ class ReceiverAnnotation:
     class Meta:
         name = "RECEIVER-ANNOTATION"
 
-    label: MultilanguageLongName | None = field(
+    label: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LABEL",
@@ -72,7 +72,7 @@ class ReceiverAnnotation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotation_origin: String | None = field(
+    annotation_origin: None | String = field(
         default=None,
         metadata={
             "name": "ANNOTATION-ORIGIN",
@@ -80,7 +80,7 @@ class ReceiverAnnotation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotation_text: DocumentationBlock | None = field(
+    annotation_text: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "ANNOTATION-TEXT",
@@ -88,7 +88,7 @@ class ReceiverAnnotation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    computed: Boolean | None = field(
+    computed: None | Boolean = field(
         default=None,
         metadata={
             "name": "COMPUTED",
@@ -96,7 +96,7 @@ class ReceiverAnnotation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    data_element_ref: ReceiverAnnotation.DataElementRef | None = field(
+    data_element_ref: None | ReceiverAnnotation.DataElementRef = field(
         default=None,
         metadata={
             "name": "DATA-ELEMENT-REF",
@@ -104,7 +104,7 @@ class ReceiverAnnotation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    limit_kind: DataLimitKindEnum | None = field(
+    limit_kind: None | DataLimitKindEnum = field(
         default=None,
         metadata={
             "name": "LIMIT-KIND",
@@ -112,7 +112,7 @@ class ReceiverAnnotation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    processing_kind: ProcessingKindEnum | None = field(
+    processing_kind: None | ProcessingKindEnum = field(
         default=None,
         metadata={
             "name": "PROCESSING-KIND",
@@ -120,7 +120,7 @@ class ReceiverAnnotation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    signal_age: MultidimensionalTime | None = field(
+    signal_age: None | MultidimensionalTime = field(
         default=None,
         metadata={
             "name": "SIGNAL-AGE",
@@ -128,14 +128,14 @@ class ReceiverAnnotation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -146,7 +146,7 @@ class ReceiverAnnotation:
 
     @dataclass
     class DataElementRef(Ref):
-        dest: VariableDataPrototypeSubtypesEnum | None = field(
+        dest: None | VariableDataPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

@@ -40,7 +40,7 @@ class CoctMt150000Uv02Person:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Ii | None = field(
+    type_id: None | Ii = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -63,7 +63,7 @@ class CoctMt150000Uv02Person:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    as_located_entity: CoctMt070000Uv01LocatedEntity | None = field(
+    as_located_entity: None | CoctMt070000Uv01LocatedEntity = field(
         default=None,
         metadata={
             "name": "asLocatedEntity",
@@ -72,7 +72,7 @@ class CoctMt150000Uv02Person:
             "nillable": True,
         },
     )
-    null_flavor: NullFlavor | None = field(
+    null_flavor: None | NullFlavor = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -112,7 +112,7 @@ class CoctMt150000Uv02ContactParty:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Ii | None = field(
+    type_id: None | Ii = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -135,7 +135,7 @@ class CoctMt150000Uv02ContactParty:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    code: Ce | None = field(
+    code: None | Ce = field(
         default=None,
         metadata={
             "type": "Element",
@@ -156,7 +156,7 @@ class CoctMt150000Uv02ContactParty:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    contact_person: CoctMt150000Uv02Person | None = field(
+    contact_person: None | CoctMt150000Uv02Person = field(
         default=None,
         metadata={
             "name": "contactPerson",
@@ -165,14 +165,14 @@ class CoctMt150000Uv02ContactParty:
             "nillable": True,
         },
     )
-    null_flavor: NullFlavor | None = field(
+    null_flavor: None | NullFlavor = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
         },
     )
-    class_code: RoleClassContact | None = field(
+    class_code: None | RoleClassContact = field(
         default=None,
         metadata={
             "name": "classCode",
@@ -195,7 +195,7 @@ class CoctMt150000Uv02Organization:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Ii | None = field(
+    type_id: None | Ii = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -219,7 +219,7 @@ class CoctMt150000Uv02Organization:
             "min_occurs": 1,
         },
     )
-    code: Ce | None = field(
+    code: None | Ce = field(
         default=None,
         metadata={
             "type": "Element",
@@ -233,14 +233,14 @@ class CoctMt150000Uv02Organization:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    desc: EdExplicit | None = field(
+    desc: None | EdExplicit = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    status_code: Cs | None = field(
+    status_code: None | Cs = field(
         default=None,
         metadata={
             "name": "statusCode",
@@ -262,7 +262,7 @@ class CoctMt150000Uv02Organization:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    standard_industry_class_code: Ce | None = field(
+    standard_industry_class_code: None | Ce = field(
         default=None,
         metadata={
             "name": "standardIndustryClassCode",
@@ -297,14 +297,14 @@ class CoctMt150000Uv02Organization:
             "nillable": True,
         },
     )
-    null_flavor: NullFlavor | None = field(
+    null_flavor: None | NullFlavor = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
         },
     )
-    class_code: EntityClassOrganization | None = field(
+    class_code: None | EntityClassOrganization = field(
         default=None,
         metadata={
             "name": "classCode",
@@ -336,7 +336,7 @@ class CoctMt150000Uv02OrganizationContains:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Ii | None = field(
+    type_id: None | Ii = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -359,14 +359,14 @@ class CoctMt150000Uv02OrganizationContains:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    code: Ce | None = field(
+    code: None | Ce = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    status_code: Cs | None = field(
+    status_code: None | Cs = field(
         default=None,
         metadata={
             "name": "statusCode",
@@ -374,7 +374,7 @@ class CoctMt150000Uv02OrganizationContains:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    effective_time: IvlTs | None = field(
+    effective_time: None | IvlTs = field(
         default=None,
         metadata={
             "name": "effectiveTime",
@@ -382,7 +382,7 @@ class CoctMt150000Uv02OrganizationContains:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    part_organization: CoctMt150000Uv02Organization | None = field(
+    part_organization: None | CoctMt150000Uv02Organization = field(
         default=None,
         metadata={
             "name": "partOrganization",
@@ -391,14 +391,14 @@ class CoctMt150000Uv02OrganizationContains:
             "nillable": True,
         },
     )
-    null_flavor: NullFlavor | None = field(
+    null_flavor: None | NullFlavor = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
         },
     )
-    class_code: RoleClassPartitivePartByBot | None = field(
+    class_code: None | RoleClassPartitivePartByBot = field(
         default=None,
         metadata={
             "name": "classCode",
@@ -421,7 +421,7 @@ class CoctMt150000Uv02OrganizationPartOf:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Ii | None = field(
+    type_id: None | Ii = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -444,14 +444,14 @@ class CoctMt150000Uv02OrganizationPartOf:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    code: Ce | None = field(
+    code: None | Ce = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    status_code: Cs | None = field(
+    status_code: None | Cs = field(
         default=None,
         metadata={
             "name": "statusCode",
@@ -459,7 +459,7 @@ class CoctMt150000Uv02OrganizationPartOf:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    effective_time: IvlTsExplicit | None = field(
+    effective_time: None | IvlTsExplicit = field(
         default=None,
         metadata={
             "name": "effectiveTime",
@@ -467,7 +467,7 @@ class CoctMt150000Uv02OrganizationPartOf:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    whole_organization: CoctMt150000Uv02Organization | None = field(
+    whole_organization: None | CoctMt150000Uv02Organization = field(
         default=None,
         metadata={
             "name": "wholeOrganization",
@@ -476,14 +476,14 @@ class CoctMt150000Uv02OrganizationPartOf:
             "nillable": True,
         },
     )
-    null_flavor: NullFlavor | None = field(
+    null_flavor: None | NullFlavor = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
         },
     )
-    class_code: RoleClassPartitivePartByBot | None = field(
+    class_code: None | RoleClassPartitivePartByBot = field(
         default=None,
         metadata={
             "name": "classCode",

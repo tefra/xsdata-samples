@@ -105,7 +105,7 @@ class DataExchangePoint:
     class Meta:
         name = "DATA-EXCHANGE-POINT"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -114,7 +114,7 @@ class DataExchangePoint:
             "required": True,
         },
     )
-    short_name_fragments: DataExchangePoint.ShortNameFragments | None = field(
+    short_name_fragments: None | DataExchangePoint.ShortNameFragments = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -122,7 +122,7 @@ class DataExchangePoint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -130,7 +130,7 @@ class DataExchangePoint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -138,7 +138,7 @@ class DataExchangePoint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -146,7 +146,7 @@ class DataExchangePoint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -154,7 +154,7 @@ class DataExchangePoint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -162,7 +162,7 @@ class DataExchangePoint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: DataExchangePoint.Annotations | None = field(
+    annotations: None | DataExchangePoint.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -170,7 +170,7 @@ class DataExchangePoint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -178,7 +178,7 @@ class DataExchangePoint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    kind: DataExchangePointKind | None = field(
+    kind: None | DataExchangePointKind = field(
         default=None,
         metadata={
             "name": "KIND",
@@ -186,7 +186,7 @@ class DataExchangePoint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    referenced_baseline: Baseline | None = field(
+    referenced_baseline: None | Baseline = field(
         default=None,
         metadata={
             "name": "REFERENCED-BASELINE",
@@ -194,7 +194,7 @@ class DataExchangePoint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    specification_scope: SpecificationScope | None = field(
+    specification_scope: None | SpecificationScope = field(
         default=None,
         metadata={
             "name": "SPECIFICATION-SCOPE",
@@ -202,7 +202,7 @@ class DataExchangePoint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    data_format_tailoring: DataFormatTailoring | None = field(
+    data_format_tailoring: None | DataFormatTailoring = field(
         default=None,
         metadata={
             "name": "DATA-FORMAT-TAILORING",
@@ -210,14 +210,14 @@ class DataExchangePoint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -225,7 +225,7 @@ class DataExchangePoint:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",

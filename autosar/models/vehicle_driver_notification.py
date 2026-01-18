@@ -33,7 +33,7 @@ class VehicleDriverNotification:
     class Meta:
         name = "VEHICLE-DRIVER-NOTIFICATION"
 
-    approval_required: Boolean | None = field(
+    approval_required: None | Boolean = field(
         default=None,
         metadata={
             "name": "APPROVAL-REQUIRED",
@@ -41,7 +41,7 @@ class VehicleDriverNotification:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    notification_state: VehicleDriverNotificationEnum | None = field(
+    notification_state: None | VehicleDriverNotificationEnum = field(
         default=None,
         metadata={
             "name": "NOTIFICATION-STATE",
@@ -49,14 +49,14 @@ class VehicleDriverNotification:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

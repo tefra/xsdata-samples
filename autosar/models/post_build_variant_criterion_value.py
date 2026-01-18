@@ -43,7 +43,7 @@ class PostBuildVariantCriterionValue:
         name = "POST-BUILD-VARIANT-CRITERION-VALUE"
 
     variant_criterion_ref: (
-        PostBuildVariantCriterionValue.VariantCriterionRef | None
+        None | PostBuildVariantCriterionValue.VariantCriterionRef
     ) = field(
         default=None,
         metadata={
@@ -52,7 +52,7 @@ class PostBuildVariantCriterionValue:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    value: IntegerValueVariationPoint | None = field(
+    value: None | IntegerValueVariationPoint = field(
         default=None,
         metadata={
             "name": "VALUE",
@@ -60,7 +60,7 @@ class PostBuildVariantCriterionValue:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: PostBuildVariantCriterionValue.Annotations | None = field(
+    annotations: None | PostBuildVariantCriterionValue.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -68,14 +68,14 @@ class PostBuildVariantCriterionValue:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -86,7 +86,7 @@ class PostBuildVariantCriterionValue:
 
     @dataclass
     class VariantCriterionRef(Ref):
-        dest: PostBuildVariantCriterionSubtypesEnum | None = field(
+        dest: None | PostBuildVariantCriterionSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

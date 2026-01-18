@@ -13,7 +13,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 @dataclass
 class ModalLinkRefByValue2Structure:
-    from_point_ref: PointRefStructure | None = field(
+    from_point_ref: None | PointRefStructure = field(
         default=None,
         metadata={
             "name": "FromPointRef",
@@ -22,7 +22,7 @@ class ModalLinkRefByValue2Structure:
             "required": True,
         },
     )
-    to_point_ref: PointRefStructure | None = field(
+    to_point_ref: None | PointRefStructure = field(
         default=None,
         metadata={
             "name": "ToPointRef",
@@ -31,7 +31,7 @@ class ModalLinkRefByValue2Structure:
             "required": True,
         },
     )
-    type_of_link_ref: TypeOfLinkRef | None = field(
+    type_of_link_ref: None | TypeOfLinkRef = field(
         default=None,
         metadata={
             "name": "TypeOfLinkRef",
@@ -39,7 +39,7 @@ class ModalLinkRefByValue2Structure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    vehicle_mode: VehicleMode | None = field(
+    vehicle_mode: None | VehicleMode = field(
         default=None,
         metadata={
             "name": "VehicleMode",
@@ -47,26 +47,26 @@ class ModalLinkRefByValue2Structure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    name_of_class: str | None = field(
+    name_of_class: None | str = field(
         default=None,
         metadata={
             "name": "nameOfClass",
             "type": "Attribute",
         },
     )
-    created: XmlDateTime | None = field(
+    created: None | XmlDateTime = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    changed: XmlDateTime | None = field(
+    changed: None | XmlDateTime = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    version: str | None = field(
+    version: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",

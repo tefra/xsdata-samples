@@ -25,7 +25,8 @@ class FlexibleLinkPropertiesVersionedChildStructure(VersionedChildStructure):
         name = "FlexibleLinkProperties_VersionedChildStructure"
 
     link_ref_or_infrastructure_link_ref: (
-        OnwardVehicleMeetingLinkRef
+        None
+        | OnwardVehicleMeetingLinkRef
         | VehicleMeetingLinkRef
         | ServiceLinkRef
         | LineLinkRef
@@ -36,7 +37,6 @@ class FlexibleLinkPropertiesVersionedChildStructure(VersionedChildStructure):
         | ActivationLinkRef
         | PathLinkRef
         | RouteLinkRef
-        | None
     ) = field(
         default=None,
         metadata={
@@ -100,7 +100,7 @@ class FlexibleLinkPropertiesVersionedChildStructure(VersionedChildStructure):
             ),
         },
     )
-    may_be_skipped: bool | None = field(
+    may_be_skipped: None | bool = field(
         default=None,
         metadata={
             "name": "MayBeSkipped",
@@ -108,7 +108,7 @@ class FlexibleLinkPropertiesVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    on_main_route: bool | None = field(
+    on_main_route: None | bool = field(
         default=None,
         metadata={
             "name": "OnMainRoute",
@@ -116,7 +116,7 @@ class FlexibleLinkPropertiesVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    unscheduled_path: bool | None = field(
+    unscheduled_path: None | bool = field(
         default=None,
         metadata={
             "name": "UnscheduledPath",
@@ -124,7 +124,7 @@ class FlexibleLinkPropertiesVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    flexible_link_type: FlexibleLinkTypeEnumeration | None = field(
+    flexible_link_type: None | FlexibleLinkTypeEnumeration = field(
         default=None,
         metadata={
             "name": "FlexibleLinkType",

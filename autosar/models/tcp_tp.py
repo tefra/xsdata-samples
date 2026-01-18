@@ -42,7 +42,7 @@ class TcpTp:
     class Meta:
         name = "TCP-TP"
 
-    keep_alive_interval: TimeValue | None = field(
+    keep_alive_interval: None | TimeValue = field(
         default=None,
         metadata={
             "name": "KEEP-ALIVE-INTERVAL",
@@ -50,7 +50,7 @@ class TcpTp:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    keep_alive_probes_max: PositiveInteger | None = field(
+    keep_alive_probes_max: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "KEEP-ALIVE-PROBES-MAX",
@@ -58,7 +58,7 @@ class TcpTp:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    keep_alive_time: TimeValue | None = field(
+    keep_alive_time: None | TimeValue = field(
         default=None,
         metadata={
             "name": "KEEP-ALIVE-TIME",
@@ -66,7 +66,7 @@ class TcpTp:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    keep_alives: Boolean | None = field(
+    keep_alives: None | Boolean = field(
         default=None,
         metadata={
             "name": "KEEP-ALIVES",
@@ -74,7 +74,7 @@ class TcpTp:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nagles_algorithm: Boolean | None = field(
+    nagles_algorithm: None | Boolean = field(
         default=None,
         metadata={
             "name": "NAGLES-ALGORITHM",
@@ -82,7 +82,7 @@ class TcpTp:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    receive_window_min: PositiveInteger | None = field(
+    receive_window_min: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "RECEIVE-WINDOW-MIN",
@@ -90,7 +90,7 @@ class TcpTp:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tcp_tp_port: TpPort | None = field(
+    tcp_tp_port: None | TpPort = field(
         default=None,
         metadata={
             "name": "TCP-TP-PORT",
@@ -98,14 +98,14 @@ class TcpTp:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

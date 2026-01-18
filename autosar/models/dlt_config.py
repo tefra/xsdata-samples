@@ -37,7 +37,7 @@ class DltConfig:
     class Meta:
         name = "DLT-CONFIG"
 
-    dlt_ecu_id: String | None = field(
+    dlt_ecu_id: None | String = field(
         default=None,
         metadata={
             "name": "DLT-ECU-ID",
@@ -45,7 +45,7 @@ class DltConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    dlt_log_channels: DltConfig.DltLogChannels | None = field(
+    dlt_log_channels: None | DltConfig.DltLogChannels = field(
         default=None,
         metadata={
             "name": "DLT-LOG-CHANNELS",
@@ -53,7 +53,7 @@ class DltConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    session_id_support: Boolean | None = field(
+    session_id_support: None | Boolean = field(
         default=None,
         metadata={
             "name": "SESSION-ID-SUPPORT",
@@ -61,7 +61,7 @@ class DltConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    timestamp_support: Boolean | None = field(
+    timestamp_support: None | Boolean = field(
         default=None,
         metadata={
             "name": "TIMESTAMP-SUPPORT",
@@ -69,14 +69,14 @@ class DltConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

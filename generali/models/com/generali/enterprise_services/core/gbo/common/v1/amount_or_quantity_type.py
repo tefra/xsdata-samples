@@ -14,7 +14,7 @@ __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/common/v1"
 
 @dataclass
 class AmountOrQuantityType:
-    amount: AmountType | None = field(
+    amount: None | AmountType = field(
         default=None,
         metadata={
             "name": "Amount",
@@ -22,7 +22,7 @@ class AmountOrQuantityType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
         },
     )
-    quantity: NumericType | None = field(
+    quantity: None | NumericType = field(
         default=None,
         metadata={
             "name": "Quantity",

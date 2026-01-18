@@ -116,7 +116,7 @@ class ISignalGroup:
     class Meta:
         name = "I-SIGNAL-GROUP"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -125,7 +125,7 @@ class ISignalGroup:
             "required": True,
         },
     )
-    short_name_fragments: ISignalGroup.ShortNameFragments | None = field(
+    short_name_fragments: None | ISignalGroup.ShortNameFragments = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -133,7 +133,7 @@ class ISignalGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -141,7 +141,7 @@ class ISignalGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -149,7 +149,7 @@ class ISignalGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -157,7 +157,7 @@ class ISignalGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -165,7 +165,7 @@ class ISignalGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -173,7 +173,7 @@ class ISignalGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: ISignalGroup.Annotations | None = field(
+    annotations: None | ISignalGroup.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -181,7 +181,7 @@ class ISignalGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -190,7 +190,7 @@ class ISignalGroup:
         },
     )
     com_based_signal_group_transformations: (
-        ISignalGroup.ComBasedSignalGroupTransformations | None
+        None | ISignalGroup.ComBasedSignalGroupTransformations
     ) = field(
         default=None,
         metadata={
@@ -199,7 +199,7 @@ class ISignalGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    i_signal_refs: ISignalGroup.ISignalRefs | None = field(
+    i_signal_refs: None | ISignalGroup.ISignalRefs = field(
         default=None,
         metadata={
             "name": "I-SIGNAL-REFS",
@@ -207,7 +207,7 @@ class ISignalGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    system_signal_group_ref: ISignalGroup.SystemSignalGroupRef | None = field(
+    system_signal_group_ref: None | ISignalGroup.SystemSignalGroupRef = field(
         default=None,
         metadata={
             "name": "SYSTEM-SIGNAL-GROUP-REF",
@@ -216,7 +216,7 @@ class ISignalGroup:
         },
     )
     transformation_i_signal_propss: (
-        ISignalGroup.TransformationISignalPropss | None
+        None | ISignalGroup.TransformationISignalPropss
     ) = field(
         default=None,
         metadata={
@@ -225,14 +225,14 @@ class ISignalGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -240,7 +240,7 @@ class ISignalGroup:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -296,7 +296,7 @@ class ISignalGroup:
 
         @dataclass
         class ISignalRef(Ref):
-            dest: ISignalSubtypesEnum | None = field(
+            dest: None | ISignalSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -307,7 +307,7 @@ class ISignalGroup:
 
     @dataclass
     class SystemSignalGroupRef(Ref):
-        dest: SystemSignalGroupSubtypesEnum | None = field(
+        dest: None | SystemSignalGroupSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

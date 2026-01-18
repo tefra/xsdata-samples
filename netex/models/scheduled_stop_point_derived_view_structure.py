@@ -22,7 +22,7 @@ class ScheduledStopPointDerivedViewStructure(DerivedViewStructure):
         name = "ScheduledStopPoint_DerivedViewStructure"
 
     scheduled_stop_point_ref: (
-        FareScheduledStopPointRef | ScheduledStopPointRef | None
+        None | FareScheduledStopPointRef | ScheduledStopPointRef
     ) = field(
         default=None,
         metadata={
@@ -41,7 +41,7 @@ class ScheduledStopPointDerivedViewStructure(DerivedViewStructure):
             ),
         },
     )
-    name: MultilingualString | None = field(
+    name: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "Name",
@@ -49,7 +49,7 @@ class ScheduledStopPointDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    type_of_point_ref: TypeOfPointRef | None = field(
+    type_of_point_ref: None | TypeOfPointRef = field(
         default=None,
         metadata={
             "name": "TypeOfPointRef",
@@ -57,7 +57,7 @@ class ScheduledStopPointDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    short_name: MultilingualString | None = field(
+    short_name: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "ShortName",
@@ -65,7 +65,7 @@ class ScheduledStopPointDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    name_suffix: MultilingualString | None = field(
+    name_suffix: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "NameSuffix",
@@ -73,7 +73,7 @@ class ScheduledStopPointDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    description: MultilingualString | None = field(
+    description: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "Description",
@@ -81,7 +81,7 @@ class ScheduledStopPointDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    label: MultilingualString | None = field(
+    label: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "Label",
@@ -89,7 +89,7 @@ class ScheduledStopPointDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    short_stop_code: PrivateCodeStructure | None = field(
+    short_stop_code: None | PrivateCodeStructure = field(
         default=None,
         metadata={
             "name": "ShortStopCode",
@@ -97,7 +97,7 @@ class ScheduledStopPointDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    public_code: PrivateCodeStructure | None = field(
+    public_code: None | PrivateCodeStructure = field(
         default=None,
         metadata={
             "name": "PublicCode",
@@ -105,7 +105,7 @@ class ScheduledStopPointDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    private_code: PrivateCode | None = field(
+    private_code: None | PrivateCode = field(
         default=None,
         metadata={
             "name": "PrivateCode",
@@ -113,7 +113,7 @@ class ScheduledStopPointDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    external_stop_point_ref: ExternalObjectRefStructure | None = field(
+    external_stop_point_ref: None | ExternalObjectRefStructure = field(
         default=None,
         metadata={
             "name": "ExternalStopPointRef",
@@ -121,7 +121,7 @@ class ScheduledStopPointDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    url: str | None = field(
+    url: None | str = field(
         default=None,
         metadata={
             "name": "Url",
@@ -129,7 +129,7 @@ class ScheduledStopPointDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    stop_type: StopTypeEnumeration | None = field(
+    stop_type: None | StopTypeEnumeration = field(
         default=None,
         metadata={
             "name": "StopType",
@@ -137,7 +137,7 @@ class ScheduledStopPointDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    compass_bearing: float | None = field(
+    compass_bearing: None | float = field(
         default=None,
         metadata={
             "name": "CompassBearing",
@@ -145,7 +145,7 @@ class ScheduledStopPointDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    presentation: PresentationStructure | None = field(
+    presentation: None | PresentationStructure = field(
         default=None,
         metadata={
             "name": "Presentation",

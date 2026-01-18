@@ -85,7 +85,7 @@ class ParkingSpaceBasics:
     :ivar parking_space_basics_extension:
     """
 
-    parking_space_or_group_identifier: MultilingualString | None = field(
+    parking_space_or_group_identifier: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "parkingSpaceOrGroupIdentifier",
@@ -93,7 +93,7 @@ class ParkingSpaceBasics:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    parking_floor_or_level: int | None = field(
+    parking_floor_or_level: None | int = field(
         default=None,
         metadata={
             "name": "parkingFloorOrLevel",
@@ -125,7 +125,7 @@ class ParkingSpaceBasics:
             "max_occurs": 2,
         },
     )
-    parking_mode: ParkingModeEnum | None = field(
+    parking_mode: None | ParkingModeEnum = field(
         default=None,
         metadata={
             "name": "parkingMode",
@@ -133,7 +133,7 @@ class ParkingSpaceBasics:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    parking_reservation: ReservationTypeEnum | None = field(
+    parking_reservation: None | ReservationTypeEnum = field(
         default=None,
         metadata={
             "name": "parkingReservation",
@@ -141,7 +141,7 @@ class ParkingSpaceBasics:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    maximum_parking_duration: float | None = field(
+    maximum_parking_duration: None | float = field(
         default=None,
         metadata={
             "name": "maximumParkingDuration",
@@ -149,7 +149,7 @@ class ParkingSpaceBasics:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    distance_from_primary_road: int | None = field(
+    distance_from_primary_road: None | int = field(
         default=None,
         metadata={
             "name": "distanceFromPrimaryRoad",
@@ -181,7 +181,7 @@ class ParkingSpaceBasics:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    only_assigned_parking: ParkingAssignment | None = field(
+    only_assigned_parking: None | ParkingAssignment = field(
         default=None,
         metadata={
             "name": "onlyAssignedParking",
@@ -189,7 +189,7 @@ class ParkingSpaceBasics:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    assigned_parking_among_others: ParkingAssignment | None = field(
+    assigned_parking_among_others: None | ParkingAssignment = field(
         default=None,
         metadata={
             "name": "assignedParkingAmongOthers",
@@ -197,7 +197,7 @@ class ParkingSpaceBasics:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    prohibited_parking: ParkingAssignment | None = field(
+    prohibited_parking: None | ParkingAssignment = field(
         default=None,
         metadata={
             "name": "prohibitedParking",
@@ -225,7 +225,7 @@ class ParkingSpaceBasics:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    parking_space_basics_extension: ExtensionType | None = field(
+    parking_space_basics_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "parkingSpaceBasicsExtension",

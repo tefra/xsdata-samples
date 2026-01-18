@@ -31,7 +31,7 @@ class OverallPeriod:
     :ivar overall_period_extension:
     """
 
-    overall_start_time: XmlDateTime | None = field(
+    overall_start_time: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "overallStartTime",
@@ -40,7 +40,7 @@ class OverallPeriod:
             "required": True,
         },
     )
-    overall_end_time: XmlDateTime | None = field(
+    overall_end_time: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "overallEndTime",
@@ -64,7 +64,7 @@ class OverallPeriod:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    overall_period_extension: ExtensionType | None = field(
+    overall_period_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "overallPeriodExtension",

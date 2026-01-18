@@ -35,8 +35,8 @@ class ModeDeclarationGroupPrototypeRefConditional:
         name = "MODE-DECLARATION-GROUP-PROTOTYPE-REF-CONDITIONAL"
 
     mode_declaration_group_prototype_ref: (
-        ModeDeclarationGroupPrototypeRefConditional.ModeDeclarationGroupPrototypeRef
-        | None
+        None
+        | ModeDeclarationGroupPrototypeRefConditional.ModeDeclarationGroupPrototypeRef
     ) = field(
         default=None,
         metadata={
@@ -45,7 +45,7 @@ class ModeDeclarationGroupPrototypeRefConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -53,14 +53,14 @@ class ModeDeclarationGroupPrototypeRefConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -71,7 +71,7 @@ class ModeDeclarationGroupPrototypeRefConditional:
 
     @dataclass
     class ModeDeclarationGroupPrototypeRef(Ref):
-        dest: ModeDeclarationGroupPrototypeSubtypesEnum | None = field(
+        dest: None | ModeDeclarationGroupPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

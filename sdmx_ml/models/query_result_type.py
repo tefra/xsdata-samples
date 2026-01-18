@@ -29,7 +29,7 @@ class QueryResultType:
     """
 
     data_result_or_metadata_result: (
-        QueryResultType.DataResult | QueryResultType.MetadataResult | None
+        None | QueryResultType.DataResult | QueryResultType.MetadataResult
     ) = field(
         default=None,
         metadata={
@@ -48,7 +48,7 @@ class QueryResultType:
             ),
         },
     )
-    time_series_match: bool | None = field(
+    time_series_match: None | bool = field(
         default=None,
         metadata={
             "name": "timeSeriesMatch",

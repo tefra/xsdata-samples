@@ -11,7 +11,7 @@ class UnionType:
         name = "union"
         namespace = "http://www.w3.org/1998/Math/MathML"
 
-    any_element: object | None = field(
+    any_element: None | object = field(
         default=None,
         metadata={
             "type": "Wildcard",

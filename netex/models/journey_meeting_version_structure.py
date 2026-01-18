@@ -35,7 +35,7 @@ class JourneyMeetingVersionStructure(DataManagedObjectStructure):
     class Meta:
         name = "JourneyMeeting_VersionStructure"
 
-    name: MultilingualString | None = field(
+    name: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "Name",
@@ -43,7 +43,7 @@ class JourneyMeetingVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    at_stop_point_ref: ScheduledStopPointRefStructure | None = field(
+    at_stop_point_ref: None | ScheduledStopPointRefStructure = field(
         default=None,
         metadata={
             "name": "AtStopPointRef",
@@ -51,7 +51,7 @@ class JourneyMeetingVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    from_journey_ref: VehicleJourneyRefStructure | None = field(
+    from_journey_ref: None | VehicleJourneyRefStructure = field(
         default=None,
         metadata={
             "name": "FromJourneyRef",
@@ -60,7 +60,7 @@ class JourneyMeetingVersionStructure(DataManagedObjectStructure):
             "required": True,
         },
     )
-    to_journey_ref: VehicleJourneyRefStructure | None = field(
+    to_journey_ref: None | VehicleJourneyRefStructure = field(
         default=None,
         metadata={
             "name": "ToJourneyRef",
@@ -70,7 +70,7 @@ class JourneyMeetingVersionStructure(DataManagedObjectStructure):
         },
     )
     from_point_in_journey_pattern_ref: (
-        PointInJourneyPatternRefStructure | None
+        None | PointInJourneyPatternRefStructure
     ) = field(
         default=None,
         metadata={
@@ -80,7 +80,7 @@ class JourneyMeetingVersionStructure(DataManagedObjectStructure):
         },
     )
     to_point_in_journey_pattern_ref: (
-        PointInJourneyPatternRefStructure | None
+        None | PointInJourneyPatternRefStructure
     ) = field(
         default=None,
         metadata={
@@ -89,7 +89,7 @@ class JourneyMeetingVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    description: MultilingualString | None = field(
+    description: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "Description",
@@ -97,7 +97,7 @@ class JourneyMeetingVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    earliest_time: XmlTime | None = field(
+    earliest_time: None | XmlTime = field(
         default=None,
         metadata={
             "name": "EarliestTime",
@@ -105,7 +105,7 @@ class JourneyMeetingVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    earliest_time_day_offset: int | None = field(
+    earliest_time_day_offset: None | int = field(
         default=None,
         metadata={
             "name": "EarliestTimeDayOffset",
@@ -113,7 +113,7 @@ class JourneyMeetingVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    latest_time: XmlTime | None = field(
+    latest_time: None | XmlTime = field(
         default=None,
         metadata={
             "name": "LatestTime",
@@ -121,7 +121,7 @@ class JourneyMeetingVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    latest_time_day_offset: int | None = field(
+    latest_time_day_offset: None | int = field(
         default=None,
         metadata={
             "name": "LatestTimeDayOffset",
@@ -129,7 +129,7 @@ class JourneyMeetingVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    reason: ReasonForMeetingEnumeration | None = field(
+    reason: None | ReasonForMeetingEnumeration = field(
         default=None,
         metadata={
             "name": "Reason",
@@ -137,7 +137,7 @@ class JourneyMeetingVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    connection_ref: ConnectionRefStructure | None = field(
+    connection_ref: None | ConnectionRefStructure = field(
         default=None,
         metadata={
             "name": "ConnectionRef",
@@ -164,7 +164,8 @@ class JourneyMeetingVersionStructure(DataManagedObjectStructure):
         },
     )
     choice: (
-        SingleJourneyRef
+        None
+        | SingleJourneyRef
         | DatedVehicleJourneyRef
         | DatedSpecialServiceRef
         | SpecialServiceRef
@@ -173,7 +174,6 @@ class JourneyMeetingVersionStructure(DataManagedObjectStructure):
         | DeadRunRef
         | VehicleJourneyRef
         | ConnectingJourneyView
-        | None
     ) = field(
         default=None,
         metadata={
@@ -228,7 +228,7 @@ class JourneyMeetingVersionStructure(DataManagedObjectStructure):
         },
     )
     flexible_line_ref_or_line_ref_or_connecting_line_view: (
-        FlexibleLineRef | LineRef | LineDerivedViewStructure | None
+        None | FlexibleLineRef | LineRef | LineDerivedViewStructure
     ) = field(
         default=None,
         metadata={

@@ -12,7 +12,7 @@ class LhsFunapp:
     class Meta:
         global_type = False
 
-    name: Name | None = field(
+    name: None | Name = field(
         default=None,
         metadata={
             "type": "Element",
@@ -49,7 +49,7 @@ class LhsLambda:
             "max_occurs": 2,
         },
     )
-    type_value: Type | None = field(
+    type_value: None | Type = field(
         default=None,
         metadata={
             "name": "type",
@@ -57,20 +57,20 @@ class LhsLambda:
             "required": True,
         },
     )
-    funapp: LhsFunapp | None = field(
+    funapp: None | LhsFunapp = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    lambda_value: LhsLambda | None = field(
+    lambda_value: None | LhsLambda = field(
         default=None,
         metadata={
             "name": "lambda",
             "type": "Element",
         },
     )
-    application: LhsApplication | None = field(
+    application: None | LhsApplication = field(
         default=None,
         metadata={
             "type": "Element",
@@ -143,26 +143,26 @@ class LhsFunappArg:
     class Meta:
         global_type = False
 
-    funapp: LhsFunapp | None = field(
+    funapp: None | LhsFunapp = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    var: Var | None = field(
+    var: None | Var = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    lambda_value: LhsLambda | None = field(
+    lambda_value: None | LhsLambda = field(
         default=None,
         metadata={
             "name": "lambda",
             "type": "Element",
         },
     )
-    application: LhsApplication | None = field(
+    application: None | LhsApplication = field(
         default=None,
         metadata={
             "type": "Element",

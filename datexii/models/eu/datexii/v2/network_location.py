@@ -20,7 +20,7 @@ class NetworkLocation(Location):
     """
 
     supplementary_positional_description: (
-        SupplementaryPositionalDescription | None
+        None | SupplementaryPositionalDescription
     ) = field(
         default=None,
         metadata={
@@ -29,14 +29,14 @@ class NetworkLocation(Location):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    destination: Destination | None = field(
+    destination: None | Destination = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    network_location_extension: ExtensionType | None = field(
+    network_location_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "networkLocationExtension",

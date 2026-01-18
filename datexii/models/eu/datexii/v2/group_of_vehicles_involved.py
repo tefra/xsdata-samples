@@ -24,7 +24,7 @@ class GroupOfVehiclesInvolved:
     :ivar group_of_vehicles_involved_extension:
     """
 
-    number_of_vehicles: int | None = field(
+    number_of_vehicles: None | int = field(
         default=None,
         metadata={
             "name": "numberOfVehicles",
@@ -32,7 +32,7 @@ class GroupOfVehiclesInvolved:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    vehicle_status: VehicleStatusEnum | None = field(
+    vehicle_status: None | VehicleStatusEnum = field(
         default=None,
         metadata={
             "name": "vehicleStatus",
@@ -40,7 +40,7 @@ class GroupOfVehiclesInvolved:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    vehicle_characteristics: VehicleCharacteristics | None = field(
+    vehicle_characteristics: None | VehicleCharacteristics = field(
         default=None,
         metadata={
             "name": "vehicleCharacteristics",
@@ -48,7 +48,7 @@ class GroupOfVehiclesInvolved:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    group_of_vehicles_involved_extension: ExtensionType | None = field(
+    group_of_vehicles_involved_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "groupOfVehiclesInvolvedExtension",

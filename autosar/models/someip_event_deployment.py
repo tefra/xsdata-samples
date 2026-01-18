@@ -106,7 +106,7 @@ class SomeipEventDeployment:
     class Meta:
         name = "SOMEIP-EVENT-DEPLOYMENT"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -115,7 +115,7 @@ class SomeipEventDeployment:
             "required": True,
         },
     )
-    short_name_fragments: SomeipEventDeployment.ShortNameFragments | None = (
+    short_name_fragments: None | SomeipEventDeployment.ShortNameFragments = (
         field(
             default=None,
             metadata={
@@ -125,7 +125,7 @@ class SomeipEventDeployment:
             },
         )
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -133,7 +133,7 @@ class SomeipEventDeployment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -141,7 +141,7 @@ class SomeipEventDeployment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -149,7 +149,7 @@ class SomeipEventDeployment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -157,7 +157,7 @@ class SomeipEventDeployment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -165,7 +165,7 @@ class SomeipEventDeployment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: SomeipEventDeployment.Annotations | None = field(
+    annotations: None | SomeipEventDeployment.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -173,7 +173,7 @@ class SomeipEventDeployment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    event_ref: SomeipEventDeployment.EventRef | None = field(
+    event_ref: None | SomeipEventDeployment.EventRef = field(
         default=None,
         metadata={
             "name": "EVENT-REF",
@@ -181,7 +181,7 @@ class SomeipEventDeployment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    event_id: PositiveInteger | None = field(
+    event_id: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "EVENT-ID",
@@ -189,7 +189,7 @@ class SomeipEventDeployment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    maximum_segment_length: PositiveInteger | None = field(
+    maximum_segment_length: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "MAXIMUM-SEGMENT-LENGTH",
@@ -197,7 +197,7 @@ class SomeipEventDeployment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    separation_time: TimeValue | None = field(
+    separation_time: None | TimeValue = field(
         default=None,
         metadata={
             "name": "SEPARATION-TIME",
@@ -205,7 +205,7 @@ class SomeipEventDeployment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    serializer: SerializationTechnologyEnum | None = field(
+    serializer: None | SerializationTechnologyEnum = field(
         default=None,
         metadata={
             "name": "SERIALIZER",
@@ -213,7 +213,7 @@ class SomeipEventDeployment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    transport_protocol: TransportLayerProtocolEnum | None = field(
+    transport_protocol: None | TransportLayerProtocolEnum = field(
         default=None,
         metadata={
             "name": "TRANSPORT-PROTOCOL",
@@ -221,14 +221,14 @@ class SomeipEventDeployment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -236,7 +236,7 @@ class SomeipEventDeployment:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -268,7 +268,7 @@ class SomeipEventDeployment:
 
     @dataclass
     class EventRef(Ref):
-        dest: VariableDataPrototypeSubtypesEnum | None = field(
+        dest: None | VariableDataPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

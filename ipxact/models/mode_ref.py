@@ -21,14 +21,14 @@ class ModeRef:
             "required": True,
         },
     )
-    priority: int | None = field(
+    priority: None | int = field(
         default=None,
         metadata={
             "type": "Attribute",
             "required": True,
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",

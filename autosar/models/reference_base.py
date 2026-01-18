@@ -62,7 +62,7 @@ class ReferenceBase:
     class Meta:
         name = "REFERENCE-BASE"
 
-    short_label: Identifier | None = field(
+    short_label: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-LABEL",
@@ -70,7 +70,7 @@ class ReferenceBase:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    is_default: Boolean | None = field(
+    is_default: None | Boolean = field(
         default=None,
         metadata={
             "name": "IS-DEFAULT",
@@ -78,7 +78,7 @@ class ReferenceBase:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    is_global: Boolean | None = field(
+    is_global: None | Boolean = field(
         default=None,
         metadata={
             "name": "IS-GLOBAL",
@@ -86,7 +86,7 @@ class ReferenceBase:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    base_is_this_package: Boolean | None = field(
+    base_is_this_package: None | Boolean = field(
         default=None,
         metadata={
             "name": "BASE-IS-THIS-PACKAGE",
@@ -94,7 +94,7 @@ class ReferenceBase:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    global_in_package_refs: ReferenceBase.GlobalInPackageRefs | None = field(
+    global_in_package_refs: None | ReferenceBase.GlobalInPackageRefs = field(
         default=None,
         metadata={
             "name": "GLOBAL-IN-PACKAGE-REFS",
@@ -102,7 +102,7 @@ class ReferenceBase:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    global_elements: ReferenceBase.GlobalElements | None = field(
+    global_elements: None | ReferenceBase.GlobalElements = field(
         default=None,
         metadata={
             "name": "GLOBAL-ELEMENTS",
@@ -110,7 +110,7 @@ class ReferenceBase:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    package_ref: ReferenceBase.PackageRef | None = field(
+    package_ref: None | ReferenceBase.PackageRef = field(
         default=None,
         metadata={
             "name": "PACKAGE-REF",
@@ -118,14 +118,14 @@ class ReferenceBase:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -149,7 +149,7 @@ class ReferenceBase:
 
         @dataclass
         class GlobalInPackageRef(Ref):
-            dest: ArPackageSubtypesEnum | None = field(
+            dest: None | ArPackageSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -177,7 +177,7 @@ class ReferenceBase:
 
     @dataclass
     class PackageRef(Ref):
-        dest: ArPackageSubtypesEnum | None = field(
+        dest: None | ArPackageSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

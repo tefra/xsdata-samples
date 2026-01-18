@@ -28,20 +28,20 @@ class MappingDirectionEnum:
     class Meta:
         name = "MAPPING-DIRECTION-ENUM"
 
-    value: MappingDirectionEnumSimple | None = field(
+    value: None | MappingDirectionEnumSimple = field(
         default=None,
         metadata={
             "required": True,
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

@@ -46,7 +46,7 @@ class InstanceGeneratorType(GeneratorType):
                 "required": True,
             },
         )
-        id: str | None = field(
+        id: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",

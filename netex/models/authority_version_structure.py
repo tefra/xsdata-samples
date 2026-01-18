@@ -17,7 +17,7 @@ class AuthorityVersionStructure(TransportOrganisationVersionStructure):
     class Meta:
         name = "Authority_VersionStructure"
 
-    authority_types: TypeOfOrganisationRefsRelStructure | None = field(
+    authority_types: None | TypeOfOrganisationRefsRelStructure = field(
         default=None,
         metadata={
             "name": "authorityTypes",

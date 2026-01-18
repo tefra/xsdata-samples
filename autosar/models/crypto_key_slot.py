@@ -120,7 +120,7 @@ class CryptoKeySlot:
     class Meta:
         name = "CRYPTO-KEY-SLOT"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -129,7 +129,7 @@ class CryptoKeySlot:
             "required": True,
         },
     )
-    short_name_fragments: CryptoKeySlot.ShortNameFragments | None = field(
+    short_name_fragments: None | CryptoKeySlot.ShortNameFragments = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -137,7 +137,7 @@ class CryptoKeySlot:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -145,7 +145,7 @@ class CryptoKeySlot:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -153,7 +153,7 @@ class CryptoKeySlot:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -161,7 +161,7 @@ class CryptoKeySlot:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -169,7 +169,7 @@ class CryptoKeySlot:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -177,7 +177,7 @@ class CryptoKeySlot:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: CryptoKeySlot.Annotations | None = field(
+    annotations: None | CryptoKeySlot.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -185,7 +185,7 @@ class CryptoKeySlot:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    allocate_shadow_copy: Boolean | None = field(
+    allocate_shadow_copy: None | Boolean = field(
         default=None,
         metadata={
             "name": "ALLOCATE-SHADOW-COPY",
@@ -193,7 +193,7 @@ class CryptoKeySlot:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    crypto_alg_id: String | None = field(
+    crypto_alg_id: None | String = field(
         default=None,
         metadata={
             "name": "CRYPTO-ALG-ID",
@@ -201,7 +201,7 @@ class CryptoKeySlot:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    crypto_object_type: CryptoObjectTypeEnum | None = field(
+    crypto_object_type: None | CryptoObjectTypeEnum = field(
         default=None,
         metadata={
             "name": "CRYPTO-OBJECT-TYPE",
@@ -209,7 +209,7 @@ class CryptoKeySlot:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    key_slot_allowed_modification: CryptoKeySlotAllowedModification | None = (
+    key_slot_allowed_modification: None | CryptoKeySlotAllowedModification = (
         field(
             default=None,
             metadata={
@@ -220,7 +220,7 @@ class CryptoKeySlot:
         )
     )
     key_slot_content_allowed_usages: (
-        CryptoKeySlot.KeySlotContentAllowedUsages | None
+        None | CryptoKeySlot.KeySlotContentAllowedUsages
     ) = field(
         default=None,
         metadata={
@@ -229,7 +229,7 @@ class CryptoKeySlot:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    slot_capacity: PositiveInteger | None = field(
+    slot_capacity: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "SLOT-CAPACITY",
@@ -237,7 +237,7 @@ class CryptoKeySlot:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    slot_type: CryptoKeySlotTypeEnum | None = field(
+    slot_type: None | CryptoKeySlotTypeEnum = field(
         default=None,
         metadata={
             "name": "SLOT-TYPE",
@@ -245,14 +245,14 @@ class CryptoKeySlot:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -260,7 +260,7 @@ class CryptoKeySlot:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",

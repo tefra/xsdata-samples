@@ -36,7 +36,7 @@ class ClientServerApplicationErrorMapping:
         name = "CLIENT-SERVER-APPLICATION-ERROR-MAPPING"
 
     first_application_error_ref: (
-        ClientServerApplicationErrorMapping.FirstApplicationErrorRef | None
+        None | ClientServerApplicationErrorMapping.FirstApplicationErrorRef
     ) = field(
         default=None,
         metadata={
@@ -46,7 +46,7 @@ class ClientServerApplicationErrorMapping:
         },
     )
     second_application_error_ref: (
-        ClientServerApplicationErrorMapping.SecondApplicationErrorRef | None
+        None | ClientServerApplicationErrorMapping.SecondApplicationErrorRef
     ) = field(
         default=None,
         metadata={
@@ -55,14 +55,14 @@ class ClientServerApplicationErrorMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -73,7 +73,7 @@ class ClientServerApplicationErrorMapping:
 
     @dataclass
     class FirstApplicationErrorRef(Ref):
-        dest: ApplicationErrorSubtypesEnum | None = field(
+        dest: None | ApplicationErrorSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -84,7 +84,7 @@ class ClientServerApplicationErrorMapping:
 
     @dataclass
     class SecondApplicationErrorRef(Ref):
-        dest: ApplicationErrorSubtypesEnum | None = field(
+        dest: None | ApplicationErrorSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

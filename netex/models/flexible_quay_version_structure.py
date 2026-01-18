@@ -18,7 +18,7 @@ class FlexibleQuayVersionStructure(PlaceVersionStructure):
     class Meta:
         name = "FlexibleQuay_VersionStructure"
 
-    name_suffix: MultilingualString | None = field(
+    name_suffix: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "NameSuffix",
@@ -26,7 +26,7 @@ class FlexibleQuayVersionStructure(PlaceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    alternative_names: AlternativeNamesRelStructure | None = field(
+    alternative_names: None | AlternativeNamesRelStructure = field(
         default=None,
         metadata={
             "name": "alternativeNames",
@@ -34,7 +34,7 @@ class FlexibleQuayVersionStructure(PlaceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    flexible_stop_place_ref: FlexibleStopPlaceRef | None = field(
+    flexible_stop_place_ref: None | FlexibleStopPlaceRef = field(
         default=None,
         metadata={
             "name": "FlexibleStopPlaceRef",
@@ -42,7 +42,7 @@ class FlexibleQuayVersionStructure(PlaceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    transport_mode: AllVehicleModesOfTransportEnumeration | None = field(
+    transport_mode: None | AllVehicleModesOfTransportEnumeration = field(
         default=None,
         metadata={
             "name": "TransportMode",
@@ -50,7 +50,7 @@ class FlexibleQuayVersionStructure(PlaceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    boarding_use: bool | None = field(
+    boarding_use: None | bool = field(
         default=None,
         metadata={
             "name": "BoardingUse",
@@ -58,7 +58,7 @@ class FlexibleQuayVersionStructure(PlaceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    alighting_use: bool | None = field(
+    alighting_use: None | bool = field(
         default=None,
         metadata={
             "name": "AlightingUse",
@@ -66,7 +66,7 @@ class FlexibleQuayVersionStructure(PlaceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    public_code: str | None = field(
+    public_code: None | str = field(
         default=None,
         metadata={
             "name": "PublicCode",

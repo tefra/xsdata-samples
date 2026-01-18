@@ -79,7 +79,7 @@ class Xref:
     class Meta:
         name = "XREF"
 
-    label_1: SingleLanguageLongName | None = field(
+    label_1: None | SingleLanguageLongName = field(
         default=None,
         metadata={
             "name": "LABEL-1",
@@ -87,7 +87,7 @@ class Xref:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    referrable_ref: Xref.ReferrableRef | None = field(
+    referrable_ref: None | Xref.ReferrableRef = field(
         default=None,
         metadata={
             "name": "REFERRABLE-REF",
@@ -95,14 +95,14 @@ class Xref:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -110,70 +110,70 @@ class Xref:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    resolution_policy: ResolutionPolicyEnumSimple | None = field(
+    resolution_policy: None | ResolutionPolicyEnumSimple = field(
         default=None,
         metadata={
             "name": "RESOLUTION-POLICY",
             "type": "Attribute",
         },
     )
-    show_content: ShowContentEnumSimple | None = field(
+    show_content: None | ShowContentEnumSimple = field(
         default=None,
         metadata={
             "name": "SHOW-CONTENT",
             "type": "Attribute",
         },
     )
-    show_resource_alias_name: ShowResourceAliasNameEnumSimple | None = field(
+    show_resource_alias_name: None | ShowResourceAliasNameEnumSimple = field(
         default=None,
         metadata={
             "name": "SHOW-RESOURCE-ALIAS-NAME",
             "type": "Attribute",
         },
     )
-    show_resource_category: ShowResourceCategoryEnumSimple | None = field(
+    show_resource_category: None | ShowResourceCategoryEnumSimple = field(
         default=None,
         metadata={
             "name": "SHOW-RESOURCE-CATEGORY",
             "type": "Attribute",
         },
     )
-    show_resource_long_name: ShowResourceLongNameEnumSimple | None = field(
+    show_resource_long_name: None | ShowResourceLongNameEnumSimple = field(
         default=None,
         metadata={
             "name": "SHOW-RESOURCE-LONG-NAME",
             "type": "Attribute",
         },
     )
-    show_resource_number: ShowResourceNumberEnumSimple | None = field(
+    show_resource_number: None | ShowResourceNumberEnumSimple = field(
         default=None,
         metadata={
             "name": "SHOW-RESOURCE-NUMBER",
             "type": "Attribute",
         },
     )
-    show_resource_page: ShowResourcePageEnumSimple | None = field(
+    show_resource_page: None | ShowResourcePageEnumSimple = field(
         default=None,
         metadata={
             "name": "SHOW-RESOURCE-PAGE",
             "type": "Attribute",
         },
     )
-    show_resource_short_name: ShowResourceShortNameEnumSimple | None = field(
+    show_resource_short_name: None | ShowResourceShortNameEnumSimple = field(
         default=None,
         metadata={
             "name": "SHOW-RESOURCE-SHORT-NAME",
             "type": "Attribute",
         },
     )
-    show_resource_type: ShowResourceTypeEnumSimple | None = field(
+    show_resource_type: None | ShowResourceTypeEnumSimple = field(
         default=None,
         metadata={
             "name": "SHOW-RESOURCE-TYPE",
             "type": "Attribute",
         },
     )
-    show_see: ShowSeeEnumSimple | None = field(
+    show_see: None | ShowSeeEnumSimple = field(
         default=None,
         metadata={
             "name": "SHOW-SEE",
@@ -183,7 +183,7 @@ class Xref:
 
     @dataclass
     class ReferrableRef(Ref):
-        dest: ReferrableSubtypesEnum | None = field(
+        dest: None | ReferrableSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

@@ -16,7 +16,7 @@ class RiskTypeLocations:
     class Meta:
         global_type = False
 
-    location: LocationType | None = field(
+    location: None | LocationType = field(
         default=None,
         metadata={
             "name": "Location",

@@ -34,7 +34,7 @@ __NAMESPACE__ = "urn:oasis:names:specification:ubl:schema:xsd:Forecast-2"
 
 @dataclass(frozen=True)
 class ForecastType:
-    ublextensions: Ublextensions | None = field(
+    ublextensions: None | Ublextensions = field(
         default=None,
         metadata={
             "name": "UBLExtensions",
@@ -42,7 +42,7 @@ class ForecastType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2",
         },
     )
-    ublversion_id: UblversionId | None = field(
+    ublversion_id: None | UblversionId = field(
         default=None,
         metadata={
             "name": "UBLVersionID",
@@ -50,7 +50,7 @@ class ForecastType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    customization_id: CustomizationId | None = field(
+    customization_id: None | CustomizationId = field(
         default=None,
         metadata={
             "name": "CustomizationID",
@@ -58,7 +58,7 @@ class ForecastType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    profile_id: ProfileId | None = field(
+    profile_id: None | ProfileId = field(
         default=None,
         metadata={
             "name": "ProfileID",
@@ -66,7 +66,7 @@ class ForecastType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    profile_execution_id: ProfileExecutionId | None = field(
+    profile_execution_id: None | ProfileExecutionId = field(
         default=None,
         metadata={
             "name": "ProfileExecutionID",
@@ -74,7 +74,7 @@ class ForecastType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    id: Id | None = field(
+    id: None | Id = field(
         default=None,
         metadata={
             "name": "ID",
@@ -83,7 +83,7 @@ class ForecastType:
             "required": True,
         },
     )
-    copy_indicator: CopyIndicator | None = field(
+    copy_indicator: None | CopyIndicator = field(
         default=None,
         metadata={
             "name": "CopyIndicator",
@@ -91,7 +91,7 @@ class ForecastType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    uuid: Uuid | None = field(
+    uuid: None | Uuid = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -99,7 +99,7 @@ class ForecastType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    issue_date: IssueDate | None = field(
+    issue_date: None | IssueDate = field(
         default=None,
         metadata={
             "name": "IssueDate",
@@ -108,7 +108,7 @@ class ForecastType:
             "required": True,
         },
     )
-    issue_time: IssueTime | None = field(
+    issue_time: None | IssueTime = field(
         default=None,
         metadata={
             "name": "IssueTime",
@@ -124,7 +124,7 @@ class ForecastType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    version_id: VersionId | None = field(
+    version_id: None | VersionId = field(
         default=None,
         metadata={
             "name": "VersionID",
@@ -132,7 +132,7 @@ class ForecastType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    based_on_consensus_indicator: BasedOnConsensusIndicator | None = field(
+    based_on_consensus_indicator: None | BasedOnConsensusIndicator = field(
         default=None,
         metadata={
             "name": "BasedOnConsensusIndicator",
@@ -140,7 +140,7 @@ class ForecastType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    forecast_purpose_code: ForecastPurposeCode | None = field(
+    forecast_purpose_code: None | ForecastPurposeCode = field(
         default=None,
         metadata={
             "name": "ForecastPurposeCode",
@@ -149,7 +149,7 @@ class ForecastType:
             "required": True,
         },
     )
-    forecast_period: ForecastPeriod | None = field(
+    forecast_period: None | ForecastPeriod = field(
         default=None,
         metadata={
             "name": "ForecastPeriod",
@@ -176,7 +176,7 @@ class ForecastType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    sender_party: SenderParty | None = field(
+    sender_party: None | SenderParty = field(
         default=None,
         metadata={
             "name": "SenderParty",
@@ -185,7 +185,7 @@ class ForecastType:
             "required": True,
         },
     )
-    receiver_party: ReceiverParty | None = field(
+    receiver_party: None | ReceiverParty = field(
         default=None,
         metadata={
             "name": "ReceiverParty",
@@ -194,7 +194,7 @@ class ForecastType:
             "required": True,
         },
     )
-    buyer_customer_party: BuyerCustomerParty | None = field(
+    buyer_customer_party: None | BuyerCustomerParty = field(
         default=None,
         metadata={
             "name": "BuyerCustomerParty",
@@ -202,7 +202,7 @@ class ForecastType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    seller_supplier_party: SellerSupplierParty | None = field(
+    seller_supplier_party: None | SellerSupplierParty = field(
         default=None,
         metadata={
             "name": "SellerSupplierParty",

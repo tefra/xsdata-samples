@@ -12,7 +12,7 @@ __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
 @dataclass
 class TerminateSubscriptionRequestBodyStructure:
-    subscriber_ref: ParticipantRefStructure | None = field(
+    subscriber_ref: None | ParticipantRefStructure = field(
         default=None,
         metadata={
             "name": "SubscriberRef",

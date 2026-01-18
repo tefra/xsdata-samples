@@ -12,7 +12,7 @@ class VehicleEntranceVersionStructure(SiteEntranceVersionStructure):
     class Meta:
         name = "VehicleEntrance_VersionStructure"
 
-    public: bool | None = field(
+    public: None | bool = field(
         default=None,
         metadata={
             "name": "Public",

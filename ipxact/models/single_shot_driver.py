@@ -27,7 +27,7 @@ class SingleShotDriver:
         name = "singleShotDriver"
         namespace = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
-    single_shot_offset: SingleShotDriver.SingleShotOffset | None = field(
+    single_shot_offset: None | SingleShotDriver.SingleShotOffset = field(
         default=None,
         metadata={
             "name": "singleShotOffset",
@@ -35,7 +35,7 @@ class SingleShotDriver:
             "required": True,
         },
     )
-    single_shot_value: UnsignedBitVectorExpression | None = field(
+    single_shot_value: None | UnsignedBitVectorExpression = field(
         default=None,
         metadata={
             "name": "singleShotValue",
@@ -43,7 +43,7 @@ class SingleShotDriver:
             "required": True,
         },
     )
-    single_shot_duration: SingleShotDriver.SingleShotDuration | None = field(
+    single_shot_duration: None | SingleShotDriver.SingleShotDuration = field(
         default=None,
         metadata={
             "name": "singleShotDuration",

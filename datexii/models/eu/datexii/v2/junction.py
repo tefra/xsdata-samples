@@ -29,7 +29,7 @@ class Junction:
     :ivar junction_extension:
     """
 
-    junction_classification: JunctionClassificationEnum | None = field(
+    junction_classification: None | JunctionClassificationEnum = field(
         default=None,
         metadata={
             "name": "junctionClassification",
@@ -37,7 +37,7 @@ class Junction:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    junction_name: MultilingualString | None = field(
+    junction_name: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "junctionName",
@@ -46,7 +46,7 @@ class Junction:
             "required": True,
         },
     )
-    junction_number: str | None = field(
+    junction_number: None | str = field(
         default=None,
         metadata={
             "name": "junctionNumber",
@@ -55,7 +55,7 @@ class Junction:
             "max_length": 1024,
         },
     )
-    motorway: Road | None = field(
+    motorway: None | Road = field(
         default=None,
         metadata={
             "type": "Element",
@@ -70,7 +70,7 @@ class Junction:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    junction_extension: ExtensionType | None = field(
+    junction_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "junctionExtension",

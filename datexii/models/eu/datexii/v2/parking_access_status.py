@@ -24,7 +24,7 @@ class ParkingAccessStatus:
     :ivar parking_access_status_extension:
     """
 
-    access_reference: ParkingAccessReference | None = field(
+    access_reference: None | ParkingAccessReference = field(
         default=None,
         metadata={
             "name": "accessReference",
@@ -33,7 +33,7 @@ class ParkingAccessStatus:
             "required": True,
         },
     )
-    access_opening_status: OpeningStatusEnum | None = field(
+    access_opening_status: None | OpeningStatusEnum = field(
         default=None,
         metadata={
             "name": "accessOpeningStatus",
@@ -49,7 +49,7 @@ class ParkingAccessStatus:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    parking_access_status_extension: ExtensionType | None = field(
+    parking_access_status_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "parkingAccessStatusExtension",

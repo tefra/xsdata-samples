@@ -20,7 +20,7 @@ class DataRefType:
         referenced by the Path Name.</description>
     """
 
-    path_name_text: str | None = field(
+    path_name_text: None | str = field(
         default=None,
         metadata={
             "name": "PathNameText",
@@ -29,7 +29,7 @@ class DataRefType:
             "required": True,
         },
     )
-    path_value_text: str | None = field(
+    path_value_text: None | str = field(
         default=None,
         metadata={
             "name": "PathValueText",

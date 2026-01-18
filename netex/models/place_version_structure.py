@@ -13,7 +13,7 @@ class PlaceVersionStructure(ZoneVersionStructure):
     class Meta:
         name = "Place_VersionStructure"
 
-    place_types: TypeOfPlaceRefsRelStructure | None = field(
+    place_types: None | TypeOfPlaceRefsRelStructure = field(
         default=None,
         metadata={
             "name": "placeTypes",

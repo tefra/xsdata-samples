@@ -122,7 +122,7 @@ class ClientServerInterface:
     class Meta:
         name = "CLIENT-SERVER-INTERFACE"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -131,7 +131,7 @@ class ClientServerInterface:
             "required": True,
         },
     )
-    short_name_fragments: ClientServerInterface.ShortNameFragments | None = (
+    short_name_fragments: None | ClientServerInterface.ShortNameFragments = (
         field(
             default=None,
             metadata={
@@ -141,7 +141,7 @@ class ClientServerInterface:
             },
         )
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -149,7 +149,7 @@ class ClientServerInterface:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -157,7 +157,7 @@ class ClientServerInterface:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -165,7 +165,7 @@ class ClientServerInterface:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -173,7 +173,7 @@ class ClientServerInterface:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -181,7 +181,7 @@ class ClientServerInterface:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: ClientServerInterface.Annotations | None = field(
+    annotations: None | ClientServerInterface.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -189,7 +189,7 @@ class ClientServerInterface:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -197,7 +197,7 @@ class ClientServerInterface:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    blueprint_policys: ClientServerInterface.BlueprintPolicys | None = field(
+    blueprint_policys: None | ClientServerInterface.BlueprintPolicys = field(
         default=None,
         metadata={
             "name": "BLUEPRINT-POLICYS",
@@ -205,7 +205,7 @@ class ClientServerInterface:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    short_name_pattern: String | None = field(
+    short_name_pattern: None | String = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-PATTERN",
@@ -213,7 +213,7 @@ class ClientServerInterface:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    is_service: Boolean | None = field(
+    is_service: None | Boolean = field(
         default=None,
         metadata={
             "name": "IS-SERVICE",
@@ -221,7 +221,7 @@ class ClientServerInterface:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    namespaces: ClientServerInterface.Namespaces | None = field(
+    namespaces: None | ClientServerInterface.Namespaces = field(
         default=None,
         metadata={
             "name": "NAMESPACES",
@@ -229,7 +229,7 @@ class ClientServerInterface:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    service_kind: ServiceProviderEnum | None = field(
+    service_kind: None | ServiceProviderEnum = field(
         default=None,
         metadata={
             "name": "SERVICE-KIND",
@@ -237,7 +237,7 @@ class ClientServerInterface:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    operations: ClientServerInterface.Operations | None = field(
+    operations: None | ClientServerInterface.Operations = field(
         default=None,
         metadata={
             "name": "OPERATIONS",
@@ -245,7 +245,7 @@ class ClientServerInterface:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    possible_errors: ClientServerInterface.PossibleErrors | None = field(
+    possible_errors: None | ClientServerInterface.PossibleErrors = field(
         default=None,
         metadata={
             "name": "POSSIBLE-ERRORS",
@@ -253,14 +253,14 @@ class ClientServerInterface:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -268,7 +268,7 @@ class ClientServerInterface:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",

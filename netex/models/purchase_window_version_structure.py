@@ -19,7 +19,7 @@ class PurchaseWindowVersionStructure(UsageParameterVersionStructure):
     class Meta:
         name = "PurchaseWindow_VersionStructure"
 
-    purchase_action: PurchaseActionEnumeration | None = field(
+    purchase_action: None | PurchaseActionEnumeration = field(
         default=None,
         metadata={
             "name": "PurchaseAction",
@@ -27,7 +27,7 @@ class PurchaseWindowVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    purchase_when: PurchaseWhenEnumeration | None = field(
+    purchase_when: None | PurchaseWhenEnumeration = field(
         default=None,
         metadata={
             "name": "PurchaseWhen",
@@ -35,7 +35,7 @@ class PurchaseWindowVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    latest_time: XmlTime | None = field(
+    latest_time: None | XmlTime = field(
         default=None,
         metadata={
             "name": "LatestTime",
@@ -43,7 +43,7 @@ class PurchaseWindowVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    minimum_period_before_departure: XmlDuration | None = field(
+    minimum_period_before_departure: None | XmlDuration = field(
         default=None,
         metadata={
             "name": "MinimumPeriodBeforeDeparture",
@@ -51,7 +51,7 @@ class PurchaseWindowVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    minimum_period_interval_ref: TimeIntervalRefStructure | None = field(
+    minimum_period_interval_ref: None | TimeIntervalRefStructure = field(
         default=None,
         metadata={
             "name": "MinimumPeriodIntervalRef",
@@ -59,7 +59,7 @@ class PurchaseWindowVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    maximum_period_before_departure: XmlDuration | None = field(
+    maximum_period_before_departure: None | XmlDuration = field(
         default=None,
         metadata={
             "name": "MaximumPeriodBeforeDeparture",
@@ -67,7 +67,7 @@ class PurchaseWindowVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    maximum_period_interval_ref: TimeIntervalRefStructure | None = field(
+    maximum_period_interval_ref: None | TimeIntervalRefStructure = field(
         default=None,
         metadata={
             "name": "MaximumPeriodIntervalRef",

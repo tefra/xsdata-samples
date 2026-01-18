@@ -48,7 +48,7 @@ class CharacteristicValueType(BaseComponentType):
     <description xmlns="">A value of the characteristic.</description>.
     """
 
-    text: TextType | None = field(
+    text: None | TextType = field(
         default=None,
         metadata={
             "name": "Text",
@@ -56,7 +56,7 @@ class CharacteristicValueType(BaseComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
         },
     )
-    code: CodeType | None = field(
+    code: None | CodeType = field(
         default=None,
         metadata={
             "name": "Code",
@@ -64,7 +64,7 @@ class CharacteristicValueType(BaseComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
         },
     )
-    amount: AmountType | None = field(
+    amount: None | AmountType = field(
         default=None,
         metadata={
             "name": "Amount",
@@ -72,7 +72,7 @@ class CharacteristicValueType(BaseComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
         },
     )
-    quantity: QuantityType | None = field(
+    quantity: None | QuantityType = field(
         default=None,
         metadata={
             "name": "Quantity",
@@ -80,7 +80,7 @@ class CharacteristicValueType(BaseComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
         },
     )
-    numeric: NumericType | None = field(
+    numeric: None | NumericType = field(
         default=None,
         metadata={
             "name": "Numeric",
@@ -88,7 +88,7 @@ class CharacteristicValueType(BaseComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
         },
     )
-    percent: PercentType | None = field(
+    percent: None | PercentType = field(
         default=None,
         metadata={
             "name": "Percent",
@@ -96,7 +96,7 @@ class CharacteristicValueType(BaseComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
         },
     )
-    indicator: IndicatorType | None = field(
+    indicator: None | IndicatorType = field(
         default=None,
         metadata={
             "name": "Indicator",
@@ -104,7 +104,7 @@ class CharacteristicValueType(BaseComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
         },
     )
-    duration: DurationType | None = field(
+    duration: None | DurationType = field(
         default=None,
         metadata={
             "name": "Duration",
@@ -112,7 +112,7 @@ class CharacteristicValueType(BaseComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
         },
     )
-    time: TimeType | None = field(
+    time: None | TimeType = field(
         default=None,
         metadata={
             "name": "Time",
@@ -120,7 +120,7 @@ class CharacteristicValueType(BaseComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
         },
     )
-    date: DateType | None = field(
+    date: None | DateType = field(
         default=None,
         metadata={
             "name": "Date",
@@ -128,7 +128,7 @@ class CharacteristicValueType(BaseComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
         },
     )
-    date_time: DateTimeType | None = field(
+    date_time: None | DateTimeType = field(
         default=None,
         metadata={
             "name": "DateTime",

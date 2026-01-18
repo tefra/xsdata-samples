@@ -23,7 +23,7 @@ class VmsUnitTable:
     :ivar version:
     """
 
-    vms_unit_table_identification: str | None = field(
+    vms_unit_table_identification: None | str = field(
         default=None,
         metadata={
             "name": "vmsUnitTableIdentification",
@@ -41,7 +41,7 @@ class VmsUnitTable:
             "min_occurs": 1,
         },
     )
-    vms_unit_table_extension: ExtensionType | None = field(
+    vms_unit_table_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "vmsUnitTableExtension",
@@ -49,14 +49,14 @@ class VmsUnitTable:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "required": True,
         },
     )
-    version: str | None = field(
+    version: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",

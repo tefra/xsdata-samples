@@ -30,20 +30,20 @@ class TdEventBswModuleTypeEnum:
     class Meta:
         name = "TD-EVENT-BSW-MODULE-TYPE-ENUM"
 
-    value: TdEventBswModuleTypeEnumSimple | None = field(
+    value: None | TdEventBswModuleTypeEnumSimple = field(
         default=None,
         metadata={
             "required": True,
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

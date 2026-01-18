@@ -60,7 +60,7 @@ class ParkingOccupancy:
     :ivar parking_occupancy_extension:
     """
 
-    parking_number_of_spaces_override: int | None = field(
+    parking_number_of_spaces_override: None | int = field(
         default=None,
         metadata={
             "name": "parkingNumberOfSpacesOverride",
@@ -68,7 +68,7 @@ class ParkingOccupancy:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    parking_number_of_vacant_spaces: int | None = field(
+    parking_number_of_vacant_spaces: None | int = field(
         default=None,
         metadata={
             "name": "parkingNumberOfVacantSpaces",
@@ -76,7 +76,7 @@ class ParkingOccupancy:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    parking_number_of_vacant_spaces_lower_than: int | None = field(
+    parking_number_of_vacant_spaces_lower_than: None | int = field(
         default=None,
         metadata={
             "name": "parkingNumberOfVacantSpacesLowerThan",
@@ -84,7 +84,7 @@ class ParkingOccupancy:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    parking_number_of_vacant_spaces_higher_than: int | None = field(
+    parking_number_of_vacant_spaces_higher_than: None | int = field(
         default=None,
         metadata={
             "name": "parkingNumberOfVacantSpacesHigherThan",
@@ -92,7 +92,7 @@ class ParkingOccupancy:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    parking_number_of_vacant_spaces_graded: ParkingVacantSpacesEnum | None = (
+    parking_number_of_vacant_spaces_graded: None | ParkingVacantSpacesEnum = (
         field(
             default=None,
             metadata={
@@ -102,7 +102,7 @@ class ParkingOccupancy:
             },
         )
     )
-    parking_number_of_occupied_spaces: int | None = field(
+    parking_number_of_occupied_spaces: None | int = field(
         default=None,
         metadata={
             "name": "parkingNumberOfOccupiedSpaces",
@@ -110,7 +110,7 @@ class ParkingOccupancy:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    parking_number_of_vehicles: int | None = field(
+    parking_number_of_vehicles: None | int = field(
         default=None,
         metadata={
             "name": "parkingNumberOfVehicles",
@@ -118,7 +118,7 @@ class ParkingOccupancy:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    parking_occupancy: float | None = field(
+    parking_occupancy: None | float = field(
         default=None,
         metadata={
             "name": "parkingOccupancy",
@@ -126,7 +126,7 @@ class ParkingOccupancy:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    parking_occupancy_graded: ParkingOccupancyEnum | None = field(
+    parking_occupancy_graded: None | ParkingOccupancyEnum = field(
         default=None,
         metadata={
             "name": "parkingOccupancyGraded",
@@ -134,7 +134,7 @@ class ParkingOccupancy:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    parking_occupancy_trend: ParkingOccupancyTrendEnum | None = field(
+    parking_occupancy_trend: None | ParkingOccupancyTrendEnum = field(
         default=None,
         metadata={
             "name": "parkingOccupancyTrend",
@@ -142,7 +142,7 @@ class ParkingOccupancy:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    parking_not_allowed: bool | None = field(
+    parking_not_allowed: None | bool = field(
         default=None,
         metadata={
             "name": "parkingNotAllowed",
@@ -158,7 +158,7 @@ class ParkingOccupancy:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    parking_occupancy_extension: ExtensionType | None = field(
+    parking_occupancy_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "parkingOccupancyExtension",

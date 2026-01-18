@@ -20,7 +20,7 @@ class PortAccessType1:
     class Meta:
         name = "portAccessType"
 
-    port_access_type: PortAccessType | None = field(
+    port_access_type: None | PortAccessType = field(
         default=None,
         metadata={
             "name": "portAccessType",
@@ -28,7 +28,7 @@ class PortAccessType1:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    access_handles: PortAccessType1.AccessHandles | None = field(
+    access_handles: None | PortAccessType1.AccessHandles = field(
         default=None,
         metadata={
             "name": "accessHandles",

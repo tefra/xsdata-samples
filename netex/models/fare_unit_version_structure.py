@@ -12,7 +12,7 @@ class FareUnitVersionStructure(PriceableObjectVersionStructure):
     class Meta:
         name = "FareUnit_VersionStructure"
 
-    name_of_class_of_unit: str | None = field(
+    name_of_class_of_unit: None | str = field(
         default=None,
         metadata={
             "name": "nameOfClassOfUnit",

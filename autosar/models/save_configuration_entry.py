@@ -49,7 +49,7 @@ class SaveConfigurationEntry:
     class Meta:
         name = "SAVE-CONFIGURATION-ENTRY"
 
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -57,7 +57,7 @@ class SaveConfigurationEntry:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    delay: TimeValue | None = field(
+    delay: None | TimeValue = field(
         default=None,
         metadata={
             "name": "DELAY",
@@ -65,7 +65,7 @@ class SaveConfigurationEntry:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    position_in_table: Integer | None = field(
+    position_in_table: None | Integer = field(
         default=None,
         metadata={
             "name": "POSITION-IN-TABLE",
@@ -74,7 +74,7 @@ class SaveConfigurationEntry:
         },
     )
     assigned_controller_ref: (
-        SaveConfigurationEntry.AssignedControllerRef | None
+        None | SaveConfigurationEntry.AssignedControllerRef
     ) = field(
         default=None,
         metadata={
@@ -84,7 +84,7 @@ class SaveConfigurationEntry:
         },
     )
     assigned_lin_slave_config_ref: (
-        SaveConfigurationEntry.AssignedLinSlaveConfigRef | None
+        None | SaveConfigurationEntry.AssignedLinSlaveConfigRef
     ) = field(
         default=None,
         metadata={
@@ -93,14 +93,14 @@ class SaveConfigurationEntry:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -111,7 +111,7 @@ class SaveConfigurationEntry:
 
     @dataclass
     class AssignedControllerRef(Ref):
-        dest: LinSlaveSubtypesEnum | None = field(
+        dest: None | LinSlaveSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -122,7 +122,7 @@ class SaveConfigurationEntry:
 
     @dataclass
     class AssignedLinSlaveConfigRef(Ref):
-        dest: LinSlaveConfigIdentSubtypesEnum | None = field(
+        dest: None | LinSlaveConfigIdentSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

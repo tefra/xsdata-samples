@@ -21,7 +21,7 @@ class AlertCLocation:
     :ivar alert_clocation_extension:
     """
 
-    alert_clocation_name: MultilingualString | None = field(
+    alert_clocation_name: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "alertCLocationName",
@@ -29,7 +29,7 @@ class AlertCLocation:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    specific_location: int | None = field(
+    specific_location: None | int = field(
         default=None,
         metadata={
             "name": "specificLocation",
@@ -38,7 +38,7 @@ class AlertCLocation:
             "required": True,
         },
     )
-    alert_clocation_extension: ExtensionType | None = field(
+    alert_clocation_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "alertCLocationExtension",

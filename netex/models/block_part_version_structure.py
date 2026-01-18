@@ -21,7 +21,7 @@ class BlockPartVersionStructure(DataManagedObjectStructure):
     class Meta:
         name = "BlockPart_VersionStructure"
 
-    name: MultilingualString | None = field(
+    name: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "Name",
@@ -29,7 +29,7 @@ class BlockPartVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    description: MultilingualString | None = field(
+    description: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "Description",
@@ -37,7 +37,7 @@ class BlockPartVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    block_ref: TrainBlockRef | BlockRef | None = field(
+    block_ref: None | TrainBlockRef | BlockRef = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -55,7 +55,7 @@ class BlockPartVersionStructure(DataManagedObjectStructure):
             ),
         },
     )
-    vehicle_type_ref: CompoundTrainRef | TrainRef | VehicleTypeRef | None = (
+    vehicle_type_ref: None | CompoundTrainRef | TrainRef | VehicleTypeRef = (
         field(
             default=None,
             metadata={
@@ -80,7 +80,7 @@ class BlockPartVersionStructure(DataManagedObjectStructure):
             },
         )
     )
-    compound_block_ref: CompoundBlockRef | None = field(
+    compound_block_ref: None | CompoundBlockRef = field(
         default=None,
         metadata={
             "name": "CompoundBlockRef",
@@ -89,7 +89,7 @@ class BlockPartVersionStructure(DataManagedObjectStructure):
         },
     )
     journey_part_couple_ref_or_journey_parts: (
-        JourneyPartCoupleRef | JourneyPartRefsRelStructure | None
+        None | JourneyPartCoupleRef | JourneyPartRefsRelStructure
     ) = field(
         default=None,
         metadata={
@@ -108,7 +108,7 @@ class BlockPartVersionStructure(DataManagedObjectStructure):
             ),
         },
     )
-    order: int | None = field(
+    order: None | int = field(
         default=None,
         metadata={
             "type": "Attribute",

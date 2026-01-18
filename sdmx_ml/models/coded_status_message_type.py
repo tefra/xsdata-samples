@@ -14,7 +14,7 @@ class CodedStatusMessageType(StatusMessageType1):
     message which required a code.
     """
 
-    code: str | None = field(
+    code: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",

@@ -45,7 +45,7 @@ class DiagnosticEnvModeCondition:
     class Meta:
         name = "DIAGNOSTIC-ENV-MODE-CONDITION"
 
-    compare_type: DiagnosticCompareTypeEnum | None = field(
+    compare_type: None | DiagnosticCompareTypeEnum = field(
         default=None,
         metadata={
             "name": "COMPARE-TYPE",
@@ -53,7 +53,7 @@ class DiagnosticEnvModeCondition:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    mode_element_ref: DiagnosticEnvModeCondition.ModeElementRef | None = field(
+    mode_element_ref: None | DiagnosticEnvModeCondition.ModeElementRef = field(
         default=None,
         metadata={
             "name": "MODE-ELEMENT-REF",
@@ -61,14 +61,14 @@ class DiagnosticEnvModeCondition:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -79,7 +79,7 @@ class DiagnosticEnvModeCondition:
 
     @dataclass
     class ModeElementRef(Ref):
-        dest: DiagnosticEnvModeElementSubtypesEnum | None = field(
+        dest: None | DiagnosticEnvModeElementSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

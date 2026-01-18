@@ -46,13 +46,13 @@ class Mtable:
             "type": "Element",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    xref: object | None = field(
+    xref: None | object = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -66,19 +66,19 @@ class Mtable:
             "tokens": True,
         },
     )
-    style: str | None = field(
+    style: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    href: str | None = field(
+    href: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    other: object | None = field(
+    other: None | object = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -91,21 +91,21 @@ class Mtable:
             "namespace": "##other",
         },
     )
-    mathcolor: str | None = field(
+    mathcolor: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\s*((#[0-9a-fA-F]{3}([0-9a-fA-F]{3})?)|[aA][qQ][uU][aA]|[bB][lL][aA][cC][kK]|[bB][lL][uU][eE]|[fF][uU][cC][hH][sS][iI][aA]|[gG][rR][aA][yY]|[gG][rR][eE][eE][nN]|[lL][iI][mM][eE]|[mM][aA][rR][oO][oO][nN]|[nN][aA][vV][yY]|[oO][lL][iI][vV][eE]|[pP][uU][rR][pP][lL][eE]|[rR][eE][dD]|[sS][iI][lL][vV][eE][rR]|[tT][eE][aA][lL]|[wW][hH][iI][tT][eE]|[yY][eE][lL][lL][oO][wW])\s*",
         },
     )
-    mathbackground: str | MtableValue | None = field(
+    mathbackground: None | str | MtableValue = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\s*((#[0-9a-fA-F]{3}([0-9a-fA-F]{3})?)|[aA][qQ][uU][aA]|[bB][lL][aA][cC][kK]|[bB][lL][uU][eE]|[fF][uU][cC][hH][sS][iI][aA]|[gG][rR][aA][yY]|[gG][rR][eE][eE][nN]|[lL][iI][mM][eE]|[mM][aA][rR][oO][oO][nN]|[nN][aA][vV][yY]|[oO][lL][iI][vV][eE]|[pP][uU][rR][pP][lL][eE]|[rR][eE][dD]|[sS][iI][lL][vV][eE][rR]|[tT][eE][aA][lL]|[wW][hH][iI][tT][eE]|[yY][eE][lL][lL][oO][wW])\s*",
         },
     )
-    align: str | None = field(
+    align: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -126,7 +126,7 @@ class Mtable:
             "tokens": True,
         },
     )
-    groupalign: str | None = field(
+    groupalign: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -147,7 +147,7 @@ class Mtable:
             "tokens": True,
         },
     )
-    width: str | MtableValue | None = field(
+    width: None | str | MtableValue = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -186,7 +186,7 @@ class Mtable:
             "tokens": True,
         },
     )
-    frame: Linestyle | None = field(
+    frame: None | Linestyle = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -200,31 +200,31 @@ class Mtable:
             "tokens": True,
         },
     )
-    equalrows: MtableEqualrows | None = field(
+    equalrows: None | MtableEqualrows = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    equalcolumns: MtableEqualcolumns | None = field(
+    equalcolumns: None | MtableEqualcolumns = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    displaystyle: MtableDisplaystyle | None = field(
+    displaystyle: None | MtableDisplaystyle = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    side: MtableSide | None = field(
+    side: None | MtableSide = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    minlabelspacing: str | None = field(
+    minlabelspacing: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",

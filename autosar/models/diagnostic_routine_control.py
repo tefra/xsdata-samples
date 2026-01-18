@@ -99,7 +99,7 @@ class DiagnosticRoutineControl:
     class Meta:
         name = "DIAGNOSTIC-ROUTINE-CONTROL"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -109,7 +109,7 @@ class DiagnosticRoutineControl:
         },
     )
     short_name_fragments: (
-        DiagnosticRoutineControl.ShortNameFragments | None
+        None | DiagnosticRoutineControl.ShortNameFragments
     ) = field(
         default=None,
         metadata={
@@ -118,7 +118,7 @@ class DiagnosticRoutineControl:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -126,7 +126,7 @@ class DiagnosticRoutineControl:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -134,7 +134,7 @@ class DiagnosticRoutineControl:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -142,7 +142,7 @@ class DiagnosticRoutineControl:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -150,7 +150,7 @@ class DiagnosticRoutineControl:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -158,7 +158,7 @@ class DiagnosticRoutineControl:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: DiagnosticRoutineControl.Annotations | None = field(
+    annotations: None | DiagnosticRoutineControl.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -166,7 +166,7 @@ class DiagnosticRoutineControl:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -175,7 +175,7 @@ class DiagnosticRoutineControl:
         },
     )
     access_permission_ref: (
-        DiagnosticRoutineControl.AccessPermissionRef | None
+        None | DiagnosticRoutineControl.AccessPermissionRef
     ) = field(
         default=None,
         metadata={
@@ -185,7 +185,7 @@ class DiagnosticRoutineControl:
         },
     )
     routine_control_class_ref: (
-        DiagnosticRoutineControl.RoutineControlClassRef | None
+        None | DiagnosticRoutineControl.RoutineControlClassRef
     ) = field(
         default=None,
         metadata={
@@ -194,7 +194,7 @@ class DiagnosticRoutineControl:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    routine_ref: DiagnosticRoutineControl.RoutineRef | None = field(
+    routine_ref: None | DiagnosticRoutineControl.RoutineRef = field(
         default=None,
         metadata={
             "name": "ROUTINE-REF",
@@ -202,14 +202,14 @@ class DiagnosticRoutineControl:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -217,7 +217,7 @@ class DiagnosticRoutineControl:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -249,7 +249,7 @@ class DiagnosticRoutineControl:
 
     @dataclass
     class AccessPermissionRef(Ref):
-        dest: DiagnosticAccessPermissionSubtypesEnum | None = field(
+        dest: None | DiagnosticAccessPermissionSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -260,7 +260,7 @@ class DiagnosticRoutineControl:
 
     @dataclass
     class RoutineControlClassRef(Ref):
-        dest: DiagnosticRoutineControlClassSubtypesEnum | None = field(
+        dest: None | DiagnosticRoutineControlClassSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -271,7 +271,7 @@ class DiagnosticRoutineControl:
 
     @dataclass
     class RoutineRef(Ref):
-        dest: DiagnosticRoutineSubtypesEnum | None = field(
+        dest: None | DiagnosticRoutineSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

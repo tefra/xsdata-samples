@@ -29,20 +29,20 @@ class SomeipMessageTypeEnum:
     class Meta:
         name = "SOMEIP-MESSAGE-TYPE-ENUM"
 
-    value: SomeipMessageTypeEnumSimple | None = field(
+    value: None | SomeipMessageTypeEnumSimple = field(
         default=None,
         metadata={
             "required": True,
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

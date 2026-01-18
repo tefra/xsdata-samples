@@ -69,7 +69,7 @@ class RoleBasedDataAssignment:
     class Meta:
         name = "ROLE-BASED-DATA-ASSIGNMENT"
 
-    role: Identifier | None = field(
+    role: None | Identifier = field(
         default=None,
         metadata={
             "name": "ROLE",
@@ -77,7 +77,7 @@ class RoleBasedDataAssignment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    used_data_element: AutosarVariableRef | None = field(
+    used_data_element: None | AutosarVariableRef = field(
         default=None,
         metadata={
             "name": "USED-DATA-ELEMENT",
@@ -85,7 +85,7 @@ class RoleBasedDataAssignment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    used_parameter_element: AutosarParameterRef | None = field(
+    used_parameter_element: None | AutosarParameterRef = field(
         default=None,
         metadata={
             "name": "USED-PARAMETER-ELEMENT",
@@ -93,7 +93,7 @@ class RoleBasedDataAssignment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    used_pim_ref: RoleBasedDataAssignment.UsedPimRef | None = field(
+    used_pim_ref: None | RoleBasedDataAssignment.UsedPimRef = field(
         default=None,
         metadata={
             "name": "USED-PIM-REF",
@@ -101,7 +101,7 @@ class RoleBasedDataAssignment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -109,14 +109,14 @@ class RoleBasedDataAssignment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -127,7 +127,7 @@ class RoleBasedDataAssignment:
 
     @dataclass
     class UsedPimRef(Ref):
-        dest: PerInstanceMemorySubtypesEnum | None = field(
+        dest: None | PerInstanceMemorySubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

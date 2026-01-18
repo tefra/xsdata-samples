@@ -54,8 +54,8 @@ class ArParameterInImplementationDataInstanceRef:
         name = "AR-PARAMETER-IN-IMPLEMENTATION-DATA-INSTANCE-REF"
 
     context_data_prototype_refs: (
-        ArParameterInImplementationDataInstanceRef.ContextDataPrototypeRefs
-        | None
+        None
+        | ArParameterInImplementationDataInstanceRef.ContextDataPrototypeRefs
     ) = field(
         default=None,
         metadata={
@@ -65,7 +65,7 @@ class ArParameterInImplementationDataInstanceRef:
         },
     )
     port_prototype_ref: (
-        ArParameterInImplementationDataInstanceRef.PortPrototypeRef | None
+        None | ArParameterInImplementationDataInstanceRef.PortPrototypeRef
     ) = field(
         default=None,
         metadata={
@@ -75,8 +75,8 @@ class ArParameterInImplementationDataInstanceRef:
         },
     )
     root_parameter_data_prototype_ref: (
-        ArParameterInImplementationDataInstanceRef.RootParameterDataPrototypeRef
-        | None
+        None
+        | ArParameterInImplementationDataInstanceRef.RootParameterDataPrototypeRef
     ) = field(
         default=None,
         metadata={
@@ -86,8 +86,8 @@ class ArParameterInImplementationDataInstanceRef:
         },
     )
     target_data_prototype_ref: (
-        ArParameterInImplementationDataInstanceRef.TargetDataPrototypeRef
-        | None
+        None
+        | ArParameterInImplementationDataInstanceRef.TargetDataPrototypeRef
     ) = field(
         default=None,
         metadata={
@@ -96,14 +96,14 @@ class ArParameterInImplementationDataInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -127,7 +127,7 @@ class ArParameterInImplementationDataInstanceRef:
 
         @dataclass
         class ContextDataPrototypeRef(Ref):
-            dest: ImplementationDataTypeElementSubtypesEnum | None = field(
+            dest: None | ImplementationDataTypeElementSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -138,7 +138,7 @@ class ArParameterInImplementationDataInstanceRef:
 
     @dataclass
     class PortPrototypeRef(Ref):
-        dest: PortPrototypeSubtypesEnum | None = field(
+        dest: None | PortPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -149,7 +149,7 @@ class ArParameterInImplementationDataInstanceRef:
 
     @dataclass
     class RootParameterDataPrototypeRef(Ref):
-        dest: ParameterDataPrototypeSubtypesEnum | None = field(
+        dest: None | ParameterDataPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -160,7 +160,7 @@ class ArParameterInImplementationDataInstanceRef:
 
     @dataclass
     class TargetDataPrototypeRef(Ref):
-        dest: ImplementationDataTypeElementSubtypesEnum | None = field(
+        dest: None | ImplementationDataTypeElementSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

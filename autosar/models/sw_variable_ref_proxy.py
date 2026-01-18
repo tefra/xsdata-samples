@@ -38,7 +38,7 @@ class SwVariableRefProxy:
     class Meta:
         name = "SW-VARIABLE-REF-PROXY"
 
-    autosar_variable: AutosarVariableRef | None = field(
+    autosar_variable: None | AutosarVariableRef = field(
         default=None,
         metadata={
             "name": "AUTOSAR-VARIABLE",
@@ -47,7 +47,7 @@ class SwVariableRefProxy:
         },
     )
     mc_data_instance_var_ref: (
-        SwVariableRefProxy.McDataInstanceVarRef | None
+        None | SwVariableRefProxy.McDataInstanceVarRef
     ) = field(
         default=None,
         metadata={
@@ -56,14 +56,14 @@ class SwVariableRefProxy:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -74,7 +74,7 @@ class SwVariableRefProxy:
 
     @dataclass
     class McDataInstanceVarRef(Ref):
-        dest: McDataInstanceSubtypesEnum | None = field(
+        dest: None | McDataInstanceSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

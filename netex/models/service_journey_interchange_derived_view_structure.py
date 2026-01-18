@@ -21,7 +21,7 @@ class ServiceJourneyInterchangeDerivedViewStructure(DerivedViewStructure):
     class Meta:
         name = "ServiceJourneyInterchange_DerivedViewStructure"
 
-    service_journey_interchange_ref: ServiceJourneyInterchangeRef | None = (
+    service_journey_interchange_ref: None | ServiceJourneyInterchangeRef = (
         field(
             default=None,
             metadata={
@@ -31,7 +31,7 @@ class ServiceJourneyInterchangeDerivedViewStructure(DerivedViewStructure):
             },
         )
     )
-    description: MultilingualString | None = field(
+    description: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "Description",
@@ -39,7 +39,7 @@ class ServiceJourneyInterchangeDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    stay_seated: bool | None = field(
+    stay_seated: None | bool = field(
         default=None,
         metadata={
             "name": "StaySeated",
@@ -47,7 +47,7 @@ class ServiceJourneyInterchangeDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    cross_border: bool | None = field(
+    cross_border: None | bool = field(
         default=None,
         metadata={
             "name": "CrossBorder",
@@ -55,7 +55,7 @@ class ServiceJourneyInterchangeDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    planned: bool | None = field(
+    planned: None | bool = field(
         default=None,
         metadata={
             "name": "Planned",
@@ -63,7 +63,7 @@ class ServiceJourneyInterchangeDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    guaranteed: bool | None = field(
+    guaranteed: None | bool = field(
         default=None,
         metadata={
             "name": "Guaranteed",
@@ -71,7 +71,7 @@ class ServiceJourneyInterchangeDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    advertised: bool | None = field(
+    advertised: None | bool = field(
         default=None,
         metadata={
             "name": "Advertised",
@@ -79,7 +79,7 @@ class ServiceJourneyInterchangeDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    controlled: bool | None = field(
+    controlled: None | bool = field(
         default=None,
         metadata={
             "name": "Controlled",
@@ -87,7 +87,7 @@ class ServiceJourneyInterchangeDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    connection_certainty: ConnectionCertaintyEnumeration | None = field(
+    connection_certainty: None | ConnectionCertaintyEnumeration = field(
         default=None,
         metadata={
             "name": "ConnectionCertainty",
@@ -95,7 +95,7 @@ class ServiceJourneyInterchangeDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    notice_assignments: NoticeAssignmentsRelStructure | None = field(
+    notice_assignments: None | NoticeAssignmentsRelStructure = field(
         default=None,
         metadata={
             "name": "noticeAssignments",
@@ -104,7 +104,7 @@ class ServiceJourneyInterchangeDerivedViewStructure(DerivedViewStructure):
         },
     )
     connecting_journey_ref_or_connecting_journey_view: (
-        VehicleJourneyRefStructure | ConnectingJourneyView | None
+        None | VehicleJourneyRefStructure | ConnectingJourneyView
     ) = field(
         default=None,
         metadata={
@@ -123,7 +123,7 @@ class ServiceJourneyInterchangeDerivedViewStructure(DerivedViewStructure):
             ),
         },
     )
-    connecting_line_view: LineDerivedViewStructure | None = field(
+    connecting_line_view: None | LineDerivedViewStructure = field(
         default=None,
         metadata={
             "name": "ConnectingLineView",
@@ -131,7 +131,7 @@ class ServiceJourneyInterchangeDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    standard_wait_time: XmlDuration | None = field(
+    standard_wait_time: None | XmlDuration = field(
         default=None,
         metadata={
             "name": "StandardWaitTime",
@@ -139,7 +139,7 @@ class ServiceJourneyInterchangeDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    maximum_wait_time: XmlDuration | None = field(
+    maximum_wait_time: None | XmlDuration = field(
         default=None,
         metadata={
             "name": "MaximumWaitTime",
@@ -147,7 +147,7 @@ class ServiceJourneyInterchangeDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    maximum_automatic_wait_time: XmlDuration | None = field(
+    maximum_automatic_wait_time: None | XmlDuration = field(
         default=None,
         metadata={
             "name": "MaximumAutomaticWaitTime",
@@ -155,7 +155,7 @@ class ServiceJourneyInterchangeDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    standard_transfer_time: XmlDuration | None = field(
+    standard_transfer_time: None | XmlDuration = field(
         default=None,
         metadata={
             "name": "StandardTransferTime",
@@ -163,7 +163,7 @@ class ServiceJourneyInterchangeDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    minimum_transfer_time: XmlDuration | None = field(
+    minimum_transfer_time: None | XmlDuration = field(
         default=None,
         metadata={
             "name": "MinimumTransferTime",
@@ -171,7 +171,7 @@ class ServiceJourneyInterchangeDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    maximum_transfer_time: XmlDuration | None = field(
+    maximum_transfer_time: None | XmlDuration = field(
         default=None,
         metadata={
             "name": "MaximumTransferTime",
@@ -179,7 +179,7 @@ class ServiceJourneyInterchangeDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    control_centre_notify_threshold: XmlDuration | None = field(
+    control_centre_notify_threshold: None | XmlDuration = field(
         default=None,
         metadata={
             "name": "ControlCentreNotifyThreshold",

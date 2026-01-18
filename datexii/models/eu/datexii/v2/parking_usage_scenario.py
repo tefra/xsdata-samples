@@ -44,7 +44,7 @@ class ParkingUsageScenario:
     :ivar parking_usage_scenario_extension:
     """
 
-    parking_usage_scenario: ParkingUsageScenarioEnum | None = field(
+    parking_usage_scenario: None | ParkingUsageScenarioEnum = field(
         default=None,
         metadata={
             "name": "parkingUsageScenario",
@@ -63,7 +63,7 @@ class ParkingUsageScenario:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    event_parking_type: PublicEventTypeEnum | None = field(
+    event_parking_type: None | PublicEventTypeEnum = field(
         default=None,
         metadata={
             "name": "eventParkingType",
@@ -71,7 +71,7 @@ class ParkingUsageScenario:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    event_parking_type2: PublicEventType2Enum | None = field(
+    event_parking_type2: None | PublicEventType2Enum = field(
         default=None,
         metadata={
             "name": "eventParkingType2",
@@ -79,7 +79,7 @@ class ParkingUsageScenario:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    scenario_availability: OverallPeriod | None = field(
+    scenario_availability: None | OverallPeriod = field(
         default=None,
         metadata={
             "name": "scenarioAvailability",
@@ -87,7 +87,7 @@ class ParkingUsageScenario:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    parking_usage_scenario_extension: ExtensionType | None = field(
+    parking_usage_scenario_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "parkingUsageScenarioExtension",

@@ -94,7 +94,7 @@ class ApplicationPartitionToEcuPartitionMapping:
     class Meta:
         name = "APPLICATION-PARTITION-TO-ECU-PARTITION-MAPPING"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -104,7 +104,7 @@ class ApplicationPartitionToEcuPartitionMapping:
         },
     )
     short_name_fragments: (
-        ApplicationPartitionToEcuPartitionMapping.ShortNameFragments | None
+        None | ApplicationPartitionToEcuPartitionMapping.ShortNameFragments
     ) = field(
         default=None,
         metadata={
@@ -113,7 +113,7 @@ class ApplicationPartitionToEcuPartitionMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -121,7 +121,7 @@ class ApplicationPartitionToEcuPartitionMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -129,7 +129,7 @@ class ApplicationPartitionToEcuPartitionMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -137,7 +137,7 @@ class ApplicationPartitionToEcuPartitionMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -145,7 +145,7 @@ class ApplicationPartitionToEcuPartitionMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -154,7 +154,7 @@ class ApplicationPartitionToEcuPartitionMapping:
         },
     )
     annotations: (
-        ApplicationPartitionToEcuPartitionMapping.Annotations | None
+        None | ApplicationPartitionToEcuPartitionMapping.Annotations
     ) = field(
         default=None,
         metadata={
@@ -164,8 +164,8 @@ class ApplicationPartitionToEcuPartitionMapping:
         },
     )
     application_partition_refs: (
-        ApplicationPartitionToEcuPartitionMapping.ApplicationPartitionRefs
-        | None
+        None
+        | ApplicationPartitionToEcuPartitionMapping.ApplicationPartitionRefs
     ) = field(
         default=None,
         metadata={
@@ -175,7 +175,7 @@ class ApplicationPartitionToEcuPartitionMapping:
         },
     )
     ecu_partition_ref: (
-        ApplicationPartitionToEcuPartitionMapping.EcuPartitionRef | None
+        None | ApplicationPartitionToEcuPartitionMapping.EcuPartitionRef
     ) = field(
         default=None,
         metadata={
@@ -184,7 +184,7 @@ class ApplicationPartitionToEcuPartitionMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -192,14 +192,14 @@ class ApplicationPartitionToEcuPartitionMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -207,7 +207,7 @@ class ApplicationPartitionToEcuPartitionMapping:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -252,7 +252,7 @@ class ApplicationPartitionToEcuPartitionMapping:
 
         @dataclass
         class ApplicationPartitionRef(Ref):
-            dest: ApplicationPartitionSubtypesEnum | None = field(
+            dest: None | ApplicationPartitionSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -263,7 +263,7 @@ class ApplicationPartitionToEcuPartitionMapping:
 
     @dataclass
     class EcuPartitionRef(Ref):
-        dest: EcuPartitionSubtypesEnum | None = field(
+        dest: None | EcuPartitionSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

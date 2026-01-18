@@ -18,7 +18,7 @@ class TravelDocumentSecurityListingVersionedChildStructure(
     class Meta:
         name = "TravelDocumentSecurityListing_VersionedChildStructure"
 
-    travel_document_ref: ServiceAccessCodeRef | TravelDocumentRef | None = (
+    travel_document_ref: None | ServiceAccessCodeRef | TravelDocumentRef = (
         field(
             default=None,
             metadata={

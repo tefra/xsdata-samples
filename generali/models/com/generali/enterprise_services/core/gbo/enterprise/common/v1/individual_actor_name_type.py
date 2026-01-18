@@ -49,7 +49,7 @@ class IndividualActorNameType(BaseComponentType):
         the person prefers to be addressed</description>
     """
 
-    title_code: CodeType | None = field(
+    title_code: None | CodeType = field(
         default=None,
         metadata={
             "name": "TitleCode",
@@ -57,7 +57,7 @@ class IndividualActorNameType(BaseComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
         },
     )
-    first_name_text: TextType | None = field(
+    first_name_text: None | TextType = field(
         default=None,
         metadata={
             "name": "FirstNameText",
@@ -65,7 +65,7 @@ class IndividualActorNameType(BaseComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
         },
     )
-    middle_name_text: TextType | None = field(
+    middle_name_text: None | TextType = field(
         default=None,
         metadata={
             "name": "MiddleNameText",
@@ -73,7 +73,7 @@ class IndividualActorNameType(BaseComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
         },
     )
-    middle_initial_text: TextType | None = field(
+    middle_initial_text: None | TextType = field(
         default=None,
         metadata={
             "name": "MiddleInitialText",
@@ -81,7 +81,7 @@ class IndividualActorNameType(BaseComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
         },
     )
-    family_name_text: TextType | None = field(
+    family_name_text: None | TextType = field(
         default=None,
         metadata={
             "name": "FamilyNameText",
@@ -89,7 +89,7 @@ class IndividualActorNameType(BaseComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
         },
     )
-    prefix_code: CodeType | None = field(
+    prefix_code: None | CodeType = field(
         default=None,
         metadata={
             "name": "PrefixCode",
@@ -97,7 +97,7 @@ class IndividualActorNameType(BaseComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
         },
     )
-    suffix_code: CodeType | None = field(
+    suffix_code: None | CodeType = field(
         default=None,
         metadata={
             "name": "SuffixCode",
@@ -105,7 +105,7 @@ class IndividualActorNameType(BaseComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
         },
     )
-    salutation_text: TextType | None = field(
+    salutation_text: None | TextType = field(
         default=None,
         metadata={
             "name": "SalutationText",
@@ -113,7 +113,7 @@ class IndividualActorNameType(BaseComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
         },
     )
-    formatted_name_text: TextType | None = field(
+    formatted_name_text: None | TextType = field(
         default=None,
         metadata={
             "name": "FormattedNameText",
@@ -121,7 +121,7 @@ class IndividualActorNameType(BaseComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
         },
     )
-    aristocratic_title_code: CodeType | None = field(
+    aristocratic_title_code: None | CodeType = field(
         default=None,
         metadata={
             "name": "AristocraticTitleCode",
@@ -129,7 +129,7 @@ class IndividualActorNameType(BaseComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
         },
     )
-    legal_name_text: TextType | None = field(
+    legal_name_text: None | TextType = field(
         default=None,
         metadata={
             "name": "LegalNameText",
@@ -137,7 +137,7 @@ class IndividualActorNameType(BaseComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
         },
     )
-    preferred_given_name_text: TextType | None = field(
+    preferred_given_name_text: None | TextType = field(
         default=None,
         metadata={
             "name": "PreferredGivenNameText",

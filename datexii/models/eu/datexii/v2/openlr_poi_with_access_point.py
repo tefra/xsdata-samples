@@ -22,7 +22,7 @@ class OpenlrPoiWithAccessPoint(OpenlrBasePointLocation):
     :ivar openlr_poi_with_access_point_extension:
     """
 
-    openlr_coordinate: PointCoordinates | None = field(
+    openlr_coordinate: None | PointCoordinates = field(
         default=None,
         metadata={
             "name": "openlrCoordinate",
@@ -31,7 +31,7 @@ class OpenlrPoiWithAccessPoint(OpenlrBasePointLocation):
             "required": True,
         },
     )
-    openlr_poi_with_access_point_extension: ExtensionType | None = field(
+    openlr_poi_with_access_point_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "openlrPoiWithAccessPointExtension",

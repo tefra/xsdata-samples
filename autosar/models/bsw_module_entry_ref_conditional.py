@@ -33,7 +33,7 @@ class BswModuleEntryRefConditional:
         name = "BSW-MODULE-ENTRY-REF-CONDITIONAL"
 
     bsw_module_entry_ref: (
-        BswModuleEntryRefConditional.BswModuleEntryRef | None
+        None | BswModuleEntryRefConditional.BswModuleEntryRef
     ) = field(
         default=None,
         metadata={
@@ -42,7 +42,7 @@ class BswModuleEntryRefConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -50,14 +50,14 @@ class BswModuleEntryRefConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -68,7 +68,7 @@ class BswModuleEntryRefConditional:
 
     @dataclass
     class BswModuleEntryRef(Ref):
-        dest: BswModuleEntrySubtypesEnum | None = field(
+        dest: None | BswModuleEntrySubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

@@ -34,7 +34,7 @@ class FramePid:
     class Meta:
         name = "FRAME-PID"
 
-    index: Integer | None = field(
+    index: None | Integer = field(
         default=None,
         metadata={
             "name": "INDEX",
@@ -42,7 +42,7 @@ class FramePid:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    pid: PositiveInteger | None = field(
+    pid: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "PID",
@@ -50,14 +50,14 @@ class FramePid:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

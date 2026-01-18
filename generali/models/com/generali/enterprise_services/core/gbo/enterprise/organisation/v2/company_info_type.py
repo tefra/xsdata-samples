@@ -15,7 +15,7 @@ __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/enterprise/org
 
 @dataclass
 class CompanyInfoType:
-    company_legal_status: str | None = field(
+    company_legal_status: None | str = field(
         default=None,
         metadata={
             "name": "CompanyLegalStatus",
@@ -23,7 +23,7 @@ class CompanyInfoType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v2",
         },
     )
-    year_started: int | None = field(
+    year_started: None | int = field(
         default=None,
         metadata={
             "name": "YearStarted",
@@ -31,7 +31,7 @@ class CompanyInfoType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v2",
         },
     )
-    turnover: AmountType | None = field(
+    turnover: None | AmountType = field(
         default=None,
         metadata={
             "name": "Turnover",
@@ -39,7 +39,7 @@ class CompanyInfoType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v2",
         },
     )
-    turnover_currency: str | None = field(
+    turnover_currency: None | str = field(
         default=None,
         metadata={
             "name": "TurnoverCurrency",
@@ -47,7 +47,7 @@ class CompanyInfoType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v2",
         },
     )
-    turnover_accuracy: CodeType | None = field(
+    turnover_accuracy: None | CodeType = field(
         default=None,
         metadata={
             "name": "TurnoverAccuracy",
@@ -55,7 +55,7 @@ class CompanyInfoType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v2",
         },
     )
-    number_of_employees: Decimal | None = field(
+    number_of_employees: None | Decimal = field(
         default=None,
         metadata={
             "name": "NumberOfEmployees",
@@ -63,7 +63,7 @@ class CompanyInfoType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v2",
         },
     )
-    employee_accuracy: CodeType | None = field(
+    employee_accuracy: None | CodeType = field(
         default=None,
         metadata={
             "name": "EmployeeAccuracy",
@@ -71,7 +71,7 @@ class CompanyInfoType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v2",
         },
     )
-    is_part_of_corporate_tree: bool | None = field(
+    is_part_of_corporate_tree: None | bool = field(
         default=None,
         metadata={
             "name": "IsPartOfCorporateTree",
@@ -79,7 +79,7 @@ class CompanyInfoType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v2",
         },
     )
-    is_standalone: bool | None = field(
+    is_standalone: None | bool = field(
         default=None,
         metadata={
             "name": "IsStandalone",
@@ -87,7 +87,7 @@ class CompanyInfoType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v2",
         },
     )
-    this_level_in_corporate_tree: int | None = field(
+    this_level_in_corporate_tree: None | int = field(
         default=None,
         metadata={
             "name": "ThisLevelInCorporateTree",
@@ -95,7 +95,7 @@ class CompanyInfoType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v2",
         },
     )
-    is_domestic_ultimate: bool | None = field(
+    is_domestic_ultimate: None | bool = field(
         default=None,
         metadata={
             "name": "IsDomesticUltimate",
@@ -103,7 +103,7 @@ class CompanyInfoType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v2",
         },
     )
-    is_global_ultimate: bool | None = field(
+    is_global_ultimate: None | bool = field(
         default=None,
         metadata={
             "name": "IsGlobalUltimate",

@@ -43,7 +43,7 @@ class ScaleConstr:
     class Meta:
         name = "SCALE-CONSTR"
 
-    short_label: Identifier | None = field(
+    short_label: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-LABEL",
@@ -51,7 +51,7 @@ class ScaleConstr:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -59,7 +59,7 @@ class ScaleConstr:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    lower_limit: Limit | None = field(
+    lower_limit: None | Limit = field(
         default=None,
         metadata={
             "name": "LOWER-LIMIT",
@@ -67,7 +67,7 @@ class ScaleConstr:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    upper_limit: Limit | None = field(
+    upper_limit: None | Limit = field(
         default=None,
         metadata={
             "name": "UPPER-LIMIT",
@@ -75,14 +75,14 @@ class ScaleConstr:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -90,7 +90,7 @@ class ScaleConstr:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    validity: ScaleConstrValidityEnumSimple | None = field(
+    validity: None | ScaleConstrValidityEnumSimple = field(
         default=None,
         metadata={
             "name": "VALIDITY",

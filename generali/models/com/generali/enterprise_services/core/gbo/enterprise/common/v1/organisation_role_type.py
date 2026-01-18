@@ -28,7 +28,7 @@ class OrganisationRoleType(BaseGborolesType):
         Partner Repository (BPR).
     """
 
-    legal_name: TextType | None = field(
+    legal_name: None | TextType = field(
         default=None,
         metadata={
             "name": "LegalName",
@@ -36,7 +36,7 @@ class OrganisationRoleType(BaseGborolesType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
         },
     )
-    gunsnumber: str | None = field(
+    gunsnumber: None | str = field(
         default=None,
         metadata={
             "name": "GUNSNumber",
@@ -46,7 +46,7 @@ class OrganisationRoleType(BaseGborolesType):
             "pattern": r"G([0-9]{9})",
         },
     )
-    dunsnumber: str | None = field(
+    dunsnumber: None | str = field(
         default=None,
         metadata={
             "name": "DUNSNumber",

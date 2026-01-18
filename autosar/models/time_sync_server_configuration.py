@@ -45,7 +45,7 @@ class TimeSyncServerConfiguration:
     class Meta:
         name = "TIME-SYNC-SERVER-CONFIGURATION"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -55,7 +55,7 @@ class TimeSyncServerConfiguration:
         },
     )
     short_name_fragments: (
-        TimeSyncServerConfiguration.ShortNameFragments | None
+        None | TimeSyncServerConfiguration.ShortNameFragments
     ) = field(
         default=None,
         metadata={
@@ -64,7 +64,7 @@ class TimeSyncServerConfiguration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    priority: PositiveInteger | None = field(
+    priority: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "PRIORITY",
@@ -72,7 +72,7 @@ class TimeSyncServerConfiguration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sync_interval: TimeValue | None = field(
+    sync_interval: None | TimeValue = field(
         default=None,
         metadata={
             "name": "SYNC-INTERVAL",
@@ -80,7 +80,7 @@ class TimeSyncServerConfiguration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    time_sync_server_identifier: String | None = field(
+    time_sync_server_identifier: None | String = field(
         default=None,
         metadata={
             "name": "TIME-SYNC-SERVER-IDENTIFIER",
@@ -88,7 +88,7 @@ class TimeSyncServerConfiguration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    time_sync_technology: TimeSyncTechnologyEnum | None = field(
+    time_sync_technology: None | TimeSyncTechnologyEnum = field(
         default=None,
         metadata={
             "name": "TIME-SYNC-TECHNOLOGY",
@@ -96,14 +96,14 @@ class TimeSyncServerConfiguration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

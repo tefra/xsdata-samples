@@ -31,20 +31,20 @@ class DiagnosticInhibitionMaskEnum:
     class Meta:
         name = "DIAGNOSTIC-INHIBITION-MASK-ENUM"
 
-    value: DiagnosticInhibitionMaskEnumSimple | None = field(
+    value: None | DiagnosticInhibitionMaskEnumSimple = field(
         default=None,
         metadata={
             "required": True,
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

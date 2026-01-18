@@ -15,7 +15,7 @@ class TopographicProjectionVersionStructure(ProjectionVersionStructure):
     class Meta:
         name = "TopographicProjection_VersionStructure"
 
-    projected_object_ref: VersionOfObjectRefStructure | None = field(
+    projected_object_ref: None | VersionOfObjectRefStructure = field(
         default=None,
         metadata={
             "name": "ProjectedObjectRef",
@@ -24,7 +24,7 @@ class TopographicProjectionVersionStructure(ProjectionVersionStructure):
         },
     )
     country_ref_or_topographic_place_ref: (
-        CountryRef | TopographicPlaceRef | None
+        None | CountryRef | TopographicPlaceRef
     ) = field(
         default=None,
         metadata={

@@ -57,34 +57,34 @@ class QuantityType:
         xmlns:ns1="urn:un:unece:uncefact:documentation:standard:CoreComponentsTechnicalSpecification:2">string</ns1:PrimitiveType>
     """
 
-    value: Decimal | None = field(
+    value: None | Decimal = field(
         default=None,
         metadata={
             "required": True,
         },
     )
-    unit_code: str | None = field(
+    unit_code: None | str = field(
         default=None,
         metadata={
             "name": "unitCode",
             "type": "Attribute",
         },
     )
-    unit_code_list_id: str | None = field(
+    unit_code_list_id: None | str = field(
         default=None,
         metadata={
             "name": "unitCodeListID",
             "type": "Attribute",
         },
     )
-    unit_code_list_agency_id: str | None = field(
+    unit_code_list_agency_id: None | str = field(
         default=None,
         metadata={
             "name": "unitCodeListAgencyID",
             "type": "Attribute",
         },
     )
-    unit_code_list_agency_name: str | None = field(
+    unit_code_list_agency_name: None | str = field(
         default=None,
         metadata={
             "name": "unitCodeListAgencyName",

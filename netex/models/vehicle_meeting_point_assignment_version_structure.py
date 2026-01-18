@@ -57,7 +57,7 @@ class VehicleMeetingPointAssignmentVersionStructure(
     class Meta:
         name = "VehicleMeetingPointAssignment_VersionStructure"
 
-    vehicle_meeting_point_ref: VehicleMeetingPointRef | None = field(
+    vehicle_meeting_point_ref: None | VehicleMeetingPointRef = field(
         default=None,
         metadata={
             "name": "VehicleMeetingPointRef",
@@ -67,7 +67,8 @@ class VehicleMeetingPointAssignmentVersionStructure(
         },
     )
     choice: (
-        VehiclePoolingMeetingPlaceRef
+        None
+        | VehiclePoolingMeetingPlaceRef
         | VehicleMeetingPlaceRef
         | GarageRef
         | VehicleStoppingPositionRef
@@ -104,7 +105,6 @@ class VehicleMeetingPointAssignmentVersionStructure(
         | SiteRef
         | SiteElementRef
         | AddressablePlaceRef
-        | None
     ) = field(
         default=None,
         metadata={
@@ -298,7 +298,7 @@ class VehicleMeetingPointAssignmentVersionStructure(
             ),
         },
     )
-    usage: MeetingUsageEnumeration | None = field(
+    usage: None | MeetingUsageEnumeration = field(
         default=None,
         metadata={
             "name": "Usage",

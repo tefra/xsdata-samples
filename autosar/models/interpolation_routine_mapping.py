@@ -42,7 +42,7 @@ class InterpolationRoutineMapping:
         name = "INTERPOLATION-ROUTINE-MAPPING"
 
     interpolation_routines: (
-        InterpolationRoutineMapping.InterpolationRoutines | None
+        None | InterpolationRoutineMapping.InterpolationRoutines
     ) = field(
         default=None,
         metadata={
@@ -52,7 +52,7 @@ class InterpolationRoutineMapping:
         },
     )
     sw_record_layout_ref: (
-        InterpolationRoutineMapping.SwRecordLayoutRef | None
+        None | InterpolationRoutineMapping.SwRecordLayoutRef
     ) = field(
         default=None,
         metadata={
@@ -61,14 +61,14 @@ class InterpolationRoutineMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -90,7 +90,7 @@ class InterpolationRoutineMapping:
 
     @dataclass
     class SwRecordLayoutRef(Ref):
-        dest: SwRecordLayoutSubtypesEnum | None = field(
+        dest: None | SwRecordLayoutSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

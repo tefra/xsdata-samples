@@ -101,7 +101,7 @@ class SdgAggregationWithVariation:
     class Meta:
         name = "SDG-AGGREGATION-WITH-VARIATION"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -111,7 +111,7 @@ class SdgAggregationWithVariation:
         },
     )
     short_name_fragments: (
-        SdgAggregationWithVariation.ShortNameFragments | None
+        None | SdgAggregationWithVariation.ShortNameFragments
     ) = field(
         default=None,
         metadata={
@@ -120,7 +120,7 @@ class SdgAggregationWithVariation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -128,7 +128,7 @@ class SdgAggregationWithVariation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -136,7 +136,7 @@ class SdgAggregationWithVariation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -144,7 +144,7 @@ class SdgAggregationWithVariation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -152,7 +152,7 @@ class SdgAggregationWithVariation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -160,7 +160,7 @@ class SdgAggregationWithVariation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: SdgAggregationWithVariation.Annotations | None = field(
+    annotations: None | SdgAggregationWithVariation.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -168,7 +168,7 @@ class SdgAggregationWithVariation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    lower_multiplicity: PositiveInteger | None = field(
+    lower_multiplicity: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "LOWER-MULTIPLICITY",
@@ -176,7 +176,7 @@ class SdgAggregationWithVariation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    upper_multiplicity: PositiveInteger | None = field(
+    upper_multiplicity: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "UPPER-MULTIPLICITY",
@@ -184,7 +184,7 @@ class SdgAggregationWithVariation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    upper_multiplicity_infinite: Boolean | None = field(
+    upper_multiplicity_infinite: None | Boolean = field(
         default=None,
         metadata={
             "name": "UPPER-MULTIPLICITY-INFINITE",
@@ -192,7 +192,7 @@ class SdgAggregationWithVariation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    gid: NmtokenString | None = field(
+    gid: None | NmtokenString = field(
         default=None,
         metadata={
             "name": "GID",
@@ -200,7 +200,7 @@ class SdgAggregationWithVariation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation: Boolean | None = field(
+    variation: None | Boolean = field(
         default=None,
         metadata={
             "name": "VARIATION",
@@ -209,7 +209,7 @@ class SdgAggregationWithVariation:
         },
     )
     valid_binding_times: (
-        SdgAggregationWithVariation.ValidBindingTimes | None
+        None | SdgAggregationWithVariation.ValidBindingTimes
     ) = field(
         default=None,
         metadata={
@@ -218,7 +218,7 @@ class SdgAggregationWithVariation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sub_sdg_ref: SdgAggregationWithVariation.SubSdgRef | None = field(
+    sub_sdg_ref: None | SdgAggregationWithVariation.SubSdgRef = field(
         default=None,
         metadata={
             "name": "SUB-SDG-REF",
@@ -226,14 +226,14 @@ class SdgAggregationWithVariation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -241,7 +241,7 @@ class SdgAggregationWithVariation:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -288,7 +288,7 @@ class SdgAggregationWithVariation:
 
     @dataclass
     class SubSdgRef(Ref):
-        dest: SdgClassSubtypesEnum | None = field(
+        dest: None | SdgClassSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

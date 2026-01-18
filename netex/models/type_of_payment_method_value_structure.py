@@ -13,7 +13,7 @@ class TypeOfPaymentMethodValueStructure(TypeOfValueVersionStructure):
     class Meta:
         name = "TypeOfPaymentMethod_ValueStructure"
 
-    payment_method: PaymentMethodEnumeration | None = field(
+    payment_method: None | PaymentMethodEnumeration = field(
         default=None,
         metadata={
             "name": "PaymentMethod",
@@ -21,7 +21,7 @@ class TypeOfPaymentMethodValueStructure(TypeOfValueVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    automated_use: bool | None = field(
+    automated_use: None | bool = field(
         default=None,
         metadata={
             "name": "AutomatedUse",

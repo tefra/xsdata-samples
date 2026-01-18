@@ -34,7 +34,7 @@ class Wind:
     :ivar wind_extension:
     """
 
-    wind_measurement_height: int | None = field(
+    wind_measurement_height: None | int = field(
         default=None,
         metadata={
             "name": "windMeasurementHeight",
@@ -42,7 +42,7 @@ class Wind:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    wind_speed: SpeedValue | None = field(
+    wind_speed: None | SpeedValue = field(
         default=None,
         metadata={
             "name": "windSpeed",
@@ -50,7 +50,7 @@ class Wind:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    maximum_wind_speed: SpeedValue | None = field(
+    maximum_wind_speed: None | SpeedValue = field(
         default=None,
         metadata={
             "name": "maximumWindSpeed",
@@ -58,7 +58,7 @@ class Wind:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    wind_direction_bearing: DirectionBearingValue | None = field(
+    wind_direction_bearing: None | DirectionBearingValue = field(
         default=None,
         metadata={
             "name": "windDirectionBearing",
@@ -66,7 +66,7 @@ class Wind:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    wind_direction_compass: DirectionCompassValue | None = field(
+    wind_direction_compass: None | DirectionCompassValue = field(
         default=None,
         metadata={
             "name": "windDirectionCompass",
@@ -74,7 +74,7 @@ class Wind:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    wind_extension: ExtensionType | None = field(
+    wind_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "windExtension",

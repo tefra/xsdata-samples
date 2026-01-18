@@ -14,7 +14,7 @@ class MeasureListType:
             "tokens": True,
         },
     )
-    uom: str | None = field(
+    uom: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",

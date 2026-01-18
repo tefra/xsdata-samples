@@ -12,7 +12,7 @@ class PeriodExtensionType:
     class Meta:
         name = "_PeriodExtensionType"
 
-    period_extended: PeriodExtended | None = field(
+    period_extended: None | PeriodExtended = field(
         default=None,
         metadata={
             "name": "periodExtended",

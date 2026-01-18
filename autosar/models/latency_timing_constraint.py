@@ -117,7 +117,7 @@ class LatencyTimingConstraint:
     class Meta:
         name = "LATENCY-TIMING-CONSTRAINT"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -126,7 +126,7 @@ class LatencyTimingConstraint:
             "required": True,
         },
     )
-    short_name_fragments: LatencyTimingConstraint.ShortNameFragments | None = (
+    short_name_fragments: None | LatencyTimingConstraint.ShortNameFragments = (
         field(
             default=None,
             metadata={
@@ -136,7 +136,7 @@ class LatencyTimingConstraint:
             },
         )
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -144,7 +144,7 @@ class LatencyTimingConstraint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -152,7 +152,7 @@ class LatencyTimingConstraint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -160,7 +160,7 @@ class LatencyTimingConstraint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -168,7 +168,7 @@ class LatencyTimingConstraint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -176,7 +176,7 @@ class LatencyTimingConstraint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: LatencyTimingConstraint.Annotations | None = field(
+    annotations: None | LatencyTimingConstraint.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -184,7 +184,7 @@ class LatencyTimingConstraint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    trace_refs: LatencyTimingConstraint.TraceRefs | None = field(
+    trace_refs: None | LatencyTimingConstraint.TraceRefs = field(
         default=None,
         metadata={
             "name": "TRACE-REFS",
@@ -192,7 +192,7 @@ class LatencyTimingConstraint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    timing_condition_ref: LatencyTimingConstraint.TimingConditionRef | None = (
+    timing_condition_ref: None | LatencyTimingConstraint.TimingConditionRef = (
         field(
             default=None,
             metadata={
@@ -202,7 +202,7 @@ class LatencyTimingConstraint:
             },
         )
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -210,7 +210,7 @@ class LatencyTimingConstraint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    latency_constraint_type: LatencyConstraintTypeEnum | None = field(
+    latency_constraint_type: None | LatencyConstraintTypeEnum = field(
         default=None,
         metadata={
             "name": "LATENCY-CONSTRAINT-TYPE",
@@ -218,7 +218,7 @@ class LatencyTimingConstraint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    scope_ref: LatencyTimingConstraint.ScopeRef | None = field(
+    scope_ref: None | LatencyTimingConstraint.ScopeRef = field(
         default=None,
         metadata={
             "name": "SCOPE-REF",
@@ -226,7 +226,7 @@ class LatencyTimingConstraint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    minimum: MultidimensionalTime | None = field(
+    minimum: None | MultidimensionalTime = field(
         default=None,
         metadata={
             "name": "MINIMUM",
@@ -234,7 +234,7 @@ class LatencyTimingConstraint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    maximum: MultidimensionalTime | None = field(
+    maximum: None | MultidimensionalTime = field(
         default=None,
         metadata={
             "name": "MAXIMUM",
@@ -242,7 +242,7 @@ class LatencyTimingConstraint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nominal: MultidimensionalTime | None = field(
+    nominal: None | MultidimensionalTime = field(
         default=None,
         metadata={
             "name": "NOMINAL",
@@ -250,14 +250,14 @@ class LatencyTimingConstraint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -265,7 +265,7 @@ class LatencyTimingConstraint:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -308,7 +308,7 @@ class LatencyTimingConstraint:
 
         @dataclass
         class TraceRef(Ref):
-            dest: TraceableSubtypesEnum | None = field(
+            dest: None | TraceableSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -319,7 +319,7 @@ class LatencyTimingConstraint:
 
     @dataclass
     class TimingConditionRef(Ref):
-        dest: TimingConditionSubtypesEnum | None = field(
+        dest: None | TimingConditionSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -330,7 +330,7 @@ class LatencyTimingConstraint:
 
     @dataclass
     class ScopeRef(Ref):
-        dest: TimingDescriptionEventChainSubtypesEnum | None = field(
+        dest: None | TimingDescriptionEventChainSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

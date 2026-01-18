@@ -33,7 +33,7 @@ class CoctMt240000Uv01ServiceDeliveryLocation:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Ii | None = field(
+    type_id: None | Ii = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -56,7 +56,7 @@ class CoctMt240000Uv01ServiceDeliveryLocation:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    code: Ce | None = field(
+    code: None | Ce = field(
         default=None,
         metadata={
             "type": "Element",
@@ -77,7 +77,7 @@ class CoctMt240000Uv01ServiceDeliveryLocation:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    status_code: Cs | None = field(
+    status_code: None | Cs = field(
         default=None,
         metadata={
             "name": "statusCode",
@@ -85,7 +85,7 @@ class CoctMt240000Uv01ServiceDeliveryLocation:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    effective_time: IvlTsExplicit | None = field(
+    effective_time: None | IvlTsExplicit = field(
         default=None,
         metadata={
             "name": "effectiveTime",
@@ -93,7 +93,7 @@ class CoctMt240000Uv01ServiceDeliveryLocation:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    location: CoctMt710000Uv01Place | None = field(
+    location: None | CoctMt710000Uv01Place = field(
         default=None,
         metadata={
             "type": "Element",
@@ -101,7 +101,7 @@ class CoctMt240000Uv01ServiceDeliveryLocation:
             "nillable": True,
         },
     )
-    service_provider_organization: CoctMt150000Uv02Organization | None = field(
+    service_provider_organization: None | CoctMt150000Uv02Organization = field(
         default=None,
         metadata={
             "name": "serviceProviderOrganization",
@@ -110,14 +110,14 @@ class CoctMt240000Uv01ServiceDeliveryLocation:
             "nillable": True,
         },
     )
-    null_flavor: NullFlavor | None = field(
+    null_flavor: None | NullFlavor = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
         },
     )
-    class_code: RoleClassServiceDeliveryLocation | None = field(
+    class_code: None | RoleClassServiceDeliveryLocation = field(
         default=None,
         metadata={
             "name": "classCode",

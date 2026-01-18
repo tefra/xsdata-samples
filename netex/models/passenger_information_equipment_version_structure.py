@@ -61,7 +61,7 @@ class PassengerInformationEquipmentVersionStructure(
     class Meta:
         name = "PassengerInformationEquipment_VersionStructure"
 
-    logical_display_ref: LogicalDisplayRef | None = field(
+    logical_display_ref: None | LogicalDisplayRef = field(
         default=None,
         metadata={
             "name": "LogicalDisplayRef",
@@ -69,7 +69,7 @@ class PassengerInformationEquipmentVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    stop_place_ref: TaxiRankRef | StopPlaceRef | None = field(
+    stop_place_ref: None | TaxiRankRef | StopPlaceRef = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -88,7 +88,8 @@ class PassengerInformationEquipmentVersionStructure(
         },
     )
     choice: (
-        VehicleStoppingPositionRef
+        None
+        | VehicleStoppingPositionRef
         | VehicleStoppingPlaceRef
         | BoardingPositionRef
         | AccessSpaceRef
@@ -114,7 +115,6 @@ class PassengerInformationEquipmentVersionStructure(
         | VehicleEntranceRef
         | EntranceRef
         | SiteComponentRef
-        | None
     ) = field(
         default=None,
         metadata={
@@ -265,7 +265,7 @@ class PassengerInformationEquipmentVersionStructure(
         },
     )
     type_of_passenger_information_equipment_ref: (
-        TypeOfPassengerInformationEquipmentRef | None
+        None | TypeOfPassengerInformationEquipmentRef
     ) = field(
         default=None,
         metadata={
@@ -274,7 +274,7 @@ class PassengerInformationEquipmentVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    low_counter_access: bool | None = field(
+    low_counter_access: None | bool = field(
         default=None,
         metadata={
             "name": "LowCounterAccess",
@@ -282,7 +282,7 @@ class PassengerInformationEquipmentVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    height_of_low_counter: Decimal | None = field(
+    height_of_low_counter: None | Decimal = field(
         default=None,
         metadata={
             "name": "HeightOfLowCounter",
@@ -290,7 +290,7 @@ class PassengerInformationEquipmentVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    induction_loops: bool | None = field(
+    induction_loops: None | bool = field(
         default=None,
         metadata={
             "name": "InductionLoops",
@@ -298,7 +298,7 @@ class PassengerInformationEquipmentVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    tactile_interface_available: bool | None = field(
+    tactile_interface_available: None | bool = field(
         default=None,
         metadata={
             "name": "TactileInterfaceAvailable",
@@ -306,7 +306,7 @@ class PassengerInformationEquipmentVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    audio_interface_available: bool | None = field(
+    audio_interface_available: None | bool = field(
         default=None,
         metadata={
             "name": "AudioInterfaceAvailable",
@@ -314,7 +314,7 @@ class PassengerInformationEquipmentVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    disabled_priority: bool | None = field(
+    disabled_priority: None | bool = field(
         default=None,
         metadata={
             "name": "DisabledPriority",
@@ -322,7 +322,7 @@ class PassengerInformationEquipmentVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    wheelchair_suitable: bool | None = field(
+    wheelchair_suitable: None | bool = field(
         default=None,
         metadata={
             "name": "WheelchairSuitable",
@@ -331,7 +331,7 @@ class PassengerInformationEquipmentVersionStructure(
         },
     )
     passenger_information_facility_list: (
-        PassengerInformationFacilityList | None
+        None | PassengerInformationFacilityList
     ) = field(
         default=None,
         metadata={
@@ -340,7 +340,7 @@ class PassengerInformationEquipmentVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    accessibility_info_facility_list: AccessibilityInfoFacilityList | None = (
+    accessibility_info_facility_list: None | AccessibilityInfoFacilityList = (
         field(
             default=None,
             metadata={

@@ -39,7 +39,7 @@ class McFunctionDataRefSet:
         name = "MC-FUNCTION-DATA-REF-SET"
 
     mc_function_data_ref_set_variants: (
-        McFunctionDataRefSet.McFunctionDataRefSetVariants | None
+        None | McFunctionDataRefSet.McFunctionDataRefSetVariants
     ) = field(
         default=None,
         metadata={
@@ -48,14 +48,14 @@ class McFunctionDataRefSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

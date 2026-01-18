@@ -49,7 +49,7 @@ class RptHook:
     class Meta:
         name = "RPT-HOOK"
 
-    code_label: CIdentifier | None = field(
+    code_label: None | CIdentifier = field(
         default=None,
         metadata={
             "name": "CODE-LABEL",
@@ -57,7 +57,7 @@ class RptHook:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    mcd_identifier: NmtokenString | None = field(
+    mcd_identifier: None | NmtokenString = field(
         default=None,
         metadata={
             "name": "MCD-IDENTIFIER",
@@ -65,7 +65,7 @@ class RptHook:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    rpt_ar_hook_iref: AnyInstanceRef | None = field(
+    rpt_ar_hook_iref: None | AnyInstanceRef = field(
         default=None,
         metadata={
             "name": "RPT-AR-HOOK-IREF",
@@ -73,7 +73,7 @@ class RptHook:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sdgs: RptHook.Sdgs | None = field(
+    sdgs: None | RptHook.Sdgs = field(
         default=None,
         metadata={
             "name": "SDGS",
@@ -81,7 +81,7 @@ class RptHook:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -89,14 +89,14 @@ class RptHook:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

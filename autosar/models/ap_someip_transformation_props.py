@@ -134,7 +134,7 @@ class ApSomeipTransformationProps:
     class Meta:
         name = "AP-SOMEIP-TRANSFORMATION-PROPS"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -144,7 +144,7 @@ class ApSomeipTransformationProps:
         },
     )
     short_name_fragments: (
-        ApSomeipTransformationProps.ShortNameFragments | None
+        None | ApSomeipTransformationProps.ShortNameFragments
     ) = field(
         default=None,
         metadata={
@@ -153,7 +153,7 @@ class ApSomeipTransformationProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -161,7 +161,7 @@ class ApSomeipTransformationProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -169,7 +169,7 @@ class ApSomeipTransformationProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -177,7 +177,7 @@ class ApSomeipTransformationProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -185,7 +185,7 @@ class ApSomeipTransformationProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -193,7 +193,7 @@ class ApSomeipTransformationProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: ApSomeipTransformationProps.Annotations | None = field(
+    annotations: None | ApSomeipTransformationProps.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -201,7 +201,7 @@ class ApSomeipTransformationProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    alignment: PositiveInteger | None = field(
+    alignment: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "ALIGNMENT",
@@ -209,7 +209,7 @@ class ApSomeipTransformationProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    byte_order: ByteOrderEnum | None = field(
+    byte_order: None | ByteOrderEnum = field(
         default=None,
         metadata={
             "name": "BYTE-ORDER",
@@ -217,7 +217,7 @@ class ApSomeipTransformationProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    implements_legacy_string_serialization: Boolean | None = field(
+    implements_legacy_string_serialization: None | Boolean = field(
         default=None,
         metadata={
             "name": "IMPLEMENTS-LEGACY-STRING-SERIALIZATION",
@@ -225,7 +225,7 @@ class ApSomeipTransformationProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    is_dynamic_length_field_size: Boolean | None = field(
+    is_dynamic_length_field_size: None | Boolean = field(
         default=None,
         metadata={
             "name": "IS-DYNAMIC-LENGTH-FIELD-SIZE",
@@ -233,7 +233,7 @@ class ApSomeipTransformationProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    session_handling: SomeipTransformerSessionHandlingEnum | None = field(
+    session_handling: None | SomeipTransformerSessionHandlingEnum = field(
         default=None,
         metadata={
             "name": "SESSION-HANDLING",
@@ -241,7 +241,7 @@ class ApSomeipTransformationProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    size_of_array_length_field: PositiveInteger | None = field(
+    size_of_array_length_field: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "SIZE-OF-ARRAY-LENGTH-FIELD",
@@ -249,7 +249,7 @@ class ApSomeipTransformationProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    size_of_string_length_field: PositiveInteger | None = field(
+    size_of_string_length_field: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "SIZE-OF-STRING-LENGTH-FIELD",
@@ -257,7 +257,7 @@ class ApSomeipTransformationProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    size_of_struct_length_field: PositiveInteger | None = field(
+    size_of_struct_length_field: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "SIZE-OF-STRUCT-LENGTH-FIELD",
@@ -265,7 +265,7 @@ class ApSomeipTransformationProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    size_of_union_length_field: PositiveInteger | None = field(
+    size_of_union_length_field: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "SIZE-OF-UNION-LENGTH-FIELD",
@@ -273,7 +273,7 @@ class ApSomeipTransformationProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    size_of_union_type_selector_field: PositiveInteger | None = field(
+    size_of_union_type_selector_field: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "SIZE-OF-UNION-TYPE-SELECTOR-FIELD",
@@ -281,7 +281,7 @@ class ApSomeipTransformationProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    string_encoding: BaseTypeEncodingString | None = field(
+    string_encoding: None | BaseTypeEncodingString = field(
         default=None,
         metadata={
             "name": "STRING-ENCODING",
@@ -289,14 +289,14 @@ class ApSomeipTransformationProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -304,7 +304,7 @@ class ApSomeipTransformationProps:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",

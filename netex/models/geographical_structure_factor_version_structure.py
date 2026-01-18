@@ -22,7 +22,7 @@ class GeographicalStructureFactorVersionStructure(
     class Meta:
         name = "GeographicalStructureFactor_VersionStructure"
 
-    tariff_ref: ParkingTariffRef | TariffRef | None = field(
+    tariff_ref: None | ParkingTariffRef | TariffRef = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -40,7 +40,7 @@ class GeographicalStructureFactorVersionStructure(
             ),
         },
     )
-    geographical_interval_ref: GeographicalIntervalRef | None = field(
+    geographical_interval_ref: None | GeographicalIntervalRef = field(
         default=None,
         metadata={
             "name": "GeographicalIntervalRef",
@@ -48,7 +48,7 @@ class GeographicalStructureFactorVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    distance_matrix_element_ref: DistanceMatrixElementRef | None = field(
+    distance_matrix_element_ref: None | DistanceMatrixElementRef = field(
         default=None,
         metadata={
             "name": "DistanceMatrixElementRef",
@@ -56,7 +56,7 @@ class GeographicalStructureFactorVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    geographical_unit_ref: GeographicalUnitRef | None = field(
+    geographical_unit_ref: None | GeographicalUnitRef = field(
         default=None,
         metadata={
             "name": "GeographicalUnitRef",
@@ -64,7 +64,7 @@ class GeographicalStructureFactorVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    number_of_units_or_amount_factor: int | Decimal | None = field(
+    number_of_units_or_amount_factor: None | int | Decimal = field(
         default=None,
         metadata={
             "type": "Elements",

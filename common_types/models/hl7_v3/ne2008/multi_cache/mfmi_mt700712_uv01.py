@@ -71,7 +71,7 @@ class MfmiMt700712Uv01ActDefinition:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Ii | None = field(
+    type_id: None | Ii = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -95,7 +95,7 @@ class MfmiMt700712Uv01ActDefinition:
             "min_occurs": 1,
         },
     )
-    code: Cd | None = field(
+    code: None | Cd = field(
         default=None,
         metadata={
             "type": "Element",
@@ -103,21 +103,21 @@ class MfmiMt700712Uv01ActDefinition:
             "required": True,
         },
     )
-    text: EdExplicit | None = field(
+    text: None | EdExplicit = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    null_flavor: NullFlavor | None = field(
+    null_flavor: None | NullFlavor = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
         },
     )
-    class_code: ActClassRoot | None = field(
+    class_code: None | ActClassRoot = field(
         default=None,
         metadata={
             "name": "classCode",
@@ -149,7 +149,7 @@ class MfmiMt700712Uv01Author1:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Ii | None = field(
+    type_id: None | Ii = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -165,14 +165,14 @@ class MfmiMt700712Uv01Author1:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    time: IvlTsExplicit | None = field(
+    time: None | IvlTsExplicit = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    assigned_entity: CoctMt090003UvAssignedEntity | None = field(
+    assigned_entity: None | CoctMt090003UvAssignedEntity = field(
         default=None,
         metadata={
             "name": "assignedEntity",
@@ -181,7 +181,7 @@ class MfmiMt700712Uv01Author1:
             "nillable": True,
         },
     )
-    null_flavor: NullFlavor | None = field(
+    null_flavor: None | NullFlavor = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -212,7 +212,7 @@ class MfmiMt700712Uv01Author2:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Ii | None = field(
+    type_id: None | Ii = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -228,7 +228,7 @@ class MfmiMt700712Uv01Author2:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    note_text: EdExplicit | None = field(
+    note_text: None | EdExplicit = field(
         default=None,
         metadata={
             "name": "noteText",
@@ -236,14 +236,14 @@ class MfmiMt700712Uv01Author2:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    time: IvlTsExplicit | None = field(
+    time: None | IvlTsExplicit = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    mode_code: Ce | None = field(
+    mode_code: None | Ce = field(
         default=None,
         metadata={
             "name": "modeCode",
@@ -251,7 +251,7 @@ class MfmiMt700712Uv01Author2:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    assigned_entity: CoctMt090003UvAssignedEntity | None = field(
+    assigned_entity: None | CoctMt090003UvAssignedEntity = field(
         default=None,
         metadata={
             "name": "assignedEntity",
@@ -260,7 +260,7 @@ class MfmiMt700712Uv01Author2:
             "nillable": True,
         },
     )
-    null_flavor: NullFlavor | None = field(
+    null_flavor: None | NullFlavor = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -298,7 +298,7 @@ class MfmiMt700712Uv01AuthorOrPerformer:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Ii | None = field(
+    type_id: None | Ii = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -314,7 +314,7 @@ class MfmiMt700712Uv01AuthorOrPerformer:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    note_text: EdExplicit | None = field(
+    note_text: None | EdExplicit = field(
         default=None,
         metadata={
             "name": "noteText",
@@ -322,14 +322,14 @@ class MfmiMt700712Uv01AuthorOrPerformer:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    time: IvlTsExplicit | None = field(
+    time: None | IvlTsExplicit = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    mode_code: Ce | None = field(
+    mode_code: None | Ce = field(
         default=None,
         metadata={
             "name": "modeCode",
@@ -337,7 +337,7 @@ class MfmiMt700712Uv01AuthorOrPerformer:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    signature_code: Ce | None = field(
+    signature_code: None | Ce = field(
         default=None,
         metadata={
             "name": "signatureCode",
@@ -345,7 +345,7 @@ class MfmiMt700712Uv01AuthorOrPerformer:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    signature_text: EdExplicit | None = field(
+    signature_text: None | EdExplicit = field(
         default=None,
         metadata={
             "name": "signatureText",
@@ -353,7 +353,7 @@ class MfmiMt700712Uv01AuthorOrPerformer:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    assigned_device: CoctMt090300Uv01AssignedDevice | None = field(
+    assigned_device: None | CoctMt090300Uv01AssignedDevice = field(
         default=None,
         metadata={
             "name": "assignedDevice",
@@ -362,7 +362,7 @@ class MfmiMt700712Uv01AuthorOrPerformer:
             "nillable": True,
         },
     )
-    assigned_person: CoctMt090100Uv01AssignedPerson | None = field(
+    assigned_person: None | CoctMt090100Uv01AssignedPerson = field(
         default=None,
         metadata={
             "name": "assignedPerson",
@@ -371,14 +371,14 @@ class MfmiMt700712Uv01AuthorOrPerformer:
             "nillable": True,
         },
     )
-    null_flavor: NullFlavor | None = field(
+    null_flavor: None | NullFlavor = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
         },
     )
-    type_code: XParticipationAuthorPerformer | None = field(
+    type_code: None | XParticipationAuthorPerformer = field(
         default=None,
         metadata={
             "name": "typeCode",
@@ -408,7 +408,7 @@ class MfmiMt700712Uv01Custodian:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Ii | None = field(
+    type_id: None | Ii = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -424,7 +424,7 @@ class MfmiMt700712Uv01Custodian:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    assigned_entity: CoctMt090003UvAssignedEntity | None = field(
+    assigned_entity: None | CoctMt090003UvAssignedEntity = field(
         default=None,
         metadata={
             "name": "assignedEntity",
@@ -433,7 +433,7 @@ class MfmiMt700712Uv01Custodian:
             "nillable": True,
         },
     )
-    null_flavor: NullFlavor | None = field(
+    null_flavor: None | NullFlavor = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -471,7 +471,7 @@ class MfmiMt700712Uv01DataEnterer:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Ii | None = field(
+    type_id: None | Ii = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -487,7 +487,7 @@ class MfmiMt700712Uv01DataEnterer:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    note_text: EdExplicit | None = field(
+    note_text: None | EdExplicit = field(
         default=None,
         metadata={
             "name": "noteText",
@@ -495,14 +495,14 @@ class MfmiMt700712Uv01DataEnterer:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    time: IvlTsExplicit | None = field(
+    time: None | IvlTsExplicit = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    assigned_person: CoctMt090100Uv01AssignedPerson | None = field(
+    assigned_person: None | CoctMt090100Uv01AssignedPerson = field(
         default=None,
         metadata={
             "name": "assignedPerson",
@@ -511,7 +511,7 @@ class MfmiMt700712Uv01DataEnterer:
             "nillable": True,
         },
     )
-    null_flavor: NullFlavor | None = field(
+    null_flavor: None | NullFlavor = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -549,7 +549,7 @@ class MfmiMt700712Uv01InformationRecipient:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Ii | None = field(
+    type_id: None | Ii = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -565,14 +565,14 @@ class MfmiMt700712Uv01InformationRecipient:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    time: IvlTs | None = field(
+    time: None | IvlTs = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    assigned_person: CoctMt090100Uv01AssignedPerson | None = field(
+    assigned_person: None | CoctMt090100Uv01AssignedPerson = field(
         default=None,
         metadata={
             "name": "assignedPerson",
@@ -581,14 +581,14 @@ class MfmiMt700712Uv01InformationRecipient:
             "nillable": True,
         },
     )
-    null_flavor: NullFlavor | None = field(
+    null_flavor: None | NullFlavor = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
         },
     )
-    type_code: ParticipationInformationRecipient | None = field(
+    type_code: None | ParticipationInformationRecipient = field(
         default=None,
         metadata={
             "name": "typeCode",
@@ -618,7 +618,7 @@ class MfmiMt700712Uv01Overseer:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Ii | None = field(
+    type_id: None | Ii = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -634,7 +634,7 @@ class MfmiMt700712Uv01Overseer:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    note_text: EdExplicit | None = field(
+    note_text: None | EdExplicit = field(
         default=None,
         metadata={
             "name": "noteText",
@@ -642,14 +642,14 @@ class MfmiMt700712Uv01Overseer:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    time: IvlTsExplicit | None = field(
+    time: None | IvlTsExplicit = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    mode_code: Ce | None = field(
+    mode_code: None | Ce = field(
         default=None,
         metadata={
             "name": "modeCode",
@@ -657,7 +657,7 @@ class MfmiMt700712Uv01Overseer:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    signature_code: Ce | None = field(
+    signature_code: None | Ce = field(
         default=None,
         metadata={
             "name": "signatureCode",
@@ -665,7 +665,7 @@ class MfmiMt700712Uv01Overseer:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    signature_text: EdExplicit | None = field(
+    signature_text: None | EdExplicit = field(
         default=None,
         metadata={
             "name": "signatureText",
@@ -673,7 +673,7 @@ class MfmiMt700712Uv01Overseer:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    assigned_person: CoctMt090100Uv01AssignedPerson | None = field(
+    assigned_person: None | CoctMt090100Uv01AssignedPerson = field(
         default=None,
         metadata={
             "name": "assignedPerson",
@@ -682,14 +682,14 @@ class MfmiMt700712Uv01Overseer:
             "nillable": True,
         },
     )
-    null_flavor: NullFlavor | None = field(
+    null_flavor: None | NullFlavor = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
         },
     )
-    type_code: XParticipationVrfRespSprfWit | None = field(
+    type_code: None | XParticipationVrfRespSprfWit = field(
         default=None,
         metadata={
             "name": "typeCode",
@@ -719,7 +719,7 @@ class MfmiMt700712Uv01PriorRegisteredAct:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Ii | None = field(
+    type_id: None | Ii = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -743,14 +743,14 @@ class MfmiMt700712Uv01PriorRegisteredAct:
             "min_occurs": 1,
         },
     )
-    null_flavor: NullFlavor | None = field(
+    null_flavor: None | NullFlavor = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
         },
     )
-    class_code: ActClassRoot | None = field(
+    class_code: None | ActClassRoot = field(
         default=None,
         metadata={
             "name": "classCode",
@@ -758,7 +758,7 @@ class MfmiMt700712Uv01PriorRegisteredAct:
             "required": True,
         },
     )
-    mood_code: ActMoodCompletionTrack | None = field(
+    mood_code: None | ActMoodCompletionTrack = field(
         default=None,
         metadata={
             "name": "moodCode",
@@ -781,7 +781,7 @@ class MfmiMt700712Uv01PriorRegisteredRole:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Ii | None = field(
+    type_id: None | Ii = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -805,7 +805,7 @@ class MfmiMt700712Uv01PriorRegisteredRole:
             "min_occurs": 1,
         },
     )
-    null_flavor: NullFlavor | None = field(
+    null_flavor: None | NullFlavor = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -813,13 +813,13 @@ class MfmiMt700712Uv01PriorRegisteredRole:
         },
     )
     class_code: (
-        RoleClassMutualRelationship
+        None
+        | RoleClassMutualRelationship
         | RoleClassPassive
         | str
         | RoleClassOntological
         | RoleClassPartitive
         | RoleClassRootValue
-        | None
     ) = field(
         default=None,
         metadata={
@@ -844,7 +844,7 @@ class MfmiMt700712Uv01QueryAck:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Ii | None = field(
+    type_id: None | Ii = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -860,7 +860,7 @@ class MfmiMt700712Uv01QueryAck:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    query_id: Ii | None = field(
+    query_id: None | Ii = field(
         default=None,
         metadata={
             "name": "queryId",
@@ -868,7 +868,7 @@ class MfmiMt700712Uv01QueryAck:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    status_code: Cs | None = field(
+    status_code: None | Cs = field(
         default=None,
         metadata={
             "name": "statusCode",
@@ -876,7 +876,7 @@ class MfmiMt700712Uv01QueryAck:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    query_response_code: Cs | None = field(
+    query_response_code: None | Cs = field(
         default=None,
         metadata={
             "name": "queryResponseCode",
@@ -885,7 +885,7 @@ class MfmiMt700712Uv01QueryAck:
             "required": True,
         },
     )
-    result_total_quantity: Int | None = field(
+    result_total_quantity: None | Int = field(
         default=None,
         metadata={
             "name": "resultTotalQuantity",
@@ -893,7 +893,7 @@ class MfmiMt700712Uv01QueryAck:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    result_current_quantity: Int | None = field(
+    result_current_quantity: None | Int = field(
         default=None,
         metadata={
             "name": "resultCurrentQuantity",
@@ -901,7 +901,7 @@ class MfmiMt700712Uv01QueryAck:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    result_remaining_quantity: Int | None = field(
+    result_remaining_quantity: None | Int = field(
         default=None,
         metadata={
             "name": "resultRemainingQuantity",
@@ -909,7 +909,7 @@ class MfmiMt700712Uv01QueryAck:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    null_flavor: NullFlavor | None = field(
+    null_flavor: None | NullFlavor = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -931,7 +931,7 @@ class MfmiMt700712Uv01Reason:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Ii | None = field(
+    type_id: None | Ii = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -947,7 +947,7 @@ class MfmiMt700712Uv01Reason:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    detected_issue_event: McaiMt900001Uv01DetectedIssueEvent | None = field(
+    detected_issue_event: None | McaiMt900001Uv01DetectedIssueEvent = field(
         default=None,
         metadata={
             "name": "detectedIssueEvent",
@@ -956,14 +956,14 @@ class MfmiMt700712Uv01Reason:
             "nillable": True,
         },
     )
-    null_flavor: NullFlavor | None = field(
+    null_flavor: None | NullFlavor = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
         },
     )
-    type_code: ActRelationshipReason | None = field(
+    type_code: None | ActRelationshipReason = field(
         default=None,
         metadata={
             "name": "typeCode",
@@ -971,7 +971,7 @@ class MfmiMt700712Uv01Reason:
             "required": True,
         },
     )
-    context_conduction_ind: str | None = field(
+    context_conduction_ind: None | str = field(
         default=None,
         metadata={
             "name": "contextConductionInd",
@@ -994,7 +994,7 @@ class MfmiMt700712Uv01Definition:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Ii | None = field(
+    type_id: None | Ii = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -1010,7 +1010,7 @@ class MfmiMt700712Uv01Definition:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    act_definition: MfmiMt700712Uv01ActDefinition | None = field(
+    act_definition: None | MfmiMt700712Uv01ActDefinition = field(
         default=None,
         metadata={
             "name": "actDefinition",
@@ -1019,7 +1019,7 @@ class MfmiMt700712Uv01Definition:
             "nillable": True,
         },
     )
-    null_flavor: NullFlavor | None = field(
+    null_flavor: None | NullFlavor = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -1071,7 +1071,7 @@ class MfmiMt700712Uv01RegistrationRequest:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Ii | None = field(
+    type_id: None | Ii = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -1102,7 +1102,7 @@ class MfmiMt700712Uv01RegistrationRequest:
             "nillable": True,
         },
     )
-    null_flavor: NullFlavor | None = field(
+    null_flavor: None | NullFlavor = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -1142,7 +1142,7 @@ class MfmiMt700712Uv01Subject3:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Ii | None = field(
+    type_id: None | Ii = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -1158,7 +1158,7 @@ class MfmiMt700712Uv01Subject3:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    prior_registered_role: MfmiMt700712Uv01PriorRegisteredRole | None = field(
+    prior_registered_role: None | MfmiMt700712Uv01PriorRegisteredRole = field(
         default=None,
         metadata={
             "name": "priorRegisteredRole",
@@ -1167,14 +1167,14 @@ class MfmiMt700712Uv01Subject3:
             "nillable": True,
         },
     )
-    null_flavor: NullFlavor | None = field(
+    null_flavor: None | NullFlavor = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
         },
     )
-    type_code: ParticipationTargetSubject | None = field(
+    type_code: None | ParticipationTargetSubject = field(
         default=None,
         metadata={
             "name": "typeCode",
@@ -1197,7 +1197,7 @@ class MfmiMt700712Uv01Subject4:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Ii | None = field(
+    type_id: None | Ii = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -1213,7 +1213,7 @@ class MfmiMt700712Uv01Subject4:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    prior_registered_act: MfmiMt700712Uv01PriorRegisteredAct | None = field(
+    prior_registered_act: None | MfmiMt700712Uv01PriorRegisteredAct = field(
         default=None,
         metadata={
             "name": "priorRegisteredAct",
@@ -1222,7 +1222,7 @@ class MfmiMt700712Uv01Subject4:
             "nillable": True,
         },
     )
-    null_flavor: NullFlavor | None = field(
+    null_flavor: None | NullFlavor = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -1282,7 +1282,7 @@ class MfmiMt700712Uv01InFulfillmentOf:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Ii | None = field(
+    type_id: None | Ii = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -1298,7 +1298,7 @@ class MfmiMt700712Uv01InFulfillmentOf:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    registration_request: MfmiMt700712Uv01RegistrationRequest | None = field(
+    registration_request: None | MfmiMt700712Uv01RegistrationRequest = field(
         default=None,
         metadata={
             "name": "registrationRequest",
@@ -1307,14 +1307,14 @@ class MfmiMt700712Uv01InFulfillmentOf:
             "nillable": True,
         },
     )
-    null_flavor: NullFlavor | None = field(
+    null_flavor: None | NullFlavor = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
         },
     )
-    type_code: ActRelationshipFulfills | None = field(
+    type_code: None | ActRelationshipFulfills = field(
         default=None,
         metadata={
             "name": "typeCode",
@@ -1337,7 +1337,7 @@ class MfmiMt700712Uv01PriorRegistration:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Ii | None = field(
+    type_id: None | Ii = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -1360,7 +1360,7 @@ class MfmiMt700712Uv01PriorRegistration:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    status_code: Cs | None = field(
+    status_code: None | Cs = field(
         default=None,
         metadata={
             "name": "statusCode",
@@ -1368,7 +1368,7 @@ class MfmiMt700712Uv01PriorRegistration:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    subject1: MfmiMt700712Uv01Subject3 | None = field(
+    subject1: None | MfmiMt700712Uv01Subject3 = field(
         default=None,
         metadata={
             "type": "Element",
@@ -1376,7 +1376,7 @@ class MfmiMt700712Uv01PriorRegistration:
             "nillable": True,
         },
     )
-    subject2: MfmiMt700712Uv01Subject4 | None = field(
+    subject2: None | MfmiMt700712Uv01Subject4 = field(
         default=None,
         metadata={
             "type": "Element",
@@ -1384,7 +1384,7 @@ class MfmiMt700712Uv01PriorRegistration:
             "nillable": True,
         },
     )
-    null_flavor: NullFlavor | None = field(
+    null_flavor: None | NullFlavor = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -1424,7 +1424,7 @@ class MfmiMt700712Uv01ReplacementOf:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Ii | None = field(
+    type_id: None | Ii = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -1440,7 +1440,7 @@ class MfmiMt700712Uv01ReplacementOf:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    prior_registration: MfmiMt700712Uv01PriorRegistration | None = field(
+    prior_registration: None | MfmiMt700712Uv01PriorRegistration = field(
         default=None,
         metadata={
             "name": "priorRegistration",
@@ -1449,7 +1449,7 @@ class MfmiMt700712Uv01ReplacementOf:
             "nillable": True,
         },
     )
-    null_flavor: NullFlavor | None = field(
+    null_flavor: None | NullFlavor = field(
         default=None,
         metadata={
             "name": "nullFlavor",

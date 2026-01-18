@@ -44,7 +44,7 @@ class SwcToSwcOperationArguments:
     class Meta:
         name = "SWC-TO-SWC-OPERATION-ARGUMENTS"
 
-    direction: SwcToSwcOperationArgumentsDirectionEnum | None = field(
+    direction: None | SwcToSwcOperationArgumentsDirectionEnum = field(
         default=None,
         metadata={
             "name": "DIRECTION",
@@ -52,7 +52,7 @@ class SwcToSwcOperationArguments:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    operation_irefs: SwcToSwcOperationArguments.OperationIrefs | None = field(
+    operation_irefs: None | SwcToSwcOperationArguments.OperationIrefs = field(
         default=None,
         metadata={
             "name": "OPERATION-IREFS",
@@ -60,14 +60,14 @@ class SwcToSwcOperationArguments:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

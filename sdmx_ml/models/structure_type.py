@@ -18,7 +18,7 @@ class StructureType:
     service with only information in the footer.
     """
 
-    header: StructureHeaderType | None = field(
+    header: None | StructureHeaderType = field(
         default=None,
         metadata={
             "name": "Header",
@@ -27,7 +27,7 @@ class StructureType:
             "required": True,
         },
     )
-    structures: StructuresType | None = field(
+    structures: None | StructuresType = field(
         default=None,
         metadata={
             "name": "Structures",
@@ -35,7 +35,7 @@ class StructureType:
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/message",
         },
     )
-    footer: Footer | None = field(
+    footer: None | Footer = field(
         default=None,
         metadata={
             "name": "Footer",

@@ -20,14 +20,14 @@ class SaComponent:
         name = "sa_component"
         namespace = "http://www.crossref.org/schema/5.3.1"
 
-    component_list: ComponentList | None = field(
+    component_list: None | ComponentList = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
         },
     )
-    parent_doi: str | None = field(
+    parent_doi: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",

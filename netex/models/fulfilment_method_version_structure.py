@@ -19,7 +19,7 @@ class FulfilmentMethodVersionStructure(PriceableObjectVersionStructure):
     class Meta:
         name = "FulfilmentMethod_VersionStructure"
 
-    fulfilment_method_type: FulfilmentMethodTypeEnumeration | None = field(
+    fulfilment_method_type: None | FulfilmentMethodTypeEnumeration = field(
         default=None,
         metadata={
             "name": "FulfilmentMethodType",
@@ -27,7 +27,7 @@ class FulfilmentMethodVersionStructure(PriceableObjectVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    requires_card: bool | None = field(
+    requires_card: None | bool = field(
         default=None,
         metadata={
             "name": "RequiresCard",
@@ -35,7 +35,7 @@ class FulfilmentMethodVersionStructure(PriceableObjectVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    requires_booking_reference: bool | None = field(
+    requires_booking_reference: None | bool = field(
         default=None,
         metadata={
             "name": "RequiresBookingReference",
@@ -43,7 +43,7 @@ class FulfilmentMethodVersionStructure(PriceableObjectVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    types_of_travel_document: TypeOfTravelDocumentRefsRelStructure | None = (
+    types_of_travel_document: None | TypeOfTravelDocumentRefsRelStructure = (
         field(
             default=None,
             metadata={
@@ -53,7 +53,7 @@ class FulfilmentMethodVersionStructure(PriceableObjectVersionStructure):
             },
         )
     )
-    prices: FulfilmentMethodPricesRelStructure | None = field(
+    prices: None | FulfilmentMethodPricesRelStructure = field(
         default=None,
         metadata={
             "type": "Element",

@@ -14,7 +14,7 @@ __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
 @dataclass
 class ServiceRequestContextStructure:
-    check_status_address: str | None = field(
+    check_status_address: None | str = field(
         default=None,
         metadata={
             "name": "CheckStatusAddress",
@@ -22,7 +22,7 @@ class ServiceRequestContextStructure:
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    subscribe_address: str | None = field(
+    subscribe_address: None | str = field(
         default=None,
         metadata={
             "name": "SubscribeAddress",
@@ -30,7 +30,7 @@ class ServiceRequestContextStructure:
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    manage_subscription_address: str | None = field(
+    manage_subscription_address: None | str = field(
         default=None,
         metadata={
             "name": "ManageSubscriptionAddress",
@@ -38,7 +38,7 @@ class ServiceRequestContextStructure:
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    get_data_address: str | None = field(
+    get_data_address: None | str = field(
         default=None,
         metadata={
             "name": "GetDataAddress",
@@ -46,7 +46,7 @@ class ServiceRequestContextStructure:
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    status_response_address: str | None = field(
+    status_response_address: None | str = field(
         default=None,
         metadata={
             "name": "StatusResponseAddress",
@@ -54,7 +54,7 @@ class ServiceRequestContextStructure:
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    subscriber_address: str | None = field(
+    subscriber_address: None | str = field(
         default=None,
         metadata={
             "name": "SubscriberAddress",
@@ -62,7 +62,7 @@ class ServiceRequestContextStructure:
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    notify_address: str | None = field(
+    notify_address: None | str = field(
         default=None,
         metadata={
             "name": "NotifyAddress",
@@ -70,7 +70,7 @@ class ServiceRequestContextStructure:
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    consumer_address: str | None = field(
+    consumer_address: None | str = field(
         default=None,
         metadata={
             "name": "ConsumerAddress",
@@ -78,7 +78,7 @@ class ServiceRequestContextStructure:
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    data_name_spaces: DataNameSpacesStructure | None = field(
+    data_name_spaces: None | DataNameSpacesStructure = field(
         default=None,
         metadata={
             "name": "DataNameSpaces",
@@ -86,7 +86,7 @@ class ServiceRequestContextStructure:
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    language: str | None = field(
+    language: None | str = field(
         default=None,
         metadata={
             "name": "Language",
@@ -94,7 +94,7 @@ class ServiceRequestContextStructure:
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    wgs_decimal_degrees_or_gml_coordinate_format: EmptyType1 | str | None = (
+    wgs_decimal_degrees_or_gml_coordinate_format: None | EmptyType1 | str = (
         field(
             default=None,
             metadata={
@@ -114,7 +114,7 @@ class ServiceRequestContextStructure:
             },
         )
     )
-    distance_units: str | None = field(
+    distance_units: None | str = field(
         default=None,
         metadata={
             "name": "DistanceUnits",
@@ -122,7 +122,7 @@ class ServiceRequestContextStructure:
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    velocity_units: str | None = field(
+    velocity_units: None | str = field(
         default=None,
         metadata={
             "name": "VelocityUnits",
@@ -130,7 +130,7 @@ class ServiceRequestContextStructure:
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    data_horizon: XmlDuration | None = field(
+    data_horizon: None | XmlDuration = field(
         default=None,
         metadata={
             "name": "DataHorizon",
@@ -138,7 +138,7 @@ class ServiceRequestContextStructure:
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    request_timeout: XmlDuration | None = field(
+    request_timeout: None | XmlDuration = field(
         default=None,
         metadata={
             "name": "RequestTimeout",
@@ -146,7 +146,7 @@ class ServiceRequestContextStructure:
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    delivery_method: DeliveryMethodEnumeration | None = field(
+    delivery_method: None | DeliveryMethodEnumeration = field(
         default=None,
         metadata={
             "name": "DeliveryMethod",
@@ -154,7 +154,7 @@ class ServiceRequestContextStructure:
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    multipart_despatch: bool | None = field(
+    multipart_despatch: None | bool = field(
         default=None,
         metadata={
             "name": "MultipartDespatch",
@@ -162,7 +162,7 @@ class ServiceRequestContextStructure:
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    confirm_delivery: bool | None = field(
+    confirm_delivery: None | bool = field(
         default=None,
         metadata={
             "name": "ConfirmDelivery",
@@ -170,7 +170,7 @@ class ServiceRequestContextStructure:
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    maximimum_number_of_subscriptions: int | None = field(
+    maximimum_number_of_subscriptions: None | int = field(
         default=None,
         metadata={
             "name": "MaximimumNumberOfSubscriptions",
@@ -178,7 +178,7 @@ class ServiceRequestContextStructure:
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    allowed_predictors: PredictorsEnumeration | None = field(
+    allowed_predictors: None | PredictorsEnumeration = field(
         default=None,
         metadata={
             "name": "AllowedPredictors",
@@ -186,7 +186,7 @@ class ServiceRequestContextStructure:
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    prediction_function: str | None = field(
+    prediction_function: None | str = field(
         default=None,
         metadata={
             "name": "PredictionFunction",

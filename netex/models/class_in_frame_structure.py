@@ -14,7 +14,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 @dataclass
 class ClassInFrameStructure:
-    class_ref_type: ClassRefTypeEnumeration | None = field(
+    class_ref_type: None | ClassRefTypeEnumeration = field(
         default=None,
         metadata={
             "name": "ClassRefType",
@@ -22,7 +22,7 @@ class ClassInFrameStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    type_of_frame_ref: TypeOfFrameRef | None = field(
+    type_of_frame_ref: None | TypeOfFrameRef = field(
         default=None,
         metadata={
             "name": "TypeOfFrameRef",
@@ -30,7 +30,7 @@ class ClassInFrameStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    mandatory: MandatoryEnumeration | None = field(
+    mandatory: None | MandatoryEnumeration = field(
         default=None,
         metadata={
             "name": "Mandatory",
@@ -38,21 +38,21 @@ class ClassInFrameStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    attributes: ClassInFrameStructure.Attributes | None = field(
+    attributes: None | ClassInFrameStructure.Attributes = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    relationships: ClassInFrameStructure.Relationships | None = field(
+    relationships: None | ClassInFrameStructure.Relationships = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    name_of_class: str | None = field(
+    name_of_class: None | str = field(
         default=None,
         metadata={
             "name": "nameOfClass",

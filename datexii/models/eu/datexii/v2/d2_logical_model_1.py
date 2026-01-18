@@ -19,7 +19,7 @@ class D2LogicalModel1:
     class Meta:
         name = "D2LogicalModel"
 
-    exchange: Exchange | None = field(
+    exchange: None | Exchange = field(
         default=None,
         metadata={
             "type": "Element",
@@ -27,7 +27,7 @@ class D2LogicalModel1:
             "required": True,
         },
     )
-    payload_publication: PayloadPublication | None = field(
+    payload_publication: None | PayloadPublication = field(
         default=None,
         metadata={
             "name": "payloadPublication",
@@ -35,7 +35,7 @@ class D2LogicalModel1:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    d2_logical_model_extension: ExtensionType | None = field(
+    d2_logical_model_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "d2LogicalModelExtension",

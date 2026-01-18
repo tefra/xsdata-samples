@@ -32,7 +32,7 @@ class FieldMap:
         name = "fieldMap"
         namespace = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
-    field_slice: FieldMap.FieldSlice | None = field(
+    field_slice: None | FieldMap.FieldSlice = field(
         default=None,
         metadata={
             "name": "fieldSlice",
@@ -47,7 +47,7 @@ class FieldMap:
             "type": "Element",
         },
     )
-    part_select: PartSelect | None = field(
+    part_select: None | PartSelect = field(
         default=None,
         metadata={
             "name": "partSelect",
@@ -61,7 +61,7 @@ class FieldMap:
             "type": "Element",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -71,21 +71,21 @@ class FieldMap:
 
     @dataclass
     class FieldSlice:
-        address_space_ref: FieldMap.FieldSlice.AddressSpaceRef | None = field(
+        address_space_ref: None | FieldMap.FieldSlice.AddressSpaceRef = field(
             default=None,
             metadata={
                 "name": "addressSpaceRef",
                 "type": "Element",
             },
         )
-        memory_map_ref: FieldMap.FieldSlice.MemoryMapRef | None = field(
+        memory_map_ref: None | FieldMap.FieldSlice.MemoryMapRef = field(
             default=None,
             metadata={
                 "name": "memoryMapRef",
                 "type": "Element",
             },
         )
-        memory_remap_ref: MemoryRemapRef | None = field(
+        memory_remap_ref: None | MemoryRemapRef = field(
             default=None,
             metadata={
                 "name": "memoryRemapRef",
@@ -99,7 +99,7 @@ class FieldMap:
                 "type": "Element",
             },
         )
-        address_block_ref: AddressBlockRef | None = field(
+        address_block_ref: None | AddressBlockRef = field(
             default=None,
             metadata={
                 "name": "addressBlockRef",
@@ -114,7 +114,7 @@ class FieldMap:
                 "type": "Element",
             },
         )
-        register_ref: RegisterRef | None = field(
+        register_ref: None | RegisterRef = field(
             default=None,
             metadata={
                 "name": "registerRef",
@@ -122,14 +122,14 @@ class FieldMap:
                 "required": True,
             },
         )
-        alternate_register_ref: AlternateRegisterRef | None = field(
+        alternate_register_ref: None | AlternateRegisterRef = field(
             default=None,
             metadata={
                 "name": "alternateRegisterRef",
                 "type": "Element",
             },
         )
-        field_ref: FieldRef | None = field(
+        field_ref: None | FieldRef = field(
             default=None,
             metadata={
                 "name": "fieldRef",
@@ -137,7 +137,7 @@ class FieldMap:
                 "required": True,
             },
         )
-        range: Range | None = field(
+        range: None | Range = field(
             default=None,
             metadata={
                 "type": "Element",
@@ -146,7 +146,7 @@ class FieldMap:
 
         @dataclass
         class AddressSpaceRef:
-            address_space_ref: str | None = field(
+            address_space_ref: None | str = field(
                 default=None,
                 metadata={
                     "name": "addressSpaceRef",
@@ -157,7 +157,7 @@ class FieldMap:
 
         @dataclass
         class MemoryMapRef:
-            memory_map_ref: str | None = field(
+            memory_map_ref: None | str = field(
                 default=None,
                 metadata={
                     "name": "memoryMapRef",
@@ -174,14 +174,14 @@ class FieldMap:
                 "required": True,
             },
         )
-        priority: int | None = field(
+        priority: None | int = field(
             default=None,
             metadata={
                 "type": "Attribute",
                 "required": True,
             },
         )
-        id: str | None = field(
+        id: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",

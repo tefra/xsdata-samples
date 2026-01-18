@@ -17,7 +17,7 @@ class AttachmentTypeSizeMeasure(MeasureType):
     class Meta:
         global_type = False
 
-    unit_code: SimpleUomAmountOfInformationCodeType | None = field(
+    unit_code: None | SimpleUomAmountOfInformationCodeType = field(
         default=None,
         metadata={
             "name": "unitCode",

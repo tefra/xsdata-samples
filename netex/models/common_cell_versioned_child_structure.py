@@ -17,7 +17,7 @@ class CommonCellVersionedChildStructure(VersionedChildStructure):
     class Meta:
         name = "CommonCell_VersionedChildStructure"
 
-    name: MultilingualString | None = field(
+    name: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "Name",
@@ -25,7 +25,7 @@ class CommonCellVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    description: MultilingualString | None = field(
+    description: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "Description",
@@ -33,7 +33,7 @@ class CommonCellVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    fare_table_ref: StandardFareTableRef | FareTableRef | None = field(
+    fare_table_ref: None | StandardFareTableRef | FareTableRef = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -51,7 +51,7 @@ class CommonCellVersionedChildStructure(VersionedChildStructure):
             ),
         },
     )
-    column_ref: FareTableColumnRefStructure | None = field(
+    column_ref: None | FareTableColumnRefStructure = field(
         default=None,
         metadata={
             "name": "ColumnRef",
@@ -59,7 +59,7 @@ class CommonCellVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    row_ref: FareTableRowRefStructure | None = field(
+    row_ref: None | FareTableRowRefStructure = field(
         default=None,
         metadata={
             "name": "RowRef",
@@ -67,7 +67,7 @@ class CommonCellVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    order: int | None = field(
+    order: None | int = field(
         default=None,
         metadata={
             "type": "Attribute",

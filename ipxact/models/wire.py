@@ -41,7 +41,7 @@ class Wire:
         name = "wire"
         namespace = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
-    qualifier: QualifierType | None = field(
+    qualifier: None | QualifierType = field(
         default=None,
         metadata={
             "type": "Element",
@@ -54,28 +54,28 @@ class Wire:
             "type": "Element",
         },
     )
-    on_initiator: Wire.OnInitiator | None = field(
+    on_initiator: None | Wire.OnInitiator = field(
         default=None,
         metadata={
             "name": "onInitiator",
             "type": "Element",
         },
     )
-    on_target: Wire.OnTarget | None = field(
+    on_target: None | Wire.OnTarget = field(
         default=None,
         metadata={
             "name": "onTarget",
             "type": "Element",
         },
     )
-    default_value: UnsignedBitVectorExpression | None = field(
+    default_value: None | UnsignedBitVectorExpression = field(
         default=None,
         metadata={
             "name": "defaultValue",
             "type": "Element",
         },
     )
-    requires_driver: RequiresDriver | None = field(
+    requires_driver: None | RequiresDriver = field(
         default=None,
         metadata={
             "name": "requiresDriver",
@@ -109,39 +109,39 @@ class Wire:
         :ivar id:
         """
 
-        group: str | None = field(
+        group: None | str = field(
             default=None,
             metadata={
                 "type": "Element",
                 "required": True,
             },
         )
-        presence: Presence | None = field(
+        presence: None | Presence = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        width: Wire.OnSystem.Width | None = field(
+        width: None | Wire.OnSystem.Width = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        direction: Direction | None = field(
+        direction: None | Direction = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mode_constraints: AbstractionDefPortConstraintsType | None = field(
+        mode_constraints: None | AbstractionDefPortConstraintsType = field(
             default=None,
             metadata={
                 "name": "modeConstraints",
                 "type": "Element",
             },
         )
-        mirrored_mode_constraints: AbstractionDefPortConstraintsType | None = (
+        mirrored_mode_constraints: None | AbstractionDefPortConstraintsType = (
             field(
                 default=None,
                 metadata={
@@ -150,7 +150,7 @@ class Wire:
                 },
             )
         )
-        id: str | None = field(
+        id: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -197,32 +197,32 @@ class Wire:
             mirrored-'mode' bus interface.
         """
 
-        presence: Presence | None = field(
+        presence: None | Presence = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        width: Wire.OnInitiator.Width | None = field(
+        width: None | Wire.OnInitiator.Width = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        direction: Direction | None = field(
+        direction: None | Direction = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mode_constraints: AbstractionDefPortConstraintsType | None = field(
+        mode_constraints: None | AbstractionDefPortConstraintsType = field(
             default=None,
             metadata={
                 "name": "modeConstraints",
                 "type": "Element",
             },
         )
-        mirrored_mode_constraints: AbstractionDefPortConstraintsType | None = (
+        mirrored_mode_constraints: None | AbstractionDefPortConstraintsType = (
             field(
                 default=None,
                 metadata={
@@ -271,32 +271,32 @@ class Wire:
             mirrored-'mode' bus interface.
         """
 
-        presence: Presence | None = field(
+        presence: None | Presence = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        width: Wire.OnTarget.Width | None = field(
+        width: None | Wire.OnTarget.Width = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        direction: Direction | None = field(
+        direction: None | Direction = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mode_constraints: AbstractionDefPortConstraintsType | None = field(
+        mode_constraints: None | AbstractionDefPortConstraintsType = field(
             default=None,
             metadata={
                 "name": "modeConstraints",
                 "type": "Element",
             },
         )
-        mirrored_mode_constraints: AbstractionDefPortConstraintsType | None = (
+        mirrored_mode_constraints: None | AbstractionDefPortConstraintsType = (
             field(
                 default=None,
                 metadata={

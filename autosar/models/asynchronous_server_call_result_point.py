@@ -99,7 +99,7 @@ class AsynchronousServerCallResultPoint:
     class Meta:
         name = "ASYNCHRONOUS-SERVER-CALL-RESULT-POINT"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -109,7 +109,7 @@ class AsynchronousServerCallResultPoint:
         },
     )
     short_name_fragments: (
-        AsynchronousServerCallResultPoint.ShortNameFragments | None
+        None | AsynchronousServerCallResultPoint.ShortNameFragments
     ) = field(
         default=None,
         metadata={
@@ -118,7 +118,7 @@ class AsynchronousServerCallResultPoint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -126,7 +126,7 @@ class AsynchronousServerCallResultPoint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -134,7 +134,7 @@ class AsynchronousServerCallResultPoint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -142,7 +142,7 @@ class AsynchronousServerCallResultPoint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -150,7 +150,7 @@ class AsynchronousServerCallResultPoint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -158,7 +158,7 @@ class AsynchronousServerCallResultPoint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: AsynchronousServerCallResultPoint.Annotations | None = field(
+    annotations: None | AsynchronousServerCallResultPoint.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -166,7 +166,7 @@ class AsynchronousServerCallResultPoint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    return_value_provision: RteApiReturnValueProvisionEnum | None = field(
+    return_value_provision: None | RteApiReturnValueProvisionEnum = field(
         default=None,
         metadata={
             "name": "RETURN-VALUE-PROVISION",
@@ -175,7 +175,7 @@ class AsynchronousServerCallResultPoint:
         },
     )
     asynchronous_server_call_point_ref: (
-        AsynchronousServerCallResultPoint.AsynchronousServerCallPointRef | None
+        None | AsynchronousServerCallResultPoint.AsynchronousServerCallPointRef
     ) = field(
         default=None,
         metadata={
@@ -184,7 +184,7 @@ class AsynchronousServerCallResultPoint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -192,14 +192,14 @@ class AsynchronousServerCallResultPoint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -207,7 +207,7 @@ class AsynchronousServerCallResultPoint:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -239,7 +239,7 @@ class AsynchronousServerCallResultPoint:
 
     @dataclass
     class AsynchronousServerCallPointRef(Ref):
-        dest: AsynchronousServerCallPointSubtypesEnum | None = field(
+        dest: None | AsynchronousServerCallPointSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

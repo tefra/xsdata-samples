@@ -39,7 +39,7 @@ class Compu:
     class Meta:
         name = "COMPU"
 
-    compu_scales: Compu.CompuScales | None = field(
+    compu_scales: None | Compu.CompuScales = field(
         default=None,
         metadata={
             "name": "COMPU-SCALES",
@@ -47,7 +47,7 @@ class Compu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    compu_default_value: CompuConst | None = field(
+    compu_default_value: None | CompuConst = field(
         default=None,
         metadata={
             "name": "COMPU-DEFAULT-VALUE",
@@ -55,14 +55,14 @@ class Compu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

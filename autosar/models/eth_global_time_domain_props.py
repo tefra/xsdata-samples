@@ -48,7 +48,7 @@ class EthGlobalTimeDomainProps:
     class Meta:
         name = "ETH-GLOBAL-TIME-DOMAIN-PROPS"
 
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -56,7 +56,7 @@ class EthGlobalTimeDomainProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    crc_flags: EthTSynCrcFlags | None = field(
+    crc_flags: None | EthTSynCrcFlags = field(
         default=None,
         metadata={
             "name": "CRC-FLAGS",
@@ -64,7 +64,7 @@ class EthGlobalTimeDomainProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    destination_physical_address: MacAddressString | None = field(
+    destination_physical_address: None | MacAddressString = field(
         default=None,
         metadata={
             "name": "DESTINATION-PHYSICAL-ADDRESS",
@@ -72,7 +72,7 @@ class EthGlobalTimeDomainProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    fup_data_id_lists: EthGlobalTimeDomainProps.FupDataIdLists | None = field(
+    fup_data_id_lists: None | EthGlobalTimeDomainProps.FupDataIdLists = field(
         default=None,
         metadata={
             "name": "FUP-DATA-ID-LISTS",
@@ -81,7 +81,7 @@ class EthGlobalTimeDomainProps:
         },
     )
     managed_coupling_ports: (
-        EthGlobalTimeDomainProps.ManagedCouplingPorts | None
+        None | EthGlobalTimeDomainProps.ManagedCouplingPorts
     ) = field(
         default=None,
         metadata={
@@ -90,7 +90,7 @@ class EthGlobalTimeDomainProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    message_compliance: EthGlobalTimeMessageFormatEnum | None = field(
+    message_compliance: None | EthGlobalTimeMessageFormatEnum = field(
         default=None,
         metadata={
             "name": "MESSAGE-COMPLIANCE",
@@ -98,7 +98,7 @@ class EthGlobalTimeDomainProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    vlan_priority: PositiveInteger | None = field(
+    vlan_priority: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "VLAN-PRIORITY",
@@ -106,14 +106,14 @@ class EthGlobalTimeDomainProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

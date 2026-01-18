@@ -87,7 +87,7 @@ class DiagnosticInfoType:
     class Meta:
         name = "DIAGNOSTIC-INFO-TYPE"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -96,7 +96,7 @@ class DiagnosticInfoType:
             "required": True,
         },
     )
-    short_name_fragments: DiagnosticInfoType.ShortNameFragments | None = field(
+    short_name_fragments: None | DiagnosticInfoType.ShortNameFragments = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -104,7 +104,7 @@ class DiagnosticInfoType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -112,7 +112,7 @@ class DiagnosticInfoType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -120,7 +120,7 @@ class DiagnosticInfoType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -128,7 +128,7 @@ class DiagnosticInfoType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -136,7 +136,7 @@ class DiagnosticInfoType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -144,7 +144,7 @@ class DiagnosticInfoType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: DiagnosticInfoType.Annotations | None = field(
+    annotations: None | DiagnosticInfoType.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -152,7 +152,7 @@ class DiagnosticInfoType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -160,7 +160,7 @@ class DiagnosticInfoType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    data_elements: DiagnosticInfoType.DataElements | None = field(
+    data_elements: None | DiagnosticInfoType.DataElements = field(
         default=None,
         metadata={
             "name": "DATA-ELEMENTS",
@@ -168,7 +168,7 @@ class DiagnosticInfoType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    id: PositiveInteger | None = field(
+    id: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "ID",
@@ -176,14 +176,14 @@ class DiagnosticInfoType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -191,7 +191,7 @@ class DiagnosticInfoType:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",

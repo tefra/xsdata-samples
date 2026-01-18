@@ -28,7 +28,7 @@ class WireTypeDef:
         name = "wireTypeDef"
         namespace = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
-    type_name: WireTypeDef.TypeName | None = field(
+    type_name: None | WireTypeDef.TypeName = field(
         default=None,
         metadata={
             "name": "typeName",
@@ -49,7 +49,7 @@ class WireTypeDef:
             "type": "Element",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -87,7 +87,7 @@ class WireTypeDef:
                 "required": True,
             },
         )
-        id: str | None = field(
+        id: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -103,7 +103,7 @@ class WireTypeDef:
                 "required": True,
             },
         )
-        id: str | None = field(
+        id: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",

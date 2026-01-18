@@ -15,7 +15,7 @@ class CarModelProfileVersionStructure(VehicleModelProfileVersionStructure):
     class Meta:
         name = "CarModelProfile_VersionStructure"
 
-    seats: int | None = field(
+    seats: None | int = field(
         default=None,
         metadata={
             "name": "Seats",
@@ -23,7 +23,7 @@ class CarModelProfileVersionStructure(VehicleModelProfileVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    doors: int | None = field(
+    doors: None | int = field(
         default=None,
         metadata={
             "name": "Doors",
@@ -31,7 +31,7 @@ class CarModelProfileVersionStructure(VehicleModelProfileVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    transmission: TransmissionEnumeration | None = field(
+    transmission: None | TransmissionEnumeration = field(
         default=None,
         metadata={
             "name": "Transmission",
@@ -39,7 +39,7 @@ class CarModelProfileVersionStructure(VehicleModelProfileVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    cruise_control: bool | None = field(
+    cruise_control: None | bool = field(
         default=None,
         metadata={
             "name": "CruiseControl",
@@ -47,7 +47,7 @@ class CarModelProfileVersionStructure(VehicleModelProfileVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    sat_nav: bool | None = field(
+    sat_nav: None | bool = field(
         default=None,
         metadata={
             "name": "SatNav",
@@ -55,7 +55,7 @@ class CarModelProfileVersionStructure(VehicleModelProfileVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    air_conditioning: bool | None = field(
+    air_conditioning: None | bool = field(
         default=None,
         metadata={
             "name": "AirConditioning",
@@ -63,7 +63,7 @@ class CarModelProfileVersionStructure(VehicleModelProfileVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    convertible: bool | None = field(
+    convertible: None | bool = field(
         default=None,
         metadata={
             "name": "Convertible",
@@ -71,7 +71,7 @@ class CarModelProfileVersionStructure(VehicleModelProfileVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    usb_power_sockets: bool | None = field(
+    usb_power_sockets: None | bool = field(
         default=None,
         metadata={
             "name": "UsbPowerSockets",
@@ -79,7 +79,7 @@ class CarModelProfileVersionStructure(VehicleModelProfileVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    winter_tyres: bool | None = field(
+    winter_tyres: None | bool = field(
         default=None,
         metadata={
             "name": "WinterTyres",
@@ -87,7 +87,7 @@ class CarModelProfileVersionStructure(VehicleModelProfileVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    chains: bool | None = field(
+    chains: None | bool = field(
         default=None,
         metadata={
             "name": "Chains",
@@ -95,7 +95,7 @@ class CarModelProfileVersionStructure(VehicleModelProfileVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    trailer_hitch: bool | None = field(
+    trailer_hitch: None | bool = field(
         default=None,
         metadata={
             "name": "TrailerHitch",
@@ -103,7 +103,7 @@ class CarModelProfileVersionStructure(VehicleModelProfileVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    roof_rack: bool | None = field(
+    roof_rack: None | bool = field(
         default=None,
         metadata={
             "name": "RoofRack",
@@ -111,7 +111,7 @@ class CarModelProfileVersionStructure(VehicleModelProfileVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    cycle_rack: bool | None = field(
+    cycle_rack: None | bool = field(
         default=None,
         metadata={
             "name": "CycleRack",
@@ -119,7 +119,7 @@ class CarModelProfileVersionStructure(VehicleModelProfileVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    ski_rack: bool | None = field(
+    ski_rack: None | bool = field(
         default=None,
         metadata={
             "name": "SkiRack",

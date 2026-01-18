@@ -40,7 +40,7 @@ class CanCommunicationControllerConditional:
     class Meta:
         name = "CAN-COMMUNICATION-CONTROLLER-CONDITIONAL"
 
-    wake_up_by_controller_supported: Boolean | None = field(
+    wake_up_by_controller_supported: None | Boolean = field(
         default=None,
         metadata={
             "name": "WAKE-UP-BY-CONTROLLER-SUPPORTED",
@@ -49,7 +49,7 @@ class CanCommunicationControllerConditional:
         },
     )
     can_controller_attributes: (
-        CanCommunicationControllerConditional.CanControllerAttributes | None
+        None | CanCommunicationControllerConditional.CanControllerAttributes
     ) = field(
         default=None,
         metadata={
@@ -58,7 +58,7 @@ class CanCommunicationControllerConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -66,14 +66,14 @@ class CanCommunicationControllerConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -84,7 +84,7 @@ class CanCommunicationControllerConditional:
 
     @dataclass
     class CanControllerAttributes:
-        can_controller_configuration: CanControllerConfiguration | None = (
+        can_controller_configuration: None | CanControllerConfiguration = (
             field(
                 default=None,
                 metadata={
@@ -95,7 +95,7 @@ class CanCommunicationControllerConditional:
             )
         )
         can_controller_configuration_requirements: (
-            CanControllerConfigurationRequirements | None
+            None | CanControllerConfigurationRequirements
         ) = field(
             default=None,
             metadata={

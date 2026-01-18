@@ -33,7 +33,7 @@ class BusMirrorCanIdToCanIdMapping:
     class Meta:
         name = "BUS-MIRROR-CAN-ID-TO-CAN-ID-MAPPING"
 
-    remapped_can_id: PositiveInteger | None = field(
+    remapped_can_id: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "REMAPPED-CAN-ID",
@@ -41,7 +41,7 @@ class BusMirrorCanIdToCanIdMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    souce_can_id_ref: BusMirrorCanIdToCanIdMapping.SouceCanIdRef | None = (
+    souce_can_id_ref: None | BusMirrorCanIdToCanIdMapping.SouceCanIdRef = (
         field(
             default=None,
             metadata={
@@ -51,14 +51,14 @@ class BusMirrorCanIdToCanIdMapping:
             },
         )
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -69,7 +69,7 @@ class BusMirrorCanIdToCanIdMapping:
 
     @dataclass
     class SouceCanIdRef(Ref):
-        dest: CanFrameTriggeringSubtypesEnum | None = field(
+        dest: None | CanFrameTriggeringSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

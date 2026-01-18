@@ -24,7 +24,7 @@ class Name:
         name = "name"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    surname: Surname | None = field(
+    surname: None | Surname = field(
         default=None,
         metadata={
             "type": "Element",
@@ -41,26 +41,26 @@ class Name:
             "sequence": 1,
         },
     )
-    prefix: Prefix | None = field(
+    prefix: None | Prefix = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    suffix: Suffix | None = field(
+    suffix: None | Suffix = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    content_type: str | None = field(
+    content_type: None | str = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -73,21 +73,21 @@ class Name:
             "type": "Attribute",
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",

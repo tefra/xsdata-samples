@@ -41,7 +41,7 @@ class SignalIPduReplication:
     class Meta:
         name = "SIGNAL-I-PDU-REPLICATION"
 
-    pdu_replication_voting: Integer | None = field(
+    pdu_replication_voting: None | Integer = field(
         default=None,
         metadata={
             "name": "PDU-REPLICATION-VOTING",
@@ -49,7 +49,7 @@ class SignalIPduReplication:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    replica_pdus_refs: SignalIPduReplication.ReplicaPdusRefs | None = field(
+    replica_pdus_refs: None | SignalIPduReplication.ReplicaPdusRefs = field(
         default=None,
         metadata={
             "name": "REPLICA-PDUS-REFS",
@@ -57,7 +57,7 @@ class SignalIPduReplication:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -65,14 +65,14 @@ class SignalIPduReplication:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -97,7 +97,7 @@ class SignalIPduReplication:
 
         @dataclass
         class ReplicaPdusRef(Ref):
-            dest: ISignalIPduSubtypesEnum | None = field(
+            dest: None | ISignalIPduSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",

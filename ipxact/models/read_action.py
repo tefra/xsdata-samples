@@ -22,13 +22,13 @@ class ReadAction:
         name = "readAction"
         namespace = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
-    value: ReadActionType | None = field(
+    value: None | ReadActionType = field(
         default=None,
         metadata={
             "required": True,
         },
     )
-    modify: str | None = field(
+    modify: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",

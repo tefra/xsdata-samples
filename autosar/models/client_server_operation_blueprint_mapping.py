@@ -45,7 +45,7 @@ class ClientServerOperationBlueprintMapping:
     class Meta:
         name = "CLIENT-SERVER-OPERATION-BLUEPRINT-MAPPING"
 
-    blueprint_mapping_guide: DocumentationBlock | None = field(
+    blueprint_mapping_guide: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "BLUEPRINT-MAPPING-GUIDE",
@@ -54,7 +54,7 @@ class ClientServerOperationBlueprintMapping:
         },
     )
     bsw_module_entry_ref: (
-        ClientServerOperationBlueprintMapping.BswModuleEntryRef | None
+        None | ClientServerOperationBlueprintMapping.BswModuleEntryRef
     ) = field(
         default=None,
         metadata={
@@ -64,7 +64,7 @@ class ClientServerOperationBlueprintMapping:
         },
     )
     client_server_operation_ref: (
-        ClientServerOperationBlueprintMapping.ClientServerOperationRef | None
+        None | ClientServerOperationBlueprintMapping.ClientServerOperationRef
     ) = field(
         default=None,
         metadata={
@@ -73,7 +73,7 @@ class ClientServerOperationBlueprintMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -81,14 +81,14 @@ class ClientServerOperationBlueprintMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -99,7 +99,7 @@ class ClientServerOperationBlueprintMapping:
 
     @dataclass
     class BswModuleEntryRef(Ref):
-        dest: BswModuleEntrySubtypesEnum | None = field(
+        dest: None | BswModuleEntrySubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -110,7 +110,7 @@ class ClientServerOperationBlueprintMapping:
 
     @dataclass
     class ClientServerOperationRef(Ref):
-        dest: ClientServerOperationSubtypesEnum | None = field(
+        dest: None | ClientServerOperationSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

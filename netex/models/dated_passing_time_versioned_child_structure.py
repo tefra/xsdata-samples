@@ -17,7 +17,7 @@ class DatedPassingTimeVersionedChildStructure(
     class Meta:
         name = "DatedPassingTime_VersionedChildStructure"
 
-    dated_journey_ref: JourneyRefStructure | None = field(
+    dated_journey_ref: None | JourneyRefStructure = field(
         default=None,
         metadata={
             "name": "DatedJourneyRef",

@@ -14,11 +14,11 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 @dataclass
 class JourneyPatternLayoverStructure(JourneyLayoverStructure):
     journey_pattern_ref: (
-        ServiceJourneyPatternRef
+        None
+        | ServiceJourneyPatternRef
         | ServicePatternRef
         | DeadRunJourneyPatternRef
         | JourneyPatternRef
-        | None
     ) = field(
         default=None,
         metadata={

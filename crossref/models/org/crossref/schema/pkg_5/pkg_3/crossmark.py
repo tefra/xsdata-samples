@@ -46,13 +46,13 @@ class Crossmark:
         name = "crossmark"
         namespace = "http://www.crossref.org/schema/5.3.1"
 
-    crossmark_version: CrossmarkVersion | None = field(
+    crossmark_version: None | CrossmarkVersion = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    crossmark_policy: CrossmarkPolicy | None = field(
+    crossmark_policy: None | CrossmarkPolicy = field(
         default=None,
         metadata={
             "type": "Element",
@@ -64,19 +64,19 @@ class Crossmark:
             "type": "Element",
         },
     )
-    crossmark_domain_exclusive: CrossmarkDomainExclusive | None = field(
+    crossmark_domain_exclusive: None | CrossmarkDomainExclusive = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    updates: Updates | None = field(
+    updates: None | Updates = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    custom_metadata: CustomMetadata | None = field(
+    custom_metadata: None | CustomMetadata = field(
         default=None,
         metadata={
             "type": "Element",

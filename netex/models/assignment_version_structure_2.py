@@ -13,7 +13,7 @@ class AssignmentVersionStructure2(DataManagedObjectStructure):
     class Meta:
         name = "Assignment_VersionStructure_"
 
-    name: MultilingualString | None = field(
+    name: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "Name",
@@ -21,7 +21,7 @@ class AssignmentVersionStructure2(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    description: MultilingualString | None = field(
+    description: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "Description",
@@ -29,7 +29,7 @@ class AssignmentVersionStructure2(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    order: int | None = field(
+    order: None | int = field(
         default=None,
         metadata={
             "type": "Attribute",

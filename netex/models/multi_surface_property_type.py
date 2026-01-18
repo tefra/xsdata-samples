@@ -10,7 +10,7 @@ __NAMESPACE__ = "http://www.opengis.net/gml/3.2"
 
 @dataclass
 class MultiSurfacePropertyType:
-    multi_surface: MultiSurface | None = field(
+    multi_surface: None | MultiSurface = field(
         default=None,
         metadata={
             "name": "MultiSurface",
@@ -18,7 +18,7 @@ class MultiSurfacePropertyType:
             "namespace": "http://www.opengis.net/gml/3.2",
         },
     )
-    nil_reason: str | NilReasonEnumerationValue | None = field(
+    nil_reason: None | str | NilReasonEnumerationValue = field(
         default=None,
         metadata={
             "name": "nilReason",

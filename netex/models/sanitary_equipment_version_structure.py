@@ -22,7 +22,7 @@ class SanitaryEquipmentVersionStructure(PassengerEquipmentVersionStructure):
     class Meta:
         name = "SanitaryEquipment_VersionStructure"
 
-    accessibility_assessment: AccessibilityAssessment | None = field(
+    accessibility_assessment: None | AccessibilityAssessment = field(
         default=None,
         metadata={
             "name": "AccessibilityAssessment",
@@ -30,7 +30,7 @@ class SanitaryEquipmentVersionStructure(PassengerEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    gender: GenderLimitationEnumeration | None = field(
+    gender: None | GenderLimitationEnumeration = field(
         default=None,
         metadata={
             "name": "Gender",
@@ -38,7 +38,7 @@ class SanitaryEquipmentVersionStructure(PassengerEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    sanitary_facility_list: SanitaryFacilityList | None = field(
+    sanitary_facility_list: None | SanitaryFacilityList = field(
         default=None,
         metadata={
             "name": "SanitaryFacilityList",
@@ -46,7 +46,7 @@ class SanitaryEquipmentVersionStructure(PassengerEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    number_of_toilets: int | None = field(
+    number_of_toilets: None | int = field(
         default=None,
         metadata={
             "name": "NumberOfToilets",
@@ -54,7 +54,7 @@ class SanitaryEquipmentVersionStructure(PassengerEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    free_to_use: bool | None = field(
+    free_to_use: None | bool = field(
         default=None,
         metadata={
             "name": "FreeToUse",
@@ -62,7 +62,7 @@ class SanitaryEquipmentVersionStructure(PassengerEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    charge: Decimal | None = field(
+    charge: None | Decimal = field(
         default=None,
         metadata={
             "name": "Charge",
@@ -70,7 +70,7 @@ class SanitaryEquipmentVersionStructure(PassengerEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    currency: str | None = field(
+    currency: None | str = field(
         default=None,
         metadata={
             "name": "Currency",
@@ -90,7 +90,7 @@ class SanitaryEquipmentVersionStructure(PassengerEquipmentVersionStructure):
             "tokens": True,
         },
     )
-    change_available: bool | None = field(
+    change_available: None | bool = field(
         default=None,
         metadata={
             "name": "ChangeAvailable",
@@ -98,7 +98,7 @@ class SanitaryEquipmentVersionStructure(PassengerEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    wheelchair_turning_circle: Decimal | None = field(
+    wheelchair_turning_circle: None | Decimal = field(
         default=None,
         metadata={
             "name": "WheelchairTurningCircle",
@@ -106,7 +106,7 @@ class SanitaryEquipmentVersionStructure(PassengerEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    support_bar_height: Decimal | None = field(
+    support_bar_height: None | Decimal = field(
         default=None,
         metadata={
             "name": "SupportBarHeight",
@@ -114,7 +114,7 @@ class SanitaryEquipmentVersionStructure(PassengerEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    call_button_available: bool | None = field(
+    call_button_available: None | bool = field(
         default=None,
         metadata={
             "name": "CallButtonAvailable",
@@ -122,7 +122,7 @@ class SanitaryEquipmentVersionStructure(PassengerEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    sharps_disposal: bool | None = field(
+    sharps_disposal: None | bool = field(
         default=None,
         metadata={
             "name": "SharpsDisposal",
@@ -130,7 +130,7 @@ class SanitaryEquipmentVersionStructure(PassengerEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    staffing: StaffingEnumeration | None = field(
+    staffing: None | StaffingEnumeration = field(
         default=None,
         metadata={
             "name": "Staffing",
@@ -138,7 +138,7 @@ class SanitaryEquipmentVersionStructure(PassengerEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    locked_access: bool | None = field(
+    locked_access: None | bool = field(
         default=None,
         metadata={
             "name": "LockedAccess",
@@ -146,7 +146,7 @@ class SanitaryEquipmentVersionStructure(PassengerEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    key_scheme: str | None = field(
+    key_scheme: None | str = field(
         default=None,
         metadata={
             "name": "KeyScheme",
@@ -154,7 +154,7 @@ class SanitaryEquipmentVersionStructure(PassengerEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    hand_washing: bool | None = field(
+    hand_washing: None | bool = field(
         default=None,
         metadata={
             "name": "HandWashing",
@@ -162,7 +162,7 @@ class SanitaryEquipmentVersionStructure(PassengerEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    drinking_water: bool | None = field(
+    drinking_water: None | bool = field(
         default=None,
         metadata={
             "name": "DrinkingWater",
@@ -170,7 +170,7 @@ class SanitaryEquipmentVersionStructure(PassengerEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    toilets_type: ToiletsTypeEnumeration | None = field(
+    toilets_type: None | ToiletsTypeEnumeration = field(
         default=None,
         metadata={
             "name": "ToiletsType",

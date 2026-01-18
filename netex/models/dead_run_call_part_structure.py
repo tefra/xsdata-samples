@@ -13,7 +13,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 @dataclass
 class DeadRunCallPartStructure:
-    time: XmlTime | None = field(
+    time: None | XmlTime = field(
         default=None,
         metadata={
             "name": "Time",
@@ -21,7 +21,7 @@ class DeadRunCallPartStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    day_offset: int | None = field(
+    day_offset: None | int = field(
         default=None,
         metadata={
             "name": "DayOffset",
@@ -29,7 +29,7 @@ class DeadRunCallPartStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    wait_time: XmlDuration | None = field(
+    wait_time: None | XmlDuration = field(
         default=None,
         metadata={
             "name": "WaitTime",
@@ -37,7 +37,7 @@ class DeadRunCallPartStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    journey_part_ref: JourneyPartRef | None = field(
+    journey_part_ref: None | JourneyPartRef = field(
         default=None,
         metadata={
             "name": "JourneyPartRef",
@@ -45,7 +45,7 @@ class DeadRunCallPartStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    time_demand_type_ref: TimeDemandTypeRef | None = field(
+    time_demand_type_ref: None | TimeDemandTypeRef = field(
         default=None,
         metadata={
             "name": "TimeDemandTypeRef",
@@ -53,7 +53,7 @@ class DeadRunCallPartStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    duty_part_ref: DutyPartRef | None = field(
+    duty_part_ref: None | DutyPartRef = field(
         default=None,
         metadata={
             "name": "DutyPartRef",

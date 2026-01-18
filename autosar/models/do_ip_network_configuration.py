@@ -75,7 +75,7 @@ class DoIpNetworkConfiguration:
     class Meta:
         name = "DO-IP-NETWORK-CONFIGURATION"
 
-    eid_use_mac: Boolean | None = field(
+    eid_use_mac: None | Boolean = field(
         default=None,
         metadata={
             "name": "EID-USE-MAC",
@@ -83,7 +83,7 @@ class DoIpNetworkConfiguration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    is_activation_line_dependent: Boolean | None = field(
+    is_activation_line_dependent: None | Boolean = field(
         default=None,
         metadata={
             "name": "IS-ACTIVATION-LINE-DEPENDENT",
@@ -91,7 +91,7 @@ class DoIpNetworkConfiguration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    max_initial_vehicle_announcement_time: TimeValue | None = field(
+    max_initial_vehicle_announcement_time: None | TimeValue = field(
         default=None,
         metadata={
             "name": "MAX-INITIAL-VEHICLE-ANNOUNCEMENT-TIME",
@@ -99,7 +99,7 @@ class DoIpNetworkConfiguration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    max_tester_connections: PositiveInteger | None = field(
+    max_tester_connections: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "MAX-TESTER-CONNECTIONS",
@@ -108,7 +108,7 @@ class DoIpNetworkConfiguration:
         },
     )
     network_configuration_ref: (
-        DoIpNetworkConfiguration.NetworkConfigurationRef | None
+        None | DoIpNetworkConfiguration.NetworkConfigurationRef
     ) = field(
         default=None,
         metadata={
@@ -117,7 +117,7 @@ class DoIpNetworkConfiguration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    network_interface_id: PositiveInteger | None = field(
+    network_interface_id: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "NETWORK-INTERFACE-ID",
@@ -125,7 +125,7 @@ class DoIpNetworkConfiguration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tcp_alive_check_response_timeout: TimeValue | None = field(
+    tcp_alive_check_response_timeout: None | TimeValue = field(
         default=None,
         metadata={
             "name": "TCP-ALIVE-CHECK-RESPONSE-TIMEOUT",
@@ -133,7 +133,7 @@ class DoIpNetworkConfiguration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tcp_general_inactivity_time: TimeValue | None = field(
+    tcp_general_inactivity_time: None | TimeValue = field(
         default=None,
         metadata={
             "name": "TCP-GENERAL-INACTIVITY-TIME",
@@ -141,7 +141,7 @@ class DoIpNetworkConfiguration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tcp_initial_inactivity_time: TimeValue | None = field(
+    tcp_initial_inactivity_time: None | TimeValue = field(
         default=None,
         metadata={
             "name": "TCP-INITIAL-INACTIVITY-TIME",
@@ -149,7 +149,7 @@ class DoIpNetworkConfiguration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    vehicle_announcement_count: PositiveInteger | None = field(
+    vehicle_announcement_count: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "VEHICLE-ANNOUNCEMENT-COUNT",
@@ -157,7 +157,7 @@ class DoIpNetworkConfiguration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    vehicle_announcement_interval: TimeValue | None = field(
+    vehicle_announcement_interval: None | TimeValue = field(
         default=None,
         metadata={
             "name": "VEHICLE-ANNOUNCEMENT-INTERVAL",
@@ -165,7 +165,7 @@ class DoIpNetworkConfiguration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    vehicle_identification_sync_status: Boolean | None = field(
+    vehicle_identification_sync_status: None | Boolean = field(
         default=None,
         metadata={
             "name": "VEHICLE-IDENTIFICATION-SYNC-STATUS",
@@ -173,14 +173,14 @@ class DoIpNetworkConfiguration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -192,7 +192,7 @@ class DoIpNetworkConfiguration:
     @dataclass
     class NetworkConfigurationRef(Ref):
         dest: (
-            PlatformModuleEthernetEndpointConfigurationSubtypesEnum | None
+            None | PlatformModuleEthernetEndpointConfigurationSubtypesEnum
         ) = field(
             default=None,
             metadata={

@@ -17,7 +17,7 @@ class TrainInCompoundTrainVersionedChildStructure(VersionedChildStructure):
     class Meta:
         name = "TrainInCompoundTrain_VersionedChildStructure"
 
-    description: MultilingualString | None = field(
+    description: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "Description",
@@ -25,7 +25,7 @@ class TrainInCompoundTrainVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    compound_train_ref: CompoundTrainRef | None = field(
+    compound_train_ref: None | CompoundTrainRef = field(
         default=None,
         metadata={
             "name": "CompoundTrainRef",
@@ -33,7 +33,7 @@ class TrainInCompoundTrainVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    train_ref_or_train: TrainRef | Train | None = field(
+    train_ref_or_train: None | TrainRef | Train = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -51,7 +51,7 @@ class TrainInCompoundTrainVersionedChildStructure(VersionedChildStructure):
             ),
         },
     )
-    label: MultilingualString | None = field(
+    label: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "Label",
@@ -59,7 +59,7 @@ class TrainInCompoundTrainVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    operational_orientation: VehicleOrientationEnumeration | None = field(
+    operational_orientation: None | VehicleOrientationEnumeration = field(
         default=None,
         metadata={
             "name": "OperationalOrientation",
@@ -67,7 +67,7 @@ class TrainInCompoundTrainVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    reversed_orientation: bool | None = field(
+    reversed_orientation: None | bool = field(
         default=None,
         metadata={
             "name": "ReversedOrientation",
@@ -75,7 +75,7 @@ class TrainInCompoundTrainVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    order: int | None = field(
+    order: None | int = field(
         default=None,
         metadata={
             "type": "Attribute",

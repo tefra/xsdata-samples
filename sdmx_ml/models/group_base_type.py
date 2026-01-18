@@ -29,7 +29,7 @@ class GroupBaseType(ComponentListType):
             "type": "Ignore",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",

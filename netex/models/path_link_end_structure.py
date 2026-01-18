@@ -11,7 +11,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 @dataclass
 class PathLinkEndStructure:
-    place_ref: PlaceRefStructure | None = field(
+    place_ref: None | PlaceRefStructure = field(
         default=None,
         metadata={
             "name": "PlaceRef",
@@ -20,7 +20,7 @@ class PathLinkEndStructure:
             "required": True,
         },
     )
-    level_ref: LevelRefStructure | None = field(
+    level_ref: None | LevelRefStructure = field(
         default=None,
         metadata={
             "name": "LevelRef",
@@ -28,7 +28,7 @@ class PathLinkEndStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    entrance_ref: EntranceRefStructure | None = field(
+    entrance_ref: None | EntranceRefStructure = field(
         default=None,
         metadata={
             "name": "EntranceRef",

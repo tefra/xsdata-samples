@@ -77,7 +77,7 @@ class DataPrototypeMapping:
         name = "DATA-PROTOTYPE-MAPPING"
 
     first_data_prototype_ref: (
-        DataPrototypeMapping.FirstDataPrototypeRef | None
+        None | DataPrototypeMapping.FirstDataPrototypeRef
     ) = field(
         default=None,
         metadata={
@@ -87,7 +87,7 @@ class DataPrototypeMapping:
         },
     )
     first_to_second_data_transformation_ref: (
-        DataPrototypeMapping.FirstToSecondDataTransformationRef | None
+        None | DataPrototypeMapping.FirstToSecondDataTransformationRef
     ) = field(
         default=None,
         metadata={
@@ -97,7 +97,7 @@ class DataPrototypeMapping:
         },
     )
     second_data_prototype_ref: (
-        DataPrototypeMapping.SecondDataPrototypeRef | None
+        None | DataPrototypeMapping.SecondDataPrototypeRef
     ) = field(
         default=None,
         metadata={
@@ -107,7 +107,7 @@ class DataPrototypeMapping:
         },
     )
     second_to_first_data_transformation_ref: (
-        DataPrototypeMapping.SecondToFirstDataTransformationRef | None
+        None | DataPrototypeMapping.SecondToFirstDataTransformationRef
     ) = field(
         default=None,
         metadata={
@@ -116,7 +116,7 @@ class DataPrototypeMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sub_element_mappings: DataPrototypeMapping.SubElementMappings | None = (
+    sub_element_mappings: None | DataPrototypeMapping.SubElementMappings = (
         field(
             default=None,
             metadata={
@@ -126,7 +126,7 @@ class DataPrototypeMapping:
             },
         )
     )
-    text_table_mappings: DataPrototypeMapping.TextTableMappings | None = field(
+    text_table_mappings: None | DataPrototypeMapping.TextTableMappings = field(
         default=None,
         metadata={
             "name": "TEXT-TABLE-MAPPINGS",
@@ -134,14 +134,14 @@ class DataPrototypeMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -152,7 +152,7 @@ class DataPrototypeMapping:
 
     @dataclass
     class FirstDataPrototypeRef(Ref):
-        dest: AutosarDataPrototypeSubtypesEnum | None = field(
+        dest: None | AutosarDataPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -163,7 +163,7 @@ class DataPrototypeMapping:
 
     @dataclass
     class FirstToSecondDataTransformationRef(Ref):
-        dest: DataTransformationSubtypesEnum | None = field(
+        dest: None | DataTransformationSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -174,7 +174,7 @@ class DataPrototypeMapping:
 
     @dataclass
     class SecondDataPrototypeRef(Ref):
-        dest: AutosarDataPrototypeSubtypesEnum | None = field(
+        dest: None | AutosarDataPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -185,7 +185,7 @@ class DataPrototypeMapping:
 
     @dataclass
     class SecondToFirstDataTransformationRef(Ref):
-        dest: DataTransformationSubtypesEnum | None = field(
+        dest: None | DataTransformationSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

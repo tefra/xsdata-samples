@@ -99,7 +99,7 @@ class LinTpConnection:
     class Meta:
         name = "LIN-TP-CONNECTION"
 
-    ident: TpConnectionIdent | None = field(
+    ident: None | TpConnectionIdent = field(
         default=None,
         metadata={
             "name": "IDENT",
@@ -107,7 +107,7 @@ class LinTpConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    data_pdu_ref: LinTpConnection.DataPduRef | None = field(
+    data_pdu_ref: None | LinTpConnection.DataPduRef = field(
         default=None,
         metadata={
             "name": "DATA-PDU-REF",
@@ -115,7 +115,7 @@ class LinTpConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    drop_not_requested_nad: Boolean | None = field(
+    drop_not_requested_nad: None | Boolean = field(
         default=None,
         metadata={
             "name": "DROP-NOT-REQUESTED-NAD",
@@ -123,7 +123,7 @@ class LinTpConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    flow_control_ref: LinTpConnection.FlowControlRef | None = field(
+    flow_control_ref: None | LinTpConnection.FlowControlRef = field(
         default=None,
         metadata={
             "name": "FLOW-CONTROL-REF",
@@ -131,7 +131,7 @@ class LinTpConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    lin_tp_n_sdu_ref: LinTpConnection.LinTpNSduRef | None = field(
+    lin_tp_n_sdu_ref: None | LinTpConnection.LinTpNSduRef = field(
         default=None,
         metadata={
             "name": "LIN-TP-N-SDU-REF",
@@ -139,7 +139,7 @@ class LinTpConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    max_number_of_resp_pending_frames: PositiveInteger | None = field(
+    max_number_of_resp_pending_frames: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "MAX-NUMBER-OF-RESP-PENDING-FRAMES",
@@ -147,7 +147,7 @@ class LinTpConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    multicast_ref: LinTpConnection.MulticastRef | None = field(
+    multicast_ref: None | LinTpConnection.MulticastRef = field(
         default=None,
         metadata={
             "name": "MULTICAST-REF",
@@ -155,7 +155,7 @@ class LinTpConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    p_2_max: TimeValue | None = field(
+    p_2_max: None | TimeValue = field(
         default=None,
         metadata={
             "name": "P-2-MAX",
@@ -163,7 +163,7 @@ class LinTpConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    p_2_timing: TimeValue | None = field(
+    p_2_timing: None | TimeValue = field(
         default=None,
         metadata={
             "name": "P-2-TIMING",
@@ -171,7 +171,7 @@ class LinTpConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    receiver_refs: LinTpConnection.ReceiverRefs | None = field(
+    receiver_refs: None | LinTpConnection.ReceiverRefs = field(
         default=None,
         metadata={
             "name": "RECEIVER-REFS",
@@ -179,7 +179,7 @@ class LinTpConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    timeout_as: TimeValue | None = field(
+    timeout_as: None | TimeValue = field(
         default=None,
         metadata={
             "name": "TIMEOUT-AS",
@@ -187,7 +187,7 @@ class LinTpConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    timeout_cr: TimeValue | None = field(
+    timeout_cr: None | TimeValue = field(
         default=None,
         metadata={
             "name": "TIMEOUT-CR",
@@ -195,7 +195,7 @@ class LinTpConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    timeout_cs: TimeValue | None = field(
+    timeout_cs: None | TimeValue = field(
         default=None,
         metadata={
             "name": "TIMEOUT-CS",
@@ -203,7 +203,7 @@ class LinTpConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    transmitter_ref: LinTpConnection.TransmitterRef | None = field(
+    transmitter_ref: None | LinTpConnection.TransmitterRef = field(
         default=None,
         metadata={
             "name": "TRANSMITTER-REF",
@@ -211,7 +211,7 @@ class LinTpConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -219,14 +219,14 @@ class LinTpConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -237,7 +237,7 @@ class LinTpConnection:
 
     @dataclass
     class DataPduRef(Ref):
-        dest: NPduSubtypesEnum | None = field(
+        dest: None | NPduSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -248,7 +248,7 @@ class LinTpConnection:
 
     @dataclass
     class FlowControlRef(Ref):
-        dest: NPduSubtypesEnum | None = field(
+        dest: None | NPduSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -259,7 +259,7 @@ class LinTpConnection:
 
     @dataclass
     class LinTpNSduRef(Ref):
-        dest: IPduSubtypesEnum | None = field(
+        dest: None | IPduSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -270,7 +270,7 @@ class LinTpConnection:
 
     @dataclass
     class MulticastRef(Ref):
-        dest: TpAddressSubtypesEnum | None = field(
+        dest: None | TpAddressSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -292,7 +292,7 @@ class LinTpConnection:
 
         @dataclass
         class ReceiverRef(Ref):
-            dest: LinTpNodeSubtypesEnum | None = field(
+            dest: None | LinTpNodeSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -303,7 +303,7 @@ class LinTpConnection:
 
     @dataclass
     class TransmitterRef(Ref):
-        dest: LinTpNodeSubtypesEnum | None = field(
+        dest: None | LinTpNodeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

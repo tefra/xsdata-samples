@@ -16,7 +16,7 @@ class NoticeVersionStructure(DataManagedObjectStructure):
     class Meta:
         name = "Notice_VersionStructure"
 
-    name: MultilingualString | None = field(
+    name: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "Name",
@@ -24,7 +24,7 @@ class NoticeVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    short_name: MultilingualString | None = field(
+    short_name: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "ShortName",
@@ -32,7 +32,7 @@ class NoticeVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    text: MultilingualString | None = field(
+    text: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "Text",
@@ -40,7 +40,7 @@ class NoticeVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    public_code: str | None = field(
+    public_code: None | str = field(
         default=None,
         metadata={
             "name": "PublicCode",
@@ -48,7 +48,7 @@ class NoticeVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    short_code: str | None = field(
+    short_code: None | str = field(
         default=None,
         metadata={
             "name": "ShortCode",
@@ -56,7 +56,7 @@ class NoticeVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    private_code: PrivateCode | None = field(
+    private_code: None | PrivateCode = field(
         default=None,
         metadata={
             "name": "PrivateCode",
@@ -64,7 +64,7 @@ class NoticeVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    type_of_notice_ref: TypeOfNoticeRef | None = field(
+    type_of_notice_ref: None | TypeOfNoticeRef = field(
         default=None,
         metadata={
             "name": "TypeOfNoticeRef",
@@ -72,7 +72,7 @@ class NoticeVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    can_be_advertised: bool | None = field(
+    can_be_advertised: None | bool = field(
         default=None,
         metadata={
             "name": "CanBeAdvertised",
@@ -80,7 +80,7 @@ class NoticeVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    driver_display_text: MultilingualString | None = field(
+    driver_display_text: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "DriverDisplayText",
@@ -88,7 +88,7 @@ class NoticeVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    variants: DeliveryVariantsRelStructure | None = field(
+    variants: None | DeliveryVariantsRelStructure = field(
         default=None,
         metadata={
             "type": "Element",

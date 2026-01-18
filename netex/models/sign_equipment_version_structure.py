@@ -17,7 +17,7 @@ class SignEquipmentVersionStructure(PlaceEquipmentVersionStructure):
     class Meta:
         name = "SignEquipment_VersionStructure"
 
-    height: Decimal | None = field(
+    height: None | Decimal = field(
         default=None,
         metadata={
             "name": "Height",
@@ -25,7 +25,7 @@ class SignEquipmentVersionStructure(PlaceEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    width: Decimal | None = field(
+    width: None | Decimal = field(
         default=None,
         metadata={
             "name": "Width",
@@ -33,7 +33,7 @@ class SignEquipmentVersionStructure(PlaceEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    height_from_floor: Decimal | None = field(
+    height_from_floor: None | Decimal = field(
         default=None,
         metadata={
             "name": "HeightFromFloor",
@@ -41,7 +41,7 @@ class SignEquipmentVersionStructure(PlaceEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    placement: MultilingualString | None = field(
+    placement: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "Placement",
@@ -49,7 +49,7 @@ class SignEquipmentVersionStructure(PlaceEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    brand_graphic: str | None = field(
+    brand_graphic: None | str = field(
         default=None,
         metadata={
             "name": "BrandGraphic",
@@ -57,7 +57,7 @@ class SignEquipmentVersionStructure(PlaceEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    sign_graphic: str | None = field(
+    sign_graphic: None | str = field(
         default=None,
         metadata={
             "name": "SignGraphic",
@@ -65,7 +65,7 @@ class SignEquipmentVersionStructure(PlaceEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    machine_readable: bool | None = field(
+    machine_readable: None | bool = field(
         default=None,
         metadata={
             "name": "MachineReadable",
@@ -73,7 +73,7 @@ class SignEquipmentVersionStructure(PlaceEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    as_braille: bool | None = field(
+    as_braille: None | bool = field(
         default=None,
         metadata={
             "name": "AsBraille",
@@ -81,7 +81,7 @@ class SignEquipmentVersionStructure(PlaceEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    audio_trigger_method: AudioTriggerMethodEnumeration | None = field(
+    audio_trigger_method: None | AudioTriggerMethodEnumeration = field(
         default=None,
         metadata={
             "name": "AudioTriggerMethod",
@@ -89,7 +89,7 @@ class SignEquipmentVersionStructure(PlaceEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    printed_presentation: PrintPresentationStructure | None = field(
+    printed_presentation: None | PrintPresentationStructure = field(
         default=None,
         metadata={
             "name": "PrintedPresentation",
@@ -97,7 +97,7 @@ class SignEquipmentVersionStructure(PlaceEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    contrast: Decimal | None = field(
+    contrast: None | Decimal = field(
         default=None,
         metadata={
             "name": "Contrast",
@@ -105,7 +105,7 @@ class SignEquipmentVersionStructure(PlaceEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    font_size: FontSizeEnumeration | None = field(
+    font_size: None | FontSizeEnumeration = field(
         default=None,
         metadata={
             "name": "FontSize",

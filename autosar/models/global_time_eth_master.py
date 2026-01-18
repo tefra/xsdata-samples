@@ -102,7 +102,7 @@ class GlobalTimeEthMaster:
     class Meta:
         name = "GLOBAL-TIME-ETH-MASTER"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -111,7 +111,7 @@ class GlobalTimeEthMaster:
             "required": True,
         },
     )
-    short_name_fragments: GlobalTimeEthMaster.ShortNameFragments | None = (
+    short_name_fragments: None | GlobalTimeEthMaster.ShortNameFragments = (
         field(
             default=None,
             metadata={
@@ -121,7 +121,7 @@ class GlobalTimeEthMaster:
             },
         )
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -129,7 +129,7 @@ class GlobalTimeEthMaster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -137,7 +137,7 @@ class GlobalTimeEthMaster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -145,7 +145,7 @@ class GlobalTimeEthMaster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -153,7 +153,7 @@ class GlobalTimeEthMaster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -161,7 +161,7 @@ class GlobalTimeEthMaster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: GlobalTimeEthMaster.Annotations | None = field(
+    annotations: None | GlobalTimeEthMaster.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -170,7 +170,7 @@ class GlobalTimeEthMaster:
         },
     )
     communication_connector_ref: (
-        GlobalTimeEthMaster.CommunicationConnectorRef | None
+        None | GlobalTimeEthMaster.CommunicationConnectorRef
     ) = field(
         default=None,
         metadata={
@@ -179,7 +179,7 @@ class GlobalTimeEthMaster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    immediate_resume_time: TimeValue | None = field(
+    immediate_resume_time: None | TimeValue = field(
         default=None,
         metadata={
             "name": "IMMEDIATE-RESUME-TIME",
@@ -187,7 +187,7 @@ class GlobalTimeEthMaster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    is_system_wide_global_time_master: Boolean | None = field(
+    is_system_wide_global_time_master: None | Boolean = field(
         default=None,
         metadata={
             "name": "IS-SYSTEM-WIDE-GLOBAL-TIME-MASTER",
@@ -195,7 +195,7 @@ class GlobalTimeEthMaster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sync_period: TimeValue | None = field(
+    sync_period: None | TimeValue = field(
         default=None,
         metadata={
             "name": "SYNC-PERIOD",
@@ -203,7 +203,7 @@ class GlobalTimeEthMaster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -211,7 +211,7 @@ class GlobalTimeEthMaster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    crc_secured: GlobalTimeCrcSupportEnum | None = field(
+    crc_secured: None | GlobalTimeCrcSupportEnum = field(
         default=None,
         metadata={
             "name": "CRC-SECURED",
@@ -219,7 +219,7 @@ class GlobalTimeEthMaster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sub_tlv_config: EthTSynSubTlvConfig | None = field(
+    sub_tlv_config: None | EthTSynSubTlvConfig = field(
         default=None,
         metadata={
             "name": "SUB-TLV-CONFIG",
@@ -227,14 +227,14 @@ class GlobalTimeEthMaster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -242,7 +242,7 @@ class GlobalTimeEthMaster:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -274,7 +274,7 @@ class GlobalTimeEthMaster:
 
     @dataclass
     class CommunicationConnectorRef(Ref):
-        dest: CommunicationConnectorSubtypesEnum | None = field(
+        dest: None | CommunicationConnectorSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

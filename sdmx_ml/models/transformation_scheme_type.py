@@ -50,7 +50,7 @@ class TransformationSchemeType(TransformationSchemeBaseType):
         is defined must be referenced here.
     """
 
-    vtl_mapping_scheme: str | None = field(
+    vtl_mapping_scheme: None | str = field(
         default=None,
         metadata={
             "name": "VtlMappingScheme",
@@ -59,7 +59,7 @@ class TransformationSchemeType(TransformationSchemeBaseType):
             "pattern": r".+\.transformation\.VtlMappingScheme=.+",
         },
     )
-    name_personalisation_scheme: str | None = field(
+    name_personalisation_scheme: None | str = field(
         default=None,
         metadata={
             "name": "NamePersonalisationScheme",
@@ -68,7 +68,7 @@ class TransformationSchemeType(TransformationSchemeBaseType):
             "pattern": r".+\.transformation\.NamePersonalisationScheme=.+",
         },
     )
-    custom_type_scheme: str | None = field(
+    custom_type_scheme: None | str = field(
         default=None,
         metadata={
             "name": "CustomTypeScheme",

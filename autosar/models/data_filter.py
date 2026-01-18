@@ -43,7 +43,7 @@ class DataFilter:
     class Meta:
         name = "DATA-FILTER"
 
-    data_filter_type: DataFilterTypeEnum | None = field(
+    data_filter_type: None | DataFilterTypeEnum = field(
         default=None,
         metadata={
             "name": "DATA-FILTER-TYPE",
@@ -51,7 +51,7 @@ class DataFilter:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    mask: UnlimitedInteger | None = field(
+    mask: None | UnlimitedInteger = field(
         default=None,
         metadata={
             "name": "MASK",
@@ -59,7 +59,7 @@ class DataFilter:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    max: UnlimitedInteger | None = field(
+    max: None | UnlimitedInteger = field(
         default=None,
         metadata={
             "name": "MAX",
@@ -67,7 +67,7 @@ class DataFilter:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    min: UnlimitedInteger | None = field(
+    min: None | UnlimitedInteger = field(
         default=None,
         metadata={
             "name": "MIN",
@@ -75,7 +75,7 @@ class DataFilter:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    offset: PositiveInteger | None = field(
+    offset: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "OFFSET",
@@ -83,7 +83,7 @@ class DataFilter:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    period: PositiveInteger | None = field(
+    period: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "PERIOD",
@@ -91,7 +91,7 @@ class DataFilter:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    x: UnlimitedInteger | None = field(
+    x: None | UnlimitedInteger = field(
         default=None,
         metadata={
             "name": "X",
@@ -99,14 +99,14 @@ class DataFilter:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

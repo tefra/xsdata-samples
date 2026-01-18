@@ -40,7 +40,7 @@ class FlexrayNmClusterCoupling:
     class Meta:
         name = "FLEXRAY-NM-CLUSTER-COUPLING"
 
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -49,7 +49,7 @@ class FlexrayNmClusterCoupling:
         },
     )
     coupled_cluster_refs: (
-        FlexrayNmClusterCoupling.CoupledClusterRefs | None
+        None | FlexrayNmClusterCoupling.CoupledClusterRefs
     ) = field(
         default=None,
         metadata={
@@ -58,7 +58,7 @@ class FlexrayNmClusterCoupling:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nm_control_bit_vector_enabled: Boolean | None = field(
+    nm_control_bit_vector_enabled: None | Boolean = field(
         default=None,
         metadata={
             "name": "NM-CONTROL-BIT-VECTOR-ENABLED",
@@ -66,7 +66,7 @@ class FlexrayNmClusterCoupling:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nm_data_disabled: Boolean | None = field(
+    nm_data_disabled: None | Boolean = field(
         default=None,
         metadata={
             "name": "NM-DATA-DISABLED",
@@ -74,7 +74,7 @@ class FlexrayNmClusterCoupling:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nm_schedule_variant: FlexrayNmScheduleVariant | None = field(
+    nm_schedule_variant: None | FlexrayNmScheduleVariant = field(
         default=None,
         metadata={
             "name": "NM-SCHEDULE-VARIANT",
@@ -82,14 +82,14 @@ class FlexrayNmClusterCoupling:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -113,7 +113,7 @@ class FlexrayNmClusterCoupling:
 
         @dataclass
         class CoupledClusterRef(Ref):
-            dest: FlexrayNmClusterSubtypesEnum | None = field(
+            dest: None | FlexrayNmClusterSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",

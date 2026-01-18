@@ -88,7 +88,7 @@ class EventMapping:
     class Meta:
         name = "EVENT-MAPPING"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -97,7 +97,7 @@ class EventMapping:
             "required": True,
         },
     )
-    short_name_fragments: EventMapping.ShortNameFragments | None = field(
+    short_name_fragments: None | EventMapping.ShortNameFragments = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -105,7 +105,7 @@ class EventMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -113,7 +113,7 @@ class EventMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -121,7 +121,7 @@ class EventMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -129,7 +129,7 @@ class EventMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -137,7 +137,7 @@ class EventMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -145,7 +145,7 @@ class EventMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: EventMapping.Annotations | None = field(
+    annotations: None | EventMapping.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -153,7 +153,7 @@ class EventMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    data_element_ref: EventMapping.DataElementRef | None = field(
+    data_element_ref: None | EventMapping.DataElementRef = field(
         default=None,
         metadata={
             "name": "DATA-ELEMENT-REF",
@@ -161,7 +161,7 @@ class EventMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    event_ref: EventMapping.EventRef | None = field(
+    event_ref: None | EventMapping.EventRef = field(
         default=None,
         metadata={
             "name": "EVENT-REF",
@@ -169,14 +169,14 @@ class EventMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -184,7 +184,7 @@ class EventMapping:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -216,7 +216,7 @@ class EventMapping:
 
     @dataclass
     class DataElementRef(Ref):
-        dest: VariableDataPrototypeSubtypesEnum | None = field(
+        dest: None | VariableDataPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -227,7 +227,7 @@ class EventMapping:
 
     @dataclass
     class EventRef(Ref):
-        dest: VariableDataPrototypeSubtypesEnum | None = field(
+        dest: None | VariableDataPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

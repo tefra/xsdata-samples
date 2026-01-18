@@ -148,14 +148,14 @@ class ApplicationIdentification:
             "required": True,
         }
     )
-    application_idextension: ApplicationIdextension | None = field(
+    application_idextension: None | ApplicationIdextension = field(
         default=None,
         metadata={
             "name": "ApplicationIDExtension",
             "type": "Element",
         },
     )
-    application_instance: ApplicationInstance | None = field(
+    application_instance: None | ApplicationInstance = field(
         default=None,
         metadata={
             "name": "ApplicationInstance",
@@ -206,7 +206,7 @@ class ItemReference:
             "required": True,
         }
     )
-    schedule_line_id: ScheduleLineId | None = field(
+    schedule_line_id: None | ScheduleLineId = field(
         default=None,
         metadata={
             "name": "ScheduleLineID",
@@ -224,14 +224,14 @@ class ApplicationResponseDetail:
             "required": True,
         }
     )
-    error_type_coded_other: ErrorTypeCodedOther | None = field(
+    error_type_coded_other: None | ErrorTypeCodedOther = field(
         default=None,
         metadata={
             "name": "ErrorTypeCodedOther",
             "type": "Element",
         },
     )
-    item_reference: ItemReference | None = field(
+    item_reference: None | ItemReference = field(
         default=None,
         metadata={
             "name": "ItemReference",
@@ -245,7 +245,7 @@ class ApplicationResponseDetail:
             "required": True,
         }
     )
-    list_of_structured_note: ListOfStructuredNote | None = field(
+    list_of_structured_note: None | ListOfStructuredNote = field(
         default=None,
         metadata={
             "name": "ListOfStructuredNote",
@@ -306,7 +306,7 @@ class ApplicationResponseHeader:
             "required": True,
         }
     )
-    sending_application: SendingApplication | None = field(
+    sending_application: None | SendingApplication = field(
         default=None,
         metadata={
             "name": "SendingApplication",
@@ -320,7 +320,7 @@ class ApplicationResponseHeader:
             "required": True,
         }
     )
-    responding_application: RespondingApplication | None = field(
+    responding_application: None | RespondingApplication = field(
         default=None,
         metadata={
             "name": "RespondingApplication",
@@ -335,7 +335,7 @@ class ApplicationResponseHeader:
         }
     )
     business_document_type_coded_other: (
-        BusinessDocumentTypeCodedOther | None
+        None | BusinessDocumentTypeCodedOther
     ) = field(
         default=None,
         metadata={
@@ -357,28 +357,28 @@ class ApplicationResponseHeader:
             "required": True,
         }
     )
-    document_status_coded_other: DocumentStatusCodedOther | None = field(
+    document_status_coded_other: None | DocumentStatusCodedOther = field(
         default=None,
         metadata={
             "name": "DocumentStatusCodedOther",
             "type": "Element",
         },
     )
-    application_response_note: ApplicationResponseNote | None = field(
+    application_response_note: None | ApplicationResponseNote = field(
         default=None,
         metadata={
             "name": "ApplicationResponseNote",
             "type": "Element",
         },
     )
-    list_of_structured_note: ListOfStructuredNote | None = field(
+    list_of_structured_note: None | ListOfStructuredNote = field(
         default=None,
         metadata={
             "name": "ListOfStructuredNote",
             "type": "Element",
         },
     )
-    list_of_name_value_set: ListOfNameValueSet | None = field(
+    list_of_name_value_set: None | ListOfNameValueSet = field(
         default=None,
         metadata={
             "name": "ListOfNameValueSet",
@@ -409,7 +409,7 @@ class ApplicationResponse:
         }
     )
     list_of_application_response_detail: (
-        ListOfApplicationResponseDetail | None
+        None | ListOfApplicationResponseDetail
     ) = field(
         default=None,
         metadata={

@@ -90,7 +90,7 @@ class DltMessage:
     class Meta:
         name = "DLT-MESSAGE"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -99,7 +99,7 @@ class DltMessage:
             "required": True,
         },
     )
-    short_name_fragments: DltMessage.ShortNameFragments | None = field(
+    short_name_fragments: None | DltMessage.ShortNameFragments = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -107,7 +107,7 @@ class DltMessage:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -115,7 +115,7 @@ class DltMessage:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -123,7 +123,7 @@ class DltMessage:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -131,7 +131,7 @@ class DltMessage:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -139,7 +139,7 @@ class DltMessage:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -147,7 +147,7 @@ class DltMessage:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: DltMessage.Annotations | None = field(
+    annotations: None | DltMessage.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -155,7 +155,7 @@ class DltMessage:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    dlt_arguments: DltMessage.DltArguments | None = field(
+    dlt_arguments: None | DltMessage.DltArguments = field(
         default=None,
         metadata={
             "name": "DLT-ARGUMENTS",
@@ -163,7 +163,7 @@ class DltMessage:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    message_id: PositiveInteger | None = field(
+    message_id: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "MESSAGE-ID",
@@ -171,7 +171,7 @@ class DltMessage:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    message_line_number: PositiveInteger | None = field(
+    message_line_number: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "MESSAGE-LINE-NUMBER",
@@ -179,7 +179,7 @@ class DltMessage:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    message_source_file: String | None = field(
+    message_source_file: None | String = field(
         default=None,
         metadata={
             "name": "MESSAGE-SOURCE-FILE",
@@ -187,7 +187,7 @@ class DltMessage:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    message_type_info: String | None = field(
+    message_type_info: None | String = field(
         default=None,
         metadata={
             "name": "MESSAGE-TYPE-INFO",
@@ -195,14 +195,14 @@ class DltMessage:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -210,7 +210,7 @@ class DltMessage:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",

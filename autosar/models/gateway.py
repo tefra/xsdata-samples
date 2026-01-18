@@ -99,7 +99,7 @@ class Gateway:
     class Meta:
         name = "GATEWAY"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -108,7 +108,7 @@ class Gateway:
             "required": True,
         },
     )
-    short_name_fragments: Gateway.ShortNameFragments | None = field(
+    short_name_fragments: None | Gateway.ShortNameFragments = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -116,7 +116,7 @@ class Gateway:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -124,7 +124,7 @@ class Gateway:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -132,7 +132,7 @@ class Gateway:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -140,7 +140,7 @@ class Gateway:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -148,7 +148,7 @@ class Gateway:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -156,7 +156,7 @@ class Gateway:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Gateway.Annotations | None = field(
+    annotations: None | Gateway.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -164,7 +164,7 @@ class Gateway:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -172,7 +172,7 @@ class Gateway:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ecu_ref: Gateway.EcuRef | None = field(
+    ecu_ref: None | Gateway.EcuRef = field(
         default=None,
         metadata={
             "name": "ECU-REF",
@@ -180,7 +180,7 @@ class Gateway:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    frame_mappings: Gateway.FrameMappings | None = field(
+    frame_mappings: None | Gateway.FrameMappings = field(
         default=None,
         metadata={
             "name": "FRAME-MAPPINGS",
@@ -188,7 +188,7 @@ class Gateway:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    i_pdu_mappings: Gateway.IPduMappings | None = field(
+    i_pdu_mappings: None | Gateway.IPduMappings = field(
         default=None,
         metadata={
             "name": "I-PDU-MAPPINGS",
@@ -196,7 +196,7 @@ class Gateway:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    signal_mappings: Gateway.SignalMappings | None = field(
+    signal_mappings: None | Gateway.SignalMappings = field(
         default=None,
         metadata={
             "name": "SIGNAL-MAPPINGS",
@@ -204,14 +204,14 @@ class Gateway:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -219,7 +219,7 @@ class Gateway:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -251,7 +251,7 @@ class Gateway:
 
     @dataclass
     class EcuRef(Ref):
-        dest: EcuInstanceSubtypesEnum | None = field(
+        dest: None | EcuInstanceSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

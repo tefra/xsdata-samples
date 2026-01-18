@@ -18,7 +18,7 @@ class ReferencePeriodType:
         date for the reference period.
     """
 
-    start_time: XmlDateTime | None = field(
+    start_time: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "startTime",
@@ -26,7 +26,7 @@ class ReferencePeriodType:
             "required": True,
         },
     )
-    end_time: XmlDateTime | None = field(
+    end_time: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "endTime",

@@ -141,7 +141,7 @@ class ConsumedEventGroup:
     class Meta:
         name = "CONSUMED-EVENT-GROUP"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -150,7 +150,7 @@ class ConsumedEventGroup:
             "required": True,
         },
     )
-    short_name_fragments: ConsumedEventGroup.ShortNameFragments | None = field(
+    short_name_fragments: None | ConsumedEventGroup.ShortNameFragments = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -158,7 +158,7 @@ class ConsumedEventGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -166,7 +166,7 @@ class ConsumedEventGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -174,7 +174,7 @@ class ConsumedEventGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -182,7 +182,7 @@ class ConsumedEventGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -190,7 +190,7 @@ class ConsumedEventGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -198,7 +198,7 @@ class ConsumedEventGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: ConsumedEventGroup.Annotations | None = field(
+    annotations: None | ConsumedEventGroup.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -207,7 +207,7 @@ class ConsumedEventGroup:
         },
     )
     application_endpoint_ref: (
-        ConsumedEventGroup.ApplicationEndpointRef | None
+        None | ConsumedEventGroup.ApplicationEndpointRef
     ) = field(
         default=None,
         metadata={
@@ -216,7 +216,7 @@ class ConsumedEventGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    auto_require: Boolean | None = field(
+    auto_require: None | Boolean = field(
         default=None,
         metadata={
             "name": "AUTO-REQUIRE",
@@ -224,7 +224,7 @@ class ConsumedEventGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    event_group_identifier: PositiveInteger | None = field(
+    event_group_identifier: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "EVENT-GROUP-IDENTIFIER",
@@ -233,7 +233,7 @@ class ConsumedEventGroup:
         },
     )
     event_multicast_addresss: (
-        ConsumedEventGroup.EventMulticastAddresss | None
+        None | ConsumedEventGroup.EventMulticastAddresss
     ) = field(
         default=None,
         metadata={
@@ -242,7 +242,7 @@ class ConsumedEventGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    instance_identifier: PositiveInteger | None = field(
+    instance_identifier: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "INSTANCE-IDENTIFIER",
@@ -251,7 +251,7 @@ class ConsumedEventGroup:
         },
     )
     pdu_activation_routing_groups: (
-        ConsumedEventGroup.PduActivationRoutingGroups | None
+        None | ConsumedEventGroup.PduActivationRoutingGroups
     ) = field(
         default=None,
         metadata={
@@ -260,7 +260,7 @@ class ConsumedEventGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    priority: PositiveInteger | None = field(
+    priority: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "PRIORITY",
@@ -268,7 +268,7 @@ class ConsumedEventGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    routing_group_refs: ConsumedEventGroup.RoutingGroupRefs | None = field(
+    routing_group_refs: None | ConsumedEventGroup.RoutingGroupRefs = field(
         default=None,
         metadata={
             "name": "ROUTING-GROUP-REFS",
@@ -276,7 +276,7 @@ class ConsumedEventGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sd_client_config: SdClientConfig | None = field(
+    sd_client_config: None | SdClientConfig = field(
         default=None,
         metadata={
             "name": "SD-CLIENT-CONFIG",
@@ -284,7 +284,7 @@ class ConsumedEventGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sd_client_timer_configs: ConsumedEventGroup.SdClientTimerConfigs | None = (
+    sd_client_timer_configs: None | ConsumedEventGroup.SdClientTimerConfigs = (
         field(
             default=None,
             metadata={
@@ -294,7 +294,7 @@ class ConsumedEventGroup:
             },
         )
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -302,14 +302,14 @@ class ConsumedEventGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -317,7 +317,7 @@ class ConsumedEventGroup:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -349,7 +349,7 @@ class ConsumedEventGroup:
 
     @dataclass
     class ApplicationEndpointRef(Ref):
-        dest: ApplicationEndpointSubtypesEnum | None = field(
+        dest: None | ApplicationEndpointSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -397,7 +397,7 @@ class ConsumedEventGroup:
 
         @dataclass
         class RoutingGroupRef(Ref):
-            dest: SoAdRoutingGroupSubtypesEnum | None = field(
+            dest: None | SoAdRoutingGroupSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",

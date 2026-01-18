@@ -21,7 +21,7 @@ class ReleaseCalendarType:
         data may be deemed late.
     """
 
-    periodicity: str | None = field(
+    periodicity: None | str = field(
         default=None,
         metadata={
             "name": "Periodicity",
@@ -30,7 +30,7 @@ class ReleaseCalendarType:
             "required": True,
         },
     )
-    offset: str | None = field(
+    offset: None | str = field(
         default=None,
         metadata={
             "name": "Offset",
@@ -39,7 +39,7 @@ class ReleaseCalendarType:
             "required": True,
         },
     )
-    tolerance: str | None = field(
+    tolerance: None | str = field(
         default=None,
         metadata={
             "name": "Tolerance",

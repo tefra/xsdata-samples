@@ -24,7 +24,7 @@ class LineShapeStructure2(DataManagedObjectStructure):
     class Meta:
         name = "LineShapeStructure"
 
-    formula: str | None = field(
+    formula: None | str = field(
         default=None,
         metadata={
             "name": "Formula",
@@ -32,7 +32,7 @@ class LineShapeStructure2(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    name: MultilingualString | None = field(
+    name: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "Name",
@@ -41,7 +41,8 @@ class LineShapeStructure2(DataManagedObjectStructure):
         },
     )
     link_ref_or_infrastructure_link_ref: (
-        OnwardVehicleMeetingLinkRef
+        None
+        | OnwardVehicleMeetingLinkRef
         | VehicleMeetingLinkRef
         | ServiceLinkRef
         | LineLinkRef
@@ -52,7 +53,6 @@ class LineShapeStructure2(DataManagedObjectStructure):
         | ActivationLinkRef
         | PathLinkRef
         | RouteLinkRef
-        | None
     ) = field(
         default=None,
         metadata={
@@ -116,7 +116,7 @@ class LineShapeStructure2(DataManagedObjectStructure):
             ),
         },
     )
-    locating_system_ref: str | None = field(
+    locating_system_ref: None | str = field(
         default=None,
         metadata={
             "name": "LocatingSystemRef",

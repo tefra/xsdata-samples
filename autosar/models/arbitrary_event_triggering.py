@@ -111,7 +111,7 @@ class ArbitraryEventTriggering:
     class Meta:
         name = "ARBITRARY-EVENT-TRIGGERING"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -121,7 +121,7 @@ class ArbitraryEventTriggering:
         },
     )
     short_name_fragments: (
-        ArbitraryEventTriggering.ShortNameFragments | None
+        None | ArbitraryEventTriggering.ShortNameFragments
     ) = field(
         default=None,
         metadata={
@@ -130,7 +130,7 @@ class ArbitraryEventTriggering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -138,7 +138,7 @@ class ArbitraryEventTriggering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -146,7 +146,7 @@ class ArbitraryEventTriggering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -154,7 +154,7 @@ class ArbitraryEventTriggering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -162,7 +162,7 @@ class ArbitraryEventTriggering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -170,7 +170,7 @@ class ArbitraryEventTriggering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: ArbitraryEventTriggering.Annotations | None = field(
+    annotations: None | ArbitraryEventTriggering.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -178,7 +178,7 @@ class ArbitraryEventTriggering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    trace_refs: ArbitraryEventTriggering.TraceRefs | None = field(
+    trace_refs: None | ArbitraryEventTriggering.TraceRefs = field(
         default=None,
         metadata={
             "name": "TRACE-REFS",
@@ -187,7 +187,7 @@ class ArbitraryEventTriggering:
         },
     )
     timing_condition_ref: (
-        ArbitraryEventTriggering.TimingConditionRef | None
+        None | ArbitraryEventTriggering.TimingConditionRef
     ) = field(
         default=None,
         metadata={
@@ -196,7 +196,7 @@ class ArbitraryEventTriggering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -204,7 +204,7 @@ class ArbitraryEventTriggering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    event_ref: ArbitraryEventTriggering.EventRef | None = field(
+    event_ref: None | ArbitraryEventTriggering.EventRef = field(
         default=None,
         metadata={
             "name": "EVENT-REF",
@@ -212,7 +212,7 @@ class ArbitraryEventTriggering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    minimum_distances: ArbitraryEventTriggering.MinimumDistances | None = (
+    minimum_distances: None | ArbitraryEventTriggering.MinimumDistances = (
         field(
             default=None,
             metadata={
@@ -222,7 +222,7 @@ class ArbitraryEventTriggering:
             },
         )
     )
-    maximum_distances: ArbitraryEventTriggering.MaximumDistances | None = (
+    maximum_distances: None | ArbitraryEventTriggering.MaximumDistances = (
         field(
             default=None,
             metadata={
@@ -233,7 +233,7 @@ class ArbitraryEventTriggering:
         )
     )
     confidence_intervals: (
-        ArbitraryEventTriggering.ConfidenceIntervals | None
+        None | ArbitraryEventTriggering.ConfidenceIntervals
     ) = field(
         default=None,
         metadata={
@@ -242,14 +242,14 @@ class ArbitraryEventTriggering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -257,7 +257,7 @@ class ArbitraryEventTriggering:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -300,7 +300,7 @@ class ArbitraryEventTriggering:
 
         @dataclass
         class TraceRef(Ref):
-            dest: TraceableSubtypesEnum | None = field(
+            dest: None | TraceableSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -311,7 +311,7 @@ class ArbitraryEventTriggering:
 
     @dataclass
     class TimingConditionRef(Ref):
-        dest: TimingConditionSubtypesEnum | None = field(
+        dest: None | TimingConditionSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -322,7 +322,7 @@ class ArbitraryEventTriggering:
 
     @dataclass
     class EventRef(Ref):
-        dest: TimingDescriptionEventSubtypesEnum | None = field(
+        dest: None | TimingDescriptionEventSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

@@ -8,7 +8,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 @dataclass
 class PointOnLinkByValueStructure:
-    distance_from_start: Decimal | None = field(
+    distance_from_start: None | Decimal = field(
         default=None,
         metadata={
             "name": "DistanceFromStart",

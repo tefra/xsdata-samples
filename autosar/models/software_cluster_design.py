@@ -128,7 +128,7 @@ class SoftwareClusterDesign:
     class Meta:
         name = "SOFTWARE-CLUSTER-DESIGN"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -137,7 +137,7 @@ class SoftwareClusterDesign:
             "required": True,
         },
     )
-    short_name_fragments: SoftwareClusterDesign.ShortNameFragments | None = (
+    short_name_fragments: None | SoftwareClusterDesign.ShortNameFragments = (
         field(
             default=None,
             metadata={
@@ -147,7 +147,7 @@ class SoftwareClusterDesign:
             },
         )
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -155,7 +155,7 @@ class SoftwareClusterDesign:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -163,7 +163,7 @@ class SoftwareClusterDesign:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -171,7 +171,7 @@ class SoftwareClusterDesign:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -179,7 +179,7 @@ class SoftwareClusterDesign:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -187,7 +187,7 @@ class SoftwareClusterDesign:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: SoftwareClusterDesign.Annotations | None = field(
+    annotations: None | SoftwareClusterDesign.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -195,7 +195,7 @@ class SoftwareClusterDesign:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -204,7 +204,7 @@ class SoftwareClusterDesign:
         },
     )
     contained_process_refs: (
-        SoftwareClusterDesign.ContainedProcessRefs | None
+        None | SoftwareClusterDesign.ContainedProcessRefs
     ) = field(
         default=None,
         metadata={
@@ -213,7 +213,7 @@ class SoftwareClusterDesign:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    depends_on_refs: SoftwareClusterDesign.DependsOnRefs | None = field(
+    depends_on_refs: None | SoftwareClusterDesign.DependsOnRefs = field(
         default=None,
         metadata={
             "name": "DEPENDS-ON-REFS",
@@ -221,7 +221,7 @@ class SoftwareClusterDesign:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    diagnostic_addresss: SoftwareClusterDesign.DiagnosticAddresss | None = (
+    diagnostic_addresss: None | SoftwareClusterDesign.DiagnosticAddresss = (
         field(
             default=None,
             metadata={
@@ -232,7 +232,7 @@ class SoftwareClusterDesign:
         )
     )
     diagnostic_contribution_refs: (
-        SoftwareClusterDesign.DiagnosticContributionRefs | None
+        None | SoftwareClusterDesign.DiagnosticContributionRefs
     ) = field(
         default=None,
         metadata={
@@ -242,7 +242,7 @@ class SoftwareClusterDesign:
         },
     )
     intended_target_machine_ref: (
-        SoftwareClusterDesign.IntendedTargetMachineRef | None
+        None | SoftwareClusterDesign.IntendedTargetMachineRef
     ) = field(
         default=None,
         metadata={
@@ -252,7 +252,7 @@ class SoftwareClusterDesign:
         },
     )
     required_ar_element_refs: (
-        SoftwareClusterDesign.RequiredArElementRefs | None
+        None | SoftwareClusterDesign.RequiredArElementRefs
     ) = field(
         default=None,
         metadata={
@@ -262,7 +262,7 @@ class SoftwareClusterDesign:
         },
     )
     required_fibex_element_refs: (
-        SoftwareClusterDesign.RequiredFibexElementRefs | None
+        None | SoftwareClusterDesign.RequiredFibexElementRefs
     ) = field(
         default=None,
         metadata={
@@ -272,7 +272,7 @@ class SoftwareClusterDesign:
         },
     )
     required_package_element_refs: (
-        SoftwareClusterDesign.RequiredPackageElementRefs | None
+        None | SoftwareClusterDesign.RequiredPackageElementRefs
     ) = field(
         default=None,
         metadata={
@@ -281,7 +281,7 @@ class SoftwareClusterDesign:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    root_composition: RootSwClusterDesignComponentPrototype | None = field(
+    root_composition: None | RootSwClusterDesignComponentPrototype = field(
         default=None,
         metadata={
             "name": "ROOT-COMPOSITION",
@@ -290,7 +290,7 @@ class SoftwareClusterDesign:
         },
     )
     sub_software_cluster_refs: (
-        SoftwareClusterDesign.SubSoftwareClusterRefs | None
+        None | SoftwareClusterDesign.SubSoftwareClusterRefs
     ) = field(
         default=None,
         metadata={
@@ -299,14 +299,14 @@ class SoftwareClusterDesign:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -314,7 +314,7 @@ class SoftwareClusterDesign:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -359,7 +359,7 @@ class SoftwareClusterDesign:
 
         @dataclass
         class ContainedProcessRef(Ref):
-            dest: ProcessDesignSubtypesEnum | None = field(
+            dest: None | ProcessDesignSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -383,7 +383,7 @@ class SoftwareClusterDesign:
 
         @dataclass
         class DependsOnRef(Ref):
-            dest: SoftwareClusterDesignSubtypesEnum | None = field(
+            dest: None | SoftwareClusterDesignSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -420,7 +420,7 @@ class SoftwareClusterDesign:
 
         @dataclass
         class DiagnosticContributionRef(Ref):
-            dest: DiagnosticContributionSetSubtypesEnum | None = field(
+            dest: None | DiagnosticContributionSetSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -431,7 +431,7 @@ class SoftwareClusterDesign:
 
     @dataclass
     class IntendedTargetMachineRef(Ref):
-        dest: MachineDesignSubtypesEnum | None = field(
+        dest: None | MachineDesignSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -455,7 +455,7 @@ class SoftwareClusterDesign:
 
         @dataclass
         class RequiredArElementRef(Ref):
-            dest: ArElementSubtypesEnum | None = field(
+            dest: None | ArElementSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -479,7 +479,7 @@ class SoftwareClusterDesign:
 
         @dataclass
         class RequiredFibexElementRef(Ref):
-            dest: FibexElementSubtypesEnum | None = field(
+            dest: None | FibexElementSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -503,7 +503,7 @@ class SoftwareClusterDesign:
 
         @dataclass
         class RequiredPackageElementRef(Ref):
-            dest: UploadablePackageElementSubtypesEnum | None = field(
+            dest: None | UploadablePackageElementSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -527,7 +527,7 @@ class SoftwareClusterDesign:
 
         @dataclass
         class SubSoftwareClusterRef(Ref):
-            dest: SoftwareClusterDesignSubtypesEnum | None = field(
+            dest: None | SoftwareClusterDesignSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",

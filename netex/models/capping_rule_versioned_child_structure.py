@@ -25,7 +25,7 @@ class CappingRuleVersionedChildStructure(PriceableObjectVersionStructure):
     class Meta:
         name = "CappingRule_VersionedChildStructure"
 
-    maximum_distance: Decimal | None = field(
+    maximum_distance: None | Decimal = field(
         default=None,
         metadata={
             "name": "MaximumDistance",
@@ -33,7 +33,7 @@ class CappingRuleVersionedChildStructure(PriceableObjectVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    capping_period: CappingPeriodEnumeration | None = field(
+    capping_period: None | CappingPeriodEnumeration = field(
         default=None,
         metadata={
             "name": "CappingPeriod",
@@ -69,7 +69,7 @@ class CappingRuleVersionedChildStructure(PriceableObjectVersionStructure):
             ),
         },
     )
-    validable_element_ref: ValidableElementRef | None = field(
+    validable_element_ref: None | ValidableElementRef = field(
         default=None,
         metadata={
             "name": "ValidableElementRef",
@@ -78,10 +78,10 @@ class CappingRuleVersionedChildStructure(PriceableObjectVersionStructure):
         },
     )
     validity_parameter_assignments_or_generic_parameter_assignment_or_generic_parameter_assignment_in_context: (
-        GenericParameterAssignmentsRelStructure
+        None
+        | GenericParameterAssignmentsRelStructure
         | GenericParameterAssignment
         | GenericParameterAssignmentInContext
-        | None
     ) = field(
         default=None,
         metadata={
@@ -105,7 +105,7 @@ class CappingRuleVersionedChildStructure(PriceableObjectVersionStructure):
             ),
         },
     )
-    prices: CappingRulePricesRelStructure | None = field(
+    prices: None | CappingRulePricesRelStructure = field(
         default=None,
         metadata={
             "type": "Element",

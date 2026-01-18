@@ -40,14 +40,14 @@ class QueryExpressionType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
         },
     )
-    logical_operator_code: LogicalOperatorCodeType | None = field(
+    logical_operator_code: None | LogicalOperatorCodeType = field(
         default=None,
         metadata={
             "name": "logicalOperatorCode",
             "type": "Attribute",
         },
     )
-    negation_indicator: bool | None = field(
+    negation_indicator: None | bool = field(
         default=None,
         metadata={
             "name": "negationIndicator",

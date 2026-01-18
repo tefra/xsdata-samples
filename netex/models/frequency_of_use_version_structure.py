@@ -17,7 +17,7 @@ class FrequencyOfUseVersionStructure(UsageParameterVersionStructure):
     class Meta:
         name = "FrequencyOfUse_VersionStructure"
 
-    frequency_of_use_type: FrequencyOfUseTypeEnumeration | None = field(
+    frequency_of_use_type: None | FrequencyOfUseTypeEnumeration = field(
         default=None,
         metadata={
             "name": "FrequencyOfUseType",
@@ -25,7 +25,7 @@ class FrequencyOfUseVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    minimal_frequency: int | None = field(
+    minimal_frequency: None | int = field(
         default=None,
         metadata={
             "name": "MinimalFrequency",
@@ -33,7 +33,7 @@ class FrequencyOfUseVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    maximal_frequency: int | None = field(
+    maximal_frequency: None | int = field(
         default=None,
         metadata={
             "name": "MaximalFrequency",
@@ -41,7 +41,7 @@ class FrequencyOfUseVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    frequency_interval: XmlDuration | None = field(
+    frequency_interval: None | XmlDuration = field(
         default=None,
         metadata={
             "name": "FrequencyInterval",
@@ -49,7 +49,7 @@ class FrequencyOfUseVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    time_interval_ref: TimeIntervalRef | None = field(
+    time_interval_ref: None | TimeIntervalRef = field(
         default=None,
         metadata={
             "name": "TimeIntervalRef",
@@ -57,7 +57,7 @@ class FrequencyOfUseVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    discount_basis: DiscountBasisEnumeration | None = field(
+    discount_basis: None | DiscountBasisEnumeration = field(
         default=None,
         metadata={
             "name": "DiscountBasis",

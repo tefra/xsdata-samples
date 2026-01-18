@@ -63,7 +63,7 @@ class ClientComSpec:
     class Meta:
         name = "CLIENT-COM-SPEC"
 
-    client_intent: ClientIntentEnum | None = field(
+    client_intent: None | ClientIntentEnum = field(
         default=None,
         metadata={
             "name": "CLIENT-INTENT",
@@ -71,7 +71,7 @@ class ClientComSpec:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    end_to_end_call_response_timeout: TimeValue | None = field(
+    end_to_end_call_response_timeout: None | TimeValue = field(
         default=None,
         metadata={
             "name": "END-TO-END-CALL-RESPONSE-TIMEOUT",
@@ -79,7 +79,7 @@ class ClientComSpec:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    getter_ref: ClientComSpec.GetterRef | None = field(
+    getter_ref: None | ClientComSpec.GetterRef = field(
         default=None,
         metadata={
             "name": "GETTER-REF",
@@ -87,7 +87,7 @@ class ClientComSpec:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    operation_ref: ClientComSpec.OperationRef | None = field(
+    operation_ref: None | ClientComSpec.OperationRef = field(
         default=None,
         metadata={
             "name": "OPERATION-REF",
@@ -95,7 +95,7 @@ class ClientComSpec:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    setter_ref: ClientComSpec.SetterRef | None = field(
+    setter_ref: None | ClientComSpec.SetterRef = field(
         default=None,
         metadata={
             "name": "SETTER-REF",
@@ -104,7 +104,7 @@ class ClientComSpec:
         },
     )
     transformation_com_spec_propss: (
-        ClientComSpec.TransformationComSpecPropss | None
+        None | ClientComSpec.TransformationComSpecPropss
     ) = field(
         default=None,
         metadata={
@@ -113,14 +113,14 @@ class ClientComSpec:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -131,7 +131,7 @@ class ClientComSpec:
 
     @dataclass
     class GetterRef(Ref):
-        dest: FieldSubtypesEnum | None = field(
+        dest: None | FieldSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -142,7 +142,7 @@ class ClientComSpec:
 
     @dataclass
     class OperationRef(Ref):
-        dest: ClientServerOperationSubtypesEnum | None = field(
+        dest: None | ClientServerOperationSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -153,7 +153,7 @@ class ClientComSpec:
 
     @dataclass
     class SetterRef(Ref):
-        dest: FieldSubtypesEnum | None = field(
+        dest: None | FieldSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

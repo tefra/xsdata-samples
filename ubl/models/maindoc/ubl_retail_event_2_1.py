@@ -38,7 +38,7 @@ __NAMESPACE__ = "urn:oasis:names:specification:ubl:schema:xsd:RetailEvent-2"
 
 @dataclass(frozen=True)
 class RetailEventType:
-    ublextensions: Ublextensions | None = field(
+    ublextensions: None | Ublextensions = field(
         default=None,
         metadata={
             "name": "UBLExtensions",
@@ -46,7 +46,7 @@ class RetailEventType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2",
         },
     )
-    ublversion_id: UblversionId | None = field(
+    ublversion_id: None | UblversionId = field(
         default=None,
         metadata={
             "name": "UBLVersionID",
@@ -54,7 +54,7 @@ class RetailEventType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    customization_id: CustomizationId | None = field(
+    customization_id: None | CustomizationId = field(
         default=None,
         metadata={
             "name": "CustomizationID",
@@ -62,7 +62,7 @@ class RetailEventType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    profile_id: ProfileId | None = field(
+    profile_id: None | ProfileId = field(
         default=None,
         metadata={
             "name": "ProfileID",
@@ -70,7 +70,7 @@ class RetailEventType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    profile_execution_id: ProfileExecutionId | None = field(
+    profile_execution_id: None | ProfileExecutionId = field(
         default=None,
         metadata={
             "name": "ProfileExecutionID",
@@ -78,7 +78,7 @@ class RetailEventType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    id: Id | None = field(
+    id: None | Id = field(
         default=None,
         metadata={
             "name": "ID",
@@ -87,7 +87,7 @@ class RetailEventType:
             "required": True,
         },
     )
-    copy_indicator: CopyIndicator | None = field(
+    copy_indicator: None | CopyIndicator = field(
         default=None,
         metadata={
             "name": "CopyIndicator",
@@ -95,7 +95,7 @@ class RetailEventType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    uuid: Uuid | None = field(
+    uuid: None | Uuid = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -103,7 +103,7 @@ class RetailEventType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    issue_date: IssueDate | None = field(
+    issue_date: None | IssueDate = field(
         default=None,
         metadata={
             "name": "IssueDate",
@@ -111,7 +111,7 @@ class RetailEventType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    issue_time: IssueTime | None = field(
+    issue_time: None | IssueTime = field(
         default=None,
         metadata={
             "name": "IssueTime",
@@ -127,7 +127,7 @@ class RetailEventType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    retail_event_name: RetailEventName | None = field(
+    retail_event_name: None | RetailEventName = field(
         default=None,
         metadata={
             "name": "RetailEventName",
@@ -135,7 +135,7 @@ class RetailEventType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    retail_event_status_code: RetailEventStatusCode | None = field(
+    retail_event_status_code: None | RetailEventStatusCode = field(
         default=None,
         metadata={
             "name": "RetailEventStatusCode",
@@ -144,7 +144,7 @@ class RetailEventType:
             "required": True,
         },
     )
-    seller_event_id: SellerEventId | None = field(
+    seller_event_id: None | SellerEventId = field(
         default=None,
         metadata={
             "name": "SellerEventID",
@@ -152,7 +152,7 @@ class RetailEventType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    buyer_event_id: BuyerEventId | None = field(
+    buyer_event_id: None | BuyerEventId = field(
         default=None,
         metadata={
             "name": "BuyerEventID",
@@ -168,7 +168,7 @@ class RetailEventType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    period: Period | None = field(
+    period: None | Period = field(
         default=None,
         metadata={
             "name": "Period",
@@ -193,7 +193,7 @@ class RetailEventType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    sender_party: SenderParty | None = field(
+    sender_party: None | SenderParty = field(
         default=None,
         metadata={
             "name": "SenderParty",
@@ -202,7 +202,7 @@ class RetailEventType:
             "required": True,
         },
     )
-    receiver_party: ReceiverParty | None = field(
+    receiver_party: None | ReceiverParty = field(
         default=None,
         metadata={
             "name": "ReceiverParty",
@@ -211,7 +211,7 @@ class RetailEventType:
             "required": True,
         },
     )
-    buyer_customer_party: BuyerCustomerParty | None = field(
+    buyer_customer_party: None | BuyerCustomerParty = field(
         default=None,
         metadata={
             "name": "BuyerCustomerParty",
@@ -219,7 +219,7 @@ class RetailEventType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    seller_supplier_party: SellerSupplierParty | None = field(
+    seller_supplier_party: None | SellerSupplierParty = field(
         default=None,
         metadata={
             "name": "SellerSupplierParty",
@@ -235,7 +235,7 @@ class RetailEventType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    promotional_event: PromotionalEvent | None = field(
+    promotional_event: None | PromotionalEvent = field(
         default=None,
         metadata={
             "name": "PromotionalEvent",
@@ -243,7 +243,7 @@ class RetailEventType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    miscellaneous_event: MiscellaneousEvent | None = field(
+    miscellaneous_event: None | MiscellaneousEvent = field(
         default=None,
         metadata={
             "name": "MiscellaneousEvent",

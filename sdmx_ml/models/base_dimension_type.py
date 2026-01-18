@@ -32,7 +32,7 @@ class BaseDimensionType(BaseDimensionBaseType):
             "pattern": r".+\.conceptscheme\.Concept=.+",
         },
     )
-    position: int | None = field(
+    position: None | int = field(
         default=None,
         metadata={
             "type": "Attribute",

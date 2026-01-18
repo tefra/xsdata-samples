@@ -17,7 +17,7 @@ class SchematicMapVersionStructure(DataManagedObjectStructure):
     class Meta:
         name = "SchematicMap_VersionStructure"
 
-    name: MultilingualString | None = field(
+    name: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "Name",
@@ -25,7 +25,7 @@ class SchematicMapVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    short_name: MultilingualString | None = field(
+    short_name: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "ShortName",
@@ -33,7 +33,7 @@ class SchematicMapVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    image_uri: str | None = field(
+    image_uri: None | str = field(
         default=None,
         metadata={
             "name": "ImageUri",
@@ -41,7 +41,7 @@ class SchematicMapVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    depicted_object_ref: VersionOfObjectRefStructure | None = field(
+    depicted_object_ref: None | VersionOfObjectRefStructure = field(
         default=None,
         metadata={
             "name": "DepictedObjectRef",
@@ -49,7 +49,7 @@ class SchematicMapVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    members: SchematicMapMembersRelStructure | None = field(
+    members: None | SchematicMapMembersRelStructure = field(
         default=None,
         metadata={
             "type": "Element",

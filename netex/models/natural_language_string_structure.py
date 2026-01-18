@@ -14,7 +14,7 @@ class NaturalLanguageStringStructure:
             "min_length": 1,
         },
     )
-    lang: str | None = field(
+    lang: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",

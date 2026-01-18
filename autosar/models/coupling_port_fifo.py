@@ -82,7 +82,7 @@ class CouplingPortFifo:
     class Meta:
         name = "COUPLING-PORT-FIFO"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -91,7 +91,7 @@ class CouplingPortFifo:
             "required": True,
         },
     )
-    short_name_fragments: CouplingPortFifo.ShortNameFragments | None = field(
+    short_name_fragments: None | CouplingPortFifo.ShortNameFragments = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -99,7 +99,7 @@ class CouplingPortFifo:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -107,7 +107,7 @@ class CouplingPortFifo:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -115,7 +115,7 @@ class CouplingPortFifo:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -123,7 +123,7 @@ class CouplingPortFifo:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -131,7 +131,7 @@ class CouplingPortFifo:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -139,7 +139,7 @@ class CouplingPortFifo:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: CouplingPortFifo.Annotations | None = field(
+    annotations: None | CouplingPortFifo.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -147,7 +147,7 @@ class CouplingPortFifo:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    assigned_traffic_classs: CouplingPortFifo.AssignedTrafficClasss | None = (
+    assigned_traffic_classs: None | CouplingPortFifo.AssignedTrafficClasss = (
         field(
             default=None,
             metadata={
@@ -157,7 +157,7 @@ class CouplingPortFifo:
             },
         )
     )
-    minimum_fifo_length: PositiveInteger | None = field(
+    minimum_fifo_length: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "MINIMUM-FIFO-LENGTH",
@@ -165,14 +165,14 @@ class CouplingPortFifo:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -180,7 +180,7 @@ class CouplingPortFifo:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",

@@ -16,7 +16,7 @@ class AccessZoneVersionStructure(ZoneVersionStructure):
         name = "AccessZone_VersionStructure"
 
     accessibility_assessment: (
-        AccessibilityAssessmentVersionedChildStructure | None
+        None | AccessibilityAssessmentVersionedChildStructure
     ) = field(
         default=None,
         metadata={
@@ -25,7 +25,7 @@ class AccessZoneVersionStructure(ZoneVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    all_areas_wheelchair_accessible: bool | None = field(
+    all_areas_wheelchair_accessible: None | bool = field(
         default=None,
         metadata={
             "name": "AllAreasWheelchairAccessible",

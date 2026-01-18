@@ -35,7 +35,7 @@ class ComponentInSystemInstanceRef:
         name = "COMPONENT-IN-SYSTEM-INSTANCE-REF"
 
     context_composition_ref: (
-        ComponentInSystemInstanceRef.ContextCompositionRef | None
+        None | ComponentInSystemInstanceRef.ContextCompositionRef
     ) = field(
         default=None,
         metadata={
@@ -55,7 +55,7 @@ class ComponentInSystemInstanceRef:
         },
     )
     target_component_ref: (
-        ComponentInSystemInstanceRef.TargetComponentRef | None
+        None | ComponentInSystemInstanceRef.TargetComponentRef
     ) = field(
         default=None,
         metadata={
@@ -64,14 +64,14 @@ class ComponentInSystemInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -82,7 +82,7 @@ class ComponentInSystemInstanceRef:
 
     @dataclass
     class ContextCompositionRef(Ref):
-        dest: RootSwCompositionPrototypeSubtypesEnum | None = field(
+        dest: None | RootSwCompositionPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -93,7 +93,7 @@ class ComponentInSystemInstanceRef:
 
     @dataclass
     class ContextComponentRef(Ref):
-        dest: SwComponentPrototypeSubtypesEnum | None = field(
+        dest: None | SwComponentPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -104,7 +104,7 @@ class ComponentInSystemInstanceRef:
 
     @dataclass
     class TargetComponentRef(Ref):
-        dest: SwComponentPrototypeSubtypesEnum | None = field(
+        dest: None | SwComponentPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

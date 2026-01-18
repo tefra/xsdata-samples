@@ -28,20 +28,20 @@ class DiagPduType:
     class Meta:
         name = "DIAG-PDU-TYPE"
 
-    value: DiagPduTypeSimple | None = field(
+    value: None | DiagPduTypeSimple = field(
         default=None,
         metadata={
             "required": True,
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

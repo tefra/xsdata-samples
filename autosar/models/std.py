@@ -47,7 +47,7 @@ class Std:
     class Meta:
         name = "STD"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -56,7 +56,7 @@ class Std:
             "required": True,
         },
     )
-    short_name_fragments: Std.ShortNameFragments | None = field(
+    short_name_fragments: None | Std.ShortNameFragments = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -64,7 +64,7 @@ class Std:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name_1: SingleLanguageLongName | None = field(
+    long_name_1: None | SingleLanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME-1",
@@ -72,7 +72,7 @@ class Std:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    subtitle: String | None = field(
+    subtitle: None | String = field(
         default=None,
         metadata={
             "name": "SUBTITLE",
@@ -80,7 +80,7 @@ class Std:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    state: String | None = field(
+    state: None | String = field(
         default=None,
         metadata={
             "name": "STATE",
@@ -88,7 +88,7 @@ class Std:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    date: Date | None = field(
+    date: None | Date = field(
         default=None,
         metadata={
             "name": "DATE",
@@ -96,7 +96,7 @@ class Std:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    url: Url | None = field(
+    url: None | Url = field(
         default=None,
         metadata={
             "name": "URL",
@@ -104,7 +104,7 @@ class Std:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    position: String | None = field(
+    position: None | String = field(
         default=None,
         metadata={
             "name": "POSITION",
@@ -112,14 +112,14 @@ class Std:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

@@ -60,7 +60,7 @@ class SomeipTransformationDescription:
     class Meta:
         name = "SOMEIP-TRANSFORMATION-DESCRIPTION"
 
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -68,7 +68,7 @@ class SomeipTransformationDescription:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -76,7 +76,7 @@ class SomeipTransformationDescription:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -84,7 +84,7 @@ class SomeipTransformationDescription:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -92,7 +92,7 @@ class SomeipTransformationDescription:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -100,7 +100,7 @@ class SomeipTransformationDescription:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    alignment: PositiveInteger | None = field(
+    alignment: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "ALIGNMENT",
@@ -108,7 +108,7 @@ class SomeipTransformationDescription:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    byte_order: ByteOrderEnum | None = field(
+    byte_order: None | ByteOrderEnum = field(
         default=None,
         metadata={
             "name": "BYTE-ORDER",
@@ -116,7 +116,7 @@ class SomeipTransformationDescription:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    interface_version: PositiveInteger | None = field(
+    interface_version: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "INTERFACE-VERSION",
@@ -124,14 +124,14 @@ class SomeipTransformationDescription:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

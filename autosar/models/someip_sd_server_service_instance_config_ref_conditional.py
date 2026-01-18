@@ -35,8 +35,8 @@ class SomeipSdServerServiceInstanceConfigRefConditional:
         name = "SOMEIP-SD-SERVER-SERVICE-INSTANCE-CONFIG-REF-CONDITIONAL"
 
     someip_sd_server_service_instance_config_ref: (
-        SomeipSdServerServiceInstanceConfigRefConditional.SomeipSdServerServiceInstanceConfigRef
-        | None
+        None
+        | SomeipSdServerServiceInstanceConfigRefConditional.SomeipSdServerServiceInstanceConfigRef
     ) = field(
         default=None,
         metadata={
@@ -45,7 +45,7 @@ class SomeipSdServerServiceInstanceConfigRefConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -53,14 +53,14 @@ class SomeipSdServerServiceInstanceConfigRefConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -71,7 +71,7 @@ class SomeipSdServerServiceInstanceConfigRefConditional:
 
     @dataclass
     class SomeipSdServerServiceInstanceConfigRef(Ref):
-        dest: SomeipSdServerServiceInstanceConfigSubtypesEnum | None = field(
+        dest: None | SomeipSdServerServiceInstanceConfigSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

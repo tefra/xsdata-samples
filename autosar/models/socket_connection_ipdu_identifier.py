@@ -59,7 +59,7 @@ class SocketConnectionIpduIdentifier:
     class Meta:
         name = "SOCKET-CONNECTION-IPDU-IDENTIFIER"
 
-    header_id: PositiveInteger | None = field(
+    header_id: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "HEADER-ID",
@@ -67,7 +67,7 @@ class SocketConnectionIpduIdentifier:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    pdu_collection_pdu_timeout: TimeValue | None = field(
+    pdu_collection_pdu_timeout: None | TimeValue = field(
         default=None,
         metadata={
             "name": "PDU-COLLECTION-PDU-TIMEOUT",
@@ -75,7 +75,7 @@ class SocketConnectionIpduIdentifier:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    pdu_collection_semantics: PduCollectionSemanticsEnum | None = field(
+    pdu_collection_semantics: None | PduCollectionSemanticsEnum = field(
         default=None,
         metadata={
             "name": "PDU-COLLECTION-SEMANTICS",
@@ -83,7 +83,7 @@ class SocketConnectionIpduIdentifier:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    pdu_collection_trigger: PduCollectionTriggerEnum | None = field(
+    pdu_collection_trigger: None | PduCollectionTriggerEnum = field(
         default=None,
         metadata={
             "name": "PDU-COLLECTION-TRIGGER",
@@ -91,7 +91,7 @@ class SocketConnectionIpduIdentifier:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    pdu_ref: SocketConnectionIpduIdentifier.PduRef | None = field(
+    pdu_ref: None | SocketConnectionIpduIdentifier.PduRef = field(
         default=None,
         metadata={
             "name": "PDU-REF",
@@ -100,7 +100,7 @@ class SocketConnectionIpduIdentifier:
         },
     )
     pdu_triggering_ref: (
-        SocketConnectionIpduIdentifier.PduTriggeringRef | None
+        None | SocketConnectionIpduIdentifier.PduTriggeringRef
     ) = field(
         default=None,
         metadata={
@@ -110,7 +110,7 @@ class SocketConnectionIpduIdentifier:
         },
     )
     routing_group_refs: (
-        SocketConnectionIpduIdentifier.RoutingGroupRefs | None
+        None | SocketConnectionIpduIdentifier.RoutingGroupRefs
     ) = field(
         default=None,
         metadata={
@@ -119,14 +119,14 @@ class SocketConnectionIpduIdentifier:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -137,7 +137,7 @@ class SocketConnectionIpduIdentifier:
 
     @dataclass
     class PduRef(Ref):
-        dest: PduSubtypesEnum | None = field(
+        dest: None | PduSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -148,7 +148,7 @@ class SocketConnectionIpduIdentifier:
 
     @dataclass
     class PduTriggeringRef(Ref):
-        dest: PduTriggeringSubtypesEnum | None = field(
+        dest: None | PduTriggeringSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -172,7 +172,7 @@ class SocketConnectionIpduIdentifier:
 
         @dataclass
         class RoutingGroupRef(Ref):
-            dest: SoAdRoutingGroupSubtypesEnum | None = field(
+            dest: None | SoAdRoutingGroupSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",

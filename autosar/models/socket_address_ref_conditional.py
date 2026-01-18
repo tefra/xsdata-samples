@@ -32,7 +32,7 @@ class SocketAddressRefConditional:
     class Meta:
         name = "SOCKET-ADDRESS-REF-CONDITIONAL"
 
-    socket_address_ref: SocketAddressRefConditional.SocketAddressRef | None = (
+    socket_address_ref: None | SocketAddressRefConditional.SocketAddressRef = (
         field(
             default=None,
             metadata={
@@ -42,7 +42,7 @@ class SocketAddressRefConditional:
             },
         )
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -50,14 +50,14 @@ class SocketAddressRefConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -68,7 +68,7 @@ class SocketAddressRefConditional:
 
     @dataclass
     class SocketAddressRef(Ref):
-        dest: SocketAddressSubtypesEnum | None = field(
+        dest: None | SocketAddressSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

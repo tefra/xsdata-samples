@@ -112,7 +112,7 @@ class SomeipServiceInterfaceDeployment:
     class Meta:
         name = "SOMEIP-SERVICE-INTERFACE-DEPLOYMENT"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -122,7 +122,7 @@ class SomeipServiceInterfaceDeployment:
         },
     )
     short_name_fragments: (
-        SomeipServiceInterfaceDeployment.ShortNameFragments | None
+        None | SomeipServiceInterfaceDeployment.ShortNameFragments
     ) = field(
         default=None,
         metadata={
@@ -131,7 +131,7 @@ class SomeipServiceInterfaceDeployment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -139,7 +139,7 @@ class SomeipServiceInterfaceDeployment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -147,7 +147,7 @@ class SomeipServiceInterfaceDeployment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -155,7 +155,7 @@ class SomeipServiceInterfaceDeployment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -163,7 +163,7 @@ class SomeipServiceInterfaceDeployment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -171,7 +171,7 @@ class SomeipServiceInterfaceDeployment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: SomeipServiceInterfaceDeployment.Annotations | None = field(
+    annotations: None | SomeipServiceInterfaceDeployment.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -179,7 +179,7 @@ class SomeipServiceInterfaceDeployment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -188,7 +188,7 @@ class SomeipServiceInterfaceDeployment:
         },
     )
     event_deployments: (
-        SomeipServiceInterfaceDeployment.EventDeployments | None
+        None | SomeipServiceInterfaceDeployment.EventDeployments
     ) = field(
         default=None,
         metadata={
@@ -198,7 +198,7 @@ class SomeipServiceInterfaceDeployment:
         },
     )
     field_deployments: (
-        SomeipServiceInterfaceDeployment.FieldDeployments | None
+        None | SomeipServiceInterfaceDeployment.FieldDeployments
     ) = field(
         default=None,
         metadata={
@@ -208,7 +208,7 @@ class SomeipServiceInterfaceDeployment:
         },
     )
     method_deployments: (
-        SomeipServiceInterfaceDeployment.MethodDeployments | None
+        None | SomeipServiceInterfaceDeployment.MethodDeployments
     ) = field(
         default=None,
         metadata={
@@ -218,7 +218,7 @@ class SomeipServiceInterfaceDeployment:
         },
     )
     service_interface_ref: (
-        SomeipServiceInterfaceDeployment.ServiceInterfaceRef | None
+        None | SomeipServiceInterfaceDeployment.ServiceInterfaceRef
     ) = field(
         default=None,
         metadata={
@@ -227,7 +227,7 @@ class SomeipServiceInterfaceDeployment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    event_groups: SomeipServiceInterfaceDeployment.EventGroups | None = field(
+    event_groups: None | SomeipServiceInterfaceDeployment.EventGroups = field(
         default=None,
         metadata={
             "name": "EVENT-GROUPS",
@@ -235,7 +235,7 @@ class SomeipServiceInterfaceDeployment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    service_interface_id: PositiveInteger | None = field(
+    service_interface_id: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "SERVICE-INTERFACE-ID",
@@ -243,7 +243,7 @@ class SomeipServiceInterfaceDeployment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    service_interface_version: SomeipServiceVersion | None = field(
+    service_interface_version: None | SomeipServiceVersion = field(
         default=None,
         metadata={
             "name": "SERVICE-INTERFACE-VERSION",
@@ -251,14 +251,14 @@ class SomeipServiceInterfaceDeployment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -266,7 +266,7 @@ class SomeipServiceInterfaceDeployment:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -377,7 +377,7 @@ class SomeipServiceInterfaceDeployment:
 
     @dataclass
     class ServiceInterfaceRef(Ref):
-        dest: ServiceInterfaceSubtypesEnum | None = field(
+        dest: None | ServiceInterfaceSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

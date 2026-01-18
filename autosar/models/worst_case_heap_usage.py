@@ -93,7 +93,7 @@ class WorstCaseHeapUsage:
     class Meta:
         name = "WORST-CASE-HEAP-USAGE"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -102,7 +102,7 @@ class WorstCaseHeapUsage:
             "required": True,
         },
     )
-    short_name_fragments: WorstCaseHeapUsage.ShortNameFragments | None = field(
+    short_name_fragments: None | WorstCaseHeapUsage.ShortNameFragments = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -110,7 +110,7 @@ class WorstCaseHeapUsage:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -118,7 +118,7 @@ class WorstCaseHeapUsage:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -126,7 +126,7 @@ class WorstCaseHeapUsage:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -134,7 +134,7 @@ class WorstCaseHeapUsage:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -142,7 +142,7 @@ class WorstCaseHeapUsage:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -150,7 +150,7 @@ class WorstCaseHeapUsage:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: WorstCaseHeapUsage.Annotations | None = field(
+    annotations: None | WorstCaseHeapUsage.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -158,7 +158,7 @@ class WorstCaseHeapUsage:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    hardware_configuration: HardwareConfiguration | None = field(
+    hardware_configuration: None | HardwareConfiguration = field(
         default=None,
         metadata={
             "name": "HARDWARE-CONFIGURATION",
@@ -166,7 +166,7 @@ class WorstCaseHeapUsage:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    hw_element_ref: WorstCaseHeapUsage.HwElementRef | None = field(
+    hw_element_ref: None | WorstCaseHeapUsage.HwElementRef = field(
         default=None,
         metadata={
             "name": "HW-ELEMENT-REF",
@@ -174,7 +174,7 @@ class WorstCaseHeapUsage:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    software_context: SoftwareContext | None = field(
+    software_context: None | SoftwareContext = field(
         default=None,
         metadata={
             "name": "SOFTWARE-CONTEXT",
@@ -182,7 +182,7 @@ class WorstCaseHeapUsage:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -190,7 +190,7 @@ class WorstCaseHeapUsage:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    memory_consumption: PositiveInteger | None = field(
+    memory_consumption: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "MEMORY-CONSUMPTION",
@@ -198,14 +198,14 @@ class WorstCaseHeapUsage:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -213,7 +213,7 @@ class WorstCaseHeapUsage:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -245,7 +245,7 @@ class WorstCaseHeapUsage:
 
     @dataclass
     class HwElementRef(Ref):
-        dest: HwElementSubtypesEnum | None = field(
+        dest: None | HwElementSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

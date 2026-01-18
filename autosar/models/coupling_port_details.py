@@ -55,7 +55,7 @@ class CouplingPortDetails:
         name = "COUPLING-PORT-DETAILS"
 
     coupling_port_structural_elements: (
-        CouplingPortDetails.CouplingPortStructuralElements | None
+        None | CouplingPortDetails.CouplingPortStructuralElements
     ) = field(
         default=None,
         metadata={
@@ -65,7 +65,7 @@ class CouplingPortDetails:
         },
     )
     ethernet_priority_regenerations: (
-        CouplingPortDetails.EthernetPriorityRegenerations | None
+        None | CouplingPortDetails.EthernetPriorityRegenerations
     ) = field(
         default=None,
         metadata={
@@ -75,7 +75,7 @@ class CouplingPortDetails:
         },
     )
     ethernet_traffic_class_assignments: (
-        CouplingPortDetails.EthernetTrafficClassAssignments | None
+        None | CouplingPortDetails.EthernetTrafficClassAssignments
     ) = field(
         default=None,
         metadata={
@@ -84,7 +84,7 @@ class CouplingPortDetails:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    global_time_props: GlobalTimeCouplingPortProps | None = field(
+    global_time_props: None | GlobalTimeCouplingPortProps = field(
         default=None,
         metadata={
             "name": "GLOBAL-TIME-PROPS",
@@ -93,7 +93,7 @@ class CouplingPortDetails:
         },
     )
     last_egress_scheduler_ref: (
-        CouplingPortDetails.LastEgressSchedulerRef | None
+        None | CouplingPortDetails.LastEgressSchedulerRef
     ) = field(
         default=None,
         metadata={
@@ -102,7 +102,7 @@ class CouplingPortDetails:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    rate_policys: CouplingPortDetails.RatePolicys | None = field(
+    rate_policys: None | CouplingPortDetails.RatePolicys = field(
         default=None,
         metadata={
             "name": "RATE-POLICYS",
@@ -110,14 +110,14 @@ class CouplingPortDetails:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -183,7 +183,7 @@ class CouplingPortDetails:
 
     @dataclass
     class LastEgressSchedulerRef(Ref):
-        dest: CouplingPortSchedulerSubtypesEnum | None = field(
+        dest: None | CouplingPortSchedulerSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

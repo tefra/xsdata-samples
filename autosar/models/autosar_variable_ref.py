@@ -62,7 +62,7 @@ class AutosarVariableRef:
         name = "AUTOSAR-VARIABLE-REF"
 
     autosar_variable_in_impl_datatype: (
-        ArVariableInImplementationDataInstanceRef | None
+        None | ArVariableInImplementationDataInstanceRef
     ) = field(
         default=None,
         metadata={
@@ -71,7 +71,7 @@ class AutosarVariableRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    autosar_variable_iref: VariableInAtomicSwcTypeInstanceRef | None = field(
+    autosar_variable_iref: None | VariableInAtomicSwcTypeInstanceRef = field(
         default=None,
         metadata={
             "name": "AUTOSAR-VARIABLE-IREF",
@@ -79,7 +79,7 @@ class AutosarVariableRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    local_variable_ref: AutosarVariableRef.LocalVariableRef | None = field(
+    local_variable_ref: None | AutosarVariableRef.LocalVariableRef = field(
         default=None,
         metadata={
             "name": "LOCAL-VARIABLE-REF",
@@ -87,14 +87,14 @@ class AutosarVariableRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -105,7 +105,7 @@ class AutosarVariableRef:
 
     @dataclass
     class LocalVariableRef(Ref):
-        dest: VariableDataPrototypeSubtypesEnum | None = field(
+        dest: None | VariableDataPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

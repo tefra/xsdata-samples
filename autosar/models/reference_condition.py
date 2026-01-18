@@ -43,7 +43,7 @@ class ReferenceCondition:
     class Meta:
         name = "REFERENCE-CONDITION"
 
-    lower_multiplicity: PositiveInteger | None = field(
+    lower_multiplicity: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "LOWER-MULTIPLICITY",
@@ -51,7 +51,7 @@ class ReferenceCondition:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    upper_multiplicity: PositiveInteger | None = field(
+    upper_multiplicity: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "UPPER-MULTIPLICITY",
@@ -59,7 +59,7 @@ class ReferenceCondition:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    upper_multiplicity_infinite: Boolean | None = field(
+    upper_multiplicity_infinite: None | Boolean = field(
         default=None,
         metadata={
             "name": "UPPER-MULTIPLICITY-INFINITE",
@@ -67,7 +67,7 @@ class ReferenceCondition:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    reference_ref: ReferenceCondition.ReferenceRef | None = field(
+    reference_ref: None | ReferenceCondition.ReferenceRef = field(
         default=None,
         metadata={
             "name": "REFERENCE-REF",
@@ -75,14 +75,14 @@ class ReferenceCondition:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -93,7 +93,7 @@ class ReferenceCondition:
 
     @dataclass
     class ReferenceRef(Ref):
-        dest: ReferenceTailoringSubtypesEnum | None = field(
+        dest: None | ReferenceTailoringSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

@@ -16,7 +16,7 @@ class FlexibleStopAssignmentVersionStructure(StopAssignmentVersionStructure):
     class Meta:
         name = "FlexibleStopAssignment_VersionStructure"
 
-    flexible_stop_place_ref: FlexibleStopPlaceRef | None = field(
+    flexible_stop_place_ref: None | FlexibleStopPlaceRef = field(
         default=None,
         metadata={
             "name": "FlexibleStopPlaceRef",
@@ -26,7 +26,7 @@ class FlexibleStopAssignmentVersionStructure(StopAssignmentVersionStructure):
         },
     )
     flexible_quay_ref: (
-        HailAndRideAreaRef | FlexibleAreaRef | FlexibleQuayRef | None
+        None | HailAndRideAreaRef | FlexibleAreaRef | FlexibleQuayRef
     ) = field(
         default=None,
         metadata={

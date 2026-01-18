@@ -25,21 +25,21 @@ class VersionableType(NameableType):
         version.
     """
 
-    version: str | None = field(
+    version: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"(0|[1-9]\d*)(\.(0|[1-9]\d*))?",
         },
     )
-    valid_from: XmlDateTime | None = field(
+    valid_from: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "validFrom",
             "type": "Attribute",
         },
     )
-    valid_to: XmlDateTime | None = field(
+    valid_to: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "validTo",

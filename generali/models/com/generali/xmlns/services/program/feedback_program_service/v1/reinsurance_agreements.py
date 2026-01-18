@@ -12,7 +12,7 @@ class ReinsuranceAgreements:
     class Meta:
         namespace = "http://xmlns.generali.com/services/program/FeedbackProgramService/v1"
 
-    reinsurance_agreement_id: str | None = field(
+    reinsurance_agreement_id: None | str = field(
         default=None,
         metadata={
             "name": "ReinsuranceAgreementID",

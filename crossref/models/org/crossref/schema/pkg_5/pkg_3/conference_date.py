@@ -34,7 +34,7 @@ class ConferenceDate:
             "max_length": 100,
         },
     )
-    start_day: int | None = field(
+    start_day: None | int = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -43,7 +43,7 @@ class ConferenceDate:
             "total_digits": 2,
         },
     )
-    start_month: int | None = field(
+    start_month: None | int = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -52,7 +52,7 @@ class ConferenceDate:
             "total_digits": 2,
         },
     )
-    start_year: int | None = field(
+    start_year: None | int = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -61,7 +61,7 @@ class ConferenceDate:
             "total_digits": 4,
         },
     )
-    end_day: int | None = field(
+    end_day: None | int = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -70,7 +70,7 @@ class ConferenceDate:
             "total_digits": 2,
         },
     )
-    end_month: int | None = field(
+    end_month: None | int = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -79,7 +79,7 @@ class ConferenceDate:
             "total_digits": 2,
         },
     )
-    end_year: int | None = field(
+    end_year: None | int = field(
         default=None,
         metadata={
             "type": "Attribute",

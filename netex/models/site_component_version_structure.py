@@ -19,7 +19,7 @@ class SiteComponentVersionStructure(SiteElementVersionStructure):
     class Meta:
         name = "SiteComponent_VersionStructure"
 
-    site_ref: SiteRefStructure | None = field(
+    site_ref: None | SiteRefStructure = field(
         default=None,
         metadata={
             "name": "SiteRef",
@@ -27,7 +27,7 @@ class SiteComponentVersionStructure(SiteElementVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    level_ref: LevelRef | None = field(
+    level_ref: None | LevelRef = field(
         default=None,
         metadata={
             "name": "LevelRef",
@@ -35,7 +35,7 @@ class SiteComponentVersionStructure(SiteElementVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    class_of_use_ref: ClassOfUseRef | None = field(
+    class_of_use_ref: None | ClassOfUseRef = field(
         default=None,
         metadata={
             "name": "ClassOfUseRef",
@@ -43,7 +43,7 @@ class SiteComponentVersionStructure(SiteElementVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    check_constraints: CheckConstraintsRelStructure | None = field(
+    check_constraints: None | CheckConstraintsRelStructure = field(
         default=None,
         metadata={
             "name": "checkConstraints",
@@ -51,7 +51,7 @@ class SiteComponentVersionStructure(SiteElementVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    equipment_places: EquipmentPlacesRelStructure | None = field(
+    equipment_places: None | EquipmentPlacesRelStructure = field(
         default=None,
         metadata={
             "name": "equipmentPlaces",
@@ -59,7 +59,7 @@ class SiteComponentVersionStructure(SiteElementVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    place_equipments: PlaceEquipmentsRelStructure | None = field(
+    place_equipments: None | PlaceEquipmentsRelStructure = field(
         default=None,
         metadata={
             "name": "placeEquipments",
@@ -67,7 +67,7 @@ class SiteComponentVersionStructure(SiteElementVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    local_services: LocalServicesRelStructure | None = field(
+    local_services: None | LocalServicesRelStructure = field(
         default=None,
         metadata={
             "name": "localServices",

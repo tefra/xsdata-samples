@@ -37,7 +37,7 @@ class CppImplementationDataTypeElementQualifier:
     class Meta:
         name = "CPP-IMPLEMENTATION-DATA-TYPE-ELEMENT-QUALIFIER"
 
-    inplace: Boolean | None = field(
+    inplace: None | Boolean = field(
         default=None,
         metadata={
             "name": "INPLACE",
@@ -46,7 +46,7 @@ class CppImplementationDataTypeElementQualifier:
         },
     )
     type_reference_ref: (
-        CppImplementationDataTypeElementQualifier.TypeReferenceRef | None
+        None | CppImplementationDataTypeElementQualifier.TypeReferenceRef
     ) = field(
         default=None,
         metadata={
@@ -55,14 +55,14 @@ class CppImplementationDataTypeElementQualifier:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -73,7 +73,7 @@ class CppImplementationDataTypeElementQualifier:
 
     @dataclass
     class TypeReferenceRef(Ref):
-        dest: CppImplementationDataTypeSubtypesEnum | None = field(
+        dest: None | CppImplementationDataTypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

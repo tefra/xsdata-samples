@@ -35,7 +35,7 @@ class OrderedMaster:
     class Meta:
         name = "ORDERED-MASTER"
 
-    index: PositiveInteger | None = field(
+    index: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "INDEX",
@@ -43,7 +43,7 @@ class OrderedMaster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    time_sync_server_ref: OrderedMaster.TimeSyncServerRef | None = field(
+    time_sync_server_ref: None | OrderedMaster.TimeSyncServerRef = field(
         default=None,
         metadata={
             "name": "TIME-SYNC-SERVER-REF",
@@ -51,14 +51,14 @@ class OrderedMaster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -69,7 +69,7 @@ class OrderedMaster:
 
     @dataclass
     class TimeSyncServerRef(Ref):
-        dest: TimeSyncServerConfigurationSubtypesEnum | None = field(
+        dest: None | TimeSyncServerConfigurationSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

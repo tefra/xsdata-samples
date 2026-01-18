@@ -18,7 +18,7 @@ class MetadataStructureComponentsType(MetadataStructureComponentsBaseType):
     definition.
     """
 
-    metadata_attribute_list: MetadataAttributeList | None = field(
+    metadata_attribute_list: None | MetadataAttributeList = field(
         default=None,
         metadata={
             "name": "MetadataAttributeList",

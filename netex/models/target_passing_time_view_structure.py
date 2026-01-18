@@ -81,7 +81,7 @@ class TargetPassingTimeViewStructure(PassingTimeViewStructure):
             "max_occurs": 5,
         },
     )
-    aimed_headway: HeadwayIntervalStructure | None = field(
+    aimed_headway: None | HeadwayIntervalStructure = field(
         default=None,
         metadata={
             "name": "AimedHeadway",
@@ -92,7 +92,7 @@ class TargetPassingTimeViewStructure(PassingTimeViewStructure):
 
     @dataclass
     class AimedArrivalTime:
-        value: XmlTime | None = field(
+        value: None | XmlTime = field(
             default=None,
             metadata={
                 "required": True,
@@ -101,7 +101,7 @@ class TargetPassingTimeViewStructure(PassingTimeViewStructure):
 
     @dataclass
     class ArrivalDayOffset:
-        value: int | None = field(
+        value: None | int = field(
             default=None,
             metadata={
                 "required": True,
@@ -110,7 +110,7 @@ class TargetPassingTimeViewStructure(PassingTimeViewStructure):
 
     @dataclass
     class AimedDepartureTime:
-        value: XmlTime | None = field(
+        value: None | XmlTime = field(
             default=None,
             metadata={
                 "required": True,
@@ -119,7 +119,7 @@ class TargetPassingTimeViewStructure(PassingTimeViewStructure):
 
     @dataclass
     class DepartureDayOffset:
-        value: int | None = field(
+        value: None | int = field(
             default=None,
             metadata={
                 "required": True,
@@ -128,7 +128,7 @@ class TargetPassingTimeViewStructure(PassingTimeViewStructure):
 
     @dataclass
     class AimedNonstopPassingTime:
-        value: XmlTime | None = field(
+        value: None | XmlTime = field(
             default=None,
             metadata={
                 "required": True,
@@ -137,7 +137,7 @@ class TargetPassingTimeViewStructure(PassingTimeViewStructure):
 
     @dataclass
     class PassingDayOffset:
-        value: int | None = field(
+        value: None | int = field(
             default=None,
             metadata={
                 "required": True,

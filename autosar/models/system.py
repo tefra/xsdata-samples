@@ -145,7 +145,7 @@ class System:
     class Meta:
         name = "SYSTEM"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -154,7 +154,7 @@ class System:
             "required": True,
         },
     )
-    short_name_fragments: System.ShortNameFragments | None = field(
+    short_name_fragments: None | System.ShortNameFragments = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -162,7 +162,7 @@ class System:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -170,7 +170,7 @@ class System:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -178,7 +178,7 @@ class System:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -186,7 +186,7 @@ class System:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -194,7 +194,7 @@ class System:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -202,7 +202,7 @@ class System:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: System.Annotations | None = field(
+    annotations: None | System.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -210,7 +210,7 @@ class System:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -218,7 +218,7 @@ class System:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    system_documentations: System.SystemDocumentations | None = field(
+    system_documentations: None | System.SystemDocumentations = field(
         default=None,
         metadata={
             "name": "SYSTEM-DOCUMENTATIONS",
@@ -226,7 +226,7 @@ class System:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    client_id_definition_set_refs: System.ClientIdDefinitionSetRefs | None = (
+    client_id_definition_set_refs: None | System.ClientIdDefinitionSetRefs = (
         field(
             default=None,
             metadata={
@@ -236,7 +236,7 @@ class System:
             },
         )
     )
-    container_i_pdu_header_byte_order: ByteOrderEnum | None = field(
+    container_i_pdu_header_byte_order: None | ByteOrderEnum = field(
         default=None,
         metadata={
             "name": "CONTAINER-I-PDU-HEADER-BYTE-ORDER",
@@ -244,7 +244,7 @@ class System:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ecu_extract_version: RevisionLabelString | None = field(
+    ecu_extract_version: None | RevisionLabelString = field(
         default=None,
         metadata={
             "name": "ECU-EXTRACT-VERSION",
@@ -252,7 +252,7 @@ class System:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    fibex_elements: System.FibexElements | None = field(
+    fibex_elements: None | System.FibexElements = field(
         default=None,
         metadata={
             "name": "FIBEX-ELEMENTS",
@@ -261,7 +261,7 @@ class System:
         },
     )
     interpolation_routine_mapping_set_refs: (
-        System.InterpolationRoutineMappingSetRefs | None
+        None | System.InterpolationRoutineMappingSetRefs
     ) = field(
         default=None,
         metadata={
@@ -271,7 +271,7 @@ class System:
         },
     )
     j_1939_shared_address_clusters: (
-        System.J1939SharedAddressClusters | None
+        None | System.J1939SharedAddressClusters
     ) = field(
         default=None,
         metadata={
@@ -280,7 +280,7 @@ class System:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    mappings: System.Mappings | None = field(
+    mappings: None | System.Mappings = field(
         default=None,
         metadata={
             "name": "MAPPINGS",
@@ -288,7 +288,7 @@ class System:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    pnc_vector_length: PositiveInteger | None = field(
+    pnc_vector_length: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "PNC-VECTOR-LENGTH",
@@ -296,7 +296,7 @@ class System:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    pnc_vector_offset: PositiveInteger | None = field(
+    pnc_vector_offset: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "PNC-VECTOR-OFFSET",
@@ -304,7 +304,7 @@ class System:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    root_software_compositions: System.RootSoftwareCompositions | None = field(
+    root_software_compositions: None | System.RootSoftwareCompositions = field(
         default=None,
         metadata={
             "name": "ROOT-SOFTWARE-COMPOSITIONS",
@@ -312,7 +312,7 @@ class System:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_clusters: System.SwClusters | None = field(
+    sw_clusters: None | System.SwClusters = field(
         default=None,
         metadata={
             "name": "SW-CLUSTERS",
@@ -320,7 +320,7 @@ class System:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    system_version: RevisionLabelString | None = field(
+    system_version: None | RevisionLabelString = field(
         default=None,
         metadata={
             "name": "SYSTEM-VERSION",
@@ -328,14 +328,14 @@ class System:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -343,7 +343,7 @@ class System:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -399,7 +399,7 @@ class System:
 
         @dataclass
         class ClientIdDefinitionSetRef(Ref):
-            dest: ClientIdDefinitionSetSubtypesEnum | None = field(
+            dest: None | ClientIdDefinitionSetSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -436,7 +436,7 @@ class System:
 
         @dataclass
         class InterpolationRoutineMappingSetRef(Ref):
-            dest: InterpolationRoutineMappingSetSubtypesEnum | None = field(
+            dest: None | InterpolationRoutineMappingSetSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",

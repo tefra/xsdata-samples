@@ -98,7 +98,7 @@ class DiagnosticClearConditionPortMapping:
     class Meta:
         name = "DIAGNOSTIC-CLEAR-CONDITION-PORT-MAPPING"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -108,7 +108,7 @@ class DiagnosticClearConditionPortMapping:
         },
     )
     short_name_fragments: (
-        DiagnosticClearConditionPortMapping.ShortNameFragments | None
+        None | DiagnosticClearConditionPortMapping.ShortNameFragments
     ) = field(
         default=None,
         metadata={
@@ -117,7 +117,7 @@ class DiagnosticClearConditionPortMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -125,7 +125,7 @@ class DiagnosticClearConditionPortMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -133,7 +133,7 @@ class DiagnosticClearConditionPortMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -141,7 +141,7 @@ class DiagnosticClearConditionPortMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -149,7 +149,7 @@ class DiagnosticClearConditionPortMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -157,7 +157,7 @@ class DiagnosticClearConditionPortMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: DiagnosticClearConditionPortMapping.Annotations | None = (
+    annotations: None | DiagnosticClearConditionPortMapping.Annotations = (
         field(
             default=None,
             metadata={
@@ -167,7 +167,7 @@ class DiagnosticClearConditionPortMapping:
             },
         )
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -176,7 +176,7 @@ class DiagnosticClearConditionPortMapping:
         },
     )
     clear_condition_ref: (
-        DiagnosticClearConditionPortMapping.ClearConditionRef | None
+        None | DiagnosticClearConditionPortMapping.ClearConditionRef
     ) = field(
         default=None,
         metadata={
@@ -185,7 +185,7 @@ class DiagnosticClearConditionPortMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    process_ref: DiagnosticClearConditionPortMapping.ProcessRef | None = field(
+    process_ref: None | DiagnosticClearConditionPortMapping.ProcessRef = field(
         default=None,
         metadata={
             "name": "PROCESS-REF",
@@ -194,7 +194,7 @@ class DiagnosticClearConditionPortMapping:
         },
     )
     swc_service_dependency_in_executable_iref: (
-        SwcServiceDependencyInExecutableInstanceRef | None
+        None | SwcServiceDependencyInExecutableInstanceRef
     ) = field(
         default=None,
         metadata={
@@ -203,14 +203,14 @@ class DiagnosticClearConditionPortMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -218,7 +218,7 @@ class DiagnosticClearConditionPortMapping:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -250,7 +250,7 @@ class DiagnosticClearConditionPortMapping:
 
     @dataclass
     class ClearConditionRef(Ref):
-        dest: DiagnosticClearConditionSubtypesEnum | None = field(
+        dest: None | DiagnosticClearConditionSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -261,7 +261,7 @@ class DiagnosticClearConditionPortMapping:
 
     @dataclass
     class ProcessRef(Ref):
-        dest: ProcessDesignSubtypesEnum | None = field(
+        dest: None | ProcessDesignSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

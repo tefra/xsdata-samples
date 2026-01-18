@@ -34,7 +34,7 @@ class VmsUnit(VmsSetting):
     :ivar vms_unit_extension:
     """
 
-    vms_unit_table_reference: VmsUnitTableVersionedReference | None = field(
+    vms_unit_table_reference: None | VmsUnitTableVersionedReference = field(
         default=None,
         metadata={
             "name": "vmsUnitTableReference",
@@ -43,7 +43,7 @@ class VmsUnit(VmsSetting):
             "required": True,
         },
     )
-    vms_unit_reference: VmsUnitRecordVersionedReference | None = field(
+    vms_unit_reference: None | VmsUnitRecordVersionedReference = field(
         default=None,
         metadata={
             "name": "vmsUnitReference",
@@ -67,7 +67,7 @@ class VmsUnit(VmsSetting):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    vms_unit_extension: ExtensionType | None = field(
+    vms_unit_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "vmsUnitExtension",

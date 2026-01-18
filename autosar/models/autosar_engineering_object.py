@@ -45,7 +45,7 @@ class AutosarEngineeringObject:
     class Meta:
         name = "AUTOSAR-ENGINEERING-OBJECT"
 
-    short_label: NmtokenString | None = field(
+    short_label: None | NmtokenString = field(
         default=None,
         metadata={
             "name": "SHORT-LABEL",
@@ -53,7 +53,7 @@ class AutosarEngineeringObject:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: NmtokenString | None = field(
+    category: None | NmtokenString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -61,7 +61,7 @@ class AutosarEngineeringObject:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    revision_labels: AutosarEngineeringObject.RevisionLabels | None = field(
+    revision_labels: None | AutosarEngineeringObject.RevisionLabels = field(
         default=None,
         metadata={
             "name": "REVISION-LABELS",
@@ -69,7 +69,7 @@ class AutosarEngineeringObject:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    domain: NmtokenString | None = field(
+    domain: None | NmtokenString = field(
         default=None,
         metadata={
             "name": "DOMAIN",
@@ -77,14 +77,14 @@ class AutosarEngineeringObject:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

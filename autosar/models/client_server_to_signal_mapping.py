@@ -79,7 +79,7 @@ class ClientServerToSignalMapping:
     class Meta:
         name = "CLIENT-SERVER-TO-SIGNAL-MAPPING"
 
-    communication_direction: CommunicationDirectionType | None = field(
+    communication_direction: None | CommunicationDirectionType = field(
         default=None,
         metadata={
             "name": "COMMUNICATION-DIRECTION",
@@ -87,7 +87,7 @@ class ClientServerToSignalMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    event_group_refs: ClientServerToSignalMapping.EventGroupRefs | None = (
+    event_group_refs: None | ClientServerToSignalMapping.EventGroupRefs = (
         field(
             default=None,
             metadata={
@@ -97,7 +97,7 @@ class ClientServerToSignalMapping:
             },
         )
     )
-    event_handler_refs: ClientServerToSignalMapping.EventHandlerRefs | None = (
+    event_handler_refs: None | ClientServerToSignalMapping.EventHandlerRefs = (
         field(
             default=None,
             metadata={
@@ -107,7 +107,7 @@ class ClientServerToSignalMapping:
             },
         )
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -116,7 +116,7 @@ class ClientServerToSignalMapping:
         },
     )
     service_instance_refs: (
-        ClientServerToSignalMapping.ServiceInstanceRefs | None
+        None | ClientServerToSignalMapping.ServiceInstanceRefs
     ) = field(
         default=None,
         metadata={
@@ -125,7 +125,7 @@ class ClientServerToSignalMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -133,7 +133,7 @@ class ClientServerToSignalMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    call_signal_ref: ClientServerToSignalMapping.CallSignalRef | None = field(
+    call_signal_ref: None | ClientServerToSignalMapping.CallSignalRef = field(
         default=None,
         metadata={
             "name": "CALL-SIGNAL-REF",
@@ -141,7 +141,7 @@ class ClientServerToSignalMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    client_server_operation_iref: OperationInSystemInstanceRef | None = field(
+    client_server_operation_iref: None | OperationInSystemInstanceRef = field(
         default=None,
         metadata={
             "name": "CLIENT-SERVER-OPERATION-IREF",
@@ -149,7 +149,7 @@ class ClientServerToSignalMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    length_client_id: PositiveInteger | None = field(
+    length_client_id: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "LENGTH-CLIENT-ID",
@@ -157,7 +157,7 @@ class ClientServerToSignalMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    length_sequence_counter: PositiveInteger | None = field(
+    length_sequence_counter: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "LENGTH-SEQUENCE-COUNTER",
@@ -165,7 +165,7 @@ class ClientServerToSignalMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    return_signal_ref: ClientServerToSignalMapping.ReturnSignalRef | None = (
+    return_signal_ref: None | ClientServerToSignalMapping.ReturnSignalRef = (
         field(
             default=None,
             metadata={
@@ -175,7 +175,7 @@ class ClientServerToSignalMapping:
             },
         )
     )
-    serializer_ref: ClientServerToSignalMapping.SerializerRef | None = field(
+    serializer_ref: None | ClientServerToSignalMapping.SerializerRef = field(
         default=None,
         metadata={
             "name": "SERIALIZER-REF",
@@ -183,14 +183,14 @@ class ClientServerToSignalMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -214,7 +214,7 @@ class ClientServerToSignalMapping:
 
         @dataclass
         class EventGroupRef(Ref):
-            dest: ConsumedEventGroupSubtypesEnum | None = field(
+            dest: None | ConsumedEventGroupSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -238,7 +238,7 @@ class ClientServerToSignalMapping:
 
         @dataclass
         class EventHandlerRef(Ref):
-            dest: EventHandlerSubtypesEnum | None = field(
+            dest: None | EventHandlerSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -262,7 +262,7 @@ class ClientServerToSignalMapping:
 
         @dataclass
         class ServiceInstanceRef(Ref):
-            dest: AbstractServiceInstanceSubtypesEnum | None = field(
+            dest: None | AbstractServiceInstanceSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -273,7 +273,7 @@ class ClientServerToSignalMapping:
 
     @dataclass
     class CallSignalRef(Ref):
-        dest: SystemSignalSubtypesEnum | None = field(
+        dest: None | SystemSignalSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -284,7 +284,7 @@ class ClientServerToSignalMapping:
 
     @dataclass
     class ReturnSignalRef(Ref):
-        dest: SystemSignalSubtypesEnum | None = field(
+        dest: None | SystemSignalSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -295,7 +295,7 @@ class ClientServerToSignalMapping:
 
     @dataclass
     class SerializerRef(Ref):
-        dest: SerializationTechnologySubtypesEnum | None = field(
+        dest: None | SerializationTechnologySubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

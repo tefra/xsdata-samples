@@ -11,14 +11,14 @@ class FuncDeclaration:
     class Meta:
         name = "funcDeclaration"
 
-    name: Name | None = field(
+    name: None | Name = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
         },
     )
-    type_declaration: TypeDeclaration | None = field(
+    type_declaration: None | TypeDeclaration = field(
         default=None,
         metadata={
             "name": "typeDeclaration",

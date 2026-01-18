@@ -32,7 +32,7 @@ class PduMappingDefaultValue:
         name = "PDU-MAPPING-DEFAULT-VALUE"
 
     default_value_elements: (
-        PduMappingDefaultValue.DefaultValueElements | None
+        None | PduMappingDefaultValue.DefaultValueElements
     ) = field(
         default=None,
         metadata={
@@ -41,14 +41,14 @@ class PduMappingDefaultValue:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

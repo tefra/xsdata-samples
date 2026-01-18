@@ -26,7 +26,7 @@ class RoadOrCarriagewayOrLaneManagement(NetworkManagement):
     """
 
     road_or_carriageway_or_lane_management_type: (
-        RoadOrCarriagewayOrLaneManagementTypeEnum | None
+        None | RoadOrCarriagewayOrLaneManagementTypeEnum
     ) = field(
         default=None,
         metadata={
@@ -36,7 +36,7 @@ class RoadOrCarriagewayOrLaneManagement(NetworkManagement):
             "required": True,
         },
     )
-    minimum_car_occupancy: int | None = field(
+    minimum_car_occupancy: None | int = field(
         default=None,
         metadata={
             "name": "minimumCarOccupancy",
@@ -44,7 +44,7 @@ class RoadOrCarriagewayOrLaneManagement(NetworkManagement):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    road_or_carriageway_or_lane_management_extension: ExtensionType | None = (
+    road_or_carriageway_or_lane_management_extension: None | ExtensionType = (
         field(
             default=None,
             metadata={

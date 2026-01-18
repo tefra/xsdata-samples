@@ -52,7 +52,7 @@ class SwTextProps:
     class Meta:
         name = "SW-TEXT-PROPS"
 
-    array_size_semantics: ArraySizeSemanticsEnum | None = field(
+    array_size_semantics: None | ArraySizeSemanticsEnum = field(
         default=None,
         metadata={
             "name": "ARRAY-SIZE-SEMANTICS",
@@ -60,7 +60,7 @@ class SwTextProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_max_text_size: IntegerValueVariationPoint | None = field(
+    sw_max_text_size: None | IntegerValueVariationPoint = field(
         default=None,
         metadata={
             "name": "SW-MAX-TEXT-SIZE",
@@ -68,7 +68,7 @@ class SwTextProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    base_type_ref: SwTextProps.BaseTypeRef | None = field(
+    base_type_ref: None | SwTextProps.BaseTypeRef = field(
         default=None,
         metadata={
             "name": "BASE-TYPE-REF",
@@ -76,7 +76,7 @@ class SwTextProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_fill_character: Integer | None = field(
+    sw_fill_character: None | Integer = field(
         default=None,
         metadata={
             "name": "SW-FILL-CHARACTER",
@@ -84,14 +84,14 @@ class SwTextProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -102,7 +102,7 @@ class SwTextProps:
 
     @dataclass
     class BaseTypeRef(Ref):
-        dest: SwBaseTypeSubtypesEnum | None = field(
+        dest: None | SwBaseTypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

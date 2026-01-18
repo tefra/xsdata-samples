@@ -36,7 +36,7 @@ class SomeipEventProps:
     class Meta:
         name = "SOMEIP-EVENT-PROPS"
 
-    collection_props: SomeipCollectionProps | None = field(
+    collection_props: None | SomeipCollectionProps = field(
         default=None,
         metadata={
             "name": "COLLECTION-PROPS",
@@ -44,7 +44,7 @@ class SomeipEventProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    event_ref: SomeipEventProps.EventRef | None = field(
+    event_ref: None | SomeipEventProps.EventRef = field(
         default=None,
         metadata={
             "name": "EVENT-REF",
@@ -52,14 +52,14 @@ class SomeipEventProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -70,7 +70,7 @@ class SomeipEventProps:
 
     @dataclass
     class EventRef(Ref):
-        dest: SomeipEventDeploymentSubtypesEnum | None = field(
+        dest: None | SomeipEventDeploymentSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

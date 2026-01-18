@@ -10,7 +10,7 @@ __NAMESPACE__ = "http://www.opengis.net/gml/3.2"
 
 @dataclass
 class SurfacePropertyType:
-    polygon: Polygon | None = field(
+    polygon: None | Polygon = field(
         default=None,
         metadata={
             "name": "Polygon",
@@ -18,7 +18,7 @@ class SurfacePropertyType:
             "namespace": "http://www.opengis.net/gml/3.2",
         },
     )
-    nil_reason: str | NilReasonEnumerationValue | None = field(
+    nil_reason: None | str | NilReasonEnumerationValue = field(
         default=None,
         metadata={
             "name": "nilReason",

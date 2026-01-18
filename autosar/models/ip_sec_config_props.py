@@ -115,7 +115,7 @@ class IpSecConfigProps:
     class Meta:
         name = "IP-SEC-CONFIG-PROPS"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -124,7 +124,7 @@ class IpSecConfigProps:
             "required": True,
         },
     )
-    short_name_fragments: IpSecConfigProps.ShortNameFragments | None = field(
+    short_name_fragments: None | IpSecConfigProps.ShortNameFragments = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -132,7 +132,7 @@ class IpSecConfigProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -140,7 +140,7 @@ class IpSecConfigProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -148,7 +148,7 @@ class IpSecConfigProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -156,7 +156,7 @@ class IpSecConfigProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -164,7 +164,7 @@ class IpSecConfigProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -172,7 +172,7 @@ class IpSecConfigProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: IpSecConfigProps.Annotations | None = field(
+    annotations: None | IpSecConfigProps.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -180,7 +180,7 @@ class IpSecConfigProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -188,7 +188,7 @@ class IpSecConfigProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ah_cipher_suite_names: IpSecConfigProps.AhCipherSuiteNames | None = field(
+    ah_cipher_suite_names: None | IpSecConfigProps.AhCipherSuiteNames = field(
         default=None,
         metadata={
             "name": "AH-CIPHER-SUITE-NAMES",
@@ -196,7 +196,7 @@ class IpSecConfigProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    dpd_action: IPsecDpdActionEnum | None = field(
+    dpd_action: None | IPsecDpdActionEnum = field(
         default=None,
         metadata={
             "name": "DPD-ACTION",
@@ -204,7 +204,7 @@ class IpSecConfigProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    dpd_delay: TimeValue | None = field(
+    dpd_delay: None | TimeValue = field(
         default=None,
         metadata={
             "name": "DPD-DELAY",
@@ -212,7 +212,7 @@ class IpSecConfigProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    esp_cipher_suite_names: IpSecConfigProps.EspCipherSuiteNames | None = (
+    esp_cipher_suite_names: None | IpSecConfigProps.EspCipherSuiteNames = (
         field(
             default=None,
             metadata={
@@ -222,7 +222,7 @@ class IpSecConfigProps:
             },
         )
     )
-    ike_cipher_suite_name: String | None = field(
+    ike_cipher_suite_name: None | String = field(
         default=None,
         metadata={
             "name": "IKE-CIPHER-SUITE-NAME",
@@ -230,7 +230,7 @@ class IpSecConfigProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ike_over_time: TimeValue | None = field(
+    ike_over_time: None | TimeValue = field(
         default=None,
         metadata={
             "name": "IKE-OVER-TIME",
@@ -238,7 +238,7 @@ class IpSecConfigProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ike_rand_time: PositiveInteger | None = field(
+    ike_rand_time: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "IKE-RAND-TIME",
@@ -246,7 +246,7 @@ class IpSecConfigProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ike_reauth_time: TimeValue | None = field(
+    ike_reauth_time: None | TimeValue = field(
         default=None,
         metadata={
             "name": "IKE-REAUTH-TIME",
@@ -254,7 +254,7 @@ class IpSecConfigProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ike_rekey_time: TimeValue | None = field(
+    ike_rekey_time: None | TimeValue = field(
         default=None,
         metadata={
             "name": "IKE-REKEY-TIME",
@@ -262,7 +262,7 @@ class IpSecConfigProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sa_over_time: PositiveInteger | None = field(
+    sa_over_time: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "SA-OVER-TIME",
@@ -270,7 +270,7 @@ class IpSecConfigProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sa_rand_time: TimeValue | None = field(
+    sa_rand_time: None | TimeValue = field(
         default=None,
         metadata={
             "name": "SA-RAND-TIME",
@@ -278,7 +278,7 @@ class IpSecConfigProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sa_rekey_time: TimeValue | None = field(
+    sa_rekey_time: None | TimeValue = field(
         default=None,
         metadata={
             "name": "SA-REKEY-TIME",
@@ -286,14 +286,14 @@ class IpSecConfigProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -301,7 +301,7 @@ class IpSecConfigProps:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",

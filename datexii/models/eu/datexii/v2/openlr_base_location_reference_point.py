@@ -17,7 +17,7 @@ class OpenlrBaseLocationReferencePoint:
     Base class used to hold data about a reference point.
     """
 
-    openlr_coordinate: PointCoordinates | None = field(
+    openlr_coordinate: None | PointCoordinates = field(
         default=None,
         metadata={
             "name": "openlrCoordinate",
@@ -26,7 +26,7 @@ class OpenlrBaseLocationReferencePoint:
             "required": True,
         },
     )
-    openlr_line_attributes: OpenlrLineAttributes | None = field(
+    openlr_line_attributes: None | OpenlrLineAttributes = field(
         default=None,
         metadata={
             "name": "openlrLineAttributes",
@@ -35,7 +35,7 @@ class OpenlrBaseLocationReferencePoint:
             "required": True,
         },
     )
-    openlr_base_location_reference_point_extension: ExtensionType | None = (
+    openlr_base_location_reference_point_extension: None | ExtensionType = (
         field(
             default=None,
             metadata={

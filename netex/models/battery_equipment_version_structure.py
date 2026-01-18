@@ -14,7 +14,7 @@ class BatteryEquipmentVersionStructure(PlaceEquipmentVersionStructure):
     class Meta:
         name = "BatteryEquipment_VersionStructure"
 
-    battery_capacity: Decimal | None = field(
+    battery_capacity: None | Decimal = field(
         default=None,
         metadata={
             "name": "BatteryCapacity",
@@ -22,7 +22,7 @@ class BatteryEquipmentVersionStructure(PlaceEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    battery_usable_capacity: Decimal | None = field(
+    battery_usable_capacity: None | Decimal = field(
         default=None,
         metadata={
             "name": "BatteryUsableCapacity",
@@ -30,7 +30,7 @@ class BatteryEquipmentVersionStructure(PlaceEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    nominal_voltage: Decimal | None = field(
+    nominal_voltage: None | Decimal = field(
         default=None,
         metadata={
             "name": "NominalVoltage",
@@ -38,7 +38,7 @@ class BatteryEquipmentVersionStructure(PlaceEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    maximum_charging_power: Decimal | None = field(
+    maximum_charging_power: None | Decimal = field(
         default=None,
         metadata={
             "name": "MaximumChargingPower",
@@ -46,7 +46,7 @@ class BatteryEquipmentVersionStructure(PlaceEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    type_of_battery_chemistry_ref: TypeOfBatteryChemistryRef | None = field(
+    type_of_battery_chemistry_ref: None | TypeOfBatteryChemistryRef = field(
         default=None,
         metadata={
             "name": "TypeOfBatteryChemistryRef",

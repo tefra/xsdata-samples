@@ -120,7 +120,7 @@ class PduTriggering:
     class Meta:
         name = "PDU-TRIGGERING"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -129,7 +129,7 @@ class PduTriggering:
             "required": True,
         },
     )
-    short_name_fragments: PduTriggering.ShortNameFragments | None = field(
+    short_name_fragments: None | PduTriggering.ShortNameFragments = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -137,7 +137,7 @@ class PduTriggering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -145,7 +145,7 @@ class PduTriggering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -153,7 +153,7 @@ class PduTriggering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -161,7 +161,7 @@ class PduTriggering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -169,7 +169,7 @@ class PduTriggering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -177,7 +177,7 @@ class PduTriggering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: PduTriggering.Annotations | None = field(
+    annotations: None | PduTriggering.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -185,7 +185,7 @@ class PduTriggering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    i_pdu_port_refs: PduTriggering.IPduPortRefs | None = field(
+    i_pdu_port_refs: None | PduTriggering.IPduPortRefs = field(
         default=None,
         metadata={
             "name": "I-PDU-PORT-REFS",
@@ -193,7 +193,7 @@ class PduTriggering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    i_pdu_ref: PduTriggering.IPduRef | None = field(
+    i_pdu_ref: None | PduTriggering.IPduRef = field(
         default=None,
         metadata={
             "name": "I-PDU-REF",
@@ -201,7 +201,7 @@ class PduTriggering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    i_signal_triggerings: PduTriggering.ISignalTriggerings | None = field(
+    i_signal_triggerings: None | PduTriggering.ISignalTriggerings = field(
         default=None,
         metadata={
             "name": "I-SIGNAL-TRIGGERINGS",
@@ -209,7 +209,7 @@ class PduTriggering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sec_oc_crypto_mapping_ref: PduTriggering.SecOcCryptoMappingRef | None = (
+    sec_oc_crypto_mapping_ref: None | PduTriggering.SecOcCryptoMappingRef = (
         field(
             default=None,
             metadata={
@@ -220,7 +220,7 @@ class PduTriggering:
         )
     )
     trigger_i_pdu_send_conditions: (
-        PduTriggering.TriggerIPduSendConditions | None
+        None | PduTriggering.TriggerIPduSendConditions
     ) = field(
         default=None,
         metadata={
@@ -229,7 +229,7 @@ class PduTriggering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -237,14 +237,14 @@ class PduTriggering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -252,7 +252,7 @@ class PduTriggering:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -295,7 +295,7 @@ class PduTriggering:
 
         @dataclass
         class IPduPortRef(Ref):
-            dest: IPduPortSubtypesEnum | None = field(
+            dest: None | IPduPortSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -306,7 +306,7 @@ class PduTriggering:
 
     @dataclass
     class IPduRef(Ref):
-        dest: PduSubtypesEnum | None = field(
+        dest: None | PduSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -330,7 +330,7 @@ class PduTriggering:
 
     @dataclass
     class SecOcCryptoMappingRef(Ref):
-        dest: SecOcCryptoServiceMappingSubtypesEnum | None = field(
+        dest: None | SecOcCryptoServiceMappingSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

@@ -40,20 +40,20 @@ class EventMetadata:
         name = "event_metadata"
         namespace = "http://www.crossref.org/schema/5.3.1"
 
-    conference_name: ConferenceName | None = field(
+    conference_name: None | ConferenceName = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
         },
     )
-    conference_theme: ConferenceTheme | None = field(
+    conference_theme: None | ConferenceTheme = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    conference_acronym: ConferenceAcronym | None = field(
+    conference_acronym: None | ConferenceAcronym = field(
         default=None,
         metadata={
             "type": "Element",
@@ -66,19 +66,19 @@ class EventMetadata:
             "max_occurs": 10,
         },
     )
-    conference_number: ConferenceNumber | None = field(
+    conference_number: None | ConferenceNumber = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    conference_location: ConferenceLocation | None = field(
+    conference_location: None | ConferenceLocation = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    conference_date: ConferenceDate | None = field(
+    conference_date: None | ConferenceDate = field(
         default=None,
         metadata={
             "type": "Element",

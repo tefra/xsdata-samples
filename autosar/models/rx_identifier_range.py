@@ -36,7 +36,7 @@ class RxIdentifierRange:
     class Meta:
         name = "RX-IDENTIFIER-RANGE"
 
-    lower_can_id: PositiveInteger | None = field(
+    lower_can_id: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "LOWER-CAN-ID",
@@ -44,7 +44,7 @@ class RxIdentifierRange:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    upper_can_id: PositiveInteger | None = field(
+    upper_can_id: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "UPPER-CAN-ID",
@@ -52,14 +52,14 @@ class RxIdentifierRange:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

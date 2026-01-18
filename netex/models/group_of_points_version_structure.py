@@ -15,7 +15,7 @@ class GroupOfPointsVersionStructure(GroupOfEntitiesVersionStructure):
     class Meta:
         name = "GroupOfPoints_VersionStructure"
 
-    members: PointRefsRelStructure | None = field(
+    members: None | PointRefsRelStructure = field(
         default=None,
         metadata={
             "type": "Element",

@@ -45,7 +45,7 @@ class FmFeatureDecomposition:
     class Meta:
         name = "FM-FEATURE-DECOMPOSITION"
 
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -53,7 +53,7 @@ class FmFeatureDecomposition:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    feature_refs: FmFeatureDecomposition.FeatureRefs | None = field(
+    feature_refs: None | FmFeatureDecomposition.FeatureRefs = field(
         default=None,
         metadata={
             "name": "FEATURE-REFS",
@@ -61,7 +61,7 @@ class FmFeatureDecomposition:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    max: PositiveInteger | None = field(
+    max: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "MAX",
@@ -69,7 +69,7 @@ class FmFeatureDecomposition:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    min: PositiveInteger | None = field(
+    min: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "MIN",
@@ -77,14 +77,14 @@ class FmFeatureDecomposition:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -108,7 +108,7 @@ class FmFeatureDecomposition:
 
         @dataclass
         class FeatureRef(Ref):
-            dest: FmFeatureSubtypesEnum | None = field(
+            dest: None | FmFeatureSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",

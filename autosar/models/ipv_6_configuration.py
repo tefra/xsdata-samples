@@ -51,7 +51,7 @@ class Ipv6Configuration:
     class Meta:
         name = "IPV-6-CONFIGURATION"
 
-    assignment_priority: PositiveInteger | None = field(
+    assignment_priority: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "ASSIGNMENT-PRIORITY",
@@ -59,7 +59,7 @@ class Ipv6Configuration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    default_router: Ip6AddressString | None = field(
+    default_router: None | Ip6AddressString = field(
         default=None,
         metadata={
             "name": "DEFAULT-ROUTER",
@@ -67,7 +67,7 @@ class Ipv6Configuration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    dns_server_addresses: Ipv6Configuration.DnsServerAddresses | None = field(
+    dns_server_addresses: None | Ipv6Configuration.DnsServerAddresses = field(
         default=None,
         metadata={
             "name": "DNS-SERVER-ADDRESSES",
@@ -75,7 +75,7 @@ class Ipv6Configuration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    enable_anycast: Boolean | None = field(
+    enable_anycast: None | Boolean = field(
         default=None,
         metadata={
             "name": "ENABLE-ANYCAST",
@@ -83,7 +83,7 @@ class Ipv6Configuration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    hop_count: PositiveInteger | None = field(
+    hop_count: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "HOP-COUNT",
@@ -91,7 +91,7 @@ class Ipv6Configuration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ip_address_keep_behavior: IpAddressKeepEnum | None = field(
+    ip_address_keep_behavior: None | IpAddressKeepEnum = field(
         default=None,
         metadata={
             "name": "IP-ADDRESS-KEEP-BEHAVIOR",
@@ -99,7 +99,7 @@ class Ipv6Configuration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ip_address_prefix_length: PositiveInteger | None = field(
+    ip_address_prefix_length: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "IP-ADDRESS-PREFIX-LENGTH",
@@ -107,7 +107,7 @@ class Ipv6Configuration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ipv_6_address: Ip6AddressString | None = field(
+    ipv_6_address: None | Ip6AddressString = field(
         default=None,
         metadata={
             "name": "IPV-6-ADDRESS",
@@ -115,7 +115,7 @@ class Ipv6Configuration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ipv_6_address_source: Ipv6AddressSourceEnum | None = field(
+    ipv_6_address_source: None | Ipv6AddressSourceEnum = field(
         default=None,
         metadata={
             "name": "IPV-6-ADDRESS-SOURCE",
@@ -123,14 +123,14 @@ class Ipv6Configuration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

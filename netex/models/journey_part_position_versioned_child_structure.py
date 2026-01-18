@@ -16,7 +16,7 @@ class JourneyPartPositionVersionedChildStructure(VersionedChildStructure):
     class Meta:
         name = "JourneyPartPosition_VersionedChildStructure"
 
-    parent_journey_part_ref: JourneyPartRefStructure | None = field(
+    parent_journey_part_ref: None | JourneyPartRefStructure = field(
         default=None,
         metadata={
             "name": "ParentJourneyPartRef",
@@ -44,7 +44,7 @@ class JourneyPartPositionVersionedChildStructure(VersionedChildStructure):
             ),
         },
     )
-    position_in_train: int | None = field(
+    position_in_train: None | int = field(
         default=None,
         metadata={
             "name": "PositionInTrain",
@@ -53,7 +53,7 @@ class JourneyPartPositionVersionedChildStructure(VersionedChildStructure):
             "required": True,
         },
     )
-    order: int | None = field(
+    order: None | int = field(
         default=None,
         metadata={
             "type": "Attribute",

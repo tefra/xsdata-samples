@@ -20,13 +20,13 @@ class ParkingEntranceForVehiclesVersionStructure(SiteEntranceVersionStructure):
         name = "ParkingEntranceForVehicles__VersionStructure"
 
     mode_of_operation_ref_or_alternative_mode_of_operation_ref_or_conventional_mode_of_operation_ref: (
-        PersonalModeOfOperationRef
+        None
+        | PersonalModeOfOperationRef
         | VehiclePoolingRef
         | VehicleSharingRef
         | VehicleRentalRef
         | FlexibleModeOfOperationRef
         | ScheduledModeOfOperationRef
-        | None
     ) = field(
         default=None,
         metadata={
@@ -65,7 +65,7 @@ class ParkingEntranceForVehiclesVersionStructure(SiteEntranceVersionStructure):
             ),
         },
     )
-    areas: ParkingAreaRefsRelStructure | None = field(
+    areas: None | ParkingAreaRefsRelStructure = field(
         default=None,
         metadata={
             "type": "Element",

@@ -104,7 +104,7 @@ class DiagnosticTestResult:
     class Meta:
         name = "DIAGNOSTIC-TEST-RESULT"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -113,7 +113,7 @@ class DiagnosticTestResult:
             "required": True,
         },
     )
-    short_name_fragments: DiagnosticTestResult.ShortNameFragments | None = (
+    short_name_fragments: None | DiagnosticTestResult.ShortNameFragments = (
         field(
             default=None,
             metadata={
@@ -123,7 +123,7 @@ class DiagnosticTestResult:
             },
         )
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -131,7 +131,7 @@ class DiagnosticTestResult:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -139,7 +139,7 @@ class DiagnosticTestResult:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -147,7 +147,7 @@ class DiagnosticTestResult:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -155,7 +155,7 @@ class DiagnosticTestResult:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -163,7 +163,7 @@ class DiagnosticTestResult:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: DiagnosticTestResult.Annotations | None = field(
+    annotations: None | DiagnosticTestResult.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -171,7 +171,7 @@ class DiagnosticTestResult:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -179,7 +179,7 @@ class DiagnosticTestResult:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    diagnostic_events: DiagnosticTestResult.DiagnosticEvents | None = field(
+    diagnostic_events: None | DiagnosticTestResult.DiagnosticEvents = field(
         default=None,
         metadata={
             "name": "DIAGNOSTIC-EVENTS",
@@ -187,7 +187,7 @@ class DiagnosticTestResult:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    event_ref: DiagnosticTestResult.EventRef | None = field(
+    event_ref: None | DiagnosticTestResult.EventRef = field(
         default=None,
         metadata={
             "name": "EVENT-REF",
@@ -196,7 +196,7 @@ class DiagnosticTestResult:
         },
     )
     monitored_identifier_ref: (
-        DiagnosticTestResult.MonitoredIdentifierRef | None
+        None | DiagnosticTestResult.MonitoredIdentifierRef
     ) = field(
         default=None,
         metadata={
@@ -205,7 +205,7 @@ class DiagnosticTestResult:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    test_identifier: DiagnosticTestIdentifier | None = field(
+    test_identifier: None | DiagnosticTestIdentifier = field(
         default=None,
         metadata={
             "name": "TEST-IDENTIFIER",
@@ -213,7 +213,7 @@ class DiagnosticTestResult:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    update_kind: DiagnosticTestResultUpdateEnumValueVariationPoint | None = (
+    update_kind: None | DiagnosticTestResultUpdateEnumValueVariationPoint = (
         field(
             default=None,
             metadata={
@@ -223,14 +223,14 @@ class DiagnosticTestResult:
             },
         )
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -238,7 +238,7 @@ class DiagnosticTestResult:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -283,7 +283,7 @@ class DiagnosticTestResult:
 
     @dataclass
     class EventRef(Ref):
-        dest: DiagnosticEventSubtypesEnum | None = field(
+        dest: None | DiagnosticEventSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -294,7 +294,7 @@ class DiagnosticTestResult:
 
     @dataclass
     class MonitoredIdentifierRef(Ref):
-        dest: DiagnosticMeasurementIdentifierSubtypesEnum | None = field(
+        dest: None | DiagnosticMeasurementIdentifierSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

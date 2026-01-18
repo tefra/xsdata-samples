@@ -16,7 +16,7 @@ __NAMESPACE__ = (
 
 @dataclass
 class AppliedDeductionType:
-    amount: AmountType | None = field(
+    amount: None | AmountType = field(
         default=None,
         metadata={
             "name": "Amount",
@@ -24,7 +24,7 @@ class AppliedDeductionType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    premium: PremiumType | None = field(
+    premium: None | PremiumType = field(
         default=None,
         metadata={
             "name": "Premium",

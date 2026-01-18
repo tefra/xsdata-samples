@@ -105,7 +105,7 @@ class DiagnosticSecurityAccess:
     class Meta:
         name = "DIAGNOSTIC-SECURITY-ACCESS"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -115,7 +115,7 @@ class DiagnosticSecurityAccess:
         },
     )
     short_name_fragments: (
-        DiagnosticSecurityAccess.ShortNameFragments | None
+        None | DiagnosticSecurityAccess.ShortNameFragments
     ) = field(
         default=None,
         metadata={
@@ -124,7 +124,7 @@ class DiagnosticSecurityAccess:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -132,7 +132,7 @@ class DiagnosticSecurityAccess:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -140,7 +140,7 @@ class DiagnosticSecurityAccess:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -148,7 +148,7 @@ class DiagnosticSecurityAccess:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -156,7 +156,7 @@ class DiagnosticSecurityAccess:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -164,7 +164,7 @@ class DiagnosticSecurityAccess:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: DiagnosticSecurityAccess.Annotations | None = field(
+    annotations: None | DiagnosticSecurityAccess.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -172,7 +172,7 @@ class DiagnosticSecurityAccess:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -181,7 +181,7 @@ class DiagnosticSecurityAccess:
         },
     )
     access_permission_ref: (
-        DiagnosticSecurityAccess.AccessPermissionRef | None
+        None | DiagnosticSecurityAccess.AccessPermissionRef
     ) = field(
         default=None,
         metadata={
@@ -190,7 +190,7 @@ class DiagnosticSecurityAccess:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    request_seed_id: PositiveInteger | None = field(
+    request_seed_id: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "REQUEST-SEED-ID",
@@ -199,7 +199,7 @@ class DiagnosticSecurityAccess:
         },
     )
     security_access_class_ref: (
-        DiagnosticSecurityAccess.SecurityAccessClassRef | None
+        None | DiagnosticSecurityAccess.SecurityAccessClassRef
     ) = field(
         default=None,
         metadata={
@@ -208,7 +208,7 @@ class DiagnosticSecurityAccess:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    security_level_ref: DiagnosticSecurityAccess.SecurityLevelRef | None = (
+    security_level_ref: None | DiagnosticSecurityAccess.SecurityLevelRef = (
         field(
             default=None,
             metadata={
@@ -218,14 +218,14 @@ class DiagnosticSecurityAccess:
             },
         )
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -233,7 +233,7 @@ class DiagnosticSecurityAccess:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -265,7 +265,7 @@ class DiagnosticSecurityAccess:
 
     @dataclass
     class AccessPermissionRef(Ref):
-        dest: DiagnosticAccessPermissionSubtypesEnum | None = field(
+        dest: None | DiagnosticAccessPermissionSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -276,7 +276,7 @@ class DiagnosticSecurityAccess:
 
     @dataclass
     class SecurityAccessClassRef(Ref):
-        dest: DiagnosticSecurityAccessClassSubtypesEnum | None = field(
+        dest: None | DiagnosticSecurityAccessClassSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -287,7 +287,7 @@ class DiagnosticSecurityAccess:
 
     @dataclass
     class SecurityLevelRef(Ref):
-        dest: DiagnosticSecurityLevelSubtypesEnum | None = field(
+        dest: None | DiagnosticSecurityLevelSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

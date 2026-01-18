@@ -40,7 +40,7 @@ class PointAlongLinearElement:
     :ivar point_along_linear_element_extension:
     """
 
-    administrative_area_of_point: MultilingualString | None = field(
+    administrative_area_of_point: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "administrativeAreaOfPoint",
@@ -48,7 +48,7 @@ class PointAlongLinearElement:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    direction_bound_at_point: DirectionEnum | None = field(
+    direction_bound_at_point: None | DirectionEnum = field(
         default=None,
         metadata={
             "name": "directionBoundAtPoint",
@@ -56,7 +56,7 @@ class PointAlongLinearElement:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    direction_relative_at_point: LinearReferencingDirectionEnum | None = field(
+    direction_relative_at_point: None | LinearReferencingDirectionEnum = field(
         default=None,
         metadata={
             "name": "directionRelativeAtPoint",
@@ -64,7 +64,7 @@ class PointAlongLinearElement:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    height_grade_of_point: HeightGradeEnum | None = field(
+    height_grade_of_point: None | HeightGradeEnum = field(
         default=None,
         metadata={
             "name": "heightGradeOfPoint",
@@ -72,7 +72,7 @@ class PointAlongLinearElement:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    linear_element: LinearElement | None = field(
+    linear_element: None | LinearElement = field(
         default=None,
         metadata={
             "name": "linearElement",
@@ -81,7 +81,7 @@ class PointAlongLinearElement:
             "required": True,
         },
     )
-    distance_along_linear_element: DistanceAlongLinearElement | None = field(
+    distance_along_linear_element: None | DistanceAlongLinearElement = field(
         default=None,
         metadata={
             "name": "distanceAlongLinearElement",
@@ -90,7 +90,7 @@ class PointAlongLinearElement:
             "required": True,
         },
     )
-    point_along_linear_element_extension: ExtensionType | None = field(
+    point_along_linear_element_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "pointAlongLinearElementExtension",

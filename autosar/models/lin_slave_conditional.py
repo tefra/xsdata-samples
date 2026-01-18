@@ -56,7 +56,7 @@ class LinSlaveConditional:
     class Meta:
         name = "LIN-SLAVE-CONDITIONAL"
 
-    wake_up_by_controller_supported: Boolean | None = field(
+    wake_up_by_controller_supported: None | Boolean = field(
         default=None,
         metadata={
             "name": "WAKE-UP-BY-CONTROLLER-SUPPORTED",
@@ -64,7 +64,7 @@ class LinSlaveConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    protocol_version: String | None = field(
+    protocol_version: None | String = field(
         default=None,
         metadata={
             "name": "PROTOCOL-VERSION",
@@ -72,7 +72,7 @@ class LinSlaveConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    assign_nad: Boolean | None = field(
+    assign_nad: None | Boolean = field(
         default=None,
         metadata={
             "name": "ASSIGN-NAD",
@@ -80,7 +80,7 @@ class LinSlaveConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    configured_nad: Integer | None = field(
+    configured_nad: None | Integer = field(
         default=None,
         metadata={
             "name": "CONFIGURED-NAD",
@@ -88,7 +88,7 @@ class LinSlaveConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    function_id: PositiveInteger | None = field(
+    function_id: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "FUNCTION-ID",
@@ -96,7 +96,7 @@ class LinSlaveConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    initial_nad: Integer | None = field(
+    initial_nad: None | Integer = field(
         default=None,
         metadata={
             "name": "INITIAL-NAD",
@@ -104,7 +104,7 @@ class LinSlaveConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    lin_error_response: LinErrorResponse | None = field(
+    lin_error_response: None | LinErrorResponse = field(
         default=None,
         metadata={
             "name": "LIN-ERROR-RESPONSE",
@@ -112,7 +112,7 @@ class LinSlaveConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nas_timeout: TimeValue | None = field(
+    nas_timeout: None | TimeValue = field(
         default=None,
         metadata={
             "name": "NAS-TIMEOUT",
@@ -120,7 +120,7 @@ class LinSlaveConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    save_configuration: Boolean | None = field(
+    save_configuration: None | Boolean = field(
         default=None,
         metadata={
             "name": "SAVE-CONFIGURATION",
@@ -128,7 +128,7 @@ class LinSlaveConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    supplier_id: PositiveInteger | None = field(
+    supplier_id: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "SUPPLIER-ID",
@@ -136,7 +136,7 @@ class LinSlaveConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variant_id: PositiveInteger | None = field(
+    variant_id: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "VARIANT-ID",
@@ -144,7 +144,7 @@ class LinSlaveConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -152,14 +152,14 @@ class LinSlaveConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

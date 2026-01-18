@@ -26,7 +26,7 @@ class TrafficData(BasicData):
     :ivar traffic_data_extension:
     """
 
-    for_vehicles_with_characteristics_of: VehicleCharacteristics | None = (
+    for_vehicles_with_characteristics_of: None | VehicleCharacteristics = (
         field(
             default=None,
             metadata={
@@ -36,7 +36,7 @@ class TrafficData(BasicData):
             },
         )
     )
-    traffic_data_extension: ExtensionType | None = field(
+    traffic_data_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "trafficDataExtension",

@@ -19,7 +19,7 @@ class TransTitleGroup:
         name = "trans-title-group"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    trans_title: TransTitle | None = field(
+    trans_title: None | TransTitle = field(
         default=None,
         metadata={
             "name": "trans-title",
@@ -34,34 +34,34 @@ class TransTitleGroup:
             "type": "Element",
         },
     )
-    content_type: str | None = field(
+    content_type: None | str = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",

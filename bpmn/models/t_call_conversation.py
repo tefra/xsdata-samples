@@ -22,7 +22,7 @@ class TCallConversation(TConversationNode):
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    called_collaboration_ref: QName | None = field(
+    called_collaboration_ref: None | QName = field(
         default=None,
         metadata={
             "name": "calledCollaborationRef",

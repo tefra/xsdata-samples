@@ -103,41 +103,41 @@ class TextFormatType:
             "type": "Attribute",
         },
     )
-    is_sequence: bool | None = field(
+    is_sequence: None | bool = field(
         default=None,
         metadata={
             "name": "isSequence",
             "type": "Attribute",
         },
     )
-    interval: Decimal | None = field(
+    interval: None | Decimal = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    start_value: Decimal | None = field(
+    start_value: None | Decimal = field(
         default=None,
         metadata={
             "name": "startValue",
             "type": "Attribute",
         },
     )
-    end_value: Decimal | None = field(
+    end_value: None | Decimal = field(
         default=None,
         metadata={
             "name": "endValue",
             "type": "Attribute",
         },
     )
-    time_interval: XmlDuration | None = field(
+    time_interval: None | XmlDuration = field(
         default=None,
         metadata={
             "name": "timeInterval",
             "type": "Attribute",
         },
     )
-    start_time: XmlPeriod | XmlDate | XmlDateTime | str | None = field(
+    start_time: None | XmlPeriod | XmlDate | XmlDateTime | str = field(
         default=None,
         metadata={
             "name": "startTime",
@@ -145,7 +145,7 @@ class TextFormatType:
             "pattern": r".{5}A1.*",
         },
     )
-    end_time: XmlPeriod | XmlDate | XmlDateTime | str | None = field(
+    end_time: None | XmlPeriod | XmlDate | XmlDateTime | str = field(
         default=None,
         metadata={
             "name": "endTime",
@@ -153,41 +153,41 @@ class TextFormatType:
             "pattern": r".{5}A1.*",
         },
     )
-    min_length: int | None = field(
+    min_length: None | int = field(
         default=None,
         metadata={
             "name": "minLength",
             "type": "Attribute",
         },
     )
-    max_length: int | None = field(
+    max_length: None | int = field(
         default=None,
         metadata={
             "name": "maxLength",
             "type": "Attribute",
         },
     )
-    min_value: Decimal | None = field(
+    min_value: None | Decimal = field(
         default=None,
         metadata={
             "name": "minValue",
             "type": "Attribute",
         },
     )
-    max_value: Decimal | None = field(
+    max_value: None | Decimal = field(
         default=None,
         metadata={
             "name": "maxValue",
             "type": "Attribute",
         },
     )
-    decimals: int | None = field(
+    decimals: None | int = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    pattern: str | None = field(
+    pattern: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",

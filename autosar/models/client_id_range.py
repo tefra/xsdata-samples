@@ -34,7 +34,7 @@ class ClientIdRange:
     class Meta:
         name = "CLIENT-ID-RANGE"
 
-    lower_limit: Limit | None = field(
+    lower_limit: None | Limit = field(
         default=None,
         metadata={
             "name": "LOWER-LIMIT",
@@ -42,7 +42,7 @@ class ClientIdRange:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    upper_limit: Limit | None = field(
+    upper_limit: None | Limit = field(
         default=None,
         metadata={
             "name": "UPPER-LIMIT",
@@ -50,14 +50,14 @@ class ClientIdRange:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

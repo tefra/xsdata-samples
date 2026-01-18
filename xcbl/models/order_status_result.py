@@ -242,7 +242,7 @@ class StatusEvent:
             "required": True,
         }
     )
-    status_event_coded_other: StatusEventCodedOther | None = field(
+    status_event_coded_other: None | StatusEventCodedOther = field(
         default=None,
         metadata={
             "name": "StatusEventCodedOther",
@@ -285,21 +285,21 @@ class OrderStatusResultHeader:
             "required": True,
         }
     )
-    order_status_result_language: OrderStatusResultLanguage | None = field(
+    order_status_result_language: None | OrderStatusResultLanguage = field(
         default=None,
         metadata={
             "name": "OrderStatusResultLanguage",
             "type": "Element",
         },
     )
-    order_status_result_note: OrderStatusResultNote | None = field(
+    order_status_result_note: None | OrderStatusResultNote = field(
         default=None,
         metadata={
             "name": "OrderStatusResultNote",
             "type": "Element",
         },
     )
-    result_list_of_attachment: ResultListOfAttachment | None = field(
+    result_list_of_attachment: None | ResultListOfAttachment = field(
         default=None,
         metadata={
             "name": "ResultListOfAttachment",
@@ -317,7 +317,7 @@ class OrderStatusResultSummary:
             "required": True,
         }
     )
-    order_status_summary_error_info: OrderStatusSummaryErrorInfo | None = (
+    order_status_summary_error_info: None | OrderStatusSummaryErrorInfo = (
         field(
             default=None,
             metadata={
@@ -326,7 +326,7 @@ class OrderStatusResultSummary:
             },
         )
     )
-    total_number_of_line_item: TotalNumberOfLineItem | None = field(
+    total_number_of_line_item: None | TotalNumberOfLineItem = field(
         default=None,
         metadata={
             "name": "TotalNumberOfLineItem",
@@ -344,28 +344,28 @@ class ShipmentStatusEvent:
             "required": True,
         }
     )
-    list_of_status_reason: ListOfStatusReason | None = field(
+    list_of_status_reason: None | ListOfStatusReason = field(
         default=None,
         metadata={
             "name": "ListOfStatusReason",
             "type": "Element",
         },
     )
-    status_note: StatusNote | None = field(
+    status_note: None | StatusNote = field(
         default=None,
         metadata={
             "name": "StatusNote",
             "type": "Element",
         },
     )
-    error_info: ErrorInfo | None = field(
+    error_info: None | ErrorInfo = field(
         default=None,
         metadata={
             "name": "ErrorInfo",
             "type": "Element",
         },
     )
-    ship_date: ShipDate | None = field(
+    ship_date: None | ShipDate = field(
         default=None,
         metadata={
             "name": "ShipDate",
@@ -383,21 +383,21 @@ class Status:
             "required": True,
         }
     )
-    list_of_status_reason: ListOfStatusReason | None = field(
+    list_of_status_reason: None | ListOfStatusReason = field(
         default=None,
         metadata={
             "name": "ListOfStatusReason",
             "type": "Element",
         },
     )
-    status_note: StatusNote | None = field(
+    status_note: None | StatusNote = field(
         default=None,
         metadata={
             "name": "StatusNote",
             "type": "Element",
         },
     )
-    error_info: ErrorInfo | None = field(
+    error_info: None | ErrorInfo = field(
         default=None,
         metadata={
             "name": "ErrorInfo",
@@ -455,14 +455,14 @@ class ItemStatus:
             "required": True,
         }
     )
-    payment_status_event: PaymentStatusEvent | None = field(
+    payment_status_event: None | PaymentStatusEvent = field(
         default=None,
         metadata={
             "name": "PaymentStatusEvent",
             "type": "Element",
         },
     )
-    shipment_status_event: ShipmentStatusEvent | None = field(
+    shipment_status_event: None | ShipmentStatusEvent = field(
         default=None,
         metadata={
             "name": "ShipmentStatusEvent",
@@ -480,119 +480,119 @@ class OrderStatusResultItem:
             "required": True,
         }
     )
-    line_item_type: LineItemType | None = field(
+    line_item_type: None | LineItemType = field(
         default=None,
         metadata={
             "name": "LineItemType",
             "type": "Element",
         },
     )
-    parent_item_number: ParentItemNumber | None = field(
+    parent_item_number: None | ParentItemNumber = field(
         default=None,
         metadata={
             "name": "ParentItemNumber",
             "type": "Element",
         },
     )
-    item_identifiers: ItemIdentifiers | None = field(
+    item_identifiers: None | ItemIdentifiers = field(
         default=None,
         metadata={
             "name": "ItemIdentifiers",
             "type": "Element",
         },
     )
-    list_of_dimension: ListOfDimension | None = field(
+    list_of_dimension: None | ListOfDimension = field(
         default=None,
         metadata={
             "name": "ListOfDimension",
             "type": "Element",
         },
     )
-    total_quantity: TotalQuantity | None = field(
+    total_quantity: None | TotalQuantity = field(
         default=None,
         metadata={
             "name": "TotalQuantity",
             "type": "Element",
         },
     )
-    max_back_order_quantity: MaxBackOrderQuantity | None = field(
+    max_back_order_quantity: None | MaxBackOrderQuantity = field(
         default=None,
         metadata={
             "name": "MaxBackOrderQuantity",
             "type": "Element",
         },
     )
-    list_of_quantity_coded: ListOfQuantityCoded | None = field(
+    list_of_quantity_coded: None | ListOfQuantityCoded = field(
         default=None,
         metadata={
             "name": "ListOfQuantityCoded",
             "type": "Element",
         },
     )
-    off_catalog_flag: OffCatalogFlag | None = field(
+    off_catalog_flag: None | OffCatalogFlag = field(
         default=None,
         metadata={
             "name": "OffCatalogFlag",
             "type": "Element",
         },
     )
-    catalog_reference: CatalogReference | None = field(
+    catalog_reference: None | CatalogReference = field(
         default=None,
         metadata={
             "name": "CatalogReference",
             "type": "Element",
         },
     )
-    item_contract_references: ItemContractReferences | None = field(
+    item_contract_references: None | ItemContractReferences = field(
         default=None,
         metadata={
             "name": "ItemContractReferences",
             "type": "Element",
         },
     )
-    list_of_item_references: ListOfItemReferences | None = field(
+    list_of_item_references: None | ListOfItemReferences = field(
         default=None,
         metadata={
             "name": "ListOfItemReferences",
             "type": "Element",
         },
     )
-    country_of_origin: CountryOfOrigin | None = field(
+    country_of_origin: None | CountryOfOrigin = field(
         default=None,
         metadata={
             "name": "CountryOfOrigin",
             "type": "Element",
         },
     )
-    country_of_destination: CountryOfDestination | None = field(
+    country_of_destination: None | CountryOfDestination = field(
         default=None,
         metadata={
             "name": "CountryOfDestination",
             "type": "Element",
         },
     )
-    final_recipient: FinalRecipient | None = field(
+    final_recipient: None | FinalRecipient = field(
         default=None,
         metadata={
             "name": "FinalRecipient",
             "type": "Element",
         },
     )
-    list_of_party_coded: ListOfPartyCoded | None = field(
+    list_of_party_coded: None | ListOfPartyCoded = field(
         default=None,
         metadata={
             "name": "ListOfPartyCoded",
             "type": "Element",
         },
     )
-    conditions_of_sale: ConditionsOfSale | None = field(
+    conditions_of_sale: None | ConditionsOfSale = field(
         default=None,
         metadata={
             "name": "ConditionsOfSale",
             "type": "Element",
         },
     )
-    hazardous_materials: HazardousMaterials | None = field(
+    hazardous_materials: None | HazardousMaterials = field(
         default=None,
         metadata={
             "name": "HazardousMaterials",
@@ -600,7 +600,7 @@ class OrderStatusResultItem:
         },
     )
     order_status_item_result_transport: (
-        OrderStatusItemResultTransport | None
+        None | OrderStatusItemResultTransport
     ) = field(
         default=None,
         metadata={
@@ -639,7 +639,7 @@ class ListOfOrderStatusResultItem:
 
 @dataclass(kw_only=True)
 class OrderStatusResultReference:
-    account_code: AccountCode | None = field(
+    account_code: None | AccountCode = field(
         default=None,
         metadata={
             "name": "AccountCode",
@@ -660,7 +660,7 @@ class OrderStatusResultReference:
             "required": True,
         }
     )
-    other_reference: OtherReference | None = field(
+    other_reference: None | OtherReference = field(
         default=None,
         metadata={
             "name": "OtherReference",
@@ -688,21 +688,21 @@ class OrderStatusResultReference:
             "required": True,
         }
     )
-    payment_status_event: PaymentStatusEvent | None = field(
+    payment_status_event: None | PaymentStatusEvent = field(
         default=None,
         metadata={
             "name": "PaymentStatusEvent",
             "type": "Element",
         },
     )
-    shipment_status_event: ShipmentStatusEvent | None = field(
+    shipment_status_event: None | ShipmentStatusEvent = field(
         default=None,
         metadata={
             "name": "ShipmentStatusEvent",
             "type": "Element",
         },
     )
-    list_of_order_status_result_item: ListOfOrderStatusResultItem | None = (
+    list_of_order_status_result_item: None | ListOfOrderStatusResultItem = (
         field(
             default=None,
             metadata={
@@ -722,14 +722,14 @@ class OrderStatusDetailResult:
             "required": True,
         }
     )
-    general_line_item_note: GeneralLineItemNote | None = field(
+    general_line_item_note: None | GeneralLineItemNote = field(
         default=None,
         metadata={
             "name": "GeneralLineItemNote",
             "type": "Element",
         },
     )
-    line_item_attachment: LineItemAttachment | None = field(
+    line_item_attachment: None | LineItemAttachment = field(
         default=None,
         metadata={
             "name": "LineItemAttachment",
@@ -770,14 +770,14 @@ class OrderStatusResult:
             "required": True,
         }
     )
-    order_status_result_detail: OrderStatusResultDetail | None = field(
+    order_status_result_detail: None | OrderStatusResultDetail = field(
         default=None,
         metadata={
             "name": "OrderStatusResultDetail",
             "type": "Element",
         },
     )
-    order_status_result_summary: OrderStatusResultSummary | None = field(
+    order_status_result_summary: None | OrderStatusResultSummary = field(
         default=None,
         metadata={
             "name": "OrderStatusResultSummary",

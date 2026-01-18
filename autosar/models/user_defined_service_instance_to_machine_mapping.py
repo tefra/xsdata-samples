@@ -109,7 +109,7 @@ class UserDefinedServiceInstanceToMachineMapping:
     class Meta:
         name = "USER-DEFINED-SERVICE-INSTANCE-TO-MACHINE-MAPPING"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -119,7 +119,7 @@ class UserDefinedServiceInstanceToMachineMapping:
         },
     )
     short_name_fragments: (
-        UserDefinedServiceInstanceToMachineMapping.ShortNameFragments | None
+        None | UserDefinedServiceInstanceToMachineMapping.ShortNameFragments
     ) = field(
         default=None,
         metadata={
@@ -128,7 +128,7 @@ class UserDefinedServiceInstanceToMachineMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -136,7 +136,7 @@ class UserDefinedServiceInstanceToMachineMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -144,7 +144,7 @@ class UserDefinedServiceInstanceToMachineMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -152,7 +152,7 @@ class UserDefinedServiceInstanceToMachineMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -160,7 +160,7 @@ class UserDefinedServiceInstanceToMachineMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -169,7 +169,7 @@ class UserDefinedServiceInstanceToMachineMapping:
         },
     )
     annotations: (
-        UserDefinedServiceInstanceToMachineMapping.Annotations | None
+        None | UserDefinedServiceInstanceToMachineMapping.Annotations
     ) = field(
         default=None,
         metadata={
@@ -178,7 +178,7 @@ class UserDefinedServiceInstanceToMachineMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -187,8 +187,8 @@ class UserDefinedServiceInstanceToMachineMapping:
         },
     )
     communication_connector_ref: (
-        UserDefinedServiceInstanceToMachineMapping.CommunicationConnectorRef
-        | None
+        None
+        | UserDefinedServiceInstanceToMachineMapping.CommunicationConnectorRef
     ) = field(
         default=None,
         metadata={
@@ -198,8 +198,8 @@ class UserDefinedServiceInstanceToMachineMapping:
         },
     )
     sec_oc_com_props_for_multicast_refs: (
-        UserDefinedServiceInstanceToMachineMapping.SecOcComPropsForMulticastRefs
-        | None
+        None
+        | UserDefinedServiceInstanceToMachineMapping.SecOcComPropsForMulticastRefs
     ) = field(
         default=None,
         metadata={
@@ -209,8 +209,8 @@ class UserDefinedServiceInstanceToMachineMapping:
         },
     )
     secure_com_props_for_tcp_refs: (
-        UserDefinedServiceInstanceToMachineMapping.SecureComPropsForTcpRefs
-        | None
+        None
+        | UserDefinedServiceInstanceToMachineMapping.SecureComPropsForTcpRefs
     ) = field(
         default=None,
         metadata={
@@ -220,8 +220,8 @@ class UserDefinedServiceInstanceToMachineMapping:
         },
     )
     secure_com_props_for_udp_refs: (
-        UserDefinedServiceInstanceToMachineMapping.SecureComPropsForUdpRefs
-        | None
+        None
+        | UserDefinedServiceInstanceToMachineMapping.SecureComPropsForUdpRefs
     ) = field(
         default=None,
         metadata={
@@ -231,7 +231,7 @@ class UserDefinedServiceInstanceToMachineMapping:
         },
     )
     service_instance_refs: (
-        UserDefinedServiceInstanceToMachineMapping.ServiceInstanceRefs | None
+        None | UserDefinedServiceInstanceToMachineMapping.ServiceInstanceRefs
     ) = field(
         default=None,
         metadata={
@@ -240,14 +240,14 @@ class UserDefinedServiceInstanceToMachineMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -255,7 +255,7 @@ class UserDefinedServiceInstanceToMachineMapping:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -287,7 +287,7 @@ class UserDefinedServiceInstanceToMachineMapping:
 
     @dataclass
     class CommunicationConnectorRef(Ref):
-        dest: CommunicationConnectorSubtypesEnum | None = field(
+        dest: None | CommunicationConnectorSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -311,7 +311,7 @@ class UserDefinedServiceInstanceToMachineMapping:
 
         @dataclass
         class SecOcComPropsForMulticastRef(Ref):
-            dest: SecOcSecureComPropsSubtypesEnum | None = field(
+            dest: None | SecOcSecureComPropsSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -335,7 +335,7 @@ class UserDefinedServiceInstanceToMachineMapping:
 
         @dataclass
         class SecureComPropsForTcpRef(Ref):
-            dest: SecureComPropsSubtypesEnum | None = field(
+            dest: None | SecureComPropsSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -359,7 +359,7 @@ class UserDefinedServiceInstanceToMachineMapping:
 
         @dataclass
         class SecureComPropsForUdpRef(Ref):
-            dest: SecureComPropsSubtypesEnum | None = field(
+            dest: None | SecureComPropsSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -383,7 +383,7 @@ class UserDefinedServiceInstanceToMachineMapping:
 
         @dataclass
         class ServiceInstanceRef(Ref):
-            dest: AdaptivePlatformServiceInstanceSubtypesEnum | None = field(
+            dest: None | AdaptivePlatformServiceInstanceSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",

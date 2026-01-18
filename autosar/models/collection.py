@@ -110,7 +110,7 @@ class Collection:
     class Meta:
         name = "COLLECTION"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -119,7 +119,7 @@ class Collection:
             "required": True,
         },
     )
-    short_name_fragments: Collection.ShortNameFragments | None = field(
+    short_name_fragments: None | Collection.ShortNameFragments = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -127,7 +127,7 @@ class Collection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -135,7 +135,7 @@ class Collection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -143,7 +143,7 @@ class Collection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -151,7 +151,7 @@ class Collection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -159,7 +159,7 @@ class Collection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -167,7 +167,7 @@ class Collection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Collection.Annotations | None = field(
+    annotations: None | Collection.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -175,7 +175,7 @@ class Collection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -183,7 +183,7 @@ class Collection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    auto_collect: AutoCollectEnum | None = field(
+    auto_collect: None | AutoCollectEnum = field(
         default=None,
         metadata={
             "name": "AUTO-COLLECT",
@@ -191,7 +191,7 @@ class Collection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    element_role: Identifier | None = field(
+    element_role: None | Identifier = field(
         default=None,
         metadata={
             "name": "ELEMENT-ROLE",
@@ -199,7 +199,7 @@ class Collection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    element_refs: Collection.ElementRefs | None = field(
+    element_refs: None | Collection.ElementRefs = field(
         default=None,
         metadata={
             "name": "ELEMENT-REFS",
@@ -207,7 +207,7 @@ class Collection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    source_element_refs: Collection.SourceElementRefs | None = field(
+    source_element_refs: None | Collection.SourceElementRefs = field(
         default=None,
         metadata={
             "name": "SOURCE-ELEMENT-REFS",
@@ -215,7 +215,7 @@ class Collection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    collected_instance_irefs: Collection.CollectedInstanceIrefs | None = field(
+    collected_instance_irefs: None | Collection.CollectedInstanceIrefs = field(
         default=None,
         metadata={
             "name": "COLLECTED-INSTANCE-IREFS",
@@ -223,7 +223,7 @@ class Collection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    source_instance_irefs: Collection.SourceInstanceIrefs | None = field(
+    source_instance_irefs: None | Collection.SourceInstanceIrefs = field(
         default=None,
         metadata={
             "name": "SOURCE-INSTANCE-IREFS",
@@ -231,14 +231,14 @@ class Collection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -246,7 +246,7 @@ class Collection:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -289,7 +289,7 @@ class Collection:
 
         @dataclass
         class ElementRef(Ref):
-            dest: IdentifiableSubtypesEnum | None = field(
+            dest: None | IdentifiableSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -313,7 +313,7 @@ class Collection:
 
         @dataclass
         class SourceElementRef(Ref):
-            dest: IdentifiableSubtypesEnum | None = field(
+            dest: None | IdentifiableSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",

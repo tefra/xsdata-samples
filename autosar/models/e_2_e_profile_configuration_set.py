@@ -86,7 +86,7 @@ class E2EProfileConfigurationSet:
     class Meta:
         name = "E-2-E-PROFILE-CONFIGURATION-SET"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -96,7 +96,7 @@ class E2EProfileConfigurationSet:
         },
     )
     short_name_fragments: (
-        E2EProfileConfigurationSet.ShortNameFragments | None
+        None | E2EProfileConfigurationSet.ShortNameFragments
     ) = field(
         default=None,
         metadata={
@@ -105,7 +105,7 @@ class E2EProfileConfigurationSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -113,7 +113,7 @@ class E2EProfileConfigurationSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -121,7 +121,7 @@ class E2EProfileConfigurationSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -129,7 +129,7 @@ class E2EProfileConfigurationSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -137,7 +137,7 @@ class E2EProfileConfigurationSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -145,7 +145,7 @@ class E2EProfileConfigurationSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: E2EProfileConfigurationSet.Annotations | None = field(
+    annotations: None | E2EProfileConfigurationSet.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -153,7 +153,7 @@ class E2EProfileConfigurationSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -162,7 +162,7 @@ class E2EProfileConfigurationSet:
         },
     )
     e_2_e_profile_configurations: (
-        E2EProfileConfigurationSet.E2EProfileConfigurations | None
+        None | E2EProfileConfigurationSet.E2EProfileConfigurations
     ) = field(
         default=None,
         metadata={
@@ -171,14 +171,14 @@ class E2EProfileConfigurationSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -186,7 +186,7 @@ class E2EProfileConfigurationSet:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",

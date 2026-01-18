@@ -39,20 +39,20 @@ class Snc:
     class Meta:
         name = "snc"
 
-    mrk: str | None = field(
+    mrk: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    ref_attribute: str | None = field(
+    ref_attribute: None | str = field(
         default=None,
         metadata={
             "name": "ref",
             "type": "Attribute",
         },
     )
-    num: str | None = field(
+    num: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -167,7 +167,7 @@ class Dif:
     class Meta:
         name = "dif"
 
-    lng: str | None = field(
+    lng: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -266,13 +266,13 @@ class Subsnc:
     class Meta:
         name = "subsnc"
 
-    mrk: str | None = field(
+    mrk: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    ref_attribute: str | None = field(
+    ref_attribute: None | str = field(
         default=None,
         metadata={
             "name": "ref",

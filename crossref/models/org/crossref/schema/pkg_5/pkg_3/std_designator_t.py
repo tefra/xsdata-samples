@@ -20,7 +20,7 @@ class StdDesignatorT:
     class Meta:
         name = "std_designator_t"
 
-    std_designator: StdDesignator | None = field(
+    std_designator: None | StdDesignator = field(
         default=None,
         metadata={
             "type": "Element",

@@ -13,20 +13,20 @@ class TError(TRootElement):
     class Meta:
         name = "tError"
 
-    name: str | None = field(
+    name: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    error_code: str | None = field(
+    error_code: None | str = field(
         default=None,
         metadata={
             "name": "errorCode",
             "type": "Attribute",
         },
     )
-    structure_ref: QName | None = field(
+    structure_ref: None | QName = field(
         default=None,
         metadata={
             "name": "structureRef",

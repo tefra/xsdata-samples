@@ -22,7 +22,7 @@ class OperationalContextVersionStructure(DataManagedObjectStructure):
     class Meta:
         name = "OperationalContext_VersionStructure"
 
-    name: MultilingualString | None = field(
+    name: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "Name",
@@ -30,7 +30,7 @@ class OperationalContextVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    short_name: MultilingualString | None = field(
+    short_name: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "ShortName",
@@ -38,7 +38,7 @@ class OperationalContextVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    private_code: PrivateCode | None = field(
+    private_code: None | PrivateCode = field(
         default=None,
         metadata={
             "name": "PrivateCode",
@@ -47,11 +47,11 @@ class OperationalContextVersionStructure(DataManagedObjectStructure):
         },
     )
     organisation_part_ref: (
-        ControlCentreRef
+        None
+        | ControlCentreRef
         | OrganisationalUnitRef
         | DepartmentRef
         | OrganisationPartRef
-        | None
     ) = field(
         default=None,
         metadata={
@@ -80,7 +80,7 @@ class OperationalContextVersionStructure(DataManagedObjectStructure):
             ),
         },
     )
-    vehicle_mode: AllVehicleModesOfTransportEnumeration | None = field(
+    vehicle_mode: None | AllVehicleModesOfTransportEnumeration = field(
         default=None,
         metadata={
             "name": "VehicleMode",
@@ -88,7 +88,7 @@ class OperationalContextVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    transport_submode: TransportSubmode | None = field(
+    transport_submode: None | TransportSubmode = field(
         default=None,
         metadata={
             "name": "TransportSubmode",

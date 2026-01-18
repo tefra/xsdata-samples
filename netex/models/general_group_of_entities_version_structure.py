@@ -15,14 +15,14 @@ class GeneralGroupOfEntitiesVersionStructure(GroupOfEntitiesVersionStructure):
     class Meta:
         name = "GeneralGroupOfEntities_VersionStructure"
 
-    members: ObjectRefsRelStructure | None = field(
+    members: None | ObjectRefsRelStructure = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    name_of_member_class: str | None = field(
+    name_of_member_class: None | str = field(
         default=None,
         metadata={
             "name": "nameOfMemberClass",

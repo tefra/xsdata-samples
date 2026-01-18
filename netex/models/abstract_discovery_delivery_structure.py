@@ -15,7 +15,7 @@ __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
 @dataclass
 class AbstractDiscoveryDeliveryStructure(ResponseStructure):
-    status: Status | None = field(
+    status: None | Status = field(
         default=None,
         metadata={
             "name": "Status",
@@ -23,7 +23,7 @@ class AbstractDiscoveryDeliveryStructure(ResponseStructure):
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    error_condition: ServiceDeliveryErrorConditionStructure | None = field(
+    error_condition: None | ServiceDeliveryErrorConditionStructure = field(
         default=None,
         metadata={
             "name": "ErrorCondition",
@@ -31,7 +31,7 @@ class AbstractDiscoveryDeliveryStructure(ResponseStructure):
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    valid_until: XmlDateTime | None = field(
+    valid_until: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "ValidUntil",
@@ -39,7 +39,7 @@ class AbstractDiscoveryDeliveryStructure(ResponseStructure):
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    shortest_possible_cycle: XmlDuration | None = field(
+    shortest_possible_cycle: None | XmlDuration = field(
         default=None,
         metadata={
             "name": "ShortestPossibleCycle",

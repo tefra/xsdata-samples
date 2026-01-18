@@ -25,7 +25,7 @@ class TargetType(BaseSystemTraceabilityType):
         message.</description>
     """
 
-    received_date_time: XmlDateTime | None = field(
+    received_date_time: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "ReceivedDateTime",

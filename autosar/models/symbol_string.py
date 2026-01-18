@@ -41,14 +41,14 @@ class SymbolString:
             "required": True,
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -56,7 +56,7 @@ class SymbolString:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    name_pattern: str | None = field(
+    name_pattern: None | str = field(
         default=None,
         metadata={
             "name": "NAME-PATTERN",

@@ -13,7 +13,7 @@ class TParticipantAssociation(TBaseElement):
     class Meta:
         name = "tParticipantAssociation"
 
-    inner_participant_ref: QName | None = field(
+    inner_participant_ref: None | QName = field(
         default=None,
         metadata={
             "name": "innerParticipantRef",
@@ -22,7 +22,7 @@ class TParticipantAssociation(TBaseElement):
             "required": True,
         },
     )
-    outer_participant_ref: QName | None = field(
+    outer_participant_ref: None | QName = field(
         default=None,
         metadata={
             "name": "outerParticipantRef",

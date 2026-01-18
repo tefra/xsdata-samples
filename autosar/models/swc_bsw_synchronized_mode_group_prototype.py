@@ -41,7 +41,7 @@ class SwcBswSynchronizedModeGroupPrototype:
         name = "SWC-BSW-SYNCHRONIZED-MODE-GROUP-PROTOTYPE"
 
     bsw_mode_group_ref: (
-        SwcBswSynchronizedModeGroupPrototype.BswModeGroupRef | None
+        None | SwcBswSynchronizedModeGroupPrototype.BswModeGroupRef
     ) = field(
         default=None,
         metadata={
@@ -50,7 +50,7 @@ class SwcBswSynchronizedModeGroupPrototype:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    swc_mode_group_iref: PModeGroupInAtomicSwcInstanceRef | None = field(
+    swc_mode_group_iref: None | PModeGroupInAtomicSwcInstanceRef = field(
         default=None,
         metadata={
             "name": "SWC-MODE-GROUP-IREF",
@@ -58,7 +58,7 @@ class SwcBswSynchronizedModeGroupPrototype:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -66,14 +66,14 @@ class SwcBswSynchronizedModeGroupPrototype:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -84,7 +84,7 @@ class SwcBswSynchronizedModeGroupPrototype:
 
     @dataclass
     class BswModeGroupRef(Ref):
-        dest: ModeDeclarationGroupPrototypeSubtypesEnum | None = field(
+        dest: None | ModeDeclarationGroupPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

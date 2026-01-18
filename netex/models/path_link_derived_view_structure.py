@@ -12,7 +12,7 @@ class PathLinkDerivedViewStructure(DerivedViewStructure):
     class Meta:
         name = "PathLink_DerivedViewStructure"
 
-    hide_link: bool | None = field(
+    hide_link: None | bool = field(
         default=None,
         metadata={
             "name": "HideLink",
@@ -20,7 +20,7 @@ class PathLinkDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    hide_destination: bool | None = field(
+    hide_destination: None | bool = field(
         default=None,
         metadata={
             "name": "HideDestination",
@@ -28,7 +28,7 @@ class PathLinkDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    show_entrance_separately: bool | None = field(
+    show_entrance_separately: None | bool = field(
         default=None,
         metadata={
             "name": "ShowEntranceSeparately",
@@ -36,7 +36,7 @@ class PathLinkDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    show_exit_separately: bool | None = field(
+    show_exit_separately: None | bool = field(
         default=None,
         metadata={
             "name": "ShowExitSeparately",
@@ -44,7 +44,7 @@ class PathLinkDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    show_heading_separately: bool | None = field(
+    show_heading_separately: None | bool = field(
         default=None,
         metadata={
             "name": "ShowHeadingSeparately",

@@ -84,7 +84,7 @@ class J1939TpConnection:
     class Meta:
         name = "J-1939-TP-CONNECTION"
 
-    ident: TpConnectionIdent | None = field(
+    ident: None | TpConnectionIdent = field(
         default=None,
         metadata={
             "name": "IDENT",
@@ -92,7 +92,7 @@ class J1939TpConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    broadcast: Boolean | None = field(
+    broadcast: None | Boolean = field(
         default=None,
         metadata={
             "name": "BROADCAST",
@@ -100,7 +100,7 @@ class J1939TpConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    buffer_ratio: PositiveInteger | None = field(
+    buffer_ratio: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "BUFFER-RATIO",
@@ -108,7 +108,7 @@ class J1939TpConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    cancellation: Boolean | None = field(
+    cancellation: None | Boolean = field(
         default=None,
         metadata={
             "name": "CANCELLATION",
@@ -116,7 +116,7 @@ class J1939TpConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    data_pdu_ref: J1939TpConnection.DataPduRef | None = field(
+    data_pdu_ref: None | J1939TpConnection.DataPduRef = field(
         default=None,
         metadata={
             "name": "DATA-PDU-REF",
@@ -124,7 +124,7 @@ class J1939TpConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    direct_pdu_ref: J1939TpConnection.DirectPduRef | None = field(
+    direct_pdu_ref: None | J1939TpConnection.DirectPduRef = field(
         default=None,
         metadata={
             "name": "DIRECT-PDU-REF",
@@ -132,7 +132,7 @@ class J1939TpConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    dynamic_bs: Boolean | None = field(
+    dynamic_bs: None | Boolean = field(
         default=None,
         metadata={
             "name": "DYNAMIC-BS",
@@ -140,7 +140,7 @@ class J1939TpConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    flow_control_pdu_refs: J1939TpConnection.FlowControlPduRefs | None = field(
+    flow_control_pdu_refs: None | J1939TpConnection.FlowControlPduRefs = field(
         default=None,
         metadata={
             "name": "FLOW-CONTROL-PDU-REFS",
@@ -148,7 +148,7 @@ class J1939TpConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    max_bs: PositiveInteger | None = field(
+    max_bs: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "MAX-BS",
@@ -156,7 +156,7 @@ class J1939TpConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    max_exp_bs: PositiveInteger | None = field(
+    max_exp_bs: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "MAX-EXP-BS",
@@ -164,7 +164,7 @@ class J1939TpConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    receiver_refs: J1939TpConnection.ReceiverRefs | None = field(
+    receiver_refs: None | J1939TpConnection.ReceiverRefs = field(
         default=None,
         metadata={
             "name": "RECEIVER-REFS",
@@ -172,7 +172,7 @@ class J1939TpConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    retry: Boolean | None = field(
+    retry: None | Boolean = field(
         default=None,
         metadata={
             "name": "RETRY",
@@ -180,7 +180,7 @@ class J1939TpConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tp_pgs: J1939TpConnection.TpPgs | None = field(
+    tp_pgs: None | J1939TpConnection.TpPgs = field(
         default=None,
         metadata={
             "name": "TP-PGS",
@@ -188,7 +188,7 @@ class J1939TpConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tp_sdu_refs: J1939TpConnection.TpSduRefs | None = field(
+    tp_sdu_refs: None | J1939TpConnection.TpSduRefs = field(
         default=None,
         metadata={
             "name": "TP-SDU-REFS",
@@ -196,7 +196,7 @@ class J1939TpConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    transmitter_ref: J1939TpConnection.TransmitterRef | None = field(
+    transmitter_ref: None | J1939TpConnection.TransmitterRef = field(
         default=None,
         metadata={
             "name": "TRANSMITTER-REF",
@@ -204,7 +204,7 @@ class J1939TpConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -212,14 +212,14 @@ class J1939TpConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -230,7 +230,7 @@ class J1939TpConnection:
 
     @dataclass
     class DataPduRef(Ref):
-        dest: NPduSubtypesEnum | None = field(
+        dest: None | NPduSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -241,7 +241,7 @@ class J1939TpConnection:
 
     @dataclass
     class DirectPduRef(Ref):
-        dest: NPduSubtypesEnum | None = field(
+        dest: None | NPduSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -266,7 +266,7 @@ class J1939TpConnection:
 
         @dataclass
         class FlowControlPduRef(Ref):
-            dest: NPduSubtypesEnum | None = field(
+            dest: None | NPduSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -288,7 +288,7 @@ class J1939TpConnection:
 
         @dataclass
         class ReceiverRef(Ref):
-            dest: J1939TpNodeSubtypesEnum | None = field(
+            dest: None | J1939TpNodeSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -321,7 +321,7 @@ class J1939TpConnection:
 
         @dataclass
         class TpSduRef(Ref):
-            dest: IPduSubtypesEnum | None = field(
+            dest: None | IPduSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -332,7 +332,7 @@ class J1939TpConnection:
 
     @dataclass
     class TransmitterRef(Ref):
-        dest: J1939TpNodeSubtypesEnum | None = field(
+        dest: None | J1939TpNodeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

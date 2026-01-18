@@ -8,7 +8,7 @@ class Duration:
     class Meta:
         name = "duration"
 
-    type_value: str | None = field(
+    type_value: None | str = field(
         default=None,
         metadata={
             "name": "type",
@@ -16,7 +16,7 @@ class Duration:
             "required": True,
         },
     )
-    description: str | None = field(
+    description: None | str = field(
         default=None,
         metadata={
             "type": "Element",

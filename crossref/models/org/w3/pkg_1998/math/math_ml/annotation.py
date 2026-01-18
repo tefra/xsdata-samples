@@ -11,13 +11,13 @@ class Annotation:
         name = "annotation"
         namespace = "http://www.w3.org/1998/Math/MathML"
 
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    xref: object | None = field(
+    xref: None | object = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -31,19 +31,19 @@ class Annotation:
             "tokens": True,
         },
     )
-    style: str | None = field(
+    style: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    href: str | None = field(
+    href: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    other: object | None = field(
+    other: None | object = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -56,32 +56,32 @@ class Annotation:
             "namespace": "##other",
         },
     )
-    cd: str | None = field(
+    cd: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    name: str | None = field(
+    name: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    encoding: str | None = field(
+    encoding: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    definition_url: str | None = field(
+    definition_url: None | str = field(
         default=None,
         metadata={
             "name": "definitionURL",
             "type": "Attribute",
         },
     )
-    src: str | None = field(
+    src: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",

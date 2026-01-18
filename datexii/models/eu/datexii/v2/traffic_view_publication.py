@@ -16,7 +16,7 @@ class TrafficViewPublication(PayloadPublication):
     A publication containing one or more traffic views.
     """
 
-    header_information: HeaderInformation | None = field(
+    header_information: None | HeaderInformation = field(
         default=None,
         metadata={
             "name": "headerInformation",
@@ -34,7 +34,7 @@ class TrafficViewPublication(PayloadPublication):
             "min_occurs": 1,
         },
     )
-    traffic_view_publication_extension: ExtensionType | None = field(
+    traffic_view_publication_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "trafficViewPublicationExtension",

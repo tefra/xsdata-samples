@@ -36,7 +36,7 @@ class VariableAccessInEcuInstanceRef:
         name = "VARIABLE-ACCESS-IN-ECU-INSTANCE-REF"
 
     context_root_composition_ref: (
-        VariableAccessInEcuInstanceRef.ContextRootCompositionRef | None
+        None | VariableAccessInEcuInstanceRef.ContextRootCompositionRef
     ) = field(
         default=None,
         metadata={
@@ -46,7 +46,7 @@ class VariableAccessInEcuInstanceRef:
         },
     )
     context_atomic_component_ref: (
-        VariableAccessInEcuInstanceRef.ContextAtomicComponentRef | None
+        None | VariableAccessInEcuInstanceRef.ContextAtomicComponentRef
     ) = field(
         default=None,
         metadata={
@@ -56,7 +56,7 @@ class VariableAccessInEcuInstanceRef:
         },
     )
     target_variable_access_ref: (
-        VariableAccessInEcuInstanceRef.TargetVariableAccessRef | None
+        None | VariableAccessInEcuInstanceRef.TargetVariableAccessRef
     ) = field(
         default=None,
         metadata={
@@ -65,14 +65,14 @@ class VariableAccessInEcuInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -83,7 +83,7 @@ class VariableAccessInEcuInstanceRef:
 
     @dataclass
     class ContextRootCompositionRef(Ref):
-        dest: RootSwCompositionPrototypeSubtypesEnum | None = field(
+        dest: None | RootSwCompositionPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -94,7 +94,7 @@ class VariableAccessInEcuInstanceRef:
 
     @dataclass
     class ContextAtomicComponentRef(Ref):
-        dest: SwComponentPrototypeSubtypesEnum | None = field(
+        dest: None | SwComponentPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -105,7 +105,7 @@ class VariableAccessInEcuInstanceRef:
 
     @dataclass
     class TargetVariableAccessRef(Ref):
-        dest: VariableAccessSubtypesEnum | None = field(
+        dest: None | VariableAccessSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

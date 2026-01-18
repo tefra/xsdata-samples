@@ -109,7 +109,7 @@ class PrimitiveAttributeTailoring:
     class Meta:
         name = "PRIMITIVE-ATTRIBUTE-TAILORING"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -119,7 +119,7 @@ class PrimitiveAttributeTailoring:
         },
     )
     short_name_fragments: (
-        PrimitiveAttributeTailoring.ShortNameFragments | None
+        None | PrimitiveAttributeTailoring.ShortNameFragments
     ) = field(
         default=None,
         metadata={
@@ -128,7 +128,7 @@ class PrimitiveAttributeTailoring:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -136,7 +136,7 @@ class PrimitiveAttributeTailoring:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -144,7 +144,7 @@ class PrimitiveAttributeTailoring:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -152,7 +152,7 @@ class PrimitiveAttributeTailoring:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -160,7 +160,7 @@ class PrimitiveAttributeTailoring:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -168,7 +168,7 @@ class PrimitiveAttributeTailoring:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: PrimitiveAttributeTailoring.Annotations | None = field(
+    annotations: None | PrimitiveAttributeTailoring.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -176,7 +176,7 @@ class PrimitiveAttributeTailoring:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    alternative_name: String | None = field(
+    alternative_name: None | String = field(
         default=None,
         metadata={
             "name": "ALTERNATIVE-NAME",
@@ -184,7 +184,7 @@ class PrimitiveAttributeTailoring:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    in_scope: Boolean | None = field(
+    in_scope: None | Boolean = field(
         default=None,
         metadata={
             "name": "IN-SCOPE",
@@ -192,7 +192,7 @@ class PrimitiveAttributeTailoring:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    multiplicity_restriction: MultiplicityRestrictionWithSeverity | None = (
+    multiplicity_restriction: None | MultiplicityRestrictionWithSeverity = (
         field(
             default=None,
             metadata={
@@ -202,7 +202,7 @@ class PrimitiveAttributeTailoring:
             },
         )
     )
-    variation_restriction: VariationRestrictionWithSeverity | None = field(
+    variation_restriction: None | VariationRestrictionWithSeverity = field(
         default=None,
         metadata={
             "name": "VARIATION-RESTRICTION",
@@ -210,7 +210,7 @@ class PrimitiveAttributeTailoring:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    default_value_handling: DefaultValueApplicationStrategyEnum | None = field(
+    default_value_handling: None | DefaultValueApplicationStrategyEnum = field(
         default=None,
         metadata={
             "name": "DEFAULT-VALUE-HANDLING",
@@ -219,7 +219,7 @@ class PrimitiveAttributeTailoring:
         },
     )
     sub_attribute_tailorings: (
-        PrimitiveAttributeTailoring.SubAttributeTailorings | None
+        None | PrimitiveAttributeTailoring.SubAttributeTailorings
     ) = field(
         default=None,
         metadata={
@@ -228,7 +228,7 @@ class PrimitiveAttributeTailoring:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    value_restriction: ValueRestrictionWithSeverity | None = field(
+    value_restriction: None | ValueRestrictionWithSeverity = field(
         default=None,
         metadata={
             "name": "VALUE-RESTRICTION",
@@ -236,14 +236,14 @@ class PrimitiveAttributeTailoring:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -251,7 +251,7 @@ class PrimitiveAttributeTailoring:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",

@@ -35,7 +35,7 @@ class CryptoCertificateToCryptoKeySlotMapping:
         name = "CRYPTO-CERTIFICATE-TO-CRYPTO-KEY-SLOT-MAPPING"
 
     crypto_certificate_ref: (
-        CryptoCertificateToCryptoKeySlotMapping.CryptoCertificateRef | None
+        None | CryptoCertificateToCryptoKeySlotMapping.CryptoCertificateRef
     ) = field(
         default=None,
         metadata={
@@ -45,7 +45,7 @@ class CryptoCertificateToCryptoKeySlotMapping:
         },
     )
     crypto_key_slot_refs: (
-        CryptoCertificateToCryptoKeySlotMapping.CryptoKeySlotRefs | None
+        None | CryptoCertificateToCryptoKeySlotMapping.CryptoKeySlotRefs
     ) = field(
         default=None,
         metadata={
@@ -54,14 +54,14 @@ class CryptoCertificateToCryptoKeySlotMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -72,7 +72,7 @@ class CryptoCertificateToCryptoKeySlotMapping:
 
     @dataclass
     class CryptoCertificateRef(Ref):
-        dest: CryptoCertificateSubtypesEnum | None = field(
+        dest: None | CryptoCertificateSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -97,7 +97,7 @@ class CryptoCertificateToCryptoKeySlotMapping:
 
         @dataclass
         class CryptoKeySlotRef(Ref):
-            dest: CryptoKeySlotSubtypesEnum | None = field(
+            dest: None | CryptoKeySlotSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",

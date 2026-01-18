@@ -38,7 +38,7 @@ class CompositeNetworkRepresentation:
         name = "COMPOSITE-NETWORK-REPRESENTATION"
 
     leaf_element_iref: (
-        ApplicationCompositeElementInPortInterfaceInstanceRef | None
+        None | ApplicationCompositeElementInPortInterfaceInstanceRef
     ) = field(
         default=None,
         metadata={
@@ -47,7 +47,7 @@ class CompositeNetworkRepresentation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    network_representation: SwDataDefProps | None = field(
+    network_representation: None | SwDataDefProps = field(
         default=None,
         metadata={
             "name": "NETWORK-REPRESENTATION",
@@ -55,14 +55,14 @@ class CompositeNetworkRepresentation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

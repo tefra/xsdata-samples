@@ -17,7 +17,7 @@ class TransferVersionStructure(DataManagedObjectStructure):
     class Meta:
         name = "Transfer_VersionStructure"
 
-    name: MultilingualString | None = field(
+    name: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "Name",
@@ -25,7 +25,7 @@ class TransferVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    type_of_transfer_ref: TypeOfTransferRef | None = field(
+    type_of_transfer_ref: None | TypeOfTransferRef = field(
         default=None,
         metadata={
             "name": "TypeOfTransferRef",
@@ -33,7 +33,7 @@ class TransferVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    description: MultilingualString | None = field(
+    description: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "Description",
@@ -41,7 +41,7 @@ class TransferVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    distance: Decimal | None = field(
+    distance: None | Decimal = field(
         default=None,
         metadata={
             "name": "Distance",
@@ -49,7 +49,7 @@ class TransferVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    transfer_duration: TransferDurationStructure | None = field(
+    transfer_duration: None | TransferDurationStructure = field(
         default=None,
         metadata={
             "name": "TransferDuration",
@@ -57,7 +57,7 @@ class TransferVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    walk_transfer_duration: TransferDurationStructure | None = field(
+    walk_transfer_duration: None | TransferDurationStructure = field(
         default=None,
         metadata={
             "name": "WalkTransferDuration",
@@ -65,7 +65,7 @@ class TransferVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    both_ways: bool | None = field(
+    both_ways: None | bool = field(
         default=None,
         metadata={
             "name": "BothWays",
@@ -73,7 +73,7 @@ class TransferVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    transfer_mode: AccessModeEnumeration | None = field(
+    transfer_mode: None | AccessModeEnumeration = field(
         default=None,
         metadata={
             "name": "TransferMode",

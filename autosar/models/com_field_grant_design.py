@@ -100,7 +100,7 @@ class ComFieldGrantDesign:
     class Meta:
         name = "COM-FIELD-GRANT-DESIGN"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -109,7 +109,7 @@ class ComFieldGrantDesign:
             "required": True,
         },
     )
-    short_name_fragments: ComFieldGrantDesign.ShortNameFragments | None = (
+    short_name_fragments: None | ComFieldGrantDesign.ShortNameFragments = (
         field(
             default=None,
             metadata={
@@ -119,7 +119,7 @@ class ComFieldGrantDesign:
             },
         )
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -127,7 +127,7 @@ class ComFieldGrantDesign:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -135,7 +135,7 @@ class ComFieldGrantDesign:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -143,7 +143,7 @@ class ComFieldGrantDesign:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -151,7 +151,7 @@ class ComFieldGrantDesign:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -159,7 +159,7 @@ class ComFieldGrantDesign:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: ComFieldGrantDesign.Annotations | None = field(
+    annotations: None | ComFieldGrantDesign.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -167,7 +167,7 @@ class ComFieldGrantDesign:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -175,7 +175,7 @@ class ComFieldGrantDesign:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    process_design_ref: ComFieldGrantDesign.ProcessDesignRef | None = field(
+    process_design_ref: None | ComFieldGrantDesign.ProcessDesignRef = field(
         default=None,
         metadata={
             "name": "PROCESS-DESIGN-REF",
@@ -183,7 +183,7 @@ class ComFieldGrantDesign:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    remote_subject_ref: ComFieldGrantDesign.RemoteSubjectRef | None = field(
+    remote_subject_ref: None | ComFieldGrantDesign.RemoteSubjectRef = field(
         default=None,
         metadata={
             "name": "REMOTE-SUBJECT-REF",
@@ -191,7 +191,7 @@ class ComFieldGrantDesign:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    field_iref: FieldInExecutableInstanceRef | None = field(
+    field_iref: None | FieldInExecutableInstanceRef = field(
         default=None,
         metadata={
             "name": "FIELD-IREF",
@@ -199,7 +199,7 @@ class ComFieldGrantDesign:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    role: FieldAccessEnum | None = field(
+    role: None | FieldAccessEnum = field(
         default=None,
         metadata={
             "name": "ROLE",
@@ -207,14 +207,14 @@ class ComFieldGrantDesign:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -222,7 +222,7 @@ class ComFieldGrantDesign:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -254,7 +254,7 @@ class ComFieldGrantDesign:
 
     @dataclass
     class ProcessDesignRef(Ref):
-        dest: ProcessDesignSubtypesEnum | None = field(
+        dest: None | ProcessDesignSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -265,7 +265,7 @@ class ComFieldGrantDesign:
 
     @dataclass
     class RemoteSubjectRef(Ref):
-        dest: AbstractIamRemoteSubjectSubtypesEnum | None = field(
+        dest: None | AbstractIamRemoteSubjectSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

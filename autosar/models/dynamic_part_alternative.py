@@ -44,7 +44,7 @@ class DynamicPartAlternative:
     class Meta:
         name = "DYNAMIC-PART-ALTERNATIVE"
 
-    i_pdu_ref: DynamicPartAlternative.IPduRef | None = field(
+    i_pdu_ref: None | DynamicPartAlternative.IPduRef = field(
         default=None,
         metadata={
             "name": "I-PDU-REF",
@@ -52,7 +52,7 @@ class DynamicPartAlternative:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    initial_dynamic_part: Boolean | None = field(
+    initial_dynamic_part: None | Boolean = field(
         default=None,
         metadata={
             "name": "INITIAL-DYNAMIC-PART",
@@ -60,7 +60,7 @@ class DynamicPartAlternative:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    selector_field_code: Integer | None = field(
+    selector_field_code: None | Integer = field(
         default=None,
         metadata={
             "name": "SELECTOR-FIELD-CODE",
@@ -68,14 +68,14 @@ class DynamicPartAlternative:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -86,7 +86,7 @@ class DynamicPartAlternative:
 
     @dataclass
     class IPduRef(Ref):
-        dest: ISignalIPduSubtypesEnum | None = field(
+        dest: None | ISignalIPduSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

@@ -14,7 +14,7 @@ class PassengerInformationFacility:
     class Meta:
         namespace = "http://www.netex.org.uk/netex"
 
-    value: PassengerInformationFacilityEnumeration | None = field(
+    value: None | PassengerInformationFacilityEnumeration = field(
         default=None,
         metadata={
             "required": True,

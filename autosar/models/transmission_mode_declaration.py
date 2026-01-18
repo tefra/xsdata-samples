@@ -68,7 +68,7 @@ class TransmissionModeDeclaration:
         name = "TRANSMISSION-MODE-DECLARATION"
 
     mode_driven_false_conditions: (
-        TransmissionModeDeclaration.ModeDrivenFalseConditions | None
+        None | TransmissionModeDeclaration.ModeDrivenFalseConditions
     ) = field(
         default=None,
         metadata={
@@ -78,7 +78,7 @@ class TransmissionModeDeclaration:
         },
     )
     mode_driven_true_conditions: (
-        TransmissionModeDeclaration.ModeDrivenTrueConditions | None
+        None | TransmissionModeDeclaration.ModeDrivenTrueConditions
     ) = field(
         default=None,
         metadata={
@@ -88,7 +88,7 @@ class TransmissionModeDeclaration:
         },
     )
     transmission_mode_conditions: (
-        TransmissionModeDeclaration.TransmissionModeConditions | None
+        None | TransmissionModeDeclaration.TransmissionModeConditions
     ) = field(
         default=None,
         metadata={
@@ -97,7 +97,7 @@ class TransmissionModeDeclaration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    transmission_mode_false_timing: TransmissionModeTiming | None = field(
+    transmission_mode_false_timing: None | TransmissionModeTiming = field(
         default=None,
         metadata={
             "name": "TRANSMISSION-MODE-FALSE-TIMING",
@@ -105,7 +105,7 @@ class TransmissionModeDeclaration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    transmission_mode_true_timing: TransmissionModeTiming | None = field(
+    transmission_mode_true_timing: None | TransmissionModeTiming = field(
         default=None,
         metadata={
             "name": "TRANSMISSION-MODE-TRUE-TIMING",
@@ -113,14 +113,14 @@ class TransmissionModeDeclaration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

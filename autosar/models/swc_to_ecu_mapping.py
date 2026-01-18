@@ -115,7 +115,7 @@ class SwcToEcuMapping:
     class Meta:
         name = "SWC-TO-ECU-MAPPING"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -124,7 +124,7 @@ class SwcToEcuMapping:
             "required": True,
         },
     )
-    short_name_fragments: SwcToEcuMapping.ShortNameFragments | None = field(
+    short_name_fragments: None | SwcToEcuMapping.ShortNameFragments = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -132,7 +132,7 @@ class SwcToEcuMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -140,7 +140,7 @@ class SwcToEcuMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -148,7 +148,7 @@ class SwcToEcuMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -156,7 +156,7 @@ class SwcToEcuMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -164,7 +164,7 @@ class SwcToEcuMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -172,7 +172,7 @@ class SwcToEcuMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: SwcToEcuMapping.Annotations | None = field(
+    annotations: None | SwcToEcuMapping.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -180,7 +180,7 @@ class SwcToEcuMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    component_irefs: SwcToEcuMapping.ComponentIrefs | None = field(
+    component_irefs: None | SwcToEcuMapping.ComponentIrefs = field(
         default=None,
         metadata={
             "name": "COMPONENT-IREFS",
@@ -189,7 +189,7 @@ class SwcToEcuMapping:
         },
     )
     controlled_hw_element_ref: (
-        SwcToEcuMapping.ControlledHwElementRef | None
+        None | SwcToEcuMapping.ControlledHwElementRef
     ) = field(
         default=None,
         metadata={
@@ -198,7 +198,7 @@ class SwcToEcuMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ecu_instance_ref: SwcToEcuMapping.EcuInstanceRef | None = field(
+    ecu_instance_ref: None | SwcToEcuMapping.EcuInstanceRef = field(
         default=None,
         metadata={
             "name": "ECU-INSTANCE-REF",
@@ -206,7 +206,7 @@ class SwcToEcuMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    partition_ref: SwcToEcuMapping.PartitionRef | None = field(
+    partition_ref: None | SwcToEcuMapping.PartitionRef = field(
         default=None,
         metadata={
             "name": "PARTITION-REF",
@@ -214,7 +214,7 @@ class SwcToEcuMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    processing_unit_ref: SwcToEcuMapping.ProcessingUnitRef | None = field(
+    processing_unit_ref: None | SwcToEcuMapping.ProcessingUnitRef = field(
         default=None,
         metadata={
             "name": "PROCESSING-UNIT-REF",
@@ -222,7 +222,7 @@ class SwcToEcuMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -230,14 +230,14 @@ class SwcToEcuMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -245,7 +245,7 @@ class SwcToEcuMapping:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -288,7 +288,7 @@ class SwcToEcuMapping:
 
     @dataclass
     class ControlledHwElementRef(Ref):
-        dest: HwElementSubtypesEnum | None = field(
+        dest: None | HwElementSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -299,7 +299,7 @@ class SwcToEcuMapping:
 
     @dataclass
     class EcuInstanceRef(Ref):
-        dest: EcuInstanceSubtypesEnum | None = field(
+        dest: None | EcuInstanceSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -310,7 +310,7 @@ class SwcToEcuMapping:
 
     @dataclass
     class PartitionRef(Ref):
-        dest: EcuPartitionSubtypesEnum | None = field(
+        dest: None | EcuPartitionSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -321,7 +321,7 @@ class SwcToEcuMapping:
 
     @dataclass
     class ProcessingUnitRef(Ref):
-        dest: HwElementSubtypesEnum | None = field(
+        dest: None | HwElementSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

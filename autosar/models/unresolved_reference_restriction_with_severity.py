@@ -29,7 +29,7 @@ class UnresolvedReferenceRestrictionWithSeverity:
     class Meta:
         name = "UNRESOLVED-REFERENCE-RESTRICTION-WITH-SEVERITY"
 
-    severity: SeverityEnum | None = field(
+    severity: None | SeverityEnum = field(
         default=None,
         metadata={
             "name": "SEVERITY",
@@ -37,14 +37,14 @@ class UnresolvedReferenceRestrictionWithSeverity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

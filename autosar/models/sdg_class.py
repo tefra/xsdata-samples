@@ -104,7 +104,7 @@ class SdgClass:
     class Meta:
         name = "SDG-CLASS"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -113,7 +113,7 @@ class SdgClass:
             "required": True,
         },
     )
-    short_name_fragments: SdgClass.ShortNameFragments | None = field(
+    short_name_fragments: None | SdgClass.ShortNameFragments = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -121,7 +121,7 @@ class SdgClass:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -129,7 +129,7 @@ class SdgClass:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -137,7 +137,7 @@ class SdgClass:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -145,7 +145,7 @@ class SdgClass:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -153,7 +153,7 @@ class SdgClass:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -161,7 +161,7 @@ class SdgClass:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: SdgClass.Annotations | None = field(
+    annotations: None | SdgClass.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -169,7 +169,7 @@ class SdgClass:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    gid: NmtokenString | None = field(
+    gid: None | NmtokenString = field(
         default=None,
         metadata={
             "name": "GID",
@@ -177,7 +177,7 @@ class SdgClass:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    extends_meta_class: MetaClassName | None = field(
+    extends_meta_class: None | MetaClassName = field(
         default=None,
         metadata={
             "name": "EXTENDS-META-CLASS",
@@ -185,7 +185,7 @@ class SdgClass:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    caption: Boolean | None = field(
+    caption: None | Boolean = field(
         default=None,
         metadata={
             "name": "CAPTION",
@@ -193,7 +193,7 @@ class SdgClass:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    attributes: SdgClass.Attributes | None = field(
+    attributes: None | SdgClass.Attributes = field(
         default=None,
         metadata={
             "name": "ATTRIBUTES",
@@ -201,7 +201,7 @@ class SdgClass:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sdg_constraint_refs: SdgClass.SdgConstraintRefs | None = field(
+    sdg_constraint_refs: None | SdgClass.SdgConstraintRefs = field(
         default=None,
         metadata={
             "name": "SDG-CONSTRAINT-REFS",
@@ -209,14 +209,14 @@ class SdgClass:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -224,7 +224,7 @@ class SdgClass:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -326,7 +326,7 @@ class SdgClass:
 
         @dataclass
         class SdgConstraintRef(Ref):
-            dest: TraceableTextSubtypesEnum | None = field(
+            dest: None | TraceableTextSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",

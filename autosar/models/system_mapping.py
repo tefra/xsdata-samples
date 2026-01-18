@@ -200,7 +200,7 @@ class SystemMapping:
     class Meta:
         name = "SYSTEM-MAPPING"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -209,7 +209,7 @@ class SystemMapping:
             "required": True,
         },
     )
-    short_name_fragments: SystemMapping.ShortNameFragments | None = field(
+    short_name_fragments: None | SystemMapping.ShortNameFragments = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -217,7 +217,7 @@ class SystemMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -225,7 +225,7 @@ class SystemMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -233,7 +233,7 @@ class SystemMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -241,7 +241,7 @@ class SystemMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -249,7 +249,7 @@ class SystemMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -257,7 +257,7 @@ class SystemMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: SystemMapping.Annotations | None = field(
+    annotations: None | SystemMapping.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -266,7 +266,7 @@ class SystemMapping:
         },
     )
     application_partition_to_ecu_partition_mappings: (
-        SystemMapping.ApplicationPartitionToEcuPartitionMappings | None
+        None | SystemMapping.ApplicationPartitionToEcuPartitionMappings
     ) = field(
         default=None,
         metadata={
@@ -275,7 +275,7 @@ class SystemMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    com_management_mappings: SystemMapping.ComManagementMappings | None = (
+    com_management_mappings: None | SystemMapping.ComManagementMappings = (
         field(
             default=None,
             metadata={
@@ -285,7 +285,7 @@ class SystemMapping:
             },
         )
     )
-    crypto_service_mappings: SystemMapping.CryptoServiceMappings | None = (
+    crypto_service_mappings: None | SystemMapping.CryptoServiceMappings = (
         field(
             default=None,
             metadata={
@@ -295,7 +295,7 @@ class SystemMapping:
             },
         )
     )
-    data_mappings: SystemMapping.DataMappings | None = field(
+    data_mappings: None | SystemMapping.DataMappings = field(
         default=None,
         metadata={
             "name": "DATA-MAPPINGS",
@@ -303,7 +303,7 @@ class SystemMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ecu_resource_mappings: SystemMapping.EcuResourceMappings | None = field(
+    ecu_resource_mappings: None | SystemMapping.EcuResourceMappings = field(
         default=None,
         metadata={
             "name": "ECU-RESOURCE-MAPPINGS",
@@ -312,7 +312,7 @@ class SystemMapping:
         },
     )
     j_1939_controller_application_to_j_1939_nm_node_mappings: (
-        SystemMapping.J1939ControllerApplicationToJ1939NmNodeMappings | None
+        None | SystemMapping.J1939ControllerApplicationToJ1939NmNodeMappings
     ) = field(
         default=None,
         metadata={
@@ -321,7 +321,7 @@ class SystemMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    mapping_constraints: SystemMapping.MappingConstraints | None = field(
+    mapping_constraints: None | SystemMapping.MappingConstraints = field(
         default=None,
         metadata={
             "name": "MAPPING-CONSTRAINTS",
@@ -329,7 +329,7 @@ class SystemMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    pnc_mappings: SystemMapping.PncMappings | None = field(
+    pnc_mappings: None | SystemMapping.PncMappings = field(
         default=None,
         metadata={
             "name": "PNC-MAPPINGS",
@@ -338,7 +338,7 @@ class SystemMapping:
         },
     )
     port_element_to_com_resource_mappings: (
-        SystemMapping.PortElementToComResourceMappings | None
+        None | SystemMapping.PortElementToComResourceMappings
     ) = field(
         default=None,
         metadata={
@@ -347,7 +347,7 @@ class SystemMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    resource_estimations: SystemMapping.ResourceEstimations | None = field(
+    resource_estimations: None | SystemMapping.ResourceEstimations = field(
         default=None,
         metadata={
             "name": "RESOURCE-ESTIMATIONS",
@@ -356,7 +356,7 @@ class SystemMapping:
         },
     )
     resource_to_application_partition_mappings: (
-        SystemMapping.ResourceToApplicationPartitionMappings | None
+        None | SystemMapping.ResourceToApplicationPartitionMappings
     ) = field(
         default=None,
         metadata={
@@ -365,7 +365,7 @@ class SystemMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    signal_path_constraints: SystemMapping.SignalPathConstraints | None = (
+    signal_path_constraints: None | SystemMapping.SignalPathConstraints = (
         field(
             default=None,
             metadata={
@@ -376,7 +376,7 @@ class SystemMapping:
         )
     )
     software_cluster_to_resource_mappings: (
-        SystemMapping.SoftwareClusterToResourceMappings | None
+        None | SystemMapping.SoftwareClusterToResourceMappings
     ) = field(
         default=None,
         metadata={
@@ -385,7 +385,7 @@ class SystemMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_cluster_mappings: SystemMapping.SwClusterMappings | None = field(
+    sw_cluster_mappings: None | SystemMapping.SwClusterMappings = field(
         default=None,
         metadata={
             "name": "SW-CLUSTER-MAPPINGS",
@@ -393,7 +393,7 @@ class SystemMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_impl_mappings: SystemMapping.SwImplMappings | None = field(
+    sw_impl_mappings: None | SystemMapping.SwImplMappings = field(
         default=None,
         metadata={
             "name": "SW-IMPL-MAPPINGS",
@@ -401,7 +401,7 @@ class SystemMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_mappings: SystemMapping.SwMappings | None = field(
+    sw_mappings: None | SystemMapping.SwMappings = field(
         default=None,
         metadata={
             "name": "SW-MAPPINGS",
@@ -410,7 +410,7 @@ class SystemMapping:
         },
     )
     swc_to_application_partition_mappings: (
-        SystemMapping.SwcToApplicationPartitionMappings | None
+        None | SystemMapping.SwcToApplicationPartitionMappings
     ) = field(
         default=None,
         metadata={
@@ -419,7 +419,7 @@ class SystemMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -427,14 +427,14 @@ class SystemMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -442,7 +442,7 @@ class SystemMapping:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",

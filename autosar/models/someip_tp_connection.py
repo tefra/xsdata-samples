@@ -41,7 +41,7 @@ class SomeipTpConnection:
     class Meta:
         name = "SOMEIP-TP-CONNECTION"
 
-    separation_time: TimeValue | None = field(
+    separation_time: None | TimeValue = field(
         default=None,
         metadata={
             "name": "SEPARATION-TIME",
@@ -49,7 +49,7 @@ class SomeipTpConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tp_channel_ref: SomeipTpConnection.TpChannelRef | None = field(
+    tp_channel_ref: None | SomeipTpConnection.TpChannelRef = field(
         default=None,
         metadata={
             "name": "TP-CHANNEL-REF",
@@ -57,7 +57,7 @@ class SomeipTpConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tp_sdu_ref: SomeipTpConnection.TpSduRef | None = field(
+    tp_sdu_ref: None | SomeipTpConnection.TpSduRef = field(
         default=None,
         metadata={
             "name": "TP-SDU-REF",
@@ -65,7 +65,7 @@ class SomeipTpConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    transport_pdu_ref: SomeipTpConnection.TransportPduRef | None = field(
+    transport_pdu_ref: None | SomeipTpConnection.TransportPduRef = field(
         default=None,
         metadata={
             "name": "TRANSPORT-PDU-REF",
@@ -73,14 +73,14 @@ class SomeipTpConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -91,7 +91,7 @@ class SomeipTpConnection:
 
     @dataclass
     class TpChannelRef(Ref):
-        dest: SomeipTpChannelSubtypesEnum | None = field(
+        dest: None | SomeipTpChannelSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -102,7 +102,7 @@ class SomeipTpConnection:
 
     @dataclass
     class TpSduRef(Ref):
-        dest: PduTriggeringSubtypesEnum | None = field(
+        dest: None | PduTriggeringSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -113,7 +113,7 @@ class SomeipTpConnection:
 
     @dataclass
     class TransportPduRef(Ref):
-        dest: PduTriggeringSubtypesEnum | None = field(
+        dest: None | PduTriggeringSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

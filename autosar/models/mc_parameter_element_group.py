@@ -40,7 +40,7 @@ class McParameterElementGroup:
     class Meta:
         name = "MC-PARAMETER-ELEMENT-GROUP"
 
-    short_label: Identifier | None = field(
+    short_label: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-LABEL",
@@ -48,7 +48,7 @@ class McParameterElementGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ram_location_ref: McParameterElementGroup.RamLocationRef | None = field(
+    ram_location_ref: None | McParameterElementGroup.RamLocationRef = field(
         default=None,
         metadata={
             "name": "RAM-LOCATION-REF",
@@ -56,7 +56,7 @@ class McParameterElementGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    rom_location_ref: McParameterElementGroup.RomLocationRef | None = field(
+    rom_location_ref: None | McParameterElementGroup.RomLocationRef = field(
         default=None,
         metadata={
             "name": "ROM-LOCATION-REF",
@@ -64,14 +64,14 @@ class McParameterElementGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -82,7 +82,7 @@ class McParameterElementGroup:
 
     @dataclass
     class RamLocationRef(Ref):
-        dest: VariableDataPrototypeSubtypesEnum | None = field(
+        dest: None | VariableDataPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -93,7 +93,7 @@ class McParameterElementGroup:
 
     @dataclass
     class RomLocationRef(Ref):
-        dest: ParameterDataPrototypeSubtypesEnum | None = field(
+        dest: None | ParameterDataPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

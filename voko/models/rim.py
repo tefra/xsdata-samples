@@ -29,13 +29,13 @@ class Rim:
     class Meta:
         name = "rim"
 
-    num: str | None = field(
+    num: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    mrk: str | None = field(
+    mrk: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",

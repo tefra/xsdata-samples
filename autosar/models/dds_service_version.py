@@ -29,7 +29,7 @@ class DdsServiceVersion:
     class Meta:
         name = "DDS-SERVICE-VERSION"
 
-    major_version: PositiveInteger | None = field(
+    major_version: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "MAJOR-VERSION",
@@ -37,7 +37,7 @@ class DdsServiceVersion:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    minor_version: PositiveInteger | None = field(
+    minor_version: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "MINOR-VERSION",
@@ -45,14 +45,14 @@ class DdsServiceVersion:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

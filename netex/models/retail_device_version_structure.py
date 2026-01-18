@@ -25,7 +25,7 @@ class RetailDeviceVersionStructure(InstalledEquipmentVersionStructure):
     class Meta:
         name = "RetailDevice_VersionStructure"
 
-    status: str | None = field(
+    status: None | str = field(
         default=None,
         metadata={
             "name": "Status",
@@ -34,7 +34,8 @@ class RetailDeviceVersionStructure(InstalledEquipmentVersionStructure):
         },
     )
     organisation_ref_or_other_organisation_ref_or_transport_organisation_ref: (
-        RetailConsortiumRef
+        None
+        | RetailConsortiumRef
         | OnlineServiceOperatorRef
         | GeneralOrganisationRef
         | ManagementAgentRef
@@ -44,7 +45,6 @@ class RetailDeviceVersionStructure(InstalledEquipmentVersionStructure):
         | AuthorityRef
         | OperatorRef
         | OrganisationRef
-        | None
     ) = field(
         default=None,
         metadata={
@@ -103,7 +103,7 @@ class RetailDeviceVersionStructure(InstalledEquipmentVersionStructure):
             ),
         },
     )
-    type_of_retail_device_ref: TypeOfRetailDeviceRef | None = field(
+    type_of_retail_device_ref: None | TypeOfRetailDeviceRef = field(
         default=None,
         metadata={
             "name": "TypeOfRetailDeviceRef",

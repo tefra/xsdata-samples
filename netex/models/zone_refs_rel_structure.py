@@ -23,7 +23,8 @@ class ZoneRefsRelStructure(OneToManyRelationshipStructure):
         name = "zoneRefs_RelStructure"
 
     zone_ref_or_tariff_zone_ref: (
-        MobilityServiceConstraintZoneRef
+        None
+        | MobilityServiceConstraintZoneRef
         | StopAreaRef
         | TransportAdministrativeZoneRef
         | AccessZoneRef
@@ -31,7 +32,6 @@ class ZoneRefsRelStructure(OneToManyRelationshipStructure):
         | FareZoneRef
         | TariffZoneRef
         | ZoneRef
-        | None
     ) = field(
         default=None,
         metadata={

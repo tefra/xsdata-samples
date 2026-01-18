@@ -17,7 +17,7 @@ class TrainComponentDerivedViewStructure(DerivedViewStructure):
     class Meta:
         name = "TrainComponent_DerivedViewStructure"
 
-    train_component_ref: TrainComponentRef | None = field(
+    train_component_ref: None | TrainComponentRef = field(
         default=None,
         metadata={
             "name": "TrainComponentRef",
@@ -25,7 +25,7 @@ class TrainComponentDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    label: MultilingualString | None = field(
+    label: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "Label",
@@ -33,7 +33,7 @@ class TrainComponentDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    description: MultilingualString | None = field(
+    description: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "Description",
@@ -41,7 +41,7 @@ class TrainComponentDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    train_element_ref: TrainElementRef | None = field(
+    train_element_ref: None | TrainElementRef = field(
         default=None,
         metadata={
             "name": "TrainElementRef",
@@ -49,7 +49,7 @@ class TrainComponentDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    fare_classes: FareClasses | None = field(
+    fare_classes: None | FareClasses = field(
         default=None,
         metadata={
             "name": "FareClasses",
@@ -57,7 +57,7 @@ class TrainComponentDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    train_element_type: TrainElementTypeEnumeration | None = field(
+    train_element_type: None | TrainElementTypeEnumeration = field(
         default=None,
         metadata={
             "name": "TrainElementType",
@@ -65,7 +65,7 @@ class TrainComponentDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    order: int | None = field(
+    order: None | int = field(
         default=None,
         metadata={
             "type": "Attribute",

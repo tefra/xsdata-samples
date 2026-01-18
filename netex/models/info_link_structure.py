@@ -24,7 +24,7 @@ class InfoLinkStructure:
             "tokens": True,
         },
     )
-    target_platform: object | None = field(
+    target_platform: None | object = field(
         default=None,
         metadata={
             "name": "targetPlatform",

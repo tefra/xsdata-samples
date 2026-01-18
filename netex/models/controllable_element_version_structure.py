@@ -22,7 +22,7 @@ class ControllableElementVersionStructure(PriceableObjectVersionStructure):
         name = "ControllableElement_VersionStructure"
 
     access_right_parameter_assignments: (
-        AccessRightParameterAssignmentsRelStructure | None
+        None | AccessRightParameterAssignmentsRelStructure
     ) = field(
         default=None,
         metadata={
@@ -32,7 +32,7 @@ class ControllableElementVersionStructure(PriceableObjectVersionStructure):
         },
     )
     controllable_elements_in_sequence: (
-        ControllableElementsInSequenceRelStructure | None
+        None | ControllableElementsInSequenceRelStructure
     ) = field(
         default=None,
         metadata={
@@ -41,7 +41,7 @@ class ControllableElementVersionStructure(PriceableObjectVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    prices: ControllableElementPricesRelStructure | None = field(
+    prices: None | ControllableElementPricesRelStructure = field(
         default=None,
         metadata={
             "type": "Element",

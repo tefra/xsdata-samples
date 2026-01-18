@@ -23,7 +23,7 @@ class IpxactFileType:
     class Meta:
         name = "ipxactFileType"
 
-    vlnv: LibraryRefType | None = field(
+    vlnv: None | LibraryRefType = field(
         default=None,
         metadata={
             "type": "Element",
@@ -31,7 +31,7 @@ class IpxactFileType:
             "required": True,
         },
     )
-    name: IpxactUri | None = field(
+    name: None | IpxactUri = field(
         default=None,
         metadata={
             "type": "Element",
@@ -39,14 +39,14 @@ class IpxactFileType:
             "required": True,
         },
     )
-    description: Description | None = field(
+    description: None | Description = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    vendor_extensions: VendorExtensions | None = field(
+    vendor_extensions: None | VendorExtensions = field(
         default=None,
         metadata={
             "name": "vendorExtensions",
@@ -54,7 +54,7 @@ class IpxactFileType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",

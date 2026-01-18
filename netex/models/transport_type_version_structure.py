@@ -22,7 +22,7 @@ class TransportTypeVersionStructure(DataManagedObjectStructure):
     class Meta:
         name = "TransportType_VersionStructure"
 
-    name: MultilingualString | None = field(
+    name: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "Name",
@@ -30,7 +30,7 @@ class TransportTypeVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    short_name: MultilingualString | None = field(
+    short_name: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "ShortName",
@@ -38,7 +38,7 @@ class TransportTypeVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    description: MultilingualString | None = field(
+    description: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "Description",
@@ -46,7 +46,7 @@ class TransportTypeVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    private_code: PrivateCode | None = field(
+    private_code: None | PrivateCode = field(
         default=None,
         metadata={
             "name": "PrivateCode",
@@ -54,7 +54,7 @@ class TransportTypeVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    euro_class: str | None = field(
+    euro_class: None | str = field(
         default=None,
         metadata={
             "name": "EuroClass",
@@ -62,7 +62,7 @@ class TransportTypeVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    reversing_direction: bool | None = field(
+    reversing_direction: None | bool = field(
         default=None,
         metadata={
             "name": "ReversingDirection",
@@ -70,7 +70,7 @@ class TransportTypeVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    self_propelled: bool | None = field(
+    self_propelled: None | bool = field(
         default=None,
         metadata={
             "name": "SelfPropelled",
@@ -78,7 +78,7 @@ class TransportTypeVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    propulsion_type: PropulsionTypeEnumeration | None = field(
+    propulsion_type: None | PropulsionTypeEnumeration = field(
         default=None,
         metadata={
             "name": "PropulsionType",
@@ -87,9 +87,9 @@ class TransportTypeVersionStructure(DataManagedObjectStructure):
         },
     )
     fuel_type_or_type_of_fuel: (
-        TransportTypeVersionStructure.FuelType
+        None
+        | TransportTypeVersionStructure.FuelType
         | TransportTypeVersionStructure.TypeOfFuel
-        | None
     ) = field(
         default=None,
         metadata={
@@ -112,7 +112,7 @@ class TransportTypeVersionStructure(DataManagedObjectStructure):
             ),
         },
     )
-    maximum_range: Decimal | None = field(
+    maximum_range: None | Decimal = field(
         default=None,
         metadata={
             "name": "MaximumRange",
@@ -120,7 +120,7 @@ class TransportTypeVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    transport_mode: AllVehicleModesOfTransportEnumeration | None = field(
+    transport_mode: None | AllVehicleModesOfTransportEnumeration = field(
         default=None,
         metadata={
             "name": "TransportMode",
@@ -128,7 +128,7 @@ class TransportTypeVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    passenger_capacity: PassengerCapacityStructure | None = field(
+    passenger_capacity: None | PassengerCapacityStructure = field(
         default=None,
         metadata={
             "name": "PassengerCapacity",
@@ -139,7 +139,7 @@ class TransportTypeVersionStructure(DataManagedObjectStructure):
 
     @dataclass
     class FuelType:
-        value: FuelTypeEnumeration | None = field(
+        value: None | FuelTypeEnumeration = field(
             default=None,
             metadata={
                 "required": True,
@@ -148,7 +148,7 @@ class TransportTypeVersionStructure(DataManagedObjectStructure):
 
     @dataclass
     class TypeOfFuel:
-        value: FuelTypeEnumeration | None = field(
+        value: None | FuelTypeEnumeration = field(
             default=None,
             metadata={
                 "required": True,

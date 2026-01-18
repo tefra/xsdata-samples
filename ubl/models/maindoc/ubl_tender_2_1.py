@@ -35,7 +35,7 @@ __NAMESPACE__ = "urn:oasis:names:specification:ubl:schema:xsd:Tender-2"
 
 @dataclass(frozen=True)
 class TenderType:
-    ublextensions: Ublextensions | None = field(
+    ublextensions: None | Ublextensions = field(
         default=None,
         metadata={
             "name": "UBLExtensions",
@@ -43,7 +43,7 @@ class TenderType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2",
         },
     )
-    ublversion_id: UblversionId | None = field(
+    ublversion_id: None | UblversionId = field(
         default=None,
         metadata={
             "name": "UBLVersionID",
@@ -51,7 +51,7 @@ class TenderType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    customization_id: CustomizationId | None = field(
+    customization_id: None | CustomizationId = field(
         default=None,
         metadata={
             "name": "CustomizationID",
@@ -59,7 +59,7 @@ class TenderType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    profile_id: ProfileId | None = field(
+    profile_id: None | ProfileId = field(
         default=None,
         metadata={
             "name": "ProfileID",
@@ -67,7 +67,7 @@ class TenderType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    profile_execution_id: ProfileExecutionId | None = field(
+    profile_execution_id: None | ProfileExecutionId = field(
         default=None,
         metadata={
             "name": "ProfileExecutionID",
@@ -75,7 +75,7 @@ class TenderType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    id: Id | None = field(
+    id: None | Id = field(
         default=None,
         metadata={
             "name": "ID",
@@ -84,7 +84,7 @@ class TenderType:
             "required": True,
         },
     )
-    copy_indicator: CopyIndicator | None = field(
+    copy_indicator: None | CopyIndicator = field(
         default=None,
         metadata={
             "name": "CopyIndicator",
@@ -92,7 +92,7 @@ class TenderType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    uuid: Uuid | None = field(
+    uuid: None | Uuid = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -100,7 +100,7 @@ class TenderType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    tender_type_code: TenderTypeCode | None = field(
+    tender_type_code: None | TenderTypeCode = field(
         default=None,
         metadata={
             "name": "TenderTypeCode",
@@ -108,7 +108,7 @@ class TenderType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    contract_folder_id: ContractFolderId | None = field(
+    contract_folder_id: None | ContractFolderId = field(
         default=None,
         metadata={
             "name": "ContractFolderID",
@@ -117,7 +117,7 @@ class TenderType:
             "required": True,
         },
     )
-    issue_date: IssueDate | None = field(
+    issue_date: None | IssueDate = field(
         default=None,
         metadata={
             "name": "IssueDate",
@@ -126,7 +126,7 @@ class TenderType:
             "required": True,
         },
     )
-    issue_time: IssueTime | None = field(
+    issue_time: None | IssueTime = field(
         default=None,
         metadata={
             "name": "IssueTime",
@@ -150,7 +150,7 @@ class TenderType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    validity_period: ValidityPeriod | None = field(
+    validity_period: None | ValidityPeriod = field(
         default=None,
         metadata={
             "name": "ValidityPeriod",
@@ -174,7 +174,7 @@ class TenderType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    tenderer_party: TendererParty | None = field(
+    tenderer_party: None | TendererParty = field(
         default=None,
         metadata={
             "name": "TendererParty",
@@ -184,7 +184,7 @@ class TenderType:
         },
     )
     tenderer_qualification_document_reference: (
-        TendererQualificationDocumentReference | None
+        None | TendererQualificationDocumentReference
     ) = field(
         default=None,
         metadata={
@@ -201,7 +201,7 @@ class TenderType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    contracting_party: ContractingParty | None = field(
+    contracting_party: None | ContractingParty = field(
         default=None,
         metadata={
             "name": "ContractingParty",
@@ -209,7 +209,7 @@ class TenderType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    originator_customer_party: OriginatorCustomerParty | None = field(
+    originator_customer_party: None | OriginatorCustomerParty = field(
         default=None,
         metadata={
             "name": "OriginatorCustomerParty",

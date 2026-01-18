@@ -294,7 +294,7 @@ class SwcInternalBehavior:
     class Meta:
         name = "SWC-INTERNAL-BEHAVIOR"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -303,7 +303,7 @@ class SwcInternalBehavior:
             "required": True,
         },
     )
-    short_name_fragments: SwcInternalBehavior.ShortNameFragments | None = (
+    short_name_fragments: None | SwcInternalBehavior.ShortNameFragments = (
         field(
             default=None,
             metadata={
@@ -313,7 +313,7 @@ class SwcInternalBehavior:
             },
         )
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -321,7 +321,7 @@ class SwcInternalBehavior:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -329,7 +329,7 @@ class SwcInternalBehavior:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -337,7 +337,7 @@ class SwcInternalBehavior:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -345,7 +345,7 @@ class SwcInternalBehavior:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -353,7 +353,7 @@ class SwcInternalBehavior:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: SwcInternalBehavior.Annotations | None = field(
+    annotations: None | SwcInternalBehavior.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -361,7 +361,7 @@ class SwcInternalBehavior:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    constant_memorys: SwcInternalBehavior.ConstantMemorys | None = field(
+    constant_memorys: None | SwcInternalBehavior.ConstantMemorys = field(
         default=None,
         metadata={
             "name": "CONSTANT-MEMORYS",
@@ -370,7 +370,7 @@ class SwcInternalBehavior:
         },
     )
     constant_value_mapping_refs: (
-        SwcInternalBehavior.ConstantValueMappingRefs | None
+        None | SwcInternalBehavior.ConstantValueMappingRefs
     ) = field(
         default=None,
         metadata={
@@ -379,7 +379,7 @@ class SwcInternalBehavior:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    data_type_mapping_refs: SwcInternalBehavior.DataTypeMappingRefs | None = (
+    data_type_mapping_refs: None | SwcInternalBehavior.DataTypeMappingRefs = (
         field(
             default=None,
             metadata={
@@ -389,7 +389,7 @@ class SwcInternalBehavior:
             },
         )
     )
-    exclusive_areas: SwcInternalBehavior.ExclusiveAreas | None = field(
+    exclusive_areas: None | SwcInternalBehavior.ExclusiveAreas = field(
         default=None,
         metadata={
             "name": "EXCLUSIVE-AREAS",
@@ -398,7 +398,7 @@ class SwcInternalBehavior:
         },
     )
     exclusive_area_nesting_orders: (
-        SwcInternalBehavior.ExclusiveAreaNestingOrders | None
+        None | SwcInternalBehavior.ExclusiveAreaNestingOrders
     ) = field(
         default=None,
         metadata={
@@ -407,7 +407,7 @@ class SwcInternalBehavior:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    static_memorys: SwcInternalBehavior.StaticMemorys | None = field(
+    static_memorys: None | SwcInternalBehavior.StaticMemorys = field(
         default=None,
         metadata={
             "name": "STATIC-MEMORYS",
@@ -416,7 +416,7 @@ class SwcInternalBehavior:
         },
     )
     ar_typed_per_instance_memorys: (
-        SwcInternalBehavior.ArTypedPerInstanceMemorys | None
+        None | SwcInternalBehavior.ArTypedPerInstanceMemorys
     ) = field(
         default=None,
         metadata={
@@ -425,7 +425,7 @@ class SwcInternalBehavior:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    events: SwcInternalBehavior.Events | None = field(
+    events: None | SwcInternalBehavior.Events = field(
         default=None,
         metadata={
             "name": "EVENTS",
@@ -433,7 +433,7 @@ class SwcInternalBehavior:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    exclusive_area_policys: SwcInternalBehavior.ExclusiveAreaPolicys | None = (
+    exclusive_area_policys: None | SwcInternalBehavior.ExclusiveAreaPolicys = (
         field(
             default=None,
             metadata={
@@ -444,7 +444,7 @@ class SwcInternalBehavior:
         )
     )
     explicit_inter_runnable_variables: (
-        SwcInternalBehavior.ExplicitInterRunnableVariables | None
+        None | SwcInternalBehavior.ExplicitInterRunnableVariables
     ) = field(
         default=None,
         metadata={
@@ -453,7 +453,7 @@ class SwcInternalBehavior:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    handle_termination_and_restart: HandleTerminationAndRestartEnum | None = (
+    handle_termination_and_restart: None | HandleTerminationAndRestartEnum = (
         field(
             default=None,
             metadata={
@@ -464,7 +464,7 @@ class SwcInternalBehavior:
         )
     )
     implicit_inter_runnable_variables: (
-        SwcInternalBehavior.ImplicitInterRunnableVariables | None
+        None | SwcInternalBehavior.ImplicitInterRunnableVariables
     ) = field(
         default=None,
         metadata={
@@ -474,7 +474,7 @@ class SwcInternalBehavior:
         },
     )
     included_data_type_sets: (
-        SwcInternalBehavior.IncludedDataTypeSets | None
+        None | SwcInternalBehavior.IncludedDataTypeSets
     ) = field(
         default=None,
         metadata={
@@ -484,7 +484,7 @@ class SwcInternalBehavior:
         },
     )
     included_mode_declaration_group_sets: (
-        SwcInternalBehavior.IncludedModeDeclarationGroupSets | None
+        None | SwcInternalBehavior.IncludedModeDeclarationGroupSets
     ) = field(
         default=None,
         metadata={
@@ -494,7 +494,7 @@ class SwcInternalBehavior:
         },
     )
     instantiation_data_def_propss: (
-        SwcInternalBehavior.InstantiationDataDefPropss | None
+        None | SwcInternalBehavior.InstantiationDataDefPropss
     ) = field(
         default=None,
         metadata={
@@ -503,7 +503,7 @@ class SwcInternalBehavior:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    per_instance_memorys: SwcInternalBehavior.PerInstanceMemorys | None = (
+    per_instance_memorys: None | SwcInternalBehavior.PerInstanceMemorys = (
         field(
             default=None,
             metadata={
@@ -514,7 +514,7 @@ class SwcInternalBehavior:
         )
     )
     per_instance_parameters: (
-        SwcInternalBehavior.PerInstanceParameters | None
+        None | SwcInternalBehavior.PerInstanceParameters
     ) = field(
         default=None,
         metadata={
@@ -523,7 +523,7 @@ class SwcInternalBehavior:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    port_api_options: SwcInternalBehavior.PortApiOptions | None = field(
+    port_api_options: None | SwcInternalBehavior.PortApiOptions = field(
         default=None,
         metadata={
             "name": "PORT-API-OPTIONS",
@@ -531,7 +531,7 @@ class SwcInternalBehavior:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    runnables: SwcInternalBehavior.Runnables | None = field(
+    runnables: None | SwcInternalBehavior.Runnables = field(
         default=None,
         metadata={
             "name": "RUNNABLES",
@@ -539,7 +539,7 @@ class SwcInternalBehavior:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    service_dependencys: SwcInternalBehavior.ServiceDependencys | None = field(
+    service_dependencys: None | SwcInternalBehavior.ServiceDependencys = field(
         default=None,
         metadata={
             "name": "SERVICE-DEPENDENCYS",
@@ -547,7 +547,7 @@ class SwcInternalBehavior:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    shared_parameters: SwcInternalBehavior.SharedParameters | None = field(
+    shared_parameters: None | SwcInternalBehavior.SharedParameters = field(
         default=None,
         metadata={
             "name": "SHARED-PARAMETERS",
@@ -555,7 +555,7 @@ class SwcInternalBehavior:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    supports_multiple_instantiation: Boolean | None = field(
+    supports_multiple_instantiation: None | Boolean = field(
         default=None,
         metadata={
             "name": "SUPPORTS-MULTIPLE-INSTANTIATION",
@@ -563,7 +563,7 @@ class SwcInternalBehavior:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point_proxys: SwcInternalBehavior.VariationPointProxys | None = (
+    variation_point_proxys: None | SwcInternalBehavior.VariationPointProxys = (
         field(
             default=None,
             metadata={
@@ -573,7 +573,7 @@ class SwcInternalBehavior:
             },
         )
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -581,14 +581,14 @@ class SwcInternalBehavior:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -596,7 +596,7 @@ class SwcInternalBehavior:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -652,7 +652,7 @@ class SwcInternalBehavior:
 
         @dataclass
         class ConstantValueMappingRef(Ref):
-            dest: ConstantSpecificationMappingSetSubtypesEnum | None = field(
+            dest: None | ConstantSpecificationMappingSetSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -676,7 +676,7 @@ class SwcInternalBehavior:
 
         @dataclass
         class DataTypeMappingRef(Ref):
-            dest: DataTypeMappingSetSubtypesEnum | None = field(
+            dest: None | DataTypeMappingSetSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",

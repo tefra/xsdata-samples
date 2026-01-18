@@ -13,7 +13,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 @dataclass
 class DataObjectServiceCapabilitiesStructure(AbstractCapabilitiesStructure):
     topic_filtering: (
-        DataObjectServiceCapabilitiesStructure.TopicFiltering | None
+        None | DataObjectServiceCapabilitiesStructure.TopicFiltering
     ) = field(
         default=None,
         metadata={
@@ -22,7 +22,7 @@ class DataObjectServiceCapabilitiesStructure(AbstractCapabilitiesStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    request_policy: DataObjectCapabilityRequestPolicyStructure | None = field(
+    request_policy: None | DataObjectCapabilityRequestPolicyStructure = field(
         default=None,
         metadata={
             "name": "RequestPolicy",
@@ -31,7 +31,7 @@ class DataObjectServiceCapabilitiesStructure(AbstractCapabilitiesStructure):
         },
     )
     subscription_policy: (
-        DataObjectServiceCapabilitiesStructure.SubscriptionPolicy | None
+        None | DataObjectServiceCapabilitiesStructure.SubscriptionPolicy
     ) = field(
         default=None,
         metadata={
@@ -40,7 +40,7 @@ class DataObjectServiceCapabilitiesStructure(AbstractCapabilitiesStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    response_features: object | None = field(
+    response_features: None | object = field(
         default=None,
         metadata={
             "name": "ResponseFeatures",
@@ -51,7 +51,7 @@ class DataObjectServiceCapabilitiesStructure(AbstractCapabilitiesStructure):
 
     @dataclass
     class TopicFiltering:
-        filter_by_frame: bool | None = field(
+        filter_by_frame: None | bool = field(
             default=None,
             metadata={
                 "name": "FilterByFrame",
@@ -62,7 +62,7 @@ class DataObjectServiceCapabilitiesStructure(AbstractCapabilitiesStructure):
 
     @dataclass
     class SubscriptionPolicy:
-        has_incremental_updates: bool | None = field(
+        has_incremental_updates: None | bool = field(
             default=None,
             metadata={
                 "name": "HasIncrementalUpdates",

@@ -141,7 +141,7 @@ class BswServiceDependency:
     class Meta:
         name = "BSW-SERVICE-DEPENDENCY"
 
-    assigned_data_types: BswServiceDependency.AssignedDataTypes | None = field(
+    assigned_data_types: None | BswServiceDependency.AssignedDataTypes = field(
         default=None,
         metadata={
             "name": "ASSIGNED-DATA-TYPES",
@@ -149,7 +149,7 @@ class BswServiceDependency:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    symbolic_name_props: SymbolicNameProps | None = field(
+    symbolic_name_props: None | SymbolicNameProps = field(
         default=None,
         metadata={
             "name": "SYMBOLIC-NAME-PROPS",
@@ -157,7 +157,7 @@ class BswServiceDependency:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ident: BswServiceDependencyIdent | None = field(
+    ident: None | BswServiceDependencyIdent = field(
         default=None,
         metadata={
             "name": "IDENT",
@@ -165,7 +165,7 @@ class BswServiceDependency:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    assigned_datas: BswServiceDependency.AssignedDatas | None = field(
+    assigned_datas: None | BswServiceDependency.AssignedDatas = field(
         default=None,
         metadata={
             "name": "ASSIGNED-DATAS",
@@ -173,7 +173,7 @@ class BswServiceDependency:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    assigned_entry_roles: BswServiceDependency.AssignedEntryRoles | None = (
+    assigned_entry_roles: None | BswServiceDependency.AssignedEntryRoles = (
         field(
             default=None,
             metadata={
@@ -183,7 +183,7 @@ class BswServiceDependency:
             },
         )
     )
-    service_needs: BswServiceDependency.ServiceNeeds | None = field(
+    service_needs: None | BswServiceDependency.ServiceNeeds = field(
         default=None,
         metadata={
             "name": "SERVICE-NEEDS",
@@ -191,7 +191,7 @@ class BswServiceDependency:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -199,14 +199,14 @@ class BswServiceDependency:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -254,7 +254,7 @@ class BswServiceDependency:
 
     @dataclass
     class ServiceNeeds:
-        bsw_mgr_needs: BswMgrNeeds | None = field(
+        bsw_mgr_needs: None | BswMgrNeeds = field(
             default=None,
             metadata={
                 "name": "BSW-MGR-NEEDS",
@@ -262,7 +262,7 @@ class BswServiceDependency:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        com_mgr_user_needs: ComMgrUserNeeds | None = field(
+        com_mgr_user_needs: None | ComMgrUserNeeds = field(
             default=None,
             metadata={
                 "name": "COM-MGR-USER-NEEDS",
@@ -271,7 +271,7 @@ class BswServiceDependency:
             },
         )
         crypto_certificate_key_slot_needs: (
-            CryptoCertificateKeySlotNeeds | None
+            None | CryptoCertificateKeySlotNeeds
         ) = field(
             default=None,
             metadata={
@@ -280,7 +280,7 @@ class BswServiceDependency:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        crypto_key_management_needs: CryptoKeyManagementNeeds | None = field(
+        crypto_key_management_needs: None | CryptoKeyManagementNeeds = field(
             default=None,
             metadata={
                 "name": "CRYPTO-KEY-MANAGEMENT-NEEDS",
@@ -288,7 +288,7 @@ class BswServiceDependency:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        crypto_service_job_needs: CryptoServiceJobNeeds | None = field(
+        crypto_service_job_needs: None | CryptoServiceJobNeeds = field(
             default=None,
             metadata={
                 "name": "CRYPTO-SERVICE-JOB-NEEDS",
@@ -296,7 +296,7 @@ class BswServiceDependency:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        crypto_service_needs: CryptoServiceNeeds | None = field(
+        crypto_service_needs: None | CryptoServiceNeeds = field(
             default=None,
             metadata={
                 "name": "CRYPTO-SERVICE-NEEDS",
@@ -305,7 +305,7 @@ class BswServiceDependency:
             },
         )
         diagnostic_clear_condition_needs: (
-            DiagnosticClearConditionNeeds | None
+            None | DiagnosticClearConditionNeeds
         ) = field(
             default=None,
             metadata={
@@ -315,7 +315,7 @@ class BswServiceDependency:
             },
         )
         diagnostic_communication_manager_needs: (
-            DiagnosticCommunicationManagerNeeds | None
+            None | DiagnosticCommunicationManagerNeeds
         ) = field(
             default=None,
             metadata={
@@ -324,7 +324,7 @@ class BswServiceDependency:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_component_needs: DiagnosticComponentNeeds | None = field(
+        diagnostic_component_needs: None | DiagnosticComponentNeeds = field(
             default=None,
             metadata={
                 "name": "DIAGNOSTIC-COMPONENT-NEEDS",
@@ -332,7 +332,7 @@ class BswServiceDependency:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_control_needs: DiagnosticControlNeeds | None = field(
+        diagnostic_control_needs: None | DiagnosticControlNeeds = field(
             default=None,
             metadata={
                 "name": "DIAGNOSTIC-CONTROL-NEEDS",
@@ -341,7 +341,7 @@ class BswServiceDependency:
             },
         )
         diagnostic_enable_condition_needs: (
-            DiagnosticEnableConditionNeeds | None
+            None | DiagnosticEnableConditionNeeds
         ) = field(
             default=None,
             metadata={
@@ -350,7 +350,7 @@ class BswServiceDependency:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_event_info_needs: DiagnosticEventInfoNeeds | None = field(
+        diagnostic_event_info_needs: None | DiagnosticEventInfoNeeds = field(
             default=None,
             metadata={
                 "name": "DIAGNOSTIC-EVENT-INFO-NEEDS",
@@ -358,7 +358,7 @@ class BswServiceDependency:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_event_manager_needs: DiagnosticEventManagerNeeds | None = (
+        diagnostic_event_manager_needs: None | DiagnosticEventManagerNeeds = (
             field(
                 default=None,
                 metadata={
@@ -368,7 +368,7 @@ class BswServiceDependency:
                 },
             )
         )
-        diagnostic_event_needs: DiagnosticEventNeeds | None = field(
+        diagnostic_event_needs: None | DiagnosticEventNeeds = field(
             default=None,
             metadata={
                 "name": "DIAGNOSTIC-EVENT-NEEDS",
@@ -376,7 +376,7 @@ class BswServiceDependency:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_generic_uds_needs: DiagnosticGenericUdsNeeds | None = field(
+        diagnostic_generic_uds_needs: None | DiagnosticGenericUdsNeeds = field(
             default=None,
             metadata={
                 "name": "DIAGNOSTIC-GENERIC-UDS-NEEDS",
@@ -384,7 +384,7 @@ class BswServiceDependency:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_indicator_needs: DiagnosticIndicatorNeeds | None = field(
+        diagnostic_indicator_needs: None | DiagnosticIndicatorNeeds = field(
             default=None,
             metadata={
                 "name": "DIAGNOSTIC-INDICATOR-NEEDS",
@@ -392,7 +392,7 @@ class BswServiceDependency:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_io_control_needs: DiagnosticIoControlNeeds | None = field(
+        diagnostic_io_control_needs: None | DiagnosticIoControlNeeds = field(
             default=None,
             metadata={
                 "name": "DIAGNOSTIC-IO-CONTROL-NEEDS",
@@ -401,7 +401,7 @@ class BswServiceDependency:
             },
         )
         diagnostic_operation_cycle_needs: (
-            DiagnosticOperationCycleNeeds | None
+            None | DiagnosticOperationCycleNeeds
         ) = field(
             default=None,
             metadata={
@@ -411,7 +411,7 @@ class BswServiceDependency:
             },
         )
         diagnostic_request_file_transfer_needs: (
-            DiagnosticRequestFileTransferNeeds | None
+            None | DiagnosticRequestFileTransferNeeds
         ) = field(
             default=None,
             metadata={
@@ -421,7 +421,7 @@ class BswServiceDependency:
             },
         )
         diagnostic_response_on_event_needs: (
-            DiagnosticResponseOnEventNeeds | None
+            None | DiagnosticResponseOnEventNeeds
         ) = field(
             default=None,
             metadata={
@@ -430,7 +430,7 @@ class BswServiceDependency:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_routine_needs: DiagnosticRoutineNeeds | None = field(
+        diagnostic_routine_needs: None | DiagnosticRoutineNeeds = field(
             default=None,
             metadata={
                 "name": "DIAGNOSTIC-ROUTINE-NEEDS",
@@ -439,7 +439,7 @@ class BswServiceDependency:
             },
         )
         diagnostic_storage_condition_needs: (
-            DiagnosticStorageConditionNeeds | None
+            None | DiagnosticStorageConditionNeeds
         ) = field(
             default=None,
             metadata={
@@ -449,7 +449,7 @@ class BswServiceDependency:
             },
         )
         diagnostic_upload_download_needs: (
-            DiagnosticUploadDownloadNeeds | None
+            None | DiagnosticUploadDownloadNeeds
         ) = field(
             default=None,
             metadata={
@@ -458,7 +458,7 @@ class BswServiceDependency:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_value_needs: DiagnosticValueNeeds | None = field(
+        diagnostic_value_needs: None | DiagnosticValueNeeds = field(
             default=None,
             metadata={
                 "name": "DIAGNOSTIC-VALUE-NEEDS",
@@ -467,7 +467,7 @@ class BswServiceDependency:
             },
         )
         diagnostics_communication_security_needs: (
-            DiagnosticsCommunicationSecurityNeeds | None
+            None | DiagnosticsCommunicationSecurityNeeds
         ) = field(
             default=None,
             metadata={
@@ -476,7 +476,7 @@ class BswServiceDependency:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        dlt_user_needs: DltUserNeeds | None = field(
+        dlt_user_needs: None | DltUserNeeds = field(
             default=None,
             metadata={
                 "name": "DLT-USER-NEEDS",
@@ -484,7 +484,7 @@ class BswServiceDependency:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        do_ip_activation_line_needs: DoIpActivationLineNeeds | None = field(
+        do_ip_activation_line_needs: None | DoIpActivationLineNeeds = field(
             default=None,
             metadata={
                 "name": "DO-IP-ACTIVATION-LINE-NEEDS",
@@ -492,7 +492,7 @@ class BswServiceDependency:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        do_ip_gid_needs: DoIpGidNeeds | None = field(
+        do_ip_gid_needs: None | DoIpGidNeeds = field(
             default=None,
             metadata={
                 "name": "DO-IP-GID-NEEDS",
@@ -500,7 +500,7 @@ class BswServiceDependency:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        do_ip_gid_synchronization_needs: DoIpGidSynchronizationNeeds | None = (
+        do_ip_gid_synchronization_needs: None | DoIpGidSynchronizationNeeds = (
             field(
                 default=None,
                 metadata={
@@ -510,7 +510,7 @@ class BswServiceDependency:
                 },
             )
         )
-        do_ip_power_mode_status_needs: DoIpPowerModeStatusNeeds | None = field(
+        do_ip_power_mode_status_needs: None | DoIpPowerModeStatusNeeds = field(
             default=None,
             metadata={
                 "name": "DO-IP-POWER-MODE-STATUS-NEEDS",
@@ -519,7 +519,7 @@ class BswServiceDependency:
             },
         )
         do_ip_routing_activation_authentication_needs: (
-            DoIpRoutingActivationAuthenticationNeeds | None
+            None | DoIpRoutingActivationAuthenticationNeeds
         ) = field(
             default=None,
             metadata={
@@ -529,7 +529,7 @@ class BswServiceDependency:
             },
         )
         do_ip_routing_activation_confirmation_needs: (
-            DoIpRoutingActivationConfirmationNeeds | None
+            None | DoIpRoutingActivationConfirmationNeeds
         ) = field(
             default=None,
             metadata={
@@ -539,7 +539,7 @@ class BswServiceDependency:
             },
         )
         dtc_status_change_notification_needs: (
-            DtcStatusChangeNotificationNeeds | None
+            None | DtcStatusChangeNotificationNeeds
         ) = field(
             default=None,
             metadata={
@@ -548,7 +548,7 @@ class BswServiceDependency:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        ecu_state_mgr_user_needs: EcuStateMgrUserNeeds | None = field(
+        ecu_state_mgr_user_needs: None | EcuStateMgrUserNeeds = field(
             default=None,
             metadata={
                 "name": "ECU-STATE-MGR-USER-NEEDS",
@@ -556,7 +556,7 @@ class BswServiceDependency:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        error_tracer_needs: ErrorTracerNeeds | None = field(
+        error_tracer_needs: None | ErrorTracerNeeds = field(
             default=None,
             metadata={
                 "name": "ERROR-TRACER-NEEDS",
@@ -565,7 +565,7 @@ class BswServiceDependency:
             },
         )
         function_inhibition_availability_needs: (
-            FunctionInhibitionAvailabilityNeeds | None
+            None | FunctionInhibitionAvailabilityNeeds
         ) = field(
             default=None,
             metadata={
@@ -574,7 +574,7 @@ class BswServiceDependency:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        function_inhibition_needs: FunctionInhibitionNeeds | None = field(
+        function_inhibition_needs: None | FunctionInhibitionNeeds = field(
             default=None,
             metadata={
                 "name": "FUNCTION-INHIBITION-NEEDS",
@@ -582,7 +582,7 @@ class BswServiceDependency:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        further_action_byte_needs: FurtherActionByteNeeds | None = field(
+        further_action_byte_needs: None | FurtherActionByteNeeds = field(
             default=None,
             metadata={
                 "name": "FURTHER-ACTION-BYTE-NEEDS",
@@ -590,7 +590,7 @@ class BswServiceDependency:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        global_supervision_needs: GlobalSupervisionNeeds | None = field(
+        global_supervision_needs: None | GlobalSupervisionNeeds = field(
             default=None,
             metadata={
                 "name": "GLOBAL-SUPERVISION-NEEDS",
@@ -598,7 +598,7 @@ class BswServiceDependency:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        hardware_test_needs: HardwareTestNeeds | None = field(
+        hardware_test_needs: None | HardwareTestNeeds = field(
             default=None,
             metadata={
                 "name": "HARDWARE-TEST-NEEDS",
@@ -606,7 +606,7 @@ class BswServiceDependency:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        ids_mgr_custom_timestamp_needs: IdsMgrCustomTimestampNeeds | None = (
+        ids_mgr_custom_timestamp_needs: None | IdsMgrCustomTimestampNeeds = (
             field(
                 default=None,
                 metadata={
@@ -616,7 +616,7 @@ class BswServiceDependency:
                 },
             )
         )
-        ids_mgr_needs: IdsMgrNeeds | None = field(
+        ids_mgr_needs: None | IdsMgrNeeds = field(
             default=None,
             metadata={
                 "name": "IDS-MGR-NEEDS",
@@ -624,7 +624,7 @@ class BswServiceDependency:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        indicator_status_needs: IndicatorStatusNeeds | None = field(
+        indicator_status_needs: None | IndicatorStatusNeeds = field(
             default=None,
             metadata={
                 "name": "INDICATOR-STATUS-NEEDS",
@@ -632,7 +632,7 @@ class BswServiceDependency:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        j_1939_dcm_dm_19_support: J1939DcmDm19Support | None = field(
+        j_1939_dcm_dm_19_support: None | J1939DcmDm19Support = field(
             default=None,
             metadata={
                 "name": "J-1939-DCM-DM-19-SUPPORT",
@@ -641,7 +641,7 @@ class BswServiceDependency:
             },
         )
         j_1939_rm_incoming_request_service_needs: (
-            J1939RmIncomingRequestServiceNeeds | None
+            None | J1939RmIncomingRequestServiceNeeds
         ) = field(
             default=None,
             metadata={
@@ -651,7 +651,7 @@ class BswServiceDependency:
             },
         )
         j_1939_rm_outgoing_request_service_needs: (
-            J1939RmOutgoingRequestServiceNeeds | None
+            None | J1939RmOutgoingRequestServiceNeeds
         ) = field(
             default=None,
             metadata={
@@ -660,7 +660,7 @@ class BswServiceDependency:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        nv_block_needs: NvBlockNeeds | None = field(
+        nv_block_needs: None | NvBlockNeeds = field(
             default=None,
             metadata={
                 "name": "NV-BLOCK-NEEDS",
@@ -668,7 +668,7 @@ class BswServiceDependency:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        obd_control_service_needs: ObdControlServiceNeeds | None = field(
+        obd_control_service_needs: None | ObdControlServiceNeeds = field(
             default=None,
             metadata={
                 "name": "OBD-CONTROL-SERVICE-NEEDS",
@@ -676,7 +676,7 @@ class BswServiceDependency:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        obd_info_service_needs: ObdInfoServiceNeeds | None = field(
+        obd_info_service_needs: None | ObdInfoServiceNeeds = field(
             default=None,
             metadata={
                 "name": "OBD-INFO-SERVICE-NEEDS",
@@ -684,7 +684,7 @@ class BswServiceDependency:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        obd_monitor_service_needs: ObdMonitorServiceNeeds | None = field(
+        obd_monitor_service_needs: None | ObdMonitorServiceNeeds = field(
             default=None,
             metadata={
                 "name": "OBD-MONITOR-SERVICE-NEEDS",
@@ -692,7 +692,7 @@ class BswServiceDependency:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        obd_pid_service_needs: ObdPidServiceNeeds | None = field(
+        obd_pid_service_needs: None | ObdPidServiceNeeds = field(
             default=None,
             metadata={
                 "name": "OBD-PID-SERVICE-NEEDS",
@@ -700,7 +700,7 @@ class BswServiceDependency:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        obd_ratio_denominator_needs: ObdRatioDenominatorNeeds | None = field(
+        obd_ratio_denominator_needs: None | ObdRatioDenominatorNeeds = field(
             default=None,
             metadata={
                 "name": "OBD-RATIO-DENOMINATOR-NEEDS",
@@ -708,7 +708,7 @@ class BswServiceDependency:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        obd_ratio_service_needs: ObdRatioServiceNeeds | None = field(
+        obd_ratio_service_needs: None | ObdRatioServiceNeeds = field(
             default=None,
             metadata={
                 "name": "OBD-RATIO-SERVICE-NEEDS",
@@ -717,7 +717,7 @@ class BswServiceDependency:
             },
         )
         secure_on_board_communication_needs: (
-            SecureOnBoardCommunicationNeeds | None
+            None | SecureOnBoardCommunicationNeeds
         ) = field(
             default=None,
             metadata={
@@ -727,7 +727,7 @@ class BswServiceDependency:
             },
         )
         supervised_entity_checkpoint_needs: (
-            SupervisedEntityCheckpointNeeds | None
+            None | SupervisedEntityCheckpointNeeds
         ) = field(
             default=None,
             metadata={
@@ -736,7 +736,7 @@ class BswServiceDependency:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        supervised_entity_needs: SupervisedEntityNeeds | None = field(
+        supervised_entity_needs: None | SupervisedEntityNeeds = field(
             default=None,
             metadata={
                 "name": "SUPERVISED-ENTITY-NEEDS",
@@ -744,7 +744,7 @@ class BswServiceDependency:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        sync_time_base_mgr_user_needs: SyncTimeBaseMgrUserNeeds | None = field(
+        sync_time_base_mgr_user_needs: None | SyncTimeBaseMgrUserNeeds = field(
             default=None,
             metadata={
                 "name": "SYNC-TIME-BASE-MGR-USER-NEEDS",
@@ -752,7 +752,7 @@ class BswServiceDependency:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        v_2_x_fac_user_needs: V2XFacUserNeeds | None = field(
+        v_2_x_fac_user_needs: None | V2XFacUserNeeds = field(
             default=None,
             metadata={
                 "name": "V-2-X-FAC-USER-NEEDS",
@@ -760,7 +760,7 @@ class BswServiceDependency:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        v_2_x_m_user_needs: V2XMUserNeeds | None = field(
+        v_2_x_m_user_needs: None | V2XMUserNeeds = field(
             default=None,
             metadata={
                 "name": "V-2-X-M-USER-NEEDS",
@@ -768,7 +768,7 @@ class BswServiceDependency:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        vendor_specific_service_needs: VendorSpecificServiceNeeds | None = (
+        vendor_specific_service_needs: None | VendorSpecificServiceNeeds = (
             field(
                 default=None,
                 metadata={
@@ -779,7 +779,7 @@ class BswServiceDependency:
             )
         )
         warning_indicator_requested_bit_needs: (
-            WarningIndicatorRequestedBitNeeds | None
+            None | WarningIndicatorRequestedBitNeeds
         ) = field(
             default=None,
             metadata={

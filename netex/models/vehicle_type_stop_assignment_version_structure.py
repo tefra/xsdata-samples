@@ -21,7 +21,7 @@ class VehicleTypeStopAssignmentVersionStructure(AssignmentVersionStructure1):
     class Meta:
         name = "VehicleTypeStopAssignment_VersionStructure"
 
-    vehicle_orientation: VehicleOrientationEnumeration | None = field(
+    vehicle_orientation: None | VehicleOrientationEnumeration = field(
         default=None,
         metadata={
             "name": "VehicleOrientation",
@@ -29,7 +29,7 @@ class VehicleTypeStopAssignmentVersionStructure(AssignmentVersionStructure1):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    vehicle_stopping_position_ref: VehicleStoppingPositionRef | None = field(
+    vehicle_stopping_position_ref: None | VehicleStoppingPositionRef = field(
         default=None,
         metadata={
             "name": "VehicleStoppingPositionRef",
@@ -37,7 +37,7 @@ class VehicleTypeStopAssignmentVersionStructure(AssignmentVersionStructure1):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    vehicle_journey_ref: DeadRunRef | VehicleJourneyRef | None = field(
+    vehicle_journey_ref: None | DeadRunRef | VehicleJourneyRef = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -56,12 +56,12 @@ class VehicleTypeStopAssignmentVersionStructure(AssignmentVersionStructure1):
         },
     )
     transport_type_ref_or_vehicle_type_ref: (
-        SimpleVehicleTypeRef
+        None
+        | SimpleVehicleTypeRef
         | CompoundTrainRef
         | TrainRef
         | VehicleTypeRef
         | TransportTypeRef
-        | None
     ) = field(
         default=None,
         metadata={

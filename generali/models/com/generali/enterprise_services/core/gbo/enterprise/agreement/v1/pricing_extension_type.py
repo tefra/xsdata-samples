@@ -16,7 +16,7 @@ __NAMESPACE__ = (
 
 @dataclass
 class PricingExtensionType(BaseIdentifiedComponentType):
-    code: str | None = field(
+    code: None | str = field(
         default=None,
         metadata={
             "name": "Code",
@@ -24,7 +24,7 @@ class PricingExtensionType(BaseIdentifiedComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    rate_basis: str | None = field(
+    rate_basis: None | str = field(
         default=None,
         metadata={
             "name": "RateBasis",
@@ -32,7 +32,7 @@ class PricingExtensionType(BaseIdentifiedComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    rate_pc: NumericType | None = field(
+    rate_pc: None | NumericType = field(
         default=None,
         metadata={
             "name": "RatePC",
@@ -40,7 +40,7 @@ class PricingExtensionType(BaseIdentifiedComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    exposure: NumericType | None = field(
+    exposure: None | NumericType = field(
         default=None,
         metadata={
             "name": "Exposure",
@@ -48,7 +48,7 @@ class PricingExtensionType(BaseIdentifiedComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    sublimit: NumericType | None = field(
+    sublimit: None | NumericType = field(
         default=None,
         metadata={
             "name": "Sublimit",
@@ -56,7 +56,7 @@ class PricingExtensionType(BaseIdentifiedComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    premium: NumericType | None = field(
+    premium: None | NumericType = field(
         default=None,
         metadata={
             "name": "Premium",
@@ -64,7 +64,7 @@ class PricingExtensionType(BaseIdentifiedComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    comment: str | None = field(
+    comment: None | str = field(
         default=None,
         metadata={
             "name": "Comment",

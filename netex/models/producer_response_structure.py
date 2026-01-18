@@ -12,7 +12,7 @@ __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
 @dataclass
 class ProducerResponseStructure(ResponseStructure):
-    producer_ref: ParticipantRefStructure | None = field(
+    producer_ref: None | ParticipantRefStructure = field(
         default=None,
         metadata={
             "name": "ProducerRef",
@@ -20,7 +20,7 @@ class ProducerResponseStructure(ResponseStructure):
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    address: str | None = field(
+    address: None | str = field(
         default=None,
         metadata={
             "name": "Address",
@@ -28,7 +28,7 @@ class ProducerResponseStructure(ResponseStructure):
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    response_message_identifier: MessageQualifierStructure | None = field(
+    response_message_identifier: None | MessageQualifierStructure = field(
         default=None,
         metadata={
             "name": "ResponseMessageIdentifier",
@@ -36,7 +36,7 @@ class ProducerResponseStructure(ResponseStructure):
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    request_message_ref: MessageRefStructure | None = field(
+    request_message_ref: None | MessageRefStructure = field(
         default=None,
         metadata={
             "name": "RequestMessageRef",
@@ -44,7 +44,7 @@ class ProducerResponseStructure(ResponseStructure):
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    delegator_address: str | None = field(
+    delegator_address: None | str = field(
         default=None,
         metadata={
             "name": "DelegatorAddress",
@@ -52,7 +52,7 @@ class ProducerResponseStructure(ResponseStructure):
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    delegator_ref: ParticipantRefStructure | None = field(
+    delegator_ref: None | ParticipantRefStructure = field(
         default=None,
         metadata={
             "name": "DelegatorRef",

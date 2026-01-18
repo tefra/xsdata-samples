@@ -41,7 +41,7 @@ class RuleBasedValueCont:
     class Meta:
         name = "RULE-BASED-VALUE-CONT"
 
-    unit_ref: RuleBasedValueCont.UnitRef | None = field(
+    unit_ref: None | RuleBasedValueCont.UnitRef = field(
         default=None,
         metadata={
             "name": "UNIT-REF",
@@ -49,7 +49,7 @@ class RuleBasedValueCont:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_arraysize: ValueList | None = field(
+    sw_arraysize: None | ValueList = field(
         default=None,
         metadata={
             "name": "SW-ARRAYSIZE",
@@ -57,7 +57,7 @@ class RuleBasedValueCont:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    rule_based_values: RuleBasedValueSpecification | None = field(
+    rule_based_values: None | RuleBasedValueSpecification = field(
         default=None,
         metadata={
             "name": "RULE-BASED-VALUES",
@@ -65,14 +65,14 @@ class RuleBasedValueCont:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -83,7 +83,7 @@ class RuleBasedValueCont:
 
     @dataclass
     class UnitRef(Ref):
-        dest: UnitSubtypesEnum | None = field(
+        dest: None | UnitSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

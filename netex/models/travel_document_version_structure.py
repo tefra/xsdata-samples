@@ -17,7 +17,7 @@ class TravelDocumentVersionStructure(DataManagedObjectStructure):
     class Meta:
         name = "TravelDocument_VersionStructure"
 
-    name: MultilingualString | None = field(
+    name: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "Name",
@@ -25,7 +25,7 @@ class TravelDocumentVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    description: MultilingualString | None = field(
+    description: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "Description",
@@ -33,7 +33,7 @@ class TravelDocumentVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    private_code: PrivateCode | None = field(
+    private_code: None | PrivateCode = field(
         default=None,
         metadata={
             "name": "PrivateCode",
@@ -41,7 +41,7 @@ class TravelDocumentVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    type_of_travel_document_ref: TypeOfTravelDocumentRef | None = field(
+    type_of_travel_document_ref: None | TypeOfTravelDocumentRef = field(
         default=None,
         metadata={
             "name": "TypeOfTravelDocumentRef",
@@ -49,7 +49,7 @@ class TravelDocumentVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    customer_purchase_package_ref: CustomerPurchasePackageRef | None = field(
+    customer_purchase_package_ref: None | CustomerPurchasePackageRef = field(
         default=None,
         metadata={
             "name": "CustomerPurchasePackageRef",
@@ -57,7 +57,7 @@ class TravelDocumentVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    marked_as: MarkedAsEnumeration | None = field(
+    marked_as: None | MarkedAsEnumeration = field(
         default=None,
         metadata={
             "name": "MarkedAs",

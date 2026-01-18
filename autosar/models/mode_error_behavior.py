@@ -36,7 +36,7 @@ class ModeErrorBehavior:
     class Meta:
         name = "MODE-ERROR-BEHAVIOR"
 
-    default_mode_ref: ModeErrorBehavior.DefaultModeRef | None = field(
+    default_mode_ref: None | ModeErrorBehavior.DefaultModeRef = field(
         default=None,
         metadata={
             "name": "DEFAULT-MODE-REF",
@@ -44,7 +44,7 @@ class ModeErrorBehavior:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    error_reaction_policy: ModeErrorReactionPolicyEnum | None = field(
+    error_reaction_policy: None | ModeErrorReactionPolicyEnum = field(
         default=None,
         metadata={
             "name": "ERROR-REACTION-POLICY",
@@ -52,14 +52,14 @@ class ModeErrorBehavior:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -70,7 +70,7 @@ class ModeErrorBehavior:
 
     @dataclass
     class DefaultModeRef(Ref):
-        dest: ModeDeclarationSubtypesEnum | None = field(
+        dest: None | ModeDeclarationSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

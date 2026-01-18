@@ -30,28 +30,28 @@ class NamedArea:
     :ivar named_area_extension:
     """
 
-    country: CountryEnum | None = field(
+    country: None | CountryEnum = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    nation: MultilingualString | None = field(
+    nation: None | MultilingualString = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    county: MultilingualString | None = field(
+    county: None | MultilingualString = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    area_name: MultilingualString | None = field(
+    area_name: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "areaName",
@@ -59,7 +59,7 @@ class NamedArea:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    police_force_control_area: MultilingualString | None = field(
+    police_force_control_area: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "policeForceControlArea",
@@ -67,7 +67,7 @@ class NamedArea:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    road_operator_control_area: MultilingualString | None = field(
+    road_operator_control_area: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "roadOperatorControlArea",
@@ -75,7 +75,7 @@ class NamedArea:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    named_area_extension: ExtensionType | None = field(
+    named_area_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "namedAreaExtension",

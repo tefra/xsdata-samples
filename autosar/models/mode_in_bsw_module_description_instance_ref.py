@@ -32,8 +32,8 @@ class ModeInBswModuleDescriptionInstanceRef:
         name = "MODE-IN-BSW-MODULE-DESCRIPTION-INSTANCE-REF"
 
     context_mode_declaration_group_ref: (
-        ModeInBswModuleDescriptionInstanceRef.ContextModeDeclarationGroupRef
-        | None
+        None
+        | ModeInBswModuleDescriptionInstanceRef.ContextModeDeclarationGroupRef
     ) = field(
         default=None,
         metadata={
@@ -43,7 +43,7 @@ class ModeInBswModuleDescriptionInstanceRef:
         },
     )
     target_mode_ref: (
-        ModeInBswModuleDescriptionInstanceRef.TargetModeRef | None
+        None | ModeInBswModuleDescriptionInstanceRef.TargetModeRef
     ) = field(
         default=None,
         metadata={
@@ -52,14 +52,14 @@ class ModeInBswModuleDescriptionInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -70,7 +70,7 @@ class ModeInBswModuleDescriptionInstanceRef:
 
     @dataclass
     class ContextModeDeclarationGroupRef(Ref):
-        dest: ModeDeclarationGroupPrototypeSubtypesEnum | None = field(
+        dest: None | ModeDeclarationGroupPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -81,7 +81,7 @@ class ModeInBswModuleDescriptionInstanceRef:
 
     @dataclass
     class TargetModeRef(Ref):
-        dest: ModeDeclarationSubtypesEnum | None = field(
+        dest: None | ModeDeclarationSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

@@ -107,7 +107,7 @@ class SecurityEventContextMappingFunctionalCluster:
     class Meta:
         name = "SECURITY-EVENT-CONTEXT-MAPPING-FUNCTIONAL-CLUSTER"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -117,7 +117,7 @@ class SecurityEventContextMappingFunctionalCluster:
         },
     )
     short_name_fragments: (
-        SecurityEventContextMappingFunctionalCluster.ShortNameFragments | None
+        None | SecurityEventContextMappingFunctionalCluster.ShortNameFragments
     ) = field(
         default=None,
         metadata={
@@ -126,7 +126,7 @@ class SecurityEventContextMappingFunctionalCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -134,7 +134,7 @@ class SecurityEventContextMappingFunctionalCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -142,7 +142,7 @@ class SecurityEventContextMappingFunctionalCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -150,7 +150,7 @@ class SecurityEventContextMappingFunctionalCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -158,7 +158,7 @@ class SecurityEventContextMappingFunctionalCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -167,7 +167,7 @@ class SecurityEventContextMappingFunctionalCluster:
         },
     )
     annotations: (
-        SecurityEventContextMappingFunctionalCluster.Annotations | None
+        None | SecurityEventContextMappingFunctionalCluster.Annotations
     ) = field(
         default=None,
         metadata={
@@ -176,7 +176,7 @@ class SecurityEventContextMappingFunctionalCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -185,7 +185,7 @@ class SecurityEventContextMappingFunctionalCluster:
         },
     )
     filter_chains: (
-        SecurityEventContextMappingFunctionalCluster.FilterChains | None
+        None | SecurityEventContextMappingFunctionalCluster.FilterChains
     ) = field(
         default=None,
         metadata={
@@ -195,7 +195,7 @@ class SecurityEventContextMappingFunctionalCluster:
         },
     )
     idsm_instances: (
-        SecurityEventContextMappingFunctionalCluster.IdsmInstances | None
+        None | SecurityEventContextMappingFunctionalCluster.IdsmInstances
     ) = field(
         default=None,
         metadata={
@@ -205,8 +205,8 @@ class SecurityEventContextMappingFunctionalCluster:
         },
     )
     mapped_security_events: (
-        SecurityEventContextMappingFunctionalCluster.MappedSecurityEvents
-        | None
+        None
+        | SecurityEventContextMappingFunctionalCluster.MappedSecurityEvents
     ) = field(
         default=None,
         metadata={
@@ -215,7 +215,7 @@ class SecurityEventContextMappingFunctionalCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    affected_functional_cluster: String | None = field(
+    affected_functional_cluster: None | String = field(
         default=None,
         metadata={
             "name": "AFFECTED-FUNCTIONAL-CLUSTER",
@@ -223,14 +223,14 @@ class SecurityEventContextMappingFunctionalCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -238,7 +238,7 @@ class SecurityEventContextMappingFunctionalCluster:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",

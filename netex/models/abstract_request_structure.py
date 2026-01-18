@@ -9,7 +9,7 @@ __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
 @dataclass
 class AbstractRequestStructure:
-    request_timestamp: RequestTimestamp | None = field(
+    request_timestamp: None | RequestTimestamp = field(
         default=None,
         metadata={
             "name": "RequestTimestamp",

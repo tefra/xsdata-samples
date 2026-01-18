@@ -21,7 +21,7 @@ class FieldAccessPolicyDefinitionRef:
             "required": True,
         },
     )
-    type_definitions: str | None = field(
+    type_definitions: None | str = field(
         default=None,
         metadata={
             "name": "typeDefinitions",

@@ -16,7 +16,7 @@ class DestinationDisplayDerivedViewStructure(DerivedViewStructure):
     class Meta:
         name = "DestinationDisplay_DerivedViewStructure"
 
-    key_list: KeyList | None = field(
+    key_list: None | KeyList = field(
         default=None,
         metadata={
             "name": "keyList",
@@ -24,7 +24,7 @@ class DestinationDisplayDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    destination_display_ref: DestinationDisplayRef | None = field(
+    destination_display_ref: None | DestinationDisplayRef = field(
         default=None,
         metadata={
             "name": "DestinationDisplayRef",
@@ -32,7 +32,7 @@ class DestinationDisplayDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    name: MultilingualString | None = field(
+    name: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "Name",
@@ -40,7 +40,7 @@ class DestinationDisplayDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    short_name: MultilingualString | None = field(
+    short_name: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "ShortName",
@@ -48,7 +48,7 @@ class DestinationDisplayDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    side_text: MultilingualString | None = field(
+    side_text: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "SideText",
@@ -56,7 +56,7 @@ class DestinationDisplayDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    front_text: MultilingualString | None = field(
+    front_text: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "FrontText",
@@ -64,7 +64,7 @@ class DestinationDisplayDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    driver_display_text: MultilingualString | None = field(
+    driver_display_text: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "DriverDisplayText",
@@ -72,7 +72,7 @@ class DestinationDisplayDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    short_code: str | None = field(
+    short_code: None | str = field(
         default=None,
         metadata={
             "name": "ShortCode",
@@ -80,7 +80,7 @@ class DestinationDisplayDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    public_code: str | None = field(
+    public_code: None | str = field(
         default=None,
         metadata={
             "name": "PublicCode",
@@ -88,7 +88,7 @@ class DestinationDisplayDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    private_code: PrivateCode | None = field(
+    private_code: None | PrivateCode = field(
         default=None,
         metadata={
             "name": "PrivateCode",

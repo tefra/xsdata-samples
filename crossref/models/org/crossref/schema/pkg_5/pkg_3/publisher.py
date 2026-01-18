@@ -23,14 +23,14 @@ class Publisher:
         name = "publisher"
         namespace = "http://www.crossref.org/schema/5.3.1"
 
-    publisher_name: PublisherName | None = field(
+    publisher_name: None | PublisherName = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
         },
     )
-    publisher_place: PublisherPlace | None = field(
+    publisher_place: None | PublisherPlace = field(
         default=None,
         metadata={
             "type": "Element",

@@ -33,7 +33,7 @@ class ParkingSpaceStatus:
     :ivar parking_space_status_extension:
     """
 
-    parking_space_occupied: bool | None = field(
+    parking_space_occupied: None | bool = field(
         default=None,
         metadata={
             "name": "parkingSpaceOccupied",
@@ -42,7 +42,7 @@ class ParkingSpaceStatus:
             "required": True,
         },
     )
-    parking_space_closed: bool | None = field(
+    parking_space_closed: None | bool = field(
         default=None,
         metadata={
             "name": "parkingSpaceClosed",
@@ -50,7 +50,7 @@ class ParkingSpaceStatus:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    parking_space_declaration_valid_now: bool | None = field(
+    parking_space_declaration_valid_now: None | bool = field(
         default=None,
         metadata={
             "name": "parkingSpaceDeclarationValidNow",
@@ -58,7 +58,7 @@ class ParkingSpaceStatus:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    measurement_or_calculation_time: XmlDateTime | None = field(
+    measurement_or_calculation_time: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "measurementOrCalculationTime",
@@ -66,7 +66,7 @@ class ParkingSpaceStatus:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    last_calibration: XmlDateTime | None = field(
+    last_calibration: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "lastCalibration",
@@ -74,7 +74,7 @@ class ParkingSpaceStatus:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    parking_space_status_extension: ExtensionType | None = field(
+    parking_space_status_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "parkingSpaceStatusExtension",

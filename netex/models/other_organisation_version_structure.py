@@ -13,7 +13,7 @@ class OtherOrganisationVersionStructure(OrganisationVersionStructure):
     class Meta:
         name = "OtherOrganisation_VersionStructure"
 
-    address: PostalAddressVersionStructure | None = field(
+    address: None | PostalAddressVersionStructure = field(
         default=None,
         metadata={
             "name": "Address",

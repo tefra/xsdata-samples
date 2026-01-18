@@ -19,7 +19,7 @@ class TimeDemandProfileMemberVersionStructure(
     class Meta:
         name = "TimeDemandProfileMember_VersionStructure"
 
-    name: MultilingualString | None = field(
+    name: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "Name",
@@ -27,7 +27,7 @@ class TimeDemandProfileMemberVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    time_demand_type_ref: TimeDemandTypeRef | None = field(
+    time_demand_type_ref: None | TimeDemandTypeRef = field(
         default=None,
         metadata={
             "name": "TimeDemandTypeRef",
@@ -35,7 +35,7 @@ class TimeDemandProfileMemberVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    journey_pattern_run_time: JourneyPatternRunTime | None = field(
+    journey_pattern_run_time: None | JourneyPatternRunTime = field(
         default=None,
         metadata={
             "name": "JourneyPatternRunTime",

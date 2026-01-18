@@ -46,7 +46,7 @@ class EthGlobalTimeManagedCouplingPort:
         name = "ETH-GLOBAL-TIME-MANAGED-COUPLING-PORT"
 
     coupling_port_ref: (
-        EthGlobalTimeManagedCouplingPort.CouplingPortRef | None
+        None | EthGlobalTimeManagedCouplingPort.CouplingPortRef
     ) = field(
         default=None,
         metadata={
@@ -55,7 +55,7 @@ class EthGlobalTimeManagedCouplingPort:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    pdelay_latency_threshold: TimeValue | None = field(
+    pdelay_latency_threshold: None | TimeValue = field(
         default=None,
         metadata={
             "name": "PDELAY-LATENCY-THRESHOLD",
@@ -63,7 +63,7 @@ class EthGlobalTimeManagedCouplingPort:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    pdelay_request_period: TimeValue | None = field(
+    pdelay_request_period: None | TimeValue = field(
         default=None,
         metadata={
             "name": "PDELAY-REQUEST-PERIOD",
@@ -71,7 +71,7 @@ class EthGlobalTimeManagedCouplingPort:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    pdelay_resp_and_resp_follow_up_timeout: TimeValue | None = field(
+    pdelay_resp_and_resp_follow_up_timeout: None | TimeValue = field(
         default=None,
         metadata={
             "name": "PDELAY-RESP-AND-RESP-FOLLOW-UP-TIMEOUT",
@@ -79,7 +79,7 @@ class EthGlobalTimeManagedCouplingPort:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    pdelay_response_enabled: Boolean | None = field(
+    pdelay_response_enabled: None | Boolean = field(
         default=None,
         metadata={
             "name": "PDELAY-RESPONSE-ENABLED",
@@ -87,14 +87,14 @@ class EthGlobalTimeManagedCouplingPort:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -105,7 +105,7 @@ class EthGlobalTimeManagedCouplingPort:
 
     @dataclass
     class CouplingPortRef(Ref):
-        dest: CouplingPortSubtypesEnum | None = field(
+        dest: None | CouplingPortSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

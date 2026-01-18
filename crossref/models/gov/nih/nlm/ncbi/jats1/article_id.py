@@ -19,41 +19,41 @@ class ArticleId:
         name = "article-id"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    assigning_authority: str | None = field(
+    assigning_authority: None | str = field(
         default=None,
         metadata={
             "name": "assigning-authority",
             "type": "Attribute",
         },
     )
-    custom_type: str | None = field(
+    custom_type: None | str = field(
         default=None,
         metadata={
             "name": "custom-type",
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    pub_id_type: ArticleIdPubIdType | None = field(
+    pub_id_type: None | ArticleIdPubIdType = field(
         default=None,
         metadata={
             "name": "pub-id-type",
             "type": "Attribute",
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",

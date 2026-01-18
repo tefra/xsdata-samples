@@ -17,7 +17,7 @@ class JourneyTimingVersionedChildStructure(VersionedChildStructure):
     class Meta:
         name = "JourneyTiming_VersionedChildStructure"
 
-    name: MultilingualString | None = field(
+    name: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "Name",
@@ -26,7 +26,7 @@ class JourneyTimingVersionedChildStructure(VersionedChildStructure):
         },
     )
     time_demand_type_ref_or_timeband_ref: (
-        TimeDemandTypeRef | TimebandRef | None
+        None | TimeDemandTypeRef | TimebandRef
     ) = field(
         default=None,
         metadata={
@@ -45,7 +45,7 @@ class JourneyTimingVersionedChildStructure(VersionedChildStructure):
             ),
         },
     )
-    vehicle_mode: VehicleMode | None = field(
+    vehicle_mode: None | VehicleMode = field(
         default=None,
         metadata={
             "name": "VehicleMode",
@@ -53,7 +53,7 @@ class JourneyTimingVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    operational_context_ref: OperationalContextRef | None = field(
+    operational_context_ref: None | OperationalContextRef = field(
         default=None,
         metadata={
             "name": "OperationalContextRef",

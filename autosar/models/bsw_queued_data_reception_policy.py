@@ -40,7 +40,7 @@ class BswQueuedDataReceptionPolicy:
     class Meta:
         name = "BSW-QUEUED-DATA-RECEPTION-POLICY"
 
-    enable_take_address: Boolean | None = field(
+    enable_take_address: None | Boolean = field(
         default=None,
         metadata={
             "name": "ENABLE-TAKE-ADDRESS",
@@ -48,7 +48,7 @@ class BswQueuedDataReceptionPolicy:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    received_data_ref: BswQueuedDataReceptionPolicy.ReceivedDataRef | None = (
+    received_data_ref: None | BswQueuedDataReceptionPolicy.ReceivedDataRef = (
         field(
             default=None,
             metadata={
@@ -58,7 +58,7 @@ class BswQueuedDataReceptionPolicy:
             },
         )
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -66,7 +66,7 @@ class BswQueuedDataReceptionPolicy:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    queue_length: PositiveInteger | None = field(
+    queue_length: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "QUEUE-LENGTH",
@@ -74,14 +74,14 @@ class BswQueuedDataReceptionPolicy:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -92,7 +92,7 @@ class BswQueuedDataReceptionPolicy:
 
     @dataclass
     class ReceivedDataRef(Ref):
-        dest: VariableDataPrototypeSubtypesEnum | None = field(
+        dest: None | VariableDataPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

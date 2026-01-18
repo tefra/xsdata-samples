@@ -57,7 +57,7 @@ class BaseTypeDirectDefinition:
     class Meta:
         name = "BASE-TYPE-DIRECT-DEFINITION"
 
-    base_type_size: PositiveInteger | None = field(
+    base_type_size: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "BASE-TYPE-SIZE",
@@ -65,7 +65,7 @@ class BaseTypeDirectDefinition:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    max_base_type_size: PositiveInteger | None = field(
+    max_base_type_size: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "MAX-BASE-TYPE-SIZE",
@@ -73,7 +73,7 @@ class BaseTypeDirectDefinition:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    base_type_encoding: BaseTypeEncodingString | None = field(
+    base_type_encoding: None | BaseTypeEncodingString = field(
         default=None,
         metadata={
             "name": "BASE-TYPE-ENCODING",
@@ -81,7 +81,7 @@ class BaseTypeDirectDefinition:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    mem_alignment: PositiveInteger | None = field(
+    mem_alignment: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "MEM-ALIGNMENT",
@@ -89,7 +89,7 @@ class BaseTypeDirectDefinition:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    byte_order: ByteOrderEnum | None = field(
+    byte_order: None | ByteOrderEnum = field(
         default=None,
         metadata={
             "name": "BYTE-ORDER",
@@ -97,7 +97,7 @@ class BaseTypeDirectDefinition:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    native_declaration: NativeDeclarationString | None = field(
+    native_declaration: None | NativeDeclarationString = field(
         default=None,
         metadata={
             "name": "NATIVE-DECLARATION",
@@ -105,14 +105,14 @@ class BaseTypeDirectDefinition:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

@@ -74,7 +74,7 @@ class FieldType:
     class Meta:
         name = "fieldType"
 
-    name: str | None = field(
+    name: None | str = field(
         default=None,
         metadata={
             "type": "Element",
@@ -82,7 +82,7 @@ class FieldType:
             "required": True,
         },
     )
-    display_name: DisplayName | None = field(
+    display_name: None | DisplayName = field(
         default=None,
         metadata={
             "name": "displayName",
@@ -90,7 +90,7 @@ class FieldType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    short_description: ShortDescription | None = field(
+    short_description: None | ShortDescription = field(
         default=None,
         metadata={
             "name": "shortDescription",
@@ -98,14 +98,14 @@ class FieldType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    description: Description | None = field(
+    description: None | Description = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    access_handles: FieldType.AccessHandles | None = field(
+    access_handles: None | FieldType.AccessHandles = field(
         default=None,
         metadata={
             "name": "accessHandles",
@@ -113,14 +113,14 @@ class FieldType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    array: FieldType.Array | None = field(
+    array: None | FieldType.Array = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    bit_offset: UnsignedIntExpression | None = field(
+    bit_offset: None | UnsignedIntExpression = field(
         default=None,
         metadata={
             "name": "bitOffset",
@@ -129,7 +129,7 @@ class FieldType:
             "required": True,
         },
     )
-    field_definition_ref: FieldType.FieldDefinitionRef | None = field(
+    field_definition_ref: None | FieldType.FieldDefinitionRef = field(
         default=None,
         metadata={
             "name": "fieldDefinitionRef",
@@ -137,7 +137,7 @@ class FieldType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    type_identifier: str | None = field(
+    type_identifier: None | str = field(
         default=None,
         metadata={
             "name": "typeIdentifier",
@@ -145,7 +145,7 @@ class FieldType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    bit_width: UnsignedPositiveIntExpression | None = field(
+    bit_width: None | UnsignedPositiveIntExpression = field(
         default=None,
         metadata={
             "name": "bitWidth",
@@ -153,21 +153,21 @@ class FieldType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    volatile: bool | None = field(
+    volatile: None | bool = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    resets: FieldType.Resets | None = field(
+    resets: None | FieldType.Resets = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    alias_of: FieldType.AliasOf | None = field(
+    alias_of: None | FieldType.AliasOf = field(
         default=None,
         metadata={
             "name": "aliasOf",
@@ -175,7 +175,7 @@ class FieldType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    field_access_policies: FieldType.FieldAccessPolicies | None = field(
+    field_access_policies: None | FieldType.FieldAccessPolicies = field(
         default=None,
         metadata={
             "name": "fieldAccessPolicies",
@@ -183,7 +183,7 @@ class FieldType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    enumerated_values: EnumeratedValues | None = field(
+    enumerated_values: None | EnumeratedValues = field(
         default=None,
         metadata={
             "name": "enumeratedValues",
@@ -191,14 +191,14 @@ class FieldType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    parameters: Parameters | None = field(
+    parameters: None | Parameters = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    vendor_extensions: VendorExtensions | None = field(
+    vendor_extensions: None | VendorExtensions = field(
         default=None,
         metadata={
             "name": "vendorExtensions",
@@ -206,7 +206,7 @@ class FieldType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -236,7 +236,7 @@ class FieldType:
                 "min_occurs": 1,
             },
         )
-        bit_stride: BitStride | None = field(
+        bit_stride: None | BitStride = field(
             default=None,
             metadata={
                 "name": "bitStride",
@@ -253,7 +253,7 @@ class FieldType:
                 "required": True,
             },
         )
-        type_definitions: str | None = field(
+        type_definitions: None | str = field(
             default=None,
             metadata={
                 "name": "typeDefinitions",
@@ -279,7 +279,7 @@ class FieldType:
 
     @dataclass
     class AliasOf:
-        address_space_ref: FieldType.AliasOf.AddressSpaceRef | None = field(
+        address_space_ref: None | FieldType.AliasOf.AddressSpaceRef = field(
             default=None,
             metadata={
                 "name": "addressSpaceRef",
@@ -287,7 +287,7 @@ class FieldType:
                 "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
             },
         )
-        memory_map_ref: FieldType.AliasOf.MemoryMapRef | None = field(
+        memory_map_ref: None | FieldType.AliasOf.MemoryMapRef = field(
             default=None,
             metadata={
                 "name": "memoryMapRef",
@@ -295,7 +295,7 @@ class FieldType:
                 "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
             },
         )
-        memory_remap_ref: MemoryRemapRef | None = field(
+        memory_remap_ref: None | MemoryRemapRef = field(
             default=None,
             metadata={
                 "name": "memoryRemapRef",
@@ -311,7 +311,7 @@ class FieldType:
                 "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
             },
         )
-        address_block_ref: AddressBlockRef | None = field(
+        address_block_ref: None | AddressBlockRef = field(
             default=None,
             metadata={
                 "name": "addressBlockRef",
@@ -327,7 +327,7 @@ class FieldType:
                 "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
             },
         )
-        register_ref: RegisterRef | None = field(
+        register_ref: None | RegisterRef = field(
             default=None,
             metadata={
                 "name": "registerRef",
@@ -335,7 +335,7 @@ class FieldType:
                 "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
             },
         )
-        alternate_register_ref: AlternateRegisterRef | None = field(
+        alternate_register_ref: None | AlternateRegisterRef = field(
             default=None,
             metadata={
                 "name": "alternateRegisterRef",
@@ -343,7 +343,7 @@ class FieldType:
                 "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
             },
         )
-        field_ref: FieldRef | None = field(
+        field_ref: None | FieldRef = field(
             default=None,
             metadata={
                 "name": "fieldRef",
@@ -355,7 +355,7 @@ class FieldType:
 
         @dataclass
         class AddressSpaceRef:
-            address_space_ref: str | None = field(
+            address_space_ref: None | str = field(
                 default=None,
                 metadata={
                     "name": "addressSpaceRef",
@@ -366,7 +366,7 @@ class FieldType:
 
         @dataclass
         class MemoryMapRef:
-            memory_map_ref: str | None = field(
+            memory_map_ref: None | str = field(
                 default=None,
                 metadata={
                     "name": "memoryMapRef",
@@ -420,7 +420,7 @@ class FieldType:
                 },
             )
             field_access_policy_definition_ref: (
-                FieldAccessPolicyDefinitionRef | None
+                None | FieldAccessPolicyDefinitionRef
             ) = field(
                 default=None,
                 metadata={
@@ -429,14 +429,14 @@ class FieldType:
                     "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
                 },
             )
-            access: Access | None = field(
+            access: None | Access = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
                 },
             )
-            modified_write_value: ModifiedWriteValue | None = field(
+            modified_write_value: None | ModifiedWriteValue = field(
                 default=None,
                 metadata={
                     "name": "modifiedWriteValue",
@@ -444,7 +444,7 @@ class FieldType:
                     "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
                 },
             )
-            write_value_constraint: WriteValueConstraint | None = field(
+            write_value_constraint: None | WriteValueConstraint = field(
                 default=None,
                 metadata={
                     "name": "writeValueConstraint",
@@ -452,7 +452,7 @@ class FieldType:
                     "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
                 },
             )
-            read_action: ReadAction | None = field(
+            read_action: None | ReadAction = field(
                 default=None,
                 metadata={
                     "name": "readAction",
@@ -460,7 +460,7 @@ class FieldType:
                     "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
                 },
             )
-            read_response: ReadResponse | None = field(
+            read_response: None | ReadResponse = field(
                 default=None,
                 metadata={
                     "name": "readResponse",
@@ -469,8 +469,8 @@ class FieldType:
                 },
             )
             broadcasts: (
-                FieldType.FieldAccessPolicies.FieldAccessPolicy.Broadcasts
-                | None
+                None
+                | FieldType.FieldAccessPolicies.FieldAccessPolicy.Broadcasts
             ) = field(
                 default=None,
                 metadata={
@@ -478,7 +478,7 @@ class FieldType:
                     "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
                 },
             )
-            access_restrictions: AccessRestrictions | None = field(
+            access_restrictions: None | AccessRestrictions = field(
                 default=None,
                 metadata={
                     "name": "accessRestrictions",
@@ -487,7 +487,7 @@ class FieldType:
                 },
             )
             testable: (
-                FieldType.FieldAccessPolicies.FieldAccessPolicy.Testable | None
+                None | FieldType.FieldAccessPolicies.FieldAccessPolicy.Testable
             ) = field(
                 default=None,
                 metadata={
@@ -495,14 +495,14 @@ class FieldType:
                     "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
                 },
             )
-            reserved: UnsignedBitExpression | None = field(
+            reserved: None | UnsignedBitExpression = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
                 },
             )
-            vendor_extensions: VendorExtensions | None = field(
+            vendor_extensions: None | VendorExtensions = field(
                 default=None,
                 metadata={
                     "name": "vendorExtensions",
@@ -510,7 +510,7 @@ class FieldType:
                     "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
                 },
             )
-            id: str | None = field(
+            id: None | str = field(
                 default=None,
                 metadata={
                     "type": "Attribute",
@@ -535,8 +535,8 @@ class FieldType:
                 @dataclass
                 class BroadcastTo:
                     address_space_ref: (
-                        FieldType.FieldAccessPolicies.FieldAccessPolicy.Broadcasts.BroadcastTo.AddressSpaceRef
-                        | None
+                        None
+                        | FieldType.FieldAccessPolicies.FieldAccessPolicy.Broadcasts.BroadcastTo.AddressSpaceRef
                     ) = field(
                         default=None,
                         metadata={
@@ -546,8 +546,8 @@ class FieldType:
                         },
                     )
                     memory_map_ref: (
-                        FieldType.FieldAccessPolicies.FieldAccessPolicy.Broadcasts.BroadcastTo.MemoryMapRef
-                        | None
+                        None
+                        | FieldType.FieldAccessPolicies.FieldAccessPolicy.Broadcasts.BroadcastTo.MemoryMapRef
                     ) = field(
                         default=None,
                         metadata={
@@ -556,7 +556,7 @@ class FieldType:
                             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
                         },
                     )
-                    memory_remap_ref: MemoryRemapRef | None = field(
+                    memory_remap_ref: None | MemoryRemapRef = field(
                         default=None,
                         metadata={
                             "name": "memoryRemapRef",
@@ -572,7 +572,7 @@ class FieldType:
                             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
                         },
                     )
-                    address_block_ref: AddressBlockRef | None = field(
+                    address_block_ref: None | AddressBlockRef = field(
                         default=None,
                         metadata={
                             "name": "addressBlockRef",
@@ -588,7 +588,7 @@ class FieldType:
                             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
                         },
                     )
-                    register_ref: RegisterRef | None = field(
+                    register_ref: None | RegisterRef = field(
                         default=None,
                         metadata={
                             "name": "registerRef",
@@ -596,7 +596,7 @@ class FieldType:
                             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
                         },
                     )
-                    alternate_register_ref: AlternateRegisterRef | None = (
+                    alternate_register_ref: None | AlternateRegisterRef = (
                         field(
                             default=None,
                             metadata={
@@ -606,7 +606,7 @@ class FieldType:
                             },
                         )
                     )
-                    field_ref: FieldRef | None = field(
+                    field_ref: None | FieldRef = field(
                         default=None,
                         metadata={
                             "name": "fieldRef",
@@ -615,7 +615,7 @@ class FieldType:
                             "required": True,
                         },
                     )
-                    id: str | None = field(
+                    id: None | str = field(
                         default=None,
                         metadata={
                             "type": "Attribute",
@@ -625,7 +625,7 @@ class FieldType:
 
                     @dataclass
                     class AddressSpaceRef:
-                        address_space_ref: str | None = field(
+                        address_space_ref: None | str = field(
                             default=None,
                             metadata={
                                 "name": "addressSpaceRef",
@@ -636,7 +636,7 @@ class FieldType:
 
                     @dataclass
                     class MemoryMapRef:
-                        memory_map_ref: str | None = field(
+                        memory_map_ref: None | str = field(
                             default=None,
                             metadata={
                                 "name": "memoryMapRef",
@@ -661,7 +661,7 @@ class FieldType:
                     values may only be read from the field.
                 """
 
-                value: bool | None = field(
+                value: None | bool = field(
                     default=None,
                     metadata={
                         "required": True,

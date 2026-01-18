@@ -90,7 +90,7 @@ class PersistencyFile:
     class Meta:
         name = "PERSISTENCY-FILE"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -99,7 +99,7 @@ class PersistencyFile:
             "required": True,
         },
     )
-    short_name_fragments: PersistencyFile.ShortNameFragments | None = field(
+    short_name_fragments: None | PersistencyFile.ShortNameFragments = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -107,7 +107,7 @@ class PersistencyFile:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -115,7 +115,7 @@ class PersistencyFile:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -123,7 +123,7 @@ class PersistencyFile:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -131,7 +131,7 @@ class PersistencyFile:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -139,7 +139,7 @@ class PersistencyFile:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -147,7 +147,7 @@ class PersistencyFile:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: PersistencyFile.Annotations | None = field(
+    annotations: None | PersistencyFile.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -155,7 +155,7 @@ class PersistencyFile:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    update_strategy: PersistencyElementLevelUpdateStrategyEnum | None = field(
+    update_strategy: None | PersistencyElementLevelUpdateStrategyEnum = field(
         default=None,
         metadata={
             "name": "UPDATE-STRATEGY",
@@ -163,7 +163,7 @@ class PersistencyFile:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    content_uri: UriString | None = field(
+    content_uri: None | UriString = field(
         default=None,
         metadata={
             "name": "CONTENT-URI",
@@ -171,7 +171,7 @@ class PersistencyFile:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    file_name: String | None = field(
+    file_name: None | String = field(
         default=None,
         metadata={
             "name": "FILE-NAME",
@@ -179,14 +179,14 @@ class PersistencyFile:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -194,7 +194,7 @@ class PersistencyFile:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",

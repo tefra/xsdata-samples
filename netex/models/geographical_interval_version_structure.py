@@ -18,7 +18,7 @@ class GeographicalIntervalVersionStructure(FareIntervalVersionStructure):
     class Meta:
         name = "GeographicalInterval_VersionStructure"
 
-    start_geographical_value: Decimal | None = field(
+    start_geographical_value: None | Decimal = field(
         default=None,
         metadata={
             "name": "StartGeographicalValue",
@@ -26,7 +26,7 @@ class GeographicalIntervalVersionStructure(FareIntervalVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    end_geographical_value: Decimal | None = field(
+    end_geographical_value: None | Decimal = field(
         default=None,
         metadata={
             "name": "EndGeographicalValue",
@@ -34,7 +34,7 @@ class GeographicalIntervalVersionStructure(FareIntervalVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    number_of_units: int | None = field(
+    number_of_units: None | int = field(
         default=None,
         metadata={
             "name": "NumberOfUnits",
@@ -42,7 +42,7 @@ class GeographicalIntervalVersionStructure(FareIntervalVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    interval_type: IntervalTypeEnumeration | None = field(
+    interval_type: None | IntervalTypeEnumeration = field(
         default=None,
         metadata={
             "name": "IntervalType",
@@ -50,7 +50,7 @@ class GeographicalIntervalVersionStructure(FareIntervalVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    geographical_unit_ref: GeographicalUnitRef | None = field(
+    geographical_unit_ref: None | GeographicalUnitRef = field(
         default=None,
         metadata={
             "name": "GeographicalUnitRef",
@@ -58,7 +58,7 @@ class GeographicalIntervalVersionStructure(FareIntervalVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    prices: GeographicalIntervalPricesRelStructure | None = field(
+    prices: None | GeographicalIntervalPricesRelStructure = field(
         default=None,
         metadata={
             "type": "Element",

@@ -41,7 +41,7 @@ class CryptoKeySlotAllowedModification:
     class Meta:
         name = "CRYPTO-KEY-SLOT-ALLOWED-MODIFICATION"
 
-    allow_content_type_change: Boolean | None = field(
+    allow_content_type_change: None | Boolean = field(
         default=None,
         metadata={
             "name": "ALLOW-CONTENT-TYPE-CHANGE",
@@ -49,7 +49,7 @@ class CryptoKeySlotAllowedModification:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    exportability: Boolean | None = field(
+    exportability: None | Boolean = field(
         default=None,
         metadata={
             "name": "EXPORTABILITY",
@@ -57,7 +57,7 @@ class CryptoKeySlotAllowedModification:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    max_number_of_allowed_updates: PositiveInteger | None = field(
+    max_number_of_allowed_updates: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "MAX-NUMBER-OF-ALLOWED-UPDATES",
@@ -65,7 +65,7 @@ class CryptoKeySlotAllowedModification:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    restrict_update: Boolean | None = field(
+    restrict_update: None | Boolean = field(
         default=None,
         metadata={
             "name": "RESTRICT-UPDATE",
@@ -73,14 +73,14 @@ class CryptoKeySlotAllowedModification:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

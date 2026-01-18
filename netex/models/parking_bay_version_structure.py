@@ -33,11 +33,11 @@ class ParkingBayVersionStructure(ParkingComponentVersionStructure):
         name = "ParkingBay_VersionStructure"
 
     parking_area_ref: (
-        VehiclePoolingParkingAreaRef
+        None
+        | VehiclePoolingParkingAreaRef
         | VehicleSharingParkingAreaRef
         | TaxiParkingAreaRef
         | ParkingAreaRef
-        | None
     ) = field(
         default=None,
         metadata={
@@ -75,7 +75,7 @@ class ParkingBayVersionStructure(ParkingComponentVersionStructure):
             "tokens": True,
         },
     )
-    parking_vehicle_type: ParkingVehicleEnumeration | None = field(
+    parking_vehicle_type: None | ParkingVehicleEnumeration = field(
         default=None,
         metadata={
             "name": "ParkingVehicleType",
@@ -84,12 +84,12 @@ class ParkingBayVersionStructure(ParkingComponentVersionStructure):
         },
     )
     transport_type_ref_or_vehicle_type_ref: (
-        SimpleVehicleTypeRef
+        None
+        | SimpleVehicleTypeRef
         | CompoundTrainRef
         | TrainRef
         | VehicleTypeRef
         | TransportTypeRef
-        | None
     ) = field(
         default=None,
         metadata={
@@ -132,7 +132,7 @@ class ParkingBayVersionStructure(ParkingComponentVersionStructure):
             "tokens": True,
         },
     )
-    maximum_stay: XmlDuration | None = field(
+    maximum_stay: None | XmlDuration = field(
         default=None,
         metadata={
             "name": "MaximumStay",
@@ -140,7 +140,7 @@ class ParkingBayVersionStructure(ParkingComponentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    secure_parking: bool | None = field(
+    secure_parking: None | bool = field(
         default=None,
         metadata={
             "name": "SecureParking",
@@ -148,7 +148,7 @@ class ParkingBayVersionStructure(ParkingComponentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    bay_geometry: BayGeometryEnumeration | None = field(
+    bay_geometry: None | BayGeometryEnumeration = field(
         default=None,
         metadata={
             "name": "BayGeometry",
@@ -156,7 +156,7 @@ class ParkingBayVersionStructure(ParkingComponentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    parking_visibility: ParkingVisibilityEnumeration | None = field(
+    parking_visibility: None | ParkingVisibilityEnumeration = field(
         default=None,
         metadata={
             "name": "ParkingVisibility",
@@ -164,7 +164,7 @@ class ParkingBayVersionStructure(ParkingComponentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    length: Decimal | None = field(
+    length: None | Decimal = field(
         default=None,
         metadata={
             "name": "Length",
@@ -172,7 +172,7 @@ class ParkingBayVersionStructure(ParkingComponentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    width: Decimal | None = field(
+    width: None | Decimal = field(
         default=None,
         metadata={
             "name": "Width",
@@ -180,7 +180,7 @@ class ParkingBayVersionStructure(ParkingComponentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    height: Decimal | None = field(
+    height: None | Decimal = field(
         default=None,
         metadata={
             "name": "Height",
@@ -188,7 +188,7 @@ class ParkingBayVersionStructure(ParkingComponentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    weight: Decimal | None = field(
+    weight: None | Decimal = field(
         default=None,
         metadata={
             "name": "Weight",
@@ -196,7 +196,7 @@ class ParkingBayVersionStructure(ParkingComponentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    recharging_available: bool | None = field(
+    recharging_available: None | bool = field(
         default=None,
         metadata={
             "name": "RechargingAvailable",

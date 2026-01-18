@@ -41,7 +41,7 @@ class BswExclusiveAreaPolicy:
     class Meta:
         name = "BSW-EXCLUSIVE-AREA-POLICY"
 
-    enable_take_address: Boolean | None = field(
+    enable_take_address: None | Boolean = field(
         default=None,
         metadata={
             "name": "ENABLE-TAKE-ADDRESS",
@@ -49,7 +49,7 @@ class BswExclusiveAreaPolicy:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    api_principle: ApiPrincipleEnum | None = field(
+    api_principle: None | ApiPrincipleEnum = field(
         default=None,
         metadata={
             "name": "API-PRINCIPLE",
@@ -57,7 +57,7 @@ class BswExclusiveAreaPolicy:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    exclusive_area_ref: BswExclusiveAreaPolicy.ExclusiveAreaRef | None = field(
+    exclusive_area_ref: None | BswExclusiveAreaPolicy.ExclusiveAreaRef = field(
         default=None,
         metadata={
             "name": "EXCLUSIVE-AREA-REF",
@@ -65,7 +65,7 @@ class BswExclusiveAreaPolicy:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -73,14 +73,14 @@ class BswExclusiveAreaPolicy:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -91,7 +91,7 @@ class BswExclusiveAreaPolicy:
 
     @dataclass
     class ExclusiveAreaRef(Ref):
-        dest: ExclusiveAreaSubtypesEnum | None = field(
+        dest: None | ExclusiveAreaSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

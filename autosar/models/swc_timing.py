@@ -155,7 +155,7 @@ class SwcTiming:
     class Meta:
         name = "SWC-TIMING"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -164,7 +164,7 @@ class SwcTiming:
             "required": True,
         },
     )
-    short_name_fragments: SwcTiming.ShortNameFragments | None = field(
+    short_name_fragments: None | SwcTiming.ShortNameFragments = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -172,7 +172,7 @@ class SwcTiming:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -180,7 +180,7 @@ class SwcTiming:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -188,7 +188,7 @@ class SwcTiming:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -196,7 +196,7 @@ class SwcTiming:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -204,7 +204,7 @@ class SwcTiming:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -212,7 +212,7 @@ class SwcTiming:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: SwcTiming.Annotations | None = field(
+    annotations: None | SwcTiming.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -220,7 +220,7 @@ class SwcTiming:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -228,7 +228,7 @@ class SwcTiming:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    timing_conditions: SwcTiming.TimingConditions | None = field(
+    timing_conditions: None | SwcTiming.TimingConditions = field(
         default=None,
         metadata={
             "name": "TIMING-CONDITIONS",
@@ -236,7 +236,7 @@ class SwcTiming:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    timing_descriptions: SwcTiming.TimingDescriptions | None = field(
+    timing_descriptions: None | SwcTiming.TimingDescriptions = field(
         default=None,
         metadata={
             "name": "TIMING-DESCRIPTIONS",
@@ -244,7 +244,7 @@ class SwcTiming:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    timing_guarantees: SwcTiming.TimingGuarantees | None = field(
+    timing_guarantees: None | SwcTiming.TimingGuarantees = field(
         default=None,
         metadata={
             "name": "TIMING-GUARANTEES",
@@ -252,7 +252,7 @@ class SwcTiming:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    timing_requirements: SwcTiming.TimingRequirements | None = field(
+    timing_requirements: None | SwcTiming.TimingRequirements = field(
         default=None,
         metadata={
             "name": "TIMING-REQUIREMENTS",
@@ -260,7 +260,7 @@ class SwcTiming:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    timing_resource: TimingExtensionResource | None = field(
+    timing_resource: None | TimingExtensionResource = field(
         default=None,
         metadata={
             "name": "TIMING-RESOURCE",
@@ -268,7 +268,7 @@ class SwcTiming:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    behavior_ref: SwcTiming.BehaviorRef | None = field(
+    behavior_ref: None | SwcTiming.BehaviorRef = field(
         default=None,
         metadata={
             "name": "BEHAVIOR-REF",
@@ -276,7 +276,7 @@ class SwcTiming:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    component_ref: SwcTiming.ComponentRef | None = field(
+    component_ref: None | SwcTiming.ComponentRef = field(
         default=None,
         metadata={
             "name": "COMPONENT-REF",
@@ -284,14 +284,14 @@ class SwcTiming:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -299,7 +299,7 @@ class SwcTiming:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -755,7 +755,7 @@ class SwcTiming:
 
     @dataclass
     class BehaviorRef(Ref):
-        dest: SwcInternalBehaviorSubtypesEnum | None = field(
+        dest: None | SwcInternalBehaviorSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -766,7 +766,7 @@ class SwcTiming:
 
     @dataclass
     class ComponentRef(Ref):
-        dest: SwComponentTypeSubtypesEnum | None = field(
+        dest: None | SwComponentTypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

@@ -104,7 +104,7 @@ class ProcessToMachineMapping:
     class Meta:
         name = "PROCESS-TO-MACHINE-MAPPING"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -113,7 +113,7 @@ class ProcessToMachineMapping:
             "required": True,
         },
     )
-    short_name_fragments: ProcessToMachineMapping.ShortNameFragments | None = (
+    short_name_fragments: None | ProcessToMachineMapping.ShortNameFragments = (
         field(
             default=None,
             metadata={
@@ -123,7 +123,7 @@ class ProcessToMachineMapping:
             },
         )
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -131,7 +131,7 @@ class ProcessToMachineMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -139,7 +139,7 @@ class ProcessToMachineMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -147,7 +147,7 @@ class ProcessToMachineMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -155,7 +155,7 @@ class ProcessToMachineMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -163,7 +163,7 @@ class ProcessToMachineMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: ProcessToMachineMapping.Annotations | None = field(
+    annotations: None | ProcessToMachineMapping.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -171,7 +171,7 @@ class ProcessToMachineMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    design_ref: ProcessToMachineMapping.DesignRef | None = field(
+    design_ref: None | ProcessToMachineMapping.DesignRef = field(
         default=None,
         metadata={
             "name": "DESIGN-REF",
@@ -179,7 +179,7 @@ class ProcessToMachineMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    machine_ref: ProcessToMachineMapping.MachineRef | None = field(
+    machine_ref: None | ProcessToMachineMapping.MachineRef = field(
         default=None,
         metadata={
             "name": "MACHINE-REF",
@@ -188,7 +188,7 @@ class ProcessToMachineMapping:
         },
     )
     non_os_module_instantiation_ref: (
-        ProcessToMachineMapping.NonOsModuleInstantiationRef | None
+        None | ProcessToMachineMapping.NonOsModuleInstantiationRef
     ) = field(
         default=None,
         metadata={
@@ -197,7 +197,7 @@ class ProcessToMachineMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    process_ref: ProcessToMachineMapping.ProcessRef | None = field(
+    process_ref: None | ProcessToMachineMapping.ProcessRef = field(
         default=None,
         metadata={
             "name": "PROCESS-REF",
@@ -205,7 +205,7 @@ class ProcessToMachineMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    shall_not_run_on_refs: ProcessToMachineMapping.ShallNotRunOnRefs | None = (
+    shall_not_run_on_refs: None | ProcessToMachineMapping.ShallNotRunOnRefs = (
         field(
             default=None,
             metadata={
@@ -215,7 +215,7 @@ class ProcessToMachineMapping:
             },
         )
     )
-    shall_run_on_refs: ProcessToMachineMapping.ShallRunOnRefs | None = field(
+    shall_run_on_refs: None | ProcessToMachineMapping.ShallRunOnRefs = field(
         default=None,
         metadata={
             "name": "SHALL-RUN-ON-REFS",
@@ -223,14 +223,14 @@ class ProcessToMachineMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -238,7 +238,7 @@ class ProcessToMachineMapping:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -270,7 +270,7 @@ class ProcessToMachineMapping:
 
     @dataclass
     class DesignRef(Ref):
-        dest: ProcessDesignToMachineDesignMappingSubtypesEnum | None = field(
+        dest: None | ProcessDesignToMachineDesignMappingSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -281,7 +281,7 @@ class ProcessToMachineMapping:
 
     @dataclass
     class MachineRef(Ref):
-        dest: MachineSubtypesEnum | None = field(
+        dest: None | MachineSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -292,7 +292,7 @@ class ProcessToMachineMapping:
 
     @dataclass
     class NonOsModuleInstantiationRef(Ref):
-        dest: NonOsModuleInstantiationSubtypesEnum | None = field(
+        dest: None | NonOsModuleInstantiationSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -303,7 +303,7 @@ class ProcessToMachineMapping:
 
     @dataclass
     class ProcessRef(Ref):
-        dest: ProcessSubtypesEnum | None = field(
+        dest: None | ProcessSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -327,7 +327,7 @@ class ProcessToMachineMapping:
 
         @dataclass
         class ShallNotRunOnRef(Ref):
-            dest: ProcessorCoreSubtypesEnum | None = field(
+            dest: None | ProcessorCoreSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -351,7 +351,7 @@ class ProcessToMachineMapping:
 
         @dataclass
         class ShallRunOnRef(Ref):
-            dest: ProcessorCoreSubtypesEnum | None = field(
+            dest: None | ProcessorCoreSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",

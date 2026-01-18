@@ -115,7 +115,7 @@ class OrderStatusRequestId:
 
 @dataclass(kw_only=True)
 class OrderStatusRequestSummary:
-    total_number_of_line_item: TotalNumberOfLineItem | None = field(
+    total_number_of_line_item: None | TotalNumberOfLineItem = field(
         default=None,
         metadata={
             "name": "TotalNumberOfLineItem",
@@ -133,126 +133,126 @@ class OrderStatusItem:
             "required": True,
         }
     )
-    line_item_type: LineItemType | None = field(
+    line_item_type: None | LineItemType = field(
         default=None,
         metadata={
             "name": "LineItemType",
             "type": "Element",
         },
     )
-    parent_item_number: ParentItemNumber | None = field(
+    parent_item_number: None | ParentItemNumber = field(
         default=None,
         metadata={
             "name": "ParentItemNumber",
             "type": "Element",
         },
     )
-    item_identifiers: ItemIdentifiers | None = field(
+    item_identifiers: None | ItemIdentifiers = field(
         default=None,
         metadata={
             "name": "ItemIdentifiers",
             "type": "Element",
         },
     )
-    list_of_dimension: ListOfDimension | None = field(
+    list_of_dimension: None | ListOfDimension = field(
         default=None,
         metadata={
             "name": "ListOfDimension",
             "type": "Element",
         },
     )
-    total_quantity: TotalQuantity | None = field(
+    total_quantity: None | TotalQuantity = field(
         default=None,
         metadata={
             "name": "TotalQuantity",
             "type": "Element",
         },
     )
-    max_back_order_quantity: MaxBackOrderQuantity | None = field(
+    max_back_order_quantity: None | MaxBackOrderQuantity = field(
         default=None,
         metadata={
             "name": "MaxBackOrderQuantity",
             "type": "Element",
         },
     )
-    list_of_quantity_coded: ListOfQuantityCoded | None = field(
+    list_of_quantity_coded: None | ListOfQuantityCoded = field(
         default=None,
         metadata={
             "name": "ListOfQuantityCoded",
             "type": "Element",
         },
     )
-    off_catalog_flag: OffCatalogFlag | None = field(
+    off_catalog_flag: None | OffCatalogFlag = field(
         default=None,
         metadata={
             "name": "OffCatalogFlag",
             "type": "Element",
         },
     )
-    catalog_reference: CatalogReference | None = field(
+    catalog_reference: None | CatalogReference = field(
         default=None,
         metadata={
             "name": "CatalogReference",
             "type": "Element",
         },
     )
-    item_contract_references: ItemContractReferences | None = field(
+    item_contract_references: None | ItemContractReferences = field(
         default=None,
         metadata={
             "name": "ItemContractReferences",
             "type": "Element",
         },
     )
-    list_of_item_references: ListOfItemReferences | None = field(
+    list_of_item_references: None | ListOfItemReferences = field(
         default=None,
         metadata={
             "name": "ListOfItemReferences",
             "type": "Element",
         },
     )
-    country_of_origin: CountryOfOrigin | None = field(
+    country_of_origin: None | CountryOfOrigin = field(
         default=None,
         metadata={
             "name": "CountryOfOrigin",
             "type": "Element",
         },
     )
-    country_of_destination: CountryOfDestination | None = field(
+    country_of_destination: None | CountryOfDestination = field(
         default=None,
         metadata={
             "name": "CountryOfDestination",
             "type": "Element",
         },
     )
-    final_recipient: FinalRecipient | None = field(
+    final_recipient: None | FinalRecipient = field(
         default=None,
         metadata={
             "name": "FinalRecipient",
             "type": "Element",
         },
     )
-    list_of_party_coded: ListOfPartyCoded | None = field(
+    list_of_party_coded: None | ListOfPartyCoded = field(
         default=None,
         metadata={
             "name": "ListOfPartyCoded",
             "type": "Element",
         },
     )
-    conditions_of_sale: ConditionsOfSale | None = field(
+    conditions_of_sale: None | ConditionsOfSale = field(
         default=None,
         metadata={
             "name": "ConditionsOfSale",
             "type": "Element",
         },
     )
-    hazardous_materials: HazardousMaterials | None = field(
+    hazardous_materials: None | HazardousMaterials = field(
         default=None,
         metadata={
             "name": "HazardousMaterials",
             "type": "Element",
         },
     )
-    order_status_item_transport: OrderStatusItemTransport | None = field(
+    order_status_item_transport: None | OrderStatusItemTransport = field(
         default=None,
         metadata={
             "name": "OrderStatusItemTransport",
@@ -291,21 +291,21 @@ class OrderStatusRequestHeader:
             "required": True,
         }
     )
-    order_status_language: OrderStatusLanguage | None = field(
+    order_status_language: None | OrderStatusLanguage = field(
         default=None,
         metadata={
             "name": "OrderStatusLanguage",
             "type": "Element",
         },
     )
-    order_status_request_note: OrderStatusRequestNote | None = field(
+    order_status_request_note: None | OrderStatusRequestNote = field(
         default=None,
         metadata={
             "name": "OrderStatusRequestNote",
             "type": "Element",
         },
     )
-    order_status_list_of_attachment: OrderStatusListOfAttachment | None = (
+    order_status_list_of_attachment: None | OrderStatusListOfAttachment = (
         field(
             default=None,
             metadata={
@@ -330,7 +330,7 @@ class ListOfOrderStatusItem:
 
 @dataclass(kw_only=True)
 class OrderStatusReference:
-    account_code: AccountCode | None = field(
+    account_code: None | AccountCode = field(
         default=None,
         metadata={
             "name": "AccountCode",
@@ -351,7 +351,7 @@ class OrderStatusReference:
             "required": True,
         }
     )
-    other_reference: OtherReference | None = field(
+    other_reference: None | OtherReference = field(
         default=None,
         metadata={
             "name": "OtherReference",
@@ -365,7 +365,7 @@ class OrderStatusReference:
             "required": True,
         }
     )
-    list_of_order_status_item: ListOfOrderStatusItem | None = field(
+    list_of_order_status_item: None | ListOfOrderStatusItem = field(
         default=None,
         metadata={
             "name": "ListOfOrderStatusItem",
@@ -383,14 +383,14 @@ class OrderStatusDetailRequest:
             "required": True,
         }
     )
-    general_line_item_note: GeneralLineItemNote | None = field(
+    general_line_item_note: None | GeneralLineItemNote = field(
         default=None,
         metadata={
             "name": "GeneralLineItemNote",
             "type": "Element",
         },
     )
-    line_item_attachment: LineItemAttachment | None = field(
+    line_item_attachment: None | LineItemAttachment = field(
         default=None,
         metadata={
             "name": "LineItemAttachment",
@@ -433,14 +433,14 @@ class OrderStatusRequest:
             "required": True,
         }
     )
-    order_status_request_detail: OrderStatusRequestDetail | None = field(
+    order_status_request_detail: None | OrderStatusRequestDetail = field(
         default=None,
         metadata={
             "name": "OrderStatusRequestDetail",
             "type": "Element",
         },
     )
-    order_status_request_summary: OrderStatusRequestSummary | None = field(
+    order_status_request_summary: None | OrderStatusRequestSummary = field(
         default=None,
         metadata={
             "name": "OrderStatusRequestSummary",

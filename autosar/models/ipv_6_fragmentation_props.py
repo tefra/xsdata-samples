@@ -49,7 +49,7 @@ class Ipv6FragmentationProps:
     class Meta:
         name = "IPV-6-FRAGMENTATION-PROPS"
 
-    tcp_ip_ip_reassembly_buffer_count: PositiveInteger | None = field(
+    tcp_ip_ip_reassembly_buffer_count: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "TCP-IP-IP-REASSEMBLY-BUFFER-COUNT",
@@ -57,7 +57,7 @@ class Ipv6FragmentationProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tcp_ip_ip_reassembly_buffer_size: PositiveInteger | None = field(
+    tcp_ip_ip_reassembly_buffer_size: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "TCP-IP-IP-REASSEMBLY-BUFFER-SIZE",
@@ -65,7 +65,7 @@ class Ipv6FragmentationProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tcp_ip_ip_reassembly_segment_count: PositiveInteger | None = field(
+    tcp_ip_ip_reassembly_segment_count: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "TCP-IP-IP-REASSEMBLY-SEGMENT-COUNT",
@@ -73,7 +73,7 @@ class Ipv6FragmentationProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tcp_ip_ip_reassembly_timeout: TimeValue | None = field(
+    tcp_ip_ip_reassembly_timeout: None | TimeValue = field(
         default=None,
         metadata={
             "name": "TCP-IP-IP-REASSEMBLY-TIMEOUT",
@@ -81,7 +81,7 @@ class Ipv6FragmentationProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tcp_ip_ip_tx_fragment_buffer_count: PositiveInteger | None = field(
+    tcp_ip_ip_tx_fragment_buffer_count: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "TCP-IP-IP-TX-FRAGMENT-BUFFER-COUNT",
@@ -89,7 +89,7 @@ class Ipv6FragmentationProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tcp_ip_ip_tx_fragment_buffer_size: PositiveInteger | None = field(
+    tcp_ip_ip_tx_fragment_buffer_size: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "TCP-IP-IP-TX-FRAGMENT-BUFFER-SIZE",
@@ -97,14 +97,14 @@ class Ipv6FragmentationProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

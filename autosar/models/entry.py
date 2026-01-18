@@ -104,7 +104,7 @@ class Entry:
     class Meta:
         name = "ENTRY"
 
-    bgcolor: String | None = field(
+    bgcolor: None | String = field(
         default=None,
         metadata={
             "name": "BGCOLOR",
@@ -200,14 +200,14 @@ class Entry:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -215,28 +215,28 @@ class Entry:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    align: AlignEnumSimple | None = field(
+    align: None | AlignEnumSimple = field(
         default=None,
         metadata={
             "name": "ALIGN",
             "type": "Attribute",
         },
     )
-    bgcolor_attribute: str | None = field(
+    bgcolor_attribute: None | str = field(
         default=None,
         metadata={
             "name": "BGCOLOR",
             "type": "Attribute",
         },
     )
-    colname: str | None = field(
+    colname: None | str = field(
         default=None,
         metadata={
             "name": "COLNAME",
             "type": "Attribute",
         },
     )
-    colsep: str | None = field(
+    colsep: None | str = field(
         default=None,
         metadata={
             "name": "COLSEP",
@@ -244,35 +244,35 @@ class Entry:
             "pattern": r"[0-1]",
         },
     )
-    morerows: str | None = field(
+    morerows: None | str = field(
         default=None,
         metadata={
             "name": "MOREROWS",
             "type": "Attribute",
         },
     )
-    nameend: str | None = field(
+    nameend: None | str = field(
         default=None,
         metadata={
             "name": "NAMEEND",
             "type": "Attribute",
         },
     )
-    namest: str | None = field(
+    namest: None | str = field(
         default=None,
         metadata={
             "name": "NAMEST",
             "type": "Attribute",
         },
     )
-    rotate: str | None = field(
+    rotate: None | str = field(
         default=None,
         metadata={
             "name": "ROTATE",
             "type": "Attribute",
         },
     )
-    rowsep: str | None = field(
+    rowsep: None | str = field(
         default=None,
         metadata={
             "name": "ROWSEP",
@@ -280,14 +280,14 @@ class Entry:
             "pattern": r"[0-1]",
         },
     )
-    spanname: str | None = field(
+    spanname: None | str = field(
         default=None,
         metadata={
             "name": "SPANNAME",
             "type": "Attribute",
         },
     )
-    valign: ValignEnumSimple | None = field(
+    valign: None | ValignEnumSimple = field(
         default=None,
         metadata={
             "name": "VALIGN",

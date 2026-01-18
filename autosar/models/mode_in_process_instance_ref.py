@@ -32,7 +32,7 @@ class ModeInProcessInstanceRef:
         name = "MODE-IN-PROCESS-INSTANCE-REF"
 
     context_mode_declaration_group_prototype_ref: (
-        ModeInProcessInstanceRef.ContextModeDeclarationGroupPrototypeRef | None
+        None | ModeInProcessInstanceRef.ContextModeDeclarationGroupPrototypeRef
     ) = field(
         default=None,
         metadata={
@@ -42,7 +42,7 @@ class ModeInProcessInstanceRef:
         },
     )
     target_mode_declaration_ref: (
-        ModeInProcessInstanceRef.TargetModeDeclarationRef | None
+        None | ModeInProcessInstanceRef.TargetModeDeclarationRef
     ) = field(
         default=None,
         metadata={
@@ -51,14 +51,14 @@ class ModeInProcessInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -69,7 +69,7 @@ class ModeInProcessInstanceRef:
 
     @dataclass
     class ContextModeDeclarationGroupPrototypeRef(Ref):
-        dest: ModeDeclarationGroupPrototypeSubtypesEnum | None = field(
+        dest: None | ModeDeclarationGroupPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -80,7 +80,7 @@ class ModeInProcessInstanceRef:
 
     @dataclass
     class TargetModeDeclarationRef(Ref):
-        dest: ModeDeclarationSubtypesEnum | None = field(
+        dest: None | ModeDeclarationSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

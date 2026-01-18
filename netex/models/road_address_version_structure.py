@@ -15,7 +15,7 @@ class RoadAddressVersionStructure(AddressVersionStructure):
     class Meta:
         name = "RoadAddress_VersionStructure"
 
-    gis_feature_ref: str | None = field(
+    gis_feature_ref: None | str = field(
         default=None,
         metadata={
             "name": "GisFeatureRef",
@@ -23,7 +23,7 @@ class RoadAddressVersionStructure(AddressVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    road_number: str | None = field(
+    road_number: None | str = field(
         default=None,
         metadata={
             "name": "RoadNumber",
@@ -31,7 +31,7 @@ class RoadAddressVersionStructure(AddressVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    road_name: MultilingualString | None = field(
+    road_name: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "RoadName",
@@ -39,7 +39,7 @@ class RoadAddressVersionStructure(AddressVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    bearing_compass: CompassBearing16Enumeration | None = field(
+    bearing_compass: None | CompassBearing16Enumeration = field(
         default=None,
         metadata={
             "name": "BearingCompass",
@@ -47,7 +47,7 @@ class RoadAddressVersionStructure(AddressVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    bearing_degrees: int | None = field(
+    bearing_degrees: None | int = field(
         default=None,
         metadata={
             "name": "BearingDegrees",
@@ -55,7 +55,7 @@ class RoadAddressVersionStructure(AddressVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    odd_number_range: RoadNumberRangeStructure | None = field(
+    odd_number_range: None | RoadNumberRangeStructure = field(
         default=None,
         metadata={
             "name": "OddNumberRange",
@@ -63,7 +63,7 @@ class RoadAddressVersionStructure(AddressVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    even_number_range: RoadNumberRangeStructure | None = field(
+    even_number_range: None | RoadNumberRangeStructure = field(
         default=None,
         metadata={
             "name": "EvenNumberRange",

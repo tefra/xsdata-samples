@@ -46,7 +46,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 @dataclass
 class CellPriceStructure:
-    name: MultilingualString | None = field(
+    name: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "Name",
@@ -54,7 +54,7 @@ class CellPriceStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    description: MultilingualString | None = field(
+    description: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "Description",
@@ -62,7 +62,7 @@ class CellPriceStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    private_code: PrivateCode | None = field(
+    private_code: None | PrivateCode = field(
         default=None,
         metadata={
             "name": "PrivateCode",
@@ -70,7 +70,7 @@ class CellPriceStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    start_date: XmlDate | None = field(
+    start_date: None | XmlDate = field(
         default=None,
         metadata={
             "name": "StartDate",
@@ -78,7 +78,7 @@ class CellPriceStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    end_date: XmlDate | None = field(
+    end_date: None | XmlDate = field(
         default=None,
         metadata={
             "name": "EndDate",
@@ -86,7 +86,7 @@ class CellPriceStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    amount: Decimal | None = field(
+    amount: None | Decimal = field(
         default=None,
         metadata={
             "name": "Amount",
@@ -94,7 +94,7 @@ class CellPriceStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    currency: str | None = field(
+    currency: None | str = field(
         default=None,
         metadata={
             "name": "Currency",
@@ -105,7 +105,7 @@ class CellPriceStructure:
             "pattern": r"[A-Z][A-Z][A-Z]",
         },
     )
-    price_unit_ref: PriceUnitRef | None = field(
+    price_unit_ref: None | PriceUnitRef = field(
         default=None,
         metadata={
             "name": "PriceUnitRef",
@@ -113,7 +113,7 @@ class CellPriceStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    units: Decimal | None = field(
+    units: None | Decimal = field(
         default=None,
         metadata={
             "name": "Units",
@@ -121,7 +121,7 @@ class CellPriceStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    rule_step_results: PriceRuleStepResultsRelStructure | None = field(
+    rule_step_results: None | PriceRuleStepResultsRelStructure = field(
         default=None,
         metadata={
             "name": "ruleStepResults",
@@ -129,7 +129,7 @@ class CellPriceStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    is_allowed: bool | None = field(
+    is_allowed: None | bool = field(
         default=None,
         metadata={
             "name": "IsAllowed",
@@ -137,7 +137,7 @@ class CellPriceStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    pricing_service_ref: PricingServiceRef | None = field(
+    pricing_service_ref: None | PricingServiceRef = field(
         default=None,
         metadata={
             "name": "PricingServiceRef",
@@ -146,7 +146,8 @@ class CellPriceStructure:
         },
     )
     fare_price_ref: (
-        CustomerPurchasePackagePriceRef
+        None
+        | CustomerPurchasePackagePriceRef
         | ParkingPriceRef
         | TimeIntervalPriceRef
         | TimeUnitPriceRef
@@ -164,7 +165,6 @@ class CellPriceStructure:
         | CappingRulePriceRef
         | FareProductPriceRef
         | FarePriceRef
-        | None
     ) = field(
         default=None,
         metadata={
@@ -264,14 +264,14 @@ class CellPriceStructure:
         },
     )
     discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule: (
-        LimitingRuleRef
+        None
+        | LimitingRuleRef
         | DiscountingRuleRef
         | PricingRuleRef
         | LimitingRuleInContext
         | LimitingRule
         | DiscountingRule
         | PricingRule
-        | None
     ) = field(
         default=None,
         metadata={
@@ -315,7 +315,7 @@ class CellPriceStructure:
             ),
         },
     )
-    can_be_cumulative: bool | None = field(
+    can_be_cumulative: None | bool = field(
         default=None,
         metadata={
             "name": "CanBeCumulative",
@@ -323,7 +323,7 @@ class CellPriceStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    rounding_ref: RoundingRef | None = field(
+    rounding_ref: None | RoundingRef = field(
         default=None,
         metadata={
             "name": "RoundingRef",
@@ -331,7 +331,7 @@ class CellPriceStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    ranking: int | None = field(
+    ranking: None | int = field(
         default=None,
         metadata={
             "name": "Ranking",
@@ -339,7 +339,7 @@ class CellPriceStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    minimum_price: Decimal | None = field(
+    minimum_price: None | Decimal = field(
         default=None,
         metadata={
             "name": "MinimumPrice",
@@ -347,7 +347,7 @@ class CellPriceStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    minimum_price_as_percentage: Decimal | None = field(
+    minimum_price_as_percentage: None | Decimal = field(
         default=None,
         metadata={
             "name": "MinimumPriceAsPercentage",
@@ -355,7 +355,7 @@ class CellPriceStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    minimum_price_as_multiple: int | None = field(
+    minimum_price_as_multiple: None | int = field(
         default=None,
         metadata={
             "name": "MinimumPriceAsMultiple",
@@ -363,7 +363,7 @@ class CellPriceStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    maximum_price: Decimal | None = field(
+    maximum_price: None | Decimal = field(
         default=None,
         metadata={
             "name": "MaximumPrice",
@@ -371,7 +371,7 @@ class CellPriceStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    maximum_price_as_percentage: Decimal | None = field(
+    maximum_price_as_percentage: None | Decimal = field(
         default=None,
         metadata={
             "name": "MaximumPriceAsPercentage",
@@ -379,7 +379,7 @@ class CellPriceStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    maximum_price_as_multiple: int | None = field(
+    maximum_price_as_multiple: None | int = field(
         default=None,
         metadata={
             "name": "MaximumPriceAsMultiple",
@@ -387,7 +387,7 @@ class CellPriceStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    minimum_limit_price_as_percentage: Decimal | None = field(
+    minimum_limit_price_as_percentage: None | Decimal = field(
         default=None,
         metadata={
             "name": "MinimumLimitPriceAsPercentage",
@@ -395,7 +395,7 @@ class CellPriceStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    minimum_limit_price: Decimal | None = field(
+    minimum_limit_price: None | Decimal = field(
         default=None,
         metadata={
             "name": "MinimumLimitPrice",
@@ -403,7 +403,7 @@ class CellPriceStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    maximum_limit_price_as_percentage: Decimal | None = field(
+    maximum_limit_price_as_percentage: None | Decimal = field(
         default=None,
         metadata={
             "name": "MaximumLimitPriceAsPercentage",
@@ -411,7 +411,7 @@ class CellPriceStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    maximum_limit_price: Decimal | None = field(
+    maximum_limit_price: None | Decimal = field(
         default=None,
         metadata={
             "name": "MaximumLimitPrice",

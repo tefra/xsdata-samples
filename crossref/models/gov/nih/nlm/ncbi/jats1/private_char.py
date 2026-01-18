@@ -19,14 +19,14 @@ class PrivateChar:
         name = "private-char"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    glyph_data: GlyphData | None = field(
+    glyph_data: None | GlyphData = field(
         default=None,
         metadata={
             "name": "glyph-data",
             "type": "Element",
         },
     )
-    glyph_ref: GlyphRef | None = field(
+    glyph_ref: None | GlyphRef = field(
         default=None,
         metadata={
             "name": "glyph-ref",
@@ -40,32 +40,32 @@ class PrivateChar:
             "type": "Element",
         },
     )
-    description: str | None = field(
+    description: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    name: str | None = field(
+    name: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",

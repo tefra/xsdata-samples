@@ -28,7 +28,7 @@ class ExtendedVectorsType:
 
     @dataclass
     class Vector:
-        left: Left | None = field(
+        left: None | Left = field(
             default=None,
             metadata={
                 "type": "Element",
@@ -36,7 +36,7 @@ class ExtendedVectorsType:
                 "required": True,
             },
         )
-        right: Right | None = field(
+        right: None | Right = field(
             default=None,
             metadata={
                 "type": "Element",
@@ -44,14 +44,14 @@ class ExtendedVectorsType:
                 "required": True,
             },
         )
-        vector_id: str | None = field(
+        vector_id: None | str = field(
             default=None,
             metadata={
                 "name": "vectorId",
                 "type": "Attribute",
             },
         )
-        id: str | None = field(
+        id: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",

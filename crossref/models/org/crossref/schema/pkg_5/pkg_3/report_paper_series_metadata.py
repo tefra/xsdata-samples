@@ -60,20 +60,20 @@ class ReportPaperSeriesMetadata:
         name = "report-paper_series_metadata"
         namespace = "http://www.crossref.org/schema/5.3.1"
 
-    series_metadata: SeriesMetadata | None = field(
+    series_metadata: None | SeriesMetadata = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
         },
     )
-    contributors: Contributors | None = field(
+    contributors: None | Contributors = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    titles: Titles | None = field(
+    titles: None | Titles = field(
         default=None,
         metadata={
             "type": "Element",
@@ -95,7 +95,7 @@ class ReportPaperSeriesMetadata:
             "sequence": 1,
         },
     )
-    edition_number: EditionNumber | None = field(
+    edition_number: None | EditionNumber = field(
         default=None,
         metadata={
             "type": "Element",
@@ -123,7 +123,7 @@ class ReportPaperSeriesMetadata:
             "max_occurs": 6,
         },
     )
-    publisher: Publisher | None = field(
+    publisher: None | Publisher = field(
         default=None,
         metadata={
             "type": "Element",
@@ -136,44 +136,44 @@ class ReportPaperSeriesMetadata:
             "max_occurs": 5,
         },
     )
-    publisher_item: PublisherItem | None = field(
+    publisher_item: None | PublisherItem = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    contract_number: ContractNumber | None = field(
+    contract_number: None | ContractNumber = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    archive_locations: ArchiveLocations | None = field(
+    archive_locations: None | ArchiveLocations = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    doi_data: DoiData | None = field(
+    doi_data: None | DoiData = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    citation_list: CitationList | None = field(
+    citation_list: None | CitationList = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    program: Program | None = field(
+    program: None | Program = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.crossref.org/relations.xsd",
         },
     )
-    language: ReportPaperSeriesMetadataLanguage | None = field(
+    language: None | ReportPaperSeriesMetadataLanguage = field(
         default=None,
         metadata={
             "type": "Attribute",

@@ -10,28 +10,28 @@ class Bounds:
     class Meta:
         namespace = "http://www.omg.org/spec/DD/20100524/DC"
 
-    x: float | None = field(
+    x: None | float = field(
         default=None,
         metadata={
             "type": "Attribute",
             "required": True,
         },
     )
-    y: float | None = field(
+    y: None | float = field(
         default=None,
         metadata={
             "type": "Attribute",
             "required": True,
         },
     )
-    width: float | None = field(
+    width: None | float = field(
         default=None,
         metadata={
             "type": "Attribute",
             "required": True,
         },
     )
-    height: float | None = field(
+    height: None | float = field(
         default=None,
         metadata={
             "type": "Attribute",

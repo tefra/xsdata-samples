@@ -92,7 +92,7 @@ class DiagnosticFimAliasEventGroup:
     class Meta:
         name = "DIAGNOSTIC-FIM-ALIAS-EVENT-GROUP"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -102,7 +102,7 @@ class DiagnosticFimAliasEventGroup:
         },
     )
     short_name_fragments: (
-        DiagnosticFimAliasEventGroup.ShortNameFragments | None
+        None | DiagnosticFimAliasEventGroup.ShortNameFragments
     ) = field(
         default=None,
         metadata={
@@ -111,7 +111,7 @@ class DiagnosticFimAliasEventGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -119,7 +119,7 @@ class DiagnosticFimAliasEventGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -127,7 +127,7 @@ class DiagnosticFimAliasEventGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -135,7 +135,7 @@ class DiagnosticFimAliasEventGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -143,7 +143,7 @@ class DiagnosticFimAliasEventGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -151,7 +151,7 @@ class DiagnosticFimAliasEventGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: DiagnosticFimAliasEventGroup.Annotations | None = field(
+    annotations: None | DiagnosticFimAliasEventGroup.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -159,7 +159,7 @@ class DiagnosticFimAliasEventGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -168,7 +168,7 @@ class DiagnosticFimAliasEventGroup:
         },
     )
     grouped_alias_event_refs: (
-        DiagnosticFimAliasEventGroup.GroupedAliasEventRefs | None
+        None | DiagnosticFimAliasEventGroup.GroupedAliasEventRefs
     ) = field(
         default=None,
         metadata={
@@ -177,14 +177,14 @@ class DiagnosticFimAliasEventGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -192,7 +192,7 @@ class DiagnosticFimAliasEventGroup:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -237,7 +237,7 @@ class DiagnosticFimAliasEventGroup:
 
         @dataclass
         class GroupedAliasEventRef(Ref):
-            dest: DiagnosticFimAliasEventSubtypesEnum | None = field(
+            dest: None | DiagnosticFimAliasEventSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",

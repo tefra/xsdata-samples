@@ -24,7 +24,7 @@ class AxleSpacing:
     :ivar axle_spacing_extension:
     """
 
-    axle_spacing: float | None = field(
+    axle_spacing: None | float = field(
         default=None,
         metadata={
             "name": "axleSpacing",
@@ -33,7 +33,7 @@ class AxleSpacing:
             "required": True,
         },
     )
-    axle_spacing_sequence_identifier: int | None = field(
+    axle_spacing_sequence_identifier: None | int = field(
         default=None,
         metadata={
             "name": "axleSpacingSequenceIdentifier",
@@ -42,7 +42,7 @@ class AxleSpacing:
             "required": True,
         },
     )
-    axle_spacing_extension: ExtensionType | None = field(
+    axle_spacing_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "axleSpacingExtension",

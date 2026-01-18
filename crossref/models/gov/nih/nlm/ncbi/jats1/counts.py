@@ -29,55 +29,55 @@ class Counts:
             "type": "Element",
         },
     )
-    fig_count: FigCount | None = field(
+    fig_count: None | FigCount = field(
         default=None,
         metadata={
             "name": "fig-count",
             "type": "Element",
         },
     )
-    table_count: TableCount | None = field(
+    table_count: None | TableCount = field(
         default=None,
         metadata={
             "name": "table-count",
             "type": "Element",
         },
     )
-    equation_count: EquationCount | None = field(
+    equation_count: None | EquationCount = field(
         default=None,
         metadata={
             "name": "equation-count",
             "type": "Element",
         },
     )
-    ref_count: RefCount | None = field(
+    ref_count: None | RefCount = field(
         default=None,
         metadata={
             "name": "ref-count",
             "type": "Element",
         },
     )
-    page_count: PageCount | None = field(
+    page_count: None | PageCount = field(
         default=None,
         metadata={
             "name": "page-count",
             "type": "Element",
         },
     )
-    word_count: WordCount | None = field(
+    word_count: None | WordCount = field(
         default=None,
         metadata={
             "name": "word-count",
             "type": "Element",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",

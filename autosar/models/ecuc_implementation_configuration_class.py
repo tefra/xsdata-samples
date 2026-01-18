@@ -36,7 +36,7 @@ class EcucImplementationConfigurationClass:
     class Meta:
         name = "ECUC-IMPLEMENTATION-CONFIGURATION-CLASS"
 
-    config_class: EcucConfigurationClassEnum | None = field(
+    config_class: None | EcucConfigurationClassEnum = field(
         default=None,
         metadata={
             "name": "CONFIG-CLASS",
@@ -44,7 +44,7 @@ class EcucImplementationConfigurationClass:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    config_variant: EcucConfigurationVariantEnum | None = field(
+    config_variant: None | EcucConfigurationVariantEnum = field(
         default=None,
         metadata={
             "name": "CONFIG-VARIANT",
@@ -52,14 +52,14 @@ class EcucImplementationConfigurationClass:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

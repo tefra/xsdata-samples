@@ -149,7 +149,7 @@ class SystemTiming:
     class Meta:
         name = "SYSTEM-TIMING"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -158,7 +158,7 @@ class SystemTiming:
             "required": True,
         },
     )
-    short_name_fragments: SystemTiming.ShortNameFragments | None = field(
+    short_name_fragments: None | SystemTiming.ShortNameFragments = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -166,7 +166,7 @@ class SystemTiming:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -174,7 +174,7 @@ class SystemTiming:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -182,7 +182,7 @@ class SystemTiming:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -190,7 +190,7 @@ class SystemTiming:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -198,7 +198,7 @@ class SystemTiming:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -206,7 +206,7 @@ class SystemTiming:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: SystemTiming.Annotations | None = field(
+    annotations: None | SystemTiming.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -214,7 +214,7 @@ class SystemTiming:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -222,7 +222,7 @@ class SystemTiming:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    timing_conditions: SystemTiming.TimingConditions | None = field(
+    timing_conditions: None | SystemTiming.TimingConditions = field(
         default=None,
         metadata={
             "name": "TIMING-CONDITIONS",
@@ -230,7 +230,7 @@ class SystemTiming:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    timing_descriptions: SystemTiming.TimingDescriptions | None = field(
+    timing_descriptions: None | SystemTiming.TimingDescriptions = field(
         default=None,
         metadata={
             "name": "TIMING-DESCRIPTIONS",
@@ -238,7 +238,7 @@ class SystemTiming:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    timing_guarantees: SystemTiming.TimingGuarantees | None = field(
+    timing_guarantees: None | SystemTiming.TimingGuarantees = field(
         default=None,
         metadata={
             "name": "TIMING-GUARANTEES",
@@ -246,7 +246,7 @@ class SystemTiming:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    timing_requirements: SystemTiming.TimingRequirements | None = field(
+    timing_requirements: None | SystemTiming.TimingRequirements = field(
         default=None,
         metadata={
             "name": "TIMING-REQUIREMENTS",
@@ -254,7 +254,7 @@ class SystemTiming:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    timing_resource: TimingExtensionResource | None = field(
+    timing_resource: None | TimingExtensionResource = field(
         default=None,
         metadata={
             "name": "TIMING-RESOURCE",
@@ -262,7 +262,7 @@ class SystemTiming:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    system_ref: SystemTiming.SystemRef | None = field(
+    system_ref: None | SystemTiming.SystemRef = field(
         default=None,
         metadata={
             "name": "SYSTEM-REF",
@@ -270,14 +270,14 @@ class SystemTiming:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -285,7 +285,7 @@ class SystemTiming:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -741,7 +741,7 @@ class SystemTiming:
 
     @dataclass
     class SystemRef(Ref):
-        dest: SystemSubtypesEnum | None = field(
+        dest: None | SystemSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

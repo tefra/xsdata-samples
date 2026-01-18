@@ -87,7 +87,7 @@ class EndToEndDescription:
     class Meta:
         name = "END-TO-END-DESCRIPTION"
 
-    category: NmtokenString | None = field(
+    category: None | NmtokenString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -95,7 +95,7 @@ class EndToEndDescription:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    data_ids: EndToEndDescription.DataIds | None = field(
+    data_ids: None | EndToEndDescription.DataIds = field(
         default=None,
         metadata={
             "name": "DATA-IDS",
@@ -103,7 +103,7 @@ class EndToEndDescription:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    data_id_mode: PositiveInteger | None = field(
+    data_id_mode: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "DATA-ID-MODE",
@@ -111,7 +111,7 @@ class EndToEndDescription:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    data_length: PositiveInteger | None = field(
+    data_length: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "DATA-LENGTH",
@@ -119,7 +119,7 @@ class EndToEndDescription:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    max_delta_counter_init: PositiveInteger | None = field(
+    max_delta_counter_init: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "MAX-DELTA-COUNTER-INIT",
@@ -127,7 +127,7 @@ class EndToEndDescription:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    crc_offset: PositiveInteger | None = field(
+    crc_offset: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "CRC-OFFSET",
@@ -135,7 +135,7 @@ class EndToEndDescription:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    counter_offset: PositiveInteger | None = field(
+    counter_offset: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "COUNTER-OFFSET",
@@ -143,7 +143,7 @@ class EndToEndDescription:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    max_no_new_or_repeated_data: PositiveInteger | None = field(
+    max_no_new_or_repeated_data: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "MAX-NO-NEW-OR-REPEATED-DATA",
@@ -151,7 +151,7 @@ class EndToEndDescription:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sync_counter_init: PositiveInteger | None = field(
+    sync_counter_init: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "SYNC-COUNTER-INIT",
@@ -159,7 +159,7 @@ class EndToEndDescription:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    data_id_nibble_offset: PositiveInteger | None = field(
+    data_id_nibble_offset: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "DATA-ID-NIBBLE-OFFSET",
@@ -167,14 +167,14 @@ class EndToEndDescription:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

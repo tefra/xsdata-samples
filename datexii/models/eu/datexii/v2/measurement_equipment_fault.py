@@ -22,7 +22,7 @@ class MeasurementEquipmentFault(Fault):
     :ivar measurement_equipment_fault_extension:
     """
 
-    measurement_equipment_fault: MeasurementEquipmentFaultEnum | None = field(
+    measurement_equipment_fault: None | MeasurementEquipmentFaultEnum = field(
         default=None,
         metadata={
             "name": "measurementEquipmentFault",
@@ -31,7 +31,7 @@ class MeasurementEquipmentFault(Fault):
             "required": True,
         },
     )
-    measurement_equipment_fault_extension: ExtensionType | None = field(
+    measurement_equipment_fault_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "measurementEquipmentFaultExtension",

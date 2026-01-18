@@ -16,7 +16,7 @@ class DefaultInterchangeVersionStructure(DataManagedObjectStructure):
     class Meta:
         name = "DefaultInterchange_VersionStructure"
 
-    from_stop_point_ref: ScheduledStopPointRefStructure | None = field(
+    from_stop_point_ref: None | ScheduledStopPointRefStructure = field(
         default=None,
         metadata={
             "name": "FromStopPointRef",
@@ -24,7 +24,7 @@ class DefaultInterchangeVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    to_stop_point_ref: ScheduledStopPointRefStructure | None = field(
+    to_stop_point_ref: None | ScheduledStopPointRefStructure = field(
         default=None,
         metadata={
             "name": "ToStopPointRef",
@@ -32,7 +32,7 @@ class DefaultInterchangeVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    description: MultilingualString | None = field(
+    description: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "Description",
@@ -40,7 +40,7 @@ class DefaultInterchangeVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    standard_wait_time: XmlDuration | None = field(
+    standard_wait_time: None | XmlDuration = field(
         default=None,
         metadata={
             "name": "StandardWaitTime",
@@ -48,7 +48,7 @@ class DefaultInterchangeVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    maximum_wait_time: XmlDuration | None = field(
+    maximum_wait_time: None | XmlDuration = field(
         default=None,
         metadata={
             "name": "MaximumWaitTime",
@@ -56,7 +56,7 @@ class DefaultInterchangeVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    maximum_automatic_wait_time: XmlDuration | None = field(
+    maximum_automatic_wait_time: None | XmlDuration = field(
         default=None,
         metadata={
             "name": "MaximumAutomaticWaitTime",
@@ -64,7 +64,7 @@ class DefaultInterchangeVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    standard_transfer_time: XmlDuration | None = field(
+    standard_transfer_time: None | XmlDuration = field(
         default=None,
         metadata={
             "name": "StandardTransferTime",
@@ -72,7 +72,7 @@ class DefaultInterchangeVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    minimum_transfer_time: XmlDuration | None = field(
+    minimum_transfer_time: None | XmlDuration = field(
         default=None,
         metadata={
             "name": "MinimumTransferTime",
@@ -80,7 +80,7 @@ class DefaultInterchangeVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    maximum_transfer_time: XmlDuration | None = field(
+    maximum_transfer_time: None | XmlDuration = field(
         default=None,
         metadata={
             "name": "MaximumTransferTime",

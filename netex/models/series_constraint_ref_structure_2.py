@@ -12,7 +12,7 @@ class SeriesConstraintRefStructure2(PriceableObjectRefStructure):
     class Meta:
         name = "SeriesConstraintRefStructure_"
 
-    order: int | None = field(
+    order: None | int = field(
         default=None,
         metadata={
             "type": "Attribute",

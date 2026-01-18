@@ -32,7 +32,8 @@ class FlexibleServicePropertiesVersionStructure(DataManagedObjectStructure):
         name = "FlexibleServiceProperties_VersionStructure"
 
     choice: (
-        SingleJourneyRef
+        None
+        | SingleJourneyRef
         | DatedVehicleJourneyRef
         | DatedSpecialServiceRef
         | SpecialServiceRef
@@ -40,7 +41,6 @@ class FlexibleServicePropertiesVersionStructure(DataManagedObjectStructure):
         | ServiceJourneyRef
         | DeadRunRef
         | VehicleJourneyRef
-        | None
     ) = field(
         default=None,
         metadata={
@@ -89,7 +89,7 @@ class FlexibleServicePropertiesVersionStructure(DataManagedObjectStructure):
             ),
         },
     )
-    type_of_flexible_service_ref: TypeOfFlexibleServiceRef | None = field(
+    type_of_flexible_service_ref: None | TypeOfFlexibleServiceRef = field(
         default=None,
         metadata={
             "name": "TypeOfFlexibleServiceRef",
@@ -97,7 +97,7 @@ class FlexibleServicePropertiesVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    flexible_service_type: FlexibleServiceEnumeration | None = field(
+    flexible_service_type: None | FlexibleServiceEnumeration = field(
         default=None,
         metadata={
             "name": "FlexibleServiceType",
@@ -105,7 +105,7 @@ class FlexibleServicePropertiesVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    cancellation_possible: bool | None = field(
+    cancellation_possible: None | bool = field(
         default=None,
         metadata={
             "name": "CancellationPossible",
@@ -113,7 +113,7 @@ class FlexibleServicePropertiesVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    change_of_time_possible: bool | None = field(
+    change_of_time_possible: None | bool = field(
         default=None,
         metadata={
             "name": "ChangeOfTimePossible",
@@ -121,7 +121,7 @@ class FlexibleServicePropertiesVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    booking_contact: ContactStructure | None = field(
+    booking_contact: None | ContactStructure = field(
         default=None,
         metadata={
             "name": "BookingContact",
@@ -138,7 +138,7 @@ class FlexibleServicePropertiesVersionStructure(DataManagedObjectStructure):
             "tokens": True,
         },
     )
-    booking_access: BookingAccessEnumeration | None = field(
+    booking_access: None | BookingAccessEnumeration = field(
         default=None,
         metadata={
             "name": "BookingAccess",
@@ -146,7 +146,7 @@ class FlexibleServicePropertiesVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    book_when: PurchaseWhenEnumeration | None = field(
+    book_when: None | PurchaseWhenEnumeration = field(
         default=None,
         metadata={
             "name": "BookWhen",
@@ -163,7 +163,7 @@ class FlexibleServicePropertiesVersionStructure(DataManagedObjectStructure):
             "tokens": True,
         },
     )
-    latest_booking_time: XmlTime | None = field(
+    latest_booking_time: None | XmlTime = field(
         default=None,
         metadata={
             "name": "LatestBookingTime",
@@ -171,7 +171,7 @@ class FlexibleServicePropertiesVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    minimum_booking_period: XmlDuration | None = field(
+    minimum_booking_period: None | XmlDuration = field(
         default=None,
         metadata={
             "name": "MinimumBookingPeriod",
@@ -179,7 +179,7 @@ class FlexibleServicePropertiesVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    maximum_booking_period: XmlDuration | None = field(
+    maximum_booking_period: None | XmlDuration = field(
         default=None,
         metadata={
             "name": "MaximumBookingPeriod",
@@ -187,7 +187,7 @@ class FlexibleServicePropertiesVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    booking_url: str | None = field(
+    booking_url: None | str = field(
         default=None,
         metadata={
             "name": "BookingUrl",
@@ -195,7 +195,7 @@ class FlexibleServicePropertiesVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    booking_note: MultilingualString | None = field(
+    booking_note: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "BookingNote",

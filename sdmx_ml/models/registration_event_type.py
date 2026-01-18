@@ -17,7 +17,7 @@ class RegistrationEventType:
         data or metadata registration.
     """
 
-    registration: RegistrationType | None = field(
+    registration: None | RegistrationType = field(
         default=None,
         metadata={
             "name": "Registration",

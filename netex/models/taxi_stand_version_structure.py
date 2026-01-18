@@ -14,7 +14,7 @@ class TaxiStandVersionStructure(QuayVersionStructure):
     class Meta:
         name = "TaxiStand_VersionStructure"
 
-    maximum_standing_duration: XmlDuration | None = field(
+    maximum_standing_duration: None | XmlDuration = field(
         default=None,
         metadata={
             "name": "MaximumStandingDuration",

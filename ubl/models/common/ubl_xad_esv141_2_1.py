@@ -19,7 +19,7 @@ class ArchiveTimeStampV2(XadEstimeStampType):
 
 @dataclass(frozen=True)
 class ValidationDataType:
-    certificate_values: CertificateValues | None = field(
+    certificate_values: None | CertificateValues = field(
         default=None,
         metadata={
             "name": "CertificateValues",
@@ -27,7 +27,7 @@ class ValidationDataType:
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
         },
     )
-    revocation_values: RevocationValues | None = field(
+    revocation_values: None | RevocationValues = field(
         default=None,
         metadata={
             "name": "RevocationValues",
@@ -35,14 +35,14 @@ class ValidationDataType:
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "name": "Id",
             "type": "Attribute",
         },
     )
-    ur: str | None = field(
+    ur: None | str = field(
         default=None,
         metadata={
             "name": "UR",

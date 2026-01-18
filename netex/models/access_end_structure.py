@@ -11,7 +11,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 @dataclass
 class AccessEndStructure:
-    transport_mode: AllModesEnumeration | None = field(
+    transport_mode: None | AllModesEnumeration = field(
         default=None,
         metadata={
             "name": "TransportMode",
@@ -19,7 +19,7 @@ class AccessEndStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    place_ref: PlaceRefStructure | None = field(
+    place_ref: None | PlaceRefStructure = field(
         default=None,
         metadata={
             "name": "PlaceRef",
@@ -27,7 +27,7 @@ class AccessEndStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    point_ref: PointRefStructure | None = field(
+    point_ref: None | PointRefStructure = field(
         default=None,
         metadata={
             "name": "PointRef",

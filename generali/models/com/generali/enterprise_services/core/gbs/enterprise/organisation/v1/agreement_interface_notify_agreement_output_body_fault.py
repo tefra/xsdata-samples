@@ -10,28 +10,28 @@ class AgreementInterfaceNotifyAgreementOutputBodyFault:
     class Meta:
         global_type = False
 
-    faultcode: str | None = field(
+    faultcode: None | str = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "",
         },
     )
-    faultstring: str | None = field(
+    faultstring: None | str = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "",
         },
     )
-    faultactor: str | None = field(
+    faultactor: None | str = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "",
         },
     )
-    detail: str | None = field(
+    detail: None | str = field(
         default=None,
         metadata={
             "type": "Element",

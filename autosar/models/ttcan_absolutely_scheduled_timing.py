@@ -43,7 +43,7 @@ class TtcanAbsolutelyScheduledTiming:
         name = "TTCAN-ABSOLUTELY-SCHEDULED-TIMING"
 
     communication_cycle: (
-        TtcanAbsolutelyScheduledTiming.CommunicationCycle | None
+        None | TtcanAbsolutelyScheduledTiming.CommunicationCycle
     ) = field(
         default=None,
         metadata={
@@ -52,7 +52,7 @@ class TtcanAbsolutelyScheduledTiming:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    time_mark: Integer | None = field(
+    time_mark: None | Integer = field(
         default=None,
         metadata={
             "name": "TIME-MARK",
@@ -60,7 +60,7 @@ class TtcanAbsolutelyScheduledTiming:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    trigger: TtcanTriggerType | None = field(
+    trigger: None | TtcanTriggerType = field(
         default=None,
         metadata={
             "name": "TRIGGER",
@@ -68,14 +68,14 @@ class TtcanAbsolutelyScheduledTiming:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -86,7 +86,7 @@ class TtcanAbsolutelyScheduledTiming:
 
     @dataclass
     class CommunicationCycle:
-        cycle_counter: CycleCounter | None = field(
+        cycle_counter: None | CycleCounter = field(
             default=None,
             metadata={
                 "name": "CYCLE-COUNTER",
@@ -94,7 +94,7 @@ class TtcanAbsolutelyScheduledTiming:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        cycle_repetition: CycleRepetition | None = field(
+        cycle_repetition: None | CycleRepetition = field(
             default=None,
             metadata={
                 "name": "CYCLE-REPETITION",

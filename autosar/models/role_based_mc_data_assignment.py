@@ -54,7 +54,7 @@ class RoleBasedMcDataAssignment:
         name = "ROLE-BASED-MC-DATA-ASSIGNMENT"
 
     execution_context_refs: (
-        RoleBasedMcDataAssignment.ExecutionContextRefs | None
+        None | RoleBasedMcDataAssignment.ExecutionContextRefs
     ) = field(
         default=None,
         metadata={
@@ -64,7 +64,7 @@ class RoleBasedMcDataAssignment:
         },
     )
     mc_data_instance_refs: (
-        RoleBasedMcDataAssignment.McDataInstanceRefs | None
+        None | RoleBasedMcDataAssignment.McDataInstanceRefs
     ) = field(
         default=None,
         metadata={
@@ -73,7 +73,7 @@ class RoleBasedMcDataAssignment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    role: Identifier | None = field(
+    role: None | Identifier = field(
         default=None,
         metadata={
             "name": "ROLE",
@@ -81,7 +81,7 @@ class RoleBasedMcDataAssignment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -89,14 +89,14 @@ class RoleBasedMcDataAssignment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -120,7 +120,7 @@ class RoleBasedMcDataAssignment:
 
         @dataclass
         class ExecutionContextRef(Ref):
-            dest: RptExecutionContextSubtypesEnum | None = field(
+            dest: None | RptExecutionContextSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -144,7 +144,7 @@ class RoleBasedMcDataAssignment:
 
         @dataclass
         class McDataInstanceRef(Ref):
-            dest: McDataInstanceSubtypesEnum | None = field(
+            dest: None | McDataInstanceSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",

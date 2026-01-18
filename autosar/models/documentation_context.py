@@ -47,7 +47,7 @@ class DocumentationContext:
     class Meta:
         name = "DOCUMENTATION-CONTEXT"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -56,7 +56,7 @@ class DocumentationContext:
             "required": True,
         },
     )
-    short_name_fragments: DocumentationContext.ShortNameFragments | None = (
+    short_name_fragments: None | DocumentationContext.ShortNameFragments = (
         field(
             default=None,
             metadata={
@@ -66,7 +66,7 @@ class DocumentationContext:
             },
         )
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -74,7 +74,7 @@ class DocumentationContext:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    feature_iref: AnyInstanceRef | None = field(
+    feature_iref: None | AnyInstanceRef = field(
         default=None,
         metadata={
             "name": "FEATURE-IREF",
@@ -82,7 +82,7 @@ class DocumentationContext:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    identifiable_ref: DocumentationContext.IdentifiableRef | None = field(
+    identifiable_ref: None | DocumentationContext.IdentifiableRef = field(
         default=None,
         metadata={
             "name": "IDENTIFIABLE-REF",
@@ -90,14 +90,14 @@ class DocumentationContext:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -119,7 +119,7 @@ class DocumentationContext:
 
     @dataclass
     class IdentifiableRef(Ref):
-        dest: IdentifiableSubtypesEnum | None = field(
+        dest: None | IdentifiableSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

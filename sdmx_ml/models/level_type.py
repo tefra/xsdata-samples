@@ -23,7 +23,7 @@ class LevelType(LevelBaseType):
     :ivar level: Level describes the next level down in the hierarchy.
     """
 
-    coding_format: CodingTextFormatType | None = field(
+    coding_format: None | CodingTextFormatType = field(
         default=None,
         metadata={
             "name": "CodingFormat",
@@ -31,7 +31,7 @@ class LevelType(LevelBaseType):
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
         },
     )
-    level: LevelType | None = field(
+    level: None | LevelType = field(
         default=None,
         metadata={
             "name": "Level",

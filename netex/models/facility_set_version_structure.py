@@ -41,7 +41,7 @@ class FacilitySetVersionStructure(DataManagedObjectStructure):
     class Meta:
         name = "FacilitySet_VersionStructure"
 
-    provided_by_ref: OrganisationRefStructure | None = field(
+    provided_by_ref: None | OrganisationRefStructure = field(
         default=None,
         metadata={
             "name": "ProvidedByRef",
@@ -49,7 +49,7 @@ class FacilitySetVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    description: MultilingualString | None = field(
+    description: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "Description",
@@ -57,7 +57,7 @@ class FacilitySetVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    type_of_facility_ref: TypeOfFacilityRef | None = field(
+    type_of_facility_ref: None | TypeOfFacilityRef = field(
         default=None,
         metadata={
             "name": "TypeOfFacilityRef",
@@ -65,7 +65,7 @@ class FacilitySetVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    other_facilities: TypesOfEquipmentRelStructure | None = field(
+    other_facilities: None | TypesOfEquipmentRelStructure = field(
         default=None,
         metadata={
             "name": "otherFacilities",
@@ -73,7 +73,7 @@ class FacilitySetVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    accessibility_info_facility_list: AccessibilityInfoFacilityList | None = (
+    accessibility_info_facility_list: None | AccessibilityInfoFacilityList = (
         field(
             default=None,
             metadata={
@@ -83,7 +83,7 @@ class FacilitySetVersionStructure(DataManagedObjectStructure):
             },
         )
     )
-    assistance_facility_list: AssistanceFacilityList | None = field(
+    assistance_facility_list: None | AssistanceFacilityList = field(
         default=None,
         metadata={
             "name": "AssistanceFacilityList",
@@ -91,7 +91,7 @@ class FacilitySetVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    accessibility_tool_list: AccessibilityToolList | None = field(
+    accessibility_tool_list: None | AccessibilityToolList = field(
         default=None,
         metadata={
             "name": "AccessibilityToolList",
@@ -99,7 +99,7 @@ class FacilitySetVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    car_service_facility_list: CarServiceFacilityList | None = field(
+    car_service_facility_list: None | CarServiceFacilityList = field(
         default=None,
         metadata={
             "name": "CarServiceFacilityList",
@@ -107,7 +107,7 @@ class FacilitySetVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    catering_facility_list: CateringFacilityList | None = field(
+    catering_facility_list: None | CateringFacilityList = field(
         default=None,
         metadata={
             "name": "CateringFacilityList",
@@ -115,7 +115,7 @@ class FacilitySetVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    family_facility_list: FamilyFacilityList | None = field(
+    family_facility_list: None | FamilyFacilityList = field(
         default=None,
         metadata={
             "name": "FamilyFacilityList",
@@ -123,7 +123,7 @@ class FacilitySetVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    fare_classes: FareClasses | None = field(
+    fare_classes: None | FareClasses = field(
         default=None,
         metadata={
             "name": "FareClasses",
@@ -131,7 +131,7 @@ class FacilitySetVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    gender_limitation: GenderLimitation | None = field(
+    gender_limitation: None | GenderLimitation = field(
         default=None,
         metadata={
             "name": "GenderLimitation",
@@ -139,7 +139,7 @@ class FacilitySetVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    meal_facility_list: MealFacilityList | None = field(
+    meal_facility_list: None | MealFacilityList = field(
         default=None,
         metadata={
             "name": "MealFacilityList",
@@ -147,7 +147,7 @@ class FacilitySetVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    medical_facility_list: MedicalFacilityList | None = field(
+    medical_facility_list: None | MedicalFacilityList = field(
         default=None,
         metadata={
             "name": "MedicalFacilityList",
@@ -155,7 +155,7 @@ class FacilitySetVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    mobility_facility_list: MobilityFacilityList | None = field(
+    mobility_facility_list: None | MobilityFacilityList = field(
         default=None,
         metadata={
             "name": "MobilityFacilityList",
@@ -163,7 +163,7 @@ class FacilitySetVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    nuisance_facility_list: NuisanceFacilityList | None = field(
+    nuisance_facility_list: None | NuisanceFacilityList = field(
         default=None,
         metadata={
             "name": "NuisanceFacilityList",
@@ -171,7 +171,7 @@ class FacilitySetVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    passenger_comms_facility_list: PassengerCommsFacilityList | None = field(
+    passenger_comms_facility_list: None | PassengerCommsFacilityList = field(
         default=None,
         metadata={
             "name": "PassengerCommsFacilityList",
@@ -191,7 +191,7 @@ class FacilitySetVersionStructure(DataManagedObjectStructure):
         },
     )
     passenger_information_facility_list: (
-        PassengerInformationFacilityList | None
+        None | PassengerInformationFacilityList
     ) = field(
         default=None,
         metadata={
@@ -200,7 +200,7 @@ class FacilitySetVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    retail_facility_list: RetailFacilityList | None = field(
+    retail_facility_list: None | RetailFacilityList = field(
         default=None,
         metadata={
             "name": "RetailFacilityList",
@@ -208,7 +208,7 @@ class FacilitySetVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    safety_facility_list: SafetyFacilityList | None = field(
+    safety_facility_list: None | SafetyFacilityList = field(
         default=None,
         metadata={
             "name": "SafetyFacilityList",
@@ -216,7 +216,7 @@ class FacilitySetVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    sanitary_facility_list: SanitaryFacilityList | None = field(
+    sanitary_facility_list: None | SanitaryFacilityList = field(
         default=None,
         metadata={
             "name": "SanitaryFacilityList",
@@ -224,7 +224,7 @@ class FacilitySetVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    ticketing_facility_list: TicketingFacilityList | None = field(
+    ticketing_facility_list: None | TicketingFacilityList = field(
         default=None,
         metadata={
             "name": "TicketingFacilityList",
@@ -232,7 +232,7 @@ class FacilitySetVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    ticketing_service_facility_list: TicketingServiceFacilityList | None = (
+    ticketing_service_facility_list: None | TicketingServiceFacilityList = (
         field(
             default=None,
             metadata={

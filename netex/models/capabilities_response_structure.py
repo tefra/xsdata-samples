@@ -11,7 +11,7 @@ __NAMESPACE__ = "http://www.siri.org.uk/siri"
 @dataclass
 class CapabilitiesResponseStructure(ProducerResponseStructure):
     data_object_capabilities_response: (
-        DataObjectCapabilitiesResponse | None
+        None | DataObjectCapabilitiesResponse
     ) = field(
         default=None,
         metadata={

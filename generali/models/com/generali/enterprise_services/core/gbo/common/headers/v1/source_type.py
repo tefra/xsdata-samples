@@ -23,7 +23,7 @@ class SourceType(BaseSystemTraceabilityType):
         which the message was sent.</description>
     """
 
-    sent_date_time: XmlDateTime | None = field(
+    sent_date_time: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "SentDateTime",

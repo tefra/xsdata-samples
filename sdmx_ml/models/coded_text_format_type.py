@@ -36,7 +36,7 @@ class CodedTextFormatType(SimpleComponentTextFormatType):
             "type": "Ignore",
         },
     )
-    text_type: CodeDataType | None = field(
+    text_type: None | CodeDataType = field(
         default=None,
         metadata={
             "name": "textType",

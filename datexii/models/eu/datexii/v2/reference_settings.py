@@ -30,7 +30,7 @@ class ReferenceSettings:
     """
 
     predefined_non_ordered_location_group_reference: (
-        PredefinedNonOrderedLocationGroupVersionedReference | None
+        None | PredefinedNonOrderedLocationGroupVersionedReference
     ) = field(
         default=None,
         metadata={
@@ -39,7 +39,7 @@ class ReferenceSettings:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    traffic_status_default: TrafficStatusEnum | None = field(
+    traffic_status_default: None | TrafficStatusEnum = field(
         default=None,
         metadata={
             "name": "trafficStatusDefault",
@@ -47,7 +47,7 @@ class ReferenceSettings:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    reference_settings_extension: ExtensionType | None = field(
+    reference_settings_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "referenceSettingsExtension",

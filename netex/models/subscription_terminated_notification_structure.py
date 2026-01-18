@@ -40,7 +40,7 @@ class SubscriptionTerminatedNotificationStructure(ProducerResponseStructure):
             "min_occurs": 1,
         },
     )
-    description: ErrorDescriptionStructure | None = field(
+    description: None | ErrorDescriptionStructure = field(
         default=None,
         metadata={
             "name": "Description",
@@ -48,7 +48,7 @@ class SubscriptionTerminatedNotificationStructure(ProducerResponseStructure):
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    extensions: Extensions1 | None = field(
+    extensions: None | Extensions1 = field(
         default=None,
         metadata={
             "name": "Extensions",

@@ -39,14 +39,14 @@ class ConditionByFormula:
     class Meta:
         name = "CONDITION-BY-FORMULA"
 
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -54,7 +54,7 @@ class ConditionByFormula:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    binding_time: BindingTimeEnumSimple | None = field(
+    binding_time: None | BindingTimeEnumSimple = field(
         default=None,
         metadata={
             "name": "BINDING-TIME",
@@ -84,7 +84,7 @@ class ConditionByFormula:
 
     @dataclass
     class SyscStringRef(Ref):
-        dest: SwSystemconstSubtypesEnum | None = field(
+        dest: None | SwSystemconstSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -95,7 +95,7 @@ class ConditionByFormula:
 
     @dataclass
     class SyscRef(Ref):
-        dest: SwSystemconstSubtypesEnum | None = field(
+        dest: None | SwSystemconstSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

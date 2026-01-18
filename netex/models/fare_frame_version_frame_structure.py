@@ -105,7 +105,7 @@ class FareFrameVersionFrameStructure(CommonVersionFrameStructure):
     class Meta:
         name = "FareFrame_VersionFrameStructure"
 
-    mode: AllVehicleModesOfTransportEnumeration | None = field(
+    mode: None | AllVehicleModesOfTransportEnumeration = field(
         default=None,
         metadata={
             "name": "Mode",
@@ -113,7 +113,7 @@ class FareFrameVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    transport_organisation_ref: AuthorityRef | OperatorRef | None = field(
+    transport_organisation_ref: None | AuthorityRef | OperatorRef = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -131,7 +131,7 @@ class FareFrameVersionFrameStructure(CommonVersionFrameStructure):
             ),
         },
     )
-    pricing_parameter_set: PricingParameterSet | None = field(
+    pricing_parameter_set: None | PricingParameterSet = field(
         default=None,
         metadata={
             "name": "PricingParameterSet",
@@ -139,14 +139,14 @@ class FareFrameVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    notices: NoticesInFrameRelStructure | None = field(
+    notices: None | NoticesInFrameRelStructure = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    notice_assignments: NoticeAssignmentsInFrameRelStructure | None = field(
+    notice_assignments: None | NoticeAssignmentsInFrameRelStructure = field(
         default=None,
         metadata={
             "name": "noticeAssignments",
@@ -154,7 +154,7 @@ class FareFrameVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    border_points: BorderPointsInFrameRelStructure | None = field(
+    border_points: None | BorderPointsInFrameRelStructure = field(
         default=None,
         metadata={
             "name": "borderPoints",
@@ -163,7 +163,7 @@ class FareFrameVersionFrameStructure(CommonVersionFrameStructure):
         },
     )
     fare_scheduled_stop_points: (
-        FareScheduledStopPointsInFrameRelStructure | None
+        None | FareScheduledStopPointsInFrameRelStructure
     ) = field(
         default=None,
         metadata={
@@ -172,7 +172,7 @@ class FareFrameVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    fare_zones: FareZonesInFrameRelStructure | None = field(
+    fare_zones: None | FareZonesInFrameRelStructure = field(
         default=None,
         metadata={
             "name": "fareZones",
@@ -180,7 +180,7 @@ class FareFrameVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    fare_sections: FareSectionsInFrameRelStructure | None = field(
+    fare_sections: None | FareSectionsInFrameRelStructure = field(
         default=None,
         metadata={
             "name": "fareSections",
@@ -188,7 +188,7 @@ class FareFrameVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    series_constraints: FareSeriesInFrameRelStructure | None = field(
+    series_constraints: None | FareSeriesInFrameRelStructure = field(
         default=None,
         metadata={
             "name": "seriesConstraints",
@@ -196,7 +196,7 @@ class FareFrameVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    geographical_units: GeographicalUnitsRelStructure | None = field(
+    geographical_units: None | GeographicalUnitsRelStructure = field(
         default=None,
         metadata={
             "name": "geographicalUnits",
@@ -204,7 +204,7 @@ class FareFrameVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    geographical_intervals: GeographicalIntervalsRelStructure | None = field(
+    geographical_intervals: None | GeographicalIntervalsRelStructure = field(
         default=None,
         metadata={
             "name": "geographicalIntervals",
@@ -213,7 +213,7 @@ class FareFrameVersionFrameStructure(CommonVersionFrameStructure):
         },
     )
     geographical_structure_factors: (
-        GeographicalStructureFactorsRelStructure | None
+        None | GeographicalStructureFactorsRelStructure
     ) = field(
         default=None,
         metadata={
@@ -222,7 +222,7 @@ class FareFrameVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    time_units: TimeUnitsRelStructure | None = field(
+    time_units: None | TimeUnitsRelStructure = field(
         default=None,
         metadata={
             "name": "timeUnits",
@@ -230,7 +230,7 @@ class FareFrameVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    time_intervals: TimeIntervalsRelStructure | None = field(
+    time_intervals: None | TimeIntervalsRelStructure = field(
         default=None,
         metadata={
             "name": "timeIntervals",
@@ -238,7 +238,7 @@ class FareFrameVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    time_structure_factors: TimeStructureFactorsRelStructure | None = field(
+    time_structure_factors: None | TimeStructureFactorsRelStructure = field(
         default=None,
         metadata={
             "name": "timeStructureFactors",
@@ -246,7 +246,7 @@ class FareFrameVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    quality_structure_factors: QualityStructureFactorsRelStructure | None = (
+    quality_structure_factors: None | QualityStructureFactorsRelStructure = (
         field(
             default=None,
             metadata={
@@ -256,7 +256,7 @@ class FareFrameVersionFrameStructure(CommonVersionFrameStructure):
             },
         )
     )
-    distance_matrix_elements: DistanceMatrixElementsRelStructure | None = (
+    distance_matrix_elements: None | DistanceMatrixElementsRelStructure = (
         field(
             default=None,
             metadata={
@@ -267,7 +267,7 @@ class FareFrameVersionFrameStructure(CommonVersionFrameStructure):
         )
     )
     groups_of_distance_matrix_elements: (
-        GroupsOfDistanceMatrixElementsRelStructure | None
+        None | GroupsOfDistanceMatrixElementsRelStructure
     ) = field(
         default=None,
         metadata={
@@ -277,7 +277,7 @@ class FareFrameVersionFrameStructure(CommonVersionFrameStructure):
         },
     )
     fare_structure_elements: (
-        FareStructureElementsInFrameRelStructure | None
+        None | FareStructureElementsInFrameRelStructure
     ) = field(
         default=None,
         metadata={
@@ -286,14 +286,14 @@ class FareFrameVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    tariffs: TariffsInFrameRelStructure | None = field(
+    tariffs: None | TariffsInFrameRelStructure = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    validable_elements: ValidableElementsInFrameRelStructure | None = field(
+    validable_elements: None | ValidableElementsInFrameRelStructure = field(
         default=None,
         metadata={
             "name": "validableElements",
@@ -301,7 +301,7 @@ class FareFrameVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    controllable_elements: ControllableElementsInFrameRelStructure | None = (
+    controllable_elements: None | ControllableElementsInFrameRelStructure = (
         field(
             default=None,
             metadata={
@@ -311,7 +311,7 @@ class FareFrameVersionFrameStructure(CommonVersionFrameStructure):
             },
         )
     )
-    usage_parameters: UsageParametersInFrameRelStructure | None = field(
+    usage_parameters: None | UsageParametersInFrameRelStructure = field(
         default=None,
         metadata={
             "name": "usageParameters",
@@ -320,7 +320,7 @@ class FareFrameVersionFrameStructure(CommonVersionFrameStructure):
         },
     )
     access_right_parameter_assignments: (
-        AccessRightParameterAssignmentsInFrameRelStructure | None
+        None | AccessRightParameterAssignmentsInFrameRelStructure
     ) = field(
         default=None,
         metadata={
@@ -329,7 +329,7 @@ class FareFrameVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    fare_products: FareProductsInFrameRelStructure | None = field(
+    fare_products: None | FareProductsInFrameRelStructure = field(
         default=None,
         metadata={
             "name": "fareProducts",
@@ -337,7 +337,7 @@ class FareFrameVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    price_groups: FarePricesInFrameRelStructure | None = field(
+    price_groups: None | FarePricesInFrameRelStructure = field(
         default=None,
         metadata={
             "name": "priceGroups",
@@ -345,7 +345,7 @@ class FareFrameVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    fare_tables: FareTablesInFrameRelStructure | None = field(
+    fare_tables: None | FareTablesInFrameRelStructure = field(
         default=None,
         metadata={
             "name": "fareTables",
@@ -353,7 +353,7 @@ class FareFrameVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    distribution_channels: DistributionChannelsInFrameRelStructure | None = (
+    distribution_channels: None | DistributionChannelsInFrameRelStructure = (
         field(
             default=None,
             metadata={
@@ -364,7 +364,7 @@ class FareFrameVersionFrameStructure(CommonVersionFrameStructure):
         )
     )
     groups_of_distribution_channels: (
-        GroupsOfDistributionChannelsInFrameRelStructure | None
+        None | GroupsOfDistributionChannelsInFrameRelStructure
     ) = field(
         default=None,
         metadata={
@@ -373,7 +373,7 @@ class FareFrameVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    fulfilment_methods: FulfilmentMethodsInFrameRelStructure | None = field(
+    fulfilment_methods: None | FulfilmentMethodsInFrameRelStructure = field(
         default=None,
         metadata={
             "name": "fulfilmentMethods",
@@ -382,7 +382,7 @@ class FareFrameVersionFrameStructure(CommonVersionFrameStructure):
         },
     )
     types_of_travel_documents: (
-        TypesOfTravelDocumentInFrameRelStructure | None
+        None | TypesOfTravelDocumentInFrameRelStructure
     ) = field(
         default=None,
         metadata={
@@ -391,7 +391,7 @@ class FareFrameVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    sales_offer_packages: SalesOfferPackagesInFrameRelStructure | None = field(
+    sales_offer_packages: None | SalesOfferPackagesInFrameRelStructure = field(
         default=None,
         metadata={
             "name": "salesOfferPackages",
@@ -400,7 +400,7 @@ class FareFrameVersionFrameStructure(CommonVersionFrameStructure):
         },
     )
     sales_offer_package_elements: (
-        SalesOfferPackageElementsInFrameRelStructure | None
+        None | SalesOfferPackageElementsInFrameRelStructure
     ) = field(
         default=None,
         metadata={
@@ -410,7 +410,7 @@ class FareFrameVersionFrameStructure(CommonVersionFrameStructure):
         },
     )
     sales_offer_package_substitutions: (
-        SalesOfferPackageSubstitutionsInFrameRelStructure | None
+        None | SalesOfferPackageSubstitutionsInFrameRelStructure
     ) = field(
         default=None,
         metadata={
@@ -420,7 +420,7 @@ class FareFrameVersionFrameStructure(CommonVersionFrameStructure):
         },
     )
     groups_of_sales_offer_packages: (
-        GroupsOfSalesOfferPackagesInFrameRelStructure | None
+        None | GroupsOfSalesOfferPackagesInFrameRelStructure
     ) = field(
         default=None,
         metadata={
@@ -430,7 +430,7 @@ class FareFrameVersionFrameStructure(CommonVersionFrameStructure):
         },
     )
     distribution_assignments: (
-        DistributionAssignmentsInFrameRelStructure | None
+        None | DistributionAssignmentsInFrameRelStructure
     ) = field(
         default=None,
         metadata={
@@ -439,7 +439,7 @@ class FareFrameVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    parking_tariffs: ParkingTariffsInFrameRelStructure | None = field(
+    parking_tariffs: None | ParkingTariffsInFrameRelStructure = field(
         default=None,
         metadata={
             "name": "parkingTariffs",

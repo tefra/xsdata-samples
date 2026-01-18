@@ -23,7 +23,7 @@ class RegistrationRequestType:
         addition, a modification, or a deletion of a registration.
     """
 
-    registration: RegistrationType | None = field(
+    registration: None | RegistrationType = field(
         default=None,
         metadata={
             "name": "Registration",
@@ -32,7 +32,7 @@ class RegistrationRequestType:
             "required": True,
         },
     )
-    action: ActionType | None = field(
+    action: None | ActionType = field(
         default=None,
         metadata={
             "type": "Attribute",

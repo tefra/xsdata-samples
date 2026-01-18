@@ -85,7 +85,7 @@ class ServiceInterfaceMapping:
     class Meta:
         name = "SERVICE-INTERFACE-MAPPING"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -94,7 +94,7 @@ class ServiceInterfaceMapping:
             "required": True,
         },
     )
-    short_name_fragments: ServiceInterfaceMapping.ShortNameFragments | None = (
+    short_name_fragments: None | ServiceInterfaceMapping.ShortNameFragments = (
         field(
             default=None,
             metadata={
@@ -104,7 +104,7 @@ class ServiceInterfaceMapping:
             },
         )
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -112,7 +112,7 @@ class ServiceInterfaceMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -120,7 +120,7 @@ class ServiceInterfaceMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -128,7 +128,7 @@ class ServiceInterfaceMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -136,7 +136,7 @@ class ServiceInterfaceMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -144,7 +144,7 @@ class ServiceInterfaceMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: ServiceInterfaceMapping.Annotations | None = field(
+    annotations: None | ServiceInterfaceMapping.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -153,7 +153,7 @@ class ServiceInterfaceMapping:
         },
     )
     composite_service_interface_ref: (
-        ServiceInterfaceMapping.CompositeServiceInterfaceRef | None
+        None | ServiceInterfaceMapping.CompositeServiceInterfaceRef
     ) = field(
         default=None,
         metadata={
@@ -163,7 +163,7 @@ class ServiceInterfaceMapping:
         },
     )
     source_service_interface_refs: (
-        ServiceInterfaceMapping.SourceServiceInterfaceRefs | None
+        None | ServiceInterfaceMapping.SourceServiceInterfaceRefs
     ) = field(
         default=None,
         metadata={
@@ -172,14 +172,14 @@ class ServiceInterfaceMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -187,7 +187,7 @@ class ServiceInterfaceMapping:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -219,7 +219,7 @@ class ServiceInterfaceMapping:
 
     @dataclass
     class CompositeServiceInterfaceRef(Ref):
-        dest: ServiceInterfaceSubtypesEnum | None = field(
+        dest: None | ServiceInterfaceSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -243,7 +243,7 @@ class ServiceInterfaceMapping:
 
         @dataclass
         class SourceServiceInterfaceRef(Ref):
-            dest: ServiceInterfaceSubtypesEnum | None = field(
+            dest: None | ServiceInterfaceSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",

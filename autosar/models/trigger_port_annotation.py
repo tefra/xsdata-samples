@@ -38,7 +38,7 @@ class TriggerPortAnnotation:
     class Meta:
         name = "TRIGGER-PORT-ANNOTATION"
 
-    label: MultilanguageLongName | None = field(
+    label: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LABEL",
@@ -46,7 +46,7 @@ class TriggerPortAnnotation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotation_origin: String | None = field(
+    annotation_origin: None | String = field(
         default=None,
         metadata={
             "name": "ANNOTATION-ORIGIN",
@@ -54,7 +54,7 @@ class TriggerPortAnnotation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotation_text: DocumentationBlock | None = field(
+    annotation_text: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "ANNOTATION-TEXT",
@@ -62,7 +62,7 @@ class TriggerPortAnnotation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    trigger_ref: TriggerPortAnnotation.TriggerRef | None = field(
+    trigger_ref: None | TriggerPortAnnotation.TriggerRef = field(
         default=None,
         metadata={
             "name": "TRIGGER-REF",
@@ -70,14 +70,14 @@ class TriggerPortAnnotation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -88,7 +88,7 @@ class TriggerPortAnnotation:
 
     @dataclass
     class TriggerRef(Ref):
-        dest: TriggerSubtypesEnum | None = field(
+        dest: None | TriggerSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

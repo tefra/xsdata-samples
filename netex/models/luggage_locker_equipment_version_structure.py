@@ -15,7 +15,7 @@ class LuggageLockerEquipmentVersionStructure(SiteEquipmentVersionStructure):
     class Meta:
         name = "LuggageLockerEquipment_VersionStructure"
 
-    number_of_lockers: int | None = field(
+    number_of_lockers: None | int = field(
         default=None,
         metadata={
             "name": "NumberOfLockers",
@@ -23,7 +23,7 @@ class LuggageLockerEquipmentVersionStructure(SiteEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    locker_width: Decimal | None = field(
+    locker_width: None | Decimal = field(
         default=None,
         metadata={
             "name": "LockerWidth",
@@ -31,7 +31,7 @@ class LuggageLockerEquipmentVersionStructure(SiteEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    locker_height: Decimal | None = field(
+    locker_height: None | Decimal = field(
         default=None,
         metadata={
             "name": "LockerHeight",
@@ -39,7 +39,7 @@ class LuggageLockerEquipmentVersionStructure(SiteEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    locker_depth: Decimal | None = field(
+    locker_depth: None | Decimal = field(
         default=None,
         metadata={
             "name": "LockerDepth",
@@ -47,7 +47,7 @@ class LuggageLockerEquipmentVersionStructure(SiteEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    locker_type: LockerTypeEnumeration | None = field(
+    locker_type: None | LockerTypeEnumeration = field(
         default=None,
         metadata={
             "name": "LockerType",
@@ -55,7 +55,7 @@ class LuggageLockerEquipmentVersionStructure(SiteEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    locking_type: LockingTypeEnumeration | None = field(
+    locking_type: None | LockingTypeEnumeration = field(
         default=None,
         metadata={
             "name": "LockingType",
@@ -63,7 +63,7 @@ class LuggageLockerEquipmentVersionStructure(SiteEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    wheelchair_accepted: bool | None = field(
+    wheelchair_accepted: None | bool = field(
         default=None,
         metadata={
             "name": "WheelchairAccepted",
@@ -71,7 +71,7 @@ class LuggageLockerEquipmentVersionStructure(SiteEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    blind_accessible: bool | None = field(
+    blind_accessible: None | bool = field(
         default=None,
         metadata={
             "name": "BlindAccessible",

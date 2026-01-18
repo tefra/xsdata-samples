@@ -39,7 +39,7 @@ class ParkingEquipmentOrServiceFacilityStatus:
     :ivar parking_equipment_or_service_facility_status_extension:
     """
 
-    number_of_equipment_or_service_facility_override: int | None = field(
+    number_of_equipment_or_service_facility_override: None | int = field(
         default=None,
         metadata={
             "name": "numberOfEquipmentOrServiceFacilityOverride",
@@ -47,7 +47,7 @@ class ParkingEquipmentOrServiceFacilityStatus:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    number_of_subitems_override: int | None = field(
+    number_of_subitems_override: None | int = field(
         default=None,
         metadata={
             "name": "numberOfSubitemsOverride",
@@ -55,7 +55,7 @@ class ParkingEquipmentOrServiceFacilityStatus:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    vacant_equipment_or_service_facility_subitems: int | None = field(
+    vacant_equipment_or_service_facility_subitems: None | int = field(
         default=None,
         metadata={
             "name": "vacantEquipmentOrServiceFacilitySubitems",
@@ -63,7 +63,7 @@ class ParkingEquipmentOrServiceFacilityStatus:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    service_facility_opening_status: OpeningStatusEnum | None = field(
+    service_facility_opening_status: None | OpeningStatusEnum = field(
         default=None,
         metadata={
             "name": "serviceFacilityOpeningStatus",
@@ -71,7 +71,7 @@ class ParkingEquipmentOrServiceFacilityStatus:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    equipment_operation_status: OperationStatusEnum | None = field(
+    equipment_operation_status: None | OperationStatusEnum = field(
         default=None,
         metadata={
             "name": "equipmentOperationStatus",
@@ -80,7 +80,7 @@ class ParkingEquipmentOrServiceFacilityStatus:
         },
     )
     parking_equipment_or_service_facility_status_extension: (
-        ExtensionType | None
+        None | ExtensionType
     ) = field(
         default=None,
         metadata={

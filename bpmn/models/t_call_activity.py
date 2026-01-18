@@ -13,7 +13,7 @@ class TCallActivity(TActivity):
     class Meta:
         name = "tCallActivity"
 
-    called_element: QName | None = field(
+    called_element: None | QName = field(
         default=None,
         metadata={
             "name": "calledElement",

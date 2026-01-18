@@ -7,7 +7,7 @@ from xsdata.models.datatype import XmlDateTime
 
 @dataclass
 class Error:
-    timestamp: XmlDateTime | None = field(
+    timestamp: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "Timestamp",
@@ -16,7 +16,7 @@ class Error:
             "required": True,
         },
     )
-    code: str | None = field(
+    code: None | str = field(
         default=None,
         metadata={
             "name": "Code",
@@ -25,7 +25,7 @@ class Error:
             "required": True,
         },
     )
-    message: str | None = field(
+    message: None | str = field(
         default=None,
         metadata={
             "name": "Message",
@@ -34,7 +34,7 @@ class Error:
             "nillable": True,
         },
     )
-    payload: str | None = field(
+    payload: None | str = field(
         default=None,
         metadata={
             "name": "Payload",

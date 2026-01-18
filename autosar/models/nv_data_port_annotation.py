@@ -40,7 +40,7 @@ class NvDataPortAnnotation:
     class Meta:
         name = "NV-DATA-PORT-ANNOTATION"
 
-    label: MultilanguageLongName | None = field(
+    label: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LABEL",
@@ -48,7 +48,7 @@ class NvDataPortAnnotation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotation_origin: String | None = field(
+    annotation_origin: None | String = field(
         default=None,
         metadata={
             "name": "ANNOTATION-ORIGIN",
@@ -56,7 +56,7 @@ class NvDataPortAnnotation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotation_text: DocumentationBlock | None = field(
+    annotation_text: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "ANNOTATION-TEXT",
@@ -64,7 +64,7 @@ class NvDataPortAnnotation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variable_ref: NvDataPortAnnotation.VariableRef | None = field(
+    variable_ref: None | NvDataPortAnnotation.VariableRef = field(
         default=None,
         metadata={
             "name": "VARIABLE-REF",
@@ -72,14 +72,14 @@ class NvDataPortAnnotation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -90,7 +90,7 @@ class NvDataPortAnnotation:
 
     @dataclass
     class VariableRef(Ref):
-        dest: VariableDataPrototypeSubtypesEnum | None = field(
+        dest: None | VariableDataPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

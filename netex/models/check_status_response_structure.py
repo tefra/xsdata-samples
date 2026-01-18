@@ -16,7 +16,7 @@ __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
 @dataclass
 class CheckStatusResponseStructure(ProducerResponseStructure):
-    status: Status | None = field(
+    status: None | Status = field(
         default=None,
         metadata={
             "name": "Status",
@@ -24,7 +24,7 @@ class CheckStatusResponseStructure(ProducerResponseStructure):
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    data_ready: bool | None = field(
+    data_ready: None | bool = field(
         default=None,
         metadata={
             "name": "DataReady",
@@ -32,7 +32,7 @@ class CheckStatusResponseStructure(ProducerResponseStructure):
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    error_condition: CheckStatusResponseStructure.ErrorCondition | None = (
+    error_condition: None | CheckStatusResponseStructure.ErrorCondition = (
         field(
             default=None,
             metadata={
@@ -42,7 +42,7 @@ class CheckStatusResponseStructure(ProducerResponseStructure):
             },
         )
     )
-    valid_until: XmlDateTime | None = field(
+    valid_until: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "ValidUntil",
@@ -50,7 +50,7 @@ class CheckStatusResponseStructure(ProducerResponseStructure):
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    shortest_possible_cycle: XmlDuration | None = field(
+    shortest_possible_cycle: None | XmlDuration = field(
         default=None,
         metadata={
             "name": "ShortestPossibleCycle",
@@ -58,7 +58,7 @@ class CheckStatusResponseStructure(ProducerResponseStructure):
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    service_started_time: XmlDateTime | None = field(
+    service_started_time: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "ServiceStartedTime",
@@ -66,7 +66,7 @@ class CheckStatusResponseStructure(ProducerResponseStructure):
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    extensions: Extensions1 | None = field(
+    extensions: None | Extensions1 = field(
         default=None,
         metadata={
             "name": "Extensions",
@@ -78,7 +78,7 @@ class CheckStatusResponseStructure(ProducerResponseStructure):
     @dataclass
     class ErrorCondition:
         service_not_available_error_or_other_error: (
-            ServiceNotAvailableError | OtherError | None
+            None | ServiceNotAvailableError | OtherError
         ) = field(
             default=None,
             metadata={
@@ -97,7 +97,7 @@ class CheckStatusResponseStructure(ProducerResponseStructure):
                 ),
             },
         )
-        description: ErrorDescriptionStructure | None = field(
+        description: None | ErrorDescriptionStructure = field(
             default=None,
             metadata={
                 "name": "Description",

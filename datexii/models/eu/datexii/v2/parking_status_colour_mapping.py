@@ -22,7 +22,7 @@ class ParkingStatusColourMapping:
     :ivar parking_status_colour_mapping_extension:
     """
 
-    parking_site_status: ParkingSiteStatusEnum | None = field(
+    parking_site_status: None | ParkingSiteStatusEnum = field(
         default=None,
         metadata={
             "name": "parkingSiteStatus",
@@ -31,7 +31,7 @@ class ParkingStatusColourMapping:
             "required": True,
         },
     )
-    rgb_colour: RGBColour | None = field(
+    rgb_colour: None | RGBColour = field(
         default=None,
         metadata={
             "name": "rgbColour",
@@ -40,7 +40,7 @@ class ParkingStatusColourMapping:
             "required": True,
         },
     )
-    parking_status_colour_mapping_extension: ExtensionType | None = field(
+    parking_status_colour_mapping_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "parkingStatusColourMappingExtension",

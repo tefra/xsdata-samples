@@ -40,7 +40,7 @@ class CanClusterBusOffRecovery:
     class Meta:
         name = "CAN-CLUSTER-BUS-OFF-RECOVERY"
 
-    bor_counter_l_1_to_l_2: PositiveInteger | None = field(
+    bor_counter_l_1_to_l_2: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "BOR-COUNTER-L-1-TO-L-2",
@@ -48,7 +48,7 @@ class CanClusterBusOffRecovery:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    bor_time_l_1: TimeValue | None = field(
+    bor_time_l_1: None | TimeValue = field(
         default=None,
         metadata={
             "name": "BOR-TIME-L-1",
@@ -56,7 +56,7 @@ class CanClusterBusOffRecovery:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    bor_time_l_2: TimeValue | None = field(
+    bor_time_l_2: None | TimeValue = field(
         default=None,
         metadata={
             "name": "BOR-TIME-L-2",
@@ -64,7 +64,7 @@ class CanClusterBusOffRecovery:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    bor_time_tx_ensured: TimeValue | None = field(
+    bor_time_tx_ensured: None | TimeValue = field(
         default=None,
         metadata={
             "name": "BOR-TIME-TX-ENSURED",
@@ -72,7 +72,7 @@ class CanClusterBusOffRecovery:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    main_function_period: TimeValue | None = field(
+    main_function_period: None | TimeValue = field(
         default=None,
         metadata={
             "name": "MAIN-FUNCTION-PERIOD",
@@ -80,14 +80,14 @@ class CanClusterBusOffRecovery:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

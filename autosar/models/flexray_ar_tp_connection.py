@@ -66,7 +66,7 @@ class FlexrayArTpConnection:
     class Meta:
         name = "FLEXRAY-AR-TP-CONNECTION"
 
-    ident: TpConnectionIdent | None = field(
+    ident: None | TpConnectionIdent = field(
         default=None,
         metadata={
             "name": "IDENT",
@@ -74,7 +74,7 @@ class FlexrayArTpConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    connection_prio_pdus: Integer | None = field(
+    connection_prio_pdus: None | Integer = field(
         default=None,
         metadata={
             "name": "CONNECTION-PRIO-PDUS",
@@ -82,7 +82,7 @@ class FlexrayArTpConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    direct_tp_sdu_ref: FlexrayArTpConnection.DirectTpSduRef | None = field(
+    direct_tp_sdu_ref: None | FlexrayArTpConnection.DirectTpSduRef = field(
         default=None,
         metadata={
             "name": "DIRECT-TP-SDU-REF",
@@ -90,7 +90,7 @@ class FlexrayArTpConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    flow_control_pdu_ref: FlexrayArTpConnection.FlowControlPduRef | None = (
+    flow_control_pdu_ref: None | FlexrayArTpConnection.FlowControlPduRef = (
         field(
             default=None,
             metadata={
@@ -100,7 +100,7 @@ class FlexrayArTpConnection:
             },
         )
     )
-    multicast_ref: FlexrayArTpConnection.MulticastRef | None = field(
+    multicast_ref: None | FlexrayArTpConnection.MulticastRef = field(
         default=None,
         metadata={
             "name": "MULTICAST-REF",
@@ -108,7 +108,7 @@ class FlexrayArTpConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    reversed_tp_sdu_ref: FlexrayArTpConnection.ReversedTpSduRef | None = field(
+    reversed_tp_sdu_ref: None | FlexrayArTpConnection.ReversedTpSduRef = field(
         default=None,
         metadata={
             "name": "REVERSED-TP-SDU-REF",
@@ -116,7 +116,7 @@ class FlexrayArTpConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    source_ref: FlexrayArTpConnection.SourceRef | None = field(
+    source_ref: None | FlexrayArTpConnection.SourceRef = field(
         default=None,
         metadata={
             "name": "SOURCE-REF",
@@ -124,7 +124,7 @@ class FlexrayArTpConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    target_refs: FlexrayArTpConnection.TargetRefs | None = field(
+    target_refs: None | FlexrayArTpConnection.TargetRefs = field(
         default=None,
         metadata={
             "name": "TARGET-REFS",
@@ -132,7 +132,7 @@ class FlexrayArTpConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    transmit_pdu_refs: FlexrayArTpConnection.TransmitPduRefs | None = field(
+    transmit_pdu_refs: None | FlexrayArTpConnection.TransmitPduRefs = field(
         default=None,
         metadata={
             "name": "TRANSMIT-PDU-REFS",
@@ -140,14 +140,14 @@ class FlexrayArTpConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -158,7 +158,7 @@ class FlexrayArTpConnection:
 
     @dataclass
     class DirectTpSduRef(Ref):
-        dest: IPduSubtypesEnum | None = field(
+        dest: None | IPduSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -169,7 +169,7 @@ class FlexrayArTpConnection:
 
     @dataclass
     class FlowControlPduRef(Ref):
-        dest: NPduSubtypesEnum | None = field(
+        dest: None | NPduSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -180,7 +180,7 @@ class FlexrayArTpConnection:
 
     @dataclass
     class MulticastRef(Ref):
-        dest: TpAddressSubtypesEnum | None = field(
+        dest: None | TpAddressSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -191,7 +191,7 @@ class FlexrayArTpConnection:
 
     @dataclass
     class ReversedTpSduRef(Ref):
-        dest: IPduSubtypesEnum | None = field(
+        dest: None | IPduSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -202,7 +202,7 @@ class FlexrayArTpConnection:
 
     @dataclass
     class SourceRef(Ref):
-        dest: FlexrayArTpNodeSubtypesEnum | None = field(
+        dest: None | FlexrayArTpNodeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -224,7 +224,7 @@ class FlexrayArTpConnection:
 
         @dataclass
         class TargetRef(Ref):
-            dest: FlexrayArTpNodeSubtypesEnum | None = field(
+            dest: None | FlexrayArTpNodeSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -248,7 +248,7 @@ class FlexrayArTpConnection:
 
         @dataclass
         class TransmitPduRef(Ref):
-            dest: NPduSubtypesEnum | None = field(
+            dest: None | NPduSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",

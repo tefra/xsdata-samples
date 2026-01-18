@@ -22,7 +22,7 @@ class TDataAssociation(TBaseElement):
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    target_ref: str | None = field(
+    target_ref: None | str = field(
         default=None,
         metadata={
             "name": "targetRef",
@@ -31,7 +31,7 @@ class TDataAssociation(TBaseElement):
             "required": True,
         },
     )
-    transformation: TFormalExpression | None = field(
+    transformation: None | TFormalExpression = field(
         default=None,
         metadata={
             "type": "Element",

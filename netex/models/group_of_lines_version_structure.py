@@ -33,7 +33,7 @@ class GroupOfLinesVersionStructure(GroupOfEntitiesVersionStructure):
     class Meta:
         name = "GroupOfLines_VersionStructure"
 
-    use_to_exclude: bool | None = field(
+    use_to_exclude: None | bool = field(
         default=None,
         metadata={
             "name": "UseToExclude",
@@ -41,14 +41,14 @@ class GroupOfLinesVersionStructure(GroupOfEntitiesVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    members: LineRefsRelStructure | None = field(
+    members: None | LineRefsRelStructure = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    main_line_ref: LineRefStructure | None = field(
+    main_line_ref: None | LineRefStructure = field(
         default=None,
         metadata={
             "name": "MainLineRef",
@@ -56,7 +56,7 @@ class GroupOfLinesVersionStructure(GroupOfEntitiesVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    transport_mode: AllVehicleModesOfTransportEnumeration | None = field(
+    transport_mode: None | AllVehicleModesOfTransportEnumeration = field(
         default=None,
         metadata={
             "name": "TransportMode",
@@ -64,7 +64,7 @@ class GroupOfLinesVersionStructure(GroupOfEntitiesVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    transport_submode: TransportSubmode | None = field(
+    transport_submode: None | TransportSubmode = field(
         default=None,
         metadata={
             "name": "TransportSubmode",
@@ -73,13 +73,13 @@ class GroupOfLinesVersionStructure(GroupOfEntitiesVersionStructure):
         },
     )
     mode_of_operation_ref_or_alternative_mode_of_operation_ref_or_conventional_mode_of_operation_ref: (
-        PersonalModeOfOperationRef
+        None
+        | PersonalModeOfOperationRef
         | VehiclePoolingRef
         | VehicleSharingRef
         | VehicleRentalRef
         | FlexibleModeOfOperationRef
         | ScheduledModeOfOperationRef
-        | None
     ) = field(
         default=None,
         metadata={
@@ -118,7 +118,7 @@ class GroupOfLinesVersionStructure(GroupOfEntitiesVersionStructure):
             ),
         },
     )
-    group_of_lines_type: GroupOfLinesTypeEnumeration | None = field(
+    group_of_lines_type: None | GroupOfLinesTypeEnumeration = field(
         default=None,
         metadata={
             "name": "GroupOfLinesType",
@@ -135,7 +135,7 @@ class GroupOfLinesVersionStructure(GroupOfEntitiesVersionStructure):
             "tokens": True,
         },
     )
-    types_of_payment_method: TypeOfPaymentMethodValueStructure | None = field(
+    types_of_payment_method: None | TypeOfPaymentMethodValueStructure = field(
         default=None,
         metadata={
             "name": "typesOfPaymentMethod",

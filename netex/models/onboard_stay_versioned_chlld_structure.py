@@ -19,7 +19,7 @@ class OnboardStayVersionedChlldStructure(VersionedChildStructure):
     class Meta:
         name = "OnboardStay_VersionedChlldStructure"
 
-    name: MultilingualString | None = field(
+    name: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "Name",
@@ -27,7 +27,7 @@ class OnboardStayVersionedChlldStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    service_facility_set_ref: ServiceFacilitySetRef | None = field(
+    service_facility_set_ref: None | ServiceFacilitySetRef = field(
         default=None,
         metadata={
             "name": "ServiceFacilitySetRef",
@@ -35,7 +35,7 @@ class OnboardStayVersionedChlldStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    fare_class: FareClass | None = field(
+    fare_class: None | FareClass = field(
         default=None,
         metadata={
             "name": "FareClass",
@@ -43,7 +43,7 @@ class OnboardStayVersionedChlldStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    class_of_use_ref: ClassOfUseRef | None = field(
+    class_of_use_ref: None | ClassOfUseRef = field(
         default=None,
         metadata={
             "name": "ClassOfUseRef",
@@ -51,7 +51,7 @@ class OnboardStayVersionedChlldStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    boarding_permission: BoardingPermission | None = field(
+    boarding_permission: None | BoardingPermission = field(
         default=None,
         metadata={
             "name": "BoardingPermission",
@@ -59,7 +59,7 @@ class OnboardStayVersionedChlldStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    period: XmlDuration | None = field(
+    period: None | XmlDuration = field(
         default=None,
         metadata={
             "name": "Period",

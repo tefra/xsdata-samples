@@ -13,7 +13,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 @dataclass
 class JourneyEndpointStructure:
-    name: MultilingualString | None = field(
+    name: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "Name",
@@ -22,7 +22,7 @@ class JourneyEndpointStructure:
         },
     )
     scheduled_stop_point_ref: (
-        FareScheduledStopPointRef | ScheduledStopPointRef | None
+        None | FareScheduledStopPointRef | ScheduledStopPointRef
     ) = field(
         default=None,
         metadata={
@@ -41,7 +41,7 @@ class JourneyEndpointStructure:
             ),
         },
     )
-    destination_display_ref: DestinationDisplayRef | None = field(
+    destination_display_ref: None | DestinationDisplayRef = field(
         default=None,
         metadata={
             "name": "DestinationDisplayRef",
@@ -49,7 +49,7 @@ class JourneyEndpointStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    place_ref: PlaceRef | None = field(
+    place_ref: None | PlaceRef = field(
         default=None,
         metadata={
             "name": "PlaceRef",

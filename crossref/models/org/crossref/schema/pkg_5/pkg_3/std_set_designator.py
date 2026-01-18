@@ -20,7 +20,7 @@ class StdSetDesignator(StdDesignatorT):
         name = "std_set_designator"
         namespace = "http://www.crossref.org/schema/5.3.1"
 
-    family: str | None = field(
+    family: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",

@@ -623,42 +623,42 @@ class CardInfo:
             "required": True,
         }
     )
-    card_auth_code: CardAuthCode | None = field(
+    card_auth_code: None | CardAuthCode = field(
         default=None,
         metadata={
             "name": "CardAuthCode",
             "type": "Element",
         },
     )
-    card_ref_num: CardRefNum | None = field(
+    card_ref_num: None | CardRefNum = field(
         default=None,
         metadata={
             "name": "CardRefNum",
             "type": "Element",
         },
     )
-    card_expiration_date: CardExpirationDate | None = field(
+    card_expiration_date: None | CardExpirationDate = field(
         default=None,
         metadata={
             "name": "CardExpirationDate",
             "type": "Element",
         },
     )
-    card_type: CardType | None = field(
+    card_type: None | CardType = field(
         default=None,
         metadata={
             "name": "CardType",
             "type": "Element",
         },
     )
-    card_type_other: CardTypeOther | None = field(
+    card_type_other: None | CardTypeOther = field(
         default=None,
         metadata={
             "name": "CardTypeOther",
             "type": "Element",
         },
     )
-    card_holder_name: CardHolderName | None = field(
+    card_holder_name: None | CardHolderName = field(
         default=None,
         metadata={
             "name": "CardHolderName",
@@ -894,7 +894,7 @@ class RequestQuotePurpose:
             "required": True,
         }
     )
-    request_quote_purpose_coded_other: RequestQuotePurposeCodedOther | None = (
+    request_quote_purpose_coded_other: None | RequestQuotePurposeCodedOther = (
         field(
             default=None,
             metadata={
@@ -907,7 +907,7 @@ class RequestQuotePurpose:
 
 @dataclass(kw_only=True)
 class RequestQuoteSummary:
-    total_number_of_line_items: TotalNumberOfLineItems | None = field(
+    total_number_of_line_items: None | TotalNumberOfLineItems = field(
         default=None,
         metadata={
             "name": "TotalNumberOfLineItems",
@@ -980,21 +980,21 @@ class AccountDetail:
             "required": True,
         }
     )
-    secondary_account_id: SecondaryAccountId | None = field(
+    secondary_account_id: None | SecondaryAccountId = field(
         default=None,
         metadata={
             "name": "SecondaryAccountID",
             "type": "Element",
         },
     )
-    iban: Iban | None = field(
+    iban: None | Iban = field(
         default=None,
         metadata={
             "name": "IBAN",
             "type": "Element",
         },
     )
-    account_control_key: AccountControlKey | None = field(
+    account_control_key: None | AccountControlKey = field(
         default=None,
         metadata={
             "name": "AccountControlKey",
@@ -1008,7 +1008,7 @@ class AccountDetail:
             "required": True,
         }
     )
-    account_type_coded_other: AccountTypeCodedOther | None = field(
+    account_type_coded_other: None | AccountTypeCodedOther = field(
         default=None,
         metadata={
             "name": "AccountTypeCodedOther",
@@ -1022,21 +1022,21 @@ class AccountDetail:
             "required": True,
         }
     )
-    account_name2: AccountName2 | None = field(
+    account_name2: None | AccountName2 = field(
         default=None,
         metadata={
             "name": "AccountName2",
             "type": "Element",
         },
     )
-    currency: Currency | None = field(
+    currency: None | Currency = field(
         default=None,
         metadata={
             "name": "Currency",
             "type": "Element",
         },
     )
-    account_references: AccountReferences | None = field(
+    account_references: None | AccountReferences = field(
         default=None,
         metadata={
             "name": "AccountReferences",
@@ -1047,42 +1047,42 @@ class AccountDetail:
 
 @dataclass(kw_only=True)
 class Discounts:
-    discount_percent: DiscountPercent | None = field(
+    discount_percent: None | DiscountPercent = field(
         default=None,
         metadata={
             "name": "DiscountPercent",
             "type": "Element",
         },
     )
-    discount_amount: DiscountAmount | None = field(
+    discount_amount: None | DiscountAmount = field(
         default=None,
         metadata={
             "name": "DiscountAmount",
             "type": "Element",
         },
     )
-    discount_days_due: DiscountDaysDue | None = field(
+    discount_days_due: None | DiscountDaysDue = field(
         default=None,
         metadata={
             "name": "DiscountDaysDue",
             "type": "Element",
         },
     )
-    discount_due_date: DiscountDueDate | None = field(
+    discount_due_date: None | DiscountDueDate = field(
         default=None,
         metadata={
             "name": "DiscountDueDate",
             "type": "Element",
         },
     )
-    discount_day_of_month: DiscountDayOfMonth | None = field(
+    discount_day_of_month: None | DiscountDayOfMonth = field(
         default=None,
         metadata={
             "name": "DiscountDayOfMonth",
             "type": "Element",
         },
     )
-    discount_date_time_ref_coded: DiscountDateTimeRefCoded | None = field(
+    discount_date_time_ref_coded: None | DiscountDateTimeRefCoded = field(
         default=None,
         metadata={
             "name": "DiscountDateTimeRefCoded",
@@ -1090,7 +1090,7 @@ class Discounts:
         },
     )
     discount_date_time_ref_coded_other: (
-        DiscountDateTimeRefCodedOther | None
+        None | DiscountDateTimeRefCodedOther
     ) = field(
         default=None,
         metadata={
@@ -1098,28 +1098,28 @@ class Discounts:
             "type": "Element",
         },
     )
-    net_days_due: NetDaysDue | None = field(
+    net_days_due: None | NetDaysDue = field(
         default=None,
         metadata={
             "name": "NetDaysDue",
             "type": "Element",
         },
     )
-    net_due_date: NetDueDate | None = field(
+    net_due_date: None | NetDueDate = field(
         default=None,
         metadata={
             "name": "NetDueDate",
             "type": "Element",
         },
     )
-    net_date_time_ref_coded: NetDateTimeRefCoded | None = field(
+    net_date_time_ref_coded: None | NetDateTimeRefCoded = field(
         default=None,
         metadata={
             "name": "NetDateTimeRefCoded",
             "type": "Element",
         },
     )
-    net_date_time_ref_coded_other: NetDateTimeRefCodedOther | None = field(
+    net_date_time_ref_coded_other: None | NetDateTimeRefCodedOther = field(
         default=None,
         metadata={
             "name": "NetDateTimeRefCodedOther",
@@ -1144,70 +1144,70 @@ class FinancialInstitution:
             "required": True,
         }
     )
-    fibranch_id: FibranchId | None = field(
+    fibranch_id: None | FibranchId = field(
         default=None,
         metadata={
             "name": "FIBranchID",
             "type": "Element",
         },
     )
-    fibranch_name: FibranchName | None = field(
+    fibranch_name: None | FibranchName = field(
         default=None,
         metadata={
             "name": "FIBranchName",
             "type": "Element",
         },
     )
-    fibranch_street: FibranchStreet | None = field(
+    fibranch_street: None | FibranchStreet = field(
         default=None,
         metadata={
             "name": "FIBranchStreet",
             "type": "Element",
         },
     )
-    fibranch_house_number: FibranchHouseNumber | None = field(
+    fibranch_house_number: None | FibranchHouseNumber = field(
         default=None,
         metadata={
             "name": "FIBranchHouseNumber",
             "type": "Element",
         },
     )
-    fibranch_street_supplement1: FibranchStreetSupplement1 | None = field(
+    fibranch_street_supplement1: None | FibranchStreetSupplement1 = field(
         default=None,
         metadata={
             "name": "FIBranchStreetSupplement1",
             "type": "Element",
         },
     )
-    fibranch_street_supplement2: FibranchStreetSupplement2 | None = field(
+    fibranch_street_supplement2: None | FibranchStreetSupplement2 = field(
         default=None,
         metadata={
             "name": "FIBranchStreetSupplement2",
             "type": "Element",
         },
     )
-    fibranch_postal_code: FibranchPostalCode | None = field(
+    fibranch_postal_code: None | FibranchPostalCode = field(
         default=None,
         metadata={
             "name": "FIBranchPostalCode",
             "type": "Element",
         },
     )
-    fibranch_city: FibranchCity | None = field(
+    fibranch_city: None | FibranchCity = field(
         default=None,
         metadata={
             "name": "FIBranchCity",
             "type": "Element",
         },
     )
-    fibranch_region: FibranchRegion | None = field(
+    fibranch_region: None | FibranchRegion = field(
         default=None,
         metadata={
             "name": "FIBranchRegion",
             "type": "Element",
         },
     )
-    fibranch_country: FibranchCountry | None = field(
+    fibranch_country: None | FibranchCountry = field(
         default=None,
         metadata={
             "name": "FIBranchCountry",
@@ -1225,42 +1225,42 @@ class RequestQuoteDate:
             "required": True,
         }
     )
-    decision_date: DecisionDate | None = field(
+    decision_date: None | DecisionDate = field(
         default=None,
         metadata={
             "name": "DecisionDate",
             "type": "Element",
         },
     )
-    delivery_date: DeliveryDate | None = field(
+    delivery_date: None | DeliveryDate = field(
         default=None,
         metadata={
             "name": "DeliveryDate",
             "type": "Element",
         },
     )
-    delivery_date_earliest: DeliveryDateEarliest | None = field(
+    delivery_date_earliest: None | DeliveryDateEarliest = field(
         default=None,
         metadata={
             "name": "DeliveryDateEarliest",
             "type": "Element",
         },
     )
-    delivery_date_latest: DeliveryDateLatest | None = field(
+    delivery_date_latest: None | DeliveryDateLatest = field(
         default=None,
         metadata={
             "name": "DeliveryDateLatest",
             "type": "Element",
         },
     )
-    advise_before: AdviseBefore | None = field(
+    advise_before: None | AdviseBefore = field(
         default=None,
         metadata={
             "name": "AdviseBefore",
             "type": "Element",
         },
     )
-    cancel_if_not_delivered: CancelIfNotDelivered | None = field(
+    cancel_if_not_delivered: None | CancelIfNotDelivered = field(
         default=None,
         metadata={
             "name": "CancelIfNotDelivered",
@@ -1278,14 +1278,14 @@ class RequestQuoteDetails:
             "required": True,
         }
     )
-    request_quote_pricing_detail: RequestQuotePricingDetail | None = field(
+    request_quote_pricing_detail: None | RequestQuotePricingDetail = field(
         default=None,
         metadata={
             "name": "RequestQuotePricingDetail",
             "type": "Element",
         },
     )
-    request_quote_delivery_detail: RequestQuoteDeliveryDetail | None = field(
+    request_quote_delivery_detail: None | RequestQuoteDeliveryDetail = field(
         default=None,
         metadata={
             "name": "RequestQuoteDeliveryDetail",
@@ -1293,7 +1293,7 @@ class RequestQuoteDetails:
         },
     )
     request_quote_item_list_of_attachment: (
-        RequestQuoteItemListOfAttachment | None
+        None | RequestQuoteItemListOfAttachment
     ) = field(
         default=None,
         metadata={
@@ -1305,42 +1305,42 @@ class RequestQuoteDetails:
 
 @dataclass(kw_only=True)
 class RequestQuoteReference:
-    contract_reference: ContractReference | None = field(
+    contract_reference: None | ContractReference = field(
         default=None,
         metadata={
             "name": "ContractReference",
             "type": "Element",
         },
     )
-    account_number: AccountNumber | None = field(
+    account_number: None | AccountNumber = field(
         default=None,
         metadata={
             "name": "AccountNumber",
             "type": "Element",
         },
     )
-    price_list_number: PriceListNumber | None = field(
+    price_list_number: None | PriceListNumber = field(
         default=None,
         metadata={
             "name": "PriceListNumber",
             "type": "Element",
         },
     )
-    price_list_version_number: PriceListVersionNumber | None = field(
+    price_list_version_number: None | PriceListVersionNumber = field(
         default=None,
         metadata={
             "name": "PriceListVersionNumber",
             "type": "Element",
         },
     )
-    buyers_catalog_number: BuyersCatalogNumber | None = field(
+    buyers_catalog_number: None | BuyersCatalogNumber = field(
         default=None,
         metadata={
             "name": "BuyersCatalogNumber",
             "type": "Element",
         },
     )
-    other_request_quote_references: OtherRequestQuoteReferences | None = field(
+    other_request_quote_references: None | OtherRequestQuoteReferences = field(
         default=None,
         metadata={
             "name": "OtherRequestQuoteReferences",
@@ -1354,7 +1354,7 @@ class Fiaccount:
     class Meta:
         name = "FIAccount"
 
-    account_detail: AccountDetail | None = field(
+    account_detail: None | AccountDetail = field(
         default=None,
         metadata={
             "name": "AccountDetail",
@@ -1416,21 +1416,21 @@ class PaymentTerm:
             "required": True,
         }
     )
-    payment_term_coded_other: PaymentTermCodedOther | None = field(
+    payment_term_coded_other: None | PaymentTermCodedOther = field(
         default=None,
         metadata={
             "name": "PaymentTermCodedOther",
             "type": "Element",
         },
     )
-    payment_term_value: PaymentTermValue | None = field(
+    payment_term_value: None | PaymentTermValue = field(
         default=None,
         metadata={
             "name": "PaymentTermValue",
             "type": "Element",
         },
     )
-    payment_term_details: PaymentTermDetails | None = field(
+    payment_term_details: None | PaymentTermDetails = field(
         default=None,
         metadata={
             "name": "PaymentTermDetails",
@@ -1462,49 +1462,49 @@ class PaymentMethod:
             "required": True,
         }
     )
-    payment_mean_coded_other: PaymentMeanCodedOther | None = field(
+    payment_mean_coded_other: None | PaymentMeanCodedOther = field(
         default=None,
         metadata={
             "name": "PaymentMeanCodedOther",
             "type": "Element",
         },
     )
-    payment_mean_reference: PaymentMeanReference | None = field(
+    payment_mean_reference: None | PaymentMeanReference = field(
         default=None,
         metadata={
             "name": "PaymentMeanReference",
             "type": "Element",
         },
     )
-    payment_system_coded: PaymentSystemCoded | None = field(
+    payment_system_coded: None | PaymentSystemCoded = field(
         default=None,
         metadata={
             "name": "PaymentSystemCoded",
             "type": "Element",
         },
     )
-    payment_system_coded_other: PaymentSystemCodedOther | None = field(
+    payment_system_coded_other: None | PaymentSystemCodedOther = field(
         default=None,
         metadata={
             "name": "PaymentSystemCodedOther",
             "type": "Element",
         },
     )
-    originating_fiaccount: OriginatingFiaccount | None = field(
+    originating_fiaccount: None | OriginatingFiaccount = field(
         default=None,
         metadata={
             "name": "OriginatingFIAccount",
             "type": "Element",
         },
     )
-    receiving_fiaccount: ReceivingFiaccount | None = field(
+    receiving_fiaccount: None | ReceivingFiaccount = field(
         default=None,
         metadata={
             "name": "ReceivingFIAccount",
             "type": "Element",
         },
     )
-    card_info: CardInfo | None = field(
+    card_info: None | CardInfo = field(
         default=None,
         metadata={
             "name": "CardInfo",
@@ -1530,7 +1530,7 @@ class PaymentTerms:
             "type": "Element",
         },
     )
-    payment_terms_note: PaymentTermsNote | None = field(
+    payment_terms_note: None | PaymentTermsNote = field(
         default=None,
         metadata={
             "name": "PaymentTermsNote",
@@ -1586,21 +1586,21 @@ class RequestQuoteHeader:
             "required": True,
         }
     )
-    request_quote_reference: RequestQuoteReference | None = field(
+    request_quote_reference: None | RequestQuoteReference = field(
         default=None,
         metadata={
             "name": "RequestQuoteReference",
             "type": "Element",
         },
     )
-    request_quote_purpose: RequestQuotePurpose | None = field(
+    request_quote_purpose: None | RequestQuotePurpose = field(
         default=None,
         metadata={
             "name": "RequestQuotePurpose",
             "type": "Element",
         },
     )
-    request_quote_date: RequestQuoteDate | None = field(
+    request_quote_date: None | RequestQuoteDate = field(
         default=None,
         metadata={
             "name": "RequestQuoteDate",
@@ -1614,21 +1614,21 @@ class RequestQuoteHeader:
             "required": True,
         }
     )
-    resulting_order_type: ResultingOrderType | None = field(
+    resulting_order_type: None | ResultingOrderType = field(
         default=None,
         metadata={
             "name": "ResultingOrderType",
             "type": "Element",
         },
     )
-    request_quote_currency: RequestQuoteCurrency | None = field(
+    request_quote_currency: None | RequestQuoteCurrency = field(
         default=None,
         metadata={
             "name": "RequestQuoteCurrency",
             "type": "Element",
         },
     )
-    request_quote_allowance_or_charge: RequestQuoteAllowanceOrCharge | None = (
+    request_quote_allowance_or_charge: None | RequestQuoteAllowanceOrCharge = (
         field(
             default=None,
             metadata={
@@ -1637,14 +1637,14 @@ class RequestQuoteHeader:
             },
         )
     )
-    request_quote_terms_of_payment: RequestQuoteTermsOfPayment | None = field(
+    request_quote_terms_of_payment: None | RequestQuoteTermsOfPayment = field(
         default=None,
         metadata={
             "name": "RequestQuoteTermsOfPayment",
             "type": "Element",
         },
     )
-    request_quote_terms_of_delivery: RequestQuoteTermsOfDelivery | None = (
+    request_quote_terms_of_delivery: None | RequestQuoteTermsOfDelivery = (
         field(
             default=None,
             metadata={
@@ -1653,35 +1653,35 @@ class RequestQuoteHeader:
             },
         )
     )
-    request_quote_tax: RequestQuoteTax | None = field(
+    request_quote_tax: None | RequestQuoteTax = field(
         default=None,
         metadata={
             "name": "RequestQuoteTax",
             "type": "Element",
         },
     )
-    request_quote_transport: RequestQuoteTransport | None = field(
+    request_quote_transport: None | RequestQuoteTransport = field(
         default=None,
         metadata={
             "name": "RequestQuoteTransport",
             "type": "Element",
         },
     )
-    request_quote_language: RequestQuoteLanguage | None = field(
+    request_quote_language: None | RequestQuoteLanguage = field(
         default=None,
         metadata={
             "name": "RequestQuoteLanguage",
             "type": "Element",
         },
     )
-    request_quote_general_notes: RequestQuoteGeneralNotes | None = field(
+    request_quote_general_notes: None | RequestQuoteGeneralNotes = field(
         default=None,
         metadata={
             "name": "RequestQuoteGeneralNotes",
             "type": "Element",
         },
     )
-    request_quote_list_of_attachment: RequestQuoteListOfAttachment | None = (
+    request_quote_list_of_attachment: None | RequestQuoteListOfAttachment = (
         field(
             default=None,
             metadata={
@@ -1701,7 +1701,7 @@ class RequestForQuotation:
             "required": True,
         }
     )
-    list_of_request_quote_details: ListOfRequestQuoteDetails | None = field(
+    list_of_request_quote_details: None | ListOfRequestQuoteDetails = field(
         default=None,
         metadata={
             "name": "ListOfRequestQuoteDetails",
@@ -1709,7 +1709,7 @@ class RequestForQuotation:
         },
     )
     list_of_request_quote_package_detail: (
-        ListOfRequestQuotePackageDetail | None
+        None | ListOfRequestQuotePackageDetail
     ) = field(
         default=None,
         metadata={
@@ -1717,7 +1717,7 @@ class RequestForQuotation:
             "type": "Element",
         },
     )
-    request_quote_summary: RequestQuoteSummary | None = field(
+    request_quote_summary: None | RequestQuoteSummary = field(
         default=None,
         metadata={
             "name": "RequestQuoteSummary",

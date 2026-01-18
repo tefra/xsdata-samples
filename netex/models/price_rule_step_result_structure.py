@@ -37,7 +37,8 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 @dataclass
 class PriceRuleStepResultStructure:
     fare_price_ref: (
-        CustomerPurchasePackagePriceRef
+        None
+        | CustomerPurchasePackagePriceRef
         | ParkingPriceRef
         | TimeIntervalPriceRef
         | TimeUnitPriceRef
@@ -55,7 +56,6 @@ class PriceRuleStepResultStructure:
         | CappingRulePriceRef
         | FareProductPriceRef
         | FarePriceRef
-        | None
     ) = field(
         default=None,
         metadata={
@@ -154,7 +154,7 @@ class PriceRuleStepResultStructure:
             ),
         },
     )
-    amount: Decimal | None = field(
+    amount: None | Decimal = field(
         default=None,
         metadata={
             "name": "Amount",
@@ -162,7 +162,7 @@ class PriceRuleStepResultStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    currency: str | None = field(
+    currency: None | str = field(
         default=None,
         metadata={
             "name": "Currency",
@@ -173,7 +173,7 @@ class PriceRuleStepResultStructure:
             "pattern": r"[A-Z][A-Z][A-Z]",
         },
     )
-    price_unit_ref: PriceUnitRef | None = field(
+    price_unit_ref: None | PriceUnitRef = field(
         default=None,
         metadata={
             "name": "PriceUnitRef",
@@ -181,7 +181,7 @@ class PriceRuleStepResultStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    units: Decimal | None = field(
+    units: None | Decimal = field(
         default=None,
         metadata={
             "name": "Units",
@@ -189,7 +189,7 @@ class PriceRuleStepResultStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    rate_used: Decimal | None = field(
+    rate_used: None | Decimal = field(
         default=None,
         metadata={
             "name": "RateUsed",
@@ -197,7 +197,7 @@ class PriceRuleStepResultStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    adjustment_amount: Decimal | None = field(
+    adjustment_amount: None | Decimal = field(
         default=None,
         metadata={
             "name": "AdjustmentAmount",
@@ -205,7 +205,7 @@ class PriceRuleStepResultStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    adjustment_units: Decimal | None = field(
+    adjustment_units: None | Decimal = field(
         default=None,
         metadata={
             "name": "AdjustmentUnits",
@@ -214,7 +214,7 @@ class PriceRuleStepResultStructure:
         },
     )
     discounting_rule_ref_or_pricing_rule_ref: (
-        LimitingRuleRef | DiscountingRuleRef | PricingRuleRef | None
+        None | LimitingRuleRef | DiscountingRuleRef | PricingRuleRef
     ) = field(
         default=None,
         metadata={
@@ -238,7 +238,7 @@ class PriceRuleStepResultStructure:
             ),
         },
     )
-    rounding_ref: RoundingRef | None = field(
+    rounding_ref: None | RoundingRef = field(
         default=None,
         metadata={
             "name": "RoundingRef",
@@ -246,7 +246,7 @@ class PriceRuleStepResultStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    rounding_step_ref: RoundingStepRef | None = field(
+    rounding_step_ref: None | RoundingStepRef = field(
         default=None,
         metadata={
             "name": "RoundingStepRef",
@@ -254,7 +254,7 @@ class PriceRuleStepResultStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    narrative: MultilingualString | None = field(
+    narrative: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "Narrative",
@@ -262,13 +262,13 @@ class PriceRuleStepResultStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    order: int | None = field(
+    order: None | int = field(
         default=None,
         metadata={
             "type": "Attribute",

@@ -17,11 +17,11 @@ class UserNeedVersionedChildStructure(VersionedChildStructure):
         name = "UserNeed_VersionedChildStructure"
 
     choice: (
-        MobilityEnumeration
+        None
+        | MobilityEnumeration
         | PsychosensoryNeedEnumeration
         | MedicalNeedEnumeration
         | EncumbranceEnumeration
-        | None
     ) = field(
         default=None,
         metadata={
@@ -50,7 +50,7 @@ class UserNeedVersionedChildStructure(VersionedChildStructure):
             ),
         },
     )
-    excluded: bool | None = field(
+    excluded: None | bool = field(
         default=None,
         metadata={
             "name": "Excluded",
@@ -58,7 +58,7 @@ class UserNeedVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    need_ranking: int | None = field(
+    need_ranking: None | int = field(
         default=None,
         metadata={
             "name": "NeedRanking",

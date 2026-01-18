@@ -87,7 +87,7 @@ class DiagnosticStartRoutine:
     class Meta:
         name = "DIAGNOSTIC-START-ROUTINE"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -96,7 +96,7 @@ class DiagnosticStartRoutine:
             "required": True,
         },
     )
-    short_name_fragments: DiagnosticStartRoutine.ShortNameFragments | None = (
+    short_name_fragments: None | DiagnosticStartRoutine.ShortNameFragments = (
         field(
             default=None,
             metadata={
@@ -106,7 +106,7 @@ class DiagnosticStartRoutine:
             },
         )
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -114,7 +114,7 @@ class DiagnosticStartRoutine:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -122,7 +122,7 @@ class DiagnosticStartRoutine:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -130,7 +130,7 @@ class DiagnosticStartRoutine:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -138,7 +138,7 @@ class DiagnosticStartRoutine:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -146,7 +146,7 @@ class DiagnosticStartRoutine:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: DiagnosticStartRoutine.Annotations | None = field(
+    annotations: None | DiagnosticStartRoutine.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -155,7 +155,7 @@ class DiagnosticStartRoutine:
         },
     )
     access_permission_ref: (
-        DiagnosticStartRoutine.AccessPermissionRef | None
+        None | DiagnosticStartRoutine.AccessPermissionRef
     ) = field(
         default=None,
         metadata={
@@ -164,7 +164,7 @@ class DiagnosticStartRoutine:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    requests: DiagnosticStartRoutine.Requests | None = field(
+    requests: None | DiagnosticStartRoutine.Requests = field(
         default=None,
         metadata={
             "name": "REQUESTS",
@@ -172,7 +172,7 @@ class DiagnosticStartRoutine:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    responses: DiagnosticStartRoutine.Responses | None = field(
+    responses: None | DiagnosticStartRoutine.Responses = field(
         default=None,
         metadata={
             "name": "RESPONSES",
@@ -180,14 +180,14 @@ class DiagnosticStartRoutine:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -195,7 +195,7 @@ class DiagnosticStartRoutine:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -227,7 +227,7 @@ class DiagnosticStartRoutine:
 
     @dataclass
     class AccessPermissionRef(Ref):
-        dest: DiagnosticAccessPermissionSubtypesEnum | None = field(
+        dest: None | DiagnosticAccessPermissionSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

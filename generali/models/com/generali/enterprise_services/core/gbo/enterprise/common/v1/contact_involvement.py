@@ -22,7 +22,7 @@ class ContactInvolvement:
     :ivar cover_name:
     """
 
-    contact_person: ContactPersonType | None = field(
+    contact_person: None | ContactPersonType = field(
         default=None,
         metadata={
             "name": "ContactPerson",
@@ -30,7 +30,7 @@ class ContactInvolvement:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
         },
     )
-    contact_point: ContactPointType | None = field(
+    contact_point: None | ContactPointType = field(
         default=None,
         metadata={
             "name": "ContactPoint",
@@ -38,7 +38,7 @@ class ContactInvolvement:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
         },
     )
-    cover_name: str | None = field(
+    cover_name: None | str = field(
         default=None,
         metadata={
             "name": "CoverName",

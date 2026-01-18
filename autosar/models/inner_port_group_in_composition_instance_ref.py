@@ -44,7 +44,7 @@ class InnerPortGroupInCompositionInstanceRef:
             },
         )
     )
-    target_ref: InnerPortGroupInCompositionInstanceRef.TargetRef | None = (
+    target_ref: None | InnerPortGroupInCompositionInstanceRef.TargetRef = (
         field(
             default=None,
             metadata={
@@ -54,14 +54,14 @@ class InnerPortGroupInCompositionInstanceRef:
             },
         )
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -72,7 +72,7 @@ class InnerPortGroupInCompositionInstanceRef:
 
     @dataclass
     class ContextRef(Ref):
-        dest: SwComponentPrototypeSubtypesEnum | None = field(
+        dest: None | SwComponentPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -83,7 +83,7 @@ class InnerPortGroupInCompositionInstanceRef:
 
     @dataclass
     class TargetRef(Ref):
-        dest: PortGroupSubtypesEnum | None = field(
+        dest: None | PortGroupSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

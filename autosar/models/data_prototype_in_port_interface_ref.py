@@ -44,7 +44,7 @@ class DataPrototypeInPortInterfaceRef:
     class Meta:
         name = "DATA-PROTOTYPE-IN-PORT-INTERFACE-REF"
 
-    tag_id: PositiveInteger | None = field(
+    tag_id: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "TAG-ID",
@@ -53,7 +53,7 @@ class DataPrototypeInPortInterfaceRef:
         },
     )
     data_prototype_iref: (
-        DataPrototypeInPortInterfaceRef.DataPrototypeIref | None
+        None | DataPrototypeInPortInterfaceRef.DataPrototypeIref
     ) = field(
         default=None,
         metadata={
@@ -62,14 +62,14 @@ class DataPrototypeInPortInterfaceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -81,8 +81,8 @@ class DataPrototypeInPortInterfaceRef:
     @dataclass
     class DataPrototypeIref:
         root_data_prototype_in_cs_ref: (
-            DataPrototypeInPortInterfaceRef.DataPrototypeIref.RootDataPrototypeInCsRef
-            | None
+            None
+            | DataPrototypeInPortInterfaceRef.DataPrototypeIref.RootDataPrototypeInCsRef
         ) = field(
             default=None,
             metadata={
@@ -102,8 +102,8 @@ class DataPrototypeInPortInterfaceRef:
             },
         )
         target_data_prototype_in_cs_ref: (
-            DataPrototypeInPortInterfaceRef.DataPrototypeIref.TargetDataPrototypeInCsRef
-            | None
+            None
+            | DataPrototypeInPortInterfaceRef.DataPrototypeIref.TargetDataPrototypeInCsRef
         ) = field(
             default=None,
             metadata={
@@ -113,8 +113,8 @@ class DataPrototypeInPortInterfaceRef:
             },
         )
         root_data_prototype_in_sr_ref: (
-            DataPrototypeInPortInterfaceRef.DataPrototypeIref.RootDataPrototypeInSrRef
-            | None
+            None
+            | DataPrototypeInPortInterfaceRef.DataPrototypeIref.RootDataPrototypeInSrRef
         ) = field(
             default=None,
             metadata={
@@ -134,8 +134,8 @@ class DataPrototypeInPortInterfaceRef:
             },
         )
         target_data_prototype_in_sr_ref: (
-            DataPrototypeInPortInterfaceRef.DataPrototypeIref.TargetDataPrototypeInSrRef
-            | None
+            None
+            | DataPrototypeInPortInterfaceRef.DataPrototypeIref.TargetDataPrototypeInSrRef
         ) = field(
             default=None,
             metadata={
@@ -145,8 +145,8 @@ class DataPrototypeInPortInterfaceRef:
             },
         )
         root_data_prototype_ref: (
-            DataPrototypeInPortInterfaceRef.DataPrototypeIref.RootDataPrototypeRef
-            | None
+            None
+            | DataPrototypeInPortInterfaceRef.DataPrototypeIref.RootDataPrototypeRef
         ) = field(
             default=None,
             metadata={
@@ -166,8 +166,8 @@ class DataPrototypeInPortInterfaceRef:
             },
         )
         target_data_prototype_ref: (
-            DataPrototypeInPortInterfaceRef.DataPrototypeIref.TargetDataPrototypeRef
-            | None
+            None
+            | DataPrototypeInPortInterfaceRef.DataPrototypeIref.TargetDataPrototypeRef
         ) = field(
             default=None,
             metadata={
@@ -179,7 +179,7 @@ class DataPrototypeInPortInterfaceRef:
 
         @dataclass
         class RootDataPrototypeInCsRef(Ref):
-            dest: AutosarDataPrototypeSubtypesEnum | None = field(
+            dest: None | AutosarDataPrototypeSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -191,7 +191,7 @@ class DataPrototypeInPortInterfaceRef:
         @dataclass
         class ContextDataPrototypeInCsRef(Ref):
             dest: (
-                ApplicationCompositeElementDataPrototypeSubtypesEnum | None
+                None | ApplicationCompositeElementDataPrototypeSubtypesEnum
             ) = field(
                 default=None,
                 metadata={
@@ -203,7 +203,7 @@ class DataPrototypeInPortInterfaceRef:
 
         @dataclass
         class TargetDataPrototypeInCsRef(Ref):
-            dest: DataPrototypeSubtypesEnum | None = field(
+            dest: None | DataPrototypeSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -214,7 +214,7 @@ class DataPrototypeInPortInterfaceRef:
 
         @dataclass
         class RootDataPrototypeInSrRef(Ref):
-            dest: AutosarDataPrototypeSubtypesEnum | None = field(
+            dest: None | AutosarDataPrototypeSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -226,7 +226,7 @@ class DataPrototypeInPortInterfaceRef:
         @dataclass
         class ContextDataPrototypeInSrRef(Ref):
             dest: (
-                ApplicationCompositeElementDataPrototypeSubtypesEnum | None
+                None | ApplicationCompositeElementDataPrototypeSubtypesEnum
             ) = field(
                 default=None,
                 metadata={
@@ -238,7 +238,7 @@ class DataPrototypeInPortInterfaceRef:
 
         @dataclass
         class TargetDataPrototypeInSrRef(Ref):
-            dest: DataPrototypeSubtypesEnum | None = field(
+            dest: None | DataPrototypeSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -249,7 +249,7 @@ class DataPrototypeInPortInterfaceRef:
 
         @dataclass
         class RootDataPrototypeRef(Ref):
-            dest: AutosarDataPrototypeSubtypesEnum | None = field(
+            dest: None | AutosarDataPrototypeSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -261,7 +261,7 @@ class DataPrototypeInPortInterfaceRef:
         @dataclass
         class ContextDataPrototypeRef(Ref):
             dest: (
-                ApplicationCompositeElementDataPrototypeSubtypesEnum | None
+                None | ApplicationCompositeElementDataPrototypeSubtypesEnum
             ) = field(
                 default=None,
                 metadata={
@@ -273,7 +273,7 @@ class DataPrototypeInPortInterfaceRef:
 
         @dataclass
         class TargetDataPrototypeRef(Ref):
-            dest: DataPrototypeSubtypesEnum | None = field(
+            dest: None | DataPrototypeSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",

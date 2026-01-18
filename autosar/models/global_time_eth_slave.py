@@ -109,7 +109,7 @@ class GlobalTimeEthSlave:
     class Meta:
         name = "GLOBAL-TIME-ETH-SLAVE"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -118,7 +118,7 @@ class GlobalTimeEthSlave:
             "required": True,
         },
     )
-    short_name_fragments: GlobalTimeEthSlave.ShortNameFragments | None = field(
+    short_name_fragments: None | GlobalTimeEthSlave.ShortNameFragments = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -126,7 +126,7 @@ class GlobalTimeEthSlave:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -134,7 +134,7 @@ class GlobalTimeEthSlave:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -142,7 +142,7 @@ class GlobalTimeEthSlave:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -150,7 +150,7 @@ class GlobalTimeEthSlave:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -158,7 +158,7 @@ class GlobalTimeEthSlave:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -166,7 +166,7 @@ class GlobalTimeEthSlave:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: GlobalTimeEthSlave.Annotations | None = field(
+    annotations: None | GlobalTimeEthSlave.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -175,7 +175,7 @@ class GlobalTimeEthSlave:
         },
     )
     communication_connector_ref: (
-        GlobalTimeEthSlave.CommunicationConnectorRef | None
+        None | GlobalTimeEthSlave.CommunicationConnectorRef
     ) = field(
         default=None,
         metadata={
@@ -184,7 +184,7 @@ class GlobalTimeEthSlave:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    follow_up_timeout_value: TimeValue | None = field(
+    follow_up_timeout_value: None | TimeValue = field(
         default=None,
         metadata={
             "name": "FOLLOW-UP-TIMEOUT-VALUE",
@@ -192,7 +192,7 @@ class GlobalTimeEthSlave:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    time_leap_future_threshold: TimeValue | None = field(
+    time_leap_future_threshold: None | TimeValue = field(
         default=None,
         metadata={
             "name": "TIME-LEAP-FUTURE-THRESHOLD",
@@ -200,7 +200,7 @@ class GlobalTimeEthSlave:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    time_leap_healing_counter: PositiveInteger | None = field(
+    time_leap_healing_counter: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "TIME-LEAP-HEALING-COUNTER",
@@ -208,7 +208,7 @@ class GlobalTimeEthSlave:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    time_leap_past_threshold: TimeValue | None = field(
+    time_leap_past_threshold: None | TimeValue = field(
         default=None,
         metadata={
             "name": "TIME-LEAP-PAST-THRESHOLD",
@@ -216,7 +216,7 @@ class GlobalTimeEthSlave:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -224,7 +224,7 @@ class GlobalTimeEthSlave:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    crc_validated: GlobalTimeCrcValidationEnum | None = field(
+    crc_validated: None | GlobalTimeCrcValidationEnum = field(
         default=None,
         metadata={
             "name": "CRC-VALIDATED",
@@ -232,7 +232,7 @@ class GlobalTimeEthSlave:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    time_hardware_correction_threshold: TimeValue | None = field(
+    time_hardware_correction_threshold: None | TimeValue = field(
         default=None,
         metadata={
             "name": "TIME-HARDWARE-CORRECTION-THRESHOLD",
@@ -240,14 +240,14 @@ class GlobalTimeEthSlave:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -255,7 +255,7 @@ class GlobalTimeEthSlave:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -287,7 +287,7 @@ class GlobalTimeEthSlave:
 
     @dataclass
     class CommunicationConnectorRef(Ref):
-        dest: CommunicationConnectorSubtypesEnum | None = field(
+        dest: None | CommunicationConnectorSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

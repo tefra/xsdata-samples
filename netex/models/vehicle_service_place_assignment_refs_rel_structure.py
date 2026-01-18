@@ -25,11 +25,11 @@ class VehicleServicePlaceAssignmentRefsRelStructure(
         name = "vehicleServicePlaceAssignmentRefs_RelStructure"
 
     vehicle_service_place_assignment_ref: (
-        VehiclePoolingPlaceAssignmentRef
+        None
+        | VehiclePoolingPlaceAssignmentRef
         | VehicleSharingPlaceAssignmentRef
         | TaxiServicePlaceAssignmentRef
         | VehicleServicePlaceAssignmentRef
-        | None
     ) = field(
         default=None,
         metadata={

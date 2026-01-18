@@ -35,7 +35,7 @@ class CoctMt150007UvPerson:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Ii | None = field(
+    type_id: None | Ii = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -59,7 +59,7 @@ class CoctMt150007UvPerson:
             "min_occurs": 1,
         },
     )
-    null_flavor: NullFlavor | None = field(
+    null_flavor: None | NullFlavor = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -99,7 +99,7 @@ class CoctMt150007UvContactParty:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Ii | None = field(
+    type_id: None | Ii = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -122,7 +122,7 @@ class CoctMt150007UvContactParty:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    code: Ce | None = field(
+    code: None | Ce = field(
         default=None,
         metadata={
             "type": "Element",
@@ -143,7 +143,7 @@ class CoctMt150007UvContactParty:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    contact_person: CoctMt150007UvPerson | None = field(
+    contact_person: None | CoctMt150007UvPerson = field(
         default=None,
         metadata={
             "name": "contactPerson",
@@ -152,14 +152,14 @@ class CoctMt150007UvContactParty:
             "nillable": True,
         },
     )
-    null_flavor: NullFlavor | None = field(
+    null_flavor: None | NullFlavor = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
         },
     )
-    class_code: RoleClassContact | None = field(
+    class_code: None | RoleClassContact = field(
         default=None,
         metadata={
             "name": "classCode",
@@ -182,7 +182,7 @@ class CoctMt150007UvOrganization:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Ii | None = field(
+    type_id: None | Ii = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -205,7 +205,7 @@ class CoctMt150007UvOrganization:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    code: Ce | None = field(
+    code: None | Ce = field(
         default=None,
         metadata={
             "type": "Element",
@@ -229,14 +229,14 @@ class CoctMt150007UvOrganization:
             "nillable": True,
         },
     )
-    null_flavor: NullFlavor | None = field(
+    null_flavor: None | NullFlavor = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
         },
     )
-    class_code: EntityClassOrganization | None = field(
+    class_code: None | EntityClassOrganization = field(
         default=None,
         metadata={
             "name": "classCode",

@@ -112,7 +112,7 @@ class IPduPort:
     class Meta:
         name = "I-PDU-PORT"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -121,7 +121,7 @@ class IPduPort:
             "required": True,
         },
     )
-    short_name_fragments: IPduPort.ShortNameFragments | None = field(
+    short_name_fragments: None | IPduPort.ShortNameFragments = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -129,7 +129,7 @@ class IPduPort:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -137,7 +137,7 @@ class IPduPort:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -145,7 +145,7 @@ class IPduPort:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -153,7 +153,7 @@ class IPduPort:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -161,7 +161,7 @@ class IPduPort:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -169,7 +169,7 @@ class IPduPort:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: IPduPort.Annotations | None = field(
+    annotations: None | IPduPort.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -177,7 +177,7 @@ class IPduPort:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    communication_direction: CommunicationDirectionType | None = field(
+    communication_direction: None | CommunicationDirectionType = field(
         default=None,
         metadata={
             "name": "COMMUNICATION-DIRECTION",
@@ -185,7 +185,7 @@ class IPduPort:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -193,7 +193,7 @@ class IPduPort:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    i_pdu_signal_processing: IPduSignalProcessingEnum | None = field(
+    i_pdu_signal_processing: None | IPduSignalProcessingEnum = field(
         default=None,
         metadata={
             "name": "I-PDU-SIGNAL-PROCESSING",
@@ -201,7 +201,7 @@ class IPduPort:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    key_id: PositiveInteger | None = field(
+    key_id: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "KEY-ID",
@@ -209,7 +209,7 @@ class IPduPort:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    rx_security_verification: Boolean | None = field(
+    rx_security_verification: None | Boolean = field(
         default=None,
         metadata={
             "name": "RX-SECURITY-VERIFICATION",
@@ -217,7 +217,7 @@ class IPduPort:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    timestamp_rx_acceptance_window: TimeValue | None = field(
+    timestamp_rx_acceptance_window: None | TimeValue = field(
         default=None,
         metadata={
             "name": "TIMESTAMP-RX-ACCEPTANCE-WINDOW",
@@ -225,7 +225,7 @@ class IPduPort:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    use_auth_data_freshness: Boolean | None = field(
+    use_auth_data_freshness: None | Boolean = field(
         default=None,
         metadata={
             "name": "USE-AUTH-DATA-FRESHNESS",
@@ -233,14 +233,14 @@ class IPduPort:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -248,7 +248,7 @@ class IPduPort:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",

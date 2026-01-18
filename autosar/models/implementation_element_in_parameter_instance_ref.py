@@ -49,7 +49,7 @@ class ImplementationElementInParameterInstanceRef:
         name = "IMPLEMENTATION-ELEMENT-IN-PARAMETER-INSTANCE-REF"
 
     context_ref: (
-        ImplementationElementInParameterInstanceRef.ContextRef | None
+        None | ImplementationElementInParameterInstanceRef.ContextRef
     ) = field(
         default=None,
         metadata={
@@ -59,7 +59,7 @@ class ImplementationElementInParameterInstanceRef:
         },
     )
     target_ref: (
-        ImplementationElementInParameterInstanceRef.TargetRef | None
+        None | ImplementationElementInParameterInstanceRef.TargetRef
     ) = field(
         default=None,
         metadata={
@@ -68,14 +68,14 @@ class ImplementationElementInParameterInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -86,7 +86,7 @@ class ImplementationElementInParameterInstanceRef:
 
     @dataclass
     class ContextRef(Ref):
-        dest: ParameterDataPrototypeSubtypesEnum | None = field(
+        dest: None | ParameterDataPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -97,7 +97,7 @@ class ImplementationElementInParameterInstanceRef:
 
     @dataclass
     class TargetRef(Ref):
-        dest: ImplementationDataTypeElementSubtypesEnum | None = field(
+        dest: None | ImplementationDataTypeElementSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

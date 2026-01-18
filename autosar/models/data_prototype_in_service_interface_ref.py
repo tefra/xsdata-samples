@@ -42,7 +42,7 @@ class DataPrototypeInServiceInterfaceRef:
     class Meta:
         name = "DATA-PROTOTYPE-IN-SERVICE-INTERFACE-REF"
 
-    data_prototype_iref: DataPrototypeInServiceInterfaceInstanceRef | None = (
+    data_prototype_iref: None | DataPrototypeInServiceInterfaceInstanceRef = (
         field(
             default=None,
             metadata={
@@ -53,7 +53,7 @@ class DataPrototypeInServiceInterfaceRef:
         )
     )
     element_in_impl_datatype: (
-        PortInterfaceElementInImplementationDatatypeRef | None
+        None | PortInterfaceElementInImplementationDatatypeRef
     ) = field(
         default=None,
         metadata={
@@ -62,14 +62,14 @@ class DataPrototypeInServiceInterfaceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

@@ -53,7 +53,7 @@ class VehicleJourneyVersionStructure(JourneyVersionStructure):
     class Meta:
         name = "VehicleJourney_VersionStructure"
 
-    departure_time: XmlTime | None = field(
+    departure_time: None | XmlTime = field(
         default=None,
         metadata={
             "name": "DepartureTime",
@@ -61,7 +61,7 @@ class VehicleJourneyVersionStructure(JourneyVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    departure_day_offset: int | None = field(
+    departure_day_offset: None | int = field(
         default=None,
         metadata={
             "name": "DepartureDayOffset",
@@ -69,7 +69,7 @@ class VehicleJourneyVersionStructure(JourneyVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    frequency: FrequencyStructure | None = field(
+    frequency: None | FrequencyStructure = field(
         default=None,
         metadata={
             "name": "Frequency",
@@ -77,7 +77,7 @@ class VehicleJourneyVersionStructure(JourneyVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    journey_duration: XmlDuration | None = field(
+    journey_duration: None | XmlDuration = field(
         default=None,
         metadata={
             "name": "JourneyDuration",
@@ -85,7 +85,7 @@ class VehicleJourneyVersionStructure(JourneyVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    day_types: DayTypeRefsRelStructure | None = field(
+    day_types: None | DayTypeRefsRelStructure = field(
         default=None,
         metadata={
             "name": "dayTypes",
@@ -93,7 +93,7 @@ class VehicleJourneyVersionStructure(JourneyVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    route_ref: RouteRef | None = field(
+    route_ref: None | RouteRef = field(
         default=None,
         metadata={
             "name": "RouteRef",
@@ -102,11 +102,11 @@ class VehicleJourneyVersionStructure(JourneyVersionStructure):
         },
     )
     journey_pattern_ref: (
-        ServiceJourneyPatternRef
+        None
+        | ServiceJourneyPatternRef
         | ServicePatternRef
         | DeadRunJourneyPatternRef
         | JourneyPatternRef
-        | None
     ) = field(
         default=None,
         metadata={
@@ -135,7 +135,7 @@ class VehicleJourneyVersionStructure(JourneyVersionStructure):
             ),
         },
     )
-    time_demand_type_ref: TimeDemandTypeRefStructure | None = field(
+    time_demand_type_ref: None | TimeDemandTypeRefStructure = field(
         default=None,
         metadata={
             "name": "TimeDemandTypeRef",
@@ -143,7 +143,7 @@ class VehicleJourneyVersionStructure(JourneyVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    timing_algorithm_type_ref: TimingAlgorithmTypeRef | None = field(
+    timing_algorithm_type_ref: None | TimingAlgorithmTypeRef = field(
         default=None,
         metadata={
             "name": "TimingAlgorithmTypeRef",
@@ -152,10 +152,10 @@ class VehicleJourneyVersionStructure(JourneyVersionStructure):
         },
     )
     journey_frequency_group_ref: (
-        RhythmicalJourneyGroupRef
+        None
+        | RhythmicalJourneyGroupRef
         | HeadwayJourneyGroupRef
         | JourneyFrequencyGroupRef
-        | None
     ) = field(
         default=None,
         metadata={
@@ -179,7 +179,7 @@ class VehicleJourneyVersionStructure(JourneyVersionStructure):
             ),
         },
     )
-    vehicle_type_ref: CompoundTrainRef | TrainRef | VehicleTypeRef | None = (
+    vehicle_type_ref: None | CompoundTrainRef | TrainRef | VehicleTypeRef = (
         field(
             default=None,
             metadata={
@@ -204,7 +204,7 @@ class VehicleJourneyVersionStructure(JourneyVersionStructure):
             },
         )
     )
-    operational_context_ref: OperationalContextRef | None = field(
+    operational_context_ref: None | OperationalContextRef = field(
         default=None,
         metadata={
             "name": "OperationalContextRef",
@@ -212,7 +212,7 @@ class VehicleJourneyVersionStructure(JourneyVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    block_ref: TrainBlockRef | BlockRef | None = field(
+    block_ref: None | TrainBlockRef | BlockRef = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -230,7 +230,7 @@ class VehicleJourneyVersionStructure(JourneyVersionStructure):
             ),
         },
     )
-    course_of_journeys_ref: CourseOfJourneysRef | None = field(
+    course_of_journeys_ref: None | CourseOfJourneysRef = field(
         default=None,
         metadata={
             "name": "CourseOfJourneysRef",
@@ -238,7 +238,7 @@ class VehicleJourneyVersionStructure(JourneyVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    public_code: str | None = field(
+    public_code: None | str = field(
         default=None,
         metadata={
             "name": "PublicCode",
@@ -246,7 +246,7 @@ class VehicleJourneyVersionStructure(JourneyVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    time_demand_types: TimeDemandTypeRefsRelStructure | None = field(
+    time_demand_types: None | TimeDemandTypeRefsRelStructure = field(
         default=None,
         metadata={
             "name": "timeDemandTypes",
@@ -254,7 +254,7 @@ class VehicleJourneyVersionStructure(JourneyVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    parts: JourneyPartsRelStructure | None = field(
+    parts: None | JourneyPartsRelStructure = field(
         default=None,
         metadata={
             "type": "Element",
@@ -262,7 +262,7 @@ class VehicleJourneyVersionStructure(JourneyVersionStructure):
         },
     )
     train_component_label_assignments: (
-        TrainComponentLabelAssignmentsRelStructure | None
+        None | TrainComponentLabelAssignmentsRelStructure
     ) = field(
         default=None,
         metadata={
@@ -272,7 +272,7 @@ class VehicleJourneyVersionStructure(JourneyVersionStructure):
         },
     )
     vehicle_journey_stop_assignments: (
-        VehicleJourneyStopAssignmentsRelStructure | None
+        None | VehicleJourneyStopAssignmentsRelStructure
     ) = field(
         default=None,
         metadata={
@@ -281,7 +281,7 @@ class VehicleJourneyVersionStructure(JourneyVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    wait_times: VehicleJourneyWaitTimesRelStructure | None = field(
+    wait_times: None | VehicleJourneyWaitTimesRelStructure = field(
         default=None,
         metadata={
             "name": "waitTimes",
@@ -289,7 +289,7 @@ class VehicleJourneyVersionStructure(JourneyVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    run_times: VehicleJourneyRunTimesRelStructure | None = field(
+    run_times: None | VehicleJourneyRunTimesRelStructure = field(
         default=None,
         metadata={
             "name": "runTimes",
@@ -297,14 +297,14 @@ class VehicleJourneyVersionStructure(JourneyVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    layovers: VehicleJourneyLayoversRelStructure | None = field(
+    layovers: None | VehicleJourneyLayoversRelStructure = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    passing_times: TimetabledPassingTimesRelStructure | None = field(
+    passing_times: None | TimetabledPassingTimesRelStructure = field(
         default=None,
         metadata={
             "name": "passingTimes",

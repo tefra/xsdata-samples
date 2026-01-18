@@ -24,35 +24,35 @@ class AuctionCreateDetail:
             "required": True,
         }
     )
-    list_of_mvbvariables: ListOfMvbvariables | None = field(
+    list_of_mvbvariables: None | ListOfMvbvariables = field(
         default=None,
         metadata={
             "name": "ListOfMVBVariables",
             "type": "Element",
         },
     )
-    auction_pricing_detail: AuctionPricingDetail | None = field(
+    auction_pricing_detail: None | AuctionPricingDetail = field(
         default=None,
         metadata={
             "name": "AuctionPricingDetail",
             "type": "Element",
         },
     )
-    auction_item_dates: AuctionItemDates | None = field(
+    auction_item_dates: None | AuctionItemDates = field(
         default=None,
         metadata={
             "name": "AuctionItemDates",
             "type": "Element",
         },
     )
-    auction_delivery_detail: AuctionDeliveryDetail | None = field(
+    auction_delivery_detail: None | AuctionDeliveryDetail = field(
         default=None,
         metadata={
             "name": "AuctionDeliveryDetail",
             "type": "Element",
         },
     )
-    list_of_attachment: ListOfAttachment | None = field(
+    list_of_attachment: None | ListOfAttachment = field(
         default=None,
         metadata={
             "name": "ListOfAttachment",
@@ -66,7 +66,7 @@ class AuctionCreateDetail:
             "required": True,
         }
     )
-    list_of_auction_item_components: ListOfAuctionItemComponents | None = (
+    list_of_auction_item_components: None | ListOfAuctionItemComponents = (
         field(
             default=None,
             metadata={

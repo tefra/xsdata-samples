@@ -39,7 +39,7 @@ class CompType(AnnotableType):
             "namespace": "",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",

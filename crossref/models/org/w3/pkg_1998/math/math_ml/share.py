@@ -11,13 +11,13 @@ class Share:
         name = "share"
         namespace = "http://www.w3.org/1998/Math/MathML"
 
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    xref: object | None = field(
+    xref: None | object = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -31,19 +31,19 @@ class Share:
             "tokens": True,
         },
     )
-    style: str | None = field(
+    style: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    href: str | None = field(
+    href: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    other: object | None = field(
+    other: None | object = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -56,7 +56,7 @@ class Share:
             "namespace": "##other",
         },
     )
-    src: str | None = field(
+    src: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",

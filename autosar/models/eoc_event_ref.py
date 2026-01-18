@@ -97,7 +97,7 @@ class EocEventRef:
     class Meta:
         name = "EOC-EVENT-REF"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -106,7 +106,7 @@ class EocEventRef:
             "required": True,
         },
     )
-    short_name_fragments: EocEventRef.ShortNameFragments | None = field(
+    short_name_fragments: None | EocEventRef.ShortNameFragments = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -114,7 +114,7 @@ class EocEventRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -122,7 +122,7 @@ class EocEventRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -130,7 +130,7 @@ class EocEventRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -138,7 +138,7 @@ class EocEventRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -146,7 +146,7 @@ class EocEventRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -154,7 +154,7 @@ class EocEventRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: EocEventRef.Annotations | None = field(
+    annotations: None | EocEventRef.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -162,7 +162,7 @@ class EocEventRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    direct_successor_refs: EocEventRef.DirectSuccessorRefs | None = field(
+    direct_successor_refs: None | EocEventRef.DirectSuccessorRefs = field(
         default=None,
         metadata={
             "name": "DIRECT-SUCCESSOR-REFS",
@@ -170,7 +170,7 @@ class EocEventRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    bsw_module_instance_ref: EocEventRef.BswModuleInstanceRef | None = field(
+    bsw_module_instance_ref: None | EocEventRef.BswModuleInstanceRef = field(
         default=None,
         metadata={
             "name": "BSW-MODULE-INSTANCE-REF",
@@ -178,7 +178,7 @@ class EocEventRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    component_iref: ComponentInCompositionInstanceRef | None = field(
+    component_iref: None | ComponentInCompositionInstanceRef = field(
         default=None,
         metadata={
             "name": "COMPONENT-IREF",
@@ -186,7 +186,7 @@ class EocEventRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    event_ref: EocEventRef.EventRef | None = field(
+    event_ref: None | EocEventRef.EventRef = field(
         default=None,
         metadata={
             "name": "EVENT-REF",
@@ -194,7 +194,7 @@ class EocEventRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    successor_refs: EocEventRef.SuccessorRefs | None = field(
+    successor_refs: None | EocEventRef.SuccessorRefs = field(
         default=None,
         metadata={
             "name": "SUCCESSOR-REFS",
@@ -202,14 +202,14 @@ class EocEventRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -217,7 +217,7 @@ class EocEventRef:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -262,7 +262,7 @@ class EocEventRef:
 
         @dataclass
         class DirectSuccessorRef(Ref):
-            dest: EocExecutableEntityRefAbstractSubtypesEnum | None = field(
+            dest: None | EocExecutableEntityRefAbstractSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -273,7 +273,7 @@ class EocEventRef:
 
     @dataclass
     class BswModuleInstanceRef(Ref):
-        dest: BswImplementationSubtypesEnum | None = field(
+        dest: None | BswImplementationSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -284,7 +284,7 @@ class EocEventRef:
 
     @dataclass
     class EventRef(Ref):
-        dest: AbstractEventSubtypesEnum | None = field(
+        dest: None | AbstractEventSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -306,7 +306,7 @@ class EocEventRef:
 
         @dataclass
         class SuccessorRef(Ref):
-            dest: EocExecutableEntityRefAbstractSubtypesEnum | None = field(
+            dest: None | EocExecutableEntityRefAbstractSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",

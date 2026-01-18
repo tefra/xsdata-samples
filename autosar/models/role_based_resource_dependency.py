@@ -34,7 +34,7 @@ class RoleBasedResourceDependency:
     class Meta:
         name = "ROLE-BASED-RESOURCE-DEPENDENCY"
 
-    resource_ref: RoleBasedResourceDependency.ResourceRef | None = field(
+    resource_ref: None | RoleBasedResourceDependency.ResourceRef = field(
         default=None,
         metadata={
             "name": "RESOURCE-REF",
@@ -42,7 +42,7 @@ class RoleBasedResourceDependency:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    role: Identifier | None = field(
+    role: None | Identifier = field(
         default=None,
         metadata={
             "name": "ROLE",
@@ -50,14 +50,14 @@ class RoleBasedResourceDependency:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -68,7 +68,7 @@ class RoleBasedResourceDependency:
 
     @dataclass
     class ResourceRef(Ref):
-        dest: CpSoftwareClusterResourceSubtypesEnum | None = field(
+        dest: None | CpSoftwareClusterResourceSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

@@ -26,7 +26,7 @@ class DisplayAssignmentVersionStructure(AssignmentVersionStructure1):
     class Meta:
         name = "DisplayAssignment_VersionStructure"
 
-    logical_display_ref: LogicalDisplayRef | None = field(
+    logical_display_ref: None | LogicalDisplayRef = field(
         default=None,
         metadata={
             "name": "LogicalDisplayRef",
@@ -35,7 +35,7 @@ class DisplayAssignmentVersionStructure(AssignmentVersionStructure1):
         },
     )
     scheduled_stop_point_ref: (
-        FareScheduledStopPointRef | ScheduledStopPointRef | None
+        None | FareScheduledStopPointRef | ScheduledStopPointRef
     ) = field(
         default=None,
         metadata={
@@ -54,7 +54,7 @@ class DisplayAssignmentVersionStructure(AssignmentVersionStructure1):
             ),
         },
     )
-    vehicle_mode: VehicleMode | None = field(
+    vehicle_mode: None | VehicleMode = field(
         default=None,
         metadata={
             "name": "VehicleMode",
@@ -62,7 +62,7 @@ class DisplayAssignmentVersionStructure(AssignmentVersionStructure1):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    line_ref: FlexibleLineRef | LineRef | None = field(
+    line_ref: None | FlexibleLineRef | LineRef = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -80,7 +80,7 @@ class DisplayAssignmentVersionStructure(AssignmentVersionStructure1):
             ),
         },
     )
-    direction_ref: DirectionRef | None = field(
+    direction_ref: None | DirectionRef = field(
         default=None,
         metadata={
             "name": "DirectionRef",
@@ -89,11 +89,11 @@ class DisplayAssignmentVersionStructure(AssignmentVersionStructure1):
         },
     )
     journey_pattern_ref: (
-        ServiceJourneyPatternRef
+        None
+        | ServiceJourneyPatternRef
         | ServicePatternRef
         | DeadRunJourneyPatternRef
         | JourneyPatternRef
-        | None
     ) = field(
         default=None,
         metadata={
@@ -122,7 +122,7 @@ class DisplayAssignmentVersionStructure(AssignmentVersionStructure1):
             ),
         },
     )
-    display_assignment_type: DisplayAssignmentTypeEnumeration | None = field(
+    display_assignment_type: None | DisplayAssignmentTypeEnumeration = field(
         default=None,
         metadata={
             "name": "DisplayAssignmentType",
@@ -130,7 +130,7 @@ class DisplayAssignmentVersionStructure(AssignmentVersionStructure1):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    number_of_journeys_to_show: int | None = field(
+    number_of_journeys_to_show: None | int = field(
         default=None,
         metadata={
             "name": "NumberOfJourneysToShow",
@@ -138,7 +138,7 @@ class DisplayAssignmentVersionStructure(AssignmentVersionStructure1):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    display_priority: int | None = field(
+    display_priority: None | int = field(
         default=None,
         metadata={
             "name": "DisplayPriority",

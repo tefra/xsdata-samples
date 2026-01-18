@@ -27,7 +27,7 @@ class GroupOfParkingSpacesStatus(ParkingOccupancy):
     :ivar group_of_parking_spaces_status_extension:
     """
 
-    group_declaration_valid_now: bool | None = field(
+    group_declaration_valid_now: None | bool = field(
         default=None,
         metadata={
             "name": "groupDeclarationValidNow",
@@ -35,7 +35,7 @@ class GroupOfParkingSpacesStatus(ParkingOccupancy):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    group_of_parking_spaces_closed: bool | None = field(
+    group_of_parking_spaces_closed: None | bool = field(
         default=None,
         metadata={
             "name": "groupOfParkingSpacesClosed",
@@ -43,7 +43,7 @@ class GroupOfParkingSpacesStatus(ParkingOccupancy):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    group_of_parking_spaces_status_extension: ExtensionType | None = field(
+    group_of_parking_spaces_status_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "groupOfParkingSpacesStatusExtension",

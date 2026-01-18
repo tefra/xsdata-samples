@@ -36,7 +36,7 @@ class Event:
         name = "event"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    event_desc: EventDesc | None = field(
+    event_desc: None | EventDesc = field(
         default=None,
         metadata={
             "name": "event-desc",
@@ -50,14 +50,14 @@ class Event:
             "type": "Element",
         },
     )
-    article_version: ArticleVersion | None = field(
+    article_version: None | ArticleVersion = field(
         default=None,
         metadata={
             "name": "article-version",
             "type": "Element",
         },
     )
-    article_version_alternatives: ArticleVersionAlternatives | None = field(
+    article_version_alternatives: None | ArticleVersionAlternatives = field(
         default=None,
         metadata={
             "name": "article-version-alternatives",
@@ -71,7 +71,7 @@ class Event:
             "type": "Element",
         },
     )
-    pub_date_not_available: PubDateNotAvailable | None = field(
+    pub_date_not_available: None | PubDateNotAvailable = field(
         default=None,
         metadata={
             "name": "pub-date-not-available",
@@ -90,7 +90,7 @@ class Event:
             "type": "Element",
         },
     )
-    issn_l: IssnL | None = field(
+    issn_l: None | IssnL = field(
         default=None,
         metadata={
             "name": "issn-l",
@@ -103,7 +103,7 @@ class Event:
             "type": "Element",
         },
     )
-    permissions: Permissions | None = field(
+    permissions: None | Permissions = field(
         default=None,
         metadata={
             "type": "Element",
@@ -122,34 +122,34 @@ class Event:
             "type": "Element",
         },
     )
-    event_type: str | None = field(
+    event_type: None | str = field(
         default=None,
         metadata={
             "name": "event-type",
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",

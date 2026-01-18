@@ -35,7 +35,7 @@ class ClientIdMapping:
     class Meta:
         name = "CLIENT-ID-MAPPING"
 
-    system_signal_ref: ClientIdMapping.SystemSignalRef | None = field(
+    system_signal_ref: None | ClientIdMapping.SystemSignalRef = field(
         default=None,
         metadata={
             "name": "SYSTEM-SIGNAL-REF",
@@ -43,14 +43,14 @@ class ClientIdMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -61,7 +61,7 @@ class ClientIdMapping:
 
     @dataclass
     class SystemSignalRef(Ref):
-        dest: SystemSignalSubtypesEnum | None = field(
+        dest: None | SystemSignalSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

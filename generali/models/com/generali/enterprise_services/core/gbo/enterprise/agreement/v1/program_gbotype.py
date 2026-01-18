@@ -67,7 +67,7 @@ class ProgramGbotype(AgreementType):
     class Meta:
         name = "ProgramGBOType"
 
-    long_term_agreement: bool | None = field(
+    long_term_agreement: None | bool = field(
         default=None,
         metadata={
             "name": "LongTermAgreement",
@@ -75,7 +75,7 @@ class ProgramGbotype(AgreementType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    long_term_start_date: DateTimeType | None = field(
+    long_term_start_date: None | DateTimeType = field(
         default=None,
         metadata={
             "name": "LongTermStartDate",
@@ -83,7 +83,7 @@ class ProgramGbotype(AgreementType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    long_term_end_date: DateTimeType | None = field(
+    long_term_end_date: None | DateTimeType = field(
         default=None,
         metadata={
             "name": "LongTermEndDate",
@@ -91,7 +91,7 @@ class ProgramGbotype(AgreementType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    on_risk_since: DateTimeType | None = field(
+    on_risk_since: None | DateTimeType = field(
         default=None,
         metadata={
             "name": "OnRiskSince",
@@ -99,7 +99,7 @@ class ProgramGbotype(AgreementType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    renewal_date: DateTimeType | None = field(
+    renewal_date: None | DateTimeType = field(
         default=None,
         metadata={
             "name": "RenewalDate",
@@ -107,7 +107,7 @@ class ProgramGbotype(AgreementType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    year_sequence_number: int | None = field(
+    year_sequence_number: None | int = field(
         default=None,
         metadata={
             "name": "YearSequenceNumber",
@@ -116,7 +116,7 @@ class ProgramGbotype(AgreementType):
             "required": True,
         },
     )
-    producer: ProducerInvolvementType | None = field(
+    producer: None | ProducerInvolvementType = field(
         default=None,
         metadata={
             "name": "Producer",
@@ -125,7 +125,7 @@ class ProgramGbotype(AgreementType):
             "required": True,
         },
     )
-    cancellation_days_notice: NumberType | None = field(
+    cancellation_days_notice: None | NumberType = field(
         default=None,
         metadata={
             "name": "CancellationDaysNotice",
@@ -134,7 +134,7 @@ class ProgramGbotype(AgreementType):
             "required": True,
         },
     )
-    risks: ProgramGbotypeRisks | None = field(
+    risks: None | ProgramGbotypeRisks = field(
         default=None,
         metadata={
             "name": "Risks",
@@ -142,7 +142,7 @@ class ProgramGbotype(AgreementType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    covers: ProgramGbotypeCovers | None = field(
+    covers: None | ProgramGbotypeCovers = field(
         default=None,
         metadata={
             "name": "Covers",
@@ -151,7 +151,7 @@ class ProgramGbotype(AgreementType):
             "required": True,
         },
     )
-    deductibles: DeductiblesType | None = field(
+    deductibles: None | DeductiblesType = field(
         default=None,
         metadata={
             "name": "Deductibles",
@@ -159,7 +159,7 @@ class ProgramGbotype(AgreementType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    limits: LimitsType | None = field(
+    limits: None | LimitsType = field(
         default=None,
         metadata={
             "name": "Limits",
@@ -167,7 +167,7 @@ class ProgramGbotype(AgreementType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    premium_factors: ProgramGbotypePremiumFactors | None = field(
+    premium_factors: None | ProgramGbotypePremiumFactors = field(
         default=None,
         metadata={
             "name": "PremiumFactors",
@@ -175,7 +175,7 @@ class ProgramGbotype(AgreementType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    perils: PerilsStructureType | None = field(
+    perils: None | PerilsStructureType = field(
         default=None,
         metadata={
             "name": "Perils",
@@ -183,7 +183,7 @@ class ProgramGbotype(AgreementType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    si_ccode: SicClassificationType | None = field(
+    si_ccode: None | SicClassificationType = field(
         default=None,
         metadata={
             "name": "SiCCode",
@@ -191,7 +191,7 @@ class ProgramGbotype(AgreementType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    legal_cost: LegalCostType | None = field(
+    legal_cost: None | LegalCostType = field(
         default=None,
         metadata={
             "name": "LegalCost",
@@ -199,7 +199,7 @@ class ProgramGbotype(AgreementType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    total_premium: TotalPremiumType | None = field(
+    total_premium: None | TotalPremiumType = field(
         default=None,
         metadata={
             "name": "TotalPremium",
@@ -207,7 +207,7 @@ class ProgramGbotype(AgreementType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    program_limit_of_indemnity: AmountType | None = field(
+    program_limit_of_indemnity: None | AmountType = field(
         default=None,
         metadata={
             "name": "ProgramLimitOfIndemnity",
@@ -215,7 +215,7 @@ class ProgramGbotype(AgreementType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    pharmaceutical_risk: bool | None = field(
+    pharmaceutical_risk: None | bool = field(
         default=None,
         metadata={
             "name": "PharmaceuticalRisk",
@@ -223,7 +223,7 @@ class ProgramGbotype(AgreementType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    is_centralised_premium_payment: bool | None = field(
+    is_centralised_premium_payment: None | bool = field(
         default=None,
         metadata={
             "name": "IsCentralisedPremiumPayment",
@@ -231,7 +231,7 @@ class ProgramGbotype(AgreementType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    to_portal_indicator: TextType | None = field(
+    to_portal_indicator: None | TextType = field(
         default=None,
         metadata={
             "name": "ToPortalIndicator",
@@ -239,7 +239,7 @@ class ProgramGbotype(AgreementType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    documents: ProgramGbotypeDocuments | None = field(
+    documents: None | ProgramGbotypeDocuments = field(
         default=None,
         metadata={
             "name": "Documents",
@@ -247,7 +247,7 @@ class ProgramGbotype(AgreementType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    mprindicator: bool | None = field(
+    mprindicator: None | bool = field(
         default=None,
         metadata={
             "name": "MPRIndicator",
@@ -255,7 +255,7 @@ class ProgramGbotype(AgreementType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    sanction_and_compliance_flag: bool | None = field(
+    sanction_and_compliance_flag: None | bool = field(
         default=None,
         metadata={
             "name": "SanctionAndComplianceFlag",
@@ -263,7 +263,7 @@ class ProgramGbotype(AgreementType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    pricing: PricingType | None = field(
+    pricing: None | PricingType = field(
         default=None,
         metadata={
             "name": "Pricing",
@@ -271,7 +271,7 @@ class ProgramGbotype(AgreementType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    cyber_exclusion: CyberExclusionType | None = field(
+    cyber_exclusion: None | CyberExclusionType = field(
         default=None,
         metadata={
             "name": "CyberExclusion",
@@ -279,7 +279,7 @@ class ProgramGbotype(AgreementType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    family_submission_reference: str | None = field(
+    family_submission_reference: None | str = field(
         default=None,
         metadata={
             "name": "FamilySubmissionReference",
@@ -287,7 +287,7 @@ class ProgramGbotype(AgreementType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    car_submission_reference: str | None = field(
+    car_submission_reference: None | str = field(
         default=None,
         metadata={
             "name": "CarSubmissionReference",
@@ -295,7 +295,7 @@ class ProgramGbotype(AgreementType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    project_type_code: str | None = field(
+    project_type_code: None | str = field(
         default=None,
         metadata={
             "name": "ProjectTypeCode",
@@ -303,7 +303,7 @@ class ProgramGbotype(AgreementType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    publish_claims_with_paid_values: bool | None = field(
+    publish_claims_with_paid_values: None | bool = field(
         default=None,
         metadata={
             "name": "PublishClaimsWithPaidValues",
@@ -311,7 +311,7 @@ class ProgramGbotype(AgreementType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    publish_claims_without_paid_values: bool | None = field(
+    publish_claims_without_paid_values: None | bool = field(
         default=None,
         metadata={
             "name": "PublishClaimsWithoutPaidValues",

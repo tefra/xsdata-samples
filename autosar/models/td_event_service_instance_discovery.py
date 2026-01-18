@@ -96,7 +96,7 @@ class TdEventServiceInstanceDiscovery:
     class Meta:
         name = "TD-EVENT-SERVICE-INSTANCE-DISCOVERY"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -106,7 +106,7 @@ class TdEventServiceInstanceDiscovery:
         },
     )
     short_name_fragments: (
-        TdEventServiceInstanceDiscovery.ShortNameFragments | None
+        None | TdEventServiceInstanceDiscovery.ShortNameFragments
     ) = field(
         default=None,
         metadata={
@@ -115,7 +115,7 @@ class TdEventServiceInstanceDiscovery:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -123,7 +123,7 @@ class TdEventServiceInstanceDiscovery:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -131,7 +131,7 @@ class TdEventServiceInstanceDiscovery:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -139,7 +139,7 @@ class TdEventServiceInstanceDiscovery:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -147,7 +147,7 @@ class TdEventServiceInstanceDiscovery:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -155,7 +155,7 @@ class TdEventServiceInstanceDiscovery:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: TdEventServiceInstanceDiscovery.Annotations | None = field(
+    annotations: None | TdEventServiceInstanceDiscovery.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -163,7 +163,7 @@ class TdEventServiceInstanceDiscovery:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -171,7 +171,7 @@ class TdEventServiceInstanceDiscovery:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    occurrence_expression: TdEventOccurrenceExpression | None = field(
+    occurrence_expression: None | TdEventOccurrenceExpression = field(
         default=None,
         metadata={
             "name": "OCCURRENCE-EXPRESSION",
@@ -180,8 +180,8 @@ class TdEventServiceInstanceDiscovery:
         },
     )
     service_instance_to_port_prototype_mapping_ref: (
-        TdEventServiceInstanceDiscovery.ServiceInstanceToPortPrototypeMappingRef
-        | None
+        None
+        | TdEventServiceInstanceDiscovery.ServiceInstanceToPortPrototypeMappingRef
     ) = field(
         default=None,
         metadata={
@@ -191,7 +191,7 @@ class TdEventServiceInstanceDiscovery:
         },
     )
     td_event_service_instance_discovery_type: (
-        TdEventServiceInstanceDiscoveryTypeEnum | None
+        None | TdEventServiceInstanceDiscoveryTypeEnum
     ) = field(
         default=None,
         metadata={
@@ -200,14 +200,14 @@ class TdEventServiceInstanceDiscovery:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -215,7 +215,7 @@ class TdEventServiceInstanceDiscovery:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -247,7 +247,7 @@ class TdEventServiceInstanceDiscovery:
 
     @dataclass
     class ServiceInstanceToPortPrototypeMappingRef(Ref):
-        dest: ServiceInstanceToPortPrototypeMappingSubtypesEnum | None = field(
+        dest: None | ServiceInstanceToPortPrototypeMappingSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

@@ -95,7 +95,7 @@ class DiagnosticRequestCurrentPowertrainDataClass:
     class Meta:
         name = "DIAGNOSTIC-REQUEST-CURRENT-POWERTRAIN-DATA-CLASS"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -105,7 +105,7 @@ class DiagnosticRequestCurrentPowertrainDataClass:
         },
     )
     short_name_fragments: (
-        DiagnosticRequestCurrentPowertrainDataClass.ShortNameFragments | None
+        None | DiagnosticRequestCurrentPowertrainDataClass.ShortNameFragments
     ) = field(
         default=None,
         metadata={
@@ -114,7 +114,7 @@ class DiagnosticRequestCurrentPowertrainDataClass:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -122,7 +122,7 @@ class DiagnosticRequestCurrentPowertrainDataClass:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -130,7 +130,7 @@ class DiagnosticRequestCurrentPowertrainDataClass:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -138,7 +138,7 @@ class DiagnosticRequestCurrentPowertrainDataClass:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -146,7 +146,7 @@ class DiagnosticRequestCurrentPowertrainDataClass:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -155,7 +155,7 @@ class DiagnosticRequestCurrentPowertrainDataClass:
         },
     )
     annotations: (
-        DiagnosticRequestCurrentPowertrainDataClass.Annotations | None
+        None | DiagnosticRequestCurrentPowertrainDataClass.Annotations
     ) = field(
         default=None,
         metadata={
@@ -164,7 +164,7 @@ class DiagnosticRequestCurrentPowertrainDataClass:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -173,7 +173,7 @@ class DiagnosticRequestCurrentPowertrainDataClass:
         },
     )
     access_permission_ref: (
-        DiagnosticRequestCurrentPowertrainDataClass.AccessPermissionRef | None
+        None | DiagnosticRequestCurrentPowertrainDataClass.AccessPermissionRef
     ) = field(
         default=None,
         metadata={
@@ -183,7 +183,7 @@ class DiagnosticRequestCurrentPowertrainDataClass:
         },
     )
     access_permission_validity: (
-        DiagnosticAccessPermissionValidityEnum | None
+        None | DiagnosticAccessPermissionValidityEnum
     ) = field(
         default=None,
         metadata={
@@ -192,14 +192,14 @@ class DiagnosticRequestCurrentPowertrainDataClass:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -207,7 +207,7 @@ class DiagnosticRequestCurrentPowertrainDataClass:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -239,7 +239,7 @@ class DiagnosticRequestCurrentPowertrainDataClass:
 
     @dataclass
     class AccessPermissionRef(Ref):
-        dest: DiagnosticAccessPermissionSubtypesEnum | None = field(
+        dest: None | DiagnosticAccessPermissionSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

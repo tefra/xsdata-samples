@@ -39,14 +39,14 @@ class EnvelopeType:
             "max_occurs": 2,
         },
     )
-    srs_name: str | None = field(
+    srs_name: None | str = field(
         default=None,
         metadata={
             "name": "srsName",
             "type": "Attribute",
         },
     )
-    srs_dimension: int | None = field(
+    srs_dimension: None | int = field(
         default=None,
         metadata={
             "name": "srsDimension",

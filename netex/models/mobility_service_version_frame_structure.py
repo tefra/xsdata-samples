@@ -35,14 +35,14 @@ class MobilityServiceVersionFrameStructure(CommonVersionFrameStructure):
     class Meta:
         name = "MobilityService_VersionFrameStructure"
 
-    fleets: FleetsRelStructure | None = field(
+    fleets: None | FleetsRelStructure = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    pools_of_vehicles: PoolOfVehiclesRelStructure | None = field(
+    pools_of_vehicles: None | PoolOfVehiclesRelStructure = field(
         default=None,
         metadata={
             "name": "poolsOfVehicles",
@@ -50,7 +50,7 @@ class MobilityServiceVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    modes_of_operation: ModesOfOperationRelStructure | None = field(
+    modes_of_operation: None | ModesOfOperationRelStructure = field(
         default=None,
         metadata={
             "name": "modesOfOperation",
@@ -58,7 +58,7 @@ class MobilityServiceVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    mobility_services: MobilityServicesRelStructure | None = field(
+    mobility_services: None | MobilityServicesRelStructure = field(
         default=None,
         metadata={
             "name": "mobilityServices",
@@ -66,7 +66,7 @@ class MobilityServiceVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    online_services: OnlineServicesRelStructure | None = field(
+    online_services: None | OnlineServicesRelStructure = field(
         default=None,
         metadata={
             "name": "onlineServices",
@@ -74,7 +74,7 @@ class MobilityServiceVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    vehicle_meeting_points: VehicleMeetingPointsInFrameRelStructure | None = (
+    vehicle_meeting_points: None | VehicleMeetingPointsInFrameRelStructure = (
         field(
             default=None,
             metadata={
@@ -84,7 +84,7 @@ class MobilityServiceVersionFrameStructure(CommonVersionFrameStructure):
             },
         )
     )
-    vehicle_meeting_links: VehicleMeetingLinksInFrameRelStructure | None = (
+    vehicle_meeting_links: None | VehicleMeetingLinksInFrameRelStructure = (
         field(
             default=None,
             metadata={
@@ -95,7 +95,7 @@ class MobilityServiceVersionFrameStructure(CommonVersionFrameStructure):
         )
     )
     vehicle_meeting_point_assignments: (
-        VehicleMeetingPointAssignmentsInFrameRelStructure | None
+        None | VehicleMeetingPointAssignmentsInFrameRelStructure
     ) = field(
         default=None,
         metadata={
@@ -104,7 +104,7 @@ class MobilityServiceVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    vehicle_meeting_places: VehicleMeetingPlacesRelStructure | None = field(
+    vehicle_meeting_places: None | VehicleMeetingPlacesRelStructure = field(
         default=None,
         metadata={
             "name": "vehicleMeetingPlaces",
@@ -113,7 +113,7 @@ class MobilityServiceVersionFrameStructure(CommonVersionFrameStructure):
         },
     )
     vehicle_meeting_place_assignments: (
-        VehicleServicePlaceAssignmentsRelStructure | None
+        None | VehicleServicePlaceAssignmentsRelStructure
     ) = field(
         default=None,
         metadata={
@@ -123,7 +123,7 @@ class MobilityServiceVersionFrameStructure(CommonVersionFrameStructure):
         },
     )
     mobility_service_constraint_zones: (
-        MobilityServiceConstraintZonesInFrameRelStructure | None
+        None | MobilityServiceConstraintZonesInFrameRelStructure
     ) = field(
         default=None,
         metadata={

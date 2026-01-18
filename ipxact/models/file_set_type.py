@@ -44,7 +44,7 @@ class FileSetType:
     class Meta:
         name = "fileSetType"
 
-    name: str | None = field(
+    name: None | str = field(
         default=None,
         metadata={
             "type": "Element",
@@ -52,7 +52,7 @@ class FileSetType:
             "required": True,
         },
     )
-    display_name: DisplayName | None = field(
+    display_name: None | DisplayName = field(
         default=None,
         metadata={
             "name": "displayName",
@@ -60,7 +60,7 @@ class FileSetType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    short_description: ShortDescription | None = field(
+    short_description: None | ShortDescription = field(
         default=None,
         metadata={
             "name": "shortDescription",
@@ -68,7 +68,7 @@ class FileSetType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    description: Description | None = field(
+    description: None | Description = field(
         default=None,
         metadata={
             "type": "Element",
@@ -111,7 +111,7 @@ class FileSetType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    vendor_extensions: VendorExtensions | None = field(
+    vendor_extensions: None | VendorExtensions = field(
         default=None,
         metadata={
             "name": "vendorExtensions",
@@ -119,7 +119,7 @@ class FileSetType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -135,7 +135,7 @@ class FileSetType:
                 "required": True,
             },
         )
-        id: str | None = field(
+        id: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -168,7 +168,7 @@ class FileSetType:
         :ivar id:
         """
 
-        entry_point: str | None = field(
+        entry_point: None | str = field(
             default=None,
             metadata={
                 "name": "entryPoint",
@@ -176,7 +176,7 @@ class FileSetType:
                 "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
             },
         )
-        file_ref: str | None = field(
+        file_ref: None | str = field(
             default=None,
             metadata={
                 "name": "fileRef",
@@ -185,7 +185,7 @@ class FileSetType:
                 "required": True,
             },
         )
-        return_type: ReturnTypeType | None = field(
+        return_type: None | ReturnTypeType = field(
             default=None,
             metadata={
                 "name": "returnType",
@@ -200,7 +200,7 @@ class FileSetType:
                 "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
             },
         )
-        disabled: UnsignedBitExpression | None = field(
+        disabled: None | UnsignedBitExpression = field(
             default=None,
             metadata={
                 "type": "Element",
@@ -221,7 +221,7 @@ class FileSetType:
                 "type": "Attribute",
             },
         )
-        id: str | None = field(
+        id: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -236,7 +236,7 @@ class FileSetType:
                 to the language. Example: "int", "double", "char *".
             """
 
-            data_type: DataTypeType | None = field(
+            data_type: None | DataTypeType = field(
                 default=None,
                 metadata={
                     "name": "dataType",
@@ -255,7 +255,7 @@ class FileSetType:
             :ivar id:
             """
 
-            source_name: IpxactUri | None = field(
+            source_name: None | IpxactUri = field(
                 default=None,
                 metadata={
                     "name": "sourceName",
@@ -264,7 +264,7 @@ class FileSetType:
                     "required": True,
                 },
             )
-            file_type: FileType | None = field(
+            file_type: None | FileType = field(
                 default=None,
                 metadata={
                     "name": "fileType",
@@ -273,7 +273,7 @@ class FileSetType:
                     "required": True,
                 },
             )
-            id: str | None = field(
+            id: None | str = field(
                 default=None,
                 metadata={
                     "type": "Attribute",

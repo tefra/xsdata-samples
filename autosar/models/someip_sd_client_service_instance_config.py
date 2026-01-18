@@ -88,7 +88,7 @@ class SomeipSdClientServiceInstanceConfig:
     class Meta:
         name = "SOMEIP-SD-CLIENT-SERVICE-INSTANCE-CONFIG"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -98,7 +98,7 @@ class SomeipSdClientServiceInstanceConfig:
         },
     )
     short_name_fragments: (
-        SomeipSdClientServiceInstanceConfig.ShortNameFragments | None
+        None | SomeipSdClientServiceInstanceConfig.ShortNameFragments
     ) = field(
         default=None,
         metadata={
@@ -107,7 +107,7 @@ class SomeipSdClientServiceInstanceConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -115,7 +115,7 @@ class SomeipSdClientServiceInstanceConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -123,7 +123,7 @@ class SomeipSdClientServiceInstanceConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -131,7 +131,7 @@ class SomeipSdClientServiceInstanceConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -139,7 +139,7 @@ class SomeipSdClientServiceInstanceConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -147,7 +147,7 @@ class SomeipSdClientServiceInstanceConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: SomeipSdClientServiceInstanceConfig.Annotations | None = (
+    annotations: None | SomeipSdClientServiceInstanceConfig.Annotations = (
         field(
             default=None,
             metadata={
@@ -157,7 +157,7 @@ class SomeipSdClientServiceInstanceConfig:
             },
         )
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -165,7 +165,7 @@ class SomeipSdClientServiceInstanceConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    initial_find_behavior: InitialSdDelayConfig | None = field(
+    initial_find_behavior: None | InitialSdDelayConfig = field(
         default=None,
         metadata={
             "name": "INITIAL-FIND-BEHAVIOR",
@@ -173,7 +173,7 @@ class SomeipSdClientServiceInstanceConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    service_find_time_to_live: PositiveInteger | None = field(
+    service_find_time_to_live: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "SERVICE-FIND-TIME-TO-LIVE",
@@ -181,14 +181,14 @@ class SomeipSdClientServiceInstanceConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -196,7 +196,7 @@ class SomeipSdClientServiceInstanceConfig:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",

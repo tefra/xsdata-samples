@@ -23,7 +23,7 @@ class GroupOfParkingSitesStatus(ParkingRecordStatus):
     :ivar group_of_parking_sites_status_extension:
     """
 
-    group_of_parking_sites_status: GroupOfParkingSitesStatusEnum | None = (
+    group_of_parking_sites_status: None | GroupOfParkingSitesStatusEnum = (
         field(
             default=None,
             metadata={
@@ -33,7 +33,7 @@ class GroupOfParkingSitesStatus(ParkingRecordStatus):
             },
         )
     )
-    group_of_parking_sites_status_extension: ExtensionType | None = field(
+    group_of_parking_sites_status_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "groupOfParkingSitesStatusExtension",

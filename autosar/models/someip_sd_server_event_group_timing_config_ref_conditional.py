@@ -35,8 +35,8 @@ class SomeipSdServerEventGroupTimingConfigRefConditional:
         name = "SOMEIP-SD-SERVER-EVENT-GROUP-TIMING-CONFIG-REF-CONDITIONAL"
 
     someip_sd_server_event_group_timing_config_ref: (
-        SomeipSdServerEventGroupTimingConfigRefConditional.SomeipSdServerEventGroupTimingConfigRef
-        | None
+        None
+        | SomeipSdServerEventGroupTimingConfigRefConditional.SomeipSdServerEventGroupTimingConfigRef
     ) = field(
         default=None,
         metadata={
@@ -45,7 +45,7 @@ class SomeipSdServerEventGroupTimingConfigRefConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -53,14 +53,14 @@ class SomeipSdServerEventGroupTimingConfigRefConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -71,7 +71,7 @@ class SomeipSdServerEventGroupTimingConfigRefConditional:
 
     @dataclass
     class SomeipSdServerEventGroupTimingConfigRef(Ref):
-        dest: SomeipSdServerEventGroupTimingConfigSubtypesEnum | None = field(
+        dest: None | SomeipSdServerEventGroupTimingConfigSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

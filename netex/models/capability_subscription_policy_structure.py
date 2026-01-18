@@ -7,7 +7,7 @@ __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
 @dataclass
 class CapabilitySubscriptionPolicyStructure:
-    has_incremental_updates: bool | None = field(
+    has_incremental_updates: None | bool = field(
         default=None,
         metadata={
             "name": "HasIncrementalUpdates",
@@ -15,7 +15,7 @@ class CapabilitySubscriptionPolicyStructure:
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    has_change_sensitivity: bool | None = field(
+    has_change_sensitivity: None | bool = field(
         default=None,
         metadata={
             "name": "HasChangeSensitivity",

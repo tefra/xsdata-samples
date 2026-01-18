@@ -52,7 +52,7 @@ class VehicleMeetingPlaceVersionStructure(AddressablePlaceVersionStructure):
     class Meta:
         name = "VehicleMeetingPlace_VersionStructure"
 
-    topographic_place_ref: TopographicPlaceRef | None = field(
+    topographic_place_ref: None | TopographicPlaceRef = field(
         default=None,
         metadata={
             "name": "TopographicPlaceRef",
@@ -61,7 +61,8 @@ class VehicleMeetingPlaceVersionStructure(AddressablePlaceVersionStructure):
         },
     )
     choice: (
-        VehicleStoppingPositionRef
+        None
+        | VehicleStoppingPositionRef
         | VehicleStoppingPlaceRef
         | BoardingPositionRef
         | AccessSpaceRef
@@ -94,7 +95,6 @@ class VehicleMeetingPlaceVersionStructure(AddressablePlaceVersionStructure):
         | ServiceSiteRef
         | SiteRef
         | SiteElementRef
-        | None
     ) = field(
         default=None,
         metadata={

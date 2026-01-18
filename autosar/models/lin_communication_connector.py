@@ -135,7 +135,7 @@ class LinCommunicationConnector:
     class Meta:
         name = "LIN-COMMUNICATION-CONNECTOR"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -145,7 +145,7 @@ class LinCommunicationConnector:
         },
     )
     short_name_fragments: (
-        LinCommunicationConnector.ShortNameFragments | None
+        None | LinCommunicationConnector.ShortNameFragments
     ) = field(
         default=None,
         metadata={
@@ -154,7 +154,7 @@ class LinCommunicationConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -162,7 +162,7 @@ class LinCommunicationConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -170,7 +170,7 @@ class LinCommunicationConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -178,7 +178,7 @@ class LinCommunicationConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -186,7 +186,7 @@ class LinCommunicationConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -194,7 +194,7 @@ class LinCommunicationConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: LinCommunicationConnector.Annotations | None = field(
+    annotations: None | LinCommunicationConnector.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -202,7 +202,7 @@ class LinCommunicationConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    comm_controller_ref: LinCommunicationConnector.CommControllerRef | None = (
+    comm_controller_ref: None | LinCommunicationConnector.CommControllerRef = (
         field(
             default=None,
             metadata={
@@ -212,7 +212,7 @@ class LinCommunicationConnector:
             },
         )
     )
-    create_ecu_wakeup_source: Boolean | None = field(
+    create_ecu_wakeup_source: None | Boolean = field(
         default=None,
         metadata={
             "name": "CREATE-ECU-WAKEUP-SOURCE",
@@ -220,7 +220,7 @@ class LinCommunicationConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    dynamic_pnc_to_channel_mapping_enabled: Boolean | None = field(
+    dynamic_pnc_to_channel_mapping_enabled: None | Boolean = field(
         default=None,
         metadata={
             "name": "DYNAMIC-PNC-TO-CHANNEL-MAPPING-ENABLED",
@@ -229,7 +229,7 @@ class LinCommunicationConnector:
         },
     )
     ecu_comm_port_instances: (
-        LinCommunicationConnector.EcuCommPortInstances | None
+        None | LinCommunicationConnector.EcuCommPortInstances
     ) = field(
         default=None,
         metadata={
@@ -238,7 +238,7 @@ class LinCommunicationConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    pnc_gateway_type: PncGatewayTypeEnum | None = field(
+    pnc_gateway_type: None | PncGatewayTypeEnum = field(
         default=None,
         metadata={
             "name": "PNC-GATEWAY-TYPE",
@@ -246,7 +246,7 @@ class LinCommunicationConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -254,7 +254,7 @@ class LinCommunicationConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    initial_nad: Integer | None = field(
+    initial_nad: None | Integer = field(
         default=None,
         metadata={
             "name": "INITIAL-NAD",
@@ -263,7 +263,7 @@ class LinCommunicationConnector:
         },
     )
     lin_configurable_frames: (
-        LinCommunicationConnector.LinConfigurableFrames | None
+        None | LinCommunicationConnector.LinConfigurableFrames
     ) = field(
         default=None,
         metadata={
@@ -273,7 +273,7 @@ class LinCommunicationConnector:
         },
     )
     lin_ordered_configurable_frames: (
-        LinCommunicationConnector.LinOrderedConfigurableFrames | None
+        None | LinCommunicationConnector.LinOrderedConfigurableFrames
     ) = field(
         default=None,
         metadata={
@@ -282,7 +282,7 @@ class LinCommunicationConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    schedule_change_next_time_base: Boolean | None = field(
+    schedule_change_next_time_base: None | Boolean = field(
         default=None,
         metadata={
             "name": "SCHEDULE-CHANGE-NEXT-TIME-BASE",
@@ -290,14 +290,14 @@ class LinCommunicationConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -305,7 +305,7 @@ class LinCommunicationConnector:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -337,7 +337,7 @@ class LinCommunicationConnector:
 
     @dataclass
     class CommControllerRef(Ref):
-        dest: CommunicationControllerSubtypesEnum | None = field(
+        dest: None | CommunicationControllerSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

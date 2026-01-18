@@ -23,7 +23,7 @@ class TimeType:
     xmlns:ns1="urn:un:unece:uncefact:documentation:standard:CoreComponentsTechnicalSpecification:2">Time</ns1:PrimitiveType>.
     """
 
-    value: XmlTime | None = field(
+    value: None | XmlTime = field(
         default=None,
         metadata={
             "required": True,

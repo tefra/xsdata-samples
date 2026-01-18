@@ -28,11 +28,11 @@ class JourneyPatternHeadwayVersionedChildStructure(
         name = "JourneyPatternHeadway_VersionedChildStructure"
 
     journey_pattern_ref: (
-        ServiceJourneyPatternRef
+        None
+        | ServiceJourneyPatternRef
         | ServicePatternRef
         | DeadRunJourneyPatternRef
         | JourneyPatternRef
-        | None
     ) = field(
         default=None,
         metadata={
@@ -62,14 +62,14 @@ class JourneyPatternHeadwayVersionedChildStructure(
         },
     )
     choice: (
-        BorderPointRef
+        None
+        | BorderPointRef
         | FareScheduledStopPointRef
         | ScheduledStopPointRef
         | GaragePointRef
         | ParkingPointRef
         | ReliefPointRef
         | TimingPointRef
-        | None
     ) = field(
         default=None,
         metadata={

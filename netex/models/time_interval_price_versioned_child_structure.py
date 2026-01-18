@@ -17,7 +17,7 @@ class TimeIntervalPriceVersionedChildStructure(
     class Meta:
         name = "TimeIntervalPrice_VersionedChildStructure"
 
-    time_interval_ref: TimeIntervalRef | None = field(
+    time_interval_ref: None | TimeIntervalRef = field(
         default=None,
         metadata={
             "name": "TimeIntervalRef",

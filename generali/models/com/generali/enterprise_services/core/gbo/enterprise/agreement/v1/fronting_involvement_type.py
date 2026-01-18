@@ -19,7 +19,7 @@ __NAMESPACE__ = (
 
 @dataclass
 class FrontingInvolvementType(OrganisationInvolvementType):
-    organisation_role: InsurerRoleType | None = field(
+    organisation_role: None | InsurerRoleType = field(
         default=None,
         metadata={
             "name": "OrganisationRole",
@@ -28,7 +28,7 @@ class FrontingInvolvementType(OrganisationInvolvementType):
             "required": True,
         },
     )
-    fronting_agreement_identifier: Idtype | None = field(
+    fronting_agreement_identifier: None | Idtype = field(
         default=None,
         metadata={
             "name": "FrontingAgreementIdentifier",
@@ -36,7 +36,7 @@ class FrontingInvolvementType(OrganisationInvolvementType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    fronting_country: str | None = field(
+    fronting_country: None | str = field(
         default=None,
         metadata={
             "name": "FrontingCountry",

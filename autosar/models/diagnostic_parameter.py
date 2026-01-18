@@ -43,7 +43,7 @@ class DiagnosticParameter:
     class Meta:
         name = "DIAGNOSTIC-PARAMETER"
 
-    bit_offset: PositiveInteger | None = field(
+    bit_offset: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "BIT-OFFSET",
@@ -51,7 +51,7 @@ class DiagnosticParameter:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    data_elements: DiagnosticParameter.DataElements | None = field(
+    data_elements: None | DiagnosticParameter.DataElements = field(
         default=None,
         metadata={
             "name": "DATA-ELEMENTS",
@@ -59,7 +59,7 @@ class DiagnosticParameter:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    support_info: DiagnosticParameterSupportInfo | None = field(
+    support_info: None | DiagnosticParameterSupportInfo = field(
         default=None,
         metadata={
             "name": "SUPPORT-INFO",
@@ -67,7 +67,7 @@ class DiagnosticParameter:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -75,14 +75,14 @@ class DiagnosticParameter:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

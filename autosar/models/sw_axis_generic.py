@@ -46,7 +46,7 @@ class SwAxisGeneric:
     class Meta:
         name = "SW-AXIS-GENERIC"
 
-    sw_axis_type_ref: SwAxisGeneric.SwAxisTypeRef | None = field(
+    sw_axis_type_ref: None | SwAxisGeneric.SwAxisTypeRef = field(
         default=None,
         metadata={
             "name": "SW-AXIS-TYPE-REF",
@@ -54,7 +54,7 @@ class SwAxisGeneric:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_number_of_axis_points: IntegerValueVariationPoint | None = field(
+    sw_number_of_axis_points: None | IntegerValueVariationPoint = field(
         default=None,
         metadata={
             "name": "SW-NUMBER-OF-AXIS-POINTS",
@@ -62,7 +62,7 @@ class SwAxisGeneric:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_generic_axis_params: SwAxisGeneric.SwGenericAxisParams | None = field(
+    sw_generic_axis_params: None | SwAxisGeneric.SwGenericAxisParams = field(
         default=None,
         metadata={
             "name": "SW-GENERIC-AXIS-PARAMS",
@@ -70,14 +70,14 @@ class SwAxisGeneric:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -88,7 +88,7 @@ class SwAxisGeneric:
 
     @dataclass
     class SwAxisTypeRef(Ref):
-        dest: SwAxisTypeSubtypesEnum | None = field(
+        dest: None | SwAxisTypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

@@ -22,7 +22,7 @@ class SmsnumberType:
     class Meta:
         name = "SMSNumberType"
 
-    full_number_text: TextType | None = field(
+    full_number_text: None | TextType = field(
         default=None,
         metadata={
             "name": "FullNumberText",

@@ -26,7 +26,7 @@ class TpegIlcPointDescriptor(TpegPointDescriptor):
     """
 
     tpeg_ilc_point_descriptor_type: (
-        TpegLoc03IlcPointDescriptorSubtypeEnum | None
+        None | TpegLoc03IlcPointDescriptorSubtypeEnum
     ) = field(
         default=None,
         metadata={
@@ -36,7 +36,7 @@ class TpegIlcPointDescriptor(TpegPointDescriptor):
             "required": True,
         },
     )
-    tpeg_ilc_point_descriptor_extension: ExtensionType | None = field(
+    tpeg_ilc_point_descriptor_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "tpegIlcPointDescriptorExtension",

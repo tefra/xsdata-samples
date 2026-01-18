@@ -43,7 +43,7 @@ class SwValueCont:
     class Meta:
         name = "SW-VALUE-CONT"
 
-    unit_ref: SwValueCont.UnitRef | None = field(
+    unit_ref: None | SwValueCont.UnitRef = field(
         default=None,
         metadata={
             "name": "UNIT-REF",
@@ -51,7 +51,7 @@ class SwValueCont:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    unit_display_name: SingleLanguageUnitNames | None = field(
+    unit_display_name: None | SingleLanguageUnitNames = field(
         default=None,
         metadata={
             "name": "UNIT-DISPLAY-NAME",
@@ -59,7 +59,7 @@ class SwValueCont:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_arraysize: ValueList | None = field(
+    sw_arraysize: None | ValueList = field(
         default=None,
         metadata={
             "name": "SW-ARRAYSIZE",
@@ -67,7 +67,7 @@ class SwValueCont:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_values_phys: SwValues | None = field(
+    sw_values_phys: None | SwValues = field(
         default=None,
         metadata={
             "name": "SW-VALUES-PHYS",
@@ -75,14 +75,14 @@ class SwValueCont:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -93,7 +93,7 @@ class SwValueCont:
 
     @dataclass
     class UnitRef(Ref):
-        dest: UnitSubtypesEnum | None = field(
+        dest: None | UnitSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

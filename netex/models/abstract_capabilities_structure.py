@@ -12,7 +12,7 @@ __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
 @dataclass
 class AbstractCapabilitiesStructure:
-    general_interaction: CapabilityGeneralInteractionStructure | None = field(
+    general_interaction: None | CapabilityGeneralInteractionStructure = field(
         default=None,
         metadata={
             "name": "GeneralInteraction",
@@ -20,7 +20,7 @@ class AbstractCapabilitiesStructure:
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    transport_description: TransportDescriptionStructure | None = field(
+    transport_description: None | TransportDescriptionStructure = field(
         default=None,
         metadata={
             "name": "TransportDescription",

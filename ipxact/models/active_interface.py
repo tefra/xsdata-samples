@@ -23,20 +23,20 @@ class ActiveInterface(InterfaceType):
         name = "activeInterface"
         namespace = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
-    description: Description | None = field(
+    description: None | Description = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    exclude_ports: ActiveInterface.ExcludePorts | None = field(
+    exclude_ports: None | ActiveInterface.ExcludePorts = field(
         default=None,
         metadata={
             "name": "excludePorts",
             "type": "Element",
         },
     )
-    vendor_extensions: VendorExtensions | None = field(
+    vendor_extensions: None | VendorExtensions = field(
         default=None,
         metadata={
             "name": "vendorExtensions",
@@ -70,7 +70,7 @@ class ActiveInterface(InterfaceType):
                     "pattern": r"\i[\p{L}\p{N}\.\-:_]*",
                 },
             )
-            id: str | None = field(
+            id: None | str = field(
                 default=None,
                 metadata={
                     "type": "Attribute",

@@ -19,7 +19,7 @@ class AlertCMethod4PrimaryPointLocation:
     ALERT-C location table plus a non-negative offset distance.
     """
 
-    alert_clocation: AlertCLocation | None = field(
+    alert_clocation: None | AlertCLocation = field(
         default=None,
         metadata={
             "name": "alertCLocation",
@@ -28,7 +28,7 @@ class AlertCMethod4PrimaryPointLocation:
             "required": True,
         },
     )
-    offset_distance: OffsetDistance | None = field(
+    offset_distance: None | OffsetDistance = field(
         default=None,
         metadata={
             "name": "offsetDistance",
@@ -37,7 +37,7 @@ class AlertCMethod4PrimaryPointLocation:
             "required": True,
         },
     )
-    alert_cmethod4_primary_point_location_extension: ExtensionType | None = (
+    alert_cmethod4_primary_point_location_extension: None | ExtensionType = (
         field(
             default=None,
             metadata={

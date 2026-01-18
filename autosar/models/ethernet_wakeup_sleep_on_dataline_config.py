@@ -136,7 +136,7 @@ class EthernetWakeupSleepOnDatalineConfig:
     class Meta:
         name = "ETHERNET-WAKEUP-SLEEP-ON-DATALINE-CONFIG"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -146,7 +146,7 @@ class EthernetWakeupSleepOnDatalineConfig:
         },
     )
     short_name_fragments: (
-        EthernetWakeupSleepOnDatalineConfig.ShortNameFragments | None
+        None | EthernetWakeupSleepOnDatalineConfig.ShortNameFragments
     ) = field(
         default=None,
         metadata={
@@ -155,7 +155,7 @@ class EthernetWakeupSleepOnDatalineConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -163,7 +163,7 @@ class EthernetWakeupSleepOnDatalineConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -171,7 +171,7 @@ class EthernetWakeupSleepOnDatalineConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -179,7 +179,7 @@ class EthernetWakeupSleepOnDatalineConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -187,7 +187,7 @@ class EthernetWakeupSleepOnDatalineConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -195,7 +195,7 @@ class EthernetWakeupSleepOnDatalineConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: EthernetWakeupSleepOnDatalineConfig.Annotations | None = (
+    annotations: None | EthernetWakeupSleepOnDatalineConfig.Annotations = (
         field(
             default=None,
             metadata={
@@ -205,7 +205,7 @@ class EthernetWakeupSleepOnDatalineConfig:
             },
         )
     )
-    sleep_mode_execution_delay: TimeValue | None = field(
+    sleep_mode_execution_delay: None | TimeValue = field(
         default=None,
         metadata={
             "name": "SLEEP-MODE-EXECUTION-DELAY",
@@ -213,7 +213,7 @@ class EthernetWakeupSleepOnDatalineConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sleep_repetition_delay_of_sleep_request: TimeValue | None = field(
+    sleep_repetition_delay_of_sleep_request: None | TimeValue = field(
         default=None,
         metadata={
             "name": "SLEEP-REPETITION-DELAY-OF-SLEEP-REQUEST",
@@ -221,7 +221,7 @@ class EthernetWakeupSleepOnDatalineConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sleep_repetitions_of_sleep_request: PositiveInteger | None = field(
+    sleep_repetitions_of_sleep_request: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "SLEEP-REPETITIONS-OF-SLEEP-REQUEST",
@@ -229,7 +229,7 @@ class EthernetWakeupSleepOnDatalineConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    wakeup_forward_local_enabled: Boolean | None = field(
+    wakeup_forward_local_enabled: None | Boolean = field(
         default=None,
         metadata={
             "name": "WAKEUP-FORWARD-LOCAL-ENABLED",
@@ -237,7 +237,7 @@ class EthernetWakeupSleepOnDatalineConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    wakeup_forward_remote_enabled: Boolean | None = field(
+    wakeup_forward_remote_enabled: None | Boolean = field(
         default=None,
         metadata={
             "name": "WAKEUP-FORWARD-REMOTE-ENABLED",
@@ -245,7 +245,7 @@ class EthernetWakeupSleepOnDatalineConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    wakeup_local_detection_time: TimeValue | None = field(
+    wakeup_local_detection_time: None | TimeValue = field(
         default=None,
         metadata={
             "name": "WAKEUP-LOCAL-DETECTION-TIME",
@@ -253,7 +253,7 @@ class EthernetWakeupSleepOnDatalineConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    wakeup_local_duration_time: TimeValue | None = field(
+    wakeup_local_duration_time: None | TimeValue = field(
         default=None,
         metadata={
             "name": "WAKEUP-LOCAL-DURATION-TIME",
@@ -261,7 +261,7 @@ class EthernetWakeupSleepOnDatalineConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    wakeup_local_enabled: Boolean | None = field(
+    wakeup_local_enabled: None | Boolean = field(
         default=None,
         metadata={
             "name": "WAKEUP-LOCAL-ENABLED",
@@ -269,7 +269,7 @@ class EthernetWakeupSleepOnDatalineConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    wakeup_remote_enabled: Boolean | None = field(
+    wakeup_remote_enabled: None | Boolean = field(
         default=None,
         metadata={
             "name": "WAKEUP-REMOTE-ENABLED",
@@ -277,7 +277,7 @@ class EthernetWakeupSleepOnDatalineConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    wakeup_repetition_delay_of_wakeup_request: TimeValue | None = field(
+    wakeup_repetition_delay_of_wakeup_request: None | TimeValue = field(
         default=None,
         metadata={
             "name": "WAKEUP-REPETITION-DELAY-OF-WAKEUP-REQUEST",
@@ -285,7 +285,7 @@ class EthernetWakeupSleepOnDatalineConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    wakeup_repetitions_of_wakeup_request: PositiveInteger | None = field(
+    wakeup_repetitions_of_wakeup_request: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "WAKEUP-REPETITIONS-OF-WAKEUP-REQUEST",
@@ -293,14 +293,14 @@ class EthernetWakeupSleepOnDatalineConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -308,7 +308,7 @@ class EthernetWakeupSleepOnDatalineConfig:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",

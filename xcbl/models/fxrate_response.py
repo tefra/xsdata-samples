@@ -304,42 +304,42 @@ class RemoteCheckIndicator:
 
 @dataclass(kw_only=True)
 class CurrencyAvailabilityCheckList:
-    funds_transfer_indicator: FundsTransferIndicator | None = field(
+    funds_transfer_indicator: None | FundsTransferIndicator = field(
         default=None,
         metadata={
             "name": "FundsTransferIndicator",
             "type": "Element",
         },
     )
-    remote_check_indicator: RemoteCheckIndicator | None = field(
+    remote_check_indicator: None | RemoteCheckIndicator = field(
         default=None,
         metadata={
             "name": "RemoteCheckIndicator",
             "type": "Element",
         },
     )
-    onsite_check_indicator: OnsiteCheckIndicator | None = field(
+    onsite_check_indicator: None | OnsiteCheckIndicator = field(
         default=None,
         metadata={
             "name": "OnsiteCheckIndicator",
             "type": "Element",
         },
     )
-    achindicator: Achindicator | None = field(
+    achindicator: None | Achindicator = field(
         default=None,
         metadata={
             "name": "ACHIndicator",
             "type": "Element",
         },
     )
-    remit_currency_indicator: RemitCurrencyIndicator | None = field(
+    remit_currency_indicator: None | RemitCurrencyIndicator = field(
         default=None,
         metadata={
             "name": "RemitCurrencyIndicator",
             "type": "Element",
         },
     )
-    other_payment_service_note: OtherPaymentServiceNote | None = field(
+    other_payment_service_note: None | OtherPaymentServiceNote = field(
         default=None,
         metadata={
             "name": "OtherPaymentServiceNote",
@@ -353,7 +353,7 @@ class Fxamounts:
     class Meta:
         name = "FXAmounts"
 
-    settlement_amount: SettlementAmount | None = field(
+    settlement_amount: None | SettlementAmount = field(
         default=None,
         metadata={
             "name": "SettlementAmount",
@@ -367,7 +367,7 @@ class Fxamounts:
             "required": True,
         }
     )
-    credit_amount: CreditAmount | None = field(
+    credit_amount: None | CreditAmount = field(
         default=None,
         metadata={
             "name": "CreditAmount",
@@ -381,28 +381,28 @@ class Fxdates:
     class Meta:
         name = "FXDates"
 
-    fxvalue_date: FxvalueDate | None = field(
+    fxvalue_date: None | FxvalueDate = field(
         default=None,
         metadata={
             "name": "FXValueDate",
             "type": "Element",
         },
     )
-    remittance_date: RemittanceDate | None = field(
+    remittance_date: None | RemittanceDate = field(
         default=None,
         metadata={
             "name": "RemittanceDate",
             "type": "Element",
         },
     )
-    quote_expiration_date: QuoteExpirationDate | None = field(
+    quote_expiration_date: None | QuoteExpirationDate = field(
         default=None,
         metadata={
             "name": "QuoteExpirationDate",
             "type": "Element",
         },
     )
-    list_of_date_coded: ListOfDateCoded | None = field(
+    list_of_date_coded: None | ListOfDateCoded = field(
         default=None,
         metadata={
             "name": "ListOfDateCoded",
@@ -417,7 +417,7 @@ class FxidentificationData:
         name = "FXIdentificationData"
 
     originating_financial_institution: (
-        OriginatingFinancialInstitution | None
+        None | OriginatingFinancialInstitution
     ) = field(
         default=None,
         metadata={
@@ -425,14 +425,14 @@ class FxidentificationData:
             "type": "Element",
         },
     )
-    card_info: CardInfo | None = field(
+    card_info: None | CardInfo = field(
         default=None,
         metadata={
             "name": "CardInfo",
             "type": "Element",
         },
     )
-    payee_party: PayeeParty | None = field(
+    payee_party: None | PayeeParty = field(
         default=None,
         metadata={
             "name": "PayeeParty",
@@ -460,7 +460,7 @@ class FxrateRequestSummary:
     class Meta:
         name = "FXRateRequestSummary"
 
-    number_of_fxrate_request: NumberOfFxrateRequest | None = field(
+    number_of_fxrate_request: None | NumberOfFxrateRequest = field(
         default=None,
         metadata={
             "name": "NumberOfFXRateRequest",
@@ -566,7 +566,7 @@ class FxrateResponseHeader:
             "required": True,
         }
     )
-    sending_party: SendingParty | None = field(
+    sending_party: None | SendingParty = field(
         default=None,
         metadata={
             "name": "SendingParty",
@@ -580,7 +580,7 @@ class FxrateResponseHeader:
             "required": True,
         }
     )
-    general_note: GeneralNote | None = field(
+    general_note: None | GeneralNote = field(
         default=None,
         metadata={
             "name": "GeneralNote",
@@ -605,14 +605,14 @@ class FxrateResponseSummary:
 
 @dataclass(kw_only=True)
 class Fee:
-    fee_type: FeeType | None = field(
+    fee_type: None | FeeType = field(
         default=None,
         metadata={
             "name": "FeeType",
             "type": "Element",
         },
     )
-    fee_value: FeeValue | None = field(
+    fee_value: None | FeeValue = field(
         default=None,
         metadata={
             "name": "FeeValue",
@@ -623,14 +623,14 @@ class Fee:
 
 @dataclass(kw_only=True)
 class IndicativeRateDetail:
-    currency_decimal_places: CurrencyDecimalPlaces | None = field(
+    currency_decimal_places: None | CurrencyDecimalPlaces = field(
         default=None,
         metadata={
             "name": "CurrencyDecimalPlaces",
             "type": "Element",
         },
     )
-    currency_availability_check_list: CurrencyAvailabilityCheckList | None = (
+    currency_availability_check_list: None | CurrencyAvailabilityCheckList = (
         field(
             default=None,
             metadata={
@@ -639,14 +639,14 @@ class IndicativeRateDetail:
             },
         )
     )
-    indicative_rate_retrieved_date: IndicativeRateRetrievedDate | None = field(
+    indicative_rate_retrieved_date: None | IndicativeRateRetrievedDate = field(
         default=None,
         metadata={
             "name": "IndicativeRateRetrievedDate",
             "type": "Element",
         },
     )
-    current_date_time: CurrentDateTime | None = field(
+    current_date_time: None | CurrentDateTime = field(
         default=None,
         metadata={
             "name": "CurrentDateTime",
@@ -683,21 +683,21 @@ class SpotRateDetail:
             "required": True,
         }
     )
-    fxidentification_data: FxidentificationData | None = field(
+    fxidentification_data: None | FxidentificationData = field(
         default=None,
         metadata={
             "name": "FXIdentificationData",
             "type": "Element",
         },
     )
-    target_currency: TargetCurrency | None = field(
+    target_currency: None | TargetCurrency = field(
         default=None,
         metadata={
             "name": "TargetCurrency",
             "type": "Element",
         },
     )
-    fxreference_number: FxreferenceNumber | None = field(
+    fxreference_number: None | FxreferenceNumber = field(
         default=None,
         metadata={
             "name": "FXReferenceNumber",
@@ -711,42 +711,42 @@ class SpotRateDetail:
             "required": True,
         }
     )
-    list_of_fee: ListOfFee | None = field(
+    list_of_fee: None | ListOfFee = field(
         default=None,
         metadata={
             "name": "ListOfFee",
             "type": "Element",
         },
     )
-    fxtransaction_type_coded: FxtransactionTypeCoded | None = field(
+    fxtransaction_type_coded: None | FxtransactionTypeCoded = field(
         default=None,
         metadata={
             "name": "FXTransactionTypeCoded",
             "type": "Element",
         },
     )
-    fxtransaction_type_coded_other: FxtransactionTypeCodedOther | None = field(
+    fxtransaction_type_coded_other: None | FxtransactionTypeCodedOther = field(
         default=None,
         metadata={
             "name": "FXTransactionTypeCodedOther",
             "type": "Element",
         },
     )
-    fxquote_type_coded: FxquoteTypeCoded | None = field(
+    fxquote_type_coded: None | FxquoteTypeCoded = field(
         default=None,
         metadata={
             "name": "FXQuoteTypeCoded",
             "type": "Element",
         },
     )
-    fxquote_type_coded_other: FxquoteTypeCodedOther | None = field(
+    fxquote_type_coded_other: None | FxquoteTypeCodedOther = field(
         default=None,
         metadata={
             "name": "FXQuoteTypeCodedOther",
             "type": "Element",
         },
     )
-    fxdates: Fxdates | None = field(
+    fxdates: None | Fxdates = field(
         default=None,
         metadata={
             "name": "FXDates",
@@ -760,7 +760,7 @@ class FxrateResponseDetail:
     class Meta:
         name = "FXRateResponseDetail"
 
-    sequence_number: SequenceNumber | None = field(
+    sequence_number: None | SequenceNumber = field(
         default=None,
         metadata={
             "name": "SequenceNumber",
@@ -774,14 +774,14 @@ class FxrateResponseDetail:
             "required": True,
         }
     )
-    computational_method_coded: ComputationalMethodCoded | None = field(
+    computational_method_coded: None | ComputationalMethodCoded = field(
         default=None,
         metadata={
             "name": "ComputationalMethodCoded",
             "type": "Element",
         },
     )
-    computational_method_coded_other: ComputationalMethodCodedOther | None = (
+    computational_method_coded_other: None | ComputationalMethodCodedOther = (
         field(
             default=None,
             metadata={
@@ -797,63 +797,63 @@ class FxrateResponseDetail:
             "required": True,
         }
     )
-    inverse_fxrate: InverseFxrate | None = field(
+    inverse_fxrate: None | InverseFxrate = field(
         default=None,
         metadata={
             "name": "InverseFXRate",
             "type": "Element",
         },
     )
-    payer_party: PayerParty | None = field(
+    payer_party: None | PayerParty = field(
         default=None,
         metadata={
             "name": "PayerParty",
             "type": "Element",
         },
     )
-    indicative_rate_detail: IndicativeRateDetail | None = field(
+    indicative_rate_detail: None | IndicativeRateDetail = field(
         default=None,
         metadata={
             "name": "IndicativeRateDetail",
             "type": "Element",
         },
     )
-    spot_rate_detail: SpotRateDetail | None = field(
+    spot_rate_detail: None | SpotRateDetail = field(
         default=None,
         metadata={
             "name": "SpotRateDetail",
             "type": "Element",
         },
     )
-    list_of_payment_reference: ListOfPaymentReference | None = field(
+    list_of_payment_reference: None | ListOfPaymentReference = field(
         default=None,
         metadata={
             "name": "ListOfPaymentReference",
             "type": "Element",
         },
     )
-    list_of_other_payment_info: ListOfOtherPaymentInfo | None = field(
+    list_of_other_payment_info: None | ListOfOtherPaymentInfo = field(
         default=None,
         metadata={
             "name": "ListOfOtherPaymentInfo",
             "type": "Element",
         },
     )
-    list_of_payment_exception: ListOfPaymentException | None = field(
+    list_of_payment_exception: None | ListOfPaymentException = field(
         default=None,
         metadata={
             "name": "ListOfPaymentException",
             "type": "Element",
         },
     )
-    certificate_authority: CertificateAuthority | None = field(
+    certificate_authority: None | CertificateAuthority = field(
         default=None,
         metadata={
             "name": "CertificateAuthority",
             "type": "Element",
         },
     )
-    fxrate_response_note: FxrateResponseNote | None = field(
+    fxrate_response_note: None | FxrateResponseNote = field(
         default=None,
         metadata={
             "name": "FXRateResponseNote",
@@ -896,7 +896,7 @@ class FxrateResponse:
             "required": True,
         }
     )
-    fxrate_response_summary: FxrateResponseSummary | None = field(
+    fxrate_response_summary: None | FxrateResponseSummary = field(
         default=None,
         metadata={
             "name": "FXRateResponseSummary",

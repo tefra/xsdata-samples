@@ -43,7 +43,7 @@ class ClientServerOperationMapping:
     class Meta:
         name = "CLIENT-SERVER-OPERATION-MAPPING"
 
-    argument_mappings: ClientServerOperationMapping.ArgumentMappings | None = (
+    argument_mappings: None | ClientServerOperationMapping.ArgumentMappings = (
         field(
             default=None,
             metadata={
@@ -54,7 +54,7 @@ class ClientServerOperationMapping:
         )
     )
     first_operation_ref: (
-        ClientServerOperationMapping.FirstOperationRef | None
+        None | ClientServerOperationMapping.FirstOperationRef
     ) = field(
         default=None,
         metadata={
@@ -64,7 +64,7 @@ class ClientServerOperationMapping:
         },
     )
     first_to_second_data_transformation_ref: (
-        ClientServerOperationMapping.FirstToSecondDataTransformationRef | None
+        None | ClientServerOperationMapping.FirstToSecondDataTransformationRef
     ) = field(
         default=None,
         metadata={
@@ -74,7 +74,7 @@ class ClientServerOperationMapping:
         },
     )
     second_operation_ref: (
-        ClientServerOperationMapping.SecondOperationRef | None
+        None | ClientServerOperationMapping.SecondOperationRef
     ) = field(
         default=None,
         metadata={
@@ -83,14 +83,14 @@ class ClientServerOperationMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -112,7 +112,7 @@ class ClientServerOperationMapping:
 
     @dataclass
     class FirstOperationRef(Ref):
-        dest: ClientServerOperationSubtypesEnum | None = field(
+        dest: None | ClientServerOperationSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -123,7 +123,7 @@ class ClientServerOperationMapping:
 
     @dataclass
     class FirstToSecondDataTransformationRef(Ref):
-        dest: DataTransformationSubtypesEnum | None = field(
+        dest: None | DataTransformationSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -134,7 +134,7 @@ class ClientServerOperationMapping:
 
     @dataclass
     class SecondOperationRef(Ref):
-        dest: ClientServerOperationSubtypesEnum | None = field(
+        dest: None | ClientServerOperationSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

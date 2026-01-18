@@ -103,7 +103,7 @@ class OperationInvokedEvent:
     class Meta:
         name = "OPERATION-INVOKED-EVENT"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -112,7 +112,7 @@ class OperationInvokedEvent:
             "required": True,
         },
     )
-    short_name_fragments: OperationInvokedEvent.ShortNameFragments | None = (
+    short_name_fragments: None | OperationInvokedEvent.ShortNameFragments = (
         field(
             default=None,
             metadata={
@@ -122,7 +122,7 @@ class OperationInvokedEvent:
             },
         )
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -130,7 +130,7 @@ class OperationInvokedEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -138,7 +138,7 @@ class OperationInvokedEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -146,7 +146,7 @@ class OperationInvokedEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -154,7 +154,7 @@ class OperationInvokedEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -162,7 +162,7 @@ class OperationInvokedEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: OperationInvokedEvent.Annotations | None = field(
+    annotations: None | OperationInvokedEvent.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -171,7 +171,7 @@ class OperationInvokedEvent:
         },
     )
     activation_reason_representation_ref: (
-        OperationInvokedEvent.ActivationReasonRepresentationRef | None
+        None | OperationInvokedEvent.ActivationReasonRepresentationRef
     ) = field(
         default=None,
         metadata={
@@ -180,7 +180,7 @@ class OperationInvokedEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    disabled_mode_irefs: OperationInvokedEvent.DisabledModeIrefs | None = (
+    disabled_mode_irefs: None | OperationInvokedEvent.DisabledModeIrefs = (
         field(
             default=None,
             metadata={
@@ -190,7 +190,7 @@ class OperationInvokedEvent:
             },
         )
     )
-    start_on_event_ref: OperationInvokedEvent.StartOnEventRef | None = field(
+    start_on_event_ref: None | OperationInvokedEvent.StartOnEventRef = field(
         default=None,
         metadata={
             "name": "START-ON-EVENT-REF",
@@ -198,7 +198,7 @@ class OperationInvokedEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -206,7 +206,7 @@ class OperationInvokedEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    operation_iref: POperationInAtomicSwcInstanceRef | None = field(
+    operation_iref: None | POperationInAtomicSwcInstanceRef = field(
         default=None,
         metadata={
             "name": "OPERATION-IREF",
@@ -214,14 +214,14 @@ class OperationInvokedEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -229,7 +229,7 @@ class OperationInvokedEvent:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -261,7 +261,7 @@ class OperationInvokedEvent:
 
     @dataclass
     class ActivationReasonRepresentationRef(Ref):
-        dest: ExecutableEntityActivationReasonSubtypesEnum | None = field(
+        dest: None | ExecutableEntityActivationReasonSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -283,7 +283,7 @@ class OperationInvokedEvent:
 
     @dataclass
     class StartOnEventRef(Ref):
-        dest: RunnableEntitySubtypesEnum | None = field(
+        dest: None | RunnableEntitySubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

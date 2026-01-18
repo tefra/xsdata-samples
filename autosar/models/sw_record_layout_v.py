@@ -94,7 +94,7 @@ class SwRecordLayoutV:
     class Meta:
         name = "SW-RECORD-LAYOUT-V"
 
-    short_label: Identifier | None = field(
+    short_label: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-LABEL",
@@ -102,7 +102,7 @@ class SwRecordLayoutV:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: AsamRecordLayoutSemantics | None = field(
+    category: None | AsamRecordLayoutSemantics = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -110,7 +110,7 @@ class SwRecordLayoutV:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -118,7 +118,7 @@ class SwRecordLayoutV:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    base_type_ref: SwRecordLayoutV.BaseTypeRef | None = field(
+    base_type_ref: None | SwRecordLayoutV.BaseTypeRef = field(
         default=None,
         metadata={
             "name": "BASE-TYPE-REF",
@@ -126,7 +126,7 @@ class SwRecordLayoutV:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_record_layout_v_axis: AxisIndexType | None = field(
+    sw_record_layout_v_axis: None | AxisIndexType = field(
         default=None,
         metadata={
             "name": "SW-RECORD-LAYOUT-V-AXIS",
@@ -134,7 +134,7 @@ class SwRecordLayoutV:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_record_layout_v_prop: NmtokenString | None = field(
+    sw_record_layout_v_prop: None | NmtokenString = field(
         default=None,
         metadata={
             "name": "SW-RECORD-LAYOUT-V-PROP",
@@ -142,7 +142,7 @@ class SwRecordLayoutV:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_record_layout_v_index: NmtokensString | None = field(
+    sw_record_layout_v_index: None | NmtokensString = field(
         default=None,
         metadata={
             "name": "SW-RECORD-LAYOUT-V-INDEX",
@@ -151,7 +151,7 @@ class SwRecordLayoutV:
         },
     )
     sw_generic_axis_param_type_ref: (
-        SwRecordLayoutV.SwGenericAxisParamTypeRef | None
+        None | SwRecordLayoutV.SwGenericAxisParamTypeRef
     ) = field(
         default=None,
         metadata={
@@ -160,7 +160,7 @@ class SwRecordLayoutV:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_record_layout_v_fix_value: Integer | None = field(
+    sw_record_layout_v_fix_value: None | Integer = field(
         default=None,
         metadata={
             "name": "SW-RECORD-LAYOUT-V-FIX-VALUE",
@@ -168,14 +168,14 @@ class SwRecordLayoutV:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -186,7 +186,7 @@ class SwRecordLayoutV:
 
     @dataclass
     class BaseTypeRef(Ref):
-        dest: SwBaseTypeSubtypesEnum | None = field(
+        dest: None | SwBaseTypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -197,7 +197,7 @@ class SwRecordLayoutV:
 
     @dataclass
     class SwGenericAxisParamTypeRef(Ref):
-        dest: SwGenericAxisParamTypeSubtypesEnum | None = field(
+        dest: None | SwGenericAxisParamTypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

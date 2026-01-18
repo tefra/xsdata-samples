@@ -21,7 +21,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 @dataclass
 class TransportModeStructure:
-    transport_mode: AllModesEnumeration | None = field(
+    transport_mode: None | AllModesEnumeration = field(
         default=None,
         metadata={
             "name": "TransportMode",
@@ -31,7 +31,8 @@ class TransportModeStructure:
         },
     )
     choice: (
-        AirSubmode
+        None
+        | AirSubmode
         | BusSubmode
         | CoachSubmode
         | FunicularSubmode
@@ -43,7 +44,6 @@ class TransportModeStructure:
         | SnowAndIceSubmode
         | TaxiSubmode
         | SelfDriveSubmode
-        | None
     ) = field(
         default=None,
         metadata={

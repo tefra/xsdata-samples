@@ -172,7 +172,7 @@ class MultiplexedIPdu:
     class Meta:
         name = "MULTIPLEXED-I-PDU"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -181,7 +181,7 @@ class MultiplexedIPdu:
             "required": True,
         },
     )
-    short_name_fragments: MultiplexedIPdu.ShortNameFragments | None = field(
+    short_name_fragments: None | MultiplexedIPdu.ShortNameFragments = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -189,7 +189,7 @@ class MultiplexedIPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -197,7 +197,7 @@ class MultiplexedIPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -205,7 +205,7 @@ class MultiplexedIPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -213,7 +213,7 @@ class MultiplexedIPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -221,7 +221,7 @@ class MultiplexedIPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -229,7 +229,7 @@ class MultiplexedIPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: MultiplexedIPdu.Annotations | None = field(
+    annotations: None | MultiplexedIPdu.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -237,7 +237,7 @@ class MultiplexedIPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -245,7 +245,7 @@ class MultiplexedIPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    has_dynamic_length: Boolean | None = field(
+    has_dynamic_length: None | Boolean = field(
         default=None,
         metadata={
             "name": "HAS-DYNAMIC-LENGTH",
@@ -253,7 +253,7 @@ class MultiplexedIPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    length: Integer | None = field(
+    length: None | Integer = field(
         default=None,
         metadata={
             "name": "LENGTH",
@@ -261,7 +261,7 @@ class MultiplexedIPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    meta_data_length: PositiveInteger | None = field(
+    meta_data_length: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "META-DATA-LENGTH",
@@ -269,7 +269,7 @@ class MultiplexedIPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    contained_i_pdu_props: ContainedIPduProps | None = field(
+    contained_i_pdu_props: None | ContainedIPduProps = field(
         default=None,
         metadata={
             "name": "CONTAINED-I-PDU-PROPS",
@@ -277,7 +277,7 @@ class MultiplexedIPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    dynamic_parts: MultiplexedIPdu.DynamicParts | None = field(
+    dynamic_parts: None | MultiplexedIPdu.DynamicParts = field(
         default=None,
         metadata={
             "name": "DYNAMIC-PARTS",
@@ -285,7 +285,7 @@ class MultiplexedIPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    selector_field_byte_order: ByteOrderEnum | None = field(
+    selector_field_byte_order: None | ByteOrderEnum = field(
         default=None,
         metadata={
             "name": "SELECTOR-FIELD-BYTE-ORDER",
@@ -293,7 +293,7 @@ class MultiplexedIPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    selector_field_length: Integer | None = field(
+    selector_field_length: None | Integer = field(
         default=None,
         metadata={
             "name": "SELECTOR-FIELD-LENGTH",
@@ -301,7 +301,7 @@ class MultiplexedIPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    selector_field_start_position: Integer | None = field(
+    selector_field_start_position: None | Integer = field(
         default=None,
         metadata={
             "name": "SELECTOR-FIELD-START-POSITION",
@@ -309,7 +309,7 @@ class MultiplexedIPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    static_parts: MultiplexedIPdu.StaticParts | None = field(
+    static_parts: None | MultiplexedIPdu.StaticParts = field(
         default=None,
         metadata={
             "name": "STATIC-PARTS",
@@ -317,7 +317,7 @@ class MultiplexedIPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    trigger_mode: TriggerMode | None = field(
+    trigger_mode: None | TriggerMode = field(
         default=None,
         metadata={
             "name": "TRIGGER-MODE",
@@ -325,7 +325,7 @@ class MultiplexedIPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    unused_bit_pattern: Integer | None = field(
+    unused_bit_pattern: None | Integer = field(
         default=None,
         metadata={
             "name": "UNUSED-BIT-PATTERN",
@@ -333,14 +333,14 @@ class MultiplexedIPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -348,7 +348,7 @@ class MultiplexedIPdu:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",

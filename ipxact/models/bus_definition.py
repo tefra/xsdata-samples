@@ -59,55 +59,55 @@ class BusDefinition:
         name = "busDefinition"
         namespace = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
-    vendor: str | None = field(
+    vendor: None | str = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
         },
     )
-    library: str | None = field(
+    library: None | str = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
         },
     )
-    name: str | None = field(
+    name: None | str = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
         },
     )
-    version: str | None = field(
+    version: None | str = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
         },
     )
-    display_name: str | None = field(
+    display_name: None | str = field(
         default=None,
         metadata={
             "name": "displayName",
             "type": "Element",
         },
     )
-    short_description: ShortDescription | None = field(
+    short_description: None | ShortDescription = field(
         default=None,
         metadata={
             "name": "shortDescription",
             "type": "Element",
         },
     )
-    description: Description | None = field(
+    description: None | Description = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    direct_connection: bool | None = field(
+    direct_connection: None | bool = field(
         default=None,
         metadata={
             "name": "directConnection",
@@ -115,13 +115,13 @@ class BusDefinition:
             "required": True,
         },
     )
-    broadcast: bool | None = field(
+    broadcast: None | bool = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    is_addressable: bool | None = field(
+    is_addressable: None | bool = field(
         default=None,
         metadata={
             "name": "isAddressable",
@@ -129,59 +129,59 @@ class BusDefinition:
             "required": True,
         },
     )
-    extends: LibraryRefType | None = field(
+    extends: None | LibraryRefType = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    max_initiators: UnsignedIntExpression | None = field(
+    max_initiators: None | UnsignedIntExpression = field(
         default=None,
         metadata={
             "name": "maxInitiators",
             "type": "Element",
         },
     )
-    max_targets: UnsignedIntExpression | None = field(
+    max_targets: None | UnsignedIntExpression = field(
         default=None,
         metadata={
             "name": "maxTargets",
             "type": "Element",
         },
     )
-    system_group_names: BusDefinition.SystemGroupNames | None = field(
+    system_group_names: None | BusDefinition.SystemGroupNames = field(
         default=None,
         metadata={
             "name": "systemGroupNames",
             "type": "Element",
         },
     )
-    choices: Choices | None = field(
+    choices: None | Choices = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    parameters: Parameters | None = field(
+    parameters: None | Parameters = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    assertions: Assertions | None = field(
+    assertions: None | Assertions = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    vendor_extensions: VendorExtensions | None = field(
+    vendor_extensions: None | VendorExtensions = field(
         default=None,
         metadata={
             "name": "vendorExtensions",
             "type": "Element",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -215,7 +215,7 @@ class BusDefinition:
                     "required": True,
                 },
             )
-            id: str | None = field(
+            id: None | str = field(
                 default=None,
                 metadata={
                     "type": "Attribute",

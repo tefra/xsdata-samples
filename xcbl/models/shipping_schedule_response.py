@@ -593,7 +593,7 @@ class IdassignedBy:
             "required": True,
         }
     )
-    idassigned_by_coded_other: IdassignedByCodedOther | None = field(
+    idassigned_by_coded_other: None | IdassignedByCodedOther = field(
         default=None,
         metadata={
             "name": "IDAssignedByCodedOther",
@@ -623,7 +623,7 @@ class ItemResourceAuthorization:
         }
     )
     resource_authorization_coded_other: (
-        ResourceAuthorizationCodedOther | None
+        None | ResourceAuthorizationCodedOther
     ) = field(
         default=None,
         metadata={
@@ -631,7 +631,7 @@ class ItemResourceAuthorization:
             "type": "Element",
         },
     )
-    validity_dates: ValidityDates | None = field(
+    validity_dates: None | ValidityDates = field(
         default=None,
         metadata={
             "name": "ValidityDates",
@@ -683,7 +683,7 @@ class OrderType:
             "required": True,
         }
     )
-    order_type_coded_other: OrderTypeCodedOther | None = field(
+    order_type_coded_other: None | OrderTypeCodedOther = field(
         default=None,
         metadata={
             "name": "OrderTypeCodedOther",
@@ -712,7 +712,7 @@ class RequestedResponse:
             "required": True,
         }
     )
-    requested_response_coded_other: RequestedResponseCodedOther | None = field(
+    requested_response_coded_other: None | RequestedResponseCodedOther = field(
         default=None,
         metadata={
             "name": "RequestedResponseCodedOther",
@@ -730,7 +730,7 @@ class ResponseType:
             "required": True,
         }
     )
-    response_type_coded_other: ResponseTypeCodedOther | None = field(
+    response_type_coded_other: None | ResponseTypeCodedOther = field(
         default=None,
         metadata={
             "name": "ResponseTypeCodedOther",
@@ -785,28 +785,28 @@ class ScheduleReference:
 
 @dataclass(kw_only=True)
 class ServiceLevel:
-    service_level_coded: ServiceLevelCoded | None = field(
+    service_level_coded: None | ServiceLevelCoded = field(
         default=None,
         metadata={
             "name": "ServiceLevelCoded",
             "type": "Element",
         },
     )
-    service_level_coded_other: ServiceLevelCodedOther | None = field(
+    service_level_coded_other: None | ServiceLevelCodedOther = field(
         default=None,
         metadata={
             "name": "ServiceLevelCodedOther",
             "type": "Element",
         },
     )
-    service_level_reason_coded: ServiceLevelReasonCoded | None = field(
+    service_level_reason_coded: None | ServiceLevelReasonCoded = field(
         default=None,
         metadata={
             "name": "ServiceLevelReasonCoded",
             "type": "Element",
         },
     )
-    service_level_reason_coded_other: ServiceLevelReasonCodedOther | None = (
+    service_level_reason_coded_other: None | ServiceLevelReasonCodedOther = (
         field(
             default=None,
             metadata={
@@ -816,7 +816,7 @@ class ServiceLevel:
         )
     )
     service_level_responsibility_coded: (
-        ServiceLevelResponsibilityCoded | None
+        None | ServiceLevelResponsibilityCoded
     ) = field(
         default=None,
         metadata={
@@ -825,7 +825,7 @@ class ServiceLevel:
         },
     )
     service_level_responsibility_coded_other: (
-        ServiceLevelResponsibilityCodedOther | None
+        None | ServiceLevelResponsibilityCodedOther
     ) = field(
         default=None,
         metadata={
@@ -862,35 +862,35 @@ class TransportLocation:
             "required": True,
         }
     )
-    sequence: Sequence | None = field(
+    sequence: None | Sequence = field(
         default=None,
         metadata={
             "name": "Sequence",
             "type": "Element",
         },
     )
-    estimated_arrival_date: EstimatedArrivalDate | None = field(
+    estimated_arrival_date: None | EstimatedArrivalDate = field(
         default=None,
         metadata={
             "name": "EstimatedArrivalDate",
             "type": "Element",
         },
     )
-    actual_arrival_date: ActualArrivalDate | None = field(
+    actual_arrival_date: None | ActualArrivalDate = field(
         default=None,
         metadata={
             "name": "ActualArrivalDate",
             "type": "Element",
         },
     )
-    estimated_departure_date: EstimatedDepartureDate | None = field(
+    estimated_departure_date: None | EstimatedDepartureDate = field(
         default=None,
         metadata={
             "name": "EstimatedDepartureDate",
             "type": "Element",
         },
     )
-    actual_departure_date: ActualDepartureDate | None = field(
+    actual_departure_date: None | ActualDepartureDate = field(
         default=None,
         metadata={
             "name": "ActualDepartureDate",
@@ -973,7 +973,7 @@ class MessageId:
             "required": True,
         }
     )
-    idassigned_date: IdassignedDate | None = field(
+    idassigned_date: None | IdassignedDate = field(
         default=None,
         metadata={
             "name": "IDAssignedDate",
@@ -1012,21 +1012,21 @@ class ScheduleParty:
             "required": True,
         }
     )
-    bill_to_party: BillToParty | None = field(
+    bill_to_party: None | BillToParty = field(
         default=None,
         metadata={
             "name": "BillToParty",
             "type": "Element",
         },
     )
-    material_issuer_party: MaterialIssuerParty | None = field(
+    material_issuer_party: None | MaterialIssuerParty = field(
         default=None,
         metadata={
             "name": "MaterialIssuerParty",
             "type": "Element",
         },
     )
-    list_of_party_coded: ListOfPartyCoded | None = field(
+    list_of_party_coded: None | ListOfPartyCoded = field(
         default=None,
         metadata={
             "name": "ListOfPartyCoded",
@@ -1044,7 +1044,7 @@ class ShipScheduleDetail:
             "required": True,
         }
     )
-    commitment_level_coded_other: CommitmentLevelCodedOther | None = field(
+    commitment_level_coded_other: None | CommitmentLevelCodedOther = field(
         default=None,
         metadata={
             "name": "CommitmentLevelCodedOther",
@@ -1065,21 +1065,21 @@ class ShipScheduleDetail:
             "required": True,
         }
     )
-    item_resource_authorization: ItemResourceAuthorization | None = field(
+    item_resource_authorization: None | ItemResourceAuthorization = field(
         default=None,
         metadata={
             "name": "ItemResourceAuthorization",
             "type": "Element",
         },
     )
-    schedule_note: ScheduleNote | None = field(
+    schedule_note: None | ScheduleNote = field(
         default=None,
         metadata={
             "name": "ScheduleNote",
             "type": "Element",
         },
     )
-    route_id: RouteId | None = field(
+    route_id: None | RouteId = field(
         default=None,
         metadata={
             "name": "RouteID",
@@ -1112,14 +1112,14 @@ class StartTransportLocation:
 
 @dataclass(kw_only=True)
 class TransportQuantities:
-    lading_quantity: LadingQuantity | None = field(
+    lading_quantity: None | LadingQuantity = field(
         default=None,
         metadata={
             "name": "LadingQuantity",
             "type": "Element",
         },
     )
-    list_of_quantity_coded: ListOfQuantityCoded | None = field(
+    list_of_quantity_coded: None | ListOfQuantityCoded = field(
         default=None,
         metadata={
             "name": "ListOfQuantityCoded",
@@ -1182,14 +1182,14 @@ class TransportLocationList:
 
 @dataclass(kw_only=True)
 class LocationShipSchedule:
-    location: Location | None = field(
+    location: None | Location = field(
         default=None,
         metadata={
             "name": "Location",
             "type": "Element",
         },
     )
-    list_of_contact: ListOfContact | None = field(
+    list_of_contact: None | ListOfContact = field(
         default=None,
         metadata={
             "name": "ListOfContact",
@@ -1214,14 +1214,14 @@ class OrderNumber:
             "required": True,
         }
     )
-    seller_order_number: SellerOrderNumber | None = field(
+    seller_order_number: None | SellerOrderNumber = field(
         default=None,
         metadata={
             "name": "SellerOrderNumber",
             "type": "Element",
         },
     )
-    list_of_message_id: ListOfMessageId | None = field(
+    list_of_message_id: None | ListOfMessageId = field(
         default=None,
         metadata={
             "name": "ListOfMessageID",
@@ -1239,35 +1239,35 @@ class TransportRouting:
             "required": True,
         }
     )
-    transport_mode: TransportMode | None = field(
+    transport_mode: None | TransportMode = field(
         default=None,
         metadata={
             "name": "TransportMode",
             "type": "Element",
         },
     )
-    transport_means: TransportMeans | None = field(
+    transport_means: None | TransportMeans = field(
         default=None,
         metadata={
             "name": "TransportMeans",
             "type": "Element",
         },
     )
-    transport_means_identifier: TransportMeansIdentifier | None = field(
+    transport_means_identifier: None | TransportMeansIdentifier = field(
         default=None,
         metadata={
             "name": "TransportMeansIdentifier",
             "type": "Element",
         },
     )
-    transport_means_reference: TransportMeansReference | None = field(
+    transport_means_reference: None | TransportMeansReference = field(
         default=None,
         metadata={
             "name": "TransportMeansReference",
             "type": "Element",
         },
     )
-    transport_requirement_coded: TransportRequirementCoded | None = field(
+    transport_requirement_coded: None | TransportRequirementCoded = field(
         default=None,
         metadata={
             "name": "TransportRequirementCoded",
@@ -1275,7 +1275,7 @@ class TransportRouting:
         },
     )
     transport_requirement_coded_other: (
-        TransportRequirementCodedOther | None
+        None | TransportRequirementCodedOther
     ) = field(
         default=None,
         metadata={
@@ -1283,70 +1283,70 @@ class TransportRouting:
             "type": "Element",
         },
     )
-    carrier_name: CarrierName | None = field(
+    carrier_name: None | CarrierName = field(
         default=None,
         metadata={
             "name": "CarrierName",
             "type": "Element",
         },
     )
-    carrier_id: CarrierId | None = field(
+    carrier_id: None | CarrierId = field(
         default=None,
         metadata={
             "name": "CarrierID",
             "type": "Element",
         },
     )
-    transport_quantities: TransportQuantities | None = field(
+    transport_quantities: None | TransportQuantities = field(
         default=None,
         metadata={
             "name": "TransportQuantities",
             "type": "Element",
         },
     )
-    cust_shipping_contract_num: CustShippingContractNum | None = field(
+    cust_shipping_contract_num: None | CustShippingContractNum = field(
         default=None,
         metadata={
             "name": "CustShippingContractNum",
             "type": "Element",
         },
     )
-    service_level: ServiceLevel | None = field(
+    service_level: None | ServiceLevel = field(
         default=None,
         metadata={
             "name": "ServiceLevel",
             "type": "Element",
         },
     )
-    shipping_instructions: ShippingInstructions | None = field(
+    shipping_instructions: None | ShippingInstructions = field(
         default=None,
         metadata={
             "name": "ShippingInstructions",
             "type": "Element",
         },
     )
-    transport_leg_coded: TransportLegCoded | None = field(
+    transport_leg_coded: None | TransportLegCoded = field(
         default=None,
         metadata={
             "name": "TransportLegCoded",
             "type": "Element",
         },
     )
-    transport_leg_coded_other: TransportLegCodedOther | None = field(
+    transport_leg_coded_other: None | TransportLegCodedOther = field(
         default=None,
         metadata={
             "name": "TransportLegCodedOther",
             "type": "Element",
         },
     )
-    list_of_transport_equipment: ListOfTransportEquipment | None = field(
+    list_of_transport_equipment: None | ListOfTransportEquipment = field(
         default=None,
         metadata={
             "name": "ListOfTransportEquipment",
             "type": "Element",
         },
     )
-    transit_direction: TransitDirection | None = field(
+    transit_direction: None | TransitDirection = field(
         default=None,
         metadata={
             "name": "TransitDirection",
@@ -1395,14 +1395,14 @@ class ScheduleOrderReference:
             "required": True,
         }
     )
-    order_issue_date: OrderIssueDate | None = field(
+    order_issue_date: None | OrderIssueDate = field(
         default=None,
         metadata={
             "name": "OrderIssueDate",
             "type": "Element",
         },
     )
-    order_type: OrderType | None = field(
+    order_type: None | OrderType = field(
         default=None,
         metadata={
             "name": "OrderType",
@@ -1413,28 +1413,28 @@ class ScheduleOrderReference:
 
 @dataclass(kw_only=True)
 class ScheduleReferences:
-    contract_references: ContractReferences | None = field(
+    contract_references: None | ContractReferences = field(
         default=None,
         metadata={
             "name": "ContractReferences",
             "type": "Element",
         },
     )
-    schedule_order_reference: ScheduleOrderReference | None = field(
+    schedule_order_reference: None | ScheduleOrderReference = field(
         default=None,
         metadata={
             "name": "ScheduleOrderReference",
             "type": "Element",
         },
     )
-    order_type: OrderType | None = field(
+    order_type: None | OrderType = field(
         default=None,
         metadata={
             "name": "OrderType",
             "type": "Element",
         },
     )
-    other_schedle_references: OtherSchedleReferences | None = field(
+    other_schedle_references: None | OtherSchedleReferences = field(
         default=None,
         metadata={
             "name": "OtherSchedleReferences",
@@ -1470,14 +1470,14 @@ class ShippingScheduleHeader:
             "required": True,
         }
     )
-    schedule_references: ScheduleReferences | None = field(
+    schedule_references: None | ScheduleReferences = field(
         default=None,
         metadata={
             "name": "ScheduleReferences",
             "type": "Element",
         },
     )
-    release_number: ReleaseNumber | None = field(
+    release_number: None | ReleaseNumber = field(
         default=None,
         metadata={
             "name": "ReleaseNumber",
@@ -1491,7 +1491,7 @@ class ShippingScheduleHeader:
             "required": True,
         }
     )
-    requested_response: RequestedResponse | None = field(
+    requested_response: None | RequestedResponse = field(
         default=None,
         metadata={
             "name": "RequestedResponse",
@@ -1505,7 +1505,7 @@ class ShippingScheduleHeader:
             "required": True,
         }
     )
-    schedule_type_coded_other: ScheduleTypeCodedOther | None = field(
+    schedule_type_coded_other: None | ScheduleTypeCodedOther = field(
         default=None,
         metadata={
             "name": "ScheduleTypeCodedOther",
@@ -1519,14 +1519,14 @@ class ShippingScheduleHeader:
             "required": True,
         }
     )
-    quantity_qualifier_coded_other: QuantityQualifierCodedOther | None = field(
+    quantity_qualifier_coded_other: None | QuantityQualifierCodedOther = field(
         default=None,
         metadata={
             "name": "QuantityQualifierCodedOther",
             "type": "Element",
         },
     )
-    validity_dates: ValidityDates | None = field(
+    validity_dates: None | ValidityDates = field(
         default=None,
         metadata={
             "name": "ValidityDates",
@@ -1540,14 +1540,14 @@ class ShippingScheduleHeader:
             "required": True,
         }
     )
-    list_of_transport_routing: ListOfTransportRouting | None = field(
+    list_of_transport_routing: None | ListOfTransportRouting = field(
         default=None,
         metadata={
             "name": "ListOfTransportRouting",
             "type": "Element",
         },
     )
-    terms_of_delivery: TermsOfDelivery | None = field(
+    terms_of_delivery: None | TermsOfDelivery = field(
         default=None,
         metadata={
             "name": "TermsOfDelivery",
@@ -1561,21 +1561,21 @@ class ShippingScheduleHeader:
             "required": True,
         }
     )
-    shipping_schedule_header_note: ShippingScheduleHeaderNote | None = field(
+    shipping_schedule_header_note: None | ShippingScheduleHeaderNote = field(
         default=None,
         metadata={
             "name": "ShippingScheduleHeaderNote",
             "type": "Element",
         },
     )
-    list_of_structured_note: ListOfStructuredNote | None = field(
+    list_of_structured_note: None | ListOfStructuredNote = field(
         default=None,
         metadata={
             "name": "ListOfStructuredNote",
             "type": "Element",
         },
     )
-    list_of_attachment: ListOfAttachment | None = field(
+    list_of_attachment: None | ListOfAttachment = field(
         default=None,
         metadata={
             "name": "ListOfAttachment",
@@ -1593,133 +1593,133 @@ class BaseShippingDetail:
             "required": True,
         }
     )
-    line_item_type: LineItemType | None = field(
+    line_item_type: None | LineItemType = field(
         default=None,
         metadata={
             "name": "LineItemType",
             "type": "Element",
         },
     )
-    parent_item_number: ParentItemNumber | None = field(
+    parent_item_number: None | ParentItemNumber = field(
         default=None,
         metadata={
             "name": "ParentItemNumber",
             "type": "Element",
         },
     )
-    item_identifiers: ItemIdentifiers | None = field(
+    item_identifiers: None | ItemIdentifiers = field(
         default=None,
         metadata={
             "name": "ItemIdentifiers",
             "type": "Element",
         },
     )
-    list_of_dimension: ListOfDimension | None = field(
+    list_of_dimension: None | ListOfDimension = field(
         default=None,
         metadata={
             "name": "ListOfDimension",
             "type": "Element",
         },
     )
-    total_quantity: TotalQuantity | None = field(
+    total_quantity: None | TotalQuantity = field(
         default=None,
         metadata={
             "name": "TotalQuantity",
             "type": "Element",
         },
     )
-    max_back_order_quantity: MaxBackOrderQuantity | None = field(
+    max_back_order_quantity: None | MaxBackOrderQuantity = field(
         default=None,
         metadata={
             "name": "MaxBackOrderQuantity",
             "type": "Element",
         },
     )
-    list_of_quantity_coded: ListOfQuantityCoded | None = field(
+    list_of_quantity_coded: None | ListOfQuantityCoded = field(
         default=None,
         metadata={
             "name": "ListOfQuantityCoded",
             "type": "Element",
         },
     )
-    off_catalog_flag: OffCatalogFlag | None = field(
+    off_catalog_flag: None | OffCatalogFlag = field(
         default=None,
         metadata={
             "name": "OffCatalogFlag",
             "type": "Element",
         },
     )
-    catalog_reference: CatalogReference | None = field(
+    catalog_reference: None | CatalogReference = field(
         default=None,
         metadata={
             "name": "CatalogReference",
             "type": "Element",
         },
     )
-    item_contract_references: ItemContractReferences | None = field(
+    item_contract_references: None | ItemContractReferences = field(
         default=None,
         metadata={
             "name": "ItemContractReferences",
             "type": "Element",
         },
     )
-    list_of_item_references: ListOfItemReferences | None = field(
+    list_of_item_references: None | ListOfItemReferences = field(
         default=None,
         metadata={
             "name": "ListOfItemReferences",
             "type": "Element",
         },
     )
-    country_of_origin: CountryOfOrigin | None = field(
+    country_of_origin: None | CountryOfOrigin = field(
         default=None,
         metadata={
             "name": "CountryOfOrigin",
             "type": "Element",
         },
     )
-    country_of_destination: CountryOfDestination | None = field(
+    country_of_destination: None | CountryOfDestination = field(
         default=None,
         metadata={
             "name": "CountryOfDestination",
             "type": "Element",
         },
     )
-    final_recipient: FinalRecipient | None = field(
+    final_recipient: None | FinalRecipient = field(
         default=None,
         metadata={
             "name": "FinalRecipient",
             "type": "Element",
         },
     )
-    list_of_party_coded: ListOfPartyCoded | None = field(
+    list_of_party_coded: None | ListOfPartyCoded = field(
         default=None,
         metadata={
             "name": "ListOfPartyCoded",
             "type": "Element",
         },
     )
-    conditions_of_sale: ConditionsOfSale | None = field(
+    conditions_of_sale: None | ConditionsOfSale = field(
         default=None,
         metadata={
             "name": "ConditionsOfSale",
             "type": "Element",
         },
     )
-    hazardous_materials: HazardousMaterials | None = field(
+    hazardous_materials: None | HazardousMaterials = field(
         default=None,
         metadata={
             "name": "HazardousMaterials",
             "type": "Element",
         },
     )
-    record_keeping_year: RecordKeepingYear | None = field(
+    record_keeping_year: None | RecordKeepingYear = field(
         default=None,
         metadata={
             "name": "RecordKeepingYear",
             "type": "Element",
         },
     )
-    item_schedule_reference: ItemScheduleReference | None = field(
+    item_schedule_reference: None | ItemScheduleReference = field(
         default=None,
         metadata={
             "name": "ItemScheduleReference",
@@ -1733,28 +1733,28 @@ class BaseShippingDetail:
             "required": True,
         }
     )
-    forecast_frequency_coded_other: ForecastFrequencyCodedOther | None = field(
+    forecast_frequency_coded_other: None | ForecastFrequencyCodedOther = field(
         default=None,
         metadata={
             "name": "ForecastFrequencyCodedOther",
             "type": "Element",
         },
     )
-    item_quantities: ItemQuantities | None = field(
+    item_quantities: None | ItemQuantities = field(
         default=None,
         metadata={
             "name": "ItemQuantities",
             "type": "Element",
         },
     )
-    item_release_status_coded: ItemReleaseStatusCoded | None = field(
+    item_release_status_coded: None | ItemReleaseStatusCoded = field(
         default=None,
         metadata={
             "name": "ItemReleaseStatusCoded",
             "type": "Element",
         },
     )
-    item_release_status_coded_other: ItemReleaseStatusCodedOther | None = (
+    item_release_status_coded_other: None | ItemReleaseStatusCodedOther = (
         field(
             default=None,
             metadata={
@@ -1810,14 +1810,14 @@ class LocationShippingItemDetail:
             "required": True,
         }
     )
-    line_item_note: LineItemNote | None = field(
+    line_item_note: None | LineItemNote = field(
         default=None,
         metadata={
             "name": "LineItemNote",
             "type": "Element",
         },
     )
-    list_of_structured_note: ListOfStructuredNote | None = field(
+    list_of_structured_note: None | ListOfStructuredNote = field(
         default=None,
         metadata={
             "name": "ListOfStructuredNote",
@@ -1842,14 +1842,14 @@ class MaterialGroupedShippingDetail:
             "required": True,
         }
     )
-    line_item_note: LineItemNote | None = field(
+    line_item_note: None | LineItemNote = field(
         default=None,
         metadata={
             "name": "LineItemNote",
             "type": "Element",
         },
     )
-    list_of_structured_note: ListOfStructuredNote | None = field(
+    list_of_structured_note: None | ListOfStructuredNote = field(
         default=None,
         metadata={
             "name": "ListOfStructuredNote",
@@ -1881,7 +1881,7 @@ class ShippingScheduleResponseHeader:
             "required": True,
         }
     )
-    list_of_reference_coded: ListOfReferenceCoded | None = field(
+    list_of_reference_coded: None | ListOfReferenceCoded = field(
         default=None,
         metadata={
             "name": "ListOfReferenceCoded",
@@ -1924,7 +1924,7 @@ class ShippingScheduleResponseHeader:
         }
     )
     original_shipping_schedule_header: (
-        OriginalShippingScheduleHeader | None
+        None | OriginalShippingScheduleHeader
     ) = field(
         default=None,
         metadata={
@@ -1932,7 +1932,7 @@ class ShippingScheduleResponseHeader:
             "type": "Element",
         },
     )
-    changed_shipping_schedule_header: ChangedShippingScheduleHeader | None = (
+    changed_shipping_schedule_header: None | ChangedShippingScheduleHeader = (
         field(
             default=None,
             metadata={
@@ -1942,7 +1942,7 @@ class ShippingScheduleResponseHeader:
         )
     )
     shipping_schedule_response_header_note: (
-        ShippingScheduleResponseHeaderNote | None
+        None | ShippingScheduleResponseHeaderNote
     ) = field(
         default=None,
         metadata={
@@ -1950,14 +1950,14 @@ class ShippingScheduleResponseHeader:
             "type": "Element",
         },
     )
-    list_of_structured_note: ListOfStructuredNote | None = field(
+    list_of_structured_note: None | ListOfStructuredNote = field(
         default=None,
         metadata={
             "name": "ListOfStructuredNote",
             "type": "Element",
         },
     )
-    list_of_attachment: ListOfAttachment | None = field(
+    list_of_attachment: None | ListOfAttachment = field(
         default=None,
         metadata={
             "name": "ListOfAttachment",
@@ -2009,7 +2009,7 @@ class LocationGroupedShippingDetail:
             "required": True,
         }
     )
-    list_of_contact: ListOfContact | None = field(
+    list_of_contact: None | ListOfContact = field(
         default=None,
         metadata={
             "name": "ListOfContact",
@@ -2036,7 +2036,7 @@ class MaterialGroupedShippingResponse:
             "required": True,
         }
     )
-    detail_response_coded_other: DetailResponseCodedOther | None = field(
+    detail_response_coded_other: None | DetailResponseCodedOther = field(
         default=None,
         metadata={
             "name": "DetailResponseCodedOther",
@@ -2044,7 +2044,7 @@ class MaterialGroupedShippingResponse:
         },
     )
     original_material_grouped_shipping_detail: (
-        OriginalMaterialGroupedShippingDetail | None
+        None | OriginalMaterialGroupedShippingDetail
     ) = field(
         default=None,
         metadata={
@@ -2053,7 +2053,7 @@ class MaterialGroupedShippingResponse:
         },
     )
     changed_material_grouped_shipping_detail: (
-        ChangedMaterialGroupedShippingDetail | None
+        None | ChangedMaterialGroupedShippingDetail
     ) = field(
         default=None,
         metadata={
@@ -2061,21 +2061,21 @@ class MaterialGroupedShippingResponse:
             "type": "Element",
         },
     )
-    line_item_note: LineItemNote | None = field(
+    line_item_note: None | LineItemNote = field(
         default=None,
         metadata={
             "name": "LineItemNote",
             "type": "Element",
         },
     )
-    list_of_structured_note: ListOfStructuredNote | None = field(
+    list_of_structured_note: None | ListOfStructuredNote = field(
         default=None,
         metadata={
             "name": "ListOfStructuredNote",
             "type": "Element",
         },
     )
-    list_of_attachment: ListOfAttachment | None = field(
+    list_of_attachment: None | ListOfAttachment = field(
         default=None,
         metadata={
             "name": "ListOfAttachment",
@@ -2129,7 +2129,7 @@ class LocationGroupedShippingResponse:
             "required": True,
         }
     )
-    detail_response_coded_other: DetailResponseCodedOther | None = field(
+    detail_response_coded_other: None | DetailResponseCodedOther = field(
         default=None,
         metadata={
             "name": "DetailResponseCodedOther",
@@ -2137,7 +2137,7 @@ class LocationGroupedShippingResponse:
         },
     )
     original_location_grouped_shipping_detail: (
-        OriginalLocationGroupedShippingDetail | None
+        None | OriginalLocationGroupedShippingDetail
     ) = field(
         default=None,
         metadata={
@@ -2146,7 +2146,7 @@ class LocationGroupedShippingResponse:
         },
     )
     changed_location_grouped_shipping_detail: (
-        ChangedLocationGroupedShippingDetail | None
+        None | ChangedLocationGroupedShippingDetail
     ) = field(
         default=None,
         metadata={
@@ -2154,21 +2154,21 @@ class LocationGroupedShippingResponse:
             "type": "Element",
         },
     )
-    line_item_note: LineItemNote | None = field(
+    line_item_note: None | LineItemNote = field(
         default=None,
         metadata={
             "name": "LineItemNote",
             "type": "Element",
         },
     )
-    list_of_structured_note: ListOfStructuredNote | None = field(
+    list_of_structured_note: None | ListOfStructuredNote = field(
         default=None,
         metadata={
             "name": "ListOfStructuredNote",
             "type": "Element",
         },
     )
-    list_of_attachment: ListOfAttachment | None = field(
+    list_of_attachment: None | ListOfAttachment = field(
         default=None,
         metadata={
             "name": "ListOfAttachment",
@@ -2201,7 +2201,7 @@ class ShippingScheduleResponse:
         }
     )
     list_of_location_grouped_shipping_response: (
-        ListOfLocationGroupedShippingResponse | None
+        None | ListOfLocationGroupedShippingResponse
     ) = field(
         default=None,
         metadata={
@@ -2210,7 +2210,7 @@ class ShippingScheduleResponse:
         },
     )
     list_of_material_grouped_shipping_response: (
-        ListOfMaterialGroupedShippingResponse | None
+        None | ListOfMaterialGroupedShippingResponse
     ) = field(
         default=None,
         metadata={
@@ -2219,7 +2219,7 @@ class ShippingScheduleResponse:
         },
     )
     shipping_schedule_response_summary: (
-        ShippingScheduleResponseSummary | None
+        None | ShippingScheduleResponseSummary
     ) = field(
         default=None,
         metadata={

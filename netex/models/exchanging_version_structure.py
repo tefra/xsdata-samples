@@ -15,7 +15,7 @@ class ExchangingVersionStructure(ResellingVersionStructure):
     class Meta:
         name = "Exchanging_VersionStructure"
 
-    number_of_exchanges_allowed: int | None = field(
+    number_of_exchanges_allowed: None | int = field(
         default=None,
         metadata={
             "name": "NumberOfExchangesAllowed",
@@ -23,7 +23,7 @@ class ExchangingVersionStructure(ResellingVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    to_fare_class: FareClassEnumeration | None = field(
+    to_fare_class: None | FareClassEnumeration = field(
         default=None,
         metadata={
             "name": "ToFareClass",
@@ -31,7 +31,7 @@ class ExchangingVersionStructure(ResellingVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    to_class_of_use_ref: ClassOfUseRefStructure | None = field(
+    to_class_of_use_ref: None | ClassOfUseRefStructure = field(
         default=None,
         metadata={
             "name": "ToClassOfUseRef",
@@ -39,7 +39,7 @@ class ExchangingVersionStructure(ResellingVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    exchangable_to: ExchangableToEnumeration | None = field(
+    exchangable_to: None | ExchangableToEnumeration = field(
         default=None,
         metadata={
             "name": "ExchangableTo",

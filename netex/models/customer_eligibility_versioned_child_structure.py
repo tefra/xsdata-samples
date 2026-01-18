@@ -14,7 +14,7 @@ class CustomerEligibilityVersionedChildStructure(VersionedChildStructure):
     class Meta:
         name = "CustomerEligibility_VersionedChildStructure"
 
-    name: MultilingualString | None = field(
+    name: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "Name",
@@ -22,7 +22,7 @@ class CustomerEligibilityVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    customer_ref: CustomerRef | None = field(
+    customer_ref: None | CustomerRef = field(
         default=None,
         metadata={
             "name": "CustomerRef",

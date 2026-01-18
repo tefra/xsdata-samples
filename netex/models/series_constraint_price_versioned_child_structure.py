@@ -17,7 +17,7 @@ class SeriesConstraintPriceVersionedChildStructure(
     class Meta:
         name = "SeriesConstraintPrice_VersionedChildStructure"
 
-    series_constraint_ref: SeriesConstraintRef | None = field(
+    series_constraint_ref: None | SeriesConstraintRef = field(
         default=None,
         metadata={
             "name": "SeriesConstraintRef",

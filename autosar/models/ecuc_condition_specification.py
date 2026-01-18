@@ -35,7 +35,7 @@ class EcucConditionSpecification:
     class Meta:
         name = "ECUC-CONDITION-SPECIFICATION"
 
-    condition_formula: EcucConditionFormula | None = field(
+    condition_formula: None | EcucConditionFormula = field(
         default=None,
         metadata={
             "name": "CONDITION-FORMULA",
@@ -43,7 +43,7 @@ class EcucConditionSpecification:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ecuc_querys: EcucConditionSpecification.EcucQuerys | None = field(
+    ecuc_querys: None | EcucConditionSpecification.EcucQuerys = field(
         default=None,
         metadata={
             "name": "ECUC-QUERYS",
@@ -51,7 +51,7 @@ class EcucConditionSpecification:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    informal_formula: MlFormula | None = field(
+    informal_formula: None | MlFormula = field(
         default=None,
         metadata={
             "name": "INFORMAL-FORMULA",
@@ -59,14 +59,14 @@ class EcucConditionSpecification:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

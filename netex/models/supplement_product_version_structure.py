@@ -19,7 +19,7 @@ class SupplementProductVersionStructure(
     class Meta:
         name = "SupplementProduct_VersionStructure"
 
-    supplement_product_type: SupplementProductEnumeration | None = field(
+    supplement_product_type: None | SupplementProductEnumeration = field(
         default=None,
         metadata={
             "name": "SupplementProductType",
@@ -28,7 +28,7 @@ class SupplementProductVersionStructure(
         },
     )
     supplement_to_fare_product_ref_or_supplement_to: (
-        FareProductRefStructure | FareProductRefsRelStructure | None
+        None | FareProductRefStructure | FareProductRefsRelStructure
     ) = field(
         default=None,
         metadata={

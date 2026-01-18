@@ -10,7 +10,7 @@ class AnnotationXmlModel:
     class Meta:
         name = "annotation-xml.model"
 
-    any_element: object | None = field(
+    any_element: None | object = field(
         default=None,
         metadata={
             "type": "Wildcard",

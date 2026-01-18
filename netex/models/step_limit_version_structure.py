@@ -13,7 +13,7 @@ class StepLimitVersionStructure(UsageParameterVersionStructure):
     class Meta:
         name = "StepLimit_VersionStructure"
 
-    restricted: bool | None = field(
+    restricted: None | bool = field(
         default=None,
         metadata={
             "name": "Restricted",
@@ -21,7 +21,7 @@ class StepLimitVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    adjustment_units: StepLimitUnitEnumeration | None = field(
+    adjustment_units: None | StepLimitUnitEnumeration = field(
         default=None,
         metadata={
             "name": "AdjustmentUnits",
@@ -29,7 +29,7 @@ class StepLimitVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    minimum_number_of_steps: int | None = field(
+    minimum_number_of_steps: None | int = field(
         default=None,
         metadata={
             "name": "MinimumNumberOfSteps",
@@ -37,7 +37,7 @@ class StepLimitVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    maximum_number_of_steps: int | None = field(
+    maximum_number_of_steps: None | int = field(
         default=None,
         metadata={
             "name": "MaximumNumberOfSteps",
@@ -45,7 +45,7 @@ class StepLimitVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    maximum_number_of_trips: int | None = field(
+    maximum_number_of_trips: None | int = field(
         default=None,
         metadata={
             "name": "MaximumNumberOfTrips",

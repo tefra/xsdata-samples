@@ -25,14 +25,14 @@ class Dim(UnsignedPositiveLongintExpression):
         name = "dim"
         namespace = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    index_var: str | None = field(
+    index_var: None | str = field(
         default=None,
         metadata={
             "name": "indexVar",

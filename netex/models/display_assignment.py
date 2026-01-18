@@ -15,14 +15,14 @@ class DisplayAssignment(DisplayAssignmentVersionStructure):
     class Meta:
         namespace = "http://www.netex.org.uk/netex"
 
-    name_of_class: str | None = field(
+    name_of_class: None | str = field(
         default=None,
         metadata={
             "name": "nameOfClass",
             "type": "Attribute",
         },
     )
-    data_source_ref: str | None = field(
+    data_source_ref: None | str = field(
         default=None,
         metadata={
             "name": "dataSourceRef",
@@ -35,7 +35,7 @@ class DisplayAssignment(DisplayAssignmentVersionStructure):
             "type": "Attribute",
         },
     )
-    derived_from_version_ref: str | None = field(
+    derived_from_version_ref: None | str = field(
         default=None,
         metadata={
             "name": "derivedFromVersionRef",

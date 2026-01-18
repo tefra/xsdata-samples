@@ -17,47 +17,47 @@ class ConfDate:
         name = "conf-date"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    calendar: str | None = field(
+    calendar: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    content_type: str | None = field(
+    content_type: None | str = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    iso_8601_date: str | None = field(
+    iso_8601_date: None | str = field(
         default=None,
         metadata={
             "name": "iso-8601-date",
             "type": "Attribute",
         },
     )
-    specific_use: str | None = field(
+    specific_use: None | str = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: str | LangValue | None = field(
+    lang: None | str | LangValue = field(
         default=None,
         metadata={
             "type": "Attribute",

@@ -96,7 +96,7 @@ class SomeipSdServerServiceInstanceConfig:
     class Meta:
         name = "SOMEIP-SD-SERVER-SERVICE-INSTANCE-CONFIG"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -106,7 +106,7 @@ class SomeipSdServerServiceInstanceConfig:
         },
     )
     short_name_fragments: (
-        SomeipSdServerServiceInstanceConfig.ShortNameFragments | None
+        None | SomeipSdServerServiceInstanceConfig.ShortNameFragments
     ) = field(
         default=None,
         metadata={
@@ -115,7 +115,7 @@ class SomeipSdServerServiceInstanceConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -123,7 +123,7 @@ class SomeipSdServerServiceInstanceConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -131,7 +131,7 @@ class SomeipSdServerServiceInstanceConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -139,7 +139,7 @@ class SomeipSdServerServiceInstanceConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -147,7 +147,7 @@ class SomeipSdServerServiceInstanceConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -155,7 +155,7 @@ class SomeipSdServerServiceInstanceConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: SomeipSdServerServiceInstanceConfig.Annotations | None = (
+    annotations: None | SomeipSdServerServiceInstanceConfig.Annotations = (
         field(
             default=None,
             metadata={
@@ -165,7 +165,7 @@ class SomeipSdServerServiceInstanceConfig:
             },
         )
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -173,7 +173,7 @@ class SomeipSdServerServiceInstanceConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    initial_offer_behavior: InitialSdDelayConfig | None = field(
+    initial_offer_behavior: None | InitialSdDelayConfig = field(
         default=None,
         metadata={
             "name": "INITIAL-OFFER-BEHAVIOR",
@@ -181,7 +181,7 @@ class SomeipSdServerServiceInstanceConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    offer_cyclic_delay: TimeValue | None = field(
+    offer_cyclic_delay: None | TimeValue = field(
         default=None,
         metadata={
             "name": "OFFER-CYCLIC-DELAY",
@@ -189,7 +189,7 @@ class SomeipSdServerServiceInstanceConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    request_response_delay: RequestResponseDelay | None = field(
+    request_response_delay: None | RequestResponseDelay = field(
         default=None,
         metadata={
             "name": "REQUEST-RESPONSE-DELAY",
@@ -197,7 +197,7 @@ class SomeipSdServerServiceInstanceConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    service_offer_time_to_live: PositiveInteger | None = field(
+    service_offer_time_to_live: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "SERVICE-OFFER-TIME-TO-LIVE",
@@ -205,14 +205,14 @@ class SomeipSdServerServiceInstanceConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -220,7 +220,7 @@ class SomeipSdServerServiceInstanceConfig:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",

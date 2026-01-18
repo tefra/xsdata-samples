@@ -14,7 +14,7 @@ class ParkingRecordStatusGroupIndexGroupOfParkingSpacesStatus:
     class Meta:
         name = "_ParkingRecordStatusGroupIndexGroupOfParkingSpacesStatus"
 
-    group_of_parking_spaces_status: GroupOfParkingSpacesStatus | None = field(
+    group_of_parking_spaces_status: None | GroupOfParkingSpacesStatus = field(
         default=None,
         metadata={
             "name": "groupOfParkingSpacesStatus",
@@ -23,7 +23,7 @@ class ParkingRecordStatusGroupIndexGroupOfParkingSpacesStatus:
             "required": True,
         },
     )
-    group_index: int | None = field(
+    group_index: None | int = field(
         default=None,
         metadata={
             "name": "groupIndex",

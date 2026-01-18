@@ -45,7 +45,7 @@ class AnyInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    target_ref: AnyInstanceRef.TargetRef | None = field(
+    target_ref: None | AnyInstanceRef.TargetRef = field(
         default=None,
         metadata={
             "name": "TARGET-REF",
@@ -53,7 +53,7 @@ class AnyInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -61,14 +61,14 @@ class AnyInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -79,7 +79,7 @@ class AnyInstanceRef:
 
     @dataclass
     class ContextElementRef(Ref):
-        dest: AtpFeatureSubtypesEnum | None = field(
+        dest: None | AtpFeatureSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -90,7 +90,7 @@ class AnyInstanceRef:
 
     @dataclass
     class TargetRef(Ref):
-        dest: AtpFeatureSubtypesEnum | None = field(
+        dest: None | AtpFeatureSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

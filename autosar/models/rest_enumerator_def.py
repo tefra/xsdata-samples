@@ -30,7 +30,7 @@ class RestEnumeratorDef:
     class Meta:
         name = "REST-ENUMERATOR-DEF"
 
-    value: String | None = field(
+    value: None | String = field(
         default=None,
         metadata={
             "name": "VALUE",
@@ -38,14 +38,14 @@ class RestEnumeratorDef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

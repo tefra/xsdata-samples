@@ -13,7 +13,7 @@ class TLane(TBaseElement):
     class Meta:
         name = "tLane"
 
-    partition_element: TBaseElement | None = field(
+    partition_element: None | TBaseElement = field(
         default=None,
         metadata={
             "name": "partitionElement",
@@ -29,7 +29,7 @@ class TLane(TBaseElement):
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    child_lane_set: TLaneSet | None = field(
+    child_lane_set: None | TLaneSet = field(
         default=None,
         metadata={
             "name": "childLaneSet",
@@ -37,13 +37,13 @@ class TLane(TBaseElement):
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    name: str | None = field(
+    name: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    partition_element_ref: QName | None = field(
+    partition_element_ref: None | QName = field(
         default=None,
         metadata={
             "name": "partitionElementRef",
@@ -71,7 +71,7 @@ class TLaneSet(TBaseElement):
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    name: str | None = field(
+    name: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",

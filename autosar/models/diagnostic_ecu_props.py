@@ -36,7 +36,7 @@ class DiagnosticEcuProps:
     class Meta:
         name = "DIAGNOSTIC-ECU-PROPS"
 
-    is_obd_relevant: Boolean | None = field(
+    is_obd_relevant: None | Boolean = field(
         default=None,
         metadata={
             "name": "IS-OBD-RELEVANT",
@@ -44,7 +44,7 @@ class DiagnosticEcuProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    send_resp_pend_on_trans_to_boot: Boolean | None = field(
+    send_resp_pend_on_trans_to_boot: None | Boolean = field(
         default=None,
         metadata={
             "name": "SEND-RESP-PEND-ON-TRANS-TO-BOOT",
@@ -52,14 +52,14 @@ class DiagnosticEcuProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

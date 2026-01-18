@@ -20,7 +20,7 @@ class VehicleCountValue(DataValue):
     :ivar vehicle_count_value_extension:
     """
 
-    vehicle_count: int | None = field(
+    vehicle_count: None | int = field(
         default=None,
         metadata={
             "name": "vehicleCount",
@@ -29,7 +29,7 @@ class VehicleCountValue(DataValue):
             "required": True,
         },
     )
-    vehicle_count_value_extension: ExtensionType | None = field(
+    vehicle_count_value_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "vehicleCountValueExtension",

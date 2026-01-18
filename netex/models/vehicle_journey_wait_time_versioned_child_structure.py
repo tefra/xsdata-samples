@@ -18,7 +18,7 @@ class VehicleJourneyWaitTimeVersionedChildStructure(
     class Meta:
         name = "VehicleJourneyWaitTime_VersionedChildStructure"
 
-    vehicle_journey_ref: DeadRunRef | VehicleJourneyRef | None = field(
+    vehicle_journey_ref: None | DeadRunRef | VehicleJourneyRef = field(
         default=None,
         metadata={
             "type": "Elements",

@@ -8,13 +8,13 @@ class Tld:
     class Meta:
         name = "tld"
 
-    lit: str | None = field(
+    lit: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    var: str | None = field(
+    var: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",

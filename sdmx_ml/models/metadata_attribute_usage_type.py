@@ -31,7 +31,7 @@ class MetadataAttributeUsageType(MetadataAttributeUsageBaseType):
         components of the data structure.
     """
 
-    metadata_attribute_reference: str | None = field(
+    metadata_attribute_reference: None | str = field(
         default=None,
         metadata={
             "name": "MetadataAttributeReference",
@@ -41,7 +41,7 @@ class MetadataAttributeUsageType(MetadataAttributeUsageBaseType):
             "pattern": r"[A-Za-z][A-Za-z0-9_\-]*",
         },
     )
-    attribute_relationship: AttributeRelationshipType | None = field(
+    attribute_relationship: None | AttributeRelationshipType = field(
         default=None,
         metadata={
             "name": "AttributeRelationship",

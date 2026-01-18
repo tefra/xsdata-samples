@@ -14,7 +14,7 @@ class FareQuotaFactorVersionStructure(QualityStructureFactorVersionStructure):
     class Meta:
         name = "FareQuotaFactor_VersionStructure"
 
-    number_of_units: int | None = field(
+    number_of_units: None | int = field(
         default=None,
         metadata={
             "name": "NumberOfUnits",

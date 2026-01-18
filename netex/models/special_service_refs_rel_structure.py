@@ -14,7 +14,7 @@ class SpecialServiceRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "specialServiceRefs_RelStructure"
 
-    special_service_ref: DatedSpecialServiceRef | SpecialServiceRef | None = (
+    special_service_ref: None | DatedSpecialServiceRef | SpecialServiceRef = (
         field(
             default=None,
             metadata={

@@ -37,7 +37,7 @@ class AccessCountSet:
     class Meta:
         name = "ACCESS-COUNT-SET"
 
-    access_counts: AccessCountSet.AccessCounts | None = field(
+    access_counts: None | AccessCountSet.AccessCounts = field(
         default=None,
         metadata={
             "name": "ACCESS-COUNTS",
@@ -45,7 +45,7 @@ class AccessCountSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    count_profile: NmtokenString | None = field(
+    count_profile: None | NmtokenString = field(
         default=None,
         metadata={
             "name": "COUNT-PROFILE",
@@ -53,7 +53,7 @@ class AccessCountSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -61,14 +61,14 @@ class AccessCountSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

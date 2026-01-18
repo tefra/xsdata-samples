@@ -266,7 +266,7 @@ class AddressType:
             "required": True,
         }
     )
-    address_type_coded_other: AddressTypeCodedOther | None = field(
+    address_type_coded_other: None | AddressTypeCodedOther = field(
         default=None,
         metadata={
             "name": "AddressTypeCodedOther",
@@ -295,7 +295,7 @@ class Currency:
             "required": True,
         }
     )
-    currency_coded_other: CurrencyCodedOther | None = field(
+    currency_coded_other: None | CurrencyCodedOther = field(
         default=None,
         metadata={
             "name": "CurrencyCodedOther",
@@ -347,7 +347,7 @@ class TradingPartnerOrganizationPurpose:
         }
     )
     trading_partner_organization_purpose_coded_other: (
-        TradingPartnerOrganizationPurposeCodedOther | None
+        None | TradingPartnerOrganizationPurposeCodedOther
     ) = field(
         default=None,
         metadata={
@@ -367,7 +367,7 @@ class TradingPartnerOrganizationVisibility:
         }
     )
     trading_partner_organization_visibility_coded_other: (
-        TradingPartnerOrganizationVisibilityCodedOther | None
+        None | TradingPartnerOrganizationVisibilityCodedOther
     ) = field(
         default=None,
         metadata={
@@ -397,7 +397,7 @@ class TradingPartnerType:
             "required": True,
         }
     )
-    trading_partner_type_coded_other: TradingPartnerTypeCodedOther | None = (
+    trading_partner_type_coded_other: None | TradingPartnerTypeCodedOther = (
         field(
             default=None,
             metadata={
@@ -417,14 +417,14 @@ class BankDetail:
             "required": True,
         }
     )
-    bank_key: BankKey | None = field(
+    bank_key: None | BankKey = field(
         default=None,
         metadata={
             "name": "BankKey",
             "type": "Element",
         },
     )
-    swiftcode: Swiftcode | None = field(
+    swiftcode: None | Swiftcode = field(
         default=None,
         metadata={
             "name": "SWIFTCode",
@@ -439,7 +439,7 @@ class BankDetail:
         }
     )
     international_bank_account_number: (
-        InternationalBankAccountNumber | None
+        None | InternationalBankAccountNumber
     ) = field(
         default=None,
         metadata={
@@ -447,21 +447,21 @@ class BankDetail:
             "type": "Element",
         },
     )
-    trading_partner_account_holder: TradingPartnerAccountHolder | None = field(
+    trading_partner_account_holder: None | TradingPartnerAccountHolder = field(
         default=None,
         metadata={
             "name": "TradingPartnerAccountHolder",
             "type": "Element",
         },
     )
-    bank_account_control_key: BankAccountControlKey | None = field(
+    bank_account_control_key: None | BankAccountControlKey = field(
         default=None,
         metadata={
             "name": "BankAccountControlKey",
             "type": "Element",
         },
     )
-    bank_reference: BankReference | None = field(
+    bank_reference: None | BankReference = field(
         default=None,
         metadata={
             "name": "BankReference",
@@ -484,7 +484,7 @@ class ListOfTradingPartnerType:
 
 @dataclass(kw_only=True)
 class OrganizationAddress:
-    address_type: AddressType | None = field(
+    address_type: None | AddressType = field(
         default=None,
         metadata={
             "name": "AddressType",
@@ -498,42 +498,42 @@ class OrganizationAddress:
             "required": True,
         }
     )
-    pobox: Pobox | None = field(
+    pobox: None | Pobox = field(
         default=None,
         metadata={
             "name": "POBox",
             "type": "Element",
         },
     )
-    street: Street | None = field(
+    street: None | Street = field(
         default=None,
         metadata={
             "name": "Street",
             "type": "Element",
         },
     )
-    house_number: HouseNumber | None = field(
+    house_number: None | HouseNumber = field(
         default=None,
         metadata={
             "name": "HouseNumber",
             "type": "Element",
         },
     )
-    street_supplement1: StreetSupplement1 | None = field(
+    street_supplement1: None | StreetSupplement1 = field(
         default=None,
         metadata={
             "name": "StreetSupplement1",
             "type": "Element",
         },
     )
-    street_supplement2: StreetSupplement2 | None = field(
+    street_supplement2: None | StreetSupplement2 = field(
         default=None,
         metadata={
             "name": "StreetSupplement2",
             "type": "Element",
         },
     )
-    postal_code: PostalCode | None = field(
+    postal_code: None | PostalCode = field(
         default=None,
         metadata={
             "name": "PostalCode",
@@ -547,21 +547,21 @@ class OrganizationAddress:
             "required": True,
         }
     )
-    county: County | None = field(
+    county: None | County = field(
         default=None,
         metadata={
             "name": "County",
             "type": "Element",
         },
     )
-    region: Region | None = field(
+    region: None | Region = field(
         default=None,
         metadata={
             "name": "Region",
             "type": "Element",
         },
     )
-    district: District | None = field(
+    district: None | District = field(
         default=None,
         metadata={
             "name": "District",
@@ -575,7 +575,7 @@ class OrganizationAddress:
             "required": True,
         }
     )
-    trading_partner_timezone: TradingPartnerTimezone | None = field(
+    trading_partner_timezone: None | TradingPartnerTimezone = field(
         default=None,
         metadata={
             "name": "TradingPartnerTimezone",
@@ -631,7 +631,7 @@ class PrimaryOrganizationAddress:
 
 @dataclass(kw_only=True)
 class TradingPartnerOrganizationHeader:
-    validity_dates: ValidityDates | None = field(
+    validity_dates: None | ValidityDates = field(
         default=None,
         metadata={
             "name": "ValidityDates",
@@ -665,13 +665,13 @@ class TradingPartnerOrganizationHeader:
             "required": True,
         }
     )
-    name2: Name22 | None = field(
+    name2: None | Name22 = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    name3: Name32 | None = field(
+    name3: None | Name32 = field(
         default=None,
         metadata={
             "type": "Element",
@@ -699,7 +699,7 @@ class TradingPartnerOrganizationHeader:
         }
     )
     parent_trading_partner_identifications: (
-        ParentTradingPartnerIdentifications | None
+        None | ParentTradingPartnerIdentifications
     ) = field(
         default=None,
         metadata={
@@ -707,7 +707,7 @@ class TradingPartnerOrganizationHeader:
             "type": "Element",
         },
     )
-    general_notes: GeneralNotes | None = field(
+    general_notes: None | GeneralNotes = field(
         default=None,
         metadata={
             "name": "GeneralNotes",
@@ -725,7 +725,7 @@ class OrganizationAddresses:
             "required": True,
         }
     )
-    list_of_organization_address: ListOfOrganizationAddress | None = field(
+    list_of_organization_address: None | ListOfOrganizationAddress = field(
         default=None,
         metadata={
             "name": "ListOfOrganizationAddress",

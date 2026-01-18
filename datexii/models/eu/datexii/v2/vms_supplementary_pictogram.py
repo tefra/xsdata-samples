@@ -34,7 +34,7 @@ class VmsSupplementaryPictogram:
     """
 
     supplementary_pictogram_description: (
-        VmsDatexSupplementalPictogramEnum | None
+        None | VmsDatexSupplementalPictogramEnum
     ) = field(
         default=None,
         metadata={
@@ -43,7 +43,7 @@ class VmsSupplementaryPictogram:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    supplementary_pictogram_code: str | None = field(
+    supplementary_pictogram_code: None | str = field(
         default=None,
         metadata={
             "name": "supplementaryPictogramCode",
@@ -52,7 +52,7 @@ class VmsSupplementaryPictogram:
             "max_length": 1024,
         },
     )
-    supplementary_pictogram_url: str | None = field(
+    supplementary_pictogram_url: None | str = field(
         default=None,
         metadata={
             "name": "supplementaryPictogramUrl",
@@ -61,7 +61,7 @@ class VmsSupplementaryPictogram:
         },
     )
     additional_supplementary_pictogram_description: (
-        MultilingualString | None
+        None | MultilingualString
     ) = field(
         default=None,
         metadata={
@@ -70,7 +70,7 @@ class VmsSupplementaryPictogram:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    pictogram_flashing: bool | None = field(
+    pictogram_flashing: None | bool = field(
         default=None,
         metadata={
             "name": "pictogramFlashing",
@@ -78,7 +78,7 @@ class VmsSupplementaryPictogram:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    vms_supplementary_pictogram_extension: ExtensionType | None = field(
+    vms_supplementary_pictogram_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "vmsSupplementaryPictogramExtension",

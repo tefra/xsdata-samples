@@ -26,14 +26,14 @@ class TReceiveTask(TTask):
             "type": "Attribute",
         },
     )
-    message_ref: QName | None = field(
+    message_ref: None | QName = field(
         default=None,
         metadata={
             "name": "messageRef",
             "type": "Attribute",
         },
     )
-    operation_ref: QName | None = field(
+    operation_ref: None | QName = field(
         default=None,
         metadata={
             "name": "operationRef",

@@ -25,7 +25,7 @@ class Comment:
     :ivar comment_extension:
     """
 
-    comment: MultilingualString | None = field(
+    comment: None | MultilingualString = field(
         default=None,
         metadata={
             "type": "Element",
@@ -33,7 +33,7 @@ class Comment:
             "required": True,
         },
     )
-    comment_date_time: XmlDateTime | None = field(
+    comment_date_time: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "commentDateTime",
@@ -41,7 +41,7 @@ class Comment:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    comment_type: CommentTypeEnum | None = field(
+    comment_type: None | CommentTypeEnum = field(
         default=None,
         metadata={
             "name": "commentType",
@@ -49,7 +49,7 @@ class Comment:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    comment_extension: ExtensionType | None = field(
+    comment_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "commentExtension",

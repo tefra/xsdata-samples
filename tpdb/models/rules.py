@@ -17,7 +17,7 @@ class Rules:
             "type": "Element",
         },
     )
-    relrules: Relrules | None = field(
+    relrules: None | Relrules = field(
         default=None,
         metadata={
             "type": "Element",

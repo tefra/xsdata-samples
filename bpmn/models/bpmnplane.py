@@ -14,7 +14,7 @@ class Bpmnplane(Plane):
         name = "BPMNPlane"
         namespace = "http://www.omg.org/spec/BPMN/20100524/DI"
 
-    bpmn_element: QName | None = field(
+    bpmn_element: None | QName = field(
         default=None,
         metadata={
             "name": "bpmnElement",

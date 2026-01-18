@@ -9,7 +9,7 @@ __NAMESPACE__ = "http://www.opengis.net/gml/3.2"
 
 @dataclass
 class AssociationRoleType:
-    any_element: object | None = field(
+    any_element: None | object = field(
         default=None,
         metadata={
             "type": "Wildcard",
@@ -22,7 +22,7 @@ class AssociationRoleType:
             "type": "Attribute",
         },
     )
-    nil_reason: str | NilReasonEnumerationValue | None = field(
+    nil_reason: None | str | NilReasonEnumerationValue = field(
         default=None,
         metadata={
             "name": "nilReason",

@@ -33,7 +33,7 @@ __NAMESPACE__ = "urn:oasis:names:specification:ubl:schema:xsd:TransportServiceDe
 
 @dataclass(frozen=True)
 class TransportServiceDescriptionType:
-    ublextensions: Ublextensions | None = field(
+    ublextensions: None | Ublextensions = field(
         default=None,
         metadata={
             "name": "UBLExtensions",
@@ -41,7 +41,7 @@ class TransportServiceDescriptionType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2",
         },
     )
-    ublversion_id: UblversionId | None = field(
+    ublversion_id: None | UblversionId = field(
         default=None,
         metadata={
             "name": "UBLVersionID",
@@ -49,7 +49,7 @@ class TransportServiceDescriptionType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    customization_id: CustomizationId | None = field(
+    customization_id: None | CustomizationId = field(
         default=None,
         metadata={
             "name": "CustomizationID",
@@ -57,7 +57,7 @@ class TransportServiceDescriptionType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    profile_id: ProfileId | None = field(
+    profile_id: None | ProfileId = field(
         default=None,
         metadata={
             "name": "ProfileID",
@@ -65,7 +65,7 @@ class TransportServiceDescriptionType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    profile_execution_id: ProfileExecutionId | None = field(
+    profile_execution_id: None | ProfileExecutionId = field(
         default=None,
         metadata={
             "name": "ProfileExecutionID",
@@ -73,7 +73,7 @@ class TransportServiceDescriptionType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    id: Id | None = field(
+    id: None | Id = field(
         default=None,
         metadata={
             "name": "ID",
@@ -82,7 +82,7 @@ class TransportServiceDescriptionType:
             "required": True,
         },
     )
-    copy_indicator: CopyIndicator | None = field(
+    copy_indicator: None | CopyIndicator = field(
         default=None,
         metadata={
             "name": "CopyIndicator",
@@ -90,7 +90,7 @@ class TransportServiceDescriptionType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    uuid: Uuid | None = field(
+    uuid: None | Uuid = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -98,7 +98,7 @@ class TransportServiceDescriptionType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    issue_date: IssueDate | None = field(
+    issue_date: None | IssueDate = field(
         default=None,
         metadata={
             "name": "IssueDate",
@@ -106,7 +106,7 @@ class TransportServiceDescriptionType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    issue_time: IssueTime | None = field(
+    issue_time: None | IssueTime = field(
         default=None,
         metadata={
             "name": "IssueTime",
@@ -122,7 +122,7 @@ class TransportServiceDescriptionType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    service_name: ServiceName | None = field(
+    service_name: None | ServiceName = field(
         default=None,
         metadata={
             "name": "ServiceName",
@@ -130,7 +130,7 @@ class TransportServiceDescriptionType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    response_code: ResponseCode | None = field(
+    response_code: None | ResponseCode = field(
         default=None,
         metadata={
             "name": "ResponseCode",
@@ -146,7 +146,7 @@ class TransportServiceDescriptionType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    sender_party: SenderParty | None = field(
+    sender_party: None | SenderParty = field(
         default=None,
         metadata={
             "name": "SenderParty",
@@ -154,7 +154,7 @@ class TransportServiceDescriptionType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    receiver_party: ReceiverParty | None = field(
+    receiver_party: None | ReceiverParty = field(
         default=None,
         metadata={
             "name": "ReceiverParty",
@@ -163,7 +163,7 @@ class TransportServiceDescriptionType:
         },
     )
     transport_service_description_request_document_reference: (
-        TransportServiceDescriptionRequestDocumentReference | None
+        None | TransportServiceDescriptionRequestDocumentReference
     ) = field(
         default=None,
         metadata={
@@ -172,7 +172,7 @@ class TransportServiceDescriptionType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    transport_service_provider_party: TransportServiceProviderParty | None = (
+    transport_service_provider_party: None | TransportServiceProviderParty = (
         field(
             default=None,
             metadata={
@@ -182,7 +182,7 @@ class TransportServiceDescriptionType:
             },
         )
     )
-    service_charge_payment_terms: ServiceChargePaymentTerms | None = field(
+    service_charge_payment_terms: None | ServiceChargePaymentTerms = field(
         default=None,
         metadata={
             "name": "ServiceChargePaymentTerms",
@@ -190,7 +190,7 @@ class TransportServiceDescriptionType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    validity_period: ValidityPeriod | None = field(
+    validity_period: None | ValidityPeriod = field(
         default=None,
         metadata={
             "name": "ValidityPeriod",

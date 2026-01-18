@@ -22,20 +22,20 @@ class DoiData:
         name = "doi_data"
         namespace = "http://www.crossref.org/schema/5.3.1"
 
-    doi: Doi | None = field(
+    doi: None | Doi = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
         },
     )
-    timestamp: Timestamp | None = field(
+    timestamp: None | Timestamp = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    resource: Resource | None = field(
+    resource: None | Resource = field(
         default=None,
         metadata={
             "type": "Element",

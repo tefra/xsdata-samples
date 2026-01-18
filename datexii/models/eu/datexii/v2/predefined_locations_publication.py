@@ -20,7 +20,7 @@ class PredefinedLocationsPublication(PayloadPublication):
     locations.
     """
 
-    header_information: HeaderInformation | None = field(
+    header_information: None | HeaderInformation = field(
         default=None,
         metadata={
             "name": "headerInformation",
@@ -38,7 +38,7 @@ class PredefinedLocationsPublication(PayloadPublication):
             "min_occurs": 1,
         },
     )
-    predefined_locations_publication_extension: ExtensionType | None = field(
+    predefined_locations_publication_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "predefinedLocationsPublicationExtension",

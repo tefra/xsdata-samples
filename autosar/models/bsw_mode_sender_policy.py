@@ -48,7 +48,7 @@ class BswModeSenderPolicy:
     class Meta:
         name = "BSW-MODE-SENDER-POLICY"
 
-    ack_request: BswModeSwitchAckRequest | None = field(
+    ack_request: None | BswModeSwitchAckRequest = field(
         default=None,
         metadata={
             "name": "ACK-REQUEST",
@@ -56,7 +56,7 @@ class BswModeSenderPolicy:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    enhanced_mode_api: Boolean | None = field(
+    enhanced_mode_api: None | Boolean = field(
         default=None,
         metadata={
             "name": "ENHANCED-MODE-API",
@@ -65,7 +65,7 @@ class BswModeSenderPolicy:
         },
     )
     provided_mode_group_ref: (
-        BswModeSenderPolicy.ProvidedModeGroupRef | None
+        None | BswModeSenderPolicy.ProvidedModeGroupRef
     ) = field(
         default=None,
         metadata={
@@ -74,7 +74,7 @@ class BswModeSenderPolicy:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    queue_length: PositiveInteger | None = field(
+    queue_length: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "QUEUE-LENGTH",
@@ -82,7 +82,7 @@ class BswModeSenderPolicy:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -90,14 +90,14 @@ class BswModeSenderPolicy:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -108,7 +108,7 @@ class BswModeSenderPolicy:
 
     @dataclass
     class ProvidedModeGroupRef(Ref):
-        dest: ModeDeclarationGroupPrototypeSubtypesEnum | None = field(
+        dest: None | ModeDeclarationGroupPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

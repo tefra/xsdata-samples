@@ -95,7 +95,7 @@ class IdsmModuleInstantiation:
     class Meta:
         name = "IDSM-MODULE-INSTANTIATION"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -104,7 +104,7 @@ class IdsmModuleInstantiation:
             "required": True,
         },
     )
-    short_name_fragments: IdsmModuleInstantiation.ShortNameFragments | None = (
+    short_name_fragments: None | IdsmModuleInstantiation.ShortNameFragments = (
         field(
             default=None,
             metadata={
@@ -114,7 +114,7 @@ class IdsmModuleInstantiation:
             },
         )
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -122,7 +122,7 @@ class IdsmModuleInstantiation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -130,7 +130,7 @@ class IdsmModuleInstantiation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -138,7 +138,7 @@ class IdsmModuleInstantiation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -146,7 +146,7 @@ class IdsmModuleInstantiation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -154,7 +154,7 @@ class IdsmModuleInstantiation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: IdsmModuleInstantiation.Annotations | None = field(
+    annotations: None | IdsmModuleInstantiation.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -163,7 +163,7 @@ class IdsmModuleInstantiation:
         },
     )
     network_interface_ref: (
-        IdsmModuleInstantiation.NetworkInterfaceRef | None
+        None | IdsmModuleInstantiation.NetworkInterfaceRef
     ) = field(
         default=None,
         metadata={
@@ -172,7 +172,7 @@ class IdsmModuleInstantiation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    time_bases: IdsmModuleInstantiation.TimeBases | None = field(
+    time_bases: None | IdsmModuleInstantiation.TimeBases = field(
         default=None,
         metadata={
             "name": "TIME-BASES",
@@ -181,7 +181,7 @@ class IdsmModuleInstantiation:
         },
     )
     reportable_security_event_refs: (
-        IdsmModuleInstantiation.ReportableSecurityEventRefs | None
+        None | IdsmModuleInstantiation.ReportableSecurityEventRefs
     ) = field(
         default=None,
         metadata={
@@ -190,14 +190,14 @@ class IdsmModuleInstantiation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -205,7 +205,7 @@ class IdsmModuleInstantiation:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -238,7 +238,7 @@ class IdsmModuleInstantiation:
     @dataclass
     class NetworkInterfaceRef(Ref):
         dest: (
-            PlatformModuleEthernetEndpointConfigurationSubtypesEnum | None
+            None | PlatformModuleEthernetEndpointConfigurationSubtypesEnum
         ) = field(
             default=None,
             metadata={
@@ -276,7 +276,7 @@ class IdsmModuleInstantiation:
 
         @dataclass
         class ReportableSecurityEventRef(Ref):
-            dest: SecurityEventMappingSubtypesEnum | None = field(
+            dest: None | SecurityEventMappingSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",

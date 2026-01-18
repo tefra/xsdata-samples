@@ -31,20 +31,20 @@ class PersistencyElementLevelUpdateStrategyEnum:
     class Meta:
         name = "PERSISTENCY-ELEMENT-LEVEL-UPDATE-STRATEGY-ENUM"
 
-    value: PersistencyElementLevelUpdateStrategyEnumSimple | None = field(
+    value: None | PersistencyElementLevelUpdateStrategyEnumSimple = field(
         default=None,
         metadata={
             "required": True,
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

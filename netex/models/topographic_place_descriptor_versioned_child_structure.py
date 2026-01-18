@@ -16,7 +16,7 @@ class TopographicPlaceDescriptorVersionedChildStructure(
     class Meta:
         name = "TopographicPlaceDescriptor_VersionedChildStructure"
 
-    name: MultilingualString | None = field(
+    name: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "Name",
@@ -25,7 +25,7 @@ class TopographicPlaceDescriptorVersionedChildStructure(
             "required": True,
         },
     )
-    short_name: MultilingualString | None = field(
+    short_name: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "ShortName",
@@ -34,7 +34,7 @@ class TopographicPlaceDescriptorVersionedChildStructure(
         },
     )
     qualify: (
-        TopographicPlaceDescriptorVersionedChildStructure.Qualify | None
+        None | TopographicPlaceDescriptorVersionedChildStructure.Qualify
     ) = field(
         default=None,
         metadata={
@@ -46,7 +46,7 @@ class TopographicPlaceDescriptorVersionedChildStructure(
 
     @dataclass
     class Qualify:
-        qualifier_name: MultilingualString | None = field(
+        qualifier_name: None | MultilingualString = field(
             default=None,
             metadata={
                 "name": "QualifierName",
@@ -55,7 +55,7 @@ class TopographicPlaceDescriptorVersionedChildStructure(
                 "required": True,
             },
         )
-        topographic_place_ref: TopographicPlaceRef | None = field(
+        topographic_place_ref: None | TopographicPlaceRef = field(
             default=None,
             metadata={
                 "name": "TopographicPlaceRef",

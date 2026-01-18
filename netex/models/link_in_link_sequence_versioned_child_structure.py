@@ -35,7 +35,8 @@ class LinkInLinkSequenceVersionedChildStructure(VersionedChildStructure):
         name = "LinkInLinkSequence_VersionedChildStructure"
 
     choice: (
-        TripRef
+        None
+        | TripRef
         | TripPatternTripRef
         | SingleJourneyPathRef
         | SingleJourneyRef
@@ -54,7 +55,6 @@ class LinkInLinkSequenceVersionedChildStructure(VersionedChildStructure):
         | NavigationPathRef
         | RouteRef
         | LinkSequenceRef
-        | None
     ) = field(
         default=None,
         metadata={
@@ -158,7 +158,7 @@ class LinkInLinkSequenceVersionedChildStructure(VersionedChildStructure):
             ),
         },
     )
-    projections: ProjectionsRelStructure | None = field(
+    projections: None | ProjectionsRelStructure = field(
         default=None,
         metadata={
             "type": "Element",
@@ -173,7 +173,7 @@ class LinkInLinkSequenceVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    order: int | None = field(
+    order: None | int = field(
         default=None,
         metadata={
             "type": "Attribute",

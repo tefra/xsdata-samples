@@ -12,7 +12,7 @@ class ResponseTimestamp:
     class Meta:
         namespace = "http://www.siri.org.uk/siri"
 
-    value: XmlDateTime | None = field(
+    value: None | XmlDateTime = field(
         default=None,
         metadata={
             "required": True,

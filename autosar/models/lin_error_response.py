@@ -47,7 +47,7 @@ class LinErrorResponse:
     class Meta:
         name = "LIN-ERROR-RESPONSE"
 
-    frame_triggering_ref: LinErrorResponse.FrameTriggeringRef | None = field(
+    frame_triggering_ref: None | LinErrorResponse.FrameTriggeringRef = field(
         default=None,
         metadata={
             "name": "FRAME-TRIGGERING-REF",
@@ -55,7 +55,7 @@ class LinErrorResponse:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    response_error_position: Integer | None = field(
+    response_error_position: None | Integer = field(
         default=None,
         metadata={
             "name": "RESPONSE-ERROR-POSITION",
@@ -63,7 +63,7 @@ class LinErrorResponse:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    response_error_ref: LinErrorResponse.ResponseErrorRef | None = field(
+    response_error_ref: None | LinErrorResponse.ResponseErrorRef = field(
         default=None,
         metadata={
             "name": "RESPONSE-ERROR-REF",
@@ -71,14 +71,14 @@ class LinErrorResponse:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -89,7 +89,7 @@ class LinErrorResponse:
 
     @dataclass
     class FrameTriggeringRef(Ref):
-        dest: LinFrameTriggeringSubtypesEnum | None = field(
+        dest: None | LinFrameTriggeringSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -100,7 +100,7 @@ class LinErrorResponse:
 
     @dataclass
     class ResponseErrorRef(Ref):
-        dest: ISignalTriggeringSubtypesEnum | None = field(
+        dest: None | ISignalTriggeringSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

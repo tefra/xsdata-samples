@@ -174,7 +174,7 @@ class McDataInstance:
     class Meta:
         name = "MC-DATA-INSTANCE"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -183,7 +183,7 @@ class McDataInstance:
             "required": True,
         },
     )
-    short_name_fragments: McDataInstance.ShortNameFragments | None = field(
+    short_name_fragments: None | McDataInstance.ShortNameFragments = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -191,7 +191,7 @@ class McDataInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -199,7 +199,7 @@ class McDataInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -207,7 +207,7 @@ class McDataInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -215,7 +215,7 @@ class McDataInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -223,7 +223,7 @@ class McDataInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -231,7 +231,7 @@ class McDataInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: McDataInstance.Annotations | None = field(
+    annotations: None | McDataInstance.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -239,7 +239,7 @@ class McDataInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    array_size: PositiveInteger | None = field(
+    array_size: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "ARRAY-SIZE",
@@ -247,7 +247,7 @@ class McDataInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    display_identifier: McdIdentifier | None = field(
+    display_identifier: None | McdIdentifier = field(
         default=None,
         metadata={
             "name": "DISPLAY-IDENTIFIER",
@@ -255,7 +255,7 @@ class McDataInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    flat_map_entry_ref: McDataInstance.FlatMapEntryRef | None = field(
+    flat_map_entry_ref: None | McDataInstance.FlatMapEntryRef = field(
         default=None,
         metadata={
             "name": "FLAT-MAP-ENTRY-REF",
@@ -263,7 +263,7 @@ class McDataInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    instance_in_memory: ImplementationElementInParameterInstanceRef | None = (
+    instance_in_memory: None | ImplementationElementInParameterInstanceRef = (
         field(
             default=None,
             metadata={
@@ -273,7 +273,7 @@ class McDataInstance:
             },
         )
     )
-    mc_data_access_details: McDataAccessDetails | None = field(
+    mc_data_access_details: None | McDataAccessDetails = field(
         default=None,
         metadata={
             "name": "MC-DATA-ACCESS-DETAILS",
@@ -281,7 +281,7 @@ class McDataInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    mc_data_assignments: McDataInstance.McDataAssignments | None = field(
+    mc_data_assignments: None | McDataInstance.McDataAssignments = field(
         default=None,
         metadata={
             "name": "MC-DATA-ASSIGNMENTS",
@@ -289,7 +289,7 @@ class McDataInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    resulting_properties: SwDataDefProps | None = field(
+    resulting_properties: None | SwDataDefProps = field(
         default=None,
         metadata={
             "name": "RESULTING-PROPERTIES",
@@ -297,7 +297,7 @@ class McDataInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    resulting_rpt_sw_prototyping_access: RptSwPrototypingAccess | None = field(
+    resulting_rpt_sw_prototyping_access: None | RptSwPrototypingAccess = field(
         default=None,
         metadata={
             "name": "RESULTING-RPT-SW-PROTOTYPING-ACCESS",
@@ -305,7 +305,7 @@ class McDataInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    role: Identifier | None = field(
+    role: None | Identifier = field(
         default=None,
         metadata={
             "name": "ROLE",
@@ -313,7 +313,7 @@ class McDataInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    rpt_impl_policy: RptImplPolicy | None = field(
+    rpt_impl_policy: None | RptImplPolicy = field(
         default=None,
         metadata={
             "name": "RPT-IMPL-POLICY",
@@ -321,7 +321,7 @@ class McDataInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sub_elements: McDataInstance.SubElements | None = field(
+    sub_elements: None | McDataInstance.SubElements = field(
         default=None,
         metadata={
             "name": "SUB-ELEMENTS",
@@ -329,7 +329,7 @@ class McDataInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    symbol: SymbolString | None = field(
+    symbol: None | SymbolString = field(
         default=None,
         metadata={
             "name": "SYMBOL",
@@ -337,7 +337,7 @@ class McDataInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -345,14 +345,14 @@ class McDataInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -360,7 +360,7 @@ class McDataInstance:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -392,7 +392,7 @@ class McDataInstance:
 
     @dataclass
     class FlatMapEntryRef(Ref):
-        dest: FlatInstanceDescriptorSubtypesEnum | None = field(
+        dest: None | FlatInstanceDescriptorSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

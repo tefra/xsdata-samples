@@ -99,7 +99,7 @@ class DelegationSwConnector:
     class Meta:
         name = "DELEGATION-SW-CONNECTOR"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -108,7 +108,7 @@ class DelegationSwConnector:
             "required": True,
         },
     )
-    short_name_fragments: DelegationSwConnector.ShortNameFragments | None = (
+    short_name_fragments: None | DelegationSwConnector.ShortNameFragments = (
         field(
             default=None,
             metadata={
@@ -118,7 +118,7 @@ class DelegationSwConnector:
             },
         )
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -126,7 +126,7 @@ class DelegationSwConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -134,7 +134,7 @@ class DelegationSwConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -142,7 +142,7 @@ class DelegationSwConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -150,7 +150,7 @@ class DelegationSwConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -158,7 +158,7 @@ class DelegationSwConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: DelegationSwConnector.Annotations | None = field(
+    annotations: None | DelegationSwConnector.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -166,7 +166,7 @@ class DelegationSwConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    mapping_ref: DelegationSwConnector.MappingRef | None = field(
+    mapping_ref: None | DelegationSwConnector.MappingRef = field(
         default=None,
         metadata={
             "name": "MAPPING-REF",
@@ -174,7 +174,7 @@ class DelegationSwConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -182,7 +182,7 @@ class DelegationSwConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    inner_port_iref: DelegationSwConnector.InnerPortIref | None = field(
+    inner_port_iref: None | DelegationSwConnector.InnerPortIref = field(
         default=None,
         metadata={
             "name": "INNER-PORT-IREF",
@@ -190,7 +190,7 @@ class DelegationSwConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    outer_port_ref: DelegationSwConnector.OuterPortRef | None = field(
+    outer_port_ref: None | DelegationSwConnector.OuterPortRef = field(
         default=None,
         metadata={
             "name": "OUTER-PORT-REF",
@@ -198,14 +198,14 @@ class DelegationSwConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -213,7 +213,7 @@ class DelegationSwConnector:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -245,7 +245,7 @@ class DelegationSwConnector:
 
     @dataclass
     class MappingRef(Ref):
-        dest: PortInterfaceMappingSubtypesEnum | None = field(
+        dest: None | PortInterfaceMappingSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -257,7 +257,7 @@ class DelegationSwConnector:
     @dataclass
     class InnerPortIref:
         p_port_in_composition_instance_ref: (
-            PPortInCompositionInstanceRef | None
+            None | PPortInCompositionInstanceRef
         ) = field(
             default=None,
             metadata={
@@ -267,7 +267,7 @@ class DelegationSwConnector:
             },
         )
         r_port_in_composition_instance_ref: (
-            RPortInCompositionInstanceRef | None
+            None | RPortInCompositionInstanceRef
         ) = field(
             default=None,
             metadata={
@@ -279,7 +279,7 @@ class DelegationSwConnector:
 
     @dataclass
     class OuterPortRef(Ref):
-        dest: PortPrototypeSubtypesEnum | None = field(
+        dest: None | PortPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

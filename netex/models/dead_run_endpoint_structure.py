@@ -26,7 +26,8 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 @dataclass
 class DeadRunEndpointStructure:
     choice: (
-        VehicleMeetingPointRef
+        None
+        | VehicleMeetingPointRef
         | WirePointRef
         | RoadPointRef
         | RailwayPointRef
@@ -42,7 +43,6 @@ class DeadRunEndpointStructure:
         | TimingPointRef
         | RoutePointRef
         | PointRef
-        | None
     ) = field(
         default=None,
         metadata={
@@ -131,7 +131,7 @@ class DeadRunEndpointStructure:
             ),
         },
     )
-    type_of_point_ref: TypeOfPointRef | None = field(
+    type_of_point_ref: None | TypeOfPointRef = field(
         default=None,
         metadata={
             "name": "TypeOfPointRef",

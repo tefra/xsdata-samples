@@ -88,7 +88,7 @@ class UcmDescription:
     class Meta:
         name = "UCM-DESCRIPTION"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -97,7 +97,7 @@ class UcmDescription:
             "required": True,
         },
     )
-    short_name_fragments: UcmDescription.ShortNameFragments | None = field(
+    short_name_fragments: None | UcmDescription.ShortNameFragments = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -105,7 +105,7 @@ class UcmDescription:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -113,7 +113,7 @@ class UcmDescription:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -121,7 +121,7 @@ class UcmDescription:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -129,7 +129,7 @@ class UcmDescription:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -137,7 +137,7 @@ class UcmDescription:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -145,7 +145,7 @@ class UcmDescription:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: UcmDescription.Annotations | None = field(
+    annotations: None | UcmDescription.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -153,7 +153,7 @@ class UcmDescription:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    identifier: String | None = field(
+    identifier: None | String = field(
         default=None,
         metadata={
             "name": "IDENTIFIER",
@@ -162,7 +162,7 @@ class UcmDescription:
         },
     )
     ucm_module_instantiation_ref: (
-        UcmDescription.UcmModuleInstantiationRef | None
+        None | UcmDescription.UcmModuleInstantiationRef
     ) = field(
         default=None,
         metadata={
@@ -171,14 +171,14 @@ class UcmDescription:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -186,7 +186,7 @@ class UcmDescription:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -218,7 +218,7 @@ class UcmDescription:
 
     @dataclass
     class UcmModuleInstantiationRef(Ref):
-        dest: UcmModuleInstantiationSubtypesEnum | None = field(
+        dest: None | UcmModuleInstantiationSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

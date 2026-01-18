@@ -15,7 +15,7 @@ class ShelterEquipmentVersionStructure(WaitingEquipmentVersionStructure):
     class Meta:
         name = "ShelterEquipment_VersionStructure"
 
-    enclosed: bool | None = field(
+    enclosed: None | bool = field(
         default=None,
         metadata={
             "name": "Enclosed",
@@ -23,7 +23,7 @@ class ShelterEquipmentVersionStructure(WaitingEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    distance_from_nearest_kerb: Decimal | None = field(
+    distance_from_nearest_kerb: None | Decimal = field(
         default=None,
         metadata={
             "name": "DistanceFromNearestKerb",

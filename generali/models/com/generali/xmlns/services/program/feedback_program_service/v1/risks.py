@@ -16,7 +16,7 @@ class Risks:
     class Meta:
         namespace = "http://xmlns.generali.com/services/program/FeedbackProgramService/v1"
 
-    risk: Risk | None = field(
+    risk: None | Risk = field(
         default=None,
         metadata={
             "name": "Risk",

@@ -43,7 +43,7 @@ class SubPortType:
     class Meta:
         name = "subPortType"
 
-    name: str | None = field(
+    name: None | str = field(
         default=None,
         metadata={
             "type": "Element",
@@ -53,7 +53,7 @@ class SubPortType:
             "pattern": r"\i[\p{L}\p{N}\.\-:_]*",
         },
     )
-    display_name: DisplayName | None = field(
+    display_name: None | DisplayName = field(
         default=None,
         metadata={
             "name": "displayName",
@@ -61,7 +61,7 @@ class SubPortType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    short_description: ShortDescription | None = field(
+    short_description: None | ShortDescription = field(
         default=None,
         metadata={
             "name": "shortDescription",
@@ -69,42 +69,42 @@ class SubPortType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    description: Description | None = field(
+    description: None | Description = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    wire: PortWireType | None = field(
+    wire: None | PortWireType = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    structured: PortStructuredType | None = field(
+    structured: None | PortStructuredType = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    arrays: Arrays | None = field(
+    arrays: None | Arrays = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    access: PortAccessType1 | None = field(
+    access: None | PortAccessType1 = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    vendor_extensions: VendorExtensions | None = field(
+    vendor_extensions: None | VendorExtensions = field(
         default=None,
         metadata={
             "name": "vendorExtensions",
@@ -112,14 +112,14 @@ class SubPortType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    is_io: bool | None = field(
+    is_io: None | bool = field(
         default=None,
         metadata={
             "name": "isIO",
@@ -145,35 +145,35 @@ class PortStructuredType:
     class Meta:
         name = "portStructuredType"
 
-    struct: PortStructuredType.Struct | None = field(
+    struct: None | PortStructuredType.Struct = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    union: PortStructuredType.UnionType | None = field(
+    union: None | PortStructuredType.UnionType = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    interface: PortStructuredType.Interface | None = field(
+    interface: None | PortStructuredType.Interface = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    vectors: ExtendedVectorsType | None = field(
+    vectors: None | ExtendedVectorsType = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    sub_ports: PortStructuredType.SubPorts | None = field(
+    sub_ports: None | PortStructuredType.SubPorts = field(
         default=None,
         metadata={
             "name": "subPorts",
@@ -181,7 +181,7 @@ class PortStructuredType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    struct_port_type_defs: StructPortTypeDefs | None = field(
+    struct_port_type_defs: None | StructPortTypeDefs = field(
         default=None,
         metadata={
             "name": "structPortTypeDefs",
@@ -220,7 +220,7 @@ class PortStructuredType:
             model.
         """
 
-        direction: ComponentPortDirectionType | None = field(
+        direction: None | ComponentPortDirectionType = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -238,7 +238,7 @@ class PortStructuredType:
             model.
         """
 
-        direction: ComponentPortDirectionType | None = field(
+        direction: None | ComponentPortDirectionType = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -247,7 +247,7 @@ class PortStructuredType:
 
     @dataclass
     class Interface:
-        phantom: bool | None = field(
+        phantom: None | bool = field(
             default=None,
             metadata={
                 "type": "Attribute",

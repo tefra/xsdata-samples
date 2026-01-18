@@ -43,7 +43,7 @@ class GeneralObstruction(Obstruction):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    general_obstruction_extension: ExtensionType | None = field(
+    general_obstruction_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "generalObstructionExtension",

@@ -24,7 +24,7 @@ class PercentageDistanceAlongLinearElement(DistanceAlongLinearElement):
     :ivar percentage_distance_along_linear_element_extension:
     """
 
-    percentage_distance_along: float | None = field(
+    percentage_distance_along: None | float = field(
         default=None,
         metadata={
             "name": "percentageDistanceAlong",
@@ -34,7 +34,7 @@ class PercentageDistanceAlongLinearElement(DistanceAlongLinearElement):
         },
     )
     percentage_distance_along_linear_element_extension: (
-        ExtensionType | None
+        None | ExtensionType
     ) = field(
         default=None,
         metadata={

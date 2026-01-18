@@ -51,7 +51,7 @@ class AliasNameAssignment:
     class Meta:
         name = "ALIAS-NAME-ASSIGNMENT"
 
-    short_label: String | None = field(
+    short_label: None | String = field(
         default=None,
         metadata={
             "name": "SHORT-LABEL",
@@ -59,7 +59,7 @@ class AliasNameAssignment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    label: MultilanguageLongName | None = field(
+    label: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LABEL",
@@ -67,7 +67,7 @@ class AliasNameAssignment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    identifiable_ref: AliasNameAssignment.IdentifiableRef | None = field(
+    identifiable_ref: None | AliasNameAssignment.IdentifiableRef = field(
         default=None,
         metadata={
             "name": "IDENTIFIABLE-REF",
@@ -75,7 +75,7 @@ class AliasNameAssignment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    flat_instance_ref: AliasNameAssignment.FlatInstanceRef | None = field(
+    flat_instance_ref: None | AliasNameAssignment.FlatInstanceRef = field(
         default=None,
         metadata={
             "name": "FLAT-INSTANCE-REF",
@@ -83,7 +83,7 @@ class AliasNameAssignment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -91,14 +91,14 @@ class AliasNameAssignment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -109,7 +109,7 @@ class AliasNameAssignment:
 
     @dataclass
     class IdentifiableRef(Ref):
-        dest: IdentifiableSubtypesEnum | None = field(
+        dest: None | IdentifiableSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -120,7 +120,7 @@ class AliasNameAssignment:
 
     @dataclass
     class FlatInstanceRef(Ref):
-        dest: FlatInstanceDescriptorSubtypesEnum | None = field(
+        dest: None | FlatInstanceDescriptorSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

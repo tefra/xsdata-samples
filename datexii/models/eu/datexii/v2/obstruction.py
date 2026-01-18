@@ -23,7 +23,7 @@ class Obstruction(TrafficElement):
     :ivar obstruction_extension:
     """
 
-    number_of_obstructions: int | None = field(
+    number_of_obstructions: None | int = field(
         default=None,
         metadata={
             "name": "numberOfObstructions",
@@ -31,7 +31,7 @@ class Obstruction(TrafficElement):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    mobility_of_obstruction: Mobility | None = field(
+    mobility_of_obstruction: None | Mobility = field(
         default=None,
         metadata={
             "name": "mobilityOfObstruction",
@@ -39,7 +39,7 @@ class Obstruction(TrafficElement):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    obstruction_extension: ExtensionType | None = field(
+    obstruction_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "obstructionExtension",

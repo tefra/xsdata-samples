@@ -27,7 +27,7 @@ class PredefinedItinerary(PredefinedLocationContainer):
     :ivar version:
     """
 
-    predefined_itinerary_name: MultilingualString | None = field(
+    predefined_itinerary_name: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "predefinedItineraryName",
@@ -45,7 +45,7 @@ class PredefinedItinerary(PredefinedLocationContainer):
             },
         )
     )
-    predefined_itinerary_extension: ExtensionType | None = field(
+    predefined_itinerary_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "predefinedItineraryExtension",
@@ -53,14 +53,14 @@ class PredefinedItinerary(PredefinedLocationContainer):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "required": True,
         },
     )
-    version: str | None = field(
+    version: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",

@@ -107,7 +107,7 @@ class BswBackgroundEvent:
     class Meta:
         name = "BSW-BACKGROUND-EVENT"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -116,7 +116,7 @@ class BswBackgroundEvent:
             "required": True,
         },
     )
-    short_name_fragments: BswBackgroundEvent.ShortNameFragments | None = field(
+    short_name_fragments: None | BswBackgroundEvent.ShortNameFragments = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -124,7 +124,7 @@ class BswBackgroundEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -132,7 +132,7 @@ class BswBackgroundEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -140,7 +140,7 @@ class BswBackgroundEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -148,7 +148,7 @@ class BswBackgroundEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -156,7 +156,7 @@ class BswBackgroundEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -164,7 +164,7 @@ class BswBackgroundEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: BswBackgroundEvent.Annotations | None = field(
+    annotations: None | BswBackgroundEvent.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -173,7 +173,7 @@ class BswBackgroundEvent:
         },
     )
     activation_reason_representation_ref: (
-        BswBackgroundEvent.ActivationReasonRepresentationRef | None
+        None | BswBackgroundEvent.ActivationReasonRepresentationRef
     ) = field(
         default=None,
         metadata={
@@ -183,7 +183,7 @@ class BswBackgroundEvent:
         },
     )
     context_limitation_refs: (
-        BswBackgroundEvent.ContextLimitationRefs | None
+        None | BswBackgroundEvent.ContextLimitationRefs
     ) = field(
         default=None,
         metadata={
@@ -192,7 +192,7 @@ class BswBackgroundEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    disabled_in_mode_irefs: BswBackgroundEvent.DisabledInModeIrefs | None = (
+    disabled_in_mode_irefs: None | BswBackgroundEvent.DisabledInModeIrefs = (
         field(
             default=None,
             metadata={
@@ -202,7 +202,7 @@ class BswBackgroundEvent:
             },
         )
     )
-    starts_on_event_ref: BswBackgroundEvent.StartsOnEventRef | None = field(
+    starts_on_event_ref: None | BswBackgroundEvent.StartsOnEventRef = field(
         default=None,
         metadata={
             "name": "STARTS-ON-EVENT-REF",
@@ -210,7 +210,7 @@ class BswBackgroundEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -218,14 +218,14 @@ class BswBackgroundEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -233,7 +233,7 @@ class BswBackgroundEvent:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -265,7 +265,7 @@ class BswBackgroundEvent:
 
     @dataclass
     class ActivationReasonRepresentationRef(Ref):
-        dest: ExecutableEntityActivationReasonSubtypesEnum | None = field(
+        dest: None | ExecutableEntityActivationReasonSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -289,7 +289,7 @@ class BswBackgroundEvent:
 
         @dataclass
         class ContextLimitationRef(Ref):
-            dest: BswDistinguishedPartitionSubtypesEnum | None = field(
+            dest: None | BswDistinguishedPartitionSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -313,7 +313,7 @@ class BswBackgroundEvent:
 
     @dataclass
     class StartsOnEventRef(Ref):
-        dest: BswModuleEntitySubtypesEnum | None = field(
+        dest: None | BswModuleEntitySubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

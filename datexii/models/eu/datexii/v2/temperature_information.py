@@ -15,7 +15,7 @@ class TemperatureInformation(WeatherData):
     Measurements of atmospheric temperature.
     """
 
-    temperature: Temperature | None = field(
+    temperature: None | Temperature = field(
         default=None,
         metadata={
             "type": "Element",
@@ -23,7 +23,7 @@ class TemperatureInformation(WeatherData):
             "required": True,
         },
     )
-    temperature_information_extension: ExtensionType | None = field(
+    temperature_information_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "temperatureInformationExtension",

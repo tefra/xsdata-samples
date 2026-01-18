@@ -94,7 +94,7 @@ class RoughEstimateHeapUsage:
     class Meta:
         name = "ROUGH-ESTIMATE-HEAP-USAGE"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -103,7 +103,7 @@ class RoughEstimateHeapUsage:
             "required": True,
         },
     )
-    short_name_fragments: RoughEstimateHeapUsage.ShortNameFragments | None = (
+    short_name_fragments: None | RoughEstimateHeapUsage.ShortNameFragments = (
         field(
             default=None,
             metadata={
@@ -113,7 +113,7 @@ class RoughEstimateHeapUsage:
             },
         )
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -121,7 +121,7 @@ class RoughEstimateHeapUsage:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -129,7 +129,7 @@ class RoughEstimateHeapUsage:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -137,7 +137,7 @@ class RoughEstimateHeapUsage:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -145,7 +145,7 @@ class RoughEstimateHeapUsage:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -153,7 +153,7 @@ class RoughEstimateHeapUsage:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: RoughEstimateHeapUsage.Annotations | None = field(
+    annotations: None | RoughEstimateHeapUsage.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -161,7 +161,7 @@ class RoughEstimateHeapUsage:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    hardware_configuration: HardwareConfiguration | None = field(
+    hardware_configuration: None | HardwareConfiguration = field(
         default=None,
         metadata={
             "name": "HARDWARE-CONFIGURATION",
@@ -169,7 +169,7 @@ class RoughEstimateHeapUsage:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    hw_element_ref: RoughEstimateHeapUsage.HwElementRef | None = field(
+    hw_element_ref: None | RoughEstimateHeapUsage.HwElementRef = field(
         default=None,
         metadata={
             "name": "HW-ELEMENT-REF",
@@ -177,7 +177,7 @@ class RoughEstimateHeapUsage:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    software_context: SoftwareContext | None = field(
+    software_context: None | SoftwareContext = field(
         default=None,
         metadata={
             "name": "SOFTWARE-CONTEXT",
@@ -185,7 +185,7 @@ class RoughEstimateHeapUsage:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -193,7 +193,7 @@ class RoughEstimateHeapUsage:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    memory_consumption: PositiveInteger | None = field(
+    memory_consumption: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "MEMORY-CONSUMPTION",
@@ -201,14 +201,14 @@ class RoughEstimateHeapUsage:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -216,7 +216,7 @@ class RoughEstimateHeapUsage:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -248,7 +248,7 @@ class RoughEstimateHeapUsage:
 
     @dataclass
     class HwElementRef(Ref):
-        dest: HwElementSubtypesEnum | None = field(
+        dest: None | HwElementSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

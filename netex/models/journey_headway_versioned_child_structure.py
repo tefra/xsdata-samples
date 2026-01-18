@@ -18,7 +18,7 @@ class JourneyHeadwayVersionedChildStructure(
     class Meta:
         name = "JourneyHeadway_VersionedChildStructure"
 
-    scheduled_headway_interval: XmlDuration | None = field(
+    scheduled_headway_interval: None | XmlDuration = field(
         default=None,
         metadata={
             "name": "ScheduledHeadwayInterval",
@@ -26,7 +26,7 @@ class JourneyHeadwayVersionedChildStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    minimum_headway_interval: XmlDuration | None = field(
+    minimum_headway_interval: None | XmlDuration = field(
         default=None,
         metadata={
             "name": "MinimumHeadwayInterval",
@@ -34,7 +34,7 @@ class JourneyHeadwayVersionedChildStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    maximum_headway_interval: XmlDuration | None = field(
+    maximum_headway_interval: None | XmlDuration = field(
         default=None,
         metadata={
             "name": "MaximumHeadwayInterval",

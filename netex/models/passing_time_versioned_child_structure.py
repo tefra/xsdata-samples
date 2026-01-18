@@ -26,7 +26,8 @@ class PassingTimeVersionedChildStructure(VersionedChildStructure):
         name = "PassingTime_VersionedChildStructure"
 
     choice: (
-        SingleJourneyRef
+        None
+        | SingleJourneyRef
         | DatedVehicleJourneyRef
         | DatedSpecialServiceRef
         | SpecialServiceRef
@@ -34,7 +35,6 @@ class PassingTimeVersionedChildStructure(VersionedChildStructure):
         | ServiceJourneyRef
         | DeadRunRef
         | VehicleJourneyRef
-        | None
     ) = field(
         default=None,
         metadata={
@@ -83,7 +83,7 @@ class PassingTimeVersionedChildStructure(VersionedChildStructure):
             ),
         },
     )
-    alight_and_reboard: bool | None = field(
+    alight_and_reboard: None | bool = field(
         default=None,
         metadata={
             "name": "AlightAndReboard",
@@ -92,12 +92,12 @@ class PassingTimeVersionedChildStructure(VersionedChildStructure):
         },
     )
     point_in_journey_pattern_ref: (
-        PointInSingleJourneyPathRef
+        None
+        | PointInSingleJourneyPathRef
         | FarePointInPatternRef
         | StopPointInJourneyPatternRef
         | TimingPointInJourneyPatternRef
         | PointInJourneyPatternRef
-        | None
     ) = field(
         default=None,
         metadata={

@@ -47,7 +47,7 @@ class CouplingPortRatePolicy:
     class Meta:
         name = "COUPLING-PORT-RATE-POLICY"
 
-    data_length: PositiveInteger | None = field(
+    data_length: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "DATA-LENGTH",
@@ -55,7 +55,7 @@ class CouplingPortRatePolicy:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    policy_action: CouplingPortRatePolicyActionEnum | None = field(
+    policy_action: None | CouplingPortRatePolicyActionEnum = field(
         default=None,
         metadata={
             "name": "POLICY-ACTION",
@@ -63,7 +63,7 @@ class CouplingPortRatePolicy:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    priority: PositiveInteger | None = field(
+    priority: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "PRIORITY",
@@ -71,7 +71,7 @@ class CouplingPortRatePolicy:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    time_interval: TimeValue | None = field(
+    time_interval: None | TimeValue = field(
         default=None,
         metadata={
             "name": "TIME-INTERVAL",
@@ -79,7 +79,7 @@ class CouplingPortRatePolicy:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    v_lan_refs: CouplingPortRatePolicy.VLanRefs | None = field(
+    v_lan_refs: None | CouplingPortRatePolicy.VLanRefs = field(
         default=None,
         metadata={
             "name": "V-LAN-REFS",
@@ -87,14 +87,14 @@ class CouplingPortRatePolicy:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -116,7 +116,7 @@ class CouplingPortRatePolicy:
 
         @dataclass
         class VLanRef(Ref):
-            dest: EthernetPhysicalChannelSubtypesEnum | None = field(
+            dest: None | EthernetPhysicalChannelSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",

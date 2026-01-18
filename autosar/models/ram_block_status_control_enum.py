@@ -31,20 +31,20 @@ class RamBlockStatusControlEnum:
     class Meta:
         name = "RAM-BLOCK-STATUS-CONTROL-ENUM"
 
-    value: RamBlockStatusControlEnumSimple | None = field(
+    value: None | RamBlockStatusControlEnumSimple = field(
         default=None,
         metadata={
             "required": True,
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

@@ -9,7 +9,7 @@ __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
 @dataclass
 class SubscriptionContextStructure:
-    heartbeat_interval: XmlDuration | None = field(
+    heartbeat_interval: None | XmlDuration = field(
         default=None,
         metadata={
             "name": "HeartbeatInterval",

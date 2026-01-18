@@ -17,7 +17,7 @@ class LuggageAllowanceVersionStructure(UsageParameterVersionStructure):
     class Meta:
         name = "LuggageAllowance_VersionStructure"
 
-    baggage_use_type: BaggageUseTypeEnumeration | None = field(
+    baggage_use_type: None | BaggageUseTypeEnumeration = field(
         default=None,
         metadata={
             "name": "BaggageUseType",
@@ -25,7 +25,7 @@ class LuggageAllowanceVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    baggage_type: BaggageTypeEnumeration | None = field(
+    baggage_type: None | BaggageTypeEnumeration = field(
         default=None,
         metadata={
             "name": "BaggageType",
@@ -33,7 +33,7 @@ class LuggageAllowanceVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    luggage_allowance_type: LuggageAllowanceTypeEnumeration | None = field(
+    luggage_allowance_type: None | LuggageAllowanceTypeEnumeration = field(
         default=None,
         metadata={
             "name": "LuggageAllowanceType",
@@ -41,7 +41,7 @@ class LuggageAllowanceVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    maximum_number_items: int | None = field(
+    maximum_number_items: None | int = field(
         default=None,
         metadata={
             "name": "MaximumNumberItems",
@@ -49,7 +49,7 @@ class LuggageAllowanceVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    maximum_bag_height: Decimal | None = field(
+    maximum_bag_height: None | Decimal = field(
         default=None,
         metadata={
             "name": "MaximumBagHeight",
@@ -57,7 +57,7 @@ class LuggageAllowanceVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    maximum_bag_width: Decimal | None = field(
+    maximum_bag_width: None | Decimal = field(
         default=None,
         metadata={
             "name": "MaximumBagWidth",
@@ -65,7 +65,7 @@ class LuggageAllowanceVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    maximum_bag_depth: Decimal | None = field(
+    maximum_bag_depth: None | Decimal = field(
         default=None,
         metadata={
             "name": "MaximumBagDepth",
@@ -73,7 +73,7 @@ class LuggageAllowanceVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    maximum_bag_weight: Decimal | None = field(
+    maximum_bag_weight: None | Decimal = field(
         default=None,
         metadata={
             "name": "MaximumBagWeight",
@@ -81,7 +81,7 @@ class LuggageAllowanceVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    total_weight: Decimal | None = field(
+    total_weight: None | Decimal = field(
         default=None,
         metadata={
             "name": "TotalWeight",
@@ -89,7 +89,7 @@ class LuggageAllowanceVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    luggage_charging_basis: LuggageChargingBasisEnumeration | None = field(
+    luggage_charging_basis: None | LuggageChargingBasisEnumeration = field(
         default=None,
         metadata={
             "name": "LuggageChargingBasis",

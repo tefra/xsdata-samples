@@ -14,7 +14,7 @@ __NAMESPACE__ = "urn:hl7-org:v3"
 
 @dataclass
 class AsyncAdapterPatientDiscoveryErrorRequestType:
-    prpa_in201305_uv02: PrpaIn201305Uv02 | None = field(
+    prpa_in201305_uv02: None | PrpaIn201305Uv02 = field(
         default=None,
         metadata={
             "name": "PRPA_IN201305UV02",
@@ -23,7 +23,7 @@ class AsyncAdapterPatientDiscoveryErrorRequestType:
             "required": True,
         },
     )
-    prpa_in201306_uv02: PrpaIn201306Uv02 | None = field(
+    prpa_in201306_uv02: None | PrpaIn201306Uv02 = field(
         default=None,
         metadata={
             "name": "PRPA_IN201306UV02",
@@ -32,7 +32,7 @@ class AsyncAdapterPatientDiscoveryErrorRequestType:
             "required": True,
         },
     )
-    assertion: AssertionType | None = field(
+    assertion: None | AssertionType = field(
         default=None,
         metadata={
             "type": "Element",
@@ -40,7 +40,7 @@ class AsyncAdapterPatientDiscoveryErrorRequestType:
             "required": True,
         },
     )
-    nhin_target_communities: NhinTargetCommunitiesType | None = field(
+    nhin_target_communities: None | NhinTargetCommunitiesType = field(
         default=None,
         metadata={
             "name": "NhinTargetCommunities",
@@ -49,7 +49,7 @@ class AsyncAdapterPatientDiscoveryErrorRequestType:
             "required": True,
         },
     )
-    error_msg: str | None = field(
+    error_msg: None | str = field(
         default=None,
         metadata={
             "name": "errorMsg",
@@ -62,7 +62,7 @@ class AsyncAdapterPatientDiscoveryErrorRequestType:
 
 @dataclass
 class AsyncAdapterPatientDiscoveryErrorSecuredRequestType:
-    prpa_in201305_uv02: PrpaIn201305Uv02 | None = field(
+    prpa_in201305_uv02: None | PrpaIn201305Uv02 = field(
         default=None,
         metadata={
             "name": "PRPA_IN201305UV02",
@@ -71,7 +71,7 @@ class AsyncAdapterPatientDiscoveryErrorSecuredRequestType:
             "required": True,
         },
     )
-    prpa_in201306_uv02: PrpaIn201306Uv02 | None = field(
+    prpa_in201306_uv02: None | PrpaIn201306Uv02 = field(
         default=None,
         metadata={
             "name": "PRPA_IN201306UV02",
@@ -80,7 +80,7 @@ class AsyncAdapterPatientDiscoveryErrorSecuredRequestType:
             "required": True,
         },
     )
-    nhin_target_communities: NhinTargetCommunitiesType | None = field(
+    nhin_target_communities: None | NhinTargetCommunitiesType = field(
         default=None,
         metadata={
             "name": "NhinTargetCommunities",
@@ -89,7 +89,7 @@ class AsyncAdapterPatientDiscoveryErrorSecuredRequestType:
             "required": True,
         },
     )
-    error_msg: str | None = field(
+    error_msg: None | str = field(
         default=None,
         metadata={
             "name": "errorMsg",

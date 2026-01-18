@@ -40,7 +40,7 @@ class ParameterDataPrototypeInSystemInstanceRef:
         name = "PARAMETER-DATA-PROTOTYPE-IN-SYSTEM-INSTANCE-REF"
 
     context_composition_ref: (
-        ParameterDataPrototypeInSystemInstanceRef.ContextCompositionRef | None
+        None | ParameterDataPrototypeInSystemInstanceRef.ContextCompositionRef
     ) = field(
         default=None,
         metadata={
@@ -60,7 +60,7 @@ class ParameterDataPrototypeInSystemInstanceRef:
         },
     )
     context_port_ref: (
-        ParameterDataPrototypeInSystemInstanceRef.ContextPortRef | None
+        None | ParameterDataPrototypeInSystemInstanceRef.ContextPortRef
     ) = field(
         default=None,
         metadata={
@@ -70,8 +70,8 @@ class ParameterDataPrototypeInSystemInstanceRef:
         },
     )
     target_parameter_data_prototype_ref: (
-        ParameterDataPrototypeInSystemInstanceRef.TargetParameterDataPrototypeRef
-        | None
+        None
+        | ParameterDataPrototypeInSystemInstanceRef.TargetParameterDataPrototypeRef
     ) = field(
         default=None,
         metadata={
@@ -80,14 +80,14 @@ class ParameterDataPrototypeInSystemInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -98,7 +98,7 @@ class ParameterDataPrototypeInSystemInstanceRef:
 
     @dataclass
     class ContextCompositionRef(Ref):
-        dest: RootSwCompositionPrototypeSubtypesEnum | None = field(
+        dest: None | RootSwCompositionPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -109,7 +109,7 @@ class ParameterDataPrototypeInSystemInstanceRef:
 
     @dataclass
     class ContextComponentRef(Ref):
-        dest: SwComponentPrototypeSubtypesEnum | None = field(
+        dest: None | SwComponentPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -120,7 +120,7 @@ class ParameterDataPrototypeInSystemInstanceRef:
 
     @dataclass
     class ContextPortRef(Ref):
-        dest: PortPrototypeSubtypesEnum | None = field(
+        dest: None | PortPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -131,7 +131,7 @@ class ParameterDataPrototypeInSystemInstanceRef:
 
     @dataclass
     class TargetParameterDataPrototypeRef(Ref):
-        dest: ParameterDataPrototypeSubtypesEnum | None = field(
+        dest: None | ParameterDataPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

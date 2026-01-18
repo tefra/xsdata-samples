@@ -32,7 +32,7 @@ class PTriggerInAtomicSwcTypeInstanceRef:
         name = "P-TRIGGER-IN-ATOMIC-SWC-TYPE-INSTANCE-REF"
 
     context_p_port_ref: (
-        PTriggerInAtomicSwcTypeInstanceRef.ContextPPortRef | None
+        None | PTriggerInAtomicSwcTypeInstanceRef.ContextPPortRef
     ) = field(
         default=None,
         metadata={
@@ -42,7 +42,7 @@ class PTriggerInAtomicSwcTypeInstanceRef:
         },
     )
     target_trigger_ref: (
-        PTriggerInAtomicSwcTypeInstanceRef.TargetTriggerRef | None
+        None | PTriggerInAtomicSwcTypeInstanceRef.TargetTriggerRef
     ) = field(
         default=None,
         metadata={
@@ -51,14 +51,14 @@ class PTriggerInAtomicSwcTypeInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -69,7 +69,7 @@ class PTriggerInAtomicSwcTypeInstanceRef:
 
     @dataclass
     class ContextPPortRef(Ref):
-        dest: AbstractProvidedPortPrototypeSubtypesEnum | None = field(
+        dest: None | AbstractProvidedPortPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -80,7 +80,7 @@ class PTriggerInAtomicSwcTypeInstanceRef:
 
     @dataclass
     class TargetTriggerRef(Ref):
-        dest: TriggerSubtypesEnum | None = field(
+        dest: None | TriggerSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

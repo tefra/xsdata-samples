@@ -40,7 +40,7 @@ class Accident(TrafficElement):
     :ivar accident_extension:
     """
 
-    accident_cause: AccidentCauseEnum | None = field(
+    accident_cause: None | AccidentCauseEnum = field(
         default=None,
         metadata={
             "name": "accidentCause",
@@ -57,7 +57,7 @@ class Accident(TrafficElement):
             "min_occurs": 1,
         },
     )
-    total_number_of_people_involved: int | None = field(
+    total_number_of_people_involved: None | int = field(
         default=None,
         metadata={
             "name": "totalNumberOfPeopleInvolved",
@@ -65,7 +65,7 @@ class Accident(TrafficElement):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    total_number_of_vehicles_involved: int | None = field(
+    total_number_of_vehicles_involved: None | int = field(
         default=None,
         metadata={
             "name": "totalNumberOfVehiclesInvolved",
@@ -97,7 +97,7 @@ class Accident(TrafficElement):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    accident_extension: ExtensionType | None = field(
+    accident_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "accidentExtension",

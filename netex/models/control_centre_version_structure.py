@@ -16,7 +16,7 @@ class ControlCentreVersionStructure(OrganisationPartVersionStructure):
     class Meta:
         name = "ControlCentre_VersionStructure"
 
-    number: int | None = field(
+    number: None | int = field(
         default=None,
         metadata={
             "name": "Number",
@@ -24,7 +24,7 @@ class ControlCentreVersionStructure(OrganisationPartVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    control_centre_code: MultilingualString | None = field(
+    control_centre_code: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "ControlCentreCode",
@@ -32,7 +32,7 @@ class ControlCentreVersionStructure(OrganisationPartVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    department_ref: DepartmentRef | None = field(
+    department_ref: None | DepartmentRef = field(
         default=None,
         metadata={
             "name": "DepartmentRef",

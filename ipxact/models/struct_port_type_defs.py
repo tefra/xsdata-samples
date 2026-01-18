@@ -40,7 +40,7 @@ class StructPortTypeDefs:
         :ivar id:
         """
 
-        type_name: StructPortTypeDefs.StructPortTypeDef.TypeName | None = (
+        type_name: None | StructPortTypeDefs.StructPortTypeDef.TypeName = (
             field(
                 default=None,
                 metadata={
@@ -60,7 +60,7 @@ class StructPortTypeDefs:
             },
         )
         type_parameters: (
-            StructPortTypeDefs.StructPortTypeDef.TypeParameters | None
+            None | StructPortTypeDefs.StructPortTypeDef.TypeParameters
         ) = field(
             default=None,
             metadata={
@@ -68,7 +68,7 @@ class StructPortTypeDefs:
                 "type": "Element",
             },
         )
-        role: str | None = field(
+        role: None | str = field(
             default=None,
             metadata={
                 "type": "Element",
@@ -81,7 +81,7 @@ class StructPortTypeDefs:
                 "type": "Element",
             },
         )
-        id: str | None = field(
+        id: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -119,7 +119,7 @@ class StructPortTypeDefs:
                     "required": True,
                 },
             )
-            id: str | None = field(
+            id: None | str = field(
                 default=None,
                 metadata={
                     "type": "Attribute",
@@ -146,7 +146,7 @@ class StructPortTypeDefs:
                     "required": True,
                 },
             )
-            id: str | None = field(
+            id: None | str = field(
                 default=None,
                 metadata={
                     "type": "Attribute",

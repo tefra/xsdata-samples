@@ -35,7 +35,7 @@ class SoftwarePackageStoring:
     class Meta:
         name = "SOFTWARE-PACKAGE-STORING"
 
-    storing: SoftwarePackageStoringEnum | None = field(
+    storing: None | SoftwarePackageStoringEnum = field(
         default=None,
         metadata={
             "name": "STORING",
@@ -43,7 +43,7 @@ class SoftwarePackageStoring:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    transfer_refs: SoftwarePackageStoring.TransferRefs | None = field(
+    transfer_refs: None | SoftwarePackageStoring.TransferRefs = field(
         default=None,
         metadata={
             "name": "TRANSFER-REFS",
@@ -51,14 +51,14 @@ class SoftwarePackageStoring:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -82,7 +82,7 @@ class SoftwarePackageStoring:
 
         @dataclass
         class TransferRef(Ref):
-            dest: SoftwarePackageSubtypesEnum | None = field(
+            dest: None | SoftwarePackageSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",

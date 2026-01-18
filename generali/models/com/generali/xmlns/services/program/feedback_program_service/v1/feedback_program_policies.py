@@ -19,14 +19,14 @@ class FeedbackProgramPolicies:
     class Meta:
         namespace = "http://xmlns.generali.com/services/program/FeedbackProgramService/v1"
 
-    action: str | None = field(
+    action: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "required": True,
         },
     )
-    schema_location: str | None = field(
+    schema_location: None | str = field(
         default=None,
         metadata={
             "name": "schemaLocation",
@@ -35,7 +35,7 @@ class FeedbackProgramPolicies:
             "required": True,
         },
     )
-    consumer_id: str | None = field(
+    consumer_id: None | str = field(
         default=None,
         metadata={
             "name": "ConsumerID",
@@ -43,7 +43,7 @@ class FeedbackProgramPolicies:
             "required": True,
         },
     )
-    transmission_id: str | None = field(
+    transmission_id: None | str = field(
         default=None,
         metadata={
             "name": "TransmissionID",
@@ -51,7 +51,7 @@ class FeedbackProgramPolicies:
             "required": True,
         },
     )
-    program_id: str | None = field(
+    program_id: None | str = field(
         default=None,
         metadata={
             "name": "ProgramID",
@@ -59,7 +59,7 @@ class FeedbackProgramPolicies:
             "required": True,
         },
     )
-    local_program_id: str | None = field(
+    local_program_id: None | str = field(
         default=None,
         metadata={
             "name": "LocalProgramID",
@@ -67,7 +67,7 @@ class FeedbackProgramPolicies:
             "required": True,
         },
     )
-    policies: Policies | None = field(
+    policies: None | Policies = field(
         default=None,
         metadata={
             "name": "Policies",
@@ -75,7 +75,7 @@ class FeedbackProgramPolicies:
             "required": True,
         },
     )
-    status: str | None = field(
+    status: None | str = field(
         default=None,
         metadata={
             "name": "Status",
@@ -83,7 +83,7 @@ class FeedbackProgramPolicies:
             "required": True,
         },
     )
-    errors: Errors | None = field(
+    errors: None | Errors = field(
         default=None,
         metadata={
             "name": "Errors",

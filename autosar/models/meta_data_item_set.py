@@ -36,7 +36,7 @@ class MetaDataItemSet:
     class Meta:
         name = "META-DATA-ITEM-SET"
 
-    data_element_refs: MetaDataItemSet.DataElementRefs | None = field(
+    data_element_refs: None | MetaDataItemSet.DataElementRefs = field(
         default=None,
         metadata={
             "name": "DATA-ELEMENT-REFS",
@@ -44,7 +44,7 @@ class MetaDataItemSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    meta_data_items: MetaDataItemSet.MetaDataItems | None = field(
+    meta_data_items: None | MetaDataItemSet.MetaDataItems = field(
         default=None,
         metadata={
             "name": "META-DATA-ITEMS",
@@ -52,14 +52,14 @@ class MetaDataItemSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -83,7 +83,7 @@ class MetaDataItemSet:
 
         @dataclass
         class DataElementRef(Ref):
-            dest: VariableDataPrototypeSubtypesEnum | None = field(
+            dest: None | VariableDataPrototypeSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",

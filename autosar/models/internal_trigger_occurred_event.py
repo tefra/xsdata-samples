@@ -103,7 +103,7 @@ class InternalTriggerOccurredEvent:
     class Meta:
         name = "INTERNAL-TRIGGER-OCCURRED-EVENT"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -113,7 +113,7 @@ class InternalTriggerOccurredEvent:
         },
     )
     short_name_fragments: (
-        InternalTriggerOccurredEvent.ShortNameFragments | None
+        None | InternalTriggerOccurredEvent.ShortNameFragments
     ) = field(
         default=None,
         metadata={
@@ -122,7 +122,7 @@ class InternalTriggerOccurredEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -130,7 +130,7 @@ class InternalTriggerOccurredEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -138,7 +138,7 @@ class InternalTriggerOccurredEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -146,7 +146,7 @@ class InternalTriggerOccurredEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -154,7 +154,7 @@ class InternalTriggerOccurredEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -162,7 +162,7 @@ class InternalTriggerOccurredEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: InternalTriggerOccurredEvent.Annotations | None = field(
+    annotations: None | InternalTriggerOccurredEvent.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -171,7 +171,7 @@ class InternalTriggerOccurredEvent:
         },
     )
     activation_reason_representation_ref: (
-        InternalTriggerOccurredEvent.ActivationReasonRepresentationRef | None
+        None | InternalTriggerOccurredEvent.ActivationReasonRepresentationRef
     ) = field(
         default=None,
         metadata={
@@ -181,7 +181,7 @@ class InternalTriggerOccurredEvent:
         },
     )
     disabled_mode_irefs: (
-        InternalTriggerOccurredEvent.DisabledModeIrefs | None
+        None | InternalTriggerOccurredEvent.DisabledModeIrefs
     ) = field(
         default=None,
         metadata={
@@ -190,7 +190,7 @@ class InternalTriggerOccurredEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    start_on_event_ref: InternalTriggerOccurredEvent.StartOnEventRef | None = (
+    start_on_event_ref: None | InternalTriggerOccurredEvent.StartOnEventRef = (
         field(
             default=None,
             metadata={
@@ -200,7 +200,7 @@ class InternalTriggerOccurredEvent:
             },
         )
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -208,7 +208,7 @@ class InternalTriggerOccurredEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    event_source_ref: InternalTriggerOccurredEvent.EventSourceRef | None = (
+    event_source_ref: None | InternalTriggerOccurredEvent.EventSourceRef = (
         field(
             default=None,
             metadata={
@@ -218,14 +218,14 @@ class InternalTriggerOccurredEvent:
             },
         )
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -233,7 +233,7 @@ class InternalTriggerOccurredEvent:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -265,7 +265,7 @@ class InternalTriggerOccurredEvent:
 
     @dataclass
     class ActivationReasonRepresentationRef(Ref):
-        dest: ExecutableEntityActivationReasonSubtypesEnum | None = field(
+        dest: None | ExecutableEntityActivationReasonSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -287,7 +287,7 @@ class InternalTriggerOccurredEvent:
 
     @dataclass
     class StartOnEventRef(Ref):
-        dest: RunnableEntitySubtypesEnum | None = field(
+        dest: None | RunnableEntitySubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -298,7 +298,7 @@ class InternalTriggerOccurredEvent:
 
     @dataclass
     class EventSourceRef(Ref):
-        dest: InternalTriggeringPointSubtypesEnum | None = field(
+        dest: None | InternalTriggeringPointSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

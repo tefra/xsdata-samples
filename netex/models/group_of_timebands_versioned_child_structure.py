@@ -15,7 +15,7 @@ class GroupOfTimebandsVersionedChildStructure(GroupOfEntitiesVersionStructure):
     class Meta:
         name = "GroupOfTimebands_VersionedChildStructure"
 
-    timebands: TimebandRefsRelStructure | None = field(
+    timebands: None | TimebandRefsRelStructure = field(
         default=None,
         metadata={
             "type": "Element",

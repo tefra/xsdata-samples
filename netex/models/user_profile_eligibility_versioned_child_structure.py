@@ -20,7 +20,7 @@ class UserProfileEligibilityVersionedChildStructure(
         name = "UserProfileEligibility_VersionedChildStructure"
 
     user_profile_ref: (
-        VehiclePoolerProfileRef | CompanionProfileRef | UserProfileRef | None
+        None | VehiclePoolerProfileRef | CompanionProfileRef | UserProfileRef
     ) = field(
         default=None,
         metadata={

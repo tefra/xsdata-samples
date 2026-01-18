@@ -42,7 +42,7 @@ class InstanceEventInCompositionInstanceRef:
         },
     )
     target_event_ref: (
-        InstanceEventInCompositionInstanceRef.TargetEventRef | None
+        None | InstanceEventInCompositionInstanceRef.TargetEventRef
     ) = field(
         default=None,
         metadata={
@@ -51,14 +51,14 @@ class InstanceEventInCompositionInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -69,7 +69,7 @@ class InstanceEventInCompositionInstanceRef:
 
     @dataclass
     class ContextComponentPrototypeRef(Ref):
-        dest: SwComponentPrototypeSubtypesEnum | None = field(
+        dest: None | SwComponentPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -80,7 +80,7 @@ class InstanceEventInCompositionInstanceRef:
 
     @dataclass
     class TargetEventRef(Ref):
-        dest: RteEventSubtypesEnum | None = field(
+        dest: None | RteEventSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

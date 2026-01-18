@@ -36,7 +36,7 @@ class MemoryRemapType:
     class Meta:
         name = "memoryRemapType"
 
-    name: str | None = field(
+    name: None | str = field(
         default=None,
         metadata={
             "type": "Element",
@@ -44,7 +44,7 @@ class MemoryRemapType:
             "required": True,
         },
     )
-    display_name: DisplayName | None = field(
+    display_name: None | DisplayName = field(
         default=None,
         metadata={
             "name": "displayName",
@@ -52,7 +52,7 @@ class MemoryRemapType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    short_description: ShortDescription | None = field(
+    short_description: None | ShortDescription = field(
         default=None,
         metadata={
             "name": "shortDescription",
@@ -60,7 +60,7 @@ class MemoryRemapType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    description: Description | None = field(
+    description: None | Description = field(
         default=None,
         metadata={
             "type": "Element",
@@ -76,7 +76,7 @@ class MemoryRemapType:
             "min_occurs": 1,
         },
     )
-    remap_definition_ref: MemoryRemapType.RemapDefinitionRef | None = field(
+    remap_definition_ref: None | MemoryRemapType.RemapDefinitionRef = field(
         default=None,
         metadata={
             "name": "remapDefinitionRef",
@@ -107,7 +107,7 @@ class MemoryRemapType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    vendor_extensions: VendorExtensions | None = field(
+    vendor_extensions: None | VendorExtensions = field(
         default=None,
         metadata={
             "name": "vendorExtensions",
@@ -115,7 +115,7 @@ class MemoryRemapType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -131,7 +131,7 @@ class MemoryRemapType:
                 "required": True,
             },
         )
-        type_definitions: str | None = field(
+        type_definitions: None | str = field(
             default=None,
             metadata={
                 "name": "typeDefinitions",

@@ -43,7 +43,7 @@ class NonFacetedTextFormatType(SimpleComponentTextFormatType):
             "type": "Ignore",
         },
     )
-    text_type: SimpleDataType | None = field(
+    text_type: None | SimpleDataType = field(
         default=None,
         metadata={
             "name": "textType",

@@ -101,7 +101,7 @@ class EocExecutableEntityRef:
     class Meta:
         name = "EOC-EXECUTABLE-ENTITY-REF"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -110,7 +110,7 @@ class EocExecutableEntityRef:
             "required": True,
         },
     )
-    short_name_fragments: EocExecutableEntityRef.ShortNameFragments | None = (
+    short_name_fragments: None | EocExecutableEntityRef.ShortNameFragments = (
         field(
             default=None,
             metadata={
@@ -120,7 +120,7 @@ class EocExecutableEntityRef:
             },
         )
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -128,7 +128,7 @@ class EocExecutableEntityRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -136,7 +136,7 @@ class EocExecutableEntityRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -144,7 +144,7 @@ class EocExecutableEntityRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -152,7 +152,7 @@ class EocExecutableEntityRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -160,7 +160,7 @@ class EocExecutableEntityRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: EocExecutableEntityRef.Annotations | None = field(
+    annotations: None | EocExecutableEntityRef.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -169,7 +169,7 @@ class EocExecutableEntityRef:
         },
     )
     direct_successor_refs: (
-        EocExecutableEntityRef.DirectSuccessorRefs | None
+        None | EocExecutableEntityRef.DirectSuccessorRefs
     ) = field(
         default=None,
         metadata={
@@ -179,7 +179,7 @@ class EocExecutableEntityRef:
         },
     )
     bsw_module_instance_ref: (
-        EocExecutableEntityRef.BswModuleInstanceRef | None
+        None | EocExecutableEntityRef.BswModuleInstanceRef
     ) = field(
         default=None,
         metadata={
@@ -188,7 +188,7 @@ class EocExecutableEntityRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    component_iref: ComponentInCompositionInstanceRef | None = field(
+    component_iref: None | ComponentInCompositionInstanceRef = field(
         default=None,
         metadata={
             "name": "COMPONENT-IREF",
@@ -196,7 +196,7 @@ class EocExecutableEntityRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    executable_ref: EocExecutableEntityRef.ExecutableRef | None = field(
+    executable_ref: None | EocExecutableEntityRef.ExecutableRef = field(
         default=None,
         metadata={
             "name": "EXECUTABLE-REF",
@@ -204,7 +204,7 @@ class EocExecutableEntityRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    successor_refs: EocExecutableEntityRef.SuccessorRefs | None = field(
+    successor_refs: None | EocExecutableEntityRef.SuccessorRefs = field(
         default=None,
         metadata={
             "name": "SUCCESSOR-REFS",
@@ -212,14 +212,14 @@ class EocExecutableEntityRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -227,7 +227,7 @@ class EocExecutableEntityRef:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -272,7 +272,7 @@ class EocExecutableEntityRef:
 
         @dataclass
         class DirectSuccessorRef(Ref):
-            dest: EocExecutableEntityRefAbstractSubtypesEnum | None = field(
+            dest: None | EocExecutableEntityRefAbstractSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -283,7 +283,7 @@ class EocExecutableEntityRef:
 
     @dataclass
     class BswModuleInstanceRef(Ref):
-        dest: BswImplementationSubtypesEnum | None = field(
+        dest: None | BswImplementationSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -294,7 +294,7 @@ class EocExecutableEntityRef:
 
     @dataclass
     class ExecutableRef(Ref):
-        dest: ExecutableEntitySubtypesEnum | None = field(
+        dest: None | ExecutableEntitySubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -318,7 +318,7 @@ class EocExecutableEntityRef:
 
         @dataclass
         class SuccessorRef(Ref):
-            dest: EocExecutableEntityRefAbstractSubtypesEnum | None = field(
+            dest: None | EocExecutableEntityRefAbstractSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",

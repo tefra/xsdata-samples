@@ -19,7 +19,7 @@ class StructuralEventType:
         the one changed object.
     """
 
-    structures: Structures | None = field(
+    structures: None | Structures = field(
         default=None,
         metadata={
             "name": "Structures",

@@ -22,7 +22,7 @@ class Pollution:
     :ivar pollution_extension:
     """
 
-    pollutant_type: PollutantTypeEnum | None = field(
+    pollutant_type: None | PollutantTypeEnum = field(
         default=None,
         metadata={
             "name": "pollutantType",
@@ -31,7 +31,7 @@ class Pollution:
             "required": True,
         },
     )
-    pollutant_concentration: MicrogramsConcentrationValue | None = field(
+    pollutant_concentration: None | MicrogramsConcentrationValue = field(
         default=None,
         metadata={
             "name": "pollutantConcentration",
@@ -39,7 +39,7 @@ class Pollution:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    pollution_extension: ExtensionType | None = field(
+    pollution_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "pollutionExtension",

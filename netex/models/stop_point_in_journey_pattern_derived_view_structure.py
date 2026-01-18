@@ -29,12 +29,12 @@ class StopPointInJourneyPatternDerivedViewStructure(DerivedViewStructure):
         name = "StopPointInJourneyPattern_DerivedViewStructure"
 
     point_in_journey_pattern_ref: (
-        PointInSingleJourneyPathRef
+        None
+        | PointInSingleJourneyPathRef
         | FarePointInPatternRef
         | StopPointInJourneyPatternRef
         | TimingPointInJourneyPatternRef
         | PointInJourneyPatternRef
-        | None
     ) = field(
         default=None,
         metadata={
@@ -68,7 +68,7 @@ class StopPointInJourneyPatternDerivedViewStructure(DerivedViewStructure):
             ),
         },
     )
-    visit_number: int | None = field(
+    visit_number: None | int = field(
         default=None,
         metadata={
             "name": "VisitNumber",
@@ -77,10 +77,10 @@ class StopPointInJourneyPatternDerivedViewStructure(DerivedViewStructure):
         },
     )
     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view: (
-        FareScheduledStopPointRef
+        None
+        | FareScheduledStopPointRef
         | ScheduledStopPointRef
         | ScheduledStopPointView
-        | None
     ) = field(
         default=None,
         metadata={
@@ -104,7 +104,7 @@ class StopPointInJourneyPatternDerivedViewStructure(DerivedViewStructure):
             ),
         },
     )
-    onward_timing_link_view: OnwardTimingLinkView | None = field(
+    onward_timing_link_view: None | OnwardTimingLinkView = field(
         default=None,
         metadata={
             "name": "OnwardTimingLinkView",
@@ -113,7 +113,7 @@ class StopPointInJourneyPatternDerivedViewStructure(DerivedViewStructure):
         },
     )
     onward_service_link_ref_or_onward_service_link_view: (
-        ServiceLinkRefStructure | OnwardServiceLinkView | None
+        None | ServiceLinkRefStructure | OnwardServiceLinkView
     ) = field(
         default=None,
         metadata={
@@ -132,7 +132,7 @@ class StopPointInJourneyPatternDerivedViewStructure(DerivedViewStructure):
             ),
         },
     )
-    timing_point_status: TimingPointStatusEnumeration | None = field(
+    timing_point_status: None | TimingPointStatusEnumeration = field(
         default=None,
         metadata={
             "name": "TimingPointStatus",
@@ -140,7 +140,7 @@ class StopPointInJourneyPatternDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    is_wait_point: bool | None = field(
+    is_wait_point: None | bool = field(
         default=None,
         metadata={
             "name": "IsWaitPoint",
@@ -149,7 +149,7 @@ class StopPointInJourneyPatternDerivedViewStructure(DerivedViewStructure):
         },
     )
     time_demand_type_ref_or_timeband_ref: (
-        TimeDemandTypeRef | TimebandRef | None
+        None | TimeDemandTypeRef | TimebandRef
     ) = field(
         default=None,
         metadata={
@@ -168,7 +168,7 @@ class StopPointInJourneyPatternDerivedViewStructure(DerivedViewStructure):
             ),
         },
     )
-    wait_time: XmlDuration | None = field(
+    wait_time: None | XmlDuration = field(
         default=None,
         metadata={
             "name": "WaitTime",
@@ -176,7 +176,7 @@ class StopPointInJourneyPatternDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    scheduled_headway_interval: XmlDuration | None = field(
+    scheduled_headway_interval: None | XmlDuration = field(
         default=None,
         metadata={
             "name": "ScheduledHeadwayInterval",
@@ -184,7 +184,7 @@ class StopPointInJourneyPatternDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    minimum_headway_interval: XmlDuration | None = field(
+    minimum_headway_interval: None | XmlDuration = field(
         default=None,
         metadata={
             "name": "MinimumHeadwayInterval",
@@ -192,7 +192,7 @@ class StopPointInJourneyPatternDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    maximum_headway_interval: XmlDuration | None = field(
+    maximum_headway_interval: None | XmlDuration = field(
         default=None,
         metadata={
             "name": "MaximumHeadwayInterval",
@@ -200,7 +200,7 @@ class StopPointInJourneyPatternDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    order: int | None = field(
+    order: None | int = field(
         default=None,
         metadata={
             "type": "Attribute",

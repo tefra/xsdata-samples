@@ -50,8 +50,8 @@ class InnerDataPrototypeGroupInCompositionInstanceRef:
         },
     )
     target_data_prototype_group_ref: (
-        InnerDataPrototypeGroupInCompositionInstanceRef.TargetDataPrototypeGroupRef
-        | None
+        None
+        | InnerDataPrototypeGroupInCompositionInstanceRef.TargetDataPrototypeGroupRef
     ) = field(
         default=None,
         metadata={
@@ -60,7 +60,7 @@ class InnerDataPrototypeGroupInCompositionInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -68,14 +68,14 @@ class InnerDataPrototypeGroupInCompositionInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -86,7 +86,7 @@ class InnerDataPrototypeGroupInCompositionInstanceRef:
 
     @dataclass
     class ContextSwComponentPrototypeRef(Ref):
-        dest: SwComponentPrototypeSubtypesEnum | None = field(
+        dest: None | SwComponentPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -97,7 +97,7 @@ class InnerDataPrototypeGroupInCompositionInstanceRef:
 
     @dataclass
     class TargetDataPrototypeGroupRef(Ref):
-        dest: DataPrototypeGroupSubtypesEnum | None = field(
+        dest: None | DataPrototypeGroupSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

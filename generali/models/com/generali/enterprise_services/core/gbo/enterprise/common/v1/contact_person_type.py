@@ -28,7 +28,7 @@ class ContactPersonType(BaseIdentifiedComponentType):
         points for the contact person.</description>
     """
 
-    individual: IndividualActorType | None = field(
+    individual: None | IndividualActorType = field(
         default=None,
         metadata={
             "name": "Individual",
@@ -37,7 +37,7 @@ class ContactPersonType(BaseIdentifiedComponentType):
             "required": True,
         },
     )
-    contact_points: ContactPersonTypeContactPoints | None = field(
+    contact_points: None | ContactPersonTypeContactPoints = field(
         default=None,
         metadata={
             "name": "ContactPoints",

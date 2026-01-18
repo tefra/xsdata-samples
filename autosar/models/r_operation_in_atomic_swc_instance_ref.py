@@ -34,7 +34,7 @@ class ROperationInAtomicSwcInstanceRef:
         name = "R-OPERATION-IN-ATOMIC-SWC-INSTANCE-REF"
 
     context_r_port_ref: (
-        ROperationInAtomicSwcInstanceRef.ContextRPortRef | None
+        None | ROperationInAtomicSwcInstanceRef.ContextRPortRef
     ) = field(
         default=None,
         metadata={
@@ -44,7 +44,7 @@ class ROperationInAtomicSwcInstanceRef:
         },
     )
     target_required_operation_ref: (
-        ROperationInAtomicSwcInstanceRef.TargetRequiredOperationRef | None
+        None | ROperationInAtomicSwcInstanceRef.TargetRequiredOperationRef
     ) = field(
         default=None,
         metadata={
@@ -53,14 +53,14 @@ class ROperationInAtomicSwcInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -71,7 +71,7 @@ class ROperationInAtomicSwcInstanceRef:
 
     @dataclass
     class ContextRPortRef(Ref):
-        dest: AbstractRequiredPortPrototypeSubtypesEnum | None = field(
+        dest: None | AbstractRequiredPortPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -82,7 +82,7 @@ class ROperationInAtomicSwcInstanceRef:
 
     @dataclass
     class TargetRequiredOperationRef(Ref):
-        dest: ClientServerOperationSubtypesEnum | None = field(
+        dest: None | ClientServerOperationSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

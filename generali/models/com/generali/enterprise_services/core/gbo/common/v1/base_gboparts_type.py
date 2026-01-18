@@ -37,7 +37,7 @@ class BaseGbopartsType(BaseComponentType):
     class Meta:
         name = "BaseGBOPartsType"
 
-    notes: BaseGbopartsTypeNotes | None = field(
+    notes: None | BaseGbopartsTypeNotes = field(
         default=None,
         metadata={
             "name": "Notes",
@@ -45,7 +45,7 @@ class BaseGbopartsType(BaseComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
         },
     )
-    characteristics: CharacteristicsType | None = field(
+    characteristics: None | CharacteristicsType = field(
         default=None,
         metadata={
             "name": "Characteristics",
@@ -53,7 +53,7 @@ class BaseGbopartsType(BaseComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
         },
     )
-    status_history: StatusHistoryType | None = field(
+    status_history: None | StatusHistoryType = field(
         default=None,
         metadata={
             "name": "StatusHistory",

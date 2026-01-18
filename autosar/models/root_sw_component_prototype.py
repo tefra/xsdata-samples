@@ -87,7 +87,7 @@ class RootSwComponentPrototype:
     class Meta:
         name = "ROOT-SW-COMPONENT-PROTOTYPE"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -97,7 +97,7 @@ class RootSwComponentPrototype:
         },
     )
     short_name_fragments: (
-        RootSwComponentPrototype.ShortNameFragments | None
+        None | RootSwComponentPrototype.ShortNameFragments
     ) = field(
         default=None,
         metadata={
@@ -106,7 +106,7 @@ class RootSwComponentPrototype:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -114,7 +114,7 @@ class RootSwComponentPrototype:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -122,7 +122,7 @@ class RootSwComponentPrototype:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -130,7 +130,7 @@ class RootSwComponentPrototype:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -138,7 +138,7 @@ class RootSwComponentPrototype:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -146,7 +146,7 @@ class RootSwComponentPrototype:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: RootSwComponentPrototype.Annotations | None = field(
+    annotations: None | RootSwComponentPrototype.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -155,7 +155,7 @@ class RootSwComponentPrototype:
         },
     )
     application_type_tref: (
-        RootSwComponentPrototype.ApplicationTypeTref | None
+        None | RootSwComponentPrototype.ApplicationTypeTref
     ) = field(
         default=None,
         metadata={
@@ -164,14 +164,14 @@ class RootSwComponentPrototype:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -179,7 +179,7 @@ class RootSwComponentPrototype:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -211,7 +211,7 @@ class RootSwComponentPrototype:
 
     @dataclass
     class ApplicationTypeTref(Ref):
-        dest: SwComponentTypeSubtypesEnum | None = field(
+        dest: None | SwComponentTypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

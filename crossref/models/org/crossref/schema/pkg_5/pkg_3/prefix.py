@@ -15,21 +15,21 @@ class Prefix:
         name = "prefix"
         namespace = "http://www.crossref.org/schema/5.3.1"
 
-    content_type: object | None = field(
+    content_type: None | object = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    specific_use: object | None = field(
+    specific_use: None | object = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    language: PrefixLanguage | None = field(
+    language: None | PrefixLanguage = field(
         default=None,
         metadata={
             "type": "Attribute",

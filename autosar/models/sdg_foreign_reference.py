@@ -98,7 +98,7 @@ class SdgForeignReference:
     class Meta:
         name = "SDG-FOREIGN-REFERENCE"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -107,7 +107,7 @@ class SdgForeignReference:
             "required": True,
         },
     )
-    short_name_fragments: SdgForeignReference.ShortNameFragments | None = (
+    short_name_fragments: None | SdgForeignReference.ShortNameFragments = (
         field(
             default=None,
             metadata={
@@ -117,7 +117,7 @@ class SdgForeignReference:
             },
         )
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -125,7 +125,7 @@ class SdgForeignReference:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -133,7 +133,7 @@ class SdgForeignReference:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -141,7 +141,7 @@ class SdgForeignReference:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -149,7 +149,7 @@ class SdgForeignReference:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -157,7 +157,7 @@ class SdgForeignReference:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: SdgForeignReference.Annotations | None = field(
+    annotations: None | SdgForeignReference.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -165,7 +165,7 @@ class SdgForeignReference:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    lower_multiplicity: PositiveInteger | None = field(
+    lower_multiplicity: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "LOWER-MULTIPLICITY",
@@ -173,7 +173,7 @@ class SdgForeignReference:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    upper_multiplicity: PositiveInteger | None = field(
+    upper_multiplicity: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "UPPER-MULTIPLICITY",
@@ -181,7 +181,7 @@ class SdgForeignReference:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    upper_multiplicity_infinite: Boolean | None = field(
+    upper_multiplicity_infinite: None | Boolean = field(
         default=None,
         metadata={
             "name": "UPPER-MULTIPLICITY-INFINITE",
@@ -189,7 +189,7 @@ class SdgForeignReference:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    gid: NmtokenString | None = field(
+    gid: None | NmtokenString = field(
         default=None,
         metadata={
             "name": "GID",
@@ -197,7 +197,7 @@ class SdgForeignReference:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    dest_meta_class: MetaClassName | None = field(
+    dest_meta_class: None | MetaClassName = field(
         default=None,
         metadata={
             "name": "DEST-META-CLASS",
@@ -205,14 +205,14 @@ class SdgForeignReference:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -220,7 +220,7 @@ class SdgForeignReference:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",

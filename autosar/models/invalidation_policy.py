@@ -40,7 +40,7 @@ class InvalidationPolicy:
     class Meta:
         name = "INVALIDATION-POLICY"
 
-    data_element_ref: InvalidationPolicy.DataElementRef | None = field(
+    data_element_ref: None | InvalidationPolicy.DataElementRef = field(
         default=None,
         metadata={
             "name": "DATA-ELEMENT-REF",
@@ -48,7 +48,7 @@ class InvalidationPolicy:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    handle_invalid: HandleInvalidEnum | None = field(
+    handle_invalid: None | HandleInvalidEnum = field(
         default=None,
         metadata={
             "name": "HANDLE-INVALID",
@@ -56,14 +56,14 @@ class InvalidationPolicy:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -74,7 +74,7 @@ class InvalidationPolicy:
 
     @dataclass
     class DataElementRef(Ref):
-        dest: VariableDataPrototypeSubtypesEnum | None = field(
+        dest: None | VariableDataPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

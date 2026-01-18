@@ -57,7 +57,7 @@ class ImplementationDataTypeElementInPortInterfaceRef:
     class Meta:
         name = "IMPLEMENTATION-DATA-TYPE-ELEMENT-IN-PORT-INTERFACE-REF"
 
-    tag_id: PositiveInteger | None = field(
+    tag_id: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "TAG-ID",
@@ -66,8 +66,8 @@ class ImplementationDataTypeElementInPortInterfaceRef:
         },
     )
     root_data_prototype_ref: (
-        ImplementationDataTypeElementInPortInterfaceRef.RootDataPrototypeRef
-        | None
+        None
+        | ImplementationDataTypeElementInPortInterfaceRef.RootDataPrototypeRef
     ) = field(
         default=None,
         metadata={
@@ -77,8 +77,8 @@ class ImplementationDataTypeElementInPortInterfaceRef:
         },
     )
     context_implementation_data_element_refs: (
-        ImplementationDataTypeElementInPortInterfaceRef.ContextImplementationDataElementRefs
-        | None
+        None
+        | ImplementationDataTypeElementInPortInterfaceRef.ContextImplementationDataElementRefs
     ) = field(
         default=None,
         metadata={
@@ -88,8 +88,8 @@ class ImplementationDataTypeElementInPortInterfaceRef:
         },
     )
     target_implementation_data_type_element_ref: (
-        ImplementationDataTypeElementInPortInterfaceRef.TargetImplementationDataTypeElementRef
-        | None
+        None
+        | ImplementationDataTypeElementInPortInterfaceRef.TargetImplementationDataTypeElementRef
     ) = field(
         default=None,
         metadata={
@@ -98,14 +98,14 @@ class ImplementationDataTypeElementInPortInterfaceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -116,7 +116,7 @@ class ImplementationDataTypeElementInPortInterfaceRef:
 
     @dataclass
     class RootDataPrototypeRef(Ref):
-        dest: AutosarDataPrototypeSubtypesEnum | None = field(
+        dest: None | AutosarDataPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -140,7 +140,7 @@ class ImplementationDataTypeElementInPortInterfaceRef:
 
         @dataclass
         class ContextImplementationDataElementRef(Ref):
-            dest: ImplementationDataTypeElementSubtypesEnum | None = field(
+            dest: None | ImplementationDataTypeElementSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -151,7 +151,7 @@ class ImplementationDataTypeElementInPortInterfaceRef:
 
     @dataclass
     class TargetImplementationDataTypeElementRef(Ref):
-        dest: ImplementationDataTypeElementSubtypesEnum | None = field(
+        dest: None | ImplementationDataTypeElementSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

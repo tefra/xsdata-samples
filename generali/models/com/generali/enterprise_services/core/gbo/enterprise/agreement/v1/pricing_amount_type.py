@@ -19,7 +19,7 @@ __NAMESPACE__ = (
 
 @dataclass
 class PricingAmountType(BaseIdentifiedComponentType):
-    premium: PricingPremiumType | None = field(
+    premium: None | PricingPremiumType = field(
         default=None,
         metadata={
             "name": "Premium",
@@ -27,7 +27,7 @@ class PricingAmountType(BaseIdentifiedComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    actual_commission: NumericType | None = field(
+    actual_commission: None | NumericType = field(
         default=None,
         metadata={
             "name": "ActualCommission",
@@ -35,7 +35,7 @@ class PricingAmountType(BaseIdentifiedComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    generali_gwp_share: NumericType | None = field(
+    generali_gwp_share: None | NumericType = field(
         default=None,
         metadata={
             "name": "GeneraliGwpShare",

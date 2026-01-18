@@ -49,7 +49,7 @@ class CoctMt050000Uv01Patient:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Ii | None = field(
+    type_id: None | Ii = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -87,7 +87,7 @@ class CoctMt050000Uv01Patient:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    status_code: Cs | None = field(
+    status_code: None | Cs = field(
         default=None,
         metadata={
             "name": "statusCode",
@@ -96,7 +96,7 @@ class CoctMt050000Uv01Patient:
             "required": True,
         },
     )
-    effective_time: IvlTsExplicit | None = field(
+    effective_time: None | IvlTsExplicit = field(
         default=None,
         metadata={
             "name": "effectiveTime",
@@ -104,7 +104,7 @@ class CoctMt050000Uv01Patient:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    confidentiality_code: Ce | None = field(
+    confidentiality_code: None | Ce = field(
         default=None,
         metadata={
             "name": "confidentialityCode",
@@ -112,7 +112,7 @@ class CoctMt050000Uv01Patient:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    very_important_person_code: Ce | None = field(
+    very_important_person_code: None | Ce = field(
         default=None,
         metadata={
             "name": "veryImportantPersonCode",
@@ -120,7 +120,7 @@ class CoctMt050000Uv01Patient:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    patient_person: CoctMt030000Uv04Person | None = field(
+    patient_person: None | CoctMt030000Uv04Person = field(
         default=None,
         metadata={
             "name": "patientPerson",
@@ -130,7 +130,7 @@ class CoctMt050000Uv01Patient:
         },
     )
     patient_non_person_living_subject: (
-        CoctMt030000Uv04NonPersonLivingSubject | None
+        None | CoctMt030000Uv04NonPersonLivingSubject
     ) = field(
         default=None,
         metadata={
@@ -140,7 +140,7 @@ class CoctMt050000Uv01Patient:
             "nillable": True,
         },
     )
-    provider_organization: CoctMt150000Uv02Organization | None = field(
+    provider_organization: None | CoctMt150000Uv02Organization = field(
         default=None,
         metadata={
             "name": "providerOrganization",
@@ -149,7 +149,7 @@ class CoctMt050000Uv01Patient:
             "nillable": True,
         },
     )
-    null_flavor: NullFlavor | None = field(
+    null_flavor: None | NullFlavor = field(
         default=None,
         metadata={
             "name": "nullFlavor",

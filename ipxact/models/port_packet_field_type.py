@@ -38,7 +38,7 @@ class PortPacketFieldType:
     class Meta:
         name = "portPacketFieldType"
 
-    name: str | None = field(
+    name: None | str = field(
         default=None,
         metadata={
             "type": "Element",
@@ -46,7 +46,7 @@ class PortPacketFieldType:
             "required": True,
         },
     )
-    display_name: DisplayName | None = field(
+    display_name: None | DisplayName = field(
         default=None,
         metadata={
             "name": "displayName",
@@ -54,7 +54,7 @@ class PortPacketFieldType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    short_description: ShortDescription | None = field(
+    short_description: None | ShortDescription = field(
         default=None,
         metadata={
             "name": "shortDescription",
@@ -62,14 +62,14 @@ class PortPacketFieldType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    description: Description | None = field(
+    description: None | Description = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    width: UnresolvedUnsignedPositiveIntExpression | None = field(
+    width: None | UnresolvedUnsignedPositiveIntExpression = field(
         default=None,
         metadata={
             "type": "Element",
@@ -77,28 +77,28 @@ class PortPacketFieldType:
             "required": True,
         },
     )
-    value: UnsignedBitVectorExpression | None = field(
+    value: None | UnsignedBitVectorExpression = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    endianness: EndianessType | None = field(
+    endianness: None | EndianessType = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    qualifier: QualifierType | None = field(
+    qualifier: None | QualifierType = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    vendor_extensions: VendorExtensions | None = field(
+    vendor_extensions: None | VendorExtensions = field(
         default=None,
         metadata={
             "name": "vendorExtensions",
@@ -106,7 +106,7 @@ class PortPacketFieldType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",

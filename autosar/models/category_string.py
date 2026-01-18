@@ -36,14 +36,14 @@ class CategoryString:
             "pattern": r"[a-zA-Z][a-zA-Z0-9_]*",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

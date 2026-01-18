@@ -80,7 +80,7 @@ class TcpProps:
     class Meta:
         name = "TCP-PROPS"
 
-    tcp_congestion_avoidance_enabled: Boolean | None = field(
+    tcp_congestion_avoidance_enabled: None | Boolean = field(
         default=None,
         metadata={
             "name": "TCP-CONGESTION-AVOIDANCE-ENABLED",
@@ -88,7 +88,7 @@ class TcpProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tcp_delayed_ack_timeout: TimeValue | None = field(
+    tcp_delayed_ack_timeout: None | TimeValue = field(
         default=None,
         metadata={
             "name": "TCP-DELAYED-ACK-TIMEOUT",
@@ -96,7 +96,7 @@ class TcpProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tcp_fast_recovery_enabled: Boolean | None = field(
+    tcp_fast_recovery_enabled: None | Boolean = field(
         default=None,
         metadata={
             "name": "TCP-FAST-RECOVERY-ENABLED",
@@ -104,7 +104,7 @@ class TcpProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tcp_fast_retransmit_enabled: Boolean | None = field(
+    tcp_fast_retransmit_enabled: None | Boolean = field(
         default=None,
         metadata={
             "name": "TCP-FAST-RETRANSMIT-ENABLED",
@@ -112,7 +112,7 @@ class TcpProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tcp_fin_wait_2_timeout: TimeValue | None = field(
+    tcp_fin_wait_2_timeout: None | TimeValue = field(
         default=None,
         metadata={
             "name": "TCP-FIN-WAIT-2-TIMEOUT",
@@ -120,7 +120,7 @@ class TcpProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tcp_keep_alive_enabled: Boolean | None = field(
+    tcp_keep_alive_enabled: None | Boolean = field(
         default=None,
         metadata={
             "name": "TCP-KEEP-ALIVE-ENABLED",
@@ -128,7 +128,7 @@ class TcpProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tcp_keep_alive_interval: TimeValue | None = field(
+    tcp_keep_alive_interval: None | TimeValue = field(
         default=None,
         metadata={
             "name": "TCP-KEEP-ALIVE-INTERVAL",
@@ -136,7 +136,7 @@ class TcpProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tcp_keep_alive_probes_max: PositiveInteger | None = field(
+    tcp_keep_alive_probes_max: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "TCP-KEEP-ALIVE-PROBES-MAX",
@@ -144,7 +144,7 @@ class TcpProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tcp_keep_alive_time: TimeValue | None = field(
+    tcp_keep_alive_time: None | TimeValue = field(
         default=None,
         metadata={
             "name": "TCP-KEEP-ALIVE-TIME",
@@ -152,7 +152,7 @@ class TcpProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tcp_max_rtx: PositiveInteger | None = field(
+    tcp_max_rtx: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "TCP-MAX-RTX",
@@ -160,7 +160,7 @@ class TcpProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tcp_msl: TimeValue | None = field(
+    tcp_msl: None | TimeValue = field(
         default=None,
         metadata={
             "name": "TCP-MSL",
@@ -168,7 +168,7 @@ class TcpProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tcp_nagle_enabled: Boolean | None = field(
+    tcp_nagle_enabled: None | Boolean = field(
         default=None,
         metadata={
             "name": "TCP-NAGLE-ENABLED",
@@ -176,7 +176,7 @@ class TcpProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tcp_receive_window_max: PositiveInteger | None = field(
+    tcp_receive_window_max: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "TCP-RECEIVE-WINDOW-MAX",
@@ -184,7 +184,7 @@ class TcpProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tcp_retransmission_timeout: TimeValue | None = field(
+    tcp_retransmission_timeout: None | TimeValue = field(
         default=None,
         metadata={
             "name": "TCP-RETRANSMISSION-TIMEOUT",
@@ -192,7 +192,7 @@ class TcpProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tcp_slow_start_enabled: Boolean | None = field(
+    tcp_slow_start_enabled: None | Boolean = field(
         default=None,
         metadata={
             "name": "TCP-SLOW-START-ENABLED",
@@ -200,7 +200,7 @@ class TcpProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tcp_syn_max_rtx: PositiveInteger | None = field(
+    tcp_syn_max_rtx: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "TCP-SYN-MAX-RTX",
@@ -208,7 +208,7 @@ class TcpProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tcp_syn_received_timeout: TimeValue | None = field(
+    tcp_syn_received_timeout: None | TimeValue = field(
         default=None,
         metadata={
             "name": "TCP-SYN-RECEIVED-TIMEOUT",
@@ -216,7 +216,7 @@ class TcpProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tcp_ttl: PositiveInteger | None = field(
+    tcp_ttl: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "TCP-TTL",
@@ -224,14 +224,14 @@ class TcpProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

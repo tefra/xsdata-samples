@@ -15,7 +15,7 @@ class LiftCallEquipmentVersionStructure(AccessEquipmentVersionStructure):
     class Meta:
         name = "LiftCallEquipment_VersionStructure"
 
-    call_button_height: Decimal | None = field(
+    call_button_height: None | Decimal = field(
         default=None,
         metadata={
             "name": "CallButtonHeight",
@@ -23,7 +23,7 @@ class LiftCallEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    raised_buttons: bool | None = field(
+    raised_buttons: None | bool = field(
         default=None,
         metadata={
             "name": "RaisedButtons",
@@ -31,7 +31,7 @@ class LiftCallEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    braille_buttons: bool | None = field(
+    braille_buttons: None | bool = field(
         default=None,
         metadata={
             "name": "BrailleButtons",
@@ -39,7 +39,7 @@ class LiftCallEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    ground_mark_aligned_with_button: bool | None = field(
+    ground_mark_aligned_with_button: None | bool = field(
         default=None,
         metadata={
             "name": "GroundMarkAlignedWithButton",
@@ -47,7 +47,7 @@ class LiftCallEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    audio_announcements: bool | None = field(
+    audio_announcements: None | bool = field(
         default=None,
         metadata={
             "name": "AudioAnnouncements",
@@ -55,7 +55,7 @@ class LiftCallEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    magnetic_induction_loop: bool | None = field(
+    magnetic_induction_loop: None | bool = field(
         default=None,
         metadata={
             "name": "MagneticInductionLoop",
@@ -72,7 +72,7 @@ class LiftCallEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "max_occurs": 2,
         },
     )
-    monitoring_remote_control: bool | None = field(
+    monitoring_remote_control: None | bool = field(
         default=None,
         metadata={
             "name": "MonitoringRemoteControl",

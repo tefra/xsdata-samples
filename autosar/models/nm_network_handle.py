@@ -43,7 +43,7 @@ class NmNetworkHandle:
     class Meta:
         name = "NM-NETWORK-HANDLE"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -52,7 +52,7 @@ class NmNetworkHandle:
             "required": True,
         },
     )
-    short_name_fragments: NmNetworkHandle.ShortNameFragments | None = field(
+    short_name_fragments: None | NmNetworkHandle.ShortNameFragments = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -60,7 +60,7 @@ class NmNetworkHandle:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    partial_network_refs: NmNetworkHandle.PartialNetworkRefs | None = field(
+    partial_network_refs: None | NmNetworkHandle.PartialNetworkRefs = field(
         default=None,
         metadata={
             "name": "PARTIAL-NETWORK-REFS",
@@ -68,7 +68,7 @@ class NmNetworkHandle:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    vlan_refs: NmNetworkHandle.VlanRefs | None = field(
+    vlan_refs: None | NmNetworkHandle.VlanRefs = field(
         default=None,
         metadata={
             "name": "VLAN-REFS",
@@ -76,14 +76,14 @@ class NmNetworkHandle:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -118,7 +118,7 @@ class NmNetworkHandle:
 
         @dataclass
         class PartialNetworkRef(Ref):
-            dest: PncMappingIdentSubtypesEnum | None = field(
+            dest: None | PncMappingIdentSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -140,7 +140,7 @@ class NmNetworkHandle:
 
         @dataclass
         class VlanRef(Ref):
-            dest: EthernetCommunicationConnectorSubtypesEnum | None = field(
+            dest: None | EthernetCommunicationConnectorSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",

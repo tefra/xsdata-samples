@@ -19,7 +19,7 @@ class FlexibleModeOfOperationValueStructure(
     class Meta:
         name = "FlexibleModeOfOperation_ValueStructure"
 
-    flexible_operation_type: FlexibleOperationTypeEnumeration | None = field(
+    flexible_operation_type: None | FlexibleOperationTypeEnumeration = field(
         default=None,
         metadata={
             "name": "FlexibleOperationType",

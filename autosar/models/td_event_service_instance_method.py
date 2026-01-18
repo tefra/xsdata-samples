@@ -100,7 +100,7 @@ class TdEventServiceInstanceMethod:
     class Meta:
         name = "TD-EVENT-SERVICE-INSTANCE-METHOD"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -110,7 +110,7 @@ class TdEventServiceInstanceMethod:
         },
     )
     short_name_fragments: (
-        TdEventServiceInstanceMethod.ShortNameFragments | None
+        None | TdEventServiceInstanceMethod.ShortNameFragments
     ) = field(
         default=None,
         metadata={
@@ -119,7 +119,7 @@ class TdEventServiceInstanceMethod:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -127,7 +127,7 @@ class TdEventServiceInstanceMethod:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -135,7 +135,7 @@ class TdEventServiceInstanceMethod:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -143,7 +143,7 @@ class TdEventServiceInstanceMethod:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -151,7 +151,7 @@ class TdEventServiceInstanceMethod:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -159,7 +159,7 @@ class TdEventServiceInstanceMethod:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: TdEventServiceInstanceMethod.Annotations | None = field(
+    annotations: None | TdEventServiceInstanceMethod.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -167,7 +167,7 @@ class TdEventServiceInstanceMethod:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -175,7 +175,7 @@ class TdEventServiceInstanceMethod:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    occurrence_expression: TdEventOccurrenceExpression | None = field(
+    occurrence_expression: None | TdEventOccurrenceExpression = field(
         default=None,
         metadata={
             "name": "OCCURRENCE-EXPRESSION",
@@ -184,8 +184,8 @@ class TdEventServiceInstanceMethod:
         },
     )
     service_instance_to_port_prototype_mapping_ref: (
-        TdEventServiceInstanceMethod.ServiceInstanceToPortPrototypeMappingRef
-        | None
+        None
+        | TdEventServiceInstanceMethod.ServiceInstanceToPortPrototypeMappingRef
     ) = field(
         default=None,
         metadata={
@@ -194,7 +194,7 @@ class TdEventServiceInstanceMethod:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    method_ref: TdEventServiceInstanceMethod.MethodRef | None = field(
+    method_ref: None | TdEventServiceInstanceMethod.MethodRef = field(
         default=None,
         metadata={
             "name": "METHOD-REF",
@@ -203,7 +203,7 @@ class TdEventServiceInstanceMethod:
         },
     )
     td_event_service_instance_method_type: (
-        TdEventServiceInstanceMethodTypeEnum | None
+        None | TdEventServiceInstanceMethodTypeEnum
     ) = field(
         default=None,
         metadata={
@@ -212,14 +212,14 @@ class TdEventServiceInstanceMethod:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -227,7 +227,7 @@ class TdEventServiceInstanceMethod:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -259,7 +259,7 @@ class TdEventServiceInstanceMethod:
 
     @dataclass
     class ServiceInstanceToPortPrototypeMappingRef(Ref):
-        dest: ServiceInstanceToPortPrototypeMappingSubtypesEnum | None = field(
+        dest: None | ServiceInstanceToPortPrototypeMappingSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -270,7 +270,7 @@ class TdEventServiceInstanceMethod:
 
     @dataclass
     class MethodRef(Ref):
-        dest: ClientServerOperationSubtypesEnum | None = field(
+        dest: None | ClientServerOperationSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

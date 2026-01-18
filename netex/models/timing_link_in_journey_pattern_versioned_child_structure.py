@@ -18,7 +18,7 @@ class TimingLinkInJourneyPatternVersionedChildStructure(
     class Meta:
         name = "TimingLinkInJourneyPattern_VersionedChildStructure"
 
-    timing_link_ref: TimingLinkRef | None = field(
+    timing_link_ref: None | TimingLinkRef = field(
         default=None,
         metadata={
             "name": "TimingLinkRef",
@@ -27,7 +27,7 @@ class TimingLinkInJourneyPatternVersionedChildStructure(
             "required": True,
         },
     )
-    run_times: JourneyRunTimesRelStructure | None = field(
+    run_times: None | JourneyRunTimesRelStructure = field(
         default=None,
         metadata={
             "name": "runTimes",

@@ -90,7 +90,7 @@ class DeterministicClient:
     class Meta:
         name = "DETERMINISTIC-CLIENT"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -99,7 +99,7 @@ class DeterministicClient:
             "required": True,
         },
     )
-    short_name_fragments: DeterministicClient.ShortNameFragments | None = (
+    short_name_fragments: None | DeterministicClient.ShortNameFragments = (
         field(
             default=None,
             metadata={
@@ -109,7 +109,7 @@ class DeterministicClient:
             },
         )
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -117,7 +117,7 @@ class DeterministicClient:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -125,7 +125,7 @@ class DeterministicClient:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -133,7 +133,7 @@ class DeterministicClient:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -141,7 +141,7 @@ class DeterministicClient:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -149,7 +149,7 @@ class DeterministicClient:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: DeterministicClient.Annotations | None = field(
+    annotations: None | DeterministicClient.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -157,7 +157,7 @@ class DeterministicClient:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -165,7 +165,7 @@ class DeterministicClient:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    cycle_time_value: TimeValue | None = field(
+    cycle_time_value: None | TimeValue = field(
         default=None,
         metadata={
             "name": "CYCLE-TIME-VALUE",
@@ -173,7 +173,7 @@ class DeterministicClient:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    number_of_workers: PositiveInteger | None = field(
+    number_of_workers: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "NUMBER-OF-WORKERS",
@@ -181,14 +181,14 @@ class DeterministicClient:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -196,7 +196,7 @@ class DeterministicClient:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",

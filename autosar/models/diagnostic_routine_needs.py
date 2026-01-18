@@ -102,7 +102,7 @@ class DiagnosticRoutineNeeds:
     class Meta:
         name = "DIAGNOSTIC-ROUTINE-NEEDS"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -111,7 +111,7 @@ class DiagnosticRoutineNeeds:
             "required": True,
         },
     )
-    short_name_fragments: DiagnosticRoutineNeeds.ShortNameFragments | None = (
+    short_name_fragments: None | DiagnosticRoutineNeeds.ShortNameFragments = (
         field(
             default=None,
             metadata={
@@ -121,7 +121,7 @@ class DiagnosticRoutineNeeds:
             },
         )
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -129,7 +129,7 @@ class DiagnosticRoutineNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -137,7 +137,7 @@ class DiagnosticRoutineNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -145,7 +145,7 @@ class DiagnosticRoutineNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -153,7 +153,7 @@ class DiagnosticRoutineNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -161,7 +161,7 @@ class DiagnosticRoutineNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: DiagnosticRoutineNeeds.Annotations | None = field(
+    annotations: None | DiagnosticRoutineNeeds.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -169,7 +169,7 @@ class DiagnosticRoutineNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    audiences: DiagnosticRoutineNeeds.Audiences | None = field(
+    audiences: None | DiagnosticRoutineNeeds.Audiences = field(
         default=None,
         metadata={
             "name": "AUDIENCES",
@@ -177,7 +177,7 @@ class DiagnosticRoutineNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    diag_requirement: DiagRequirementIdString | None = field(
+    diag_requirement: None | DiagRequirementIdString = field(
         default=None,
         metadata={
             "name": "DIAG-REQUIREMENT",
@@ -185,7 +185,7 @@ class DiagnosticRoutineNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    security_access_level: PositiveInteger | None = field(
+    security_access_level: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "SECURITY-ACCESS-LEVEL",
@@ -193,7 +193,7 @@ class DiagnosticRoutineNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    diag_routine_type: DiagnosticRoutineTypeEnum | None = field(
+    diag_routine_type: None | DiagnosticRoutineTypeEnum = field(
         default=None,
         metadata={
             "name": "DIAG-ROUTINE-TYPE",
@@ -201,7 +201,7 @@ class DiagnosticRoutineNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    rid_number: PositiveInteger | None = field(
+    rid_number: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "RID-NUMBER",
@@ -209,14 +209,14 @@ class DiagnosticRoutineNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -224,7 +224,7 @@ class DiagnosticRoutineNeeds:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",

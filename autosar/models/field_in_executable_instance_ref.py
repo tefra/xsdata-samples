@@ -38,7 +38,7 @@ class FieldInExecutableInstanceRef:
         name = "FIELD-IN-EXECUTABLE-INSTANCE-REF"
 
     context_root_sw_component_prototype_ref: (
-        FieldInExecutableInstanceRef.ContextRootSwComponentPrototypeRef | None
+        None | FieldInExecutableInstanceRef.ContextRootSwComponentPrototypeRef
     ) = field(
         default=None,
         metadata={
@@ -58,7 +58,7 @@ class FieldInExecutableInstanceRef:
         },
     )
     context_r_port_prototype_ref: (
-        FieldInExecutableInstanceRef.ContextRPortPrototypeRef | None
+        None | FieldInExecutableInstanceRef.ContextRPortPrototypeRef
     ) = field(
         default=None,
         metadata={
@@ -67,7 +67,7 @@ class FieldInExecutableInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    target_field_ref: FieldInExecutableInstanceRef.TargetFieldRef | None = (
+    target_field_ref: None | FieldInExecutableInstanceRef.TargetFieldRef = (
         field(
             default=None,
             metadata={
@@ -77,14 +77,14 @@ class FieldInExecutableInstanceRef:
             },
         )
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -95,7 +95,7 @@ class FieldInExecutableInstanceRef:
 
     @dataclass
     class ContextRootSwComponentPrototypeRef(Ref):
-        dest: RootSwComponentPrototypeSubtypesEnum | None = field(
+        dest: None | RootSwComponentPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -106,7 +106,7 @@ class FieldInExecutableInstanceRef:
 
     @dataclass
     class ContextSwComponentPrototypeRef(Ref):
-        dest: SwComponentPrototypeSubtypesEnum | None = field(
+        dest: None | SwComponentPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -117,7 +117,7 @@ class FieldInExecutableInstanceRef:
 
     @dataclass
     class ContextRPortPrototypeRef(Ref):
-        dest: RPortPrototypeSubtypesEnum | None = field(
+        dest: None | RPortPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -128,7 +128,7 @@ class FieldInExecutableInstanceRef:
 
     @dataclass
     class TargetFieldRef(Ref):
-        dest: FieldSubtypesEnum | None = field(
+        dest: None | FieldSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

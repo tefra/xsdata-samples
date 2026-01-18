@@ -100,7 +100,7 @@ class ServiceInstanceToSignalMapping:
     class Meta:
         name = "SERVICE-INSTANCE-TO-SIGNAL-MAPPING"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -110,7 +110,7 @@ class ServiceInstanceToSignalMapping:
         },
     )
     short_name_fragments: (
-        ServiceInstanceToSignalMapping.ShortNameFragments | None
+        None | ServiceInstanceToSignalMapping.ShortNameFragments
     ) = field(
         default=None,
         metadata={
@@ -119,7 +119,7 @@ class ServiceInstanceToSignalMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -127,7 +127,7 @@ class ServiceInstanceToSignalMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -135,7 +135,7 @@ class ServiceInstanceToSignalMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -143,7 +143,7 @@ class ServiceInstanceToSignalMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -151,7 +151,7 @@ class ServiceInstanceToSignalMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -159,7 +159,7 @@ class ServiceInstanceToSignalMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: ServiceInstanceToSignalMapping.Annotations | None = field(
+    annotations: None | ServiceInstanceToSignalMapping.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -168,7 +168,7 @@ class ServiceInstanceToSignalMapping:
         },
     )
     event_element_mappings: (
-        ServiceInstanceToSignalMapping.EventElementMappings | None
+        None | ServiceInstanceToSignalMapping.EventElementMappings
     ) = field(
         default=None,
         metadata={
@@ -177,7 +177,7 @@ class ServiceInstanceToSignalMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    field_mappings: ServiceInstanceToSignalMapping.FieldMappings | None = (
+    field_mappings: None | ServiceInstanceToSignalMapping.FieldMappings = (
         field(
             default=None,
             metadata={
@@ -187,7 +187,7 @@ class ServiceInstanceToSignalMapping:
             },
         )
     )
-    method_mapping: SignalBasedMethodToISignalTriggeringMapping | None = field(
+    method_mapping: None | SignalBasedMethodToISignalTriggeringMapping = field(
         default=None,
         metadata={
             "name": "METHOD-MAPPING",
@@ -196,7 +196,7 @@ class ServiceInstanceToSignalMapping:
         },
     )
     service_instance_ref: (
-        ServiceInstanceToSignalMapping.ServiceInstanceRef | None
+        None | ServiceInstanceToSignalMapping.ServiceInstanceRef
     ) = field(
         default=None,
         metadata={
@@ -205,14 +205,14 @@ class ServiceInstanceToSignalMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -220,7 +220,7 @@ class ServiceInstanceToSignalMapping:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -278,7 +278,7 @@ class ServiceInstanceToSignalMapping:
 
     @dataclass
     class ServiceInstanceRef(Ref):
-        dest: AdaptivePlatformServiceInstanceSubtypesEnum | None = field(
+        dest: None | AdaptivePlatformServiceInstanceSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

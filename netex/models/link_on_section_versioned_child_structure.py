@@ -38,7 +38,8 @@ class LinkOnSectionVersionedChildStructure(
         name = "LinkOnSection_VersionedChildStructure"
 
     choice_1: (
-        OnwardVehicleMeetingLinkRef
+        None
+        | OnwardVehicleMeetingLinkRef
         | VehicleMeetingLinkRef
         | ServiceLinkRef
         | LineLinkRef
@@ -59,7 +60,6 @@ class LinkOnSectionVersionedChildStructure(
         | RoadElement
         | RailwayElement
         | ActivationLink
-        | None
     ) = field(
         default=None,
         metadata={
@@ -173,7 +173,7 @@ class LinkOnSectionVersionedChildStructure(
             ),
         },
     )
-    reverse: bool | None = field(
+    reverse: None | bool = field(
         default=None,
         metadata={
             "name": "Reverse",

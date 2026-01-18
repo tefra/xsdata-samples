@@ -42,7 +42,7 @@ class ConstantSpecificationMapping:
     class Meta:
         name = "CONSTANT-SPECIFICATION-MAPPING"
 
-    appl_constant_ref: ConstantSpecificationMapping.ApplConstantRef | None = (
+    appl_constant_ref: None | ConstantSpecificationMapping.ApplConstantRef = (
         field(
             default=None,
             metadata={
@@ -52,7 +52,7 @@ class ConstantSpecificationMapping:
             },
         )
     )
-    impl_constant_ref: ConstantSpecificationMapping.ImplConstantRef | None = (
+    impl_constant_ref: None | ConstantSpecificationMapping.ImplConstantRef = (
         field(
             default=None,
             metadata={
@@ -62,14 +62,14 @@ class ConstantSpecificationMapping:
             },
         )
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -80,7 +80,7 @@ class ConstantSpecificationMapping:
 
     @dataclass
     class ApplConstantRef(Ref):
-        dest: ConstantSpecificationSubtypesEnum | None = field(
+        dest: None | ConstantSpecificationSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -91,7 +91,7 @@ class ConstantSpecificationMapping:
 
     @dataclass
     class ImplConstantRef(Ref):
-        dest: ConstantSpecificationSubtypesEnum | None = field(
+        dest: None | ConstantSpecificationSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

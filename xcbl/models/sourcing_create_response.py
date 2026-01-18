@@ -191,7 +191,7 @@ class SourcingCreateResponseDetail:
             "required": True,
         }
     )
-    parent_item_identifier: ParentItemIdentifier | None = field(
+    parent_item_identifier: None | ParentItemIdentifier = field(
         default=None,
         metadata={
             "name": "ParentItemIdentifier",
@@ -206,7 +206,7 @@ class SourcingCreateResponseDetail:
         }
     )
     sourcing_item_response_coded_other: (
-        SourcingItemResponseCodedOther | None
+        None | SourcingItemResponseCodedOther
     ) = field(
         default=None,
         metadata={
@@ -215,7 +215,7 @@ class SourcingCreateResponseDetail:
         },
     )
     list_of_sourcing_item_component_response: (
-        ListOfSourcingItemComponentResponse | None
+        None | ListOfSourcingItemComponentResponse
     ) = field(
         default=None,
         metadata={
@@ -238,14 +238,14 @@ class SourcingCreateResponsePurpose:
 
 @dataclass(kw_only=True)
 class SourcingCreateSummary:
-    total_number_of_sourcing_items: TotalNumberOfSourcingItems | None = field(
+    total_number_of_sourcing_items: None | TotalNumberOfSourcingItems = field(
         default=None,
         metadata={
             "name": "TotalNumberOfSourcingItems",
             "type": "Element",
         },
     )
-    total_number_of_participants: TotalNumberOfParticipants | None = field(
+    total_number_of_participants: None | TotalNumberOfParticipants = field(
         default=None,
         metadata={
             "name": "TotalNumberOfParticipants",
@@ -321,7 +321,7 @@ class SourcingCreateResponseHeader:
             "required": True,
         }
     )
-    sourcing_response_coded_other: SourcingResponseCodedOther | None = field(
+    sourcing_response_coded_other: None | SourcingResponseCodedOther = field(
         default=None,
         metadata={
             "name": "SourcingResponseCodedOther",
@@ -335,7 +335,7 @@ class SourcingCreateResponseHeader:
             "required": True,
         }
     )
-    sourcing_create_response_note: SourcingCreateResponseNote | None = field(
+    sourcing_create_response_note: None | SourcingCreateResponseNote = field(
         default=None,
         metadata={
             "name": "SourcingCreateResponseNote",
@@ -390,7 +390,7 @@ class SourcingCreateResponse:
         }
     )
     list_of_sourcing_create_response_detail: (
-        ListOfSourcingCreateResponseDetail | None
+        None | ListOfSourcingCreateResponseDetail
     ) = field(
         default=None,
         metadata={
@@ -398,7 +398,7 @@ class SourcingCreateResponse:
             "type": "Element",
         },
     )
-    sourcing_create_response_summary: SourcingCreateResponseSummary | None = (
+    sourcing_create_response_summary: None | SourcingCreateResponseSummary = (
         field(
             default=None,
             metadata={

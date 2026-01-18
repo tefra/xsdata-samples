@@ -16,7 +16,7 @@ class DatePatternMapType(DatePatternMapBaseType):
         to the pattern.
     """
 
-    source_pattern: str | None = field(
+    source_pattern: None | str = field(
         default=None,
         metadata={
             "name": "sourcePattern",
@@ -24,7 +24,7 @@ class DatePatternMapType(DatePatternMapBaseType):
             "required": True,
         },
     )
-    locale: str | None = field(
+    locale: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",

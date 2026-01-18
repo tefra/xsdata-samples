@@ -24,7 +24,7 @@ class OpenlrCircleLocationReference(OpenlrAreaLocationReference):
     :ivar openlr_circle_location_reference_extension:
     """
 
-    radius: int | None = field(
+    radius: None | int = field(
         default=None,
         metadata={
             "type": "Element",
@@ -32,7 +32,7 @@ class OpenlrCircleLocationReference(OpenlrAreaLocationReference):
             "required": True,
         },
     )
-    openlr_geo_coordinate: OpenlrGeoCoordinate | None = field(
+    openlr_geo_coordinate: None | OpenlrGeoCoordinate = field(
         default=None,
         metadata={
             "name": "openlrGeoCoordinate",
@@ -41,7 +41,7 @@ class OpenlrCircleLocationReference(OpenlrAreaLocationReference):
             "required": True,
         },
     )
-    openlr_circle_location_reference_extension: ExtensionType | None = field(
+    openlr_circle_location_reference_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "openlrCircleLocationReferenceExtension",

@@ -15,7 +15,7 @@ class VehicleTypeAtPointVersionStructure(NetworkRestrictionVersionStructure):
     class Meta:
         name = "VehicleTypeAtPoint_VersionStructure"
 
-    for_vehicle_type_ref: TransportTypeRefStructure | None = field(
+    for_vehicle_type_ref: None | TransportTypeRefStructure = field(
         default=None,
         metadata={
             "name": "ForVehicleTypeRef",
@@ -24,7 +24,7 @@ class VehicleTypeAtPointVersionStructure(NetworkRestrictionVersionStructure):
             "required": True,
         },
     )
-    capacity: int | None = field(
+    capacity: None | int = field(
         default=None,
         metadata={
             "name": "Capacity",

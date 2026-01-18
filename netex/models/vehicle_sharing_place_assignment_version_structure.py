@@ -29,12 +29,12 @@ class VehicleSharingPlaceAssignmentVersionStructure(
         name = "VehicleSharingPlaceAssignment_VersionStructure"
 
     common_vehicle_service_ref_or_vehicle_pooling_service_ref: (
-        VehicleRentalServiceRef
+        None
+        | VehicleRentalServiceRef
         | VehicleSharingServiceRef
         | ChauffeuredVehicleServiceRef
         | TaxiServiceRef
         | CarPoolingServiceRef
-        | None
     ) = field(
         default=None,
         metadata={
@@ -68,7 +68,7 @@ class VehicleSharingPlaceAssignmentVersionStructure(
             ),
         },
     )
-    vehicle_sharing_parking_area_ref: VehicleSharingParkingAreaRef | None = (
+    vehicle_sharing_parking_area_ref: None | VehicleSharingParkingAreaRef = (
         field(
             default=None,
             metadata={
@@ -80,11 +80,11 @@ class VehicleSharingPlaceAssignmentVersionStructure(
         )
     )
     parking_bay_ref_or_vehicle_sharing_parking_bay_ref: (
-        VehiclePoolingParkingBayRef
+        None
+        | VehiclePoolingParkingBayRef
         | MonitoredVehicleSharingParkingBayRef
         | VehicleSharingParkingBayRef
         | ParkingBayRef
-        | None
     ) = field(
         default=None,
         metadata={

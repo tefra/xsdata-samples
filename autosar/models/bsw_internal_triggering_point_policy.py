@@ -40,7 +40,7 @@ class BswInternalTriggeringPointPolicy:
     class Meta:
         name = "BSW-INTERNAL-TRIGGERING-POINT-POLICY"
 
-    enable_take_address: Boolean | None = field(
+    enable_take_address: None | Boolean = field(
         default=None,
         metadata={
             "name": "ENABLE-TAKE-ADDRESS",
@@ -49,7 +49,7 @@ class BswInternalTriggeringPointPolicy:
         },
     )
     bsw_internal_triggering_point_ref: (
-        BswInternalTriggeringPointPolicy.BswInternalTriggeringPointRef | None
+        None | BswInternalTriggeringPointPolicy.BswInternalTriggeringPointRef
     ) = field(
         default=None,
         metadata={
@@ -58,7 +58,7 @@ class BswInternalTriggeringPointPolicy:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -66,14 +66,14 @@ class BswInternalTriggeringPointPolicy:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -84,7 +84,7 @@ class BswInternalTriggeringPointPolicy:
 
     @dataclass
     class BswInternalTriggeringPointRef(Ref):
-        dest: BswInternalTriggeringPointSubtypesEnum | None = field(
+        dest: None | BswInternalTriggeringPointSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

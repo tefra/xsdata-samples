@@ -71,7 +71,7 @@ class AttsType(AnnotableType):
             "namespace": "",
         },
     )
-    time_period: XmlPeriod | XmlDate | XmlDateTime | str | None = field(
+    time_period: None | XmlPeriod | XmlDate | XmlDateTime | str = field(
         default=None,
         metadata={
             "name": "TIME_PERIOD",

@@ -18,14 +18,14 @@ class Order:
             "required": True,
         }
     )
-    order_detail: OrderDetail | None = field(
+    order_detail: None | OrderDetail = field(
         default=None,
         metadata={
             "name": "OrderDetail",
             "type": "Element",
         },
     )
-    order_summary: OrderSummary | None = field(
+    order_summary: None | OrderSummary = field(
         default=None,
         metadata={
             "name": "OrderSummary",

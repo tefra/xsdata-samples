@@ -391,13 +391,13 @@ class Piecewise:
             "type": "Element",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    xref: object | None = field(
+    xref: None | object = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -411,19 +411,19 @@ class Piecewise:
             "tokens": True,
         },
     )
-    style: str | None = field(
+    style: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    href: str | None = field(
+    href: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    other: object | None = field(
+    other: None | object = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -436,13 +436,13 @@ class Piecewise:
             "namespace": "##other",
         },
     )
-    encoding: str | None = field(
+    encoding: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    definition_url: str | None = field(
+    definition_url: None | str = field(
         default=None,
         metadata={
             "name": "definitionURL",
@@ -1293,13 +1293,13 @@ class Cerror:
             "type": "Element",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    xref: object | None = field(
+    xref: None | object = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -1313,19 +1313,19 @@ class Cerror:
             "tokens": True,
         },
     )
-    style: str | None = field(
+    style: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    href: str | None = field(
+    href: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    other: object | None = field(
+    other: None | object = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -1852,13 +1852,13 @@ class Ci(CiContent):
         name = "ci"
         namespace = "http://www.w3.org/1998/Math/MathML"
 
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    xref: object | None = field(
+    xref: None | object = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -1872,19 +1872,19 @@ class Ci(CiContent):
             "tokens": True,
         },
     )
-    style: str | None = field(
+    style: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    href: str | None = field(
+    href: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    other: object | None = field(
+    other: None | object = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -1897,20 +1897,20 @@ class Ci(CiContent):
             "namespace": "##other",
         },
     )
-    encoding: str | None = field(
+    encoding: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    definition_url: str | None = field(
+    definition_url: None | str = field(
         default=None,
         metadata={
             "name": "definitionURL",
             "type": "Attribute",
         },
     )
-    type_value: object | None = field(
+    type_value: None | object = field(
         default=None,
         metadata={
             "name": "type",
@@ -1925,13 +1925,13 @@ class Cn(CnContent):
         name = "cn"
         namespace = "http://www.w3.org/1998/Math/MathML"
 
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    xref: object | None = field(
+    xref: None | object = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -1945,19 +1945,19 @@ class Cn(CnContent):
             "tokens": True,
         },
     )
-    style: str | None = field(
+    style: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    href: str | None = field(
+    href: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    other: object | None = field(
+    other: None | object = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -1970,27 +1970,27 @@ class Cn(CnContent):
             "namespace": "##other",
         },
     )
-    encoding: str | None = field(
+    encoding: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    definition_url: str | None = field(
+    definition_url: None | str = field(
         default=None,
         metadata={
             "name": "definitionURL",
             "type": "Attribute",
         },
     )
-    type_value: object | None = field(
+    type_value: None | object = field(
         default=None,
         metadata={
             "name": "type",
             "type": "Attribute",
         },
     )
-    base: object | None = field(
+    base: None | object = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -2004,13 +2004,13 @@ class Csymbol(CsymbolContent):
         name = "csymbol"
         namespace = "http://www.w3.org/1998/Math/MathML"
 
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    xref: object | None = field(
+    xref: None | object = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -2024,19 +2024,19 @@ class Csymbol(CsymbolContent):
             "tokens": True,
         },
     )
-    style: str | None = field(
+    style: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    href: str | None = field(
+    href: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    other: object | None = field(
+    other: None | object = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -2049,27 +2049,27 @@ class Csymbol(CsymbolContent):
             "namespace": "##other",
         },
     )
-    encoding: str | None = field(
+    encoding: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    definition_url: str | None = field(
+    definition_url: None | str = field(
         default=None,
         metadata={
             "name": "definitionURL",
             "type": "Attribute",
         },
     )
-    type_value: object | None = field(
+    type_value: None | object = field(
         default=None,
         metadata={
             "name": "type",
             "type": "Attribute",
         },
     )
-    cd: str | None = field(
+    cd: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -3137,13 +3137,13 @@ class Bvar:
             "type": "Element",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    xref: object | None = field(
+    xref: None | object = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -3157,19 +3157,19 @@ class Bvar:
             "tokens": True,
         },
     )
-    style: str | None = field(
+    style: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    href: str | None = field(
+    href: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    other: object | None = field(
+    other: None | object = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -3185,13 +3185,13 @@ class Bvar:
 
     @dataclass
     class Semantics:
-        ci: Ci | None = field(
+        ci: None | Ci = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        semantics: Bvar.Semantics | None = field(
+        semantics: None | Bvar.Semantics = field(
             default=None,
             metadata={
                 "type": "Element",
@@ -3210,13 +3210,13 @@ class Bvar:
                 "type": "Element",
             },
         )
-        id: str | None = field(
+        id: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
             },
         )
-        xref: object | None = field(
+        xref: None | object = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -3230,19 +3230,19 @@ class Bvar:
                 "tokens": True,
             },
         )
-        style: str | None = field(
+        style: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
             },
         )
-        href: str | None = field(
+        href: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
             },
         )
-        other: object | None = field(
+        other: None | object = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -3255,26 +3255,26 @@ class Bvar:
                 "namespace": "##other",
             },
         )
-        encoding: str | None = field(
+        encoding: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
             },
         )
-        definition_url: str | None = field(
+        definition_url: None | str = field(
             default=None,
             metadata={
                 "name": "definitionURL",
                 "type": "Attribute",
             },
         )
-        cd: str | None = field(
+        cd: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
             },
         )
-        name: str | None = field(
+        name: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -3288,13 +3288,13 @@ class Apply(ApplyContent):
         name = "apply"
         namespace = "http://www.w3.org/1998/Math/MathML"
 
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    xref: object | None = field(
+    xref: None | object = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -3308,19 +3308,19 @@ class Apply(ApplyContent):
             "tokens": True,
         },
     )
-    style: str | None = field(
+    style: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    href: str | None = field(
+    href: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    other: object | None = field(
+    other: None | object = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -3347,13 +3347,13 @@ class Bind(BindContent):
         name = "bind"
         namespace = "http://www.w3.org/1998/Math/MathML"
 
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    xref: object | None = field(
+    xref: None | object = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -3367,19 +3367,19 @@ class Bind(BindContent):
             "tokens": True,
         },
     )
-    style: str | None = field(
+    style: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    href: str | None = field(
+    href: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    other: object | None = field(
+    other: None | object = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -3400,836 +3400,836 @@ class Condition:
         name = "condition"
         namespace = "http://www.w3.org/1998/Math/MathML"
 
-    apply: Apply | None = field(
+    apply: None | Apply = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    bind: Bind | None = field(
+    bind: None | Bind = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    ci: Ci | None = field(
+    ci: None | Ci = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    cn: Cn | None = field(
+    cn: None | Cn = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    csymbol: Csymbol | None = field(
+    csymbol: None | Csymbol = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    cbytes: Cbytes | None = field(
+    cbytes: None | Cbytes = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    cerror: Cerror | None = field(
+    cerror: None | Cerror = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    cs: Cs | None = field(
+    cs: None | Cs = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    share: Share | None = field(
+    share: None | Share = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    piecewise: Piecewise | None = field(
+    piecewise: None | Piecewise = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    declare: Declare | None = field(
+    declare: None | Declare = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    fn: Fn | None = field(
+    fn: None | Fn = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    reln: Reln | None = field(
+    reln: None | Reln = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    interval: Interval | None = field(
+    interval: None | Interval = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    moment: Moment | None = field(
+    moment: None | Moment = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    log: Log | None = field(
+    log: None | Log = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    ln: Ln | None = field(
+    ln: None | Ln = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    image: Image | None = field(
+    image: None | Image = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    codomain: Codomain | None = field(
+    codomain: None | Codomain = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    domain: Domain | None = field(
+    domain: None | Domain = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    ident: Ident | None = field(
+    ident: None | Ident = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    inverse: Inverse | None = field(
+    inverse: None | Inverse = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    lambda_value: Lambda | None = field(
+    lambda_value: None | Lambda = field(
         default=None,
         metadata={
             "name": "lambda",
             "type": "Element",
         },
     )
-    compose: Compose | None = field(
+    compose: None | Compose = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    quotient: Quotient | None = field(
+    quotient: None | Quotient = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    divide: Divide | None = field(
+    divide: None | Divide = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    minus: Minus | None = field(
+    minus: None | Minus = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    power: Power | None = field(
+    power: None | Power = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    rem: Rem | None = field(
+    rem: None | Rem = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    root: Root | None = field(
+    root: None | Root = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    factorial: Factorial | None = field(
+    factorial: None | Factorial = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    abs: Abs | None = field(
+    abs: None | Abs = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    conjugate: Conjugate | None = field(
+    conjugate: None | Conjugate = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    arg: Arg | None = field(
+    arg: None | Arg = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    real: Real | None = field(
+    real: None | Real = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    imaginary: Imaginary | None = field(
+    imaginary: None | Imaginary = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    floor: Floor | None = field(
+    floor: None | Floor = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    ceiling: Ceiling | None = field(
+    ceiling: None | Ceiling = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    exp: Exp | None = field(
+    exp: None | Exp = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    min: Min | None = field(
+    min: None | Min = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    max: Max | None = field(
+    max: None | Max = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    lcm: Lcm | None = field(
+    lcm: None | Lcm = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    gcd: Gcd | None = field(
+    gcd: None | Gcd = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    times: Times | None = field(
+    times: None | Times = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    plus: Plus | None = field(
+    plus: None | Plus = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    xor: Xor | None = field(
+    xor: None | Xor = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    or_value: Or | None = field(
+    or_value: None | Or = field(
         default=None,
         metadata={
             "name": "or",
             "type": "Element",
         },
     )
-    and_value: And | None = field(
+    and_value: None | And = field(
         default=None,
         metadata={
             "name": "and",
             "type": "Element",
         },
     )
-    not_value: Not | None = field(
+    not_value: None | Not = field(
         default=None,
         metadata={
             "name": "not",
             "type": "Element",
         },
     )
-    equivalent: Equivalent | None = field(
+    equivalent: None | Equivalent = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    implies: Implies | None = field(
+    implies: None | Implies = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    exists: Exists | None = field(
+    exists: None | Exists = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    forall: Forall | None = field(
+    forall: None | Forall = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    leq: Leq | None = field(
+    leq: None | Leq = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    geq: Geq | None = field(
+    geq: None | Geq = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    lt: Lt | None = field(
+    lt: None | Lt = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    gt: Gt | None = field(
+    gt: None | Gt = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    eq: Eq | None = field(
+    eq: None | Eq = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    tendsto: Tendsto | None = field(
+    tendsto: None | Tendsto = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    factorof: Factorof | None = field(
+    factorof: None | Factorof = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    approx: Approx | None = field(
+    approx: None | Approx = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    neq: Neq | None = field(
+    neq: None | Neq = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    int_value: Int | None = field(
+    int_value: None | Int = field(
         default=None,
         metadata={
             "name": "int",
             "type": "Element",
         },
     )
-    diff: Diff | None = field(
+    diff: None | Diff = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    partialdiff: Partialdiff | None = field(
+    partialdiff: None | Partialdiff = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    laplacian: Laplacian | None = field(
+    laplacian: None | Laplacian = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    curl: Curl | None = field(
+    curl: None | Curl = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    grad: Grad | None = field(
+    grad: None | Grad = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    divergence: Divergence | None = field(
+    divergence: None | Divergence = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    list_value: List | None = field(
+    list_value: None | List = field(
         default=None,
         metadata={
             "name": "list",
             "type": "Element",
         },
     )
-    set: Set | None = field(
+    set: None | Set = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    cartesianproduct: Cartesianproduct | None = field(
+    cartesianproduct: None | Cartesianproduct = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    intersect: Intersect | None = field(
+    intersect: None | Intersect = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    union: UnionType | None = field(
+    union: None | UnionType = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    setdiff: Setdiff | None = field(
+    setdiff: None | Setdiff = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    notprsubset: Notprsubset | None = field(
+    notprsubset: None | Notprsubset = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    notsubset: Notsubset | None = field(
+    notsubset: None | Notsubset = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    notin: Notin | None = field(
+    notin: None | Notin = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    in_value: In | None = field(
+    in_value: None | In = field(
         default=None,
         metadata={
             "name": "in",
             "type": "Element",
         },
     )
-    prsubset: Prsubset | None = field(
+    prsubset: None | Prsubset = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    subset: Subset | None = field(
+    subset: None | Subset = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    card: Card | None = field(
+    card: None | Card = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    sum: Sum | None = field(
+    sum: None | Sum = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    product: Product | None = field(
+    product: None | Product = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    limit: Limit | None = field(
+    limit: None | Limit = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    arctanh: Arctanh | None = field(
+    arctanh: None | Arctanh = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    arcsinh: Arcsinh | None = field(
+    arcsinh: None | Arcsinh = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    arcsech: Arcsech | None = field(
+    arcsech: None | Arcsech = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    arcsec: Arcsec | None = field(
+    arcsec: None | Arcsec = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    arccsch: Arccsch | None = field(
+    arccsch: None | Arccsch = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    arccsc: Arccsc | None = field(
+    arccsc: None | Arccsc = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    arccoth: Arccoth | None = field(
+    arccoth: None | Arccoth = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    arccot: Arccot | None = field(
+    arccot: None | Arccot = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    arccosh: Arccosh | None = field(
+    arccosh: None | Arccosh = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    arctan: Arctan | None = field(
+    arctan: None | Arctan = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    arccos: Arccos | None = field(
+    arccos: None | Arccos = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    arcsin: Arcsin | None = field(
+    arcsin: None | Arcsin = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    coth: Coth | None = field(
+    coth: None | Coth = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    csch: Csch | None = field(
+    csch: None | Csch = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    sech: Sech | None = field(
+    sech: None | Sech = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    tanh: Tanh | None = field(
+    tanh: None | Tanh = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    cosh: Cosh | None = field(
+    cosh: None | Cosh = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    sinh: Sinh | None = field(
+    sinh: None | Sinh = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    cot: Cot | None = field(
+    cot: None | Cot = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    csc: Csc | None = field(
+    csc: None | Csc = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    sec: Sec | None = field(
+    sec: None | Sec = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    tan: Tan | None = field(
+    tan: None | Tan = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    cos: Cos | None = field(
+    cos: None | Cos = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    sin: Sin | None = field(
+    sin: None | Sin = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    mode: Mode | None = field(
+    mode: None | Mode = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    median: Median | None = field(
+    median: None | Median = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    variance: Variance | None = field(
+    variance: None | Variance = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    sdev: Sdev | None = field(
+    sdev: None | Sdev = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    mean: Mean | None = field(
+    mean: None | Mean = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    matrixrow: Matrixrow | None = field(
+    matrixrow: None | Matrixrow = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    matrix: Matrix | None = field(
+    matrix: None | Matrix = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    vector: Vector | None = field(
+    vector: None | Vector = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    transpose: Transpose | None = field(
+    transpose: None | Transpose = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    determinant: Determinant | None = field(
+    determinant: None | Determinant = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    selector: Selector | None = field(
+    selector: None | Selector = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    outerproduct: Outerproduct | None = field(
+    outerproduct: None | Outerproduct = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    scalarproduct: Scalarproduct | None = field(
+    scalarproduct: None | Scalarproduct = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    vectorproduct: Vectorproduct | None = field(
+    vectorproduct: None | Vectorproduct = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    emptyset: Emptyset | None = field(
+    emptyset: None | Emptyset = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    primes: Primes | None = field(
+    primes: None | Primes = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    complexes: Complexes | None = field(
+    complexes: None | Complexes = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    naturalnumbers: Naturalnumbers | None = field(
+    naturalnumbers: None | Naturalnumbers = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    rationals: Rationals | None = field(
+    rationals: None | Rationals = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    reals: Reals | None = field(
+    reals: None | Reals = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    integers: Integers | None = field(
+    integers: None | Integers = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    infinity: Infinity | None = field(
+    infinity: None | Infinity = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    eulergamma: Eulergamma | None = field(
+    eulergamma: None | Eulergamma = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    pi: Pi | None = field(
+    pi: None | Pi = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    false: FalseType | None = field(
+    false: None | FalseType = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    true: TrueType | None = field(
+    true: None | TrueType = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    notanumber: Notanumber | None = field(
+    notanumber: None | Notanumber = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    imaginaryi: Imaginaryi | None = field(
+    imaginaryi: None | Imaginaryi = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    exponentiale: Exponentiale | None = field(
+    exponentiale: None | Exponentiale = field(
         default=None,
         metadata={
             "type": "Element",
@@ -4243,836 +4243,836 @@ class Domainofapplication:
         name = "domainofapplication"
         namespace = "http://www.w3.org/1998/Math/MathML"
 
-    apply: Apply | None = field(
+    apply: None | Apply = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    bind: Bind | None = field(
+    bind: None | Bind = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    ci: Ci | None = field(
+    ci: None | Ci = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    cn: Cn | None = field(
+    cn: None | Cn = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    csymbol: Csymbol | None = field(
+    csymbol: None | Csymbol = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    cbytes: Cbytes | None = field(
+    cbytes: None | Cbytes = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    cerror: Cerror | None = field(
+    cerror: None | Cerror = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    cs: Cs | None = field(
+    cs: None | Cs = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    share: Share | None = field(
+    share: None | Share = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    piecewise: Piecewise | None = field(
+    piecewise: None | Piecewise = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    declare: Declare | None = field(
+    declare: None | Declare = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    fn: Fn | None = field(
+    fn: None | Fn = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    reln: Reln | None = field(
+    reln: None | Reln = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    interval: Interval | None = field(
+    interval: None | Interval = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    moment: Moment | None = field(
+    moment: None | Moment = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    log: Log | None = field(
+    log: None | Log = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    ln: Ln | None = field(
+    ln: None | Ln = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    image: Image | None = field(
+    image: None | Image = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    codomain: Codomain | None = field(
+    codomain: None | Codomain = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    domain: Domain | None = field(
+    domain: None | Domain = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    ident: Ident | None = field(
+    ident: None | Ident = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    inverse: Inverse | None = field(
+    inverse: None | Inverse = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    lambda_value: Lambda | None = field(
+    lambda_value: None | Lambda = field(
         default=None,
         metadata={
             "name": "lambda",
             "type": "Element",
         },
     )
-    compose: Compose | None = field(
+    compose: None | Compose = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    quotient: Quotient | None = field(
+    quotient: None | Quotient = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    divide: Divide | None = field(
+    divide: None | Divide = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    minus: Minus | None = field(
+    minus: None | Minus = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    power: Power | None = field(
+    power: None | Power = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    rem: Rem | None = field(
+    rem: None | Rem = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    root: Root | None = field(
+    root: None | Root = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    factorial: Factorial | None = field(
+    factorial: None | Factorial = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    abs: Abs | None = field(
+    abs: None | Abs = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    conjugate: Conjugate | None = field(
+    conjugate: None | Conjugate = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    arg: Arg | None = field(
+    arg: None | Arg = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    real: Real | None = field(
+    real: None | Real = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    imaginary: Imaginary | None = field(
+    imaginary: None | Imaginary = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    floor: Floor | None = field(
+    floor: None | Floor = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    ceiling: Ceiling | None = field(
+    ceiling: None | Ceiling = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    exp: Exp | None = field(
+    exp: None | Exp = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    min: Min | None = field(
+    min: None | Min = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    max: Max | None = field(
+    max: None | Max = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    lcm: Lcm | None = field(
+    lcm: None | Lcm = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    gcd: Gcd | None = field(
+    gcd: None | Gcd = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    times: Times | None = field(
+    times: None | Times = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    plus: Plus | None = field(
+    plus: None | Plus = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    xor: Xor | None = field(
+    xor: None | Xor = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    or_value: Or | None = field(
+    or_value: None | Or = field(
         default=None,
         metadata={
             "name": "or",
             "type": "Element",
         },
     )
-    and_value: And | None = field(
+    and_value: None | And = field(
         default=None,
         metadata={
             "name": "and",
             "type": "Element",
         },
     )
-    not_value: Not | None = field(
+    not_value: None | Not = field(
         default=None,
         metadata={
             "name": "not",
             "type": "Element",
         },
     )
-    equivalent: Equivalent | None = field(
+    equivalent: None | Equivalent = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    implies: Implies | None = field(
+    implies: None | Implies = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    exists: Exists | None = field(
+    exists: None | Exists = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    forall: Forall | None = field(
+    forall: None | Forall = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    leq: Leq | None = field(
+    leq: None | Leq = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    geq: Geq | None = field(
+    geq: None | Geq = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    lt: Lt | None = field(
+    lt: None | Lt = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    gt: Gt | None = field(
+    gt: None | Gt = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    eq: Eq | None = field(
+    eq: None | Eq = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    tendsto: Tendsto | None = field(
+    tendsto: None | Tendsto = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    factorof: Factorof | None = field(
+    factorof: None | Factorof = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    approx: Approx | None = field(
+    approx: None | Approx = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    neq: Neq | None = field(
+    neq: None | Neq = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    int_value: Int | None = field(
+    int_value: None | Int = field(
         default=None,
         metadata={
             "name": "int",
             "type": "Element",
         },
     )
-    diff: Diff | None = field(
+    diff: None | Diff = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    partialdiff: Partialdiff | None = field(
+    partialdiff: None | Partialdiff = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    laplacian: Laplacian | None = field(
+    laplacian: None | Laplacian = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    curl: Curl | None = field(
+    curl: None | Curl = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    grad: Grad | None = field(
+    grad: None | Grad = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    divergence: Divergence | None = field(
+    divergence: None | Divergence = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    list_value: List | None = field(
+    list_value: None | List = field(
         default=None,
         metadata={
             "name": "list",
             "type": "Element",
         },
     )
-    set: Set | None = field(
+    set: None | Set = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    cartesianproduct: Cartesianproduct | None = field(
+    cartesianproduct: None | Cartesianproduct = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    intersect: Intersect | None = field(
+    intersect: None | Intersect = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    union: UnionType | None = field(
+    union: None | UnionType = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    setdiff: Setdiff | None = field(
+    setdiff: None | Setdiff = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    notprsubset: Notprsubset | None = field(
+    notprsubset: None | Notprsubset = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    notsubset: Notsubset | None = field(
+    notsubset: None | Notsubset = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    notin: Notin | None = field(
+    notin: None | Notin = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    in_value: In | None = field(
+    in_value: None | In = field(
         default=None,
         metadata={
             "name": "in",
             "type": "Element",
         },
     )
-    prsubset: Prsubset | None = field(
+    prsubset: None | Prsubset = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    subset: Subset | None = field(
+    subset: None | Subset = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    card: Card | None = field(
+    card: None | Card = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    sum: Sum | None = field(
+    sum: None | Sum = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    product: Product | None = field(
+    product: None | Product = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    limit: Limit | None = field(
+    limit: None | Limit = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    arctanh: Arctanh | None = field(
+    arctanh: None | Arctanh = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    arcsinh: Arcsinh | None = field(
+    arcsinh: None | Arcsinh = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    arcsech: Arcsech | None = field(
+    arcsech: None | Arcsech = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    arcsec: Arcsec | None = field(
+    arcsec: None | Arcsec = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    arccsch: Arccsch | None = field(
+    arccsch: None | Arccsch = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    arccsc: Arccsc | None = field(
+    arccsc: None | Arccsc = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    arccoth: Arccoth | None = field(
+    arccoth: None | Arccoth = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    arccot: Arccot | None = field(
+    arccot: None | Arccot = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    arccosh: Arccosh | None = field(
+    arccosh: None | Arccosh = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    arctan: Arctan | None = field(
+    arctan: None | Arctan = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    arccos: Arccos | None = field(
+    arccos: None | Arccos = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    arcsin: Arcsin | None = field(
+    arcsin: None | Arcsin = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    coth: Coth | None = field(
+    coth: None | Coth = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    csch: Csch | None = field(
+    csch: None | Csch = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    sech: Sech | None = field(
+    sech: None | Sech = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    tanh: Tanh | None = field(
+    tanh: None | Tanh = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    cosh: Cosh | None = field(
+    cosh: None | Cosh = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    sinh: Sinh | None = field(
+    sinh: None | Sinh = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    cot: Cot | None = field(
+    cot: None | Cot = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    csc: Csc | None = field(
+    csc: None | Csc = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    sec: Sec | None = field(
+    sec: None | Sec = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    tan: Tan | None = field(
+    tan: None | Tan = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    cos: Cos | None = field(
+    cos: None | Cos = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    sin: Sin | None = field(
+    sin: None | Sin = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    mode: Mode | None = field(
+    mode: None | Mode = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    median: Median | None = field(
+    median: None | Median = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    variance: Variance | None = field(
+    variance: None | Variance = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    sdev: Sdev | None = field(
+    sdev: None | Sdev = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    mean: Mean | None = field(
+    mean: None | Mean = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    matrixrow: Matrixrow | None = field(
+    matrixrow: None | Matrixrow = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    matrix: Matrix | None = field(
+    matrix: None | Matrix = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    vector: Vector | None = field(
+    vector: None | Vector = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    transpose: Transpose | None = field(
+    transpose: None | Transpose = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    determinant: Determinant | None = field(
+    determinant: None | Determinant = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    selector: Selector | None = field(
+    selector: None | Selector = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    outerproduct: Outerproduct | None = field(
+    outerproduct: None | Outerproduct = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    scalarproduct: Scalarproduct | None = field(
+    scalarproduct: None | Scalarproduct = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    vectorproduct: Vectorproduct | None = field(
+    vectorproduct: None | Vectorproduct = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    emptyset: Emptyset | None = field(
+    emptyset: None | Emptyset = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    primes: Primes | None = field(
+    primes: None | Primes = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    complexes: Complexes | None = field(
+    complexes: None | Complexes = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    naturalnumbers: Naturalnumbers | None = field(
+    naturalnumbers: None | Naturalnumbers = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    rationals: Rationals | None = field(
+    rationals: None | Rationals = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    reals: Reals | None = field(
+    reals: None | Reals = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    integers: Integers | None = field(
+    integers: None | Integers = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    infinity: Infinity | None = field(
+    infinity: None | Infinity = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    eulergamma: Eulergamma | None = field(
+    eulergamma: None | Eulergamma = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    pi: Pi | None = field(
+    pi: None | Pi = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    false: FalseType | None = field(
+    false: None | FalseType = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    true: TrueType | None = field(
+    true: None | TrueType = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    notanumber: Notanumber | None = field(
+    notanumber: None | Notanumber = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    imaginaryi: Imaginaryi | None = field(
+    imaginaryi: None | Imaginaryi = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    exponentiale: Exponentiale | None = field(
+    exponentiale: None | Exponentiale = field(
         default=None,
         metadata={
             "type": "Element",
@@ -5086,836 +5086,836 @@ class Lowlimit:
         name = "lowlimit"
         namespace = "http://www.w3.org/1998/Math/MathML"
 
-    apply: Apply | None = field(
+    apply: None | Apply = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    bind: Bind | None = field(
+    bind: None | Bind = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    ci: Ci | None = field(
+    ci: None | Ci = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    cn: Cn | None = field(
+    cn: None | Cn = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    csymbol: Csymbol | None = field(
+    csymbol: None | Csymbol = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    cbytes: Cbytes | None = field(
+    cbytes: None | Cbytes = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    cerror: Cerror | None = field(
+    cerror: None | Cerror = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    cs: Cs | None = field(
+    cs: None | Cs = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    share: Share | None = field(
+    share: None | Share = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    piecewise: Piecewise | None = field(
+    piecewise: None | Piecewise = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    declare: Declare | None = field(
+    declare: None | Declare = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    fn: Fn | None = field(
+    fn: None | Fn = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    reln: Reln | None = field(
+    reln: None | Reln = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    interval: Interval | None = field(
+    interval: None | Interval = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    moment: Moment | None = field(
+    moment: None | Moment = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    log: Log | None = field(
+    log: None | Log = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    ln: Ln | None = field(
+    ln: None | Ln = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    image: Image | None = field(
+    image: None | Image = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    codomain: Codomain | None = field(
+    codomain: None | Codomain = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    domain: Domain | None = field(
+    domain: None | Domain = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    ident: Ident | None = field(
+    ident: None | Ident = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    inverse: Inverse | None = field(
+    inverse: None | Inverse = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    lambda_value: Lambda | None = field(
+    lambda_value: None | Lambda = field(
         default=None,
         metadata={
             "name": "lambda",
             "type": "Element",
         },
     )
-    compose: Compose | None = field(
+    compose: None | Compose = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    quotient: Quotient | None = field(
+    quotient: None | Quotient = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    divide: Divide | None = field(
+    divide: None | Divide = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    minus: Minus | None = field(
+    minus: None | Minus = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    power: Power | None = field(
+    power: None | Power = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    rem: Rem | None = field(
+    rem: None | Rem = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    root: Root | None = field(
+    root: None | Root = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    factorial: Factorial | None = field(
+    factorial: None | Factorial = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    abs: Abs | None = field(
+    abs: None | Abs = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    conjugate: Conjugate | None = field(
+    conjugate: None | Conjugate = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    arg: Arg | None = field(
+    arg: None | Arg = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    real: Real | None = field(
+    real: None | Real = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    imaginary: Imaginary | None = field(
+    imaginary: None | Imaginary = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    floor: Floor | None = field(
+    floor: None | Floor = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    ceiling: Ceiling | None = field(
+    ceiling: None | Ceiling = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    exp: Exp | None = field(
+    exp: None | Exp = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    min: Min | None = field(
+    min: None | Min = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    max: Max | None = field(
+    max: None | Max = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    lcm: Lcm | None = field(
+    lcm: None | Lcm = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    gcd: Gcd | None = field(
+    gcd: None | Gcd = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    times: Times | None = field(
+    times: None | Times = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    plus: Plus | None = field(
+    plus: None | Plus = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    xor: Xor | None = field(
+    xor: None | Xor = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    or_value: Or | None = field(
+    or_value: None | Or = field(
         default=None,
         metadata={
             "name": "or",
             "type": "Element",
         },
     )
-    and_value: And | None = field(
+    and_value: None | And = field(
         default=None,
         metadata={
             "name": "and",
             "type": "Element",
         },
     )
-    not_value: Not | None = field(
+    not_value: None | Not = field(
         default=None,
         metadata={
             "name": "not",
             "type": "Element",
         },
     )
-    equivalent: Equivalent | None = field(
+    equivalent: None | Equivalent = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    implies: Implies | None = field(
+    implies: None | Implies = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    exists: Exists | None = field(
+    exists: None | Exists = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    forall: Forall | None = field(
+    forall: None | Forall = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    leq: Leq | None = field(
+    leq: None | Leq = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    geq: Geq | None = field(
+    geq: None | Geq = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    lt: Lt | None = field(
+    lt: None | Lt = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    gt: Gt | None = field(
+    gt: None | Gt = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    eq: Eq | None = field(
+    eq: None | Eq = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    tendsto: Tendsto | None = field(
+    tendsto: None | Tendsto = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    factorof: Factorof | None = field(
+    factorof: None | Factorof = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    approx: Approx | None = field(
+    approx: None | Approx = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    neq: Neq | None = field(
+    neq: None | Neq = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    int_value: Int | None = field(
+    int_value: None | Int = field(
         default=None,
         metadata={
             "name": "int",
             "type": "Element",
         },
     )
-    diff: Diff | None = field(
+    diff: None | Diff = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    partialdiff: Partialdiff | None = field(
+    partialdiff: None | Partialdiff = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    laplacian: Laplacian | None = field(
+    laplacian: None | Laplacian = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    curl: Curl | None = field(
+    curl: None | Curl = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    grad: Grad | None = field(
+    grad: None | Grad = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    divergence: Divergence | None = field(
+    divergence: None | Divergence = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    list_value: List | None = field(
+    list_value: None | List = field(
         default=None,
         metadata={
             "name": "list",
             "type": "Element",
         },
     )
-    set: Set | None = field(
+    set: None | Set = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    cartesianproduct: Cartesianproduct | None = field(
+    cartesianproduct: None | Cartesianproduct = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    intersect: Intersect | None = field(
+    intersect: None | Intersect = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    union: UnionType | None = field(
+    union: None | UnionType = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    setdiff: Setdiff | None = field(
+    setdiff: None | Setdiff = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    notprsubset: Notprsubset | None = field(
+    notprsubset: None | Notprsubset = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    notsubset: Notsubset | None = field(
+    notsubset: None | Notsubset = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    notin: Notin | None = field(
+    notin: None | Notin = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    in_value: In | None = field(
+    in_value: None | In = field(
         default=None,
         metadata={
             "name": "in",
             "type": "Element",
         },
     )
-    prsubset: Prsubset | None = field(
+    prsubset: None | Prsubset = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    subset: Subset | None = field(
+    subset: None | Subset = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    card: Card | None = field(
+    card: None | Card = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    sum: Sum | None = field(
+    sum: None | Sum = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    product: Product | None = field(
+    product: None | Product = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    limit: Limit | None = field(
+    limit: None | Limit = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    arctanh: Arctanh | None = field(
+    arctanh: None | Arctanh = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    arcsinh: Arcsinh | None = field(
+    arcsinh: None | Arcsinh = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    arcsech: Arcsech | None = field(
+    arcsech: None | Arcsech = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    arcsec: Arcsec | None = field(
+    arcsec: None | Arcsec = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    arccsch: Arccsch | None = field(
+    arccsch: None | Arccsch = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    arccsc: Arccsc | None = field(
+    arccsc: None | Arccsc = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    arccoth: Arccoth | None = field(
+    arccoth: None | Arccoth = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    arccot: Arccot | None = field(
+    arccot: None | Arccot = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    arccosh: Arccosh | None = field(
+    arccosh: None | Arccosh = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    arctan: Arctan | None = field(
+    arctan: None | Arctan = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    arccos: Arccos | None = field(
+    arccos: None | Arccos = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    arcsin: Arcsin | None = field(
+    arcsin: None | Arcsin = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    coth: Coth | None = field(
+    coth: None | Coth = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    csch: Csch | None = field(
+    csch: None | Csch = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    sech: Sech | None = field(
+    sech: None | Sech = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    tanh: Tanh | None = field(
+    tanh: None | Tanh = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    cosh: Cosh | None = field(
+    cosh: None | Cosh = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    sinh: Sinh | None = field(
+    sinh: None | Sinh = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    cot: Cot | None = field(
+    cot: None | Cot = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    csc: Csc | None = field(
+    csc: None | Csc = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    sec: Sec | None = field(
+    sec: None | Sec = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    tan: Tan | None = field(
+    tan: None | Tan = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    cos: Cos | None = field(
+    cos: None | Cos = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    sin: Sin | None = field(
+    sin: None | Sin = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    mode: Mode | None = field(
+    mode: None | Mode = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    median: Median | None = field(
+    median: None | Median = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    variance: Variance | None = field(
+    variance: None | Variance = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    sdev: Sdev | None = field(
+    sdev: None | Sdev = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    mean: Mean | None = field(
+    mean: None | Mean = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    matrixrow: Matrixrow | None = field(
+    matrixrow: None | Matrixrow = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    matrix: Matrix | None = field(
+    matrix: None | Matrix = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    vector: Vector | None = field(
+    vector: None | Vector = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    transpose: Transpose | None = field(
+    transpose: None | Transpose = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    determinant: Determinant | None = field(
+    determinant: None | Determinant = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    selector: Selector | None = field(
+    selector: None | Selector = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    outerproduct: Outerproduct | None = field(
+    outerproduct: None | Outerproduct = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    scalarproduct: Scalarproduct | None = field(
+    scalarproduct: None | Scalarproduct = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    vectorproduct: Vectorproduct | None = field(
+    vectorproduct: None | Vectorproduct = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    emptyset: Emptyset | None = field(
+    emptyset: None | Emptyset = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    primes: Primes | None = field(
+    primes: None | Primes = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    complexes: Complexes | None = field(
+    complexes: None | Complexes = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    naturalnumbers: Naturalnumbers | None = field(
+    naturalnumbers: None | Naturalnumbers = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    rationals: Rationals | None = field(
+    rationals: None | Rationals = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    reals: Reals | None = field(
+    reals: None | Reals = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    integers: Integers | None = field(
+    integers: None | Integers = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    infinity: Infinity | None = field(
+    infinity: None | Infinity = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    eulergamma: Eulergamma | None = field(
+    eulergamma: None | Eulergamma = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    pi: Pi | None = field(
+    pi: None | Pi = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    false: FalseType | None = field(
+    false: None | FalseType = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    true: TrueType | None = field(
+    true: None | TrueType = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    notanumber: Notanumber | None = field(
+    notanumber: None | Notanumber = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    imaginaryi: Imaginaryi | None = field(
+    imaginaryi: None | Imaginaryi = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    exponentiale: Exponentiale | None = field(
+    exponentiale: None | Exponentiale = field(
         default=None,
         metadata={
             "type": "Element",
@@ -6772,836 +6772,836 @@ class Uplimit:
         name = "uplimit"
         namespace = "http://www.w3.org/1998/Math/MathML"
 
-    apply: Apply | None = field(
+    apply: None | Apply = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    bind: Bind | None = field(
+    bind: None | Bind = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    ci: Ci | None = field(
+    ci: None | Ci = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    cn: Cn | None = field(
+    cn: None | Cn = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    csymbol: Csymbol | None = field(
+    csymbol: None | Csymbol = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    cbytes: Cbytes | None = field(
+    cbytes: None | Cbytes = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    cerror: Cerror | None = field(
+    cerror: None | Cerror = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    cs: Cs | None = field(
+    cs: None | Cs = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    share: Share | None = field(
+    share: None | Share = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    piecewise: Piecewise | None = field(
+    piecewise: None | Piecewise = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    declare: Declare | None = field(
+    declare: None | Declare = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    fn: Fn | None = field(
+    fn: None | Fn = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    reln: Reln | None = field(
+    reln: None | Reln = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    interval: Interval | None = field(
+    interval: None | Interval = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    moment: Moment | None = field(
+    moment: None | Moment = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    log: Log | None = field(
+    log: None | Log = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    ln: Ln | None = field(
+    ln: None | Ln = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    image: Image | None = field(
+    image: None | Image = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    codomain: Codomain | None = field(
+    codomain: None | Codomain = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    domain: Domain | None = field(
+    domain: None | Domain = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    ident: Ident | None = field(
+    ident: None | Ident = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    inverse: Inverse | None = field(
+    inverse: None | Inverse = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    lambda_value: Lambda | None = field(
+    lambda_value: None | Lambda = field(
         default=None,
         metadata={
             "name": "lambda",
             "type": "Element",
         },
     )
-    compose: Compose | None = field(
+    compose: None | Compose = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    quotient: Quotient | None = field(
+    quotient: None | Quotient = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    divide: Divide | None = field(
+    divide: None | Divide = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    minus: Minus | None = field(
+    minus: None | Minus = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    power: Power | None = field(
+    power: None | Power = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    rem: Rem | None = field(
+    rem: None | Rem = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    root: Root | None = field(
+    root: None | Root = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    factorial: Factorial | None = field(
+    factorial: None | Factorial = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    abs: Abs | None = field(
+    abs: None | Abs = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    conjugate: Conjugate | None = field(
+    conjugate: None | Conjugate = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    arg: Arg | None = field(
+    arg: None | Arg = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    real: Real | None = field(
+    real: None | Real = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    imaginary: Imaginary | None = field(
+    imaginary: None | Imaginary = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    floor: Floor | None = field(
+    floor: None | Floor = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    ceiling: Ceiling | None = field(
+    ceiling: None | Ceiling = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    exp: Exp | None = field(
+    exp: None | Exp = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    min: Min | None = field(
+    min: None | Min = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    max: Max | None = field(
+    max: None | Max = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    lcm: Lcm | None = field(
+    lcm: None | Lcm = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    gcd: Gcd | None = field(
+    gcd: None | Gcd = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    times: Times | None = field(
+    times: None | Times = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    plus: Plus | None = field(
+    plus: None | Plus = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    xor: Xor | None = field(
+    xor: None | Xor = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    or_value: Or | None = field(
+    or_value: None | Or = field(
         default=None,
         metadata={
             "name": "or",
             "type": "Element",
         },
     )
-    and_value: And | None = field(
+    and_value: None | And = field(
         default=None,
         metadata={
             "name": "and",
             "type": "Element",
         },
     )
-    not_value: Not | None = field(
+    not_value: None | Not = field(
         default=None,
         metadata={
             "name": "not",
             "type": "Element",
         },
     )
-    equivalent: Equivalent | None = field(
+    equivalent: None | Equivalent = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    implies: Implies | None = field(
+    implies: None | Implies = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    exists: Exists | None = field(
+    exists: None | Exists = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    forall: Forall | None = field(
+    forall: None | Forall = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    leq: Leq | None = field(
+    leq: None | Leq = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    geq: Geq | None = field(
+    geq: None | Geq = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    lt: Lt | None = field(
+    lt: None | Lt = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    gt: Gt | None = field(
+    gt: None | Gt = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    eq: Eq | None = field(
+    eq: None | Eq = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    tendsto: Tendsto | None = field(
+    tendsto: None | Tendsto = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    factorof: Factorof | None = field(
+    factorof: None | Factorof = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    approx: Approx | None = field(
+    approx: None | Approx = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    neq: Neq | None = field(
+    neq: None | Neq = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    int_value: Int | None = field(
+    int_value: None | Int = field(
         default=None,
         metadata={
             "name": "int",
             "type": "Element",
         },
     )
-    diff: Diff | None = field(
+    diff: None | Diff = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    partialdiff: Partialdiff | None = field(
+    partialdiff: None | Partialdiff = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    laplacian: Laplacian | None = field(
+    laplacian: None | Laplacian = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    curl: Curl | None = field(
+    curl: None | Curl = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    grad: Grad | None = field(
+    grad: None | Grad = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    divergence: Divergence | None = field(
+    divergence: None | Divergence = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    list_value: List | None = field(
+    list_value: None | List = field(
         default=None,
         metadata={
             "name": "list",
             "type": "Element",
         },
     )
-    set: Set | None = field(
+    set: None | Set = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    cartesianproduct: Cartesianproduct | None = field(
+    cartesianproduct: None | Cartesianproduct = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    intersect: Intersect | None = field(
+    intersect: None | Intersect = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    union: UnionType | None = field(
+    union: None | UnionType = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    setdiff: Setdiff | None = field(
+    setdiff: None | Setdiff = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    notprsubset: Notprsubset | None = field(
+    notprsubset: None | Notprsubset = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    notsubset: Notsubset | None = field(
+    notsubset: None | Notsubset = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    notin: Notin | None = field(
+    notin: None | Notin = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    in_value: In | None = field(
+    in_value: None | In = field(
         default=None,
         metadata={
             "name": "in",
             "type": "Element",
         },
     )
-    prsubset: Prsubset | None = field(
+    prsubset: None | Prsubset = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    subset: Subset | None = field(
+    subset: None | Subset = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    card: Card | None = field(
+    card: None | Card = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    sum: Sum | None = field(
+    sum: None | Sum = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    product: Product | None = field(
+    product: None | Product = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    limit: Limit | None = field(
+    limit: None | Limit = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    arctanh: Arctanh | None = field(
+    arctanh: None | Arctanh = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    arcsinh: Arcsinh | None = field(
+    arcsinh: None | Arcsinh = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    arcsech: Arcsech | None = field(
+    arcsech: None | Arcsech = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    arcsec: Arcsec | None = field(
+    arcsec: None | Arcsec = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    arccsch: Arccsch | None = field(
+    arccsch: None | Arccsch = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    arccsc: Arccsc | None = field(
+    arccsc: None | Arccsc = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    arccoth: Arccoth | None = field(
+    arccoth: None | Arccoth = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    arccot: Arccot | None = field(
+    arccot: None | Arccot = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    arccosh: Arccosh | None = field(
+    arccosh: None | Arccosh = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    arctan: Arctan | None = field(
+    arctan: None | Arctan = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    arccos: Arccos | None = field(
+    arccos: None | Arccos = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    arcsin: Arcsin | None = field(
+    arcsin: None | Arcsin = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    coth: Coth | None = field(
+    coth: None | Coth = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    csch: Csch | None = field(
+    csch: None | Csch = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    sech: Sech | None = field(
+    sech: None | Sech = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    tanh: Tanh | None = field(
+    tanh: None | Tanh = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    cosh: Cosh | None = field(
+    cosh: None | Cosh = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    sinh: Sinh | None = field(
+    sinh: None | Sinh = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    cot: Cot | None = field(
+    cot: None | Cot = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    csc: Csc | None = field(
+    csc: None | Csc = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    sec: Sec | None = field(
+    sec: None | Sec = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    tan: Tan | None = field(
+    tan: None | Tan = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    cos: Cos | None = field(
+    cos: None | Cos = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    sin: Sin | None = field(
+    sin: None | Sin = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    mode: Mode | None = field(
+    mode: None | Mode = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    median: Median | None = field(
+    median: None | Median = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    variance: Variance | None = field(
+    variance: None | Variance = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    sdev: Sdev | None = field(
+    sdev: None | Sdev = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    mean: Mean | None = field(
+    mean: None | Mean = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    matrixrow: Matrixrow | None = field(
+    matrixrow: None | Matrixrow = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    matrix: Matrix | None = field(
+    matrix: None | Matrix = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    vector: Vector | None = field(
+    vector: None | Vector = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    transpose: Transpose | None = field(
+    transpose: None | Transpose = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    determinant: Determinant | None = field(
+    determinant: None | Determinant = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    selector: Selector | None = field(
+    selector: None | Selector = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    outerproduct: Outerproduct | None = field(
+    outerproduct: None | Outerproduct = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    scalarproduct: Scalarproduct | None = field(
+    scalarproduct: None | Scalarproduct = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    vectorproduct: Vectorproduct | None = field(
+    vectorproduct: None | Vectorproduct = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    emptyset: Emptyset | None = field(
+    emptyset: None | Emptyset = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    primes: Primes | None = field(
+    primes: None | Primes = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    complexes: Complexes | None = field(
+    complexes: None | Complexes = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    naturalnumbers: Naturalnumbers | None = field(
+    naturalnumbers: None | Naturalnumbers = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    rationals: Rationals | None = field(
+    rationals: None | Rationals = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    reals: Reals | None = field(
+    reals: None | Reals = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    integers: Integers | None = field(
+    integers: None | Integers = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    infinity: Infinity | None = field(
+    infinity: None | Infinity = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    eulergamma: Eulergamma | None = field(
+    eulergamma: None | Eulergamma = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    pi: Pi | None = field(
+    pi: None | Pi = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    false: FalseType | None = field(
+    false: None | FalseType = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    true: TrueType | None = field(
+    true: None | TrueType = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    notanumber: Notanumber | None = field(
+    notanumber: None | Notanumber = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    imaginaryi: Imaginaryi | None = field(
+    imaginaryi: None | Imaginaryi = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    exponentiale: Exponentiale | None = field(
+    exponentiale: None | Exponentiale = field(
         default=None,
         metadata={
             "type": "Element",
@@ -7615,836 +7615,836 @@ class Fn:
         name = "fn"
         namespace = "http://www.w3.org/1998/Math/MathML"
 
-    apply: Apply | None = field(
+    apply: None | Apply = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    bind: Bind | None = field(
+    bind: None | Bind = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    ci: Ci | None = field(
+    ci: None | Ci = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    cn: Cn | None = field(
+    cn: None | Cn = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    csymbol: Csymbol | None = field(
+    csymbol: None | Csymbol = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    cbytes: Cbytes | None = field(
+    cbytes: None | Cbytes = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    cerror: Cerror | None = field(
+    cerror: None | Cerror = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    cs: Cs | None = field(
+    cs: None | Cs = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    share: Share | None = field(
+    share: None | Share = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    piecewise: Piecewise | None = field(
+    piecewise: None | Piecewise = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    declare: Declare | None = field(
+    declare: None | Declare = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    fn: Fn | None = field(
+    fn: None | Fn = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    reln: Reln | None = field(
+    reln: None | Reln = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    interval: Interval | None = field(
+    interval: None | Interval = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    moment: Moment | None = field(
+    moment: None | Moment = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    log: Log | None = field(
+    log: None | Log = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    ln: Ln | None = field(
+    ln: None | Ln = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    image: Image | None = field(
+    image: None | Image = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    codomain: Codomain | None = field(
+    codomain: None | Codomain = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    domain: Domain | None = field(
+    domain: None | Domain = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    ident: Ident | None = field(
+    ident: None | Ident = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    inverse: Inverse | None = field(
+    inverse: None | Inverse = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    lambda_value: Lambda | None = field(
+    lambda_value: None | Lambda = field(
         default=None,
         metadata={
             "name": "lambda",
             "type": "Element",
         },
     )
-    compose: Compose | None = field(
+    compose: None | Compose = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    quotient: Quotient | None = field(
+    quotient: None | Quotient = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    divide: Divide | None = field(
+    divide: None | Divide = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    minus: Minus | None = field(
+    minus: None | Minus = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    power: Power | None = field(
+    power: None | Power = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    rem: Rem | None = field(
+    rem: None | Rem = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    root: Root | None = field(
+    root: None | Root = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    factorial: Factorial | None = field(
+    factorial: None | Factorial = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    abs: Abs | None = field(
+    abs: None | Abs = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    conjugate: Conjugate | None = field(
+    conjugate: None | Conjugate = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    arg: Arg | None = field(
+    arg: None | Arg = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    real: Real | None = field(
+    real: None | Real = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    imaginary: Imaginary | None = field(
+    imaginary: None | Imaginary = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    floor: Floor | None = field(
+    floor: None | Floor = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    ceiling: Ceiling | None = field(
+    ceiling: None | Ceiling = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    exp: Exp | None = field(
+    exp: None | Exp = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    min: Min | None = field(
+    min: None | Min = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    max: Max | None = field(
+    max: None | Max = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    lcm: Lcm | None = field(
+    lcm: None | Lcm = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    gcd: Gcd | None = field(
+    gcd: None | Gcd = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    times: Times | None = field(
+    times: None | Times = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    plus: Plus | None = field(
+    plus: None | Plus = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    xor: Xor | None = field(
+    xor: None | Xor = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    or_value: Or | None = field(
+    or_value: None | Or = field(
         default=None,
         metadata={
             "name": "or",
             "type": "Element",
         },
     )
-    and_value: And | None = field(
+    and_value: None | And = field(
         default=None,
         metadata={
             "name": "and",
             "type": "Element",
         },
     )
-    not_value: Not | None = field(
+    not_value: None | Not = field(
         default=None,
         metadata={
             "name": "not",
             "type": "Element",
         },
     )
-    equivalent: Equivalent | None = field(
+    equivalent: None | Equivalent = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    implies: Implies | None = field(
+    implies: None | Implies = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    exists: Exists | None = field(
+    exists: None | Exists = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    forall: Forall | None = field(
+    forall: None | Forall = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    leq: Leq | None = field(
+    leq: None | Leq = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    geq: Geq | None = field(
+    geq: None | Geq = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    lt: Lt | None = field(
+    lt: None | Lt = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    gt: Gt | None = field(
+    gt: None | Gt = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    eq: Eq | None = field(
+    eq: None | Eq = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    tendsto: Tendsto | None = field(
+    tendsto: None | Tendsto = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    factorof: Factorof | None = field(
+    factorof: None | Factorof = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    approx: Approx | None = field(
+    approx: None | Approx = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    neq: Neq | None = field(
+    neq: None | Neq = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    int_value: Int | None = field(
+    int_value: None | Int = field(
         default=None,
         metadata={
             "name": "int",
             "type": "Element",
         },
     )
-    diff: Diff | None = field(
+    diff: None | Diff = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    partialdiff: Partialdiff | None = field(
+    partialdiff: None | Partialdiff = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    laplacian: Laplacian | None = field(
+    laplacian: None | Laplacian = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    curl: Curl | None = field(
+    curl: None | Curl = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    grad: Grad | None = field(
+    grad: None | Grad = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    divergence: Divergence | None = field(
+    divergence: None | Divergence = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    list_value: List | None = field(
+    list_value: None | List = field(
         default=None,
         metadata={
             "name": "list",
             "type": "Element",
         },
     )
-    set: Set | None = field(
+    set: None | Set = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    cartesianproduct: Cartesianproduct | None = field(
+    cartesianproduct: None | Cartesianproduct = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    intersect: Intersect | None = field(
+    intersect: None | Intersect = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    union: UnionType | None = field(
+    union: None | UnionType = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    setdiff: Setdiff | None = field(
+    setdiff: None | Setdiff = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    notprsubset: Notprsubset | None = field(
+    notprsubset: None | Notprsubset = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    notsubset: Notsubset | None = field(
+    notsubset: None | Notsubset = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    notin: Notin | None = field(
+    notin: None | Notin = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    in_value: In | None = field(
+    in_value: None | In = field(
         default=None,
         metadata={
             "name": "in",
             "type": "Element",
         },
     )
-    prsubset: Prsubset | None = field(
+    prsubset: None | Prsubset = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    subset: Subset | None = field(
+    subset: None | Subset = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    card: Card | None = field(
+    card: None | Card = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    sum: Sum | None = field(
+    sum: None | Sum = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    product: Product | None = field(
+    product: None | Product = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    limit: Limit | None = field(
+    limit: None | Limit = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    arctanh: Arctanh | None = field(
+    arctanh: None | Arctanh = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    arcsinh: Arcsinh | None = field(
+    arcsinh: None | Arcsinh = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    arcsech: Arcsech | None = field(
+    arcsech: None | Arcsech = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    arcsec: Arcsec | None = field(
+    arcsec: None | Arcsec = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    arccsch: Arccsch | None = field(
+    arccsch: None | Arccsch = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    arccsc: Arccsc | None = field(
+    arccsc: None | Arccsc = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    arccoth: Arccoth | None = field(
+    arccoth: None | Arccoth = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    arccot: Arccot | None = field(
+    arccot: None | Arccot = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    arccosh: Arccosh | None = field(
+    arccosh: None | Arccosh = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    arctan: Arctan | None = field(
+    arctan: None | Arctan = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    arccos: Arccos | None = field(
+    arccos: None | Arccos = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    arcsin: Arcsin | None = field(
+    arcsin: None | Arcsin = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    coth: Coth | None = field(
+    coth: None | Coth = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    csch: Csch | None = field(
+    csch: None | Csch = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    sech: Sech | None = field(
+    sech: None | Sech = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    tanh: Tanh | None = field(
+    tanh: None | Tanh = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    cosh: Cosh | None = field(
+    cosh: None | Cosh = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    sinh: Sinh | None = field(
+    sinh: None | Sinh = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    cot: Cot | None = field(
+    cot: None | Cot = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    csc: Csc | None = field(
+    csc: None | Csc = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    sec: Sec | None = field(
+    sec: None | Sec = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    tan: Tan | None = field(
+    tan: None | Tan = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    cos: Cos | None = field(
+    cos: None | Cos = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    sin: Sin | None = field(
+    sin: None | Sin = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    mode: Mode | None = field(
+    mode: None | Mode = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    median: Median | None = field(
+    median: None | Median = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    variance: Variance | None = field(
+    variance: None | Variance = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    sdev: Sdev | None = field(
+    sdev: None | Sdev = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    mean: Mean | None = field(
+    mean: None | Mean = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    matrixrow: Matrixrow | None = field(
+    matrixrow: None | Matrixrow = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    matrix: Matrix | None = field(
+    matrix: None | Matrix = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    vector: Vector | None = field(
+    vector: None | Vector = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    transpose: Transpose | None = field(
+    transpose: None | Transpose = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    determinant: Determinant | None = field(
+    determinant: None | Determinant = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    selector: Selector | None = field(
+    selector: None | Selector = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    outerproduct: Outerproduct | None = field(
+    outerproduct: None | Outerproduct = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    scalarproduct: Scalarproduct | None = field(
+    scalarproduct: None | Scalarproduct = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    vectorproduct: Vectorproduct | None = field(
+    vectorproduct: None | Vectorproduct = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    emptyset: Emptyset | None = field(
+    emptyset: None | Emptyset = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    primes: Primes | None = field(
+    primes: None | Primes = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    complexes: Complexes | None = field(
+    complexes: None | Complexes = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    naturalnumbers: Naturalnumbers | None = field(
+    naturalnumbers: None | Naturalnumbers = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    rationals: Rationals | None = field(
+    rationals: None | Rationals = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    reals: Reals | None = field(
+    reals: None | Reals = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    integers: Integers | None = field(
+    integers: None | Integers = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    infinity: Infinity | None = field(
+    infinity: None | Infinity = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    eulergamma: Eulergamma | None = field(
+    eulergamma: None | Eulergamma = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    pi: Pi | None = field(
+    pi: None | Pi = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    false: FalseType | None = field(
+    false: None | FalseType = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    true: TrueType | None = field(
+    true: None | TrueType = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    notanumber: Notanumber | None = field(
+    notanumber: None | Notanumber = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    imaginaryi: Imaginaryi | None = field(
+    imaginaryi: None | Imaginaryi = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    exponentiale: Exponentiale | None = field(
+    exponentiale: None | Exponentiale = field(
         default=None,
         metadata={
             "type": "Element",
@@ -9293,38 +9293,38 @@ class Declare:
             "type": "Element",
         },
     )
-    type_value: str | None = field(
+    type_value: None | str = field(
         default=None,
         metadata={
             "name": "type",
             "type": "Attribute",
         },
     )
-    scope: str | None = field(
+    scope: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    nargs: int | None = field(
+    nargs: None | int = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    occurrence: DeclareOccurrence | None = field(
+    occurrence: None | DeclareOccurrence = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    encoding: str | None = field(
+    encoding: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    definition_url: str | None = field(
+    definition_url: None | str = field(
         default=None,
         metadata={
             "name": "definitionURL",
@@ -10204,13 +10204,13 @@ class Set:
             "type": "Element",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    xref: object | None = field(
+    xref: None | object = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -10224,19 +10224,19 @@ class Set:
             "tokens": True,
         },
     )
-    style: str | None = field(
+    style: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    href: str | None = field(
+    href: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    other: object | None = field(
+    other: None | object = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -10249,20 +10249,20 @@ class Set:
             "namespace": "##other",
         },
     )
-    encoding: str | None = field(
+    encoding: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    definition_url: str | None = field(
+    definition_url: None | str = field(
         default=None,
         metadata={
             "name": "definitionURL",
             "type": "Attribute",
         },
     )
-    type_value: object | None = field(
+    type_value: None | object = field(
         default=None,
         metadata={
             "name": "type",
@@ -11142,13 +11142,13 @@ class List:
             "type": "Element",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    xref: object | None = field(
+    xref: None | object = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -11162,19 +11162,19 @@ class List:
             "tokens": True,
         },
     )
-    style: str | None = field(
+    style: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    href: str | None = field(
+    href: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    other: object | None = field(
+    other: None | object = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -11187,20 +11187,20 @@ class List:
             "namespace": "##other",
         },
     )
-    encoding: str | None = field(
+    encoding: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    definition_url: str | None = field(
+    definition_url: None | str = field(
         default=None,
         metadata={
             "name": "definitionURL",
             "type": "Attribute",
         },
     )
-    order: ListOrder | None = field(
+    order: None | ListOrder = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -12396,161 +12396,161 @@ class ImpliedMrow:
 
     @dataclass
     class Semantics:
-        apply: Apply | None = field(
+        apply: None | Apply = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        bind: Bind | None = field(
+        bind: None | Bind = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        ci: Ci | None = field(
+        ci: None | Ci = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        cn: Cn | None = field(
+        cn: None | Cn = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        csymbol: Csymbol | None = field(
+        csymbol: None | Csymbol = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        cbytes: Cbytes | None = field(
+        cbytes: None | Cbytes = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        cerror: Cerror | None = field(
+        cerror: None | Cerror = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        cs: Cs | None = field(
+        cs: None | Cs = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        share: Share | None = field(
+        share: None | Share = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        piecewise: Piecewise | None = field(
+        piecewise: None | Piecewise = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        declare: Declare | None = field(
+        declare: None | Declare = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        fn: Fn | None = field(
+        fn: None | Fn = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        reln: Reln | None = field(
+        reln: None | Reln = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        interval: Interval | None = field(
+        interval: None | Interval = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        moment: Moment | None = field(
+        moment: None | Moment = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        log: Log | None = field(
+        log: None | Log = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        ln: Ln | None = field(
+        ln: None | Ln = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        image: Image | None = field(
+        image: None | Image = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        codomain: Codomain | None = field(
+        codomain: None | Codomain = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        domain: Domain | None = field(
+        domain: None | Domain = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        ident: Ident | None = field(
+        ident: None | Ident = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        inverse: Inverse | None = field(
+        inverse: None | Inverse = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        lambda_value: Lambda | None = field(
+        lambda_value: None | Lambda = field(
             default=None,
             metadata={
                 "name": "lambda",
@@ -12558,168 +12558,168 @@ class ImpliedMrow:
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        compose: Compose | None = field(
+        compose: None | Compose = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        quotient: Quotient | None = field(
+        quotient: None | Quotient = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        divide: Divide | None = field(
+        divide: None | Divide = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        minus: Minus | None = field(
+        minus: None | Minus = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        power: Power | None = field(
+        power: None | Power = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        rem: Rem | None = field(
+        rem: None | Rem = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        root: Root | None = field(
+        root: None | Root = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        factorial: Factorial | None = field(
+        factorial: None | Factorial = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        abs: Abs | None = field(
+        abs: None | Abs = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        conjugate: Conjugate | None = field(
+        conjugate: None | Conjugate = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        arg: Arg | None = field(
+        arg: None | Arg = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        real: Real | None = field(
+        real: None | Real = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        imaginary: Imaginary | None = field(
+        imaginary: None | Imaginary = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        floor: Floor | None = field(
+        floor: None | Floor = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        ceiling: Ceiling | None = field(
+        ceiling: None | Ceiling = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        exp: Exp | None = field(
+        exp: None | Exp = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        min: Min | None = field(
+        min: None | Min = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        max: Max | None = field(
+        max: None | Max = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        lcm: Lcm | None = field(
+        lcm: None | Lcm = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        gcd: Gcd | None = field(
+        gcd: None | Gcd = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        times: Times | None = field(
+        times: None | Times = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        plus: Plus | None = field(
+        plus: None | Plus = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        xor: Xor | None = field(
+        xor: None | Xor = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        or_value: Or | None = field(
+        or_value: None | Or = field(
             default=None,
             metadata={
                 "name": "or",
@@ -12727,7 +12727,7 @@ class ImpliedMrow:
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        and_value: And | None = field(
+        and_value: None | And = field(
             default=None,
             metadata={
                 "name": "and",
@@ -12735,7 +12735,7 @@ class ImpliedMrow:
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        not_value: Not | None = field(
+        not_value: None | Not = field(
             default=None,
             metadata={
                 "name": "not",
@@ -12743,98 +12743,98 @@ class ImpliedMrow:
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        equivalent: Equivalent | None = field(
+        equivalent: None | Equivalent = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        implies: Implies | None = field(
+        implies: None | Implies = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        exists: Exists | None = field(
+        exists: None | Exists = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        forall: Forall | None = field(
+        forall: None | Forall = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        leq: Leq | None = field(
+        leq: None | Leq = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        geq: Geq | None = field(
+        geq: None | Geq = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        lt: Lt | None = field(
+        lt: None | Lt = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        gt: Gt | None = field(
+        gt: None | Gt = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        eq: Eq | None = field(
+        eq: None | Eq = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        tendsto: Tendsto | None = field(
+        tendsto: None | Tendsto = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        factorof: Factorof | None = field(
+        factorof: None | Factorof = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        approx: Approx | None = field(
+        approx: None | Approx = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        neq: Neq | None = field(
+        neq: None | Neq = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        int_value: Int | None = field(
+        int_value: None | Int = field(
             default=None,
             metadata={
                 "name": "int",
@@ -12842,49 +12842,49 @@ class ImpliedMrow:
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        diff: Diff | None = field(
+        diff: None | Diff = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        partialdiff: Partialdiff | None = field(
+        partialdiff: None | Partialdiff = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        laplacian: Laplacian | None = field(
+        laplacian: None | Laplacian = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        curl: Curl | None = field(
+        curl: None | Curl = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        grad: Grad | None = field(
+        grad: None | Grad = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        divergence: Divergence | None = field(
+        divergence: None | Divergence = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        list_value: List | None = field(
+        list_value: None | List = field(
             default=None,
             metadata={
                 "name": "list",
@@ -12892,63 +12892,63 @@ class ImpliedMrow:
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        set: Set | None = field(
+        set: None | Set = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        cartesianproduct: Cartesianproduct | None = field(
+        cartesianproduct: None | Cartesianproduct = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        intersect: Intersect | None = field(
+        intersect: None | Intersect = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        union: UnionType | None = field(
+        union: None | UnionType = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        setdiff: Setdiff | None = field(
+        setdiff: None | Setdiff = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        notprsubset: Notprsubset | None = field(
+        notprsubset: None | Notprsubset = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        notsubset: Notsubset | None = field(
+        notsubset: None | Notsubset = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        notin: Notin | None = field(
+        notin: None | Notin = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        in_value: In | None = field(
+        in_value: None | In = field(
             default=None,
             metadata={
                 "name": "in",
@@ -12956,623 +12956,623 @@ class ImpliedMrow:
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        prsubset: Prsubset | None = field(
+        prsubset: None | Prsubset = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        subset: Subset | None = field(
+        subset: None | Subset = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        card: Card | None = field(
+        card: None | Card = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        sum: Sum | None = field(
+        sum: None | Sum = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        product: Product | None = field(
+        product: None | Product = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        limit: Limit | None = field(
+        limit: None | Limit = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        arctanh: Arctanh | None = field(
+        arctanh: None | Arctanh = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        arcsinh: Arcsinh | None = field(
+        arcsinh: None | Arcsinh = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        arcsech: Arcsech | None = field(
+        arcsech: None | Arcsech = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        arcsec: Arcsec | None = field(
+        arcsec: None | Arcsec = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        arccsch: Arccsch | None = field(
+        arccsch: None | Arccsch = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        arccsc: Arccsc | None = field(
+        arccsc: None | Arccsc = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        arccoth: Arccoth | None = field(
+        arccoth: None | Arccoth = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        arccot: Arccot | None = field(
+        arccot: None | Arccot = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        arccosh: Arccosh | None = field(
+        arccosh: None | Arccosh = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        arctan: Arctan | None = field(
+        arctan: None | Arctan = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        arccos: Arccos | None = field(
+        arccos: None | Arccos = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        arcsin: Arcsin | None = field(
+        arcsin: None | Arcsin = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        coth: Coth | None = field(
+        coth: None | Coth = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        csch: Csch | None = field(
+        csch: None | Csch = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        sech: Sech | None = field(
+        sech: None | Sech = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        tanh: Tanh | None = field(
+        tanh: None | Tanh = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        cosh: Cosh | None = field(
+        cosh: None | Cosh = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        sinh: Sinh | None = field(
+        sinh: None | Sinh = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        cot: Cot | None = field(
+        cot: None | Cot = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        csc: Csc | None = field(
+        csc: None | Csc = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        sec: Sec | None = field(
+        sec: None | Sec = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        tan: Tan | None = field(
+        tan: None | Tan = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        cos: Cos | None = field(
+        cos: None | Cos = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        sin: Sin | None = field(
+        sin: None | Sin = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        mode: Mode | None = field(
+        mode: None | Mode = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        median: Median | None = field(
+        median: None | Median = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        variance: Variance | None = field(
+        variance: None | Variance = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        sdev: Sdev | None = field(
+        sdev: None | Sdev = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        mean: Mean | None = field(
+        mean: None | Mean = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        matrixrow: Matrixrow | None = field(
+        matrixrow: None | Matrixrow = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        matrix: Matrix | None = field(
+        matrix: None | Matrix = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        vector: Vector | None = field(
+        vector: None | Vector = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        transpose: Transpose | None = field(
+        transpose: None | Transpose = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        determinant: Determinant | None = field(
+        determinant: None | Determinant = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        selector: Selector | None = field(
+        selector: None | Selector = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        outerproduct: Outerproduct | None = field(
+        outerproduct: None | Outerproduct = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        scalarproduct: Scalarproduct | None = field(
+        scalarproduct: None | Scalarproduct = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        vectorproduct: Vectorproduct | None = field(
+        vectorproduct: None | Vectorproduct = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        emptyset: Emptyset | None = field(
+        emptyset: None | Emptyset = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        primes: Primes | None = field(
+        primes: None | Primes = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        complexes: Complexes | None = field(
+        complexes: None | Complexes = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        naturalnumbers: Naturalnumbers | None = field(
+        naturalnumbers: None | Naturalnumbers = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        rationals: Rationals | None = field(
+        rationals: None | Rationals = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        reals: Reals | None = field(
+        reals: None | Reals = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        integers: Integers | None = field(
+        integers: None | Integers = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        infinity: Infinity | None = field(
+        infinity: None | Infinity = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        eulergamma: Eulergamma | None = field(
+        eulergamma: None | Eulergamma = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        pi: Pi | None = field(
+        pi: None | Pi = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        false: FalseType | None = field(
+        false: None | FalseType = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        true: TrueType | None = field(
+        true: None | TrueType = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        notanumber: Notanumber | None = field(
+        notanumber: None | Notanumber = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        imaginaryi: Imaginaryi | None = field(
+        imaginaryi: None | Imaginaryi = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        exponentiale: Exponentiale | None = field(
+        exponentiale: None | Exponentiale = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        maction: Maction | None = field(
+        maction: None | Maction = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        mlongdiv: Mlongdiv | None = field(
+        mlongdiv: None | Mlongdiv = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        mstack: Mstack | None = field(
+        mstack: None | Mstack = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        mtable: Mtable | None = field(
+        mtable: None | Mtable = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        mmultiscripts: Mmultiscripts | None = field(
+        mmultiscripts: None | Mmultiscripts = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        munderover: Munderover | None = field(
+        munderover: None | Munderover = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        mover: Mover | None = field(
+        mover: None | Mover = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        munder: Munder | None = field(
+        munder: None | Munder = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        msubsup: Msubsup | None = field(
+        msubsup: None | Msubsup = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        msup: Msup | None = field(
+        msup: None | Msup = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        msub: Msub | None = field(
+        msub: None | Msub = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        menclose: Menclose | None = field(
+        menclose: None | Menclose = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        mfenced: Mfenced | None = field(
+        mfenced: None | Mfenced = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        mphantom: Mphantom | None = field(
+        mphantom: None | Mphantom = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        mpadded: Mpadded | None = field(
+        mpadded: None | Mpadded = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        merror: Merror | None = field(
+        merror: None | Merror = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        mstyle: Mstyle | None = field(
+        mstyle: None | Mstyle = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        mroot: Mroot | None = field(
+        mroot: None | Mroot = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        msqrt: Msqrt | None = field(
+        msqrt: None | Msqrt = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        mfrac: Mfrac | None = field(
+        mfrac: None | Mfrac = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        mrow: Mrow | None = field(
+        mrow: None | Mrow = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        maligngroup: Maligngroup | None = field(
+        maligngroup: None | Maligngroup = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        malignmark: Malignmark | None = field(
+        malignmark: None | Malignmark = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        ms: Ms | None = field(
+        ms: None | Ms = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        mspace: Mspace | None = field(
+        mspace: None | Mspace = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        mtext: Mtext | None = field(
+        mtext: None | Mtext = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        mo: Mo | None = field(
+        mo: None | Mo = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        mn: Mn | None = field(
+        mn: None | Mn = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        mi: Mi | None = field(
+        mi: None | Mi = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        semantics: ImpliedMrow.Semantics | None = field(
+        semantics: None | ImpliedMrow.Semantics = field(
             default=None,
             metadata={
                 "type": "Element",
@@ -13594,13 +13594,13 @@ class ImpliedMrow:
                 "namespace": "http://www.w3.org/1998/Math/MathML",
             },
         )
-        id: str | None = field(
+        id: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
             },
         )
-        xref: object | None = field(
+        xref: None | object = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -13614,19 +13614,19 @@ class ImpliedMrow:
                 "tokens": True,
             },
         )
-        style: str | None = field(
+        style: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
             },
         )
-        href: str | None = field(
+        href: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
             },
         )
-        other: object | None = field(
+        other: None | object = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -13639,26 +13639,26 @@ class ImpliedMrow:
                 "namespace": "##other",
             },
         )
-        encoding: str | None = field(
+        encoding: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
             },
         )
-        definition_url: str | None = field(
+        definition_url: None | str = field(
             default=None,
             metadata={
                 "name": "definitionURL",
                 "type": "Attribute",
             },
         )
-        cd: str | None = field(
+        cd: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
             },
         )
-        name: str | None = field(
+        name: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -13672,836 +13672,836 @@ class Degree:
         name = "degree"
         namespace = "http://www.w3.org/1998/Math/MathML"
 
-    apply: Apply | None = field(
+    apply: None | Apply = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    bind: Bind | None = field(
+    bind: None | Bind = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    ci: Ci | None = field(
+    ci: None | Ci = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    cn: Cn | None = field(
+    cn: None | Cn = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    csymbol: Csymbol | None = field(
+    csymbol: None | Csymbol = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    cbytes: Cbytes | None = field(
+    cbytes: None | Cbytes = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    cerror: Cerror | None = field(
+    cerror: None | Cerror = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    cs: Cs | None = field(
+    cs: None | Cs = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    share: Share | None = field(
+    share: None | Share = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    piecewise: Piecewise | None = field(
+    piecewise: None | Piecewise = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    declare: Declare | None = field(
+    declare: None | Declare = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    fn: Fn | None = field(
+    fn: None | Fn = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    reln: Reln | None = field(
+    reln: None | Reln = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    interval: Interval | None = field(
+    interval: None | Interval = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    moment: Moment | None = field(
+    moment: None | Moment = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    log: Log | None = field(
+    log: None | Log = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    ln: Ln | None = field(
+    ln: None | Ln = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    image: Image | None = field(
+    image: None | Image = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    codomain: Codomain | None = field(
+    codomain: None | Codomain = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    domain: Domain | None = field(
+    domain: None | Domain = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    ident: Ident | None = field(
+    ident: None | Ident = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    inverse: Inverse | None = field(
+    inverse: None | Inverse = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    lambda_value: Lambda | None = field(
+    lambda_value: None | Lambda = field(
         default=None,
         metadata={
             "name": "lambda",
             "type": "Element",
         },
     )
-    compose: Compose | None = field(
+    compose: None | Compose = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    quotient: Quotient | None = field(
+    quotient: None | Quotient = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    divide: Divide | None = field(
+    divide: None | Divide = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    minus: Minus | None = field(
+    minus: None | Minus = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    power: Power | None = field(
+    power: None | Power = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    rem: Rem | None = field(
+    rem: None | Rem = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    root: Root | None = field(
+    root: None | Root = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    factorial: Factorial | None = field(
+    factorial: None | Factorial = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    abs: Abs | None = field(
+    abs: None | Abs = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    conjugate: Conjugate | None = field(
+    conjugate: None | Conjugate = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    arg: Arg | None = field(
+    arg: None | Arg = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    real: Real | None = field(
+    real: None | Real = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    imaginary: Imaginary | None = field(
+    imaginary: None | Imaginary = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    floor: Floor | None = field(
+    floor: None | Floor = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    ceiling: Ceiling | None = field(
+    ceiling: None | Ceiling = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    exp: Exp | None = field(
+    exp: None | Exp = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    min: Min | None = field(
+    min: None | Min = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    max: Max | None = field(
+    max: None | Max = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    lcm: Lcm | None = field(
+    lcm: None | Lcm = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    gcd: Gcd | None = field(
+    gcd: None | Gcd = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    times: Times | None = field(
+    times: None | Times = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    plus: Plus | None = field(
+    plus: None | Plus = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    xor: Xor | None = field(
+    xor: None | Xor = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    or_value: Or | None = field(
+    or_value: None | Or = field(
         default=None,
         metadata={
             "name": "or",
             "type": "Element",
         },
     )
-    and_value: And | None = field(
+    and_value: None | And = field(
         default=None,
         metadata={
             "name": "and",
             "type": "Element",
         },
     )
-    not_value: Not | None = field(
+    not_value: None | Not = field(
         default=None,
         metadata={
             "name": "not",
             "type": "Element",
         },
     )
-    equivalent: Equivalent | None = field(
+    equivalent: None | Equivalent = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    implies: Implies | None = field(
+    implies: None | Implies = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    exists: Exists | None = field(
+    exists: None | Exists = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    forall: Forall | None = field(
+    forall: None | Forall = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    leq: Leq | None = field(
+    leq: None | Leq = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    geq: Geq | None = field(
+    geq: None | Geq = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    lt: Lt | None = field(
+    lt: None | Lt = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    gt: Gt | None = field(
+    gt: None | Gt = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    eq: Eq | None = field(
+    eq: None | Eq = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    tendsto: Tendsto | None = field(
+    tendsto: None | Tendsto = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    factorof: Factorof | None = field(
+    factorof: None | Factorof = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    approx: Approx | None = field(
+    approx: None | Approx = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    neq: Neq | None = field(
+    neq: None | Neq = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    int_value: Int | None = field(
+    int_value: None | Int = field(
         default=None,
         metadata={
             "name": "int",
             "type": "Element",
         },
     )
-    diff: Diff | None = field(
+    diff: None | Diff = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    partialdiff: Partialdiff | None = field(
+    partialdiff: None | Partialdiff = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    laplacian: Laplacian | None = field(
+    laplacian: None | Laplacian = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    curl: Curl | None = field(
+    curl: None | Curl = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    grad: Grad | None = field(
+    grad: None | Grad = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    divergence: Divergence | None = field(
+    divergence: None | Divergence = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    list_value: List | None = field(
+    list_value: None | List = field(
         default=None,
         metadata={
             "name": "list",
             "type": "Element",
         },
     )
-    set: Set | None = field(
+    set: None | Set = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    cartesianproduct: Cartesianproduct | None = field(
+    cartesianproduct: None | Cartesianproduct = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    intersect: Intersect | None = field(
+    intersect: None | Intersect = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    union: UnionType | None = field(
+    union: None | UnionType = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    setdiff: Setdiff | None = field(
+    setdiff: None | Setdiff = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    notprsubset: Notprsubset | None = field(
+    notprsubset: None | Notprsubset = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    notsubset: Notsubset | None = field(
+    notsubset: None | Notsubset = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    notin: Notin | None = field(
+    notin: None | Notin = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    in_value: In | None = field(
+    in_value: None | In = field(
         default=None,
         metadata={
             "name": "in",
             "type": "Element",
         },
     )
-    prsubset: Prsubset | None = field(
+    prsubset: None | Prsubset = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    subset: Subset | None = field(
+    subset: None | Subset = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    card: Card | None = field(
+    card: None | Card = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    sum: Sum | None = field(
+    sum: None | Sum = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    product: Product | None = field(
+    product: None | Product = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    limit: Limit | None = field(
+    limit: None | Limit = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    arctanh: Arctanh | None = field(
+    arctanh: None | Arctanh = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    arcsinh: Arcsinh | None = field(
+    arcsinh: None | Arcsinh = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    arcsech: Arcsech | None = field(
+    arcsech: None | Arcsech = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    arcsec: Arcsec | None = field(
+    arcsec: None | Arcsec = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    arccsch: Arccsch | None = field(
+    arccsch: None | Arccsch = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    arccsc: Arccsc | None = field(
+    arccsc: None | Arccsc = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    arccoth: Arccoth | None = field(
+    arccoth: None | Arccoth = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    arccot: Arccot | None = field(
+    arccot: None | Arccot = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    arccosh: Arccosh | None = field(
+    arccosh: None | Arccosh = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    arctan: Arctan | None = field(
+    arctan: None | Arctan = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    arccos: Arccos | None = field(
+    arccos: None | Arccos = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    arcsin: Arcsin | None = field(
+    arcsin: None | Arcsin = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    coth: Coth | None = field(
+    coth: None | Coth = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    csch: Csch | None = field(
+    csch: None | Csch = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    sech: Sech | None = field(
+    sech: None | Sech = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    tanh: Tanh | None = field(
+    tanh: None | Tanh = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    cosh: Cosh | None = field(
+    cosh: None | Cosh = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    sinh: Sinh | None = field(
+    sinh: None | Sinh = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    cot: Cot | None = field(
+    cot: None | Cot = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    csc: Csc | None = field(
+    csc: None | Csc = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    sec: Sec | None = field(
+    sec: None | Sec = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    tan: Tan | None = field(
+    tan: None | Tan = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    cos: Cos | None = field(
+    cos: None | Cos = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    sin: Sin | None = field(
+    sin: None | Sin = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    mode: Mode | None = field(
+    mode: None | Mode = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    median: Median | None = field(
+    median: None | Median = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    variance: Variance | None = field(
+    variance: None | Variance = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    sdev: Sdev | None = field(
+    sdev: None | Sdev = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    mean: Mean | None = field(
+    mean: None | Mean = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    matrixrow: Matrixrow | None = field(
+    matrixrow: None | Matrixrow = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    matrix: Matrix | None = field(
+    matrix: None | Matrix = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    vector: Vector | None = field(
+    vector: None | Vector = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    transpose: Transpose | None = field(
+    transpose: None | Transpose = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    determinant: Determinant | None = field(
+    determinant: None | Determinant = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    selector: Selector | None = field(
+    selector: None | Selector = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    outerproduct: Outerproduct | None = field(
+    outerproduct: None | Outerproduct = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    scalarproduct: Scalarproduct | None = field(
+    scalarproduct: None | Scalarproduct = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    vectorproduct: Vectorproduct | None = field(
+    vectorproduct: None | Vectorproduct = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    emptyset: Emptyset | None = field(
+    emptyset: None | Emptyset = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    primes: Primes | None = field(
+    primes: None | Primes = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    complexes: Complexes | None = field(
+    complexes: None | Complexes = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    naturalnumbers: Naturalnumbers | None = field(
+    naturalnumbers: None | Naturalnumbers = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    rationals: Rationals | None = field(
+    rationals: None | Rationals = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    reals: Reals | None = field(
+    reals: None | Reals = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    integers: Integers | None = field(
+    integers: None | Integers = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    infinity: Infinity | None = field(
+    infinity: None | Infinity = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    eulergamma: Eulergamma | None = field(
+    eulergamma: None | Eulergamma = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    pi: Pi | None = field(
+    pi: None | Pi = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    false: FalseType | None = field(
+    false: None | FalseType = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    true: TrueType | None = field(
+    true: None | TrueType = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    notanumber: Notanumber | None = field(
+    notanumber: None | Notanumber = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    imaginaryi: Imaginaryi | None = field(
+    imaginaryi: None | Imaginaryi = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    exponentiale: Exponentiale | None = field(
+    exponentiale: None | Exponentiale = field(
         default=None,
         metadata={
             "type": "Element",
@@ -14515,836 +14515,836 @@ class Logbase:
         name = "logbase"
         namespace = "http://www.w3.org/1998/Math/MathML"
 
-    apply: Apply | None = field(
+    apply: None | Apply = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    bind: Bind | None = field(
+    bind: None | Bind = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    ci: Ci | None = field(
+    ci: None | Ci = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    cn: Cn | None = field(
+    cn: None | Cn = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    csymbol: Csymbol | None = field(
+    csymbol: None | Csymbol = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    cbytes: Cbytes | None = field(
+    cbytes: None | Cbytes = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    cerror: Cerror | None = field(
+    cerror: None | Cerror = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    cs: Cs | None = field(
+    cs: None | Cs = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    share: Share | None = field(
+    share: None | Share = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    piecewise: Piecewise | None = field(
+    piecewise: None | Piecewise = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    declare: Declare | None = field(
+    declare: None | Declare = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    fn: Fn | None = field(
+    fn: None | Fn = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    reln: Reln | None = field(
+    reln: None | Reln = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    interval: Interval | None = field(
+    interval: None | Interval = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    moment: Moment | None = field(
+    moment: None | Moment = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    log: Log | None = field(
+    log: None | Log = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    ln: Ln | None = field(
+    ln: None | Ln = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    image: Image | None = field(
+    image: None | Image = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    codomain: Codomain | None = field(
+    codomain: None | Codomain = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    domain: Domain | None = field(
+    domain: None | Domain = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    ident: Ident | None = field(
+    ident: None | Ident = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    inverse: Inverse | None = field(
+    inverse: None | Inverse = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    lambda_value: Lambda | None = field(
+    lambda_value: None | Lambda = field(
         default=None,
         metadata={
             "name": "lambda",
             "type": "Element",
         },
     )
-    compose: Compose | None = field(
+    compose: None | Compose = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    quotient: Quotient | None = field(
+    quotient: None | Quotient = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    divide: Divide | None = field(
+    divide: None | Divide = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    minus: Minus | None = field(
+    minus: None | Minus = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    power: Power | None = field(
+    power: None | Power = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    rem: Rem | None = field(
+    rem: None | Rem = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    root: Root | None = field(
+    root: None | Root = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    factorial: Factorial | None = field(
+    factorial: None | Factorial = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    abs: Abs | None = field(
+    abs: None | Abs = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    conjugate: Conjugate | None = field(
+    conjugate: None | Conjugate = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    arg: Arg | None = field(
+    arg: None | Arg = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    real: Real | None = field(
+    real: None | Real = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    imaginary: Imaginary | None = field(
+    imaginary: None | Imaginary = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    floor: Floor | None = field(
+    floor: None | Floor = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    ceiling: Ceiling | None = field(
+    ceiling: None | Ceiling = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    exp: Exp | None = field(
+    exp: None | Exp = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    min: Min | None = field(
+    min: None | Min = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    max: Max | None = field(
+    max: None | Max = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    lcm: Lcm | None = field(
+    lcm: None | Lcm = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    gcd: Gcd | None = field(
+    gcd: None | Gcd = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    times: Times | None = field(
+    times: None | Times = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    plus: Plus | None = field(
+    plus: None | Plus = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    xor: Xor | None = field(
+    xor: None | Xor = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    or_value: Or | None = field(
+    or_value: None | Or = field(
         default=None,
         metadata={
             "name": "or",
             "type": "Element",
         },
     )
-    and_value: And | None = field(
+    and_value: None | And = field(
         default=None,
         metadata={
             "name": "and",
             "type": "Element",
         },
     )
-    not_value: Not | None = field(
+    not_value: None | Not = field(
         default=None,
         metadata={
             "name": "not",
             "type": "Element",
         },
     )
-    equivalent: Equivalent | None = field(
+    equivalent: None | Equivalent = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    implies: Implies | None = field(
+    implies: None | Implies = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    exists: Exists | None = field(
+    exists: None | Exists = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    forall: Forall | None = field(
+    forall: None | Forall = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    leq: Leq | None = field(
+    leq: None | Leq = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    geq: Geq | None = field(
+    geq: None | Geq = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    lt: Lt | None = field(
+    lt: None | Lt = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    gt: Gt | None = field(
+    gt: None | Gt = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    eq: Eq | None = field(
+    eq: None | Eq = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    tendsto: Tendsto | None = field(
+    tendsto: None | Tendsto = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    factorof: Factorof | None = field(
+    factorof: None | Factorof = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    approx: Approx | None = field(
+    approx: None | Approx = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    neq: Neq | None = field(
+    neq: None | Neq = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    int_value: Int | None = field(
+    int_value: None | Int = field(
         default=None,
         metadata={
             "name": "int",
             "type": "Element",
         },
     )
-    diff: Diff | None = field(
+    diff: None | Diff = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    partialdiff: Partialdiff | None = field(
+    partialdiff: None | Partialdiff = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    laplacian: Laplacian | None = field(
+    laplacian: None | Laplacian = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    curl: Curl | None = field(
+    curl: None | Curl = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    grad: Grad | None = field(
+    grad: None | Grad = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    divergence: Divergence | None = field(
+    divergence: None | Divergence = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    list_value: List | None = field(
+    list_value: None | List = field(
         default=None,
         metadata={
             "name": "list",
             "type": "Element",
         },
     )
-    set: Set | None = field(
+    set: None | Set = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    cartesianproduct: Cartesianproduct | None = field(
+    cartesianproduct: None | Cartesianproduct = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    intersect: Intersect | None = field(
+    intersect: None | Intersect = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    union: UnionType | None = field(
+    union: None | UnionType = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    setdiff: Setdiff | None = field(
+    setdiff: None | Setdiff = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    notprsubset: Notprsubset | None = field(
+    notprsubset: None | Notprsubset = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    notsubset: Notsubset | None = field(
+    notsubset: None | Notsubset = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    notin: Notin | None = field(
+    notin: None | Notin = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    in_value: In | None = field(
+    in_value: None | In = field(
         default=None,
         metadata={
             "name": "in",
             "type": "Element",
         },
     )
-    prsubset: Prsubset | None = field(
+    prsubset: None | Prsubset = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    subset: Subset | None = field(
+    subset: None | Subset = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    card: Card | None = field(
+    card: None | Card = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    sum: Sum | None = field(
+    sum: None | Sum = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    product: Product | None = field(
+    product: None | Product = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    limit: Limit | None = field(
+    limit: None | Limit = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    arctanh: Arctanh | None = field(
+    arctanh: None | Arctanh = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    arcsinh: Arcsinh | None = field(
+    arcsinh: None | Arcsinh = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    arcsech: Arcsech | None = field(
+    arcsech: None | Arcsech = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    arcsec: Arcsec | None = field(
+    arcsec: None | Arcsec = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    arccsch: Arccsch | None = field(
+    arccsch: None | Arccsch = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    arccsc: Arccsc | None = field(
+    arccsc: None | Arccsc = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    arccoth: Arccoth | None = field(
+    arccoth: None | Arccoth = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    arccot: Arccot | None = field(
+    arccot: None | Arccot = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    arccosh: Arccosh | None = field(
+    arccosh: None | Arccosh = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    arctan: Arctan | None = field(
+    arctan: None | Arctan = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    arccos: Arccos | None = field(
+    arccos: None | Arccos = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    arcsin: Arcsin | None = field(
+    arcsin: None | Arcsin = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    coth: Coth | None = field(
+    coth: None | Coth = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    csch: Csch | None = field(
+    csch: None | Csch = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    sech: Sech | None = field(
+    sech: None | Sech = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    tanh: Tanh | None = field(
+    tanh: None | Tanh = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    cosh: Cosh | None = field(
+    cosh: None | Cosh = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    sinh: Sinh | None = field(
+    sinh: None | Sinh = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    cot: Cot | None = field(
+    cot: None | Cot = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    csc: Csc | None = field(
+    csc: None | Csc = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    sec: Sec | None = field(
+    sec: None | Sec = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    tan: Tan | None = field(
+    tan: None | Tan = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    cos: Cos | None = field(
+    cos: None | Cos = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    sin: Sin | None = field(
+    sin: None | Sin = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    mode: Mode | None = field(
+    mode: None | Mode = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    median: Median | None = field(
+    median: None | Median = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    variance: Variance | None = field(
+    variance: None | Variance = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    sdev: Sdev | None = field(
+    sdev: None | Sdev = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    mean: Mean | None = field(
+    mean: None | Mean = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    matrixrow: Matrixrow | None = field(
+    matrixrow: None | Matrixrow = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    matrix: Matrix | None = field(
+    matrix: None | Matrix = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    vector: Vector | None = field(
+    vector: None | Vector = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    transpose: Transpose | None = field(
+    transpose: None | Transpose = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    determinant: Determinant | None = field(
+    determinant: None | Determinant = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    selector: Selector | None = field(
+    selector: None | Selector = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    outerproduct: Outerproduct | None = field(
+    outerproduct: None | Outerproduct = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    scalarproduct: Scalarproduct | None = field(
+    scalarproduct: None | Scalarproduct = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    vectorproduct: Vectorproduct | None = field(
+    vectorproduct: None | Vectorproduct = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    emptyset: Emptyset | None = field(
+    emptyset: None | Emptyset = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    primes: Primes | None = field(
+    primes: None | Primes = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    complexes: Complexes | None = field(
+    complexes: None | Complexes = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    naturalnumbers: Naturalnumbers | None = field(
+    naturalnumbers: None | Naturalnumbers = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    rationals: Rationals | None = field(
+    rationals: None | Rationals = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    reals: Reals | None = field(
+    reals: None | Reals = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    integers: Integers | None = field(
+    integers: None | Integers = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    infinity: Infinity | None = field(
+    infinity: None | Infinity = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    eulergamma: Eulergamma | None = field(
+    eulergamma: None | Eulergamma = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    pi: Pi | None = field(
+    pi: None | Pi = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    false: FalseType | None = field(
+    false: None | FalseType = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    true: TrueType | None = field(
+    true: None | TrueType = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    notanumber: Notanumber | None = field(
+    notanumber: None | Notanumber = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    imaginaryi: Imaginaryi | None = field(
+    imaginaryi: None | Imaginaryi = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    exponentiale: Exponentiale | None = field(
+    exponentiale: None | Exponentiale = field(
         default=None,
         metadata={
             "type": "Element",
@@ -15358,836 +15358,836 @@ class Momentabout:
         name = "momentabout"
         namespace = "http://www.w3.org/1998/Math/MathML"
 
-    apply: Apply | None = field(
+    apply: None | Apply = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    bind: Bind | None = field(
+    bind: None | Bind = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    ci: Ci | None = field(
+    ci: None | Ci = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    cn: Cn | None = field(
+    cn: None | Cn = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    csymbol: Csymbol | None = field(
+    csymbol: None | Csymbol = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    cbytes: Cbytes | None = field(
+    cbytes: None | Cbytes = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    cerror: Cerror | None = field(
+    cerror: None | Cerror = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    cs: Cs | None = field(
+    cs: None | Cs = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    share: Share | None = field(
+    share: None | Share = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    piecewise: Piecewise | None = field(
+    piecewise: None | Piecewise = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    declare: Declare | None = field(
+    declare: None | Declare = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    fn: Fn | None = field(
+    fn: None | Fn = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    reln: Reln | None = field(
+    reln: None | Reln = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    interval: Interval | None = field(
+    interval: None | Interval = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    moment: Moment | None = field(
+    moment: None | Moment = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    log: Log | None = field(
+    log: None | Log = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    ln: Ln | None = field(
+    ln: None | Ln = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    image: Image | None = field(
+    image: None | Image = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    codomain: Codomain | None = field(
+    codomain: None | Codomain = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    domain: Domain | None = field(
+    domain: None | Domain = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    ident: Ident | None = field(
+    ident: None | Ident = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    inverse: Inverse | None = field(
+    inverse: None | Inverse = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    lambda_value: Lambda | None = field(
+    lambda_value: None | Lambda = field(
         default=None,
         metadata={
             "name": "lambda",
             "type": "Element",
         },
     )
-    compose: Compose | None = field(
+    compose: None | Compose = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    quotient: Quotient | None = field(
+    quotient: None | Quotient = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    divide: Divide | None = field(
+    divide: None | Divide = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    minus: Minus | None = field(
+    minus: None | Minus = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    power: Power | None = field(
+    power: None | Power = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    rem: Rem | None = field(
+    rem: None | Rem = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    root: Root | None = field(
+    root: None | Root = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    factorial: Factorial | None = field(
+    factorial: None | Factorial = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    abs: Abs | None = field(
+    abs: None | Abs = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    conjugate: Conjugate | None = field(
+    conjugate: None | Conjugate = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    arg: Arg | None = field(
+    arg: None | Arg = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    real: Real | None = field(
+    real: None | Real = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    imaginary: Imaginary | None = field(
+    imaginary: None | Imaginary = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    floor: Floor | None = field(
+    floor: None | Floor = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    ceiling: Ceiling | None = field(
+    ceiling: None | Ceiling = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    exp: Exp | None = field(
+    exp: None | Exp = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    min: Min | None = field(
+    min: None | Min = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    max: Max | None = field(
+    max: None | Max = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    lcm: Lcm | None = field(
+    lcm: None | Lcm = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    gcd: Gcd | None = field(
+    gcd: None | Gcd = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    times: Times | None = field(
+    times: None | Times = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    plus: Plus | None = field(
+    plus: None | Plus = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    xor: Xor | None = field(
+    xor: None | Xor = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    or_value: Or | None = field(
+    or_value: None | Or = field(
         default=None,
         metadata={
             "name": "or",
             "type": "Element",
         },
     )
-    and_value: And | None = field(
+    and_value: None | And = field(
         default=None,
         metadata={
             "name": "and",
             "type": "Element",
         },
     )
-    not_value: Not | None = field(
+    not_value: None | Not = field(
         default=None,
         metadata={
             "name": "not",
             "type": "Element",
         },
     )
-    equivalent: Equivalent | None = field(
+    equivalent: None | Equivalent = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    implies: Implies | None = field(
+    implies: None | Implies = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    exists: Exists | None = field(
+    exists: None | Exists = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    forall: Forall | None = field(
+    forall: None | Forall = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    leq: Leq | None = field(
+    leq: None | Leq = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    geq: Geq | None = field(
+    geq: None | Geq = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    lt: Lt | None = field(
+    lt: None | Lt = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    gt: Gt | None = field(
+    gt: None | Gt = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    eq: Eq | None = field(
+    eq: None | Eq = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    tendsto: Tendsto | None = field(
+    tendsto: None | Tendsto = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    factorof: Factorof | None = field(
+    factorof: None | Factorof = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    approx: Approx | None = field(
+    approx: None | Approx = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    neq: Neq | None = field(
+    neq: None | Neq = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    int_value: Int | None = field(
+    int_value: None | Int = field(
         default=None,
         metadata={
             "name": "int",
             "type": "Element",
         },
     )
-    diff: Diff | None = field(
+    diff: None | Diff = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    partialdiff: Partialdiff | None = field(
+    partialdiff: None | Partialdiff = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    laplacian: Laplacian | None = field(
+    laplacian: None | Laplacian = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    curl: Curl | None = field(
+    curl: None | Curl = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    grad: Grad | None = field(
+    grad: None | Grad = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    divergence: Divergence | None = field(
+    divergence: None | Divergence = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    list_value: List | None = field(
+    list_value: None | List = field(
         default=None,
         metadata={
             "name": "list",
             "type": "Element",
         },
     )
-    set: Set | None = field(
+    set: None | Set = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    cartesianproduct: Cartesianproduct | None = field(
+    cartesianproduct: None | Cartesianproduct = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    intersect: Intersect | None = field(
+    intersect: None | Intersect = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    union: UnionType | None = field(
+    union: None | UnionType = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    setdiff: Setdiff | None = field(
+    setdiff: None | Setdiff = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    notprsubset: Notprsubset | None = field(
+    notprsubset: None | Notprsubset = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    notsubset: Notsubset | None = field(
+    notsubset: None | Notsubset = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    notin: Notin | None = field(
+    notin: None | Notin = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    in_value: In | None = field(
+    in_value: None | In = field(
         default=None,
         metadata={
             "name": "in",
             "type": "Element",
         },
     )
-    prsubset: Prsubset | None = field(
+    prsubset: None | Prsubset = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    subset: Subset | None = field(
+    subset: None | Subset = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    card: Card | None = field(
+    card: None | Card = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    sum: Sum | None = field(
+    sum: None | Sum = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    product: Product | None = field(
+    product: None | Product = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    limit: Limit | None = field(
+    limit: None | Limit = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    arctanh: Arctanh | None = field(
+    arctanh: None | Arctanh = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    arcsinh: Arcsinh | None = field(
+    arcsinh: None | Arcsinh = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    arcsech: Arcsech | None = field(
+    arcsech: None | Arcsech = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    arcsec: Arcsec | None = field(
+    arcsec: None | Arcsec = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    arccsch: Arccsch | None = field(
+    arccsch: None | Arccsch = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    arccsc: Arccsc | None = field(
+    arccsc: None | Arccsc = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    arccoth: Arccoth | None = field(
+    arccoth: None | Arccoth = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    arccot: Arccot | None = field(
+    arccot: None | Arccot = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    arccosh: Arccosh | None = field(
+    arccosh: None | Arccosh = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    arctan: Arctan | None = field(
+    arctan: None | Arctan = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    arccos: Arccos | None = field(
+    arccos: None | Arccos = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    arcsin: Arcsin | None = field(
+    arcsin: None | Arcsin = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    coth: Coth | None = field(
+    coth: None | Coth = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    csch: Csch | None = field(
+    csch: None | Csch = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    sech: Sech | None = field(
+    sech: None | Sech = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    tanh: Tanh | None = field(
+    tanh: None | Tanh = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    cosh: Cosh | None = field(
+    cosh: None | Cosh = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    sinh: Sinh | None = field(
+    sinh: None | Sinh = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    cot: Cot | None = field(
+    cot: None | Cot = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    csc: Csc | None = field(
+    csc: None | Csc = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    sec: Sec | None = field(
+    sec: None | Sec = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    tan: Tan | None = field(
+    tan: None | Tan = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    cos: Cos | None = field(
+    cos: None | Cos = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    sin: Sin | None = field(
+    sin: None | Sin = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    mode: Mode | None = field(
+    mode: None | Mode = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    median: Median | None = field(
+    median: None | Median = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    variance: Variance | None = field(
+    variance: None | Variance = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    sdev: Sdev | None = field(
+    sdev: None | Sdev = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    mean: Mean | None = field(
+    mean: None | Mean = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    matrixrow: Matrixrow | None = field(
+    matrixrow: None | Matrixrow = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    matrix: Matrix | None = field(
+    matrix: None | Matrix = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    vector: Vector | None = field(
+    vector: None | Vector = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    transpose: Transpose | None = field(
+    transpose: None | Transpose = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    determinant: Determinant | None = field(
+    determinant: None | Determinant = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    selector: Selector | None = field(
+    selector: None | Selector = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    outerproduct: Outerproduct | None = field(
+    outerproduct: None | Outerproduct = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    scalarproduct: Scalarproduct | None = field(
+    scalarproduct: None | Scalarproduct = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    vectorproduct: Vectorproduct | None = field(
+    vectorproduct: None | Vectorproduct = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    emptyset: Emptyset | None = field(
+    emptyset: None | Emptyset = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    primes: Primes | None = field(
+    primes: None | Primes = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    complexes: Complexes | None = field(
+    complexes: None | Complexes = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    naturalnumbers: Naturalnumbers | None = field(
+    naturalnumbers: None | Naturalnumbers = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    rationals: Rationals | None = field(
+    rationals: None | Rationals = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    reals: Reals | None = field(
+    reals: None | Reals = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    integers: Integers | None = field(
+    integers: None | Integers = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    infinity: Infinity | None = field(
+    infinity: None | Infinity = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    eulergamma: Eulergamma | None = field(
+    eulergamma: None | Eulergamma = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    pi: Pi | None = field(
+    pi: None | Pi = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    false: FalseType | None = field(
+    false: None | FalseType = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    true: TrueType | None = field(
+    true: None | TrueType = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    notanumber: Notanumber | None = field(
+    notanumber: None | Notanumber = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    imaginaryi: Imaginaryi | None = field(
+    imaginaryi: None | Imaginaryi = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    exponentiale: Exponentiale | None = field(
+    exponentiale: None | Exponentiale = field(
         default=None,
         metadata={
             "type": "Element",
@@ -16201,848 +16201,848 @@ class Otherwise:
         name = "otherwise"
         namespace = "http://www.w3.org/1998/Math/MathML"
 
-    apply: Apply | None = field(
+    apply: None | Apply = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    bind: Bind | None = field(
+    bind: None | Bind = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    ci: Ci | None = field(
+    ci: None | Ci = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    cn: Cn | None = field(
+    cn: None | Cn = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    csymbol: Csymbol | None = field(
+    csymbol: None | Csymbol = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    cbytes: Cbytes | None = field(
+    cbytes: None | Cbytes = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    cerror: Cerror | None = field(
+    cerror: None | Cerror = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    cs: Cs | None = field(
+    cs: None | Cs = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    share: Share | None = field(
+    share: None | Share = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    piecewise: Piecewise | None = field(
+    piecewise: None | Piecewise = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    declare: Declare | None = field(
+    declare: None | Declare = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    fn: Fn | None = field(
+    fn: None | Fn = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    reln: Reln | None = field(
+    reln: None | Reln = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    interval: Interval | None = field(
+    interval: None | Interval = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    moment: Moment | None = field(
+    moment: None | Moment = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    log: Log | None = field(
+    log: None | Log = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    ln: Ln | None = field(
+    ln: None | Ln = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    image: Image | None = field(
+    image: None | Image = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    codomain: Codomain | None = field(
+    codomain: None | Codomain = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    domain: Domain | None = field(
+    domain: None | Domain = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    ident: Ident | None = field(
+    ident: None | Ident = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    inverse: Inverse | None = field(
+    inverse: None | Inverse = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    lambda_value: Lambda | None = field(
+    lambda_value: None | Lambda = field(
         default=None,
         metadata={
             "name": "lambda",
             "type": "Element",
         },
     )
-    compose: Compose | None = field(
+    compose: None | Compose = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    quotient: Quotient | None = field(
+    quotient: None | Quotient = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    divide: Divide | None = field(
+    divide: None | Divide = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    minus: Minus | None = field(
+    minus: None | Minus = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    power: Power | None = field(
+    power: None | Power = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    rem: Rem | None = field(
+    rem: None | Rem = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    root: Root | None = field(
+    root: None | Root = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    factorial: Factorial | None = field(
+    factorial: None | Factorial = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    abs: Abs | None = field(
+    abs: None | Abs = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    conjugate: Conjugate | None = field(
+    conjugate: None | Conjugate = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    arg: Arg | None = field(
+    arg: None | Arg = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    real: Real | None = field(
+    real: None | Real = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    imaginary: Imaginary | None = field(
+    imaginary: None | Imaginary = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    floor: Floor | None = field(
+    floor: None | Floor = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    ceiling: Ceiling | None = field(
+    ceiling: None | Ceiling = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    exp: Exp | None = field(
+    exp: None | Exp = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    min: Min | None = field(
+    min: None | Min = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    max: Max | None = field(
+    max: None | Max = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    lcm: Lcm | None = field(
+    lcm: None | Lcm = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    gcd: Gcd | None = field(
+    gcd: None | Gcd = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    times: Times | None = field(
+    times: None | Times = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    plus: Plus | None = field(
+    plus: None | Plus = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    xor: Xor | None = field(
+    xor: None | Xor = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    or_value: Or | None = field(
+    or_value: None | Or = field(
         default=None,
         metadata={
             "name": "or",
             "type": "Element",
         },
     )
-    and_value: And | None = field(
+    and_value: None | And = field(
         default=None,
         metadata={
             "name": "and",
             "type": "Element",
         },
     )
-    not_value: Not | None = field(
+    not_value: None | Not = field(
         default=None,
         metadata={
             "name": "not",
             "type": "Element",
         },
     )
-    equivalent: Equivalent | None = field(
+    equivalent: None | Equivalent = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    implies: Implies | None = field(
+    implies: None | Implies = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    exists: Exists | None = field(
+    exists: None | Exists = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    forall: Forall | None = field(
+    forall: None | Forall = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    leq: Leq | None = field(
+    leq: None | Leq = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    geq: Geq | None = field(
+    geq: None | Geq = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    lt: Lt | None = field(
+    lt: None | Lt = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    gt: Gt | None = field(
+    gt: None | Gt = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    eq: Eq | None = field(
+    eq: None | Eq = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    tendsto: Tendsto | None = field(
+    tendsto: None | Tendsto = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    factorof: Factorof | None = field(
+    factorof: None | Factorof = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    approx: Approx | None = field(
+    approx: None | Approx = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    neq: Neq | None = field(
+    neq: None | Neq = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    int_value: Int | None = field(
+    int_value: None | Int = field(
         default=None,
         metadata={
             "name": "int",
             "type": "Element",
         },
     )
-    diff: Diff | None = field(
+    diff: None | Diff = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    partialdiff: Partialdiff | None = field(
+    partialdiff: None | Partialdiff = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    laplacian: Laplacian | None = field(
+    laplacian: None | Laplacian = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    curl: Curl | None = field(
+    curl: None | Curl = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    grad: Grad | None = field(
+    grad: None | Grad = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    divergence: Divergence | None = field(
+    divergence: None | Divergence = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    list_value: List | None = field(
+    list_value: None | List = field(
         default=None,
         metadata={
             "name": "list",
             "type": "Element",
         },
     )
-    set: Set | None = field(
+    set: None | Set = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    cartesianproduct: Cartesianproduct | None = field(
+    cartesianproduct: None | Cartesianproduct = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    intersect: Intersect | None = field(
+    intersect: None | Intersect = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    union: UnionType | None = field(
+    union: None | UnionType = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    setdiff: Setdiff | None = field(
+    setdiff: None | Setdiff = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    notprsubset: Notprsubset | None = field(
+    notprsubset: None | Notprsubset = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    notsubset: Notsubset | None = field(
+    notsubset: None | Notsubset = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    notin: Notin | None = field(
+    notin: None | Notin = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    in_value: In | None = field(
+    in_value: None | In = field(
         default=None,
         metadata={
             "name": "in",
             "type": "Element",
         },
     )
-    prsubset: Prsubset | None = field(
+    prsubset: None | Prsubset = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    subset: Subset | None = field(
+    subset: None | Subset = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    card: Card | None = field(
+    card: None | Card = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    sum: Sum | None = field(
+    sum: None | Sum = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    product: Product | None = field(
+    product: None | Product = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    limit: Limit | None = field(
+    limit: None | Limit = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    arctanh: Arctanh | None = field(
+    arctanh: None | Arctanh = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    arcsinh: Arcsinh | None = field(
+    arcsinh: None | Arcsinh = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    arcsech: Arcsech | None = field(
+    arcsech: None | Arcsech = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    arcsec: Arcsec | None = field(
+    arcsec: None | Arcsec = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    arccsch: Arccsch | None = field(
+    arccsch: None | Arccsch = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    arccsc: Arccsc | None = field(
+    arccsc: None | Arccsc = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    arccoth: Arccoth | None = field(
+    arccoth: None | Arccoth = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    arccot: Arccot | None = field(
+    arccot: None | Arccot = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    arccosh: Arccosh | None = field(
+    arccosh: None | Arccosh = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    arctan: Arctan | None = field(
+    arctan: None | Arctan = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    arccos: Arccos | None = field(
+    arccos: None | Arccos = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    arcsin: Arcsin | None = field(
+    arcsin: None | Arcsin = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    coth: Coth | None = field(
+    coth: None | Coth = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    csch: Csch | None = field(
+    csch: None | Csch = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    sech: Sech | None = field(
+    sech: None | Sech = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    tanh: Tanh | None = field(
+    tanh: None | Tanh = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    cosh: Cosh | None = field(
+    cosh: None | Cosh = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    sinh: Sinh | None = field(
+    sinh: None | Sinh = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    cot: Cot | None = field(
+    cot: None | Cot = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    csc: Csc | None = field(
+    csc: None | Csc = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    sec: Sec | None = field(
+    sec: None | Sec = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    tan: Tan | None = field(
+    tan: None | Tan = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    cos: Cos | None = field(
+    cos: None | Cos = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    sin: Sin | None = field(
+    sin: None | Sin = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    mode: Mode | None = field(
+    mode: None | Mode = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    median: Median | None = field(
+    median: None | Median = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    variance: Variance | None = field(
+    variance: None | Variance = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    sdev: Sdev | None = field(
+    sdev: None | Sdev = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    mean: Mean | None = field(
+    mean: None | Mean = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    matrixrow: Matrixrow | None = field(
+    matrixrow: None | Matrixrow = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    matrix: Matrix | None = field(
+    matrix: None | Matrix = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    vector: Vector | None = field(
+    vector: None | Vector = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    transpose: Transpose | None = field(
+    transpose: None | Transpose = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    determinant: Determinant | None = field(
+    determinant: None | Determinant = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    selector: Selector | None = field(
+    selector: None | Selector = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    outerproduct: Outerproduct | None = field(
+    outerproduct: None | Outerproduct = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    scalarproduct: Scalarproduct | None = field(
+    scalarproduct: None | Scalarproduct = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    vectorproduct: Vectorproduct | None = field(
+    vectorproduct: None | Vectorproduct = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    emptyset: Emptyset | None = field(
+    emptyset: None | Emptyset = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    primes: Primes | None = field(
+    primes: None | Primes = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    complexes: Complexes | None = field(
+    complexes: None | Complexes = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    naturalnumbers: Naturalnumbers | None = field(
+    naturalnumbers: None | Naturalnumbers = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    rationals: Rationals | None = field(
+    rationals: None | Rationals = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    reals: Reals | None = field(
+    reals: None | Reals = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    integers: Integers | None = field(
+    integers: None | Integers = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    infinity: Infinity | None = field(
+    infinity: None | Infinity = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    eulergamma: Eulergamma | None = field(
+    eulergamma: None | Eulergamma = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    pi: Pi | None = field(
+    pi: None | Pi = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    false: FalseType | None = field(
+    false: None | FalseType = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    true: TrueType | None = field(
+    true: None | TrueType = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    notanumber: Notanumber | None = field(
+    notanumber: None | Notanumber = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    imaginaryi: Imaginaryi | None = field(
+    imaginaryi: None | Imaginaryi = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    exponentiale: Exponentiale | None = field(
+    exponentiale: None | Exponentiale = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    xref: object | None = field(
+    xref: None | object = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -17056,19 +17056,19 @@ class Otherwise:
             "tokens": True,
         },
     )
-    style: str | None = field(
+    style: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    href: str | None = field(
+    href: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    other: object | None = field(
+    other: None | object = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -17081,13 +17081,13 @@ class Otherwise:
             "namespace": "##other",
         },
     )
-    encoding: str | None = field(
+    encoding: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    definition_url: str | None = field(
+    definition_url: None | str = field(
         default=None,
         metadata={
             "name": "definitionURL",
@@ -18238,13 +18238,13 @@ class Piece:
             "sequence": 1,
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    xref: object | None = field(
+    xref: None | object = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -18258,19 +18258,19 @@ class Piece:
             "tokens": True,
         },
     )
-    style: str | None = field(
+    style: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    href: str | None = field(
+    href: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    other: object | None = field(
+    other: None | object = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -18283,13 +18283,13 @@ class Piece:
             "namespace": "##other",
         },
     )
-    encoding: str | None = field(
+    encoding: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    definition_url: str | None = field(
+    definition_url: None | str = field(
         default=None,
         metadata={
             "name": "definitionURL",
@@ -18304,13 +18304,13 @@ class Menclose(ImpliedMrow):
         name = "menclose"
         namespace = "http://www.w3.org/1998/Math/MathML"
 
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    xref: object | None = field(
+    xref: None | object = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -18324,19 +18324,19 @@ class Menclose(ImpliedMrow):
             "tokens": True,
         },
     )
-    style: str | None = field(
+    style: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    href: str | None = field(
+    href: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    other: object | None = field(
+    other: None | object = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -18349,21 +18349,21 @@ class Menclose(ImpliedMrow):
             "namespace": "##other",
         },
     )
-    mathcolor: str | None = field(
+    mathcolor: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\s*((#[0-9a-fA-F]{3}([0-9a-fA-F]{3})?)|[aA][qQ][uU][aA]|[bB][lL][aA][cC][kK]|[bB][lL][uU][eE]|[fF][uU][cC][hH][sS][iI][aA]|[gG][rR][aA][yY]|[gG][rR][eE][eE][nN]|[lL][iI][mM][eE]|[mM][aA][rR][oO][oO][nN]|[nN][aA][vV][yY]|[oO][lL][iI][vV][eE]|[pP][uU][rR][pP][lL][eE]|[rR][eE][dD]|[sS][iI][lL][vV][eE][rR]|[tT][eE][aA][lL]|[wW][hH][iI][tT][eE]|[yY][eE][lL][lL][oO][wW])\s*",
         },
     )
-    mathbackground: str | MencloseValue | None = field(
+    mathbackground: None | str | MencloseValue = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\s*((#[0-9a-fA-F]{3}([0-9a-fA-F]{3})?)|[aA][qQ][uU][aA]|[bB][lL][aA][cC][kK]|[bB][lL][uU][eE]|[fF][uU][cC][hH][sS][iI][aA]|[gG][rR][aA][yY]|[gG][rR][eE][eE][nN]|[lL][iI][mM][eE]|[mM][aA][rR][oO][oO][nN]|[nN][aA][vV][yY]|[oO][lL][iI][vV][eE]|[pP][uU][rR][pP][lL][eE]|[rR][eE][dD]|[sS][iI][lL][vV][eE][rR]|[tT][eE][aA][lL]|[wW][hH][iI][tT][eE]|[yY][eE][lL][lL][oO][wW])\s*",
         },
     )
-    notation: object | None = field(
+    notation: None | object = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -18377,13 +18377,13 @@ class Merror(ImpliedMrow):
         name = "merror"
         namespace = "http://www.w3.org/1998/Math/MathML"
 
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    xref: object | None = field(
+    xref: None | object = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -18397,19 +18397,19 @@ class Merror(ImpliedMrow):
             "tokens": True,
         },
     )
-    style: str | None = field(
+    style: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    href: str | None = field(
+    href: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    other: object | None = field(
+    other: None | object = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -18422,14 +18422,14 @@ class Merror(ImpliedMrow):
             "namespace": "##other",
         },
     )
-    mathcolor: str | None = field(
+    mathcolor: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\s*((#[0-9a-fA-F]{3}([0-9a-fA-F]{3})?)|[aA][qQ][uU][aA]|[bB][lL][aA][cC][kK]|[bB][lL][uU][eE]|[fF][uU][cC][hH][sS][iI][aA]|[gG][rR][aA][yY]|[gG][rR][eE][eE][nN]|[lL][iI][mM][eE]|[mM][aA][rR][oO][oO][nN]|[nN][aA][vV][yY]|[oO][lL][iI][vV][eE]|[pP][uU][rR][pP][lL][eE]|[rR][eE][dD]|[sS][iI][lL][vV][eE][rR]|[tT][eE][aA][lL]|[wW][hH][iI][tT][eE]|[yY][eE][lL][lL][oO][wW])\s*",
         },
     )
-    mathbackground: str | MerrorValue | None = field(
+    mathbackground: None | str | MerrorValue = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -18444,13 +18444,13 @@ class Mpadded(ImpliedMrow):
         name = "mpadded"
         namespace = "http://www.w3.org/1998/Math/MathML"
 
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    xref: object | None = field(
+    xref: None | object = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -18464,19 +18464,19 @@ class Mpadded(ImpliedMrow):
             "tokens": True,
         },
     )
-    style: str | None = field(
+    style: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    href: str | None = field(
+    href: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    other: object | None = field(
+    other: None | object = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -18489,49 +18489,49 @@ class Mpadded(ImpliedMrow):
             "namespace": "##other",
         },
     )
-    mathcolor: str | None = field(
+    mathcolor: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\s*((#[0-9a-fA-F]{3}([0-9a-fA-F]{3})?)|[aA][qQ][uU][aA]|[bB][lL][aA][cC][kK]|[bB][lL][uU][eE]|[fF][uU][cC][hH][sS][iI][aA]|[gG][rR][aA][yY]|[gG][rR][eE][eE][nN]|[lL][iI][mM][eE]|[mM][aA][rR][oO][oO][nN]|[nN][aA][vV][yY]|[oO][lL][iI][vV][eE]|[pP][uU][rR][pP][lL][eE]|[rR][eE][dD]|[sS][iI][lL][vV][eE][rR]|[tT][eE][aA][lL]|[wW][hH][iI][tT][eE]|[yY][eE][lL][lL][oO][wW])\s*",
         },
     )
-    mathbackground: str | MpaddedValue | None = field(
+    mathbackground: None | str | MpaddedValue = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\s*((#[0-9a-fA-F]{3}([0-9a-fA-F]{3})?)|[aA][qQ][uU][aA]|[bB][lL][aA][cC][kK]|[bB][lL][uU][eE]|[fF][uU][cC][hH][sS][iI][aA]|[gG][rR][aA][yY]|[gG][rR][eE][eE][nN]|[lL][iI][mM][eE]|[mM][aA][rR][oO][oO][nN]|[nN][aA][vV][yY]|[oO][lL][iI][vV][eE]|[pP][uU][rR][pP][lL][eE]|[rR][eE][dD]|[sS][iI][lL][vV][eE][rR]|[tT][eE][aA][lL]|[wW][hH][iI][tT][eE]|[yY][eE][lL][lL][oO][wW])\s*",
         },
     )
-    height: str | None = field(
+    height: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\s*([\+\-]?[0-9]*([0-9]\.?|\.[0-9])[0-9]*\s*((%?\s*(height|depth|width)?)|e[mx]|in|cm|mm|p[xtc]|((negative)?((very){0,2}thi(n|ck)|medium)mathspace))?)\s*",
         },
     )
-    depth: str | None = field(
+    depth: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\s*([\+\-]?[0-9]*([0-9]\.?|\.[0-9])[0-9]*\s*((%?\s*(height|depth|width)?)|e[mx]|in|cm|mm|p[xtc]|((negative)?((very){0,2}thi(n|ck)|medium)mathspace))?)\s*",
         },
     )
-    width: str | None = field(
+    width: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\s*([\+\-]?[0-9]*([0-9]\.?|\.[0-9])[0-9]*\s*((%?\s*(height|depth|width)?)|e[mx]|in|cm|mm|p[xtc]|((negative)?((very){0,2}thi(n|ck)|medium)mathspace))?)\s*",
         },
     )
-    lspace: str | None = field(
+    lspace: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\s*([\+\-]?[0-9]*([0-9]\.?|\.[0-9])[0-9]*\s*((%?\s*(height|depth|width)?)|e[mx]|in|cm|mm|p[xtc]|((negative)?((very){0,2}thi(n|ck)|medium)mathspace))?)\s*",
         },
     )
-    voffset: str | None = field(
+    voffset: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -18546,13 +18546,13 @@ class Mphantom(ImpliedMrow):
         name = "mphantom"
         namespace = "http://www.w3.org/1998/Math/MathML"
 
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    xref: object | None = field(
+    xref: None | object = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -18566,19 +18566,19 @@ class Mphantom(ImpliedMrow):
             "tokens": True,
         },
     )
-    style: str | None = field(
+    style: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    href: str | None = field(
+    href: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    other: object | None = field(
+    other: None | object = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -18591,14 +18591,14 @@ class Mphantom(ImpliedMrow):
             "namespace": "##other",
         },
     )
-    mathcolor: str | None = field(
+    mathcolor: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\s*((#[0-9a-fA-F]{3}([0-9a-fA-F]{3})?)|[aA][qQ][uU][aA]|[bB][lL][aA][cC][kK]|[bB][lL][uU][eE]|[fF][uU][cC][hH][sS][iI][aA]|[gG][rR][aA][yY]|[gG][rR][eE][eE][nN]|[lL][iI][mM][eE]|[mM][aA][rR][oO][oO][nN]|[nN][aA][vV][yY]|[oO][lL][iI][vV][eE]|[pP][uU][rR][pP][lL][eE]|[rR][eE][dD]|[sS][iI][lL][vV][eE][rR]|[tT][eE][aA][lL]|[wW][hH][iI][tT][eE]|[yY][eE][lL][lL][oO][wW])\s*",
         },
     )
-    mathbackground: str | MphantomValue | None = field(
+    mathbackground: None | str | MphantomValue = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -18613,13 +18613,13 @@ class Msqrt(ImpliedMrow):
         name = "msqrt"
         namespace = "http://www.w3.org/1998/Math/MathML"
 
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    xref: object | None = field(
+    xref: None | object = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -18633,19 +18633,19 @@ class Msqrt(ImpliedMrow):
             "tokens": True,
         },
     )
-    style: str | None = field(
+    style: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    href: str | None = field(
+    href: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    other: object | None = field(
+    other: None | object = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -18658,14 +18658,14 @@ class Msqrt(ImpliedMrow):
             "namespace": "##other",
         },
     )
-    mathcolor: str | None = field(
+    mathcolor: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\s*((#[0-9a-fA-F]{3}([0-9a-fA-F]{3})?)|[aA][qQ][uU][aA]|[bB][lL][aA][cC][kK]|[bB][lL][uU][eE]|[fF][uU][cC][hH][sS][iI][aA]|[gG][rR][aA][yY]|[gG][rR][eE][eE][nN]|[lL][iI][mM][eE]|[mM][aA][rR][oO][oO][nN]|[nN][aA][vV][yY]|[oO][lL][iI][vV][eE]|[pP][uU][rR][pP][lL][eE]|[rR][eE][dD]|[sS][iI][lL][vV][eE][rR]|[tT][eE][aA][lL]|[wW][hH][iI][tT][eE]|[yY][eE][lL][lL][oO][wW])\s*",
         },
     )
-    mathbackground: str | MsqrtValue | None = field(
+    mathbackground: None | str | MsqrtValue = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -18680,13 +18680,13 @@ class Mstyle(ImpliedMrow):
         name = "mstyle"
         namespace = "http://www.w3.org/1998/Math/MathML"
 
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    xref: object | None = field(
+    xref: None | object = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -18700,19 +18700,19 @@ class Mstyle(ImpliedMrow):
             "tokens": True,
         },
     )
-    style: str | None = field(
+    style: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    href: str | None = field(
+    href: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    other: object | None = field(
+    other: None | object = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -18725,71 +18725,71 @@ class Mstyle(ImpliedMrow):
             "namespace": "##other",
         },
     )
-    mathcolor: str | None = field(
+    mathcolor: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\s*((#[0-9a-fA-F]{3}([0-9a-fA-F]{3})?)|[aA][qQ][uU][aA]|[bB][lL][aA][cC][kK]|[bB][lL][uU][eE]|[fF][uU][cC][hH][sS][iI][aA]|[gG][rR][aA][yY]|[gG][rR][eE][eE][nN]|[lL][iI][mM][eE]|[mM][aA][rR][oO][oO][nN]|[nN][aA][vV][yY]|[oO][lL][iI][vV][eE]|[pP][uU][rR][pP][lL][eE]|[rR][eE][dD]|[sS][iI][lL][vV][eE][rR]|[tT][eE][aA][lL]|[wW][hH][iI][tT][eE]|[yY][eE][lL][lL][oO][wW])\s*",
         },
     )
-    mathbackground: str | MstyleValue | None = field(
+    mathbackground: None | str | MstyleValue = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\s*((#[0-9a-fA-F]{3}([0-9a-fA-F]{3})?)|[aA][qQ][uU][aA]|[bB][lL][aA][cC][kK]|[bB][lL][uU][eE]|[fF][uU][cC][hH][sS][iI][aA]|[gG][rR][aA][yY]|[gG][rR][eE][eE][nN]|[lL][iI][mM][eE]|[mM][aA][rR][oO][oO][nN]|[nN][aA][vV][yY]|[oO][lL][iI][vV][eE]|[pP][uU][rR][pP][lL][eE]|[rR][eE][dD]|[sS][iI][lL][vV][eE][rR]|[tT][eE][aA][lL]|[wW][hH][iI][tT][eE]|[yY][eE][lL][lL][oO][wW])\s*",
         },
     )
-    scriptlevel: int | None = field(
+    scriptlevel: None | int = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    displaystyle: MstyleDisplaystyle | None = field(
+    displaystyle: None | MstyleDisplaystyle = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    scriptsizemultiplier: Decimal | None = field(
+    scriptsizemultiplier: None | Decimal = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    scriptminsize: str | None = field(
+    scriptminsize: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\s*((-?[0-9]*([0-9]\.?|\.[0-9])[0-9]*(e[mx]|in|cm|mm|p[xtc]|%)?)|(negative)?((very){0,2}thi(n|ck)|medium)mathspace)\s*",
         },
     )
-    infixlinebreakstyle: MstyleInfixlinebreakstyle | None = field(
+    infixlinebreakstyle: None | MstyleInfixlinebreakstyle = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    decimalpoint: str | None = field(
+    decimalpoint: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\s*\S\s*",
         },
     )
-    accent: MstyleAccent | None = field(
+    accent: None | MstyleAccent = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    accentunder: MstyleAccentunder | None = field(
+    accentunder: None | MstyleAccentunder = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    align: MstyleAlign | None = field(
+    align: None | MstyleAlign = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -18802,26 +18802,26 @@ class Mstyle(ImpliedMrow):
             "tokens": True,
         },
     )
-    bevelled: MstyleBevelled | None = field(
+    bevelled: None | MstyleBevelled = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    charalign: MstyleCharalign | None = field(
+    charalign: None | MstyleCharalign = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    charspacing: str | MstyleValue | None = field(
+    charspacing: None | str | MstyleValue = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\s*((-?[0-9]*([0-9]\.?|\.[0-9])[0-9]*(e[mx]|in|cm|mm|p[xtc]|%)?)|(negative)?((very){0,2}thi(n|ck)|medium)mathspace)\s*",
         },
     )
-    close: object | None = field(
+    close: None | object = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -18850,7 +18850,7 @@ class Mstyle(ImpliedMrow):
             "tokens": True,
         },
     )
-    columnspan: int | None = field(
+    columnspan: None | int = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -18870,56 +18870,56 @@ class Mstyle(ImpliedMrow):
             "tokens": True,
         },
     )
-    denomalign: MstyleDenomalign | None = field(
+    denomalign: None | MstyleDenomalign = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    depth: str | None = field(
+    depth: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\s*((-?[0-9]*([0-9]\.?|\.[0-9])[0-9]*(e[mx]|in|cm|mm|p[xtc]|%)?)|(negative)?((very){0,2}thi(n|ck)|medium)mathspace)\s*",
         },
     )
-    dir: MstyleDir | None = field(
+    dir: None | MstyleDir = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    edge: MstyleEdge | None = field(
+    edge: None | MstyleEdge = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    equalcolumns: MstyleEqualcolumns | None = field(
+    equalcolumns: None | MstyleEqualcolumns = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    equalrows: MstyleEqualrows | None = field(
+    equalrows: None | MstyleEqualrows = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    fence: MstyleFence | None = field(
+    fence: None | MstyleFence = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    form: MstyleForm | None = field(
+    form: None | MstyleForm = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    frame: Linestyle | None = field(
+    frame: None | Linestyle = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -18933,213 +18933,213 @@ class Mstyle(ImpliedMrow):
             "tokens": True,
         },
     )
-    groupalign: str | None = field(
+    groupalign: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"(\s*\{\s*(left|center|right|decimalpoint)(\s+(left|center|right|decimalpoint))*\})*\s*",
         },
     )
-    height: str | None = field(
+    height: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\s*((-?[0-9]*([0-9]\.?|\.[0-9])[0-9]*(e[mx]|in|cm|mm|p[xtc]|%)?)|(negative)?((very){0,2}thi(n|ck)|medium)mathspace)\s*",
         },
     )
-    indentalign: MstyleIndentalign | None = field(
+    indentalign: None | MstyleIndentalign = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    indentalignfirst: MstyleIndentalignfirst | None = field(
+    indentalignfirst: None | MstyleIndentalignfirst = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    indentalignlast: MstyleIndentalignlast | None = field(
+    indentalignlast: None | MstyleIndentalignlast = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    indentshift: str | None = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-            "pattern": r"\s*((-?[0-9]*([0-9]\.?|\.[0-9])[0-9]*(e[mx]|in|cm|mm|p[xtc]|%)?)|(negative)?((very){0,2}thi(n|ck)|medium)mathspace)\s*",
-        },
-    )
-    indentshiftfirst: str | MstyleValue | None = field(
+    indentshift: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\s*((-?[0-9]*([0-9]\.?|\.[0-9])[0-9]*(e[mx]|in|cm|mm|p[xtc]|%)?)|(negative)?((very){0,2}thi(n|ck)|medium)mathspace)\s*",
         },
     )
-    indentshiftlast: str | MstyleValue | None = field(
+    indentshiftfirst: None | str | MstyleValue = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\s*((-?[0-9]*([0-9]\.?|\.[0-9])[0-9]*(e[mx]|in|cm|mm|p[xtc]|%)?)|(negative)?((very){0,2}thi(n|ck)|medium)mathspace)\s*",
         },
     )
-    indenttarget: object | None = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        },
-    )
-    largeop: MstyleLargeop | None = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        },
-    )
-    leftoverhang: str | None = field(
+    indentshiftlast: None | str | MstyleValue = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\s*((-?[0-9]*([0-9]\.?|\.[0-9])[0-9]*(e[mx]|in|cm|mm|p[xtc]|%)?)|(negative)?((very){0,2}thi(n|ck)|medium)mathspace)\s*",
         },
     )
-    length: int | None = field(
+    indenttarget: None | object = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    linebreak: MstyleLinebreak | None = field(
+    largeop: None | MstyleLargeop = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    linebreakmultchar: object | None = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        },
-    )
-    linebreakstyle: MstyleLinebreakstyle | None = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        },
-    )
-    lineleading: str | None = field(
+    leftoverhang: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\s*((-?[0-9]*([0-9]\.?|\.[0-9])[0-9]*(e[mx]|in|cm|mm|p[xtc]|%)?)|(negative)?((very){0,2}thi(n|ck)|medium)mathspace)\s*",
         },
     )
-    linethickness: str | MstyleValue | None = field(
+    length: None | int = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        },
+    )
+    linebreak: None | MstyleLinebreak = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        },
+    )
+    linebreakmultchar: None | object = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        },
+    )
+    linebreakstyle: None | MstyleLinebreakstyle = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        },
+    )
+    lineleading: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\s*((-?[0-9]*([0-9]\.?|\.[0-9])[0-9]*(e[mx]|in|cm|mm|p[xtc]|%)?)|(negative)?((very){0,2}thi(n|ck)|medium)mathspace)\s*",
         },
     )
-    location: MstyleLocation | None = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        },
-    )
-    longdivstyle: MstyleLongdivstyle | None = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        },
-    )
-    lquote: object | None = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        },
-    )
-    lspace: str | None = field(
+    linethickness: None | str | MstyleValue = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\s*((-?[0-9]*([0-9]\.?|\.[0-9])[0-9]*(e[mx]|in|cm|mm|p[xtc]|%)?)|(negative)?((very){0,2}thi(n|ck)|medium)mathspace)\s*",
         },
     )
-    mathsize: str | MstyleValue | None = field(
+    location: None | MstyleLocation = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        },
+    )
+    longdivstyle: None | MstyleLongdivstyle = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        },
+    )
+    lquote: None | object = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        },
+    )
+    lspace: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\s*((-?[0-9]*([0-9]\.?|\.[0-9])[0-9]*(e[mx]|in|cm|mm|p[xtc]|%)?)|(negative)?((very){0,2}thi(n|ck)|medium)mathspace)\s*",
         },
     )
-    mathvariant: MstyleMathvariant | None = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        },
-    )
-    maxsize: str | MstyleValue | None = field(
+    mathsize: None | str | MstyleValue = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\s*((-?[0-9]*([0-9]\.?|\.[0-9])[0-9]*(e[mx]|in|cm|mm|p[xtc]|%)?)|(negative)?((very){0,2}thi(n|ck)|medium)mathspace)\s*",
         },
     )
-    minlabelspacing: str | None = field(
+    mathvariant: None | MstyleMathvariant = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        },
+    )
+    maxsize: None | str | MstyleValue = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\s*((-?[0-9]*([0-9]\.?|\.[0-9])[0-9]*(e[mx]|in|cm|mm|p[xtc]|%)?)|(negative)?((very){0,2}thi(n|ck)|medium)mathspace)\s*",
         },
     )
-    minsize: str | None = field(
+    minlabelspacing: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\s*((-?[0-9]*([0-9]\.?|\.[0-9])[0-9]*(e[mx]|in|cm|mm|p[xtc]|%)?)|(negative)?((very){0,2}thi(n|ck)|medium)mathspace)\s*",
         },
     )
-    movablelimits: MstyleMovablelimits | None = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        },
-    )
-    mslinethickness: str | MstyleValue | None = field(
+    minsize: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\s*((-?[0-9]*([0-9]\.?|\.[0-9])[0-9]*(e[mx]|in|cm|mm|p[xtc]|%)?)|(negative)?((very){0,2}thi(n|ck)|medium)mathspace)\s*",
         },
     )
-    notation: object | None = field(
+    movablelimits: None | MstyleMovablelimits = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    numalign: MstyleNumalign | None = field(
+    mslinethickness: None | str | MstyleValue = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+            "pattern": r"\s*((-?[0-9]*([0-9]\.?|\.[0-9])[0-9]*(e[mx]|in|cm|mm|p[xtc]|%)?)|(negative)?((very){0,2}thi(n|ck)|medium)mathspace)\s*",
+        },
+    )
+    notation: None | object = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    open: object | None = field(
+    numalign: None | MstyleNumalign = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    position: int | None = field(
+    open: None | object = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    rightoverhang: str | None = field(
+    position: None | int = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        },
+    )
+    rightoverhang: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -19169,183 +19169,183 @@ class Mstyle(ImpliedMrow):
             "tokens": True,
         },
     )
-    rowspan: int | None = field(
+    rowspan: None | int = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    rquote: object | None = field(
+    rquote: None | object = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    rspace: str | None = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-            "pattern": r"\s*((-?[0-9]*([0-9]\.?|\.[0-9])[0-9]*(e[mx]|in|cm|mm|p[xtc]|%)?)|(negative)?((very){0,2}thi(n|ck)|medium)mathspace)\s*",
-        },
-    )
-    selection: int | None = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        },
-    )
-    separator: MstyleSeparator | None = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        },
-    )
-    separators: object | None = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        },
-    )
-    shift: int | None = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        },
-    )
-    side: MstyleSide | None = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        },
-    )
-    stackalign: MstyleStackalign | None = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        },
-    )
-    stretchy: MstyleStretchy | None = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        },
-    )
-    subscriptshift: str | None = field(
+    rspace: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\s*((-?[0-9]*([0-9]\.?|\.[0-9])[0-9]*(e[mx]|in|cm|mm|p[xtc]|%)?)|(negative)?((very){0,2}thi(n|ck)|medium)mathspace)\s*",
         },
     )
-    superscriptshift: str | None = field(
+    selection: None | int = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        },
+    )
+    separator: None | MstyleSeparator = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        },
+    )
+    separators: None | object = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        },
+    )
+    shift: None | int = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        },
+    )
+    side: None | MstyleSide = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        },
+    )
+    stackalign: None | MstyleStackalign = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        },
+    )
+    stretchy: None | MstyleStretchy = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        },
+    )
+    subscriptshift: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\s*((-?[0-9]*([0-9]\.?|\.[0-9])[0-9]*(e[mx]|in|cm|mm|p[xtc]|%)?)|(negative)?((very){0,2}thi(n|ck)|medium)mathspace)\s*",
         },
     )
-    symmetric: MstyleSymmetric | None = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        },
-    )
-    valign: str | None = field(
+    superscriptshift: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\s*((-?[0-9]*([0-9]\.?|\.[0-9])[0-9]*(e[mx]|in|cm|mm|p[xtc]|%)?)|(negative)?((very){0,2}thi(n|ck)|medium)mathspace)\s*",
         },
     )
-    width: str | None = field(
+    symmetric: None | MstyleSymmetric = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        },
+    )
+    valign: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\s*((-?[0-9]*([0-9]\.?|\.[0-9])[0-9]*(e[mx]|in|cm|mm|p[xtc]|%)?)|(negative)?((very){0,2}thi(n|ck)|medium)mathspace)\s*",
         },
     )
-    fontfamily: object | None = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        },
-    )
-    fontweight: MstyleFontweight | None = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        },
-    )
-    fontstyle: MstyleFontstyle | None = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        },
-    )
-    fontsize: str | None = field(
+    width: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\s*((-?[0-9]*([0-9]\.?|\.[0-9])[0-9]*(e[mx]|in|cm|mm|p[xtc]|%)?)|(negative)?((very){0,2}thi(n|ck)|medium)mathspace)\s*",
         },
     )
-    color: str | None = field(
+    fontfamily: None | object = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        },
+    )
+    fontweight: None | MstyleFontweight = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        },
+    )
+    fontstyle: None | MstyleFontstyle = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        },
+    )
+    fontsize: None | str = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+            "pattern": r"\s*((-?[0-9]*([0-9]\.?|\.[0-9])[0-9]*(e[mx]|in|cm|mm|p[xtc]|%)?)|(negative)?((very){0,2}thi(n|ck)|medium)mathspace)\s*",
+        },
+    )
+    color: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\s*((#[0-9a-fA-F]{3}([0-9a-fA-F]{3})?)|[aA][qQ][uU][aA]|[bB][lL][aA][cC][kK]|[bB][lL][uU][eE]|[fF][uU][cC][hH][sS][iI][aA]|[gG][rR][aA][yY]|[gG][rR][eE][eE][nN]|[lL][iI][mM][eE]|[mM][aA][rR][oO][oO][nN]|[nN][aA][vV][yY]|[oO][lL][iI][vV][eE]|[pP][uU][rR][pP][lL][eE]|[rR][eE][dD]|[sS][iI][lL][vV][eE][rR]|[tT][eE][aA][lL]|[wW][hH][iI][tT][eE]|[yY][eE][lL][lL][oO][wW])\s*",
         },
     )
-    background: str | MstyleValue | None = field(
+    background: None | str | MstyleValue = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\s*((#[0-9a-fA-F]{3}([0-9a-fA-F]{3})?)|[aA][qQ][uU][aA]|[bB][lL][aA][cC][kK]|[bB][lL][uU][eE]|[fF][uU][cC][hH][sS][iI][aA]|[gG][rR][aA][yY]|[gG][rR][eE][eE][nN]|[lL][iI][mM][eE]|[mM][aA][rR][oO][oO][nN]|[nN][aA][vV][yY]|[oO][lL][iI][vV][eE]|[pP][uU][rR][pP][lL][eE]|[rR][eE][dD]|[sS][iI][lL][vV][eE][rR]|[tT][eE][aA][lL]|[wW][hH][iI][tT][eE]|[yY][eE][lL][lL][oO][wW])\s*",
         },
     )
-    veryverythinmathspace: str | None = field(
+    veryverythinmathspace: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\s*((-?[0-9]*([0-9]\.?|\.[0-9])[0-9]*(e[mx]|in|cm|mm|p[xtc]|%)?)|(negative)?((very){0,2}thi(n|ck)|medium)mathspace)\s*",
         },
     )
-    verythinmathspace: str | None = field(
+    verythinmathspace: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\s*((-?[0-9]*([0-9]\.?|\.[0-9])[0-9]*(e[mx]|in|cm|mm|p[xtc]|%)?)|(negative)?((very){0,2}thi(n|ck)|medium)mathspace)\s*",
         },
     )
-    thinmathspace: str | None = field(
+    thinmathspace: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\s*((-?[0-9]*([0-9]\.?|\.[0-9])[0-9]*(e[mx]|in|cm|mm|p[xtc]|%)?)|(negative)?((very){0,2}thi(n|ck)|medium)mathspace)\s*",
         },
     )
-    mediummathspace: str | None = field(
+    mediummathspace: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\s*((-?[0-9]*([0-9]\.?|\.[0-9])[0-9]*(e[mx]|in|cm|mm|p[xtc]|%)?)|(negative)?((very){0,2}thi(n|ck)|medium)mathspace)\s*",
         },
     )
-    thickmathspace: str | None = field(
+    thickmathspace: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\s*((-?[0-9]*([0-9]\.?|\.[0-9])[0-9]*(e[mx]|in|cm|mm|p[xtc]|%)?)|(negative)?((very){0,2}thi(n|ck)|medium)mathspace)\s*",
         },
     )
-    verythickmathspace: str | None = field(
+    verythickmathspace: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\s*((-?[0-9]*([0-9]\.?|\.[0-9])[0-9]*(e[mx]|in|cm|mm|p[xtc]|%)?)|(negative)?((very){0,2}thi(n|ck)|medium)mathspace)\s*",
         },
     )
-    veryverythickmathspace: str | None = field(
+    veryverythickmathspace: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -20375,13 +20375,13 @@ class Mrow:
             "type": "Element",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    xref: object | None = field(
+    xref: None | object = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -20395,19 +20395,19 @@ class Mrow:
             "tokens": True,
         },
     )
-    style: str | None = field(
+    style: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    href: str | None = field(
+    href: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    other: object | None = field(
+    other: None | object = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -20420,21 +20420,21 @@ class Mrow:
             "namespace": "##other",
         },
     )
-    mathcolor: str | None = field(
+    mathcolor: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\s*((#[0-9a-fA-F]{3}([0-9a-fA-F]{3})?)|[aA][qQ][uU][aA]|[bB][lL][aA][cC][kK]|[bB][lL][uU][eE]|[fF][uU][cC][hH][sS][iI][aA]|[gG][rR][aA][yY]|[gG][rR][eE][eE][nN]|[lL][iI][mM][eE]|[mM][aA][rR][oO][oO][nN]|[nN][aA][vV][yY]|[oO][lL][iI][vV][eE]|[pP][uU][rR][pP][lL][eE]|[rR][eE][dD]|[sS][iI][lL][vV][eE][rR]|[tT][eE][aA][lL]|[wW][hH][iI][tT][eE]|[yY][eE][lL][lL][oO][wW])\s*",
         },
     )
-    mathbackground: str | MrowValue | None = field(
+    mathbackground: None | str | MrowValue = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\s*((#[0-9a-fA-F]{3}([0-9a-fA-F]{3})?)|[aA][qQ][uU][aA]|[bB][lL][aA][cC][kK]|[bB][lL][uU][eE]|[fF][uU][cC][hH][sS][iI][aA]|[gG][rR][aA][yY]|[gG][rR][eE][eE][nN]|[lL][iI][mM][eE]|[mM][aA][rR][oO][oO][nN]|[nN][aA][vV][yY]|[oO][lL][iI][vV][eE]|[pP][uU][rR][pP][lL][eE]|[rR][eE][dD]|[sS][iI][lL][vV][eE][rR]|[tT][eE][aA][lL]|[wW][hH][iI][tT][eE]|[yY][eE][lL][lL][oO][wW])\s*",
         },
     )
-    dir: MrowDir | None = field(
+    dir: None | MrowDir = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -20443,1016 +20443,1016 @@ class Mrow:
 
     @dataclass
     class Semantics:
-        apply: Apply | None = field(
+        apply: None | Apply = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        bind: Bind | None = field(
+        bind: None | Bind = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        ci: Ci | None = field(
+        ci: None | Ci = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cn: Cn | None = field(
+        cn: None | Cn = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        csymbol: Csymbol | None = field(
+        csymbol: None | Csymbol = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cbytes: Cbytes | None = field(
+        cbytes: None | Cbytes = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cerror: Cerror | None = field(
+        cerror: None | Cerror = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cs: Cs | None = field(
+        cs: None | Cs = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        share: Share | None = field(
+        share: None | Share = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        piecewise: Piecewise | None = field(
+        piecewise: None | Piecewise = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        declare: Declare | None = field(
+        declare: None | Declare = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        fn: Fn | None = field(
+        fn: None | Fn = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        reln: Reln | None = field(
+        reln: None | Reln = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        interval: Interval | None = field(
+        interval: None | Interval = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        moment: Moment | None = field(
+        moment: None | Moment = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        log: Log | None = field(
+        log: None | Log = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        ln: Ln | None = field(
+        ln: None | Ln = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        image: Image | None = field(
+        image: None | Image = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        codomain: Codomain | None = field(
+        codomain: None | Codomain = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        domain: Domain | None = field(
+        domain: None | Domain = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        ident: Ident | None = field(
+        ident: None | Ident = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        inverse: Inverse | None = field(
+        inverse: None | Inverse = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        lambda_value: Lambda | None = field(
+        lambda_value: None | Lambda = field(
             default=None,
             metadata={
                 "name": "lambda",
                 "type": "Element",
             },
         )
-        compose: Compose | None = field(
+        compose: None | Compose = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        quotient: Quotient | None = field(
+        quotient: None | Quotient = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        divide: Divide | None = field(
+        divide: None | Divide = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        minus: Minus | None = field(
+        minus: None | Minus = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        power: Power | None = field(
+        power: None | Power = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        rem: Rem | None = field(
+        rem: None | Rem = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        root: Root | None = field(
+        root: None | Root = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        factorial: Factorial | None = field(
+        factorial: None | Factorial = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        abs: Abs | None = field(
+        abs: None | Abs = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        conjugate: Conjugate | None = field(
+        conjugate: None | Conjugate = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arg: Arg | None = field(
+        arg: None | Arg = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        real: Real | None = field(
+        real: None | Real = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        imaginary: Imaginary | None = field(
+        imaginary: None | Imaginary = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        floor: Floor | None = field(
+        floor: None | Floor = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        ceiling: Ceiling | None = field(
+        ceiling: None | Ceiling = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        exp: Exp | None = field(
+        exp: None | Exp = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        min: Min | None = field(
+        min: None | Min = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        max: Max | None = field(
+        max: None | Max = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        lcm: Lcm | None = field(
+        lcm: None | Lcm = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        gcd: Gcd | None = field(
+        gcd: None | Gcd = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        times: Times | None = field(
+        times: None | Times = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        plus: Plus | None = field(
+        plus: None | Plus = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        xor: Xor | None = field(
+        xor: None | Xor = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        or_value: Or | None = field(
+        or_value: None | Or = field(
             default=None,
             metadata={
                 "name": "or",
                 "type": "Element",
             },
         )
-        and_value: And | None = field(
+        and_value: None | And = field(
             default=None,
             metadata={
                 "name": "and",
                 "type": "Element",
             },
         )
-        not_value: Not | None = field(
+        not_value: None | Not = field(
             default=None,
             metadata={
                 "name": "not",
                 "type": "Element",
             },
         )
-        equivalent: Equivalent | None = field(
+        equivalent: None | Equivalent = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        implies: Implies | None = field(
+        implies: None | Implies = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        exists: Exists | None = field(
+        exists: None | Exists = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        forall: Forall | None = field(
+        forall: None | Forall = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        leq: Leq | None = field(
+        leq: None | Leq = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        geq: Geq | None = field(
+        geq: None | Geq = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        lt: Lt | None = field(
+        lt: None | Lt = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        gt: Gt | None = field(
+        gt: None | Gt = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        eq: Eq | None = field(
+        eq: None | Eq = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        tendsto: Tendsto | None = field(
+        tendsto: None | Tendsto = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        factorof: Factorof | None = field(
+        factorof: None | Factorof = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        approx: Approx | None = field(
+        approx: None | Approx = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        neq: Neq | None = field(
+        neq: None | Neq = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        int_value: Int | None = field(
+        int_value: None | Int = field(
             default=None,
             metadata={
                 "name": "int",
                 "type": "Element",
             },
         )
-        diff: Diff | None = field(
+        diff: None | Diff = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        partialdiff: Partialdiff | None = field(
+        partialdiff: None | Partialdiff = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        laplacian: Laplacian | None = field(
+        laplacian: None | Laplacian = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        curl: Curl | None = field(
+        curl: None | Curl = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        grad: Grad | None = field(
+        grad: None | Grad = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        divergence: Divergence | None = field(
+        divergence: None | Divergence = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        list_value: List | None = field(
+        list_value: None | List = field(
             default=None,
             metadata={
                 "name": "list",
                 "type": "Element",
             },
         )
-        set: Set | None = field(
+        set: None | Set = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cartesianproduct: Cartesianproduct | None = field(
+        cartesianproduct: None | Cartesianproduct = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        intersect: Intersect | None = field(
+        intersect: None | Intersect = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        union: UnionType | None = field(
+        union: None | UnionType = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        setdiff: Setdiff | None = field(
+        setdiff: None | Setdiff = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        notprsubset: Notprsubset | None = field(
+        notprsubset: None | Notprsubset = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        notsubset: Notsubset | None = field(
+        notsubset: None | Notsubset = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        notin: Notin | None = field(
+        notin: None | Notin = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        in_value: In | None = field(
+        in_value: None | In = field(
             default=None,
             metadata={
                 "name": "in",
                 "type": "Element",
             },
         )
-        prsubset: Prsubset | None = field(
+        prsubset: None | Prsubset = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        subset: Subset | None = field(
+        subset: None | Subset = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        card: Card | None = field(
+        card: None | Card = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        sum: Sum | None = field(
+        sum: None | Sum = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        product: Product | None = field(
+        product: None | Product = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        limit: Limit | None = field(
+        limit: None | Limit = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arctanh: Arctanh | None = field(
+        arctanh: None | Arctanh = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arcsinh: Arcsinh | None = field(
+        arcsinh: None | Arcsinh = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arcsech: Arcsech | None = field(
+        arcsech: None | Arcsech = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arcsec: Arcsec | None = field(
+        arcsec: None | Arcsec = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arccsch: Arccsch | None = field(
+        arccsch: None | Arccsch = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arccsc: Arccsc | None = field(
+        arccsc: None | Arccsc = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arccoth: Arccoth | None = field(
+        arccoth: None | Arccoth = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arccot: Arccot | None = field(
+        arccot: None | Arccot = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arccosh: Arccosh | None = field(
+        arccosh: None | Arccosh = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arctan: Arctan | None = field(
+        arctan: None | Arctan = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arccos: Arccos | None = field(
+        arccos: None | Arccos = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arcsin: Arcsin | None = field(
+        arcsin: None | Arcsin = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        coth: Coth | None = field(
+        coth: None | Coth = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        csch: Csch | None = field(
+        csch: None | Csch = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        sech: Sech | None = field(
+        sech: None | Sech = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        tanh: Tanh | None = field(
+        tanh: None | Tanh = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cosh: Cosh | None = field(
+        cosh: None | Cosh = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        sinh: Sinh | None = field(
+        sinh: None | Sinh = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cot: Cot | None = field(
+        cot: None | Cot = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        csc: Csc | None = field(
+        csc: None | Csc = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        sec: Sec | None = field(
+        sec: None | Sec = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        tan: Tan | None = field(
+        tan: None | Tan = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cos: Cos | None = field(
+        cos: None | Cos = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        sin: Sin | None = field(
+        sin: None | Sin = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mode: Mode | None = field(
+        mode: None | Mode = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        median: Median | None = field(
+        median: None | Median = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        variance: Variance | None = field(
+        variance: None | Variance = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        sdev: Sdev | None = field(
+        sdev: None | Sdev = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mean: Mean | None = field(
+        mean: None | Mean = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        matrixrow: Matrixrow | None = field(
+        matrixrow: None | Matrixrow = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        matrix: Matrix | None = field(
+        matrix: None | Matrix = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        vector: Vector | None = field(
+        vector: None | Vector = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        transpose: Transpose | None = field(
+        transpose: None | Transpose = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        determinant: Determinant | None = field(
+        determinant: None | Determinant = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        selector: Selector | None = field(
+        selector: None | Selector = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        outerproduct: Outerproduct | None = field(
+        outerproduct: None | Outerproduct = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        scalarproduct: Scalarproduct | None = field(
+        scalarproduct: None | Scalarproduct = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        vectorproduct: Vectorproduct | None = field(
+        vectorproduct: None | Vectorproduct = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        emptyset: Emptyset | None = field(
+        emptyset: None | Emptyset = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        primes: Primes | None = field(
+        primes: None | Primes = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        complexes: Complexes | None = field(
+        complexes: None | Complexes = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        naturalnumbers: Naturalnumbers | None = field(
+        naturalnumbers: None | Naturalnumbers = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        rationals: Rationals | None = field(
+        rationals: None | Rationals = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        reals: Reals | None = field(
+        reals: None | Reals = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        integers: Integers | None = field(
+        integers: None | Integers = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        infinity: Infinity | None = field(
+        infinity: None | Infinity = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        eulergamma: Eulergamma | None = field(
+        eulergamma: None | Eulergamma = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        pi: Pi | None = field(
+        pi: None | Pi = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        false: FalseType | None = field(
+        false: None | FalseType = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        true: TrueType | None = field(
+        true: None | TrueType = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        notanumber: Notanumber | None = field(
+        notanumber: None | Notanumber = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        imaginaryi: Imaginaryi | None = field(
+        imaginaryi: None | Imaginaryi = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        exponentiale: Exponentiale | None = field(
+        exponentiale: None | Exponentiale = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        maction: Maction | None = field(
+        maction: None | Maction = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mlongdiv: Mlongdiv | None = field(
+        mlongdiv: None | Mlongdiv = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mstack: Mstack | None = field(
+        mstack: None | Mstack = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mtable: Mtable | None = field(
+        mtable: None | Mtable = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mmultiscripts: Mmultiscripts | None = field(
+        mmultiscripts: None | Mmultiscripts = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        munderover: Munderover | None = field(
+        munderover: None | Munderover = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mover: Mover | None = field(
+        mover: None | Mover = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        munder: Munder | None = field(
+        munder: None | Munder = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        msubsup: Msubsup | None = field(
+        msubsup: None | Msubsup = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        msup: Msup | None = field(
+        msup: None | Msup = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        msub: Msub | None = field(
+        msub: None | Msub = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        menclose: Menclose | None = field(
+        menclose: None | Menclose = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mfenced: Mfenced | None = field(
+        mfenced: None | Mfenced = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mphantom: Mphantom | None = field(
+        mphantom: None | Mphantom = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mpadded: Mpadded | None = field(
+        mpadded: None | Mpadded = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        merror: Merror | None = field(
+        merror: None | Merror = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mstyle: Mstyle | None = field(
+        mstyle: None | Mstyle = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mroot: Mroot | None = field(
+        mroot: None | Mroot = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        msqrt: Msqrt | None = field(
+        msqrt: None | Msqrt = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mfrac: Mfrac | None = field(
+        mfrac: None | Mfrac = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mrow: Mrow | None = field(
+        mrow: None | Mrow = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        maligngroup: Maligngroup | None = field(
+        maligngroup: None | Maligngroup = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        malignmark: Malignmark | None = field(
+        malignmark: None | Malignmark = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        ms: Ms | None = field(
+        ms: None | Ms = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mspace: Mspace | None = field(
+        mspace: None | Mspace = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mtext: Mtext | None = field(
+        mtext: None | Mtext = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mo: Mo | None = field(
+        mo: None | Mo = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mn: Mn | None = field(
+        mn: None | Mn = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mi: Mi | None = field(
+        mi: None | Mi = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        semantics: Mrow.Semantics | None = field(
+        semantics: None | Mrow.Semantics = field(
             default=None,
             metadata={
                 "type": "Element",
@@ -21471,13 +21471,13 @@ class Mrow:
                 "type": "Element",
             },
         )
-        id: str | None = field(
+        id: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
             },
         )
-        xref: object | None = field(
+        xref: None | object = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -21491,19 +21491,19 @@ class Mrow:
                 "tokens": True,
             },
         )
-        style: str | None = field(
+        style: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
             },
         )
-        href: str | None = field(
+        href: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
             },
         )
-        other: object | None = field(
+        other: None | object = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -21516,26 +21516,26 @@ class Mrow:
                 "namespace": "##other",
             },
         )
-        encoding: str | None = field(
+        encoding: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
             },
         )
-        definition_url: str | None = field(
+        definition_url: None | str = field(
             default=None,
             metadata={
                 "name": "definitionURL",
                 "type": "Attribute",
             },
         )
-        cd: str | None = field(
+        cd: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
             },
         )
-        name: str | None = field(
+        name: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -22926,13 +22926,13 @@ class Mfrac:
             "sequence": 1,
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    xref: object | None = field(
+    xref: None | object = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -22946,19 +22946,19 @@ class Mfrac:
             "tokens": True,
         },
     )
-    style: str | None = field(
+    style: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    href: str | None = field(
+    href: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    other: object | None = field(
+    other: None | object = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -22971,40 +22971,40 @@ class Mfrac:
             "namespace": "##other",
         },
     )
-    mathcolor: str | None = field(
+    mathcolor: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\s*((#[0-9a-fA-F]{3}([0-9a-fA-F]{3})?)|[aA][qQ][uU][aA]|[bB][lL][aA][cC][kK]|[bB][lL][uU][eE]|[fF][uU][cC][hH][sS][iI][aA]|[gG][rR][aA][yY]|[gG][rR][eE][eE][nN]|[lL][iI][mM][eE]|[mM][aA][rR][oO][oO][nN]|[nN][aA][vV][yY]|[oO][lL][iI][vV][eE]|[pP][uU][rR][pP][lL][eE]|[rR][eE][dD]|[sS][iI][lL][vV][eE][rR]|[tT][eE][aA][lL]|[wW][hH][iI][tT][eE]|[yY][eE][lL][lL][oO][wW])\s*",
         },
     )
-    mathbackground: str | MfracValue | None = field(
+    mathbackground: None | str | MfracValue = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\s*((#[0-9a-fA-F]{3}([0-9a-fA-F]{3})?)|[aA][qQ][uU][aA]|[bB][lL][aA][cC][kK]|[bB][lL][uU][eE]|[fF][uU][cC][hH][sS][iI][aA]|[gG][rR][aA][yY]|[gG][rR][eE][eE][nN]|[lL][iI][mM][eE]|[mM][aA][rR][oO][oO][nN]|[nN][aA][vV][yY]|[oO][lL][iI][vV][eE]|[pP][uU][rR][pP][lL][eE]|[rR][eE][dD]|[sS][iI][lL][vV][eE][rR]|[tT][eE][aA][lL]|[wW][hH][iI][tT][eE]|[yY][eE][lL][lL][oO][wW])\s*",
         },
     )
-    linethickness: str | MfracValue | None = field(
+    linethickness: None | str | MfracValue = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\s*((-?[0-9]*([0-9]\.?|\.[0-9])[0-9]*(e[mx]|in|cm|mm|p[xtc]|%)?)|(negative)?((very){0,2}thi(n|ck)|medium)mathspace)\s*",
         },
     )
-    numalign: MfracNumalign | None = field(
+    numalign: None | MfracNumalign = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    denomalign: MfracDenomalign | None = field(
+    denomalign: None | MfracDenomalign = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    bevelled: MfracBevelled | None = field(
+    bevelled: None | MfracBevelled = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -23013,1016 +23013,1016 @@ class Mfrac:
 
     @dataclass
     class Semantics:
-        apply: Apply | None = field(
+        apply: None | Apply = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        bind: Bind | None = field(
+        bind: None | Bind = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        ci: Ci | None = field(
+        ci: None | Ci = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cn: Cn | None = field(
+        cn: None | Cn = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        csymbol: Csymbol | None = field(
+        csymbol: None | Csymbol = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cbytes: Cbytes | None = field(
+        cbytes: None | Cbytes = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cerror: Cerror | None = field(
+        cerror: None | Cerror = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cs: Cs | None = field(
+        cs: None | Cs = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        share: Share | None = field(
+        share: None | Share = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        piecewise: Piecewise | None = field(
+        piecewise: None | Piecewise = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        declare: Declare | None = field(
+        declare: None | Declare = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        fn: Fn | None = field(
+        fn: None | Fn = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        reln: Reln | None = field(
+        reln: None | Reln = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        interval: Interval | None = field(
+        interval: None | Interval = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        moment: Moment | None = field(
+        moment: None | Moment = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        log: Log | None = field(
+        log: None | Log = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        ln: Ln | None = field(
+        ln: None | Ln = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        image: Image | None = field(
+        image: None | Image = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        codomain: Codomain | None = field(
+        codomain: None | Codomain = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        domain: Domain | None = field(
+        domain: None | Domain = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        ident: Ident | None = field(
+        ident: None | Ident = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        inverse: Inverse | None = field(
+        inverse: None | Inverse = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        lambda_value: Lambda | None = field(
+        lambda_value: None | Lambda = field(
             default=None,
             metadata={
                 "name": "lambda",
                 "type": "Element",
             },
         )
-        compose: Compose | None = field(
+        compose: None | Compose = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        quotient: Quotient | None = field(
+        quotient: None | Quotient = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        divide: Divide | None = field(
+        divide: None | Divide = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        minus: Minus | None = field(
+        minus: None | Minus = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        power: Power | None = field(
+        power: None | Power = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        rem: Rem | None = field(
+        rem: None | Rem = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        root: Root | None = field(
+        root: None | Root = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        factorial: Factorial | None = field(
+        factorial: None | Factorial = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        abs: Abs | None = field(
+        abs: None | Abs = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        conjugate: Conjugate | None = field(
+        conjugate: None | Conjugate = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arg: Arg | None = field(
+        arg: None | Arg = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        real: Real | None = field(
+        real: None | Real = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        imaginary: Imaginary | None = field(
+        imaginary: None | Imaginary = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        floor: Floor | None = field(
+        floor: None | Floor = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        ceiling: Ceiling | None = field(
+        ceiling: None | Ceiling = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        exp: Exp | None = field(
+        exp: None | Exp = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        min: Min | None = field(
+        min: None | Min = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        max: Max | None = field(
+        max: None | Max = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        lcm: Lcm | None = field(
+        lcm: None | Lcm = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        gcd: Gcd | None = field(
+        gcd: None | Gcd = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        times: Times | None = field(
+        times: None | Times = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        plus: Plus | None = field(
+        plus: None | Plus = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        xor: Xor | None = field(
+        xor: None | Xor = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        or_value: Or | None = field(
+        or_value: None | Or = field(
             default=None,
             metadata={
                 "name": "or",
                 "type": "Element",
             },
         )
-        and_value: And | None = field(
+        and_value: None | And = field(
             default=None,
             metadata={
                 "name": "and",
                 "type": "Element",
             },
         )
-        not_value: Not | None = field(
+        not_value: None | Not = field(
             default=None,
             metadata={
                 "name": "not",
                 "type": "Element",
             },
         )
-        equivalent: Equivalent | None = field(
+        equivalent: None | Equivalent = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        implies: Implies | None = field(
+        implies: None | Implies = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        exists: Exists | None = field(
+        exists: None | Exists = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        forall: Forall | None = field(
+        forall: None | Forall = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        leq: Leq | None = field(
+        leq: None | Leq = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        geq: Geq | None = field(
+        geq: None | Geq = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        lt: Lt | None = field(
+        lt: None | Lt = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        gt: Gt | None = field(
+        gt: None | Gt = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        eq: Eq | None = field(
+        eq: None | Eq = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        tendsto: Tendsto | None = field(
+        tendsto: None | Tendsto = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        factorof: Factorof | None = field(
+        factorof: None | Factorof = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        approx: Approx | None = field(
+        approx: None | Approx = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        neq: Neq | None = field(
+        neq: None | Neq = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        int_value: Int | None = field(
+        int_value: None | Int = field(
             default=None,
             metadata={
                 "name": "int",
                 "type": "Element",
             },
         )
-        diff: Diff | None = field(
+        diff: None | Diff = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        partialdiff: Partialdiff | None = field(
+        partialdiff: None | Partialdiff = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        laplacian: Laplacian | None = field(
+        laplacian: None | Laplacian = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        curl: Curl | None = field(
+        curl: None | Curl = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        grad: Grad | None = field(
+        grad: None | Grad = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        divergence: Divergence | None = field(
+        divergence: None | Divergence = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        list_value: List | None = field(
+        list_value: None | List = field(
             default=None,
             metadata={
                 "name": "list",
                 "type": "Element",
             },
         )
-        set: Set | None = field(
+        set: None | Set = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cartesianproduct: Cartesianproduct | None = field(
+        cartesianproduct: None | Cartesianproduct = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        intersect: Intersect | None = field(
+        intersect: None | Intersect = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        union: UnionType | None = field(
+        union: None | UnionType = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        setdiff: Setdiff | None = field(
+        setdiff: None | Setdiff = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        notprsubset: Notprsubset | None = field(
+        notprsubset: None | Notprsubset = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        notsubset: Notsubset | None = field(
+        notsubset: None | Notsubset = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        notin: Notin | None = field(
+        notin: None | Notin = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        in_value: In | None = field(
+        in_value: None | In = field(
             default=None,
             metadata={
                 "name": "in",
                 "type": "Element",
             },
         )
-        prsubset: Prsubset | None = field(
+        prsubset: None | Prsubset = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        subset: Subset | None = field(
+        subset: None | Subset = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        card: Card | None = field(
+        card: None | Card = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        sum: Sum | None = field(
+        sum: None | Sum = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        product: Product | None = field(
+        product: None | Product = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        limit: Limit | None = field(
+        limit: None | Limit = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arctanh: Arctanh | None = field(
+        arctanh: None | Arctanh = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arcsinh: Arcsinh | None = field(
+        arcsinh: None | Arcsinh = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arcsech: Arcsech | None = field(
+        arcsech: None | Arcsech = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arcsec: Arcsec | None = field(
+        arcsec: None | Arcsec = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arccsch: Arccsch | None = field(
+        arccsch: None | Arccsch = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arccsc: Arccsc | None = field(
+        arccsc: None | Arccsc = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arccoth: Arccoth | None = field(
+        arccoth: None | Arccoth = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arccot: Arccot | None = field(
+        arccot: None | Arccot = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arccosh: Arccosh | None = field(
+        arccosh: None | Arccosh = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arctan: Arctan | None = field(
+        arctan: None | Arctan = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arccos: Arccos | None = field(
+        arccos: None | Arccos = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arcsin: Arcsin | None = field(
+        arcsin: None | Arcsin = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        coth: Coth | None = field(
+        coth: None | Coth = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        csch: Csch | None = field(
+        csch: None | Csch = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        sech: Sech | None = field(
+        sech: None | Sech = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        tanh: Tanh | None = field(
+        tanh: None | Tanh = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cosh: Cosh | None = field(
+        cosh: None | Cosh = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        sinh: Sinh | None = field(
+        sinh: None | Sinh = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cot: Cot | None = field(
+        cot: None | Cot = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        csc: Csc | None = field(
+        csc: None | Csc = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        sec: Sec | None = field(
+        sec: None | Sec = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        tan: Tan | None = field(
+        tan: None | Tan = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cos: Cos | None = field(
+        cos: None | Cos = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        sin: Sin | None = field(
+        sin: None | Sin = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mode: Mode | None = field(
+        mode: None | Mode = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        median: Median | None = field(
+        median: None | Median = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        variance: Variance | None = field(
+        variance: None | Variance = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        sdev: Sdev | None = field(
+        sdev: None | Sdev = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mean: Mean | None = field(
+        mean: None | Mean = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        matrixrow: Matrixrow | None = field(
+        matrixrow: None | Matrixrow = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        matrix: Matrix | None = field(
+        matrix: None | Matrix = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        vector: Vector | None = field(
+        vector: None | Vector = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        transpose: Transpose | None = field(
+        transpose: None | Transpose = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        determinant: Determinant | None = field(
+        determinant: None | Determinant = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        selector: Selector | None = field(
+        selector: None | Selector = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        outerproduct: Outerproduct | None = field(
+        outerproduct: None | Outerproduct = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        scalarproduct: Scalarproduct | None = field(
+        scalarproduct: None | Scalarproduct = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        vectorproduct: Vectorproduct | None = field(
+        vectorproduct: None | Vectorproduct = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        emptyset: Emptyset | None = field(
+        emptyset: None | Emptyset = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        primes: Primes | None = field(
+        primes: None | Primes = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        complexes: Complexes | None = field(
+        complexes: None | Complexes = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        naturalnumbers: Naturalnumbers | None = field(
+        naturalnumbers: None | Naturalnumbers = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        rationals: Rationals | None = field(
+        rationals: None | Rationals = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        reals: Reals | None = field(
+        reals: None | Reals = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        integers: Integers | None = field(
+        integers: None | Integers = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        infinity: Infinity | None = field(
+        infinity: None | Infinity = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        eulergamma: Eulergamma | None = field(
+        eulergamma: None | Eulergamma = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        pi: Pi | None = field(
+        pi: None | Pi = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        false: FalseType | None = field(
+        false: None | FalseType = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        true: TrueType | None = field(
+        true: None | TrueType = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        notanumber: Notanumber | None = field(
+        notanumber: None | Notanumber = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        imaginaryi: Imaginaryi | None = field(
+        imaginaryi: None | Imaginaryi = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        exponentiale: Exponentiale | None = field(
+        exponentiale: None | Exponentiale = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        maction: Maction | None = field(
+        maction: None | Maction = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mlongdiv: Mlongdiv | None = field(
+        mlongdiv: None | Mlongdiv = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mstack: Mstack | None = field(
+        mstack: None | Mstack = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mtable: Mtable | None = field(
+        mtable: None | Mtable = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mmultiscripts: Mmultiscripts | None = field(
+        mmultiscripts: None | Mmultiscripts = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        munderover: Munderover | None = field(
+        munderover: None | Munderover = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mover: Mover | None = field(
+        mover: None | Mover = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        munder: Munder | None = field(
+        munder: None | Munder = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        msubsup: Msubsup | None = field(
+        msubsup: None | Msubsup = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        msup: Msup | None = field(
+        msup: None | Msup = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        msub: Msub | None = field(
+        msub: None | Msub = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        menclose: Menclose | None = field(
+        menclose: None | Menclose = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mfenced: Mfenced | None = field(
+        mfenced: None | Mfenced = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mphantom: Mphantom | None = field(
+        mphantom: None | Mphantom = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mpadded: Mpadded | None = field(
+        mpadded: None | Mpadded = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        merror: Merror | None = field(
+        merror: None | Merror = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mstyle: Mstyle | None = field(
+        mstyle: None | Mstyle = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mroot: Mroot | None = field(
+        mroot: None | Mroot = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        msqrt: Msqrt | None = field(
+        msqrt: None | Msqrt = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mfrac: Mfrac | None = field(
+        mfrac: None | Mfrac = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mrow: Mrow | None = field(
+        mrow: None | Mrow = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        maligngroup: Maligngroup | None = field(
+        maligngroup: None | Maligngroup = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        malignmark: Malignmark | None = field(
+        malignmark: None | Malignmark = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        ms: Ms | None = field(
+        ms: None | Ms = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mspace: Mspace | None = field(
+        mspace: None | Mspace = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mtext: Mtext | None = field(
+        mtext: None | Mtext = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mo: Mo | None = field(
+        mo: None | Mo = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mn: Mn | None = field(
+        mn: None | Mn = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mi: Mi | None = field(
+        mi: None | Mi = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        semantics: Mfrac.Semantics | None = field(
+        semantics: None | Mfrac.Semantics = field(
             default=None,
             metadata={
                 "type": "Element",
@@ -24041,13 +24041,13 @@ class Mfrac:
                 "type": "Element",
             },
         )
-        id: str | None = field(
+        id: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
             },
         )
-        xref: object | None = field(
+        xref: None | object = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -24061,19 +24061,19 @@ class Mfrac:
                 "tokens": True,
             },
         )
-        style: str | None = field(
+        style: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
             },
         )
-        href: str | None = field(
+        href: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
             },
         )
-        other: object | None = field(
+        other: None | object = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -24086,26 +24086,26 @@ class Mfrac:
                 "namespace": "##other",
             },
         )
-        encoding: str | None = field(
+        encoding: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
             },
         )
-        definition_url: str | None = field(
+        definition_url: None | str = field(
             default=None,
             metadata={
                 "name": "definitionURL",
                 "type": "Attribute",
             },
         )
-        cd: str | None = field(
+        cd: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
             },
         )
-        name: str | None = field(
+        name: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -25496,13 +25496,13 @@ class Mroot:
             "sequence": 1,
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    xref: object | None = field(
+    xref: None | object = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -25516,19 +25516,19 @@ class Mroot:
             "tokens": True,
         },
     )
-    style: str | None = field(
+    style: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    href: str | None = field(
+    href: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    other: object | None = field(
+    other: None | object = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -25541,14 +25541,14 @@ class Mroot:
             "namespace": "##other",
         },
     )
-    mathcolor: str | None = field(
+    mathcolor: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\s*((#[0-9a-fA-F]{3}([0-9a-fA-F]{3})?)|[aA][qQ][uU][aA]|[bB][lL][aA][cC][kK]|[bB][lL][uU][eE]|[fF][uU][cC][hH][sS][iI][aA]|[gG][rR][aA][yY]|[gG][rR][eE][eE][nN]|[lL][iI][mM][eE]|[mM][aA][rR][oO][oO][nN]|[nN][aA][vV][yY]|[oO][lL][iI][vV][eE]|[pP][uU][rR][pP][lL][eE]|[rR][eE][dD]|[sS][iI][lL][vV][eE][rR]|[tT][eE][aA][lL]|[wW][hH][iI][tT][eE]|[yY][eE][lL][lL][oO][wW])\s*",
         },
     )
-    mathbackground: str | MrootValue | None = field(
+    mathbackground: None | str | MrootValue = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -25558,1016 +25558,1016 @@ class Mroot:
 
     @dataclass
     class Semantics:
-        apply: Apply | None = field(
+        apply: None | Apply = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        bind: Bind | None = field(
+        bind: None | Bind = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        ci: Ci | None = field(
+        ci: None | Ci = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cn: Cn | None = field(
+        cn: None | Cn = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        csymbol: Csymbol | None = field(
+        csymbol: None | Csymbol = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cbytes: Cbytes | None = field(
+        cbytes: None | Cbytes = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cerror: Cerror | None = field(
+        cerror: None | Cerror = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cs: Cs | None = field(
+        cs: None | Cs = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        share: Share | None = field(
+        share: None | Share = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        piecewise: Piecewise | None = field(
+        piecewise: None | Piecewise = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        declare: Declare | None = field(
+        declare: None | Declare = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        fn: Fn | None = field(
+        fn: None | Fn = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        reln: Reln | None = field(
+        reln: None | Reln = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        interval: Interval | None = field(
+        interval: None | Interval = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        moment: Moment | None = field(
+        moment: None | Moment = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        log: Log | None = field(
+        log: None | Log = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        ln: Ln | None = field(
+        ln: None | Ln = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        image: Image | None = field(
+        image: None | Image = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        codomain: Codomain | None = field(
+        codomain: None | Codomain = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        domain: Domain | None = field(
+        domain: None | Domain = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        ident: Ident | None = field(
+        ident: None | Ident = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        inverse: Inverse | None = field(
+        inverse: None | Inverse = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        lambda_value: Lambda | None = field(
+        lambda_value: None | Lambda = field(
             default=None,
             metadata={
                 "name": "lambda",
                 "type": "Element",
             },
         )
-        compose: Compose | None = field(
+        compose: None | Compose = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        quotient: Quotient | None = field(
+        quotient: None | Quotient = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        divide: Divide | None = field(
+        divide: None | Divide = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        minus: Minus | None = field(
+        minus: None | Minus = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        power: Power | None = field(
+        power: None | Power = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        rem: Rem | None = field(
+        rem: None | Rem = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        root: Root | None = field(
+        root: None | Root = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        factorial: Factorial | None = field(
+        factorial: None | Factorial = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        abs: Abs | None = field(
+        abs: None | Abs = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        conjugate: Conjugate | None = field(
+        conjugate: None | Conjugate = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arg: Arg | None = field(
+        arg: None | Arg = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        real: Real | None = field(
+        real: None | Real = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        imaginary: Imaginary | None = field(
+        imaginary: None | Imaginary = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        floor: Floor | None = field(
+        floor: None | Floor = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        ceiling: Ceiling | None = field(
+        ceiling: None | Ceiling = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        exp: Exp | None = field(
+        exp: None | Exp = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        min: Min | None = field(
+        min: None | Min = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        max: Max | None = field(
+        max: None | Max = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        lcm: Lcm | None = field(
+        lcm: None | Lcm = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        gcd: Gcd | None = field(
+        gcd: None | Gcd = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        times: Times | None = field(
+        times: None | Times = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        plus: Plus | None = field(
+        plus: None | Plus = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        xor: Xor | None = field(
+        xor: None | Xor = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        or_value: Or | None = field(
+        or_value: None | Or = field(
             default=None,
             metadata={
                 "name": "or",
                 "type": "Element",
             },
         )
-        and_value: And | None = field(
+        and_value: None | And = field(
             default=None,
             metadata={
                 "name": "and",
                 "type": "Element",
             },
         )
-        not_value: Not | None = field(
+        not_value: None | Not = field(
             default=None,
             metadata={
                 "name": "not",
                 "type": "Element",
             },
         )
-        equivalent: Equivalent | None = field(
+        equivalent: None | Equivalent = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        implies: Implies | None = field(
+        implies: None | Implies = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        exists: Exists | None = field(
+        exists: None | Exists = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        forall: Forall | None = field(
+        forall: None | Forall = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        leq: Leq | None = field(
+        leq: None | Leq = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        geq: Geq | None = field(
+        geq: None | Geq = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        lt: Lt | None = field(
+        lt: None | Lt = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        gt: Gt | None = field(
+        gt: None | Gt = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        eq: Eq | None = field(
+        eq: None | Eq = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        tendsto: Tendsto | None = field(
+        tendsto: None | Tendsto = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        factorof: Factorof | None = field(
+        factorof: None | Factorof = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        approx: Approx | None = field(
+        approx: None | Approx = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        neq: Neq | None = field(
+        neq: None | Neq = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        int_value: Int | None = field(
+        int_value: None | Int = field(
             default=None,
             metadata={
                 "name": "int",
                 "type": "Element",
             },
         )
-        diff: Diff | None = field(
+        diff: None | Diff = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        partialdiff: Partialdiff | None = field(
+        partialdiff: None | Partialdiff = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        laplacian: Laplacian | None = field(
+        laplacian: None | Laplacian = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        curl: Curl | None = field(
+        curl: None | Curl = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        grad: Grad | None = field(
+        grad: None | Grad = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        divergence: Divergence | None = field(
+        divergence: None | Divergence = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        list_value: List | None = field(
+        list_value: None | List = field(
             default=None,
             metadata={
                 "name": "list",
                 "type": "Element",
             },
         )
-        set: Set | None = field(
+        set: None | Set = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cartesianproduct: Cartesianproduct | None = field(
+        cartesianproduct: None | Cartesianproduct = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        intersect: Intersect | None = field(
+        intersect: None | Intersect = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        union: UnionType | None = field(
+        union: None | UnionType = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        setdiff: Setdiff | None = field(
+        setdiff: None | Setdiff = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        notprsubset: Notprsubset | None = field(
+        notprsubset: None | Notprsubset = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        notsubset: Notsubset | None = field(
+        notsubset: None | Notsubset = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        notin: Notin | None = field(
+        notin: None | Notin = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        in_value: In | None = field(
+        in_value: None | In = field(
             default=None,
             metadata={
                 "name": "in",
                 "type": "Element",
             },
         )
-        prsubset: Prsubset | None = field(
+        prsubset: None | Prsubset = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        subset: Subset | None = field(
+        subset: None | Subset = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        card: Card | None = field(
+        card: None | Card = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        sum: Sum | None = field(
+        sum: None | Sum = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        product: Product | None = field(
+        product: None | Product = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        limit: Limit | None = field(
+        limit: None | Limit = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arctanh: Arctanh | None = field(
+        arctanh: None | Arctanh = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arcsinh: Arcsinh | None = field(
+        arcsinh: None | Arcsinh = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arcsech: Arcsech | None = field(
+        arcsech: None | Arcsech = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arcsec: Arcsec | None = field(
+        arcsec: None | Arcsec = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arccsch: Arccsch | None = field(
+        arccsch: None | Arccsch = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arccsc: Arccsc | None = field(
+        arccsc: None | Arccsc = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arccoth: Arccoth | None = field(
+        arccoth: None | Arccoth = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arccot: Arccot | None = field(
+        arccot: None | Arccot = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arccosh: Arccosh | None = field(
+        arccosh: None | Arccosh = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arctan: Arctan | None = field(
+        arctan: None | Arctan = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arccos: Arccos | None = field(
+        arccos: None | Arccos = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arcsin: Arcsin | None = field(
+        arcsin: None | Arcsin = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        coth: Coth | None = field(
+        coth: None | Coth = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        csch: Csch | None = field(
+        csch: None | Csch = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        sech: Sech | None = field(
+        sech: None | Sech = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        tanh: Tanh | None = field(
+        tanh: None | Tanh = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cosh: Cosh | None = field(
+        cosh: None | Cosh = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        sinh: Sinh | None = field(
+        sinh: None | Sinh = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cot: Cot | None = field(
+        cot: None | Cot = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        csc: Csc | None = field(
+        csc: None | Csc = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        sec: Sec | None = field(
+        sec: None | Sec = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        tan: Tan | None = field(
+        tan: None | Tan = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cos: Cos | None = field(
+        cos: None | Cos = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        sin: Sin | None = field(
+        sin: None | Sin = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mode: Mode | None = field(
+        mode: None | Mode = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        median: Median | None = field(
+        median: None | Median = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        variance: Variance | None = field(
+        variance: None | Variance = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        sdev: Sdev | None = field(
+        sdev: None | Sdev = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mean: Mean | None = field(
+        mean: None | Mean = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        matrixrow: Matrixrow | None = field(
+        matrixrow: None | Matrixrow = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        matrix: Matrix | None = field(
+        matrix: None | Matrix = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        vector: Vector | None = field(
+        vector: None | Vector = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        transpose: Transpose | None = field(
+        transpose: None | Transpose = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        determinant: Determinant | None = field(
+        determinant: None | Determinant = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        selector: Selector | None = field(
+        selector: None | Selector = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        outerproduct: Outerproduct | None = field(
+        outerproduct: None | Outerproduct = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        scalarproduct: Scalarproduct | None = field(
+        scalarproduct: None | Scalarproduct = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        vectorproduct: Vectorproduct | None = field(
+        vectorproduct: None | Vectorproduct = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        emptyset: Emptyset | None = field(
+        emptyset: None | Emptyset = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        primes: Primes | None = field(
+        primes: None | Primes = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        complexes: Complexes | None = field(
+        complexes: None | Complexes = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        naturalnumbers: Naturalnumbers | None = field(
+        naturalnumbers: None | Naturalnumbers = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        rationals: Rationals | None = field(
+        rationals: None | Rationals = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        reals: Reals | None = field(
+        reals: None | Reals = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        integers: Integers | None = field(
+        integers: None | Integers = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        infinity: Infinity | None = field(
+        infinity: None | Infinity = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        eulergamma: Eulergamma | None = field(
+        eulergamma: None | Eulergamma = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        pi: Pi | None = field(
+        pi: None | Pi = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        false: FalseType | None = field(
+        false: None | FalseType = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        true: TrueType | None = field(
+        true: None | TrueType = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        notanumber: Notanumber | None = field(
+        notanumber: None | Notanumber = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        imaginaryi: Imaginaryi | None = field(
+        imaginaryi: None | Imaginaryi = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        exponentiale: Exponentiale | None = field(
+        exponentiale: None | Exponentiale = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        maction: Maction | None = field(
+        maction: None | Maction = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mlongdiv: Mlongdiv | None = field(
+        mlongdiv: None | Mlongdiv = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mstack: Mstack | None = field(
+        mstack: None | Mstack = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mtable: Mtable | None = field(
+        mtable: None | Mtable = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mmultiscripts: Mmultiscripts | None = field(
+        mmultiscripts: None | Mmultiscripts = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        munderover: Munderover | None = field(
+        munderover: None | Munderover = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mover: Mover | None = field(
+        mover: None | Mover = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        munder: Munder | None = field(
+        munder: None | Munder = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        msubsup: Msubsup | None = field(
+        msubsup: None | Msubsup = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        msup: Msup | None = field(
+        msup: None | Msup = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        msub: Msub | None = field(
+        msub: None | Msub = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        menclose: Menclose | None = field(
+        menclose: None | Menclose = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mfenced: Mfenced | None = field(
+        mfenced: None | Mfenced = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mphantom: Mphantom | None = field(
+        mphantom: None | Mphantom = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mpadded: Mpadded | None = field(
+        mpadded: None | Mpadded = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        merror: Merror | None = field(
+        merror: None | Merror = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mstyle: Mstyle | None = field(
+        mstyle: None | Mstyle = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mroot: Mroot | None = field(
+        mroot: None | Mroot = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        msqrt: Msqrt | None = field(
+        msqrt: None | Msqrt = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mfrac: Mfrac | None = field(
+        mfrac: None | Mfrac = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mrow: Mrow | None = field(
+        mrow: None | Mrow = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        maligngroup: Maligngroup | None = field(
+        maligngroup: None | Maligngroup = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        malignmark: Malignmark | None = field(
+        malignmark: None | Malignmark = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        ms: Ms | None = field(
+        ms: None | Ms = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mspace: Mspace | None = field(
+        mspace: None | Mspace = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mtext: Mtext | None = field(
+        mtext: None | Mtext = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mo: Mo | None = field(
+        mo: None | Mo = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mn: Mn | None = field(
+        mn: None | Mn = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mi: Mi | None = field(
+        mi: None | Mi = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        semantics: Mroot.Semantics | None = field(
+        semantics: None | Mroot.Semantics = field(
             default=None,
             metadata={
                 "type": "Element",
@@ -26586,13 +26586,13 @@ class Mroot:
                 "type": "Element",
             },
         )
-        id: str | None = field(
+        id: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
             },
         )
-        xref: object | None = field(
+        xref: None | object = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -26606,19 +26606,19 @@ class Mroot:
                 "tokens": True,
             },
         )
-        style: str | None = field(
+        style: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
             },
         )
-        href: str | None = field(
+        href: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
             },
         )
-        other: object | None = field(
+        other: None | object = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -26631,26 +26631,26 @@ class Mroot:
                 "namespace": "##other",
             },
         )
-        encoding: str | None = field(
+        encoding: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
             },
         )
-        definition_url: str | None = field(
+        definition_url: None | str = field(
             default=None,
             metadata={
                 "name": "definitionURL",
                 "type": "Attribute",
             },
         )
-        cd: str | None = field(
+        cd: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
             },
         )
-        name: str | None = field(
+        name: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -27679,13 +27679,13 @@ class Mfenced:
             "type": "Element",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    xref: object | None = field(
+    xref: None | object = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -27699,19 +27699,19 @@ class Mfenced:
             "tokens": True,
         },
     )
-    style: str | None = field(
+    style: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    href: str | None = field(
+    href: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    other: object | None = field(
+    other: None | object = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -27724,33 +27724,33 @@ class Mfenced:
             "namespace": "##other",
         },
     )
-    mathcolor: str | None = field(
+    mathcolor: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\s*((#[0-9a-fA-F]{3}([0-9a-fA-F]{3})?)|[aA][qQ][uU][aA]|[bB][lL][aA][cC][kK]|[bB][lL][uU][eE]|[fF][uU][cC][hH][sS][iI][aA]|[gG][rR][aA][yY]|[gG][rR][eE][eE][nN]|[lL][iI][mM][eE]|[mM][aA][rR][oO][oO][nN]|[nN][aA][vV][yY]|[oO][lL][iI][vV][eE]|[pP][uU][rR][pP][lL][eE]|[rR][eE][dD]|[sS][iI][lL][vV][eE][rR]|[tT][eE][aA][lL]|[wW][hH][iI][tT][eE]|[yY][eE][lL][lL][oO][wW])\s*",
         },
     )
-    mathbackground: str | MfencedValue | None = field(
+    mathbackground: None | str | MfencedValue = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\s*((#[0-9a-fA-F]{3}([0-9a-fA-F]{3})?)|[aA][qQ][uU][aA]|[bB][lL][aA][cC][kK]|[bB][lL][uU][eE]|[fF][uU][cC][hH][sS][iI][aA]|[gG][rR][aA][yY]|[gG][rR][eE][eE][nN]|[lL][iI][mM][eE]|[mM][aA][rR][oO][oO][nN]|[nN][aA][vV][yY]|[oO][lL][iI][vV][eE]|[pP][uU][rR][pP][lL][eE]|[rR][eE][dD]|[sS][iI][lL][vV][eE][rR]|[tT][eE][aA][lL]|[wW][hH][iI][tT][eE]|[yY][eE][lL][lL][oO][wW])\s*",
         },
     )
-    open: object | None = field(
+    open: None | object = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    close: object | None = field(
+    close: None | object = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    separators: object | None = field(
+    separators: None | object = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -27759,1016 +27759,1016 @@ class Mfenced:
 
     @dataclass
     class Semantics:
-        apply: Apply | None = field(
+        apply: None | Apply = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        bind: Bind | None = field(
+        bind: None | Bind = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        ci: Ci | None = field(
+        ci: None | Ci = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cn: Cn | None = field(
+        cn: None | Cn = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        csymbol: Csymbol | None = field(
+        csymbol: None | Csymbol = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cbytes: Cbytes | None = field(
+        cbytes: None | Cbytes = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cerror: Cerror | None = field(
+        cerror: None | Cerror = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cs: Cs | None = field(
+        cs: None | Cs = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        share: Share | None = field(
+        share: None | Share = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        piecewise: Piecewise | None = field(
+        piecewise: None | Piecewise = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        declare: Declare | None = field(
+        declare: None | Declare = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        fn: Fn | None = field(
+        fn: None | Fn = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        reln: Reln | None = field(
+        reln: None | Reln = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        interval: Interval | None = field(
+        interval: None | Interval = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        moment: Moment | None = field(
+        moment: None | Moment = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        log: Log | None = field(
+        log: None | Log = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        ln: Ln | None = field(
+        ln: None | Ln = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        image: Image | None = field(
+        image: None | Image = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        codomain: Codomain | None = field(
+        codomain: None | Codomain = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        domain: Domain | None = field(
+        domain: None | Domain = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        ident: Ident | None = field(
+        ident: None | Ident = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        inverse: Inverse | None = field(
+        inverse: None | Inverse = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        lambda_value: Lambda | None = field(
+        lambda_value: None | Lambda = field(
             default=None,
             metadata={
                 "name": "lambda",
                 "type": "Element",
             },
         )
-        compose: Compose | None = field(
+        compose: None | Compose = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        quotient: Quotient | None = field(
+        quotient: None | Quotient = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        divide: Divide | None = field(
+        divide: None | Divide = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        minus: Minus | None = field(
+        minus: None | Minus = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        power: Power | None = field(
+        power: None | Power = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        rem: Rem | None = field(
+        rem: None | Rem = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        root: Root | None = field(
+        root: None | Root = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        factorial: Factorial | None = field(
+        factorial: None | Factorial = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        abs: Abs | None = field(
+        abs: None | Abs = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        conjugate: Conjugate | None = field(
+        conjugate: None | Conjugate = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arg: Arg | None = field(
+        arg: None | Arg = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        real: Real | None = field(
+        real: None | Real = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        imaginary: Imaginary | None = field(
+        imaginary: None | Imaginary = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        floor: Floor | None = field(
+        floor: None | Floor = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        ceiling: Ceiling | None = field(
+        ceiling: None | Ceiling = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        exp: Exp | None = field(
+        exp: None | Exp = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        min: Min | None = field(
+        min: None | Min = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        max: Max | None = field(
+        max: None | Max = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        lcm: Lcm | None = field(
+        lcm: None | Lcm = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        gcd: Gcd | None = field(
+        gcd: None | Gcd = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        times: Times | None = field(
+        times: None | Times = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        plus: Plus | None = field(
+        plus: None | Plus = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        xor: Xor | None = field(
+        xor: None | Xor = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        or_value: Or | None = field(
+        or_value: None | Or = field(
             default=None,
             metadata={
                 "name": "or",
                 "type": "Element",
             },
         )
-        and_value: And | None = field(
+        and_value: None | And = field(
             default=None,
             metadata={
                 "name": "and",
                 "type": "Element",
             },
         )
-        not_value: Not | None = field(
+        not_value: None | Not = field(
             default=None,
             metadata={
                 "name": "not",
                 "type": "Element",
             },
         )
-        equivalent: Equivalent | None = field(
+        equivalent: None | Equivalent = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        implies: Implies | None = field(
+        implies: None | Implies = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        exists: Exists | None = field(
+        exists: None | Exists = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        forall: Forall | None = field(
+        forall: None | Forall = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        leq: Leq | None = field(
+        leq: None | Leq = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        geq: Geq | None = field(
+        geq: None | Geq = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        lt: Lt | None = field(
+        lt: None | Lt = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        gt: Gt | None = field(
+        gt: None | Gt = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        eq: Eq | None = field(
+        eq: None | Eq = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        tendsto: Tendsto | None = field(
+        tendsto: None | Tendsto = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        factorof: Factorof | None = field(
+        factorof: None | Factorof = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        approx: Approx | None = field(
+        approx: None | Approx = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        neq: Neq | None = field(
+        neq: None | Neq = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        int_value: Int | None = field(
+        int_value: None | Int = field(
             default=None,
             metadata={
                 "name": "int",
                 "type": "Element",
             },
         )
-        diff: Diff | None = field(
+        diff: None | Diff = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        partialdiff: Partialdiff | None = field(
+        partialdiff: None | Partialdiff = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        laplacian: Laplacian | None = field(
+        laplacian: None | Laplacian = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        curl: Curl | None = field(
+        curl: None | Curl = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        grad: Grad | None = field(
+        grad: None | Grad = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        divergence: Divergence | None = field(
+        divergence: None | Divergence = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        list_value: List | None = field(
+        list_value: None | List = field(
             default=None,
             metadata={
                 "name": "list",
                 "type": "Element",
             },
         )
-        set: Set | None = field(
+        set: None | Set = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cartesianproduct: Cartesianproduct | None = field(
+        cartesianproduct: None | Cartesianproduct = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        intersect: Intersect | None = field(
+        intersect: None | Intersect = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        union: UnionType | None = field(
+        union: None | UnionType = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        setdiff: Setdiff | None = field(
+        setdiff: None | Setdiff = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        notprsubset: Notprsubset | None = field(
+        notprsubset: None | Notprsubset = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        notsubset: Notsubset | None = field(
+        notsubset: None | Notsubset = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        notin: Notin | None = field(
+        notin: None | Notin = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        in_value: In | None = field(
+        in_value: None | In = field(
             default=None,
             metadata={
                 "name": "in",
                 "type": "Element",
             },
         )
-        prsubset: Prsubset | None = field(
+        prsubset: None | Prsubset = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        subset: Subset | None = field(
+        subset: None | Subset = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        card: Card | None = field(
+        card: None | Card = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        sum: Sum | None = field(
+        sum: None | Sum = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        product: Product | None = field(
+        product: None | Product = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        limit: Limit | None = field(
+        limit: None | Limit = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arctanh: Arctanh | None = field(
+        arctanh: None | Arctanh = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arcsinh: Arcsinh | None = field(
+        arcsinh: None | Arcsinh = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arcsech: Arcsech | None = field(
+        arcsech: None | Arcsech = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arcsec: Arcsec | None = field(
+        arcsec: None | Arcsec = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arccsch: Arccsch | None = field(
+        arccsch: None | Arccsch = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arccsc: Arccsc | None = field(
+        arccsc: None | Arccsc = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arccoth: Arccoth | None = field(
+        arccoth: None | Arccoth = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arccot: Arccot | None = field(
+        arccot: None | Arccot = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arccosh: Arccosh | None = field(
+        arccosh: None | Arccosh = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arctan: Arctan | None = field(
+        arctan: None | Arctan = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arccos: Arccos | None = field(
+        arccos: None | Arccos = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arcsin: Arcsin | None = field(
+        arcsin: None | Arcsin = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        coth: Coth | None = field(
+        coth: None | Coth = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        csch: Csch | None = field(
+        csch: None | Csch = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        sech: Sech | None = field(
+        sech: None | Sech = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        tanh: Tanh | None = field(
+        tanh: None | Tanh = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cosh: Cosh | None = field(
+        cosh: None | Cosh = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        sinh: Sinh | None = field(
+        sinh: None | Sinh = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cot: Cot | None = field(
+        cot: None | Cot = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        csc: Csc | None = field(
+        csc: None | Csc = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        sec: Sec | None = field(
+        sec: None | Sec = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        tan: Tan | None = field(
+        tan: None | Tan = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cos: Cos | None = field(
+        cos: None | Cos = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        sin: Sin | None = field(
+        sin: None | Sin = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mode: Mode | None = field(
+        mode: None | Mode = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        median: Median | None = field(
+        median: None | Median = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        variance: Variance | None = field(
+        variance: None | Variance = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        sdev: Sdev | None = field(
+        sdev: None | Sdev = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mean: Mean | None = field(
+        mean: None | Mean = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        matrixrow: Matrixrow | None = field(
+        matrixrow: None | Matrixrow = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        matrix: Matrix | None = field(
+        matrix: None | Matrix = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        vector: Vector | None = field(
+        vector: None | Vector = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        transpose: Transpose | None = field(
+        transpose: None | Transpose = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        determinant: Determinant | None = field(
+        determinant: None | Determinant = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        selector: Selector | None = field(
+        selector: None | Selector = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        outerproduct: Outerproduct | None = field(
+        outerproduct: None | Outerproduct = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        scalarproduct: Scalarproduct | None = field(
+        scalarproduct: None | Scalarproduct = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        vectorproduct: Vectorproduct | None = field(
+        vectorproduct: None | Vectorproduct = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        emptyset: Emptyset | None = field(
+        emptyset: None | Emptyset = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        primes: Primes | None = field(
+        primes: None | Primes = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        complexes: Complexes | None = field(
+        complexes: None | Complexes = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        naturalnumbers: Naturalnumbers | None = field(
+        naturalnumbers: None | Naturalnumbers = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        rationals: Rationals | None = field(
+        rationals: None | Rationals = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        reals: Reals | None = field(
+        reals: None | Reals = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        integers: Integers | None = field(
+        integers: None | Integers = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        infinity: Infinity | None = field(
+        infinity: None | Infinity = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        eulergamma: Eulergamma | None = field(
+        eulergamma: None | Eulergamma = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        pi: Pi | None = field(
+        pi: None | Pi = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        false: FalseType | None = field(
+        false: None | FalseType = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        true: TrueType | None = field(
+        true: None | TrueType = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        notanumber: Notanumber | None = field(
+        notanumber: None | Notanumber = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        imaginaryi: Imaginaryi | None = field(
+        imaginaryi: None | Imaginaryi = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        exponentiale: Exponentiale | None = field(
+        exponentiale: None | Exponentiale = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        maction: Maction | None = field(
+        maction: None | Maction = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mlongdiv: Mlongdiv | None = field(
+        mlongdiv: None | Mlongdiv = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mstack: Mstack | None = field(
+        mstack: None | Mstack = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mtable: Mtable | None = field(
+        mtable: None | Mtable = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mmultiscripts: Mmultiscripts | None = field(
+        mmultiscripts: None | Mmultiscripts = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        munderover: Munderover | None = field(
+        munderover: None | Munderover = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mover: Mover | None = field(
+        mover: None | Mover = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        munder: Munder | None = field(
+        munder: None | Munder = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        msubsup: Msubsup | None = field(
+        msubsup: None | Msubsup = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        msup: Msup | None = field(
+        msup: None | Msup = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        msub: Msub | None = field(
+        msub: None | Msub = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        menclose: Menclose | None = field(
+        menclose: None | Menclose = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mfenced: Mfenced | None = field(
+        mfenced: None | Mfenced = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mphantom: Mphantom | None = field(
+        mphantom: None | Mphantom = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mpadded: Mpadded | None = field(
+        mpadded: None | Mpadded = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        merror: Merror | None = field(
+        merror: None | Merror = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mstyle: Mstyle | None = field(
+        mstyle: None | Mstyle = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mroot: Mroot | None = field(
+        mroot: None | Mroot = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        msqrt: Msqrt | None = field(
+        msqrt: None | Msqrt = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mfrac: Mfrac | None = field(
+        mfrac: None | Mfrac = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mrow: Mrow | None = field(
+        mrow: None | Mrow = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        maligngroup: Maligngroup | None = field(
+        maligngroup: None | Maligngroup = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        malignmark: Malignmark | None = field(
+        malignmark: None | Malignmark = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        ms: Ms | None = field(
+        ms: None | Ms = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mspace: Mspace | None = field(
+        mspace: None | Mspace = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mtext: Mtext | None = field(
+        mtext: None | Mtext = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mo: Mo | None = field(
+        mo: None | Mo = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mn: Mn | None = field(
+        mn: None | Mn = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mi: Mi | None = field(
+        mi: None | Mi = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        semantics: Mfenced.Semantics | None = field(
+        semantics: None | Mfenced.Semantics = field(
             default=None,
             metadata={
                 "type": "Element",
@@ -28787,13 +28787,13 @@ class Mfenced:
                 "type": "Element",
             },
         )
-        id: str | None = field(
+        id: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
             },
         )
-        xref: object | None = field(
+        xref: None | object = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -28807,19 +28807,19 @@ class Mfenced:
                 "tokens": True,
             },
         )
-        style: str | None = field(
+        style: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
             },
         )
-        href: str | None = field(
+        href: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
             },
         )
-        other: object | None = field(
+        other: None | object = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -28832,26 +28832,26 @@ class Mfenced:
                 "namespace": "##other",
             },
         )
-        encoding: str | None = field(
+        encoding: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
             },
         )
-        definition_url: str | None = field(
+        definition_url: None | str = field(
             default=None,
             metadata={
                 "name": "definitionURL",
                 "type": "Attribute",
             },
         )
-        cd: str | None = field(
+        cd: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
             },
         )
-        name: str | None = field(
+        name: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -30242,13 +30242,13 @@ class Msub:
             "sequence": 1,
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    xref: object | None = field(
+    xref: None | object = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -30262,19 +30262,19 @@ class Msub:
             "tokens": True,
         },
     )
-    style: str | None = field(
+    style: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    href: str | None = field(
+    href: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    other: object | None = field(
+    other: None | object = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -30287,21 +30287,21 @@ class Msub:
             "namespace": "##other",
         },
     )
-    mathcolor: str | None = field(
+    mathcolor: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\s*((#[0-9a-fA-F]{3}([0-9a-fA-F]{3})?)|[aA][qQ][uU][aA]|[bB][lL][aA][cC][kK]|[bB][lL][uU][eE]|[fF][uU][cC][hH][sS][iI][aA]|[gG][rR][aA][yY]|[gG][rR][eE][eE][nN]|[lL][iI][mM][eE]|[mM][aA][rR][oO][oO][nN]|[nN][aA][vV][yY]|[oO][lL][iI][vV][eE]|[pP][uU][rR][pP][lL][eE]|[rR][eE][dD]|[sS][iI][lL][vV][eE][rR]|[tT][eE][aA][lL]|[wW][hH][iI][tT][eE]|[yY][eE][lL][lL][oO][wW])\s*",
         },
     )
-    mathbackground: str | MsubValue | None = field(
+    mathbackground: None | str | MsubValue = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\s*((#[0-9a-fA-F]{3}([0-9a-fA-F]{3})?)|[aA][qQ][uU][aA]|[bB][lL][aA][cC][kK]|[bB][lL][uU][eE]|[fF][uU][cC][hH][sS][iI][aA]|[gG][rR][aA][yY]|[gG][rR][eE][eE][nN]|[lL][iI][mM][eE]|[mM][aA][rR][oO][oO][nN]|[nN][aA][vV][yY]|[oO][lL][iI][vV][eE]|[pP][uU][rR][pP][lL][eE]|[rR][eE][dD]|[sS][iI][lL][vV][eE][rR]|[tT][eE][aA][lL]|[wW][hH][iI][tT][eE]|[yY][eE][lL][lL][oO][wW])\s*",
         },
     )
-    subscriptshift: str | None = field(
+    subscriptshift: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -30311,1016 +30311,1016 @@ class Msub:
 
     @dataclass
     class Semantics:
-        apply: Apply | None = field(
+        apply: None | Apply = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        bind: Bind | None = field(
+        bind: None | Bind = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        ci: Ci | None = field(
+        ci: None | Ci = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cn: Cn | None = field(
+        cn: None | Cn = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        csymbol: Csymbol | None = field(
+        csymbol: None | Csymbol = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cbytes: Cbytes | None = field(
+        cbytes: None | Cbytes = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cerror: Cerror | None = field(
+        cerror: None | Cerror = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cs: Cs | None = field(
+        cs: None | Cs = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        share: Share | None = field(
+        share: None | Share = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        piecewise: Piecewise | None = field(
+        piecewise: None | Piecewise = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        declare: Declare | None = field(
+        declare: None | Declare = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        fn: Fn | None = field(
+        fn: None | Fn = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        reln: Reln | None = field(
+        reln: None | Reln = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        interval: Interval | None = field(
+        interval: None | Interval = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        moment: Moment | None = field(
+        moment: None | Moment = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        log: Log | None = field(
+        log: None | Log = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        ln: Ln | None = field(
+        ln: None | Ln = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        image: Image | None = field(
+        image: None | Image = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        codomain: Codomain | None = field(
+        codomain: None | Codomain = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        domain: Domain | None = field(
+        domain: None | Domain = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        ident: Ident | None = field(
+        ident: None | Ident = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        inverse: Inverse | None = field(
+        inverse: None | Inverse = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        lambda_value: Lambda | None = field(
+        lambda_value: None | Lambda = field(
             default=None,
             metadata={
                 "name": "lambda",
                 "type": "Element",
             },
         )
-        compose: Compose | None = field(
+        compose: None | Compose = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        quotient: Quotient | None = field(
+        quotient: None | Quotient = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        divide: Divide | None = field(
+        divide: None | Divide = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        minus: Minus | None = field(
+        minus: None | Minus = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        power: Power | None = field(
+        power: None | Power = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        rem: Rem | None = field(
+        rem: None | Rem = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        root: Root | None = field(
+        root: None | Root = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        factorial: Factorial | None = field(
+        factorial: None | Factorial = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        abs: Abs | None = field(
+        abs: None | Abs = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        conjugate: Conjugate | None = field(
+        conjugate: None | Conjugate = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arg: Arg | None = field(
+        arg: None | Arg = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        real: Real | None = field(
+        real: None | Real = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        imaginary: Imaginary | None = field(
+        imaginary: None | Imaginary = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        floor: Floor | None = field(
+        floor: None | Floor = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        ceiling: Ceiling | None = field(
+        ceiling: None | Ceiling = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        exp: Exp | None = field(
+        exp: None | Exp = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        min: Min | None = field(
+        min: None | Min = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        max: Max | None = field(
+        max: None | Max = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        lcm: Lcm | None = field(
+        lcm: None | Lcm = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        gcd: Gcd | None = field(
+        gcd: None | Gcd = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        times: Times | None = field(
+        times: None | Times = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        plus: Plus | None = field(
+        plus: None | Plus = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        xor: Xor | None = field(
+        xor: None | Xor = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        or_value: Or | None = field(
+        or_value: None | Or = field(
             default=None,
             metadata={
                 "name": "or",
                 "type": "Element",
             },
         )
-        and_value: And | None = field(
+        and_value: None | And = field(
             default=None,
             metadata={
                 "name": "and",
                 "type": "Element",
             },
         )
-        not_value: Not | None = field(
+        not_value: None | Not = field(
             default=None,
             metadata={
                 "name": "not",
                 "type": "Element",
             },
         )
-        equivalent: Equivalent | None = field(
+        equivalent: None | Equivalent = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        implies: Implies | None = field(
+        implies: None | Implies = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        exists: Exists | None = field(
+        exists: None | Exists = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        forall: Forall | None = field(
+        forall: None | Forall = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        leq: Leq | None = field(
+        leq: None | Leq = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        geq: Geq | None = field(
+        geq: None | Geq = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        lt: Lt | None = field(
+        lt: None | Lt = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        gt: Gt | None = field(
+        gt: None | Gt = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        eq: Eq | None = field(
+        eq: None | Eq = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        tendsto: Tendsto | None = field(
+        tendsto: None | Tendsto = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        factorof: Factorof | None = field(
+        factorof: None | Factorof = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        approx: Approx | None = field(
+        approx: None | Approx = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        neq: Neq | None = field(
+        neq: None | Neq = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        int_value: Int | None = field(
+        int_value: None | Int = field(
             default=None,
             metadata={
                 "name": "int",
                 "type": "Element",
             },
         )
-        diff: Diff | None = field(
+        diff: None | Diff = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        partialdiff: Partialdiff | None = field(
+        partialdiff: None | Partialdiff = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        laplacian: Laplacian | None = field(
+        laplacian: None | Laplacian = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        curl: Curl | None = field(
+        curl: None | Curl = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        grad: Grad | None = field(
+        grad: None | Grad = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        divergence: Divergence | None = field(
+        divergence: None | Divergence = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        list_value: List | None = field(
+        list_value: None | List = field(
             default=None,
             metadata={
                 "name": "list",
                 "type": "Element",
             },
         )
-        set: Set | None = field(
+        set: None | Set = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cartesianproduct: Cartesianproduct | None = field(
+        cartesianproduct: None | Cartesianproduct = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        intersect: Intersect | None = field(
+        intersect: None | Intersect = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        union: UnionType | None = field(
+        union: None | UnionType = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        setdiff: Setdiff | None = field(
+        setdiff: None | Setdiff = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        notprsubset: Notprsubset | None = field(
+        notprsubset: None | Notprsubset = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        notsubset: Notsubset | None = field(
+        notsubset: None | Notsubset = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        notin: Notin | None = field(
+        notin: None | Notin = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        in_value: In | None = field(
+        in_value: None | In = field(
             default=None,
             metadata={
                 "name": "in",
                 "type": "Element",
             },
         )
-        prsubset: Prsubset | None = field(
+        prsubset: None | Prsubset = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        subset: Subset | None = field(
+        subset: None | Subset = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        card: Card | None = field(
+        card: None | Card = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        sum: Sum | None = field(
+        sum: None | Sum = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        product: Product | None = field(
+        product: None | Product = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        limit: Limit | None = field(
+        limit: None | Limit = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arctanh: Arctanh | None = field(
+        arctanh: None | Arctanh = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arcsinh: Arcsinh | None = field(
+        arcsinh: None | Arcsinh = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arcsech: Arcsech | None = field(
+        arcsech: None | Arcsech = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arcsec: Arcsec | None = field(
+        arcsec: None | Arcsec = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arccsch: Arccsch | None = field(
+        arccsch: None | Arccsch = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arccsc: Arccsc | None = field(
+        arccsc: None | Arccsc = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arccoth: Arccoth | None = field(
+        arccoth: None | Arccoth = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arccot: Arccot | None = field(
+        arccot: None | Arccot = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arccosh: Arccosh | None = field(
+        arccosh: None | Arccosh = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arctan: Arctan | None = field(
+        arctan: None | Arctan = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arccos: Arccos | None = field(
+        arccos: None | Arccos = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arcsin: Arcsin | None = field(
+        arcsin: None | Arcsin = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        coth: Coth | None = field(
+        coth: None | Coth = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        csch: Csch | None = field(
+        csch: None | Csch = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        sech: Sech | None = field(
+        sech: None | Sech = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        tanh: Tanh | None = field(
+        tanh: None | Tanh = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cosh: Cosh | None = field(
+        cosh: None | Cosh = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        sinh: Sinh | None = field(
+        sinh: None | Sinh = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cot: Cot | None = field(
+        cot: None | Cot = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        csc: Csc | None = field(
+        csc: None | Csc = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        sec: Sec | None = field(
+        sec: None | Sec = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        tan: Tan | None = field(
+        tan: None | Tan = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cos: Cos | None = field(
+        cos: None | Cos = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        sin: Sin | None = field(
+        sin: None | Sin = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mode: Mode | None = field(
+        mode: None | Mode = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        median: Median | None = field(
+        median: None | Median = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        variance: Variance | None = field(
+        variance: None | Variance = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        sdev: Sdev | None = field(
+        sdev: None | Sdev = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mean: Mean | None = field(
+        mean: None | Mean = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        matrixrow: Matrixrow | None = field(
+        matrixrow: None | Matrixrow = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        matrix: Matrix | None = field(
+        matrix: None | Matrix = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        vector: Vector | None = field(
+        vector: None | Vector = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        transpose: Transpose | None = field(
+        transpose: None | Transpose = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        determinant: Determinant | None = field(
+        determinant: None | Determinant = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        selector: Selector | None = field(
+        selector: None | Selector = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        outerproduct: Outerproduct | None = field(
+        outerproduct: None | Outerproduct = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        scalarproduct: Scalarproduct | None = field(
+        scalarproduct: None | Scalarproduct = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        vectorproduct: Vectorproduct | None = field(
+        vectorproduct: None | Vectorproduct = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        emptyset: Emptyset | None = field(
+        emptyset: None | Emptyset = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        primes: Primes | None = field(
+        primes: None | Primes = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        complexes: Complexes | None = field(
+        complexes: None | Complexes = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        naturalnumbers: Naturalnumbers | None = field(
+        naturalnumbers: None | Naturalnumbers = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        rationals: Rationals | None = field(
+        rationals: None | Rationals = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        reals: Reals | None = field(
+        reals: None | Reals = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        integers: Integers | None = field(
+        integers: None | Integers = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        infinity: Infinity | None = field(
+        infinity: None | Infinity = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        eulergamma: Eulergamma | None = field(
+        eulergamma: None | Eulergamma = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        pi: Pi | None = field(
+        pi: None | Pi = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        false: FalseType | None = field(
+        false: None | FalseType = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        true: TrueType | None = field(
+        true: None | TrueType = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        notanumber: Notanumber | None = field(
+        notanumber: None | Notanumber = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        imaginaryi: Imaginaryi | None = field(
+        imaginaryi: None | Imaginaryi = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        exponentiale: Exponentiale | None = field(
+        exponentiale: None | Exponentiale = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        maction: Maction | None = field(
+        maction: None | Maction = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mlongdiv: Mlongdiv | None = field(
+        mlongdiv: None | Mlongdiv = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mstack: Mstack | None = field(
+        mstack: None | Mstack = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mtable: Mtable | None = field(
+        mtable: None | Mtable = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mmultiscripts: Mmultiscripts | None = field(
+        mmultiscripts: None | Mmultiscripts = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        munderover: Munderover | None = field(
+        munderover: None | Munderover = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mover: Mover | None = field(
+        mover: None | Mover = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        munder: Munder | None = field(
+        munder: None | Munder = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        msubsup: Msubsup | None = field(
+        msubsup: None | Msubsup = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        msup: Msup | None = field(
+        msup: None | Msup = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        msub: Msub | None = field(
+        msub: None | Msub = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        menclose: Menclose | None = field(
+        menclose: None | Menclose = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mfenced: Mfenced | None = field(
+        mfenced: None | Mfenced = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mphantom: Mphantom | None = field(
+        mphantom: None | Mphantom = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mpadded: Mpadded | None = field(
+        mpadded: None | Mpadded = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        merror: Merror | None = field(
+        merror: None | Merror = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mstyle: Mstyle | None = field(
+        mstyle: None | Mstyle = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mroot: Mroot | None = field(
+        mroot: None | Mroot = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        msqrt: Msqrt | None = field(
+        msqrt: None | Msqrt = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mfrac: Mfrac | None = field(
+        mfrac: None | Mfrac = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mrow: Mrow | None = field(
+        mrow: None | Mrow = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        maligngroup: Maligngroup | None = field(
+        maligngroup: None | Maligngroup = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        malignmark: Malignmark | None = field(
+        malignmark: None | Malignmark = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        ms: Ms | None = field(
+        ms: None | Ms = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mspace: Mspace | None = field(
+        mspace: None | Mspace = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mtext: Mtext | None = field(
+        mtext: None | Mtext = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mo: Mo | None = field(
+        mo: None | Mo = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mn: Mn | None = field(
+        mn: None | Mn = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mi: Mi | None = field(
+        mi: None | Mi = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        semantics: Msub.Semantics | None = field(
+        semantics: None | Msub.Semantics = field(
             default=None,
             metadata={
                 "type": "Element",
@@ -31339,13 +31339,13 @@ class Msub:
                 "type": "Element",
             },
         )
-        id: str | None = field(
+        id: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
             },
         )
-        xref: object | None = field(
+        xref: None | object = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -31359,19 +31359,19 @@ class Msub:
                 "tokens": True,
             },
         )
-        style: str | None = field(
+        style: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
             },
         )
-        href: str | None = field(
+        href: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
             },
         )
-        other: object | None = field(
+        other: None | object = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -31384,26 +31384,26 @@ class Msub:
                 "namespace": "##other",
             },
         )
-        encoding: str | None = field(
+        encoding: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
             },
         )
-        definition_url: str | None = field(
+        definition_url: None | str = field(
             default=None,
             metadata={
                 "name": "definitionURL",
                 "type": "Attribute",
             },
         )
-        cd: str | None = field(
+        cd: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
             },
         )
-        name: str | None = field(
+        name: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -32794,13 +32794,13 @@ class Msup:
             "sequence": 1,
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    xref: object | None = field(
+    xref: None | object = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -32814,19 +32814,19 @@ class Msup:
             "tokens": True,
         },
     )
-    style: str | None = field(
+    style: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    href: str | None = field(
+    href: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    other: object | None = field(
+    other: None | object = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -32839,21 +32839,21 @@ class Msup:
             "namespace": "##other",
         },
     )
-    mathcolor: str | None = field(
+    mathcolor: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\s*((#[0-9a-fA-F]{3}([0-9a-fA-F]{3})?)|[aA][qQ][uU][aA]|[bB][lL][aA][cC][kK]|[bB][lL][uU][eE]|[fF][uU][cC][hH][sS][iI][aA]|[gG][rR][aA][yY]|[gG][rR][eE][eE][nN]|[lL][iI][mM][eE]|[mM][aA][rR][oO][oO][nN]|[nN][aA][vV][yY]|[oO][lL][iI][vV][eE]|[pP][uU][rR][pP][lL][eE]|[rR][eE][dD]|[sS][iI][lL][vV][eE][rR]|[tT][eE][aA][lL]|[wW][hH][iI][tT][eE]|[yY][eE][lL][lL][oO][wW])\s*",
         },
     )
-    mathbackground: str | MsupValue | None = field(
+    mathbackground: None | str | MsupValue = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\s*((#[0-9a-fA-F]{3}([0-9a-fA-F]{3})?)|[aA][qQ][uU][aA]|[bB][lL][aA][cC][kK]|[bB][lL][uU][eE]|[fF][uU][cC][hH][sS][iI][aA]|[gG][rR][aA][yY]|[gG][rR][eE][eE][nN]|[lL][iI][mM][eE]|[mM][aA][rR][oO][oO][nN]|[nN][aA][vV][yY]|[oO][lL][iI][vV][eE]|[pP][uU][rR][pP][lL][eE]|[rR][eE][dD]|[sS][iI][lL][vV][eE][rR]|[tT][eE][aA][lL]|[wW][hH][iI][tT][eE]|[yY][eE][lL][lL][oO][wW])\s*",
         },
     )
-    superscriptshift: str | None = field(
+    superscriptshift: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -32863,1016 +32863,1016 @@ class Msup:
 
     @dataclass
     class Semantics:
-        apply: Apply | None = field(
+        apply: None | Apply = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        bind: Bind | None = field(
+        bind: None | Bind = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        ci: Ci | None = field(
+        ci: None | Ci = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cn: Cn | None = field(
+        cn: None | Cn = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        csymbol: Csymbol | None = field(
+        csymbol: None | Csymbol = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cbytes: Cbytes | None = field(
+        cbytes: None | Cbytes = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cerror: Cerror | None = field(
+        cerror: None | Cerror = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cs: Cs | None = field(
+        cs: None | Cs = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        share: Share | None = field(
+        share: None | Share = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        piecewise: Piecewise | None = field(
+        piecewise: None | Piecewise = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        declare: Declare | None = field(
+        declare: None | Declare = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        fn: Fn | None = field(
+        fn: None | Fn = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        reln: Reln | None = field(
+        reln: None | Reln = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        interval: Interval | None = field(
+        interval: None | Interval = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        moment: Moment | None = field(
+        moment: None | Moment = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        log: Log | None = field(
+        log: None | Log = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        ln: Ln | None = field(
+        ln: None | Ln = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        image: Image | None = field(
+        image: None | Image = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        codomain: Codomain | None = field(
+        codomain: None | Codomain = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        domain: Domain | None = field(
+        domain: None | Domain = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        ident: Ident | None = field(
+        ident: None | Ident = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        inverse: Inverse | None = field(
+        inverse: None | Inverse = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        lambda_value: Lambda | None = field(
+        lambda_value: None | Lambda = field(
             default=None,
             metadata={
                 "name": "lambda",
                 "type": "Element",
             },
         )
-        compose: Compose | None = field(
+        compose: None | Compose = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        quotient: Quotient | None = field(
+        quotient: None | Quotient = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        divide: Divide | None = field(
+        divide: None | Divide = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        minus: Minus | None = field(
+        minus: None | Minus = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        power: Power | None = field(
+        power: None | Power = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        rem: Rem | None = field(
+        rem: None | Rem = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        root: Root | None = field(
+        root: None | Root = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        factorial: Factorial | None = field(
+        factorial: None | Factorial = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        abs: Abs | None = field(
+        abs: None | Abs = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        conjugate: Conjugate | None = field(
+        conjugate: None | Conjugate = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arg: Arg | None = field(
+        arg: None | Arg = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        real: Real | None = field(
+        real: None | Real = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        imaginary: Imaginary | None = field(
+        imaginary: None | Imaginary = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        floor: Floor | None = field(
+        floor: None | Floor = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        ceiling: Ceiling | None = field(
+        ceiling: None | Ceiling = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        exp: Exp | None = field(
+        exp: None | Exp = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        min: Min | None = field(
+        min: None | Min = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        max: Max | None = field(
+        max: None | Max = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        lcm: Lcm | None = field(
+        lcm: None | Lcm = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        gcd: Gcd | None = field(
+        gcd: None | Gcd = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        times: Times | None = field(
+        times: None | Times = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        plus: Plus | None = field(
+        plus: None | Plus = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        xor: Xor | None = field(
+        xor: None | Xor = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        or_value: Or | None = field(
+        or_value: None | Or = field(
             default=None,
             metadata={
                 "name": "or",
                 "type": "Element",
             },
         )
-        and_value: And | None = field(
+        and_value: None | And = field(
             default=None,
             metadata={
                 "name": "and",
                 "type": "Element",
             },
         )
-        not_value: Not | None = field(
+        not_value: None | Not = field(
             default=None,
             metadata={
                 "name": "not",
                 "type": "Element",
             },
         )
-        equivalent: Equivalent | None = field(
+        equivalent: None | Equivalent = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        implies: Implies | None = field(
+        implies: None | Implies = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        exists: Exists | None = field(
+        exists: None | Exists = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        forall: Forall | None = field(
+        forall: None | Forall = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        leq: Leq | None = field(
+        leq: None | Leq = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        geq: Geq | None = field(
+        geq: None | Geq = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        lt: Lt | None = field(
+        lt: None | Lt = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        gt: Gt | None = field(
+        gt: None | Gt = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        eq: Eq | None = field(
+        eq: None | Eq = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        tendsto: Tendsto | None = field(
+        tendsto: None | Tendsto = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        factorof: Factorof | None = field(
+        factorof: None | Factorof = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        approx: Approx | None = field(
+        approx: None | Approx = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        neq: Neq | None = field(
+        neq: None | Neq = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        int_value: Int | None = field(
+        int_value: None | Int = field(
             default=None,
             metadata={
                 "name": "int",
                 "type": "Element",
             },
         )
-        diff: Diff | None = field(
+        diff: None | Diff = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        partialdiff: Partialdiff | None = field(
+        partialdiff: None | Partialdiff = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        laplacian: Laplacian | None = field(
+        laplacian: None | Laplacian = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        curl: Curl | None = field(
+        curl: None | Curl = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        grad: Grad | None = field(
+        grad: None | Grad = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        divergence: Divergence | None = field(
+        divergence: None | Divergence = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        list_value: List | None = field(
+        list_value: None | List = field(
             default=None,
             metadata={
                 "name": "list",
                 "type": "Element",
             },
         )
-        set: Set | None = field(
+        set: None | Set = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cartesianproduct: Cartesianproduct | None = field(
+        cartesianproduct: None | Cartesianproduct = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        intersect: Intersect | None = field(
+        intersect: None | Intersect = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        union: UnionType | None = field(
+        union: None | UnionType = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        setdiff: Setdiff | None = field(
+        setdiff: None | Setdiff = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        notprsubset: Notprsubset | None = field(
+        notprsubset: None | Notprsubset = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        notsubset: Notsubset | None = field(
+        notsubset: None | Notsubset = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        notin: Notin | None = field(
+        notin: None | Notin = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        in_value: In | None = field(
+        in_value: None | In = field(
             default=None,
             metadata={
                 "name": "in",
                 "type": "Element",
             },
         )
-        prsubset: Prsubset | None = field(
+        prsubset: None | Prsubset = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        subset: Subset | None = field(
+        subset: None | Subset = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        card: Card | None = field(
+        card: None | Card = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        sum: Sum | None = field(
+        sum: None | Sum = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        product: Product | None = field(
+        product: None | Product = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        limit: Limit | None = field(
+        limit: None | Limit = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arctanh: Arctanh | None = field(
+        arctanh: None | Arctanh = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arcsinh: Arcsinh | None = field(
+        arcsinh: None | Arcsinh = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arcsech: Arcsech | None = field(
+        arcsech: None | Arcsech = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arcsec: Arcsec | None = field(
+        arcsec: None | Arcsec = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arccsch: Arccsch | None = field(
+        arccsch: None | Arccsch = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arccsc: Arccsc | None = field(
+        arccsc: None | Arccsc = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arccoth: Arccoth | None = field(
+        arccoth: None | Arccoth = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arccot: Arccot | None = field(
+        arccot: None | Arccot = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arccosh: Arccosh | None = field(
+        arccosh: None | Arccosh = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arctan: Arctan | None = field(
+        arctan: None | Arctan = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arccos: Arccos | None = field(
+        arccos: None | Arccos = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arcsin: Arcsin | None = field(
+        arcsin: None | Arcsin = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        coth: Coth | None = field(
+        coth: None | Coth = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        csch: Csch | None = field(
+        csch: None | Csch = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        sech: Sech | None = field(
+        sech: None | Sech = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        tanh: Tanh | None = field(
+        tanh: None | Tanh = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cosh: Cosh | None = field(
+        cosh: None | Cosh = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        sinh: Sinh | None = field(
+        sinh: None | Sinh = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cot: Cot | None = field(
+        cot: None | Cot = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        csc: Csc | None = field(
+        csc: None | Csc = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        sec: Sec | None = field(
+        sec: None | Sec = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        tan: Tan | None = field(
+        tan: None | Tan = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cos: Cos | None = field(
+        cos: None | Cos = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        sin: Sin | None = field(
+        sin: None | Sin = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mode: Mode | None = field(
+        mode: None | Mode = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        median: Median | None = field(
+        median: None | Median = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        variance: Variance | None = field(
+        variance: None | Variance = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        sdev: Sdev | None = field(
+        sdev: None | Sdev = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mean: Mean | None = field(
+        mean: None | Mean = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        matrixrow: Matrixrow | None = field(
+        matrixrow: None | Matrixrow = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        matrix: Matrix | None = field(
+        matrix: None | Matrix = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        vector: Vector | None = field(
+        vector: None | Vector = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        transpose: Transpose | None = field(
+        transpose: None | Transpose = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        determinant: Determinant | None = field(
+        determinant: None | Determinant = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        selector: Selector | None = field(
+        selector: None | Selector = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        outerproduct: Outerproduct | None = field(
+        outerproduct: None | Outerproduct = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        scalarproduct: Scalarproduct | None = field(
+        scalarproduct: None | Scalarproduct = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        vectorproduct: Vectorproduct | None = field(
+        vectorproduct: None | Vectorproduct = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        emptyset: Emptyset | None = field(
+        emptyset: None | Emptyset = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        primes: Primes | None = field(
+        primes: None | Primes = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        complexes: Complexes | None = field(
+        complexes: None | Complexes = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        naturalnumbers: Naturalnumbers | None = field(
+        naturalnumbers: None | Naturalnumbers = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        rationals: Rationals | None = field(
+        rationals: None | Rationals = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        reals: Reals | None = field(
+        reals: None | Reals = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        integers: Integers | None = field(
+        integers: None | Integers = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        infinity: Infinity | None = field(
+        infinity: None | Infinity = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        eulergamma: Eulergamma | None = field(
+        eulergamma: None | Eulergamma = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        pi: Pi | None = field(
+        pi: None | Pi = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        false: FalseType | None = field(
+        false: None | FalseType = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        true: TrueType | None = field(
+        true: None | TrueType = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        notanumber: Notanumber | None = field(
+        notanumber: None | Notanumber = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        imaginaryi: Imaginaryi | None = field(
+        imaginaryi: None | Imaginaryi = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        exponentiale: Exponentiale | None = field(
+        exponentiale: None | Exponentiale = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        maction: Maction | None = field(
+        maction: None | Maction = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mlongdiv: Mlongdiv | None = field(
+        mlongdiv: None | Mlongdiv = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mstack: Mstack | None = field(
+        mstack: None | Mstack = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mtable: Mtable | None = field(
+        mtable: None | Mtable = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mmultiscripts: Mmultiscripts | None = field(
+        mmultiscripts: None | Mmultiscripts = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        munderover: Munderover | None = field(
+        munderover: None | Munderover = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mover: Mover | None = field(
+        mover: None | Mover = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        munder: Munder | None = field(
+        munder: None | Munder = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        msubsup: Msubsup | None = field(
+        msubsup: None | Msubsup = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        msup: Msup | None = field(
+        msup: None | Msup = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        msub: Msub | None = field(
+        msub: None | Msub = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        menclose: Menclose | None = field(
+        menclose: None | Menclose = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mfenced: Mfenced | None = field(
+        mfenced: None | Mfenced = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mphantom: Mphantom | None = field(
+        mphantom: None | Mphantom = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mpadded: Mpadded | None = field(
+        mpadded: None | Mpadded = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        merror: Merror | None = field(
+        merror: None | Merror = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mstyle: Mstyle | None = field(
+        mstyle: None | Mstyle = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mroot: Mroot | None = field(
+        mroot: None | Mroot = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        msqrt: Msqrt | None = field(
+        msqrt: None | Msqrt = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mfrac: Mfrac | None = field(
+        mfrac: None | Mfrac = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mrow: Mrow | None = field(
+        mrow: None | Mrow = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        maligngroup: Maligngroup | None = field(
+        maligngroup: None | Maligngroup = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        malignmark: Malignmark | None = field(
+        malignmark: None | Malignmark = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        ms: Ms | None = field(
+        ms: None | Ms = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mspace: Mspace | None = field(
+        mspace: None | Mspace = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mtext: Mtext | None = field(
+        mtext: None | Mtext = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mo: Mo | None = field(
+        mo: None | Mo = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mn: Mn | None = field(
+        mn: None | Mn = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mi: Mi | None = field(
+        mi: None | Mi = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        semantics: Msup.Semantics | None = field(
+        semantics: None | Msup.Semantics = field(
             default=None,
             metadata={
                 "type": "Element",
@@ -33891,13 +33891,13 @@ class Msup:
                 "type": "Element",
             },
         )
-        id: str | None = field(
+        id: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
             },
         )
-        xref: object | None = field(
+        xref: None | object = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -33911,19 +33911,19 @@ class Msup:
                 "tokens": True,
             },
         )
-        style: str | None = field(
+        style: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
             },
         )
-        href: str | None = field(
+        href: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
             },
         )
-        other: object | None = field(
+        other: None | object = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -33936,26 +33936,26 @@ class Msup:
                 "namespace": "##other",
             },
         )
-        encoding: str | None = field(
+        encoding: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
             },
         )
-        definition_url: str | None = field(
+        definition_url: None | str = field(
             default=None,
             metadata={
                 "name": "definitionURL",
                 "type": "Attribute",
             },
         )
-        cd: str | None = field(
+        cd: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
             },
         )
-        name: str | None = field(
+        name: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -35346,13 +35346,13 @@ class Msubsup:
             "sequence": 1,
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    xref: object | None = field(
+    xref: None | object = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -35366,19 +35366,19 @@ class Msubsup:
             "tokens": True,
         },
     )
-    style: str | None = field(
+    style: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    href: str | None = field(
+    href: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    other: object | None = field(
+    other: None | object = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -35391,28 +35391,28 @@ class Msubsup:
             "namespace": "##other",
         },
     )
-    mathcolor: str | None = field(
+    mathcolor: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\s*((#[0-9a-fA-F]{3}([0-9a-fA-F]{3})?)|[aA][qQ][uU][aA]|[bB][lL][aA][cC][kK]|[bB][lL][uU][eE]|[fF][uU][cC][hH][sS][iI][aA]|[gG][rR][aA][yY]|[gG][rR][eE][eE][nN]|[lL][iI][mM][eE]|[mM][aA][rR][oO][oO][nN]|[nN][aA][vV][yY]|[oO][lL][iI][vV][eE]|[pP][uU][rR][pP][lL][eE]|[rR][eE][dD]|[sS][iI][lL][vV][eE][rR]|[tT][eE][aA][lL]|[wW][hH][iI][tT][eE]|[yY][eE][lL][lL][oO][wW])\s*",
         },
     )
-    mathbackground: str | MsubsupValue | None = field(
+    mathbackground: None | str | MsubsupValue = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\s*((#[0-9a-fA-F]{3}([0-9a-fA-F]{3})?)|[aA][qQ][uU][aA]|[bB][lL][aA][cC][kK]|[bB][lL][uU][eE]|[fF][uU][cC][hH][sS][iI][aA]|[gG][rR][aA][yY]|[gG][rR][eE][eE][nN]|[lL][iI][mM][eE]|[mM][aA][rR][oO][oO][nN]|[nN][aA][vV][yY]|[oO][lL][iI][vV][eE]|[pP][uU][rR][pP][lL][eE]|[rR][eE][dD]|[sS][iI][lL][vV][eE][rR]|[tT][eE][aA][lL]|[wW][hH][iI][tT][eE]|[yY][eE][lL][lL][oO][wW])\s*",
         },
     )
-    subscriptshift: str | None = field(
+    subscriptshift: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\s*((-?[0-9]*([0-9]\.?|\.[0-9])[0-9]*(e[mx]|in|cm|mm|p[xtc]|%)?)|(negative)?((very){0,2}thi(n|ck)|medium)mathspace)\s*",
         },
     )
-    superscriptshift: str | None = field(
+    superscriptshift: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -35422,1016 +35422,1016 @@ class Msubsup:
 
     @dataclass
     class Semantics:
-        apply: Apply | None = field(
+        apply: None | Apply = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        bind: Bind | None = field(
+        bind: None | Bind = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        ci: Ci | None = field(
+        ci: None | Ci = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cn: Cn | None = field(
+        cn: None | Cn = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        csymbol: Csymbol | None = field(
+        csymbol: None | Csymbol = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cbytes: Cbytes | None = field(
+        cbytes: None | Cbytes = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cerror: Cerror | None = field(
+        cerror: None | Cerror = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cs: Cs | None = field(
+        cs: None | Cs = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        share: Share | None = field(
+        share: None | Share = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        piecewise: Piecewise | None = field(
+        piecewise: None | Piecewise = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        declare: Declare | None = field(
+        declare: None | Declare = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        fn: Fn | None = field(
+        fn: None | Fn = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        reln: Reln | None = field(
+        reln: None | Reln = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        interval: Interval | None = field(
+        interval: None | Interval = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        moment: Moment | None = field(
+        moment: None | Moment = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        log: Log | None = field(
+        log: None | Log = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        ln: Ln | None = field(
+        ln: None | Ln = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        image: Image | None = field(
+        image: None | Image = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        codomain: Codomain | None = field(
+        codomain: None | Codomain = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        domain: Domain | None = field(
+        domain: None | Domain = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        ident: Ident | None = field(
+        ident: None | Ident = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        inverse: Inverse | None = field(
+        inverse: None | Inverse = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        lambda_value: Lambda | None = field(
+        lambda_value: None | Lambda = field(
             default=None,
             metadata={
                 "name": "lambda",
                 "type": "Element",
             },
         )
-        compose: Compose | None = field(
+        compose: None | Compose = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        quotient: Quotient | None = field(
+        quotient: None | Quotient = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        divide: Divide | None = field(
+        divide: None | Divide = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        minus: Minus | None = field(
+        minus: None | Minus = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        power: Power | None = field(
+        power: None | Power = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        rem: Rem | None = field(
+        rem: None | Rem = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        root: Root | None = field(
+        root: None | Root = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        factorial: Factorial | None = field(
+        factorial: None | Factorial = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        abs: Abs | None = field(
+        abs: None | Abs = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        conjugate: Conjugate | None = field(
+        conjugate: None | Conjugate = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arg: Arg | None = field(
+        arg: None | Arg = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        real: Real | None = field(
+        real: None | Real = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        imaginary: Imaginary | None = field(
+        imaginary: None | Imaginary = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        floor: Floor | None = field(
+        floor: None | Floor = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        ceiling: Ceiling | None = field(
+        ceiling: None | Ceiling = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        exp: Exp | None = field(
+        exp: None | Exp = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        min: Min | None = field(
+        min: None | Min = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        max: Max | None = field(
+        max: None | Max = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        lcm: Lcm | None = field(
+        lcm: None | Lcm = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        gcd: Gcd | None = field(
+        gcd: None | Gcd = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        times: Times | None = field(
+        times: None | Times = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        plus: Plus | None = field(
+        plus: None | Plus = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        xor: Xor | None = field(
+        xor: None | Xor = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        or_value: Or | None = field(
+        or_value: None | Or = field(
             default=None,
             metadata={
                 "name": "or",
                 "type": "Element",
             },
         )
-        and_value: And | None = field(
+        and_value: None | And = field(
             default=None,
             metadata={
                 "name": "and",
                 "type": "Element",
             },
         )
-        not_value: Not | None = field(
+        not_value: None | Not = field(
             default=None,
             metadata={
                 "name": "not",
                 "type": "Element",
             },
         )
-        equivalent: Equivalent | None = field(
+        equivalent: None | Equivalent = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        implies: Implies | None = field(
+        implies: None | Implies = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        exists: Exists | None = field(
+        exists: None | Exists = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        forall: Forall | None = field(
+        forall: None | Forall = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        leq: Leq | None = field(
+        leq: None | Leq = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        geq: Geq | None = field(
+        geq: None | Geq = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        lt: Lt | None = field(
+        lt: None | Lt = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        gt: Gt | None = field(
+        gt: None | Gt = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        eq: Eq | None = field(
+        eq: None | Eq = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        tendsto: Tendsto | None = field(
+        tendsto: None | Tendsto = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        factorof: Factorof | None = field(
+        factorof: None | Factorof = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        approx: Approx | None = field(
+        approx: None | Approx = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        neq: Neq | None = field(
+        neq: None | Neq = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        int_value: Int | None = field(
+        int_value: None | Int = field(
             default=None,
             metadata={
                 "name": "int",
                 "type": "Element",
             },
         )
-        diff: Diff | None = field(
+        diff: None | Diff = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        partialdiff: Partialdiff | None = field(
+        partialdiff: None | Partialdiff = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        laplacian: Laplacian | None = field(
+        laplacian: None | Laplacian = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        curl: Curl | None = field(
+        curl: None | Curl = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        grad: Grad | None = field(
+        grad: None | Grad = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        divergence: Divergence | None = field(
+        divergence: None | Divergence = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        list_value: List | None = field(
+        list_value: None | List = field(
             default=None,
             metadata={
                 "name": "list",
                 "type": "Element",
             },
         )
-        set: Set | None = field(
+        set: None | Set = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cartesianproduct: Cartesianproduct | None = field(
+        cartesianproduct: None | Cartesianproduct = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        intersect: Intersect | None = field(
+        intersect: None | Intersect = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        union: UnionType | None = field(
+        union: None | UnionType = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        setdiff: Setdiff | None = field(
+        setdiff: None | Setdiff = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        notprsubset: Notprsubset | None = field(
+        notprsubset: None | Notprsubset = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        notsubset: Notsubset | None = field(
+        notsubset: None | Notsubset = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        notin: Notin | None = field(
+        notin: None | Notin = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        in_value: In | None = field(
+        in_value: None | In = field(
             default=None,
             metadata={
                 "name": "in",
                 "type": "Element",
             },
         )
-        prsubset: Prsubset | None = field(
+        prsubset: None | Prsubset = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        subset: Subset | None = field(
+        subset: None | Subset = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        card: Card | None = field(
+        card: None | Card = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        sum: Sum | None = field(
+        sum: None | Sum = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        product: Product | None = field(
+        product: None | Product = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        limit: Limit | None = field(
+        limit: None | Limit = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arctanh: Arctanh | None = field(
+        arctanh: None | Arctanh = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arcsinh: Arcsinh | None = field(
+        arcsinh: None | Arcsinh = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arcsech: Arcsech | None = field(
+        arcsech: None | Arcsech = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arcsec: Arcsec | None = field(
+        arcsec: None | Arcsec = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arccsch: Arccsch | None = field(
+        arccsch: None | Arccsch = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arccsc: Arccsc | None = field(
+        arccsc: None | Arccsc = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arccoth: Arccoth | None = field(
+        arccoth: None | Arccoth = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arccot: Arccot | None = field(
+        arccot: None | Arccot = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arccosh: Arccosh | None = field(
+        arccosh: None | Arccosh = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arctan: Arctan | None = field(
+        arctan: None | Arctan = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arccos: Arccos | None = field(
+        arccos: None | Arccos = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arcsin: Arcsin | None = field(
+        arcsin: None | Arcsin = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        coth: Coth | None = field(
+        coth: None | Coth = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        csch: Csch | None = field(
+        csch: None | Csch = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        sech: Sech | None = field(
+        sech: None | Sech = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        tanh: Tanh | None = field(
+        tanh: None | Tanh = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cosh: Cosh | None = field(
+        cosh: None | Cosh = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        sinh: Sinh | None = field(
+        sinh: None | Sinh = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cot: Cot | None = field(
+        cot: None | Cot = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        csc: Csc | None = field(
+        csc: None | Csc = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        sec: Sec | None = field(
+        sec: None | Sec = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        tan: Tan | None = field(
+        tan: None | Tan = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cos: Cos | None = field(
+        cos: None | Cos = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        sin: Sin | None = field(
+        sin: None | Sin = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mode: Mode | None = field(
+        mode: None | Mode = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        median: Median | None = field(
+        median: None | Median = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        variance: Variance | None = field(
+        variance: None | Variance = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        sdev: Sdev | None = field(
+        sdev: None | Sdev = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mean: Mean | None = field(
+        mean: None | Mean = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        matrixrow: Matrixrow | None = field(
+        matrixrow: None | Matrixrow = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        matrix: Matrix | None = field(
+        matrix: None | Matrix = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        vector: Vector | None = field(
+        vector: None | Vector = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        transpose: Transpose | None = field(
+        transpose: None | Transpose = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        determinant: Determinant | None = field(
+        determinant: None | Determinant = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        selector: Selector | None = field(
+        selector: None | Selector = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        outerproduct: Outerproduct | None = field(
+        outerproduct: None | Outerproduct = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        scalarproduct: Scalarproduct | None = field(
+        scalarproduct: None | Scalarproduct = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        vectorproduct: Vectorproduct | None = field(
+        vectorproduct: None | Vectorproduct = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        emptyset: Emptyset | None = field(
+        emptyset: None | Emptyset = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        primes: Primes | None = field(
+        primes: None | Primes = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        complexes: Complexes | None = field(
+        complexes: None | Complexes = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        naturalnumbers: Naturalnumbers | None = field(
+        naturalnumbers: None | Naturalnumbers = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        rationals: Rationals | None = field(
+        rationals: None | Rationals = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        reals: Reals | None = field(
+        reals: None | Reals = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        integers: Integers | None = field(
+        integers: None | Integers = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        infinity: Infinity | None = field(
+        infinity: None | Infinity = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        eulergamma: Eulergamma | None = field(
+        eulergamma: None | Eulergamma = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        pi: Pi | None = field(
+        pi: None | Pi = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        false: FalseType | None = field(
+        false: None | FalseType = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        true: TrueType | None = field(
+        true: None | TrueType = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        notanumber: Notanumber | None = field(
+        notanumber: None | Notanumber = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        imaginaryi: Imaginaryi | None = field(
+        imaginaryi: None | Imaginaryi = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        exponentiale: Exponentiale | None = field(
+        exponentiale: None | Exponentiale = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        maction: Maction | None = field(
+        maction: None | Maction = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mlongdiv: Mlongdiv | None = field(
+        mlongdiv: None | Mlongdiv = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mstack: Mstack | None = field(
+        mstack: None | Mstack = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mtable: Mtable | None = field(
+        mtable: None | Mtable = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mmultiscripts: Mmultiscripts | None = field(
+        mmultiscripts: None | Mmultiscripts = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        munderover: Munderover | None = field(
+        munderover: None | Munderover = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mover: Mover | None = field(
+        mover: None | Mover = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        munder: Munder | None = field(
+        munder: None | Munder = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        msubsup: Msubsup | None = field(
+        msubsup: None | Msubsup = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        msup: Msup | None = field(
+        msup: None | Msup = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        msub: Msub | None = field(
+        msub: None | Msub = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        menclose: Menclose | None = field(
+        menclose: None | Menclose = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mfenced: Mfenced | None = field(
+        mfenced: None | Mfenced = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mphantom: Mphantom | None = field(
+        mphantom: None | Mphantom = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mpadded: Mpadded | None = field(
+        mpadded: None | Mpadded = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        merror: Merror | None = field(
+        merror: None | Merror = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mstyle: Mstyle | None = field(
+        mstyle: None | Mstyle = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mroot: Mroot | None = field(
+        mroot: None | Mroot = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        msqrt: Msqrt | None = field(
+        msqrt: None | Msqrt = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mfrac: Mfrac | None = field(
+        mfrac: None | Mfrac = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mrow: Mrow | None = field(
+        mrow: None | Mrow = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        maligngroup: Maligngroup | None = field(
+        maligngroup: None | Maligngroup = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        malignmark: Malignmark | None = field(
+        malignmark: None | Malignmark = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        ms: Ms | None = field(
+        ms: None | Ms = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mspace: Mspace | None = field(
+        mspace: None | Mspace = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mtext: Mtext | None = field(
+        mtext: None | Mtext = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mo: Mo | None = field(
+        mo: None | Mo = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mn: Mn | None = field(
+        mn: None | Mn = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mi: Mi | None = field(
+        mi: None | Mi = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        semantics: Msubsup.Semantics | None = field(
+        semantics: None | Msubsup.Semantics = field(
             default=None,
             metadata={
                 "type": "Element",
@@ -36450,13 +36450,13 @@ class Msubsup:
                 "type": "Element",
             },
         )
-        id: str | None = field(
+        id: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
             },
         )
-        xref: object | None = field(
+        xref: None | object = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -36470,19 +36470,19 @@ class Msubsup:
                 "tokens": True,
             },
         )
-        style: str | None = field(
+        style: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
             },
         )
-        href: str | None = field(
+        href: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
             },
         )
-        other: object | None = field(
+        other: None | object = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -36495,26 +36495,26 @@ class Msubsup:
                 "namespace": "##other",
             },
         )
-        encoding: str | None = field(
+        encoding: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
             },
         )
-        definition_url: str | None = field(
+        definition_url: None | str = field(
             default=None,
             metadata={
                 "name": "definitionURL",
                 "type": "Attribute",
             },
         )
-        cd: str | None = field(
+        cd: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
             },
         )
-        name: str | None = field(
+        name: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -37905,13 +37905,13 @@ class Munder:
             "sequence": 1,
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    xref: object | None = field(
+    xref: None | object = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -37925,19 +37925,19 @@ class Munder:
             "tokens": True,
         },
     )
-    style: str | None = field(
+    style: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    href: str | None = field(
+    href: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    other: object | None = field(
+    other: None | object = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -37950,27 +37950,27 @@ class Munder:
             "namespace": "##other",
         },
     )
-    mathcolor: str | None = field(
+    mathcolor: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\s*((#[0-9a-fA-F]{3}([0-9a-fA-F]{3})?)|[aA][qQ][uU][aA]|[bB][lL][aA][cC][kK]|[bB][lL][uU][eE]|[fF][uU][cC][hH][sS][iI][aA]|[gG][rR][aA][yY]|[gG][rR][eE][eE][nN]|[lL][iI][mM][eE]|[mM][aA][rR][oO][oO][nN]|[nN][aA][vV][yY]|[oO][lL][iI][vV][eE]|[pP][uU][rR][pP][lL][eE]|[rR][eE][dD]|[sS][iI][lL][vV][eE][rR]|[tT][eE][aA][lL]|[wW][hH][iI][tT][eE]|[yY][eE][lL][lL][oO][wW])\s*",
         },
     )
-    mathbackground: str | MunderValue | None = field(
+    mathbackground: None | str | MunderValue = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\s*((#[0-9a-fA-F]{3}([0-9a-fA-F]{3})?)|[aA][qQ][uU][aA]|[bB][lL][aA][cC][kK]|[bB][lL][uU][eE]|[fF][uU][cC][hH][sS][iI][aA]|[gG][rR][aA][yY]|[gG][rR][eE][eE][nN]|[lL][iI][mM][eE]|[mM][aA][rR][oO][oO][nN]|[nN][aA][vV][yY]|[oO][lL][iI][vV][eE]|[pP][uU][rR][pP][lL][eE]|[rR][eE][dD]|[sS][iI][lL][vV][eE][rR]|[tT][eE][aA][lL]|[wW][hH][iI][tT][eE]|[yY][eE][lL][lL][oO][wW])\s*",
         },
     )
-    accentunder: MunderAccentunder | None = field(
+    accentunder: None | MunderAccentunder = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    align: MunderAlign | None = field(
+    align: None | MunderAlign = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -37979,1016 +37979,1016 @@ class Munder:
 
     @dataclass
     class Semantics:
-        apply: Apply | None = field(
+        apply: None | Apply = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        bind: Bind | None = field(
+        bind: None | Bind = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        ci: Ci | None = field(
+        ci: None | Ci = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cn: Cn | None = field(
+        cn: None | Cn = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        csymbol: Csymbol | None = field(
+        csymbol: None | Csymbol = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cbytes: Cbytes | None = field(
+        cbytes: None | Cbytes = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cerror: Cerror | None = field(
+        cerror: None | Cerror = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cs: Cs | None = field(
+        cs: None | Cs = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        share: Share | None = field(
+        share: None | Share = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        piecewise: Piecewise | None = field(
+        piecewise: None | Piecewise = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        declare: Declare | None = field(
+        declare: None | Declare = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        fn: Fn | None = field(
+        fn: None | Fn = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        reln: Reln | None = field(
+        reln: None | Reln = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        interval: Interval | None = field(
+        interval: None | Interval = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        moment: Moment | None = field(
+        moment: None | Moment = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        log: Log | None = field(
+        log: None | Log = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        ln: Ln | None = field(
+        ln: None | Ln = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        image: Image | None = field(
+        image: None | Image = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        codomain: Codomain | None = field(
+        codomain: None | Codomain = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        domain: Domain | None = field(
+        domain: None | Domain = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        ident: Ident | None = field(
+        ident: None | Ident = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        inverse: Inverse | None = field(
+        inverse: None | Inverse = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        lambda_value: Lambda | None = field(
+        lambda_value: None | Lambda = field(
             default=None,
             metadata={
                 "name": "lambda",
                 "type": "Element",
             },
         )
-        compose: Compose | None = field(
+        compose: None | Compose = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        quotient: Quotient | None = field(
+        quotient: None | Quotient = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        divide: Divide | None = field(
+        divide: None | Divide = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        minus: Minus | None = field(
+        minus: None | Minus = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        power: Power | None = field(
+        power: None | Power = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        rem: Rem | None = field(
+        rem: None | Rem = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        root: Root | None = field(
+        root: None | Root = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        factorial: Factorial | None = field(
+        factorial: None | Factorial = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        abs: Abs | None = field(
+        abs: None | Abs = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        conjugate: Conjugate | None = field(
+        conjugate: None | Conjugate = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arg: Arg | None = field(
+        arg: None | Arg = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        real: Real | None = field(
+        real: None | Real = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        imaginary: Imaginary | None = field(
+        imaginary: None | Imaginary = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        floor: Floor | None = field(
+        floor: None | Floor = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        ceiling: Ceiling | None = field(
+        ceiling: None | Ceiling = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        exp: Exp | None = field(
+        exp: None | Exp = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        min: Min | None = field(
+        min: None | Min = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        max: Max | None = field(
+        max: None | Max = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        lcm: Lcm | None = field(
+        lcm: None | Lcm = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        gcd: Gcd | None = field(
+        gcd: None | Gcd = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        times: Times | None = field(
+        times: None | Times = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        plus: Plus | None = field(
+        plus: None | Plus = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        xor: Xor | None = field(
+        xor: None | Xor = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        or_value: Or | None = field(
+        or_value: None | Or = field(
             default=None,
             metadata={
                 "name": "or",
                 "type": "Element",
             },
         )
-        and_value: And | None = field(
+        and_value: None | And = field(
             default=None,
             metadata={
                 "name": "and",
                 "type": "Element",
             },
         )
-        not_value: Not | None = field(
+        not_value: None | Not = field(
             default=None,
             metadata={
                 "name": "not",
                 "type": "Element",
             },
         )
-        equivalent: Equivalent | None = field(
+        equivalent: None | Equivalent = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        implies: Implies | None = field(
+        implies: None | Implies = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        exists: Exists | None = field(
+        exists: None | Exists = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        forall: Forall | None = field(
+        forall: None | Forall = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        leq: Leq | None = field(
+        leq: None | Leq = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        geq: Geq | None = field(
+        geq: None | Geq = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        lt: Lt | None = field(
+        lt: None | Lt = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        gt: Gt | None = field(
+        gt: None | Gt = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        eq: Eq | None = field(
+        eq: None | Eq = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        tendsto: Tendsto | None = field(
+        tendsto: None | Tendsto = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        factorof: Factorof | None = field(
+        factorof: None | Factorof = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        approx: Approx | None = field(
+        approx: None | Approx = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        neq: Neq | None = field(
+        neq: None | Neq = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        int_value: Int | None = field(
+        int_value: None | Int = field(
             default=None,
             metadata={
                 "name": "int",
                 "type": "Element",
             },
         )
-        diff: Diff | None = field(
+        diff: None | Diff = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        partialdiff: Partialdiff | None = field(
+        partialdiff: None | Partialdiff = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        laplacian: Laplacian | None = field(
+        laplacian: None | Laplacian = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        curl: Curl | None = field(
+        curl: None | Curl = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        grad: Grad | None = field(
+        grad: None | Grad = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        divergence: Divergence | None = field(
+        divergence: None | Divergence = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        list_value: List | None = field(
+        list_value: None | List = field(
             default=None,
             metadata={
                 "name": "list",
                 "type": "Element",
             },
         )
-        set: Set | None = field(
+        set: None | Set = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cartesianproduct: Cartesianproduct | None = field(
+        cartesianproduct: None | Cartesianproduct = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        intersect: Intersect | None = field(
+        intersect: None | Intersect = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        union: UnionType | None = field(
+        union: None | UnionType = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        setdiff: Setdiff | None = field(
+        setdiff: None | Setdiff = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        notprsubset: Notprsubset | None = field(
+        notprsubset: None | Notprsubset = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        notsubset: Notsubset | None = field(
+        notsubset: None | Notsubset = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        notin: Notin | None = field(
+        notin: None | Notin = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        in_value: In | None = field(
+        in_value: None | In = field(
             default=None,
             metadata={
                 "name": "in",
                 "type": "Element",
             },
         )
-        prsubset: Prsubset | None = field(
+        prsubset: None | Prsubset = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        subset: Subset | None = field(
+        subset: None | Subset = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        card: Card | None = field(
+        card: None | Card = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        sum: Sum | None = field(
+        sum: None | Sum = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        product: Product | None = field(
+        product: None | Product = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        limit: Limit | None = field(
+        limit: None | Limit = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arctanh: Arctanh | None = field(
+        arctanh: None | Arctanh = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arcsinh: Arcsinh | None = field(
+        arcsinh: None | Arcsinh = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arcsech: Arcsech | None = field(
+        arcsech: None | Arcsech = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arcsec: Arcsec | None = field(
+        arcsec: None | Arcsec = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arccsch: Arccsch | None = field(
+        arccsch: None | Arccsch = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arccsc: Arccsc | None = field(
+        arccsc: None | Arccsc = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arccoth: Arccoth | None = field(
+        arccoth: None | Arccoth = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arccot: Arccot | None = field(
+        arccot: None | Arccot = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arccosh: Arccosh | None = field(
+        arccosh: None | Arccosh = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arctan: Arctan | None = field(
+        arctan: None | Arctan = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arccos: Arccos | None = field(
+        arccos: None | Arccos = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arcsin: Arcsin | None = field(
+        arcsin: None | Arcsin = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        coth: Coth | None = field(
+        coth: None | Coth = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        csch: Csch | None = field(
+        csch: None | Csch = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        sech: Sech | None = field(
+        sech: None | Sech = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        tanh: Tanh | None = field(
+        tanh: None | Tanh = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cosh: Cosh | None = field(
+        cosh: None | Cosh = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        sinh: Sinh | None = field(
+        sinh: None | Sinh = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cot: Cot | None = field(
+        cot: None | Cot = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        csc: Csc | None = field(
+        csc: None | Csc = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        sec: Sec | None = field(
+        sec: None | Sec = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        tan: Tan | None = field(
+        tan: None | Tan = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cos: Cos | None = field(
+        cos: None | Cos = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        sin: Sin | None = field(
+        sin: None | Sin = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mode: Mode | None = field(
+        mode: None | Mode = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        median: Median | None = field(
+        median: None | Median = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        variance: Variance | None = field(
+        variance: None | Variance = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        sdev: Sdev | None = field(
+        sdev: None | Sdev = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mean: Mean | None = field(
+        mean: None | Mean = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        matrixrow: Matrixrow | None = field(
+        matrixrow: None | Matrixrow = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        matrix: Matrix | None = field(
+        matrix: None | Matrix = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        vector: Vector | None = field(
+        vector: None | Vector = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        transpose: Transpose | None = field(
+        transpose: None | Transpose = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        determinant: Determinant | None = field(
+        determinant: None | Determinant = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        selector: Selector | None = field(
+        selector: None | Selector = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        outerproduct: Outerproduct | None = field(
+        outerproduct: None | Outerproduct = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        scalarproduct: Scalarproduct | None = field(
+        scalarproduct: None | Scalarproduct = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        vectorproduct: Vectorproduct | None = field(
+        vectorproduct: None | Vectorproduct = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        emptyset: Emptyset | None = field(
+        emptyset: None | Emptyset = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        primes: Primes | None = field(
+        primes: None | Primes = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        complexes: Complexes | None = field(
+        complexes: None | Complexes = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        naturalnumbers: Naturalnumbers | None = field(
+        naturalnumbers: None | Naturalnumbers = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        rationals: Rationals | None = field(
+        rationals: None | Rationals = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        reals: Reals | None = field(
+        reals: None | Reals = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        integers: Integers | None = field(
+        integers: None | Integers = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        infinity: Infinity | None = field(
+        infinity: None | Infinity = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        eulergamma: Eulergamma | None = field(
+        eulergamma: None | Eulergamma = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        pi: Pi | None = field(
+        pi: None | Pi = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        false: FalseType | None = field(
+        false: None | FalseType = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        true: TrueType | None = field(
+        true: None | TrueType = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        notanumber: Notanumber | None = field(
+        notanumber: None | Notanumber = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        imaginaryi: Imaginaryi | None = field(
+        imaginaryi: None | Imaginaryi = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        exponentiale: Exponentiale | None = field(
+        exponentiale: None | Exponentiale = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        maction: Maction | None = field(
+        maction: None | Maction = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mlongdiv: Mlongdiv | None = field(
+        mlongdiv: None | Mlongdiv = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mstack: Mstack | None = field(
+        mstack: None | Mstack = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mtable: Mtable | None = field(
+        mtable: None | Mtable = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mmultiscripts: Mmultiscripts | None = field(
+        mmultiscripts: None | Mmultiscripts = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        munderover: Munderover | None = field(
+        munderover: None | Munderover = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mover: Mover | None = field(
+        mover: None | Mover = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        munder: Munder | None = field(
+        munder: None | Munder = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        msubsup: Msubsup | None = field(
+        msubsup: None | Msubsup = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        msup: Msup | None = field(
+        msup: None | Msup = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        msub: Msub | None = field(
+        msub: None | Msub = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        menclose: Menclose | None = field(
+        menclose: None | Menclose = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mfenced: Mfenced | None = field(
+        mfenced: None | Mfenced = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mphantom: Mphantom | None = field(
+        mphantom: None | Mphantom = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mpadded: Mpadded | None = field(
+        mpadded: None | Mpadded = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        merror: Merror | None = field(
+        merror: None | Merror = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mstyle: Mstyle | None = field(
+        mstyle: None | Mstyle = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mroot: Mroot | None = field(
+        mroot: None | Mroot = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        msqrt: Msqrt | None = field(
+        msqrt: None | Msqrt = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mfrac: Mfrac | None = field(
+        mfrac: None | Mfrac = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mrow: Mrow | None = field(
+        mrow: None | Mrow = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        maligngroup: Maligngroup | None = field(
+        maligngroup: None | Maligngroup = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        malignmark: Malignmark | None = field(
+        malignmark: None | Malignmark = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        ms: Ms | None = field(
+        ms: None | Ms = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mspace: Mspace | None = field(
+        mspace: None | Mspace = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mtext: Mtext | None = field(
+        mtext: None | Mtext = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mo: Mo | None = field(
+        mo: None | Mo = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mn: Mn | None = field(
+        mn: None | Mn = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mi: Mi | None = field(
+        mi: None | Mi = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        semantics: Munder.Semantics | None = field(
+        semantics: None | Munder.Semantics = field(
             default=None,
             metadata={
                 "type": "Element",
@@ -39007,13 +39007,13 @@ class Munder:
                 "type": "Element",
             },
         )
-        id: str | None = field(
+        id: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
             },
         )
-        xref: object | None = field(
+        xref: None | object = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -39027,19 +39027,19 @@ class Munder:
                 "tokens": True,
             },
         )
-        style: str | None = field(
+        style: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
             },
         )
-        href: str | None = field(
+        href: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
             },
         )
-        other: object | None = field(
+        other: None | object = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -39052,26 +39052,26 @@ class Munder:
                 "namespace": "##other",
             },
         )
-        encoding: str | None = field(
+        encoding: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
             },
         )
-        definition_url: str | None = field(
+        definition_url: None | str = field(
             default=None,
             metadata={
                 "name": "definitionURL",
                 "type": "Attribute",
             },
         )
-        cd: str | None = field(
+        cd: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
             },
         )
-        name: str | None = field(
+        name: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -40462,13 +40462,13 @@ class Mover:
             "sequence": 1,
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    xref: object | None = field(
+    xref: None | object = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -40482,19 +40482,19 @@ class Mover:
             "tokens": True,
         },
     )
-    style: str | None = field(
+    style: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    href: str | None = field(
+    href: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    other: object | None = field(
+    other: None | object = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -40507,27 +40507,27 @@ class Mover:
             "namespace": "##other",
         },
     )
-    mathcolor: str | None = field(
+    mathcolor: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\s*((#[0-9a-fA-F]{3}([0-9a-fA-F]{3})?)|[aA][qQ][uU][aA]|[bB][lL][aA][cC][kK]|[bB][lL][uU][eE]|[fF][uU][cC][hH][sS][iI][aA]|[gG][rR][aA][yY]|[gG][rR][eE][eE][nN]|[lL][iI][mM][eE]|[mM][aA][rR][oO][oO][nN]|[nN][aA][vV][yY]|[oO][lL][iI][vV][eE]|[pP][uU][rR][pP][lL][eE]|[rR][eE][dD]|[sS][iI][lL][vV][eE][rR]|[tT][eE][aA][lL]|[wW][hH][iI][tT][eE]|[yY][eE][lL][lL][oO][wW])\s*",
         },
     )
-    mathbackground: str | MoverValue | None = field(
+    mathbackground: None | str | MoverValue = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\s*((#[0-9a-fA-F]{3}([0-9a-fA-F]{3})?)|[aA][qQ][uU][aA]|[bB][lL][aA][cC][kK]|[bB][lL][uU][eE]|[fF][uU][cC][hH][sS][iI][aA]|[gG][rR][aA][yY]|[gG][rR][eE][eE][nN]|[lL][iI][mM][eE]|[mM][aA][rR][oO][oO][nN]|[nN][aA][vV][yY]|[oO][lL][iI][vV][eE]|[pP][uU][rR][pP][lL][eE]|[rR][eE][dD]|[sS][iI][lL][vV][eE][rR]|[tT][eE][aA][lL]|[wW][hH][iI][tT][eE]|[yY][eE][lL][lL][oO][wW])\s*",
         },
     )
-    accent: MoverAccent | None = field(
+    accent: None | MoverAccent = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    align: MoverAlign | None = field(
+    align: None | MoverAlign = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -40536,1016 +40536,1016 @@ class Mover:
 
     @dataclass
     class Semantics:
-        apply: Apply | None = field(
+        apply: None | Apply = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        bind: Bind | None = field(
+        bind: None | Bind = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        ci: Ci | None = field(
+        ci: None | Ci = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cn: Cn | None = field(
+        cn: None | Cn = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        csymbol: Csymbol | None = field(
+        csymbol: None | Csymbol = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cbytes: Cbytes | None = field(
+        cbytes: None | Cbytes = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cerror: Cerror | None = field(
+        cerror: None | Cerror = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cs: Cs | None = field(
+        cs: None | Cs = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        share: Share | None = field(
+        share: None | Share = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        piecewise: Piecewise | None = field(
+        piecewise: None | Piecewise = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        declare: Declare | None = field(
+        declare: None | Declare = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        fn: Fn | None = field(
+        fn: None | Fn = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        reln: Reln | None = field(
+        reln: None | Reln = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        interval: Interval | None = field(
+        interval: None | Interval = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        moment: Moment | None = field(
+        moment: None | Moment = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        log: Log | None = field(
+        log: None | Log = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        ln: Ln | None = field(
+        ln: None | Ln = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        image: Image | None = field(
+        image: None | Image = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        codomain: Codomain | None = field(
+        codomain: None | Codomain = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        domain: Domain | None = field(
+        domain: None | Domain = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        ident: Ident | None = field(
+        ident: None | Ident = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        inverse: Inverse | None = field(
+        inverse: None | Inverse = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        lambda_value: Lambda | None = field(
+        lambda_value: None | Lambda = field(
             default=None,
             metadata={
                 "name": "lambda",
                 "type": "Element",
             },
         )
-        compose: Compose | None = field(
+        compose: None | Compose = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        quotient: Quotient | None = field(
+        quotient: None | Quotient = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        divide: Divide | None = field(
+        divide: None | Divide = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        minus: Minus | None = field(
+        minus: None | Minus = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        power: Power | None = field(
+        power: None | Power = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        rem: Rem | None = field(
+        rem: None | Rem = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        root: Root | None = field(
+        root: None | Root = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        factorial: Factorial | None = field(
+        factorial: None | Factorial = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        abs: Abs | None = field(
+        abs: None | Abs = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        conjugate: Conjugate | None = field(
+        conjugate: None | Conjugate = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arg: Arg | None = field(
+        arg: None | Arg = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        real: Real | None = field(
+        real: None | Real = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        imaginary: Imaginary | None = field(
+        imaginary: None | Imaginary = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        floor: Floor | None = field(
+        floor: None | Floor = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        ceiling: Ceiling | None = field(
+        ceiling: None | Ceiling = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        exp: Exp | None = field(
+        exp: None | Exp = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        min: Min | None = field(
+        min: None | Min = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        max: Max | None = field(
+        max: None | Max = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        lcm: Lcm | None = field(
+        lcm: None | Lcm = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        gcd: Gcd | None = field(
+        gcd: None | Gcd = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        times: Times | None = field(
+        times: None | Times = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        plus: Plus | None = field(
+        plus: None | Plus = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        xor: Xor | None = field(
+        xor: None | Xor = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        or_value: Or | None = field(
+        or_value: None | Or = field(
             default=None,
             metadata={
                 "name": "or",
                 "type": "Element",
             },
         )
-        and_value: And | None = field(
+        and_value: None | And = field(
             default=None,
             metadata={
                 "name": "and",
                 "type": "Element",
             },
         )
-        not_value: Not | None = field(
+        not_value: None | Not = field(
             default=None,
             metadata={
                 "name": "not",
                 "type": "Element",
             },
         )
-        equivalent: Equivalent | None = field(
+        equivalent: None | Equivalent = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        implies: Implies | None = field(
+        implies: None | Implies = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        exists: Exists | None = field(
+        exists: None | Exists = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        forall: Forall | None = field(
+        forall: None | Forall = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        leq: Leq | None = field(
+        leq: None | Leq = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        geq: Geq | None = field(
+        geq: None | Geq = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        lt: Lt | None = field(
+        lt: None | Lt = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        gt: Gt | None = field(
+        gt: None | Gt = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        eq: Eq | None = field(
+        eq: None | Eq = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        tendsto: Tendsto | None = field(
+        tendsto: None | Tendsto = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        factorof: Factorof | None = field(
+        factorof: None | Factorof = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        approx: Approx | None = field(
+        approx: None | Approx = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        neq: Neq | None = field(
+        neq: None | Neq = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        int_value: Int | None = field(
+        int_value: None | Int = field(
             default=None,
             metadata={
                 "name": "int",
                 "type": "Element",
             },
         )
-        diff: Diff | None = field(
+        diff: None | Diff = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        partialdiff: Partialdiff | None = field(
+        partialdiff: None | Partialdiff = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        laplacian: Laplacian | None = field(
+        laplacian: None | Laplacian = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        curl: Curl | None = field(
+        curl: None | Curl = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        grad: Grad | None = field(
+        grad: None | Grad = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        divergence: Divergence | None = field(
+        divergence: None | Divergence = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        list_value: List | None = field(
+        list_value: None | List = field(
             default=None,
             metadata={
                 "name": "list",
                 "type": "Element",
             },
         )
-        set: Set | None = field(
+        set: None | Set = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cartesianproduct: Cartesianproduct | None = field(
+        cartesianproduct: None | Cartesianproduct = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        intersect: Intersect | None = field(
+        intersect: None | Intersect = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        union: UnionType | None = field(
+        union: None | UnionType = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        setdiff: Setdiff | None = field(
+        setdiff: None | Setdiff = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        notprsubset: Notprsubset | None = field(
+        notprsubset: None | Notprsubset = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        notsubset: Notsubset | None = field(
+        notsubset: None | Notsubset = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        notin: Notin | None = field(
+        notin: None | Notin = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        in_value: In | None = field(
+        in_value: None | In = field(
             default=None,
             metadata={
                 "name": "in",
                 "type": "Element",
             },
         )
-        prsubset: Prsubset | None = field(
+        prsubset: None | Prsubset = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        subset: Subset | None = field(
+        subset: None | Subset = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        card: Card | None = field(
+        card: None | Card = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        sum: Sum | None = field(
+        sum: None | Sum = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        product: Product | None = field(
+        product: None | Product = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        limit: Limit | None = field(
+        limit: None | Limit = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arctanh: Arctanh | None = field(
+        arctanh: None | Arctanh = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arcsinh: Arcsinh | None = field(
+        arcsinh: None | Arcsinh = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arcsech: Arcsech | None = field(
+        arcsech: None | Arcsech = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arcsec: Arcsec | None = field(
+        arcsec: None | Arcsec = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arccsch: Arccsch | None = field(
+        arccsch: None | Arccsch = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arccsc: Arccsc | None = field(
+        arccsc: None | Arccsc = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arccoth: Arccoth | None = field(
+        arccoth: None | Arccoth = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arccot: Arccot | None = field(
+        arccot: None | Arccot = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arccosh: Arccosh | None = field(
+        arccosh: None | Arccosh = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arctan: Arctan | None = field(
+        arctan: None | Arctan = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arccos: Arccos | None = field(
+        arccos: None | Arccos = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arcsin: Arcsin | None = field(
+        arcsin: None | Arcsin = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        coth: Coth | None = field(
+        coth: None | Coth = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        csch: Csch | None = field(
+        csch: None | Csch = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        sech: Sech | None = field(
+        sech: None | Sech = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        tanh: Tanh | None = field(
+        tanh: None | Tanh = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cosh: Cosh | None = field(
+        cosh: None | Cosh = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        sinh: Sinh | None = field(
+        sinh: None | Sinh = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cot: Cot | None = field(
+        cot: None | Cot = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        csc: Csc | None = field(
+        csc: None | Csc = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        sec: Sec | None = field(
+        sec: None | Sec = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        tan: Tan | None = field(
+        tan: None | Tan = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cos: Cos | None = field(
+        cos: None | Cos = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        sin: Sin | None = field(
+        sin: None | Sin = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mode: Mode | None = field(
+        mode: None | Mode = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        median: Median | None = field(
+        median: None | Median = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        variance: Variance | None = field(
+        variance: None | Variance = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        sdev: Sdev | None = field(
+        sdev: None | Sdev = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mean: Mean | None = field(
+        mean: None | Mean = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        matrixrow: Matrixrow | None = field(
+        matrixrow: None | Matrixrow = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        matrix: Matrix | None = field(
+        matrix: None | Matrix = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        vector: Vector | None = field(
+        vector: None | Vector = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        transpose: Transpose | None = field(
+        transpose: None | Transpose = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        determinant: Determinant | None = field(
+        determinant: None | Determinant = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        selector: Selector | None = field(
+        selector: None | Selector = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        outerproduct: Outerproduct | None = field(
+        outerproduct: None | Outerproduct = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        scalarproduct: Scalarproduct | None = field(
+        scalarproduct: None | Scalarproduct = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        vectorproduct: Vectorproduct | None = field(
+        vectorproduct: None | Vectorproduct = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        emptyset: Emptyset | None = field(
+        emptyset: None | Emptyset = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        primes: Primes | None = field(
+        primes: None | Primes = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        complexes: Complexes | None = field(
+        complexes: None | Complexes = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        naturalnumbers: Naturalnumbers | None = field(
+        naturalnumbers: None | Naturalnumbers = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        rationals: Rationals | None = field(
+        rationals: None | Rationals = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        reals: Reals | None = field(
+        reals: None | Reals = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        integers: Integers | None = field(
+        integers: None | Integers = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        infinity: Infinity | None = field(
+        infinity: None | Infinity = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        eulergamma: Eulergamma | None = field(
+        eulergamma: None | Eulergamma = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        pi: Pi | None = field(
+        pi: None | Pi = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        false: FalseType | None = field(
+        false: None | FalseType = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        true: TrueType | None = field(
+        true: None | TrueType = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        notanumber: Notanumber | None = field(
+        notanumber: None | Notanumber = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        imaginaryi: Imaginaryi | None = field(
+        imaginaryi: None | Imaginaryi = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        exponentiale: Exponentiale | None = field(
+        exponentiale: None | Exponentiale = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        maction: Maction | None = field(
+        maction: None | Maction = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mlongdiv: Mlongdiv | None = field(
+        mlongdiv: None | Mlongdiv = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mstack: Mstack | None = field(
+        mstack: None | Mstack = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mtable: Mtable | None = field(
+        mtable: None | Mtable = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mmultiscripts: Mmultiscripts | None = field(
+        mmultiscripts: None | Mmultiscripts = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        munderover: Munderover | None = field(
+        munderover: None | Munderover = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mover: Mover | None = field(
+        mover: None | Mover = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        munder: Munder | None = field(
+        munder: None | Munder = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        msubsup: Msubsup | None = field(
+        msubsup: None | Msubsup = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        msup: Msup | None = field(
+        msup: None | Msup = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        msub: Msub | None = field(
+        msub: None | Msub = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        menclose: Menclose | None = field(
+        menclose: None | Menclose = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mfenced: Mfenced | None = field(
+        mfenced: None | Mfenced = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mphantom: Mphantom | None = field(
+        mphantom: None | Mphantom = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mpadded: Mpadded | None = field(
+        mpadded: None | Mpadded = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        merror: Merror | None = field(
+        merror: None | Merror = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mstyle: Mstyle | None = field(
+        mstyle: None | Mstyle = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mroot: Mroot | None = field(
+        mroot: None | Mroot = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        msqrt: Msqrt | None = field(
+        msqrt: None | Msqrt = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mfrac: Mfrac | None = field(
+        mfrac: None | Mfrac = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mrow: Mrow | None = field(
+        mrow: None | Mrow = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        maligngroup: Maligngroup | None = field(
+        maligngroup: None | Maligngroup = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        malignmark: Malignmark | None = field(
+        malignmark: None | Malignmark = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        ms: Ms | None = field(
+        ms: None | Ms = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mspace: Mspace | None = field(
+        mspace: None | Mspace = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mtext: Mtext | None = field(
+        mtext: None | Mtext = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mo: Mo | None = field(
+        mo: None | Mo = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mn: Mn | None = field(
+        mn: None | Mn = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mi: Mi | None = field(
+        mi: None | Mi = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        semantics: Mover.Semantics | None = field(
+        semantics: None | Mover.Semantics = field(
             default=None,
             metadata={
                 "type": "Element",
@@ -41564,13 +41564,13 @@ class Mover:
                 "type": "Element",
             },
         )
-        id: str | None = field(
+        id: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
             },
         )
-        xref: object | None = field(
+        xref: None | object = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -41584,19 +41584,19 @@ class Mover:
                 "tokens": True,
             },
         )
-        style: str | None = field(
+        style: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
             },
         )
-        href: str | None = field(
+        href: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
             },
         )
-        other: object | None = field(
+        other: None | object = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -41609,26 +41609,26 @@ class Mover:
                 "namespace": "##other",
             },
         )
-        encoding: str | None = field(
+        encoding: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
             },
         )
-        definition_url: str | None = field(
+        definition_url: None | str = field(
             default=None,
             metadata={
                 "name": "definitionURL",
                 "type": "Attribute",
             },
         )
-        cd: str | None = field(
+        cd: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
             },
         )
-        name: str | None = field(
+        name: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -43019,13 +43019,13 @@ class Munderover:
             "sequence": 1,
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    xref: object | None = field(
+    xref: None | object = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -43039,19 +43039,19 @@ class Munderover:
             "tokens": True,
         },
     )
-    style: str | None = field(
+    style: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    href: str | None = field(
+    href: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    other: object | None = field(
+    other: None | object = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -43064,33 +43064,33 @@ class Munderover:
             "namespace": "##other",
         },
     )
-    mathcolor: str | None = field(
+    mathcolor: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\s*((#[0-9a-fA-F]{3}([0-9a-fA-F]{3})?)|[aA][qQ][uU][aA]|[bB][lL][aA][cC][kK]|[bB][lL][uU][eE]|[fF][uU][cC][hH][sS][iI][aA]|[gG][rR][aA][yY]|[gG][rR][eE][eE][nN]|[lL][iI][mM][eE]|[mM][aA][rR][oO][oO][nN]|[nN][aA][vV][yY]|[oO][lL][iI][vV][eE]|[pP][uU][rR][pP][lL][eE]|[rR][eE][dD]|[sS][iI][lL][vV][eE][rR]|[tT][eE][aA][lL]|[wW][hH][iI][tT][eE]|[yY][eE][lL][lL][oO][wW])\s*",
         },
     )
-    mathbackground: str | MunderoverValue | None = field(
+    mathbackground: None | str | MunderoverValue = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\s*((#[0-9a-fA-F]{3}([0-9a-fA-F]{3})?)|[aA][qQ][uU][aA]|[bB][lL][aA][cC][kK]|[bB][lL][uU][eE]|[fF][uU][cC][hH][sS][iI][aA]|[gG][rR][aA][yY]|[gG][rR][eE][eE][nN]|[lL][iI][mM][eE]|[mM][aA][rR][oO][oO][nN]|[nN][aA][vV][yY]|[oO][lL][iI][vV][eE]|[pP][uU][rR][pP][lL][eE]|[rR][eE][dD]|[sS][iI][lL][vV][eE][rR]|[tT][eE][aA][lL]|[wW][hH][iI][tT][eE]|[yY][eE][lL][lL][oO][wW])\s*",
         },
     )
-    accent: MunderoverAccent | None = field(
+    accent: None | MunderoverAccent = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    accentunder: MunderoverAccentunder | None = field(
+    accentunder: None | MunderoverAccentunder = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    align: MunderoverAlign | None = field(
+    align: None | MunderoverAlign = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -43099,1016 +43099,1016 @@ class Munderover:
 
     @dataclass
     class Semantics:
-        apply: Apply | None = field(
+        apply: None | Apply = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        bind: Bind | None = field(
+        bind: None | Bind = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        ci: Ci | None = field(
+        ci: None | Ci = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cn: Cn | None = field(
+        cn: None | Cn = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        csymbol: Csymbol | None = field(
+        csymbol: None | Csymbol = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cbytes: Cbytes | None = field(
+        cbytes: None | Cbytes = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cerror: Cerror | None = field(
+        cerror: None | Cerror = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cs: Cs | None = field(
+        cs: None | Cs = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        share: Share | None = field(
+        share: None | Share = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        piecewise: Piecewise | None = field(
+        piecewise: None | Piecewise = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        declare: Declare | None = field(
+        declare: None | Declare = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        fn: Fn | None = field(
+        fn: None | Fn = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        reln: Reln | None = field(
+        reln: None | Reln = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        interval: Interval | None = field(
+        interval: None | Interval = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        moment: Moment | None = field(
+        moment: None | Moment = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        log: Log | None = field(
+        log: None | Log = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        ln: Ln | None = field(
+        ln: None | Ln = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        image: Image | None = field(
+        image: None | Image = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        codomain: Codomain | None = field(
+        codomain: None | Codomain = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        domain: Domain | None = field(
+        domain: None | Domain = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        ident: Ident | None = field(
+        ident: None | Ident = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        inverse: Inverse | None = field(
+        inverse: None | Inverse = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        lambda_value: Lambda | None = field(
+        lambda_value: None | Lambda = field(
             default=None,
             metadata={
                 "name": "lambda",
                 "type": "Element",
             },
         )
-        compose: Compose | None = field(
+        compose: None | Compose = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        quotient: Quotient | None = field(
+        quotient: None | Quotient = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        divide: Divide | None = field(
+        divide: None | Divide = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        minus: Minus | None = field(
+        minus: None | Minus = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        power: Power | None = field(
+        power: None | Power = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        rem: Rem | None = field(
+        rem: None | Rem = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        root: Root | None = field(
+        root: None | Root = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        factorial: Factorial | None = field(
+        factorial: None | Factorial = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        abs: Abs | None = field(
+        abs: None | Abs = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        conjugate: Conjugate | None = field(
+        conjugate: None | Conjugate = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arg: Arg | None = field(
+        arg: None | Arg = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        real: Real | None = field(
+        real: None | Real = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        imaginary: Imaginary | None = field(
+        imaginary: None | Imaginary = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        floor: Floor | None = field(
+        floor: None | Floor = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        ceiling: Ceiling | None = field(
+        ceiling: None | Ceiling = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        exp: Exp | None = field(
+        exp: None | Exp = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        min: Min | None = field(
+        min: None | Min = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        max: Max | None = field(
+        max: None | Max = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        lcm: Lcm | None = field(
+        lcm: None | Lcm = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        gcd: Gcd | None = field(
+        gcd: None | Gcd = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        times: Times | None = field(
+        times: None | Times = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        plus: Plus | None = field(
+        plus: None | Plus = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        xor: Xor | None = field(
+        xor: None | Xor = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        or_value: Or | None = field(
+        or_value: None | Or = field(
             default=None,
             metadata={
                 "name": "or",
                 "type": "Element",
             },
         )
-        and_value: And | None = field(
+        and_value: None | And = field(
             default=None,
             metadata={
                 "name": "and",
                 "type": "Element",
             },
         )
-        not_value: Not | None = field(
+        not_value: None | Not = field(
             default=None,
             metadata={
                 "name": "not",
                 "type": "Element",
             },
         )
-        equivalent: Equivalent | None = field(
+        equivalent: None | Equivalent = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        implies: Implies | None = field(
+        implies: None | Implies = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        exists: Exists | None = field(
+        exists: None | Exists = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        forall: Forall | None = field(
+        forall: None | Forall = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        leq: Leq | None = field(
+        leq: None | Leq = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        geq: Geq | None = field(
+        geq: None | Geq = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        lt: Lt | None = field(
+        lt: None | Lt = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        gt: Gt | None = field(
+        gt: None | Gt = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        eq: Eq | None = field(
+        eq: None | Eq = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        tendsto: Tendsto | None = field(
+        tendsto: None | Tendsto = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        factorof: Factorof | None = field(
+        factorof: None | Factorof = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        approx: Approx | None = field(
+        approx: None | Approx = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        neq: Neq | None = field(
+        neq: None | Neq = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        int_value: Int | None = field(
+        int_value: None | Int = field(
             default=None,
             metadata={
                 "name": "int",
                 "type": "Element",
             },
         )
-        diff: Diff | None = field(
+        diff: None | Diff = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        partialdiff: Partialdiff | None = field(
+        partialdiff: None | Partialdiff = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        laplacian: Laplacian | None = field(
+        laplacian: None | Laplacian = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        curl: Curl | None = field(
+        curl: None | Curl = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        grad: Grad | None = field(
+        grad: None | Grad = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        divergence: Divergence | None = field(
+        divergence: None | Divergence = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        list_value: List | None = field(
+        list_value: None | List = field(
             default=None,
             metadata={
                 "name": "list",
                 "type": "Element",
             },
         )
-        set: Set | None = field(
+        set: None | Set = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cartesianproduct: Cartesianproduct | None = field(
+        cartesianproduct: None | Cartesianproduct = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        intersect: Intersect | None = field(
+        intersect: None | Intersect = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        union: UnionType | None = field(
+        union: None | UnionType = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        setdiff: Setdiff | None = field(
+        setdiff: None | Setdiff = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        notprsubset: Notprsubset | None = field(
+        notprsubset: None | Notprsubset = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        notsubset: Notsubset | None = field(
+        notsubset: None | Notsubset = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        notin: Notin | None = field(
+        notin: None | Notin = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        in_value: In | None = field(
+        in_value: None | In = field(
             default=None,
             metadata={
                 "name": "in",
                 "type": "Element",
             },
         )
-        prsubset: Prsubset | None = field(
+        prsubset: None | Prsubset = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        subset: Subset | None = field(
+        subset: None | Subset = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        card: Card | None = field(
+        card: None | Card = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        sum: Sum | None = field(
+        sum: None | Sum = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        product: Product | None = field(
+        product: None | Product = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        limit: Limit | None = field(
+        limit: None | Limit = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arctanh: Arctanh | None = field(
+        arctanh: None | Arctanh = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arcsinh: Arcsinh | None = field(
+        arcsinh: None | Arcsinh = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arcsech: Arcsech | None = field(
+        arcsech: None | Arcsech = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arcsec: Arcsec | None = field(
+        arcsec: None | Arcsec = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arccsch: Arccsch | None = field(
+        arccsch: None | Arccsch = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arccsc: Arccsc | None = field(
+        arccsc: None | Arccsc = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arccoth: Arccoth | None = field(
+        arccoth: None | Arccoth = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arccot: Arccot | None = field(
+        arccot: None | Arccot = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arccosh: Arccosh | None = field(
+        arccosh: None | Arccosh = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arctan: Arctan | None = field(
+        arctan: None | Arctan = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arccos: Arccos | None = field(
+        arccos: None | Arccos = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arcsin: Arcsin | None = field(
+        arcsin: None | Arcsin = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        coth: Coth | None = field(
+        coth: None | Coth = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        csch: Csch | None = field(
+        csch: None | Csch = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        sech: Sech | None = field(
+        sech: None | Sech = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        tanh: Tanh | None = field(
+        tanh: None | Tanh = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cosh: Cosh | None = field(
+        cosh: None | Cosh = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        sinh: Sinh | None = field(
+        sinh: None | Sinh = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cot: Cot | None = field(
+        cot: None | Cot = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        csc: Csc | None = field(
+        csc: None | Csc = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        sec: Sec | None = field(
+        sec: None | Sec = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        tan: Tan | None = field(
+        tan: None | Tan = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cos: Cos | None = field(
+        cos: None | Cos = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        sin: Sin | None = field(
+        sin: None | Sin = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mode: Mode | None = field(
+        mode: None | Mode = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        median: Median | None = field(
+        median: None | Median = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        variance: Variance | None = field(
+        variance: None | Variance = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        sdev: Sdev | None = field(
+        sdev: None | Sdev = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mean: Mean | None = field(
+        mean: None | Mean = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        matrixrow: Matrixrow | None = field(
+        matrixrow: None | Matrixrow = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        matrix: Matrix | None = field(
+        matrix: None | Matrix = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        vector: Vector | None = field(
+        vector: None | Vector = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        transpose: Transpose | None = field(
+        transpose: None | Transpose = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        determinant: Determinant | None = field(
+        determinant: None | Determinant = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        selector: Selector | None = field(
+        selector: None | Selector = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        outerproduct: Outerproduct | None = field(
+        outerproduct: None | Outerproduct = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        scalarproduct: Scalarproduct | None = field(
+        scalarproduct: None | Scalarproduct = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        vectorproduct: Vectorproduct | None = field(
+        vectorproduct: None | Vectorproduct = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        emptyset: Emptyset | None = field(
+        emptyset: None | Emptyset = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        primes: Primes | None = field(
+        primes: None | Primes = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        complexes: Complexes | None = field(
+        complexes: None | Complexes = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        naturalnumbers: Naturalnumbers | None = field(
+        naturalnumbers: None | Naturalnumbers = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        rationals: Rationals | None = field(
+        rationals: None | Rationals = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        reals: Reals | None = field(
+        reals: None | Reals = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        integers: Integers | None = field(
+        integers: None | Integers = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        infinity: Infinity | None = field(
+        infinity: None | Infinity = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        eulergamma: Eulergamma | None = field(
+        eulergamma: None | Eulergamma = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        pi: Pi | None = field(
+        pi: None | Pi = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        false: FalseType | None = field(
+        false: None | FalseType = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        true: TrueType | None = field(
+        true: None | TrueType = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        notanumber: Notanumber | None = field(
+        notanumber: None | Notanumber = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        imaginaryi: Imaginaryi | None = field(
+        imaginaryi: None | Imaginaryi = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        exponentiale: Exponentiale | None = field(
+        exponentiale: None | Exponentiale = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        maction: Maction | None = field(
+        maction: None | Maction = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mlongdiv: Mlongdiv | None = field(
+        mlongdiv: None | Mlongdiv = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mstack: Mstack | None = field(
+        mstack: None | Mstack = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mtable: Mtable | None = field(
+        mtable: None | Mtable = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mmultiscripts: Mmultiscripts | None = field(
+        mmultiscripts: None | Mmultiscripts = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        munderover: Munderover | None = field(
+        munderover: None | Munderover = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mover: Mover | None = field(
+        mover: None | Mover = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        munder: Munder | None = field(
+        munder: None | Munder = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        msubsup: Msubsup | None = field(
+        msubsup: None | Msubsup = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        msup: Msup | None = field(
+        msup: None | Msup = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        msub: Msub | None = field(
+        msub: None | Msub = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        menclose: Menclose | None = field(
+        menclose: None | Menclose = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mfenced: Mfenced | None = field(
+        mfenced: None | Mfenced = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mphantom: Mphantom | None = field(
+        mphantom: None | Mphantom = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mpadded: Mpadded | None = field(
+        mpadded: None | Mpadded = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        merror: Merror | None = field(
+        merror: None | Merror = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mstyle: Mstyle | None = field(
+        mstyle: None | Mstyle = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mroot: Mroot | None = field(
+        mroot: None | Mroot = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        msqrt: Msqrt | None = field(
+        msqrt: None | Msqrt = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mfrac: Mfrac | None = field(
+        mfrac: None | Mfrac = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mrow: Mrow | None = field(
+        mrow: None | Mrow = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        maligngroup: Maligngroup | None = field(
+        maligngroup: None | Maligngroup = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        malignmark: Malignmark | None = field(
+        malignmark: None | Malignmark = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        ms: Ms | None = field(
+        ms: None | Ms = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mspace: Mspace | None = field(
+        mspace: None | Mspace = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mtext: Mtext | None = field(
+        mtext: None | Mtext = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mo: Mo | None = field(
+        mo: None | Mo = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mn: Mn | None = field(
+        mn: None | Mn = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mi: Mi | None = field(
+        mi: None | Mi = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        semantics: Munderover.Semantics | None = field(
+        semantics: None | Munderover.Semantics = field(
             default=None,
             metadata={
                 "type": "Element",
@@ -44127,13 +44127,13 @@ class Munderover:
                 "type": "Element",
             },
         )
-        id: str | None = field(
+        id: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
             },
         )
-        xref: object | None = field(
+        xref: None | object = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -44147,19 +44147,19 @@ class Munderover:
                 "tokens": True,
             },
         )
-        style: str | None = field(
+        style: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
             },
         )
-        href: str | None = field(
+        href: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
             },
         )
-        other: object | None = field(
+        other: None | object = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -44172,26 +44172,26 @@ class Munderover:
                 "namespace": "##other",
             },
         )
-        encoding: str | None = field(
+        encoding: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
             },
         )
-        definition_url: str | None = field(
+        definition_url: None | str = field(
             default=None,
             metadata={
                 "name": "definitionURL",
                 "type": "Attribute",
             },
         )
-        cd: str | None = field(
+        cd: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
             },
         )
-        name: str | None = field(
+        name: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -45226,19 +45226,19 @@ class Mmultiscripts:
             "type": "Element",
         },
     )
-    mprescripts: Mprescripts | None = field(
+    mprescripts: None | Mprescripts = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    xref: object | None = field(
+    xref: None | object = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -45252,19 +45252,19 @@ class Mmultiscripts:
             "tokens": True,
         },
     )
-    style: str | None = field(
+    style: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    href: str | None = field(
+    href: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    other: object | None = field(
+    other: None | object = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -45277,28 +45277,28 @@ class Mmultiscripts:
             "namespace": "##other",
         },
     )
-    mathcolor: str | None = field(
+    mathcolor: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\s*((#[0-9a-fA-F]{3}([0-9a-fA-F]{3})?)|[aA][qQ][uU][aA]|[bB][lL][aA][cC][kK]|[bB][lL][uU][eE]|[fF][uU][cC][hH][sS][iI][aA]|[gG][rR][aA][yY]|[gG][rR][eE][eE][nN]|[lL][iI][mM][eE]|[mM][aA][rR][oO][oO][nN]|[nN][aA][vV][yY]|[oO][lL][iI][vV][eE]|[pP][uU][rR][pP][lL][eE]|[rR][eE][dD]|[sS][iI][lL][vV][eE][rR]|[tT][eE][aA][lL]|[wW][hH][iI][tT][eE]|[yY][eE][lL][lL][oO][wW])\s*",
         },
     )
-    mathbackground: str | MmultiscriptsValue | None = field(
+    mathbackground: None | str | MmultiscriptsValue = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\s*((#[0-9a-fA-F]{3}([0-9a-fA-F]{3})?)|[aA][qQ][uU][aA]|[bB][lL][aA][cC][kK]|[bB][lL][uU][eE]|[fF][uU][cC][hH][sS][iI][aA]|[gG][rR][aA][yY]|[gG][rR][eE][eE][nN]|[lL][iI][mM][eE]|[mM][aA][rR][oO][oO][nN]|[nN][aA][vV][yY]|[oO][lL][iI][vV][eE]|[pP][uU][rR][pP][lL][eE]|[rR][eE][dD]|[sS][iI][lL][vV][eE][rR]|[tT][eE][aA][lL]|[wW][hH][iI][tT][eE]|[yY][eE][lL][lL][oO][wW])\s*",
         },
     )
-    subscriptshift: str | None = field(
+    subscriptshift: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\s*((-?[0-9]*([0-9]\.?|\.[0-9])[0-9]*(e[mx]|in|cm|mm|p[xtc]|%)?)|(negative)?((very){0,2}thi(n|ck)|medium)mathspace)\s*",
         },
     )
-    superscriptshift: str | None = field(
+    superscriptshift: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -45308,1016 +45308,1016 @@ class Mmultiscripts:
 
     @dataclass
     class Semantics:
-        apply: Apply | None = field(
+        apply: None | Apply = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        bind: Bind | None = field(
+        bind: None | Bind = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        ci: Ci | None = field(
+        ci: None | Ci = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cn: Cn | None = field(
+        cn: None | Cn = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        csymbol: Csymbol | None = field(
+        csymbol: None | Csymbol = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cbytes: Cbytes | None = field(
+        cbytes: None | Cbytes = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cerror: Cerror | None = field(
+        cerror: None | Cerror = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cs: Cs | None = field(
+        cs: None | Cs = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        share: Share | None = field(
+        share: None | Share = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        piecewise: Piecewise | None = field(
+        piecewise: None | Piecewise = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        declare: Declare | None = field(
+        declare: None | Declare = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        fn: Fn | None = field(
+        fn: None | Fn = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        reln: Reln | None = field(
+        reln: None | Reln = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        interval: Interval | None = field(
+        interval: None | Interval = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        moment: Moment | None = field(
+        moment: None | Moment = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        log: Log | None = field(
+        log: None | Log = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        ln: Ln | None = field(
+        ln: None | Ln = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        image: Image | None = field(
+        image: None | Image = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        codomain: Codomain | None = field(
+        codomain: None | Codomain = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        domain: Domain | None = field(
+        domain: None | Domain = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        ident: Ident | None = field(
+        ident: None | Ident = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        inverse: Inverse | None = field(
+        inverse: None | Inverse = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        lambda_value: Lambda | None = field(
+        lambda_value: None | Lambda = field(
             default=None,
             metadata={
                 "name": "lambda",
                 "type": "Element",
             },
         )
-        compose: Compose | None = field(
+        compose: None | Compose = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        quotient: Quotient | None = field(
+        quotient: None | Quotient = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        divide: Divide | None = field(
+        divide: None | Divide = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        minus: Minus | None = field(
+        minus: None | Minus = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        power: Power | None = field(
+        power: None | Power = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        rem: Rem | None = field(
+        rem: None | Rem = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        root: Root | None = field(
+        root: None | Root = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        factorial: Factorial | None = field(
+        factorial: None | Factorial = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        abs: Abs | None = field(
+        abs: None | Abs = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        conjugate: Conjugate | None = field(
+        conjugate: None | Conjugate = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arg: Arg | None = field(
+        arg: None | Arg = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        real: Real | None = field(
+        real: None | Real = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        imaginary: Imaginary | None = field(
+        imaginary: None | Imaginary = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        floor: Floor | None = field(
+        floor: None | Floor = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        ceiling: Ceiling | None = field(
+        ceiling: None | Ceiling = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        exp: Exp | None = field(
+        exp: None | Exp = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        min: Min | None = field(
+        min: None | Min = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        max: Max | None = field(
+        max: None | Max = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        lcm: Lcm | None = field(
+        lcm: None | Lcm = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        gcd: Gcd | None = field(
+        gcd: None | Gcd = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        times: Times | None = field(
+        times: None | Times = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        plus: Plus | None = field(
+        plus: None | Plus = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        xor: Xor | None = field(
+        xor: None | Xor = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        or_value: Or | None = field(
+        or_value: None | Or = field(
             default=None,
             metadata={
                 "name": "or",
                 "type": "Element",
             },
         )
-        and_value: And | None = field(
+        and_value: None | And = field(
             default=None,
             metadata={
                 "name": "and",
                 "type": "Element",
             },
         )
-        not_value: Not | None = field(
+        not_value: None | Not = field(
             default=None,
             metadata={
                 "name": "not",
                 "type": "Element",
             },
         )
-        equivalent: Equivalent | None = field(
+        equivalent: None | Equivalent = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        implies: Implies | None = field(
+        implies: None | Implies = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        exists: Exists | None = field(
+        exists: None | Exists = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        forall: Forall | None = field(
+        forall: None | Forall = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        leq: Leq | None = field(
+        leq: None | Leq = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        geq: Geq | None = field(
+        geq: None | Geq = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        lt: Lt | None = field(
+        lt: None | Lt = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        gt: Gt | None = field(
+        gt: None | Gt = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        eq: Eq | None = field(
+        eq: None | Eq = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        tendsto: Tendsto | None = field(
+        tendsto: None | Tendsto = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        factorof: Factorof | None = field(
+        factorof: None | Factorof = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        approx: Approx | None = field(
+        approx: None | Approx = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        neq: Neq | None = field(
+        neq: None | Neq = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        int_value: Int | None = field(
+        int_value: None | Int = field(
             default=None,
             metadata={
                 "name": "int",
                 "type": "Element",
             },
         )
-        diff: Diff | None = field(
+        diff: None | Diff = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        partialdiff: Partialdiff | None = field(
+        partialdiff: None | Partialdiff = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        laplacian: Laplacian | None = field(
+        laplacian: None | Laplacian = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        curl: Curl | None = field(
+        curl: None | Curl = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        grad: Grad | None = field(
+        grad: None | Grad = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        divergence: Divergence | None = field(
+        divergence: None | Divergence = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        list_value: List | None = field(
+        list_value: None | List = field(
             default=None,
             metadata={
                 "name": "list",
                 "type": "Element",
             },
         )
-        set: Set | None = field(
+        set: None | Set = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cartesianproduct: Cartesianproduct | None = field(
+        cartesianproduct: None | Cartesianproduct = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        intersect: Intersect | None = field(
+        intersect: None | Intersect = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        union: UnionType | None = field(
+        union: None | UnionType = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        setdiff: Setdiff | None = field(
+        setdiff: None | Setdiff = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        notprsubset: Notprsubset | None = field(
+        notprsubset: None | Notprsubset = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        notsubset: Notsubset | None = field(
+        notsubset: None | Notsubset = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        notin: Notin | None = field(
+        notin: None | Notin = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        in_value: In | None = field(
+        in_value: None | In = field(
             default=None,
             metadata={
                 "name": "in",
                 "type": "Element",
             },
         )
-        prsubset: Prsubset | None = field(
+        prsubset: None | Prsubset = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        subset: Subset | None = field(
+        subset: None | Subset = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        card: Card | None = field(
+        card: None | Card = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        sum: Sum | None = field(
+        sum: None | Sum = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        product: Product | None = field(
+        product: None | Product = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        limit: Limit | None = field(
+        limit: None | Limit = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arctanh: Arctanh | None = field(
+        arctanh: None | Arctanh = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arcsinh: Arcsinh | None = field(
+        arcsinh: None | Arcsinh = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arcsech: Arcsech | None = field(
+        arcsech: None | Arcsech = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arcsec: Arcsec | None = field(
+        arcsec: None | Arcsec = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arccsch: Arccsch | None = field(
+        arccsch: None | Arccsch = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arccsc: Arccsc | None = field(
+        arccsc: None | Arccsc = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arccoth: Arccoth | None = field(
+        arccoth: None | Arccoth = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arccot: Arccot | None = field(
+        arccot: None | Arccot = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arccosh: Arccosh | None = field(
+        arccosh: None | Arccosh = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arctan: Arctan | None = field(
+        arctan: None | Arctan = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arccos: Arccos | None = field(
+        arccos: None | Arccos = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arcsin: Arcsin | None = field(
+        arcsin: None | Arcsin = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        coth: Coth | None = field(
+        coth: None | Coth = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        csch: Csch | None = field(
+        csch: None | Csch = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        sech: Sech | None = field(
+        sech: None | Sech = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        tanh: Tanh | None = field(
+        tanh: None | Tanh = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cosh: Cosh | None = field(
+        cosh: None | Cosh = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        sinh: Sinh | None = field(
+        sinh: None | Sinh = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cot: Cot | None = field(
+        cot: None | Cot = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        csc: Csc | None = field(
+        csc: None | Csc = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        sec: Sec | None = field(
+        sec: None | Sec = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        tan: Tan | None = field(
+        tan: None | Tan = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cos: Cos | None = field(
+        cos: None | Cos = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        sin: Sin | None = field(
+        sin: None | Sin = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mode: Mode | None = field(
+        mode: None | Mode = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        median: Median | None = field(
+        median: None | Median = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        variance: Variance | None = field(
+        variance: None | Variance = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        sdev: Sdev | None = field(
+        sdev: None | Sdev = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mean: Mean | None = field(
+        mean: None | Mean = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        matrixrow: Matrixrow | None = field(
+        matrixrow: None | Matrixrow = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        matrix: Matrix | None = field(
+        matrix: None | Matrix = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        vector: Vector | None = field(
+        vector: None | Vector = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        transpose: Transpose | None = field(
+        transpose: None | Transpose = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        determinant: Determinant | None = field(
+        determinant: None | Determinant = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        selector: Selector | None = field(
+        selector: None | Selector = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        outerproduct: Outerproduct | None = field(
+        outerproduct: None | Outerproduct = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        scalarproduct: Scalarproduct | None = field(
+        scalarproduct: None | Scalarproduct = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        vectorproduct: Vectorproduct | None = field(
+        vectorproduct: None | Vectorproduct = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        emptyset: Emptyset | None = field(
+        emptyset: None | Emptyset = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        primes: Primes | None = field(
+        primes: None | Primes = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        complexes: Complexes | None = field(
+        complexes: None | Complexes = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        naturalnumbers: Naturalnumbers | None = field(
+        naturalnumbers: None | Naturalnumbers = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        rationals: Rationals | None = field(
+        rationals: None | Rationals = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        reals: Reals | None = field(
+        reals: None | Reals = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        integers: Integers | None = field(
+        integers: None | Integers = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        infinity: Infinity | None = field(
+        infinity: None | Infinity = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        eulergamma: Eulergamma | None = field(
+        eulergamma: None | Eulergamma = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        pi: Pi | None = field(
+        pi: None | Pi = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        false: FalseType | None = field(
+        false: None | FalseType = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        true: TrueType | None = field(
+        true: None | TrueType = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        notanumber: Notanumber | None = field(
+        notanumber: None | Notanumber = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        imaginaryi: Imaginaryi | None = field(
+        imaginaryi: None | Imaginaryi = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        exponentiale: Exponentiale | None = field(
+        exponentiale: None | Exponentiale = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        maction: Maction | None = field(
+        maction: None | Maction = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mlongdiv: Mlongdiv | None = field(
+        mlongdiv: None | Mlongdiv = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mstack: Mstack | None = field(
+        mstack: None | Mstack = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mtable: Mtable | None = field(
+        mtable: None | Mtable = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mmultiscripts: Mmultiscripts | None = field(
+        mmultiscripts: None | Mmultiscripts = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        munderover: Munderover | None = field(
+        munderover: None | Munderover = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mover: Mover | None = field(
+        mover: None | Mover = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        munder: Munder | None = field(
+        munder: None | Munder = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        msubsup: Msubsup | None = field(
+        msubsup: None | Msubsup = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        msup: Msup | None = field(
+        msup: None | Msup = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        msub: Msub | None = field(
+        msub: None | Msub = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        menclose: Menclose | None = field(
+        menclose: None | Menclose = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mfenced: Mfenced | None = field(
+        mfenced: None | Mfenced = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mphantom: Mphantom | None = field(
+        mphantom: None | Mphantom = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mpadded: Mpadded | None = field(
+        mpadded: None | Mpadded = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        merror: Merror | None = field(
+        merror: None | Merror = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mstyle: Mstyle | None = field(
+        mstyle: None | Mstyle = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mroot: Mroot | None = field(
+        mroot: None | Mroot = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        msqrt: Msqrt | None = field(
+        msqrt: None | Msqrt = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mfrac: Mfrac | None = field(
+        mfrac: None | Mfrac = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mrow: Mrow | None = field(
+        mrow: None | Mrow = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        maligngroup: Maligngroup | None = field(
+        maligngroup: None | Maligngroup = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        malignmark: Malignmark | None = field(
+        malignmark: None | Malignmark = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        ms: Ms | None = field(
+        ms: None | Ms = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mspace: Mspace | None = field(
+        mspace: None | Mspace = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mtext: Mtext | None = field(
+        mtext: None | Mtext = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mo: Mo | None = field(
+        mo: None | Mo = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mn: Mn | None = field(
+        mn: None | Mn = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mi: Mi | None = field(
+        mi: None | Mi = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        semantics: Mmultiscripts.Semantics | None = field(
+        semantics: None | Mmultiscripts.Semantics = field(
             default=None,
             metadata={
                 "type": "Element",
@@ -46336,13 +46336,13 @@ class Mmultiscripts:
                 "type": "Element",
             },
         )
-        id: str | None = field(
+        id: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
             },
         )
-        xref: object | None = field(
+        xref: None | object = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -46356,19 +46356,19 @@ class Mmultiscripts:
                 "tokens": True,
             },
         )
-        style: str | None = field(
+        style: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
             },
         )
-        href: str | None = field(
+        href: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
             },
         )
-        other: object | None = field(
+        other: None | object = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -46381,26 +46381,26 @@ class Mmultiscripts:
                 "namespace": "##other",
             },
         )
-        encoding: str | None = field(
+        encoding: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
             },
         )
-        definition_url: str | None = field(
+        definition_url: None | str = field(
             default=None,
             metadata={
                 "name": "definitionURL",
                 "type": "Attribute",
             },
         )
-        cd: str | None = field(
+        cd: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
             },
         )
-        name: str | None = field(
+        name: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -47453,13 +47453,13 @@ class Mstack:
             "type": "Element",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    xref: object | None = field(
+    xref: None | object = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -47473,19 +47473,19 @@ class Mstack:
             "tokens": True,
         },
     )
-    style: str | None = field(
+    style: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    href: str | None = field(
+    href: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    other: object | None = field(
+    other: None | object = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -47498,40 +47498,40 @@ class Mstack:
             "namespace": "##other",
         },
     )
-    mathcolor: str | None = field(
+    mathcolor: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\s*((#[0-9a-fA-F]{3}([0-9a-fA-F]{3})?)|[aA][qQ][uU][aA]|[bB][lL][aA][cC][kK]|[bB][lL][uU][eE]|[fF][uU][cC][hH][sS][iI][aA]|[gG][rR][aA][yY]|[gG][rR][eE][eE][nN]|[lL][iI][mM][eE]|[mM][aA][rR][oO][oO][nN]|[nN][aA][vV][yY]|[oO][lL][iI][vV][eE]|[pP][uU][rR][pP][lL][eE]|[rR][eE][dD]|[sS][iI][lL][vV][eE][rR]|[tT][eE][aA][lL]|[wW][hH][iI][tT][eE]|[yY][eE][lL][lL][oO][wW])\s*",
         },
     )
-    mathbackground: str | MstackValue | None = field(
+    mathbackground: None | str | MstackValue = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\s*((#[0-9a-fA-F]{3}([0-9a-fA-F]{3})?)|[aA][qQ][uU][aA]|[bB][lL][aA][cC][kK]|[bB][lL][uU][eE]|[fF][uU][cC][hH][sS][iI][aA]|[gG][rR][aA][yY]|[gG][rR][eE][eE][nN]|[lL][iI][mM][eE]|[mM][aA][rR][oO][oO][nN]|[nN][aA][vV][yY]|[oO][lL][iI][vV][eE]|[pP][uU][rR][pP][lL][eE]|[rR][eE][dD]|[sS][iI][lL][vV][eE][rR]|[tT][eE][aA][lL]|[wW][hH][iI][tT][eE]|[yY][eE][lL][lL][oO][wW])\s*",
         },
     )
-    align: str | None = field(
+    align: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\s*(top|bottom|center|baseline|axis)(\s+-?[0-9]+)?\s*",
         },
     )
-    stackalign: MstackStackalign | None = field(
+    stackalign: None | MstackStackalign = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    charalign: MstackCharalign | None = field(
+    charalign: None | MstackCharalign = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    charspacing: str | MstackValue | None = field(
+    charspacing: None | str | MstackValue = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -47541,1016 +47541,1016 @@ class Mstack:
 
     @dataclass
     class Semantics:
-        apply: Apply | None = field(
+        apply: None | Apply = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        bind: Bind | None = field(
+        bind: None | Bind = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        ci: Ci | None = field(
+        ci: None | Ci = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cn: Cn | None = field(
+        cn: None | Cn = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        csymbol: Csymbol | None = field(
+        csymbol: None | Csymbol = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cbytes: Cbytes | None = field(
+        cbytes: None | Cbytes = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cerror: Cerror | None = field(
+        cerror: None | Cerror = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cs: Cs | None = field(
+        cs: None | Cs = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        share: Share | None = field(
+        share: None | Share = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        piecewise: Piecewise | None = field(
+        piecewise: None | Piecewise = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        declare: Declare | None = field(
+        declare: None | Declare = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        fn: Fn | None = field(
+        fn: None | Fn = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        reln: Reln | None = field(
+        reln: None | Reln = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        interval: Interval | None = field(
+        interval: None | Interval = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        moment: Moment | None = field(
+        moment: None | Moment = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        log: Log | None = field(
+        log: None | Log = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        ln: Ln | None = field(
+        ln: None | Ln = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        image: Image | None = field(
+        image: None | Image = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        codomain: Codomain | None = field(
+        codomain: None | Codomain = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        domain: Domain | None = field(
+        domain: None | Domain = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        ident: Ident | None = field(
+        ident: None | Ident = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        inverse: Inverse | None = field(
+        inverse: None | Inverse = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        lambda_value: Lambda | None = field(
+        lambda_value: None | Lambda = field(
             default=None,
             metadata={
                 "name": "lambda",
                 "type": "Element",
             },
         )
-        compose: Compose | None = field(
+        compose: None | Compose = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        quotient: Quotient | None = field(
+        quotient: None | Quotient = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        divide: Divide | None = field(
+        divide: None | Divide = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        minus: Minus | None = field(
+        minus: None | Minus = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        power: Power | None = field(
+        power: None | Power = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        rem: Rem | None = field(
+        rem: None | Rem = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        root: Root | None = field(
+        root: None | Root = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        factorial: Factorial | None = field(
+        factorial: None | Factorial = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        abs: Abs | None = field(
+        abs: None | Abs = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        conjugate: Conjugate | None = field(
+        conjugate: None | Conjugate = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arg: Arg | None = field(
+        arg: None | Arg = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        real: Real | None = field(
+        real: None | Real = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        imaginary: Imaginary | None = field(
+        imaginary: None | Imaginary = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        floor: Floor | None = field(
+        floor: None | Floor = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        ceiling: Ceiling | None = field(
+        ceiling: None | Ceiling = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        exp: Exp | None = field(
+        exp: None | Exp = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        min: Min | None = field(
+        min: None | Min = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        max: Max | None = field(
+        max: None | Max = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        lcm: Lcm | None = field(
+        lcm: None | Lcm = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        gcd: Gcd | None = field(
+        gcd: None | Gcd = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        times: Times | None = field(
+        times: None | Times = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        plus: Plus | None = field(
+        plus: None | Plus = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        xor: Xor | None = field(
+        xor: None | Xor = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        or_value: Or | None = field(
+        or_value: None | Or = field(
             default=None,
             metadata={
                 "name": "or",
                 "type": "Element",
             },
         )
-        and_value: And | None = field(
+        and_value: None | And = field(
             default=None,
             metadata={
                 "name": "and",
                 "type": "Element",
             },
         )
-        not_value: Not | None = field(
+        not_value: None | Not = field(
             default=None,
             metadata={
                 "name": "not",
                 "type": "Element",
             },
         )
-        equivalent: Equivalent | None = field(
+        equivalent: None | Equivalent = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        implies: Implies | None = field(
+        implies: None | Implies = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        exists: Exists | None = field(
+        exists: None | Exists = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        forall: Forall | None = field(
+        forall: None | Forall = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        leq: Leq | None = field(
+        leq: None | Leq = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        geq: Geq | None = field(
+        geq: None | Geq = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        lt: Lt | None = field(
+        lt: None | Lt = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        gt: Gt | None = field(
+        gt: None | Gt = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        eq: Eq | None = field(
+        eq: None | Eq = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        tendsto: Tendsto | None = field(
+        tendsto: None | Tendsto = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        factorof: Factorof | None = field(
+        factorof: None | Factorof = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        approx: Approx | None = field(
+        approx: None | Approx = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        neq: Neq | None = field(
+        neq: None | Neq = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        int_value: Int | None = field(
+        int_value: None | Int = field(
             default=None,
             metadata={
                 "name": "int",
                 "type": "Element",
             },
         )
-        diff: Diff | None = field(
+        diff: None | Diff = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        partialdiff: Partialdiff | None = field(
+        partialdiff: None | Partialdiff = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        laplacian: Laplacian | None = field(
+        laplacian: None | Laplacian = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        curl: Curl | None = field(
+        curl: None | Curl = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        grad: Grad | None = field(
+        grad: None | Grad = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        divergence: Divergence | None = field(
+        divergence: None | Divergence = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        list_value: List | None = field(
+        list_value: None | List = field(
             default=None,
             metadata={
                 "name": "list",
                 "type": "Element",
             },
         )
-        set: Set | None = field(
+        set: None | Set = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cartesianproduct: Cartesianproduct | None = field(
+        cartesianproduct: None | Cartesianproduct = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        intersect: Intersect | None = field(
+        intersect: None | Intersect = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        union: UnionType | None = field(
+        union: None | UnionType = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        setdiff: Setdiff | None = field(
+        setdiff: None | Setdiff = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        notprsubset: Notprsubset | None = field(
+        notprsubset: None | Notprsubset = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        notsubset: Notsubset | None = field(
+        notsubset: None | Notsubset = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        notin: Notin | None = field(
+        notin: None | Notin = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        in_value: In | None = field(
+        in_value: None | In = field(
             default=None,
             metadata={
                 "name": "in",
                 "type": "Element",
             },
         )
-        prsubset: Prsubset | None = field(
+        prsubset: None | Prsubset = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        subset: Subset | None = field(
+        subset: None | Subset = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        card: Card | None = field(
+        card: None | Card = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        sum: Sum | None = field(
+        sum: None | Sum = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        product: Product | None = field(
+        product: None | Product = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        limit: Limit | None = field(
+        limit: None | Limit = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arctanh: Arctanh | None = field(
+        arctanh: None | Arctanh = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arcsinh: Arcsinh | None = field(
+        arcsinh: None | Arcsinh = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arcsech: Arcsech | None = field(
+        arcsech: None | Arcsech = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arcsec: Arcsec | None = field(
+        arcsec: None | Arcsec = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arccsch: Arccsch | None = field(
+        arccsch: None | Arccsch = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arccsc: Arccsc | None = field(
+        arccsc: None | Arccsc = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arccoth: Arccoth | None = field(
+        arccoth: None | Arccoth = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arccot: Arccot | None = field(
+        arccot: None | Arccot = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arccosh: Arccosh | None = field(
+        arccosh: None | Arccosh = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arctan: Arctan | None = field(
+        arctan: None | Arctan = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arccos: Arccos | None = field(
+        arccos: None | Arccos = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arcsin: Arcsin | None = field(
+        arcsin: None | Arcsin = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        coth: Coth | None = field(
+        coth: None | Coth = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        csch: Csch | None = field(
+        csch: None | Csch = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        sech: Sech | None = field(
+        sech: None | Sech = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        tanh: Tanh | None = field(
+        tanh: None | Tanh = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cosh: Cosh | None = field(
+        cosh: None | Cosh = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        sinh: Sinh | None = field(
+        sinh: None | Sinh = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cot: Cot | None = field(
+        cot: None | Cot = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        csc: Csc | None = field(
+        csc: None | Csc = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        sec: Sec | None = field(
+        sec: None | Sec = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        tan: Tan | None = field(
+        tan: None | Tan = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cos: Cos | None = field(
+        cos: None | Cos = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        sin: Sin | None = field(
+        sin: None | Sin = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mode: Mode | None = field(
+        mode: None | Mode = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        median: Median | None = field(
+        median: None | Median = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        variance: Variance | None = field(
+        variance: None | Variance = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        sdev: Sdev | None = field(
+        sdev: None | Sdev = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mean: Mean | None = field(
+        mean: None | Mean = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        matrixrow: Matrixrow | None = field(
+        matrixrow: None | Matrixrow = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        matrix: Matrix | None = field(
+        matrix: None | Matrix = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        vector: Vector | None = field(
+        vector: None | Vector = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        transpose: Transpose | None = field(
+        transpose: None | Transpose = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        determinant: Determinant | None = field(
+        determinant: None | Determinant = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        selector: Selector | None = field(
+        selector: None | Selector = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        outerproduct: Outerproduct | None = field(
+        outerproduct: None | Outerproduct = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        scalarproduct: Scalarproduct | None = field(
+        scalarproduct: None | Scalarproduct = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        vectorproduct: Vectorproduct | None = field(
+        vectorproduct: None | Vectorproduct = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        emptyset: Emptyset | None = field(
+        emptyset: None | Emptyset = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        primes: Primes | None = field(
+        primes: None | Primes = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        complexes: Complexes | None = field(
+        complexes: None | Complexes = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        naturalnumbers: Naturalnumbers | None = field(
+        naturalnumbers: None | Naturalnumbers = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        rationals: Rationals | None = field(
+        rationals: None | Rationals = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        reals: Reals | None = field(
+        reals: None | Reals = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        integers: Integers | None = field(
+        integers: None | Integers = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        infinity: Infinity | None = field(
+        infinity: None | Infinity = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        eulergamma: Eulergamma | None = field(
+        eulergamma: None | Eulergamma = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        pi: Pi | None = field(
+        pi: None | Pi = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        false: FalseType | None = field(
+        false: None | FalseType = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        true: TrueType | None = field(
+        true: None | TrueType = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        notanumber: Notanumber | None = field(
+        notanumber: None | Notanumber = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        imaginaryi: Imaginaryi | None = field(
+        imaginaryi: None | Imaginaryi = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        exponentiale: Exponentiale | None = field(
+        exponentiale: None | Exponentiale = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        maction: Maction | None = field(
+        maction: None | Maction = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mlongdiv: Mlongdiv | None = field(
+        mlongdiv: None | Mlongdiv = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mstack: Mstack | None = field(
+        mstack: None | Mstack = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mtable: Mtable | None = field(
+        mtable: None | Mtable = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mmultiscripts: Mmultiscripts | None = field(
+        mmultiscripts: None | Mmultiscripts = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        munderover: Munderover | None = field(
+        munderover: None | Munderover = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mover: Mover | None = field(
+        mover: None | Mover = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        munder: Munder | None = field(
+        munder: None | Munder = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        msubsup: Msubsup | None = field(
+        msubsup: None | Msubsup = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        msup: Msup | None = field(
+        msup: None | Msup = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        msub: Msub | None = field(
+        msub: None | Msub = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        menclose: Menclose | None = field(
+        menclose: None | Menclose = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mfenced: Mfenced | None = field(
+        mfenced: None | Mfenced = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mphantom: Mphantom | None = field(
+        mphantom: None | Mphantom = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mpadded: Mpadded | None = field(
+        mpadded: None | Mpadded = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        merror: Merror | None = field(
+        merror: None | Merror = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mstyle: Mstyle | None = field(
+        mstyle: None | Mstyle = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mroot: Mroot | None = field(
+        mroot: None | Mroot = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        msqrt: Msqrt | None = field(
+        msqrt: None | Msqrt = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mfrac: Mfrac | None = field(
+        mfrac: None | Mfrac = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mrow: Mrow | None = field(
+        mrow: None | Mrow = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        maligngroup: Maligngroup | None = field(
+        maligngroup: None | Maligngroup = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        malignmark: Malignmark | None = field(
+        malignmark: None | Malignmark = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        ms: Ms | None = field(
+        ms: None | Ms = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mspace: Mspace | None = field(
+        mspace: None | Mspace = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mtext: Mtext | None = field(
+        mtext: None | Mtext = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mo: Mo | None = field(
+        mo: None | Mo = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mn: Mn | None = field(
+        mn: None | Mn = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mi: Mi | None = field(
+        mi: None | Mi = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        semantics: Mstack.Semantics | None = field(
+        semantics: None | Mstack.Semantics = field(
             default=None,
             metadata={
                 "type": "Element",
@@ -48569,13 +48569,13 @@ class Mstack:
                 "type": "Element",
             },
         )
-        id: str | None = field(
+        id: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
             },
         )
-        xref: object | None = field(
+        xref: None | object = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -48589,19 +48589,19 @@ class Mstack:
                 "tokens": True,
             },
         )
-        style: str | None = field(
+        style: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
             },
         )
-        href: str | None = field(
+        href: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
             },
         )
-        other: object | None = field(
+        other: None | object = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -48614,26 +48614,26 @@ class Mstack:
                 "namespace": "##other",
             },
         )
-        encoding: str | None = field(
+        encoding: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
             },
         )
-        definition_url: str | None = field(
+        definition_url: None | str = field(
             default=None,
             metadata={
                 "name": "definitionURL",
                 "type": "Attribute",
             },
         )
-        cd: str | None = field(
+        cd: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
             },
         )
-        name: str | None = field(
+        name: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -49888,13 +49888,13 @@ class Mlongdiv:
             "sequence": 1,
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    xref: object | None = field(
+    xref: None | object = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -49908,19 +49908,19 @@ class Mlongdiv:
             "tokens": True,
         },
     )
-    style: str | None = field(
+    style: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    href: str | None = field(
+    href: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    other: object | None = field(
+    other: None | object = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -49933,33 +49933,33 @@ class Mlongdiv:
             "namespace": "##other",
         },
     )
-    mathcolor: str | None = field(
+    mathcolor: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\s*((#[0-9a-fA-F]{3}([0-9a-fA-F]{3})?)|[aA][qQ][uU][aA]|[bB][lL][aA][cC][kK]|[bB][lL][uU][eE]|[fF][uU][cC][hH][sS][iI][aA]|[gG][rR][aA][yY]|[gG][rR][eE][eE][nN]|[lL][iI][mM][eE]|[mM][aA][rR][oO][oO][nN]|[nN][aA][vV][yY]|[oO][lL][iI][vV][eE]|[pP][uU][rR][pP][lL][eE]|[rR][eE][dD]|[sS][iI][lL][vV][eE][rR]|[tT][eE][aA][lL]|[wW][hH][iI][tT][eE]|[yY][eE][lL][lL][oO][wW])\s*",
         },
     )
-    mathbackground: str | MlongdivValue | None = field(
+    mathbackground: None | str | MlongdivValue = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\s*((#[0-9a-fA-F]{3}([0-9a-fA-F]{3})?)|[aA][qQ][uU][aA]|[bB][lL][aA][cC][kK]|[bB][lL][uU][eE]|[fF][uU][cC][hH][sS][iI][aA]|[gG][rR][aA][yY]|[gG][rR][eE][eE][nN]|[lL][iI][mM][eE]|[mM][aA][rR][oO][oO][nN]|[nN][aA][vV][yY]|[oO][lL][iI][vV][eE]|[pP][uU][rR][pP][lL][eE]|[rR][eE][dD]|[sS][iI][lL][vV][eE][rR]|[tT][eE][aA][lL]|[wW][hH][iI][tT][eE]|[yY][eE][lL][lL][oO][wW])\s*",
         },
     )
-    position: int | None = field(
+    position: None | int = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    shift: int | None = field(
+    shift: None | int = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    longdivstyle: MlongdivLongdivstyle | None = field(
+    longdivstyle: None | MlongdivLongdivstyle = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -49968,1016 +49968,1016 @@ class Mlongdiv:
 
     @dataclass
     class Semantics:
-        apply: Apply | None = field(
+        apply: None | Apply = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        bind: Bind | None = field(
+        bind: None | Bind = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        ci: Ci | None = field(
+        ci: None | Ci = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cn: Cn | None = field(
+        cn: None | Cn = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        csymbol: Csymbol | None = field(
+        csymbol: None | Csymbol = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cbytes: Cbytes | None = field(
+        cbytes: None | Cbytes = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cerror: Cerror | None = field(
+        cerror: None | Cerror = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cs: Cs | None = field(
+        cs: None | Cs = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        share: Share | None = field(
+        share: None | Share = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        piecewise: Piecewise | None = field(
+        piecewise: None | Piecewise = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        declare: Declare | None = field(
+        declare: None | Declare = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        fn: Fn | None = field(
+        fn: None | Fn = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        reln: Reln | None = field(
+        reln: None | Reln = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        interval: Interval | None = field(
+        interval: None | Interval = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        moment: Moment | None = field(
+        moment: None | Moment = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        log: Log | None = field(
+        log: None | Log = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        ln: Ln | None = field(
+        ln: None | Ln = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        image: Image | None = field(
+        image: None | Image = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        codomain: Codomain | None = field(
+        codomain: None | Codomain = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        domain: Domain | None = field(
+        domain: None | Domain = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        ident: Ident | None = field(
+        ident: None | Ident = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        inverse: Inverse | None = field(
+        inverse: None | Inverse = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        lambda_value: Lambda | None = field(
+        lambda_value: None | Lambda = field(
             default=None,
             metadata={
                 "name": "lambda",
                 "type": "Element",
             },
         )
-        compose: Compose | None = field(
+        compose: None | Compose = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        quotient: Quotient | None = field(
+        quotient: None | Quotient = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        divide: Divide | None = field(
+        divide: None | Divide = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        minus: Minus | None = field(
+        minus: None | Minus = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        power: Power | None = field(
+        power: None | Power = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        rem: Rem | None = field(
+        rem: None | Rem = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        root: Root | None = field(
+        root: None | Root = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        factorial: Factorial | None = field(
+        factorial: None | Factorial = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        abs: Abs | None = field(
+        abs: None | Abs = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        conjugate: Conjugate | None = field(
+        conjugate: None | Conjugate = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arg: Arg | None = field(
+        arg: None | Arg = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        real: Real | None = field(
+        real: None | Real = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        imaginary: Imaginary | None = field(
+        imaginary: None | Imaginary = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        floor: Floor | None = field(
+        floor: None | Floor = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        ceiling: Ceiling | None = field(
+        ceiling: None | Ceiling = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        exp: Exp | None = field(
+        exp: None | Exp = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        min: Min | None = field(
+        min: None | Min = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        max: Max | None = field(
+        max: None | Max = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        lcm: Lcm | None = field(
+        lcm: None | Lcm = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        gcd: Gcd | None = field(
+        gcd: None | Gcd = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        times: Times | None = field(
+        times: None | Times = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        plus: Plus | None = field(
+        plus: None | Plus = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        xor: Xor | None = field(
+        xor: None | Xor = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        or_value: Or | None = field(
+        or_value: None | Or = field(
             default=None,
             metadata={
                 "name": "or",
                 "type": "Element",
             },
         )
-        and_value: And | None = field(
+        and_value: None | And = field(
             default=None,
             metadata={
                 "name": "and",
                 "type": "Element",
             },
         )
-        not_value: Not | None = field(
+        not_value: None | Not = field(
             default=None,
             metadata={
                 "name": "not",
                 "type": "Element",
             },
         )
-        equivalent: Equivalent | None = field(
+        equivalent: None | Equivalent = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        implies: Implies | None = field(
+        implies: None | Implies = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        exists: Exists | None = field(
+        exists: None | Exists = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        forall: Forall | None = field(
+        forall: None | Forall = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        leq: Leq | None = field(
+        leq: None | Leq = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        geq: Geq | None = field(
+        geq: None | Geq = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        lt: Lt | None = field(
+        lt: None | Lt = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        gt: Gt | None = field(
+        gt: None | Gt = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        eq: Eq | None = field(
+        eq: None | Eq = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        tendsto: Tendsto | None = field(
+        tendsto: None | Tendsto = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        factorof: Factorof | None = field(
+        factorof: None | Factorof = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        approx: Approx | None = field(
+        approx: None | Approx = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        neq: Neq | None = field(
+        neq: None | Neq = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        int_value: Int | None = field(
+        int_value: None | Int = field(
             default=None,
             metadata={
                 "name": "int",
                 "type": "Element",
             },
         )
-        diff: Diff | None = field(
+        diff: None | Diff = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        partialdiff: Partialdiff | None = field(
+        partialdiff: None | Partialdiff = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        laplacian: Laplacian | None = field(
+        laplacian: None | Laplacian = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        curl: Curl | None = field(
+        curl: None | Curl = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        grad: Grad | None = field(
+        grad: None | Grad = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        divergence: Divergence | None = field(
+        divergence: None | Divergence = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        list_value: List | None = field(
+        list_value: None | List = field(
             default=None,
             metadata={
                 "name": "list",
                 "type": "Element",
             },
         )
-        set: Set | None = field(
+        set: None | Set = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cartesianproduct: Cartesianproduct | None = field(
+        cartesianproduct: None | Cartesianproduct = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        intersect: Intersect | None = field(
+        intersect: None | Intersect = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        union: UnionType | None = field(
+        union: None | UnionType = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        setdiff: Setdiff | None = field(
+        setdiff: None | Setdiff = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        notprsubset: Notprsubset | None = field(
+        notprsubset: None | Notprsubset = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        notsubset: Notsubset | None = field(
+        notsubset: None | Notsubset = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        notin: Notin | None = field(
+        notin: None | Notin = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        in_value: In | None = field(
+        in_value: None | In = field(
             default=None,
             metadata={
                 "name": "in",
                 "type": "Element",
             },
         )
-        prsubset: Prsubset | None = field(
+        prsubset: None | Prsubset = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        subset: Subset | None = field(
+        subset: None | Subset = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        card: Card | None = field(
+        card: None | Card = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        sum: Sum | None = field(
+        sum: None | Sum = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        product: Product | None = field(
+        product: None | Product = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        limit: Limit | None = field(
+        limit: None | Limit = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arctanh: Arctanh | None = field(
+        arctanh: None | Arctanh = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arcsinh: Arcsinh | None = field(
+        arcsinh: None | Arcsinh = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arcsech: Arcsech | None = field(
+        arcsech: None | Arcsech = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arcsec: Arcsec | None = field(
+        arcsec: None | Arcsec = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arccsch: Arccsch | None = field(
+        arccsch: None | Arccsch = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arccsc: Arccsc | None = field(
+        arccsc: None | Arccsc = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arccoth: Arccoth | None = field(
+        arccoth: None | Arccoth = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arccot: Arccot | None = field(
+        arccot: None | Arccot = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arccosh: Arccosh | None = field(
+        arccosh: None | Arccosh = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arctan: Arctan | None = field(
+        arctan: None | Arctan = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arccos: Arccos | None = field(
+        arccos: None | Arccos = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arcsin: Arcsin | None = field(
+        arcsin: None | Arcsin = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        coth: Coth | None = field(
+        coth: None | Coth = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        csch: Csch | None = field(
+        csch: None | Csch = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        sech: Sech | None = field(
+        sech: None | Sech = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        tanh: Tanh | None = field(
+        tanh: None | Tanh = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cosh: Cosh | None = field(
+        cosh: None | Cosh = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        sinh: Sinh | None = field(
+        sinh: None | Sinh = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cot: Cot | None = field(
+        cot: None | Cot = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        csc: Csc | None = field(
+        csc: None | Csc = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        sec: Sec | None = field(
+        sec: None | Sec = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        tan: Tan | None = field(
+        tan: None | Tan = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cos: Cos | None = field(
+        cos: None | Cos = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        sin: Sin | None = field(
+        sin: None | Sin = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mode: Mode | None = field(
+        mode: None | Mode = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        median: Median | None = field(
+        median: None | Median = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        variance: Variance | None = field(
+        variance: None | Variance = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        sdev: Sdev | None = field(
+        sdev: None | Sdev = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mean: Mean | None = field(
+        mean: None | Mean = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        matrixrow: Matrixrow | None = field(
+        matrixrow: None | Matrixrow = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        matrix: Matrix | None = field(
+        matrix: None | Matrix = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        vector: Vector | None = field(
+        vector: None | Vector = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        transpose: Transpose | None = field(
+        transpose: None | Transpose = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        determinant: Determinant | None = field(
+        determinant: None | Determinant = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        selector: Selector | None = field(
+        selector: None | Selector = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        outerproduct: Outerproduct | None = field(
+        outerproduct: None | Outerproduct = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        scalarproduct: Scalarproduct | None = field(
+        scalarproduct: None | Scalarproduct = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        vectorproduct: Vectorproduct | None = field(
+        vectorproduct: None | Vectorproduct = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        emptyset: Emptyset | None = field(
+        emptyset: None | Emptyset = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        primes: Primes | None = field(
+        primes: None | Primes = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        complexes: Complexes | None = field(
+        complexes: None | Complexes = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        naturalnumbers: Naturalnumbers | None = field(
+        naturalnumbers: None | Naturalnumbers = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        rationals: Rationals | None = field(
+        rationals: None | Rationals = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        reals: Reals | None = field(
+        reals: None | Reals = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        integers: Integers | None = field(
+        integers: None | Integers = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        infinity: Infinity | None = field(
+        infinity: None | Infinity = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        eulergamma: Eulergamma | None = field(
+        eulergamma: None | Eulergamma = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        pi: Pi | None = field(
+        pi: None | Pi = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        false: FalseType | None = field(
+        false: None | FalseType = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        true: TrueType | None = field(
+        true: None | TrueType = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        notanumber: Notanumber | None = field(
+        notanumber: None | Notanumber = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        imaginaryi: Imaginaryi | None = field(
+        imaginaryi: None | Imaginaryi = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        exponentiale: Exponentiale | None = field(
+        exponentiale: None | Exponentiale = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        maction: Maction | None = field(
+        maction: None | Maction = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mlongdiv: Mlongdiv | None = field(
+        mlongdiv: None | Mlongdiv = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mstack: Mstack | None = field(
+        mstack: None | Mstack = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mtable: Mtable | None = field(
+        mtable: None | Mtable = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mmultiscripts: Mmultiscripts | None = field(
+        mmultiscripts: None | Mmultiscripts = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        munderover: Munderover | None = field(
+        munderover: None | Munderover = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mover: Mover | None = field(
+        mover: None | Mover = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        munder: Munder | None = field(
+        munder: None | Munder = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        msubsup: Msubsup | None = field(
+        msubsup: None | Msubsup = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        msup: Msup | None = field(
+        msup: None | Msup = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        msub: Msub | None = field(
+        msub: None | Msub = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        menclose: Menclose | None = field(
+        menclose: None | Menclose = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mfenced: Mfenced | None = field(
+        mfenced: None | Mfenced = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mphantom: Mphantom | None = field(
+        mphantom: None | Mphantom = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mpadded: Mpadded | None = field(
+        mpadded: None | Mpadded = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        merror: Merror | None = field(
+        merror: None | Merror = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mstyle: Mstyle | None = field(
+        mstyle: None | Mstyle = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mroot: Mroot | None = field(
+        mroot: None | Mroot = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        msqrt: Msqrt | None = field(
+        msqrt: None | Msqrt = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mfrac: Mfrac | None = field(
+        mfrac: None | Mfrac = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mrow: Mrow | None = field(
+        mrow: None | Mrow = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        maligngroup: Maligngroup | None = field(
+        maligngroup: None | Maligngroup = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        malignmark: Malignmark | None = field(
+        malignmark: None | Malignmark = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        ms: Ms | None = field(
+        ms: None | Ms = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mspace: Mspace | None = field(
+        mspace: None | Mspace = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mtext: Mtext | None = field(
+        mtext: None | Mtext = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mo: Mo | None = field(
+        mo: None | Mo = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mn: Mn | None = field(
+        mn: None | Mn = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mi: Mi | None = field(
+        mi: None | Mi = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        semantics: Mlongdiv.Semantics | None = field(
+        semantics: None | Mlongdiv.Semantics = field(
             default=None,
             metadata={
                 "type": "Element",
@@ -50996,13 +50996,13 @@ class Mlongdiv:
                 "type": "Element",
             },
         )
-        id: str | None = field(
+        id: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
             },
         )
-        xref: object | None = field(
+        xref: None | object = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -51016,19 +51016,19 @@ class Mlongdiv:
                 "tokens": True,
             },
         )
-        style: str | None = field(
+        style: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
             },
         )
-        href: str | None = field(
+        href: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
             },
         )
-        other: object | None = field(
+        other: None | object = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -51041,26 +51041,26 @@ class Mlongdiv:
                 "namespace": "##other",
             },
         )
-        encoding: str | None = field(
+        encoding: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
             },
         )
-        definition_url: str | None = field(
+        definition_url: None | str = field(
             default=None,
             metadata={
                 "name": "definitionURL",
                 "type": "Attribute",
             },
         )
-        cd: str | None = field(
+        cd: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
             },
         )
-        name: str | None = field(
+        name: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -52089,13 +52089,13 @@ class Maction:
             "type": "Element",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    xref: object | None = field(
+    xref: None | object = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -52109,19 +52109,19 @@ class Maction:
             "tokens": True,
         },
     )
-    style: str | None = field(
+    style: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    href: str | None = field(
+    href: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    other: object | None = field(
+    other: None | object = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -52134,28 +52134,28 @@ class Maction:
             "namespace": "##other",
         },
     )
-    mathcolor: str | None = field(
+    mathcolor: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\s*((#[0-9a-fA-F]{3}([0-9a-fA-F]{3})?)|[aA][qQ][uU][aA]|[bB][lL][aA][cC][kK]|[bB][lL][uU][eE]|[fF][uU][cC][hH][sS][iI][aA]|[gG][rR][aA][yY]|[gG][rR][eE][eE][nN]|[lL][iI][mM][eE]|[mM][aA][rR][oO][oO][nN]|[nN][aA][vV][yY]|[oO][lL][iI][vV][eE]|[pP][uU][rR][pP][lL][eE]|[rR][eE][dD]|[sS][iI][lL][vV][eE][rR]|[tT][eE][aA][lL]|[wW][hH][iI][tT][eE]|[yY][eE][lL][lL][oO][wW])\s*",
         },
     )
-    mathbackground: str | MactionValue | None = field(
+    mathbackground: None | str | MactionValue = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\s*((#[0-9a-fA-F]{3}([0-9a-fA-F]{3})?)|[aA][qQ][uU][aA]|[bB][lL][aA][cC][kK]|[bB][lL][uU][eE]|[fF][uU][cC][hH][sS][iI][aA]|[gG][rR][aA][yY]|[gG][rR][eE][eE][nN]|[lL][iI][mM][eE]|[mM][aA][rR][oO][oO][nN]|[nN][aA][vV][yY]|[oO][lL][iI][vV][eE]|[pP][uU][rR][pP][lL][eE]|[rR][eE][dD]|[sS][iI][lL][vV][eE][rR]|[tT][eE][aA][lL]|[wW][hH][iI][tT][eE]|[yY][eE][lL][lL][oO][wW])\s*",
         },
     )
-    actiontype: object | None = field(
+    actiontype: None | object = field(
         default=None,
         metadata={
             "type": "Attribute",
             "required": True,
         },
     )
-    selection: int | None = field(
+    selection: None | int = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -52164,1016 +52164,1016 @@ class Maction:
 
     @dataclass
     class Semantics:
-        apply: Apply | None = field(
+        apply: None | Apply = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        bind: Bind | None = field(
+        bind: None | Bind = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        ci: Ci | None = field(
+        ci: None | Ci = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cn: Cn | None = field(
+        cn: None | Cn = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        csymbol: Csymbol | None = field(
+        csymbol: None | Csymbol = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cbytes: Cbytes | None = field(
+        cbytes: None | Cbytes = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cerror: Cerror | None = field(
+        cerror: None | Cerror = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cs: Cs | None = field(
+        cs: None | Cs = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        share: Share | None = field(
+        share: None | Share = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        piecewise: Piecewise | None = field(
+        piecewise: None | Piecewise = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        declare: Declare | None = field(
+        declare: None | Declare = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        fn: Fn | None = field(
+        fn: None | Fn = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        reln: Reln | None = field(
+        reln: None | Reln = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        interval: Interval | None = field(
+        interval: None | Interval = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        moment: Moment | None = field(
+        moment: None | Moment = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        log: Log | None = field(
+        log: None | Log = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        ln: Ln | None = field(
+        ln: None | Ln = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        image: Image | None = field(
+        image: None | Image = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        codomain: Codomain | None = field(
+        codomain: None | Codomain = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        domain: Domain | None = field(
+        domain: None | Domain = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        ident: Ident | None = field(
+        ident: None | Ident = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        inverse: Inverse | None = field(
+        inverse: None | Inverse = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        lambda_value: Lambda | None = field(
+        lambda_value: None | Lambda = field(
             default=None,
             metadata={
                 "name": "lambda",
                 "type": "Element",
             },
         )
-        compose: Compose | None = field(
+        compose: None | Compose = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        quotient: Quotient | None = field(
+        quotient: None | Quotient = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        divide: Divide | None = field(
+        divide: None | Divide = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        minus: Minus | None = field(
+        minus: None | Minus = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        power: Power | None = field(
+        power: None | Power = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        rem: Rem | None = field(
+        rem: None | Rem = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        root: Root | None = field(
+        root: None | Root = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        factorial: Factorial | None = field(
+        factorial: None | Factorial = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        abs: Abs | None = field(
+        abs: None | Abs = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        conjugate: Conjugate | None = field(
+        conjugate: None | Conjugate = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arg: Arg | None = field(
+        arg: None | Arg = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        real: Real | None = field(
+        real: None | Real = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        imaginary: Imaginary | None = field(
+        imaginary: None | Imaginary = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        floor: Floor | None = field(
+        floor: None | Floor = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        ceiling: Ceiling | None = field(
+        ceiling: None | Ceiling = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        exp: Exp | None = field(
+        exp: None | Exp = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        min: Min | None = field(
+        min: None | Min = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        max: Max | None = field(
+        max: None | Max = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        lcm: Lcm | None = field(
+        lcm: None | Lcm = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        gcd: Gcd | None = field(
+        gcd: None | Gcd = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        times: Times | None = field(
+        times: None | Times = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        plus: Plus | None = field(
+        plus: None | Plus = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        xor: Xor | None = field(
+        xor: None | Xor = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        or_value: Or | None = field(
+        or_value: None | Or = field(
             default=None,
             metadata={
                 "name": "or",
                 "type": "Element",
             },
         )
-        and_value: And | None = field(
+        and_value: None | And = field(
             default=None,
             metadata={
                 "name": "and",
                 "type": "Element",
             },
         )
-        not_value: Not | None = field(
+        not_value: None | Not = field(
             default=None,
             metadata={
                 "name": "not",
                 "type": "Element",
             },
         )
-        equivalent: Equivalent | None = field(
+        equivalent: None | Equivalent = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        implies: Implies | None = field(
+        implies: None | Implies = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        exists: Exists | None = field(
+        exists: None | Exists = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        forall: Forall | None = field(
+        forall: None | Forall = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        leq: Leq | None = field(
+        leq: None | Leq = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        geq: Geq | None = field(
+        geq: None | Geq = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        lt: Lt | None = field(
+        lt: None | Lt = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        gt: Gt | None = field(
+        gt: None | Gt = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        eq: Eq | None = field(
+        eq: None | Eq = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        tendsto: Tendsto | None = field(
+        tendsto: None | Tendsto = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        factorof: Factorof | None = field(
+        factorof: None | Factorof = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        approx: Approx | None = field(
+        approx: None | Approx = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        neq: Neq | None = field(
+        neq: None | Neq = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        int_value: Int | None = field(
+        int_value: None | Int = field(
             default=None,
             metadata={
                 "name": "int",
                 "type": "Element",
             },
         )
-        diff: Diff | None = field(
+        diff: None | Diff = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        partialdiff: Partialdiff | None = field(
+        partialdiff: None | Partialdiff = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        laplacian: Laplacian | None = field(
+        laplacian: None | Laplacian = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        curl: Curl | None = field(
+        curl: None | Curl = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        grad: Grad | None = field(
+        grad: None | Grad = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        divergence: Divergence | None = field(
+        divergence: None | Divergence = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        list_value: List | None = field(
+        list_value: None | List = field(
             default=None,
             metadata={
                 "name": "list",
                 "type": "Element",
             },
         )
-        set: Set | None = field(
+        set: None | Set = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cartesianproduct: Cartesianproduct | None = field(
+        cartesianproduct: None | Cartesianproduct = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        intersect: Intersect | None = field(
+        intersect: None | Intersect = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        union: UnionType | None = field(
+        union: None | UnionType = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        setdiff: Setdiff | None = field(
+        setdiff: None | Setdiff = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        notprsubset: Notprsubset | None = field(
+        notprsubset: None | Notprsubset = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        notsubset: Notsubset | None = field(
+        notsubset: None | Notsubset = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        notin: Notin | None = field(
+        notin: None | Notin = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        in_value: In | None = field(
+        in_value: None | In = field(
             default=None,
             metadata={
                 "name": "in",
                 "type": "Element",
             },
         )
-        prsubset: Prsubset | None = field(
+        prsubset: None | Prsubset = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        subset: Subset | None = field(
+        subset: None | Subset = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        card: Card | None = field(
+        card: None | Card = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        sum: Sum | None = field(
+        sum: None | Sum = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        product: Product | None = field(
+        product: None | Product = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        limit: Limit | None = field(
+        limit: None | Limit = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arctanh: Arctanh | None = field(
+        arctanh: None | Arctanh = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arcsinh: Arcsinh | None = field(
+        arcsinh: None | Arcsinh = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arcsech: Arcsech | None = field(
+        arcsech: None | Arcsech = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arcsec: Arcsec | None = field(
+        arcsec: None | Arcsec = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arccsch: Arccsch | None = field(
+        arccsch: None | Arccsch = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arccsc: Arccsc | None = field(
+        arccsc: None | Arccsc = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arccoth: Arccoth | None = field(
+        arccoth: None | Arccoth = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arccot: Arccot | None = field(
+        arccot: None | Arccot = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arccosh: Arccosh | None = field(
+        arccosh: None | Arccosh = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arctan: Arctan | None = field(
+        arctan: None | Arctan = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arccos: Arccos | None = field(
+        arccos: None | Arccos = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arcsin: Arcsin | None = field(
+        arcsin: None | Arcsin = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        coth: Coth | None = field(
+        coth: None | Coth = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        csch: Csch | None = field(
+        csch: None | Csch = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        sech: Sech | None = field(
+        sech: None | Sech = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        tanh: Tanh | None = field(
+        tanh: None | Tanh = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cosh: Cosh | None = field(
+        cosh: None | Cosh = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        sinh: Sinh | None = field(
+        sinh: None | Sinh = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cot: Cot | None = field(
+        cot: None | Cot = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        csc: Csc | None = field(
+        csc: None | Csc = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        sec: Sec | None = field(
+        sec: None | Sec = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        tan: Tan | None = field(
+        tan: None | Tan = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cos: Cos | None = field(
+        cos: None | Cos = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        sin: Sin | None = field(
+        sin: None | Sin = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mode: Mode | None = field(
+        mode: None | Mode = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        median: Median | None = field(
+        median: None | Median = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        variance: Variance | None = field(
+        variance: None | Variance = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        sdev: Sdev | None = field(
+        sdev: None | Sdev = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mean: Mean | None = field(
+        mean: None | Mean = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        matrixrow: Matrixrow | None = field(
+        matrixrow: None | Matrixrow = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        matrix: Matrix | None = field(
+        matrix: None | Matrix = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        vector: Vector | None = field(
+        vector: None | Vector = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        transpose: Transpose | None = field(
+        transpose: None | Transpose = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        determinant: Determinant | None = field(
+        determinant: None | Determinant = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        selector: Selector | None = field(
+        selector: None | Selector = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        outerproduct: Outerproduct | None = field(
+        outerproduct: None | Outerproduct = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        scalarproduct: Scalarproduct | None = field(
+        scalarproduct: None | Scalarproduct = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        vectorproduct: Vectorproduct | None = field(
+        vectorproduct: None | Vectorproduct = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        emptyset: Emptyset | None = field(
+        emptyset: None | Emptyset = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        primes: Primes | None = field(
+        primes: None | Primes = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        complexes: Complexes | None = field(
+        complexes: None | Complexes = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        naturalnumbers: Naturalnumbers | None = field(
+        naturalnumbers: None | Naturalnumbers = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        rationals: Rationals | None = field(
+        rationals: None | Rationals = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        reals: Reals | None = field(
+        reals: None | Reals = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        integers: Integers | None = field(
+        integers: None | Integers = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        infinity: Infinity | None = field(
+        infinity: None | Infinity = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        eulergamma: Eulergamma | None = field(
+        eulergamma: None | Eulergamma = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        pi: Pi | None = field(
+        pi: None | Pi = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        false: FalseType | None = field(
+        false: None | FalseType = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        true: TrueType | None = field(
+        true: None | TrueType = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        notanumber: Notanumber | None = field(
+        notanumber: None | Notanumber = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        imaginaryi: Imaginaryi | None = field(
+        imaginaryi: None | Imaginaryi = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        exponentiale: Exponentiale | None = field(
+        exponentiale: None | Exponentiale = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        maction: Maction | None = field(
+        maction: None | Maction = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mlongdiv: Mlongdiv | None = field(
+        mlongdiv: None | Mlongdiv = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mstack: Mstack | None = field(
+        mstack: None | Mstack = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mtable: Mtable | None = field(
+        mtable: None | Mtable = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mmultiscripts: Mmultiscripts | None = field(
+        mmultiscripts: None | Mmultiscripts = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        munderover: Munderover | None = field(
+        munderover: None | Munderover = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mover: Mover | None = field(
+        mover: None | Mover = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        munder: Munder | None = field(
+        munder: None | Munder = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        msubsup: Msubsup | None = field(
+        msubsup: None | Msubsup = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        msup: Msup | None = field(
+        msup: None | Msup = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        msub: Msub | None = field(
+        msub: None | Msub = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        menclose: Menclose | None = field(
+        menclose: None | Menclose = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mfenced: Mfenced | None = field(
+        mfenced: None | Mfenced = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mphantom: Mphantom | None = field(
+        mphantom: None | Mphantom = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mpadded: Mpadded | None = field(
+        mpadded: None | Mpadded = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        merror: Merror | None = field(
+        merror: None | Merror = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mstyle: Mstyle | None = field(
+        mstyle: None | Mstyle = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mroot: Mroot | None = field(
+        mroot: None | Mroot = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        msqrt: Msqrt | None = field(
+        msqrt: None | Msqrt = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mfrac: Mfrac | None = field(
+        mfrac: None | Mfrac = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mrow: Mrow | None = field(
+        mrow: None | Mrow = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        maligngroup: Maligngroup | None = field(
+        maligngroup: None | Maligngroup = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        malignmark: Malignmark | None = field(
+        malignmark: None | Malignmark = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        ms: Ms | None = field(
+        ms: None | Ms = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mspace: Mspace | None = field(
+        mspace: None | Mspace = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mtext: Mtext | None = field(
+        mtext: None | Mtext = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mo: Mo | None = field(
+        mo: None | Mo = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mn: Mn | None = field(
+        mn: None | Mn = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mi: Mi | None = field(
+        mi: None | Mi = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        semantics: Maction.Semantics | None = field(
+        semantics: None | Maction.Semantics = field(
             default=None,
             metadata={
                 "type": "Element",
@@ -53192,13 +53192,13 @@ class Maction:
                 "type": "Element",
             },
         )
-        id: str | None = field(
+        id: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
             },
         )
-        xref: object | None = field(
+        xref: None | object = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -53212,19 +53212,19 @@ class Maction:
                 "tokens": True,
             },
         )
-        style: str | None = field(
+        style: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
             },
         )
-        href: str | None = field(
+        href: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
             },
         )
-        other: object | None = field(
+        other: None | object = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -53237,26 +53237,26 @@ class Maction:
                 "namespace": "##other",
             },
         )
-        encoding: str | None = field(
+        encoding: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
             },
         )
-        definition_url: str | None = field(
+        definition_url: None | str = field(
             default=None,
             metadata={
                 "name": "definitionURL",
                 "type": "Attribute",
             },
         )
-        cd: str | None = field(
+        cd: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
             },
         )
-        name: str | None = field(
+        name: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -54291,13 +54291,13 @@ class Mscarry:
             "type": "Element",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    xref: object | None = field(
+    xref: None | object = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -54311,19 +54311,19 @@ class Mscarry:
             "tokens": True,
         },
     )
-    style: str | None = field(
+    style: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    href: str | None = field(
+    href: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    other: object | None = field(
+    other: None | object = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -54336,21 +54336,21 @@ class Mscarry:
             "namespace": "##other",
         },
     )
-    mathcolor: str | None = field(
+    mathcolor: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\s*((#[0-9a-fA-F]{3}([0-9a-fA-F]{3})?)|[aA][qQ][uU][aA]|[bB][lL][aA][cC][kK]|[bB][lL][uU][eE]|[fF][uU][cC][hH][sS][iI][aA]|[gG][rR][aA][yY]|[gG][rR][eE][eE][nN]|[lL][iI][mM][eE]|[mM][aA][rR][oO][oO][nN]|[nN][aA][vV][yY]|[oO][lL][iI][vV][eE]|[pP][uU][rR][pP][lL][eE]|[rR][eE][dD]|[sS][iI][lL][vV][eE][rR]|[tT][eE][aA][lL]|[wW][hH][iI][tT][eE]|[yY][eE][lL][lL][oO][wW])\s*",
         },
     )
-    mathbackground: str | MscarryValue | None = field(
+    mathbackground: None | str | MscarryValue = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\s*((#[0-9a-fA-F]{3}([0-9a-fA-F]{3})?)|[aA][qQ][uU][aA]|[bB][lL][aA][cC][kK]|[bB][lL][uU][eE]|[fF][uU][cC][hH][sS][iI][aA]|[gG][rR][aA][yY]|[gG][rR][eE][eE][nN]|[lL][iI][mM][eE]|[mM][aA][rR][oO][oO][nN]|[nN][aA][vV][yY]|[oO][lL][iI][vV][eE]|[pP][uU][rR][pP][lL][eE]|[rR][eE][dD]|[sS][iI][lL][vV][eE][rR]|[tT][eE][aA][lL]|[wW][hH][iI][tT][eE]|[yY][eE][lL][lL][oO][wW])\s*",
         },
     )
-    location: MscarryLocation | None = field(
+    location: None | MscarryLocation = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -54366,1016 +54366,1016 @@ class Mscarry:
 
     @dataclass
     class Semantics:
-        apply: Apply | None = field(
+        apply: None | Apply = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        bind: Bind | None = field(
+        bind: None | Bind = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        ci: Ci | None = field(
+        ci: None | Ci = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cn: Cn | None = field(
+        cn: None | Cn = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        csymbol: Csymbol | None = field(
+        csymbol: None | Csymbol = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cbytes: Cbytes | None = field(
+        cbytes: None | Cbytes = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cerror: Cerror | None = field(
+        cerror: None | Cerror = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cs: Cs | None = field(
+        cs: None | Cs = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        share: Share | None = field(
+        share: None | Share = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        piecewise: Piecewise | None = field(
+        piecewise: None | Piecewise = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        declare: Declare | None = field(
+        declare: None | Declare = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        fn: Fn | None = field(
+        fn: None | Fn = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        reln: Reln | None = field(
+        reln: None | Reln = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        interval: Interval | None = field(
+        interval: None | Interval = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        moment: Moment | None = field(
+        moment: None | Moment = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        log: Log | None = field(
+        log: None | Log = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        ln: Ln | None = field(
+        ln: None | Ln = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        image: Image | None = field(
+        image: None | Image = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        codomain: Codomain | None = field(
+        codomain: None | Codomain = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        domain: Domain | None = field(
+        domain: None | Domain = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        ident: Ident | None = field(
+        ident: None | Ident = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        inverse: Inverse | None = field(
+        inverse: None | Inverse = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        lambda_value: Lambda | None = field(
+        lambda_value: None | Lambda = field(
             default=None,
             metadata={
                 "name": "lambda",
                 "type": "Element",
             },
         )
-        compose: Compose | None = field(
+        compose: None | Compose = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        quotient: Quotient | None = field(
+        quotient: None | Quotient = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        divide: Divide | None = field(
+        divide: None | Divide = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        minus: Minus | None = field(
+        minus: None | Minus = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        power: Power | None = field(
+        power: None | Power = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        rem: Rem | None = field(
+        rem: None | Rem = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        root: Root | None = field(
+        root: None | Root = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        factorial: Factorial | None = field(
+        factorial: None | Factorial = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        abs: Abs | None = field(
+        abs: None | Abs = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        conjugate: Conjugate | None = field(
+        conjugate: None | Conjugate = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arg: Arg | None = field(
+        arg: None | Arg = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        real: Real | None = field(
+        real: None | Real = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        imaginary: Imaginary | None = field(
+        imaginary: None | Imaginary = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        floor: Floor | None = field(
+        floor: None | Floor = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        ceiling: Ceiling | None = field(
+        ceiling: None | Ceiling = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        exp: Exp | None = field(
+        exp: None | Exp = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        min: Min | None = field(
+        min: None | Min = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        max: Max | None = field(
+        max: None | Max = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        lcm: Lcm | None = field(
+        lcm: None | Lcm = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        gcd: Gcd | None = field(
+        gcd: None | Gcd = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        times: Times | None = field(
+        times: None | Times = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        plus: Plus | None = field(
+        plus: None | Plus = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        xor: Xor | None = field(
+        xor: None | Xor = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        or_value: Or | None = field(
+        or_value: None | Or = field(
             default=None,
             metadata={
                 "name": "or",
                 "type": "Element",
             },
         )
-        and_value: And | None = field(
+        and_value: None | And = field(
             default=None,
             metadata={
                 "name": "and",
                 "type": "Element",
             },
         )
-        not_value: Not | None = field(
+        not_value: None | Not = field(
             default=None,
             metadata={
                 "name": "not",
                 "type": "Element",
             },
         )
-        equivalent: Equivalent | None = field(
+        equivalent: None | Equivalent = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        implies: Implies | None = field(
+        implies: None | Implies = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        exists: Exists | None = field(
+        exists: None | Exists = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        forall: Forall | None = field(
+        forall: None | Forall = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        leq: Leq | None = field(
+        leq: None | Leq = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        geq: Geq | None = field(
+        geq: None | Geq = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        lt: Lt | None = field(
+        lt: None | Lt = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        gt: Gt | None = field(
+        gt: None | Gt = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        eq: Eq | None = field(
+        eq: None | Eq = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        tendsto: Tendsto | None = field(
+        tendsto: None | Tendsto = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        factorof: Factorof | None = field(
+        factorof: None | Factorof = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        approx: Approx | None = field(
+        approx: None | Approx = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        neq: Neq | None = field(
+        neq: None | Neq = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        int_value: Int | None = field(
+        int_value: None | Int = field(
             default=None,
             metadata={
                 "name": "int",
                 "type": "Element",
             },
         )
-        diff: Diff | None = field(
+        diff: None | Diff = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        partialdiff: Partialdiff | None = field(
+        partialdiff: None | Partialdiff = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        laplacian: Laplacian | None = field(
+        laplacian: None | Laplacian = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        curl: Curl | None = field(
+        curl: None | Curl = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        grad: Grad | None = field(
+        grad: None | Grad = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        divergence: Divergence | None = field(
+        divergence: None | Divergence = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        list_value: List | None = field(
+        list_value: None | List = field(
             default=None,
             metadata={
                 "name": "list",
                 "type": "Element",
             },
         )
-        set: Set | None = field(
+        set: None | Set = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cartesianproduct: Cartesianproduct | None = field(
+        cartesianproduct: None | Cartesianproduct = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        intersect: Intersect | None = field(
+        intersect: None | Intersect = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        union: UnionType | None = field(
+        union: None | UnionType = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        setdiff: Setdiff | None = field(
+        setdiff: None | Setdiff = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        notprsubset: Notprsubset | None = field(
+        notprsubset: None | Notprsubset = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        notsubset: Notsubset | None = field(
+        notsubset: None | Notsubset = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        notin: Notin | None = field(
+        notin: None | Notin = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        in_value: In | None = field(
+        in_value: None | In = field(
             default=None,
             metadata={
                 "name": "in",
                 "type": "Element",
             },
         )
-        prsubset: Prsubset | None = field(
+        prsubset: None | Prsubset = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        subset: Subset | None = field(
+        subset: None | Subset = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        card: Card | None = field(
+        card: None | Card = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        sum: Sum | None = field(
+        sum: None | Sum = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        product: Product | None = field(
+        product: None | Product = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        limit: Limit | None = field(
+        limit: None | Limit = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arctanh: Arctanh | None = field(
+        arctanh: None | Arctanh = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arcsinh: Arcsinh | None = field(
+        arcsinh: None | Arcsinh = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arcsech: Arcsech | None = field(
+        arcsech: None | Arcsech = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arcsec: Arcsec | None = field(
+        arcsec: None | Arcsec = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arccsch: Arccsch | None = field(
+        arccsch: None | Arccsch = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arccsc: Arccsc | None = field(
+        arccsc: None | Arccsc = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arccoth: Arccoth | None = field(
+        arccoth: None | Arccoth = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arccot: Arccot | None = field(
+        arccot: None | Arccot = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arccosh: Arccosh | None = field(
+        arccosh: None | Arccosh = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arctan: Arctan | None = field(
+        arctan: None | Arctan = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arccos: Arccos | None = field(
+        arccos: None | Arccos = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arcsin: Arcsin | None = field(
+        arcsin: None | Arcsin = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        coth: Coth | None = field(
+        coth: None | Coth = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        csch: Csch | None = field(
+        csch: None | Csch = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        sech: Sech | None = field(
+        sech: None | Sech = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        tanh: Tanh | None = field(
+        tanh: None | Tanh = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cosh: Cosh | None = field(
+        cosh: None | Cosh = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        sinh: Sinh | None = field(
+        sinh: None | Sinh = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cot: Cot | None = field(
+        cot: None | Cot = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        csc: Csc | None = field(
+        csc: None | Csc = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        sec: Sec | None = field(
+        sec: None | Sec = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        tan: Tan | None = field(
+        tan: None | Tan = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cos: Cos | None = field(
+        cos: None | Cos = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        sin: Sin | None = field(
+        sin: None | Sin = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mode: Mode | None = field(
+        mode: None | Mode = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        median: Median | None = field(
+        median: None | Median = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        variance: Variance | None = field(
+        variance: None | Variance = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        sdev: Sdev | None = field(
+        sdev: None | Sdev = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mean: Mean | None = field(
+        mean: None | Mean = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        matrixrow: Matrixrow | None = field(
+        matrixrow: None | Matrixrow = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        matrix: Matrix | None = field(
+        matrix: None | Matrix = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        vector: Vector | None = field(
+        vector: None | Vector = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        transpose: Transpose | None = field(
+        transpose: None | Transpose = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        determinant: Determinant | None = field(
+        determinant: None | Determinant = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        selector: Selector | None = field(
+        selector: None | Selector = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        outerproduct: Outerproduct | None = field(
+        outerproduct: None | Outerproduct = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        scalarproduct: Scalarproduct | None = field(
+        scalarproduct: None | Scalarproduct = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        vectorproduct: Vectorproduct | None = field(
+        vectorproduct: None | Vectorproduct = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        emptyset: Emptyset | None = field(
+        emptyset: None | Emptyset = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        primes: Primes | None = field(
+        primes: None | Primes = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        complexes: Complexes | None = field(
+        complexes: None | Complexes = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        naturalnumbers: Naturalnumbers | None = field(
+        naturalnumbers: None | Naturalnumbers = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        rationals: Rationals | None = field(
+        rationals: None | Rationals = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        reals: Reals | None = field(
+        reals: None | Reals = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        integers: Integers | None = field(
+        integers: None | Integers = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        infinity: Infinity | None = field(
+        infinity: None | Infinity = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        eulergamma: Eulergamma | None = field(
+        eulergamma: None | Eulergamma = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        pi: Pi | None = field(
+        pi: None | Pi = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        false: FalseType | None = field(
+        false: None | FalseType = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        true: TrueType | None = field(
+        true: None | TrueType = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        notanumber: Notanumber | None = field(
+        notanumber: None | Notanumber = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        imaginaryi: Imaginaryi | None = field(
+        imaginaryi: None | Imaginaryi = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        exponentiale: Exponentiale | None = field(
+        exponentiale: None | Exponentiale = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        maction: Maction | None = field(
+        maction: None | Maction = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mlongdiv: Mlongdiv | None = field(
+        mlongdiv: None | Mlongdiv = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mstack: Mstack | None = field(
+        mstack: None | Mstack = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mtable: Mtable | None = field(
+        mtable: None | Mtable = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mmultiscripts: Mmultiscripts | None = field(
+        mmultiscripts: None | Mmultiscripts = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        munderover: Munderover | None = field(
+        munderover: None | Munderover = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mover: Mover | None = field(
+        mover: None | Mover = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        munder: Munder | None = field(
+        munder: None | Munder = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        msubsup: Msubsup | None = field(
+        msubsup: None | Msubsup = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        msup: Msup | None = field(
+        msup: None | Msup = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        msub: Msub | None = field(
+        msub: None | Msub = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        menclose: Menclose | None = field(
+        menclose: None | Menclose = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mfenced: Mfenced | None = field(
+        mfenced: None | Mfenced = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mphantom: Mphantom | None = field(
+        mphantom: None | Mphantom = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mpadded: Mpadded | None = field(
+        mpadded: None | Mpadded = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        merror: Merror | None = field(
+        merror: None | Merror = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mstyle: Mstyle | None = field(
+        mstyle: None | Mstyle = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mroot: Mroot | None = field(
+        mroot: None | Mroot = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        msqrt: Msqrt | None = field(
+        msqrt: None | Msqrt = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mfrac: Mfrac | None = field(
+        mfrac: None | Mfrac = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mrow: Mrow | None = field(
+        mrow: None | Mrow = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        maligngroup: Maligngroup | None = field(
+        maligngroup: None | Maligngroup = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        malignmark: Malignmark | None = field(
+        malignmark: None | Malignmark = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        ms: Ms | None = field(
+        ms: None | Ms = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mspace: Mspace | None = field(
+        mspace: None | Mspace = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mtext: Mtext | None = field(
+        mtext: None | Mtext = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mo: Mo | None = field(
+        mo: None | Mo = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mn: Mn | None = field(
+        mn: None | Mn = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mi: Mi | None = field(
+        mi: None | Mi = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        semantics: Mscarry.Semantics | None = field(
+        semantics: None | Mscarry.Semantics = field(
             default=None,
             metadata={
                 "type": "Element",
@@ -55394,13 +55394,13 @@ class Mscarry:
                 "type": "Element",
             },
         )
-        id: str | None = field(
+        id: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
             },
         )
-        xref: object | None = field(
+        xref: None | object = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -55414,19 +55414,19 @@ class Mscarry:
                 "tokens": True,
             },
         )
-        style: str | None = field(
+        style: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
             },
         )
-        href: str | None = field(
+        href: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
             },
         )
-        other: object | None = field(
+        other: None | object = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -55439,26 +55439,26 @@ class Mscarry:
                 "namespace": "##other",
             },
         )
-        encoding: str | None = field(
+        encoding: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
             },
         )
-        definition_url: str | None = field(
+        definition_url: None | str = field(
             default=None,
             metadata={
                 "name": "definitionURL",
                 "type": "Attribute",
             },
         )
-        cd: str | None = field(
+        cd: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
             },
         )
-        name: str | None = field(
+        name: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -56493,13 +56493,13 @@ class Msrow:
             "type": "Element",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    xref: object | None = field(
+    xref: None | object = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -56513,19 +56513,19 @@ class Msrow:
             "tokens": True,
         },
     )
-    style: str | None = field(
+    style: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    href: str | None = field(
+    href: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    other: object | None = field(
+    other: None | object = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -56538,21 +56538,21 @@ class Msrow:
             "namespace": "##other",
         },
     )
-    mathcolor: str | None = field(
+    mathcolor: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\s*((#[0-9a-fA-F]{3}([0-9a-fA-F]{3})?)|[aA][qQ][uU][aA]|[bB][lL][aA][cC][kK]|[bB][lL][uU][eE]|[fF][uU][cC][hH][sS][iI][aA]|[gG][rR][aA][yY]|[gG][rR][eE][eE][nN]|[lL][iI][mM][eE]|[mM][aA][rR][oO][oO][nN]|[nN][aA][vV][yY]|[oO][lL][iI][vV][eE]|[pP][uU][rR][pP][lL][eE]|[rR][eE][dD]|[sS][iI][lL][vV][eE][rR]|[tT][eE][aA][lL]|[wW][hH][iI][tT][eE]|[yY][eE][lL][lL][oO][wW])\s*",
         },
     )
-    mathbackground: str | MsrowValue | None = field(
+    mathbackground: None | str | MsrowValue = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\s*((#[0-9a-fA-F]{3}([0-9a-fA-F]{3})?)|[aA][qQ][uU][aA]|[bB][lL][aA][cC][kK]|[bB][lL][uU][eE]|[fF][uU][cC][hH][sS][iI][aA]|[gG][rR][aA][yY]|[gG][rR][eE][eE][nN]|[lL][iI][mM][eE]|[mM][aA][rR][oO][oO][nN]|[nN][aA][vV][yY]|[oO][lL][iI][vV][eE]|[pP][uU][rR][pP][lL][eE]|[rR][eE][dD]|[sS][iI][lL][vV][eE][rR]|[tT][eE][aA][lL]|[wW][hH][iI][tT][eE]|[yY][eE][lL][lL][oO][wW])\s*",
         },
     )
-    position: int | None = field(
+    position: None | int = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -56561,1016 +56561,1016 @@ class Msrow:
 
     @dataclass
     class Semantics:
-        apply: Apply | None = field(
+        apply: None | Apply = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        bind: Bind | None = field(
+        bind: None | Bind = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        ci: Ci | None = field(
+        ci: None | Ci = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cn: Cn | None = field(
+        cn: None | Cn = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        csymbol: Csymbol | None = field(
+        csymbol: None | Csymbol = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cbytes: Cbytes | None = field(
+        cbytes: None | Cbytes = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cerror: Cerror | None = field(
+        cerror: None | Cerror = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cs: Cs | None = field(
+        cs: None | Cs = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        share: Share | None = field(
+        share: None | Share = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        piecewise: Piecewise | None = field(
+        piecewise: None | Piecewise = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        declare: Declare | None = field(
+        declare: None | Declare = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        fn: Fn | None = field(
+        fn: None | Fn = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        reln: Reln | None = field(
+        reln: None | Reln = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        interval: Interval | None = field(
+        interval: None | Interval = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        moment: Moment | None = field(
+        moment: None | Moment = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        log: Log | None = field(
+        log: None | Log = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        ln: Ln | None = field(
+        ln: None | Ln = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        image: Image | None = field(
+        image: None | Image = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        codomain: Codomain | None = field(
+        codomain: None | Codomain = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        domain: Domain | None = field(
+        domain: None | Domain = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        ident: Ident | None = field(
+        ident: None | Ident = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        inverse: Inverse | None = field(
+        inverse: None | Inverse = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        lambda_value: Lambda | None = field(
+        lambda_value: None | Lambda = field(
             default=None,
             metadata={
                 "name": "lambda",
                 "type": "Element",
             },
         )
-        compose: Compose | None = field(
+        compose: None | Compose = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        quotient: Quotient | None = field(
+        quotient: None | Quotient = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        divide: Divide | None = field(
+        divide: None | Divide = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        minus: Minus | None = field(
+        minus: None | Minus = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        power: Power | None = field(
+        power: None | Power = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        rem: Rem | None = field(
+        rem: None | Rem = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        root: Root | None = field(
+        root: None | Root = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        factorial: Factorial | None = field(
+        factorial: None | Factorial = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        abs: Abs | None = field(
+        abs: None | Abs = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        conjugate: Conjugate | None = field(
+        conjugate: None | Conjugate = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arg: Arg | None = field(
+        arg: None | Arg = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        real: Real | None = field(
+        real: None | Real = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        imaginary: Imaginary | None = field(
+        imaginary: None | Imaginary = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        floor: Floor | None = field(
+        floor: None | Floor = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        ceiling: Ceiling | None = field(
+        ceiling: None | Ceiling = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        exp: Exp | None = field(
+        exp: None | Exp = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        min: Min | None = field(
+        min: None | Min = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        max: Max | None = field(
+        max: None | Max = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        lcm: Lcm | None = field(
+        lcm: None | Lcm = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        gcd: Gcd | None = field(
+        gcd: None | Gcd = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        times: Times | None = field(
+        times: None | Times = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        plus: Plus | None = field(
+        plus: None | Plus = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        xor: Xor | None = field(
+        xor: None | Xor = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        or_value: Or | None = field(
+        or_value: None | Or = field(
             default=None,
             metadata={
                 "name": "or",
                 "type": "Element",
             },
         )
-        and_value: And | None = field(
+        and_value: None | And = field(
             default=None,
             metadata={
                 "name": "and",
                 "type": "Element",
             },
         )
-        not_value: Not | None = field(
+        not_value: None | Not = field(
             default=None,
             metadata={
                 "name": "not",
                 "type": "Element",
             },
         )
-        equivalent: Equivalent | None = field(
+        equivalent: None | Equivalent = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        implies: Implies | None = field(
+        implies: None | Implies = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        exists: Exists | None = field(
+        exists: None | Exists = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        forall: Forall | None = field(
+        forall: None | Forall = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        leq: Leq | None = field(
+        leq: None | Leq = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        geq: Geq | None = field(
+        geq: None | Geq = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        lt: Lt | None = field(
+        lt: None | Lt = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        gt: Gt | None = field(
+        gt: None | Gt = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        eq: Eq | None = field(
+        eq: None | Eq = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        tendsto: Tendsto | None = field(
+        tendsto: None | Tendsto = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        factorof: Factorof | None = field(
+        factorof: None | Factorof = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        approx: Approx | None = field(
+        approx: None | Approx = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        neq: Neq | None = field(
+        neq: None | Neq = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        int_value: Int | None = field(
+        int_value: None | Int = field(
             default=None,
             metadata={
                 "name": "int",
                 "type": "Element",
             },
         )
-        diff: Diff | None = field(
+        diff: None | Diff = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        partialdiff: Partialdiff | None = field(
+        partialdiff: None | Partialdiff = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        laplacian: Laplacian | None = field(
+        laplacian: None | Laplacian = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        curl: Curl | None = field(
+        curl: None | Curl = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        grad: Grad | None = field(
+        grad: None | Grad = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        divergence: Divergence | None = field(
+        divergence: None | Divergence = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        list_value: List | None = field(
+        list_value: None | List = field(
             default=None,
             metadata={
                 "name": "list",
                 "type": "Element",
             },
         )
-        set: Set | None = field(
+        set: None | Set = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cartesianproduct: Cartesianproduct | None = field(
+        cartesianproduct: None | Cartesianproduct = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        intersect: Intersect | None = field(
+        intersect: None | Intersect = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        union: UnionType | None = field(
+        union: None | UnionType = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        setdiff: Setdiff | None = field(
+        setdiff: None | Setdiff = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        notprsubset: Notprsubset | None = field(
+        notprsubset: None | Notprsubset = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        notsubset: Notsubset | None = field(
+        notsubset: None | Notsubset = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        notin: Notin | None = field(
+        notin: None | Notin = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        in_value: In | None = field(
+        in_value: None | In = field(
             default=None,
             metadata={
                 "name": "in",
                 "type": "Element",
             },
         )
-        prsubset: Prsubset | None = field(
+        prsubset: None | Prsubset = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        subset: Subset | None = field(
+        subset: None | Subset = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        card: Card | None = field(
+        card: None | Card = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        sum: Sum | None = field(
+        sum: None | Sum = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        product: Product | None = field(
+        product: None | Product = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        limit: Limit | None = field(
+        limit: None | Limit = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arctanh: Arctanh | None = field(
+        arctanh: None | Arctanh = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arcsinh: Arcsinh | None = field(
+        arcsinh: None | Arcsinh = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arcsech: Arcsech | None = field(
+        arcsech: None | Arcsech = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arcsec: Arcsec | None = field(
+        arcsec: None | Arcsec = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arccsch: Arccsch | None = field(
+        arccsch: None | Arccsch = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arccsc: Arccsc | None = field(
+        arccsc: None | Arccsc = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arccoth: Arccoth | None = field(
+        arccoth: None | Arccoth = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arccot: Arccot | None = field(
+        arccot: None | Arccot = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arccosh: Arccosh | None = field(
+        arccosh: None | Arccosh = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arctan: Arctan | None = field(
+        arctan: None | Arctan = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arccos: Arccos | None = field(
+        arccos: None | Arccos = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arcsin: Arcsin | None = field(
+        arcsin: None | Arcsin = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        coth: Coth | None = field(
+        coth: None | Coth = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        csch: Csch | None = field(
+        csch: None | Csch = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        sech: Sech | None = field(
+        sech: None | Sech = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        tanh: Tanh | None = field(
+        tanh: None | Tanh = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cosh: Cosh | None = field(
+        cosh: None | Cosh = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        sinh: Sinh | None = field(
+        sinh: None | Sinh = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cot: Cot | None = field(
+        cot: None | Cot = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        csc: Csc | None = field(
+        csc: None | Csc = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        sec: Sec | None = field(
+        sec: None | Sec = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        tan: Tan | None = field(
+        tan: None | Tan = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cos: Cos | None = field(
+        cos: None | Cos = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        sin: Sin | None = field(
+        sin: None | Sin = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mode: Mode | None = field(
+        mode: None | Mode = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        median: Median | None = field(
+        median: None | Median = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        variance: Variance | None = field(
+        variance: None | Variance = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        sdev: Sdev | None = field(
+        sdev: None | Sdev = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mean: Mean | None = field(
+        mean: None | Mean = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        matrixrow: Matrixrow | None = field(
+        matrixrow: None | Matrixrow = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        matrix: Matrix | None = field(
+        matrix: None | Matrix = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        vector: Vector | None = field(
+        vector: None | Vector = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        transpose: Transpose | None = field(
+        transpose: None | Transpose = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        determinant: Determinant | None = field(
+        determinant: None | Determinant = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        selector: Selector | None = field(
+        selector: None | Selector = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        outerproduct: Outerproduct | None = field(
+        outerproduct: None | Outerproduct = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        scalarproduct: Scalarproduct | None = field(
+        scalarproduct: None | Scalarproduct = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        vectorproduct: Vectorproduct | None = field(
+        vectorproduct: None | Vectorproduct = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        emptyset: Emptyset | None = field(
+        emptyset: None | Emptyset = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        primes: Primes | None = field(
+        primes: None | Primes = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        complexes: Complexes | None = field(
+        complexes: None | Complexes = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        naturalnumbers: Naturalnumbers | None = field(
+        naturalnumbers: None | Naturalnumbers = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        rationals: Rationals | None = field(
+        rationals: None | Rationals = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        reals: Reals | None = field(
+        reals: None | Reals = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        integers: Integers | None = field(
+        integers: None | Integers = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        infinity: Infinity | None = field(
+        infinity: None | Infinity = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        eulergamma: Eulergamma | None = field(
+        eulergamma: None | Eulergamma = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        pi: Pi | None = field(
+        pi: None | Pi = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        false: FalseType | None = field(
+        false: None | FalseType = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        true: TrueType | None = field(
+        true: None | TrueType = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        notanumber: Notanumber | None = field(
+        notanumber: None | Notanumber = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        imaginaryi: Imaginaryi | None = field(
+        imaginaryi: None | Imaginaryi = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        exponentiale: Exponentiale | None = field(
+        exponentiale: None | Exponentiale = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        maction: Maction | None = field(
+        maction: None | Maction = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mlongdiv: Mlongdiv | None = field(
+        mlongdiv: None | Mlongdiv = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mstack: Mstack | None = field(
+        mstack: None | Mstack = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mtable: Mtable | None = field(
+        mtable: None | Mtable = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mmultiscripts: Mmultiscripts | None = field(
+        mmultiscripts: None | Mmultiscripts = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        munderover: Munderover | None = field(
+        munderover: None | Munderover = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mover: Mover | None = field(
+        mover: None | Mover = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        munder: Munder | None = field(
+        munder: None | Munder = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        msubsup: Msubsup | None = field(
+        msubsup: None | Msubsup = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        msup: Msup | None = field(
+        msup: None | Msup = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        msub: Msub | None = field(
+        msub: None | Msub = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        menclose: Menclose | None = field(
+        menclose: None | Menclose = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mfenced: Mfenced | None = field(
+        mfenced: None | Mfenced = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mphantom: Mphantom | None = field(
+        mphantom: None | Mphantom = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mpadded: Mpadded | None = field(
+        mpadded: None | Mpadded = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        merror: Merror | None = field(
+        merror: None | Merror = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mstyle: Mstyle | None = field(
+        mstyle: None | Mstyle = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mroot: Mroot | None = field(
+        mroot: None | Mroot = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        msqrt: Msqrt | None = field(
+        msqrt: None | Msqrt = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mfrac: Mfrac | None = field(
+        mfrac: None | Mfrac = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mrow: Mrow | None = field(
+        mrow: None | Mrow = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        maligngroup: Maligngroup | None = field(
+        maligngroup: None | Maligngroup = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        malignmark: Malignmark | None = field(
+        malignmark: None | Malignmark = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        ms: Ms | None = field(
+        ms: None | Ms = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mspace: Mspace | None = field(
+        mspace: None | Mspace = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mtext: Mtext | None = field(
+        mtext: None | Mtext = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mo: Mo | None = field(
+        mo: None | Mo = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mn: Mn | None = field(
+        mn: None | Mn = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mi: Mi | None = field(
+        mi: None | Mi = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        semantics: Msrow.Semantics | None = field(
+        semantics: None | Msrow.Semantics = field(
             default=None,
             metadata={
                 "type": "Element",
@@ -57589,13 +57589,13 @@ class Msrow:
                 "type": "Element",
             },
         )
-        id: str | None = field(
+        id: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
             },
         )
-        xref: object | None = field(
+        xref: None | object = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -57609,19 +57609,19 @@ class Msrow:
                 "tokens": True,
             },
         )
-        style: str | None = field(
+        style: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
             },
         )
-        href: str | None = field(
+        href: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
             },
         )
-        other: object | None = field(
+        other: None | object = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -57634,26 +57634,26 @@ class Msrow:
                 "namespace": "##other",
             },
         )
-        encoding: str | None = field(
+        encoding: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
             },
         )
-        definition_url: str | None = field(
+        definition_url: None | str = field(
             default=None,
             metadata={
                 "name": "definitionURL",
                 "type": "Attribute",
             },
         )
-        cd: str | None = field(
+        cd: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
             },
         )
-        name: str | None = field(
+        name: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -58694,13 +58694,13 @@ class Mscarries:
             "type": "Element",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    xref: object | None = field(
+    xref: None | object = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -58714,19 +58714,19 @@ class Mscarries:
             "tokens": True,
         },
     )
-    style: str | None = field(
+    style: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    href: str | None = field(
+    href: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    other: object | None = field(
+    other: None | object = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -58739,27 +58739,27 @@ class Mscarries:
             "namespace": "##other",
         },
     )
-    mathcolor: str | None = field(
+    mathcolor: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\s*((#[0-9a-fA-F]{3}([0-9a-fA-F]{3})?)|[aA][qQ][uU][aA]|[bB][lL][aA][cC][kK]|[bB][lL][uU][eE]|[fF][uU][cC][hH][sS][iI][aA]|[gG][rR][aA][yY]|[gG][rR][eE][eE][nN]|[lL][iI][mM][eE]|[mM][aA][rR][oO][oO][nN]|[nN][aA][vV][yY]|[oO][lL][iI][vV][eE]|[pP][uU][rR][pP][lL][eE]|[rR][eE][dD]|[sS][iI][lL][vV][eE][rR]|[tT][eE][aA][lL]|[wW][hH][iI][tT][eE]|[yY][eE][lL][lL][oO][wW])\s*",
         },
     )
-    mathbackground: str | MscarriesValue | None = field(
+    mathbackground: None | str | MscarriesValue = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\s*((#[0-9a-fA-F]{3}([0-9a-fA-F]{3})?)|[aA][qQ][uU][aA]|[bB][lL][aA][cC][kK]|[bB][lL][uU][eE]|[fF][uU][cC][hH][sS][iI][aA]|[gG][rR][aA][yY]|[gG][rR][eE][eE][nN]|[lL][iI][mM][eE]|[mM][aA][rR][oO][oO][nN]|[nN][aA][vV][yY]|[oO][lL][iI][vV][eE]|[pP][uU][rR][pP][lL][eE]|[rR][eE][dD]|[sS][iI][lL][vV][eE][rR]|[tT][eE][aA][lL]|[wW][hH][iI][tT][eE]|[yY][eE][lL][lL][oO][wW])\s*",
         },
     )
-    position: int | None = field(
+    position: None | int = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    location: MscarriesLocation | None = field(
+    location: None | MscarriesLocation = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -58772,7 +58772,7 @@ class Mscarries:
             "tokens": True,
         },
     )
-    scriptsizemultiplier: Decimal | None = field(
+    scriptsizemultiplier: None | Decimal = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -58781,1016 +58781,1016 @@ class Mscarries:
 
     @dataclass
     class Semantics:
-        apply: Apply | None = field(
+        apply: None | Apply = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        bind: Bind | None = field(
+        bind: None | Bind = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        ci: Ci | None = field(
+        ci: None | Ci = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cn: Cn | None = field(
+        cn: None | Cn = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        csymbol: Csymbol | None = field(
+        csymbol: None | Csymbol = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cbytes: Cbytes | None = field(
+        cbytes: None | Cbytes = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cerror: Cerror | None = field(
+        cerror: None | Cerror = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cs: Cs | None = field(
+        cs: None | Cs = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        share: Share | None = field(
+        share: None | Share = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        piecewise: Piecewise | None = field(
+        piecewise: None | Piecewise = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        declare: Declare | None = field(
+        declare: None | Declare = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        fn: Fn | None = field(
+        fn: None | Fn = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        reln: Reln | None = field(
+        reln: None | Reln = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        interval: Interval | None = field(
+        interval: None | Interval = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        moment: Moment | None = field(
+        moment: None | Moment = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        log: Log | None = field(
+        log: None | Log = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        ln: Ln | None = field(
+        ln: None | Ln = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        image: Image | None = field(
+        image: None | Image = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        codomain: Codomain | None = field(
+        codomain: None | Codomain = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        domain: Domain | None = field(
+        domain: None | Domain = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        ident: Ident | None = field(
+        ident: None | Ident = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        inverse: Inverse | None = field(
+        inverse: None | Inverse = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        lambda_value: Lambda | None = field(
+        lambda_value: None | Lambda = field(
             default=None,
             metadata={
                 "name": "lambda",
                 "type": "Element",
             },
         )
-        compose: Compose | None = field(
+        compose: None | Compose = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        quotient: Quotient | None = field(
+        quotient: None | Quotient = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        divide: Divide | None = field(
+        divide: None | Divide = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        minus: Minus | None = field(
+        minus: None | Minus = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        power: Power | None = field(
+        power: None | Power = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        rem: Rem | None = field(
+        rem: None | Rem = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        root: Root | None = field(
+        root: None | Root = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        factorial: Factorial | None = field(
+        factorial: None | Factorial = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        abs: Abs | None = field(
+        abs: None | Abs = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        conjugate: Conjugate | None = field(
+        conjugate: None | Conjugate = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arg: Arg | None = field(
+        arg: None | Arg = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        real: Real | None = field(
+        real: None | Real = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        imaginary: Imaginary | None = field(
+        imaginary: None | Imaginary = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        floor: Floor | None = field(
+        floor: None | Floor = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        ceiling: Ceiling | None = field(
+        ceiling: None | Ceiling = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        exp: Exp | None = field(
+        exp: None | Exp = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        min: Min | None = field(
+        min: None | Min = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        max: Max | None = field(
+        max: None | Max = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        lcm: Lcm | None = field(
+        lcm: None | Lcm = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        gcd: Gcd | None = field(
+        gcd: None | Gcd = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        times: Times | None = field(
+        times: None | Times = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        plus: Plus | None = field(
+        plus: None | Plus = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        xor: Xor | None = field(
+        xor: None | Xor = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        or_value: Or | None = field(
+        or_value: None | Or = field(
             default=None,
             metadata={
                 "name": "or",
                 "type": "Element",
             },
         )
-        and_value: And | None = field(
+        and_value: None | And = field(
             default=None,
             metadata={
                 "name": "and",
                 "type": "Element",
             },
         )
-        not_value: Not | None = field(
+        not_value: None | Not = field(
             default=None,
             metadata={
                 "name": "not",
                 "type": "Element",
             },
         )
-        equivalent: Equivalent | None = field(
+        equivalent: None | Equivalent = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        implies: Implies | None = field(
+        implies: None | Implies = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        exists: Exists | None = field(
+        exists: None | Exists = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        forall: Forall | None = field(
+        forall: None | Forall = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        leq: Leq | None = field(
+        leq: None | Leq = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        geq: Geq | None = field(
+        geq: None | Geq = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        lt: Lt | None = field(
+        lt: None | Lt = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        gt: Gt | None = field(
+        gt: None | Gt = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        eq: Eq | None = field(
+        eq: None | Eq = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        tendsto: Tendsto | None = field(
+        tendsto: None | Tendsto = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        factorof: Factorof | None = field(
+        factorof: None | Factorof = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        approx: Approx | None = field(
+        approx: None | Approx = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        neq: Neq | None = field(
+        neq: None | Neq = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        int_value: Int | None = field(
+        int_value: None | Int = field(
             default=None,
             metadata={
                 "name": "int",
                 "type": "Element",
             },
         )
-        diff: Diff | None = field(
+        diff: None | Diff = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        partialdiff: Partialdiff | None = field(
+        partialdiff: None | Partialdiff = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        laplacian: Laplacian | None = field(
+        laplacian: None | Laplacian = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        curl: Curl | None = field(
+        curl: None | Curl = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        grad: Grad | None = field(
+        grad: None | Grad = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        divergence: Divergence | None = field(
+        divergence: None | Divergence = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        list_value: List | None = field(
+        list_value: None | List = field(
             default=None,
             metadata={
                 "name": "list",
                 "type": "Element",
             },
         )
-        set: Set | None = field(
+        set: None | Set = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cartesianproduct: Cartesianproduct | None = field(
+        cartesianproduct: None | Cartesianproduct = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        intersect: Intersect | None = field(
+        intersect: None | Intersect = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        union: UnionType | None = field(
+        union: None | UnionType = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        setdiff: Setdiff | None = field(
+        setdiff: None | Setdiff = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        notprsubset: Notprsubset | None = field(
+        notprsubset: None | Notprsubset = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        notsubset: Notsubset | None = field(
+        notsubset: None | Notsubset = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        notin: Notin | None = field(
+        notin: None | Notin = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        in_value: In | None = field(
+        in_value: None | In = field(
             default=None,
             metadata={
                 "name": "in",
                 "type": "Element",
             },
         )
-        prsubset: Prsubset | None = field(
+        prsubset: None | Prsubset = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        subset: Subset | None = field(
+        subset: None | Subset = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        card: Card | None = field(
+        card: None | Card = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        sum: Sum | None = field(
+        sum: None | Sum = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        product: Product | None = field(
+        product: None | Product = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        limit: Limit | None = field(
+        limit: None | Limit = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arctanh: Arctanh | None = field(
+        arctanh: None | Arctanh = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arcsinh: Arcsinh | None = field(
+        arcsinh: None | Arcsinh = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arcsech: Arcsech | None = field(
+        arcsech: None | Arcsech = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arcsec: Arcsec | None = field(
+        arcsec: None | Arcsec = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arccsch: Arccsch | None = field(
+        arccsch: None | Arccsch = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arccsc: Arccsc | None = field(
+        arccsc: None | Arccsc = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arccoth: Arccoth | None = field(
+        arccoth: None | Arccoth = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arccot: Arccot | None = field(
+        arccot: None | Arccot = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arccosh: Arccosh | None = field(
+        arccosh: None | Arccosh = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arctan: Arctan | None = field(
+        arctan: None | Arctan = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arccos: Arccos | None = field(
+        arccos: None | Arccos = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arcsin: Arcsin | None = field(
+        arcsin: None | Arcsin = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        coth: Coth | None = field(
+        coth: None | Coth = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        csch: Csch | None = field(
+        csch: None | Csch = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        sech: Sech | None = field(
+        sech: None | Sech = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        tanh: Tanh | None = field(
+        tanh: None | Tanh = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cosh: Cosh | None = field(
+        cosh: None | Cosh = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        sinh: Sinh | None = field(
+        sinh: None | Sinh = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cot: Cot | None = field(
+        cot: None | Cot = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        csc: Csc | None = field(
+        csc: None | Csc = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        sec: Sec | None = field(
+        sec: None | Sec = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        tan: Tan | None = field(
+        tan: None | Tan = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cos: Cos | None = field(
+        cos: None | Cos = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        sin: Sin | None = field(
+        sin: None | Sin = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mode: Mode | None = field(
+        mode: None | Mode = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        median: Median | None = field(
+        median: None | Median = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        variance: Variance | None = field(
+        variance: None | Variance = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        sdev: Sdev | None = field(
+        sdev: None | Sdev = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mean: Mean | None = field(
+        mean: None | Mean = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        matrixrow: Matrixrow | None = field(
+        matrixrow: None | Matrixrow = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        matrix: Matrix | None = field(
+        matrix: None | Matrix = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        vector: Vector | None = field(
+        vector: None | Vector = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        transpose: Transpose | None = field(
+        transpose: None | Transpose = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        determinant: Determinant | None = field(
+        determinant: None | Determinant = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        selector: Selector | None = field(
+        selector: None | Selector = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        outerproduct: Outerproduct | None = field(
+        outerproduct: None | Outerproduct = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        scalarproduct: Scalarproduct | None = field(
+        scalarproduct: None | Scalarproduct = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        vectorproduct: Vectorproduct | None = field(
+        vectorproduct: None | Vectorproduct = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        emptyset: Emptyset | None = field(
+        emptyset: None | Emptyset = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        primes: Primes | None = field(
+        primes: None | Primes = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        complexes: Complexes | None = field(
+        complexes: None | Complexes = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        naturalnumbers: Naturalnumbers | None = field(
+        naturalnumbers: None | Naturalnumbers = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        rationals: Rationals | None = field(
+        rationals: None | Rationals = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        reals: Reals | None = field(
+        reals: None | Reals = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        integers: Integers | None = field(
+        integers: None | Integers = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        infinity: Infinity | None = field(
+        infinity: None | Infinity = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        eulergamma: Eulergamma | None = field(
+        eulergamma: None | Eulergamma = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        pi: Pi | None = field(
+        pi: None | Pi = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        false: FalseType | None = field(
+        false: None | FalseType = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        true: TrueType | None = field(
+        true: None | TrueType = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        notanumber: Notanumber | None = field(
+        notanumber: None | Notanumber = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        imaginaryi: Imaginaryi | None = field(
+        imaginaryi: None | Imaginaryi = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        exponentiale: Exponentiale | None = field(
+        exponentiale: None | Exponentiale = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        maction: Maction | None = field(
+        maction: None | Maction = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mlongdiv: Mlongdiv | None = field(
+        mlongdiv: None | Mlongdiv = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mstack: Mstack | None = field(
+        mstack: None | Mstack = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mtable: Mtable | None = field(
+        mtable: None | Mtable = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mmultiscripts: Mmultiscripts | None = field(
+        mmultiscripts: None | Mmultiscripts = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        munderover: Munderover | None = field(
+        munderover: None | Munderover = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mover: Mover | None = field(
+        mover: None | Mover = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        munder: Munder | None = field(
+        munder: None | Munder = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        msubsup: Msubsup | None = field(
+        msubsup: None | Msubsup = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        msup: Msup | None = field(
+        msup: None | Msup = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        msub: Msub | None = field(
+        msub: None | Msub = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        menclose: Menclose | None = field(
+        menclose: None | Menclose = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mfenced: Mfenced | None = field(
+        mfenced: None | Mfenced = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mphantom: Mphantom | None = field(
+        mphantom: None | Mphantom = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mpadded: Mpadded | None = field(
+        mpadded: None | Mpadded = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        merror: Merror | None = field(
+        merror: None | Merror = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mstyle: Mstyle | None = field(
+        mstyle: None | Mstyle = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mroot: Mroot | None = field(
+        mroot: None | Mroot = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        msqrt: Msqrt | None = field(
+        msqrt: None | Msqrt = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mfrac: Mfrac | None = field(
+        mfrac: None | Mfrac = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mrow: Mrow | None = field(
+        mrow: None | Mrow = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        maligngroup: Maligngroup | None = field(
+        maligngroup: None | Maligngroup = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        malignmark: Malignmark | None = field(
+        malignmark: None | Malignmark = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        ms: Ms | None = field(
+        ms: None | Ms = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mspace: Mspace | None = field(
+        mspace: None | Mspace = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mtext: Mtext | None = field(
+        mtext: None | Mtext = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mo: Mo | None = field(
+        mo: None | Mo = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mn: Mn | None = field(
+        mn: None | Mn = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mi: Mi | None = field(
+        mi: None | Mi = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        semantics: Mscarries.Semantics | None = field(
+        semantics: None | Mscarries.Semantics = field(
             default=None,
             metadata={
                 "type": "Element",
@@ -59809,13 +59809,13 @@ class Mscarries:
                 "type": "Element",
             },
         )
-        id: str | None = field(
+        id: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
             },
         )
-        xref: object | None = field(
+        xref: None | object = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -59829,19 +59829,19 @@ class Mscarries:
                 "tokens": True,
             },
         )
-        style: str | None = field(
+        style: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
             },
         )
-        href: str | None = field(
+        href: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
             },
         )
-        other: object | None = field(
+        other: None | object = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -59854,26 +59854,26 @@ class Mscarries:
                 "namespace": "##other",
             },
         )
-        encoding: str | None = field(
+        encoding: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
             },
         )
-        definition_url: str | None = field(
+        definition_url: None | str = field(
             default=None,
             metadata={
                 "name": "definitionURL",
                 "type": "Attribute",
             },
         )
-        cd: str | None = field(
+        cd: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
             },
         )
-        name: str | None = field(
+        name: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -60926,13 +60926,13 @@ class Msgroup:
             "type": "Element",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    xref: object | None = field(
+    xref: None | object = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -60946,19 +60946,19 @@ class Msgroup:
             "tokens": True,
         },
     )
-    style: str | None = field(
+    style: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    href: str | None = field(
+    href: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    other: object | None = field(
+    other: None | object = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -60971,27 +60971,27 @@ class Msgroup:
             "namespace": "##other",
         },
     )
-    mathcolor: str | None = field(
+    mathcolor: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\s*((#[0-9a-fA-F]{3}([0-9a-fA-F]{3})?)|[aA][qQ][uU][aA]|[bB][lL][aA][cC][kK]|[bB][lL][uU][eE]|[fF][uU][cC][hH][sS][iI][aA]|[gG][rR][aA][yY]|[gG][rR][eE][eE][nN]|[lL][iI][mM][eE]|[mM][aA][rR][oO][oO][nN]|[nN][aA][vV][yY]|[oO][lL][iI][vV][eE]|[pP][uU][rR][pP][lL][eE]|[rR][eE][dD]|[sS][iI][lL][vV][eE][rR]|[tT][eE][aA][lL]|[wW][hH][iI][tT][eE]|[yY][eE][lL][lL][oO][wW])\s*",
         },
     )
-    mathbackground: str | MsgroupValue | None = field(
+    mathbackground: None | str | MsgroupValue = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\s*((#[0-9a-fA-F]{3}([0-9a-fA-F]{3})?)|[aA][qQ][uU][aA]|[bB][lL][aA][cC][kK]|[bB][lL][uU][eE]|[fF][uU][cC][hH][sS][iI][aA]|[gG][rR][aA][yY]|[gG][rR][eE][eE][nN]|[lL][iI][mM][eE]|[mM][aA][rR][oO][oO][nN]|[nN][aA][vV][yY]|[oO][lL][iI][vV][eE]|[pP][uU][rR][pP][lL][eE]|[rR][eE][dD]|[sS][iI][lL][vV][eE][rR]|[tT][eE][aA][lL]|[wW][hH][iI][tT][eE]|[yY][eE][lL][lL][oO][wW])\s*",
         },
     )
-    position: int | None = field(
+    position: None | int = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    shift: int | None = field(
+    shift: None | int = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -61000,1016 +61000,1016 @@ class Msgroup:
 
     @dataclass
     class Semantics:
-        apply: Apply | None = field(
+        apply: None | Apply = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        bind: Bind | None = field(
+        bind: None | Bind = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        ci: Ci | None = field(
+        ci: None | Ci = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cn: Cn | None = field(
+        cn: None | Cn = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        csymbol: Csymbol | None = field(
+        csymbol: None | Csymbol = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cbytes: Cbytes | None = field(
+        cbytes: None | Cbytes = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cerror: Cerror | None = field(
+        cerror: None | Cerror = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cs: Cs | None = field(
+        cs: None | Cs = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        share: Share | None = field(
+        share: None | Share = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        piecewise: Piecewise | None = field(
+        piecewise: None | Piecewise = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        declare: Declare | None = field(
+        declare: None | Declare = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        fn: Fn | None = field(
+        fn: None | Fn = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        reln: Reln | None = field(
+        reln: None | Reln = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        interval: Interval | None = field(
+        interval: None | Interval = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        moment: Moment | None = field(
+        moment: None | Moment = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        log: Log | None = field(
+        log: None | Log = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        ln: Ln | None = field(
+        ln: None | Ln = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        image: Image | None = field(
+        image: None | Image = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        codomain: Codomain | None = field(
+        codomain: None | Codomain = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        domain: Domain | None = field(
+        domain: None | Domain = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        ident: Ident | None = field(
+        ident: None | Ident = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        inverse: Inverse | None = field(
+        inverse: None | Inverse = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        lambda_value: Lambda | None = field(
+        lambda_value: None | Lambda = field(
             default=None,
             metadata={
                 "name": "lambda",
                 "type": "Element",
             },
         )
-        compose: Compose | None = field(
+        compose: None | Compose = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        quotient: Quotient | None = field(
+        quotient: None | Quotient = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        divide: Divide | None = field(
+        divide: None | Divide = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        minus: Minus | None = field(
+        minus: None | Minus = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        power: Power | None = field(
+        power: None | Power = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        rem: Rem | None = field(
+        rem: None | Rem = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        root: Root | None = field(
+        root: None | Root = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        factorial: Factorial | None = field(
+        factorial: None | Factorial = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        abs: Abs | None = field(
+        abs: None | Abs = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        conjugate: Conjugate | None = field(
+        conjugate: None | Conjugate = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arg: Arg | None = field(
+        arg: None | Arg = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        real: Real | None = field(
+        real: None | Real = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        imaginary: Imaginary | None = field(
+        imaginary: None | Imaginary = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        floor: Floor | None = field(
+        floor: None | Floor = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        ceiling: Ceiling | None = field(
+        ceiling: None | Ceiling = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        exp: Exp | None = field(
+        exp: None | Exp = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        min: Min | None = field(
+        min: None | Min = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        max: Max | None = field(
+        max: None | Max = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        lcm: Lcm | None = field(
+        lcm: None | Lcm = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        gcd: Gcd | None = field(
+        gcd: None | Gcd = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        times: Times | None = field(
+        times: None | Times = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        plus: Plus | None = field(
+        plus: None | Plus = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        xor: Xor | None = field(
+        xor: None | Xor = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        or_value: Or | None = field(
+        or_value: None | Or = field(
             default=None,
             metadata={
                 "name": "or",
                 "type": "Element",
             },
         )
-        and_value: And | None = field(
+        and_value: None | And = field(
             default=None,
             metadata={
                 "name": "and",
                 "type": "Element",
             },
         )
-        not_value: Not | None = field(
+        not_value: None | Not = field(
             default=None,
             metadata={
                 "name": "not",
                 "type": "Element",
             },
         )
-        equivalent: Equivalent | None = field(
+        equivalent: None | Equivalent = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        implies: Implies | None = field(
+        implies: None | Implies = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        exists: Exists | None = field(
+        exists: None | Exists = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        forall: Forall | None = field(
+        forall: None | Forall = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        leq: Leq | None = field(
+        leq: None | Leq = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        geq: Geq | None = field(
+        geq: None | Geq = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        lt: Lt | None = field(
+        lt: None | Lt = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        gt: Gt | None = field(
+        gt: None | Gt = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        eq: Eq | None = field(
+        eq: None | Eq = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        tendsto: Tendsto | None = field(
+        tendsto: None | Tendsto = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        factorof: Factorof | None = field(
+        factorof: None | Factorof = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        approx: Approx | None = field(
+        approx: None | Approx = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        neq: Neq | None = field(
+        neq: None | Neq = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        int_value: Int | None = field(
+        int_value: None | Int = field(
             default=None,
             metadata={
                 "name": "int",
                 "type": "Element",
             },
         )
-        diff: Diff | None = field(
+        diff: None | Diff = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        partialdiff: Partialdiff | None = field(
+        partialdiff: None | Partialdiff = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        laplacian: Laplacian | None = field(
+        laplacian: None | Laplacian = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        curl: Curl | None = field(
+        curl: None | Curl = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        grad: Grad | None = field(
+        grad: None | Grad = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        divergence: Divergence | None = field(
+        divergence: None | Divergence = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        list_value: List | None = field(
+        list_value: None | List = field(
             default=None,
             metadata={
                 "name": "list",
                 "type": "Element",
             },
         )
-        set: Set | None = field(
+        set: None | Set = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cartesianproduct: Cartesianproduct | None = field(
+        cartesianproduct: None | Cartesianproduct = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        intersect: Intersect | None = field(
+        intersect: None | Intersect = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        union: UnionType | None = field(
+        union: None | UnionType = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        setdiff: Setdiff | None = field(
+        setdiff: None | Setdiff = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        notprsubset: Notprsubset | None = field(
+        notprsubset: None | Notprsubset = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        notsubset: Notsubset | None = field(
+        notsubset: None | Notsubset = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        notin: Notin | None = field(
+        notin: None | Notin = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        in_value: In | None = field(
+        in_value: None | In = field(
             default=None,
             metadata={
                 "name": "in",
                 "type": "Element",
             },
         )
-        prsubset: Prsubset | None = field(
+        prsubset: None | Prsubset = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        subset: Subset | None = field(
+        subset: None | Subset = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        card: Card | None = field(
+        card: None | Card = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        sum: Sum | None = field(
+        sum: None | Sum = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        product: Product | None = field(
+        product: None | Product = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        limit: Limit | None = field(
+        limit: None | Limit = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arctanh: Arctanh | None = field(
+        arctanh: None | Arctanh = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arcsinh: Arcsinh | None = field(
+        arcsinh: None | Arcsinh = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arcsech: Arcsech | None = field(
+        arcsech: None | Arcsech = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arcsec: Arcsec | None = field(
+        arcsec: None | Arcsec = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arccsch: Arccsch | None = field(
+        arccsch: None | Arccsch = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arccsc: Arccsc | None = field(
+        arccsc: None | Arccsc = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arccoth: Arccoth | None = field(
+        arccoth: None | Arccoth = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arccot: Arccot | None = field(
+        arccot: None | Arccot = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arccosh: Arccosh | None = field(
+        arccosh: None | Arccosh = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arctan: Arctan | None = field(
+        arctan: None | Arctan = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arccos: Arccos | None = field(
+        arccos: None | Arccos = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        arcsin: Arcsin | None = field(
+        arcsin: None | Arcsin = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        coth: Coth | None = field(
+        coth: None | Coth = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        csch: Csch | None = field(
+        csch: None | Csch = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        sech: Sech | None = field(
+        sech: None | Sech = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        tanh: Tanh | None = field(
+        tanh: None | Tanh = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cosh: Cosh | None = field(
+        cosh: None | Cosh = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        sinh: Sinh | None = field(
+        sinh: None | Sinh = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cot: Cot | None = field(
+        cot: None | Cot = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        csc: Csc | None = field(
+        csc: None | Csc = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        sec: Sec | None = field(
+        sec: None | Sec = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        tan: Tan | None = field(
+        tan: None | Tan = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        cos: Cos | None = field(
+        cos: None | Cos = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        sin: Sin | None = field(
+        sin: None | Sin = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mode: Mode | None = field(
+        mode: None | Mode = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        median: Median | None = field(
+        median: None | Median = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        variance: Variance | None = field(
+        variance: None | Variance = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        sdev: Sdev | None = field(
+        sdev: None | Sdev = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mean: Mean | None = field(
+        mean: None | Mean = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        matrixrow: Matrixrow | None = field(
+        matrixrow: None | Matrixrow = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        matrix: Matrix | None = field(
+        matrix: None | Matrix = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        vector: Vector | None = field(
+        vector: None | Vector = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        transpose: Transpose | None = field(
+        transpose: None | Transpose = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        determinant: Determinant | None = field(
+        determinant: None | Determinant = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        selector: Selector | None = field(
+        selector: None | Selector = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        outerproduct: Outerproduct | None = field(
+        outerproduct: None | Outerproduct = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        scalarproduct: Scalarproduct | None = field(
+        scalarproduct: None | Scalarproduct = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        vectorproduct: Vectorproduct | None = field(
+        vectorproduct: None | Vectorproduct = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        emptyset: Emptyset | None = field(
+        emptyset: None | Emptyset = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        primes: Primes | None = field(
+        primes: None | Primes = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        complexes: Complexes | None = field(
+        complexes: None | Complexes = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        naturalnumbers: Naturalnumbers | None = field(
+        naturalnumbers: None | Naturalnumbers = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        rationals: Rationals | None = field(
+        rationals: None | Rationals = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        reals: Reals | None = field(
+        reals: None | Reals = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        integers: Integers | None = field(
+        integers: None | Integers = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        infinity: Infinity | None = field(
+        infinity: None | Infinity = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        eulergamma: Eulergamma | None = field(
+        eulergamma: None | Eulergamma = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        pi: Pi | None = field(
+        pi: None | Pi = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        false: FalseType | None = field(
+        false: None | FalseType = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        true: TrueType | None = field(
+        true: None | TrueType = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        notanumber: Notanumber | None = field(
+        notanumber: None | Notanumber = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        imaginaryi: Imaginaryi | None = field(
+        imaginaryi: None | Imaginaryi = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        exponentiale: Exponentiale | None = field(
+        exponentiale: None | Exponentiale = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        maction: Maction | None = field(
+        maction: None | Maction = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mlongdiv: Mlongdiv | None = field(
+        mlongdiv: None | Mlongdiv = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mstack: Mstack | None = field(
+        mstack: None | Mstack = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mtable: Mtable | None = field(
+        mtable: None | Mtable = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mmultiscripts: Mmultiscripts | None = field(
+        mmultiscripts: None | Mmultiscripts = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        munderover: Munderover | None = field(
+        munderover: None | Munderover = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mover: Mover | None = field(
+        mover: None | Mover = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        munder: Munder | None = field(
+        munder: None | Munder = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        msubsup: Msubsup | None = field(
+        msubsup: None | Msubsup = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        msup: Msup | None = field(
+        msup: None | Msup = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        msub: Msub | None = field(
+        msub: None | Msub = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        menclose: Menclose | None = field(
+        menclose: None | Menclose = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mfenced: Mfenced | None = field(
+        mfenced: None | Mfenced = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mphantom: Mphantom | None = field(
+        mphantom: None | Mphantom = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mpadded: Mpadded | None = field(
+        mpadded: None | Mpadded = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        merror: Merror | None = field(
+        merror: None | Merror = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mstyle: Mstyle | None = field(
+        mstyle: None | Mstyle = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mroot: Mroot | None = field(
+        mroot: None | Mroot = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        msqrt: Msqrt | None = field(
+        msqrt: None | Msqrt = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mfrac: Mfrac | None = field(
+        mfrac: None | Mfrac = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mrow: Mrow | None = field(
+        mrow: None | Mrow = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        maligngroup: Maligngroup | None = field(
+        maligngroup: None | Maligngroup = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        malignmark: Malignmark | None = field(
+        malignmark: None | Malignmark = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        ms: Ms | None = field(
+        ms: None | Ms = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mspace: Mspace | None = field(
+        mspace: None | Mspace = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mtext: Mtext | None = field(
+        mtext: None | Mtext = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mo: Mo | None = field(
+        mo: None | Mo = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mn: Mn | None = field(
+        mn: None | Mn = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        mi: Mi | None = field(
+        mi: None | Mi = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        semantics: Msgroup.Semantics | None = field(
+        semantics: None | Msgroup.Semantics = field(
             default=None,
             metadata={
                 "type": "Element",
@@ -62028,13 +62028,13 @@ class Msgroup:
                 "type": "Element",
             },
         )
-        id: str | None = field(
+        id: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
             },
         )
-        xref: object | None = field(
+        xref: None | object = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -62048,19 +62048,19 @@ class Msgroup:
                 "tokens": True,
             },
         )
-        style: str | None = field(
+        style: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
             },
         )
-        href: str | None = field(
+        href: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
             },
         )
-        other: object | None = field(
+        other: None | object = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -62073,26 +62073,26 @@ class Msgroup:
                 "namespace": "##other",
             },
         )
-        encoding: str | None = field(
+        encoding: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
             },
         )
-        definition_url: str | None = field(
+        definition_url: None | str = field(
             default=None,
             metadata={
                 "name": "definitionURL",
                 "type": "Attribute",
             },
         )
-        cd: str | None = field(
+        cd: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
             },
         )
-        name: str | None = field(
+        name: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",

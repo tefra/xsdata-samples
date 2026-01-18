@@ -68,7 +68,7 @@ class SocketConnectionBundle:
     class Meta:
         name = "SOCKET-CONNECTION-BUNDLE"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -77,7 +77,7 @@ class SocketConnectionBundle:
             "required": True,
         },
     )
-    short_name_fragments: SocketConnectionBundle.ShortNameFragments | None = (
+    short_name_fragments: None | SocketConnectionBundle.ShortNameFragments = (
         field(
             default=None,
             metadata={
@@ -87,7 +87,7 @@ class SocketConnectionBundle:
             },
         )
     )
-    bundled_connections: SocketConnectionBundle.BundledConnections | None = (
+    bundled_connections: None | SocketConnectionBundle.BundledConnections = (
         field(
             default=None,
             metadata={
@@ -97,7 +97,7 @@ class SocketConnectionBundle:
             },
         )
     )
-    differentiated_service_field: PositiveInteger | None = field(
+    differentiated_service_field: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "DIFFERENTIATED-SERVICE-FIELD",
@@ -105,7 +105,7 @@ class SocketConnectionBundle:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    flow_label: PositiveInteger | None = field(
+    flow_label: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "FLOW-LABEL",
@@ -113,7 +113,7 @@ class SocketConnectionBundle:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    path_mtu_discovery_enabled: Boolean | None = field(
+    path_mtu_discovery_enabled: None | Boolean = field(
         default=None,
         metadata={
             "name": "PATH-MTU-DISCOVERY-ENABLED",
@@ -121,7 +121,7 @@ class SocketConnectionBundle:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    pdus: SocketConnectionBundle.Pdus | None = field(
+    pdus: None | SocketConnectionBundle.Pdus = field(
         default=None,
         metadata={
             "name": "PDUS",
@@ -129,7 +129,7 @@ class SocketConnectionBundle:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    server_port_ref: SocketConnectionBundle.ServerPortRef | None = field(
+    server_port_ref: None | SocketConnectionBundle.ServerPortRef = field(
         default=None,
         metadata={
             "name": "SERVER-PORT-REF",
@@ -137,7 +137,7 @@ class SocketConnectionBundle:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    udp_checksum_handling: UdpChecksumCalculationEnum | None = field(
+    udp_checksum_handling: None | UdpChecksumCalculationEnum = field(
         default=None,
         metadata={
             "name": "UDP-CHECKSUM-HANDLING",
@@ -145,7 +145,7 @@ class SocketConnectionBundle:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -153,14 +153,14 @@ class SocketConnectionBundle:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -206,7 +206,7 @@ class SocketConnectionBundle:
 
     @dataclass
     class ServerPortRef(Ref):
-        dest: SocketAddressSubtypesEnum | None = field(
+        dest: None | SocketAddressSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

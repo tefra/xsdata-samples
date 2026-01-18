@@ -27,7 +27,7 @@ class VehicleVersionStructure(DataManagedObjectStructure):
     class Meta:
         name = "Vehicle_VersionStructure"
 
-    name: MultilingualString | None = field(
+    name: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "Name",
@@ -35,7 +35,7 @@ class VehicleVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    short_name: MultilingualString | None = field(
+    short_name: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "ShortName",
@@ -43,7 +43,7 @@ class VehicleVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    description: MultilingualString | None = field(
+    description: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "Description",
@@ -51,7 +51,7 @@ class VehicleVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    registration_number: str | None = field(
+    registration_number: None | str = field(
         default=None,
         metadata={
             "name": "RegistrationNumber",
@@ -59,7 +59,7 @@ class VehicleVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    registration_date: XmlDate | None = field(
+    registration_date: None | XmlDate = field(
         default=None,
         metadata={
             "name": "RegistrationDate",
@@ -67,7 +67,7 @@ class VehicleVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    operational_number: str | None = field(
+    operational_number: None | str = field(
         default=None,
         metadata={
             "name": "OperationalNumber",
@@ -75,7 +75,7 @@ class VehicleVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    private_code: PrivateCode | None = field(
+    private_code: None | PrivateCode = field(
         default=None,
         metadata={
             "name": "PrivateCode",
@@ -83,7 +83,7 @@ class VehicleVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    transport_organisation_ref: AuthorityRef | OperatorRef | None = field(
+    transport_organisation_ref: None | AuthorityRef | OperatorRef = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -102,12 +102,12 @@ class VehicleVersionStructure(DataManagedObjectStructure):
         },
     )
     transport_type_ref_or_vehicle_type_ref: (
-        SimpleVehicleTypeRef
+        None
+        | SimpleVehicleTypeRef
         | CompoundTrainRef
         | TrainRef
         | VehicleTypeRef
         | TransportTypeRef
-        | None
     ) = field(
         default=None,
         metadata={
@@ -141,7 +141,7 @@ class VehicleVersionStructure(DataManagedObjectStructure):
             ),
         },
     )
-    vehicle_model_ref: VehicleModelRef | None = field(
+    vehicle_model_ref: None | VehicleModelRef = field(
         default=None,
         metadata={
             "name": "VehicleModelRef",
@@ -150,7 +150,7 @@ class VehicleVersionStructure(DataManagedObjectStructure):
         },
     )
     vehicle_model_profile_ref: (
-        CycleModelProfileRef | CarModelProfileRef | None
+        None | CycleModelProfileRef | CarModelProfileRef
     ) = field(
         default=None,
         metadata={
@@ -169,7 +169,7 @@ class VehicleVersionStructure(DataManagedObjectStructure):
             ),
         },
     )
-    actual_vehicle_equipments: EquipmentsRelStructure | None = field(
+    actual_vehicle_equipments: None | EquipmentsRelStructure = field(
         default=None,
         metadata={
             "name": "actualVehicleEquipments",

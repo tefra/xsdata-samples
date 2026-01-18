@@ -98,7 +98,7 @@ class ComMethodGrantDesign:
     class Meta:
         name = "COM-METHOD-GRANT-DESIGN"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -107,7 +107,7 @@ class ComMethodGrantDesign:
             "required": True,
         },
     )
-    short_name_fragments: ComMethodGrantDesign.ShortNameFragments | None = (
+    short_name_fragments: None | ComMethodGrantDesign.ShortNameFragments = (
         field(
             default=None,
             metadata={
@@ -117,7 +117,7 @@ class ComMethodGrantDesign:
             },
         )
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -125,7 +125,7 @@ class ComMethodGrantDesign:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -133,7 +133,7 @@ class ComMethodGrantDesign:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -141,7 +141,7 @@ class ComMethodGrantDesign:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -149,7 +149,7 @@ class ComMethodGrantDesign:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -157,7 +157,7 @@ class ComMethodGrantDesign:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: ComMethodGrantDesign.Annotations | None = field(
+    annotations: None | ComMethodGrantDesign.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -165,7 +165,7 @@ class ComMethodGrantDesign:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -173,7 +173,7 @@ class ComMethodGrantDesign:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    process_design_ref: ComMethodGrantDesign.ProcessDesignRef | None = field(
+    process_design_ref: None | ComMethodGrantDesign.ProcessDesignRef = field(
         default=None,
         metadata={
             "name": "PROCESS-DESIGN-REF",
@@ -181,7 +181,7 @@ class ComMethodGrantDesign:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    remote_subject_ref: ComMethodGrantDesign.RemoteSubjectRef | None = field(
+    remote_subject_ref: None | ComMethodGrantDesign.RemoteSubjectRef = field(
         default=None,
         metadata={
             "name": "REMOTE-SUBJECT-REF",
@@ -189,7 +189,7 @@ class ComMethodGrantDesign:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    method_iref: RequiredMethodInExecutableInstanceRef | None = field(
+    method_iref: None | RequiredMethodInExecutableInstanceRef = field(
         default=None,
         metadata={
             "name": "METHOD-IREF",
@@ -197,14 +197,14 @@ class ComMethodGrantDesign:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -212,7 +212,7 @@ class ComMethodGrantDesign:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -244,7 +244,7 @@ class ComMethodGrantDesign:
 
     @dataclass
     class ProcessDesignRef(Ref):
-        dest: ProcessDesignSubtypesEnum | None = field(
+        dest: None | ProcessDesignSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -255,7 +255,7 @@ class ComMethodGrantDesign:
 
     @dataclass
     class RemoteSubjectRef(Ref):
-        dest: AbstractIamRemoteSubjectSubtypesEnum | None = field(
+        dest: None | AbstractIamRemoteSubjectSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

@@ -14,7 +14,7 @@ class BpmnlabelStyle(Style):
         name = "BPMNLabelStyle"
         namespace = "http://www.omg.org/spec/BPMN/20100524/DI"
 
-    font: Font | None = field(
+    font: None | Font = field(
         default=None,
         metadata={
             "name": "Font",

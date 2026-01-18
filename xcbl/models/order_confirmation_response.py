@@ -314,21 +314,21 @@ class AccountAssignment:
             "required": True,
         }
     )
-    glaccount: Glaccount | None = field(
+    glaccount: None | Glaccount = field(
         default=None,
         metadata={
             "name": "GLAccount",
             "type": "Element",
         },
     )
-    cost_center: CostCenter | None = field(
+    cost_center: None | CostCenter = field(
         default=None,
         metadata={
             "name": "CostCenter",
             "type": "Element",
         },
     )
-    account_assignment_order_number: AccountAssignmentOrderNumber | None = (
+    account_assignment_order_number: None | AccountAssignmentOrderNumber = (
         field(
             default=None,
             metadata={
@@ -337,105 +337,105 @@ class AccountAssignment:
             },
         )
     )
-    operation_number: OperationNumber | None = field(
+    operation_number: None | OperationNumber = field(
         default=None,
         metadata={
             "name": "OperationNumber",
             "type": "Element",
         },
     )
-    sales_order_reference: SalesOrderReference | None = field(
+    sales_order_reference: None | SalesOrderReference = field(
         default=None,
         metadata={
             "name": "SalesOrderReference",
             "type": "Element",
         },
     )
-    business_area: BusinessArea | None = field(
+    business_area: None | BusinessArea = field(
         default=None,
         metadata={
             "name": "BusinessArea",
             "type": "Element",
         },
     )
-    controlling_area: ControllingArea | None = field(
+    controlling_area: None | ControllingArea = field(
         default=None,
         metadata={
             "name": "ControllingArea",
             "type": "Element",
         },
     )
-    profit_center: ProfitCenter | None = field(
+    profit_center: None | ProfitCenter = field(
         default=None,
         metadata={
             "name": "ProfitCenter",
             "type": "Element",
         },
     )
-    work_breakdown_structure: WorkBreakdownStructure | None = field(
+    work_breakdown_structure: None | WorkBreakdownStructure = field(
         default=None,
         metadata={
             "name": "WorkBreakdownStructure",
             "type": "Element",
         },
     )
-    network: Network | None = field(
+    network: None | Network = field(
         default=None,
         metadata={
             "name": "Network",
             "type": "Element",
         },
     )
-    fixed_asset: FixedAsset | None = field(
+    fixed_asset: None | FixedAsset = field(
         default=None,
         metadata={
             "name": "FixedAsset",
             "type": "Element",
         },
     )
-    fixed_asset_sub: FixedAssetSub | None = field(
+    fixed_asset_sub: None | FixedAssetSub = field(
         default=None,
         metadata={
             "name": "FixedAssetSub",
             "type": "Element",
         },
     )
-    funds_center: FundsCenter | None = field(
+    funds_center: None | FundsCenter = field(
         default=None,
         metadata={
             "name": "FundsCenter",
             "type": "Element",
         },
     )
-    fund: Fund | None = field(
+    fund: None | Fund = field(
         default=None,
         metadata={
             "name": "Fund",
             "type": "Element",
         },
     )
-    commitment_item: CommitmentItem | None = field(
+    commitment_item: None | CommitmentItem = field(
         default=None,
         metadata={
             "name": "CommitmentItem",
             "type": "Element",
         },
     )
-    functional_area: FunctionalArea | None = field(
+    functional_area: None | FunctionalArea = field(
         default=None,
         metadata={
             "name": "FunctionalArea",
             "type": "Element",
         },
     )
-    generic_accounting: GenericAccounting | None = field(
+    generic_accounting: None | GenericAccounting = field(
         default=None,
         metadata={
             "name": "GenericAccounting",
             "type": "Element",
         },
     )
-    list_of_name_value_set: ListOfNameValueSet | None = field(
+    list_of_name_value_set: None | ListOfNameValueSet = field(
         default=None,
         metadata={
             "name": "ListOfNameValueSet",
@@ -460,7 +460,7 @@ class OrderConfirmationResponseParty:
             "required": True,
         }
     )
-    list_of_party_coded: ListOfPartyCoded | None = field(
+    list_of_party_coded: None | ListOfPartyCoded = field(
         default=None,
         metadata={
             "name": "ListOfPartyCoded",
@@ -479,7 +479,7 @@ class OrderConfirmationType:
         }
     )
     order_confirmation_type_coded_other: (
-        OrderConfirmationTypeCodedOther | None
+        None | OrderConfirmationTypeCodedOther
     ) = field(
         default=None,
         metadata={
@@ -531,7 +531,7 @@ class OrderConfirmationResponseHeader:
         )
     )
     order_confirmation_response_issue_date: (
-        OrderConfirmationResponseIssueDate | None
+        None | OrderConfirmationResponseIssueDate
     ) = field(
         default=None,
         metadata={
@@ -539,7 +539,7 @@ class OrderConfirmationResponseHeader:
             "type": "Element",
         },
     )
-    order_confirmation_type: OrderConfirmationType | None = field(
+    order_confirmation_type: None | OrderConfirmationType = field(
         default=None,
         metadata={
             "name": "OrderConfirmationType",
@@ -554,7 +554,7 @@ class OrderConfirmationResponseHeader:
         }
     )
     order_confirmation_response_coded_other: (
-        OrderConfirmationResponseCodedOther | None
+        None | OrderConfirmationResponseCodedOther
     ) = field(
         default=None,
         metadata={
@@ -577,7 +577,7 @@ class OrderConfirmationResponseHeader:
         }
     )
     order_confirmation_response_header_note: (
-        OrderConfirmationResponseHeaderNote | None
+        None | OrderConfirmationResponseHeaderNote
     ) = field(
         default=None,
         metadata={
@@ -585,28 +585,28 @@ class OrderConfirmationResponseHeader:
             "type": "Element",
         },
     )
-    list_of_structured_note: ListOfStructuredNote | None = field(
+    list_of_structured_note: None | ListOfStructuredNote = field(
         default=None,
         metadata={
             "name": "ListOfStructuredNote",
             "type": "Element",
         },
     )
-    error_info: ErrorInfo | None = field(
+    error_info: None | ErrorInfo = field(
         default=None,
         metadata={
             "name": "ErrorInfo",
             "type": "Element",
         },
     )
-    list_of_name_value_set: ListOfNameValueSet | None = field(
+    list_of_name_value_set: None | ListOfNameValueSet = field(
         default=None,
         metadata={
             "name": "ListOfNameValueSet",
             "type": "Element",
         },
     )
-    list_of_attachment: ListOfAttachment | None = field(
+    list_of_attachment: None | ListOfAttachment = field(
         default=None,
         metadata={
             "name": "ListOfAttachment",
@@ -631,7 +631,7 @@ class OrderConfirmationResponseDetail:
             "required": True,
         }
     )
-    order_confirmation_response_code: OrderConfirmationResponseCode | None = (
+    order_confirmation_response_code: None | OrderConfirmationResponseCode = (
         field(
             default=None,
             metadata={
@@ -641,7 +641,7 @@ class OrderConfirmationResponseDetail:
         )
     )
     order_confirmation_response_coded_other: (
-        OrderConfirmationResponseCodedOther | None
+        None | OrderConfirmationResponseCodedOther
     ) = field(
         default=None,
         metadata={
@@ -649,28 +649,28 @@ class OrderConfirmationResponseDetail:
             "type": "Element",
         },
     )
-    list_of_account_assignment: ListOfAccountAssignment | None = field(
+    list_of_account_assignment: None | ListOfAccountAssignment = field(
         default=None,
         metadata={
             "name": "ListOfAccountAssignment",
             "type": "Element",
         },
     )
-    list_of_structured_note: ListOfStructuredNote | None = field(
+    list_of_structured_note: None | ListOfStructuredNote = field(
         default=None,
         metadata={
             "name": "ListOfStructuredNote",
             "type": "Element",
         },
     )
-    error_info: ErrorInfo | None = field(
+    error_info: None | ErrorInfo = field(
         default=None,
         metadata={
             "name": "ErrorInfo",
             "type": "Element",
         },
     )
-    list_of_name_value_set: ListOfNameValueSet | None = field(
+    list_of_name_value_set: None | ListOfNameValueSet = field(
         default=None,
         metadata={
             "name": "ListOfNameValueSet",
@@ -705,7 +705,7 @@ class OrderConfirmationResponse:
         )
     )
     list_of_order_confirmation_response_detail: (
-        ListOfOrderConfirmationResponseDetail | None
+        None | ListOfOrderConfirmationResponseDetail
     ) = field(
         default=None,
         metadata={

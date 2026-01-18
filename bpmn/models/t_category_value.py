@@ -12,7 +12,7 @@ class TCategoryValue(TBaseElement):
     class Meta:
         name = "tCategoryValue"
 
-    value: str | None = field(
+    value: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",

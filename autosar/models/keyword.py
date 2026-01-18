@@ -90,7 +90,7 @@ class Keyword:
     class Meta:
         name = "KEYWORD"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -99,7 +99,7 @@ class Keyword:
             "required": True,
         },
     )
-    short_name_fragments: Keyword.ShortNameFragments | None = field(
+    short_name_fragments: None | Keyword.ShortNameFragments = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -107,7 +107,7 @@ class Keyword:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -115,7 +115,7 @@ class Keyword:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -123,7 +123,7 @@ class Keyword:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -131,7 +131,7 @@ class Keyword:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -139,7 +139,7 @@ class Keyword:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -147,7 +147,7 @@ class Keyword:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Keyword.Annotations | None = field(
+    annotations: None | Keyword.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -155,7 +155,7 @@ class Keyword:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    abbr_name: NmtokenString | None = field(
+    abbr_name: None | NmtokenString = field(
         default=None,
         metadata={
             "name": "ABBR-NAME",
@@ -163,7 +163,7 @@ class Keyword:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    classifications: Keyword.Classifications | None = field(
+    classifications: None | Keyword.Classifications = field(
         default=None,
         metadata={
             "name": "CLASSIFICATIONS",
@@ -171,14 +171,14 @@ class Keyword:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -186,7 +186,7 @@ class Keyword:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",

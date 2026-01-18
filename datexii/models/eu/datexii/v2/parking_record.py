@@ -122,7 +122,7 @@ class ParkingRecord:
     :ivar version:
     """
 
-    parking_name: MultilingualString | None = field(
+    parking_name: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "parkingName",
@@ -138,7 +138,7 @@ class ParkingRecord:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    parking_description: MultilingualString | None = field(
+    parking_description: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "parkingDescription",
@@ -146,7 +146,7 @@ class ParkingRecord:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    parking_record_version_time: XmlDateTime | None = field(
+    parking_record_version_time: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "parkingRecordVersionTime",
@@ -155,7 +155,7 @@ class ParkingRecord:
             "required": True,
         },
     )
-    parking_number_of_spaces: int | None = field(
+    parking_number_of_spaces: None | int = field(
         default=None,
         metadata={
             "name": "parkingNumberOfSpaces",
@@ -163,7 +163,7 @@ class ParkingRecord:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    parking_principal_number_of_spaces: int | None = field(
+    parking_principal_number_of_spaces: None | int = field(
         default=None,
         metadata={
             "name": "parkingPrincipalNumberOfSpaces",
@@ -171,7 +171,7 @@ class ParkingRecord:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    maximum_parking_duration: float | None = field(
+    maximum_parking_duration: None | float = field(
         default=None,
         metadata={
             "name": "maximumParkingDuration",
@@ -179,7 +179,7 @@ class ParkingRecord:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    photo_url: str | None = field(
+    photo_url: None | str = field(
         default=None,
         metadata={
             "name": "photoUrl",
@@ -187,7 +187,7 @@ class ParkingRecord:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    url_link_address: str | None = field(
+    url_link_address: None | str = field(
         default=None,
         metadata={
             "name": "urlLinkAddress",
@@ -257,7 +257,7 @@ class ParkingRecord:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    parking_location: GroupOfLocations | None = field(
+    parking_location: None | GroupOfLocations = field(
         default=None,
         metadata={
             "name": "parkingLocation",
@@ -274,7 +274,7 @@ class ParkingRecord:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    parking_colour: RGBColour | None = field(
+    parking_colour: None | RGBColour = field(
         default=None,
         metadata={
             "name": "parkingColour",
@@ -282,7 +282,7 @@ class ParkingRecord:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    only_assigned_parking: ParkingAssignment | None = field(
+    only_assigned_parking: None | ParkingAssignment = field(
         default=None,
         metadata={
             "name": "onlyAssignedParking",
@@ -290,7 +290,7 @@ class ParkingRecord:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    assigned_parking_among_others: ParkingAssignment | None = field(
+    assigned_parking_among_others: None | ParkingAssignment = field(
         default=None,
         metadata={
             "name": "assignedParkingAmongOthers",
@@ -298,7 +298,7 @@ class ParkingRecord:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    prohibited_parking: ParkingAssignment | None = field(
+    prohibited_parking: None | ParkingAssignment = field(
         default=None,
         metadata={
             "name": "prohibitedParking",
@@ -306,7 +306,7 @@ class ParkingRecord:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    tariffs_and_payment: TariffsAndPayment | None = field(
+    tariffs_and_payment: None | TariffsAndPayment = field(
         default=None,
         metadata={
             "name": "tariffsAndPayment",
@@ -340,7 +340,7 @@ class ParkingRecord:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    parking_thresholds: ParkingThresholds | None = field(
+    parking_thresholds: None | ParkingThresholds = field(
         default=None,
         metadata={
             "name": "parkingThresholds",
@@ -356,7 +356,7 @@ class ParkingRecord:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    emergency_assembly_point: GroupOfLocations | None = field(
+    emergency_assembly_point: None | GroupOfLocations = field(
         default=None,
         metadata={
             "name": "emergencyAssemblyPoint",
@@ -364,7 +364,7 @@ class ParkingRecord:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    entire_area: Area | None = field(
+    entire_area: None | Area = field(
         default=None,
         metadata={
             "name": "entireArea",
@@ -372,7 +372,7 @@ class ParkingRecord:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    parking_record_dimension: Dimension | None = field(
+    parking_record_dimension: None | Dimension = field(
         default=None,
         metadata={
             "name": "parkingRecordDimension",
@@ -380,7 +380,7 @@ class ParkingRecord:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    parking_record_extension: ExtensionType | None = field(
+    parking_record_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "parkingRecordExtension",
@@ -388,14 +388,14 @@ class ParkingRecord:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "required": True,
         },
     )
-    version: str | None = field(
+    version: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",

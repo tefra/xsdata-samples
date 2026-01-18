@@ -24,7 +24,7 @@ class TimeDemandProfileVersionStructure(DataManagedObjectStructure):
     class Meta:
         name = "TimeDemandProfile_VersionStructure"
 
-    name: MultilingualString | None = field(
+    name: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "Name",
@@ -33,7 +33,7 @@ class TimeDemandProfileVersionStructure(DataManagedObjectStructure):
         },
     )
     time_demand_type_ref_or_timeband_ref: (
-        TimeDemandTypeRef | TimebandRef | None
+        None | TimeDemandTypeRef | TimebandRef
     ) = field(
         default=None,
         metadata={
@@ -53,11 +53,11 @@ class TimeDemandProfileVersionStructure(DataManagedObjectStructure):
         },
     )
     journey_pattern_ref: (
-        ServiceJourneyPatternRef
+        None
+        | ServiceJourneyPatternRef
         | ServicePatternRef
         | DeadRunJourneyPatternRef
         | JourneyPatternRef
-        | None
     ) = field(
         default=None,
         metadata={
@@ -86,7 +86,7 @@ class TimeDemandProfileVersionStructure(DataManagedObjectStructure):
             ),
         },
     )
-    vehicle_journey_ref: DeadRunRef | VehicleJourneyRef | None = field(
+    vehicle_journey_ref: None | DeadRunRef | VehicleJourneyRef = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -104,7 +104,7 @@ class TimeDemandProfileVersionStructure(DataManagedObjectStructure):
             ),
         },
     )
-    members: TimeDemandProfileMembersRelStructure | None = field(
+    members: None | TimeDemandProfileMembersRelStructure = field(
         default=None,
         metadata={
             "type": "Element",

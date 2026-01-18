@@ -111,7 +111,7 @@ class DiagnosticTroubleCodeUds:
     class Meta:
         name = "DIAGNOSTIC-TROUBLE-CODE-UDS"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -121,7 +121,7 @@ class DiagnosticTroubleCodeUds:
         },
     )
     short_name_fragments: (
-        DiagnosticTroubleCodeUds.ShortNameFragments | None
+        None | DiagnosticTroubleCodeUds.ShortNameFragments
     ) = field(
         default=None,
         metadata={
@@ -130,7 +130,7 @@ class DiagnosticTroubleCodeUds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -138,7 +138,7 @@ class DiagnosticTroubleCodeUds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -146,7 +146,7 @@ class DiagnosticTroubleCodeUds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -154,7 +154,7 @@ class DiagnosticTroubleCodeUds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -162,7 +162,7 @@ class DiagnosticTroubleCodeUds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -170,7 +170,7 @@ class DiagnosticTroubleCodeUds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: DiagnosticTroubleCodeUds.Annotations | None = field(
+    annotations: None | DiagnosticTroubleCodeUds.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -178,7 +178,7 @@ class DiagnosticTroubleCodeUds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -186,7 +186,7 @@ class DiagnosticTroubleCodeUds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    consider_pto_status: Boolean | None = field(
+    consider_pto_status: None | Boolean = field(
         default=None,
         metadata={
             "name": "CONSIDER-PTO-STATUS",
@@ -194,7 +194,7 @@ class DiagnosticTroubleCodeUds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    dtc_props_ref: DiagnosticTroubleCodeUds.DtcPropsRef | None = field(
+    dtc_props_ref: None | DiagnosticTroubleCodeUds.DtcPropsRef = field(
         default=None,
         metadata={
             "name": "DTC-PROPS-REF",
@@ -202,7 +202,7 @@ class DiagnosticTroubleCodeUds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    event_obd_readiness_group: NmtokenString | None = field(
+    event_obd_readiness_group: None | NmtokenString = field(
         default=None,
         metadata={
             "name": "EVENT-OBD-READINESS-GROUP",
@@ -210,7 +210,7 @@ class DiagnosticTroubleCodeUds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    functional_unit: PositiveInteger | None = field(
+    functional_unit: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "FUNCTIONAL-UNIT",
@@ -218,7 +218,7 @@ class DiagnosticTroubleCodeUds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    severity: DiagnosticUdsSeverityEnum | None = field(
+    severity: None | DiagnosticUdsSeverityEnum = field(
         default=None,
         metadata={
             "name": "SEVERITY",
@@ -226,7 +226,7 @@ class DiagnosticTroubleCodeUds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    uds_dtc_value: PositiveIntegerValueVariationPoint | None = field(
+    uds_dtc_value: None | PositiveIntegerValueVariationPoint = field(
         default=None,
         metadata={
             "name": "UDS-DTC-VALUE",
@@ -235,7 +235,7 @@ class DiagnosticTroubleCodeUds:
         },
     )
     wwh_obd_dtc_class: (
-        DiagnosticWwhObdDtcClassEnumValueVariationPoint | None
+        None | DiagnosticWwhObdDtcClassEnumValueVariationPoint
     ) = field(
         default=None,
         metadata={
@@ -244,14 +244,14 @@ class DiagnosticTroubleCodeUds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -259,7 +259,7 @@ class DiagnosticTroubleCodeUds:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -291,7 +291,7 @@ class DiagnosticTroubleCodeUds:
 
     @dataclass
     class DtcPropsRef(Ref):
-        dest: DiagnosticTroubleCodePropsSubtypesEnum | None = field(
+        dest: None | DiagnosticTroubleCodePropsSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

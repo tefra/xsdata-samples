@@ -33,7 +33,7 @@ class AutosarDataTypeRefConditional:
         name = "AUTOSAR-DATA-TYPE-REF-CONDITIONAL"
 
     autosar_data_type_ref: (
-        AutosarDataTypeRefConditional.AutosarDataTypeRef | None
+        None | AutosarDataTypeRefConditional.AutosarDataTypeRef
     ) = field(
         default=None,
         metadata={
@@ -42,7 +42,7 @@ class AutosarDataTypeRefConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -50,14 +50,14 @@ class AutosarDataTypeRefConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -68,7 +68,7 @@ class AutosarDataTypeRefConditional:
 
     @dataclass
     class AutosarDataTypeRef(Ref):
-        dest: AutosarDataTypeSubtypesEnum | None = field(
+        dest: None | AutosarDataTypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

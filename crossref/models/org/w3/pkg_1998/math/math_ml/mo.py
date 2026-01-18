@@ -54,13 +54,13 @@ class Mo:
         name = "mo"
         namespace = "http://www.w3.org/1998/Math/MathML"
 
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    xref: object | None = field(
+    xref: None | object = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -74,19 +74,19 @@ class Mo:
             "tokens": True,
         },
     )
-    style: str | None = field(
+    style: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    href: str | None = field(
+    href: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    other: object | None = field(
+    other: None | object = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -99,218 +99,218 @@ class Mo:
             "namespace": "##other",
         },
     )
-    mathcolor: str | None = field(
+    mathcolor: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\s*((#[0-9a-fA-F]{3}([0-9a-fA-F]{3})?)|[aA][qQ][uU][aA]|[bB][lL][aA][cC][kK]|[bB][lL][uU][eE]|[fF][uU][cC][hH][sS][iI][aA]|[gG][rR][aA][yY]|[gG][rR][eE][eE][nN]|[lL][iI][mM][eE]|[mM][aA][rR][oO][oO][nN]|[nN][aA][vV][yY]|[oO][lL][iI][vV][eE]|[pP][uU][rR][pP][lL][eE]|[rR][eE][dD]|[sS][iI][lL][vV][eE][rR]|[tT][eE][aA][lL]|[wW][hH][iI][tT][eE]|[yY][eE][lL][lL][oO][wW])\s*",
         },
     )
-    mathbackground: str | MoValue | None = field(
+    mathbackground: None | str | MoValue = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\s*((#[0-9a-fA-F]{3}([0-9a-fA-F]{3})?)|[aA][qQ][uU][aA]|[bB][lL][aA][cC][kK]|[bB][lL][uU][eE]|[fF][uU][cC][hH][sS][iI][aA]|[gG][rR][aA][yY]|[gG][rR][eE][eE][nN]|[lL][iI][mM][eE]|[mM][aA][rR][oO][oO][nN]|[nN][aA][vV][yY]|[oO][lL][iI][vV][eE]|[pP][uU][rR][pP][lL][eE]|[rR][eE][dD]|[sS][iI][lL][vV][eE][rR]|[tT][eE][aA][lL]|[wW][hH][iI][tT][eE]|[yY][eE][lL][lL][oO][wW])\s*",
         },
     )
-    mathvariant: MoMathvariant | None = field(
+    mathvariant: None | MoMathvariant = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    mathsize: str | MoValue | None = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-            "pattern": r"\s*((-?[0-9]*([0-9]\.?|\.[0-9])[0-9]*(e[mx]|in|cm|mm|p[xtc]|%)?)|(negative)?((very){0,2}thi(n|ck)|medium)mathspace)\s*",
-        },
-    )
-    dir: MoDir | None = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        },
-    )
-    fontfamily: object | None = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        },
-    )
-    fontweight: MoFontweight | None = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        },
-    )
-    fontstyle: MoFontstyle | None = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        },
-    )
-    fontsize: str | None = field(
+    mathsize: None | str | MoValue = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\s*((-?[0-9]*([0-9]\.?|\.[0-9])[0-9]*(e[mx]|in|cm|mm|p[xtc]|%)?)|(negative)?((very){0,2}thi(n|ck)|medium)mathspace)\s*",
         },
     )
-    color: str | None = field(
+    dir: None | MoDir = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        },
+    )
+    fontfamily: None | object = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        },
+    )
+    fontweight: None | MoFontweight = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        },
+    )
+    fontstyle: None | MoFontstyle = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        },
+    )
+    fontsize: None | str = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+            "pattern": r"\s*((-?[0-9]*([0-9]\.?|\.[0-9])[0-9]*(e[mx]|in|cm|mm|p[xtc]|%)?)|(negative)?((very){0,2}thi(n|ck)|medium)mathspace)\s*",
+        },
+    )
+    color: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\s*((#[0-9a-fA-F]{3}([0-9a-fA-F]{3})?)|[aA][qQ][uU][aA]|[bB][lL][aA][cC][kK]|[bB][lL][uU][eE]|[fF][uU][cC][hH][sS][iI][aA]|[gG][rR][aA][yY]|[gG][rR][eE][eE][nN]|[lL][iI][mM][eE]|[mM][aA][rR][oO][oO][nN]|[nN][aA][vV][yY]|[oO][lL][iI][vV][eE]|[pP][uU][rR][pP][lL][eE]|[rR][eE][dD]|[sS][iI][lL][vV][eE][rR]|[tT][eE][aA][lL]|[wW][hH][iI][tT][eE]|[yY][eE][lL][lL][oO][wW])\s*",
         },
     )
-    background: str | MoValue | None = field(
+    background: None | str | MoValue = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\s*((#[0-9a-fA-F]{3}([0-9a-fA-F]{3})?)|[aA][qQ][uU][aA]|[bB][lL][aA][cC][kK]|[bB][lL][uU][eE]|[fF][uU][cC][hH][sS][iI][aA]|[gG][rR][aA][yY]|[gG][rR][eE][eE][nN]|[lL][iI][mM][eE]|[mM][aA][rR][oO][oO][nN]|[nN][aA][vV][yY]|[oO][lL][iI][vV][eE]|[pP][uU][rR][pP][lL][eE]|[rR][eE][dD]|[sS][iI][lL][vV][eE][rR]|[tT][eE][aA][lL]|[wW][hH][iI][tT][eE]|[yY][eE][lL][lL][oO][wW])\s*",
         },
     )
-    form: MoForm | None = field(
+    form: None | MoForm = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    fence: MoFence | None = field(
+    fence: None | MoFence = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    separator: MoSeparator | None = field(
+    separator: None | MoSeparator = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    lspace: str | None = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-            "pattern": r"\s*((-?[0-9]*([0-9]\.?|\.[0-9])[0-9]*(e[mx]|in|cm|mm|p[xtc]|%)?)|(negative)?((very){0,2}thi(n|ck)|medium)mathspace)\s*",
-        },
-    )
-    rspace: str | None = field(
+    lspace: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\s*((-?[0-9]*([0-9]\.?|\.[0-9])[0-9]*(e[mx]|in|cm|mm|p[xtc]|%)?)|(negative)?((very){0,2}thi(n|ck)|medium)mathspace)\s*",
         },
     )
-    stretchy: MoStretchy | None = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        },
-    )
-    symmetric: MoSymmetric | None = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        },
-    )
-    maxsize: str | MoValue | None = field(
+    rspace: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\s*((-?[0-9]*([0-9]\.?|\.[0-9])[0-9]*(e[mx]|in|cm|mm|p[xtc]|%)?)|(negative)?((very){0,2}thi(n|ck)|medium)mathspace)\s*",
         },
     )
-    minsize: str | None = field(
+    stretchy: None | MoStretchy = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        },
+    )
+    symmetric: None | MoSymmetric = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        },
+    )
+    maxsize: None | str | MoValue = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\s*((-?[0-9]*([0-9]\.?|\.[0-9])[0-9]*(e[mx]|in|cm|mm|p[xtc]|%)?)|(negative)?((very){0,2}thi(n|ck)|medium)mathspace)\s*",
         },
     )
-    largeop: MoLargeop | None = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        },
-    )
-    movablelimits: MoMovablelimits | None = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        },
-    )
-    accent: MoAccent | None = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        },
-    )
-    linebreak: MoLinebreak | None = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        },
-    )
-    lineleading: str | None = field(
+    minsize: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\s*((-?[0-9]*([0-9]\.?|\.[0-9])[0-9]*(e[mx]|in|cm|mm|p[xtc]|%)?)|(negative)?((very){0,2}thi(n|ck)|medium)mathspace)\s*",
         },
     )
-    linebreakstyle: MoLinebreakstyle | None = field(
+    largeop: None | MoLargeop = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    linebreakmultchar: object | None = field(
+    movablelimits: None | MoMovablelimits = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    indentalign: MoIndentalign | None = field(
+    accent: None | MoAccent = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    indentshift: str | None = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-            "pattern": r"\s*((-?[0-9]*([0-9]\.?|\.[0-9])[0-9]*(e[mx]|in|cm|mm|p[xtc]|%)?)|(negative)?((very){0,2}thi(n|ck)|medium)mathspace)\s*",
-        },
-    )
-    indenttarget: object | None = field(
+    linebreak: None | MoLinebreak = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    indentalignfirst: MoIndentalignfirst | None = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        },
-    )
-    indentshiftfirst: str | MoValue | None = field(
+    lineleading: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\s*((-?[0-9]*([0-9]\.?|\.[0-9])[0-9]*(e[mx]|in|cm|mm|p[xtc]|%)?)|(negative)?((very){0,2}thi(n|ck)|medium)mathspace)\s*",
         },
     )
-    indentalignlast: MoIndentalignlast | None = field(
+    linebreakstyle: None | MoLinebreakstyle = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    indentshiftlast: str | MoValue | None = field(
+    linebreakmultchar: None | object = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        },
+    )
+    indentalign: None | MoIndentalign = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        },
+    )
+    indentshift: None | str = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+            "pattern": r"\s*((-?[0-9]*([0-9]\.?|\.[0-9])[0-9]*(e[mx]|in|cm|mm|p[xtc]|%)?)|(negative)?((very){0,2}thi(n|ck)|medium)mathspace)\s*",
+        },
+    )
+    indenttarget: None | object = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        },
+    )
+    indentalignfirst: None | MoIndentalignfirst = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        },
+    )
+    indentshiftfirst: None | str | MoValue = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+            "pattern": r"\s*((-?[0-9]*([0-9]\.?|\.[0-9])[0-9]*(e[mx]|in|cm|mm|p[xtc]|%)?)|(negative)?((very){0,2}thi(n|ck)|medium)mathspace)\s*",
+        },
+    )
+    indentalignlast: None | MoIndentalignlast = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        },
+    )
+    indentshiftlast: None | str | MoValue = field(
         default=None,
         metadata={
             "type": "Attribute",

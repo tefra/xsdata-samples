@@ -35,7 +35,7 @@ class InfrastructureServices:
     class Meta:
         name = "INFRASTRUCTURE-SERVICES"
 
-    dhcp_server_configuration: DhcpServerConfiguration | None = field(
+    dhcp_server_configuration: None | DhcpServerConfiguration = field(
         default=None,
         metadata={
             "name": "DHCP-SERVER-CONFIGURATION",
@@ -43,7 +43,7 @@ class InfrastructureServices:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    do_ip_entity: DoIpEntity | None = field(
+    do_ip_entity: None | DoIpEntity = field(
         default=None,
         metadata={
             "name": "DO-IP-ENTITY",
@@ -51,7 +51,7 @@ class InfrastructureServices:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    time_synchronization: TimeSynchronization | None = field(
+    time_synchronization: None | TimeSynchronization = field(
         default=None,
         metadata={
             "name": "TIME-SYNCHRONIZATION",
@@ -59,14 +59,14 @@ class InfrastructureServices:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

@@ -14,7 +14,7 @@ class ModeOfOperationValueStructure(TypeOfValueVersionStructure):
     class Meta:
         name = "ModeOfOperation_ValueStructure"
 
-    type_of_mode_of_operation_ref: TypeOfModeOfOperationRef | None = field(
+    type_of_mode_of_operation_ref: None | TypeOfModeOfOperationRef = field(
         default=None,
         metadata={
             "name": "TypeOfModeOfOperationRef",
@@ -22,7 +22,7 @@ class ModeOfOperationValueStructure(TypeOfValueVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    submodes: SubmodesRelStructure | None = field(
+    submodes: None | SubmodesRelStructure = field(
         default=None,
         metadata={
             "type": "Element",

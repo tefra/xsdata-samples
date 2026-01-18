@@ -23,7 +23,7 @@ class Equipment(ParkingEquipmentOrServiceFacility):
     :ivar equipment_extension:
     """
 
-    equipment_type: EquipmentTypeEnum | None = field(
+    equipment_type: None | EquipmentTypeEnum = field(
         default=None,
         metadata={
             "name": "equipmentType",
@@ -32,7 +32,7 @@ class Equipment(ParkingEquipmentOrServiceFacility):
             "required": True,
         },
     )
-    electric_charging: ElectricCharging | None = field(
+    electric_charging: None | ElectricCharging = field(
         default=None,
         metadata={
             "name": "electricCharging",
@@ -40,7 +40,7 @@ class Equipment(ParkingEquipmentOrServiceFacility):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    equipment_extension: ExtensionType | None = field(
+    equipment_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "equipmentExtension",

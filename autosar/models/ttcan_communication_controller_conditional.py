@@ -65,7 +65,7 @@ class TtcanCommunicationControllerConditional:
     class Meta:
         name = "TTCAN-COMMUNICATION-CONTROLLER-CONDITIONAL"
 
-    wake_up_by_controller_supported: Boolean | None = field(
+    wake_up_by_controller_supported: None | Boolean = field(
         default=None,
         metadata={
             "name": "WAKE-UP-BY-CONTROLLER-SUPPORTED",
@@ -74,7 +74,7 @@ class TtcanCommunicationControllerConditional:
         },
     )
     can_controller_attributes: (
-        TtcanCommunicationControllerConditional.CanControllerAttributes | None
+        None | TtcanCommunicationControllerConditional.CanControllerAttributes
     ) = field(
         default=None,
         metadata={
@@ -83,7 +83,7 @@ class TtcanCommunicationControllerConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    appl_watchdog_limit: Integer | None = field(
+    appl_watchdog_limit: None | Integer = field(
         default=None,
         metadata={
             "name": "APPL-WATCHDOG-LIMIT",
@@ -91,7 +91,7 @@ class TtcanCommunicationControllerConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    expected_tx_trigger: Integer | None = field(
+    expected_tx_trigger: None | Integer = field(
         default=None,
         metadata={
             "name": "EXPECTED-TX-TRIGGER",
@@ -99,7 +99,7 @@ class TtcanCommunicationControllerConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    external_clock_synchronisation: Boolean | None = field(
+    external_clock_synchronisation: None | Boolean = field(
         default=None,
         metadata={
             "name": "EXTERNAL-CLOCK-SYNCHRONISATION",
@@ -107,7 +107,7 @@ class TtcanCommunicationControllerConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    initial_ref_offset: Integer | None = field(
+    initial_ref_offset: None | Integer = field(
         default=None,
         metadata={
             "name": "INITIAL-REF-OFFSET",
@@ -115,7 +115,7 @@ class TtcanCommunicationControllerConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    master: Boolean | None = field(
+    master: None | Boolean = field(
         default=None,
         metadata={
             "name": "MASTER",
@@ -123,7 +123,7 @@ class TtcanCommunicationControllerConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    time_master_priority: Integer | None = field(
+    time_master_priority: None | Integer = field(
         default=None,
         metadata={
             "name": "TIME-MASTER-PRIORITY",
@@ -131,7 +131,7 @@ class TtcanCommunicationControllerConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    time_triggered_can_level: Integer | None = field(
+    time_triggered_can_level: None | Integer = field(
         default=None,
         metadata={
             "name": "TIME-TRIGGERED-CAN-LEVEL",
@@ -139,7 +139,7 @@ class TtcanCommunicationControllerConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tx_enable_window_length: Integer | None = field(
+    tx_enable_window_length: None | Integer = field(
         default=None,
         metadata={
             "name": "TX-ENABLE-WINDOW-LENGTH",
@@ -147,7 +147,7 @@ class TtcanCommunicationControllerConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -155,14 +155,14 @@ class TtcanCommunicationControllerConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -173,7 +173,7 @@ class TtcanCommunicationControllerConditional:
 
     @dataclass
     class CanControllerAttributes:
-        can_controller_configuration: CanControllerConfiguration | None = (
+        can_controller_configuration: None | CanControllerConfiguration = (
             field(
                 default=None,
                 metadata={
@@ -184,7 +184,7 @@ class TtcanCommunicationControllerConditional:
             )
         )
         can_controller_configuration_requirements: (
-            CanControllerConfigurationRequirements | None
+            None | CanControllerConfigurationRequirements
         ) = field(
             default=None,
             metadata={

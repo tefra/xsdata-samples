@@ -147,7 +147,7 @@ class NvBlockNeeds:
     class Meta:
         name = "NV-BLOCK-NEEDS"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -156,7 +156,7 @@ class NvBlockNeeds:
             "required": True,
         },
     )
-    short_name_fragments: NvBlockNeeds.ShortNameFragments | None = field(
+    short_name_fragments: None | NvBlockNeeds.ShortNameFragments = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -164,7 +164,7 @@ class NvBlockNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -172,7 +172,7 @@ class NvBlockNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -180,7 +180,7 @@ class NvBlockNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -188,7 +188,7 @@ class NvBlockNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -196,7 +196,7 @@ class NvBlockNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -204,7 +204,7 @@ class NvBlockNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: NvBlockNeeds.Annotations | None = field(
+    annotations: None | NvBlockNeeds.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -212,7 +212,7 @@ class NvBlockNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    calc_ram_block_crc: Boolean | None = field(
+    calc_ram_block_crc: None | Boolean = field(
         default=None,
         metadata={
             "name": "CALC-RAM-BLOCK-CRC",
@@ -220,7 +220,7 @@ class NvBlockNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    check_static_block_id: Boolean | None = field(
+    check_static_block_id: None | Boolean = field(
         default=None,
         metadata={
             "name": "CHECK-STATIC-BLOCK-ID",
@@ -228,7 +228,7 @@ class NvBlockNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    cyclic_writing_period: TimeValue | None = field(
+    cyclic_writing_period: None | TimeValue = field(
         default=None,
         metadata={
             "name": "CYCLIC-WRITING-PERIOD",
@@ -236,7 +236,7 @@ class NvBlockNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    n_data_sets: PositiveInteger | None = field(
+    n_data_sets: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "N-DATA-SETS",
@@ -244,7 +244,7 @@ class NvBlockNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    n_rom_blocks: PositiveInteger | None = field(
+    n_rom_blocks: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "N-ROM-BLOCKS",
@@ -252,7 +252,7 @@ class NvBlockNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ram_block_status_control: RamBlockStatusControlEnum | None = field(
+    ram_block_status_control: None | RamBlockStatusControlEnum = field(
         default=None,
         metadata={
             "name": "RAM-BLOCK-STATUS-CONTROL",
@@ -260,7 +260,7 @@ class NvBlockNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    readonly: Boolean | None = field(
+    readonly: None | Boolean = field(
         default=None,
         metadata={
             "name": "READONLY",
@@ -268,7 +268,7 @@ class NvBlockNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    reliability: NvBlockNeedsReliabilityEnum | None = field(
+    reliability: None | NvBlockNeedsReliabilityEnum = field(
         default=None,
         metadata={
             "name": "RELIABILITY",
@@ -276,7 +276,7 @@ class NvBlockNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    resistant_to_changed_sw: Boolean | None = field(
+    resistant_to_changed_sw: None | Boolean = field(
         default=None,
         metadata={
             "name": "RESISTANT-TO-CHANGED-SW",
@@ -284,7 +284,7 @@ class NvBlockNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    restore_at_start: Boolean | None = field(
+    restore_at_start: None | Boolean = field(
         default=None,
         metadata={
             "name": "RESTORE-AT-START",
@@ -292,7 +292,7 @@ class NvBlockNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    select_block_for_first_init_all: Boolean | None = field(
+    select_block_for_first_init_all: None | Boolean = field(
         default=None,
         metadata={
             "name": "SELECT-BLOCK-FOR-FIRST-INIT-ALL",
@@ -300,7 +300,7 @@ class NvBlockNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    store_at_shutdown: Boolean | None = field(
+    store_at_shutdown: None | Boolean = field(
         default=None,
         metadata={
             "name": "STORE-AT-SHUTDOWN",
@@ -308,7 +308,7 @@ class NvBlockNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    store_cyclic: Boolean | None = field(
+    store_cyclic: None | Boolean = field(
         default=None,
         metadata={
             "name": "STORE-CYCLIC",
@@ -316,7 +316,7 @@ class NvBlockNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    store_emergency: Boolean | None = field(
+    store_emergency: None | Boolean = field(
         default=None,
         metadata={
             "name": "STORE-EMERGENCY",
@@ -324,7 +324,7 @@ class NvBlockNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    store_immediate: Boolean | None = field(
+    store_immediate: None | Boolean = field(
         default=None,
         metadata={
             "name": "STORE-IMMEDIATE",
@@ -332,7 +332,7 @@ class NvBlockNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    use_auto_validation_at_shut_down: Boolean | None = field(
+    use_auto_validation_at_shut_down: None | Boolean = field(
         default=None,
         metadata={
             "name": "USE-AUTO-VALIDATION-AT-SHUT-DOWN",
@@ -340,7 +340,7 @@ class NvBlockNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    use_crc_comp_mechanism: Boolean | None = field(
+    use_crc_comp_mechanism: None | Boolean = field(
         default=None,
         metadata={
             "name": "USE-CRC-COMP-MECHANISM",
@@ -348,7 +348,7 @@ class NvBlockNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    write_only_once: Boolean | None = field(
+    write_only_once: None | Boolean = field(
         default=None,
         metadata={
             "name": "WRITE-ONLY-ONCE",
@@ -356,7 +356,7 @@ class NvBlockNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    write_verification: Boolean | None = field(
+    write_verification: None | Boolean = field(
         default=None,
         metadata={
             "name": "WRITE-VERIFICATION",
@@ -364,7 +364,7 @@ class NvBlockNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    writing_frequency: PositiveInteger | None = field(
+    writing_frequency: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "WRITING-FREQUENCY",
@@ -372,7 +372,7 @@ class NvBlockNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    writing_priority: NvBlockNeedsWritingPriorityEnum | None = field(
+    writing_priority: None | NvBlockNeedsWritingPriorityEnum = field(
         default=None,
         metadata={
             "name": "WRITING-PRIORITY",
@@ -380,14 +380,14 @@ class NvBlockNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -395,7 +395,7 @@ class NvBlockNeeds:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",

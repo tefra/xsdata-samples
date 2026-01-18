@@ -28,7 +28,7 @@ class Back:
         name = "back"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    label: Label | None = field(
+    label: None | Label = field(
         default=None,
         metadata={
             "type": "Element",
@@ -91,13 +91,13 @@ class Back:
             "type": "Element",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",

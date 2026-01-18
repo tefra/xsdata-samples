@@ -28,7 +28,7 @@ __NAMESPACE__ = (
 
 @dataclass
 class PricingType:
-    involvement_type: str | None = field(
+    involvement_type: None | str = field(
         default=None,
         metadata={
             "name": "InvolvementType",
@@ -36,7 +36,7 @@ class PricingType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    producing_country_name: str | None = field(
+    producing_country_name: None | str = field(
         default=None,
         metadata={
             "name": "ProducingCountryName",
@@ -44,7 +44,7 @@ class PricingType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    layers: PricingTypeLayers | None = field(
+    layers: None | PricingTypeLayers = field(
         default=None,
         metadata={
             "name": "Layers",
@@ -52,7 +52,7 @@ class PricingType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    deductions: PricingTypeDeductions | None = field(
+    deductions: None | PricingTypeDeductions = field(
         default=None,
         metadata={
             "name": "Deductions",
@@ -60,7 +60,7 @@ class PricingType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    extensions: PricingTypeExtensions | None = field(
+    extensions: None | PricingTypeExtensions = field(
         default=None,
         metadata={
             "name": "Extensions",
@@ -68,7 +68,7 @@ class PricingType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    deductibles: PricingTypeDeductibles | None = field(
+    deductibles: None | PricingTypeDeductibles = field(
         default=None,
         metadata={
             "name": "Deductibles",
@@ -76,7 +76,7 @@ class PricingType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    limits: PricingTypeLimits | None = field(
+    limits: None | PricingTypeLimits = field(
         default=None,
         metadata={
             "name": "Limits",
@@ -84,7 +84,7 @@ class PricingType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    pricing_amounts: PricingTypePricingAmounts | None = field(
+    pricing_amounts: None | PricingTypePricingAmounts = field(
         default=None,
         metadata={
             "name": "PricingAmounts",

@@ -36,7 +36,7 @@ class PrpaMt900350Uv02Admitter:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Ii | None = field(
+    type_id: None | Ii = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -52,7 +52,7 @@ class PrpaMt900350Uv02Admitter:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    time: IvlTsExplicit | None = field(
+    time: None | IvlTsExplicit = field(
         default=None,
         metadata={
             "type": "Element",
@@ -60,7 +60,7 @@ class PrpaMt900350Uv02Admitter:
             "required": True,
         },
     )
-    assigned_person: CoctMt090100Uv01AssignedPerson | None = field(
+    assigned_person: None | CoctMt090100Uv01AssignedPerson = field(
         default=None,
         metadata={
             "name": "assignedPerson",
@@ -69,7 +69,7 @@ class PrpaMt900350Uv02Admitter:
             "nillable": True,
         },
     )
-    null_flavor: NullFlavor | None = field(
+    null_flavor: None | NullFlavor = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -100,7 +100,7 @@ class PrpaMt900350Uv02Attender:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Ii | None = field(
+    type_id: None | Ii = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -116,7 +116,7 @@ class PrpaMt900350Uv02Attender:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    sequence_number: Int | None = field(
+    sequence_number: None | Int = field(
         default=None,
         metadata={
             "name": "sequenceNumber",
@@ -124,7 +124,7 @@ class PrpaMt900350Uv02Attender:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    time: IvlTsExplicit | None = field(
+    time: None | IvlTsExplicit = field(
         default=None,
         metadata={
             "type": "Element",
@@ -132,7 +132,7 @@ class PrpaMt900350Uv02Attender:
             "required": True,
         },
     )
-    status_code: Cs | None = field(
+    status_code: None | Cs = field(
         default=None,
         metadata={
             "name": "statusCode",
@@ -140,7 +140,7 @@ class PrpaMt900350Uv02Attender:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    assigned_person: CoctMt090100Uv01AssignedPerson | None = field(
+    assigned_person: None | CoctMt090100Uv01AssignedPerson = field(
         default=None,
         metadata={
             "name": "assignedPerson",
@@ -149,7 +149,7 @@ class PrpaMt900350Uv02Attender:
             "nillable": True,
         },
     )
-    null_flavor: NullFlavor | None = field(
+    null_flavor: None | NullFlavor = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -180,7 +180,7 @@ class PrpaMt900350Uv02ResponsibleParty:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Ii | None = field(
+    type_id: None | Ii = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -196,7 +196,7 @@ class PrpaMt900350Uv02ResponsibleParty:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    time: IvlTsExplicit | None = field(
+    time: None | IvlTsExplicit = field(
         default=None,
         metadata={
             "type": "Element",
@@ -204,7 +204,7 @@ class PrpaMt900350Uv02ResponsibleParty:
             "required": True,
         },
     )
-    status_code: Cs | None = field(
+    status_code: None | Cs = field(
         default=None,
         metadata={
             "name": "statusCode",
@@ -212,7 +212,7 @@ class PrpaMt900350Uv02ResponsibleParty:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    assigned_organization: CoctMt090200Uv01AssignedOrganization | None = field(
+    assigned_organization: None | CoctMt090200Uv01AssignedOrganization = field(
         default=None,
         metadata={
             "name": "assignedOrganization",
@@ -221,7 +221,7 @@ class PrpaMt900350Uv02ResponsibleParty:
             "nillable": True,
         },
     )
-    null_flavor: NullFlavor | None = field(
+    null_flavor: None | NullFlavor = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -252,7 +252,7 @@ class PrpaMt900350Uv02Subject:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Ii | None = field(
+    type_id: None | Ii = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -268,7 +268,7 @@ class PrpaMt900350Uv02Subject:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    patient: CoctMt050002Uv04Patient | None = field(
+    patient: None | CoctMt050002Uv04Patient = field(
         default=None,
         metadata={
             "type": "Element",
@@ -276,14 +276,14 @@ class PrpaMt900350Uv02Subject:
             "required": True,
         },
     )
-    null_flavor: NullFlavor | None = field(
+    null_flavor: None | NullFlavor = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
         },
     )
-    type_code: ParticipationTargetSubject | None = field(
+    type_code: None | ParticipationTargetSubject = field(
         default=None,
         metadata={
             "name": "typeCode",
@@ -306,7 +306,7 @@ class PrpaMt900350Uv02EncounterEvent:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Ii | None = field(
+    type_id: None | Ii = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -330,7 +330,7 @@ class PrpaMt900350Uv02EncounterEvent:
             "min_occurs": 1,
         },
     )
-    code: Cd | None = field(
+    code: None | Cd = field(
         default=None,
         metadata={
             "type": "Element",
@@ -338,7 +338,7 @@ class PrpaMt900350Uv02EncounterEvent:
             "required": True,
         },
     )
-    status_code: Cs | None = field(
+    status_code: None | Cs = field(
         default=None,
         metadata={
             "name": "statusCode",
@@ -347,7 +347,7 @@ class PrpaMt900350Uv02EncounterEvent:
             "required": True,
         },
     )
-    effective_time: IvlTsExplicit | None = field(
+    effective_time: None | IvlTsExplicit = field(
         default=None,
         metadata={
             "name": "effectiveTime",
@@ -356,7 +356,7 @@ class PrpaMt900350Uv02EncounterEvent:
             "required": True,
         },
     )
-    subject: PrpaMt900350Uv02Subject | None = field(
+    subject: None | PrpaMt900350Uv02Subject = field(
         default=None,
         metadata={
             "type": "Element",
@@ -373,7 +373,7 @@ class PrpaMt900350Uv02EncounterEvent:
             "nillable": True,
         },
     )
-    admitter: PrpaMt900350Uv02Admitter | None = field(
+    admitter: None | PrpaMt900350Uv02Admitter = field(
         default=None,
         metadata={
             "type": "Element",
@@ -389,7 +389,7 @@ class PrpaMt900350Uv02EncounterEvent:
             "nillable": True,
         },
     )
-    null_flavor: NullFlavor | None = field(
+    null_flavor: None | NullFlavor = field(
         default=None,
         metadata={
             "name": "nullFlavor",

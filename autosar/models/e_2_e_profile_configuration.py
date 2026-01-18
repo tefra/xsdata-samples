@@ -122,7 +122,7 @@ class E2EProfileConfiguration:
     class Meta:
         name = "E-2-E-PROFILE-CONFIGURATION"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -131,7 +131,7 @@ class E2EProfileConfiguration:
             "required": True,
         },
     )
-    short_name_fragments: E2EProfileConfiguration.ShortNameFragments | None = (
+    short_name_fragments: None | E2EProfileConfiguration.ShortNameFragments = (
         field(
             default=None,
             metadata={
@@ -141,7 +141,7 @@ class E2EProfileConfiguration:
             },
         )
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -149,7 +149,7 @@ class E2EProfileConfiguration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -157,7 +157,7 @@ class E2EProfileConfiguration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -165,7 +165,7 @@ class E2EProfileConfiguration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -173,7 +173,7 @@ class E2EProfileConfiguration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -181,7 +181,7 @@ class E2EProfileConfiguration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: E2EProfileConfiguration.Annotations | None = field(
+    annotations: None | E2EProfileConfiguration.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -189,7 +189,7 @@ class E2EProfileConfiguration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    clear_from_valid_to_invalid: Boolean | None = field(
+    clear_from_valid_to_invalid: None | Boolean = field(
         default=None,
         metadata={
             "name": "CLEAR-FROM-VALID-TO-INVALID",
@@ -197,7 +197,7 @@ class E2EProfileConfiguration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    data_id_mode: DataIdModeEnum | None = field(
+    data_id_mode: None | DataIdModeEnum = field(
         default=None,
         metadata={
             "name": "DATA-ID-MODE",
@@ -206,7 +206,7 @@ class E2EProfileConfiguration:
         },
     )
     e_2_e_profile_compatibility_props_ref: (
-        E2EProfileConfiguration.E2EProfileCompatibilityPropsRef | None
+        None | E2EProfileConfiguration.E2EProfileCompatibilityPropsRef
     ) = field(
         default=None,
         metadata={
@@ -215,7 +215,7 @@ class E2EProfileConfiguration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    max_delta_counter: PositiveInteger | None = field(
+    max_delta_counter: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "MAX-DELTA-COUNTER",
@@ -223,7 +223,7 @@ class E2EProfileConfiguration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    max_error_state_init: PositiveInteger | None = field(
+    max_error_state_init: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "MAX-ERROR-STATE-INIT",
@@ -231,7 +231,7 @@ class E2EProfileConfiguration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    max_error_state_invalid: PositiveInteger | None = field(
+    max_error_state_invalid: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "MAX-ERROR-STATE-INVALID",
@@ -239,7 +239,7 @@ class E2EProfileConfiguration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    max_error_state_valid: PositiveInteger | None = field(
+    max_error_state_valid: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "MAX-ERROR-STATE-VALID",
@@ -247,7 +247,7 @@ class E2EProfileConfiguration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    min_ok_state_init: PositiveInteger | None = field(
+    min_ok_state_init: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "MIN-OK-STATE-INIT",
@@ -255,7 +255,7 @@ class E2EProfileConfiguration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    min_ok_state_invalid: PositiveInteger | None = field(
+    min_ok_state_invalid: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "MIN-OK-STATE-INVALID",
@@ -263,7 +263,7 @@ class E2EProfileConfiguration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    min_ok_state_valid: PositiveInteger | None = field(
+    min_ok_state_valid: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "MIN-OK-STATE-VALID",
@@ -271,7 +271,7 @@ class E2EProfileConfiguration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    profile_name: NmtokenString | None = field(
+    profile_name: None | NmtokenString = field(
         default=None,
         metadata={
             "name": "PROFILE-NAME",
@@ -279,7 +279,7 @@ class E2EProfileConfiguration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    window_size_init: PositiveInteger | None = field(
+    window_size_init: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "WINDOW-SIZE-INIT",
@@ -287,7 +287,7 @@ class E2EProfileConfiguration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    window_size_invalid: PositiveInteger | None = field(
+    window_size_invalid: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "WINDOW-SIZE-INVALID",
@@ -295,7 +295,7 @@ class E2EProfileConfiguration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    window_size_valid: PositiveInteger | None = field(
+    window_size_valid: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "WINDOW-SIZE-VALID",
@@ -303,14 +303,14 @@ class E2EProfileConfiguration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -318,7 +318,7 @@ class E2EProfileConfiguration:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -350,7 +350,7 @@ class E2EProfileConfiguration:
 
     @dataclass
     class E2EProfileCompatibilityPropsRef(Ref):
-        dest: E2EProfileCompatibilityPropsSubtypesEnum | None = field(
+        dest: None | E2EProfileCompatibilityPropsSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

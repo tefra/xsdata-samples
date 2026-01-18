@@ -31,7 +31,7 @@ class NoteType(BaseSimpleComponentType):
         created the notes</description>
     """
 
-    text: TextType | None = field(
+    text: None | TextType = field(
         default=None,
         metadata={
             "name": "Text",
@@ -40,7 +40,7 @@ class NoteType(BaseSimpleComponentType):
             "required": True,
         },
     )
-    last_modified_date_time: DateTimeType | None = field(
+    last_modified_date_time: None | DateTimeType = field(
         default=None,
         metadata={
             "name": "LastModifiedDateTime",
@@ -48,7 +48,7 @@ class NoteType(BaseSimpleComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
         },
     )
-    agent_id: Idtype | None = field(
+    agent_id: None | Idtype = field(
         default=None,
         metadata={
             "name": "AgentID",

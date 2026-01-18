@@ -22,14 +22,14 @@ class StandardsBody:
         name = "standards_body"
         namespace = "http://www.crossref.org/schema/5.3.1"
 
-    standards_body_name: StandardsBodyName | None = field(
+    standards_body_name: None | StandardsBodyName = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
         },
     )
-    standards_body_acronym: StandardsBodyAcronym | None = field(
+    standards_body_acronym: None | StandardsBodyAcronym = field(
         default=None,
         metadata={
             "type": "Element",

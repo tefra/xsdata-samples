@@ -40,25 +40,25 @@ class Designators:
         name = "designators"
         namespace = "http://www.crossref.org/schema/5.3.1"
 
-    std_family_designator: StdFamilyDesignator | None = field(
+    std_family_designator: None | StdFamilyDesignator = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    std_set_designator: StdSetDesignator | None = field(
+    std_set_designator: None | StdSetDesignator = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    std_undated_designator: StdUndatedDesignator | None = field(
+    std_undated_designator: None | StdUndatedDesignator = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    std_as_published: StdAsPublished | None = field(
+    std_as_published: None | StdAsPublished = field(
         default=None,
         metadata={
             "type": "Element",

@@ -27,7 +27,7 @@ class Program:
         name = "program"
         namespace = "http://www.crossref.org/AccessIndicators.xsd"
 
-    free_to_read: FreeToRead | None = field(
+    free_to_read: None | FreeToRead = field(
         default=None,
         metadata={
             "type": "Element",

@@ -27,7 +27,7 @@ class Road:
     :ivar road_extension:
     """
 
-    name_of_road: MultilingualString | None = field(
+    name_of_road: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "nameOfRoad",
@@ -35,7 +35,7 @@ class Road:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    road_identifier: MultilingualString | None = field(
+    road_identifier: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "roadIdentifier",
@@ -43,7 +43,7 @@ class Road:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    type_of_road: RoadTypeEnum | None = field(
+    type_of_road: None | RoadTypeEnum = field(
         default=None,
         metadata={
             "name": "typeOfRoad",
@@ -67,7 +67,7 @@ class Road:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    distance_to_this_road: int | None = field(
+    distance_to_this_road: None | int = field(
         default=None,
         metadata={
             "name": "distanceToThisRoad",
@@ -75,7 +75,7 @@ class Road:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    road_extension: ExtensionType | None = field(
+    road_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "roadExtension",

@@ -10,21 +10,21 @@ class TImport:
     class Meta:
         name = "tImport"
 
-    namespace: str | None = field(
+    namespace: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "required": True,
         },
     )
-    location: str | None = field(
+    location: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "required": True,
         },
     )
-    import_type: str | None = field(
+    import_type: None | str = field(
         default=None,
         metadata={
             "name": "importType",

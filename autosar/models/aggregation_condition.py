@@ -45,7 +45,7 @@ class AggregationCondition:
     class Meta:
         name = "AGGREGATION-CONDITION"
 
-    lower_multiplicity: PositiveInteger | None = field(
+    lower_multiplicity: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "LOWER-MULTIPLICITY",
@@ -53,7 +53,7 @@ class AggregationCondition:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    upper_multiplicity: PositiveInteger | None = field(
+    upper_multiplicity: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "UPPER-MULTIPLICITY",
@@ -61,7 +61,7 @@ class AggregationCondition:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    upper_multiplicity_infinite: Boolean | None = field(
+    upper_multiplicity_infinite: None | Boolean = field(
         default=None,
         metadata={
             "name": "UPPER-MULTIPLICITY-INFINITE",
@@ -69,7 +69,7 @@ class AggregationCondition:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    aggregation_ref: AggregationCondition.AggregationRef | None = field(
+    aggregation_ref: None | AggregationCondition.AggregationRef = field(
         default=None,
         metadata={
             "name": "AGGREGATION-REF",
@@ -77,14 +77,14 @@ class AggregationCondition:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -95,7 +95,7 @@ class AggregationCondition:
 
     @dataclass
     class AggregationRef(Ref):
-        dest: AggregationTailoringSubtypesEnum | None = field(
+        dest: None | AggregationTailoringSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

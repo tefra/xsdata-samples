@@ -25,7 +25,7 @@ class ClockDriverType:
     class Meta:
         name = "clockDriverType"
 
-    clock_period: ClockDriverType.ClockPeriod | None = field(
+    clock_period: None | ClockDriverType.ClockPeriod = field(
         default=None,
         metadata={
             "name": "clockPeriod",
@@ -34,7 +34,7 @@ class ClockDriverType:
             "required": True,
         },
     )
-    clock_pulse_offset: ClockDriverType.ClockPulseOffset | None = field(
+    clock_pulse_offset: None | ClockDriverType.ClockPulseOffset = field(
         default=None,
         metadata={
             "name": "clockPulseOffset",
@@ -43,7 +43,7 @@ class ClockDriverType:
             "required": True,
         },
     )
-    clock_pulse_value: UnsignedBitExpression | None = field(
+    clock_pulse_value: None | UnsignedBitExpression = field(
         default=None,
         metadata={
             "name": "clockPulseValue",
@@ -52,7 +52,7 @@ class ClockDriverType:
             "required": True,
         },
     )
-    clock_pulse_duration: ClockDriverType.ClockPulseDuration | None = field(
+    clock_pulse_duration: None | ClockDriverType.ClockPulseDuration = field(
         default=None,
         metadata={
             "name": "clockPulseDuration",
@@ -61,7 +61,7 @@ class ClockDriverType:
             "required": True,
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",

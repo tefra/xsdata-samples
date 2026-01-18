@@ -34,7 +34,7 @@ class OpenlrBasePointLocation:
     :ivar openlr_base_point_location_extension:
     """
 
-    openlr_side_of_road: OpenlrSideOfRoadEnum | None = field(
+    openlr_side_of_road: None | OpenlrSideOfRoadEnum = field(
         default=None,
         metadata={
             "name": "openlrSideOfRoad",
@@ -43,7 +43,7 @@ class OpenlrBasePointLocation:
             "required": True,
         },
     )
-    openlr_orientation: OpenlrOrientationEnum | None = field(
+    openlr_orientation: None | OpenlrOrientationEnum = field(
         default=None,
         metadata={
             "name": "openlrOrientation",
@@ -52,7 +52,7 @@ class OpenlrBasePointLocation:
             "required": True,
         },
     )
-    openlr_positive_offset: int | None = field(
+    openlr_positive_offset: None | int = field(
         default=None,
         metadata={
             "name": "openlrPositiveOffset",
@@ -60,7 +60,7 @@ class OpenlrBasePointLocation:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    openlr_location_reference_point: OpenlrLocationReferencePoint | None = (
+    openlr_location_reference_point: None | OpenlrLocationReferencePoint = (
         field(
             default=None,
             metadata={
@@ -72,7 +72,7 @@ class OpenlrBasePointLocation:
         )
     )
     openlr_last_location_reference_point: (
-        OpenlrLastLocationReferencePoint | None
+        None | OpenlrLastLocationReferencePoint
     ) = field(
         default=None,
         metadata={
@@ -82,7 +82,7 @@ class OpenlrBasePointLocation:
             "required": True,
         },
     )
-    openlr_base_point_location_extension: ExtensionType | None = field(
+    openlr_base_point_location_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "openlrBasePointLocationExtension",

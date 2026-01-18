@@ -107,7 +107,7 @@ class DiagnosticContributionSet:
     class Meta:
         name = "DIAGNOSTIC-CONTRIBUTION-SET"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -117,7 +117,7 @@ class DiagnosticContributionSet:
         },
     )
     short_name_fragments: (
-        DiagnosticContributionSet.ShortNameFragments | None
+        None | DiagnosticContributionSet.ShortNameFragments
     ) = field(
         default=None,
         metadata={
@@ -126,7 +126,7 @@ class DiagnosticContributionSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -134,7 +134,7 @@ class DiagnosticContributionSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -142,7 +142,7 @@ class DiagnosticContributionSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -150,7 +150,7 @@ class DiagnosticContributionSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -158,7 +158,7 @@ class DiagnosticContributionSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -166,7 +166,7 @@ class DiagnosticContributionSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: DiagnosticContributionSet.Annotations | None = field(
+    annotations: None | DiagnosticContributionSet.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -174,7 +174,7 @@ class DiagnosticContributionSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -182,7 +182,7 @@ class DiagnosticContributionSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    common_properties: DiagnosticCommonProps | None = field(
+    common_properties: None | DiagnosticCommonProps = field(
         default=None,
         metadata={
             "name": "COMMON-PROPERTIES",
@@ -190,7 +190,7 @@ class DiagnosticContributionSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ecu_instance_refs: DiagnosticContributionSet.EcuInstanceRefs | None = (
+    ecu_instance_refs: None | DiagnosticContributionSet.EcuInstanceRefs = (
         field(
             default=None,
             metadata={
@@ -200,7 +200,7 @@ class DiagnosticContributionSet:
             },
         )
     )
-    elements: DiagnosticContributionSet.Elements | None = field(
+    elements: None | DiagnosticContributionSet.Elements = field(
         default=None,
         metadata={
             "name": "ELEMENTS",
@@ -208,7 +208,7 @@ class DiagnosticContributionSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    service_tables: DiagnosticContributionSet.ServiceTables | None = field(
+    service_tables: None | DiagnosticContributionSet.ServiceTables = field(
         default=None,
         metadata={
             "name": "SERVICE-TABLES",
@@ -216,14 +216,14 @@ class DiagnosticContributionSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -231,7 +231,7 @@ class DiagnosticContributionSet:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -276,7 +276,7 @@ class DiagnosticContributionSet:
 
         @dataclass
         class EcuInstanceRef(Ref):
-            dest: EcuInstanceSubtypesEnum | None = field(
+            dest: None | EcuInstanceSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",

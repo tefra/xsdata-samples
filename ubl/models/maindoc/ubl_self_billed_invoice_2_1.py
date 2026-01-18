@@ -64,7 +64,7 @@ __NAMESPACE__ = (
 
 @dataclass(frozen=True)
 class SelfBilledInvoiceType:
-    ublextensions: Ublextensions | None = field(
+    ublextensions: None | Ublextensions = field(
         default=None,
         metadata={
             "name": "UBLExtensions",
@@ -72,7 +72,7 @@ class SelfBilledInvoiceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2",
         },
     )
-    ublversion_id: UblversionId | None = field(
+    ublversion_id: None | UblversionId = field(
         default=None,
         metadata={
             "name": "UBLVersionID",
@@ -80,7 +80,7 @@ class SelfBilledInvoiceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    customization_id: CustomizationId | None = field(
+    customization_id: None | CustomizationId = field(
         default=None,
         metadata={
             "name": "CustomizationID",
@@ -88,7 +88,7 @@ class SelfBilledInvoiceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    profile_id: ProfileId | None = field(
+    profile_id: None | ProfileId = field(
         default=None,
         metadata={
             "name": "ProfileID",
@@ -96,7 +96,7 @@ class SelfBilledInvoiceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    profile_execution_id: ProfileExecutionId | None = field(
+    profile_execution_id: None | ProfileExecutionId = field(
         default=None,
         metadata={
             "name": "ProfileExecutionID",
@@ -104,7 +104,7 @@ class SelfBilledInvoiceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    id: Id | None = field(
+    id: None | Id = field(
         default=None,
         metadata={
             "name": "ID",
@@ -113,7 +113,7 @@ class SelfBilledInvoiceType:
             "required": True,
         },
     )
-    copy_indicator: CopyIndicator | None = field(
+    copy_indicator: None | CopyIndicator = field(
         default=None,
         metadata={
             "name": "CopyIndicator",
@@ -121,7 +121,7 @@ class SelfBilledInvoiceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    uuid: Uuid | None = field(
+    uuid: None | Uuid = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -129,7 +129,7 @@ class SelfBilledInvoiceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    issue_date: IssueDate | None = field(
+    issue_date: None | IssueDate = field(
         default=None,
         metadata={
             "name": "IssueDate",
@@ -138,7 +138,7 @@ class SelfBilledInvoiceType:
             "required": True,
         },
     )
-    issue_time: IssueTime | None = field(
+    issue_time: None | IssueTime = field(
         default=None,
         metadata={
             "name": "IssueTime",
@@ -146,7 +146,7 @@ class SelfBilledInvoiceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    tax_point_date: TaxPointDate | None = field(
+    tax_point_date: None | TaxPointDate = field(
         default=None,
         metadata={
             "name": "TaxPointDate",
@@ -154,7 +154,7 @@ class SelfBilledInvoiceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    invoice_type_code: InvoiceTypeCode | None = field(
+    invoice_type_code: None | InvoiceTypeCode = field(
         default=None,
         metadata={
             "name": "InvoiceTypeCode",
@@ -170,7 +170,7 @@ class SelfBilledInvoiceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    document_currency_code: DocumentCurrencyCode | None = field(
+    document_currency_code: None | DocumentCurrencyCode = field(
         default=None,
         metadata={
             "name": "DocumentCurrencyCode",
@@ -178,7 +178,7 @@ class SelfBilledInvoiceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    tax_currency_code: TaxCurrencyCode | None = field(
+    tax_currency_code: None | TaxCurrencyCode = field(
         default=None,
         metadata={
             "name": "TaxCurrencyCode",
@@ -186,7 +186,7 @@ class SelfBilledInvoiceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    pricing_currency_code: PricingCurrencyCode | None = field(
+    pricing_currency_code: None | PricingCurrencyCode = field(
         default=None,
         metadata={
             "name": "PricingCurrencyCode",
@@ -194,7 +194,7 @@ class SelfBilledInvoiceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    payment_currency_code: PaymentCurrencyCode | None = field(
+    payment_currency_code: None | PaymentCurrencyCode = field(
         default=None,
         metadata={
             "name": "PaymentCurrencyCode",
@@ -203,7 +203,7 @@ class SelfBilledInvoiceType:
         },
     )
     payment_alternative_currency_code: (
-        PaymentAlternativeCurrencyCode | None
+        None | PaymentAlternativeCurrencyCode
     ) = field(
         default=None,
         metadata={
@@ -212,7 +212,7 @@ class SelfBilledInvoiceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    accounting_cost_code: AccountingCostCode | None = field(
+    accounting_cost_code: None | AccountingCostCode = field(
         default=None,
         metadata={
             "name": "AccountingCostCode",
@@ -220,7 +220,7 @@ class SelfBilledInvoiceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    accounting_cost: AccountingCost | None = field(
+    accounting_cost: None | AccountingCost = field(
         default=None,
         metadata={
             "name": "AccountingCost",
@@ -228,7 +228,7 @@ class SelfBilledInvoiceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    line_count_numeric: LineCountNumeric | None = field(
+    line_count_numeric: None | LineCountNumeric = field(
         default=None,
         metadata={
             "name": "LineCountNumeric",
@@ -244,7 +244,7 @@ class SelfBilledInvoiceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    order_reference: OrderReference | None = field(
+    order_reference: None | OrderReference = field(
         default=None,
         metadata={
             "name": "OrderReference",
@@ -322,7 +322,7 @@ class SelfBilledInvoiceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    accounting_customer_party: AccountingCustomerParty | None = field(
+    accounting_customer_party: None | AccountingCustomerParty = field(
         default=None,
         metadata={
             "name": "AccountingCustomerParty",
@@ -331,7 +331,7 @@ class SelfBilledInvoiceType:
             "required": True,
         },
     )
-    accounting_supplier_party: AccountingSupplierParty | None = field(
+    accounting_supplier_party: None | AccountingSupplierParty = field(
         default=None,
         metadata={
             "name": "AccountingSupplierParty",
@@ -340,7 +340,7 @@ class SelfBilledInvoiceType:
             "required": True,
         },
     )
-    buyer_customer_party: BuyerCustomerParty | None = field(
+    buyer_customer_party: None | BuyerCustomerParty = field(
         default=None,
         metadata={
             "name": "BuyerCustomerParty",
@@ -348,7 +348,7 @@ class SelfBilledInvoiceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    seller_supplier_party: SellerSupplierParty | None = field(
+    seller_supplier_party: None | SellerSupplierParty = field(
         default=None,
         metadata={
             "name": "SellerSupplierParty",
@@ -356,7 +356,7 @@ class SelfBilledInvoiceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    payee_party: PayeeParty | None = field(
+    payee_party: None | PayeeParty = field(
         default=None,
         metadata={
             "name": "PayeeParty",
@@ -364,7 +364,7 @@ class SelfBilledInvoiceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    tax_representative_party: TaxRepresentativeParty | None = field(
+    tax_representative_party: None | TaxRepresentativeParty = field(
         default=None,
         metadata={
             "name": "TaxRepresentativeParty",
@@ -388,7 +388,7 @@ class SelfBilledInvoiceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    payment_means: PaymentMeans | None = field(
+    payment_means: None | PaymentMeans = field(
         default=None,
         metadata={
             "name": "PaymentMeans",
@@ -420,7 +420,7 @@ class SelfBilledInvoiceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    tax_exchange_rate: TaxExchangeRate | None = field(
+    tax_exchange_rate: None | TaxExchangeRate = field(
         default=None,
         metadata={
             "name": "TaxExchangeRate",
@@ -428,7 +428,7 @@ class SelfBilledInvoiceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    pricing_exchange_rate: PricingExchangeRate | None = field(
+    pricing_exchange_rate: None | PricingExchangeRate = field(
         default=None,
         metadata={
             "name": "PricingExchangeRate",
@@ -436,7 +436,7 @@ class SelfBilledInvoiceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    payment_exchange_rate: PaymentExchangeRate | None = field(
+    payment_exchange_rate: None | PaymentExchangeRate = field(
         default=None,
         metadata={
             "name": "PaymentExchangeRate",
@@ -445,7 +445,7 @@ class SelfBilledInvoiceType:
         },
     )
     payment_alternative_exchange_rate: (
-        PaymentAlternativeExchangeRate | None
+        None | PaymentAlternativeExchangeRate
     ) = field(
         default=None,
         metadata={
@@ -462,7 +462,7 @@ class SelfBilledInvoiceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    legal_monetary_total: LegalMonetaryTotal | None = field(
+    legal_monetary_total: None | LegalMonetaryTotal = field(
         default=None,
         metadata={
             "name": "LegalMonetaryTotal",

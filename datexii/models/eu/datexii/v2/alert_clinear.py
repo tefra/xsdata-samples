@@ -22,7 +22,7 @@ class AlertCLinear:
     :ivar alert_clinear_extension:
     """
 
-    alert_clocation_country_code: str | None = field(
+    alert_clocation_country_code: None | str = field(
         default=None,
         metadata={
             "name": "alertCLocationCountryCode",
@@ -32,7 +32,7 @@ class AlertCLinear:
             "max_length": 1024,
         },
     )
-    alert_clocation_table_number: str | None = field(
+    alert_clocation_table_number: None | str = field(
         default=None,
         metadata={
             "name": "alertCLocationTableNumber",
@@ -42,7 +42,7 @@ class AlertCLinear:
             "max_length": 1024,
         },
     )
-    alert_clocation_table_version: str | None = field(
+    alert_clocation_table_version: None | str = field(
         default=None,
         metadata={
             "name": "alertCLocationTableVersion",
@@ -52,7 +52,7 @@ class AlertCLinear:
             "max_length": 1024,
         },
     )
-    alert_clinear_extension: ExtensionType | None = field(
+    alert_clinear_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "alertCLinearExtension",

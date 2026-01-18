@@ -47,7 +47,7 @@ class BswAsynchronousServerCallPoint:
     class Meta:
         name = "BSW-ASYNCHRONOUS-SERVER-CALL-POINT"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -57,7 +57,7 @@ class BswAsynchronousServerCallPoint:
         },
     )
     short_name_fragments: (
-        BswAsynchronousServerCallPoint.ShortNameFragments | None
+        None | BswAsynchronousServerCallPoint.ShortNameFragments
     ) = field(
         default=None,
         metadata={
@@ -67,7 +67,7 @@ class BswAsynchronousServerCallPoint:
         },
     )
     context_limitation_refs: (
-        BswAsynchronousServerCallPoint.ContextLimitationRefs | None
+        None | BswAsynchronousServerCallPoint.ContextLimitationRefs
     ) = field(
         default=None,
         metadata={
@@ -76,7 +76,7 @@ class BswAsynchronousServerCallPoint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -84,7 +84,7 @@ class BswAsynchronousServerCallPoint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    called_entry_ref: BswAsynchronousServerCallPoint.CalledEntryRef | None = (
+    called_entry_ref: None | BswAsynchronousServerCallPoint.CalledEntryRef = (
         field(
             default=None,
             metadata={
@@ -94,14 +94,14 @@ class BswAsynchronousServerCallPoint:
             },
         )
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -136,7 +136,7 @@ class BswAsynchronousServerCallPoint:
 
         @dataclass
         class ContextLimitationRef(Ref):
-            dest: BswDistinguishedPartitionSubtypesEnum | None = field(
+            dest: None | BswDistinguishedPartitionSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -147,7 +147,7 @@ class BswAsynchronousServerCallPoint:
 
     @dataclass
     class CalledEntryRef(Ref):
-        dest: BswModuleClientServerEntrySubtypesEnum | None = field(
+        dest: None | BswModuleClientServerEntrySubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

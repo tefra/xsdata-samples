@@ -21,7 +21,7 @@ class ConstructionWorks(Roadworks):
     :ivar construction_works_extension:
     """
 
-    construction_work_type: ConstructionWorkTypeEnum | None = field(
+    construction_work_type: None | ConstructionWorkTypeEnum = field(
         default=None,
         metadata={
             "name": "constructionWorkType",
@@ -29,7 +29,7 @@ class ConstructionWorks(Roadworks):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    construction_works_extension: ExtensionType | None = field(
+    construction_works_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "constructionWorksExtension",

@@ -98,7 +98,7 @@ class BinaryManifestItem:
     class Meta:
         name = "BINARY-MANIFEST-ITEM"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -107,7 +107,7 @@ class BinaryManifestItem:
             "required": True,
         },
     )
-    short_name_fragments: BinaryManifestItem.ShortNameFragments | None = field(
+    short_name_fragments: None | BinaryManifestItem.ShortNameFragments = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -115,7 +115,7 @@ class BinaryManifestItem:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -123,7 +123,7 @@ class BinaryManifestItem:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -131,7 +131,7 @@ class BinaryManifestItem:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -139,7 +139,7 @@ class BinaryManifestItem:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -147,7 +147,7 @@ class BinaryManifestItem:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -155,7 +155,7 @@ class BinaryManifestItem:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: BinaryManifestItem.Annotations | None = field(
+    annotations: None | BinaryManifestItem.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -163,7 +163,7 @@ class BinaryManifestItem:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    address: Address | None = field(
+    address: None | Address = field(
         default=None,
         metadata={
             "name": "ADDRESS",
@@ -171,7 +171,7 @@ class BinaryManifestItem:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    symbol: SymbolString | None = field(
+    symbol: None | SymbolString = field(
         default=None,
         metadata={
             "name": "SYMBOL",
@@ -179,7 +179,7 @@ class BinaryManifestItem:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    value: BinaryManifestItem.Value | None = field(
+    value: None | BinaryManifestItem.Value = field(
         default=None,
         metadata={
             "name": "VALUE",
@@ -187,7 +187,7 @@ class BinaryManifestItem:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    default_value: BinaryManifestItem.DefaultValue | None = field(
+    default_value: None | BinaryManifestItem.DefaultValue = field(
         default=None,
         metadata={
             "name": "DEFAULT-VALUE",
@@ -195,7 +195,7 @@ class BinaryManifestItem:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    auxiliary_fields: BinaryManifestItem.AuxiliaryFields | None = field(
+    auxiliary_fields: None | BinaryManifestItem.AuxiliaryFields = field(
         default=None,
         metadata={
             "name": "AUXILIARY-FIELDS",
@@ -203,14 +203,14 @@ class BinaryManifestItem:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -218,7 +218,7 @@ class BinaryManifestItem:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -251,7 +251,7 @@ class BinaryManifestItem:
     @dataclass
     class Value:
         binary_manifest_item_numerical_value: (
-            BinaryManifestItemNumericalValue | None
+            None | BinaryManifestItemNumericalValue
         ) = field(
             default=None,
             metadata={
@@ -261,7 +261,7 @@ class BinaryManifestItem:
             },
         )
         binary_manifest_item_pointer_value: (
-            BinaryManifestItemPointerValue | None
+            None | BinaryManifestItemPointerValue
         ) = field(
             default=None,
             metadata={
@@ -274,7 +274,7 @@ class BinaryManifestItem:
     @dataclass
     class DefaultValue:
         binary_manifest_item_numerical_value: (
-            BinaryManifestItemNumericalValue | None
+            None | BinaryManifestItemNumericalValue
         ) = field(
             default=None,
             metadata={
@@ -284,7 +284,7 @@ class BinaryManifestItem:
             },
         )
         binary_manifest_item_pointer_value: (
-            BinaryManifestItemPointerValue | None
+            None | BinaryManifestItemPointerValue
         ) = field(
             default=None,
             metadata={

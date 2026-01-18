@@ -50,7 +50,7 @@ class TextTableMapping:
         name = "TEXT-TABLE-MAPPING"
 
     bitfield_text_table_mask_first: (
-        PositiveIntegerValueVariationPoint | None
+        None | PositiveIntegerValueVariationPoint
     ) = field(
         default=None,
         metadata={
@@ -60,7 +60,7 @@ class TextTableMapping:
         },
     )
     bitfield_text_table_mask_second: (
-        PositiveIntegerValueVariationPoint | None
+        None | PositiveIntegerValueVariationPoint
     ) = field(
         default=None,
         metadata={
@@ -69,7 +69,7 @@ class TextTableMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    identical_mapping: Boolean | None = field(
+    identical_mapping: None | Boolean = field(
         default=None,
         metadata={
             "name": "IDENTICAL-MAPPING",
@@ -77,7 +77,7 @@ class TextTableMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    mapping_direction: MappingDirectionEnum | None = field(
+    mapping_direction: None | MappingDirectionEnum = field(
         default=None,
         metadata={
             "name": "MAPPING-DIRECTION",
@@ -85,7 +85,7 @@ class TextTableMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    value_pairs: TextTableMapping.ValuePairs | None = field(
+    value_pairs: None | TextTableMapping.ValuePairs = field(
         default=None,
         metadata={
             "name": "VALUE-PAIRS",
@@ -93,14 +93,14 @@ class TextTableMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

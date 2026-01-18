@@ -24,7 +24,7 @@ class RulesetSchemeType(RulesetSchemeBaseType):
         Schemes, and Concepts.
     """
 
-    vtl_mapping_scheme: str | None = field(
+    vtl_mapping_scheme: None | str = field(
         default=None,
         metadata={
             "name": "VtlMappingScheme",

@@ -116,7 +116,7 @@ class EthernetRawDataStreamMapping:
     class Meta:
         name = "ETHERNET-RAW-DATA-STREAM-MAPPING"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -126,7 +126,7 @@ class EthernetRawDataStreamMapping:
         },
     )
     short_name_fragments: (
-        EthernetRawDataStreamMapping.ShortNameFragments | None
+        None | EthernetRawDataStreamMapping.ShortNameFragments
     ) = field(
         default=None,
         metadata={
@@ -135,7 +135,7 @@ class EthernetRawDataStreamMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -143,7 +143,7 @@ class EthernetRawDataStreamMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -151,7 +151,7 @@ class EthernetRawDataStreamMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -159,7 +159,7 @@ class EthernetRawDataStreamMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -167,7 +167,7 @@ class EthernetRawDataStreamMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -175,7 +175,7 @@ class EthernetRawDataStreamMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: EthernetRawDataStreamMapping.Annotations | None = field(
+    annotations: None | EthernetRawDataStreamMapping.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -183,7 +183,7 @@ class EthernetRawDataStreamMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -191,7 +191,7 @@ class EthernetRawDataStreamMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    deployment_ref: EthernetRawDataStreamMapping.DeploymentRef | None = field(
+    deployment_ref: None | EthernetRawDataStreamMapping.DeploymentRef = field(
         default=None,
         metadata={
             "name": "DEPLOYMENT-REF",
@@ -199,7 +199,7 @@ class EthernetRawDataStreamMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    port_prototype_iref: RPortPrototypeInExecutableInstanceRef | None = field(
+    port_prototype_iref: None | RPortPrototypeInExecutableInstanceRef = field(
         default=None,
         metadata={
             "name": "PORT-PROTOTYPE-IREF",
@@ -207,7 +207,7 @@ class EthernetRawDataStreamMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    process_ref: EthernetRawDataStreamMapping.ProcessRef | None = field(
+    process_ref: None | EthernetRawDataStreamMapping.ProcessRef = field(
         default=None,
         metadata={
             "name": "PROCESS-REF",
@@ -216,7 +216,7 @@ class EthernetRawDataStreamMapping:
         },
     )
     communication_connector_ref: (
-        EthernetRawDataStreamMapping.CommunicationConnectorRef | None
+        None | EthernetRawDataStreamMapping.CommunicationConnectorRef
     ) = field(
         default=None,
         metadata={
@@ -225,7 +225,7 @@ class EthernetRawDataStreamMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    multicast_udp_port: PositiveInteger | None = field(
+    multicast_udp_port: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "MULTICAST-UDP-PORT",
@@ -233,7 +233,7 @@ class EthernetRawDataStreamMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    socket_options: EthernetRawDataStreamMapping.SocketOptions | None = field(
+    socket_options: None | EthernetRawDataStreamMapping.SocketOptions = field(
         default=None,
         metadata={
             "name": "SOCKET-OPTIONS",
@@ -241,7 +241,7 @@ class EthernetRawDataStreamMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tcp_port: PositiveInteger | None = field(
+    tcp_port: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "TCP-PORT",
@@ -249,7 +249,7 @@ class EthernetRawDataStreamMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tls_secure_com_props: TlsSecureComProps | None = field(
+    tls_secure_com_props: None | TlsSecureComProps = field(
         default=None,
         metadata={
             "name": "TLS-SECURE-COM-PROPS",
@@ -257,7 +257,7 @@ class EthernetRawDataStreamMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    udp_port: PositiveInteger | None = field(
+    udp_port: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "UDP-PORT",
@@ -265,14 +265,14 @@ class EthernetRawDataStreamMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -280,7 +280,7 @@ class EthernetRawDataStreamMapping:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -312,7 +312,7 @@ class EthernetRawDataStreamMapping:
 
     @dataclass
     class DeploymentRef(Ref):
-        dest: RawDataStreamDeploymentSubtypesEnum | None = field(
+        dest: None | RawDataStreamDeploymentSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -323,7 +323,7 @@ class EthernetRawDataStreamMapping:
 
     @dataclass
     class ProcessRef(Ref):
-        dest: ProcessSubtypesEnum | None = field(
+        dest: None | ProcessSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -334,7 +334,7 @@ class EthernetRawDataStreamMapping:
 
     @dataclass
     class CommunicationConnectorRef(Ref):
-        dest: EthernetCommunicationConnectorSubtypesEnum | None = field(
+        dest: None | EthernetCommunicationConnectorSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

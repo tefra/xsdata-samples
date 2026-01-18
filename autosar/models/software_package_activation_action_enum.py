@@ -31,20 +31,20 @@ class SoftwarePackageActivationActionEnum:
     class Meta:
         name = "SOFTWARE-PACKAGE-ACTIVATION-ACTION-ENUM"
 
-    value: SoftwarePackageActivationActionEnumSimple | None = field(
+    value: None | SoftwarePackageActivationActionEnumSimple = field(
         default=None,
         metadata={
             "required": True,
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

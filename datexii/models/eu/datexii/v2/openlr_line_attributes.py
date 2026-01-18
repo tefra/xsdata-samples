@@ -30,7 +30,7 @@ class OpenlrLineAttributes:
     :ivar openlr_line_attributes_extension:
     """
 
-    openlr_functional_road_class: OpenlrFunctionalRoadClassEnum | None = field(
+    openlr_functional_road_class: None | OpenlrFunctionalRoadClassEnum = field(
         default=None,
         metadata={
             "name": "openlrFunctionalRoadClass",
@@ -39,7 +39,7 @@ class OpenlrLineAttributes:
             "required": True,
         },
     )
-    openlr_form_of_way: OpenlrFormOfWayEnum | None = field(
+    openlr_form_of_way: None | OpenlrFormOfWayEnum = field(
         default=None,
         metadata={
             "name": "openlrFormOfWay",
@@ -48,7 +48,7 @@ class OpenlrLineAttributes:
             "required": True,
         },
     )
-    openlr_bearing: int | None = field(
+    openlr_bearing: None | int = field(
         default=None,
         metadata={
             "name": "openlrBearing",
@@ -57,7 +57,7 @@ class OpenlrLineAttributes:
             "required": True,
         },
     )
-    openlr_line_attributes_extension: ExtensionType | None = field(
+    openlr_line_attributes_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "openlrLineAttributesExtension",

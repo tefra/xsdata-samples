@@ -64,7 +64,7 @@ class VmsPictogramDisplayCharacteristics:
     :ivar vms_pictogram_display_characteristics_extension:
     """
 
-    pictogram_lanterns_present: bool | None = field(
+    pictogram_lanterns_present: None | bool = field(
         default=None,
         metadata={
             "name": "pictogramLanternsPresent",
@@ -72,7 +72,7 @@ class VmsPictogramDisplayCharacteristics:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    pictogram_sequencing_capable: bool | None = field(
+    pictogram_sequencing_capable: None | bool = field(
         default=None,
         metadata={
             "name": "pictogramSequencingCapable",
@@ -80,7 +80,7 @@ class VmsPictogramDisplayCharacteristics:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    pictogram_pixels_across: int | None = field(
+    pictogram_pixels_across: None | int = field(
         default=None,
         metadata={
             "name": "pictogramPixelsAcross",
@@ -88,7 +88,7 @@ class VmsPictogramDisplayCharacteristics:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    pictogram_pixels_down: int | None = field(
+    pictogram_pixels_down: None | int = field(
         default=None,
         metadata={
             "name": "pictogramPixelsDown",
@@ -96,7 +96,7 @@ class VmsPictogramDisplayCharacteristics:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    pictogram_display_height: float | None = field(
+    pictogram_display_height: None | float = field(
         default=None,
         metadata={
             "name": "pictogramDisplayHeight",
@@ -104,7 +104,7 @@ class VmsPictogramDisplayCharacteristics:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    pictogram_display_width: float | None = field(
+    pictogram_display_width: None | float = field(
         default=None,
         metadata={
             "name": "pictogramDisplayWidth",
@@ -112,7 +112,7 @@ class VmsPictogramDisplayCharacteristics:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    pictogram_code_list_identifier: str | None = field(
+    pictogram_code_list_identifier: None | str = field(
         default=None,
         metadata={
             "name": "pictogramCodeListIdentifier",
@@ -121,7 +121,7 @@ class VmsPictogramDisplayCharacteristics:
             "max_length": 1024,
         },
     )
-    max_pictogram_luminance_level: int | None = field(
+    max_pictogram_luminance_level: None | int = field(
         default=None,
         metadata={
             "name": "maxPictogramLuminanceLevel",
@@ -129,7 +129,7 @@ class VmsPictogramDisplayCharacteristics:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    pictogram_number_of_colours: int | None = field(
+    pictogram_number_of_colours: None | int = field(
         default=None,
         metadata={
             "name": "pictogramNumberOfColours",
@@ -137,7 +137,7 @@ class VmsPictogramDisplayCharacteristics:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    max_number_of_sequential_pictograms: int | None = field(
+    max_number_of_sequential_pictograms: None | int = field(
         default=None,
         metadata={
             "name": "maxNumberOfSequentialPictograms",
@@ -145,7 +145,7 @@ class VmsPictogramDisplayCharacteristics:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    pictogram_position_absolute: PositionAbsoluteEnum | None = field(
+    pictogram_position_absolute: None | PositionAbsoluteEnum = field(
         default=None,
         metadata={
             "name": "pictogramPositionAbsolute",
@@ -153,7 +153,7 @@ class VmsPictogramDisplayCharacteristics:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    pictogram_position_x: float | None = field(
+    pictogram_position_x: None | float = field(
         default=None,
         metadata={
             "name": "pictogramPositionX",
@@ -161,7 +161,7 @@ class VmsPictogramDisplayCharacteristics:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    pictogram_position_y: float | None = field(
+    pictogram_position_y: None | float = field(
         default=None,
         metadata={
             "name": "pictogramPositionY",
@@ -169,7 +169,7 @@ class VmsPictogramDisplayCharacteristics:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    pictogram_position_relative_to_text: PositionRelativeEnum | None = field(
+    pictogram_position_relative_to_text: None | PositionRelativeEnum = field(
         default=None,
         metadata={
             "name": "pictogramPositionRelativeToText",
@@ -178,7 +178,7 @@ class VmsPictogramDisplayCharacteristics:
         },
     )
     vms_supplementary_panel_characteristics: (
-        VmsSupplementaryPanelCharacteristics | None
+        None | VmsSupplementaryPanelCharacteristics
     ) = field(
         default=None,
         metadata={
@@ -187,7 +187,7 @@ class VmsPictogramDisplayCharacteristics:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    vms_pictogram_display_characteristics_extension: ExtensionType | None = (
+    vms_pictogram_display_characteristics_extension: None | ExtensionType = (
         field(
             default=None,
             metadata={

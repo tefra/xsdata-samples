@@ -67,7 +67,7 @@ class BuildEngineeringObject:
     class Meta:
         name = "BUILD-ENGINEERING-OBJECT"
 
-    short_label: NmtokenString | None = field(
+    short_label: None | NmtokenString = field(
         default=None,
         metadata={
             "name": "SHORT-LABEL",
@@ -75,7 +75,7 @@ class BuildEngineeringObject:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: NmtokenString | None = field(
+    category: None | NmtokenString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -83,7 +83,7 @@ class BuildEngineeringObject:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    revision_labels: BuildEngineeringObject.RevisionLabels | None = field(
+    revision_labels: None | BuildEngineeringObject.RevisionLabels = field(
         default=None,
         metadata={
             "name": "REVISION-LABELS",
@@ -91,7 +91,7 @@ class BuildEngineeringObject:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    domain: NmtokenString | None = field(
+    domain: None | NmtokenString = field(
         default=None,
         metadata={
             "name": "DOMAIN",
@@ -99,7 +99,7 @@ class BuildEngineeringObject:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    file_type: NmtokenString | None = field(
+    file_type: None | NmtokenString = field(
         default=None,
         metadata={
             "name": "FILE-TYPE",
@@ -107,7 +107,7 @@ class BuildEngineeringObject:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    intended_filename: UriString | None = field(
+    intended_filename: None | UriString = field(
         default=None,
         metadata={
             "name": "INTENDED-FILENAME",
@@ -115,7 +115,7 @@ class BuildEngineeringObject:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    parent_category: NmtokenString | None = field(
+    parent_category: None | NmtokenString = field(
         default=None,
         metadata={
             "name": "PARENT-CATEGORY",
@@ -123,7 +123,7 @@ class BuildEngineeringObject:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    parent_short_label: NmtokenString | None = field(
+    parent_short_label: None | NmtokenString = field(
         default=None,
         metadata={
             "name": "PARENT-SHORT-LABEL",
@@ -131,7 +131,7 @@ class BuildEngineeringObject:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    short_label_pattern: RegularExpression | None = field(
+    short_label_pattern: None | RegularExpression = field(
         default=None,
         metadata={
             "name": "SHORT-LABEL-PATTERN",
@@ -139,7 +139,7 @@ class BuildEngineeringObject:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    file_type_pattern: RegularExpression | None = field(
+    file_type_pattern: None | RegularExpression = field(
         default=None,
         metadata={
             "name": "FILE-TYPE-PATTERN",
@@ -147,14 +147,14 @@ class BuildEngineeringObject:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

@@ -19,7 +19,7 @@ class VehicleJourneyHeadwayVersionedChildStructure(
     class Meta:
         name = "VehicleJourneyHeadway_VersionedChildStructure"
 
-    vehicle_journey_ref: DeadRunRef | VehicleJourneyRef | None = field(
+    vehicle_journey_ref: None | DeadRunRef | VehicleJourneyRef = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -38,7 +38,7 @@ class VehicleJourneyHeadwayVersionedChildStructure(
         },
     )
     timing_point_in_journey_pattern_ref: (
-        TimingPointInJourneyPatternRef | None
+        None | TimingPointInJourneyPatternRef
     ) = field(
         default=None,
         metadata={

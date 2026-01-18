@@ -35,7 +35,7 @@ class DiagnosticPeriodicRate:
     class Meta:
         name = "DIAGNOSTIC-PERIODIC-RATE"
 
-    period: TimeValue | None = field(
+    period: None | TimeValue = field(
         default=None,
         metadata={
             "name": "PERIOD",
@@ -43,7 +43,7 @@ class DiagnosticPeriodicRate:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    periodic_rate_category: DiagnosticPeriodicRateCategoryEnum | None = field(
+    periodic_rate_category: None | DiagnosticPeriodicRateCategoryEnum = field(
         default=None,
         metadata={
             "name": "PERIODIC-RATE-CATEGORY",
@@ -51,14 +51,14 @@ class DiagnosticPeriodicRate:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

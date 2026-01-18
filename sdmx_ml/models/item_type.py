@@ -294,7 +294,7 @@ class ConceptType(ConceptBaseType):
         concept.
     """
 
-    core_representation: ConceptRepresentation | None = field(
+    core_representation: None | ConceptRepresentation = field(
         default=None,
         metadata={
             "name": "CoreRepresentation",
@@ -302,7 +302,7 @@ class ConceptType(ConceptBaseType):
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
         },
     )
-    isoconcept_reference: IsoconceptReferenceType | None = field(
+    isoconcept_reference: None | IsoconceptReferenceType = field(
         default=None,
         metadata={
             "name": "ISOConceptReference",
@@ -416,7 +416,7 @@ class ReportingCategoryType(ReportingCategoryBaseType):
 
     @dataclass(frozen=True)
     class StructuralMetadata:
-        value: str | None = field(
+        value: None | str = field(
             default=None,
             metadata={
                 "required": True,
@@ -426,7 +426,7 @@ class ReportingCategoryType(ReportingCategoryBaseType):
 
     @dataclass(frozen=True)
     class ProvisioningMetadata:
-        value: str | None = field(
+        value: None | str = field(
             default=None,
             metadata={
                 "required": True,
@@ -561,7 +561,7 @@ class CustomTypeType(CustomTypeBaseType):
         conversion when a component has a null value.
     """
 
-    vtl_scalar_type: str | None = field(
+    vtl_scalar_type: None | str = field(
         default=None,
         metadata={
             "name": "VtlScalarType",
@@ -570,7 +570,7 @@ class CustomTypeType(CustomTypeBaseType):
             "required": True,
         },
     )
-    data_type: SimpleDataType | str | None = field(
+    data_type: None | SimpleDataType | str = field(
         default=None,
         metadata={
             "name": "DataType",
@@ -579,7 +579,7 @@ class CustomTypeType(CustomTypeBaseType):
             "required": True,
         },
     )
-    vtl_literal_format: str | None = field(
+    vtl_literal_format: None | str = field(
         default=None,
         metadata={
             "name": "VtlLiteralFormat",
@@ -587,7 +587,7 @@ class CustomTypeType(CustomTypeBaseType):
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
         },
     )
-    output_format: str | None = field(
+    output_format: None | str = field(
         default=None,
         metadata={
             "name": "OutputFormat",
@@ -595,7 +595,7 @@ class CustomTypeType(CustomTypeBaseType):
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
         },
     )
-    null_value: str | None = field(
+    null_value: None | str = field(
         default=None,
         metadata={
             "name": "NullValue",
@@ -651,7 +651,7 @@ class GeoFeatureSetCodeType(GeoRefCodeType):
         pattern (see section 6).
     """
 
-    value: str | None = field(
+    value: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -669,7 +669,7 @@ class GeoGridCodeType(GeoRefCodeType):
         grid.
     """
 
-    geo_cell: str | None = field(
+    geo_cell: None | str = field(
         default=None,
         metadata={
             "name": "GeoCell",
@@ -718,7 +718,7 @@ class NamePersonalisationType(NamePersonalisationBaseType):
         variable.
     """
 
-    vtl_default_name: str | None = field(
+    vtl_default_name: None | str = field(
         default=None,
         metadata={
             "name": "VtlDefaultName",
@@ -727,7 +727,7 @@ class NamePersonalisationType(NamePersonalisationBaseType):
             "required": True,
         },
     )
-    personalised_name: str | None = field(
+    personalised_name: None | str = field(
         default=None,
         metadata={
             "name": "PersonalisedName",
@@ -736,7 +736,7 @@ class NamePersonalisationType(NamePersonalisationBaseType):
             "required": True,
         },
     )
-    vtl_artefact: str | None = field(
+    vtl_artefact: None | str = field(
         default=None,
         metadata={
             "name": "vtlArtefact",
@@ -796,7 +796,7 @@ class RulesetType(RulesetBaseType):
         defined. In VTL 2.0, this is value domain or variable.
     """
 
-    ruleset_definition: str | None = field(
+    ruleset_definition: None | str = field(
         default=None,
         metadata={
             "name": "RulesetDefinition",
@@ -805,7 +805,7 @@ class RulesetType(RulesetBaseType):
             "required": True,
         },
     )
-    ruleset_type: str | None = field(
+    ruleset_type: None | str = field(
         default=None,
         metadata={
             "name": "rulesetType",
@@ -813,7 +813,7 @@ class RulesetType(RulesetBaseType):
             "required": True,
         },
     )
-    ruleset_scope: str | None = field(
+    ruleset_scope: None | str = field(
         default=None,
         metadata={
             "name": "rulesetScope",
@@ -849,7 +849,7 @@ class TransformationType(TransformationBaseType):
         transformations within the same transformation scheme.
     """
 
-    expression: str | None = field(
+    expression: None | str = field(
         default=None,
         metadata={
             "name": "Expression",
@@ -858,7 +858,7 @@ class TransformationType(TransformationBaseType):
             "required": True,
         },
     )
-    result: str | None = field(
+    result: None | str = field(
         default=None,
         metadata={
             "name": "Result",
@@ -867,7 +867,7 @@ class TransformationType(TransformationBaseType):
             "required": True,
         },
     )
-    is_persistent: bool | None = field(
+    is_persistent: None | bool = field(
         default=None,
         metadata={
             "name": "isPersistent",
@@ -893,7 +893,7 @@ class UserDefinedOperatorType(UserDefinedOperatorBaseType):
         their data types, the VTL expression that defines its behaviour.
     """
 
-    operator_definition: str | None = field(
+    operator_definition: None | str = field(
         default=None,
         metadata={
             "name": "OperatorDefinition",
@@ -976,7 +976,7 @@ class VtlMappingType(VtlMappingBaseType):
             "max_occurs": 3,
         },
     )
-    alias: str | None = field(
+    alias: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -986,7 +986,7 @@ class VtlMappingType(VtlMappingBaseType):
 
     @dataclass(frozen=True)
     class Dataflow:
-        value: str | None = field(
+        value: None | str = field(
             default=None,
             metadata={
                 "required": True,
@@ -996,7 +996,7 @@ class VtlMappingType(VtlMappingBaseType):
 
     @dataclass(frozen=True)
     class Codelist:
-        value: str | None = field(
+        value: None | str = field(
             default=None,
             metadata={
                 "required": True,
@@ -1006,7 +1006,7 @@ class VtlMappingType(VtlMappingBaseType):
 
     @dataclass(frozen=True)
     class Concept:
-        value: str | None = field(
+        value: None | str = field(
             default=None,
             metadata={
                 "required": True,

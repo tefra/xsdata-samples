@@ -20,7 +20,7 @@ class MediumAccessDeviceSecurityListingVersionedChildStructure(
         name = "MediumAccessDeviceSecurityListing_VersionedChildStructure"
 
     medium_access_device_ref: (
-        MobileDeviceRef | EmvCardRef | SmartcardRef | None
+        None | MobileDeviceRef | EmvCardRef | SmartcardRef
     ) = field(
         default=None,
         metadata={

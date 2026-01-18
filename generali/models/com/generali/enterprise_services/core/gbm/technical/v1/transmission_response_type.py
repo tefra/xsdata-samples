@@ -16,7 +16,7 @@ class TransmissionResponseType(BaseGbmtype):
     supports retrieve of a agreement</description>.
     """
 
-    status: str | None = field(
+    status: None | str = field(
         default=None,
         metadata={
             "name": "Status",
@@ -25,7 +25,7 @@ class TransmissionResponseType(BaseGbmtype):
             "required": True,
         },
     )
-    error_message: str | None = field(
+    error_message: None | str = field(
         default=None,
         metadata={
             "name": "ErrorMessage",

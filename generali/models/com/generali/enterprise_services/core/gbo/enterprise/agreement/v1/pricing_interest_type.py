@@ -16,7 +16,7 @@ __NAMESPACE__ = (
 
 @dataclass
 class PricingInterestType(BaseIdentifiedComponentType):
-    amount_types: PricingInterestTypeAmountTypes | None = field(
+    amount_types: None | PricingInterestTypeAmountTypes = field(
         default=None,
         metadata={
             "name": "AmountTypes",

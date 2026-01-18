@@ -22,7 +22,7 @@ class PrecipitationInformation(WeatherData):
     :ivar precipitation_information_extension:
     """
 
-    no_precipitation: bool | None = field(
+    no_precipitation: None | bool = field(
         default=None,
         metadata={
             "name": "noPrecipitation",
@@ -30,7 +30,7 @@ class PrecipitationInformation(WeatherData):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    precipitation_detail: PrecipitationDetail | None = field(
+    precipitation_detail: None | PrecipitationDetail = field(
         default=None,
         metadata={
             "name": "precipitationDetail",
@@ -38,7 +38,7 @@ class PrecipitationInformation(WeatherData):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    precipitation_information_extension: ExtensionType | None = field(
+    precipitation_information_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "precipitationInformationExtension",

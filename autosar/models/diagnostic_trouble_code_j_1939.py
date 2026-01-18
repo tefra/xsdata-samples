@@ -108,7 +108,7 @@ class DiagnosticTroubleCodeJ1939:
     class Meta:
         name = "DIAGNOSTIC-TROUBLE-CODE-J-1939"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -118,7 +118,7 @@ class DiagnosticTroubleCodeJ1939:
         },
     )
     short_name_fragments: (
-        DiagnosticTroubleCodeJ1939.ShortNameFragments | None
+        None | DiagnosticTroubleCodeJ1939.ShortNameFragments
     ) = field(
         default=None,
         metadata={
@@ -127,7 +127,7 @@ class DiagnosticTroubleCodeJ1939:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -135,7 +135,7 @@ class DiagnosticTroubleCodeJ1939:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -143,7 +143,7 @@ class DiagnosticTroubleCodeJ1939:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -151,7 +151,7 @@ class DiagnosticTroubleCodeJ1939:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -159,7 +159,7 @@ class DiagnosticTroubleCodeJ1939:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -167,7 +167,7 @@ class DiagnosticTroubleCodeJ1939:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: DiagnosticTroubleCodeJ1939.Annotations | None = field(
+    annotations: None | DiagnosticTroubleCodeJ1939.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -175,7 +175,7 @@ class DiagnosticTroubleCodeJ1939:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -183,7 +183,7 @@ class DiagnosticTroubleCodeJ1939:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    dtc_props_ref: DiagnosticTroubleCodeJ1939.DtcPropsRef | None = field(
+    dtc_props_ref: None | DiagnosticTroubleCodeJ1939.DtcPropsRef = field(
         default=None,
         metadata={
             "name": "DTC-PROPS-REF",
@@ -191,7 +191,7 @@ class DiagnosticTroubleCodeJ1939:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    fmi: PositiveInteger | None = field(
+    fmi: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "FMI",
@@ -199,7 +199,7 @@ class DiagnosticTroubleCodeJ1939:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    j_1939_dtc_value: PositiveIntegerValueVariationPoint | None = field(
+    j_1939_dtc_value: None | PositiveIntegerValueVariationPoint = field(
         default=None,
         metadata={
             "name": "J-1939-DTC-VALUE",
@@ -207,7 +207,7 @@ class DiagnosticTroubleCodeJ1939:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    kind: DiagnosticTroubleCodeJ1939DtcKindEnum | None = field(
+    kind: None | DiagnosticTroubleCodeJ1939DtcKindEnum = field(
         default=None,
         metadata={
             "name": "KIND",
@@ -215,7 +215,7 @@ class DiagnosticTroubleCodeJ1939:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    node_ref: DiagnosticTroubleCodeJ1939.NodeRef | None = field(
+    node_ref: None | DiagnosticTroubleCodeJ1939.NodeRef = field(
         default=None,
         metadata={
             "name": "NODE-REF",
@@ -223,7 +223,7 @@ class DiagnosticTroubleCodeJ1939:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    spn_ref: DiagnosticTroubleCodeJ1939.SpnRef | None = field(
+    spn_ref: None | DiagnosticTroubleCodeJ1939.SpnRef = field(
         default=None,
         metadata={
             "name": "SPN-REF",
@@ -231,14 +231,14 @@ class DiagnosticTroubleCodeJ1939:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -246,7 +246,7 @@ class DiagnosticTroubleCodeJ1939:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -278,7 +278,7 @@ class DiagnosticTroubleCodeJ1939:
 
     @dataclass
     class DtcPropsRef(Ref):
-        dest: DiagnosticTroubleCodePropsSubtypesEnum | None = field(
+        dest: None | DiagnosticTroubleCodePropsSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -289,7 +289,7 @@ class DiagnosticTroubleCodeJ1939:
 
     @dataclass
     class NodeRef(Ref):
-        dest: DiagnosticJ1939NodeSubtypesEnum | None = field(
+        dest: None | DiagnosticJ1939NodeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -300,7 +300,7 @@ class DiagnosticTroubleCodeJ1939:
 
     @dataclass
     class SpnRef(Ref):
-        dest: DiagnosticJ1939SpnSubtypesEnum | None = field(
+        dest: None | DiagnosticJ1939SpnSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

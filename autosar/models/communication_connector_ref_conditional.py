@@ -35,7 +35,7 @@ class CommunicationConnectorRefConditional:
         name = "COMMUNICATION-CONNECTOR-REF-CONDITIONAL"
 
     communication_connector_ref: (
-        CommunicationConnectorRefConditional.CommunicationConnectorRef | None
+        None | CommunicationConnectorRefConditional.CommunicationConnectorRef
     ) = field(
         default=None,
         metadata={
@@ -44,7 +44,7 @@ class CommunicationConnectorRefConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -52,14 +52,14 @@ class CommunicationConnectorRefConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -70,7 +70,7 @@ class CommunicationConnectorRefConditional:
 
     @dataclass
     class CommunicationConnectorRef(Ref):
-        dest: CommunicationConnectorSubtypesEnum | None = field(
+        dest: None | CommunicationConnectorSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

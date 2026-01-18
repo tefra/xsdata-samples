@@ -49,7 +49,7 @@ class EcuResourceEstimation:
     class Meta:
         name = "ECU-RESOURCE-ESTIMATION"
 
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -57,7 +57,7 @@ class EcuResourceEstimation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    bsw_resource_estimation: ResourceConsumption | None = field(
+    bsw_resource_estimation: None | ResourceConsumption = field(
         default=None,
         metadata={
             "name": "BSW-RESOURCE-ESTIMATION",
@@ -65,7 +65,7 @@ class EcuResourceEstimation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ecu_instance_ref: EcuResourceEstimation.EcuInstanceRef | None = field(
+    ecu_instance_ref: None | EcuResourceEstimation.EcuInstanceRef = field(
         default=None,
         metadata={
             "name": "ECU-INSTANCE-REF",
@@ -73,7 +73,7 @@ class EcuResourceEstimation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    rte_resource_estimation: ResourceConsumption | None = field(
+    rte_resource_estimation: None | ResourceConsumption = field(
         default=None,
         metadata={
             "name": "RTE-RESOURCE-ESTIMATION",
@@ -82,7 +82,7 @@ class EcuResourceEstimation:
         },
     )
     sw_comp_to_ecu_mapping_refs: (
-        EcuResourceEstimation.SwCompToEcuMappingRefs | None
+        None | EcuResourceEstimation.SwCompToEcuMappingRefs
     ) = field(
         default=None,
         metadata={
@@ -91,7 +91,7 @@ class EcuResourceEstimation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -99,14 +99,14 @@ class EcuResourceEstimation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -117,7 +117,7 @@ class EcuResourceEstimation:
 
     @dataclass
     class EcuInstanceRef(Ref):
-        dest: EcuInstanceSubtypesEnum | None = field(
+        dest: None | EcuInstanceSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -141,7 +141,7 @@ class EcuResourceEstimation:
 
         @dataclass
         class SwCompToEcuMappingRef(Ref):
-            dest: SwcToEcuMappingSubtypesEnum | None = field(
+            dest: None | SwcToEcuMappingSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",

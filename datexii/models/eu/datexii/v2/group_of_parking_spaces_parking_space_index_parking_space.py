@@ -12,7 +12,7 @@ class GroupOfParkingSpacesParkingSpaceIndexParkingSpace:
     class Meta:
         name = "_GroupOfParkingSpacesParkingSpaceIndexParkingSpace"
 
-    parking_space: ParkingSpace1 | None = field(
+    parking_space: None | ParkingSpace1 = field(
         default=None,
         metadata={
             "name": "parkingSpace",
@@ -21,7 +21,7 @@ class GroupOfParkingSpacesParkingSpaceIndexParkingSpace:
             "required": True,
         },
     )
-    parking_space_index: int | None = field(
+    parking_space_index: None | int = field(
         default=None,
         metadata={
             "name": "parkingSpaceIndex",

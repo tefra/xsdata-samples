@@ -84,7 +84,7 @@ class J1939Cluster:
     class Meta:
         name = "J-1939-CLUSTER"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -93,7 +93,7 @@ class J1939Cluster:
             "required": True,
         },
     )
-    short_name_fragments: J1939Cluster.ShortNameFragments | None = field(
+    short_name_fragments: None | J1939Cluster.ShortNameFragments = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -101,7 +101,7 @@ class J1939Cluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -109,7 +109,7 @@ class J1939Cluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -117,7 +117,7 @@ class J1939Cluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -125,7 +125,7 @@ class J1939Cluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -133,7 +133,7 @@ class J1939Cluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -141,7 +141,7 @@ class J1939Cluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: J1939Cluster.Annotations | None = field(
+    annotations: None | J1939Cluster.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -149,7 +149,7 @@ class J1939Cluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -157,7 +157,7 @@ class J1939Cluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    j_1939_cluster_variants: J1939Cluster.J1939ClusterVariants | None = field(
+    j_1939_cluster_variants: None | J1939Cluster.J1939ClusterVariants = field(
         default=None,
         metadata={
             "name": "J-1939-CLUSTER-VARIANTS",
@@ -165,14 +165,14 @@ class J1939Cluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -180,7 +180,7 @@ class J1939Cluster:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",

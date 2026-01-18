@@ -28,7 +28,7 @@ class LuggageServiceVersionStructure(LocalServiceVersionStructure):
             "tokens": True,
         },
     )
-    luggage_trolleys: bool | None = field(
+    luggage_trolleys: None | bool = field(
         default=None,
         metadata={
             "name": "LuggageTrolleys",
@@ -36,7 +36,7 @@ class LuggageServiceVersionStructure(LocalServiceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    wheelchair_luggage_trolleys: bool | None = field(
+    wheelchair_luggage_trolleys: None | bool = field(
         default=None,
         metadata={
             "name": "WheelchairLuggageTrolleys",
@@ -44,7 +44,7 @@ class LuggageServiceVersionStructure(LocalServiceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    free_to_use: bool | None = field(
+    free_to_use: None | bool = field(
         default=None,
         metadata={
             "name": "FreeToUse",
@@ -52,7 +52,7 @@ class LuggageServiceVersionStructure(LocalServiceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    maximum_bag_width: Decimal | None = field(
+    maximum_bag_width: None | Decimal = field(
         default=None,
         metadata={
             "name": "MaximumBagWidth",
@@ -60,7 +60,7 @@ class LuggageServiceVersionStructure(LocalServiceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    maximum_bag_height: Decimal | None = field(
+    maximum_bag_height: None | Decimal = field(
         default=None,
         metadata={
             "name": "MaximumBagHeight",
@@ -68,7 +68,7 @@ class LuggageServiceVersionStructure(LocalServiceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    maximum_bag_depth: Decimal | None = field(
+    maximum_bag_depth: None | Decimal = field(
         default=None,
         metadata={
             "name": "MaximumBagDepth",
@@ -76,7 +76,7 @@ class LuggageServiceVersionStructure(LocalServiceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    maximum_bag_weight: Decimal | None = field(
+    maximum_bag_weight: None | Decimal = field(
         default=None,
         metadata={
             "name": "MaximumBagWeight",
@@ -84,7 +84,7 @@ class LuggageServiceVersionStructure(LocalServiceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    luggage_maximal_weigth: Decimal | None = field(
+    luggage_maximal_weigth: None | Decimal = field(
         default=None,
         metadata={
             "name": "LuggageMaximalWeigth",

@@ -24,7 +24,7 @@ class SliceType:
     class Meta:
         name = "sliceType"
 
-    path_segments: SliceType.PathSegments | None = field(
+    path_segments: None | SliceType.PathSegments = field(
         default=None,
         metadata={
             "name": "pathSegments",
@@ -33,14 +33,14 @@ class SliceType:
             "required": True,
         },
     )
-    range: Range | None = field(
+    range: None | Range = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",

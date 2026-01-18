@@ -8,13 +8,13 @@ __NAMESPACE__ = "http://www.w3.org/2006/02/addressing/wsdl"
 
 @dataclass
 class ServiceNameType:
-    value: QName | None = field(
+    value: None | QName = field(
         default=None,
         metadata={
             "required": True,
         },
     )
-    endpoint_name: str | None = field(
+    endpoint_name: None | str = field(
         default=None,
         metadata={
             "name": "EndpointName",

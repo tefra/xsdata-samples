@@ -21,7 +21,7 @@ class CustomerPaymentMeansVersionedChildStructure(VersionedChildStructure):
     class Meta:
         name = "CustomerPaymentMeans_VersionedChildStructure"
 
-    name: MultilingualString | None = field(
+    name: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "Name",
@@ -29,7 +29,7 @@ class CustomerPaymentMeansVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    customer_account_ref: CustomerAccountRef | None = field(
+    customer_account_ref: None | CustomerAccountRef = field(
         default=None,
         metadata={
             "name": "CustomerAccountRef",
@@ -38,7 +38,7 @@ class CustomerPaymentMeansVersionedChildStructure(VersionedChildStructure):
         },
     )
     medium_access_device_ref: (
-        MobileDeviceRef | EmvCardRef | SmartcardRef | None
+        None | MobileDeviceRef | EmvCardRef | SmartcardRef
     ) = field(
         default=None,
         metadata={
@@ -62,7 +62,7 @@ class CustomerPaymentMeansVersionedChildStructure(VersionedChildStructure):
             ),
         },
     )
-    payment_method: PaymentMethodEnumeration | None = field(
+    payment_method: None | PaymentMethodEnumeration = field(
         default=None,
         metadata={
             "name": "PaymentMethod",
@@ -70,7 +70,7 @@ class CustomerPaymentMeansVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    type_of_payment_method_ref: TypeOfPaymentMethodRef | None = field(
+    type_of_payment_method_ref: None | TypeOfPaymentMethodRef = field(
         default=None,
         metadata={
             "name": "TypeOfPaymentMethodRef",
@@ -78,7 +78,7 @@ class CustomerPaymentMeansVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    last_verified_date: XmlDateTime | None = field(
+    last_verified_date: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "LastVerifiedDate",

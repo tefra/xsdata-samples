@@ -110,7 +110,7 @@ class ServiceInterfaceElementSecureComConfig:
     class Meta:
         name = "SERVICE-INTERFACE-ELEMENT-SECURE-COM-CONFIG"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -120,7 +120,7 @@ class ServiceInterfaceElementSecureComConfig:
         },
     )
     short_name_fragments: (
-        ServiceInterfaceElementSecureComConfig.ShortNameFragments | None
+        None | ServiceInterfaceElementSecureComConfig.ShortNameFragments
     ) = field(
         default=None,
         metadata={
@@ -129,7 +129,7 @@ class ServiceInterfaceElementSecureComConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -137,7 +137,7 @@ class ServiceInterfaceElementSecureComConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -145,7 +145,7 @@ class ServiceInterfaceElementSecureComConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -153,7 +153,7 @@ class ServiceInterfaceElementSecureComConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -161,7 +161,7 @@ class ServiceInterfaceElementSecureComConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -169,7 +169,7 @@ class ServiceInterfaceElementSecureComConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: ServiceInterfaceElementSecureComConfig.Annotations | None = (
+    annotations: None | ServiceInterfaceElementSecureComConfig.Annotations = (
         field(
             default=None,
             metadata={
@@ -179,7 +179,7 @@ class ServiceInterfaceElementSecureComConfig:
             },
         )
     )
-    data_id: PositiveInteger | None = field(
+    data_id: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "DATA-ID",
@@ -187,7 +187,7 @@ class ServiceInterfaceElementSecureComConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    event_ref: ServiceInterfaceElementSecureComConfig.EventRef | None = field(
+    event_ref: None | ServiceInterfaceElementSecureComConfig.EventRef = field(
         default=None,
         metadata={
             "name": "EVENT-REF",
@@ -196,7 +196,7 @@ class ServiceInterfaceElementSecureComConfig:
         },
     )
     field_notifier_ref: (
-        ServiceInterfaceElementSecureComConfig.FieldNotifierRef | None
+        None | ServiceInterfaceElementSecureComConfig.FieldNotifierRef
     ) = field(
         default=None,
         metadata={
@@ -205,7 +205,7 @@ class ServiceInterfaceElementSecureComConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    freshness_value_id: PositiveInteger | None = field(
+    freshness_value_id: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "FRESHNESS-VALUE-ID",
@@ -214,7 +214,7 @@ class ServiceInterfaceElementSecureComConfig:
         },
     )
     getter_call_ref: (
-        ServiceInterfaceElementSecureComConfig.GetterCallRef | None
+        None | ServiceInterfaceElementSecureComConfig.GetterCallRef
     ) = field(
         default=None,
         metadata={
@@ -224,7 +224,7 @@ class ServiceInterfaceElementSecureComConfig:
         },
     )
     getter_return_ref: (
-        ServiceInterfaceElementSecureComConfig.GetterReturnRef | None
+        None | ServiceInterfaceElementSecureComConfig.GetterReturnRef
     ) = field(
         default=None,
         metadata={
@@ -234,7 +234,7 @@ class ServiceInterfaceElementSecureComConfig:
         },
     )
     method_call_ref: (
-        ServiceInterfaceElementSecureComConfig.MethodCallRef | None
+        None | ServiceInterfaceElementSecureComConfig.MethodCallRef
     ) = field(
         default=None,
         metadata={
@@ -244,7 +244,7 @@ class ServiceInterfaceElementSecureComConfig:
         },
     )
     method_return_ref: (
-        ServiceInterfaceElementSecureComConfig.MethodReturnRef | None
+        None | ServiceInterfaceElementSecureComConfig.MethodReturnRef
     ) = field(
         default=None,
         metadata={
@@ -254,7 +254,7 @@ class ServiceInterfaceElementSecureComConfig:
         },
     )
     setter_call_ref: (
-        ServiceInterfaceElementSecureComConfig.SetterCallRef | None
+        None | ServiceInterfaceElementSecureComConfig.SetterCallRef
     ) = field(
         default=None,
         metadata={
@@ -264,7 +264,7 @@ class ServiceInterfaceElementSecureComConfig:
         },
     )
     setter_return_ref: (
-        ServiceInterfaceElementSecureComConfig.SetterReturnRef | None
+        None | ServiceInterfaceElementSecureComConfig.SetterReturnRef
     ) = field(
         default=None,
         metadata={
@@ -273,14 +273,14 @@ class ServiceInterfaceElementSecureComConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -288,7 +288,7 @@ class ServiceInterfaceElementSecureComConfig:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -320,7 +320,7 @@ class ServiceInterfaceElementSecureComConfig:
 
     @dataclass
     class EventRef(Ref):
-        dest: ServiceEventDeploymentSubtypesEnum | None = field(
+        dest: None | ServiceEventDeploymentSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -331,7 +331,7 @@ class ServiceInterfaceElementSecureComConfig:
 
     @dataclass
     class FieldNotifierRef(Ref):
-        dest: ServiceFieldDeploymentSubtypesEnum | None = field(
+        dest: None | ServiceFieldDeploymentSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -342,7 +342,7 @@ class ServiceInterfaceElementSecureComConfig:
 
     @dataclass
     class GetterCallRef(Ref):
-        dest: ServiceFieldDeploymentSubtypesEnum | None = field(
+        dest: None | ServiceFieldDeploymentSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -353,7 +353,7 @@ class ServiceInterfaceElementSecureComConfig:
 
     @dataclass
     class GetterReturnRef(Ref):
-        dest: ServiceFieldDeploymentSubtypesEnum | None = field(
+        dest: None | ServiceFieldDeploymentSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -364,7 +364,7 @@ class ServiceInterfaceElementSecureComConfig:
 
     @dataclass
     class MethodCallRef(Ref):
-        dest: ServiceMethodDeploymentSubtypesEnum | None = field(
+        dest: None | ServiceMethodDeploymentSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -375,7 +375,7 @@ class ServiceInterfaceElementSecureComConfig:
 
     @dataclass
     class MethodReturnRef(Ref):
-        dest: ServiceMethodDeploymentSubtypesEnum | None = field(
+        dest: None | ServiceMethodDeploymentSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -386,7 +386,7 @@ class ServiceInterfaceElementSecureComConfig:
 
     @dataclass
     class SetterCallRef(Ref):
-        dest: ServiceFieldDeploymentSubtypesEnum | None = field(
+        dest: None | ServiceFieldDeploymentSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -397,7 +397,7 @@ class ServiceInterfaceElementSecureComConfig:
 
     @dataclass
     class SetterReturnRef(Ref):
-        dest: ServiceFieldDeploymentSubtypesEnum | None = field(
+        dest: None | ServiceFieldDeploymentSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

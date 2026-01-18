@@ -17,7 +17,7 @@ class PixconsumerPrpaIn201301UvrequestType:
     class Meta:
         name = "PIXConsumer_PRPA_IN201301UVRequestType"
 
-    prpa_in201301_uv02: PrpaIn201301Uv02 | None = field(
+    prpa_in201301_uv02: None | PrpaIn201301Uv02 = field(
         default=None,
         metadata={
             "name": "PRPA_IN201301UV02",
@@ -26,7 +26,7 @@ class PixconsumerPrpaIn201301UvrequestType:
             "required": True,
         },
     )
-    assertion: AssertionType | None = field(
+    assertion: None | AssertionType = field(
         default=None,
         metadata={
             "type": "Element",
@@ -34,7 +34,7 @@ class PixconsumerPrpaIn201301UvrequestType:
             "required": True,
         },
     )
-    nhin_target_communities: NhinTargetCommunitiesType | None = field(
+    nhin_target_communities: None | NhinTargetCommunitiesType = field(
         default=None,
         metadata={
             "name": "NhinTargetCommunities",
@@ -49,7 +49,7 @@ class PixconsumerPrpaIn201301UvsecuredRequestType:
     class Meta:
         name = "PIXConsumer_PRPA_IN201301UVSecuredRequestType"
 
-    prpa_in201301_uv02: PrpaIn201301Uv02 | None = field(
+    prpa_in201301_uv02: None | PrpaIn201301Uv02 = field(
         default=None,
         metadata={
             "name": "PRPA_IN201301UV02",
@@ -58,7 +58,7 @@ class PixconsumerPrpaIn201301UvsecuredRequestType:
             "required": True,
         },
     )
-    nhin_target_communities: NhinTargetCommunitiesType | None = field(
+    nhin_target_communities: None | NhinTargetCommunitiesType = field(
         default=None,
         metadata={
             "name": "NhinTargetCommunities",
@@ -73,7 +73,7 @@ class PixconsumerPrpaIn201302UvrequestType:
     class Meta:
         name = "PIXConsumer_PRPA_IN201302UVRequestType"
 
-    prpa_in201302_uv02: PrpaIn201302Uv02 | None = field(
+    prpa_in201302_uv02: None | PrpaIn201302Uv02 = field(
         default=None,
         metadata={
             "name": "PRPA_IN201302UV02",
@@ -82,7 +82,7 @@ class PixconsumerPrpaIn201302UvrequestType:
             "required": True,
         },
     )
-    assertion: AssertionType | None = field(
+    assertion: None | AssertionType = field(
         default=None,
         metadata={
             "type": "Element",
@@ -90,7 +90,7 @@ class PixconsumerPrpaIn201302UvrequestType:
             "required": True,
         },
     )
-    nhin_target_communities: NhinTargetCommunitiesType | None = field(
+    nhin_target_communities: None | NhinTargetCommunitiesType = field(
         default=None,
         metadata={
             "name": "NhinTargetCommunities",
@@ -105,7 +105,7 @@ class PixconsumerPrpaIn201302UvsecuredRequestType:
     class Meta:
         name = "PIXConsumer_PRPA_IN201302UVSecuredRequestType"
 
-    prpa_in201302_uv02: PrpaIn201302Uv02 | None = field(
+    prpa_in201302_uv02: None | PrpaIn201302Uv02 = field(
         default=None,
         metadata={
             "name": "PRPA_IN201302UV02",
@@ -114,7 +114,7 @@ class PixconsumerPrpaIn201302UvsecuredRequestType:
             "required": True,
         },
     )
-    nhin_target_communities: NhinTargetCommunitiesType | None = field(
+    nhin_target_communities: None | NhinTargetCommunitiesType = field(
         default=None,
         metadata={
             "name": "NhinTargetCommunities",

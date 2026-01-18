@@ -24,7 +24,7 @@ class Linear(NetworkLocation):
     defined between two points on the same road.
     """
 
-    tpeg_linear_location: TpegLinearLocation | None = field(
+    tpeg_linear_location: None | TpegLinearLocation = field(
         default=None,
         metadata={
             "name": "tpegLinearLocation",
@@ -32,7 +32,7 @@ class Linear(NetworkLocation):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    alert_clinear: AlertCLinear | None = field(
+    alert_clinear: None | AlertCLinear = field(
         default=None,
         metadata={
             "name": "alertCLinear",
@@ -40,7 +40,7 @@ class Linear(NetworkLocation):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    linear_within_linear_element: LinearWithinLinearElement | None = field(
+    linear_within_linear_element: None | LinearWithinLinearElement = field(
         default=None,
         metadata={
             "name": "linearWithinLinearElement",
@@ -48,7 +48,7 @@ class Linear(NetworkLocation):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    linear_extension: LinearExtensionType | None = field(
+    linear_extension: None | LinearExtensionType = field(
         default=None,
         metadata={
             "name": "linearExtension",

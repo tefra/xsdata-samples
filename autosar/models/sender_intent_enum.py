@@ -29,20 +29,20 @@ class SenderIntentEnum:
     class Meta:
         name = "SENDER-INTENT-ENUM"
 
-    value: SenderIntentEnumSimple | None = field(
+    value: None | SenderIntentEnumSimple = field(
         default=None,
         metadata={
             "required": True,
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

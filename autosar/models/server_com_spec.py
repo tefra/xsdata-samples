@@ -60,7 +60,7 @@ class ServerComSpec:
     class Meta:
         name = "SERVER-COM-SPEC"
 
-    getter_ref: ServerComSpec.GetterRef | None = field(
+    getter_ref: None | ServerComSpec.GetterRef = field(
         default=None,
         metadata={
             "name": "GETTER-REF",
@@ -68,7 +68,7 @@ class ServerComSpec:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    operation_ref: ServerComSpec.OperationRef | None = field(
+    operation_ref: None | ServerComSpec.OperationRef = field(
         default=None,
         metadata={
             "name": "OPERATION-REF",
@@ -76,7 +76,7 @@ class ServerComSpec:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    queue_length: PositiveInteger | None = field(
+    queue_length: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "QUEUE-LENGTH",
@@ -84,7 +84,7 @@ class ServerComSpec:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    setter_ref: ServerComSpec.SetterRef | None = field(
+    setter_ref: None | ServerComSpec.SetterRef = field(
         default=None,
         metadata={
             "name": "SETTER-REF",
@@ -93,7 +93,7 @@ class ServerComSpec:
         },
     )
     transformation_com_spec_propss: (
-        ServerComSpec.TransformationComSpecPropss | None
+        None | ServerComSpec.TransformationComSpecPropss
     ) = field(
         default=None,
         metadata={
@@ -102,14 +102,14 @@ class ServerComSpec:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -120,7 +120,7 @@ class ServerComSpec:
 
     @dataclass
     class GetterRef(Ref):
-        dest: FieldSubtypesEnum | None = field(
+        dest: None | FieldSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -131,7 +131,7 @@ class ServerComSpec:
 
     @dataclass
     class OperationRef(Ref):
-        dest: ClientServerOperationSubtypesEnum | None = field(
+        dest: None | ClientServerOperationSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -142,7 +142,7 @@ class ServerComSpec:
 
     @dataclass
     class SetterRef(Ref):
-        dest: FieldSubtypesEnum | None = field(
+        dest: None | FieldSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

@@ -24,19 +24,19 @@ class Bld:
             "required": True,
         }
     )
-    prm: str | None = field(
+    prm: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    lrg: str | None = field(
+    lrg: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    alt: str | None = field(
+    alt: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -49,7 +49,7 @@ class Bld:
             "required": True,
         },
     )
-    mrk: str | None = field(
+    mrk: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",

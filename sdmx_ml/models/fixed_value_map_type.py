@@ -19,7 +19,7 @@ class FixedValueMapType(AnnotableType):
     """
 
     source_or_target: (
-        FixedValueMapType.Source | FixedValueMapType.Target | None
+        None | FixedValueMapType.Source | FixedValueMapType.Target
     ) = field(
         default=None,
         metadata={
@@ -49,7 +49,7 @@ class FixedValueMapType(AnnotableType):
 
     @dataclass(frozen=True)
     class Source:
-        value: str | None = field(
+        value: None | str = field(
             default=None,
             metadata={
                 "required": True,
@@ -59,7 +59,7 @@ class FixedValueMapType(AnnotableType):
 
     @dataclass(frozen=True)
     class Target:
-        value: str | None = field(
+        value: None | str = field(
             default=None,
             metadata={
                 "required": True,

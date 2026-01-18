@@ -37,7 +37,7 @@ class SubmittedStructureType:
         structure is used in a submit structure response.
     """
 
-    maintainable_object: str | None = field(
+    maintainable_object: None | str = field(
         default=None,
         metadata={
             "name": "MaintainableObject",
@@ -47,13 +47,13 @@ class SubmittedStructureType:
             "pattern": r".+\)",
         },
     )
-    action: ActionType | None = field(
+    action: None | ActionType = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    external_dependencies: bool | None = field(
+    external_dependencies: None | bool = field(
         default=None,
         metadata={
             "name": "externalDependencies",

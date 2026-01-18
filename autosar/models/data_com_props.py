@@ -30,7 +30,7 @@ class DataComProps:
     class Meta:
         name = "DATA-COM-PROPS"
 
-    send_indication: SendIndicationEnum | None = field(
+    send_indication: None | SendIndicationEnum = field(
         default=None,
         metadata={
             "name": "SEND-INDICATION",
@@ -38,14 +38,14 @@ class DataComProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

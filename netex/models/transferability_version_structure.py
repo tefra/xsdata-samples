@@ -13,7 +13,7 @@ class TransferabilityVersionStructure(UsageParameterVersionStructure):
     class Meta:
         name = "Transferability_VersionStructure"
 
-    can_transfer: bool | None = field(
+    can_transfer: None | bool = field(
         default=None,
         metadata={
             "name": "CanTransfer",
@@ -21,7 +21,7 @@ class TransferabilityVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    maximum_number_of_named_transferees: int | None = field(
+    maximum_number_of_named_transferees: None | int = field(
         default=None,
         metadata={
             "name": "MaximumNumberOfNamedTransferees",
@@ -29,7 +29,7 @@ class TransferabilityVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    has_transfer_fee: bool | None = field(
+    has_transfer_fee: None | bool = field(
         default=None,
         metadata={
             "name": "HasTransferFee",
@@ -37,7 +37,7 @@ class TransferabilityVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    shared_usage: SharedUsageEnumeration | None = field(
+    shared_usage: None | SharedUsageEnumeration = field(
         default=None,
         metadata={
             "name": "SharedUsage",

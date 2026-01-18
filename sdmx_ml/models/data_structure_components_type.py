@@ -23,7 +23,7 @@ class DataStructureComponentsType(DataStructureComponentsBaseType):
     At a minimum at least one dimension must be defined.
     """
 
-    dimension_list: DimensionList | None = field(
+    dimension_list: None | DimensionList = field(
         default=None,
         metadata={
             "name": "DimensionList",
@@ -40,7 +40,7 @@ class DataStructureComponentsType(DataStructureComponentsBaseType):
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
         },
     )
-    attribute_list: AttributeList | None = field(
+    attribute_list: None | AttributeList = field(
         default=None,
         metadata={
             "name": "AttributeList",
@@ -48,7 +48,7 @@ class DataStructureComponentsType(DataStructureComponentsBaseType):
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
         },
     )
-    measure_list: MeasureList | None = field(
+    measure_list: None | MeasureList = field(
         default=None,
         metadata={
             "name": "MeasureList",

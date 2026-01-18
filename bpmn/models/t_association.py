@@ -14,7 +14,7 @@ class TAssociation(TArtifact):
     class Meta:
         name = "tAssociation"
 
-    source_ref: QName | None = field(
+    source_ref: None | QName = field(
         default=None,
         metadata={
             "name": "sourceRef",
@@ -22,7 +22,7 @@ class TAssociation(TArtifact):
             "required": True,
         },
     )
-    target_ref: QName | None = field(
+    target_ref: None | QName = field(
         default=None,
         metadata={
             "name": "targetRef",

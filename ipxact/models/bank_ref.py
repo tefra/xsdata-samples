@@ -11,7 +11,7 @@ class BankRef:
         name = "bankRef"
         namespace = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
-    bank_ref: str | None = field(
+    bank_ref: None | str = field(
         default=None,
         metadata={
             "name": "bankRef",
@@ -19,7 +19,7 @@ class BankRef:
             "required": True,
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",

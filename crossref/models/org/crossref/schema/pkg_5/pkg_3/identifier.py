@@ -28,7 +28,7 @@ class Identifier:
             "max_length": 255,
         },
     )
-    id_type: IdentifierIdType | None = field(
+    id_type: None | IdentifierIdType = field(
         default=None,
         metadata={
             "type": "Attribute",

@@ -56,7 +56,7 @@ class TimeRangeValueType:
             "max_occurs": 2,
         },
     )
-    valid_from: XmlPeriod | XmlDate | XmlDateTime | str | None = field(
+    valid_from: None | XmlPeriod | XmlDate | XmlDateTime | str = field(
         default=None,
         metadata={
             "name": "validFrom",
@@ -64,7 +64,7 @@ class TimeRangeValueType:
             "pattern": r".{5}A1.*",
         },
     )
-    valid_to: XmlPeriod | XmlDate | XmlDateTime | str | None = field(
+    valid_to: None | XmlPeriod | XmlDate | XmlDateTime | str = field(
         default=None,
         metadata={
             "name": "validTo",

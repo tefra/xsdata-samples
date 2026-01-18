@@ -20,7 +20,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 @dataclass
 class PublicationRequestStructure:
-    request_timestamp: XmlDateTime | None = field(
+    request_timestamp: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "RequestTimestamp",
@@ -29,7 +29,7 @@ class PublicationRequestStructure:
             "required": True,
         },
     )
-    participant_ref: ParticipantRef | None = field(
+    participant_ref: None | ParticipantRef = field(
         default=None,
         metadata={
             "name": "ParticipantRef",
@@ -37,7 +37,7 @@ class PublicationRequestStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    description: MultilingualString | None = field(
+    description: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "Description",
@@ -45,14 +45,14 @@ class PublicationRequestStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    topics: PublicationRequestStructure.Topics | None = field(
+    topics: None | PublicationRequestStructure.Topics = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    request_policy: NetworkFrameRequestPolicyStructure | None = field(
+    request_policy: None | NetworkFrameRequestPolicyStructure = field(
         default=None,
         metadata={
             "name": "RequestPolicy",
@@ -60,7 +60,7 @@ class PublicationRequestStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    subscription_policy: NetworkFrameSubscriptionPolicyStructure | None = (
+    subscription_policy: None | NetworkFrameSubscriptionPolicyStructure = (
         field(
             default=None,
             metadata={

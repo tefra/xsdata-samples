@@ -23,7 +23,7 @@ class DisturbanceActivity(Activity):
     :ivar disturbance_activity_extension:
     """
 
-    disturbance_activity_type: DisturbanceActivityTypeEnum | None = field(
+    disturbance_activity_type: None | DisturbanceActivityTypeEnum = field(
         default=None,
         metadata={
             "name": "disturbanceActivityType",
@@ -32,7 +32,7 @@ class DisturbanceActivity(Activity):
             "required": True,
         },
     )
-    disturbance_activity_extension: ExtensionType | None = field(
+    disturbance_activity_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "disturbanceActivityExtension",

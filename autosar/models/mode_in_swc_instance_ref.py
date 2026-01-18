@@ -54,7 +54,7 @@ class ModeInSwcInstanceRef:
             },
         )
     )
-    context_port_ref: ModeInSwcInstanceRef.ContextPortRef | None = field(
+    context_port_ref: None | ModeInSwcInstanceRef.ContextPortRef = field(
         default=None,
         metadata={
             "name": "CONTEXT-PORT-REF",
@@ -63,7 +63,7 @@ class ModeInSwcInstanceRef:
         },
     )
     context_mode_declaration_group_prototype_ref: (
-        ModeInSwcInstanceRef.ContextModeDeclarationGroupPrototypeRef | None
+        None | ModeInSwcInstanceRef.ContextModeDeclarationGroupPrototypeRef
     ) = field(
         default=None,
         metadata={
@@ -73,7 +73,7 @@ class ModeInSwcInstanceRef:
         },
     )
     target_mode_declaration_ref: (
-        ModeInSwcInstanceRef.TargetModeDeclarationRef | None
+        None | ModeInSwcInstanceRef.TargetModeDeclarationRef
     ) = field(
         default=None,
         metadata={
@@ -82,14 +82,14 @@ class ModeInSwcInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -100,7 +100,7 @@ class ModeInSwcInstanceRef:
 
     @dataclass
     class ContextComponentRef(Ref):
-        dest: SwComponentPrototypeSubtypesEnum | None = field(
+        dest: None | SwComponentPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -111,7 +111,7 @@ class ModeInSwcInstanceRef:
 
     @dataclass
     class ContextPortRef(Ref):
-        dest: PortPrototypeSubtypesEnum | None = field(
+        dest: None | PortPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -122,7 +122,7 @@ class ModeInSwcInstanceRef:
 
     @dataclass
     class ContextModeDeclarationGroupPrototypeRef(Ref):
-        dest: ModeDeclarationGroupPrototypeSubtypesEnum | None = field(
+        dest: None | ModeDeclarationGroupPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -133,7 +133,7 @@ class ModeInSwcInstanceRef:
 
     @dataclass
     class TargetModeDeclarationRef(Ref):
-        dest: ModeDeclarationSubtypesEnum | None = field(
+        dest: None | ModeDeclarationSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

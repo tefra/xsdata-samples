@@ -23,10 +23,10 @@ class TrainStopAssignmentVersionStructure(StopAssignmentVersionStructure):
         name = "TrainStopAssignment_VersionStructure"
 
     passenger_stop_assignment_ref: (
-        VehicleJourneyStopAssignmentRef
+        None
+        | VehicleJourneyStopAssignmentRef
         | DynamicStopAssignmentRef
         | PassengerStopAssignmentRef
-        | None
     ) = field(
         default=None,
         metadata={
@@ -50,7 +50,7 @@ class TrainStopAssignmentVersionStructure(StopAssignmentVersionStructure):
             ),
         },
     )
-    train_ref: TrainRef | None = field(
+    train_ref: None | TrainRef = field(
         default=None,
         metadata={
             "name": "TrainRef",
@@ -59,7 +59,7 @@ class TrainStopAssignmentVersionStructure(StopAssignmentVersionStructure):
         },
     )
     train_component_ref_or_train_component_view: (
-        TrainComponentRef | TrainComponentView | None
+        None | TrainComponentRef | TrainComponentView
     ) = field(
         default=None,
         metadata={
@@ -78,7 +78,7 @@ class TrainStopAssignmentVersionStructure(StopAssignmentVersionStructure):
             ),
         },
     )
-    position_of_train_element: int | None = field(
+    position_of_train_element: None | int = field(
         default=None,
         metadata={
             "name": "PositionOfTrainElement",
@@ -86,7 +86,7 @@ class TrainStopAssignmentVersionStructure(StopAssignmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    boarding_position_ref: BoardingPositionRefStructure | None = field(
+    boarding_position_ref: None | BoardingPositionRefStructure = field(
         default=None,
         metadata={
             "name": "BoardingPositionRef",
@@ -94,7 +94,7 @@ class TrainStopAssignmentVersionStructure(StopAssignmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    entrance_to_vehicle: MultilingualString | None = field(
+    entrance_to_vehicle: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "EntranceToVehicle",

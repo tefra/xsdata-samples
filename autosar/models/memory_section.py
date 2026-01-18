@@ -157,7 +157,7 @@ class MemorySection:
     class Meta:
         name = "MEMORY-SECTION"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -166,7 +166,7 @@ class MemorySection:
             "required": True,
         },
     )
-    short_name_fragments: MemorySection.ShortNameFragments | None = field(
+    short_name_fragments: None | MemorySection.ShortNameFragments = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -174,7 +174,7 @@ class MemorySection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -182,7 +182,7 @@ class MemorySection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -190,7 +190,7 @@ class MemorySection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -198,7 +198,7 @@ class MemorySection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -206,7 +206,7 @@ class MemorySection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -214,7 +214,7 @@ class MemorySection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: MemorySection.Annotations | None = field(
+    annotations: None | MemorySection.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -222,7 +222,7 @@ class MemorySection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    alignment: AlignmentType | None = field(
+    alignment: None | AlignmentType = field(
         default=None,
         metadata={
             "name": "ALIGNMENT",
@@ -230,7 +230,7 @@ class MemorySection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    executable_entity_refs: MemorySection.ExecutableEntityRefs | None = field(
+    executable_entity_refs: None | MemorySection.ExecutableEntityRefs = field(
         default=None,
         metadata={
             "name": "EXECUTABLE-ENTITY-REFS",
@@ -238,7 +238,7 @@ class MemorySection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    mem_class_symbol: CIdentifier | None = field(
+    mem_class_symbol: None | CIdentifier = field(
         default=None,
         metadata={
             "name": "MEM-CLASS-SYMBOL",
@@ -246,7 +246,7 @@ class MemorySection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    options: MemorySection.Options | None = field(
+    options: None | MemorySection.Options = field(
         default=None,
         metadata={
             "name": "OPTIONS",
@@ -254,7 +254,7 @@ class MemorySection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    prefix_ref: MemorySection.PrefixRef | None = field(
+    prefix_ref: None | MemorySection.PrefixRef = field(
         default=None,
         metadata={
             "name": "PREFIX-REF",
@@ -262,7 +262,7 @@ class MemorySection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    size: PositiveInteger | None = field(
+    size: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "SIZE",
@@ -270,7 +270,7 @@ class MemorySection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_addrmethod_ref: MemorySection.SwAddrmethodRef | None = field(
+    sw_addrmethod_ref: None | MemorySection.SwAddrmethodRef = field(
         default=None,
         metadata={
             "name": "SW-ADDRMETHOD-REF",
@@ -278,7 +278,7 @@ class MemorySection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    symbol: Identifier | None = field(
+    symbol: None | Identifier = field(
         default=None,
         metadata={
             "name": "SYMBOL",
@@ -286,7 +286,7 @@ class MemorySection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -294,14 +294,14 @@ class MemorySection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -309,7 +309,7 @@ class MemorySection:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -354,7 +354,7 @@ class MemorySection:
 
         @dataclass
         class ExecutableEntityRef(Ref):
-            dest: ExecutableEntitySubtypesEnum | None = field(
+            dest: None | ExecutableEntitySubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -392,7 +392,7 @@ class MemorySection:
 
     @dataclass
     class PrefixRef(Ref):
-        dest: SectionNamePrefixSubtypesEnum | None = field(
+        dest: None | SectionNamePrefixSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -403,7 +403,7 @@ class MemorySection:
 
     @dataclass
     class SwAddrmethodRef(Ref):
-        dest: SwAddrMethodSubtypesEnum | None = field(
+        dest: None | SwAddrMethodSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

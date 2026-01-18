@@ -36,7 +36,7 @@ class DdsFieldQosProps:
     class Meta:
         name = "DDS-FIELD-QOS-PROPS"
 
-    qos_profile: String | None = field(
+    qos_profile: None | String = field(
         default=None,
         metadata={
             "name": "QOS-PROFILE",
@@ -44,7 +44,7 @@ class DdsFieldQosProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    field_ref: DdsFieldQosProps.FieldRef | None = field(
+    field_ref: None | DdsFieldQosProps.FieldRef = field(
         default=None,
         metadata={
             "name": "FIELD-REF",
@@ -52,14 +52,14 @@ class DdsFieldQosProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -70,7 +70,7 @@ class DdsFieldQosProps:
 
     @dataclass
     class FieldRef(Ref):
-        dest: ServiceFieldDeploymentSubtypesEnum | None = field(
+        dest: None | ServiceFieldDeploymentSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

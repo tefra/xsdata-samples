@@ -19,7 +19,7 @@ __NAMESPACE__ = (
 
 @dataclass
 class LandType(ExpansiveStructureType):
-    land_area_m2: NumberType | None = field(
+    land_area_m2: None | NumberType = field(
         default=None,
         metadata={
             "name": "LandAreaM2",
@@ -28,7 +28,7 @@ class LandType(ExpansiveStructureType):
             "required": True,
         },
     )
-    soli_type: TextType | None = field(
+    soli_type: None | TextType = field(
         default=None,
         metadata={
             "name": "SoliType",

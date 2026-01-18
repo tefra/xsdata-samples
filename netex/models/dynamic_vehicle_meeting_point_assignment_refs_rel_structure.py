@@ -18,7 +18,7 @@ class DynamicVehicleMeetingPointAssignmentRefsRelStructure(
         name = "dynamicVehicleMeetingPointAssignmentRefs_RelStructure"
 
     dynamic_vehicle_meeting_point_assignment_ref: (
-        DynamicVehicleMeetingPointAssignmentRef | None
+        None | DynamicVehicleMeetingPointAssignmentRef
     ) = field(
         default=None,
         metadata={

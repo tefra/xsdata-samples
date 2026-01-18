@@ -23,7 +23,7 @@ class InputOutputType(AnnotableType):
         for the input or output within the process.
     """
 
-    object_reference: str | None = field(
+    object_reference: None | str = field(
         default=None,
         metadata={
             "name": "ObjectReference",
@@ -33,7 +33,7 @@ class InputOutputType(AnnotableType):
             "pattern": r".+\)(\.[A-Za-z0-9_@$\-]+(\.[A-Za-z0-9_@$\-]+)*)?",
         },
     )
-    local_id: str | None = field(
+    local_id: None | str = field(
         default=None,
         metadata={
             "name": "localID",

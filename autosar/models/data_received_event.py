@@ -101,7 +101,7 @@ class DataReceivedEvent:
     class Meta:
         name = "DATA-RECEIVED-EVENT"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -110,7 +110,7 @@ class DataReceivedEvent:
             "required": True,
         },
     )
-    short_name_fragments: DataReceivedEvent.ShortNameFragments | None = field(
+    short_name_fragments: None | DataReceivedEvent.ShortNameFragments = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -118,7 +118,7 @@ class DataReceivedEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -126,7 +126,7 @@ class DataReceivedEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -134,7 +134,7 @@ class DataReceivedEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -142,7 +142,7 @@ class DataReceivedEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -150,7 +150,7 @@ class DataReceivedEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -158,7 +158,7 @@ class DataReceivedEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: DataReceivedEvent.Annotations | None = field(
+    annotations: None | DataReceivedEvent.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -167,7 +167,7 @@ class DataReceivedEvent:
         },
     )
     activation_reason_representation_ref: (
-        DataReceivedEvent.ActivationReasonRepresentationRef | None
+        None | DataReceivedEvent.ActivationReasonRepresentationRef
     ) = field(
         default=None,
         metadata={
@@ -176,7 +176,7 @@ class DataReceivedEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    disabled_mode_irefs: DataReceivedEvent.DisabledModeIrefs | None = field(
+    disabled_mode_irefs: None | DataReceivedEvent.DisabledModeIrefs = field(
         default=None,
         metadata={
             "name": "DISABLED-MODE-IREFS",
@@ -184,7 +184,7 @@ class DataReceivedEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    start_on_event_ref: DataReceivedEvent.StartOnEventRef | None = field(
+    start_on_event_ref: None | DataReceivedEvent.StartOnEventRef = field(
         default=None,
         metadata={
             "name": "START-ON-EVENT-REF",
@@ -192,7 +192,7 @@ class DataReceivedEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -200,7 +200,7 @@ class DataReceivedEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    data_iref: RVariableInAtomicSwcInstanceRef | None = field(
+    data_iref: None | RVariableInAtomicSwcInstanceRef = field(
         default=None,
         metadata={
             "name": "DATA-IREF",
@@ -208,14 +208,14 @@ class DataReceivedEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -223,7 +223,7 @@ class DataReceivedEvent:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -255,7 +255,7 @@ class DataReceivedEvent:
 
     @dataclass
     class ActivationReasonRepresentationRef(Ref):
-        dest: ExecutableEntityActivationReasonSubtypesEnum | None = field(
+        dest: None | ExecutableEntityActivationReasonSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -277,7 +277,7 @@ class DataReceivedEvent:
 
     @dataclass
     class StartOnEventRef(Ref):
-        dest: RunnableEntitySubtypesEnum | None = field(
+        dest: None | RunnableEntitySubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

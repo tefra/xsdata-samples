@@ -8,7 +8,7 @@ class Description:
     class Meta:
         name = "description"
 
-    type_value: str | None = field(
+    type_value: None | str = field(
         default=None,
         metadata={
             "name": "type",
@@ -16,7 +16,7 @@ class Description:
             "required": True,
         },
     )
-    description: object | None = field(
+    description: None | object = field(
         default=None,
         metadata={
             "type": "Element",

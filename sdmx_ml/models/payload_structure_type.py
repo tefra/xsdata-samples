@@ -51,10 +51,10 @@ class PayloadStructureType:
     """
 
     provision_agreement_or_structure_usage_or_structure: (
-        PayloadStructureType.ProvisionAgreement
+        None
+        | PayloadStructureType.ProvisionAgreement
         | PayloadStructureType.StructureUsage
         | PayloadStructureType.Structure
-        | None
     ) = field(
         default=None,
         metadata={
@@ -80,7 +80,7 @@ class PayloadStructureType:
             ),
         },
     )
-    structure_id: str | None = field(
+    structure_id: None | str = field(
         default=None,
         metadata={
             "name": "structureID",
@@ -88,20 +88,20 @@ class PayloadStructureType:
             "required": True,
         },
     )
-    schema_url: str | None = field(
+    schema_url: None | str = field(
         default=None,
         metadata={
             "name": "schemaURL",
             "type": "Attribute",
         },
     )
-    namespace: str | None = field(
+    namespace: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    dimension_at_observation: str | ObsDimensionsCodeType | None = field(
+    dimension_at_observation: None | str | ObsDimensionsCodeType = field(
         default=None,
         metadata={
             "name": "dimensionAtObservation",
@@ -109,21 +109,21 @@ class PayloadStructureType:
             "pattern": r"[A-Za-z][A-Za-z0-9_\-]*",
         },
     )
-    explicit_measures: bool | None = field(
+    explicit_measures: None | bool = field(
         default=None,
         metadata={
             "name": "explicitMeasures",
             "type": "Attribute",
         },
     )
-    service_url: str | None = field(
+    service_url: None | str = field(
         default=None,
         metadata={
             "name": "serviceURL",
             "type": "Attribute",
         },
     )
-    structure_url: str | None = field(
+    structure_url: None | str = field(
         default=None,
         metadata={
             "name": "structureURL",
@@ -133,7 +133,7 @@ class PayloadStructureType:
 
     @dataclass(frozen=True)
     class ProvisionAgreement:
-        value: str | None = field(
+        value: None | str = field(
             default=None,
             metadata={
                 "required": True,
@@ -143,7 +143,7 @@ class PayloadStructureType:
 
     @dataclass(frozen=True)
     class StructureUsage:
-        value: str | None = field(
+        value: None | str = field(
             default=None,
             metadata={
                 "required": True,
@@ -153,7 +153,7 @@ class PayloadStructureType:
 
     @dataclass(frozen=True)
     class Structure:
-        value: str | None = field(
+        value: None | str = field(
             default=None,
             metadata={
                 "required": True,

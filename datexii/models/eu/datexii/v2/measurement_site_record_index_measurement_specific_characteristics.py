@@ -15,7 +15,7 @@ class MeasurementSiteRecordIndexMeasurementSpecificCharacteristics:
         name = "_MeasurementSiteRecordIndexMeasurementSpecificCharacteristics"
 
     measurement_specific_characteristics: (
-        MeasurementSpecificCharacteristics | None
+        None | MeasurementSpecificCharacteristics
     ) = field(
         default=None,
         metadata={
@@ -25,7 +25,7 @@ class MeasurementSiteRecordIndexMeasurementSpecificCharacteristics:
             "required": True,
         },
     )
-    index: int | None = field(
+    index: None | int = field(
         default=None,
         metadata={
             "type": "Attribute",

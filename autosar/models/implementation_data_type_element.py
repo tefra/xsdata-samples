@@ -126,7 +126,7 @@ class ImplementationDataTypeElement:
     class Meta:
         name = "IMPLEMENTATION-DATA-TYPE-ELEMENT"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -136,7 +136,7 @@ class ImplementationDataTypeElement:
         },
     )
     short_name_fragments: (
-        ImplementationDataTypeElement.ShortNameFragments | None
+        None | ImplementationDataTypeElement.ShortNameFragments
     ) = field(
         default=None,
         metadata={
@@ -145,7 +145,7 @@ class ImplementationDataTypeElement:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -153,7 +153,7 @@ class ImplementationDataTypeElement:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -161,7 +161,7 @@ class ImplementationDataTypeElement:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -169,7 +169,7 @@ class ImplementationDataTypeElement:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -177,7 +177,7 @@ class ImplementationDataTypeElement:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -185,7 +185,7 @@ class ImplementationDataTypeElement:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: ImplementationDataTypeElement.Annotations | None = field(
+    annotations: None | ImplementationDataTypeElement.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -193,7 +193,7 @@ class ImplementationDataTypeElement:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    array_impl_policy: ArrayImplPolicyEnum | None = field(
+    array_impl_policy: None | ArrayImplPolicyEnum = field(
         default=None,
         metadata={
             "name": "ARRAY-IMPL-POLICY",
@@ -201,7 +201,7 @@ class ImplementationDataTypeElement:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    array_size: PositiveIntegerValueVariationPoint | None = field(
+    array_size: None | PositiveIntegerValueVariationPoint = field(
         default=None,
         metadata={
             "name": "ARRAY-SIZE",
@@ -209,7 +209,7 @@ class ImplementationDataTypeElement:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    array_size_handling: ArraySizeHandlingEnum | None = field(
+    array_size_handling: None | ArraySizeHandlingEnum = field(
         default=None,
         metadata={
             "name": "ARRAY-SIZE-HANDLING",
@@ -217,7 +217,7 @@ class ImplementationDataTypeElement:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    array_size_semantics: ArraySizeSemanticsEnum | None = field(
+    array_size_semantics: None | ArraySizeSemanticsEnum = field(
         default=None,
         metadata={
             "name": "ARRAY-SIZE-SEMANTICS",
@@ -225,7 +225,7 @@ class ImplementationDataTypeElement:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    is_optional: Boolean | None = field(
+    is_optional: None | Boolean = field(
         default=None,
         metadata={
             "name": "IS-OPTIONAL",
@@ -233,7 +233,7 @@ class ImplementationDataTypeElement:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sub_elements: ImplementationDataTypeElement.SubElements | None = field(
+    sub_elements: None | ImplementationDataTypeElement.SubElements = field(
         default=None,
         metadata={
             "name": "SUB-ELEMENTS",
@@ -241,7 +241,7 @@ class ImplementationDataTypeElement:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_data_def_props: SwDataDefProps | None = field(
+    sw_data_def_props: None | SwDataDefProps = field(
         default=None,
         metadata={
             "name": "SW-DATA-DEF-PROPS",
@@ -249,7 +249,7 @@ class ImplementationDataTypeElement:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -257,14 +257,14 @@ class ImplementationDataTypeElement:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -272,7 +272,7 @@ class ImplementationDataTypeElement:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",

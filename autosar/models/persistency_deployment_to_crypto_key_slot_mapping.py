@@ -97,7 +97,7 @@ class PersistencyDeploymentToCryptoKeySlotMapping:
     class Meta:
         name = "PERSISTENCY-DEPLOYMENT-TO-CRYPTO-KEY-SLOT-MAPPING"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -107,7 +107,7 @@ class PersistencyDeploymentToCryptoKeySlotMapping:
         },
     )
     short_name_fragments: (
-        PersistencyDeploymentToCryptoKeySlotMapping.ShortNameFragments | None
+        None | PersistencyDeploymentToCryptoKeySlotMapping.ShortNameFragments
     ) = field(
         default=None,
         metadata={
@@ -116,7 +116,7 @@ class PersistencyDeploymentToCryptoKeySlotMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -124,7 +124,7 @@ class PersistencyDeploymentToCryptoKeySlotMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -132,7 +132,7 @@ class PersistencyDeploymentToCryptoKeySlotMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -140,7 +140,7 @@ class PersistencyDeploymentToCryptoKeySlotMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -148,7 +148,7 @@ class PersistencyDeploymentToCryptoKeySlotMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -157,7 +157,7 @@ class PersistencyDeploymentToCryptoKeySlotMapping:
         },
     )
     annotations: (
-        PersistencyDeploymentToCryptoKeySlotMapping.Annotations | None
+        None | PersistencyDeploymentToCryptoKeySlotMapping.Annotations
     ) = field(
         default=None,
         metadata={
@@ -166,7 +166,7 @@ class PersistencyDeploymentToCryptoKeySlotMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -175,7 +175,7 @@ class PersistencyDeploymentToCryptoKeySlotMapping:
         },
     )
     crypto_key_slot_ref: (
-        PersistencyDeploymentToCryptoKeySlotMapping.CryptoKeySlotRef | None
+        None | PersistencyDeploymentToCryptoKeySlotMapping.CryptoKeySlotRef
     ) = field(
         default=None,
         metadata={
@@ -184,7 +184,7 @@ class PersistencyDeploymentToCryptoKeySlotMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    key_slot_usage: CryptoKeySlotUsageEnum | None = field(
+    key_slot_usage: None | CryptoKeySlotUsageEnum = field(
         default=None,
         metadata={
             "name": "KEY-SLOT-USAGE",
@@ -193,8 +193,8 @@ class PersistencyDeploymentToCryptoKeySlotMapping:
         },
     )
     persistency_deployment_ref: (
-        PersistencyDeploymentToCryptoKeySlotMapping.PersistencyDeploymentRef
-        | None
+        None
+        | PersistencyDeploymentToCryptoKeySlotMapping.PersistencyDeploymentRef
     ) = field(
         default=None,
         metadata={
@@ -203,7 +203,7 @@ class PersistencyDeploymentToCryptoKeySlotMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    verification_hash: String | None = field(
+    verification_hash: None | String = field(
         default=None,
         metadata={
             "name": "VERIFICATION-HASH",
@@ -211,14 +211,14 @@ class PersistencyDeploymentToCryptoKeySlotMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -226,7 +226,7 @@ class PersistencyDeploymentToCryptoKeySlotMapping:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -258,7 +258,7 @@ class PersistencyDeploymentToCryptoKeySlotMapping:
 
     @dataclass
     class CryptoKeySlotRef(Ref):
-        dest: CryptoKeySlotSubtypesEnum | None = field(
+        dest: None | CryptoKeySlotSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -269,7 +269,7 @@ class PersistencyDeploymentToCryptoKeySlotMapping:
 
     @dataclass
     class PersistencyDeploymentRef(Ref):
-        dest: PersistencyDeploymentSubtypesEnum | None = field(
+        dest: None | PersistencyDeploymentSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

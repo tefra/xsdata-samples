@@ -25,7 +25,7 @@ class ValidityParameterAssignmentVersionStructure(
         name = "ValidityParameterAssignment_VersionStructure"
 
     time_interval_ref_or_parking_charge_band_ref_or_time_structure_factor_ref: (
-        TimeIntervalRef | ParkingChargeBandRef | TimeStructureFactorRef | None
+        None | TimeIntervalRef | ParkingChargeBandRef | TimeStructureFactorRef
     ) = field(
         default=None,
         metadata={
@@ -50,7 +50,7 @@ class ValidityParameterAssignmentVersionStructure(
         },
     )
     geographical_interval_ref_or_geographical_structure_factor_ref: (
-        GeographicalIntervalRef | GeographicalStructureFactorRef | None
+        None | GeographicalIntervalRef | GeographicalStructureFactorRef
     ) = field(
         default=None,
         metadata={
@@ -70,10 +70,10 @@ class ValidityParameterAssignmentVersionStructure(
         },
     )
     quality_structure_factor_ref: (
-        FareQuotaFactorRef
+        None
+        | FareQuotaFactorRef
         | FareDemandFactorRef
         | QualityStructureFactorRef
-        | None
     ) = field(
         default=None,
         metadata={

@@ -32,7 +32,7 @@ class ISignalIPduRefConditional:
     class Meta:
         name = "I-SIGNAL-I-PDU-REF-CONDITIONAL"
 
-    i_signal_i_pdu_ref: ISignalIPduRefConditional.ISignalIPduRef | None = (
+    i_signal_i_pdu_ref: None | ISignalIPduRefConditional.ISignalIPduRef = (
         field(
             default=None,
             metadata={
@@ -42,7 +42,7 @@ class ISignalIPduRefConditional:
             },
         )
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -50,14 +50,14 @@ class ISignalIPduRefConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -68,7 +68,7 @@ class ISignalIPduRefConditional:
 
     @dataclass
     class ISignalIPduRef(Ref):
-        dest: ISignalIPduSubtypesEnum | None = field(
+        dest: None | ISignalIPduSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

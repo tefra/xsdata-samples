@@ -14,7 +14,7 @@ class VmsPictogramDisplayAreaIndexPictogramDisplayAreaSettings:
     class Meta:
         name = "_VmsPictogramDisplayAreaIndexPictogramDisplayAreaSettings"
 
-    pictogram_display_area_settings: PictogramDisplayAreaSettings | None = (
+    pictogram_display_area_settings: None | PictogramDisplayAreaSettings = (
         field(
             default=None,
             metadata={
@@ -25,7 +25,7 @@ class VmsPictogramDisplayAreaIndexPictogramDisplayAreaSettings:
             },
         )
     )
-    pictogram_display_area_index: int | None = field(
+    pictogram_display_area_index: None | int = field(
         default=None,
         metadata={
             "name": "pictogramDisplayAreaIndex",

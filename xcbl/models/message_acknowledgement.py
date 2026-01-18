@@ -35,14 +35,14 @@ class AcknowledgementReferenceNumber:
 
 @dataclass(kw_only=True)
 class MessageAcknowledgement:
-    acknowledgement_location: AcknowledgementLocation | None = field(
+    acknowledgement_location: None | AcknowledgementLocation = field(
         default=None,
         metadata={
             "name": "AcknowledgementLocation",
             "type": "Element",
         },
     )
-    acknowledgement_reference_number: AcknowledgementReferenceNumber | None = (
+    acknowledgement_reference_number: None | AcknowledgementReferenceNumber = (
         field(
             default=None,
             metadata={
@@ -51,7 +51,7 @@ class MessageAcknowledgement:
             },
         )
     )
-    acknowledgement_note: AcknowledgementNote | None = field(
+    acknowledgement_note: None | AcknowledgementNote = field(
         default=None,
         metadata={
             "name": "AcknowledgementNote",

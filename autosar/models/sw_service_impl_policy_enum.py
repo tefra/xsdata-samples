@@ -29,20 +29,20 @@ class SwServiceImplPolicyEnum:
     class Meta:
         name = "SW-SERVICE-IMPL-POLICY-ENUM"
 
-    value: SwServiceImplPolicyEnumSimple | None = field(
+    value: None | SwServiceImplPolicyEnumSimple = field(
         default=None,
         metadata={
             "required": True,
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

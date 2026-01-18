@@ -34,7 +34,7 @@ class OriginalLanguageTitle:
         name = "original_language_title"
         namespace = "http://www.crossref.org/schema/5.3.1"
 
-    language: OriginalLanguageTitleLanguage | None = field(
+    language: None | OriginalLanguageTitleLanguage = field(
         default=None,
         metadata={
             "type": "Attribute",

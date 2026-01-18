@@ -28,20 +28,20 @@ class TpAckType:
     class Meta:
         name = "TP-ACK-TYPE"
 
-    value: TpAckTypeSimple | None = field(
+    value: None | TpAckTypeSimple = field(
         default=None,
         metadata={
             "required": True,
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

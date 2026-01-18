@@ -14,7 +14,7 @@ class AgreementInterfaceNotifyAgreementInputBody:
     class Meta:
         global_type = False
 
-    notify_program_gbmrequest: NotifyProgramGbmrequest | None = field(
+    notify_program_gbmrequest: None | NotifyProgramGbmrequest = field(
         default=None,
         metadata={
             "name": "NotifyProgramGBMRequest",

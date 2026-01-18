@@ -14,7 +14,7 @@ class TicketingServiceFacility:
     class Meta:
         namespace = "http://www.netex.org.uk/netex"
 
-    value: TicketingServiceFacilityEnumeration | None = field(
+    value: None | TicketingServiceFacilityEnumeration = field(
         default=None,
         metadata={
             "required": True,

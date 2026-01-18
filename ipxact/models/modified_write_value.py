@@ -33,13 +33,13 @@ class ModifiedWriteValue:
         name = "modifiedWriteValue"
         namespace = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
-    value: ModifiedWriteValueType | None = field(
+    value: None | ModifiedWriteValueType = field(
         default=None,
         metadata={
             "required": True,
         },
     )
-    modify: str | None = field(
+    modify: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",

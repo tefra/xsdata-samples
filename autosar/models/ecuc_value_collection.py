@@ -93,7 +93,7 @@ class EcucValueCollection:
     class Meta:
         name = "ECUC-VALUE-COLLECTION"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -102,7 +102,7 @@ class EcucValueCollection:
             "required": True,
         },
     )
-    short_name_fragments: EcucValueCollection.ShortNameFragments | None = (
+    short_name_fragments: None | EcucValueCollection.ShortNameFragments = (
         field(
             default=None,
             metadata={
@@ -112,7 +112,7 @@ class EcucValueCollection:
             },
         )
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -120,7 +120,7 @@ class EcucValueCollection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -128,7 +128,7 @@ class EcucValueCollection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -136,7 +136,7 @@ class EcucValueCollection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -144,7 +144,7 @@ class EcucValueCollection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -152,7 +152,7 @@ class EcucValueCollection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: EcucValueCollection.Annotations | None = field(
+    annotations: None | EcucValueCollection.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -160,7 +160,7 @@ class EcucValueCollection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -168,7 +168,7 @@ class EcucValueCollection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ecu_extract_ref: EcucValueCollection.EcuExtractRef | None = field(
+    ecu_extract_ref: None | EcucValueCollection.EcuExtractRef = field(
         default=None,
         metadata={
             "name": "ECU-EXTRACT-REF",
@@ -176,7 +176,7 @@ class EcucValueCollection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ecuc_values: EcucValueCollection.EcucValues | None = field(
+    ecuc_values: None | EcucValueCollection.EcucValues = field(
         default=None,
         metadata={
             "name": "ECUC-VALUES",
@@ -184,14 +184,14 @@ class EcucValueCollection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -199,7 +199,7 @@ class EcucValueCollection:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -231,7 +231,7 @@ class EcucValueCollection:
 
     @dataclass
     class EcuExtractRef(Ref):
-        dest: SystemSubtypesEnum | None = field(
+        dest: None | SystemSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

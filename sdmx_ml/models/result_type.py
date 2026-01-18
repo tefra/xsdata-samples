@@ -28,7 +28,7 @@ class ResultType:
         complete set of reference fields.
     """
 
-    registration: RegistrationType | None = field(
+    registration: None | RegistrationType = field(
         default=None,
         metadata={
             "name": "Registration",

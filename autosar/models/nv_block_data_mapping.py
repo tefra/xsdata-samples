@@ -55,7 +55,7 @@ class NvBlockDataMapping:
     class Meta:
         name = "NV-BLOCK-DATA-MAPPING"
 
-    bitfield_text_table_mask_nv_block_descriptor: PositiveInteger | None = (
+    bitfield_text_table_mask_nv_block_descriptor: None | PositiveInteger = (
         field(
             default=None,
             metadata={
@@ -65,7 +65,7 @@ class NvBlockDataMapping:
             },
         )
     )
-    bitfield_text_table_mask_port_prototype: PositiveInteger | None = field(
+    bitfield_text_table_mask_port_prototype: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "BITFIELD-TEXT-TABLE-MASK-PORT-PROTOTYPE",
@@ -73,7 +73,7 @@ class NvBlockDataMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nv_ram_block_element: AutosarVariableRef | None = field(
+    nv_ram_block_element: None | AutosarVariableRef = field(
         default=None,
         metadata={
             "name": "NV-RAM-BLOCK-ELEMENT",
@@ -81,7 +81,7 @@ class NvBlockDataMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    read_nv_data: AutosarVariableRef | None = field(
+    read_nv_data: None | AutosarVariableRef = field(
         default=None,
         metadata={
             "name": "READ-NV-DATA",
@@ -89,7 +89,7 @@ class NvBlockDataMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    written_nv_data: AutosarVariableRef | None = field(
+    written_nv_data: None | AutosarVariableRef = field(
         default=None,
         metadata={
             "name": "WRITTEN-NV-DATA",
@@ -97,7 +97,7 @@ class NvBlockDataMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    written_read_nv_data: AutosarVariableRef | None = field(
+    written_read_nv_data: None | AutosarVariableRef = field(
         default=None,
         metadata={
             "name": "WRITTEN-READ-NV-DATA",
@@ -105,7 +105,7 @@ class NvBlockDataMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -113,14 +113,14 @@ class NvBlockDataMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

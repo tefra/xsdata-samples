@@ -85,7 +85,7 @@ class SynchronizedTimeBaseProvider:
     class Meta:
         name = "SYNCHRONIZED-TIME-BASE-PROVIDER"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -95,7 +95,7 @@ class SynchronizedTimeBaseProvider:
         },
     )
     short_name_fragments: (
-        SynchronizedTimeBaseProvider.ShortNameFragments | None
+        None | SynchronizedTimeBaseProvider.ShortNameFragments
     ) = field(
         default=None,
         metadata={
@@ -104,7 +104,7 @@ class SynchronizedTimeBaseProvider:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -112,7 +112,7 @@ class SynchronizedTimeBaseProvider:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -120,7 +120,7 @@ class SynchronizedTimeBaseProvider:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -128,7 +128,7 @@ class SynchronizedTimeBaseProvider:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -136,7 +136,7 @@ class SynchronizedTimeBaseProvider:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -144,7 +144,7 @@ class SynchronizedTimeBaseProvider:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: SynchronizedTimeBaseProvider.Annotations | None = field(
+    annotations: None | SynchronizedTimeBaseProvider.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -153,7 +153,7 @@ class SynchronizedTimeBaseProvider:
         },
     )
     network_time_provider_ref: (
-        SynchronizedTimeBaseProvider.NetworkTimeProviderRef | None
+        None | SynchronizedTimeBaseProvider.NetworkTimeProviderRef
     ) = field(
         default=None,
         metadata={
@@ -162,7 +162,7 @@ class SynchronizedTimeBaseProvider:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    time_sync_correction: TimeSyncCorrection | None = field(
+    time_sync_correction: None | TimeSyncCorrection = field(
         default=None,
         metadata={
             "name": "TIME-SYNC-CORRECTION",
@@ -170,14 +170,14 @@ class SynchronizedTimeBaseProvider:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -185,7 +185,7 @@ class SynchronizedTimeBaseProvider:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -217,7 +217,7 @@ class SynchronizedTimeBaseProvider:
 
     @dataclass
     class NetworkTimeProviderRef(Ref):
-        dest: GlobalTimeMasterSubtypesEnum | None = field(
+        dest: None | GlobalTimeMasterSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

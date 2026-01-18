@@ -40,12 +40,12 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 @dataclass
 class NetworkFrameTopicStructure(TopicStructure):
     choice: (
-        EmptyType2
+        None
+        | EmptyType2
         | NetworkFrameTopicStructure.ChangedSince
         | NetworkFrameTopicStructure.CurrentAt
         | ClosedTimestampRangeStructure
         | NetworkFrameTopicStructure.SelectionValidityConditions
-        | None
     ) = field(
         default=None,
         metadata={
@@ -83,7 +83,7 @@ class NetworkFrameTopicStructure(TopicStructure):
             ),
         },
     )
-    type_of_frame_ref: TypeOfFrameRef | None = field(
+    type_of_frame_ref: None | TypeOfFrameRef = field(
         default=None,
         metadata={
             "name": "TypeOfFrameRef",
@@ -241,7 +241,7 @@ class NetworkFrameTopicStructure(TopicStructure):
 
     @dataclass
     class ChangedSince:
-        value: XmlDateTime | None = field(
+        value: None | XmlDateTime = field(
             default=None,
             metadata={
                 "required": True,
@@ -250,7 +250,7 @@ class NetworkFrameTopicStructure(TopicStructure):
 
     @dataclass
     class CurrentAt:
-        value: XmlDateTime | None = field(
+        value: None | XmlDateTime = field(
             default=None,
             metadata={
                 "required": True,

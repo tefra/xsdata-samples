@@ -39,7 +39,7 @@ class WeatherRelatedRoadConditions(RoadConditions):
         },
     )
     road_surface_condition_measurements: (
-        RoadSurfaceConditionMeasurements | None
+        None | RoadSurfaceConditionMeasurements
     ) = field(
         default=None,
         metadata={
@@ -48,7 +48,7 @@ class WeatherRelatedRoadConditions(RoadConditions):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    weather_related_road_conditions_extension: ExtensionType | None = field(
+    weather_related_road_conditions_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "weatherRelatedRoadConditionsExtension",

@@ -90,7 +90,7 @@ class DiagEventDebounceTimeBased:
     class Meta:
         name = "DIAG-EVENT-DEBOUNCE-TIME-BASED"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -100,7 +100,7 @@ class DiagEventDebounceTimeBased:
         },
     )
     short_name_fragments: (
-        DiagEventDebounceTimeBased.ShortNameFragments | None
+        None | DiagEventDebounceTimeBased.ShortNameFragments
     ) = field(
         default=None,
         metadata={
@@ -109,7 +109,7 @@ class DiagEventDebounceTimeBased:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -117,7 +117,7 @@ class DiagEventDebounceTimeBased:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -125,7 +125,7 @@ class DiagEventDebounceTimeBased:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -133,7 +133,7 @@ class DiagEventDebounceTimeBased:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -141,7 +141,7 @@ class DiagEventDebounceTimeBased:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -149,7 +149,7 @@ class DiagEventDebounceTimeBased:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: DiagEventDebounceTimeBased.Annotations | None = field(
+    annotations: None | DiagEventDebounceTimeBased.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -158,7 +158,7 @@ class DiagEventDebounceTimeBased:
         },
     )
     time_based_fdc_threshold_storage_value: (
-        TimeValueValueVariationPoint | None
+        None | TimeValueValueVariationPoint
     ) = field(
         default=None,
         metadata={
@@ -167,7 +167,7 @@ class DiagEventDebounceTimeBased:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    time_failed_threshold: TimeValueValueVariationPoint | None = field(
+    time_failed_threshold: None | TimeValueValueVariationPoint = field(
         default=None,
         metadata={
             "name": "TIME-FAILED-THRESHOLD",
@@ -175,7 +175,7 @@ class DiagEventDebounceTimeBased:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    time_passed_threshold: TimeValueValueVariationPoint | None = field(
+    time_passed_threshold: None | TimeValueValueVariationPoint = field(
         default=None,
         metadata={
             "name": "TIME-PASSED-THRESHOLD",
@@ -183,14 +183,14 @@ class DiagEventDebounceTimeBased:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -198,7 +198,7 @@ class DiagEventDebounceTimeBased:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",

@@ -13,7 +13,7 @@ class PointInSingleJourneyPathRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "PointInSingleJourneyPathRefs_RelStructure"
 
-    point_in_single_journey_path_ref: PointInSingleJourneyPathRef | None = (
+    point_in_single_journey_path_ref: None | PointInSingleJourneyPathRef = (
         field(
             default=None,
             metadata={

@@ -64,7 +64,7 @@ class FaultType(BaseFaultType):
     :ivar failures:
     """
 
-    name_text: str | None = field(
+    name_text: None | str = field(
         default=None,
         metadata={
             "name": "NameText",
@@ -72,7 +72,7 @@ class FaultType(BaseFaultType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/faults/v1",
         },
     )
-    severity_code: FaultSeverityCodeType | None = field(
+    severity_code: None | FaultSeverityCodeType = field(
         default=None,
         metadata={
             "name": "SeverityCode",
@@ -80,7 +80,7 @@ class FaultType(BaseFaultType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/faults/v1",
         },
     )
-    category_code: FaultCategoryCodeType | None = field(
+    category_code: None | FaultCategoryCodeType = field(
         default=None,
         metadata={
             "name": "CategoryCode",
@@ -88,7 +88,7 @@ class FaultType(BaseFaultType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/faults/v1",
         },
     )
-    reason_code: str | None = field(
+    reason_code: None | str = field(
         default=None,
         metadata={
             "name": "ReasonCode",
@@ -96,7 +96,7 @@ class FaultType(BaseFaultType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/faults/v1",
         },
     )
-    message_text: str | None = field(
+    message_text: None | str = field(
         default=None,
         metadata={
             "name": "MessageText",
@@ -104,7 +104,7 @@ class FaultType(BaseFaultType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/faults/v1",
         },
     )
-    characteristics: CharacteristicsType | None = field(
+    characteristics: None | CharacteristicsType = field(
         default=None,
         metadata={
             "name": "Characteristics",
@@ -112,7 +112,7 @@ class FaultType(BaseFaultType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/faults/v1",
         },
     )
-    failures: FaultTypeFailures | None = field(
+    failures: None | FaultTypeFailures = field(
         default=None,
         metadata={
             "name": "Failures",

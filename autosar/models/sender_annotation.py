@@ -58,7 +58,7 @@ class SenderAnnotation:
     class Meta:
         name = "SENDER-ANNOTATION"
 
-    label: MultilanguageLongName | None = field(
+    label: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LABEL",
@@ -66,7 +66,7 @@ class SenderAnnotation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotation_origin: String | None = field(
+    annotation_origin: None | String = field(
         default=None,
         metadata={
             "name": "ANNOTATION-ORIGIN",
@@ -74,7 +74,7 @@ class SenderAnnotation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotation_text: DocumentationBlock | None = field(
+    annotation_text: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "ANNOTATION-TEXT",
@@ -82,7 +82,7 @@ class SenderAnnotation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    computed: Boolean | None = field(
+    computed: None | Boolean = field(
         default=None,
         metadata={
             "name": "COMPUTED",
@@ -90,7 +90,7 @@ class SenderAnnotation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    data_element_ref: SenderAnnotation.DataElementRef | None = field(
+    data_element_ref: None | SenderAnnotation.DataElementRef = field(
         default=None,
         metadata={
             "name": "DATA-ELEMENT-REF",
@@ -98,7 +98,7 @@ class SenderAnnotation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    limit_kind: DataLimitKindEnum | None = field(
+    limit_kind: None | DataLimitKindEnum = field(
         default=None,
         metadata={
             "name": "LIMIT-KIND",
@@ -106,7 +106,7 @@ class SenderAnnotation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    processing_kind: ProcessingKindEnum | None = field(
+    processing_kind: None | ProcessingKindEnum = field(
         default=None,
         metadata={
             "name": "PROCESSING-KIND",
@@ -114,14 +114,14 @@ class SenderAnnotation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -132,7 +132,7 @@ class SenderAnnotation:
 
     @dataclass
     class DataElementRef(Ref):
-        dest: VariableDataPrototypeSubtypesEnum | None = field(
+        dest: None | VariableDataPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

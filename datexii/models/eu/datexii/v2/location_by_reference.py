@@ -22,7 +22,7 @@ class LocationByReference(Location):
     """
 
     predefined_location_reference: (
-        PredefinedLocationVersionedReference | None
+        None | PredefinedLocationVersionedReference
     ) = field(
         default=None,
         metadata={
@@ -32,7 +32,7 @@ class LocationByReference(Location):
             "required": True,
         },
     )
-    location_by_reference_extension: ExtensionType | None = field(
+    location_by_reference_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "locationByReferenceExtension",

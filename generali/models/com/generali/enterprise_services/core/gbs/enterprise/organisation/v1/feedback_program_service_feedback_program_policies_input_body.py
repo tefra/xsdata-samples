@@ -14,7 +14,7 @@ class FeedbackProgramServiceFeedbackProgramPoliciesInputBody:
     class Meta:
         global_type = False
 
-    feedback_program_policies: FeedbackProgramPolicies | None = field(
+    feedback_program_policies: None | FeedbackProgramPolicies = field(
         default=None,
         metadata={
             "name": "FeedbackProgramPolicies",

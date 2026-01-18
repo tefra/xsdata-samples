@@ -19,7 +19,7 @@ class OnwardTimingLinkDerivedViewStructure(DerivedViewStructure):
         name = "OnwardTimingLink_DerivedViewStructure"
 
     timing_link_in_journey_pattern_ref: (
-        TimingLinkInJourneyPatternRef | None
+        None | TimingLinkInJourneyPatternRef
     ) = field(
         default=None,
         metadata={
@@ -28,7 +28,7 @@ class OnwardTimingLinkDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    timing_link_ref: TimingLinkRef | None = field(
+    timing_link_ref: None | TimingLinkRef = field(
         default=None,
         metadata={
             "name": "TimingLinkRef",
@@ -36,7 +36,7 @@ class OnwardTimingLinkDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    to_point_ref: TimingPointRefStructure | None = field(
+    to_point_ref: None | TimingPointRefStructure = field(
         default=None,
         metadata={
             "name": "ToPointRef",
@@ -44,7 +44,7 @@ class OnwardTimingLinkDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    distance: Decimal | None = field(
+    distance: None | Decimal = field(
         default=None,
         metadata={
             "name": "Distance",
@@ -52,7 +52,7 @@ class OnwardTimingLinkDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    run_time: XmlDuration | None = field(
+    run_time: None | XmlDuration = field(
         default=None,
         metadata={
             "name": "RunTime",

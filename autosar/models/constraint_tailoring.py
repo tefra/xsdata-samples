@@ -96,7 +96,7 @@ class ConstraintTailoring:
     class Meta:
         name = "CONSTRAINT-TAILORING"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -105,7 +105,7 @@ class ConstraintTailoring:
             "required": True,
         },
     )
-    short_name_fragments: ConstraintTailoring.ShortNameFragments | None = (
+    short_name_fragments: None | ConstraintTailoring.ShortNameFragments = (
         field(
             default=None,
             metadata={
@@ -115,7 +115,7 @@ class ConstraintTailoring:
             },
         )
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -123,7 +123,7 @@ class ConstraintTailoring:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -131,7 +131,7 @@ class ConstraintTailoring:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -139,7 +139,7 @@ class ConstraintTailoring:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -147,7 +147,7 @@ class ConstraintTailoring:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -155,7 +155,7 @@ class ConstraintTailoring:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: ConstraintTailoring.Annotations | None = field(
+    annotations: None | ConstraintTailoring.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -163,7 +163,7 @@ class ConstraintTailoring:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    alternative_name: String | None = field(
+    alternative_name: None | String = field(
         default=None,
         metadata={
             "name": "ALTERNATIVE-NAME",
@@ -171,7 +171,7 @@ class ConstraintTailoring:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    in_scope: Boolean | None = field(
+    in_scope: None | Boolean = field(
         default=None,
         metadata={
             "name": "IN-SCOPE",
@@ -179,7 +179,7 @@ class ConstraintTailoring:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    severity: SeverityEnum | None = field(
+    severity: None | SeverityEnum = field(
         default=None,
         metadata={
             "name": "SEVERITY",
@@ -187,7 +187,7 @@ class ConstraintTailoring:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    constraint_ref: ConstraintTailoring.ConstraintRef | None = field(
+    constraint_ref: None | ConstraintTailoring.ConstraintRef = field(
         default=None,
         metadata={
             "name": "CONSTRAINT-REF",
@@ -195,14 +195,14 @@ class ConstraintTailoring:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -210,7 +210,7 @@ class ConstraintTailoring:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -242,7 +242,7 @@ class ConstraintTailoring:
 
     @dataclass
     class ConstraintRef(Ref):
-        dest: TraceableTextSubtypesEnum | None = field(
+        dest: None | TraceableTextSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

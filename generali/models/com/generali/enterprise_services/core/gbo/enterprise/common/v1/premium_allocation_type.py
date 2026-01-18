@@ -13,7 +13,7 @@ __NAMESPACE__ = (
 
 @dataclass
 class PremiumAllocationType:
-    country_code: str | None = field(
+    country_code: None | str = field(
         default=None,
         metadata={
             "name": "CountryCode",
@@ -23,7 +23,7 @@ class PremiumAllocationType:
             "pattern": r"[A-Z][A-Z]",
         },
     )
-    beginning_of_year: AmountType | None = field(
+    beginning_of_year: None | AmountType = field(
         default=None,
         metadata={
             "name": "BeginningOfYear",
@@ -32,7 +32,7 @@ class PremiumAllocationType:
             "required": True,
         },
     )
-    beginning_of_year_local_share: AmountType | None = field(
+    beginning_of_year_local_share: None | AmountType = field(
         default=None,
         metadata={
             "name": "BeginningOfYearLocalShare",

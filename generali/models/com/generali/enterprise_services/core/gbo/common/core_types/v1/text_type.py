@@ -51,14 +51,14 @@ class TextType:
             "required": True,
         },
     )
-    language_id: str | None = field(
+    language_id: None | str = field(
         default=None,
         metadata={
             "name": "languageID",
             "type": "Attribute",
         },
     )
-    language_locale_id: str | None = field(
+    language_locale_id: None | str = field(
         default=None,
         metadata={
             "name": "languageLocaleID",

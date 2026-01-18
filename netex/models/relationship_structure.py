@@ -10,7 +10,7 @@ class RelationshipStructure:
     class Meta:
         name = "relationshipStructure"
 
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",

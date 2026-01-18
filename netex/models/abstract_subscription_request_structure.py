@@ -10,7 +10,7 @@ __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
 @dataclass
 class AbstractSubscriptionRequestStructure(RequestStructure):
-    consumer_address: str | None = field(
+    consumer_address: None | str = field(
         default=None,
         metadata={
             "name": "ConsumerAddress",
@@ -18,7 +18,7 @@ class AbstractSubscriptionRequestStructure(RequestStructure):
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    subscription_filter_identifier: str | None = field(
+    subscription_filter_identifier: None | str = field(
         default=None,
         metadata={
             "name": "SubscriptionFilterIdentifier",
@@ -26,7 +26,7 @@ class AbstractSubscriptionRequestStructure(RequestStructure):
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    subscription_context: SubscriptionContextStructure | None = field(
+    subscription_context: None | SubscriptionContextStructure = field(
         default=None,
         metadata={
             "name": "SubscriptionContext",

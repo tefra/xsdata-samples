@@ -17,7 +17,7 @@ class FacilityRequirementVersionStructure(VehicleRequirementVersionStructure):
     class Meta:
         name = "FacilityRequirement_VersionStructure"
 
-    facility_sets: ServiceFacilitySetsRelStructure | None = field(
+    facility_sets: None | ServiceFacilitySetsRelStructure = field(
         default=None,
         metadata={
             "name": "facilitySets",

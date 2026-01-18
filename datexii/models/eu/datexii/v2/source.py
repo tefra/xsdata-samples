@@ -31,7 +31,7 @@ class Source:
     :ivar source_extension:
     """
 
-    source_country: CountryEnum | None = field(
+    source_country: None | CountryEnum = field(
         default=None,
         metadata={
             "name": "sourceCountry",
@@ -39,7 +39,7 @@ class Source:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    source_identification: str | None = field(
+    source_identification: None | str = field(
         default=None,
         metadata={
             "name": "sourceIdentification",
@@ -48,7 +48,7 @@ class Source:
             "max_length": 1024,
         },
     )
-    source_name: MultilingualString | None = field(
+    source_name: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "sourceName",
@@ -56,7 +56,7 @@ class Source:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    source_type: SourceTypeEnum | None = field(
+    source_type: None | SourceTypeEnum = field(
         default=None,
         metadata={
             "name": "sourceType",
@@ -64,14 +64,14 @@ class Source:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    reliable: bool | None = field(
+    reliable: None | bool = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    source_extension: ExtensionType | None = field(
+    source_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "sourceExtension",

@@ -36,7 +36,7 @@ class DiagnosticDtcChangeTrigger:
     class Meta:
         name = "DIAGNOSTIC-DTC-CHANGE-TRIGGER"
 
-    initial_event_status: DiagnosticInitialEventStatusEnum | None = field(
+    initial_event_status: None | DiagnosticInitialEventStatusEnum = field(
         default=None,
         metadata={
             "name": "INITIAL-EVENT-STATUS",
@@ -44,7 +44,7 @@ class DiagnosticDtcChangeTrigger:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    dtc_status_mask: PositiveInteger | None = field(
+    dtc_status_mask: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "DTC-STATUS-MASK",
@@ -52,14 +52,14 @@ class DiagnosticDtcChangeTrigger:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

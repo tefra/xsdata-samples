@@ -54,7 +54,7 @@ class SwAxisCont:
     class Meta:
         name = "SW-AXIS-CONT"
 
-    category: CalprmAxisCategoryEnum | None = field(
+    category: None | CalprmAxisCategoryEnum = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -62,7 +62,7 @@ class SwAxisCont:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    unit_ref: SwAxisCont.UnitRef | None = field(
+    unit_ref: None | SwAxisCont.UnitRef = field(
         default=None,
         metadata={
             "name": "UNIT-REF",
@@ -70,7 +70,7 @@ class SwAxisCont:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    unit_display_name: SingleLanguageUnitNames | None = field(
+    unit_display_name: None | SingleLanguageUnitNames = field(
         default=None,
         metadata={
             "name": "UNIT-DISPLAY-NAME",
@@ -78,7 +78,7 @@ class SwAxisCont:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_axis_index: AxisIndexType | None = field(
+    sw_axis_index: None | AxisIndexType = field(
         default=None,
         metadata={
             "name": "SW-AXIS-INDEX",
@@ -86,7 +86,7 @@ class SwAxisCont:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_arraysize: ValueList | None = field(
+    sw_arraysize: None | ValueList = field(
         default=None,
         metadata={
             "name": "SW-ARRAYSIZE",
@@ -94,7 +94,7 @@ class SwAxisCont:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_values_phys: SwValues | None = field(
+    sw_values_phys: None | SwValues = field(
         default=None,
         metadata={
             "name": "SW-VALUES-PHYS",
@@ -102,14 +102,14 @@ class SwAxisCont:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -120,7 +120,7 @@ class SwAxisCont:
 
     @dataclass
     class UnitRef(Ref):
-        dest: UnitSubtypesEnum | None = field(
+        dest: None | UnitSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

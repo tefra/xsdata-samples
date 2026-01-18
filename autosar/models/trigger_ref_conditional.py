@@ -32,7 +32,7 @@ class TriggerRefConditional:
     class Meta:
         name = "TRIGGER-REF-CONDITIONAL"
 
-    trigger_ref: TriggerRefConditional.TriggerRef | None = field(
+    trigger_ref: None | TriggerRefConditional.TriggerRef = field(
         default=None,
         metadata={
             "name": "TRIGGER-REF",
@@ -40,7 +40,7 @@ class TriggerRefConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -48,14 +48,14 @@ class TriggerRefConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -66,7 +66,7 @@ class TriggerRefConditional:
 
     @dataclass
     class TriggerRef(Ref):
-        dest: TriggerSubtypesEnum | None = field(
+        dest: None | TriggerSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

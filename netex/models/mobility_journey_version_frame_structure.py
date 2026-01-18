@@ -26,7 +26,7 @@ class MobilityJourneyVersionFrameStructure(CommonVersionFrameStructure):
     class Meta:
         name = "MobilityJourney_VersionFrameStructure"
 
-    single_journey_paths: SingleJourneyPathsRelStructure | None = field(
+    single_journey_paths: None | SingleJourneyPathsRelStructure = field(
         default=None,
         metadata={
             "name": "singleJourneyPaths",
@@ -34,7 +34,7 @@ class MobilityJourneyVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    groups_of_single_journeys: GroupsOfSingleJourneysRelStructure | None = (
+    groups_of_single_journeys: None | GroupsOfSingleJourneysRelStructure = (
         field(
             default=None,
             metadata={
@@ -44,7 +44,7 @@ class MobilityJourneyVersionFrameStructure(CommonVersionFrameStructure):
             },
         )
     )
-    single_journeys: SingleJourneysRelStructure | None = field(
+    single_journeys: None | SingleJourneysRelStructure = field(
         default=None,
         metadata={
             "name": "singleJourneys",
@@ -52,7 +52,7 @@ class MobilityJourneyVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    individual_travellers: IndividualTravellersInFrameRelStructure | None = (
+    individual_travellers: None | IndividualTravellersInFrameRelStructure = (
         field(
             default=None,
             metadata={
@@ -63,7 +63,7 @@ class MobilityJourneyVersionFrameStructure(CommonVersionFrameStructure):
         )
     )
     vehicle_access_credentials: (
-        VehicleAccessCredentialAssignmentsRelStructure | None
+        None | VehicleAccessCredentialAssignmentsRelStructure
     ) = field(
         default=None,
         metadata={
@@ -72,7 +72,7 @@ class MobilityJourneyVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    parking_log_entries: ParkingLogEntriesInFrameRelStructure | None = field(
+    parking_log_entries: None | ParkingLogEntriesInFrameRelStructure = field(
         default=None,
         metadata={
             "name": "parkingLogEntries",

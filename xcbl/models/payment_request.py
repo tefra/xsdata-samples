@@ -268,70 +268,70 @@ class Company:
             "required": True,
         }
     )
-    list_of_identifier: ListOfIdentifier | None = field(
+    list_of_identifier: None | ListOfIdentifier = field(
         default=None,
         metadata={
             "name": "ListOfIdentifier",
             "type": "Element",
         },
     )
-    mdfbusiness: Mdfbusiness | None = field(
+    mdfbusiness: None | Mdfbusiness = field(
         default=None,
         metadata={
             "name": "MDFBusiness",
             "type": "Element",
         },
     )
-    name_address: NameAddress | None = field(
+    name_address: None | NameAddress = field(
         default=None,
         metadata={
             "name": "NameAddress",
             "type": "Element",
         },
     )
-    order_contact: OrderContact | None = field(
+    order_contact: None | OrderContact = field(
         default=None,
         metadata={
             "name": "OrderContact",
             "type": "Element",
         },
     )
-    receiving_contact: ReceivingContact | None = field(
+    receiving_contact: None | ReceivingContact = field(
         default=None,
         metadata={
             "name": "ReceivingContact",
             "type": "Element",
         },
     )
-    shipping_contact: ShippingContact | None = field(
+    shipping_contact: None | ShippingContact = field(
         default=None,
         metadata={
             "name": "ShippingContact",
             "type": "Element",
         },
     )
-    other_contacts: OtherContacts | None = field(
+    other_contacts: None | OtherContacts = field(
         default=None,
         metadata={
             "name": "OtherContacts",
             "type": "Element",
         },
     )
-    correspondence_language: CorrespondenceLanguage | None = field(
+    correspondence_language: None | CorrespondenceLanguage = field(
         default=None,
         metadata={
             "name": "CorrespondenceLanguage",
             "type": "Element",
         },
     )
-    industry_sector_coded: IndustrySectorCoded | None = field(
+    industry_sector_coded: None | IndustrySectorCoded = field(
         default=None,
         metadata={
             "name": "IndustrySectorCoded",
             "type": "Element",
         },
     )
-    industry_sector_coded_other: IndustrySectorCodedOther | None = field(
+    industry_sector_coded_other: None | IndustrySectorCodedOther = field(
         default=None,
         metadata={
             "name": "IndustrySectorCodedOther",
@@ -455,7 +455,7 @@ class PaymentRequestAttachment:
 
 @dataclass(kw_only=True)
 class PaymentRequestParty:
-    payer_party: PayerParty | None = field(
+    payer_party: None | PayerParty = field(
         default=None,
         metadata={
             "name": "PayerParty",
@@ -469,28 +469,28 @@ class PaymentRequestParty:
             "required": True,
         }
     )
-    buyer_party: BuyerParty | None = field(
+    buyer_party: None | BuyerParty = field(
         default=None,
         metadata={
             "name": "BuyerParty",
             "type": "Element",
         },
     )
-    supplier_party: SupplierParty | None = field(
+    supplier_party: None | SupplierParty = field(
         default=None,
         metadata={
             "name": "SupplierParty",
             "type": "Element",
         },
     )
-    bill_to_party: BillToParty | None = field(
+    bill_to_party: None | BillToParty = field(
         default=None,
         metadata={
             "name": "BillToParty",
             "type": "Element",
         },
     )
-    list_of_party_coded: ListOfPartyCoded | None = field(
+    list_of_party_coded: None | ListOfPartyCoded = field(
         default=None,
         metadata={
             "name": "ListOfPartyCoded",
@@ -544,28 +544,28 @@ class FinancialChargesAllocation:
             "required": True,
         }
     )
-    charge_regulation_coded_other: ChargeRegulationCodedOther | None = field(
+    charge_regulation_coded_other: None | ChargeRegulationCodedOther = field(
         default=None,
         metadata={
             "name": "ChargeRegulationCodedOther",
             "type": "Element",
         },
     )
-    fee_amount: FeeAmount | None = field(
+    fee_amount: None | FeeAmount = field(
         default=None,
         metadata={
             "name": "FeeAmount",
             "type": "Element",
         },
     )
-    charge_account: ChargeAccount | None = field(
+    charge_account: None | ChargeAccount = field(
         default=None,
         metadata={
             "name": "ChargeAccount",
             "type": "Element",
         },
     )
-    charge_financial_institution: ChargeFinancialInstitution | None = field(
+    charge_financial_institution: None | ChargeFinancialInstitution = field(
         default=None,
         metadata={
             "name": "ChargeFinancialInstitution",
@@ -634,14 +634,14 @@ class PaymentRequestHeader:
             "required": True,
         }
     )
-    general_notes: GeneralNotes | None = field(
+    general_notes: None | GeneralNotes = field(
         default=None,
         metadata={
             "name": "GeneralNotes",
             "type": "Element",
         },
     )
-    payment_request_attachment: PaymentRequestAttachment | None = field(
+    payment_request_attachment: None | PaymentRequestAttachment = field(
         default=None,
         metadata={
             "name": "PaymentRequestAttachment",
@@ -660,7 +660,7 @@ class LegalReportingInformation:
         }
     )
     legal_reporting_supplemental_code: (
-        LegalReportingSupplementalCode | None
+        None | LegalReportingSupplementalCode
     ) = field(
         default=None,
         metadata={
@@ -668,7 +668,7 @@ class LegalReportingInformation:
             "type": "Element",
         },
     )
-    legal_reporting_party: LegalReportingParty | None = field(
+    legal_reporting_party: None | LegalReportingParty = field(
         default=None,
         metadata={
             "name": "LegalReportingParty",
@@ -682,7 +682,7 @@ class LegalReportingInformation:
             "required": True,
         }
     )
-    legal_reporting_payment_amount: LegalReportingPaymentAmount | None = field(
+    legal_reporting_payment_amount: None | LegalReportingPaymentAmount = field(
         default=None,
         metadata={
             "name": "LegalReportingPaymentAmount",
@@ -690,7 +690,7 @@ class LegalReportingInformation:
         },
     )
     legal_reporting_supplying_country: (
-        LegalReportingSupplyingCountry | None
+        None | LegalReportingSupplyingCountry
     ) = field(
         default=None,
         metadata={
@@ -698,28 +698,28 @@ class LegalReportingInformation:
             "type": "Element",
         },
     )
-    legal_reporting_payee_country: LegalReportingPayeeCountry | None = field(
+    legal_reporting_payee_country: None | LegalReportingPayeeCountry = field(
         default=None,
         metadata={
             "name": "LegalReportingPayeeCountry",
             "type": "Element",
         },
     )
-    legal_reporting_import_date: LegalReportingImportDate | None = field(
+    legal_reporting_import_date: None | LegalReportingImportDate = field(
         default=None,
         metadata={
             "name": "LegalReportingImportDate",
             "type": "Element",
         },
     )
-    legal_reporting_payment_date: LegalReportingPaymentDate | None = field(
+    legal_reporting_payment_date: None | LegalReportingPaymentDate = field(
         default=None,
         metadata={
             "name": "LegalReportingPaymentDate",
             "type": "Element",
         },
     )
-    legal_reporting_description: LegalReportingDescription | None = field(
+    legal_reporting_description: None | LegalReportingDescription = field(
         default=None,
         metadata={
             "name": "LegalReportingDescription",
@@ -737,21 +737,21 @@ class PaymentRequestDetail:
             "required": True,
         }
     )
-    payment_sequence_no: PaymentSequenceNo | None = field(
+    payment_sequence_no: None | PaymentSequenceNo = field(
         default=None,
         metadata={
             "name": "PaymentSequenceNo",
             "type": "Element",
         },
     )
-    payment_dates: PaymentDates | None = field(
+    payment_dates: None | PaymentDates = field(
         default=None,
         metadata={
             "name": "PaymentDates",
             "type": "Element",
         },
     )
-    financial_institution_detail: FinancialInstitutionDetail | None = field(
+    financial_institution_detail: None | FinancialInstitutionDetail = field(
         default=None,
         metadata={
             "name": "FinancialInstitutionDetail",
@@ -759,7 +759,7 @@ class PaymentRequestDetail:
         },
     )
     originating_financial_institution: (
-        OriginatingFinancialInstitution | None
+        None | OriginatingFinancialInstitution
     ) = field(
         default=None,
         metadata={
@@ -775,14 +775,14 @@ class PaymentRequestDetail:
             "max_occurs": 2,
         },
     )
-    originating_fispecific_id: OriginatingFispecificId | None = field(
+    originating_fispecific_id: None | OriginatingFispecificId = field(
         default=None,
         metadata={
             "name": "OriginatingFISpecificID",
             "type": "Element",
         },
     )
-    receiving_financial_institution: ReceivingFinancialInstitution | None = (
+    receiving_financial_institution: None | ReceivingFinancialInstitution = (
         field(
             default=None,
             metadata={
@@ -791,7 +791,7 @@ class PaymentRequestDetail:
             },
         )
     )
-    card_info: CardInfo | None = field(
+    card_info: None | CardInfo = field(
         default=None,
         metadata={
             "name": "CardInfo",
@@ -819,42 +819,42 @@ class PaymentRequestDetail:
             "required": True,
         }
     )
-    legal_reporting_information: LegalReportingInformation | None = field(
+    legal_reporting_information: None | LegalReportingInformation = field(
         default=None,
         metadata={
             "name": "LegalReportingInformation",
             "type": "Element",
         },
     )
-    payment_reason_coded: PaymentReasonCoded | None = field(
+    payment_reason_coded: None | PaymentReasonCoded = field(
         default=None,
         metadata={
             "name": "PaymentReasonCoded",
             "type": "Element",
         },
     )
-    payment_reason_coded_other: PaymentReasonCodedOther | None = field(
+    payment_reason_coded_other: None | PaymentReasonCodedOther = field(
         default=None,
         metadata={
             "name": "PaymentReasonCodedOther",
             "type": "Element",
         },
     )
-    payment_urgency_coded: PaymentUrgencyCoded | None = field(
+    payment_urgency_coded: None | PaymentUrgencyCoded = field(
         default=None,
         metadata={
             "name": "PaymentUrgencyCoded",
             "type": "Element",
         },
     )
-    payment_urgency_coded_other: PaymentUrgencyCodedOther | None = field(
+    payment_urgency_coded_other: None | PaymentUrgencyCodedOther = field(
         default=None,
         metadata={
             "name": "PaymentUrgencyCodedOther",
             "type": "Element",
         },
     )
-    international_payment_indicator: InternationalPaymentIndicator | None = (
+    international_payment_indicator: None | InternationalPaymentIndicator = (
         field(
             default=None,
             metadata={
@@ -863,7 +863,7 @@ class PaymentRequestDetail:
             },
         )
     )
-    intra_company_payment_indicator: IntraCompanyPaymentIndicator | None = (
+    intra_company_payment_indicator: None | IntraCompanyPaymentIndicator = (
         field(
             default=None,
             metadata={
@@ -879,91 +879,91 @@ class PaymentRequestDetail:
             "required": True,
         }
     )
-    payment_mean_coded_other: PaymentMeanCodedOther | None = field(
+    payment_mean_coded_other: None | PaymentMeanCodedOther = field(
         default=None,
         metadata={
             "name": "PaymentMeanCodedOther",
             "type": "Element",
         },
     )
-    payment_mean_reference: PaymentMeanReference | None = field(
+    payment_mean_reference: None | PaymentMeanReference = field(
         default=None,
         metadata={
             "name": "PaymentMeanReference",
             "type": "Element",
         },
     )
-    payment_system_coded: PaymentSystemCoded | None = field(
+    payment_system_coded: None | PaymentSystemCoded = field(
         default=None,
         metadata={
             "name": "PaymentSystemCoded",
             "type": "Element",
         },
     )
-    payment_system_coded_other: PaymentSystemCodedOther | None = field(
+    payment_system_coded_other: None | PaymentSystemCodedOther = field(
         default=None,
         metadata={
             "name": "PaymentSystemCodedOther",
             "type": "Element",
         },
     )
-    payment_reference: PaymentReference | None = field(
+    payment_reference: None | PaymentReference = field(
         default=None,
         metadata={
             "name": "PaymentReference",
             "type": "Element",
         },
     )
-    accept_fxmarket_rate: AcceptFxmarketRate | None = field(
+    accept_fxmarket_rate: None | AcceptFxmarketRate = field(
         default=None,
         metadata={
             "name": "AcceptFXMarketRate",
             "type": "Element",
         },
     )
-    list_of_rate_of_exchange_detail: ListOfRateOfExchangeDetail | None = field(
+    list_of_rate_of_exchange_detail: None | ListOfRateOfExchangeDetail = field(
         default=None,
         metadata={
             "name": "ListOfRateOfExchangeDetail",
             "type": "Element",
         },
     )
-    payment_detail_attachment: PaymentDetailAttachment | None = field(
+    payment_detail_attachment: None | PaymentDetailAttachment = field(
         default=None,
         metadata={
             "name": "PaymentDetailAttachment",
             "type": "Element",
         },
     )
-    payment_instruction_notes: PaymentInstructionNotes | None = field(
+    payment_instruction_notes: None | PaymentInstructionNotes = field(
         default=None,
         metadata={
             "name": "PaymentInstructionNotes",
             "type": "Element",
         },
     )
-    is_credit: IsCredit | None = field(
+    is_credit: None | IsCredit = field(
         default=None,
         metadata={
             "name": "IsCredit",
             "type": "Element",
         },
     )
-    repetitive_code: RepetitiveCode | None = field(
+    repetitive_code: None | RepetitiveCode = field(
         default=None,
         metadata={
             "name": "RepetitiveCode",
             "type": "Element",
         },
     )
-    financial_charges_allocation: FinancialChargesAllocation | None = field(
+    financial_charges_allocation: None | FinancialChargesAllocation = field(
         default=None,
         metadata={
             "name": "FinancialChargesAllocation",
             "type": "Element",
         },
     )
-    list_of_payment_document_detail: ListOfPaymentDocumentDetail | None = (
+    list_of_payment_document_detail: None | ListOfPaymentDocumentDetail = (
         field(
             default=None,
             metadata={

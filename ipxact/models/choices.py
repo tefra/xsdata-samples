@@ -37,7 +37,7 @@ class Choices:
         :ivar id:
         """
 
-        name: str | None = field(
+        name: None | str = field(
             default=None,
             metadata={
                 "type": "Element",
@@ -51,7 +51,7 @@ class Choices:
                 "min_occurs": 1,
             },
         )
-        id: str | None = field(
+        id: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -69,19 +69,19 @@ class Choices:
             :ivar id:
             """
 
-            text: str | None = field(
+            text: None | str = field(
                 default=None,
                 metadata={
                     "type": "Attribute",
                 },
             )
-            help: str | None = field(
+            help: None | str = field(
                 default=None,
                 metadata={
                     "type": "Attribute",
                 },
             )
-            id: str | None = field(
+            id: None | str = field(
                 default=None,
                 metadata={
                     "type": "Attribute",

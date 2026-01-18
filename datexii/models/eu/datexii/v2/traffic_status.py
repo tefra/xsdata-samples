@@ -27,7 +27,7 @@ class TrafficStatus(BasicData):
     :ivar traffic_status_extension:
     """
 
-    traffic_trend_type: TrafficTrendTypeEnum | None = field(
+    traffic_trend_type: None | TrafficTrendTypeEnum = field(
         default=None,
         metadata={
             "name": "trafficTrendType",
@@ -35,7 +35,7 @@ class TrafficStatus(BasicData):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    traffic_status: TrafficStatusValue | None = field(
+    traffic_status: None | TrafficStatusValue = field(
         default=None,
         metadata={
             "name": "trafficStatus",
@@ -43,7 +43,7 @@ class TrafficStatus(BasicData):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    traffic_status_extension: ExtensionType | None = field(
+    traffic_status_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "trafficStatusExtension",

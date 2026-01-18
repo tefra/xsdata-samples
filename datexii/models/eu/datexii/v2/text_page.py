@@ -12,7 +12,7 @@ class TextPage:
     class Meta:
         name = "_TextPage"
 
-    vms_text: VmsText | None = field(
+    vms_text: None | VmsText = field(
         default=None,
         metadata={
             "name": "vmsText",
@@ -21,7 +21,7 @@ class TextPage:
             "required": True,
         },
     )
-    page_number: int | None = field(
+    page_number: None | int = field(
         default=None,
         metadata={
             "name": "pageNumber",

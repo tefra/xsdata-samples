@@ -95,7 +95,7 @@ class RunnableEntityGroup:
     class Meta:
         name = "RUNNABLE-ENTITY-GROUP"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -104,7 +104,7 @@ class RunnableEntityGroup:
             "required": True,
         },
     )
-    short_name_fragments: RunnableEntityGroup.ShortNameFragments | None = (
+    short_name_fragments: None | RunnableEntityGroup.ShortNameFragments = (
         field(
             default=None,
             metadata={
@@ -114,7 +114,7 @@ class RunnableEntityGroup:
             },
         )
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -122,7 +122,7 @@ class RunnableEntityGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -130,7 +130,7 @@ class RunnableEntityGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -138,7 +138,7 @@ class RunnableEntityGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -146,7 +146,7 @@ class RunnableEntityGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -154,7 +154,7 @@ class RunnableEntityGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: RunnableEntityGroup.Annotations | None = field(
+    annotations: None | RunnableEntityGroup.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -163,7 +163,7 @@ class RunnableEntityGroup:
         },
     )
     runnable_entity_group_irefs: (
-        RunnableEntityGroup.RunnableEntityGroupIrefs | None
+        None | RunnableEntityGroup.RunnableEntityGroupIrefs
     ) = field(
         default=None,
         metadata={
@@ -172,7 +172,7 @@ class RunnableEntityGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    runnable_entity_irefs: RunnableEntityGroup.RunnableEntityIrefs | None = (
+    runnable_entity_irefs: None | RunnableEntityGroup.RunnableEntityIrefs = (
         field(
             default=None,
             metadata={
@@ -182,7 +182,7 @@ class RunnableEntityGroup:
             },
         )
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -190,14 +190,14 @@ class RunnableEntityGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -205,7 +205,7 @@ class RunnableEntityGroup:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",

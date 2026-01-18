@@ -33,7 +33,7 @@ class Sdf:
     class Meta:
         name = "SDF"
 
-    value: NumericalValueVariationPoint | None = field(
+    value: None | NumericalValueVariationPoint = field(
         default=None,
         metadata={
             "name": "VALUE",
@@ -41,14 +41,14 @@ class Sdf:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -56,7 +56,7 @@ class Sdf:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    gid: str | None = field(
+    gid: None | str = field(
         default=None,
         metadata={
             "name": "GID",

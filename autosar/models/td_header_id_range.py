@@ -37,7 +37,7 @@ class TdHeaderIdRange:
     class Meta:
         name = "TD-HEADER-ID-RANGE"
 
-    max_header_id: Integer | None = field(
+    max_header_id: None | Integer = field(
         default=None,
         metadata={
             "name": "MAX-HEADER-ID",
@@ -45,7 +45,7 @@ class TdHeaderIdRange:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    min_header_id: Integer | None = field(
+    min_header_id: None | Integer = field(
         default=None,
         metadata={
             "name": "MIN-HEADER-ID",
@@ -53,14 +53,14 @@ class TdHeaderIdRange:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

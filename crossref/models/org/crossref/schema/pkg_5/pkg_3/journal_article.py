@@ -74,7 +74,7 @@ class JournalArticle:
             "max_occurs": 20,
         },
     )
-    contributors: Contributors | None = field(
+    contributors: None | Contributors = field(
         default=None,
         metadata={
             "type": "Element",
@@ -95,38 +95,38 @@ class JournalArticle:
             "max_occurs": 10,
         },
     )
-    acceptance_date: AcceptanceDate | None = field(
+    acceptance_date: None | AcceptanceDate = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    pages: Pages | None = field(
+    pages: None | Pages = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    publisher_item: PublisherItem | None = field(
+    publisher_item: None | PublisherItem = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    crossmark: Crossmark | None = field(
+    crossmark: None | Crossmark = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    program: FundrefProgram | None = field(
+    program: None | FundrefProgram = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.crossref.org/fundref.xsd",
         },
     )
-    program_1: AccessIndicatorsProgram | None = field(
+    program_1: None | AccessIndicatorsProgram = field(
         default=None,
         metadata={
             "name": "program",
@@ -134,7 +134,7 @@ class JournalArticle:
             "namespace": "http://www.crossref.org/AccessIndicators.xsd",
         },
     )
-    program_2: ClinicaltrialsProgram | None = field(
+    program_2: None | ClinicaltrialsProgram = field(
         default=None,
         metadata={
             "name": "program",
@@ -142,7 +142,7 @@ class JournalArticle:
             "namespace": "http://www.crossref.org/clinicaltrials.xsd",
         },
     )
-    program_3: RelationsProgram | None = field(
+    program_3: None | RelationsProgram = field(
         default=None,
         metadata={
             "name": "program",
@@ -150,32 +150,32 @@ class JournalArticle:
             "namespace": "http://www.crossref.org/relations.xsd",
         },
     )
-    archive_locations: ArchiveLocations | None = field(
+    archive_locations: None | ArchiveLocations = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    scn_policies: ScnPolicies | None = field(
+    scn_policies: None | ScnPolicies = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    doi_data: DoiData | None = field(
+    doi_data: None | DoiData = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
         },
     )
-    citation_list: CitationList | None = field(
+    citation_list: None | CitationList = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    component_list: ComponentList | None = field(
+    component_list: None | ComponentList = field(
         default=None,
         metadata={
             "type": "Element",
@@ -187,7 +187,7 @@ class JournalArticle:
             "type": "Attribute",
         },
     )
-    language: JournalArticleLanguage | None = field(
+    language: None | JournalArticleLanguage = field(
         default=None,
         metadata={
             "type": "Attribute",

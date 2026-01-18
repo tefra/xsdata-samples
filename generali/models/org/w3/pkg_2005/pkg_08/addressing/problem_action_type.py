@@ -9,7 +9,7 @@ __NAMESPACE__ = "http://www.w3.org/2005/08/addressing"
 
 @dataclass
 class ProblemActionType:
-    action: Action | None = field(
+    action: None | Action = field(
         default=None,
         metadata={
             "name": "Action",
@@ -17,7 +17,7 @@ class ProblemActionType:
             "namespace": "http://www.w3.org/2005/08/addressing",
         },
     )
-    soap_action: str | None = field(
+    soap_action: None | str = field(
         default=None,
         metadata={
             "name": "SoapAction",

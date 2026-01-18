@@ -130,7 +130,7 @@ class EcucModuleConfigurationValues:
     class Meta:
         name = "ECUC-MODULE-CONFIGURATION-VALUES"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -140,7 +140,7 @@ class EcucModuleConfigurationValues:
         },
     )
     short_name_fragments: (
-        EcucModuleConfigurationValues.ShortNameFragments | None
+        None | EcucModuleConfigurationValues.ShortNameFragments
     ) = field(
         default=None,
         metadata={
@@ -149,7 +149,7 @@ class EcucModuleConfigurationValues:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -157,7 +157,7 @@ class EcucModuleConfigurationValues:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -165,7 +165,7 @@ class EcucModuleConfigurationValues:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -173,7 +173,7 @@ class EcucModuleConfigurationValues:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -181,7 +181,7 @@ class EcucModuleConfigurationValues:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -189,7 +189,7 @@ class EcucModuleConfigurationValues:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: EcucModuleConfigurationValues.Annotations | None = field(
+    annotations: None | EcucModuleConfigurationValues.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -197,7 +197,7 @@ class EcucModuleConfigurationValues:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -205,7 +205,7 @@ class EcucModuleConfigurationValues:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    definition_ref: EcucModuleConfigurationValues.DefinitionRef | None = field(
+    definition_ref: None | EcucModuleConfigurationValues.DefinitionRef = field(
         default=None,
         metadata={
             "name": "DEFINITION-REF",
@@ -213,7 +213,7 @@ class EcucModuleConfigurationValues:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ecuc_def_edition: RevisionLabelString | None = field(
+    ecuc_def_edition: None | RevisionLabelString = field(
         default=None,
         metadata={
             "name": "ECUC-DEF-EDITION",
@@ -221,7 +221,7 @@ class EcucModuleConfigurationValues:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    implementation_config_variant: EcucConfigurationVariantEnum | None = field(
+    implementation_config_variant: None | EcucConfigurationVariantEnum = field(
         default=None,
         metadata={
             "name": "IMPLEMENTATION-CONFIG-VARIANT",
@@ -230,7 +230,7 @@ class EcucModuleConfigurationValues:
         },
     )
     module_description_ref: (
-        EcucModuleConfigurationValues.ModuleDescriptionRef | None
+        None | EcucModuleConfigurationValues.ModuleDescriptionRef
     ) = field(
         default=None,
         metadata={
@@ -239,7 +239,7 @@ class EcucModuleConfigurationValues:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    post_build_variant_used: Boolean | None = field(
+    post_build_variant_used: None | Boolean = field(
         default=None,
         metadata={
             "name": "POST-BUILD-VARIANT-USED",
@@ -247,7 +247,7 @@ class EcucModuleConfigurationValues:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    containers: EcucModuleConfigurationValues.Containers | None = field(
+    containers: None | EcucModuleConfigurationValues.Containers = field(
         default=None,
         metadata={
             "name": "CONTAINERS",
@@ -255,14 +255,14 @@ class EcucModuleConfigurationValues:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -270,7 +270,7 @@ class EcucModuleConfigurationValues:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -302,7 +302,7 @@ class EcucModuleConfigurationValues:
 
     @dataclass
     class DefinitionRef(Ref):
-        dest: EcucModuleDefSubtypesEnum | None = field(
+        dest: None | EcucModuleDefSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -313,7 +313,7 @@ class EcucModuleConfigurationValues:
 
     @dataclass
     class ModuleDescriptionRef(Ref):
-        dest: BswImplementationSubtypesEnum | None = field(
+        dest: None | BswImplementationSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

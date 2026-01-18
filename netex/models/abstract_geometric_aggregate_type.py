@@ -10,7 +10,7 @@ __NAMESPACE__ = "http://www.opengis.net/gml/3.2"
 
 @dataclass
 class AbstractGeometricAggregateType(AbstractGeometryType):
-    aggregation_type: AggregationType | None = field(
+    aggregation_type: None | AggregationType = field(
         default=None,
         metadata={
             "name": "aggregationType",

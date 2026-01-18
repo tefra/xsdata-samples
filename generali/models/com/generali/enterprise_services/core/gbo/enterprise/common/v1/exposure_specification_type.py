@@ -22,7 +22,7 @@ __NAMESPACE__ = (
 
 @dataclass
 class ExposureSpecificationType(BaseGbotype):
-    specification_base: SpecificationBaseType | None = field(
+    specification_base: None | SpecificationBaseType = field(
         default=None,
         metadata={
             "name": "SpecificationBase",
@@ -30,7 +30,7 @@ class ExposureSpecificationType(BaseGbotype):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
         },
     )
-    line_of_business: LineOfBusinessDetailType | None = field(
+    line_of_business: None | LineOfBusinessDetailType = field(
         default=None,
         metadata={
             "name": "LineOfBusiness",
@@ -38,7 +38,7 @@ class ExposureSpecificationType(BaseGbotype):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
         },
     )
-    item: ExposureItemType | None = field(
+    item: None | ExposureItemType = field(
         default=None,
         metadata={
             "name": "Item",

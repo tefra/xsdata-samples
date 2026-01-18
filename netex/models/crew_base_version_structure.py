@@ -19,7 +19,7 @@ class CrewBaseVersionStructure(GroupOfEntitiesVersionStructure):
         name = "CrewBase_VersionStructure"
 
     parking_point_ref_or_relief_point_ref: (
-        GaragePointRef | ParkingPointRef | ReliefPointRef | None
+        None | GaragePointRef | ParkingPointRef | ReliefPointRef
     ) = field(
         default=None,
         metadata={
@@ -43,7 +43,7 @@ class CrewBaseVersionStructure(GroupOfEntitiesVersionStructure):
             ),
         },
     )
-    garages: GarageRefsRelStructure | None = field(
+    garages: None | GarageRefsRelStructure = field(
         default=None,
         metadata={
             "type": "Element",

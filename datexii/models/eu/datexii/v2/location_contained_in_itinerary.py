@@ -12,7 +12,7 @@ class LocationContainedInItinerary:
     class Meta:
         name = "_LocationContainedInItinerary"
 
-    location: Location | None = field(
+    location: None | Location = field(
         default=None,
         metadata={
             "type": "Element",
@@ -20,7 +20,7 @@ class LocationContainedInItinerary:
             "required": True,
         },
     )
-    index: int | None = field(
+    index: None | int = field(
         default=None,
         metadata={
             "type": "Attribute",

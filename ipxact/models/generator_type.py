@@ -52,7 +52,7 @@ class GeneratorType:
     class Meta:
         name = "generatorType"
 
-    name: str | None = field(
+    name: None | str = field(
         default=None,
         metadata={
             "type": "Element",
@@ -60,7 +60,7 @@ class GeneratorType:
             "required": True,
         },
     )
-    display_name: DisplayName | None = field(
+    display_name: None | DisplayName = field(
         default=None,
         metadata={
             "name": "displayName",
@@ -68,7 +68,7 @@ class GeneratorType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    short_description: ShortDescription | None = field(
+    short_description: None | ShortDescription = field(
         default=None,
         metadata={
             "name": "shortDescription",
@@ -76,28 +76,28 @@ class GeneratorType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    description: Description | None = field(
+    description: None | Description = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    phase: Phase | None = field(
+    phase: None | Phase = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    parameters: Parameters | None = field(
+    parameters: None | Parameters = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    api_type: GeneratorType.ApiType | None = field(
+    api_type: None | GeneratorType.ApiType = field(
         default=None,
         metadata={
             "name": "apiType",
@@ -105,7 +105,7 @@ class GeneratorType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    api_service: GeneratorTypeApiService | None = field(
+    api_service: None | GeneratorTypeApiService = field(
         default=None,
         metadata={
             "name": "apiService",
@@ -113,7 +113,7 @@ class GeneratorType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    transport_methods: GeneratorType.TransportMethods | None = field(
+    transport_methods: None | GeneratorType.TransportMethods = field(
         default=None,
         metadata={
             "name": "transportMethods",
@@ -121,7 +121,7 @@ class GeneratorType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    generator_exe: IpxactUri | None = field(
+    generator_exe: None | IpxactUri = field(
         default=None,
         metadata={
             "name": "generatorExe",
@@ -130,7 +130,7 @@ class GeneratorType:
             "required": True,
         },
     )
-    vendor_extensions: VendorExtensions | None = field(
+    vendor_extensions: None | VendorExtensions = field(
         default=None,
         metadata={
             "name": "vendorExtensions",
@@ -144,7 +144,7 @@ class GeneratorType:
             "type": "Attribute",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -154,13 +154,13 @@ class GeneratorType:
 
     @dataclass
     class ApiType:
-        value: ApiType | None = field(
+        value: None | ApiType = field(
             default=None,
             metadata={
                 "required": True,
             },
         )
-        id: str | None = field(
+        id: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -178,7 +178,7 @@ class GeneratorType:
         """
 
         transport_method: (
-            GeneratorType.TransportMethods.TransportMethod | None
+            None | GeneratorType.TransportMethods.TransportMethod
         ) = field(
             default=None,
             metadata={
@@ -188,7 +188,7 @@ class GeneratorType:
                 "required": True,
             },
         )
-        id: str | None = field(
+        id: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -198,13 +198,13 @@ class GeneratorType:
 
         @dataclass
         class TransportMethod:
-            value: TransportMethodType | None = field(
+            value: None | TransportMethodType = field(
                 default=None,
                 metadata={
                     "required": True,
                 },
             )
-            id: str | None = field(
+            id: None | str = field(
                 default=None,
                 metadata={
                     "type": "Attribute",

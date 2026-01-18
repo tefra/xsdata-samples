@@ -20,7 +20,7 @@ class OpenlrLocationReferencePoint(OpenlrBaseLocationReferencePoint):
     points (LRPs).
     """
 
-    openlr_path_attributes: OpenlrPathAttributes | None = field(
+    openlr_path_attributes: None | OpenlrPathAttributes = field(
         default=None,
         metadata={
             "name": "openlrPathAttributes",
@@ -29,7 +29,7 @@ class OpenlrLocationReferencePoint(OpenlrBaseLocationReferencePoint):
             "required": True,
         },
     )
-    openlr_location_reference_point_extension: ExtensionType | None = field(
+    openlr_location_reference_point_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "openlrLocationReferencePointExtension",

@@ -36,7 +36,7 @@ class BufferProperties:
     class Meta:
         name = "BUFFER-PROPERTIES"
 
-    buffer_computation: CompuScale | None = field(
+    buffer_computation: None | CompuScale = field(
         default=None,
         metadata={
             "name": "BUFFER-COMPUTATION",
@@ -44,7 +44,7 @@ class BufferProperties:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    header_length: Integer | None = field(
+    header_length: None | Integer = field(
         default=None,
         metadata={
             "name": "HEADER-LENGTH",
@@ -52,7 +52,7 @@ class BufferProperties:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    in_place: Boolean | None = field(
+    in_place: None | Boolean = field(
         default=None,
         metadata={
             "name": "IN-PLACE",
@@ -60,14 +60,14 @@ class BufferProperties:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

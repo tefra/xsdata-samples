@@ -59,7 +59,7 @@ class Row:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -67,14 +67,14 @@ class Row:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -90,7 +90,7 @@ class Row:
             "tokens": True,
         },
     )
-    view: str | None = field(
+    view: None | str = field(
         default=None,
         metadata={
             "name": "VIEW",
@@ -98,21 +98,21 @@ class Row:
             "pattern": r"(-?[a-zA-Z_]+)(( )+-?[a-zA-Z_]+)*",
         },
     )
-    break_value: ChapterEnumBreakSimple | None = field(
+    break_value: None | ChapterEnumBreakSimple = field(
         default=None,
         metadata={
             "name": "BREAK",
             "type": "Attribute",
         },
     )
-    keep_with_previous: KeepWithPreviousEnumSimple | None = field(
+    keep_with_previous: None | KeepWithPreviousEnumSimple = field(
         default=None,
         metadata={
             "name": "KEEP-WITH-PREVIOUS",
             "type": "Attribute",
         },
     )
-    rowsep: str | None = field(
+    rowsep: None | str = field(
         default=None,
         metadata={
             "name": "ROWSEP",
@@ -120,7 +120,7 @@ class Row:
             "pattern": r"[0-1]",
         },
     )
-    valign: ValignEnumSimple | None = field(
+    valign: None | ValignEnumSimple = field(
         default=None,
         metadata={
             "name": "VALIGN",

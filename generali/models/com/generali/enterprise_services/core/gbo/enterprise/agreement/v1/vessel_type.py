@@ -22,7 +22,7 @@ __NAMESPACE__ = (
 
 @dataclass
 class VesselType(BaseIdentifiedComponentType):
-    imo_number: str | None = field(
+    imo_number: None | str = field(
         default=None,
         metadata={
             "name": "ImoNumber",
@@ -30,7 +30,7 @@ class VesselType(BaseIdentifiedComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    top: bool | None = field(
+    top: None | bool = field(
         default=None,
         metadata={
             "name": "Top",
@@ -38,7 +38,7 @@ class VesselType(BaseIdentifiedComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    flag: str | None = field(
+    flag: None | str = field(
         default=None,
         metadata={
             "name": "Flag",
@@ -46,7 +46,7 @@ class VesselType(BaseIdentifiedComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    name: str | None = field(
+    name: None | str = field(
         default=None,
         metadata={
             "name": "Name",
@@ -54,7 +54,7 @@ class VesselType(BaseIdentifiedComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    segment: str | None = field(
+    segment: None | str = field(
         default=None,
         metadata={
             "name": "Segment",
@@ -62,7 +62,7 @@ class VesselType(BaseIdentifiedComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    gross_tonnage: NumericType | None = field(
+    gross_tonnage: None | NumericType = field(
         default=None,
         metadata={
             "name": "GrossTonnage",
@@ -70,7 +70,7 @@ class VesselType(BaseIdentifiedComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    dwt: NumericType | None = field(
+    dwt: None | NumericType = field(
         default=None,
         metadata={
             "name": "DWT",
@@ -78,7 +78,7 @@ class VesselType(BaseIdentifiedComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    score: NumberType | None = field(
+    score: None | NumberType = field(
         default=None,
         metadata={
             "name": "Score",
@@ -86,7 +86,7 @@ class VesselType(BaseIdentifiedComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    classification_society: str | None = field(
+    classification_society: None | str = field(
         default=None,
         metadata={
             "name": "ClassificationSociety",
@@ -94,7 +94,7 @@ class VesselType(BaseIdentifiedComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    built_year: int | None = field(
+    built_year: None | int = field(
         default=None,
         metadata={
             "name": "BuiltYear",
@@ -102,7 +102,7 @@ class VesselType(BaseIdentifiedComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    vessel_interests: VesselTypeVesselInterests | None = field(
+    vessel_interests: None | VesselTypeVesselInterests = field(
         default=None,
         metadata={
             "name": "VesselInterests",

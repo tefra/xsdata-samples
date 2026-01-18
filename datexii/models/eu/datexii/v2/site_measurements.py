@@ -33,7 +33,7 @@ class SiteMeasurements:
     """
 
     measurement_site_reference: (
-        MeasurementSiteRecordVersionedReference | None
+        None | MeasurementSiteRecordVersionedReference
     ) = field(
         default=None,
         metadata={
@@ -43,7 +43,7 @@ class SiteMeasurements:
             "required": True,
         },
     )
-    measurement_time_default: XmlDateTime | None = field(
+    measurement_time_default: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "measurementTimeDefault",
@@ -60,7 +60,7 @@ class SiteMeasurements:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    site_measurements_extension: ExtensionType | None = field(
+    site_measurements_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "siteMeasurementsExtension",

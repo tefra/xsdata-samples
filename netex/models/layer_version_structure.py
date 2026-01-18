@@ -16,7 +16,7 @@ class LayerVersionStructure(GroupOfEntitiesVersionStructure):
     class Meta:
         name = "Layer_VersionStructure"
 
-    location_system: str | None = field(
+    location_system: None | str = field(
         default=None,
         metadata={
             "name": "LocationSystem",
@@ -24,7 +24,7 @@ class LayerVersionStructure(GroupOfEntitiesVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    version_frames: VersionFrameRefsRelStructure | None = field(
+    version_frames: None | VersionFrameRefsRelStructure = field(
         default=None,
         metadata={
             "name": "versionFrames",
@@ -32,7 +32,7 @@ class LayerVersionStructure(GroupOfEntitiesVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    members: ObjectRefsRelStructure | None = field(
+    members: None | ObjectRefsRelStructure = field(
         default=None,
         metadata={
             "type": "Element",

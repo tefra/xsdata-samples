@@ -44,7 +44,7 @@ class ExclusiveAreaNestingOrder:
     class Meta:
         name = "EXCLUSIVE-AREA-NESTING-ORDER"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -54,7 +54,7 @@ class ExclusiveAreaNestingOrder:
         },
     )
     short_name_fragments: (
-        ExclusiveAreaNestingOrder.ShortNameFragments | None
+        None | ExclusiveAreaNestingOrder.ShortNameFragments
     ) = field(
         default=None,
         metadata={
@@ -63,7 +63,7 @@ class ExclusiveAreaNestingOrder:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    exclusive_area_refs: ExclusiveAreaNestingOrder.ExclusiveAreaRefs | None = (
+    exclusive_area_refs: None | ExclusiveAreaNestingOrder.ExclusiveAreaRefs = (
         field(
             default=None,
             metadata={
@@ -73,7 +73,7 @@ class ExclusiveAreaNestingOrder:
             },
         )
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -81,14 +81,14 @@ class ExclusiveAreaNestingOrder:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -123,7 +123,7 @@ class ExclusiveAreaNestingOrder:
 
         @dataclass
         class ExclusiveAreaRef(Ref):
-            dest: ExclusiveAreaSubtypesEnum | None = field(
+            dest: None | ExclusiveAreaSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",

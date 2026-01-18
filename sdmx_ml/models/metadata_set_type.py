@@ -53,9 +53,9 @@ class MetadataSetType(MetadataSetBaseType):
     """
 
     metadata_provision_agreement_or_metadataflow: (
-        MetadataSetType.MetadataProvisionAgreement
+        None
+        | MetadataSetType.MetadataProvisionAgreement
         | MetadataSetType.Metadataflow
-        | None
     ) = field(
         default=None,
         metadata={
@@ -93,34 +93,34 @@ class MetadataSetType(MetadataSetBaseType):
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/metadata/generic",
         },
     )
-    action: ActionType | None = field(
+    action: None | ActionType = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    reporting_begin_date: XmlPeriod | XmlDate | XmlDateTime | None = field(
+    reporting_begin_date: None | XmlPeriod | XmlDate | XmlDateTime = field(
         default=None,
         metadata={
             "name": "reportingBeginDate",
             "type": "Attribute",
         },
     )
-    reporting_end_date: XmlPeriod | XmlDate | XmlDateTime | None = field(
+    reporting_end_date: None | XmlPeriod | XmlDate | XmlDateTime = field(
         default=None,
         metadata={
             "name": "reportingEndDate",
             "type": "Attribute",
         },
     )
-    publication_year: XmlPeriod | None = field(
+    publication_year: None | XmlPeriod = field(
         default=None,
         metadata={
             "name": "publicationYear",
             "type": "Attribute",
         },
     )
-    publication_period: XmlPeriod | XmlDate | XmlDateTime | str | None = field(
+    publication_period: None | XmlPeriod | XmlDate | XmlDateTime | str = field(
         default=None,
         metadata={
             "name": "publicationPeriod",
@@ -131,7 +131,7 @@ class MetadataSetType(MetadataSetBaseType):
 
     @dataclass(frozen=True)
     class MetadataProvisionAgreement:
-        value: str | None = field(
+        value: None | str = field(
             default=None,
             metadata={
                 "required": True,
@@ -141,7 +141,7 @@ class MetadataSetType(MetadataSetBaseType):
 
     @dataclass(frozen=True)
     class Metadataflow:
-        value: str | None = field(
+        value: None | str = field(
             default=None,
             metadata={
                 "required": True,

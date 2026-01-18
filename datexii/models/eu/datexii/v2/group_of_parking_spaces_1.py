@@ -61,7 +61,7 @@ class GroupOfParkingSpaces1(ParkingSpaceBasics):
     class Meta:
         name = "GroupOfParkingSpaces"
 
-    parking_number_of_spaces: int | None = field(
+    parking_number_of_spaces: None | int = field(
         default=None,
         metadata={
             "name": "parkingNumberOfSpaces",
@@ -70,7 +70,7 @@ class GroupOfParkingSpaces1(ParkingSpaceBasics):
             "required": True,
         },
     )
-    parking_type_of_group: ParkingTypeOfGroup | None = field(
+    parking_type_of_group: None | ParkingTypeOfGroup = field(
         default=None,
         metadata={
             "name": "parkingTypeOfGroup",
@@ -97,7 +97,7 @@ class GroupOfParkingSpaces1(ParkingSpaceBasics):
             "max_length": 1024,
         },
     )
-    minimum_parking_space_dimension: Dimension | None = field(
+    minimum_parking_space_dimension: None | Dimension = field(
         default=None,
         metadata={
             "name": "minimumParkingSpaceDimension",
@@ -105,7 +105,7 @@ class GroupOfParkingSpaces1(ParkingSpaceBasics):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    dimension_of_group: Dimension | None = field(
+    dimension_of_group: None | Dimension = field(
         default=None,
         metadata={
             "name": "dimensionOfGroup",
@@ -113,7 +113,7 @@ class GroupOfParkingSpaces1(ParkingSpaceBasics):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    maximum_parking_space_dimension: Dimension | None = field(
+    maximum_parking_space_dimension: None | Dimension = field(
         default=None,
         metadata={
             "name": "maximumParkingSpaceDimension",
@@ -131,7 +131,7 @@ class GroupOfParkingSpaces1(ParkingSpaceBasics):
             },
         )
     )
-    group_of_locations: GroupOfLocations | None = field(
+    group_of_locations: None | GroupOfLocations = field(
         default=None,
         metadata={
             "name": "groupOfLocations",
@@ -139,7 +139,7 @@ class GroupOfParkingSpaces1(ParkingSpaceBasics):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    group_of_parking_spaces_extension: ExtensionType | None = field(
+    group_of_parking_spaces_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "groupOfParkingSpacesExtension",

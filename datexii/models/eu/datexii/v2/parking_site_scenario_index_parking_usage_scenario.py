@@ -14,7 +14,7 @@ class ParkingSiteScenarioIndexParkingUsageScenario:
     class Meta:
         name = "_ParkingSiteScenarioIndexParkingUsageScenario"
 
-    parking_usage_scenario: ParkingUsageScenario | None = field(
+    parking_usage_scenario: None | ParkingUsageScenario = field(
         default=None,
         metadata={
             "name": "parkingUsageScenario",
@@ -23,7 +23,7 @@ class ParkingSiteScenarioIndexParkingUsageScenario:
             "required": True,
         },
     )
-    scenario_index: int | None = field(
+    scenario_index: None | int = field(
         default=None,
         metadata={
             "name": "scenarioIndex",

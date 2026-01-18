@@ -14,7 +14,7 @@ class CountryVersionStructure(PlaceVersionStructure):
     class Meta:
         name = "Country_VersionStructure"
 
-    uic_code: PrivateCodeStructure | None = field(
+    uic_code: None | PrivateCodeStructure = field(
         default=None,
         metadata={
             "name": "UicCode",
@@ -22,7 +22,7 @@ class CountryVersionStructure(PlaceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    alternative_names: AlternativeNamesRelStructure | None = field(
+    alternative_names: None | AlternativeNamesRelStructure = field(
         default=None,
         metadata={
             "name": "alternativeNames",
@@ -30,7 +30,7 @@ class CountryVersionStructure(PlaceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    principality: str | None = field(
+    principality: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",

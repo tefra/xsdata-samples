@@ -28,20 +28,20 @@ class RptExecutionControlEnum:
     class Meta:
         name = "RPT-EXECUTION-CONTROL-ENUM"
 
-    value: RptExecutionControlEnumSimple | None = field(
+    value: None | RptExecutionControlEnumSimple = field(
         default=None,
         metadata={
             "required": True,
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

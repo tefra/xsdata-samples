@@ -44,7 +44,7 @@ class SubscriptionType:
         the subscription.
     """
 
-    organisation: str | None = field(
+    organisation: None | str = field(
         default=None,
         metadata={
             "name": "Organisation",
@@ -54,7 +54,7 @@ class SubscriptionType:
             "pattern": r".+\.base\.Agency=.+:AGENCIES\(.+\).+|.+\.base\.DataConsumer=.+:DATA_CONSUMERS\(.+\).+|.+\.base\.DataProvider=.+:DATA_PROVIDERS\(.+\).+|.+\.base\.MetadataProvider=.+:METADATA_PROVIDERS\(.+\).+|.+\.base\.OrganisationUnit=.+",
         },
     )
-    registry_urn: str | None = field(
+    registry_urn: None | str = field(
         default=None,
         metadata={
             "name": "RegistryURN",
@@ -78,7 +78,7 @@ class SubscriptionType:
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry",
         },
     )
-    subscriber_assigned_id: str | None = field(
+    subscriber_assigned_id: None | str = field(
         default=None,
         metadata={
             "name": "SubscriberAssignedID",
@@ -87,7 +87,7 @@ class SubscriptionType:
             "pattern": r"[A-Za-z0-9_@$\-]+",
         },
     )
-    validity_period: ValidityPeriodType | None = field(
+    validity_period: None | ValidityPeriodType = field(
         default=None,
         metadata={
             "name": "ValidityPeriod",
@@ -96,7 +96,7 @@ class SubscriptionType:
             "required": True,
         },
     )
-    event_selector: EventSelectorType | None = field(
+    event_selector: None | EventSelectorType = field(
         default=None,
         metadata={
             "name": "EventSelector",

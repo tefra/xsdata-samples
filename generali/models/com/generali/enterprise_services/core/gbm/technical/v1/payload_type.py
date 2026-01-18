@@ -7,7 +7,7 @@ __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbm/technical/v1"
 
 @dataclass
 class PayloadType:
-    any_element: object | None = field(
+    any_element: None | object = field(
         default=None,
         metadata={
             "type": "Wildcard",

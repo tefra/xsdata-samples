@@ -23,14 +23,14 @@ class AnimalPresenceObstruction(Obstruction):
     :ivar animal_presence_obstruction_extension:
     """
 
-    alive: bool | None = field(
+    alive: None | bool = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    animal_presence_type: AnimalPresenceTypeEnum | None = field(
+    animal_presence_type: None | AnimalPresenceTypeEnum = field(
         default=None,
         metadata={
             "name": "animalPresenceType",
@@ -39,7 +39,7 @@ class AnimalPresenceObstruction(Obstruction):
             "required": True,
         },
     )
-    animal_presence_obstruction_extension: ExtensionType | None = field(
+    animal_presence_obstruction_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "animalPresenceObstructionExtension",

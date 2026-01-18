@@ -21,7 +21,7 @@ class NumberType:
     xmlns:ns1="urn:un:unece:uncefact:documentation:standard:CoreComponentsTechnicalSpecification:2">Integer</ns1:PrimitiveType>.
     """
 
-    value: int | None = field(
+    value: None | int = field(
         default=None,
         metadata={
             "required": True,

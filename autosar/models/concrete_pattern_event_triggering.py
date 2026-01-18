@@ -107,7 +107,7 @@ class ConcretePatternEventTriggering:
     class Meta:
         name = "CONCRETE-PATTERN-EVENT-TRIGGERING"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -117,7 +117,7 @@ class ConcretePatternEventTriggering:
         },
     )
     short_name_fragments: (
-        ConcretePatternEventTriggering.ShortNameFragments | None
+        None | ConcretePatternEventTriggering.ShortNameFragments
     ) = field(
         default=None,
         metadata={
@@ -126,7 +126,7 @@ class ConcretePatternEventTriggering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -134,7 +134,7 @@ class ConcretePatternEventTriggering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -142,7 +142,7 @@ class ConcretePatternEventTriggering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -150,7 +150,7 @@ class ConcretePatternEventTriggering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -158,7 +158,7 @@ class ConcretePatternEventTriggering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -166,7 +166,7 @@ class ConcretePatternEventTriggering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: ConcretePatternEventTriggering.Annotations | None = field(
+    annotations: None | ConcretePatternEventTriggering.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -174,7 +174,7 @@ class ConcretePatternEventTriggering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    trace_refs: ConcretePatternEventTriggering.TraceRefs | None = field(
+    trace_refs: None | ConcretePatternEventTriggering.TraceRefs = field(
         default=None,
         metadata={
             "name": "TRACE-REFS",
@@ -183,7 +183,7 @@ class ConcretePatternEventTriggering:
         },
     )
     timing_condition_ref: (
-        ConcretePatternEventTriggering.TimingConditionRef | None
+        None | ConcretePatternEventTriggering.TimingConditionRef
     ) = field(
         default=None,
         metadata={
@@ -192,7 +192,7 @@ class ConcretePatternEventTriggering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -200,7 +200,7 @@ class ConcretePatternEventTriggering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    event_ref: ConcretePatternEventTriggering.EventRef | None = field(
+    event_ref: None | ConcretePatternEventTriggering.EventRef = field(
         default=None,
         metadata={
             "name": "EVENT-REF",
@@ -208,7 +208,7 @@ class ConcretePatternEventTriggering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    pattern_jitter: MultidimensionalTime | None = field(
+    pattern_jitter: None | MultidimensionalTime = field(
         default=None,
         metadata={
             "name": "PATTERN-JITTER",
@@ -216,7 +216,7 @@ class ConcretePatternEventTriggering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    pattern_period: MultidimensionalTime | None = field(
+    pattern_period: None | MultidimensionalTime = field(
         default=None,
         metadata={
             "name": "PATTERN-PERIOD",
@@ -224,7 +224,7 @@ class ConcretePatternEventTriggering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    offsets: ConcretePatternEventTriggering.Offsets | None = field(
+    offsets: None | ConcretePatternEventTriggering.Offsets = field(
         default=None,
         metadata={
             "name": "OFFSETS",
@@ -232,7 +232,7 @@ class ConcretePatternEventTriggering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    pattern_length: MultidimensionalTime | None = field(
+    pattern_length: None | MultidimensionalTime = field(
         default=None,
         metadata={
             "name": "PATTERN-LENGTH",
@@ -240,14 +240,14 @@ class ConcretePatternEventTriggering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -255,7 +255,7 @@ class ConcretePatternEventTriggering:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -300,7 +300,7 @@ class ConcretePatternEventTriggering:
 
         @dataclass
         class TraceRef(Ref):
-            dest: TraceableSubtypesEnum | None = field(
+            dest: None | TraceableSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -311,7 +311,7 @@ class ConcretePatternEventTriggering:
 
     @dataclass
     class TimingConditionRef(Ref):
-        dest: TimingConditionSubtypesEnum | None = field(
+        dest: None | TimingConditionSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -322,7 +322,7 @@ class ConcretePatternEventTriggering:
 
     @dataclass
     class EventRef(Ref):
-        dest: TimingDescriptionEventSubtypesEnum | None = field(
+        dest: None | TimingDescriptionEventSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

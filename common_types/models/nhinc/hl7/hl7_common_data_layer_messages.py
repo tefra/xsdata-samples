@@ -35,7 +35,7 @@ class CareRecordQupcIn043100Uv01RequestType:
     class Meta:
         name = "CareRecord_QUPC_IN043100UV01RequestType"
 
-    local_device_id: str | None = field(
+    local_device_id: None | str = field(
         default=None,
         metadata={
             "name": "localDeviceId",
@@ -44,7 +44,7 @@ class CareRecordQupcIn043100Uv01RequestType:
             "required": True,
         },
     )
-    sender_oid: str | None = field(
+    sender_oid: None | str = field(
         default=None,
         metadata={
             "name": "senderOID",
@@ -53,7 +53,7 @@ class CareRecordQupcIn043100Uv01RequestType:
             "required": True,
         },
     )
-    receiver_oid: str | None = field(
+    receiver_oid: None | str = field(
         default=None,
         metadata={
             "name": "receiverOID",
@@ -62,7 +62,7 @@ class CareRecordQupcIn043100Uv01RequestType:
             "required": True,
         },
     )
-    query: QupcIn043100Uv01McciMt000100Uv01Message | None = field(
+    query: None | QupcIn043100Uv01McciMt000100Uv01Message = field(
         default=None,
         metadata={
             "type": "Element",
@@ -77,7 +77,7 @@ class CareRecordQupcIn043200Uv01ResponseType:
     class Meta:
         name = "CareRecord_QUPC_IN043200UV01ResponseType"
 
-    care_record: QupcIn043200Uv01MfmiMt700712Uv01Subject1 | None = field(
+    care_record: None | QupcIn043200Uv01MfmiMt700712Uv01Subject1 = field(
         default=None,
         metadata={
             "name": "careRecord",
@@ -93,7 +93,7 @@ class FindEncountersPrpaIn900300Uv02RequestType:
     class Meta:
         name = "FindEncounters_PRPA_IN900300UV02RequestType"
 
-    local_device_id: str | None = field(
+    local_device_id: None | str = field(
         default=None,
         metadata={
             "name": "localDeviceId",
@@ -102,7 +102,7 @@ class FindEncountersPrpaIn900300Uv02RequestType:
             "required": True,
         },
     )
-    sender_oid: str | None = field(
+    sender_oid: None | str = field(
         default=None,
         metadata={
             "name": "senderOID",
@@ -111,7 +111,7 @@ class FindEncountersPrpaIn900300Uv02RequestType:
             "required": True,
         },
     )
-    receiver_oid: str | None = field(
+    receiver_oid: None | str = field(
         default=None,
         metadata={
             "name": "receiverOID",
@@ -120,7 +120,7 @@ class FindEncountersPrpaIn900300Uv02RequestType:
             "required": True,
         },
     )
-    query: PrpaIn900300Uv02McciMt000100Uv01Message | None = field(
+    query: None | PrpaIn900300Uv02McciMt000100Uv01Message = field(
         default=None,
         metadata={
             "type": "Element",
@@ -149,7 +149,7 @@ class FindPatientsPrpaIn201305Uv02RequestType:
     class Meta:
         name = "FindPatients_PRPA_IN201305UV02RequestType"
 
-    local_device_id: str | None = field(
+    local_device_id: None | str = field(
         default=None,
         metadata={
             "name": "localDeviceId",
@@ -158,7 +158,7 @@ class FindPatientsPrpaIn201305Uv02RequestType:
             "required": True,
         },
     )
-    sender_oid: str | None = field(
+    sender_oid: None | str = field(
         default=None,
         metadata={
             "name": "senderOID",
@@ -167,7 +167,7 @@ class FindPatientsPrpaIn201305Uv02RequestType:
             "required": True,
         },
     )
-    receiver_oid: str | None = field(
+    receiver_oid: None | str = field(
         default=None,
         metadata={
             "name": "receiverOID",
@@ -176,7 +176,7 @@ class FindPatientsPrpaIn201305Uv02RequestType:
             "required": True,
         },
     )
-    query: PrpaIn201305Uv02McciMt000100Uv01Message | None = field(
+    query: None | PrpaIn201305Uv02McciMt000100Uv01Message = field(
         default=None,
         metadata={
             "type": "Element",
@@ -205,7 +205,7 @@ class PatientDemographicsPrpaIn201307Uv02RequestType:
     class Meta:
         name = "PatientDemographics_PRPA_IN201307UV02RequestType"
 
-    local_device_id: str | None = field(
+    local_device_id: None | str = field(
         default=None,
         metadata={
             "name": "localDeviceId",
@@ -214,7 +214,7 @@ class PatientDemographicsPrpaIn201307Uv02RequestType:
             "required": True,
         },
     )
-    sender_oid: str | None = field(
+    sender_oid: None | str = field(
         default=None,
         metadata={
             "name": "senderOID",
@@ -223,7 +223,7 @@ class PatientDemographicsPrpaIn201307Uv02RequestType:
             "required": True,
         },
     )
-    receiver_oid: str | None = field(
+    receiver_oid: None | str = field(
         default=None,
         metadata={
             "name": "receiverOID",
@@ -232,7 +232,7 @@ class PatientDemographicsPrpaIn201307Uv02RequestType:
             "required": True,
         },
     )
-    query: PrpaIn201307Uv02McciMt000100Uv01Message | None = field(
+    query: None | PrpaIn201307Uv02McciMt000100Uv01Message = field(
         default=None,
         metadata={
             "type": "Element",
@@ -247,7 +247,7 @@ class PatientDemographicsPrpaMt201303Uv02ResponseType:
     class Meta:
         name = "PatientDemographics_PRPA_MT201303UV02ResponseType"
 
-    subject: PrpaMt201303Uv02Patient | None = field(
+    subject: None | PrpaMt201303Uv02Patient = field(
         default=None,
         metadata={
             "type": "Element",

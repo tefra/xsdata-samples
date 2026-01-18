@@ -35,7 +35,7 @@ class BuildActionManifestRefConditional:
         name = "BUILD-ACTION-MANIFEST-REF-CONDITIONAL"
 
     build_action_manifest_ref: (
-        BuildActionManifestRefConditional.BuildActionManifestRef | None
+        None | BuildActionManifestRefConditional.BuildActionManifestRef
     ) = field(
         default=None,
         metadata={
@@ -44,7 +44,7 @@ class BuildActionManifestRefConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -52,14 +52,14 @@ class BuildActionManifestRefConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -70,7 +70,7 @@ class BuildActionManifestRefConditional:
 
     @dataclass
     class BuildActionManifestRef(Ref):
-        dest: BuildActionManifestSubtypesEnum | None = field(
+        dest: None | BuildActionManifestSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

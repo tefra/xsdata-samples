@@ -8,7 +8,7 @@ class Arity:
     class Meta:
         name = "arity"
 
-    value: int | None = field(
+    value: None | int = field(
         default=None,
         metadata={
             "required": True,

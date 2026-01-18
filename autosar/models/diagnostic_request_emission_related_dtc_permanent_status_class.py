@@ -95,7 +95,7 @@ class DiagnosticRequestEmissionRelatedDtcPermanentStatusClass:
     class Meta:
         name = "DIAGNOSTIC-REQUEST-EMISSION-RELATED-DTC-PERMANENT-STATUS-CLASS"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -105,8 +105,8 @@ class DiagnosticRequestEmissionRelatedDtcPermanentStatusClass:
         },
     )
     short_name_fragments: (
-        DiagnosticRequestEmissionRelatedDtcPermanentStatusClass.ShortNameFragments
-        | None
+        None
+        | DiagnosticRequestEmissionRelatedDtcPermanentStatusClass.ShortNameFragments
     ) = field(
         default=None,
         metadata={
@@ -115,7 +115,7 @@ class DiagnosticRequestEmissionRelatedDtcPermanentStatusClass:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -123,7 +123,7 @@ class DiagnosticRequestEmissionRelatedDtcPermanentStatusClass:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -131,7 +131,7 @@ class DiagnosticRequestEmissionRelatedDtcPermanentStatusClass:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -139,7 +139,7 @@ class DiagnosticRequestEmissionRelatedDtcPermanentStatusClass:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -147,7 +147,7 @@ class DiagnosticRequestEmissionRelatedDtcPermanentStatusClass:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -156,8 +156,8 @@ class DiagnosticRequestEmissionRelatedDtcPermanentStatusClass:
         },
     )
     annotations: (
-        DiagnosticRequestEmissionRelatedDtcPermanentStatusClass.Annotations
-        | None
+        None
+        | DiagnosticRequestEmissionRelatedDtcPermanentStatusClass.Annotations
     ) = field(
         default=None,
         metadata={
@@ -166,7 +166,7 @@ class DiagnosticRequestEmissionRelatedDtcPermanentStatusClass:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -175,8 +175,8 @@ class DiagnosticRequestEmissionRelatedDtcPermanentStatusClass:
         },
     )
     access_permission_ref: (
-        DiagnosticRequestEmissionRelatedDtcPermanentStatusClass.AccessPermissionRef
-        | None
+        None
+        | DiagnosticRequestEmissionRelatedDtcPermanentStatusClass.AccessPermissionRef
     ) = field(
         default=None,
         metadata={
@@ -186,7 +186,7 @@ class DiagnosticRequestEmissionRelatedDtcPermanentStatusClass:
         },
     )
     access_permission_validity: (
-        DiagnosticAccessPermissionValidityEnum | None
+        None | DiagnosticAccessPermissionValidityEnum
     ) = field(
         default=None,
         metadata={
@@ -195,14 +195,14 @@ class DiagnosticRequestEmissionRelatedDtcPermanentStatusClass:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -210,7 +210,7 @@ class DiagnosticRequestEmissionRelatedDtcPermanentStatusClass:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -242,7 +242,7 @@ class DiagnosticRequestEmissionRelatedDtcPermanentStatusClass:
 
     @dataclass
     class AccessPermissionRef(Ref):
-        dest: DiagnosticAccessPermissionSubtypesEnum | None = field(
+        dest: None | DiagnosticAccessPermissionSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

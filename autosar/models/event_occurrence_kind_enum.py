@@ -29,20 +29,20 @@ class EventOccurrenceKindEnum:
     class Meta:
         name = "EVENT-OCCURRENCE-KIND-ENUM"
 
-    value: EventOccurrenceKindEnumSimple | None = field(
+    value: None | EventOccurrenceKindEnumSimple = field(
         default=None,
         metadata={
             "required": True,
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

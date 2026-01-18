@@ -33,20 +33,20 @@ class AccessPolicies:
                 "type": "Element",
             },
         )
-        access: AccessType | None = field(
+        access: None | AccessType = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        vendor_extensions: VendorExtensions | None = field(
+        vendor_extensions: None | VendorExtensions = field(
             default=None,
             metadata={
                 "name": "vendorExtensions",
                 "type": "Element",
             },
         )
-        id: str | None = field(
+        id: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",

@@ -32,7 +32,7 @@ class StatusMessageType2:
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry",
         },
     )
-    status: StatusType | None = field(
+    status: None | StatusType = field(
         default=None,
         metadata={
             "type": "Attribute",

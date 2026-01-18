@@ -52,7 +52,7 @@ class DefaultConnectionVersionStructure(TransferVersionStructure):
     class Meta:
         name = "DefaultConnection_VersionStructure"
 
-    from_value: DefaultConnectionEndStructure | None = field(
+    from_value: None | DefaultConnectionEndStructure = field(
         default=None,
         metadata={
             "name": "From",
@@ -60,7 +60,7 @@ class DefaultConnectionVersionStructure(TransferVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    to: DefaultConnectionEndStructure | None = field(
+    to: None | DefaultConnectionEndStructure = field(
         default=None,
         metadata={
             "name": "To",
@@ -68,7 +68,7 @@ class DefaultConnectionVersionStructure(TransferVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    topographic_place_view: TopographicPlaceView | None = field(
+    topographic_place_view: None | TopographicPlaceView = field(
         default=None,
         metadata={
             "name": "TopographicPlaceView",
@@ -76,7 +76,7 @@ class DefaultConnectionVersionStructure(TransferVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    stop_area_ref: StopAreaRef | None = field(
+    stop_area_ref: None | StopAreaRef = field(
         default=None,
         metadata={
             "name": "StopAreaRef",
@@ -85,7 +85,8 @@ class DefaultConnectionVersionStructure(TransferVersionStructure):
         },
     )
     choice: (
-        VehicleStoppingPositionRef
+        None
+        | VehicleStoppingPositionRef
         | VehicleStoppingPlaceRef
         | BoardingPositionRef
         | AccessSpaceRef
@@ -118,7 +119,6 @@ class DefaultConnectionVersionStructure(TransferVersionStructure):
         | ServiceSiteRef
         | SiteRef
         | SiteElementRef
-        | None
     ) = field(
         default=None,
         metadata={

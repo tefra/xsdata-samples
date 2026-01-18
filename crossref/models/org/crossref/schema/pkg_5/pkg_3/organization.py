@@ -42,28 +42,28 @@ class Organization:
             "white_space": "collapse",
         },
     )
-    sequence: OrganizationSequence | None = field(
+    sequence: None | OrganizationSequence = field(
         default=None,
         metadata={
             "type": "Attribute",
             "required": True,
         },
     )
-    contributor_role: OrganizationContributorRole | None = field(
+    contributor_role: None | OrganizationContributorRole = field(
         default=None,
         metadata={
             "type": "Attribute",
             "required": True,
         },
     )
-    name_style: OrganizationNameStyle | None = field(
+    name_style: None | OrganizationNameStyle = field(
         default=None,
         metadata={
             "name": "name-style",
             "type": "Attribute",
         },
     )
-    language: OrganizationLanguage | None = field(
+    language: None | OrganizationLanguage = field(
         default=None,
         metadata={
             "type": "Attribute",

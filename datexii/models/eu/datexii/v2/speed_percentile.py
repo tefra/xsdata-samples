@@ -23,7 +23,7 @@ class SpeedPercentile:
     :ivar speed_percentile_extension:
     """
 
-    vehicle_percentage: PercentageValue | None = field(
+    vehicle_percentage: None | PercentageValue = field(
         default=None,
         metadata={
             "name": "vehiclePercentage",
@@ -32,7 +32,7 @@ class SpeedPercentile:
             "required": True,
         },
     )
-    speed_percentile: SpeedValue | None = field(
+    speed_percentile: None | SpeedValue = field(
         default=None,
         metadata={
             "name": "speedPercentile",
@@ -41,7 +41,7 @@ class SpeedPercentile:
             "required": True,
         },
     )
-    speed_percentile_extension: ExtensionType | None = field(
+    speed_percentile_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "speedPercentileExtension",

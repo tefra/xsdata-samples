@@ -54,7 +54,7 @@ class Tgroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    thead: Tbody | None = field(
+    thead: None | Tbody = field(
         default=None,
         metadata={
             "name": "THEAD",
@@ -62,7 +62,7 @@ class Tgroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tfoot: Tbody | None = field(
+    tfoot: None | Tbody = field(
         default=None,
         metadata={
             "name": "TFOOT",
@@ -70,7 +70,7 @@ class Tgroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tbody: Tbody | None = field(
+    tbody: None | Tbody = field(
         default=None,
         metadata={
             "name": "TBODY",
@@ -78,14 +78,14 @@ class Tgroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -93,14 +93,14 @@ class Tgroup:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    align: AlignEnumSimple | None = field(
+    align: None | AlignEnumSimple = field(
         default=None,
         metadata={
             "name": "ALIGN",
             "type": "Attribute",
         },
     )
-    cols: str | None = field(
+    cols: None | str = field(
         default=None,
         metadata={
             "name": "COLS",
@@ -108,7 +108,7 @@ class Tgroup:
             "pattern": r"0|[\+\-]?[1-9][0-9]*|0[xX][0-9a-fA-F]+|0[bB][0-1]+|0[0-7]+",
         },
     )
-    colsep: str | None = field(
+    colsep: None | str = field(
         default=None,
         metadata={
             "name": "COLSEP",
@@ -116,7 +116,7 @@ class Tgroup:
             "pattern": r"[0-1]",
         },
     )
-    rowsep: str | None = field(
+    rowsep: None | str = field(
         default=None,
         metadata={
             "name": "ROWSEP",

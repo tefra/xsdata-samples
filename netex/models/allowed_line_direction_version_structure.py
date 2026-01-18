@@ -16,7 +16,7 @@ class AllowedLineDirectionVersionStructure(DataManagedObjectStructure):
     class Meta:
         name = "AllowedLineDirection_VersionStructure"
 
-    line_ref: FlexibleLineRef | LineRef | None = field(
+    line_ref: None | FlexibleLineRef | LineRef = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -34,7 +34,7 @@ class AllowedLineDirectionVersionStructure(DataManagedObjectStructure):
             ),
         },
     )
-    direction_ref: DirectionRef | None = field(
+    direction_ref: None | DirectionRef = field(
         default=None,
         metadata={
             "name": "DirectionRef",
@@ -43,7 +43,7 @@ class AllowedLineDirectionVersionStructure(DataManagedObjectStructure):
             "required": True,
         },
     )
-    presentation: PresentationStructure | None = field(
+    presentation: None | PresentationStructure = field(
         default=None,
         metadata={
             "name": "Presentation",

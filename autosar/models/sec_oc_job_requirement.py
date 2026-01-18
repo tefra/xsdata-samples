@@ -81,7 +81,7 @@ class SecOcJobRequirement:
     class Meta:
         name = "SEC-OC-JOB-REQUIREMENT"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -90,7 +90,7 @@ class SecOcJobRequirement:
             "required": True,
         },
     )
-    short_name_fragments: SecOcJobRequirement.ShortNameFragments | None = (
+    short_name_fragments: None | SecOcJobRequirement.ShortNameFragments = (
         field(
             default=None,
             metadata={
@@ -100,7 +100,7 @@ class SecOcJobRequirement:
             },
         )
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -108,7 +108,7 @@ class SecOcJobRequirement:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -116,7 +116,7 @@ class SecOcJobRequirement:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -124,7 +124,7 @@ class SecOcJobRequirement:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -132,7 +132,7 @@ class SecOcJobRequirement:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -140,7 +140,7 @@ class SecOcJobRequirement:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: SecOcJobRequirement.Annotations | None = field(
+    annotations: None | SecOcJobRequirement.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -148,7 +148,7 @@ class SecOcJobRequirement:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sec_oc_job_semantic: SecOcJobSemanticEnum | None = field(
+    sec_oc_job_semantic: None | SecOcJobSemanticEnum = field(
         default=None,
         metadata={
             "name": "SEC-OC-JOB-SEMANTIC",
@@ -156,14 +156,14 @@ class SecOcJobRequirement:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -171,7 +171,7 @@ class SecOcJobRequirement:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",

@@ -108,7 +108,7 @@ class FlexrayPhysicalChannel:
     class Meta:
         name = "FLEXRAY-PHYSICAL-CHANNEL"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -117,7 +117,7 @@ class FlexrayPhysicalChannel:
             "required": True,
         },
     )
-    short_name_fragments: FlexrayPhysicalChannel.ShortNameFragments | None = (
+    short_name_fragments: None | FlexrayPhysicalChannel.ShortNameFragments = (
         field(
             default=None,
             metadata={
@@ -127,7 +127,7 @@ class FlexrayPhysicalChannel:
             },
         )
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -135,7 +135,7 @@ class FlexrayPhysicalChannel:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -143,7 +143,7 @@ class FlexrayPhysicalChannel:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -151,7 +151,7 @@ class FlexrayPhysicalChannel:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -159,7 +159,7 @@ class FlexrayPhysicalChannel:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -167,7 +167,7 @@ class FlexrayPhysicalChannel:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: FlexrayPhysicalChannel.Annotations | None = field(
+    annotations: None | FlexrayPhysicalChannel.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -175,7 +175,7 @@ class FlexrayPhysicalChannel:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    comm_connectors: FlexrayPhysicalChannel.CommConnectors | None = field(
+    comm_connectors: None | FlexrayPhysicalChannel.CommConnectors = field(
         default=None,
         metadata={
             "name": "COMM-CONNECTORS",
@@ -183,7 +183,7 @@ class FlexrayPhysicalChannel:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    frame_triggerings: FlexrayPhysicalChannel.FrameTriggerings | None = field(
+    frame_triggerings: None | FlexrayPhysicalChannel.FrameTriggerings = field(
         default=None,
         metadata={
             "name": "FRAME-TRIGGERINGS",
@@ -191,7 +191,7 @@ class FlexrayPhysicalChannel:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    i_signal_triggerings: FlexrayPhysicalChannel.ISignalTriggerings | None = (
+    i_signal_triggerings: None | FlexrayPhysicalChannel.ISignalTriggerings = (
         field(
             default=None,
             metadata={
@@ -202,7 +202,7 @@ class FlexrayPhysicalChannel:
         )
     )
     managed_physical_channel_refs: (
-        FlexrayPhysicalChannel.ManagedPhysicalChannelRefs | None
+        None | FlexrayPhysicalChannel.ManagedPhysicalChannelRefs
     ) = field(
         default=None,
         metadata={
@@ -211,7 +211,7 @@ class FlexrayPhysicalChannel:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    pdu_triggerings: FlexrayPhysicalChannel.PduTriggerings | None = field(
+    pdu_triggerings: None | FlexrayPhysicalChannel.PduTriggerings = field(
         default=None,
         metadata={
             "name": "PDU-TRIGGERINGS",
@@ -219,7 +219,7 @@ class FlexrayPhysicalChannel:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -227,7 +227,7 @@ class FlexrayPhysicalChannel:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    channel_name: FlexrayChannelName | None = field(
+    channel_name: None | FlexrayChannelName = field(
         default=None,
         metadata={
             "name": "CHANNEL-NAME",
@@ -235,14 +235,14 @@ class FlexrayPhysicalChannel:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -250,7 +250,7 @@ class FlexrayPhysicalChannel:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -354,7 +354,7 @@ class FlexrayPhysicalChannel:
 
         @dataclass
         class ManagedPhysicalChannelRef(Ref):
-            dest: PhysicalChannelSubtypesEnum | None = field(
+            dest: None | PhysicalChannelSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",

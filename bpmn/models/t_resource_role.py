@@ -15,7 +15,7 @@ class TResourceRole(TBaseElement):
     class Meta:
         name = "tResourceRole"
 
-    resource_ref: QName | None = field(
+    resource_ref: None | QName = field(
         default=None,
         metadata={
             "name": "resourceRef",
@@ -31,7 +31,7 @@ class TResourceRole(TBaseElement):
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    resource_assignment_expression: ResourceAssignmentExpression | None = (
+    resource_assignment_expression: None | ResourceAssignmentExpression = (
         field(
             default=None,
             metadata={
@@ -41,7 +41,7 @@ class TResourceRole(TBaseElement):
             },
         )
     )
-    name: str | None = field(
+    name: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",

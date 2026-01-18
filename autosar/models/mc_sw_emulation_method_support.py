@@ -60,7 +60,7 @@ class McSwEmulationMethodSupport:
     class Meta:
         name = "MC-SW-EMULATION-METHOD-SUPPORT"
 
-    short_label: Identifier | None = field(
+    short_label: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-LABEL",
@@ -68,7 +68,7 @@ class McSwEmulationMethodSupport:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Identifier | None = field(
+    category: None | Identifier = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -76,7 +76,7 @@ class McSwEmulationMethodSupport:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    base_reference_ref: McSwEmulationMethodSupport.BaseReferenceRef | None = (
+    base_reference_ref: None | McSwEmulationMethodSupport.BaseReferenceRef = (
         field(
             default=None,
             metadata={
@@ -86,7 +86,7 @@ class McSwEmulationMethodSupport:
             },
         )
     )
-    element_groups: McSwEmulationMethodSupport.ElementGroups | None = field(
+    element_groups: None | McSwEmulationMethodSupport.ElementGroups = field(
         default=None,
         metadata={
             "name": "ELEMENT-GROUPS",
@@ -95,7 +95,7 @@ class McSwEmulationMethodSupport:
         },
     )
     reference_table_ref: (
-        McSwEmulationMethodSupport.ReferenceTableRef | None
+        None | McSwEmulationMethodSupport.ReferenceTableRef
     ) = field(
         default=None,
         metadata={
@@ -104,7 +104,7 @@ class McSwEmulationMethodSupport:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -112,14 +112,14 @@ class McSwEmulationMethodSupport:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -130,7 +130,7 @@ class McSwEmulationMethodSupport:
 
     @dataclass
     class BaseReferenceRef(Ref):
-        dest: VariableDataPrototypeSubtypesEnum | None = field(
+        dest: None | VariableDataPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -152,7 +152,7 @@ class McSwEmulationMethodSupport:
 
     @dataclass
     class ReferenceTableRef(Ref):
-        dest: VariableDataPrototypeSubtypesEnum | None = field(
+        dest: None | VariableDataPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

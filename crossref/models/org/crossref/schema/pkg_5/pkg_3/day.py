@@ -18,7 +18,7 @@ class Day:
         name = "day"
         namespace = "http://www.crossref.org/schema/5.3.1"
 
-    value: int | None = field(
+    value: None | int = field(
         default=None,
         metadata={
             "required": True,

@@ -86,7 +86,7 @@ class ClientIdDefinitionSet:
     class Meta:
         name = "CLIENT-ID-DEFINITION-SET"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -95,7 +95,7 @@ class ClientIdDefinitionSet:
             "required": True,
         },
     )
-    short_name_fragments: ClientIdDefinitionSet.ShortNameFragments | None = (
+    short_name_fragments: None | ClientIdDefinitionSet.ShortNameFragments = (
         field(
             default=None,
             metadata={
@@ -105,7 +105,7 @@ class ClientIdDefinitionSet:
             },
         )
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -113,7 +113,7 @@ class ClientIdDefinitionSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -121,7 +121,7 @@ class ClientIdDefinitionSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -129,7 +129,7 @@ class ClientIdDefinitionSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -137,7 +137,7 @@ class ClientIdDefinitionSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -145,7 +145,7 @@ class ClientIdDefinitionSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: ClientIdDefinitionSet.Annotations | None = field(
+    annotations: None | ClientIdDefinitionSet.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -153,7 +153,7 @@ class ClientIdDefinitionSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -161,7 +161,7 @@ class ClientIdDefinitionSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    client_id_definitions: ClientIdDefinitionSet.ClientIdDefinitions | None = (
+    client_id_definitions: None | ClientIdDefinitionSet.ClientIdDefinitions = (
         field(
             default=None,
             metadata={
@@ -171,14 +171,14 @@ class ClientIdDefinitionSet:
             },
         )
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -186,7 +186,7 @@ class ClientIdDefinitionSet:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",

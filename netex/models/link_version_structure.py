@@ -18,7 +18,7 @@ class LinkVersionStructure(DataManagedObjectStructure):
     class Meta:
         name = "Link_VersionStructure"
 
-    name: MultilingualString | None = field(
+    name: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "Name",
@@ -26,7 +26,7 @@ class LinkVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    distance: Decimal | None = field(
+    distance: None | Decimal = field(
         default=None,
         metadata={
             "name": "Distance",
@@ -34,14 +34,14 @@ class LinkVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    types: LinkTypeRefsRelStructure | None = field(
+    types: None | LinkTypeRefsRelStructure = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    line_string: LineString | None = field(
+    line_string: None | LineString = field(
         default=None,
         metadata={
             "name": "LineString",
@@ -49,14 +49,14 @@ class LinkVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.opengis.net/gml/3.2",
         },
     )
-    projections: ProjectionsRelStructure | None = field(
+    projections: None | ProjectionsRelStructure = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    passing_through: PointsOnLinkRelStructure | None = field(
+    passing_through: None | PointsOnLinkRelStructure = field(
         default=None,
         metadata={
             "name": "passingThrough",

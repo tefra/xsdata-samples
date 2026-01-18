@@ -18,7 +18,7 @@ class OnlineServiceOperatorVersionStructure(OrganisationVersionStructure):
     class Meta:
         name = "OnlineServiceOperator_VersionStructure"
 
-    country_ref: CountryRef | None = field(
+    country_ref: None | CountryRef = field(
         default=None,
         metadata={
             "name": "CountryRef",
@@ -27,10 +27,10 @@ class OnlineServiceOperatorVersionStructure(OrganisationVersionStructure):
         },
     )
     address: (
-        PostalAddress
+        None
+        | PostalAddress
         | RoadAddress
         | OnlineServiceOperatorVersionStructure.Address
-        | None
     ) = field(
         default=None,
         metadata={
@@ -56,7 +56,7 @@ class OnlineServiceOperatorVersionStructure(OrganisationVersionStructure):
             ),
         },
     )
-    services: OnlineServiceRefsRelStructure | None = field(
+    services: None | OnlineServiceRefsRelStructure = field(
         default=None,
         metadata={
             "type": "Element",

@@ -20,7 +20,7 @@ class CompanionProfileVersionStructure(UsageParameterVersionStructure):
     class Meta:
         name = "CompanionProfile_VersionStructure"
 
-    parent_ref: UsageParameterRefStructure | None = field(
+    parent_ref: None | UsageParameterRefStructure = field(
         default=None,
         metadata={
             "name": "ParentRef",
@@ -29,7 +29,7 @@ class CompanionProfileVersionStructure(UsageParameterVersionStructure):
         },
     )
     user_profile_ref: (
-        VehiclePoolerProfileRef | CompanionProfileRef | UserProfileRef | None
+        None | VehiclePoolerProfileRef | CompanionProfileRef | UserProfileRef
     ) = field(
         default=None,
         metadata={
@@ -53,7 +53,7 @@ class CompanionProfileVersionStructure(UsageParameterVersionStructure):
             ),
         },
     )
-    companion_relationship_type: CompanionRelationshipEnumeration | None = (
+    companion_relationship_type: None | CompanionRelationshipEnumeration = (
         field(
             default=None,
             metadata={
@@ -63,7 +63,7 @@ class CompanionProfileVersionStructure(UsageParameterVersionStructure):
             },
         )
     )
-    minimum_number_of_persons: int | None = field(
+    minimum_number_of_persons: None | int = field(
         default=None,
         metadata={
             "name": "MinimumNumberOfPersons",
@@ -71,7 +71,7 @@ class CompanionProfileVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    maximum_number_of_persons: int | None = field(
+    maximum_number_of_persons: None | int = field(
         default=None,
         metadata={
             "name": "MaximumNumberOfPersons",
@@ -79,7 +79,7 @@ class CompanionProfileVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    discount_basis: DiscountBasisEnumeration | None = field(
+    discount_basis: None | DiscountBasisEnumeration = field(
         default=None,
         metadata={
             "name": "DiscountBasis",

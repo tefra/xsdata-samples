@@ -46,14 +46,14 @@ class Ref:
             "pattern": r"/?[a-zA-Z][a-zA-Z0-9_]{0,127}(/[a-zA-Z][a-zA-Z0-9_]{0,127})*",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -61,7 +61,7 @@ class Ref:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    base: str | None = field(
+    base: None | str = field(
         default=None,
         metadata={
             "name": "BASE",
@@ -70,14 +70,14 @@ class Ref:
             "pattern": r"[a-zA-Z][a-zA-Z0-9_]*",
         },
     )
-    blueprint_value: str | None = field(
+    blueprint_value: None | str = field(
         default=None,
         metadata={
             "name": "BLUEPRINT-VALUE",
             "type": "Attribute",
         },
     )
-    index: str | None = field(
+    index: None | str = field(
         default=None,
         metadata={
             "name": "INDEX",

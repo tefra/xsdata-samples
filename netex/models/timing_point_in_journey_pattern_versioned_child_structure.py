@@ -34,14 +34,14 @@ class TimingPointInJourneyPatternVersionedChildStructure(
         name = "TimingPointInJourneyPattern_VersionedChildStructure"
 
     choice_1: (
-        BorderPointRef
+        None
+        | BorderPointRef
         | FareScheduledStopPointRef
         | ScheduledStopPointRef
         | GaragePointRef
         | ParkingPointRef
         | ReliefPointRef
         | TimingPointRef
-        | None
     ) = field(
         default=None,
         metadata={
@@ -85,7 +85,7 @@ class TimingPointInJourneyPatternVersionedChildStructure(
             ),
         },
     )
-    onward_timing_link_ref: TimingLinkRefStructure | None = field(
+    onward_timing_link_ref: None | TimingLinkRefStructure = field(
         default=None,
         metadata={
             "name": "OnwardTimingLinkRef",
@@ -93,7 +93,7 @@ class TimingPointInJourneyPatternVersionedChildStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    is_wait_point: bool | None = field(
+    is_wait_point: None | bool = field(
         default=None,
         metadata={
             "name": "IsWaitPoint",
@@ -102,7 +102,7 @@ class TimingPointInJourneyPatternVersionedChildStructure(
         },
     )
     wait_time_or_wait_times: (
-        XmlDuration | JourneyPatternWaitTimesRelStructure | None
+        None | XmlDuration | JourneyPatternWaitTimesRelStructure
     ) = field(
         default=None,
         metadata={
@@ -121,14 +121,14 @@ class TimingPointInJourneyPatternVersionedChildStructure(
             ),
         },
     )
-    headways: JourneyPatternHeadwaysRelStructure | None = field(
+    headways: None | JourneyPatternHeadwaysRelStructure = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    notice_assignments: NoticeAssignmentsRelStructure | None = field(
+    notice_assignments: None | NoticeAssignmentsRelStructure = field(
         default=None,
         metadata={
             "name": "noticeAssignments",

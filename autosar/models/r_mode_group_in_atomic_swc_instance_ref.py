@@ -34,7 +34,7 @@ class RModeGroupInAtomicSwcInstanceRef:
         name = "R-MODE-GROUP-IN-ATOMIC-SWC-INSTANCE-REF"
 
     context_r_port_ref: (
-        RModeGroupInAtomicSwcInstanceRef.ContextRPortRef | None
+        None | RModeGroupInAtomicSwcInstanceRef.ContextRPortRef
     ) = field(
         default=None,
         metadata={
@@ -44,7 +44,7 @@ class RModeGroupInAtomicSwcInstanceRef:
         },
     )
     target_mode_group_ref: (
-        RModeGroupInAtomicSwcInstanceRef.TargetModeGroupRef | None
+        None | RModeGroupInAtomicSwcInstanceRef.TargetModeGroupRef
     ) = field(
         default=None,
         metadata={
@@ -53,14 +53,14 @@ class RModeGroupInAtomicSwcInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -71,7 +71,7 @@ class RModeGroupInAtomicSwcInstanceRef:
 
     @dataclass
     class ContextRPortRef(Ref):
-        dest: AbstractRequiredPortPrototypeSubtypesEnum | None = field(
+        dest: None | AbstractRequiredPortPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -82,7 +82,7 @@ class RModeGroupInAtomicSwcInstanceRef:
 
     @dataclass
     class TargetModeGroupRef(Ref):
-        dest: ModeDeclarationGroupPrototypeSubtypesEnum | None = field(
+        dest: None | ModeDeclarationGroupPrototypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

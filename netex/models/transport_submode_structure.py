@@ -21,7 +21,8 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 @dataclass
 class TransportSubmodeStructure:
     choice: (
-        AirSubmode
+        None
+        | AirSubmode
         | BusSubmode
         | CoachSubmode
         | FunicularSubmode
@@ -33,7 +34,6 @@ class TransportSubmodeStructure:
         | SnowAndIceSubmode
         | TaxiSubmode
         | SelfDriveSubmode
-        | None
     ) = field(
         default=None,
         metadata={

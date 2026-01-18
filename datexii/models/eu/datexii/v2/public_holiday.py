@@ -33,7 +33,7 @@ class PublicHoliday:
     :ivar public_holiday_extension:
     """
 
-    country: CountryEnum | None = field(
+    country: None | CountryEnum = field(
         default=None,
         metadata={
             "type": "Element",
@@ -41,7 +41,7 @@ class PublicHoliday:
             "required": True,
         },
     )
-    country_subdivision: str | None = field(
+    country_subdivision: None | str = field(
         default=None,
         metadata={
             "name": "countrySubdivision",
@@ -50,14 +50,14 @@ class PublicHoliday:
             "max_length": 1024,
         },
     )
-    region: MultilingualString | None = field(
+    region: None | MultilingualString = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    public_holiday_type: PublicHolidayTypeEnum | None = field(
+    public_holiday_type: None | PublicHolidayTypeEnum = field(
         default=None,
         metadata={
             "name": "publicHolidayType",
@@ -66,7 +66,7 @@ class PublicHoliday:
             "required": True,
         },
     )
-    public_holiday_name: MultilingualString | None = field(
+    public_holiday_name: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "publicHolidayName",
@@ -74,7 +74,7 @@ class PublicHoliday:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    public_holiday_extension: ExtensionType | None = field(
+    public_holiday_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "publicHolidayExtension",

@@ -292,7 +292,7 @@ class PriceableObjectVersionStructure(DataManagedObjectStructure):
     class Meta:
         name = "PriceableObject_VersionStructure"
 
-    name: MultilingualString | None = field(
+    name: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "Name",
@@ -300,7 +300,7 @@ class PriceableObjectVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    description: MultilingualString | None = field(
+    description: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "Description",
@@ -308,7 +308,7 @@ class PriceableObjectVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    url: str | None = field(
+    url: None | str = field(
         default=None,
         metadata={
             "name": "Url",
@@ -316,7 +316,7 @@ class PriceableObjectVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    info_links: InfoLinksRelStructure | None = field(
+    info_links: None | InfoLinksRelStructure = field(
         default=None,
         metadata={
             "name": "infoLinks",
@@ -324,7 +324,7 @@ class PriceableObjectVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    alternative_names: AlternativeNamesRelStructure | None = field(
+    alternative_names: None | AlternativeNamesRelStructure = field(
         default=None,
         metadata={
             "name": "alternativeNames",
@@ -332,7 +332,7 @@ class PriceableObjectVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    notice_assignments: NoticeAssignmentsRelStructure | None = field(
+    notice_assignments: None | NoticeAssignmentsRelStructure = field(
         default=None,
         metadata={
             "name": "noticeAssignments",
@@ -340,7 +340,7 @@ class PriceableObjectVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    pricing_service_ref: PricingServiceRef | None = field(
+    pricing_service_ref: None | PricingServiceRef = field(
         default=None,
         metadata={
             "name": "PricingServiceRef",
@@ -349,7 +349,7 @@ class PriceableObjectVersionStructure(DataManagedObjectStructure):
         },
     )
     discounting_rule_ref_or_pricing_rule_ref: (
-        LimitingRuleRef | DiscountingRuleRef | PricingRuleRef | None
+        None | LimitingRuleRef | DiscountingRuleRef | PricingRuleRef
     ) = field(
         default=None,
         metadata={
@@ -373,7 +373,7 @@ class PriceableObjectVersionStructure(DataManagedObjectStructure):
             ),
         },
     )
-    price_groups: PriceGroupsRelStructure | None = field(
+    price_groups: None | PriceGroupsRelStructure = field(
         default=None,
         metadata={
             "name": "priceGroups",
@@ -381,7 +381,7 @@ class PriceableObjectVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    fare_tables: FareTablesRelStructure | None = field(
+    fare_tables: None | FareTablesRelStructure = field(
         default=None,
         metadata={
             "name": "fareTables",
@@ -674,7 +674,7 @@ class FareStructureFactorVersionStructure(PriceableObjectVersionStructure):
     class Meta:
         name = "FareStructureFactor_VersionStructure"
 
-    private_code: PrivateCode | None = field(
+    private_code: None | PrivateCode = field(
         default=None,
         metadata={
             "name": "PrivateCode",
@@ -682,7 +682,7 @@ class FareStructureFactorVersionStructure(PriceableObjectVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    type_of_fare_structure_factor_ref: TypeOfFareStructureFactorRef | None = (
+    type_of_fare_structure_factor_ref: None | TypeOfFareStructureFactorRef = (
         field(
             default=None,
             metadata={
@@ -692,7 +692,7 @@ class FareStructureFactorVersionStructure(PriceableObjectVersionStructure):
             },
         )
     )
-    factor: object | None = field(
+    factor: None | object = field(
         default=None,
         metadata={
             "name": "Factor",
@@ -707,7 +707,7 @@ class PriceGroupVersionStructure(GroupOfEntitiesVersionStructure):
     class Meta:
         name = "PriceGroup_VersionStructure"
 
-    start_date: XmlDate | None = field(
+    start_date: None | XmlDate = field(
         default=None,
         metadata={
             "name": "StartDate",
@@ -715,7 +715,7 @@ class PriceGroupVersionStructure(GroupOfEntitiesVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    end_date: XmlDate | None = field(
+    end_date: None | XmlDate = field(
         default=None,
         metadata={
             "name": "EndDate",
@@ -723,7 +723,7 @@ class PriceGroupVersionStructure(GroupOfEntitiesVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    rounding_ref: RoundingRef | None = field(
+    rounding_ref: None | RoundingRef = field(
         default=None,
         metadata={
             "name": "RoundingRef",
@@ -731,7 +731,7 @@ class PriceGroupVersionStructure(GroupOfEntitiesVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    members: FarePricesRelStructure | None = field(
+    members: None | FarePricesRelStructure = field(
         default=None,
         metadata={
             "type": "Element",
@@ -739,7 +739,8 @@ class PriceGroupVersionStructure(GroupOfEntitiesVersionStructure):
         },
     )
     fare_price_ref: (
-        CustomerPurchasePackagePriceRef
+        None
+        | CustomerPurchasePackagePriceRef
         | ParkingPriceRef
         | TimeIntervalPriceRef
         | TimeUnitPriceRef
@@ -757,7 +758,6 @@ class PriceGroupVersionStructure(GroupOfEntitiesVersionStructure):
         | CappingRulePriceRef
         | FareProductPriceRef
         | FarePriceRef
-        | None
     ) = field(
         default=None,
         metadata={
@@ -869,7 +869,7 @@ class TimeStructureFactorVersionStructure(FareStructureFactorVersionStructure):
     class Meta:
         name = "TimeStructureFactor_VersionStructure"
 
-    tariff_ref: ParkingTariffRef | TariffRef | None = field(
+    tariff_ref: None | ParkingTariffRef | TariffRef = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -887,7 +887,7 @@ class TimeStructureFactorVersionStructure(FareStructureFactorVersionStructure):
             ),
         },
     )
-    time_interval_ref: TimeIntervalRef | None = field(
+    time_interval_ref: None | TimeIntervalRef = field(
         default=None,
         metadata={
             "name": "TimeIntervalRef",
@@ -895,7 +895,7 @@ class TimeStructureFactorVersionStructure(FareStructureFactorVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    time_unit_ref: TimeUnitRef | None = field(
+    time_unit_ref: None | TimeUnitRef = field(
         default=None,
         metadata={
             "name": "TimeUnitRef",
@@ -904,10 +904,10 @@ class TimeStructureFactorVersionStructure(FareStructureFactorVersionStructure):
         },
     )
     quality_structure_factor_ref: (
-        FareQuotaFactorRef
+        None
+        | FareQuotaFactorRef
         | FareDemandFactorRef
         | QualityStructureFactorRef
-        | None
     ) = field(
         default=None,
         metadata={
@@ -938,7 +938,7 @@ class ParkingChargeBandVersionStructure(TimeStructureFactorVersionStructure):
     class Meta:
         name = "ParkingChargeBand_VersionStructure"
 
-    parking_properties_ref: ParkingPropertiesRef | None = field(
+    parking_properties_ref: None | ParkingPropertiesRef = field(
         default=None,
         metadata={
             "name": "ParkingPropertiesRef",
@@ -946,7 +946,7 @@ class ParkingChargeBandVersionStructure(TimeStructureFactorVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    parking_vehicle_type: ParkingVehicleEnumeration | None = field(
+    parking_vehicle_type: None | ParkingVehicleEnumeration = field(
         default=None,
         metadata={
             "name": "ParkingVehicleType",
@@ -955,12 +955,12 @@ class ParkingChargeBandVersionStructure(TimeStructureFactorVersionStructure):
         },
     )
     transport_type_ref_or_vehicle_type_ref: (
-        SimpleVehicleTypeRef
+        None
+        | SimpleVehicleTypeRef
         | CompoundTrainRef
         | TrainRef
         | VehicleTypeRef
         | TransportTypeRef
-        | None
     ) = field(
         default=None,
         metadata={
@@ -994,7 +994,7 @@ class ParkingChargeBandVersionStructure(TimeStructureFactorVersionStructure):
             ),
         },
     )
-    maximum_stay: XmlDuration | None = field(
+    maximum_stay: None | XmlDuration = field(
         default=None,
         metadata={
             "name": "MaximumStay",
@@ -1002,7 +1002,7 @@ class ParkingChargeBandVersionStructure(TimeStructureFactorVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    prices: FarePricesRelStructure | None = field(
+    prices: None | FarePricesRelStructure = field(
         default=None,
         metadata={
             "type": "Element",
@@ -1050,7 +1050,7 @@ class ParkingPriceVersionedChildStructure(FarePriceVersionedChildStructure):
         name = "ParkingPrice_VersionedChildStructure"
 
     parking_tariff_ref_or_parking_charge_band: (
-        ParkingTariffRef | ParkingChargeBand | None
+        None | ParkingTariffRef | ParkingChargeBand
     ) = field(
         default=None,
         metadata={
@@ -1082,7 +1082,7 @@ class CellVersionedChildStructure(VersionedChildStructure):
     class Meta:
         name = "Cell_VersionedChildStructure"
 
-    name: MultilingualString | None = field(
+    name: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "Name",
@@ -1090,7 +1090,7 @@ class CellVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    description: MultilingualString | None = field(
+    description: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "Description",
@@ -1099,7 +1099,8 @@ class CellVersionedChildStructure(VersionedChildStructure):
         },
     )
     choice: (
-        FarePriceVersionedChildStructure
+        None
+        | FarePriceVersionedChildStructure
         | CustomerPurchasePackagePriceRef
         | ParkingPriceRef
         | TimeIntervalPriceRef
@@ -1136,7 +1137,6 @@ class CellVersionedChildStructure(VersionedChildStructure):
         | GeographicalUnitPrice
         | SeriesConstraintPrice
         | PriceGroupRef
-        | None
     ) = field(
         default=None,
         metadata={
@@ -1736,7 +1736,7 @@ class CellVersionedChildStructure(VersionedChildStructure):
         },
     )
     group_of_distance_matrix_elements_ref: (
-        GroupOfDistanceMatrixElementsRef | None
+        None | GroupOfDistanceMatrixElementsRef
     ) = field(
         default=None,
         metadata={
@@ -1745,7 +1745,7 @@ class CellVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    direction_type: RelativeDirectionEnumeration | None = field(
+    direction_type: None | RelativeDirectionEnumeration = field(
         default=None,
         metadata={
             "name": "DirectionType",
@@ -1753,7 +1753,7 @@ class CellVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    routing_type: RoutingTypeEnumeration | None = field(
+    routing_type: None | RoutingTypeEnumeration = field(
         default=None,
         metadata={
             "name": "RoutingType",
@@ -1761,7 +1761,7 @@ class CellVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    transport_organisation_ref: AuthorityRef | OperatorRef | None = field(
+    transport_organisation_ref: None | AuthorityRef | OperatorRef = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -1779,7 +1779,7 @@ class CellVersionedChildStructure(VersionedChildStructure):
             ),
         },
     )
-    group_of_lines_ref: NetworkRef | GroupOfLinesRef | None = field(
+    group_of_lines_ref: None | NetworkRef | GroupOfLinesRef = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -1797,7 +1797,7 @@ class CellVersionedChildStructure(VersionedChildStructure):
             ),
         },
     )
-    line_ref: FlexibleLineRef | LineRef | None = field(
+    line_ref: None | FlexibleLineRef | LineRef = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -1816,13 +1816,13 @@ class CellVersionedChildStructure(VersionedChildStructure):
         },
     )
     stop_place_ref_or_site_ref: (
-        TaxiRankRef
+        None
+        | TaxiRankRef
         | StopPlaceRef
         | ParkingRef
         | PointOfInterestRef
         | ServiceSiteRef
         | SiteRef
-        | None
     ) = field(
         default=None,
         metadata={
@@ -1862,7 +1862,7 @@ class CellVersionedChildStructure(VersionedChildStructure):
         },
     )
     vehicle_meeting_place_ref: (
-        VehiclePoolingMeetingPlaceRef | VehicleMeetingPlaceRef | None
+        None | VehiclePoolingMeetingPlaceRef | VehicleMeetingPlaceRef
     ) = field(
         default=None,
         metadata={
@@ -1881,7 +1881,7 @@ class CellVersionedChildStructure(VersionedChildStructure):
             ),
         },
     )
-    type_of_parking_ref: TypeOfParkingRef | None = field(
+    type_of_parking_ref: None | TypeOfParkingRef = field(
         default=None,
         metadata={
             "name": "TypeOfParkingRef",
@@ -1889,7 +1889,7 @@ class CellVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    tariff_zone_ref: TariffZoneRef | None = field(
+    tariff_zone_ref: None | TariffZoneRef = field(
         default=None,
         metadata={
             "name": "TariffZoneRef",
@@ -1897,7 +1897,7 @@ class CellVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    fare_section_ref: FareSectionRef | None = field(
+    fare_section_ref: None | FareSectionRef = field(
         default=None,
         metadata={
             "name": "FareSectionRef",
@@ -1905,7 +1905,7 @@ class CellVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    fare_class: FareClass | None = field(
+    fare_class: None | FareClass = field(
         default=None,
         metadata={
             "name": "FareClass",
@@ -1913,7 +1913,7 @@ class CellVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    class_of_use_ref: ClassOfUseRef | None = field(
+    class_of_use_ref: None | ClassOfUseRef = field(
         default=None,
         metadata={
             "name": "ClassOfUseRef",
@@ -1922,7 +1922,7 @@ class CellVersionedChildStructure(VersionedChildStructure):
         },
     )
     facility_set_ref: (
-        ServiceFacilitySetRef | SiteFacilitySetRef | FacilitySetRef | None
+        None | ServiceFacilitySetRef | SiteFacilitySetRef | FacilitySetRef
     ) = field(
         default=None,
         metadata={
@@ -1946,7 +1946,7 @@ class CellVersionedChildStructure(VersionedChildStructure):
             ),
         },
     )
-    type_of_product_category_ref: TypeOfProductCategoryRef | None = field(
+    type_of_product_category_ref: None | TypeOfProductCategoryRef = field(
         default=None,
         metadata={
             "name": "TypeOfProductCategoryRef",
@@ -1954,7 +1954,7 @@ class CellVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    type_of_service_ref: TypeOfServiceRef | None = field(
+    type_of_service_ref: None | TypeOfServiceRef = field(
         default=None,
         metadata={
             "name": "TypeOfServiceRef",
@@ -1963,13 +1963,13 @@ class CellVersionedChildStructure(VersionedChildStructure):
         },
     )
     choice_2: (
-        TemplateServiceJourneyRef
+        None
+        | TemplateServiceJourneyRef
         | ServiceJourneyRef
         | SingleJourneyRef
         | TrainNumberRef
         | GroupOfServicesRef
         | GroupOfSingleJourneysRef
-        | None
     ) = field(
         default=None,
         metadata={
@@ -2009,12 +2009,12 @@ class CellVersionedChildStructure(VersionedChildStructure):
         },
     )
     transport_type_ref_or_vehicle_type_ref: (
-        SimpleVehicleTypeRef
+        None
+        | SimpleVehicleTypeRef
         | CompoundTrainRef
         | TrainRef
         | VehicleTypeRef
         | TransportTypeRef
-        | None
     ) = field(
         default=None,
         metadata={
@@ -2048,7 +2048,7 @@ class CellVersionedChildStructure(VersionedChildStructure):
             ),
         },
     )
-    vehicle_model_ref: VehicleModelRef | None = field(
+    vehicle_model_ref: None | VehicleModelRef = field(
         default=None,
         metadata={
             "name": "VehicleModelRef",
@@ -2057,7 +2057,7 @@ class CellVersionedChildStructure(VersionedChildStructure):
         },
     )
     vehicle_model_profile_ref: (
-        CycleModelProfileRef | CarModelProfileRef | None
+        None | CycleModelProfileRef | CarModelProfileRef
     ) = field(
         default=None,
         metadata={
@@ -2077,7 +2077,8 @@ class CellVersionedChildStructure(VersionedChildStructure):
         },
     )
     choice_3: (
-        RetailDeviceRef
+        None
+        | RetailDeviceRef
         | OnlineServiceRef
         | VehicleRentalServiceRef
         | VehicleSharingServiceRef
@@ -2140,7 +2141,6 @@ class CellVersionedChildStructure(VersionedChildStructure):
         | VehicleEquipmentRef
         | PassengerEquipmentRef
         | EquipmentRef
-        | None
     ) = field(
         default=None,
         metadata={
@@ -2464,7 +2464,7 @@ class CellVersionedChildStructure(VersionedChildStructure):
             ),
         },
     )
-    type_of_fare_product_ref: TypeOfFareProductRef | None = field(
+    type_of_fare_product_ref: None | TypeOfFareProductRef = field(
         default=None,
         metadata={
             "name": "TypeOfFareProductRef",
@@ -2473,7 +2473,7 @@ class CellVersionedChildStructure(VersionedChildStructure):
         },
     )
     distribution_channel_ref_or_group_of_distribution_channels_ref: (
-        DistributionChannelRef | GroupOfDistributionChannelsRef | None
+        None | DistributionChannelRef | GroupOfDistributionChannelsRef
     ) = field(
         default=None,
         metadata={
@@ -2492,7 +2492,7 @@ class CellVersionedChildStructure(VersionedChildStructure):
             ),
         },
     )
-    payment_method: PaymentMethodEnumeration | None = field(
+    payment_method: None | PaymentMethodEnumeration = field(
         default=None,
         metadata={
             "name": "PaymentMethod",
@@ -2500,7 +2500,7 @@ class CellVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    type_of_payment_method_ref: TypeOfPaymentMethodRef | None = field(
+    type_of_payment_method_ref: None | TypeOfPaymentMethodRef = field(
         default=None,
         metadata={
             "name": "TypeOfPaymentMethodRef",
@@ -2508,7 +2508,7 @@ class CellVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    type_of_travel_document_ref: TypeOfTravelDocumentRef | None = field(
+    type_of_travel_document_ref: None | TypeOfTravelDocumentRef = field(
         default=None,
         metadata={
             "name": "TypeOfTravelDocumentRef",
@@ -2516,7 +2516,7 @@ class CellVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    fare_table_ref: StandardFareTableRef | FareTableRef | None = field(
+    fare_table_ref: None | StandardFareTableRef | FareTableRef = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -2534,7 +2534,7 @@ class CellVersionedChildStructure(VersionedChildStructure):
             ),
         },
     )
-    column_ref: FareTableColumnRefStructure | None = field(
+    column_ref: None | FareTableColumnRefStructure = field(
         default=None,
         metadata={
             "name": "ColumnRef",
@@ -2542,7 +2542,7 @@ class CellVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    row_ref: FareTableRowRefStructure | None = field(
+    row_ref: None | FareTableRowRefStructure = field(
         default=None,
         metadata={
             "name": "RowRef",
@@ -2550,7 +2550,7 @@ class CellVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    notice_assignments: NoticeAssignmentsRelStructure | None = field(
+    notice_assignments: None | NoticeAssignmentsRelStructure = field(
         default=None,
         metadata={
             "name": "noticeAssignments",
@@ -2558,7 +2558,7 @@ class CellVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    order: int | None = field(
+    order: None | int = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -2853,7 +2853,7 @@ class FareTableVersionStructure(GroupOfEntitiesVersionStructure):
     class Meta:
         name = "FareTable_VersionStructure"
 
-    start_date: XmlDate | None = field(
+    start_date: None | XmlDate = field(
         default=None,
         metadata={
             "name": "StartDate",
@@ -2861,7 +2861,7 @@ class FareTableVersionStructure(GroupOfEntitiesVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    end_date: XmlDate | None = field(
+    end_date: None | XmlDate = field(
         default=None,
         metadata={
             "name": "EndDate",
@@ -2869,7 +2869,7 @@ class FareTableVersionStructure(GroupOfEntitiesVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    rounding_ref: RoundingRef | None = field(
+    rounding_ref: None | RoundingRef = field(
         default=None,
         metadata={
             "name": "RoundingRef",
@@ -2877,7 +2877,7 @@ class FareTableVersionStructure(GroupOfEntitiesVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    type_of_fare_table_ref: TypeOfFareTableRef | None = field(
+    type_of_fare_table_ref: None | TypeOfFareTableRef = field(
         default=None,
         metadata={
             "name": "TypeOfFareTableRef",
@@ -2885,7 +2885,7 @@ class FareTableVersionStructure(GroupOfEntitiesVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    prices_for: PriceableObjectRefsRelStructure | None = field(
+    prices_for: None | PriceableObjectRefsRelStructure = field(
         default=None,
         metadata={
             "name": "pricesFor",
@@ -2893,7 +2893,7 @@ class FareTableVersionStructure(GroupOfEntitiesVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    used_in: UsedInRefsRelStructure | None = field(
+    used_in: None | UsedInRefsRelStructure = field(
         default=None,
         metadata={
             "name": "usedIn",
@@ -2902,7 +2902,8 @@ class FareTableVersionStructure(GroupOfEntitiesVersionStructure):
         },
     )
     organisation_ref_or_other_organisation_ref_or_transport_organisation_ref: (
-        RetailConsortiumRef
+        None
+        | RetailConsortiumRef
         | OnlineServiceOperatorRef
         | GeneralOrganisationRef
         | ManagementAgentRef
@@ -2912,7 +2913,6 @@ class FareTableVersionStructure(GroupOfEntitiesVersionStructure):
         | AuthorityRef
         | OperatorRef
         | OrganisationRef
-        | None
     ) = field(
         default=None,
         metadata={
@@ -2971,42 +2971,42 @@ class FareTableVersionStructure(GroupOfEntitiesVersionStructure):
             ),
         },
     )
-    limitations: UsageParameterRefsRelStructure | None = field(
+    limitations: None | UsageParameterRefsRelStructure = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    specifics: FareTableSpecificsStructure | None = field(
+    specifics: None | FareTableSpecificsStructure = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    columns: FareTableColumnsRelStructure | None = field(
+    columns: None | FareTableColumnsRelStructure = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    rows: FareTableRowsRelStructure | None = field(
+    rows: None | FareTableRowsRelStructure = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    includes: FareTablesRelStructure | None = field(
+    includes: None | FareTablesRelStructure = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    embargo_until: XmlDateTime | None = field(
+    embargo_until: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "EmbargoUntil",
@@ -3014,21 +3014,21 @@ class FareTableVersionStructure(GroupOfEntitiesVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    prices: FarePricesRelStructure | None = field(
+    prices: None | FarePricesRelStructure = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    cells: CellsRelStructure | None = field(
+    cells: None | CellsRelStructure = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    notice_assignments: NoticeAssignmentsRelStructure | None = field(
+    notice_assignments: None | NoticeAssignmentsRelStructure = field(
         default=None,
         metadata={
             "name": "noticeAssignments",

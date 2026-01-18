@@ -24,7 +24,7 @@ class LocalPolicy:
     class Meta:
         namespace = "http://xmlns.generali.com/services/program/FeedbackProgramService/v1"
 
-    local_policy_id: str | None = field(
+    local_policy_id: None | str = field(
         default=None,
         metadata={
             "name": "LocalPolicyID",
@@ -32,7 +32,7 @@ class LocalPolicy:
             "required": True,
         },
     )
-    status: str | None = field(
+    status: None | str = field(
         default=None,
         metadata={
             "name": "Status",
@@ -40,7 +40,7 @@ class LocalPolicy:
             "required": True,
         },
     )
-    party_ids: PartyIds | None = field(
+    party_ids: None | PartyIds = field(
         default=None,
         metadata={
             "name": "PartyIDs",
@@ -48,7 +48,7 @@ class LocalPolicy:
             "required": True,
         },
     )
-    risks: Risks | None = field(
+    risks: None | Risks = field(
         default=None,
         metadata={
             "name": "Risks",
@@ -56,7 +56,7 @@ class LocalPolicy:
             "required": True,
         },
     )
-    reinsurance_agreements: ReinsuranceAgreements | None = field(
+    reinsurance_agreements: None | ReinsuranceAgreements = field(
         default=None,
         metadata={
             "name": "ReinsuranceAgreements",
@@ -64,7 +64,7 @@ class LocalPolicy:
             "required": True,
         },
     )
-    inception_date: XmlDateTime | None = field(
+    inception_date: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "InceptionDate",
@@ -72,7 +72,7 @@ class LocalPolicy:
             "required": True,
         },
     )
-    issuance_date: XmlDateTime | None = field(
+    issuance_date: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "IssuanceDate",
@@ -80,7 +80,7 @@ class LocalPolicy:
             "required": True,
         },
     )
-    expiry_date: XmlDateTime | None = field(
+    expiry_date: None | XmlDateTime = field(
         default=None,
         metadata={
             "name": "ExpiryDate",

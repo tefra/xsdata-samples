@@ -90,7 +90,7 @@ class CryptoProvider:
     class Meta:
         name = "CRYPTO-PROVIDER"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -99,7 +99,7 @@ class CryptoProvider:
             "required": True,
         },
     )
-    short_name_fragments: CryptoProvider.ShortNameFragments | None = field(
+    short_name_fragments: None | CryptoProvider.ShortNameFragments = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -107,7 +107,7 @@ class CryptoProvider:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -115,7 +115,7 @@ class CryptoProvider:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -123,7 +123,7 @@ class CryptoProvider:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -131,7 +131,7 @@ class CryptoProvider:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -139,7 +139,7 @@ class CryptoProvider:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -147,7 +147,7 @@ class CryptoProvider:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: CryptoProvider.Annotations | None = field(
+    annotations: None | CryptoProvider.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -156,7 +156,7 @@ class CryptoProvider:
         },
     )
     crypto_provider_documentation_ref: (
-        CryptoProvider.CryptoProviderDocumentationRef | None
+        None | CryptoProvider.CryptoProviderDocumentationRef
     ) = field(
         default=None,
         metadata={
@@ -165,7 +165,7 @@ class CryptoProvider:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    key_slots: CryptoProvider.KeySlots | None = field(
+    key_slots: None | CryptoProvider.KeySlots = field(
         default=None,
         metadata={
             "name": "KEY-SLOTS",
@@ -173,14 +173,14 @@ class CryptoProvider:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -188,7 +188,7 @@ class CryptoProvider:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -220,7 +220,7 @@ class CryptoProvider:
 
     @dataclass
     class CryptoProviderDocumentationRef(Ref):
-        dest: DocumentationSubtypesEnum | None = field(
+        dest: None | DocumentationSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

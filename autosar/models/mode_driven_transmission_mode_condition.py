@@ -37,7 +37,7 @@ class ModeDrivenTransmissionModeCondition:
         name = "MODE-DRIVEN-TRANSMISSION-MODE-CONDITION"
 
     mode_declaration_refs: (
-        ModeDrivenTransmissionModeCondition.ModeDeclarationRefs | None
+        None | ModeDrivenTransmissionModeCondition.ModeDeclarationRefs
     ) = field(
         default=None,
         metadata={
@@ -46,14 +46,14 @@ class ModeDrivenTransmissionModeCondition:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -77,7 +77,7 @@ class ModeDrivenTransmissionModeCondition:
 
         @dataclass
         class ModeDeclarationRef(Ref):
-            dest: ModeDeclarationSubtypesEnum | None = field(
+            dest: None | ModeDeclarationSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",

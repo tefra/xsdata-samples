@@ -23,7 +23,7 @@ class StructureTypeAbstract(MaintainableType):
         name = "StructureType"
 
     metadata_structure_components_or_data_structure_components: (
-        MetadataStructureComponents | DataStructureComponents | None
+        None | MetadataStructureComponents | DataStructureComponents
     ) = field(
         default=None,
         metadata={

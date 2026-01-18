@@ -29,7 +29,7 @@ class BaseGbmeventType(BaseGbmtype):
     class Meta:
         name = "BaseGBMEventType"
 
-    event_code: EventCodeType | None = field(
+    event_code: None | EventCodeType = field(
         default=None,
         metadata={
             "name": "eventCode",
@@ -37,7 +37,7 @@ class BaseGbmeventType(BaseGbmtype):
             "required": True,
         },
     )
-    business_event_code: str | None = field(
+    business_event_code: None | str = field(
         default=None,
         metadata={
             "name": "businessEventCode",

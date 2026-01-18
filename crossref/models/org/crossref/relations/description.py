@@ -32,7 +32,7 @@ class Description:
         name = "description"
         namespace = "http://www.crossref.org/relations.xsd"
 
-    language: DescriptionLanguage | None = field(
+    language: None | DescriptionLanguage = field(
         default=None,
         metadata={
             "type": "Attribute",

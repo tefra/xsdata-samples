@@ -112,7 +112,7 @@ class DiagnosticDynamicallyDefineDataIdentifierClass:
     class Meta:
         name = "DIAGNOSTIC-DYNAMICALLY-DEFINE-DATA-IDENTIFIER-CLASS"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -122,8 +122,8 @@ class DiagnosticDynamicallyDefineDataIdentifierClass:
         },
     )
     short_name_fragments: (
-        DiagnosticDynamicallyDefineDataIdentifierClass.ShortNameFragments
-        | None
+        None
+        | DiagnosticDynamicallyDefineDataIdentifierClass.ShortNameFragments
     ) = field(
         default=None,
         metadata={
@@ -132,7 +132,7 @@ class DiagnosticDynamicallyDefineDataIdentifierClass:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -140,7 +140,7 @@ class DiagnosticDynamicallyDefineDataIdentifierClass:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -148,7 +148,7 @@ class DiagnosticDynamicallyDefineDataIdentifierClass:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -156,7 +156,7 @@ class DiagnosticDynamicallyDefineDataIdentifierClass:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -164,7 +164,7 @@ class DiagnosticDynamicallyDefineDataIdentifierClass:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -173,7 +173,7 @@ class DiagnosticDynamicallyDefineDataIdentifierClass:
         },
     )
     annotations: (
-        DiagnosticDynamicallyDefineDataIdentifierClass.Annotations | None
+        None | DiagnosticDynamicallyDefineDataIdentifierClass.Annotations
     ) = field(
         default=None,
         metadata={
@@ -182,7 +182,7 @@ class DiagnosticDynamicallyDefineDataIdentifierClass:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -191,8 +191,8 @@ class DiagnosticDynamicallyDefineDataIdentifierClass:
         },
     )
     access_permission_ref: (
-        DiagnosticDynamicallyDefineDataIdentifierClass.AccessPermissionRef
-        | None
+        None
+        | DiagnosticDynamicallyDefineDataIdentifierClass.AccessPermissionRef
     ) = field(
         default=None,
         metadata={
@@ -202,7 +202,7 @@ class DiagnosticDynamicallyDefineDataIdentifierClass:
         },
     )
     access_permission_validity: (
-        DiagnosticAccessPermissionValidityEnum | None
+        None | DiagnosticAccessPermissionValidityEnum
     ) = field(
         default=None,
         metadata={
@@ -211,7 +211,7 @@ class DiagnosticDynamicallyDefineDataIdentifierClass:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    check_per_source_id: Boolean | None = field(
+    check_per_source_id: None | Boolean = field(
         default=None,
         metadata={
             "name": "CHECK-PER-SOURCE-ID",
@@ -219,7 +219,7 @@ class DiagnosticDynamicallyDefineDataIdentifierClass:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    configuration_handling: DiagnosticHandleDddiConfigurationEnum | None = (
+    configuration_handling: None | DiagnosticHandleDddiConfigurationEnum = (
         field(
             default=None,
             metadata={
@@ -230,7 +230,7 @@ class DiagnosticDynamicallyDefineDataIdentifierClass:
         )
     )
     subfunctions: (
-        DiagnosticDynamicallyDefineDataIdentifierClass.Subfunctions | None
+        None | DiagnosticDynamicallyDefineDataIdentifierClass.Subfunctions
     ) = field(
         default=None,
         metadata={
@@ -239,14 +239,14 @@ class DiagnosticDynamicallyDefineDataIdentifierClass:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -254,7 +254,7 @@ class DiagnosticDynamicallyDefineDataIdentifierClass:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -286,7 +286,7 @@ class DiagnosticDynamicallyDefineDataIdentifierClass:
 
     @dataclass
     class AccessPermissionRef(Ref):
-        dest: DiagnosticAccessPermissionSubtypesEnum | None = field(
+        dest: None | DiagnosticAccessPermissionSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

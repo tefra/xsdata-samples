@@ -28,20 +28,20 @@ class EcucScopeEnum:
     class Meta:
         name = "ECUC-SCOPE-ENUM"
 
-    value: EcucScopeEnumSimple | None = field(
+    value: None | EcucScopeEnumSimple = field(
         default=None,
         metadata={
             "required": True,
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

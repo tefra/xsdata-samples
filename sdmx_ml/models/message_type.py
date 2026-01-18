@@ -20,7 +20,7 @@ class MessageType:
     messages.
     """
 
-    header: BaseHeaderType | None = field(
+    header: None | BaseHeaderType = field(
         default=None,
         metadata={
             "name": "Header",
@@ -36,7 +36,7 @@ class MessageType:
             "namespace": "##targetNamespace",
         },
     )
-    footer: Footer | None = field(
+    footer: None | Footer = field(
         default=None,
         metadata={
             "name": "Footer",

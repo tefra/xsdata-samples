@@ -16,7 +16,7 @@ class MediumAccessDeviceRefsRelStructure(OneToManyRelationshipStructure):
         name = "mediumAccessDeviceRefs_RelStructure"
 
     medium_access_device_ref: (
-        MobileDeviceRef | EmvCardRef | SmartcardRef | None
+        None | MobileDeviceRef | EmvCardRef | SmartcardRef
     ) = field(
         default=None,
         metadata={

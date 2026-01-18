@@ -86,7 +86,7 @@ class IpSecIamRemoteSubject:
     class Meta:
         name = "IP-SEC-IAM-REMOTE-SUBJECT"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -95,7 +95,7 @@ class IpSecIamRemoteSubject:
             "required": True,
         },
     )
-    short_name_fragments: IpSecIamRemoteSubject.ShortNameFragments | None = (
+    short_name_fragments: None | IpSecIamRemoteSubject.ShortNameFragments = (
         field(
             default=None,
             metadata={
@@ -105,7 +105,7 @@ class IpSecIamRemoteSubject:
             },
         )
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -113,7 +113,7 @@ class IpSecIamRemoteSubject:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -121,7 +121,7 @@ class IpSecIamRemoteSubject:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -129,7 +129,7 @@ class IpSecIamRemoteSubject:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -137,7 +137,7 @@ class IpSecIamRemoteSubject:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -145,7 +145,7 @@ class IpSecIamRemoteSubject:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: IpSecIamRemoteSubject.Annotations | None = field(
+    annotations: None | IpSecIamRemoteSubject.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -153,7 +153,7 @@ class IpSecIamRemoteSubject:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -161,7 +161,7 @@ class IpSecIamRemoteSubject:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    local_ip_sec_rule_refs: IpSecIamRemoteSubject.LocalIpSecRuleRefs | None = (
+    local_ip_sec_rule_refs: None | IpSecIamRemoteSubject.LocalIpSecRuleRefs = (
         field(
             default=None,
             metadata={
@@ -171,14 +171,14 @@ class IpSecIamRemoteSubject:
             },
         )
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -186,7 +186,7 @@ class IpSecIamRemoteSubject:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -231,7 +231,7 @@ class IpSecIamRemoteSubject:
 
         @dataclass
         class LocalIpSecRuleRef(Ref):
-            dest: IpSecRuleSubtypesEnum | None = field(
+            dest: None | IpSecRuleSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",

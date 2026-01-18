@@ -43,7 +43,7 @@ class TCatchEvent(TEvent):
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    output_set: OutputSet | None = field(
+    output_set: None | OutputSet = field(
         default=None,
         metadata={
             "name": "outputSet",

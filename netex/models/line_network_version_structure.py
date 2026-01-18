@@ -18,7 +18,7 @@ class LineNetworkVersionStructure(DataManagedObjectStructure):
     class Meta:
         name = "LineNetwork_VersionStructure"
 
-    name: MultilingualString | None = field(
+    name: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "Name",
@@ -26,7 +26,7 @@ class LineNetworkVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    description: MultilingualString | None = field(
+    description: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "Description",
@@ -34,7 +34,7 @@ class LineNetworkVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    group_of_lines_ref: NetworkRef | GroupOfLinesRef | None = field(
+    group_of_lines_ref: None | NetworkRef | GroupOfLinesRef = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -52,7 +52,7 @@ class LineNetworkVersionStructure(DataManagedObjectStructure):
             ),
         },
     )
-    line_ref: FlexibleLineRef | LineRef | None = field(
+    line_ref: None | FlexibleLineRef | LineRef = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -70,7 +70,7 @@ class LineNetworkVersionStructure(DataManagedObjectStructure):
             ),
         },
     )
-    sections: LineSectionsRelStructure | None = field(
+    sections: None | LineSectionsRelStructure = field(
         default=None,
         metadata={
             "type": "Element",

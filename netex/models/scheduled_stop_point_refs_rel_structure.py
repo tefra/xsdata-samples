@@ -15,7 +15,7 @@ class ScheduledStopPointRefsRelStructure(OneToManyRelationshipStructure):
         name = "scheduledStopPointRefs_RelStructure"
 
     scheduled_stop_point_ref: (
-        FareScheduledStopPointRef | ScheduledStopPointRef | None
+        None | FareScheduledStopPointRef | ScheduledStopPointRef
     ) = field(
         default=None,
         metadata={

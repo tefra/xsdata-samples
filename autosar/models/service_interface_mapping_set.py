@@ -92,7 +92,7 @@ class ServiceInterfaceMappingSet:
     class Meta:
         name = "SERVICE-INTERFACE-MAPPING-SET"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -102,7 +102,7 @@ class ServiceInterfaceMappingSet:
         },
     )
     short_name_fragments: (
-        ServiceInterfaceMappingSet.ShortNameFragments | None
+        None | ServiceInterfaceMappingSet.ShortNameFragments
     ) = field(
         default=None,
         metadata={
@@ -111,7 +111,7 @@ class ServiceInterfaceMappingSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -119,7 +119,7 @@ class ServiceInterfaceMappingSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -127,7 +127,7 @@ class ServiceInterfaceMappingSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -135,7 +135,7 @@ class ServiceInterfaceMappingSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -143,7 +143,7 @@ class ServiceInterfaceMappingSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -151,7 +151,7 @@ class ServiceInterfaceMappingSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: ServiceInterfaceMappingSet.Annotations | None = field(
+    annotations: None | ServiceInterfaceMappingSet.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -159,7 +159,7 @@ class ServiceInterfaceMappingSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -167,7 +167,7 @@ class ServiceInterfaceMappingSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    element_mappings: ServiceInterfaceMappingSet.ElementMappings | None = (
+    element_mappings: None | ServiceInterfaceMappingSet.ElementMappings = (
         field(
             default=None,
             metadata={
@@ -177,7 +177,7 @@ class ServiceInterfaceMappingSet:
             },
         )
     )
-    interface_mappings: ServiceInterfaceMappingSet.InterfaceMappings | None = (
+    interface_mappings: None | ServiceInterfaceMappingSet.InterfaceMappings = (
         field(
             default=None,
             metadata={
@@ -187,14 +187,14 @@ class ServiceInterfaceMappingSet:
             },
         )
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -202,7 +202,7 @@ class ServiceInterfaceMappingSet:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",

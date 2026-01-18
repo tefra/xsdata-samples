@@ -21,7 +21,7 @@ class RGBColour:
     :ivar rgb_colour_extension:
     """
 
-    rgb_red_value: int | None = field(
+    rgb_red_value: None | int = field(
         default=None,
         metadata={
             "name": "rgbRedValue",
@@ -30,7 +30,7 @@ class RGBColour:
             "required": True,
         },
     )
-    rgb_green_value: int | None = field(
+    rgb_green_value: None | int = field(
         default=None,
         metadata={
             "name": "rgbGreenValue",
@@ -39,7 +39,7 @@ class RGBColour:
             "required": True,
         },
     )
-    rgb_blue_value: int | None = field(
+    rgb_blue_value: None | int = field(
         default=None,
         metadata={
             "name": "rgbBlueValue",
@@ -48,7 +48,7 @@ class RGBColour:
             "required": True,
         },
     )
-    colour_name: MultilingualString | None = field(
+    colour_name: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "colourName",
@@ -56,7 +56,7 @@ class RGBColour:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    rgb_colour_extension: ExtensionType | None = field(
+    rgb_colour_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "rgbColourExtension",

@@ -18,7 +18,7 @@ class CatalogueReference:
     :ivar catalogue_reference_extension:
     """
 
-    key_catalogue_reference: str | None = field(
+    key_catalogue_reference: None | str = field(
         default=None,
         metadata={
             "name": "keyCatalogueReference",
@@ -28,7 +28,7 @@ class CatalogueReference:
             "max_length": 1024,
         },
     )
-    catalogue_reference_extension: ExtensionType | None = field(
+    catalogue_reference_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "catalogueReferenceExtension",

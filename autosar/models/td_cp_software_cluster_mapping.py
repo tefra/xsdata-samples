@@ -92,7 +92,7 @@ class TdCpSoftwareClusterMapping:
     class Meta:
         name = "TD-CP-SOFTWARE-CLUSTER-MAPPING"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -102,7 +102,7 @@ class TdCpSoftwareClusterMapping:
         },
     )
     short_name_fragments: (
-        TdCpSoftwareClusterMapping.ShortNameFragments | None
+        None | TdCpSoftwareClusterMapping.ShortNameFragments
     ) = field(
         default=None,
         metadata={
@@ -111,7 +111,7 @@ class TdCpSoftwareClusterMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -119,7 +119,7 @@ class TdCpSoftwareClusterMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -127,7 +127,7 @@ class TdCpSoftwareClusterMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -135,7 +135,7 @@ class TdCpSoftwareClusterMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -143,7 +143,7 @@ class TdCpSoftwareClusterMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -151,7 +151,7 @@ class TdCpSoftwareClusterMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: TdCpSoftwareClusterMapping.Annotations | None = field(
+    annotations: None | TdCpSoftwareClusterMapping.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -159,7 +159,7 @@ class TdCpSoftwareClusterMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    provider_ref: TdCpSoftwareClusterMapping.ProviderRef | None = field(
+    provider_ref: None | TdCpSoftwareClusterMapping.ProviderRef = field(
         default=None,
         metadata={
             "name": "PROVIDER-REF",
@@ -167,7 +167,7 @@ class TdCpSoftwareClusterMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    requestor_refs: TdCpSoftwareClusterMapping.RequestorRefs | None = field(
+    requestor_refs: None | TdCpSoftwareClusterMapping.RequestorRefs = field(
         default=None,
         metadata={
             "name": "REQUESTOR-REFS",
@@ -176,7 +176,7 @@ class TdCpSoftwareClusterMapping:
         },
     )
     timing_description_ref: (
-        TdCpSoftwareClusterMapping.TimingDescriptionRef | None
+        None | TdCpSoftwareClusterMapping.TimingDescriptionRef
     ) = field(
         default=None,
         metadata={
@@ -185,7 +185,7 @@ class TdCpSoftwareClusterMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -193,14 +193,14 @@ class TdCpSoftwareClusterMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -208,7 +208,7 @@ class TdCpSoftwareClusterMapping:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -240,7 +240,7 @@ class TdCpSoftwareClusterMapping:
 
     @dataclass
     class ProviderRef(Ref):
-        dest: CpSoftwareClusterSubtypesEnum | None = field(
+        dest: None | CpSoftwareClusterSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -264,7 +264,7 @@ class TdCpSoftwareClusterMapping:
 
         @dataclass
         class RequestorRef(Ref):
-            dest: CpSoftwareClusterSubtypesEnum | None = field(
+            dest: None | CpSoftwareClusterSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -275,7 +275,7 @@ class TdCpSoftwareClusterMapping:
 
     @dataclass
     class TimingDescriptionRef(Ref):
-        dest: TimingDescriptionSubtypesEnum | None = field(
+        dest: None | TimingDescriptionSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

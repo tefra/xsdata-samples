@@ -20,7 +20,7 @@ class OpenlrGridLocationReference(OpenlrAreaLocationReference):
     the openLR method of areadefinition by providing repeating rectangles.
     """
 
-    openlr_rectangle: OpenlrRectangle | None = field(
+    openlr_rectangle: None | OpenlrRectangle = field(
         default=None,
         metadata={
             "name": "openlrRectangle",
@@ -29,7 +29,7 @@ class OpenlrGridLocationReference(OpenlrAreaLocationReference):
             "required": True,
         },
     )
-    openlr_grid_attributes: OpenlrGridAttributes | None = field(
+    openlr_grid_attributes: None | OpenlrGridAttributes = field(
         default=None,
         metadata={
             "name": "openlrGridAttributes",
@@ -38,7 +38,7 @@ class OpenlrGridLocationReference(OpenlrAreaLocationReference):
             "required": True,
         },
     )
-    openlr_grid_location_reference_extension: ExtensionType | None = field(
+    openlr_grid_location_reference_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "openlrGridLocationReferenceExtension",

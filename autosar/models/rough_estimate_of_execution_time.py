@@ -112,7 +112,7 @@ class RoughEstimateOfExecutionTime:
     class Meta:
         name = "ROUGH-ESTIMATE-OF-EXECUTION-TIME"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -122,7 +122,7 @@ class RoughEstimateOfExecutionTime:
         },
     )
     short_name_fragments: (
-        RoughEstimateOfExecutionTime.ShortNameFragments | None
+        None | RoughEstimateOfExecutionTime.ShortNameFragments
     ) = field(
         default=None,
         metadata={
@@ -131,7 +131,7 @@ class RoughEstimateOfExecutionTime:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -139,7 +139,7 @@ class RoughEstimateOfExecutionTime:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -147,7 +147,7 @@ class RoughEstimateOfExecutionTime:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -155,7 +155,7 @@ class RoughEstimateOfExecutionTime:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -163,7 +163,7 @@ class RoughEstimateOfExecutionTime:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -171,7 +171,7 @@ class RoughEstimateOfExecutionTime:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: RoughEstimateOfExecutionTime.Annotations | None = field(
+    annotations: None | RoughEstimateOfExecutionTime.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -180,7 +180,7 @@ class RoughEstimateOfExecutionTime:
         },
     )
     exclusive_area_ref: (
-        RoughEstimateOfExecutionTime.ExclusiveAreaRef | None
+        None | RoughEstimateOfExecutionTime.ExclusiveAreaRef
     ) = field(
         default=None,
         metadata={
@@ -190,7 +190,7 @@ class RoughEstimateOfExecutionTime:
         },
     )
     executable_entity_ref: (
-        RoughEstimateOfExecutionTime.ExecutableEntityRef | None
+        None | RoughEstimateOfExecutionTime.ExecutableEntityRef
     ) = field(
         default=None,
         metadata={
@@ -199,7 +199,7 @@ class RoughEstimateOfExecutionTime:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    hardware_configuration: HardwareConfiguration | None = field(
+    hardware_configuration: None | HardwareConfiguration = field(
         default=None,
         metadata={
             "name": "HARDWARE-CONFIGURATION",
@@ -207,7 +207,7 @@ class RoughEstimateOfExecutionTime:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    hw_element_ref: RoughEstimateOfExecutionTime.HwElementRef | None = field(
+    hw_element_ref: None | RoughEstimateOfExecutionTime.HwElementRef = field(
         default=None,
         metadata={
             "name": "HW-ELEMENT-REF",
@@ -216,7 +216,7 @@ class RoughEstimateOfExecutionTime:
         },
     )
     included_library_refs: (
-        RoughEstimateOfExecutionTime.IncludedLibraryRefs | None
+        None | RoughEstimateOfExecutionTime.IncludedLibraryRefs
     ) = field(
         default=None,
         metadata={
@@ -226,7 +226,7 @@ class RoughEstimateOfExecutionTime:
         },
     )
     memory_section_locations: (
-        RoughEstimateOfExecutionTime.MemorySectionLocations | None
+        None | RoughEstimateOfExecutionTime.MemorySectionLocations
     ) = field(
         default=None,
         metadata={
@@ -235,7 +235,7 @@ class RoughEstimateOfExecutionTime:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    software_context: SoftwareContext | None = field(
+    software_context: None | SoftwareContext = field(
         default=None,
         metadata={
             "name": "SOFTWARE-CONTEXT",
@@ -243,7 +243,7 @@ class RoughEstimateOfExecutionTime:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -251,7 +251,7 @@ class RoughEstimateOfExecutionTime:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    additional_information: String | None = field(
+    additional_information: None | String = field(
         default=None,
         metadata={
             "name": "ADDITIONAL-INFORMATION",
@@ -259,7 +259,7 @@ class RoughEstimateOfExecutionTime:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    estimated_execution_time: MultidimensionalTime | None = field(
+    estimated_execution_time: None | MultidimensionalTime = field(
         default=None,
         metadata={
             "name": "ESTIMATED-EXECUTION-TIME",
@@ -267,14 +267,14 @@ class RoughEstimateOfExecutionTime:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -282,7 +282,7 @@ class RoughEstimateOfExecutionTime:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -314,7 +314,7 @@ class RoughEstimateOfExecutionTime:
 
     @dataclass
     class ExclusiveAreaRef(Ref):
-        dest: ExclusiveAreaSubtypesEnum | None = field(
+        dest: None | ExclusiveAreaSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -325,7 +325,7 @@ class RoughEstimateOfExecutionTime:
 
     @dataclass
     class ExecutableEntityRef(Ref):
-        dest: ExecutableEntitySubtypesEnum | None = field(
+        dest: None | ExecutableEntitySubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -336,7 +336,7 @@ class RoughEstimateOfExecutionTime:
 
     @dataclass
     class HwElementRef(Ref):
-        dest: HwElementSubtypesEnum | None = field(
+        dest: None | HwElementSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -360,7 +360,7 @@ class RoughEstimateOfExecutionTime:
 
         @dataclass
         class IncludedLibraryRef(Ref):
-            dest: DependencyOnArtifactSubtypesEnum | None = field(
+            dest: None | DependencyOnArtifactSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",

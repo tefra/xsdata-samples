@@ -30,7 +30,7 @@ class AlertCDirection:
     :ivar alert_cdirection_extension:
     """
 
-    alert_cdirection_coded: AlertCDirectionEnum | None = field(
+    alert_cdirection_coded: None | AlertCDirectionEnum = field(
         default=None,
         metadata={
             "name": "alertCDirectionCoded",
@@ -39,7 +39,7 @@ class AlertCDirection:
             "required": True,
         },
     )
-    alert_cdirection_named: MultilingualString | None = field(
+    alert_cdirection_named: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "alertCDirectionNamed",
@@ -47,7 +47,7 @@ class AlertCDirection:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    alert_cdirection_sense: bool | None = field(
+    alert_cdirection_sense: None | bool = field(
         default=None,
         metadata={
             "name": "alertCDirectionSense",
@@ -55,7 +55,7 @@ class AlertCDirection:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    alert_cdirection_extension: ExtensionType | None = field(
+    alert_cdirection_extension: None | ExtensionType = field(
         default=None,
         metadata={
             "name": "alertCDirectionExtension",

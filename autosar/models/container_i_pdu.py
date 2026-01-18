@@ -129,7 +129,7 @@ class ContainerIPdu:
     class Meta:
         name = "CONTAINER-I-PDU"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -138,7 +138,7 @@ class ContainerIPdu:
             "required": True,
         },
     )
-    short_name_fragments: ContainerIPdu.ShortNameFragments | None = field(
+    short_name_fragments: None | ContainerIPdu.ShortNameFragments = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -146,7 +146,7 @@ class ContainerIPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -154,7 +154,7 @@ class ContainerIPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -162,7 +162,7 @@ class ContainerIPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -170,7 +170,7 @@ class ContainerIPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -178,7 +178,7 @@ class ContainerIPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -186,7 +186,7 @@ class ContainerIPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: ContainerIPdu.Annotations | None = field(
+    annotations: None | ContainerIPdu.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -194,7 +194,7 @@ class ContainerIPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -202,7 +202,7 @@ class ContainerIPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    has_dynamic_length: Boolean | None = field(
+    has_dynamic_length: None | Boolean = field(
         default=None,
         metadata={
             "name": "HAS-DYNAMIC-LENGTH",
@@ -210,7 +210,7 @@ class ContainerIPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    length: Integer | None = field(
+    length: None | Integer = field(
         default=None,
         metadata={
             "name": "LENGTH",
@@ -218,7 +218,7 @@ class ContainerIPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    meta_data_length: PositiveInteger | None = field(
+    meta_data_length: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "META-DATA-LENGTH",
@@ -226,7 +226,7 @@ class ContainerIPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    contained_i_pdu_props: ContainedIPduProps | None = field(
+    contained_i_pdu_props: None | ContainedIPduProps = field(
         default=None,
         metadata={
             "name": "CONTAINED-I-PDU-PROPS",
@@ -235,7 +235,7 @@ class ContainerIPdu:
         },
     )
     contained_pdu_triggering_refs: (
-        ContainerIPdu.ContainedPduTriggeringRefs | None
+        None | ContainerIPdu.ContainedPduTriggeringRefs
     ) = field(
         default=None,
         metadata={
@@ -244,7 +244,7 @@ class ContainerIPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    container_timeout: TimeValue | None = field(
+    container_timeout: None | TimeValue = field(
         default=None,
         metadata={
             "name": "CONTAINER-TIMEOUT",
@@ -252,7 +252,7 @@ class ContainerIPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    container_trigger: ContainerIPduTriggerEnum | None = field(
+    container_trigger: None | ContainerIPduTriggerEnum = field(
         default=None,
         metadata={
             "name": "CONTAINER-TRIGGER",
@@ -260,7 +260,7 @@ class ContainerIPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    header_type: ContainerIPduHeaderTypeEnum | None = field(
+    header_type: None | ContainerIPduHeaderTypeEnum = field(
         default=None,
         metadata={
             "name": "HEADER-TYPE",
@@ -268,7 +268,7 @@ class ContainerIPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    minimum_rx_container_queue_size: PositiveInteger | None = field(
+    minimum_rx_container_queue_size: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "MINIMUM-RX-CONTAINER-QUEUE-SIZE",
@@ -276,7 +276,7 @@ class ContainerIPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    minimum_tx_container_queue_size: PositiveInteger | None = field(
+    minimum_tx_container_queue_size: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "MINIMUM-TX-CONTAINER-QUEUE-SIZE",
@@ -284,7 +284,7 @@ class ContainerIPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    rx_accept_contained_i_pdu: RxAcceptContainedIPduEnum | None = field(
+    rx_accept_contained_i_pdu: None | RxAcceptContainedIPduEnum = field(
         default=None,
         metadata={
             "name": "RX-ACCEPT-CONTAINED-I-PDU",
@@ -292,7 +292,7 @@ class ContainerIPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    threshold_size: PositiveInteger | None = field(
+    threshold_size: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "THRESHOLD-SIZE",
@@ -300,7 +300,7 @@ class ContainerIPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    unused_bit_pattern: PositiveInteger | None = field(
+    unused_bit_pattern: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "UNUSED-BIT-PATTERN",
@@ -308,14 +308,14 @@ class ContainerIPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -323,7 +323,7 @@ class ContainerIPdu:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -368,7 +368,7 @@ class ContainerIPdu:
 
         @dataclass
         class ContainedPduTriggeringRef(Ref):
-            dest: PduTriggeringSubtypesEnum | None = field(
+            dest: None | PduTriggeringSubtypesEnum = field(
                 default=None,
                 metadata={
                     "name": "DEST",

@@ -54,7 +54,7 @@ class ServiceTypeDef:
         name = "serviceTypeDef"
         namespace = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
-    type_name: ServiceTypeDef.TypeName | None = field(
+    type_name: None | ServiceTypeDef.TypeName = field(
         default=None,
         metadata={
             "name": "typeName",
@@ -69,14 +69,14 @@ class ServiceTypeDef:
             "type": "Element",
         },
     )
-    type_parameters: TypeParameters | None = field(
+    type_parameters: None | TypeParameters = field(
         default=None,
         metadata={
             "name": "typeParameters",
             "type": "Element",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -114,7 +114,7 @@ class ServiceTypeDef:
                 "required": True,
             },
         )
-        id: str | None = field(
+        id: None | str = field(
             default=None,
             metadata={
                 "type": "Attribute",

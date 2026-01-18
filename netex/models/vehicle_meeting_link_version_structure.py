@@ -15,7 +15,7 @@ class VehicleMeetingLinkVersionStructure(LinkVersionStructure):
     class Meta:
         name = "VehicleMeetingLink_VersionStructure"
 
-    from_point_ref: VehicleMeetingPointRefStructure | None = field(
+    from_point_ref: None | VehicleMeetingPointRefStructure = field(
         default=None,
         metadata={
             "name": "FromPointRef",
@@ -24,7 +24,7 @@ class VehicleMeetingLinkVersionStructure(LinkVersionStructure):
             "required": True,
         },
     )
-    to_point_ref: VehicleMeetingPointRefStructure | None = field(
+    to_point_ref: None | VehicleMeetingPointRefStructure = field(
         default=None,
         metadata={
             "name": "ToPointRef",

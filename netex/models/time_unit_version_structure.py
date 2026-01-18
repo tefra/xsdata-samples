@@ -15,7 +15,7 @@ class TimeUnitVersionStructure(FareUnitVersionStructure):
     class Meta:
         name = "TimeUnit_VersionStructure"
 
-    type_value: str | None = field(
+    type_value: None | str = field(
         default=None,
         metadata={
             "name": "Type",
@@ -23,7 +23,7 @@ class TimeUnitVersionStructure(FareUnitVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    duration: XmlDuration | None = field(
+    duration: None | XmlDuration = field(
         default=None,
         metadata={
             "name": "Duration",
@@ -31,7 +31,7 @@ class TimeUnitVersionStructure(FareUnitVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    prices: TimeUnitPricesRelStructure | None = field(
+    prices: None | TimeUnitPricesRelStructure = field(
         default=None,
         metadata={
             "type": "Element",

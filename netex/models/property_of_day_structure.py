@@ -21,7 +21,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 @dataclass
 class PropertyOfDayStructure:
-    name: MultilingualString | None = field(
+    name: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "Name",
@@ -29,7 +29,7 @@ class PropertyOfDayStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    description: MultilingualString | None = field(
+    description: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "Description",
@@ -56,10 +56,10 @@ class PropertyOfDayStructure:
         },
     )
     month_of_year_or_day_of_month_or_day_of_year: (
-        PropertyOfDayStructure.MonthOfYear
+        None
+        | PropertyOfDayStructure.MonthOfYear
         | PropertyOfDayStructure.DayOfMonth
         | PropertyOfDayStructure.DayOfYear
-        | None
     ) = field(
         default=None,
         metadata={
@@ -83,7 +83,7 @@ class PropertyOfDayStructure:
             ),
         },
     )
-    country_ref: CountryRefStructure | None = field(
+    country_ref: None | CountryRefStructure = field(
         default=None,
         metadata={
             "name": "CountryRef",
@@ -118,7 +118,7 @@ class PropertyOfDayStructure:
             "tokens": True,
         },
     )
-    day_event: DayEventEnumeration | None = field(
+    day_event: None | DayEventEnumeration = field(
         default=None,
         metadata={
             "name": "DayEvent",
@@ -126,7 +126,7 @@ class PropertyOfDayStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    crowding: CrowdingEnumeration | None = field(
+    crowding: None | CrowdingEnumeration = field(
         default=None,
         metadata={
             "name": "Crowding",
@@ -137,7 +137,7 @@ class PropertyOfDayStructure:
 
     @dataclass
     class MonthOfYear:
-        value: XmlPeriod | None = field(
+        value: None | XmlPeriod = field(
             default=None,
             metadata={
                 "required": True,
@@ -146,7 +146,7 @@ class PropertyOfDayStructure:
 
     @dataclass
     class DayOfMonth:
-        value: XmlPeriod | None = field(
+        value: None | XmlPeriod = field(
             default=None,
             metadata={
                 "required": True,
@@ -155,7 +155,7 @@ class PropertyOfDayStructure:
 
     @dataclass
     class DayOfYear:
-        value: XmlPeriod | None = field(
+        value: None | XmlPeriod = field(
             default=None,
             metadata={
                 "required": True,

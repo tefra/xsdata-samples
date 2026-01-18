@@ -19,7 +19,7 @@ class GeoCodelistType(GeoCodelistBaseType):
         type implementations.
     """
 
-    geo_type: GeoCodelistTypeType | None = field(
+    geo_type: None | GeoCodelistTypeType = field(
         default=None,
         metadata={
             "name": "geoType",

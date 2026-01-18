@@ -113,7 +113,7 @@ class DiagnosticIoControl:
     class Meta:
         name = "DIAGNOSTIC-IO-CONTROL"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -122,7 +122,7 @@ class DiagnosticIoControl:
             "required": True,
         },
     )
-    short_name_fragments: DiagnosticIoControl.ShortNameFragments | None = (
+    short_name_fragments: None | DiagnosticIoControl.ShortNameFragments = (
         field(
             default=None,
             metadata={
@@ -132,7 +132,7 @@ class DiagnosticIoControl:
             },
         )
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -140,7 +140,7 @@ class DiagnosticIoControl:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -148,7 +148,7 @@ class DiagnosticIoControl:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -156,7 +156,7 @@ class DiagnosticIoControl:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -164,7 +164,7 @@ class DiagnosticIoControl:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -172,7 +172,7 @@ class DiagnosticIoControl:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: DiagnosticIoControl.Annotations | None = field(
+    annotations: None | DiagnosticIoControl.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -180,7 +180,7 @@ class DiagnosticIoControl:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -188,7 +188,7 @@ class DiagnosticIoControl:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    access_permission_ref: DiagnosticIoControl.AccessPermissionRef | None = (
+    access_permission_ref: None | DiagnosticIoControl.AccessPermissionRef = (
         field(
             default=None,
             metadata={
@@ -199,7 +199,7 @@ class DiagnosticIoControl:
         )
     )
     control_enable_mask_bits: (
-        DiagnosticIoControl.ControlEnableMaskBits | None
+        None | DiagnosticIoControl.ControlEnableMaskBits
     ) = field(
         default=None,
         metadata={
@@ -208,7 +208,7 @@ class DiagnosticIoControl:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    data_identifier_ref: DiagnosticIoControl.DataIdentifierRef | None = field(
+    data_identifier_ref: None | DiagnosticIoControl.DataIdentifierRef = field(
         default=None,
         metadata={
             "name": "DATA-IDENTIFIER-REF",
@@ -216,7 +216,7 @@ class DiagnosticIoControl:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    freeze_current_state: Boolean | None = field(
+    freeze_current_state: None | Boolean = field(
         default=None,
         metadata={
             "name": "FREEZE-CURRENT-STATE",
@@ -224,7 +224,7 @@ class DiagnosticIoControl:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    io_control_class_ref: DiagnosticIoControl.IoControlClassRef | None = field(
+    io_control_class_ref: None | DiagnosticIoControl.IoControlClassRef = field(
         default=None,
         metadata={
             "name": "IO-CONTROL-CLASS-REF",
@@ -232,7 +232,7 @@ class DiagnosticIoControl:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    reset_to_default: Boolean | None = field(
+    reset_to_default: None | Boolean = field(
         default=None,
         metadata={
             "name": "RESET-TO-DEFAULT",
@@ -240,7 +240,7 @@ class DiagnosticIoControl:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    short_term_adjustment: Boolean | None = field(
+    short_term_adjustment: None | Boolean = field(
         default=None,
         metadata={
             "name": "SHORT-TERM-ADJUSTMENT",
@@ -248,14 +248,14 @@ class DiagnosticIoControl:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -263,7 +263,7 @@ class DiagnosticIoControl:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -295,7 +295,7 @@ class DiagnosticIoControl:
 
     @dataclass
     class AccessPermissionRef(Ref):
-        dest: DiagnosticAccessPermissionSubtypesEnum | None = field(
+        dest: None | DiagnosticAccessPermissionSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -319,7 +319,7 @@ class DiagnosticIoControl:
 
     @dataclass
     class DataIdentifierRef(Ref):
-        dest: DiagnosticDataIdentifierSubtypesEnum | None = field(
+        dest: None | DiagnosticDataIdentifierSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -330,7 +330,7 @@ class DiagnosticIoControl:
 
     @dataclass
     class IoControlClassRef(Ref):
-        dest: DiagnosticIoControlClassSubtypesEnum | None = field(
+        dest: None | DiagnosticIoControlClassSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

@@ -14,7 +14,7 @@ class ServiceAccessRightVersionStructure(PriceableObjectVersionStructure):
     class Meta:
         name = "ServiceAccessRight_VersionStructure"
 
-    private_code: PrivateCode | None = field(
+    private_code: None | PrivateCode = field(
         default=None,
         metadata={
             "name": "PrivateCode",
@@ -22,7 +22,7 @@ class ServiceAccessRightVersionStructure(PriceableObjectVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    info_url: str | None = field(
+    info_url: None | str = field(
         default=None,
         metadata={
             "name": "InfoUrl",
@@ -30,7 +30,7 @@ class ServiceAccessRightVersionStructure(PriceableObjectVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    document_links: InfoLinksRelStructure | None = field(
+    document_links: None | InfoLinksRelStructure = field(
         default=None,
         metadata={
             "name": "documentLinks",

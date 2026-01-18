@@ -62,45 +62,45 @@ class TypeDefinitions:
         name = "typeDefinitions"
         namespace = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
-    vendor: str | None = field(
+    vendor: None | str = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    library: str | None = field(
+    library: None | str = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    name: str | None = field(
+    name: None | str = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    version: str | None = field(
+    version: None | str = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    display_name: str | None = field(
+    display_name: None | str = field(
         default=None,
         metadata={
             "name": "displayName",
             "type": "Element",
         },
     )
-    short_description: ShortDescription | None = field(
+    short_description: None | ShortDescription = field(
         default=None,
         metadata={
             "name": "shortDescription",
             "type": "Element",
         },
     )
-    description: Description | None = field(
+    description: None | Description = field(
         default=None,
         metadata={
             "type": "Element",
@@ -113,19 +113,19 @@ class TypeDefinitions:
             "type": "Element",
         },
     )
-    modes: TypeDefinitions.Modes | None = field(
+    modes: None | TypeDefinitions.Modes = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    views: TypeDefinitions.Views | None = field(
+    views: None | TypeDefinitions.Views = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    field_access_policy_definitions: FieldAccessPolicyDefinitions | None = (
+    field_access_policy_definitions: None | FieldAccessPolicyDefinitions = (
         field(
             default=None,
             metadata={
@@ -134,95 +134,95 @@ class TypeDefinitions:
             },
         )
     )
-    enumeration_definitions: EnumerationDefinitions | None = field(
+    enumeration_definitions: None | EnumerationDefinitions = field(
         default=None,
         metadata={
             "name": "enumerationDefinitions",
             "type": "Element",
         },
     )
-    field_definitions: FieldDefinitions | None = field(
+    field_definitions: None | FieldDefinitions = field(
         default=None,
         metadata={
             "name": "fieldDefinitions",
             "type": "Element",
         },
     )
-    register_definitions: RegisterDefinitions | None = field(
+    register_definitions: None | RegisterDefinitions = field(
         default=None,
         metadata={
             "name": "registerDefinitions",
             "type": "Element",
         },
     )
-    register_file_definitions: RegisterFileDefinitions | None = field(
+    register_file_definitions: None | RegisterFileDefinitions = field(
         default=None,
         metadata={
             "name": "registerFileDefinitions",
             "type": "Element",
         },
     )
-    address_block_definitions: AddressBlockDefinitions | None = field(
+    address_block_definitions: None | AddressBlockDefinitions = field(
         default=None,
         metadata={
             "name": "addressBlockDefinitions",
             "type": "Element",
         },
     )
-    bank_definitions: BankDefinitions | None = field(
+    bank_definitions: None | BankDefinitions = field(
         default=None,
         metadata={
             "name": "bankDefinitions",
             "type": "Element",
         },
     )
-    memory_map_definitions: MemoryMapDefinitions | None = field(
+    memory_map_definitions: None | MemoryMapDefinitions = field(
         default=None,
         metadata={
             "name": "memoryMapDefinitions",
             "type": "Element",
         },
     )
-    memory_remap_definitions: MemoryRemapDefinitions | None = field(
+    memory_remap_definitions: None | MemoryRemapDefinitions = field(
         default=None,
         metadata={
             "name": "memoryRemapDefinitions",
             "type": "Element",
         },
     )
-    reset_types: TypeDefinitions.ResetTypes | None = field(
+    reset_types: None | TypeDefinitions.ResetTypes = field(
         default=None,
         metadata={
             "name": "resetTypes",
             "type": "Element",
         },
     )
-    choices: Choices | None = field(
+    choices: None | Choices = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    parameters: Parameters | None = field(
+    parameters: None | Parameters = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    assertions: Assertions | None = field(
+    assertions: None | Assertions = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    vendor_extensions: VendorExtensions | None = field(
+    vendor_extensions: None | VendorExtensions = field(
         default=None,
         metadata={
             "name": "vendorExtensions",
             "type": "Element",
         },
     )
-    id: str | None = field(
+    id: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -251,41 +251,41 @@ class TypeDefinitions:
             :ivar id:
             """
 
-            name: str | None = field(
+            name: None | str = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "required": True,
                 },
             )
-            display_name: DisplayName | None = field(
+            display_name: None | DisplayName = field(
                 default=None,
                 metadata={
                     "name": "displayName",
                     "type": "Element",
                 },
             )
-            short_description: ShortDescription | None = field(
+            short_description: None | ShortDescription = field(
                 default=None,
                 metadata={
                     "name": "shortDescription",
                     "type": "Element",
                 },
             )
-            description: Description | None = field(
+            description: None | Description = field(
                 default=None,
                 metadata={
                     "type": "Element",
                 },
             )
-            vendor_extensions: VendorExtensions | None = field(
+            vendor_extensions: None | VendorExtensions = field(
                 default=None,
                 metadata={
                     "name": "vendorExtensions",
                     "type": "Element",
                 },
             )
-            id: str | None = field(
+            id: None | str = field(
                 default=None,
                 metadata={
                     "type": "Attribute",
@@ -314,41 +314,41 @@ class TypeDefinitions:
             :ivar id:
             """
 
-            name: str | None = field(
+            name: None | str = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "required": True,
                 },
             )
-            display_name: DisplayName | None = field(
+            display_name: None | DisplayName = field(
                 default=None,
                 metadata={
                     "name": "displayName",
                     "type": "Element",
                 },
             )
-            short_description: ShortDescription | None = field(
+            short_description: None | ShortDescription = field(
                 default=None,
                 metadata={
                     "name": "shortDescription",
                     "type": "Element",
                 },
             )
-            description: Description | None = field(
+            description: None | Description = field(
                 default=None,
                 metadata={
                     "type": "Element",
                 },
             )
-            vendor_extensions: VendorExtensions | None = field(
+            vendor_extensions: None | VendorExtensions = field(
                 default=None,
                 metadata={
                     "name": "vendorExtensions",
                     "type": "Element",
                 },
             )
-            id: str | None = field(
+            id: None | str = field(
                 default=None,
                 metadata={
                     "type": "Attribute",
@@ -382,41 +382,41 @@ class TypeDefinitions:
             :ivar id:
             """
 
-            name: str | None = field(
+            name: None | str = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "required": True,
                 },
             )
-            display_name: DisplayName | None = field(
+            display_name: None | DisplayName = field(
                 default=None,
                 metadata={
                     "name": "displayName",
                     "type": "Element",
                 },
             )
-            short_description: ShortDescription | None = field(
+            short_description: None | ShortDescription = field(
                 default=None,
                 metadata={
                     "name": "shortDescription",
                     "type": "Element",
                 },
             )
-            description: Description | None = field(
+            description: None | Description = field(
                 default=None,
                 metadata={
                     "type": "Element",
                 },
             )
-            vendor_extensions: VendorExtensions | None = field(
+            vendor_extensions: None | VendorExtensions = field(
                 default=None,
                 metadata={
                     "name": "vendorExtensions",
                     "type": "Element",
                 },
             )
-            id: str | None = field(
+            id: None | str = field(
                 default=None,
                 metadata={
                     "type": "Attribute",

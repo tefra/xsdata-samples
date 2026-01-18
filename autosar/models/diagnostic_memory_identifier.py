@@ -99,7 +99,7 @@ class DiagnosticMemoryIdentifier:
     class Meta:
         name = "DIAGNOSTIC-MEMORY-IDENTIFIER"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -109,7 +109,7 @@ class DiagnosticMemoryIdentifier:
         },
     )
     short_name_fragments: (
-        DiagnosticMemoryIdentifier.ShortNameFragments | None
+        None | DiagnosticMemoryIdentifier.ShortNameFragments
     ) = field(
         default=None,
         metadata={
@@ -118,7 +118,7 @@ class DiagnosticMemoryIdentifier:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -126,7 +126,7 @@ class DiagnosticMemoryIdentifier:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -134,7 +134,7 @@ class DiagnosticMemoryIdentifier:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -142,7 +142,7 @@ class DiagnosticMemoryIdentifier:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -150,7 +150,7 @@ class DiagnosticMemoryIdentifier:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -158,7 +158,7 @@ class DiagnosticMemoryIdentifier:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: DiagnosticMemoryIdentifier.Annotations | None = field(
+    annotations: None | DiagnosticMemoryIdentifier.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -166,7 +166,7 @@ class DiagnosticMemoryIdentifier:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -175,7 +175,7 @@ class DiagnosticMemoryIdentifier:
         },
     )
     access_permission_ref: (
-        DiagnosticMemoryIdentifier.AccessPermissionRef | None
+        None | DiagnosticMemoryIdentifier.AccessPermissionRef
     ) = field(
         default=None,
         metadata={
@@ -184,7 +184,7 @@ class DiagnosticMemoryIdentifier:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    id: PositiveInteger | None = field(
+    id: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "ID",
@@ -192,7 +192,7 @@ class DiagnosticMemoryIdentifier:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    memory_high_address: PositiveInteger | None = field(
+    memory_high_address: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "MEMORY-HIGH-ADDRESS",
@@ -200,7 +200,7 @@ class DiagnosticMemoryIdentifier:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    memory_high_address_label: String | None = field(
+    memory_high_address_label: None | String = field(
         default=None,
         metadata={
             "name": "MEMORY-HIGH-ADDRESS-LABEL",
@@ -208,7 +208,7 @@ class DiagnosticMemoryIdentifier:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    memory_low_address: PositiveInteger | None = field(
+    memory_low_address: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "MEMORY-LOW-ADDRESS",
@@ -216,7 +216,7 @@ class DiagnosticMemoryIdentifier:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    memory_low_address_label: String | None = field(
+    memory_low_address_label: None | String = field(
         default=None,
         metadata={
             "name": "MEMORY-LOW-ADDRESS-LABEL",
@@ -224,14 +224,14 @@ class DiagnosticMemoryIdentifier:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -239,7 +239,7 @@ class DiagnosticMemoryIdentifier:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -271,7 +271,7 @@ class DiagnosticMemoryIdentifier:
 
     @dataclass
     class AccessPermissionRef(Ref):
-        dest: DiagnosticAccessPermissionSubtypesEnum | None = field(
+        dest: None | DiagnosticAccessPermissionSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

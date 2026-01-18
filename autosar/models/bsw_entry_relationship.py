@@ -37,7 +37,7 @@ class BswEntryRelationship:
     class Meta:
         name = "BSW-ENTRY-RELATIONSHIP"
 
-    from_ref: BswEntryRelationship.FromRef | None = field(
+    from_ref: None | BswEntryRelationship.FromRef = field(
         default=None,
         metadata={
             "name": "FROM-REF",
@@ -45,7 +45,7 @@ class BswEntryRelationship:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    to_ref: BswEntryRelationship.ToRef | None = field(
+    to_ref: None | BswEntryRelationship.ToRef = field(
         default=None,
         metadata={
             "name": "TO-REF",
@@ -53,7 +53,7 @@ class BswEntryRelationship:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    bsw_entry_relationship_type: BswEntryRelationshipEnum | None = field(
+    bsw_entry_relationship_type: None | BswEntryRelationshipEnum = field(
         default=None,
         metadata={
             "name": "BSW-ENTRY-RELATIONSHIP-TYPE",
@@ -61,14 +61,14 @@ class BswEntryRelationship:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -79,7 +79,7 @@ class BswEntryRelationship:
 
     @dataclass
     class FromRef(Ref):
-        dest: BswModuleEntrySubtypesEnum | None = field(
+        dest: None | BswModuleEntrySubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -90,7 +90,7 @@ class BswEntryRelationship:
 
     @dataclass
     class ToRef(Ref):
-        dest: BswModuleEntrySubtypesEnum | None = field(
+        dest: None | BswModuleEntrySubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

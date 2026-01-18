@@ -47,7 +47,7 @@ class FlexrayAbsolutelyScheduledTiming:
         name = "FLEXRAY-ABSOLUTELY-SCHEDULED-TIMING"
 
     communication_cycle: (
-        FlexrayAbsolutelyScheduledTiming.CommunicationCycle | None
+        None | FlexrayAbsolutelyScheduledTiming.CommunicationCycle
     ) = field(
         default=None,
         metadata={
@@ -56,7 +56,7 @@ class FlexrayAbsolutelyScheduledTiming:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    slot_id: PositiveInteger | None = field(
+    slot_id: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "SLOT-ID",
@@ -64,14 +64,14 @@ class FlexrayAbsolutelyScheduledTiming:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -82,7 +82,7 @@ class FlexrayAbsolutelyScheduledTiming:
 
     @dataclass
     class CommunicationCycle:
-        cycle_counter: CycleCounter | None = field(
+        cycle_counter: None | CycleCounter = field(
             default=None,
             metadata={
                 "name": "CYCLE-COUNTER",
@@ -90,7 +90,7 @@ class FlexrayAbsolutelyScheduledTiming:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        cycle_repetition: CycleRepetition | None = field(
+        cycle_repetition: None | CycleRepetition = field(
             default=None,
             metadata={
                 "name": "CYCLE-REPETITION",

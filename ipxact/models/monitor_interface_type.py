@@ -27,14 +27,14 @@ class MonitorInterfaceType(InterfaceType):
     class Meta:
         name = "monitorInterfaceType"
 
-    description: Description | None = field(
+    description: None | Description = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    vendor_extensions: VendorExtensions | None = field(
+    vendor_extensions: None | VendorExtensions = field(
         default=None,
         metadata={
             "name": "vendorExtensions",
@@ -42,7 +42,7 @@ class MonitorInterfaceType(InterfaceType):
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    path: str | None = field(
+    path: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",

@@ -48,7 +48,7 @@ class ModeAccessPoint:
     class Meta:
         name = "MODE-ACCESS-POINT"
 
-    ident: ModeAccessPointIdent | None = field(
+    ident: None | ModeAccessPointIdent = field(
         default=None,
         metadata={
             "name": "IDENT",
@@ -56,7 +56,7 @@ class ModeAccessPoint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    mode_group_iref: ModeAccessPoint.ModeGroupIref | None = field(
+    mode_group_iref: None | ModeAccessPoint.ModeGroupIref = field(
         default=None,
         metadata={
             "name": "MODE-GROUP-IREF",
@@ -64,7 +64,7 @@ class ModeAccessPoint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -72,14 +72,14 @@ class ModeAccessPoint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -91,7 +91,7 @@ class ModeAccessPoint:
     @dataclass
     class ModeGroupIref:
         p_mode_group_in_atomic_swc_instance_ref: (
-            PModeGroupInAtomicSwcInstanceRef | None
+            None | PModeGroupInAtomicSwcInstanceRef
         ) = field(
             default=None,
             metadata={
@@ -101,7 +101,7 @@ class ModeAccessPoint:
             },
         )
         r_mode_group_in_atomic_swc_instance_ref: (
-            RModeGroupInAtomicSwcInstanceRef | None
+            None | RModeGroupInAtomicSwcInstanceRef
         ) = field(
             default=None,
             metadata={

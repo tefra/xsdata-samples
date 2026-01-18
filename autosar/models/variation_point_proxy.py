@@ -132,7 +132,7 @@ class VariationPointProxy:
     class Meta:
         name = "VARIATION-POINT-PROXY"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -141,7 +141,7 @@ class VariationPointProxy:
             "required": True,
         },
     )
-    short_name_fragments: VariationPointProxy.ShortNameFragments | None = (
+    short_name_fragments: None | VariationPointProxy.ShortNameFragments = (
         field(
             default=None,
             metadata={
@@ -151,7 +151,7 @@ class VariationPointProxy:
             },
         )
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -159,7 +159,7 @@ class VariationPointProxy:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -167,7 +167,7 @@ class VariationPointProxy:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -175,7 +175,7 @@ class VariationPointProxy:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -183,7 +183,7 @@ class VariationPointProxy:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -191,7 +191,7 @@ class VariationPointProxy:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: VariationPointProxy.Annotations | None = field(
+    annotations: None | VariationPointProxy.Annotations = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -199,7 +199,7 @@ class VariationPointProxy:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    condition_access: ConditionByFormula | None = field(
+    condition_access: None | ConditionByFormula = field(
         default=None,
         metadata={
             "name": "CONDITION-ACCESS",
@@ -208,7 +208,7 @@ class VariationPointProxy:
         },
     )
     implementation_data_type_ref: (
-        VariationPointProxy.ImplementationDataTypeRef | None
+        None | VariationPointProxy.ImplementationDataTypeRef
     ) = field(
         default=None,
         metadata={
@@ -218,7 +218,7 @@ class VariationPointProxy:
         },
     )
     post_build_value_access_ref: (
-        VariationPointProxy.PostBuildValueAccessRef | None
+        None | VariationPointProxy.PostBuildValueAccessRef
     ) = field(
         default=None,
         metadata={
@@ -228,7 +228,7 @@ class VariationPointProxy:
         },
     )
     post_build_variant_conditions: (
-        VariationPointProxy.PostBuildVariantConditions | None
+        None | VariationPointProxy.PostBuildVariantConditions
     ) = field(
         default=None,
         metadata={
@@ -237,7 +237,7 @@ class VariationPointProxy:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    value_access: VariationPointProxy.ValueAccess | None = field(
+    value_access: None | VariationPointProxy.ValueAccess = field(
         default=None,
         metadata={
             "name": "VALUE-ACCESS",
@@ -245,14 +245,14 @@ class VariationPointProxy:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -260,7 +260,7 @@ class VariationPointProxy:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -292,7 +292,7 @@ class VariationPointProxy:
 
     @dataclass
     class ImplementationDataTypeRef(Ref):
-        dest: ImplementationDataTypeSubtypesEnum | None = field(
+        dest: None | ImplementationDataTypeSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -303,7 +303,7 @@ class VariationPointProxy:
 
     @dataclass
     class PostBuildValueAccessRef(Ref):
-        dest: PostBuildVariantCriterionSubtypesEnum | None = field(
+        dest: None | PostBuildVariantCriterionSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -325,7 +325,7 @@ class VariationPointProxy:
 
     @dataclass
     class ValueAccess:
-        boolean_value_variation_point: BooleanValueVariationPoint | None = (
+        boolean_value_variation_point: None | BooleanValueVariationPoint = (
             field(
                 default=None,
                 metadata={
@@ -336,7 +336,7 @@ class VariationPointProxy:
             )
         )
         diagnostic_debounce_behavior_enum_value_variation_point: (
-            DiagnosticDebounceBehaviorEnumValueVariationPoint | None
+            None | DiagnosticDebounceBehaviorEnumValueVariationPoint
         ) = field(
             default=None,
             metadata={
@@ -346,7 +346,7 @@ class VariationPointProxy:
             },
         )
         diagnostic_indicator_type_enum_value_variation_point: (
-            DiagnosticIndicatorTypeEnumValueVariationPoint | None
+            None | DiagnosticIndicatorTypeEnumValueVariationPoint
         ) = field(
             default=None,
             metadata={
@@ -356,7 +356,7 @@ class VariationPointProxy:
             },
         )
         diagnostic_test_result_update_enum_value_variation_point: (
-            DiagnosticTestResultUpdateEnumValueVariationPoint | None
+            None | DiagnosticTestResultUpdateEnumValueVariationPoint
         ) = field(
             default=None,
             metadata={
@@ -366,7 +366,7 @@ class VariationPointProxy:
             },
         )
         diagnostic_wwh_obd_dtc_class_enum_value_variation_point: (
-            DiagnosticWwhObdDtcClassEnumValueVariationPoint | None
+            None | DiagnosticWwhObdDtcClassEnumValueVariationPoint
         ) = field(
             default=None,
             metadata={
@@ -375,7 +375,7 @@ class VariationPointProxy:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        float_value_variation_point: FloatValueVariationPoint | None = field(
+        float_value_variation_point: None | FloatValueVariationPoint = field(
             default=None,
             metadata={
                 "name": "FLOAT-VALUE-VARIATION-POINT",
@@ -383,7 +383,7 @@ class VariationPointProxy:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        integer_value_variation_point: IntegerValueVariationPoint | None = (
+        integer_value_variation_point: None | IntegerValueVariationPoint = (
             field(
                 default=None,
                 metadata={
@@ -393,7 +393,7 @@ class VariationPointProxy:
                 },
             )
         )
-        limit: Limit | None = field(
+        limit: None | Limit = field(
             default=None,
             metadata={
                 "name": "LIMIT",
@@ -402,7 +402,7 @@ class VariationPointProxy:
             },
         )
         name_token_value_variation_point: (
-            NameTokenValueVariationPoint | None
+            None | NameTokenValueVariationPoint
         ) = field(
             default=None,
             metadata={
@@ -412,7 +412,7 @@ class VariationPointProxy:
             },
         )
         numerical_value_variation_point: (
-            NumericalValueVariationPoint | None
+            None | NumericalValueVariationPoint
         ) = field(
             default=None,
             metadata={
@@ -422,7 +422,7 @@ class VariationPointProxy:
             },
         )
         positive_integer_value_variation_point: (
-            PositiveIntegerValueVariationPoint | None
+            None | PositiveIntegerValueVariationPoint
         ) = field(
             default=None,
             metadata={
@@ -432,7 +432,7 @@ class VariationPointProxy:
             },
         )
         time_value_value_variation_point: (
-            TimeValueValueVariationPoint | None
+            None | TimeValueValueVariationPoint
         ) = field(
             default=None,
             metadata={
@@ -442,7 +442,7 @@ class VariationPointProxy:
             },
         )
         unlimited_integer_value_variation_point: (
-            UnlimitedIntegerValueVariationPoint | None
+            None | UnlimitedIntegerValueVariationPoint
         ) = field(
             default=None,
             metadata={

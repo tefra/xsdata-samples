@@ -31,20 +31,20 @@ class DiagnosticStoreEventSupportEnum:
     class Meta:
         name = "DIAGNOSTIC-STORE-EVENT-SUPPORT-ENUM"
 
-    value: DiagnosticStoreEventSupportEnumSimple | None = field(
+    value: None | DiagnosticStoreEventSupportEnumSimple = field(
         default=None,
         metadata={
             "required": True,
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

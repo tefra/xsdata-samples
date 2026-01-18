@@ -34,7 +34,7 @@ class PhysicalDimensionMapping:
         name = "PHYSICAL-DIMENSION-MAPPING"
 
     first_physical_dimension_ref: (
-        PhysicalDimensionMapping.FirstPhysicalDimensionRef | None
+        None | PhysicalDimensionMapping.FirstPhysicalDimensionRef
     ) = field(
         default=None,
         metadata={
@@ -44,7 +44,7 @@ class PhysicalDimensionMapping:
         },
     )
     second_physical_dimension_ref: (
-        PhysicalDimensionMapping.SecondPhysicalDimensionRef | None
+        None | PhysicalDimensionMapping.SecondPhysicalDimensionRef
     ) = field(
         default=None,
         metadata={
@@ -53,14 +53,14 @@ class PhysicalDimensionMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -71,7 +71,7 @@ class PhysicalDimensionMapping:
 
     @dataclass
     class FirstPhysicalDimensionRef(Ref):
-        dest: PhysicalDimensionSubtypesEnum | None = field(
+        dest: None | PhysicalDimensionSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -82,7 +82,7 @@ class PhysicalDimensionMapping:
 
     @dataclass
     class SecondPhysicalDimensionRef(Ref):
-        dest: PhysicalDimensionSubtypesEnum | None = field(
+        dest: None | PhysicalDimensionSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

@@ -90,7 +90,7 @@ class ProcessDesignToMachineDesignMapping:
     class Meta:
         name = "PROCESS-DESIGN-TO-MACHINE-DESIGN-MAPPING"
 
-    short_name: Identifier | None = field(
+    short_name: None | Identifier = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -100,7 +100,7 @@ class ProcessDesignToMachineDesignMapping:
         },
     )
     short_name_fragments: (
-        ProcessDesignToMachineDesignMapping.ShortNameFragments | None
+        None | ProcessDesignToMachineDesignMapping.ShortNameFragments
     ) = field(
         default=None,
         metadata={
@@ -109,7 +109,7 @@ class ProcessDesignToMachineDesignMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: MultilanguageLongName | None = field(
+    long_name: None | MultilanguageLongName = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -117,7 +117,7 @@ class ProcessDesignToMachineDesignMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: MultiLanguageOverviewParagraph | None = field(
+    desc: None | MultiLanguageOverviewParagraph = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -125,7 +125,7 @@ class ProcessDesignToMachineDesignMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: CategoryString | None = field(
+    category: None | CategoryString = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -133,7 +133,7 @@ class ProcessDesignToMachineDesignMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: AdminData | None = field(
+    admin_data: None | AdminData = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -141,7 +141,7 @@ class ProcessDesignToMachineDesignMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: DocumentationBlock | None = field(
+    introduction: None | DocumentationBlock = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -149,7 +149,7 @@ class ProcessDesignToMachineDesignMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: ProcessDesignToMachineDesignMapping.Annotations | None = (
+    annotations: None | ProcessDesignToMachineDesignMapping.Annotations = (
         field(
             default=None,
             metadata={
@@ -160,7 +160,7 @@ class ProcessDesignToMachineDesignMapping:
         )
     )
     machine_design_ref: (
-        ProcessDesignToMachineDesignMapping.MachineDesignRef | None
+        None | ProcessDesignToMachineDesignMapping.MachineDesignRef
     ) = field(
         default=None,
         metadata={
@@ -170,7 +170,7 @@ class ProcessDesignToMachineDesignMapping:
         },
     )
     process_design_ref: (
-        ProcessDesignToMachineDesignMapping.ProcessDesignRef | None
+        None | ProcessDesignToMachineDesignMapping.ProcessDesignRef
     ) = field(
         default=None,
         metadata={
@@ -179,14 +179,14 @@ class ProcessDesignToMachineDesignMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -194,7 +194,7 @@ class ProcessDesignToMachineDesignMapping:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: str | None = field(
+    uuid: None | str = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -226,7 +226,7 @@ class ProcessDesignToMachineDesignMapping:
 
     @dataclass
     class MachineDesignRef(Ref):
-        dest: MachineDesignSubtypesEnum | None = field(
+        dest: None | MachineDesignSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -237,7 +237,7 @@ class ProcessDesignToMachineDesignMapping:
 
     @dataclass
     class ProcessDesignRef(Ref):
-        dest: ProcessDesignSubtypesEnum | None = field(
+        dest: None | ProcessDesignSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

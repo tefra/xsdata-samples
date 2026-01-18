@@ -29,7 +29,7 @@ class DoIpEntity:
     class Meta:
         name = "DO-IP-ENTITY"
 
-    do_ip_entity_role: DoIpEntityRoleEnum | None = field(
+    do_ip_entity_role: None | DoIpEntityRoleEnum = field(
         default=None,
         metadata={
             "name": "DO-IP-ENTITY-ROLE",
@@ -37,14 +37,14 @@ class DoIpEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

@@ -38,7 +38,7 @@ class TransmissionModeCondition:
     class Meta:
         name = "TRANSMISSION-MODE-CONDITION"
 
-    data_filter: DataFilter | None = field(
+    data_filter: None | DataFilter = field(
         default=None,
         metadata={
             "name": "DATA-FILTER",
@@ -47,7 +47,7 @@ class TransmissionModeCondition:
         },
     )
     i_signal_in_i_pdu_ref: (
-        TransmissionModeCondition.ISignalInIPduRef | None
+        None | TransmissionModeCondition.ISignalInIPduRef
     ) = field(
         default=None,
         metadata={
@@ -56,14 +56,14 @@ class TransmissionModeCondition:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -74,7 +74,7 @@ class TransmissionModeCondition:
 
     @dataclass
     class ISignalInIPduRef(Ref):
-        dest: ISignalToIPduMappingSubtypesEnum | None = field(
+        dest: None | ISignalToIPduMappingSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

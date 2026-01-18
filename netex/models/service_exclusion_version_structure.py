@@ -15,7 +15,7 @@ class ServiceExclusionVersionStructure(AssignmentVersionStructure1):
     class Meta:
         name = "ServiceExclusion_VersionStructure"
 
-    excluding_journey_pattern_ref: JourneyPatternRefStructure | None = field(
+    excluding_journey_pattern_ref: None | JourneyPatternRefStructure = field(
         default=None,
         metadata={
             "name": "ExcludingJourneyPatternRef",
@@ -23,7 +23,7 @@ class ServiceExclusionVersionStructure(AssignmentVersionStructure1):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    start_point_ref: ScheduledStopPointRefStructure | None = field(
+    start_point_ref: None | ScheduledStopPointRefStructure = field(
         default=None,
         metadata={
             "name": "StartPointRef",
@@ -31,7 +31,7 @@ class ServiceExclusionVersionStructure(AssignmentVersionStructure1):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    end_point_ref: ScheduledStopPointRefStructure | None = field(
+    end_point_ref: None | ScheduledStopPointRefStructure = field(
         default=None,
         metadata={
             "name": "EndPointRef",
@@ -39,7 +39,7 @@ class ServiceExclusionVersionStructure(AssignmentVersionStructure1):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    excluded_journey_pattern_refs: JourneyPatternRefsRelStructure | None = (
+    excluded_journey_pattern_refs: None | JourneyPatternRefsRelStructure = (
         field(
             default=None,
             metadata={

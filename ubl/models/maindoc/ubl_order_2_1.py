@@ -60,7 +60,7 @@ __NAMESPACE__ = "urn:oasis:names:specification:ubl:schema:xsd:Order-2"
 
 @dataclass(frozen=True)
 class OrderType:
-    ublextensions: Ublextensions | None = field(
+    ublextensions: None | Ublextensions = field(
         default=None,
         metadata={
             "name": "UBLExtensions",
@@ -68,7 +68,7 @@ class OrderType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2",
         },
     )
-    ublversion_id: UblversionId | None = field(
+    ublversion_id: None | UblversionId = field(
         default=None,
         metadata={
             "name": "UBLVersionID",
@@ -76,7 +76,7 @@ class OrderType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    customization_id: CustomizationId | None = field(
+    customization_id: None | CustomizationId = field(
         default=None,
         metadata={
             "name": "CustomizationID",
@@ -84,7 +84,7 @@ class OrderType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    profile_id: ProfileId | None = field(
+    profile_id: None | ProfileId = field(
         default=None,
         metadata={
             "name": "ProfileID",
@@ -92,7 +92,7 @@ class OrderType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    profile_execution_id: ProfileExecutionId | None = field(
+    profile_execution_id: None | ProfileExecutionId = field(
         default=None,
         metadata={
             "name": "ProfileExecutionID",
@@ -100,7 +100,7 @@ class OrderType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    id: Id | None = field(
+    id: None | Id = field(
         default=None,
         metadata={
             "name": "ID",
@@ -109,7 +109,7 @@ class OrderType:
             "required": True,
         },
     )
-    sales_order_id: SalesOrderId | None = field(
+    sales_order_id: None | SalesOrderId = field(
         default=None,
         metadata={
             "name": "SalesOrderID",
@@ -117,7 +117,7 @@ class OrderType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    copy_indicator: CopyIndicator | None = field(
+    copy_indicator: None | CopyIndicator = field(
         default=None,
         metadata={
             "name": "CopyIndicator",
@@ -125,7 +125,7 @@ class OrderType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    uuid: Uuid | None = field(
+    uuid: None | Uuid = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -133,7 +133,7 @@ class OrderType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    issue_date: IssueDate | None = field(
+    issue_date: None | IssueDate = field(
         default=None,
         metadata={
             "name": "IssueDate",
@@ -142,7 +142,7 @@ class OrderType:
             "required": True,
         },
     )
-    issue_time: IssueTime | None = field(
+    issue_time: None | IssueTime = field(
         default=None,
         metadata={
             "name": "IssueTime",
@@ -150,7 +150,7 @@ class OrderType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    order_type_code: OrderTypeCode | None = field(
+    order_type_code: None | OrderTypeCode = field(
         default=None,
         metadata={
             "name": "OrderTypeCode",
@@ -166,7 +166,7 @@ class OrderType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    requested_invoice_currency_code: RequestedInvoiceCurrencyCode | None = (
+    requested_invoice_currency_code: None | RequestedInvoiceCurrencyCode = (
         field(
             default=None,
             metadata={
@@ -176,7 +176,7 @@ class OrderType:
             },
         )
     )
-    document_currency_code: DocumentCurrencyCode | None = field(
+    document_currency_code: None | DocumentCurrencyCode = field(
         default=None,
         metadata={
             "name": "DocumentCurrencyCode",
@@ -184,7 +184,7 @@ class OrderType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    pricing_currency_code: PricingCurrencyCode | None = field(
+    pricing_currency_code: None | PricingCurrencyCode = field(
         default=None,
         metadata={
             "name": "PricingCurrencyCode",
@@ -192,7 +192,7 @@ class OrderType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    tax_currency_code: TaxCurrencyCode | None = field(
+    tax_currency_code: None | TaxCurrencyCode = field(
         default=None,
         metadata={
             "name": "TaxCurrencyCode",
@@ -200,7 +200,7 @@ class OrderType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    customer_reference: CustomerReference | None = field(
+    customer_reference: None | CustomerReference = field(
         default=None,
         metadata={
             "name": "CustomerReference",
@@ -208,7 +208,7 @@ class OrderType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    accounting_cost_code: AccountingCostCode | None = field(
+    accounting_cost_code: None | AccountingCostCode = field(
         default=None,
         metadata={
             "name": "AccountingCostCode",
@@ -216,7 +216,7 @@ class OrderType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    accounting_cost: AccountingCost | None = field(
+    accounting_cost: None | AccountingCost = field(
         default=None,
         metadata={
             "name": "AccountingCost",
@@ -224,7 +224,7 @@ class OrderType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    line_count_numeric: LineCountNumeric | None = field(
+    line_count_numeric: None | LineCountNumeric = field(
         default=None,
         metadata={
             "name": "LineCountNumeric",
@@ -240,7 +240,7 @@ class OrderType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    quotation_document_reference: QuotationDocumentReference | None = field(
+    quotation_document_reference: None | QuotationDocumentReference = field(
         default=None,
         metadata={
             "name": "QuotationDocumentReference",
@@ -256,7 +256,7 @@ class OrderType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    originator_document_reference: OriginatorDocumentReference | None = field(
+    originator_document_reference: None | OriginatorDocumentReference = field(
         default=None,
         metadata={
             "name": "OriginatorDocumentReference",
@@ -264,7 +264,7 @@ class OrderType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    catalogue_reference: CatalogueReference | None = field(
+    catalogue_reference: None | CatalogueReference = field(
         default=None,
         metadata={
             "name": "CatalogueReference",
@@ -306,7 +306,7 @@ class OrderType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    buyer_customer_party: BuyerCustomerParty | None = field(
+    buyer_customer_party: None | BuyerCustomerParty = field(
         default=None,
         metadata={
             "name": "BuyerCustomerParty",
@@ -315,7 +315,7 @@ class OrderType:
             "required": True,
         },
     )
-    seller_supplier_party: SellerSupplierParty | None = field(
+    seller_supplier_party: None | SellerSupplierParty = field(
         default=None,
         metadata={
             "name": "SellerSupplierParty",
@@ -324,7 +324,7 @@ class OrderType:
             "required": True,
         },
     )
-    originator_customer_party: OriginatorCustomerParty | None = field(
+    originator_customer_party: None | OriginatorCustomerParty = field(
         default=None,
         metadata={
             "name": "OriginatorCustomerParty",
@@ -332,7 +332,7 @@ class OrderType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    freight_forwarder_party: FreightForwarderParty | None = field(
+    freight_forwarder_party: None | FreightForwarderParty = field(
         default=None,
         metadata={
             "name": "FreightForwarderParty",
@@ -340,7 +340,7 @@ class OrderType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    accounting_customer_party: AccountingCustomerParty | None = field(
+    accounting_customer_party: None | AccountingCustomerParty = field(
         default=None,
         metadata={
             "name": "AccountingCustomerParty",
@@ -380,7 +380,7 @@ class OrderType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    transaction_conditions: TransactionConditions | None = field(
+    transaction_conditions: None | TransactionConditions = field(
         default=None,
         metadata={
             "name": "TransactionConditions",
@@ -396,7 +396,7 @@ class OrderType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    tax_exchange_rate: TaxExchangeRate | None = field(
+    tax_exchange_rate: None | TaxExchangeRate = field(
         default=None,
         metadata={
             "name": "TaxExchangeRate",
@@ -404,7 +404,7 @@ class OrderType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    pricing_exchange_rate: PricingExchangeRate | None = field(
+    pricing_exchange_rate: None | PricingExchangeRate = field(
         default=None,
         metadata={
             "name": "PricingExchangeRate",
@@ -412,7 +412,7 @@ class OrderType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    payment_exchange_rate: PaymentExchangeRate | None = field(
+    payment_exchange_rate: None | PaymentExchangeRate = field(
         default=None,
         metadata={
             "name": "PaymentExchangeRate",
@@ -420,7 +420,7 @@ class OrderType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    destination_country: DestinationCountry | None = field(
+    destination_country: None | DestinationCountry = field(
         default=None,
         metadata={
             "name": "DestinationCountry",
@@ -436,7 +436,7 @@ class OrderType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    anticipated_monetary_total: AnticipatedMonetaryTotal | None = field(
+    anticipated_monetary_total: None | AnticipatedMonetaryTotal = field(
         default=None,
         metadata={
             "name": "AnticipatedMonetaryTotal",

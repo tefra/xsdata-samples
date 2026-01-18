@@ -50,7 +50,7 @@ class DocRevision:
     class Meta:
         name = "DOC-REVISION"
 
-    revision_label: RevisionLabelString | None = field(
+    revision_label: None | RevisionLabelString = field(
         default=None,
         metadata={
             "name": "REVISION-LABEL",
@@ -58,7 +58,7 @@ class DocRevision:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    revision_label_p_1: RevisionLabelString | None = field(
+    revision_label_p_1: None | RevisionLabelString = field(
         default=None,
         metadata={
             "name": "REVISION-LABEL-P-1",
@@ -66,7 +66,7 @@ class DocRevision:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    revision_label_p_2: RevisionLabelString | None = field(
+    revision_label_p_2: None | RevisionLabelString = field(
         default=None,
         metadata={
             "name": "REVISION-LABEL-P-2",
@@ -74,7 +74,7 @@ class DocRevision:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    state: NmtokenString | None = field(
+    state: None | NmtokenString = field(
         default=None,
         metadata={
             "name": "STATE",
@@ -82,7 +82,7 @@ class DocRevision:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    issued_by: String | None = field(
+    issued_by: None | String = field(
         default=None,
         metadata={
             "name": "ISSUED-BY",
@@ -90,7 +90,7 @@ class DocRevision:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    date: Date | None = field(
+    date: None | Date = field(
         default=None,
         metadata={
             "name": "DATE",
@@ -98,7 +98,7 @@ class DocRevision:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    modifications: DocRevision.Modifications | None = field(
+    modifications: None | DocRevision.Modifications = field(
         default=None,
         metadata={
             "name": "MODIFICATIONS",
@@ -106,14 +106,14 @@ class DocRevision:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",

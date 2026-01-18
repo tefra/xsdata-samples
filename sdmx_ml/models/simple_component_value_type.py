@@ -41,14 +41,14 @@ class SimpleComponentValueType:
             "type": "Attribute",
         },
     )
-    lang: str | None = field(
+    lang: None | str = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    valid_from: XmlPeriod | XmlDate | XmlDateTime | str | None = field(
+    valid_from: None | XmlPeriod | XmlDate | XmlDateTime | str = field(
         default=None,
         metadata={
             "name": "validFrom",
@@ -56,7 +56,7 @@ class SimpleComponentValueType:
             "pattern": r".{5}A1.*",
         },
     )
-    valid_to: XmlPeriod | XmlDate | XmlDateTime | str | None = field(
+    valid_to: None | XmlPeriod | XmlDate | XmlDateTime | str = field(
         default=None,
         metadata={
             "name": "validTo",

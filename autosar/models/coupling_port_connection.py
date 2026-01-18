@@ -47,7 +47,7 @@ class CouplingPortConnection:
     class Meta:
         name = "COUPLING-PORT-CONNECTION"
 
-    first_port_ref: CouplingPortConnection.FirstPortRef | None = field(
+    first_port_ref: None | CouplingPortConnection.FirstPortRef = field(
         default=None,
         metadata={
             "name": "FIRST-PORT-REF",
@@ -55,7 +55,7 @@ class CouplingPortConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    node_ports: CouplingPortConnection.NodePorts | None = field(
+    node_ports: None | CouplingPortConnection.NodePorts = field(
         default=None,
         metadata={
             "name": "NODE-PORTS",
@@ -63,7 +63,7 @@ class CouplingPortConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    plca_local_node_count: PositiveInteger | None = field(
+    plca_local_node_count: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "PLCA-LOCAL-NODE-COUNT",
@@ -71,7 +71,7 @@ class CouplingPortConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    plca_transmit_opportunity_timer: PositiveInteger | None = field(
+    plca_transmit_opportunity_timer: None | PositiveInteger = field(
         default=None,
         metadata={
             "name": "PLCA-TRANSMIT-OPPORTUNITY-TIMER",
@@ -79,7 +79,7 @@ class CouplingPortConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    second_port_ref: CouplingPortConnection.SecondPortRef | None = field(
+    second_port_ref: None | CouplingPortConnection.SecondPortRef = field(
         default=None,
         metadata={
             "name": "SECOND-PORT-REF",
@@ -87,7 +87,7 @@ class CouplingPortConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: VariationPoint | None = field(
+    variation_point: None | VariationPoint = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -95,14 +95,14 @@ class CouplingPortConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: str | None = field(
+    s: None | str = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: str | None = field(
+    t: None | str = field(
         default=None,
         metadata={
             "name": "T",
@@ -113,7 +113,7 @@ class CouplingPortConnection:
 
     @dataclass
     class FirstPortRef(Ref):
-        dest: CouplingPortSubtypesEnum | None = field(
+        dest: None | CouplingPortSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -137,7 +137,7 @@ class CouplingPortConnection:
 
     @dataclass
     class SecondPortRef(Ref):
-        dest: CouplingPortSubtypesEnum | None = field(
+        dest: None | CouplingPortSubtypesEnum = field(
             default=None,
             metadata={
                 "name": "DEST",

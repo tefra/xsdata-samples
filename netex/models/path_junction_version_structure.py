@@ -21,7 +21,7 @@ class PathJunctionVersionStructure(PointVersionStructure):
     class Meta:
         name = "PathJunction_VersionStructure"
 
-    parent_zone_ref: ZoneRefStructure | None = field(
+    parent_zone_ref: None | ZoneRefStructure = field(
         default=None,
         metadata={
             "name": "ParentZoneRef",
@@ -29,7 +29,7 @@ class PathJunctionVersionStructure(PointVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    public_use: PublicUseEnumeration | None = field(
+    public_use: None | PublicUseEnumeration = field(
         default=None,
         metadata={
             "name": "PublicUse",
@@ -37,7 +37,7 @@ class PathJunctionVersionStructure(PointVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    covered: CoveredEnumeration | None = field(
+    covered: None | CoveredEnumeration = field(
         default=None,
         metadata={
             "name": "Covered",
@@ -45,7 +45,7 @@ class PathJunctionVersionStructure(PointVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    gated: GatedEnumeration | None = field(
+    gated: None | GatedEnumeration = field(
         default=None,
         metadata={
             "name": "Gated",
@@ -53,7 +53,7 @@ class PathJunctionVersionStructure(PointVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    lighting: LightingEnumeration | None = field(
+    lighting: None | LightingEnumeration = field(
         default=None,
         metadata={
             "name": "Lighting",
@@ -61,7 +61,7 @@ class PathJunctionVersionStructure(PointVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    all_areas_wheelchair_accessible: bool | None = field(
+    all_areas_wheelchair_accessible: None | bool = field(
         default=None,
         metadata={
             "name": "AllAreasWheelchairAccessible",
@@ -69,7 +69,7 @@ class PathJunctionVersionStructure(PointVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    person_capacity: int | None = field(
+    person_capacity: None | int = field(
         default=None,
         metadata={
             "name": "PersonCapacity",
@@ -77,7 +77,7 @@ class PathJunctionVersionStructure(PointVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    presentation: PresentationStructure | None = field(
+    presentation: None | PresentationStructure = field(
         default=None,
         metadata={
             "name": "Presentation",
@@ -85,14 +85,14 @@ class PathJunctionVersionStructure(PointVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    facilities: SiteFacilitySetsRelStructure | None = field(
+    facilities: None | SiteFacilitySetsRelStructure = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    label: MultilingualString | None = field(
+    label: None | MultilingualString = field(
         default=None,
         metadata={
             "name": "Label",
@@ -100,7 +100,7 @@ class PathJunctionVersionStructure(PointVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    site_component_ref: SiteComponentRefStructure | None = field(
+    site_component_ref: None | SiteComponentRefStructure = field(
         default=None,
         metadata={
             "name": "SiteComponentRef",
