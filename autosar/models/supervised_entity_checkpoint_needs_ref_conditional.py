@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import VariationPoint
 from .ref import Ref
@@ -35,7 +34,10 @@ class SupervisedEntityCheckpointNeedsRefConditional:
     class Meta:
         name = "SUPERVISED-ENTITY-CHECKPOINT-NEEDS-REF-CONDITIONAL"
 
-    supervised_entity_checkpoint_needs_ref: SupervisedEntityCheckpointNeedsRefConditional.SupervisedEntityCheckpointNeedsRef | None = field(
+    supervised_entity_checkpoint_needs_ref: (
+        SupervisedEntityCheckpointNeedsRefConditional.SupervisedEntityCheckpointNeedsRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "SUPERVISED-ENTITY-CHECKPOINT-NEEDS-REF",

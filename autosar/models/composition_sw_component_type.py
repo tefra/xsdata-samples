@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -203,7 +202,9 @@ class CompositionSwComponentType:
             "required": True,
         },
     )
-    short_name_fragments: CompositionSwComponentType.ShortNameFragments | None = field(
+    short_name_fragments: (
+        CompositionSwComponentType.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -267,13 +268,15 @@ class CompositionSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    blueprint_policys: CompositionSwComponentType.BlueprintPolicys | None = field(
-        default=None,
-        metadata={
-            "name": "BLUEPRINT-POLICYS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    blueprint_policys: CompositionSwComponentType.BlueprintPolicys | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "BLUEPRINT-POLICYS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     short_name_pattern: String | None = field(
         default=None,
@@ -283,7 +286,9 @@ class CompositionSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_component_documentations: CompositionSwComponentType.SwComponentDocumentations | None = field(
+    sw_component_documentations: (
+        CompositionSwComponentType.SwComponentDocumentations | None
+    ) = field(
         default=None,
         metadata={
             "name": "SW-COMPONENT-DOCUMENTATIONS",
@@ -291,13 +296,15 @@ class CompositionSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    consistency_needss: CompositionSwComponentType.ConsistencyNeedss | None = field(
-        default=None,
-        metadata={
-            "name": "CONSISTENCY-NEEDSS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    consistency_needss: CompositionSwComponentType.ConsistencyNeedss | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "CONSISTENCY-NEEDSS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     ports: CompositionSwComponentType.Ports | None = field(
         default=None,
@@ -315,15 +322,13 @@ class CompositionSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    unit_group_refs: CompositionSwComponentType.UnitGroupRefs | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "UNIT-GROUP-REFS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    unit_group_refs: CompositionSwComponentType.UnitGroupRefs | None = field(
+        default=None,
+        metadata={
+            "name": "UNIT-GROUP-REFS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     components: CompositionSwComponentType.Components | None = field(
         default=None,
@@ -341,7 +346,9 @@ class CompositionSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    constant_value_mapping_refs: CompositionSwComponentType.ConstantValueMappingRefs | None = field(
+    constant_value_mapping_refs: (
+        CompositionSwComponentType.ConstantValueMappingRefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "CONSTANT-VALUE-MAPPING-REFS",
@@ -349,7 +356,9 @@ class CompositionSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    data_type_mapping_refs: CompositionSwComponentType.DataTypeMappingRefs | None = field(
+    data_type_mapping_refs: (
+        CompositionSwComponentType.DataTypeMappingRefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "DATA-TYPE-MAPPING-REFS",
@@ -357,7 +366,9 @@ class CompositionSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    instantiation_rte_event_propss: CompositionSwComponentType.InstantiationRteEventPropss | None = field(
+    instantiation_rte_event_propss: (
+        CompositionSwComponentType.InstantiationRteEventPropss | None
+    ) = field(
         default=None,
         metadata={
             "name": "INSTANTIATION-RTE-EVENT-PROPSS",
@@ -576,15 +587,13 @@ class CompositionSwComponentType:
 
         @dataclass
         class ConstantValueMappingRef(Ref):
-            dest: ConstantSpecificationMappingSetSubtypesEnum | None = (
-                field(
-                    default=None,
-                    metadata={
-                        "name": "DEST",
-                        "type": "Attribute",
-                        "required": True,
-                    },
-                )
+            dest: ConstantSpecificationMappingSetSubtypesEnum | None = field(
+                default=None,
+                metadata={
+                    "name": "DEST",
+                    "type": "Attribute",
+                    "required": True,
+                },
             )
 
     @dataclass

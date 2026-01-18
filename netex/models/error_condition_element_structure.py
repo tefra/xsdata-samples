@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from .access_not_allowed_error import AccessNotAllowedError
 from .allowed_resource_usage_exceeded_error import (
@@ -28,7 +27,25 @@ __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
 @dataclass
 class ErrorConditionElementStructure:
-    choice: UnapprovedKeyAccessError | UnknownParticipantError | UnknownEndpointError | EndpointDeniedAccessError | EndpointNotAvailableAccessError | ServiceNotAvailableError | CapabilityNotSupportedError | AccessNotAllowedError | InvalidDataReferencesError | BeyondDataHorizon | NoInfoForTopicError | ParametersIgnoredError | UnknownExtensionsError | AllowedResourceUsageExceededError | OtherError | UnknownSubscriptionError | None = field(
+    choice: (
+        UnapprovedKeyAccessError
+        | UnknownParticipantError
+        | UnknownEndpointError
+        | EndpointDeniedAccessError
+        | EndpointNotAvailableAccessError
+        | ServiceNotAvailableError
+        | CapabilityNotSupportedError
+        | AccessNotAllowedError
+        | InvalidDataReferencesError
+        | BeyondDataHorizon
+        | NoInfoForTopicError
+        | ParametersIgnoredError
+        | UnknownExtensionsError
+        | AllowedResourceUsageExceededError
+        | OtherError
+        | UnknownSubscriptionError
+        | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",

@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .do_ip_interface import DoIpInterface
 from .do_ip_logic_address import DoIpLogicAddress

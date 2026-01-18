@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional, Union
 from xml.etree.ElementTree import QName
 
 from .t_implementation_value import TImplementationValue

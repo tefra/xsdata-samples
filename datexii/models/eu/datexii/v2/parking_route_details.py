@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from datexii.models.eu.datexii.v2.direction_enum import DirectionEnum
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType

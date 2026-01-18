@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from xcbl.models.price_check_result import (
     BuyerIdreferenceDate,
@@ -266,14 +265,12 @@ class PriceCheckRequestBaseItemDetail:
             "type": "Element",
         },
     )
-    price_check_request_transport: PriceCheckRequestTransport | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "PriceCheckRequestTransport",
-                "type": "Element",
-            },
-        )
+    price_check_request_transport: PriceCheckRequestTransport | None = field(
+        default=None,
+        metadata={
+            "name": "PriceCheckRequestTransport",
+            "type": "Element",
+        },
     )
 
 

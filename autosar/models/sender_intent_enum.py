@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .sender_intent_enum_simple import SenderIntentEnumSimple
 

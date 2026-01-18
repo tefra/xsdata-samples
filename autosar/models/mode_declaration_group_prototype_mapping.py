@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .mode_declaration_group_prototype_subtypes_enum import (
     ModeDeclarationGroupPrototypeSubtypesEnum,
@@ -44,7 +43,9 @@ class ModeDeclarationGroupPrototypeMapping:
     class Meta:
         name = "MODE-DECLARATION-GROUP-PROTOTYPE-MAPPING"
 
-    first_mode_group_ref: ModeDeclarationGroupPrototypeMapping.FirstModeGroupRef | None = field(
+    first_mode_group_ref: (
+        ModeDeclarationGroupPrototypeMapping.FirstModeGroupRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "FIRST-MODE-GROUP-REF",
@@ -52,7 +53,10 @@ class ModeDeclarationGroupPrototypeMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    mode_declaration_mapping_set_ref: ModeDeclarationGroupPrototypeMapping.ModeDeclarationMappingSetRef | None = field(
+    mode_declaration_mapping_set_ref: (
+        ModeDeclarationGroupPrototypeMapping.ModeDeclarationMappingSetRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "MODE-DECLARATION-MAPPING-SET-REF",
@@ -60,7 +64,9 @@ class ModeDeclarationGroupPrototypeMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    second_mode_group_ref: ModeDeclarationGroupPrototypeMapping.SecondModeGroupRef | None = field(
+    second_mode_group_ref: (
+        ModeDeclarationGroupPrototypeMapping.SecondModeGroupRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "SECOND-MODE-GROUP-REF",

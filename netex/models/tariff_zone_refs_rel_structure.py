@@ -1,6 +1,5 @@
 from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import Union
 
 from .fare_zone_ref import FareZoneRef
 from .one_to_many_relationship_structure import OneToManyRelationshipStructure

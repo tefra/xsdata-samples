@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -156,7 +155,9 @@ class EcuAbstractionSwComponentType:
             "required": True,
         },
     )
-    short_name_fragments: EcuAbstractionSwComponentType.ShortNameFragments | None = field(
+    short_name_fragments: (
+        EcuAbstractionSwComponentType.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -220,7 +221,9 @@ class EcuAbstractionSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    blueprint_policys: EcuAbstractionSwComponentType.BlueprintPolicys | None = field(
+    blueprint_policys: (
+        EcuAbstractionSwComponentType.BlueprintPolicys | None
+    ) = field(
         default=None,
         metadata={
             "name": "BLUEPRINT-POLICYS",
@@ -236,7 +239,9 @@ class EcuAbstractionSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_component_documentations: EcuAbstractionSwComponentType.SwComponentDocumentations | None = field(
+    sw_component_documentations: (
+        EcuAbstractionSwComponentType.SwComponentDocumentations | None
+    ) = field(
         default=None,
         metadata={
             "name": "SW-COMPONENT-DOCUMENTATIONS",
@@ -244,7 +249,9 @@ class EcuAbstractionSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    consistency_needss: EcuAbstractionSwComponentType.ConsistencyNeedss | None = field(
+    consistency_needss: (
+        EcuAbstractionSwComponentType.ConsistencyNeedss | None
+    ) = field(
         default=None,
         metadata={
             "name": "CONSISTENCY-NEEDSS",
@@ -268,15 +275,19 @@ class EcuAbstractionSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    unit_group_refs: EcuAbstractionSwComponentType.UnitGroupRefs | None = field(
-        default=None,
-        metadata={
-            "name": "UNIT-GROUP-REFS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    unit_group_refs: EcuAbstractionSwComponentType.UnitGroupRefs | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "UNIT-GROUP-REFS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
-    internal_behaviors: EcuAbstractionSwComponentType.InternalBehaviors | None = field(
+    internal_behaviors: (
+        EcuAbstractionSwComponentType.InternalBehaviors | None
+    ) = field(
         default=None,
         metadata={
             "name": "INTERNAL-BEHAVIORS",
@@ -292,7 +303,9 @@ class EcuAbstractionSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    hardware_element_refs: EcuAbstractionSwComponentType.HardwareElementRefs | None = field(
+    hardware_element_refs: (
+        EcuAbstractionSwComponentType.HardwareElementRefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "HARDWARE-ELEMENT-REFS",

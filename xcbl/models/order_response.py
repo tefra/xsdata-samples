@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from xcbl.models.order_status_result import (
     ItemStatusEvent,
@@ -729,14 +728,12 @@ class ChangeOrderItemDetail:
             "required": True,
         }
     )
-    item_detail_change_coded_other: ItemDetailChangeCodedOther | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "ItemDetailChangeCodedOther",
-                "type": "Element",
-            },
-        )
+    item_detail_change_coded_other: ItemDetailChangeCodedOther | None = field(
+        default=None,
+        metadata={
+            "name": "ItemDetailChangeCodedOther",
+            "type": "Element",
+        },
     )
     list_of_reference_coded: ListOfReferenceCoded | None = field(
         default=None,
@@ -784,12 +781,14 @@ class ChangeOrderPackageDetail:
             "required": True,
         }
     )
-    package_detail_change_coded_other: PackageDetailChangeCodedOther | None = field(
-        default=None,
-        metadata={
-            "name": "PackageDetailChangeCodedOther",
-            "type": "Element",
-        },
+    package_detail_change_coded_other: PackageDetailChangeCodedOther | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "PackageDetailChangeCodedOther",
+                "type": "Element",
+            },
+        )
     )
     original_package_detail: OriginalPackageDetail | None = field(
         default=None,
@@ -902,7 +901,9 @@ class OrderHeader:
             },
         )
     )
-    order_invoice_medium_type_coded_other: OrderInvoiceMediumTypeCodedOther | None = field(
+    order_invoice_medium_type_coded_other: (
+        OrderInvoiceMediumTypeCodedOther | None
+    ) = field(
         default=None,
         metadata={
             "name": "OrderInvoiceMediumTypeCodedOther",
@@ -1089,12 +1090,14 @@ class OrderResponseItemDetail:
             "required": True,
         }
     )
-    item_detail_response_coded_other: ItemDetailResponseCodedOther | None = field(
-        default=None,
-        metadata={
-            "name": "ItemDetailResponseCodedOther",
-            "type": "Element",
-        },
+    item_detail_response_coded_other: ItemDetailResponseCodedOther | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "ItemDetailResponseCodedOther",
+                "type": "Element",
+            },
+        )
     )
     item_status_event: ItemStatusEvent | None = field(
         default=None,
@@ -1198,7 +1201,9 @@ class OrderResponsePackageDetail:
             "required": True,
         }
     )
-    package_detail_response_coded_other: PackageDetailResponseCodedOther | None = field(
+    package_detail_response_coded_other: (
+        PackageDetailResponseCodedOther | None
+    ) = field(
         default=None,
         metadata={
             "name": "PackageDetailResponseCodedOther",
@@ -1442,14 +1447,18 @@ class RevisedOrderSummary:
 
 @dataclass(kw_only=True)
 class OrderResponseDetail:
-    list_of_order_response_item_detail: ListOfOrderResponseItemDetail | None = field(
+    list_of_order_response_item_detail: (
+        ListOfOrderResponseItemDetail | None
+    ) = field(
         default=None,
         metadata={
             "name": "ListOfOrderResponseItemDetail",
             "type": "Element",
         },
     )
-    list_of_order_response_package_detail: ListOfOrderResponsePackageDetail | None = field(
+    list_of_order_response_package_detail: (
+        ListOfOrderResponsePackageDetail | None
+    ) = field(
         default=None,
         metadata={
             "name": "ListOfOrderResponsePackageDetail",
@@ -1481,7 +1490,9 @@ class OrderResponseHeader:
             "required": True,
         }
     )
-    order_response_doc_type_coded_other: OrderResponseDocTypeCodedOther | None = field(
+    order_response_doc_type_coded_other: (
+        OrderResponseDocTypeCodedOther | None
+    ) = field(
         default=None,
         metadata={
             "name": "OrderResponseDocTypeCodedOther",

@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .compu_generic_math import CompuGenericMath
 from .sw_data_dependency_args import SwDataDependencyArgs

@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .base_type_encoding_string import BaseTypeEncodingString
 from .byte_order_enum import ByteOrderEnum

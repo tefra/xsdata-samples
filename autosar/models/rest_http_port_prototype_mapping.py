@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -119,7 +118,9 @@ class RestHttpPortPrototypeMapping:
             "required": True,
         },
     )
-    short_name_fragments: RestHttpPortPrototypeMapping.ShortNameFragments | None = field(
+    short_name_fragments: (
+        RestHttpPortPrototypeMapping.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -183,13 +184,15 @@ class RestHttpPortPrototypeMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    accepts_encodings: RestHttpPortPrototypeMapping.AcceptsEncodings | None = field(
-        default=None,
-        metadata={
-            "name": "ACCEPTS-ENCODINGS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    accepts_encodings: RestHttpPortPrototypeMapping.AcceptsEncodings | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "ACCEPTS-ENCODINGS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     host_ref: RestHttpPortPrototypeMapping.HostRef | None = field(
         default=None,
@@ -199,15 +202,13 @@ class RestHttpPortPrototypeMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    port_prototype_iref: PortPrototypeInExecutableInstanceRef | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "PORT-PROTOTYPE-IREF",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    port_prototype_iref: PortPrototypeInExecutableInstanceRef | None = field(
+        default=None,
+        metadata={
+            "name": "PORT-PROTOTYPE-IREF",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     port_prototype_slug_fragment: String | None = field(
         default=None,
@@ -233,7 +234,9 @@ class RestHttpPortPrototypeMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tls_secure_com_props_ref: RestHttpPortPrototypeMapping.TlsSecureComPropsRef | None = field(
+    tls_secure_com_props_ref: (
+        RestHttpPortPrototypeMapping.TlsSecureComPropsRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "TLS-SECURE-COM-PROPS-REF",

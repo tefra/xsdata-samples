@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -127,7 +126,9 @@ class SynchronizedTimeBaseProviderInterface:
             "required": True,
         },
     )
-    short_name_fragments: SynchronizedTimeBaseProviderInterface.ShortNameFragments | None = field(
+    short_name_fragments: (
+        SynchronizedTimeBaseProviderInterface.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -175,13 +176,15 @@ class SynchronizedTimeBaseProviderInterface:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: SynchronizedTimeBaseProviderInterface.Annotations | None = field(
-        default=None,
-        metadata={
-            "name": "ANNOTATIONS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    annotations: SynchronizedTimeBaseProviderInterface.Annotations | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "ANNOTATIONS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     variation_point: VariationPoint | None = field(
         default=None,
@@ -191,7 +194,9 @@ class SynchronizedTimeBaseProviderInterface:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    blueprint_policys: SynchronizedTimeBaseProviderInterface.BlueprintPolicys | None = field(
+    blueprint_policys: (
+        SynchronizedTimeBaseProviderInterface.BlueprintPolicys | None
+    ) = field(
         default=None,
         metadata={
             "name": "BLUEPRINT-POLICYS",
@@ -215,13 +220,15 @@ class SynchronizedTimeBaseProviderInterface:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    namespaces: SynchronizedTimeBaseProviderInterface.Namespaces | None = field(
-        default=None,
-        metadata={
-            "name": "NAMESPACES",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    namespaces: SynchronizedTimeBaseProviderInterface.Namespaces | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "NAMESPACES",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     service_kind: ServiceProviderEnum | None = field(
         default=None,

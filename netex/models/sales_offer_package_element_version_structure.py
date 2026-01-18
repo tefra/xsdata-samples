@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from .amount_of_price_unit_product_ref import AmountOfPriceUnitProductRef
 from .capped_discount_right_ref import CappedDiscountRightRef
@@ -62,7 +61,17 @@ class SalesOfferPackageElementVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref: SupplementProductRef | PreassignedFareProductRef | AmountOfPriceUnitProductRef | UsageDiscountRightRef | ThirdPartyProductRef | CappedDiscountRightRef | SaleDiscountRightRef | FareProductRef | None = field(
+    preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref: (
+        SupplementProductRef
+        | PreassignedFareProductRef
+        | AmountOfPriceUnitProductRef
+        | UsageDiscountRightRef
+        | ThirdPartyProductRef
+        | CappedDiscountRightRef
+        | SaleDiscountRightRef
+        | FareProductRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -110,7 +119,9 @@ class SalesOfferPackageElementVersionStructure(
             ),
         },
     )
-    validity_parameter_assignments: GenericParameterAssignmentsRelStructure | None = field(
+    validity_parameter_assignments: (
+        GenericParameterAssignmentsRelStructure | None
+    ) = field(
         default=None,
         metadata={
             "name": "validityParameterAssignments",

@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .bsw_entry_kind_enum_simple import BswEntryKindEnumSimple
 

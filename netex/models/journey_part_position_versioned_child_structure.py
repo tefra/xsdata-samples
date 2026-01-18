@@ -1,6 +1,5 @@
 from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from .entity_in_version_structure import VersionedChildStructure
 from .fare_scheduled_stop_point_ref import FareScheduledStopPointRef

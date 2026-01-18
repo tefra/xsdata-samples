@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -100,7 +99,9 @@ class SecurityEventAggregationFilter:
             "required": True,
         },
     )
-    short_name_fragments: SecurityEventAggregationFilter.ShortNameFragments | None = field(
+    short_name_fragments: (
+        SecurityEventAggregationFilter.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -148,15 +149,13 @@ class SecurityEventAggregationFilter:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: SecurityEventAggregationFilter.Annotations | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "ANNOTATIONS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    annotations: SecurityEventAggregationFilter.Annotations | None = field(
+        default=None,
+        metadata={
+            "name": "ANNOTATIONS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     context_data_source: SecurityEventContextDataSourceEnum | None = field(
         default=None,

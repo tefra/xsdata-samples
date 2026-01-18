@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from .flexible_area_ref import FlexibleAreaRef
 from .flexible_quay_ref import FlexibleQuayRef
@@ -24,7 +23,9 @@ class FlexibleStopAssignmentVersionStructure(StopAssignmentVersionStructure):
             "required": True,
         },
     )
-    flexible_quay_ref: HailAndRideAreaRef | FlexibleAreaRef | FlexibleQuayRef | None = field(
+    flexible_quay_ref: (
+        HailAndRideAreaRef | FlexibleAreaRef | FlexibleQuayRef | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",

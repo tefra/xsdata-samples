@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from datexii.models.eu.datexii.v2.distance_along_linear_element import (
     DistanceAlongLinearElement,
@@ -32,7 +31,9 @@ class PercentageDistanceAlongLinearElement(DistanceAlongLinearElement):
             "required": True,
         },
     )
-    percentage_distance_along_linear_element_extension: ExtensionType | None = field(
+    percentage_distance_along_linear_element_extension: (
+        ExtensionType | None
+    ) = field(
         default=None,
         metadata={
             "name": "percentageDistanceAlongLinearElementExtension",

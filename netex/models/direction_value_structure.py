@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .direction_ref_structure import DirectionRefStructure
 from .direction_type import DirectionType

@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .ecuc_add_info_param_def import EcucAddInfoParamDef
 from .ecuc_boolean_param_def import EcucBooleanParamDef
@@ -71,7 +70,9 @@ class EcucDestinationUriPolicy:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    destination_uri_nesting_contract: EcucDestinationUriNestingContractEnum | None = field(
+    destination_uri_nesting_contract: (
+        EcucDestinationUriNestingContractEnum | None
+    ) = field(
         default=None,
         metadata={
             "name": "DESTINATION-URI-NESTING-CONTRACT",

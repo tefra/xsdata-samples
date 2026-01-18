@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -103,7 +102,9 @@ class DiagnosticProvidedDataMapping:
             "required": True,
         },
     )
-    short_name_fragments: DiagnosticProvidedDataMapping.ShortNameFragments | None = field(
+    short_name_fragments: (
+        DiagnosticProvidedDataMapping.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -167,13 +168,15 @@ class DiagnosticProvidedDataMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    data_element_ref: DiagnosticProvidedDataMapping.DataElementRef | None = field(
-        default=None,
-        metadata={
-            "name": "DATA-ELEMENT-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    data_element_ref: DiagnosticProvidedDataMapping.DataElementRef | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "DATA-ELEMENT-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     data_provider: NmtokenString | None = field(
         default=None,

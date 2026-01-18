@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -107,7 +106,9 @@ class DiagnosticReadDtcInformation:
             "required": True,
         },
     )
-    short_name_fragments: DiagnosticReadDtcInformation.ShortNameFragments | None = field(
+    short_name_fragments: (
+        DiagnosticReadDtcInformation.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -171,7 +172,9 @@ class DiagnosticReadDtcInformation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    access_permission_ref: DiagnosticReadDtcInformation.AccessPermissionRef | None = field(
+    access_permission_ref: (
+        DiagnosticReadDtcInformation.AccessPermissionRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "ACCESS-PERMISSION-REF",
@@ -179,7 +182,9 @@ class DiagnosticReadDtcInformation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    read_dtc_information_class_ref: DiagnosticReadDtcInformation.ReadDtcInformationClassRef | None = field(
+    read_dtc_information_class_ref: (
+        DiagnosticReadDtcInformation.ReadDtcInformationClassRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "READ-DTC-INFORMATION-CLASS-REF",

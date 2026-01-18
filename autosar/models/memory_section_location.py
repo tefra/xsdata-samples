@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .hw_element_subtypes_enum import HwElementSubtypesEnum
 from .memory_section_subtypes_enum import MemorySectionSubtypesEnum
@@ -35,15 +34,19 @@ class MemorySectionLocation:
     class Meta:
         name = "MEMORY-SECTION-LOCATION"
 
-    provided_memory_ref: MemorySectionLocation.ProvidedMemoryRef | None = field(
-        default=None,
-        metadata={
-            "name": "PROVIDED-MEMORY-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    provided_memory_ref: MemorySectionLocation.ProvidedMemoryRef | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "PROVIDED-MEMORY-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
-    software_memory_section_ref: MemorySectionLocation.SoftwareMemorySectionRef | None = field(
+    software_memory_section_ref: (
+        MemorySectionLocation.SoftwareMemorySectionRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "SOFTWARE-MEMORY-SECTION-REF",

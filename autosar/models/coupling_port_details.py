@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .coupling_port_fifo import CouplingPortFifo
 from .coupling_port_rate_policy import CouplingPortRatePolicy
@@ -55,7 +54,9 @@ class CouplingPortDetails:
     class Meta:
         name = "COUPLING-PORT-DETAILS"
 
-    coupling_port_structural_elements: CouplingPortDetails.CouplingPortStructuralElements | None = field(
+    coupling_port_structural_elements: (
+        CouplingPortDetails.CouplingPortStructuralElements | None
+    ) = field(
         default=None,
         metadata={
             "name": "COUPLING-PORT-STRUCTURAL-ELEMENTS",
@@ -63,7 +64,9 @@ class CouplingPortDetails:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ethernet_priority_regenerations: CouplingPortDetails.EthernetPriorityRegenerations | None = field(
+    ethernet_priority_regenerations: (
+        CouplingPortDetails.EthernetPriorityRegenerations | None
+    ) = field(
         default=None,
         metadata={
             "name": "ETHERNET-PRIORITY-REGENERATIONS",
@@ -71,7 +74,9 @@ class CouplingPortDetails:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ethernet_traffic_class_assignments: CouplingPortDetails.EthernetTrafficClassAssignments | None = field(
+    ethernet_traffic_class_assignments: (
+        CouplingPortDetails.EthernetTrafficClassAssignments | None
+    ) = field(
         default=None,
         metadata={
             "name": "ETHERNET-TRAFFIC-CLASS-ASSIGNMENTS",
@@ -87,7 +92,9 @@ class CouplingPortDetails:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    last_egress_scheduler_ref: CouplingPortDetails.LastEgressSchedulerRef | None = field(
+    last_egress_scheduler_ref: (
+        CouplingPortDetails.LastEgressSchedulerRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "LAST-EGRESS-SCHEDULER-REF",

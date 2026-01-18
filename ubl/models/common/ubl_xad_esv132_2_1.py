@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from enum import Enum
-from typing import Any, Optional
+from typing import Any
 
 from xsdata.models.datatype import XmlDateTime
 
@@ -1318,15 +1318,13 @@ class SignedSignaturePropertiesType:
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
         },
     )
-    signature_policy_identifier: SignaturePolicyIdentifierType | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "SignaturePolicyIdentifier",
-                "type": "Element",
-                "namespace": "http://uri.etsi.org/01903/v1.3.2#",
-            },
-        )
+    signature_policy_identifier: SignaturePolicyIdentifierType | None = field(
+        default=None,
+        metadata={
+            "name": "SignaturePolicyIdentifier",
+            "type": "Element",
+            "namespace": "http://uri.etsi.org/01903/v1.3.2#",
+        },
     )
     signature_production_place: SignatureProductionPlaceType | None = field(
         default=None,
@@ -1492,15 +1490,13 @@ class SignedDataObjectProperties(SignedDataObjectPropertiesType):
 
 @dataclass(frozen=True)
 class SignedPropertiesType:
-    signed_signature_properties: SignedSignaturePropertiesType | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "SignedSignatureProperties",
-                "type": "Element",
-                "namespace": "http://uri.etsi.org/01903/v1.3.2#",
-            },
-        )
+    signed_signature_properties: SignedSignaturePropertiesType | None = field(
+        default=None,
+        metadata={
+            "name": "SignedSignatureProperties",
+            "type": "Element",
+            "namespace": "http://uri.etsi.org/01903/v1.3.2#",
+        },
     )
     signed_data_object_properties: SignedDataObjectPropertiesType | None = (
         field(
@@ -1529,15 +1525,19 @@ class SignedSignatureProperties(SignedSignaturePropertiesType):
 
 @dataclass(frozen=True)
 class UnsignedPropertiesType:
-    unsigned_signature_properties: UnsignedSignaturePropertiesType | None = field(
-        default=None,
-        metadata={
-            "name": "UnsignedSignatureProperties",
-            "type": "Element",
-            "namespace": "http://uri.etsi.org/01903/v1.3.2#",
-        },
+    unsigned_signature_properties: UnsignedSignaturePropertiesType | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "UnsignedSignatureProperties",
+                "type": "Element",
+                "namespace": "http://uri.etsi.org/01903/v1.3.2#",
+            },
+        )
     )
-    unsigned_data_object_properties: UnsignedDataObjectPropertiesType | None = field(
+    unsigned_data_object_properties: (
+        UnsignedDataObjectPropertiesType | None
+    ) = field(
         default=None,
         metadata={
             "name": "UnsignedDataObjectProperties",

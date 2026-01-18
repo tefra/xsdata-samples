@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from generali.models.find import Find
 from generali.models.self_mod import Self

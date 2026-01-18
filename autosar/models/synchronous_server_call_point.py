@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -111,7 +110,9 @@ class SynchronousServerCallPoint:
             "required": True,
         },
     )
-    short_name_fragments: SynchronousServerCallPoint.ShortNameFragments | None = field(
+    short_name_fragments: (
+        SynchronousServerCallPoint.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -199,7 +200,9 @@ class SynchronousServerCallPoint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    called_from_within_exclusive_area_ref: SynchronousServerCallPoint.CalledFromWithinExclusiveAreaRef | None = field(
+    called_from_within_exclusive_area_ref: (
+        SynchronousServerCallPoint.CalledFromWithinExclusiveAreaRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "CALLED-FROM-WITHIN-EXCLUSIVE-AREA-REF",

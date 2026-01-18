@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .application_assoc_map_element_value_specification import (
     ApplicationAssocMapValueSpecification,
@@ -64,15 +63,13 @@ class PortDefinedArgumentValue:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    value_type_tref: PortDefinedArgumentValue.ValueTypeTref | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "VALUE-TYPE-TREF",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    value_type_tref: PortDefinedArgumentValue.ValueTypeTref | None = field(
+        default=None,
+        metadata={
+            "name": "VALUE-TYPE-TREF",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     s: str | None = field(
         default=None,
@@ -92,7 +89,9 @@ class PortDefinedArgumentValue:
 
     @dataclass
     class Value:
-        application_assoc_map_value_specification: ApplicationAssocMapValueSpecification | None = field(
+        application_assoc_map_value_specification: (
+            ApplicationAssocMapValueSpecification | None
+        ) = field(
             default=None,
             metadata={
                 "name": "APPLICATION-ASSOC-MAP-VALUE-SPECIFICATION",
@@ -100,7 +99,9 @@ class PortDefinedArgumentValue:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        application_rule_based_value_specification: ApplicationRuleBasedValueSpecification | None = field(
+        application_rule_based_value_specification: (
+            ApplicationRuleBasedValueSpecification | None
+        ) = field(
             default=None,
             metadata={
                 "name": "APPLICATION-RULE-BASED-VALUE-SPECIFICATION",
@@ -108,7 +109,9 @@ class PortDefinedArgumentValue:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        application_value_specification: ApplicationValueSpecification | None = field(
+        application_value_specification: (
+            ApplicationValueSpecification | None
+        ) = field(
             default=None,
             metadata={
                 "name": "APPLICATION-VALUE-SPECIFICATION",
@@ -124,7 +127,9 @@ class PortDefinedArgumentValue:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        composite_rule_based_value_specification: CompositeRuleBasedValueSpecification | None = field(
+        composite_rule_based_value_specification: (
+            CompositeRuleBasedValueSpecification | None
+        ) = field(
             default=None,
             metadata={
                 "name": "COMPOSITE-RULE-BASED-VALUE-SPECIFICATION",
@@ -140,7 +145,9 @@ class PortDefinedArgumentValue:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        not_available_value_specification: NotAvailableValueSpecification | None = field(
+        not_available_value_specification: (
+            NotAvailableValueSpecification | None
+        ) = field(
             default=None,
             metadata={
                 "name": "NOT-AVAILABLE-VALUE-SPECIFICATION",
@@ -148,7 +155,9 @@ class PortDefinedArgumentValue:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        numerical_rule_based_value_specification: NumericalRuleBasedValueSpecification | None = field(
+        numerical_rule_based_value_specification: (
+            NumericalRuleBasedValueSpecification | None
+        ) = field(
             default=None,
             metadata={
                 "name": "NUMERICAL-RULE-BASED-VALUE-SPECIFICATION",
@@ -156,13 +165,15 @@ class PortDefinedArgumentValue:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        numerical_value_specification: NumericalValueSpecification | None = field(
-            default=None,
-            metadata={
-                "name": "NUMERICAL-VALUE-SPECIFICATION",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        numerical_value_specification: NumericalValueSpecification | None = (
+            field(
+                default=None,
+                metadata={
+                    "name": "NUMERICAL-VALUE-SPECIFICATION",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )
         record_value_specification: RecordValueSpecification | None = field(
             default=None,
@@ -172,13 +183,15 @@ class PortDefinedArgumentValue:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        reference_value_specification: ReferenceValueSpecification | None = field(
-            default=None,
-            metadata={
-                "name": "REFERENCE-VALUE-SPECIFICATION",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        reference_value_specification: ReferenceValueSpecification | None = (
+            field(
+                default=None,
+                metadata={
+                    "name": "REFERENCE-VALUE-SPECIFICATION",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )
         text_value_specification: TextValueSpecification | None = field(
             default=None,

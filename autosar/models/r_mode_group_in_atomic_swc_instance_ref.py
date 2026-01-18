@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .abstract_required_port_prototype_subtypes_enum import (
     AbstractRequiredPortPrototypeSubtypesEnum,
@@ -34,7 +33,9 @@ class RModeGroupInAtomicSwcInstanceRef:
     class Meta:
         name = "R-MODE-GROUP-IN-ATOMIC-SWC-INSTANCE-REF"
 
-    context_r_port_ref: RModeGroupInAtomicSwcInstanceRef.ContextRPortRef | None = field(
+    context_r_port_ref: (
+        RModeGroupInAtomicSwcInstanceRef.ContextRPortRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "CONTEXT-R-PORT-REF",
@@ -42,7 +43,9 @@ class RModeGroupInAtomicSwcInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    target_mode_group_ref: RModeGroupInAtomicSwcInstanceRef.TargetModeGroupRef | None = field(
+    target_mode_group_ref: (
+        RModeGroupInAtomicSwcInstanceRef.TargetModeGroupRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "TARGET-MODE-GROUP-REF",

@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .do_ip_entity_role_enum import DoIpEntityRoleEnum
 

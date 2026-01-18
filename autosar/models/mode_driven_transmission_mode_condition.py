@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .mode_declaration_subtypes_enum import ModeDeclarationSubtypesEnum
 from .ref import Ref
@@ -37,7 +36,9 @@ class ModeDrivenTransmissionModeCondition:
     class Meta:
         name = "MODE-DRIVEN-TRANSMISSION-MODE-CONDITION"
 
-    mode_declaration_refs: ModeDrivenTransmissionModeCondition.ModeDeclarationRefs | None = field(
+    mode_declaration_refs: (
+        ModeDrivenTransmissionModeCondition.ModeDeclarationRefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "MODE-DECLARATION-REFS",

@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from xsdata.models.datatype import XmlDateTime
 
@@ -102,7 +101,9 @@ class LocalPoliciesTypeLocalPolicy:
             "namespace": "http://xmlns.generali.com/services/program/FeedbackProgramService/v1",
         },
     )
-    reinsurance_agreements: LocalPoliciesTypeLocalPolicyReinsuranceAgreements | None = field(
+    reinsurance_agreements: (
+        LocalPoliciesTypeLocalPolicyReinsuranceAgreements | None
+    ) = field(
         default=None,
         metadata={
             "name": "ReinsuranceAgreements",

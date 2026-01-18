@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .coupling_element_enum_simple import CouplingElementEnumSimple
 

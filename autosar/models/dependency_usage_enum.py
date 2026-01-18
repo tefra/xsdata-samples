@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .dependency_usage_enum_simple import DependencyUsageEnumSimple
 

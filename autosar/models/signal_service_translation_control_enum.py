@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .signal_service_translation_control_enum_simple import (
     SignalServiceTranslationControlEnumSimple,

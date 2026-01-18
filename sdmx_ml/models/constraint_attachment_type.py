@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import ForwardRef, Optional, Union
+from typing import ForwardRef
 
 from sdmx_ml.models.queryable_data_source_type_1 import (
     QueryableDataSourceType1,
@@ -18,7 +18,11 @@ class ConstraintAttachmentType:
     """
 
     choice: tuple[
-        ConstraintAttachmentType.DataProvider | ConstraintAttachmentType.MetadataProvider | ConstraintAttachmentType.MetadataSet | ConstraintAttachmentType.SimpleDataSource | ConstraintAttachmentType.DataStructure,
+        ConstraintAttachmentType.DataProvider
+        | ConstraintAttachmentType.MetadataProvider
+        | ConstraintAttachmentType.MetadataSet
+        | ConstraintAttachmentType.SimpleDataSource
+        | ConstraintAttachmentType.DataStructure,
         ...,
     ] = field(
         default_factory=tuple,
@@ -62,7 +66,12 @@ class ConstraintAttachmentType:
         },
     )
     choice_1: tuple[
-        QueryableDataSourceType1 | ConstraintAttachmentType.MetadataStructure | ConstraintAttachmentType.Dataflow | ConstraintAttachmentType.Metadataflow | ConstraintAttachmentType.ProvisionAgreement | ConstraintAttachmentType.MetadataProvisionAgreement,
+        QueryableDataSourceType1
+        | ConstraintAttachmentType.MetadataStructure
+        | ConstraintAttachmentType.Dataflow
+        | ConstraintAttachmentType.Metadataflow
+        | ConstraintAttachmentType.ProvisionAgreement
+        | ConstraintAttachmentType.MetadataProvisionAgreement,
         ...,
     ] = field(
         default_factory=tuple,

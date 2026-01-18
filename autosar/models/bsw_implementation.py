@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -213,15 +212,13 @@ class BswImplementation:
             "required": True,
         },
     )
-    short_name_fragments: BswImplementation.ShortNameFragments | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "SHORT-NAME-FRAGMENTS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    short_name_fragments: BswImplementation.ShortNameFragments | None = field(
+        default=None,
+        metadata={
+            "name": "SHORT-NAME-FRAGMENTS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     long_name: MultilanguageLongName | None = field(
         default=None,
@@ -279,13 +276,15 @@ class BswImplementation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    build_action_manifests: BswImplementation.BuildActionManifests | None = field(
-        default=None,
-        metadata={
-            "name": "BUILD-ACTION-MANIFESTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    build_action_manifests: BswImplementation.BuildActionManifests | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "BUILD-ACTION-MANIFESTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     code_descriptors: BswImplementation.CodeDescriptors | None = field(
         default=None,
@@ -303,15 +302,13 @@ class BswImplementation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    generated_artifacts: BswImplementation.GeneratedArtifacts | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "GENERATED-ARTIFACTS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    generated_artifacts: BswImplementation.GeneratedArtifacts | None = field(
+        default=None,
+        metadata={
+            "name": "GENERATED-ARTIFACTS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     hw_element_refs: BswImplementation.HwElementRefs | None = field(
         default=None,
@@ -345,17 +342,17 @@ class BswImplementation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    required_artifacts: BswImplementation.RequiredArtifacts | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "REQUIRED-ARTIFACTS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    required_artifacts: BswImplementation.RequiredArtifacts | None = field(
+        default=None,
+        metadata={
+            "name": "REQUIRED-ARTIFACTS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
-    required_generator_tools: BswImplementation.RequiredGeneratorTools | None = field(
+    required_generator_tools: (
+        BswImplementation.RequiredGeneratorTools | None
+    ) = field(
         default=None,
         metadata={
             "name": "REQUIRED-GENERATOR-TOOLS",
@@ -379,15 +376,13 @@ class BswImplementation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    swc_bsw_mapping_ref: BswImplementation.SwcBswMappingRef | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "SWC-BSW-MAPPING-REF",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    swc_bsw_mapping_ref: BswImplementation.SwcBswMappingRef | None = field(
+        default=None,
+        metadata={
+            "name": "SWC-BSW-MAPPING-REF",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     used_code_generator: String | None = field(
         default=None,
@@ -429,7 +424,9 @@ class BswImplementation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    preconfigured_configuration_refs: BswImplementation.PreconfiguredConfigurationRefs | None = field(
+    preconfigured_configuration_refs: (
+        BswImplementation.PreconfiguredConfigurationRefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "PRECONFIGURED-CONFIGURATION-REFS",
@@ -437,7 +434,9 @@ class BswImplementation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    recommended_configuration_refs: BswImplementation.RecommendedConfigurationRefs | None = field(
+    recommended_configuration_refs: (
+        BswImplementation.RecommendedConfigurationRefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "RECOMMENDED-CONFIGURATION-REFS",
@@ -453,7 +452,9 @@ class BswImplementation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    vendor_specific_module_def_refs: BswImplementation.VendorSpecificModuleDefRefs | None = field(
+    vendor_specific_module_def_refs: (
+        BswImplementation.VendorSpecificModuleDefRefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "VENDOR-SPECIFIC-MODULE-DEF-REFS",
@@ -554,15 +555,15 @@ class BswImplementation:
 
     @dataclass
     class HwElementRefs:
-        hw_element_ref: list[
-            BswImplementation.HwElementRefs.HwElementRef
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "HW-ELEMENT-REF",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        hw_element_ref: list[BswImplementation.HwElementRefs.HwElementRef] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "HW-ELEMENT-REF",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )
 
         @dataclass

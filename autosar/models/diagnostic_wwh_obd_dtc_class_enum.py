@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .diagnostic_wwh_obd_dtc_class_enum_simple import (
     DiagnosticWwhObdDtcClassEnumSimple,

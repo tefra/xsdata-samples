@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .ref import Ref
 from .rte_event_subtypes_enum import RteEventSubtypesEnum
@@ -42,7 +41,9 @@ class InstanceEventInCompositionInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    target_event_ref: InstanceEventInCompositionInstanceRef.TargetEventRef | None = field(
+    target_event_ref: (
+        InstanceEventInCompositionInstanceRef.TargetEventRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "TARGET-EVENT-REF",

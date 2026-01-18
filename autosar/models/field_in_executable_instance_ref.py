@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .field_subtypes_enum import FieldSubtypesEnum
 from .r_port_prototype_subtypes_enum import RPortPrototypeSubtypesEnum
@@ -38,7 +37,9 @@ class FieldInExecutableInstanceRef:
     class Meta:
         name = "FIELD-IN-EXECUTABLE-INSTANCE-REF"
 
-    context_root_sw_component_prototype_ref: FieldInExecutableInstanceRef.ContextRootSwComponentPrototypeRef | None = field(
+    context_root_sw_component_prototype_ref: (
+        FieldInExecutableInstanceRef.ContextRootSwComponentPrototypeRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "CONTEXT-ROOT-SW-COMPONENT-PROTOTYPE-REF",
@@ -56,7 +57,9 @@ class FieldInExecutableInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    context_r_port_prototype_ref: FieldInExecutableInstanceRef.ContextRPortPrototypeRef | None = field(
+    context_r_port_prototype_ref: (
+        FieldInExecutableInstanceRef.ContextRPortPrototypeRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "CONTEXT-R-PORT-PROTOTYPE-REF",
@@ -64,13 +67,15 @@ class FieldInExecutableInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    target_field_ref: FieldInExecutableInstanceRef.TargetFieldRef | None = field(
-        default=None,
-        metadata={
-            "name": "TARGET-FIELD-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    target_field_ref: FieldInExecutableInstanceRef.TargetFieldRef | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "TARGET-FIELD-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     s: str | None = field(
         default=None,

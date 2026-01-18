@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import VariationPoint
 from .identifier import Identifier
@@ -76,15 +75,13 @@ class ApplicationValueSpecification:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_axis_conts: ApplicationValueSpecification.SwAxisConts | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "SW-AXIS-CONTS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    sw_axis_conts: ApplicationValueSpecification.SwAxisConts | None = field(
+        default=None,
+        metadata={
+            "name": "SW-AXIS-CONTS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     sw_value_cont: SwValueCont | None = field(
         default=None,

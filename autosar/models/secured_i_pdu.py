@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -243,13 +242,15 @@ class SecuredIPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    authentication_props_ref: SecuredIPdu.AuthenticationPropsRef | None = field(
-        default=None,
-        metadata={
-            "name": "AUTHENTICATION-PROPS-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    authentication_props_ref: SecuredIPdu.AuthenticationPropsRef | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "AUTHENTICATION-PROPS-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     freshness_props_ref: SecuredIPdu.FreshnessPropsRef | None = field(
         default=None,

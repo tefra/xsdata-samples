@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -106,7 +105,10 @@ class PersistencyPortPrototypeToKeyValueStorageMapping:
             "required": True,
         },
     )
-    short_name_fragments: PersistencyPortPrototypeToKeyValueStorageMapping.ShortNameFragments | None = field(
+    short_name_fragments: (
+        PersistencyPortPrototypeToKeyValueStorageMapping.ShortNameFragments
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -154,7 +156,9 @@ class PersistencyPortPrototypeToKeyValueStorageMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: PersistencyPortPrototypeToKeyValueStorageMapping.Annotations | None = field(
+    annotations: (
+        PersistencyPortPrototypeToKeyValueStorageMapping.Annotations | None
+    ) = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -170,17 +174,17 @@ class PersistencyPortPrototypeToKeyValueStorageMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    port_prototype_iref: PortPrototypeInExecutableInstanceRef | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "PORT-PROTOTYPE-IREF",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    port_prototype_iref: PortPrototypeInExecutableInstanceRef | None = field(
+        default=None,
+        metadata={
+            "name": "PORT-PROTOTYPE-IREF",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
-    process_ref: PersistencyPortPrototypeToKeyValueStorageMapping.ProcessRef | None = field(
+    process_ref: (
+        PersistencyPortPrototypeToKeyValueStorageMapping.ProcessRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "PROCESS-REF",
@@ -188,7 +192,10 @@ class PersistencyPortPrototypeToKeyValueStorageMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    key_value_storage_ref: PersistencyPortPrototypeToKeyValueStorageMapping.KeyValueStorageRef | None = field(
+    key_value_storage_ref: (
+        PersistencyPortPrototypeToKeyValueStorageMapping.KeyValueStorageRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "KEY-VALUE-STORAGE-REF",

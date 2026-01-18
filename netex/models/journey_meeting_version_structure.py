@@ -1,6 +1,5 @@
 from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from xsdata.models.datatype import XmlTime
 
@@ -68,7 +67,9 @@ class JourneyMeetingVersionStructure(DataManagedObjectStructure):
             "required": True,
         },
     )
-    from_point_in_journey_pattern_ref: PointInJourneyPatternRefStructure | None = field(
+    from_point_in_journey_pattern_ref: (
+        PointInJourneyPatternRefStructure | None
+    ) = field(
         default=None,
         metadata={
             "name": "FromPointInJourneyPatternRef",
@@ -76,7 +77,9 @@ class JourneyMeetingVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    to_point_in_journey_pattern_ref: PointInJourneyPatternRefStructure | None = field(
+    to_point_in_journey_pattern_ref: (
+        PointInJourneyPatternRefStructure | None
+    ) = field(
         default=None,
         metadata={
             "name": "ToPointInJourneyPatternRef",
@@ -158,7 +161,18 @@ class JourneyMeetingVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    choice: SingleJourneyRef | DatedVehicleJourneyRef | DatedSpecialServiceRef | SpecialServiceRef | TemplateServiceJourneyRef | ServiceJourneyRef | DeadRunRef | VehicleJourneyRef | ConnectingJourneyView | None = field(
+    choice: (
+        SingleJourneyRef
+        | DatedVehicleJourneyRef
+        | DatedSpecialServiceRef
+        | SpecialServiceRef
+        | TemplateServiceJourneyRef
+        | ServiceJourneyRef
+        | DeadRunRef
+        | VehicleJourneyRef
+        | ConnectingJourneyView
+        | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -211,7 +225,9 @@ class JourneyMeetingVersionStructure(DataManagedObjectStructure):
             ),
         },
     )
-    flexible_line_ref_or_line_ref_or_connecting_line_view: FlexibleLineRef | LineRef | LineDerivedViewStructure | None = field(
+    flexible_line_ref_or_line_ref_or_connecting_line_view: (
+        FlexibleLineRef | LineRef | LineDerivedViewStructure | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",

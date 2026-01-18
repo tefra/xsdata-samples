@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.road_conditions import RoadConditions
@@ -37,7 +36,9 @@ class WeatherRelatedRoadConditions(RoadConditions):
             "min_occurs": 1,
         },
     )
-    road_surface_condition_measurements: RoadSurfaceConditionMeasurements | None = field(
+    road_surface_condition_measurements: (
+        RoadSurfaceConditionMeasurements | None
+    ) = field(
         default=None,
         metadata={
             "name": "roadSurfaceConditionMeasurements",

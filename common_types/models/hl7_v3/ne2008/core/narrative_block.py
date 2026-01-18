@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from enum import Enum
-from typing import ForwardRef, Optional
+from typing import ForwardRef
 
 __NAMESPACE__ = "urn:hl7-org:v3"
 

@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from crossref.models.org.w3.pkg_1998.math.math_ml.annotation_xml_model import (
     AnnotationXmlModel,

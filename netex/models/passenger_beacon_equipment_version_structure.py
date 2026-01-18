@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .accessibility_assessment import AccessibilityAssessment
 from .beacon_direction_enumeration import BeaconDirectionEnumeration

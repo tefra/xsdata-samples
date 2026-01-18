@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -120,15 +119,13 @@ class DiagnosticProtocol:
             "required": True,
         },
     )
-    short_name_fragments: DiagnosticProtocol.ShortNameFragments | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "SHORT-NAME-FRAGMENTS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    short_name_fragments: DiagnosticProtocol.ShortNameFragments | None = field(
+        default=None,
+        metadata={
+            "name": "SHORT-NAME-FRAGMENTS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     long_name: MultilanguageLongName | None = field(
         default=None,
@@ -186,13 +183,15 @@ class DiagnosticProtocol:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    diagnostic_connections: DiagnosticProtocol.DiagnosticConnections | None = field(
-        default=None,
-        metadata={
-            "name": "DIAGNOSTIC-CONNECTIONS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    diagnostic_connections: DiagnosticProtocol.DiagnosticConnections | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "DIAGNOSTIC-CONNECTIONS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     priority: PositiveIntegerValueVariationPoint | None = field(
         default=None,
@@ -210,15 +209,13 @@ class DiagnosticProtocol:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    send_resp_pend_on_trans_to_boot: BooleanValueVariationPoint | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "SEND-RESP-PEND-ON-TRANS-TO-BOOT",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    send_resp_pend_on_trans_to_boot: BooleanValueVariationPoint | None = field(
+        default=None,
+        metadata={
+            "name": "SEND-RESP-PEND-ON-TRANS-TO-BOOT",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     service_tables: DiagnosticProtocol.ServiceTables | None = field(
         default=None,

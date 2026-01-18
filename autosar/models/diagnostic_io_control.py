@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -123,13 +122,15 @@ class DiagnosticIoControl:
             "required": True,
         },
     )
-    short_name_fragments: DiagnosticIoControl.ShortNameFragments | None = field(
-        default=None,
-        metadata={
-            "name": "SHORT-NAME-FRAGMENTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    short_name_fragments: DiagnosticIoControl.ShortNameFragments | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "SHORT-NAME-FRAGMENTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     long_name: MultilanguageLongName | None = field(
         default=None,
@@ -187,15 +188,19 @@ class DiagnosticIoControl:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    access_permission_ref: DiagnosticIoControl.AccessPermissionRef | None = field(
-        default=None,
-        metadata={
-            "name": "ACCESS-PERMISSION-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    access_permission_ref: DiagnosticIoControl.AccessPermissionRef | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "ACCESS-PERMISSION-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
-    control_enable_mask_bits: DiagnosticIoControl.ControlEnableMaskBits | None = field(
+    control_enable_mask_bits: (
+        DiagnosticIoControl.ControlEnableMaskBits | None
+    ) = field(
         default=None,
         metadata={
             "name": "CONTROL-ENABLE-MASK-BITS",
@@ -203,15 +208,13 @@ class DiagnosticIoControl:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    data_identifier_ref: DiagnosticIoControl.DataIdentifierRef | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "DATA-IDENTIFIER-REF",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    data_identifier_ref: DiagnosticIoControl.DataIdentifierRef | None = field(
+        default=None,
+        metadata={
+            "name": "DATA-IDENTIFIER-REF",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     freeze_current_state: Boolean | None = field(
         default=None,
@@ -221,15 +224,13 @@ class DiagnosticIoControl:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    io_control_class_ref: DiagnosticIoControl.IoControlClassRef | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "IO-CONTROL-CLASS-REF",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    io_control_class_ref: DiagnosticIoControl.IoControlClassRef | None = field(
+        default=None,
+        metadata={
+            "name": "IO-CONTROL-CLASS-REF",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     reset_to_default: Boolean | None = field(
         default=None,

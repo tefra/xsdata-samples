@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from tpdb.models.metainformation import Metainformation
 from tpdb.models.problem_type import ProblemType

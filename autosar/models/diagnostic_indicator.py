@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -100,13 +99,15 @@ class DiagnosticIndicator:
             "required": True,
         },
     )
-    short_name_fragments: DiagnosticIndicator.ShortNameFragments | None = field(
-        default=None,
-        metadata={
-            "name": "SHORT-NAME-FRAGMENTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    short_name_fragments: DiagnosticIndicator.ShortNameFragments | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "SHORT-NAME-FRAGMENTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     long_name: MultilanguageLongName | None = field(
         default=None,
@@ -164,7 +165,9 @@ class DiagnosticIndicator:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    healing_cycle_counter_threshold: PositiveIntegerValueVariationPoint | None = field(
+    healing_cycle_counter_threshold: (
+        PositiveIntegerValueVariationPoint | None
+    ) = field(
         default=None,
         metadata={
             "name": "HEALING-CYCLE-COUNTER-THRESHOLD",
@@ -172,15 +175,13 @@ class DiagnosticIndicator:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    type_value: DiagnosticIndicatorTypeEnumValueVariationPoint | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "TYPE",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    type_value: DiagnosticIndicatorTypeEnumValueVariationPoint | None = field(
+        default=None,
+        metadata={
+            "name": "TYPE",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     s: str | None = field(
         default=None,

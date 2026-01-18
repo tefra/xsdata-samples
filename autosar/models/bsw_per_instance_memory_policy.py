@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import VariationPoint
 from .boolean import Boolean
@@ -47,7 +46,9 @@ class BswPerInstanceMemoryPolicy:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ar_typed_per_instance_memory_ref: BswPerInstanceMemoryPolicy.ArTypedPerInstanceMemoryRef | None = field(
+    ar_typed_per_instance_memory_ref: (
+        BswPerInstanceMemoryPolicy.ArTypedPerInstanceMemoryRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "AR-TYPED-PER-INSTANCE-MEMORY-REF",

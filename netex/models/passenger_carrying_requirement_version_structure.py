@@ -1,6 +1,5 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
-from typing import Optional
 
 from .passenger_capacity import PassengerCapacity
 from .vehicle_requirement_version_structure import (

@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -119,7 +118,9 @@ class BinaryManifestRequireResource:
             "required": True,
         },
     )
-    short_name_fragments: BinaryManifestRequireResource.ShortNameFragments | None = field(
+    short_name_fragments: (
+        BinaryManifestRequireResource.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -191,7 +192,9 @@ class BinaryManifestRequireResource:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    resource_definition_ref: BinaryManifestRequireResource.ResourceDefinitionRef | None = field(
+    resource_definition_ref: (
+        BinaryManifestRequireResource.ResourceDefinitionRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "RESOURCE-DEFINITION-REF",
@@ -207,15 +210,13 @@ class BinaryManifestRequireResource:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    resource_ref: BinaryManifestRequireResource.ResourceRef | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "RESOURCE-REF",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    resource_ref: BinaryManifestRequireResource.ResourceRef | None = field(
+        default=None,
+        metadata={
+            "name": "RESOURCE-REF",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     connection_is_mandatory: Boolean | None = field(
         default=None,

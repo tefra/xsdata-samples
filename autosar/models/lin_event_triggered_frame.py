@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -132,13 +131,15 @@ class LinEventTriggeredFrame:
             "required": True,
         },
     )
-    short_name_fragments: LinEventTriggeredFrame.ShortNameFragments | None = field(
-        default=None,
-        metadata={
-            "name": "SHORT-NAME-FRAGMENTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    short_name_fragments: LinEventTriggeredFrame.ShortNameFragments | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "SHORT-NAME-FRAGMENTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     long_name: MultilanguageLongName | None = field(
         default=None,
@@ -204,15 +205,19 @@ class LinEventTriggeredFrame:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    pdu_to_frame_mappings: LinEventTriggeredFrame.PduToFrameMappings | None = field(
-        default=None,
-        metadata={
-            "name": "PDU-TO-FRAME-MAPPINGS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    pdu_to_frame_mappings: LinEventTriggeredFrame.PduToFrameMappings | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "PDU-TO-FRAME-MAPPINGS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
-    collision_resolving_schedule_ref: LinEventTriggeredFrame.CollisionResolvingScheduleRef | None = field(
+    collision_resolving_schedule_ref: (
+        LinEventTriggeredFrame.CollisionResolvingScheduleRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "COLLISION-RESOLVING-SCHEDULE-REF",
@@ -220,7 +225,9 @@ class LinEventTriggeredFrame:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    lin_unconditional_frame_refs: LinEventTriggeredFrame.LinUnconditionalFrameRefs | None = field(
+    lin_unconditional_frame_refs: (
+        LinEventTriggeredFrame.LinUnconditionalFrameRefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "LIN-UNCONDITIONAL-FRAME-REFS",

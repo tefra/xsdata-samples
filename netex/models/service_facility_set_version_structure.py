@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .accommodation_access_list import AccommodationAccessList
 from .accommodation_facility_list import AccommodationFacilityList
@@ -56,15 +55,13 @@ class ServiceFacilitySetVersionStructure(FacilitySetVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    booking_process_facility_list: BookingProcessFacilityList | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "BookingProcessFacilityList",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            },
-        )
+    booking_process_facility_list: BookingProcessFacilityList | None = field(
+        default=None,
+        metadata={
+            "name": "BookingProcessFacilityList",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        },
     )
     couchette_facility_list: CouchetteFacilityList | None = field(
         default=None,
@@ -82,17 +79,17 @@ class ServiceFacilitySetVersionStructure(FacilitySetVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    luggage_carriage_facility_list: LuggageCarriageFacilityList | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "LuggageCarriageFacilityList",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            },
-        )
+    luggage_carriage_facility_list: LuggageCarriageFacilityList | None = field(
+        default=None,
+        metadata={
+            "name": "LuggageCarriageFacilityList",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        },
     )
-    service_reservation_facility_list: ServiceReservationFacilityList | None = field(
+    service_reservation_facility_list: (
+        ServiceReservationFacilityList | None
+    ) = field(
         default=None,
         metadata={
             "name": "ServiceReservationFacilityList",

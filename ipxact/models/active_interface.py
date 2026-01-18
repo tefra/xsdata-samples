@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from ipxact.models.description import Description
 from ipxact.models.interface_type import InterfaceType

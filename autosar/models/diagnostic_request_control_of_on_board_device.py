@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -111,7 +110,9 @@ class DiagnosticRequestControlOfOnBoardDevice:
             "required": True,
         },
     )
-    short_name_fragments: DiagnosticRequestControlOfOnBoardDevice.ShortNameFragments | None = field(
+    short_name_fragments: (
+        DiagnosticRequestControlOfOnBoardDevice.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -159,13 +160,15 @@ class DiagnosticRequestControlOfOnBoardDevice:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: DiagnosticRequestControlOfOnBoardDevice.Annotations | None = field(
-        default=None,
-        metadata={
-            "name": "ANNOTATIONS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    annotations: DiagnosticRequestControlOfOnBoardDevice.Annotations | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "ANNOTATIONS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     variation_point: VariationPoint | None = field(
         default=None,
@@ -175,7 +178,9 @@ class DiagnosticRequestControlOfOnBoardDevice:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    access_permission_ref: DiagnosticRequestControlOfOnBoardDevice.AccessPermissionRef | None = field(
+    access_permission_ref: (
+        DiagnosticRequestControlOfOnBoardDevice.AccessPermissionRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "ACCESS-PERMISSION-REF",
@@ -183,7 +188,10 @@ class DiagnosticRequestControlOfOnBoardDevice:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    request_control_of_on_board_device_class_ref: DiagnosticRequestControlOfOnBoardDevice.RequestControlOfOnBoardDeviceClassRef | None = field(
+    request_control_of_on_board_device_class_ref: (
+        DiagnosticRequestControlOfOnBoardDevice.RequestControlOfOnBoardDeviceClassRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "REQUEST-CONTROL-OF-ON-BOARD-DEVICE-CLASS-REF",
@@ -191,13 +199,15 @@ class DiagnosticRequestControlOfOnBoardDevice:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    test_id_ref: DiagnosticRequestControlOfOnBoardDevice.TestIdRef | None = field(
-        default=None,
-        metadata={
-            "name": "TEST-ID-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    test_id_ref: DiagnosticRequestControlOfOnBoardDevice.TestIdRef | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "TEST-ID-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     s: str | None = field(
         default=None,
@@ -257,7 +267,9 @@ class DiagnosticRequestControlOfOnBoardDevice:
 
     @dataclass
     class RequestControlOfOnBoardDeviceClassRef(Ref):
-        dest: DiagnosticRequestControlOfOnBoardDeviceClassSubtypesEnum | None = field(
+        dest: (
+            DiagnosticRequestControlOfOnBoardDeviceClassSubtypesEnum | None
+        ) = field(
             default=None,
             metadata={
                 "name": "DEST",

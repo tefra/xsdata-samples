@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import ForwardRef, Optional, Union
+from typing import ForwardRef
 
 from crossref.models.gov.nih.nlm.ncbi.jats1.abbrev import (
     Abbrev,

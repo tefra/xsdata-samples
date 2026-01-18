@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -92,15 +91,13 @@ class HwPinGroupConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    hw_pin_connections: HwPinGroupConnector.HwPinConnections | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "HW-PIN-CONNECTIONS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    hw_pin_connections: HwPinGroupConnector.HwPinConnections | None = field(
+        default=None,
+        metadata={
+            "name": "HW-PIN-CONNECTIONS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     hw_pin_group_refs: HwPinGroupConnector.HwPinGroupRefs | None = field(
         default=None,

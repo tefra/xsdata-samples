@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -113,7 +112,9 @@ class AsynchronousServerCallReturnsEvent:
             "required": True,
         },
     )
-    short_name_fragments: AsynchronousServerCallReturnsEvent.ShortNameFragments | None = field(
+    short_name_fragments: (
+        AsynchronousServerCallReturnsEvent.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -161,17 +162,18 @@ class AsynchronousServerCallReturnsEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: AsynchronousServerCallReturnsEvent.Annotations | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "ANNOTATIONS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    annotations: AsynchronousServerCallReturnsEvent.Annotations | None = field(
+        default=None,
+        metadata={
+            "name": "ANNOTATIONS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
-    activation_reason_representation_ref: AsynchronousServerCallReturnsEvent.ActivationReasonRepresentationRef | None = field(
+    activation_reason_representation_ref: (
+        AsynchronousServerCallReturnsEvent.ActivationReasonRepresentationRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "ACTIVATION-REASON-REPRESENTATION-REF",
@@ -179,7 +181,9 @@ class AsynchronousServerCallReturnsEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    disabled_mode_irefs: AsynchronousServerCallReturnsEvent.DisabledModeIrefs | None = field(
+    disabled_mode_irefs: (
+        AsynchronousServerCallReturnsEvent.DisabledModeIrefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "DISABLED-MODE-IREFS",
@@ -187,7 +191,9 @@ class AsynchronousServerCallReturnsEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    start_on_event_ref: AsynchronousServerCallReturnsEvent.StartOnEventRef | None = field(
+    start_on_event_ref: (
+        AsynchronousServerCallReturnsEvent.StartOnEventRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "START-ON-EVENT-REF",
@@ -203,7 +209,9 @@ class AsynchronousServerCallReturnsEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    event_source_ref: AsynchronousServerCallReturnsEvent.EventSourceRef | None = field(
+    event_source_ref: (
+        AsynchronousServerCallReturnsEvent.EventSourceRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "EVENT-SOURCE-REF",

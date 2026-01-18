@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .passage_type_enumeration import PassageTypeEnumeration
 from .point_of_interest_component_version_structure import (
@@ -28,7 +27,9 @@ class PointOfInterestSpaceVersionStructure(
     class Meta:
         name = "PointOfInterestSpace_VersionStructure"
 
-    access_space_type: PointOfInterestSpaceVersionStructureAccessSpaceType | None = field(
+    access_space_type: (
+        PointOfInterestSpaceVersionStructureAccessSpaceType | None
+    ) = field(
         default=None,
         metadata={
             "name": "AccessSpaceType",
@@ -36,7 +37,9 @@ class PointOfInterestSpaceVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    point_of_interest_space_type: PointOfInterestSpaceTypeEnumeration | None = field(
+    point_of_interest_space_type: (
+        PointOfInterestSpaceTypeEnumeration | None
+    ) = field(
         default=None,
         metadata={
             "name": "PointOfInterestSpaceType",
@@ -52,7 +55,9 @@ class PointOfInterestSpaceVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    parent_point_of_interest_space_ref: PointOfInterestSpaceRefStructure | None = field(
+    parent_point_of_interest_space_ref: (
+        PointOfInterestSpaceRefStructure | None
+    ) = field(
         default=None,
         metadata={
             "name": "ParentPointOfInterestSpaceRef",

@@ -1,6 +1,5 @@
 from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import Union
 
 from .access_right_in_product import AccessRightInProduct
 from .access_right_in_product_ref import AccessRightInProductRef

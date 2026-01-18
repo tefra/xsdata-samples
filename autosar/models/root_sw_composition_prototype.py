@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -129,7 +128,9 @@ class RootSwCompositionPrototype:
             "required": True,
         },
     )
-    short_name_fragments: RootSwCompositionPrototype.ShortNameFragments | None = field(
+    short_name_fragments: (
+        RootSwCompositionPrototype.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -185,7 +186,9 @@ class RootSwCompositionPrototype:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    calibration_parameter_value_set_refs: RootSwCompositionPrototype.CalibrationParameterValueSetRefs | None = field(
+    calibration_parameter_value_set_refs: (
+        RootSwCompositionPrototype.CalibrationParameterValueSetRefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "CALIBRATION-PARAMETER-VALUE-SET-REFS",
@@ -201,7 +204,9 @@ class RootSwCompositionPrototype:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    software_composition_tref: RootSwCompositionPrototype.SoftwareCompositionTref | None = field(
+    software_composition_tref: (
+        RootSwCompositionPrototype.SoftwareCompositionTref | None
+    ) = field(
         default=None,
         metadata={
             "name": "SOFTWARE-COMPOSITION-TREF",

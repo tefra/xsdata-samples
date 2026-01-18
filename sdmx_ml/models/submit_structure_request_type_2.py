@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Any, Optional
+from typing import Any
 
 from sdmx_ml.models.registry_interface_type import RegistryInterfaceType
 from sdmx_ml.models.submit_structure_request_type_1 import (

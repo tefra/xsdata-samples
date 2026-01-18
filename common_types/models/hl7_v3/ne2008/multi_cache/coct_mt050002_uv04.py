@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from ..core.datatypes_base import (
     AdExplicit,
@@ -258,7 +257,9 @@ class CoctMt050002Uv04Patient:
             "nillable": True,
         },
     )
-    patient_non_person_living_subject: CoctMt050002Uv04NonPersonLivingSubject | None = field(
+    patient_non_person_living_subject: (
+        CoctMt050002Uv04NonPersonLivingSubject | None
+    ) = field(
         default=None,
         metadata={
             "name": "patientNonPersonLivingSubject",
@@ -283,7 +284,23 @@ class CoctMt050002Uv04Patient:
             "type": "Attribute",
         },
     )
-    class_code: RoleClassMutualRelationship | RoleClassPassive | str | RoleClassOntological | RoleClassPartitive | RoleClassRootValue | XAccommodationRequestorRole | XDocumentEntrySubject | XDocumentSubject | XInformationRecipientRole | XRoleClassAccommodationRequestor | XRoleClassCoverage | XRoleClassCoverageInvoice | XRoleClassCredentialedEntity | XRoleClassPayeePolicyRelationship = field(
+    class_code: (
+        RoleClassMutualRelationship
+        | RoleClassPassive
+        | str
+        | RoleClassOntological
+        | RoleClassPartitive
+        | RoleClassRootValue
+        | XAccommodationRequestorRole
+        | XDocumentEntrySubject
+        | XDocumentSubject
+        | XInformationRecipientRole
+        | XRoleClassAccommodationRequestor
+        | XRoleClassCoverage
+        | XRoleClassCoverageInvoice
+        | XRoleClassCredentialedEntity
+        | XRoleClassPayeePolicyRelationship
+    ) = field(
         init=False,
         default=RoleClassMutualRelationship.PAT,
         metadata={

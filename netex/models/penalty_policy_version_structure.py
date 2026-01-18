@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from xsdata.models.datatype import XmlDuration
 
@@ -25,13 +24,15 @@ class PenaltyPolicyVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    same_station_rentry_policy: SameStationReentryPolicyEnumeration | None = field(
-        default=None,
-        metadata={
-            "name": "SameStationRentryPolicy",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        },
+    same_station_rentry_policy: SameStationReentryPolicyEnumeration | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "SameStationRentryPolicy",
+                "type": "Element",
+                "namespace": "http://www.netex.org.uk/netex",
+            },
+        )
     )
     minimum_time_before_reentry: XmlDuration | None = field(
         default=None,

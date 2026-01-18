@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .abstract_service_instance_subtypes_enum import (
     AbstractServiceInstanceSubtypesEnum,
@@ -105,7 +104,9 @@ class ClientServerToSignalGroupMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    event_group_refs: ClientServerToSignalGroupMapping.EventGroupRefs | None = field(
+    event_group_refs: (
+        ClientServerToSignalGroupMapping.EventGroupRefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "EVENT-GROUP-REFS",
@@ -113,7 +114,9 @@ class ClientServerToSignalGroupMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    event_handler_refs: ClientServerToSignalGroupMapping.EventHandlerRefs | None = field(
+    event_handler_refs: (
+        ClientServerToSignalGroupMapping.EventHandlerRefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "EVENT-HANDLER-REFS",
@@ -129,7 +132,9 @@ class ClientServerToSignalGroupMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    service_instance_refs: ClientServerToSignalGroupMapping.ServiceInstanceRefs | None = field(
+    service_instance_refs: (
+        ClientServerToSignalGroupMapping.ServiceInstanceRefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "SERVICE-INSTANCE-REFS",
@@ -161,7 +166,9 @@ class ClientServerToSignalGroupMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    composite_type_mappings: ClientServerToSignalGroupMapping.CompositeTypeMappings | None = field(
+    composite_type_mappings: (
+        ClientServerToSignalGroupMapping.CompositeTypeMappings | None
+    ) = field(
         default=None,
         metadata={
             "name": "COMPOSITE-TYPE-MAPPINGS",
@@ -185,7 +192,9 @@ class ClientServerToSignalGroupMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    primitive_type_mappings: ClientServerToSignalGroupMapping.PrimitiveTypeMappings | None = field(
+    primitive_type_mappings: (
+        ClientServerToSignalGroupMapping.PrimitiveTypeMappings | None
+    ) = field(
         default=None,
         metadata={
             "name": "PRIMITIVE-TYPE-MAPPINGS",
@@ -193,7 +202,9 @@ class ClientServerToSignalGroupMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    request_group_ref: ClientServerToSignalGroupMapping.RequestGroupRef | None = field(
+    request_group_ref: (
+        ClientServerToSignalGroupMapping.RequestGroupRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "REQUEST-GROUP-REF",
@@ -201,7 +212,9 @@ class ClientServerToSignalGroupMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    response_group_ref: ClientServerToSignalGroupMapping.ResponseGroupRef | None = field(
+    response_group_ref: (
+        ClientServerToSignalGroupMapping.ResponseGroupRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "RESPONSE-GROUP-REF",

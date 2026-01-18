@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from datexii.models.eu.datexii.v2.data_value import DataValue
 from datexii.models.eu.datexii.v2.direction_compass_enum import (

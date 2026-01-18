@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -105,7 +104,9 @@ class PortInterfaceToDataTypeMapping:
             "required": True,
         },
     )
-    short_name_fragments: PortInterfaceToDataTypeMapping.ShortNameFragments | None = field(
+    short_name_fragments: (
+        PortInterfaceToDataTypeMapping.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -153,15 +154,13 @@ class PortInterfaceToDataTypeMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: PortInterfaceToDataTypeMapping.Annotations | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "ANNOTATIONS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    annotations: PortInterfaceToDataTypeMapping.Annotations | None = field(
+        default=None,
+        metadata={
+            "name": "ANNOTATIONS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     variation_point: VariationPoint | None = field(
         default=None,
@@ -171,7 +170,9 @@ class PortInterfaceToDataTypeMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    data_type_mapping_set_refs: PortInterfaceToDataTypeMapping.DataTypeMappingSetRefs | None = field(
+    data_type_mapping_set_refs: (
+        PortInterfaceToDataTypeMapping.DataTypeMappingSetRefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "DATA-TYPE-MAPPING-SET-REFS",
@@ -179,7 +180,9 @@ class PortInterfaceToDataTypeMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    port_interface_ref: PortInterfaceToDataTypeMapping.PortInterfaceRef | None = field(
+    port_interface_ref: (
+        PortInterfaceToDataTypeMapping.PortInterfaceRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "PORT-INTERFACE-REF",

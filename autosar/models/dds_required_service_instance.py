@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -133,7 +132,9 @@ class DdsRequiredServiceInstance:
             "required": True,
         },
     )
-    short_name_fragments: DdsRequiredServiceInstance.ShortNameFragments | None = field(
+    short_name_fragments: (
+        DdsRequiredServiceInstance.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -197,7 +198,9 @@ class DdsRequiredServiceInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    e_2_e_event_protection_propss: DdsRequiredServiceInstance.E2EEventProtectionPropss | None = field(
+    e_2_e_event_protection_propss: (
+        DdsRequiredServiceInstance.E2EEventProtectionPropss | None
+    ) = field(
         default=None,
         metadata={
             "name": "E-2-E-EVENT-PROTECTION-PROPSS",
@@ -205,7 +208,9 @@ class DdsRequiredServiceInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    e_2_e_method_protection_propss: DdsRequiredServiceInstance.E2EMethodProtectionPropss | None = field(
+    e_2_e_method_protection_propss: (
+        DdsRequiredServiceInstance.E2EMethodProtectionPropss | None
+    ) = field(
         default=None,
         metadata={
             "name": "E-2-E-METHOD-PROTECTION-PROPSS",
@@ -213,15 +218,19 @@ class DdsRequiredServiceInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    secure_com_configs: DdsRequiredServiceInstance.SecureComConfigs | None = field(
-        default=None,
-        metadata={
-            "name": "SECURE-COM-CONFIGS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    secure_com_configs: DdsRequiredServiceInstance.SecureComConfigs | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "SECURE-COM-CONFIGS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
-    service_interface_deployment_ref: DdsRequiredServiceInstance.ServiceInterfaceDeploymentRef | None = field(
+    service_interface_deployment_ref: (
+        DdsRequiredServiceInstance.ServiceInterfaceDeploymentRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "SERVICE-INTERFACE-DEPLOYMENT-REF",
@@ -245,7 +254,9 @@ class DdsRequiredServiceInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    blacklisted_versions: DdsRequiredServiceInstance.BlacklistedVersions | None = field(
+    blacklisted_versions: (
+        DdsRequiredServiceInstance.BlacklistedVersions | None
+    ) = field(
         default=None,
         metadata={
             "name": "BLACKLISTED-VERSIONS",
@@ -253,17 +264,17 @@ class DdsRequiredServiceInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    event_qos_propss: DdsRequiredServiceInstance.EventQosPropss | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "EVENT-QOS-PROPSS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    event_qos_propss: DdsRequiredServiceInstance.EventQosPropss | None = field(
+        default=None,
+        metadata={
+            "name": "EVENT-QOS-PROPSS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
-    field_notifier_qos_propss: DdsRequiredServiceInstance.FieldNotifierQosPropss | None = field(
+    field_notifier_qos_propss: (
+        DdsRequiredServiceInstance.FieldNotifierQosPropss | None
+    ) = field(
         default=None,
         metadata={
             "name": "FIELD-NOTIFIER-QOS-PROPSS",

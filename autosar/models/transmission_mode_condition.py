@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .data_filter import DataFilter
 from .i_signal_to_i_pdu_mapping_subtypes_enum import (
@@ -47,7 +46,9 @@ class TransmissionModeCondition:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    i_signal_in_i_pdu_ref: TransmissionModeCondition.ISignalInIPduRef | None = field(
+    i_signal_in_i_pdu_ref: (
+        TransmissionModeCondition.ISignalInIPduRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "I-SIGNAL-IN-I-PDU-REF",

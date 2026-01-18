@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .ref import Ref
 from .rest_element_def_subtypes_enum import RestElementDefSubtypesEnum

@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .abstract_request_structure import AbstractRequestStructure
 

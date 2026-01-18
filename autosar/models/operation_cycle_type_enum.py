@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .operation_cycle_type_enum_simple import OperationCycleTypeEnumSimple
 

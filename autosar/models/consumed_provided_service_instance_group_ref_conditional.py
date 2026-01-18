@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import VariationPoint
 from .consumed_provided_service_instance_group_subtypes_enum import (
@@ -35,7 +34,10 @@ class ConsumedProvidedServiceInstanceGroupRefConditional:
     class Meta:
         name = "CONSUMED-PROVIDED-SERVICE-INSTANCE-GROUP-REF-CONDITIONAL"
 
-    consumed_provided_service_instance_group_ref: ConsumedProvidedServiceInstanceGroupRefConditional.ConsumedProvidedServiceInstanceGroupRef | None = field(
+    consumed_provided_service_instance_group_ref: (
+        ConsumedProvidedServiceInstanceGroupRefConditional.ConsumedProvidedServiceInstanceGroupRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "CONSUMED-PROVIDED-SERVICE-INSTANCE-GROUP-REF",
@@ -69,13 +71,11 @@ class ConsumedProvidedServiceInstanceGroupRefConditional:
 
     @dataclass
     class ConsumedProvidedServiceInstanceGroupRef(Ref):
-        dest: ConsumedProvidedServiceInstanceGroupSubtypesEnum | None = (
-            field(
-                default=None,
-                metadata={
-                    "name": "DEST",
-                    "type": "Attribute",
-                    "required": True,
-                },
-            )
+        dest: ConsumedProvidedServiceInstanceGroupSubtypesEnum | None = field(
+            default=None,
+            metadata={
+                "name": "DEST",
+                "type": "Attribute",
+                "required": True,
+            },
         )

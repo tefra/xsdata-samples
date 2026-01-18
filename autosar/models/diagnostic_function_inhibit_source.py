@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -100,7 +99,9 @@ class DiagnosticFunctionInhibitSource:
             "required": True,
         },
     )
-    short_name_fragments: DiagnosticFunctionInhibitSource.ShortNameFragments | None = field(
+    short_name_fragments: (
+        DiagnosticFunctionInhibitSource.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -148,23 +149,23 @@ class DiagnosticFunctionInhibitSource:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: DiagnosticFunctionInhibitSource.Annotations | None = (
+    annotations: DiagnosticFunctionInhibitSource.Annotations | None = field(
+        default=None,
+        metadata={
+            "name": "ANNOTATIONS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
+    )
+    event_group_ref: DiagnosticFunctionInhibitSource.EventGroupRef | None = (
         field(
             default=None,
             metadata={
-                "name": "ANNOTATIONS",
+                "name": "EVENT-GROUP-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-    )
-    event_group_ref: DiagnosticFunctionInhibitSource.EventGroupRef | None = field(
-        default=None,
-        metadata={
-            "name": "EVENT-GROUP-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
     )
     event_ref: DiagnosticFunctionInhibitSource.EventRef | None = field(
         default=None,

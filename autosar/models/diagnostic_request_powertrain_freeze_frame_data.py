@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -111,7 +110,9 @@ class DiagnosticRequestPowertrainFreezeFrameData:
             "required": True,
         },
     )
-    short_name_fragments: DiagnosticRequestPowertrainFreezeFrameData.ShortNameFragments | None = field(
+    short_name_fragments: (
+        DiagnosticRequestPowertrainFreezeFrameData.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -159,7 +160,9 @@ class DiagnosticRequestPowertrainFreezeFrameData:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: DiagnosticRequestPowertrainFreezeFrameData.Annotations | None = field(
+    annotations: (
+        DiagnosticRequestPowertrainFreezeFrameData.Annotations | None
+    ) = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -175,7 +178,9 @@ class DiagnosticRequestPowertrainFreezeFrameData:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    access_permission_ref: DiagnosticRequestPowertrainFreezeFrameData.AccessPermissionRef | None = field(
+    access_permission_ref: (
+        DiagnosticRequestPowertrainFreezeFrameData.AccessPermissionRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "ACCESS-PERMISSION-REF",
@@ -183,7 +188,9 @@ class DiagnosticRequestPowertrainFreezeFrameData:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    freeze_frame_ref: DiagnosticRequestPowertrainFreezeFrameData.FreezeFrameRef | None = field(
+    freeze_frame_ref: (
+        DiagnosticRequestPowertrainFreezeFrameData.FreezeFrameRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "FREEZE-FRAME-REF",
@@ -191,7 +198,10 @@ class DiagnosticRequestPowertrainFreezeFrameData:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    request_powertrain_freeze_frame_data_ref: DiagnosticRequestPowertrainFreezeFrameData.RequestPowertrainFreezeFrameDataRef | None = field(
+    request_powertrain_freeze_frame_data_ref: (
+        DiagnosticRequestPowertrainFreezeFrameData.RequestPowertrainFreezeFrameDataRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "REQUEST-POWERTRAIN-FREEZE-FRAME-DATA-REF",
@@ -268,7 +278,9 @@ class DiagnosticRequestPowertrainFreezeFrameData:
 
     @dataclass
     class RequestPowertrainFreezeFrameDataRef(Ref):
-        dest: DiagnosticRequestPowertrainFreezeFrameDataClassSubtypesEnum | None = field(
+        dest: (
+            DiagnosticRequestPowertrainFreezeFrameDataClassSubtypesEnum | None
+        ) = field(
             default=None,
             metadata={
                 "name": "DEST",

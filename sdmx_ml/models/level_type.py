@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from sdmx_ml.models.coding_text_format_type import CodingTextFormatType
 from sdmx_ml.models.level_base_type import LevelBaseType

@@ -1,6 +1,5 @@
 from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import Union
 
 from .offered_travel_specification_ref import OfferedTravelSpecificationRef
 from .one_to_many_relationship_structure import OneToManyRelationshipStructure
@@ -16,7 +15,9 @@ class TravelSpecificationRefsRelStructure(OneToManyRelationshipStructure):
         name = "travelSpecificationRefs_RelStructure"
 
     travel_specification_ref: Iterable[
-        OfferedTravelSpecificationRef | RequestedTravelSpecificationRef | TravelSpecificationRef
+        OfferedTravelSpecificationRef
+        | RequestedTravelSpecificationRef
+        | TravelSpecificationRef
     ] = field(
         default_factory=list,
         metadata={

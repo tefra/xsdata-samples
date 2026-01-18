@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from datexii.models.eu.datexii.v2.dangerous_goods_regulations_enum import (
     DangerousGoodsRegulationsEnum,
@@ -58,15 +57,13 @@ class HazardousMaterials:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    dangerous_goods_regulations: DangerousGoodsRegulationsEnum | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "dangerousGoodsRegulations",
-                "type": "Element",
-                "namespace": "http://datex2.eu/schema/2/2_0",
-            },
-        )
+    dangerous_goods_regulations: DangerousGoodsRegulationsEnum | None = field(
+        default=None,
+        metadata={
+            "name": "dangerousGoodsRegulations",
+            "type": "Element",
+            "namespace": "http://datex2.eu/schema/2/2_0",
+        },
     )
     hazard_code_identification: str | None = field(
         default=None,

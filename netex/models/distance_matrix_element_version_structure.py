@@ -1,6 +1,5 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
-from typing import Optional, Union
 
 from .distance_matrix_element_prices_rel_structure import (
     DistanceMatrixElementPricesRelStructure,
@@ -63,7 +62,16 @@ class DistanceMatrixElementVersionStructure(PriceableObjectVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    choice: ScheduledStopPointRefStructure | ScheduledStopPointDerivedViewStructure | TariffZoneRefStructure | ZoneDerivedViewStructure | PointRefStructure | FareSectionRefStructure | FarePointInPatternRefStructure | None = field(
+    choice: (
+        ScheduledStopPointRefStructure
+        | ScheduledStopPointDerivedViewStructure
+        | TariffZoneRefStructure
+        | ZoneDerivedViewStructure
+        | PointRefStructure
+        | FareSectionRefStructure
+        | FarePointInPatternRefStructure
+        | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -106,7 +114,16 @@ class DistanceMatrixElementVersionStructure(PriceableObjectVersionStructure):
             ),
         },
     )
-    choice_1: ScheduledStopPointRefStructure | ScheduledStopPointDerivedViewStructure | TariffZoneRefStructure | ZoneDerivedViewStructure | PointRefStructure | FareSectionRefStructure | FarePointInPatternRefStructure | None = field(
+    choice_1: (
+        ScheduledStopPointRefStructure
+        | ScheduledStopPointDerivedViewStructure
+        | TariffZoneRefStructure
+        | ZoneDerivedViewStructure
+        | PointRefStructure
+        | FareSectionRefStructure
+        | FarePointInPatternRefStructure
+        | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -157,15 +174,13 @@ class DistanceMatrixElementVersionStructure(PriceableObjectVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    structure_factors: GeographicalStructureFactorsRelStructure | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "structureFactors",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            },
-        )
+    structure_factors: GeographicalStructureFactorsRelStructure | None = field(
+        default=None,
+        metadata={
+            "name": "structureFactors",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        },
     )
     tariffs: TariffRefsRelStructure | None = field(
         default=None,
@@ -174,25 +189,23 @@ class DistanceMatrixElementVersionStructure(PriceableObjectVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    fare_table_ref: StandardFareTableRef | FareTableRef | None = (
-        field(
-            default=None,
-            metadata={
-                "type": "Elements",
-                "choices": (
-                    {
-                        "name": "StandardFareTableRef",
-                        "type": StandardFareTableRef,
-                        "namespace": "http://www.netex.org.uk/netex",
-                    },
-                    {
-                        "name": "FareTableRef",
-                        "type": FareTableRef,
-                        "namespace": "http://www.netex.org.uk/netex",
-                    },
-                ),
-            },
-        )
+    fare_table_ref: StandardFareTableRef | FareTableRef | None = field(
+        default=None,
+        metadata={
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "StandardFareTableRef",
+                    "type": StandardFareTableRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "FareTableRef",
+                    "type": FareTableRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+        },
     )
     prices: DistanceMatrixElementPricesRelStructure | None = field(
         default=None,

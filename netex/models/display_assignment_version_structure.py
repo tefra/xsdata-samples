@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from .assignment_version_structure_1 import AssignmentVersionStructure1
 from .dead_run_journey_pattern_ref import DeadRunJourneyPatternRef
@@ -33,7 +32,9 @@ class DisplayAssignmentVersionStructure(AssignmentVersionStructure1):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    scheduled_stop_point_ref: FareScheduledStopPointRef | ScheduledStopPointRef | None = field(
+    scheduled_stop_point_ref: (
+        FareScheduledStopPointRef | ScheduledStopPointRef | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -85,7 +86,13 @@ class DisplayAssignmentVersionStructure(AssignmentVersionStructure1):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    journey_pattern_ref: ServiceJourneyPatternRef | ServicePatternRef | DeadRunJourneyPatternRef | JourneyPatternRef | None = field(
+    journey_pattern_ref: (
+        ServiceJourneyPatternRef
+        | ServicePatternRef
+        | DeadRunJourneyPatternRef
+        | JourneyPatternRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -113,15 +120,13 @@ class DisplayAssignmentVersionStructure(AssignmentVersionStructure1):
             ),
         },
     )
-    display_assignment_type: DisplayAssignmentTypeEnumeration | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "DisplayAssignmentType",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            },
-        )
+    display_assignment_type: DisplayAssignmentTypeEnumeration | None = field(
+        default=None,
+        metadata={
+            "name": "DisplayAssignmentType",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        },
     )
     number_of_journeys_to_show: int | None = field(
         default=None,

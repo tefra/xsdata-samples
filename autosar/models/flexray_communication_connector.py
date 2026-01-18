@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -134,7 +133,9 @@ class FlexrayCommunicationConnector:
             "required": True,
         },
     )
-    short_name_fragments: FlexrayCommunicationConnector.ShortNameFragments | None = field(
+    short_name_fragments: (
+        FlexrayCommunicationConnector.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -190,7 +191,9 @@ class FlexrayCommunicationConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    comm_controller_ref: FlexrayCommunicationConnector.CommControllerRef | None = field(
+    comm_controller_ref: (
+        FlexrayCommunicationConnector.CommControllerRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "COMM-CONTROLLER-REF",
@@ -214,7 +217,9 @@ class FlexrayCommunicationConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ecu_comm_port_instances: FlexrayCommunicationConnector.EcuCommPortInstances | None = field(
+    ecu_comm_port_instances: (
+        FlexrayCommunicationConnector.EcuCommPortInstances | None
+    ) = field(
         default=None,
         metadata={
             "name": "ECU-COMM-PORT-INSTANCES",

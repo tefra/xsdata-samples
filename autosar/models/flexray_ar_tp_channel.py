@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import VariationPoint
 from .boolean import Boolean
@@ -179,15 +178,13 @@ class FlexrayArTpChannel:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    flow_control_pdu_ref: FlexrayArTpChannel.FlowControlPduRef | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "FLOW-CONTROL-PDU-REF",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    flow_control_pdu_ref: FlexrayArTpChannel.FlowControlPduRef | None = field(
+        default=None,
+        metadata={
+            "name": "FLOW-CONTROL-PDU-REF",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     max_ar: Integer | None = field(
         default=None,

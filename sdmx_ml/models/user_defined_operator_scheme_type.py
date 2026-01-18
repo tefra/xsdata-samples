@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from sdmx_ml.models.user_defined_operator_scheme_base_type import (
     UserDefinedOperatorSchemeBaseType,

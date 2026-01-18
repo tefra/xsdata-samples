@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import VariationPoint
 from .global_time_domain_subtypes_enum import GlobalTimeDomainSubtypesEnum
@@ -33,7 +32,9 @@ class GlobalTimeDomainRefConditional:
     class Meta:
         name = "GLOBAL-TIME-DOMAIN-REF-CONDITIONAL"
 
-    global_time_domain_ref: GlobalTimeDomainRefConditional.GlobalTimeDomainRef | None = field(
+    global_time_domain_ref: (
+        GlobalTimeDomainRefConditional.GlobalTimeDomainRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "GLOBAL-TIME-DOMAIN-REF",

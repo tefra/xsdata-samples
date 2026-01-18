@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .lin_frame_subtypes_enum import LinFrameSubtypesEnum
 from .positive_integer import PositiveInteger

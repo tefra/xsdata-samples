@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -109,7 +108,9 @@ class EcucDestinationUriDefSet:
             "required": True,
         },
     )
-    short_name_fragments: EcucDestinationUriDefSet.ShortNameFragments | None = field(
+    short_name_fragments: (
+        EcucDestinationUriDefSet.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -173,13 +174,15 @@ class EcucDestinationUriDefSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    blueprint_policys: EcucDestinationUriDefSet.BlueprintPolicys | None = field(
-        default=None,
-        metadata={
-            "name": "BLUEPRINT-POLICYS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    blueprint_policys: EcucDestinationUriDefSet.BlueprintPolicys | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "BLUEPRINT-POLICYS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     short_name_pattern: String | None = field(
         default=None,
@@ -189,7 +192,9 @@ class EcucDestinationUriDefSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    destination_uri_defs: EcucDestinationUriDefSet.DestinationUriDefs | None = field(
+    destination_uri_defs: (
+        EcucDestinationUriDefSet.DestinationUriDefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "DESTINATION-URI-DEFS",

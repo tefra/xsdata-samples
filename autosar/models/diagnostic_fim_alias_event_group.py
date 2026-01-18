@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -102,7 +101,9 @@ class DiagnosticFimAliasEventGroup:
             "required": True,
         },
     )
-    short_name_fragments: DiagnosticFimAliasEventGroup.ShortNameFragments | None = field(
+    short_name_fragments: (
+        DiagnosticFimAliasEventGroup.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -166,7 +167,9 @@ class DiagnosticFimAliasEventGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    grouped_alias_event_refs: DiagnosticFimAliasEventGroup.GroupedAliasEventRefs | None = field(
+    grouped_alias_event_refs: (
+        DiagnosticFimAliasEventGroup.GroupedAliasEventRefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "GROUPED-ALIAS-EVENT-REFS",

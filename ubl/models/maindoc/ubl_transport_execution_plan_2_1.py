@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from ubl.models.common.ubl_common_aggregate_components_2_1 import (
     AdditionalDocumentReference,
@@ -219,14 +218,16 @@ class TransportExecutionPlanType:
             "required": True,
         },
     )
-    transport_service_provider_party: TransportServiceProviderParty | None = field(
-        default=None,
-        metadata={
-            "name": "TransportServiceProviderParty",
-            "type": "Element",
-            "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-            "required": True,
-        },
+    transport_service_provider_party: TransportServiceProviderParty | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "TransportServiceProviderParty",
+                "type": "Element",
+                "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
+                "required": True,
+            },
+        )
     )
     bill_to_party: BillToParty | None = field(
         default=None,
@@ -244,7 +245,9 @@ class TransportExecutionPlanType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    transport_execution_plan_request_document_reference: TransportExecutionPlanRequestDocumentReference | None = field(
+    transport_execution_plan_request_document_reference: (
+        TransportExecutionPlanRequestDocumentReference | None
+    ) = field(
         default=None,
         metadata={
             "name": "TransportExecutionPlanRequestDocumentReference",
@@ -252,7 +255,9 @@ class TransportExecutionPlanType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    transport_execution_plan_document_reference: TransportExecutionPlanDocumentReference | None = field(
+    transport_execution_plan_document_reference: (
+        TransportExecutionPlanDocumentReference | None
+    ) = field(
         default=None,
         metadata={
             "name": "TransportExecutionPlanDocumentReference",
@@ -260,7 +265,9 @@ class TransportExecutionPlanType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    transport_service_description_document_reference: TransportServiceDescriptionDocumentReference | None = field(
+    transport_service_description_document_reference: (
+        TransportServiceDescriptionDocumentReference | None
+    ) = field(
         default=None,
         metadata={
             "name": "TransportServiceDescriptionDocumentReference",
@@ -286,7 +293,9 @@ class TransportExecutionPlanType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    transport_service_provider_response_required_period: TransportServiceProviderResponseRequiredPeriod | None = field(
+    transport_service_provider_response_required_period: (
+        TransportServiceProviderResponseRequiredPeriod | None
+    ) = field(
         default=None,
         metadata={
             "name": "TransportServiceProviderResponseRequiredPeriod",

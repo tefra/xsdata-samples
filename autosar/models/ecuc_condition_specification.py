@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import MlFormula
 from .ecuc_condition_formula import EcucConditionFormula

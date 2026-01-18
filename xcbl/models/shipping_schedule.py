@@ -2,7 +2,6 @@ from __future__ import annotations
 
 from dataclasses import dataclass, field
 from enum import Enum
-from typing import Optional
 
 from xcbl.models.shipping_schedule_response import (
     ContractReferences,
@@ -1107,14 +1106,12 @@ class PackageIdentifier:
             "required": True,
         }
     )
-    package_identifier_coded_other: PackageIdentifierCodedOther | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "PackageIdentifierCodedOther",
-                "type": "Element",
-            },
-        )
+    package_identifier_coded_other: PackageIdentifierCodedOther | None = field(
+        default=None,
+        metadata={
+            "name": "PackageIdentifierCodedOther",
+            "type": "Element",
+        },
     )
     package_identifier_value: PackageIdentifierValue | None = field(
         default=None,
@@ -1295,7 +1292,9 @@ class PackageCharacteristic:
             "required": True,
         }
     )
-    package_characteristic_coded_other: PackageCharacteristicCodedOther | None = field(
+    package_characteristic_coded_other: (
+        PackageCharacteristicCodedOther | None
+    ) = field(
         default=None,
         metadata={
             "name": "PackageCharacteristicCodedOther",
@@ -1340,12 +1339,14 @@ class PackageType:
 
 @dataclass(kw_only=True)
 class ReturnableContainerInfo:
-    returnable_container_part_number: ReturnableContainerPartNumber | None = field(
-        default=None,
-        metadata={
-            "name": "ReturnableContainerPartNumber",
-            "type": "Element",
-        },
+    returnable_container_part_number: ReturnableContainerPartNumber | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "ReturnableContainerPartNumber",
+                "type": "Element",
+            },
+        )
     )
     payment_responsibility_coded: PaymentResponsibilityCoded | None = field(
         default=None,
@@ -1354,7 +1355,9 @@ class ReturnableContainerInfo:
             "type": "Element",
         },
     )
-    payment_responsibility_coded_other: PaymentResponsibilityCodedOther | None = field(
+    payment_responsibility_coded_other: (
+        PaymentResponsibilityCodedOther | None
+    ) = field(
         default=None,
         metadata={
             "name": "PaymentResponsibilityCodedOther",
@@ -1558,14 +1561,12 @@ class Package:
             "type": "Element",
         },
     )
-    list_of_package_characteristic: ListOfPackageCharacteristic | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "ListOfPackageCharacteristic",
-                "type": "Element",
-            },
-        )
+    list_of_package_characteristic: ListOfPackageCharacteristic | None = field(
+        default=None,
+        metadata={
+            "name": "ListOfPackageCharacteristic",
+            "type": "Element",
+        },
     )
     list_of_dimension: ListOfDimension | None = field(
         default=None,
@@ -1641,14 +1642,18 @@ class ShippingSchedule:
             "required": True,
         }
     )
-    list_of_location_grouped_shipping_detail: ListOfLocationGroupedShippingDetail | None = field(
+    list_of_location_grouped_shipping_detail: (
+        ListOfLocationGroupedShippingDetail | None
+    ) = field(
         default=None,
         metadata={
             "name": "ListOfLocationGroupedShippingDetail",
             "type": "Element",
         },
     )
-    list_of_material_grouped_shipping_detail: ListOfMaterialGroupedShippingDetail | None = field(
+    list_of_material_grouped_shipping_detail: (
+        ListOfMaterialGroupedShippingDetail | None
+    ) = field(
         default=None,
         metadata={
             "name": "ListOfMaterialGroupedShippingDetail",

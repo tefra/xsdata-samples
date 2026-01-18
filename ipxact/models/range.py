@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from ipxact.models.left import Left
 from ipxact.models.right import Right

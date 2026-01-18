@@ -1,7 +1,6 @@
 from collections.abc import Iterable
 from dataclasses import dataclass, field
 from decimal import Decimal
-from typing import Optional
 
 from .payment_method_enumeration import PaymentMethodEnumeration
 from .site_equipment_version_structure import SiteEquipmentVersionStructure

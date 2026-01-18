@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -101,7 +100,9 @@ class PersistencyDeploymentToDltLogChannelMapping:
             "required": True,
         },
     )
-    short_name_fragments: PersistencyDeploymentToDltLogChannelMapping.ShortNameFragments | None = field(
+    short_name_fragments: (
+        PersistencyDeploymentToDltLogChannelMapping.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -149,7 +150,9 @@ class PersistencyDeploymentToDltLogChannelMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: PersistencyDeploymentToDltLogChannelMapping.Annotations | None = field(
+    annotations: (
+        PersistencyDeploymentToDltLogChannelMapping.Annotations | None
+    ) = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -165,7 +168,9 @@ class PersistencyDeploymentToDltLogChannelMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    dlt_log_channel_ref: PersistencyDeploymentToDltLogChannelMapping.DltLogChannelRef | None = field(
+    dlt_log_channel_ref: (
+        PersistencyDeploymentToDltLogChannelMapping.DltLogChannelRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "DLT-LOG-CHANNEL-REF",
@@ -173,7 +178,10 @@ class PersistencyDeploymentToDltLogChannelMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    persistency_deployment_ref: PersistencyDeploymentToDltLogChannelMapping.PersistencyDeploymentRef | None = field(
+    persistency_deployment_ref: (
+        PersistencyDeploymentToDltLogChannelMapping.PersistencyDeploymentRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "PERSISTENCY-DEPLOYMENT-REF",

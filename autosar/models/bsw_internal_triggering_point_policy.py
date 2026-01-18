@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import VariationPoint
 from .boolean import Boolean
@@ -49,7 +48,9 @@ class BswInternalTriggeringPointPolicy:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    bsw_internal_triggering_point_ref: BswInternalTriggeringPointPolicy.BswInternalTriggeringPointRef | None = field(
+    bsw_internal_triggering_point_ref: (
+        BswInternalTriggeringPointPolicy.BswInternalTriggeringPointRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "BSW-INTERNAL-TRIGGERING-POINT-REF",

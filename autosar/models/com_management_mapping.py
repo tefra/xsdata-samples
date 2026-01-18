@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -105,13 +104,15 @@ class ComManagementMapping:
             "required": True,
         },
     )
-    short_name_fragments: ComManagementMapping.ShortNameFragments | None = field(
-        default=None,
-        metadata={
-            "name": "SHORT-NAME-FRAGMENTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    short_name_fragments: ComManagementMapping.ShortNameFragments | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "SHORT-NAME-FRAGMENTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     long_name: MultilanguageLongName | None = field(
         default=None,
@@ -161,7 +162,9 @@ class ComManagementMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    com_management_group_refs: ComManagementMapping.ComManagementGroupRefs | None = field(
+    com_management_group_refs: (
+        ComManagementMapping.ComManagementGroupRefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "COM-MANAGEMENT-GROUP-REFS",
@@ -169,7 +172,9 @@ class ComManagementMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    com_management_port_group_irefs: ComManagementMapping.ComManagementPortGroupIrefs | None = field(
+    com_management_port_group_irefs: (
+        ComManagementMapping.ComManagementPortGroupIrefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "COM-MANAGEMENT-PORT-GROUP-IREFS",
@@ -177,13 +182,15 @@ class ComManagementMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    physical_channel_refs: ComManagementMapping.PhysicalChannelRefs | None = field(
-        default=None,
-        metadata={
-            "name": "PHYSICAL-CHANNEL-REFS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    physical_channel_refs: ComManagementMapping.PhysicalChannelRefs | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "PHYSICAL-CHANNEL-REFS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     variation_point: VariationPoint | None = field(
         default=None,

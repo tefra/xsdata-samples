@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .global_time_crc_validation_enum_simple import (
     GlobalTimeCrcValidationEnumSimple,

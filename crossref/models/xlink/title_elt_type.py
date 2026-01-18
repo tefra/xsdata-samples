@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from crossref.models.xlink.type_type import TypeType
 from crossref.models.xml.lang_value import LangValue

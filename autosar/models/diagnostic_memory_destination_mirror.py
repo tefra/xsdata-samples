@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -113,7 +112,9 @@ class DiagnosticMemoryDestinationMirror:
             "required": True,
         },
     )
-    short_name_fragments: DiagnosticMemoryDestinationMirror.ShortNameFragments | None = field(
+    short_name_fragments: (
+        DiagnosticMemoryDestinationMirror.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -161,15 +162,13 @@ class DiagnosticMemoryDestinationMirror:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: DiagnosticMemoryDestinationMirror.Annotations | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "ANNOTATIONS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    annotations: DiagnosticMemoryDestinationMirror.Annotations | None = field(
+        default=None,
+        metadata={
+            "name": "ANNOTATIONS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     variation_point: VariationPoint | None = field(
         default=None,
@@ -187,7 +186,9 @@ class DiagnosticMemoryDestinationMirror:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    event_displacement_strategy: DiagnosticEventDisplacementStrategyEnum | None = field(
+    event_displacement_strategy: (
+        DiagnosticEventDisplacementStrategyEnum | None
+    ) = field(
         default=None,
         metadata={
             "name": "EVENT-DISPLACEMENT-STRATEGY",
@@ -203,7 +204,9 @@ class DiagnosticMemoryDestinationMirror:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    memory_entry_storage_trigger: DiagnosticMemoryEntryStorageTriggerEnum | None = field(
+    memory_entry_storage_trigger: (
+        DiagnosticMemoryEntryStorageTriggerEnum | None
+    ) = field(
         default=None,
         metadata={
             "name": "MEMORY-ENTRY-STORAGE-TRIGGER",
@@ -211,7 +214,9 @@ class DiagnosticMemoryDestinationMirror:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    type_of_freeze_frame_record_numeration: DiagnosticTypeOfFreezeFrameRecordNumerationEnum | None = field(
+    type_of_freeze_frame_record_numeration: (
+        DiagnosticTypeOfFreezeFrameRecordNumerationEnum | None
+    ) = field(
         default=None,
         metadata={
             "name": "TYPE-OF-FREEZE-FRAME-RECORD-NUMERATION",

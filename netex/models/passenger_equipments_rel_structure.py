@@ -1,6 +1,5 @@
 from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import Union
 
 from .access_vehicle_equipment import AccessVehicleEquipment
 from .access_vehicle_equipment_ref import AccessVehicleEquipmentRef
@@ -32,7 +31,25 @@ class PassengerEquipmentsRelStructure(ContainmentAggregationStructure):
         name = "passengerEquipments_RelStructure"
 
     passenger_equipment_ref_or_vehicle_equipment_ref_or_passenger_equipment: Iterable[
-        RubbishDisposalEquipmentRef | PassengerBeaconEquipmentRef | HelpPointEquipmentRef | PassengerSafetyEquipmentRef | SanitaryEquipmentRef | WheelchairVehicleRef | AccessVehicleEquipmentRef | VehicleEquipmentRef | PassengerEquipmentRef | PassengerInformationEquipment | RubbishDisposalEquipment | PassengerBeaconEquipment | HelpPointEquipment | PassengerSafetyEquipment | SanitaryEquipment | TicketValidatorEquipment | TicketingEquipment | WheelchairVehicleEquipment | AccessVehicleEquipment
+        RubbishDisposalEquipmentRef
+        | PassengerBeaconEquipmentRef
+        | HelpPointEquipmentRef
+        | PassengerSafetyEquipmentRef
+        | SanitaryEquipmentRef
+        | WheelchairVehicleRef
+        | AccessVehicleEquipmentRef
+        | VehicleEquipmentRef
+        | PassengerEquipmentRef
+        | PassengerInformationEquipment
+        | RubbishDisposalEquipment
+        | PassengerBeaconEquipment
+        | HelpPointEquipment
+        | PassengerSafetyEquipment
+        | SanitaryEquipment
+        | TicketValidatorEquipment
+        | TicketingEquipment
+        | WheelchairVehicleEquipment
+        | AccessVehicleEquipment
     ] = field(
         default_factory=list,
         metadata={

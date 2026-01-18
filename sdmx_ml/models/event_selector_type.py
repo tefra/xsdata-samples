@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Union
 
 from sdmx_ml.models.data_registration_events_type import (
     DataRegistrationEventsType,
@@ -25,7 +24,9 @@ class EventSelectorType:
     """
 
     structural_repository_events_or_data_registration_events_or_metadata_registration_events: tuple[
-        StructuralRepositoryEventsType | DataRegistrationEventsType | MetadataRegistrationEventsType,
+        StructuralRepositoryEventsType
+        | DataRegistrationEventsType
+        | MetadataRegistrationEventsType,
         ...,
     ] = field(
         default_factory=tuple,

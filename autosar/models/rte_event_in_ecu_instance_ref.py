@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .ref import Ref
 from .root_sw_composition_prototype_subtypes_enum import (
@@ -36,7 +35,9 @@ class RteEventInEcuInstanceRef:
     class Meta:
         name = "RTE-EVENT-IN-ECU-INSTANCE-REF"
 
-    context_root_composition_ref: RteEventInEcuInstanceRef.ContextRootCompositionRef | None = field(
+    context_root_composition_ref: (
+        RteEventInEcuInstanceRef.ContextRootCompositionRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "CONTEXT-ROOT-COMPOSITION-REF",
@@ -44,7 +45,9 @@ class RteEventInEcuInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    context_atomic_component_ref: RteEventInEcuInstanceRef.ContextAtomicComponentRef | None = field(
+    context_atomic_component_ref: (
+        RteEventInEcuInstanceRef.ContextAtomicComponentRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "CONTEXT-ATOMIC-COMPONENT-REF",
@@ -52,13 +55,15 @@ class RteEventInEcuInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    target_rte_event_ref: RteEventInEcuInstanceRef.TargetRteEventRef | None = field(
-        default=None,
-        metadata={
-            "name": "TARGET-RTE-EVENT-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    target_rte_event_ref: RteEventInEcuInstanceRef.TargetRteEventRef | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "TARGET-RTE-EVENT-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     s: str | None = field(
         default=None,

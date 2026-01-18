@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .multilanguage_long_name import MultilanguageLongName
 from .numerical_or_text import NumericalOrText

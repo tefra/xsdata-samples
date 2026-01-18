@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -104,7 +103,9 @@ class ApplicationPartitionToEcuPartitionMapping:
             "required": True,
         },
     )
-    short_name_fragments: ApplicationPartitionToEcuPartitionMapping.ShortNameFragments | None = field(
+    short_name_fragments: (
+        ApplicationPartitionToEcuPartitionMapping.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -152,7 +153,9 @@ class ApplicationPartitionToEcuPartitionMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: ApplicationPartitionToEcuPartitionMapping.Annotations | None = field(
+    annotations: (
+        ApplicationPartitionToEcuPartitionMapping.Annotations | None
+    ) = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -160,7 +163,10 @@ class ApplicationPartitionToEcuPartitionMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    application_partition_refs: ApplicationPartitionToEcuPartitionMapping.ApplicationPartitionRefs | None = field(
+    application_partition_refs: (
+        ApplicationPartitionToEcuPartitionMapping.ApplicationPartitionRefs
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "APPLICATION-PARTITION-REFS",
@@ -168,7 +174,9 @@ class ApplicationPartitionToEcuPartitionMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ecu_partition_ref: ApplicationPartitionToEcuPartitionMapping.EcuPartitionRef | None = field(
+    ecu_partition_ref: (
+        ApplicationPartitionToEcuPartitionMapping.EcuPartitionRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "ECU-PARTITION-REF",

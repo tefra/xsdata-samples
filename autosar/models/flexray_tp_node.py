@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -232,15 +231,13 @@ class FlexrayTpNode:
 
     @dataclass
     class ConnectorRefs:
-        connector_ref: list[FlexrayTpNode.ConnectorRefs.ConnectorRef] = (
-            field(
-                default_factory=list,
-                metadata={
-                    "name": "CONNECTOR-REF",
-                    "type": "Element",
-                    "namespace": "http://autosar.org/schema/r4.0",
-                },
-            )
+        connector_ref: list[FlexrayTpNode.ConnectorRefs.ConnectorRef] = field(
+            default_factory=list,
+            metadata={
+                "name": "CONNECTOR-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
         )
 
         @dataclass

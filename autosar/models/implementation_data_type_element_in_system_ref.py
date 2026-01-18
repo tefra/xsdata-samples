@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .autosar_data_prototype_subtypes_enum import (
     AutosarDataPrototypeSubtypesEnum,
@@ -78,17 +77,17 @@ class ImplementationDataTypeElementInSystemRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    base_ref: ImplementationDataTypeElementInSystemRef.BaseRef | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "BASE-REF",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    base_ref: ImplementationDataTypeElementInSystemRef.BaseRef | None = field(
+        default=None,
+        metadata={
+            "name": "BASE-REF",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
-    context_swc_prototype_refs: ImplementationDataTypeElementInSystemRef.ContextSwcPrototypeRefs | None = field(
+    context_swc_prototype_refs: (
+        ImplementationDataTypeElementInSystemRef.ContextSwcPrototypeRefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "CONTEXT-SWC-PROTOTYPE-REFS",
@@ -96,7 +95,9 @@ class ImplementationDataTypeElementInSystemRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    context_port_prototype_ref: ImplementationDataTypeElementInSystemRef.ContextPortPrototypeRef | None = field(
+    context_port_prototype_ref: (
+        ImplementationDataTypeElementInSystemRef.ContextPortPrototypeRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "CONTEXT-PORT-PROTOTYPE-REF",
@@ -104,7 +105,9 @@ class ImplementationDataTypeElementInSystemRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    root_data_prototype_ref: ImplementationDataTypeElementInSystemRef.RootDataPrototypeRef | None = field(
+    root_data_prototype_ref: (
+        ImplementationDataTypeElementInSystemRef.RootDataPrototypeRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "ROOT-DATA-PROTOTYPE-REF",
@@ -112,7 +115,10 @@ class ImplementationDataTypeElementInSystemRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    context_implementation_data_element_refs: ImplementationDataTypeElementInSystemRef.ContextImplementationDataElementRefs | None = field(
+    context_implementation_data_element_refs: (
+        ImplementationDataTypeElementInSystemRef.ContextImplementationDataElementRefs
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "CONTEXT-IMPLEMENTATION-DATA-ELEMENT-REFS",
@@ -120,7 +126,10 @@ class ImplementationDataTypeElementInSystemRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    target_implementation_data_type_element_ref: ImplementationDataTypeElementInSystemRef.TargetImplementationDataTypeElementRef | None = field(
+    target_implementation_data_type_element_ref: (
+        ImplementationDataTypeElementInSystemRef.TargetImplementationDataTypeElementRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "TARGET-IMPLEMENTATION-DATA-TYPE-ELEMENT-REF",

@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -102,7 +101,10 @@ class SecurityEventReportToSecurityEventDefinitionMapping:
             "required": True,
         },
     )
-    short_name_fragments: SecurityEventReportToSecurityEventDefinitionMapping.ShortNameFragments | None = field(
+    short_name_fragments: (
+        SecurityEventReportToSecurityEventDefinitionMapping.ShortNameFragments
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -150,7 +152,9 @@ class SecurityEventReportToSecurityEventDefinitionMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: SecurityEventReportToSecurityEventDefinitionMapping.Annotations | None = field(
+    annotations: (
+        SecurityEventReportToSecurityEventDefinitionMapping.Annotations | None
+    ) = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -166,17 +170,18 @@ class SecurityEventReportToSecurityEventDefinitionMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    reported_security_event_iref: RPortInCompositionInstanceRef | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "REPORTED-SECURITY-EVENT-IREF",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    reported_security_event_iref: RPortInCompositionInstanceRef | None = field(
+        default=None,
+        metadata={
+            "name": "REPORTED-SECURITY-EVENT-IREF",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
-    security_event_definition_ref: SecurityEventReportToSecurityEventDefinitionMapping.SecurityEventDefinitionRef | None = field(
+    security_event_definition_ref: (
+        SecurityEventReportToSecurityEventDefinitionMapping.SecurityEventDefinitionRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "SECURITY-EVENT-DEFINITION-REF",

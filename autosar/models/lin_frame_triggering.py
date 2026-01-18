@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -113,15 +112,13 @@ class LinFrameTriggering:
             "required": True,
         },
     )
-    short_name_fragments: LinFrameTriggering.ShortNameFragments | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "SHORT-NAME-FRAGMENTS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    short_name_fragments: LinFrameTriggering.ShortNameFragments | None = field(
+        default=None,
+        metadata={
+            "name": "SHORT-NAME-FRAGMENTS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     long_name: MultilanguageLongName | None = field(
         default=None,
@@ -266,15 +263,15 @@ class LinFrameTriggering:
 
     @dataclass
     class FramePortRefs:
-        frame_port_ref: list[
-            LinFrameTriggering.FramePortRefs.FramePortRef
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "FRAME-PORT-REF",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        frame_port_ref: list[LinFrameTriggering.FramePortRefs.FramePortRef] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "FRAME-PORT-REF",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )
 
         @dataclass

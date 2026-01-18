@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import ForwardRef, Optional, Union
+from typing import ForwardRef
 
 from xsdata.models.datatype import XmlDate, XmlDateTime, XmlPeriod
 
@@ -52,7 +52,11 @@ class MetadataSetType(MetadataSetBaseType):
         quarterly basis).
     """
 
-    metadata_provision_agreement_or_metadataflow: MetadataSetType.MetadataProvisionAgreement | MetadataSetType.Metadataflow | None = field(
+    metadata_provision_agreement_or_metadataflow: (
+        MetadataSetType.MetadataProvisionAgreement
+        | MetadataSetType.Metadataflow
+        | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -95,23 +99,19 @@ class MetadataSetType(MetadataSetBaseType):
             "type": "Attribute",
         },
     )
-    reporting_begin_date: XmlPeriod | XmlDate | XmlDateTime | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "reportingBeginDate",
-                "type": "Attribute",
-            },
-        )
+    reporting_begin_date: XmlPeriod | XmlDate | XmlDateTime | None = field(
+        default=None,
+        metadata={
+            "name": "reportingBeginDate",
+            "type": "Attribute",
+        },
     )
-    reporting_end_date: XmlPeriod | XmlDate | XmlDateTime | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "reportingEndDate",
-                "type": "Attribute",
-            },
-        )
+    reporting_end_date: XmlPeriod | XmlDate | XmlDateTime | None = field(
+        default=None,
+        metadata={
+            "name": "reportingEndDate",
+            "type": "Attribute",
+        },
     )
     publication_year: XmlPeriod | None = field(
         default=None,

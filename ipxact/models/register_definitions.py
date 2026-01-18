@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from ipxact.models.access_policies import AccessPolicies
 from ipxact.models.description import Description
@@ -23,15 +22,13 @@ class RegisterDefinitions:
         name = "registerDefinitions"
         namespace = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
-    register_definition: list[RegisterDefinitions.RegisterDefinition] = (
-        field(
-            default_factory=list,
-            metadata={
-                "name": "registerDefinition",
-                "type": "Element",
-                "min_occurs": 1,
-            },
-        )
+    register_definition: list[RegisterDefinitions.RegisterDefinition] = field(
+        default_factory=list,
+        metadata={
+            "name": "registerDefinition",
+            "type": "Element",
+            "min_occurs": 1,
+        },
     )
 
     @dataclass

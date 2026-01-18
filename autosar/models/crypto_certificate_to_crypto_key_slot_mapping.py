@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .crypto_certificate_subtypes_enum import CryptoCertificateSubtypesEnum
 from .crypto_key_slot_subtypes_enum import CryptoKeySlotSubtypesEnum
@@ -35,7 +34,9 @@ class CryptoCertificateToCryptoKeySlotMapping:
     class Meta:
         name = "CRYPTO-CERTIFICATE-TO-CRYPTO-KEY-SLOT-MAPPING"
 
-    crypto_certificate_ref: CryptoCertificateToCryptoKeySlotMapping.CryptoCertificateRef | None = field(
+    crypto_certificate_ref: (
+        CryptoCertificateToCryptoKeySlotMapping.CryptoCertificateRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "CRYPTO-CERTIFICATE-REF",
@@ -43,7 +44,9 @@ class CryptoCertificateToCryptoKeySlotMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    crypto_key_slot_refs: CryptoCertificateToCryptoKeySlotMapping.CryptoKeySlotRefs | None = field(
+    crypto_key_slot_refs: (
+        CryptoCertificateToCryptoKeySlotMapping.CryptoKeySlotRefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "CRYPTO-KEY-SLOT-REFS",

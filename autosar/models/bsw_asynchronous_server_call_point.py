@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import VariationPoint
 from .bsw_distinguished_partition_subtypes_enum import (
@@ -57,7 +56,9 @@ class BswAsynchronousServerCallPoint:
             "required": True,
         },
     )
-    short_name_fragments: BswAsynchronousServerCallPoint.ShortNameFragments | None = field(
+    short_name_fragments: (
+        BswAsynchronousServerCallPoint.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -65,7 +66,9 @@ class BswAsynchronousServerCallPoint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    context_limitation_refs: BswAsynchronousServerCallPoint.ContextLimitationRefs | None = field(
+    context_limitation_refs: (
+        BswAsynchronousServerCallPoint.ContextLimitationRefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "CONTEXT-LIMITATION-REFS",
@@ -81,13 +84,15 @@ class BswAsynchronousServerCallPoint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    called_entry_ref: BswAsynchronousServerCallPoint.CalledEntryRef | None = field(
-        default=None,
-        metadata={
-            "name": "CALLED-ENTRY-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    called_entry_ref: BswAsynchronousServerCallPoint.CalledEntryRef | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "CALLED-ENTRY-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     s: str | None = field(
         default=None,

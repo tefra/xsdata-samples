@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .bsw_implementation_subtypes_enum import BswImplementationSubtypesEnum
 from .mode_declaration_group_prototype_subtypes_enum import (
@@ -41,7 +40,9 @@ class ModeInBswInstanceRef:
     class Meta:
         name = "MODE-IN-BSW-INSTANCE-REF"
 
-    context_bsw_implementation_ref: ModeInBswInstanceRef.ContextBswImplementationRef | None = field(
+    context_bsw_implementation_ref: (
+        ModeInBswInstanceRef.ContextBswImplementationRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "CONTEXT-BSW-IMPLEMENTATION-REF",
@@ -49,7 +50,9 @@ class ModeInBswInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    context_mode_declaration_group_prototype_ref: ModeInBswInstanceRef.ContextModeDeclarationGroupPrototypeRef | None = field(
+    context_mode_declaration_group_prototype_ref: (
+        ModeInBswInstanceRef.ContextModeDeclarationGroupPrototypeRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF",
@@ -57,7 +60,9 @@ class ModeInBswInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    target_mode_declaration_ref: ModeInBswInstanceRef.TargetModeDeclarationRef | None = field(
+    target_mode_declaration_ref: (
+        ModeInBswInstanceRef.TargetModeDeclarationRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "TARGET-MODE-DECLARATION-REF",

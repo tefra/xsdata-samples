@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from .railway_link_ref import RailwayLinkRef
 from .railway_point_ref import RailwayPointRef
@@ -23,7 +22,9 @@ class VehicleStoppingPlaceVersionStructure(StopPlaceSpaceVersionStructure):
     class Meta:
         name = "VehicleStoppingPlace_VersionStructure"
 
-    infrastructure_link_ref: WireLinkRef | RoadLinkRef | RailwayLinkRef | None = field(
+    infrastructure_link_ref: (
+        WireLinkRef | RoadLinkRef | RailwayLinkRef | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -46,7 +47,9 @@ class VehicleStoppingPlaceVersionStructure(StopPlaceSpaceVersionStructure):
             ),
         },
     )
-    infrastructure_point_ref: WirePointRef | RoadPointRef | RailwayPointRef | None = field(
+    infrastructure_point_ref: (
+        WirePointRef | RoadPointRef | RailwayPointRef | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -69,13 +72,15 @@ class VehicleStoppingPlaceVersionStructure(StopPlaceSpaceVersionStructure):
             ),
         },
     )
-    vehicle_stopping_positions: VehicleStoppingPositionsRelStructure | None = field(
-        default=None,
-        metadata={
-            "name": "vehicleStoppingPositions",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        },
+    vehicle_stopping_positions: VehicleStoppingPositionsRelStructure | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "vehicleStoppingPositions",
+                "type": "Element",
+                "namespace": "http://www.netex.org.uk/netex",
+            },
+        )
     )
     quay_alignments: VehicleQuayAlignmentsRelStructure | None = field(
         default=None,

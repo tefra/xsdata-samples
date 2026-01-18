@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import VariationPoint
 from .application_endpoint_ref_conditional import (
@@ -102,21 +101,25 @@ class EventHandler:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    application_endpoint_ref: EventHandler.ApplicationEndpointRef | None = field(
-        default=None,
-        metadata={
-            "name": "APPLICATION-ENDPOINT-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    application_endpoint_ref: EventHandler.ApplicationEndpointRef | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "APPLICATION-ENDPOINT-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
-    consumed_event_group_refs: EventHandler.ConsumedEventGroupRefs | None = field(
-        default=None,
-        metadata={
-            "name": "CONSUMED-EVENT-GROUP-REFS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    consumed_event_group_refs: EventHandler.ConsumedEventGroupRefs | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "CONSUMED-EVENT-GROUP-REFS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     event_group_identifier: PositiveInteger | None = field(
         default=None,
@@ -126,13 +129,15 @@ class EventHandler:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    event_multicast_addresss: EventHandler.EventMulticastAddresss | None = field(
-        default=None,
-        metadata={
-            "name": "EVENT-MULTICAST-ADDRESSS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    event_multicast_addresss: EventHandler.EventMulticastAddresss | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "EVENT-MULTICAST-ADDRESSS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     multicast_threshold: PositiveInteger | None = field(
         default=None,
@@ -142,7 +147,9 @@ class EventHandler:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    pdu_activation_routing_groups: EventHandler.PduActivationRoutingGroups | None = field(
+    pdu_activation_routing_groups: (
+        EventHandler.PduActivationRoutingGroups | None
+    ) = field(
         default=None,
         metadata={
             "name": "PDU-ACTIVATION-ROUTING-GROUPS",
@@ -166,7 +173,9 @@ class EventHandler:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sd_server_eg_timing_configs: EventHandler.SdServerEgTimingConfigs | None = field(
+    sd_server_eg_timing_configs: (
+        EventHandler.SdServerEgTimingConfigs | None
+    ) = field(
         default=None,
         metadata={
             "name": "SD-SERVER-EG-TIMING-CONFIGS",

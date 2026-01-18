@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -164,13 +163,15 @@ class ConsumedServiceInstance:
             "required": True,
         },
     )
-    short_name_fragments: ConsumedServiceInstance.ShortNameFragments | None = field(
-        default=None,
-        metadata={
-            "name": "SHORT-NAME-FRAGMENTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    short_name_fragments: ConsumedServiceInstance.ShortNameFragments | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "SHORT-NAME-FRAGMENTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     long_name: MultilanguageLongName | None = field(
         default=None,
@@ -220,13 +221,15 @@ class ConsumedServiceInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    capability_records: ConsumedServiceInstance.CapabilityRecords | None = field(
-        default=None,
-        metadata={
-            "name": "CAPABILITY-RECORDS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    capability_records: ConsumedServiceInstance.CapabilityRecords | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "CAPABILITY-RECORDS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     major_version: PositiveInteger | None = field(
         default=None,
@@ -236,7 +239,9 @@ class ConsumedServiceInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    method_activation_routing_groups: ConsumedServiceInstance.MethodActivationRoutingGroups | None = field(
+    method_activation_routing_groups: (
+        ConsumedServiceInstance.MethodActivationRoutingGroups | None
+    ) = field(
         default=None,
         metadata={
             "name": "METHOD-ACTIVATION-ROUTING-GROUPS",
@@ -244,13 +249,15 @@ class ConsumedServiceInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    routing_group_refs: ConsumedServiceInstance.RoutingGroupRefs | None = field(
-        default=None,
-        metadata={
-            "name": "ROUTING-GROUP-REFS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    routing_group_refs: ConsumedServiceInstance.RoutingGroupRefs | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "ROUTING-GROUP-REFS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     variation_point: VariationPoint | None = field(
         default=None,
@@ -268,7 +275,9 @@ class ConsumedServiceInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    blacklisted_versions: ConsumedServiceInstance.BlacklistedVersions | None = field(
+    blacklisted_versions: (
+        ConsumedServiceInstance.BlacklistedVersions | None
+    ) = field(
         default=None,
         metadata={
             "name": "BLACKLISTED-VERSIONS",
@@ -276,7 +285,9 @@ class ConsumedServiceInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    consumed_event_groups: ConsumedServiceInstance.ConsumedEventGroups | None = field(
+    consumed_event_groups: (
+        ConsumedServiceInstance.ConsumedEventGroups | None
+    ) = field(
         default=None,
         metadata={
             "name": "CONSUMED-EVENT-GROUPS",
@@ -292,7 +303,9 @@ class ConsumedServiceInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    local_unicast_addresss: ConsumedServiceInstance.LocalUnicastAddresss | None = field(
+    local_unicast_addresss: (
+        ConsumedServiceInstance.LocalUnicastAddresss | None
+    ) = field(
         default=None,
         metadata={
             "name": "LOCAL-UNICAST-ADDRESSS",
@@ -308,7 +321,9 @@ class ConsumedServiceInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    provided_service_instance_ref: ConsumedServiceInstance.ProvidedServiceInstanceRef | None = field(
+    provided_service_instance_ref: (
+        ConsumedServiceInstance.ProvidedServiceInstanceRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "PROVIDED-SERVICE-INSTANCE-REF",
@@ -316,7 +331,9 @@ class ConsumedServiceInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    remote_unicast_addresss: ConsumedServiceInstance.RemoteUnicastAddresss | None = field(
+    remote_unicast_addresss: (
+        ConsumedServiceInstance.RemoteUnicastAddresss | None
+    ) = field(
         default=None,
         metadata={
             "name": "REMOTE-UNICAST-ADDRESSS",
@@ -332,7 +349,9 @@ class ConsumedServiceInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sd_client_timer_configs: ConsumedServiceInstance.SdClientTimerConfigs | None = field(
+    sd_client_timer_configs: (
+        ConsumedServiceInstance.SdClientTimerConfigs | None
+    ) = field(
         default=None,
         metadata={
             "name": "SD-CLIENT-TIMER-CONFIGS",
@@ -348,13 +367,15 @@ class ConsumedServiceInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    version_driven_find_behavior: ServiceVersionAcceptanceKindEnum | None = field(
-        default=None,
-        metadata={
-            "name": "VERSION-DRIVEN-FIND-BEHAVIOR",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    version_driven_find_behavior: ServiceVersionAcceptanceKindEnum | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "VERSION-DRIVEN-FIND-BEHAVIOR",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     s: str | None = field(
         default=None,

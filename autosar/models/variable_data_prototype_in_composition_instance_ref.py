@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import VariationPoint
 from .port_prototype_subtypes_enum import PortPrototypeSubtypesEnum
@@ -55,7 +54,10 @@ class VariableDataPrototypeInCompositionInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    context_port_prototype_ref: VariableDataPrototypeInCompositionInstanceRef.ContextPortPrototypeRef | None = field(
+    context_port_prototype_ref: (
+        VariableDataPrototypeInCompositionInstanceRef.ContextPortPrototypeRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "CONTEXT-PORT-PROTOTYPE-REF",
@@ -63,7 +65,10 @@ class VariableDataPrototypeInCompositionInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    target_variable_data_prototype_ref: VariableDataPrototypeInCompositionInstanceRef.TargetVariableDataPrototypeRef | None = field(
+    target_variable_data_prototype_ref: (
+        VariableDataPrototypeInCompositionInstanceRef.TargetVariableDataPrototypeRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "TARGET-VARIABLE-DATA-PROTOTYPE-REF",

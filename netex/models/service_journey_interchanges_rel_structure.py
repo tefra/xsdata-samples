@@ -1,6 +1,5 @@
 from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import Union
 
 from .service_journey_interchange import ServiceJourneyInterchange
 from .service_journey_interchange_ref import ServiceJourneyInterchangeRef
@@ -20,7 +19,9 @@ class ServiceJourneyInterchangesRelStructure(
         name = "serviceJourneyInterchanges_RelStructure"
 
     service_journey_interchange_ref_or_service_journey_interchange_or_service_journey_interchange_view: Iterable[
-        ServiceJourneyInterchangeRef | ServiceJourneyInterchange | ServiceJourneyInterchangeView
+        ServiceJourneyInterchangeRef
+        | ServiceJourneyInterchange
+        | ServiceJourneyInterchangeView
     ] = field(
         default_factory=list,
         metadata={

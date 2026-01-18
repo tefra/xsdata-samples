@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from xcbl.models.availability_to_promise_response import (
     AvailabilityShipToParty,
@@ -315,7 +314,9 @@ class AvailabilityCheckRequestHeader:
             "required": True,
         }
     )
-    availability_check_request_language: AvailabilityCheckRequestLanguage | None = field(
+    availability_check_request_language: (
+        AvailabilityCheckRequestLanguage | None
+    ) = field(
         default=None,
         metadata={
             "name": "AvailabilityCheckRequestLanguage",
@@ -399,14 +400,18 @@ class AvailabilityCheckRequest:
             "required": True,
         }
     )
-    availability_check_request_detail: AvailabilityCheckRequestDetail | None = field(
+    availability_check_request_detail: (
+        AvailabilityCheckRequestDetail | None
+    ) = field(
         default=None,
         metadata={
             "name": "AvailabilityCheckRequestDetail",
             "type": "Element",
         },
     )
-    availability_check_request_summary: AvailabilityCheckRequestSummary | None = field(
+    availability_check_request_summary: (
+        AvailabilityCheckRequestSummary | None
+    ) = field(
         default=None,
         metadata={
             "name": "AvailabilityCheckRequestSummary",

@@ -1,6 +1,5 @@
 from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import Union
 
 from .additional_driver_option_ref import AdditionalDriverOptionRef
 from .amount_of_price_unit_product_ref import AmountOfPriceUnitProductRef
@@ -87,7 +86,72 @@ class PriceableObjectRefsRelStructure(OneToManyRelationshipStructure):
         name = "priceableObjectRefs_RelStructure"
 
     choice: Iterable[
-        CustomerPurchasePackageElementRef | CustomerPurchasePackageRef | ControllableElementRef | ValidableElementRef | AdditionalDriverOptionRef | RentalOptionRef | RentalPenaltyPolicyRef | SalesOfferPackageEntitlementGivenRef | SalesOfferPackageEntitlementRequiredRef | MinimumStayRef | InterchangingRef | FrequencyOfUseRef | SuspendingRef | UsageValidityPeriodRef | StepLimitRef | RoutingRef | RoundTripRef | LuggageAllowanceRef | EntitlementGivenRef | EntitlementRequiredRef | EligibilityChangePolicyRef | GroupTicketRef | CommercialProfileRef | VehiclePoolerProfileRef | CompanionProfileRef | UserProfileRef | ProfileParameterRef | SubscribingRef | PenaltyPolicyRef | ChargingPolicyRef | TransferabilityRef | ReplacingRef | RefundingRef | ExchangingRef | ResellingRef | CancellingRef | ReservingRef | BookingPolicyRef | PurchaseWindowRef | SeriesConstraintRef | SalesOfferPackageElementRef | SalesOfferPackageRef | DistanceMatrixElementInverseRef | DistanceMatrixElementRef | FareStructureElementRef | FulfilmentMethodRef | CappingRuleRef | EntitlementProductRef | SupplementProductRef | PreassignedFareProductRef | AmountOfPriceUnitProductRef | UsageDiscountRightRef | ThirdPartyProductRef | CappedDiscountRightRef | SaleDiscountRightRef | FareProductRef | ServiceAccessRightRef | TimeIntervalRef | GeographicalIntervalRef | ParkingChargeBandRef | TimeStructureFactorRef | FareQuotaFactorRef | FareDemandFactorRef | QualityStructureFactorRef | GeographicalStructureFactorRef | PriceableObjectRef
+        CustomerPurchasePackageElementRef
+        | CustomerPurchasePackageRef
+        | ControllableElementRef
+        | ValidableElementRef
+        | AdditionalDriverOptionRef
+        | RentalOptionRef
+        | RentalPenaltyPolicyRef
+        | SalesOfferPackageEntitlementGivenRef
+        | SalesOfferPackageEntitlementRequiredRef
+        | MinimumStayRef
+        | InterchangingRef
+        | FrequencyOfUseRef
+        | SuspendingRef
+        | UsageValidityPeriodRef
+        | StepLimitRef
+        | RoutingRef
+        | RoundTripRef
+        | LuggageAllowanceRef
+        | EntitlementGivenRef
+        | EntitlementRequiredRef
+        | EligibilityChangePolicyRef
+        | GroupTicketRef
+        | CommercialProfileRef
+        | VehiclePoolerProfileRef
+        | CompanionProfileRef
+        | UserProfileRef
+        | ProfileParameterRef
+        | SubscribingRef
+        | PenaltyPolicyRef
+        | ChargingPolicyRef
+        | TransferabilityRef
+        | ReplacingRef
+        | RefundingRef
+        | ExchangingRef
+        | ResellingRef
+        | CancellingRef
+        | ReservingRef
+        | BookingPolicyRef
+        | PurchaseWindowRef
+        | SeriesConstraintRef
+        | SalesOfferPackageElementRef
+        | SalesOfferPackageRef
+        | DistanceMatrixElementInverseRef
+        | DistanceMatrixElementRef
+        | FareStructureElementRef
+        | FulfilmentMethodRef
+        | CappingRuleRef
+        | EntitlementProductRef
+        | SupplementProductRef
+        | PreassignedFareProductRef
+        | AmountOfPriceUnitProductRef
+        | UsageDiscountRightRef
+        | ThirdPartyProductRef
+        | CappedDiscountRightRef
+        | SaleDiscountRightRef
+        | FareProductRef
+        | ServiceAccessRightRef
+        | TimeIntervalRef
+        | GeographicalIntervalRef
+        | ParkingChargeBandRef
+        | TimeStructureFactorRef
+        | FareQuotaFactorRef
+        | FareDemandFactorRef
+        | QualityStructureFactorRef
+        | GeographicalStructureFactorRef
+        | PriceableObjectRef
     ] = field(
         default_factory=list,
         metadata={

@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.code_type import (
     CodeType,
@@ -38,15 +37,13 @@ class StructureType(RiskElementType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
         },
     )
-    automatic_fire_detection_coverage_percentage: PercentType | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "AutomaticFireDetectionCoveragePercentage",
-                "type": "Element",
-                "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
-            },
-        )
+    automatic_fire_detection_coverage_percentage: PercentType | None = field(
+        default=None,
+        metadata={
+            "name": "AutomaticFireDetectionCoveragePercentage",
+            "type": "Element",
+            "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
+        },
     )
     automatic_sprinkler_coverage_percentage: PercentType | None = field(
         default=None,

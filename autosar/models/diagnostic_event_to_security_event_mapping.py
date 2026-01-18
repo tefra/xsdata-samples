@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -102,7 +101,9 @@ class DiagnosticEventToSecurityEventMapping:
             "required": True,
         },
     )
-    short_name_fragments: DiagnosticEventToSecurityEventMapping.ShortNameFragments | None = field(
+    short_name_fragments: (
+        DiagnosticEventToSecurityEventMapping.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -150,13 +151,15 @@ class DiagnosticEventToSecurityEventMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: DiagnosticEventToSecurityEventMapping.Annotations | None = field(
-        default=None,
-        metadata={
-            "name": "ANNOTATIONS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    annotations: DiagnosticEventToSecurityEventMapping.Annotations | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "ANNOTATIONS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     variation_point: VariationPoint | None = field(
         default=None,
@@ -166,7 +169,9 @@ class DiagnosticEventToSecurityEventMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    diagnostic_event_ref: DiagnosticEventToSecurityEventMapping.DiagnosticEventRef | None = field(
+    diagnostic_event_ref: (
+        DiagnosticEventToSecurityEventMapping.DiagnosticEventRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "DIAGNOSTIC-EVENT-REF",
@@ -174,7 +179,9 @@ class DiagnosticEventToSecurityEventMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    security_event_props_ref: DiagnosticEventToSecurityEventMapping.SecurityEventPropsRef | None = field(
+    security_event_props_ref: (
+        DiagnosticEventToSecurityEventMapping.SecurityEventPropsRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "SECURITY-EVENT-PROPS-REF",

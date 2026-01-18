@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .stop_place import StopPlace
@@ -14,7 +13,9 @@ class StopPlacesRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "stopPlaces_RelStructure"
 
-    taxi_rank_ref_or_stop_place_ref_or_stop_place: TaxiRankRef | StopPlaceRef | StopPlace | None = field(
+    taxi_rank_ref_or_stop_place_ref_or_stop_place: (
+        TaxiRankRef | StopPlaceRef | StopPlace | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",

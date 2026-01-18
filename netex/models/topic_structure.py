@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .codespace_ref import CodespaceRef
 from .data_sources_rel_structure import DataSourcesRelStructure

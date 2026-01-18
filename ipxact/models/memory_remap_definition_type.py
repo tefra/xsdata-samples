@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from ipxact.models.address_block_type import AddressBlockType
 from ipxact.models.banked_definition_bank_type import BankedDefinitionBankType
@@ -77,7 +76,9 @@ class MemoryRemapDefinitionType:
             "min_occurs": 1,
         },
     )
-    remap_definition_ref: MemoryRemapDefinitionType.RemapDefinitionRef | None = field(
+    remap_definition_ref: (
+        MemoryRemapDefinitionType.RemapDefinitionRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "remapDefinitionRef",

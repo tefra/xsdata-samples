@@ -1,6 +1,5 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
-from typing import Optional
 
 from .access_equipment_version_structure import AccessEquipmentVersionStructure
 from .handrail_enumeration import HandrailEnumeration

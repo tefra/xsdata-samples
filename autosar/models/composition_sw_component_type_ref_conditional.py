@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import VariationPoint
 from .composition_sw_component_type_subtypes_enum import (
@@ -35,7 +34,10 @@ class CompositionSwComponentTypeRefConditional:
     class Meta:
         name = "COMPOSITION-SW-COMPONENT-TYPE-REF-CONDITIONAL"
 
-    composition_sw_component_type_ref: CompositionSwComponentTypeRefConditional.CompositionSwComponentTypeRef | None = field(
+    composition_sw_component_type_ref: (
+        CompositionSwComponentTypeRefConditional.CompositionSwComponentTypeRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "COMPOSITION-SW-COMPONENT-TYPE-REF",

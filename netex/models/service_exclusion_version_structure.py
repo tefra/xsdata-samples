@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .assignment_version_structure_1 import AssignmentVersionStructure1
 from .journey_pattern_ref_structure import JourneyPatternRefStructure
@@ -14,15 +13,13 @@ class ServiceExclusionVersionStructure(AssignmentVersionStructure1):
     class Meta:
         name = "ServiceExclusion_VersionStructure"
 
-    excluding_journey_pattern_ref: JourneyPatternRefStructure | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "ExcludingJourneyPatternRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            },
-        )
+    excluding_journey_pattern_ref: JourneyPatternRefStructure | None = field(
+        default=None,
+        metadata={
+            "name": "ExcludingJourneyPatternRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        },
     )
     start_point_ref: ScheduledStopPointRefStructure | None = field(
         default=None,

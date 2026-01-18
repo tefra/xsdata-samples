@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from .assistance_availability_enumeration import (
     AssistanceAvailabilityEnumeration,
@@ -29,15 +28,13 @@ class AssistanceBookingServiceVersionStructure(LocalServiceVersionStructure):
     class Meta:
         name = "AssistanceBookingService_VersionStructure"
 
-    assistance_availability: AssistanceAvailabilityEnumeration | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "AssistanceAvailability",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            },
-        )
+    assistance_availability: AssistanceAvailabilityEnumeration | None = field(
+        default=None,
+        metadata={
+            "name": "AssistanceAvailability",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        },
     )
     wheelchair_booking_required: bool | None = field(
         default=None,
@@ -71,7 +68,15 @@ class AssistanceBookingServiceVersionStructure(LocalServiceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    mode_of_operation_ref_or_alternative_mode_of_operation_ref_or_conventional_mode_of_operation_ref: PersonalModeOfOperationRef | VehiclePoolingRef | VehicleSharingRef | VehicleRentalRef | FlexibleModeOfOperationRef | ScheduledModeOfOperationRef | None = field(
+    mode_of_operation_ref_or_alternative_mode_of_operation_ref_or_conventional_mode_of_operation_ref: (
+        PersonalModeOfOperationRef
+        | VehiclePoolingRef
+        | VehicleSharingRef
+        | VehicleRentalRef
+        | FlexibleModeOfOperationRef
+        | ScheduledModeOfOperationRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -109,25 +114,23 @@ class AssistanceBookingServiceVersionStructure(LocalServiceVersionStructure):
             ),
         },
     )
-    transport_organisation_ref: AuthorityRef | OperatorRef | None = (
-        field(
-            default=None,
-            metadata={
-                "type": "Elements",
-                "choices": (
-                    {
-                        "name": "AuthorityRef",
-                        "type": AuthorityRef,
-                        "namespace": "http://www.netex.org.uk/netex",
-                    },
-                    {
-                        "name": "OperatorRef",
-                        "type": OperatorRef,
-                        "namespace": "http://www.netex.org.uk/netex",
-                    },
-                ),
-            },
-        )
+    transport_organisation_ref: AuthorityRef | OperatorRef | None = field(
+        default=None,
+        metadata={
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "AuthorityRef",
+                    "type": AuthorityRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "OperatorRef",
+                    "type": OperatorRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+        },
     )
     line_ref: FlexibleLineRef | LineRef | None = field(
         default=None,

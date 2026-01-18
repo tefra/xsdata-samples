@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .tax_category_enumeration import TaxCategoryEnumeration
 from .type_of_value_version_structure import TypeOfValueVersionStructure

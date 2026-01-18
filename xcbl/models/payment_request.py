@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from xcbl.models.payment_request_acknowledgment import (
     FinancialInstitutionDetail,
@@ -543,14 +542,12 @@ class FinancialChargesAllocation:
             "required": True,
         }
     )
-    charge_regulation_coded_other: ChargeRegulationCodedOther | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "ChargeRegulationCodedOther",
-                "type": "Element",
-            },
-        )
+    charge_regulation_coded_other: ChargeRegulationCodedOther | None = field(
+        default=None,
+        metadata={
+            "name": "ChargeRegulationCodedOther",
+            "type": "Element",
+        },
     )
     fee_amount: FeeAmount | None = field(
         default=None,
@@ -660,7 +657,9 @@ class LegalReportingInformation:
             "required": True,
         }
     )
-    legal_reporting_supplemental_code: LegalReportingSupplementalCode | None = field(
+    legal_reporting_supplemental_code: (
+        LegalReportingSupplementalCode | None
+    ) = field(
         default=None,
         metadata={
             "name": "LegalReportingSupplementalCode",
@@ -681,30 +680,28 @@ class LegalReportingInformation:
             "required": True,
         }
     )
-    legal_reporting_payment_amount: LegalReportingPaymentAmount | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "LegalReportingPaymentAmount",
-                "type": "Element",
-            },
-        )
+    legal_reporting_payment_amount: LegalReportingPaymentAmount | None = field(
+        default=None,
+        metadata={
+            "name": "LegalReportingPaymentAmount",
+            "type": "Element",
+        },
     )
-    legal_reporting_supplying_country: LegalReportingSupplyingCountry | None = field(
+    legal_reporting_supplying_country: (
+        LegalReportingSupplyingCountry | None
+    ) = field(
         default=None,
         metadata={
             "name": "LegalReportingSupplyingCountry",
             "type": "Element",
         },
     )
-    legal_reporting_payee_country: LegalReportingPayeeCountry | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "LegalReportingPayeeCountry",
-                "type": "Element",
-            },
-        )
+    legal_reporting_payee_country: LegalReportingPayeeCountry | None = field(
+        default=None,
+        metadata={
+            "name": "LegalReportingPayeeCountry",
+            "type": "Element",
+        },
     )
     legal_reporting_import_date: LegalReportingImportDate | None = field(
         default=None,
@@ -759,7 +756,9 @@ class PaymentRequestDetail:
             "type": "Element",
         },
     )
-    originating_financial_institution: OriginatingFinancialInstitution | None = field(
+    originating_financial_institution: (
+        OriginatingFinancialInstitution | None
+    ) = field(
         default=None,
         metadata={
             "name": "OriginatingFinancialInstitution",
@@ -781,12 +780,14 @@ class PaymentRequestDetail:
             "type": "Element",
         },
     )
-    receiving_financial_institution: ReceivingFinancialInstitution | None = field(
-        default=None,
-        metadata={
-            "name": "ReceivingFinancialInstitution",
-            "type": "Element",
-        },
+    receiving_financial_institution: ReceivingFinancialInstitution | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "ReceivingFinancialInstitution",
+                "type": "Element",
+            },
+        )
     )
     card_info: CardInfo | None = field(
         default=None,
@@ -851,12 +852,14 @@ class PaymentRequestDetail:
             "type": "Element",
         },
     )
-    international_payment_indicator: InternationalPaymentIndicator | None = field(
-        default=None,
-        metadata={
-            "name": "InternationalPaymentIndicator",
-            "type": "Element",
-        },
+    international_payment_indicator: InternationalPaymentIndicator | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "InternationalPaymentIndicator",
+                "type": "Element",
+            },
+        )
     )
     intra_company_payment_indicator: IntraCompanyPaymentIndicator | None = (
         field(
@@ -916,14 +919,12 @@ class PaymentRequestDetail:
             "type": "Element",
         },
     )
-    list_of_rate_of_exchange_detail: ListOfRateOfExchangeDetail | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "ListOfRateOfExchangeDetail",
-                "type": "Element",
-            },
-        )
+    list_of_rate_of_exchange_detail: ListOfRateOfExchangeDetail | None = field(
+        default=None,
+        metadata={
+            "name": "ListOfRateOfExchangeDetail",
+            "type": "Element",
+        },
     )
     payment_detail_attachment: PaymentDetailAttachment | None = field(
         default=None,

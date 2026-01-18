@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from ..core.datatypes import RtoPqPq
 from ..core.datatypes_base import (
@@ -104,7 +103,23 @@ class CoctMt490000Uv04ContentPackagedProduct:
             "type": "Attribute",
         },
     )
-    class_code: RoleClassMutualRelationship | RoleClassPassive | str | RoleClassOntological | RoleClassPartitive | RoleClassRootValue | XAccommodationRequestorRole | XDocumentEntrySubject | XDocumentSubject | XInformationRecipientRole | XRoleClassAccommodationRequestor | XRoleClassCoverage | XRoleClassCoverageInvoice | XRoleClassCredentialedEntity | XRoleClassPayeePolicyRelationship = field(
+    class_code: (
+        RoleClassMutualRelationship
+        | RoleClassPassive
+        | str
+        | RoleClassOntological
+        | RoleClassPartitive
+        | RoleClassRootValue
+        | XAccommodationRequestorRole
+        | XDocumentEntrySubject
+        | XDocumentSubject
+        | XInformationRecipientRole
+        | XRoleClassAccommodationRequestor
+        | XRoleClassCoverage
+        | XRoleClassCoverageInvoice
+        | XRoleClassCredentialedEntity
+        | XRoleClassPayeePolicyRelationship
+    ) = field(
         init=False,
         default=RoleClassPartitive.CONT,
         metadata={
@@ -145,7 +160,9 @@ class CoctMt490000Uv04Destination:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    service_delivery_location: CoctMt240003Uv02ServiceDeliveryLocation | None = field(
+    service_delivery_location: (
+        CoctMt240003Uv02ServiceDeliveryLocation | None
+    ) = field(
         default=None,
         metadata={
             "name": "serviceDeliveryLocation",
@@ -279,7 +296,9 @@ class CoctMt490000Uv04Location:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    service_delivery_location: CoctMt240003Uv02ServiceDeliveryLocation | None = field(
+    service_delivery_location: (
+        CoctMt240003Uv02ServiceDeliveryLocation | None
+    ) = field(
         default=None,
         metadata={
             "name": "serviceDeliveryLocation",
@@ -404,7 +423,9 @@ class CoctMt490000Uv04Origin:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    service_delivery_location: CoctMt240003Uv02ServiceDeliveryLocation | None = field(
+    service_delivery_location: (
+        CoctMt240003Uv02ServiceDeliveryLocation | None
+    ) = field(
         default=None,
         metadata={
             "name": "serviceDeliveryLocation",
@@ -622,16 +643,14 @@ class CoctMt490000Uv04HealthCareProvider:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    health_care_provider_person: CoctMt490000Uv04ProviderPerson | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "healthCareProviderPerson",
-                "type": "Element",
-                "namespace": "urn:hl7-org:v3",
-                "nillable": True,
-            },
-        )
+    health_care_provider_person: CoctMt490000Uv04ProviderPerson | None = field(
+        default=None,
+        metadata={
+            "name": "healthCareProviderPerson",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        },
     )
     null_flavor: NullFlavor | None = field(
         default=None,
@@ -640,7 +659,23 @@ class CoctMt490000Uv04HealthCareProvider:
             "type": "Attribute",
         },
     )
-    class_code: RoleClassMutualRelationship | RoleClassPassive | str | RoleClassOntological | RoleClassPartitive | RoleClassRootValue | XAccommodationRequestorRole | XDocumentEntrySubject | XDocumentSubject | XInformationRecipientRole | XRoleClassAccommodationRequestor | XRoleClassCoverage | XRoleClassCoverageInvoice | XRoleClassCredentialedEntity | XRoleClassPayeePolicyRelationship = field(
+    class_code: (
+        RoleClassMutualRelationship
+        | RoleClassPassive
+        | str
+        | RoleClassOntological
+        | RoleClassPartitive
+        | RoleClassRootValue
+        | XAccommodationRequestorRole
+        | XDocumentEntrySubject
+        | XDocumentSubject
+        | XInformationRecipientRole
+        | XRoleClassAccommodationRequestor
+        | XRoleClassCoverage
+        | XRoleClassCoverageInvoice
+        | XRoleClassCredentialedEntity
+        | XRoleClassPayeePolicyRelationship
+    ) = field(
         init=False,
         default=RoleClassMutualRelationship.PROV,
         metadata={
@@ -704,7 +739,15 @@ class CoctMt490000Uv04PertinentInformation:
             "type": "Attribute",
         },
     )
-    type_code: ActRelationshipCostTracking | ActRelationshipPosting | str | ActRelationshipHasSupport | ActRelationshipTemporallyPertains | ActRelationshipPertainsValue | None = field(
+    type_code: (
+        ActRelationshipCostTracking
+        | ActRelationshipPosting
+        | str
+        | ActRelationshipHasSupport
+        | ActRelationshipTemporallyPertains
+        | ActRelationshipPertainsValue
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "typeCode",
@@ -753,7 +796,9 @@ class CoctMt490000Uv04Warrantor:
             "required": True,
         },
     )
-    warranting_warrantor_organization: CoctMt490000Uv04WarrantorOrganization | None = field(
+    warranting_warrantor_organization: (
+        CoctMt490000Uv04WarrantorOrganization | None
+    ) = field(
         default=None,
         metadata={
             "name": "warrantingWarrantorOrganization",
@@ -769,7 +814,23 @@ class CoctMt490000Uv04Warrantor:
             "type": "Attribute",
         },
     )
-    class_code: RoleClassMutualRelationship | RoleClassPassive | str | RoleClassOntological | RoleClassPartitive | RoleClassRootValue | XAccommodationRequestorRole | XDocumentEntrySubject | XDocumentSubject | XInformationRecipientRole | XRoleClassAccommodationRequestor | XRoleClassCoverage | XRoleClassCoverageInvoice | XRoleClassCredentialedEntity | XRoleClassPayeePolicyRelationship = field(
+    class_code: (
+        RoleClassMutualRelationship
+        | RoleClassPassive
+        | str
+        | RoleClassOntological
+        | RoleClassPartitive
+        | RoleClassRootValue
+        | XAccommodationRequestorRole
+        | XDocumentEntrySubject
+        | XDocumentSubject
+        | XInformationRecipientRole
+        | XRoleClassAccommodationRequestor
+        | XRoleClassCoverage
+        | XRoleClassCoverageInvoice
+        | XRoleClassCredentialedEntity
+        | XRoleClassPayeePolicyRelationship
+    ) = field(
         init=False,
         default=RoleClassPassive.WRTE,
         metadata={
@@ -1026,18 +1087,18 @@ class CoctMt490000Uv04ManufacturedProduct:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    manufactured_material: CoctMt490000Uv04ManufacturedMaterial | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "manufacturedMaterial",
-                "type": "Element",
-                "namespace": "urn:hl7-org:v3",
-                "nillable": True,
-            },
-        )
+    manufactured_material: CoctMt490000Uv04ManufacturedMaterial | None = field(
+        default=None,
+        metadata={
+            "name": "manufacturedMaterial",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        },
     )
-    manufacturer_manufactured_product_organization: CoctMt490000Uv04ManufacturedProductOrganization | None = field(
+    manufacturer_manufactured_product_organization: (
+        CoctMt490000Uv04ManufacturedProductOrganization | None
+    ) = field(
         default=None,
         metadata={
             "name": "manufacturerManufacturedProductOrganization",
@@ -1092,16 +1153,14 @@ class CoctMt490000Uv04Product:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    manufactured_product: CoctMt490000Uv04ManufacturedProduct | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "manufacturedProduct",
-                "type": "Element",
-                "namespace": "urn:hl7-org:v3",
-                "required": True,
-            },
-        )
+    manufactured_product: CoctMt490000Uv04ManufacturedProduct | None = field(
+        default=None,
+        metadata={
+            "name": "manufacturedProduct",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        },
     )
     null_flavor: NullFlavor | None = field(
         default=None,

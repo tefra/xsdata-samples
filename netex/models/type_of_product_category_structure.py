@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .external_object_ref_structure import ExternalObjectRefStructure
 from .presentation_structure import PresentationStructure
@@ -10,15 +9,13 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 @dataclass
 class TypeOfProductCategoryStructure(TypeOfEntityVersionStructure):
-    external_product_category_ref: ExternalObjectRefStructure | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "ExternalProductCategoryRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            },
-        )
+    external_product_category_ref: ExternalObjectRefStructure | None = field(
+        default=None,
+        metadata={
+            "name": "ExternalProductCategoryRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        },
     )
     presentation: PresentationStructure | None = field(
         default=None,

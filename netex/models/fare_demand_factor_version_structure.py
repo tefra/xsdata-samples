@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .fare_demand_type_enumeration import FareDemandTypeEnumeration
 from .quality_structure_factor_version_structure import (

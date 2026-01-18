@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.idtype import (
     Idtype,
@@ -142,13 +141,11 @@ class ReinsurerInvolvementType(OrganisationInvolvementType):
             },
         )
     )
-    reinsurance_type: ReinsurerInvolvementTypeReinsuranceType | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "ReinsuranceType",
-                "type": "Element",
-                "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-            },
-        )
+    reinsurance_type: ReinsurerInvolvementTypeReinsuranceType | None = field(
+        default=None,
+        metadata={
+            "name": "ReinsuranceType",
+            "type": "Element",
+            "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
+        },
     )

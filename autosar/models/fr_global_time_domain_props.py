@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import VariationPoint
 from .positive_integer import PositiveInteger
@@ -41,25 +40,21 @@ class FrGlobalTimeDomainProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ofs_data_id_lists: FrGlobalTimeDomainProps.OfsDataIdLists | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "OFS-DATA-ID-LISTS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    ofs_data_id_lists: FrGlobalTimeDomainProps.OfsDataIdLists | None = field(
+        default=None,
+        metadata={
+            "name": "OFS-DATA-ID-LISTS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
-    sync_data_id_lists: FrGlobalTimeDomainProps.SyncDataIdLists | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "SYNC-DATA-ID-LISTS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    sync_data_id_lists: FrGlobalTimeDomainProps.SyncDataIdLists | None = field(
+        default=None,
+        metadata={
+            "name": "SYNC-DATA-ID-LISTS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     s: str | None = field(
         default=None,

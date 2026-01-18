@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .mode_declaration_group_prototype_subtypes_enum import (
     ModeDeclarationGroupPrototypeSubtypesEnum,
@@ -32,7 +31,10 @@ class FunctionGroupStateInFunctionGroupSetInstanceRef:
     class Meta:
         name = "FUNCTION-GROUP-STATE-IN-FUNCTION-GROUP-SET-INSTANCE-REF"
 
-    context_mode_declaration_group_prototype_ref: FunctionGroupStateInFunctionGroupSetInstanceRef.ContextModeDeclarationGroupPrototypeRef | None = field(
+    context_mode_declaration_group_prototype_ref: (
+        FunctionGroupStateInFunctionGroupSetInstanceRef.ContextModeDeclarationGroupPrototypeRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF",
@@ -40,7 +42,10 @@ class FunctionGroupStateInFunctionGroupSetInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    target_mode_declaration_ref: FunctionGroupStateInFunctionGroupSetInstanceRef.TargetModeDeclarationRef | None = field(
+    target_mode_declaration_ref: (
+        FunctionGroupStateInFunctionGroupSetInstanceRef.TargetModeDeclarationRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "TARGET-MODE-DECLARATION-REF",

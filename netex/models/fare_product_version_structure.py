@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from .access_rights_in_product_rel_structure import (
     AccessRightsInProductRelStructure,
@@ -65,7 +64,9 @@ class FareProductVersionStructure(ServiceAccessRightVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    type_of_fare_product_ref_or_types_of_fare_product: TypeOfFareProductRef | TypeOfFareProductRefsRelStructure | None = field(
+    type_of_fare_product_ref_or_types_of_fare_product: (
+        TypeOfFareProductRef | TypeOfFareProductRefsRelStructure | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -83,7 +84,19 @@ class FareProductVersionStructure(ServiceAccessRightVersionStructure):
             ),
         },
     )
-    organisation_ref_or_other_organisation_ref_or_transport_organisation_ref: RetailConsortiumRef | OnlineServiceOperatorRef | GeneralOrganisationRef | ManagementAgentRef | ServicedOrganisationRef | TravelAgentRef | OtherOrganisationRef | AuthorityRef | OperatorRef | OrganisationRef | None = field(
+    organisation_ref_or_other_organisation_ref_or_transport_organisation_ref: (
+        RetailConsortiumRef
+        | OnlineServiceOperatorRef
+        | GeneralOrganisationRef
+        | ManagementAgentRef
+        | ServicedOrganisationRef
+        | TravelAgentRef
+        | OtherOrganisationRef
+        | AuthorityRef
+        | OperatorRef
+        | OrganisationRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -149,7 +162,17 @@ class FareProductVersionStructure(ServiceAccessRightVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref: SupplementProductRef | PreassignedFareProductRef | AmountOfPriceUnitProductRef | UsageDiscountRightRef | ThirdPartyProductRef | CappedDiscountRightRef | SaleDiscountRightRef | FareProductRef | None = field(
+    preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref: (
+        SupplementProductRef
+        | PreassignedFareProductRef
+        | AmountOfPriceUnitProductRef
+        | UsageDiscountRightRef
+        | ThirdPartyProductRef
+        | CappedDiscountRightRef
+        | SaleDiscountRightRef
+        | FareProductRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -197,7 +220,12 @@ class FareProductVersionStructure(ServiceAccessRightVersionStructure):
             ),
         },
     )
-    validity_parameter_assignments_or_generic_parameter_assignment_or_generic_parameter_assignment_in_context: GenericParameterAssignmentsRelStructure | GenericParameterAssignment | GenericParameterAssignmentInContext | None = field(
+    validity_parameter_assignments_or_generic_parameter_assignment_or_generic_parameter_assignment_in_context: (
+        GenericParameterAssignmentsRelStructure
+        | GenericParameterAssignment
+        | GenericParameterAssignmentInContext
+        | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -228,15 +256,13 @@ class FareProductVersionStructure(ServiceAccessRightVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    access_rights_in_product: AccessRightsInProductRelStructure | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "accessRightsInProduct",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            },
-        )
+    access_rights_in_product: AccessRightsInProductRelStructure | None = field(
+        default=None,
+        metadata={
+            "name": "accessRightsInProduct",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        },
     )
     tariffs: TariffRefsRelStructure | None = field(
         default=None,

@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import VariationPoint
 from .idsm_rate_limitation_subtypes_enum import IdsmRateLimitationSubtypesEnum
@@ -33,7 +32,9 @@ class IdsmRateLimitationRefConditional:
     class Meta:
         name = "IDSM-RATE-LIMITATION-REF-CONDITIONAL"
 
-    idsm_rate_limitation_ref: IdsmRateLimitationRefConditional.IdsmRateLimitationRef | None = field(
+    idsm_rate_limitation_ref: (
+        IdsmRateLimitationRefConditional.IdsmRateLimitationRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "IDSM-RATE-LIMITATION-REF",

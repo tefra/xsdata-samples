@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -124,7 +123,9 @@ class UserDefinedCommunicationConnector:
             "required": True,
         },
     )
-    short_name_fragments: UserDefinedCommunicationConnector.ShortNameFragments | None = field(
+    short_name_fragments: (
+        UserDefinedCommunicationConnector.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -172,17 +173,17 @@ class UserDefinedCommunicationConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: UserDefinedCommunicationConnector.Annotations | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "ANNOTATIONS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    annotations: UserDefinedCommunicationConnector.Annotations | None = field(
+        default=None,
+        metadata={
+            "name": "ANNOTATIONS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
-    comm_controller_ref: UserDefinedCommunicationConnector.CommControllerRef | None = field(
+    comm_controller_ref: (
+        UserDefinedCommunicationConnector.CommControllerRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "COMM-CONTROLLER-REF",
@@ -206,7 +207,9 @@ class UserDefinedCommunicationConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ecu_comm_port_instances: UserDefinedCommunicationConnector.EcuCommPortInstances | None = field(
+    ecu_comm_port_instances: (
+        UserDefinedCommunicationConnector.EcuCommPortInstances | None
+    ) = field(
         default=None,
         metadata={
             "name": "ECU-COMM-PORT-INSTANCES",

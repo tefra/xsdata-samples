@@ -1,6 +1,5 @@
 from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .local_service_version_structure import LocalServiceVersionStructure
 from .payment_method_enumeration import PaymentMethodEnumeration

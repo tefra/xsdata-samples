@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from datexii.models.eu.datexii.v2.vehicle_characteristics_extended import (
     VehicleCharacteristicsExtended,
@@ -13,13 +12,15 @@ class VehicleCharacteristicsExtensionType:
     class Meta:
         name = "_VehicleCharacteristicsExtensionType"
 
-    vehicle_characteristics_extended: VehicleCharacteristicsExtended | None = field(
-        default=None,
-        metadata={
-            "name": "vehicleCharacteristicsExtended",
-            "type": "Element",
-            "namespace": "http://datex2.eu/schema/2/2_0",
-        },
+    vehicle_characteristics_extended: VehicleCharacteristicsExtended | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "vehicleCharacteristicsExtended",
+                "type": "Element",
+                "namespace": "http://datex2.eu/schema/2/2_0",
+            },
+        )
     )
     other_element: list[object] = field(
         default_factory=list,

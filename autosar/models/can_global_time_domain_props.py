@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import VariationPoint
 from .positive_integer import PositiveInteger
@@ -43,41 +42,41 @@ class CanGlobalTimeDomainProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    fup_data_id_lists: CanGlobalTimeDomainProps.FupDataIdLists | None = (
+    fup_data_id_lists: CanGlobalTimeDomainProps.FupDataIdLists | None = field(
+        default=None,
+        metadata={
+            "name": "FUP-DATA-ID-LISTS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
+    )
+    ofns_data_id_lists: CanGlobalTimeDomainProps.OfnsDataIdLists | None = (
         field(
             default=None,
             metadata={
-                "name": "FUP-DATA-ID-LISTS",
+                "name": "OFNS-DATA-ID-LISTS",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
     )
-    ofns_data_id_lists: CanGlobalTimeDomainProps.OfnsDataIdLists | None = field(
+    ofs_data_id_lists: CanGlobalTimeDomainProps.OfsDataIdLists | None = field(
         default=None,
         metadata={
-            "name": "OFNS-DATA-ID-LISTS",
+            "name": "OFS-DATA-ID-LISTS",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ofs_data_id_lists: CanGlobalTimeDomainProps.OfsDataIdLists | None = (
+    sync_data_id_lists: CanGlobalTimeDomainProps.SyncDataIdLists | None = (
         field(
             default=None,
             metadata={
-                "name": "OFS-DATA-ID-LISTS",
+                "name": "SYNC-DATA-ID-LISTS",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-    )
-    sync_data_id_lists: CanGlobalTimeDomainProps.SyncDataIdLists | None = field(
-        default=None,
-        metadata={
-            "name": "SYNC-DATA-ID-LISTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
     )
     s: str | None = field(
         default=None,

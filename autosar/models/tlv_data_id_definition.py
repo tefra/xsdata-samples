@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .application_record_element_subtypes_enum import (
     ApplicationRecordElementSubtypesEnum,
@@ -69,7 +68,9 @@ class TlvDataIdDefinition:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tlv_implementation_data_type_element_ref: TlvDataIdDefinition.TlvImplementationDataTypeElementRef | None = field(
+    tlv_implementation_data_type_element_ref: (
+        TlvDataIdDefinition.TlvImplementationDataTypeElementRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "TLV-IMPLEMENTATION-DATA-TYPE-ELEMENT-REF",
@@ -77,23 +78,23 @@ class TlvDataIdDefinition:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tlv_record_element_ref: TlvDataIdDefinition.TlvRecordElementRef | None = field(
-        default=None,
-        metadata={
-            "name": "TLV-RECORD-ELEMENT-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
-    )
-    tlv_sub_element_ref: TlvDataIdDefinition.TlvSubElementRef | None = (
+    tlv_record_element_ref: TlvDataIdDefinition.TlvRecordElementRef | None = (
         field(
             default=None,
             metadata={
-                "name": "TLV-SUB-ELEMENT-REF",
+                "name": "TLV-RECORD-ELEMENT-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
+    )
+    tlv_sub_element_ref: TlvDataIdDefinition.TlvSubElementRef | None = field(
+        default=None,
+        metadata={
+            "name": "TLV-SUB-ELEMENT-REF",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     s: str | None = field(
         default=None,

@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -169,7 +168,9 @@ class ProcessDesign:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    deterministic_client_resource_needss: ProcessDesign.DeterministicClientResourceNeedss | None = field(
+    deterministic_client_resource_needss: (
+        ProcessDesign.DeterministicClientResourceNeedss | None
+    ) = field(
         default=None,
         metadata={
             "name": "DETERMINISTIC-CLIENT-RESOURCE-NEEDSS",

@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .abstract_required_port_prototype_subtypes_enum import (
     AbstractRequiredPortPrototypeSubtypesEnum,
@@ -36,15 +35,20 @@ class RModeInAtomicSwcInstanceRef:
     class Meta:
         name = "R-MODE-IN-ATOMIC-SWC-INSTANCE-REF"
 
-    context_port_ref: RModeInAtomicSwcInstanceRef.ContextPortRef | None = field(
-        default=None,
-        metadata={
-            "name": "CONTEXT-PORT-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    context_port_ref: RModeInAtomicSwcInstanceRef.ContextPortRef | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "CONTEXT-PORT-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
-    context_mode_declaration_group_prototype_ref: RModeInAtomicSwcInstanceRef.ContextModeDeclarationGroupPrototypeRef | None = field(
+    context_mode_declaration_group_prototype_ref: (
+        RModeInAtomicSwcInstanceRef.ContextModeDeclarationGroupPrototypeRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF",
@@ -52,7 +56,9 @@ class RModeInAtomicSwcInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    target_mode_declaration_ref: RModeInAtomicSwcInstanceRef.TargetModeDeclarationRef | None = field(
+    target_mode_declaration_ref: (
+        RModeInAtomicSwcInstanceRef.TargetModeDeclarationRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "TARGET-MODE-DECLARATION-REF",

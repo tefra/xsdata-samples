@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import VariationPoint
 from .boolean import Boolean
@@ -47,7 +46,9 @@ class BswParameterPolicy:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    per_instance_parameter_ref: BswParameterPolicy.PerInstanceParameterRef | None = field(
+    per_instance_parameter_ref: (
+        BswParameterPolicy.PerInstanceParameterRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "PER-INSTANCE-PARAMETER-REF",

@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from xcbl.models.request_for_quotation import (
     AccountNumber,
@@ -579,12 +578,14 @@ class ActualPaymentStatus:
             "type": "Element",
         },
     )
-    actual_payment_status_coded_other: ActualPaymentStatusCodedOther | None = field(
-        default=None,
-        metadata={
-            "name": "ActualPaymentStatusCodedOther",
-            "type": "Element",
-        },
+    actual_payment_status_coded_other: ActualPaymentStatusCodedOther | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "ActualPaymentStatusCodedOther",
+                "type": "Element",
+            },
+        )
     )
 
 
@@ -764,7 +765,9 @@ class FinancialInstitutionCoded:
             "required": True,
         }
     )
-    financial_institution_qaulifier_coded_other: FinancialInstitutionQaulifierCodedOther | None = field(
+    financial_institution_qaulifier_coded_other: (
+        FinancialInstitutionQaulifierCodedOther | None
+    ) = field(
         default=None,
         metadata={
             "name": "FinancialInstitutionQaulifierCodedOther",
@@ -1339,14 +1342,12 @@ class Adjustment:
             "required": True,
         }
     )
-    adjustment_reason_coded_other: AdjustmentReasonCodedOther | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "AdjustmentReasonCodedOther",
-                "type": "Element",
-            },
-        )
+    adjustment_reason_coded_other: AdjustmentReasonCodedOther | None = field(
+        default=None,
+        metadata={
+            "name": "AdjustmentReasonCodedOther",
+            "type": "Element",
+        },
     )
     adjustment_date: AdjustmentDate | None = field(
         default=None,
@@ -1589,14 +1590,12 @@ class InvoicePricingDetail:
             "type": "Element",
         },
     )
-    tax_accounting_sub_total_value: TaxAccountingSubTotalValue | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "TaxAccountingSubTotalValue",
-                "type": "Element",
-            },
-        )
+    tax_accounting_sub_total_value: TaxAccountingSubTotalValue | None = field(
+        default=None,
+        metadata={
+            "name": "TaxAccountingSubTotalValue",
+            "type": "Element",
+        },
     )
     actual_payment_status: ActualPaymentStatus | None = field(
         default=None,
@@ -1891,16 +1890,16 @@ class RemittanceAdviceHeader:
             "required": True,
         }
     )
-    remittance_advice_status_coded: RemittanceAdviceStatusCoded | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "RemittanceAdviceStatusCoded",
-                "type": "Element",
-            },
-        )
+    remittance_advice_status_coded: RemittanceAdviceStatusCoded | None = field(
+        default=None,
+        metadata={
+            "name": "RemittanceAdviceStatusCoded",
+            "type": "Element",
+        },
     )
-    remittance_advice_status_coded_other: RemittanceAdviceStatusCodedOther | None = field(
+    remittance_advice_status_coded_other: (
+        RemittanceAdviceStatusCodedOther | None
+    ) = field(
         default=None,
         metadata={
             "name": "RemittanceAdviceStatusCodedOther",
@@ -1935,14 +1934,12 @@ class RemittanceAdviceHeader:
             "required": True,
         }
     )
-    list_of_rate_of_exchange_detail: ListOfRateOfExchangeDetail | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "ListOfRateOfExchangeDetail",
-                "type": "Element",
-            },
-        )
+    list_of_rate_of_exchange_detail: ListOfRateOfExchangeDetail | None = field(
+        default=None,
+        metadata={
+            "name": "ListOfRateOfExchangeDetail",
+            "type": "Element",
+        },
     )
     list_of_price: ListOfPrice | None = field(
         default=None,
@@ -1972,7 +1969,9 @@ class RemittanceAdviceHeader:
             "type": "Element",
         },
     )
-    list_of_financial_institution_coded: ListOfFinancialInstitutionCoded | None = field(
+    list_of_financial_institution_coded: (
+        ListOfFinancialInstitutionCoded | None
+    ) = field(
         default=None,
         metadata={
             "name": "ListOfFinancialInstitutionCoded",
@@ -2007,12 +2006,14 @@ class RemittanceAdviceHeader:
             "type": "Element",
         },
     )
-    transaction_handling_coded_other: TransactionHandlingCodedOther | None = field(
-        default=None,
-        metadata={
-            "name": "TransactionHandlingCodedOther",
-            "type": "Element",
-        },
+    transaction_handling_coded_other: TransactionHandlingCodedOther | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "TransactionHandlingCodedOther",
+                "type": "Element",
+            },
+        )
     )
     trace_type: TraceType | None = field(
         default=None,
@@ -2021,7 +2022,9 @@ class RemittanceAdviceHeader:
             "type": "Element",
         },
     )
-    list_of_remittance_advice_reference: ListOfRemittanceAdviceReference | None = field(
+    list_of_remittance_advice_reference: (
+        ListOfRemittanceAdviceReference | None
+    ) = field(
         default=None,
         metadata={
             "name": "ListOfRemittanceAdviceReference",

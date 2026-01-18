@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Union
 
 from sdmx_ml.models.attribute_list import AttributeList
 from sdmx_ml.models.dimension_list import DimensionList
@@ -20,7 +19,11 @@ class GroupingType:
     """
 
     choice: tuple[
-        MetadataAttributeList | MeasureList | Group | DimensionList | AttributeList,
+        MetadataAttributeList
+        | MeasureList
+        | Group
+        | DimensionList
+        | AttributeList,
         ...,
     ] = field(
         default_factory=tuple,

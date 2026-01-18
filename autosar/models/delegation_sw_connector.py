@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -109,13 +108,15 @@ class DelegationSwConnector:
             "required": True,
         },
     )
-    short_name_fragments: DelegationSwConnector.ShortNameFragments | None = field(
-        default=None,
-        metadata={
-            "name": "SHORT-NAME-FRAGMENTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    short_name_fragments: DelegationSwConnector.ShortNameFragments | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "SHORT-NAME-FRAGMENTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     long_name: MultilanguageLongName | None = field(
         default=None,
@@ -255,7 +256,9 @@ class DelegationSwConnector:
 
     @dataclass
     class InnerPortIref:
-        p_port_in_composition_instance_ref: PPortInCompositionInstanceRef | None = field(
+        p_port_in_composition_instance_ref: (
+            PPortInCompositionInstanceRef | None
+        ) = field(
             default=None,
             metadata={
                 "name": "P-PORT-IN-COMPOSITION-INSTANCE-REF",
@@ -263,7 +266,9 @@ class DelegationSwConnector:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        r_port_in_composition_instance_ref: RPortInCompositionInstanceRef | None = field(
+        r_port_in_composition_instance_ref: (
+            RPortInCompositionInstanceRef | None
+        ) = field(
             default=None,
             metadata={
                 "name": "R-PORT-IN-COMPOSITION-INSTANCE-REF",

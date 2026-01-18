@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .acl_scope_enum import AclScopeEnum
 from .admin_data import (
@@ -247,7 +246,9 @@ class AclObjectSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    derived_from_blueprint_refs: AclObjectSet.DerivedFromBlueprintRefs | None = field(
+    derived_from_blueprint_refs: (
+        AclObjectSet.DerivedFromBlueprintRefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "DERIVED-FROM-BLUEPRINT-REFS",
@@ -263,25 +264,21 @@ class AclObjectSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    object_definition_refs: AclObjectSet.ObjectDefinitionRefs | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "OBJECT-DEFINITION-REFS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    object_definition_refs: AclObjectSet.ObjectDefinitionRefs | None = field(
+        default=None,
+        metadata={
+            "name": "OBJECT-DEFINITION-REFS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
-    object_defintion_refs: AclObjectSet.ObjectDefintionRefs | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "OBJECT-DEFINTION-REFS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    object_defintion_refs: AclObjectSet.ObjectDefintionRefs | None = field(
+        default=None,
+        metadata={
+            "name": "OBJECT-DEFINTION-REFS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     object_refs: AclObjectSet.ObjectRefs | None = field(
         default=None,

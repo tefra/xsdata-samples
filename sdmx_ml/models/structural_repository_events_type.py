@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import ForwardRef, Union
+from typing import ForwardRef
 
 from sdmx_ml.models.empty_type import EmptyType
 from sdmx_ml.models.identifiable_object_event_type import (
@@ -64,7 +64,31 @@ class StructuralRepositoryEventsType:
         },
     )
     choice: tuple[
-        EmptyType | StructuralRepositoryEventsType.AgencyScheme | StructuralRepositoryEventsType.DataConsmerScheme | StructuralRepositoryEventsType.DataProviderScheme | StructuralRepositoryEventsType.OrganisationUnitScheme | StructuralRepositoryEventsType.Dataflow | StructuralRepositoryEventsType.Metadataflow | StructuralRepositoryEventsType.CategoryScheme | IdentifiableObjectEventType | StructuralRepositoryEventsType.Codelist | StructuralRepositoryEventsType.HierarchicalCodelist | StructuralRepositoryEventsType.ConceptScheme | StructuralRepositoryEventsType.MetadataStructureDefinition | StructuralRepositoryEventsType.KeyFamily | StructuralRepositoryEventsType.StructureSet | StructuralRepositoryEventsType.ReportingTaxonomy | StructuralRepositoryEventsType.Process | StructuralRepositoryEventsType.AttachmentConstraint | StructuralRepositoryEventsType.ContentConstraint | StructuralRepositoryEventsType.ProvisionAgreement | StructuralRepositoryEventsType.TransformationScheme | StructuralRepositoryEventsType.NameAliasScheme | StructuralRepositoryEventsType.NamePersonalisationScheme | StructuralRepositoryEventsType.RulesetScheme | StructuralRepositoryEventsType.UserDefinedOperatorScheme,
+        EmptyType
+        | StructuralRepositoryEventsType.AgencyScheme
+        | StructuralRepositoryEventsType.DataConsmerScheme
+        | StructuralRepositoryEventsType.DataProviderScheme
+        | StructuralRepositoryEventsType.OrganisationUnitScheme
+        | StructuralRepositoryEventsType.Dataflow
+        | StructuralRepositoryEventsType.Metadataflow
+        | StructuralRepositoryEventsType.CategoryScheme
+        | IdentifiableObjectEventType
+        | StructuralRepositoryEventsType.Codelist
+        | StructuralRepositoryEventsType.HierarchicalCodelist
+        | StructuralRepositoryEventsType.ConceptScheme
+        | StructuralRepositoryEventsType.MetadataStructureDefinition
+        | StructuralRepositoryEventsType.KeyFamily
+        | StructuralRepositoryEventsType.StructureSet
+        | StructuralRepositoryEventsType.ReportingTaxonomy
+        | StructuralRepositoryEventsType.Process
+        | StructuralRepositoryEventsType.AttachmentConstraint
+        | StructuralRepositoryEventsType.ContentConstraint
+        | StructuralRepositoryEventsType.ProvisionAgreement
+        | StructuralRepositoryEventsType.TransformationScheme
+        | StructuralRepositoryEventsType.NameAliasScheme
+        | StructuralRepositoryEventsType.NamePersonalisationScheme
+        | StructuralRepositoryEventsType.RulesetScheme
+        | StructuralRepositoryEventsType.UserDefinedOperatorScheme,
         ...,
     ] = field(
         default_factory=tuple,

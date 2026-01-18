@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import Any, ForwardRef, Optional, Union
+from typing import Any, ForwardRef
 
 from .air_submode import AirSubmode
 from .all_modes_enumeration import AllModesEnumeration
@@ -49,7 +49,12 @@ class TransportOrganisationVersionStructure(OrganisationVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    address: PostalAddress | RoadAddress | TransportOrganisationVersionStructure.Address | None = field(
+    address: (
+        PostalAddress
+        | RoadAddress
+        | TransportOrganisationVersionStructure.Address
+        | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -82,7 +87,21 @@ class TransportOrganisationVersionStructure(OrganisationVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    choice: AirSubmode | BusSubmode | CoachSubmode | FunicularSubmode | MetroSubmode | TramSubmode | TelecabinSubmode | RailSubmode | WaterSubmode | SnowAndIceSubmode | TaxiSubmode | SelfDriveSubmode | None = field(
+    choice: (
+        AirSubmode
+        | BusSubmode
+        | CoachSubmode
+        | FunicularSubmode
+        | MetroSubmode
+        | TramSubmode
+        | TelecabinSubmode
+        | RailSubmode
+        | WaterSubmode
+        | SnowAndIceSubmode
+        | TaxiSubmode
+        | SelfDriveSubmode
+        | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -150,7 +169,15 @@ class TransportOrganisationVersionStructure(OrganisationVersionStructure):
             ),
         },
     )
-    mode_of_operation_ref_or_alternative_mode_of_operation_ref_or_conventional_mode_of_operation_ref: PersonalModeOfOperationRef | VehiclePoolingRef | VehicleSharingRef | VehicleRentalRef | FlexibleModeOfOperationRef | ScheduledModeOfOperationRef | None = field(
+    mode_of_operation_ref_or_alternative_mode_of_operation_ref_or_conventional_mode_of_operation_ref: (
+        PersonalModeOfOperationRef
+        | VehiclePoolingRef
+        | VehicleSharingRef
+        | VehicleRentalRef
+        | FlexibleModeOfOperationRef
+        | ScheduledModeOfOperationRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",

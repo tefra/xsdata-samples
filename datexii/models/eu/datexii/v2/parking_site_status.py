@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.opening_status_enum import OpeningStatusEnum
@@ -50,7 +49,9 @@ class ParkingSiteStatus(ParkingRecordStatus):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    parking_site_overcrowding_status: ParkingSiteOvercrowdingStatusEnum | None = field(
+    parking_site_overcrowding_status: (
+        ParkingSiteOvercrowdingStatusEnum | None
+    ) = field(
         default=None,
         metadata={
             "name": "parkingSiteOvercrowdingStatus",

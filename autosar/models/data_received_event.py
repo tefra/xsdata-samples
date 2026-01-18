@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -111,15 +110,13 @@ class DataReceivedEvent:
             "required": True,
         },
     )
-    short_name_fragments: DataReceivedEvent.ShortNameFragments | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "SHORT-NAME-FRAGMENTS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    short_name_fragments: DataReceivedEvent.ShortNameFragments | None = field(
+        default=None,
+        metadata={
+            "name": "SHORT-NAME-FRAGMENTS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     long_name: MultilanguageLongName | None = field(
         default=None,
@@ -169,7 +166,9 @@ class DataReceivedEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    activation_reason_representation_ref: DataReceivedEvent.ActivationReasonRepresentationRef | None = field(
+    activation_reason_representation_ref: (
+        DataReceivedEvent.ActivationReasonRepresentationRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "ACTIVATION-REASON-REPRESENTATION-REF",
@@ -177,15 +176,13 @@ class DataReceivedEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    disabled_mode_irefs: DataReceivedEvent.DisabledModeIrefs | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "DISABLED-MODE-IREFS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    disabled_mode_irefs: DataReceivedEvent.DisabledModeIrefs | None = field(
+        default=None,
+        metadata={
+            "name": "DISABLED-MODE-IREFS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     start_on_event_ref: DataReceivedEvent.StartOnEventRef | None = field(
         default=None,

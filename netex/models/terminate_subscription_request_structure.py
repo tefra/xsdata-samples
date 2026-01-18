@@ -1,6 +1,5 @@
 from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from .authenticated_request_structure import AuthenticatedRequestStructure
 from .empty_type_1 import EmptyType1

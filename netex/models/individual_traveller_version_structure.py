@@ -1,6 +1,5 @@
 from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .customer_ref import CustomerRef
 from .entity_in_version_structure import DataManagedObjectStructure
@@ -86,7 +85,9 @@ class IndividualTravellerVersionStructure(DataManagedObjectStructure):
             "tokens": True,
         },
     )
-    vehicle_pooling_driver_infos: VehiclePoolingDriverInfosRelStructure | None = field(
+    vehicle_pooling_driver_infos: (
+        VehiclePoolingDriverInfosRelStructure | None
+    ) = field(
         default=None,
         metadata={
             "name": "vehiclePoolingDriverInfos",
@@ -94,11 +95,13 @@ class IndividualTravellerVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    individual_passenger_infos: IndividualPassengerInfosRelStructure | None = field(
-        default=None,
-        metadata={
-            "name": "individualPassengerInfos",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        },
+    individual_passenger_infos: IndividualPassengerInfosRelStructure | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "individualPassengerInfos",
+                "type": "Element",
+                "namespace": "http://www.netex.org.uk/netex",
+            },
+        )
     )

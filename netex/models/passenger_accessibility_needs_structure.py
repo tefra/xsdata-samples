@@ -2,7 +2,6 @@ from __future__ import annotations
 
 from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .suitability import Suitability
 from .user_need import UserNeed
@@ -20,17 +19,17 @@ class PassengerAccessibilityNeedsStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    user_needs: PassengerAccessibilityNeedsStructure.UserNeeds | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "userNeeds",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            },
-        )
+    user_needs: PassengerAccessibilityNeedsStructure.UserNeeds | None = field(
+        default=None,
+        metadata={
+            "name": "userNeeds",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        },
     )
-    suitabilities: PassengerAccessibilityNeedsStructure.Suitabilities | None = field(
+    suitabilities: (
+        PassengerAccessibilityNeedsStructure.Suitabilities | None
+    ) = field(
         default=None,
         metadata={
             "type": "Element",

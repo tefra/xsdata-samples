@@ -1,6 +1,5 @@
 from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import Union
 
 from .charging_equipment_profile_ref import ChargingEquipmentProfileRef
 from .one_to_many_relationship_structure import OneToManyRelationshipStructure

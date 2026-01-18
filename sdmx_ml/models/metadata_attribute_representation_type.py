@@ -2,7 +2,6 @@ from dataclasses import dataclass, field
 from typing import Any
 
 from sdmx_ml.models.representation_type import RepresentationType
-from sdmx_ml.models.unbounded_code_type import UnboundedCodeType
 
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 

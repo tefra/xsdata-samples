@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -96,7 +95,9 @@ class PostBuildVariantCriterionValueSet:
             "required": True,
         },
     )
-    short_name_fragments: PostBuildVariantCriterionValueSet.ShortNameFragments | None = field(
+    short_name_fragments: (
+        PostBuildVariantCriterionValueSet.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -144,15 +145,13 @@ class PostBuildVariantCriterionValueSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: PostBuildVariantCriterionValueSet.Annotations | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "ANNOTATIONS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    annotations: PostBuildVariantCriterionValueSet.Annotations | None = field(
+        default=None,
+        metadata={
+            "name": "ANNOTATIONS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     variation_point: VariationPoint | None = field(
         default=None,
@@ -162,7 +161,10 @@ class PostBuildVariantCriterionValueSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    post_build_variant_criterion_values: PostBuildVariantCriterionValueSet.PostBuildVariantCriterionValues | None = field(
+    post_build_variant_criterion_values: (
+        PostBuildVariantCriterionValueSet.PostBuildVariantCriterionValues
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "POST-BUILD-VARIANT-CRITERION-VALUES",

@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from .complex_feature_ref import ComplexFeatureRef
 from .entity_in_version_structure import DataManagedObjectStructure
@@ -32,7 +31,9 @@ class ProjectionVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    spatial_feature_ref: ComplexFeatureRef | SimpleFeatureRef | SpatialFeatureRef | None = field(
+    spatial_feature_ref: (
+        ComplexFeatureRef | SimpleFeatureRef | SpatialFeatureRef | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",

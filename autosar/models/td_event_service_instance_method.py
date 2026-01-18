@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -110,7 +109,9 @@ class TdEventServiceInstanceMethod:
             "required": True,
         },
     )
-    short_name_fragments: TdEventServiceInstanceMethod.ShortNameFragments | None = field(
+    short_name_fragments: (
+        TdEventServiceInstanceMethod.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -182,7 +183,10 @@ class TdEventServiceInstanceMethod:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    service_instance_to_port_prototype_mapping_ref: TdEventServiceInstanceMethod.ServiceInstanceToPortPrototypeMappingRef | None = field(
+    service_instance_to_port_prototype_mapping_ref: (
+        TdEventServiceInstanceMethod.ServiceInstanceToPortPrototypeMappingRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "SERVICE-INSTANCE-TO-PORT-PROTOTYPE-MAPPING-REF",
@@ -198,7 +202,9 @@ class TdEventServiceInstanceMethod:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    td_event_service_instance_method_type: TdEventServiceInstanceMethodTypeEnum | None = field(
+    td_event_service_instance_method_type: (
+        TdEventServiceInstanceMethodTypeEnum | None
+    ) = field(
         default=None,
         metadata={
             "name": "TD-EVENT-SERVICE-INSTANCE-METHOD-TYPE",
@@ -253,15 +259,13 @@ class TdEventServiceInstanceMethod:
 
     @dataclass
     class ServiceInstanceToPortPrototypeMappingRef(Ref):
-        dest: ServiceInstanceToPortPrototypeMappingSubtypesEnum | None = (
-            field(
-                default=None,
-                metadata={
-                    "name": "DEST",
-                    "type": "Attribute",
-                    "required": True,
-                },
-            )
+        dest: ServiceInstanceToPortPrototypeMappingSubtypesEnum | None = field(
+            default=None,
+            metadata={
+                "name": "DEST",
+                "type": "Attribute",
+                "required": True,
+            },
         )
 
     @dataclass

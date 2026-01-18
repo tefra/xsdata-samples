@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -175,7 +174,9 @@ class EcucSymbolicNameReferenceDef:
             "required": True,
         },
     )
-    short_name_fragments: EcucSymbolicNameReferenceDef.ShortNameFragments | None = field(
+    short_name_fragments: (
+        EcucSymbolicNameReferenceDef.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -231,7 +232,9 @@ class EcucSymbolicNameReferenceDef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    related_trace_item_ref: EcucSymbolicNameReferenceDef.RelatedTraceItemRef | None = field(
+    related_trace_item_ref: (
+        EcucSymbolicNameReferenceDef.RelatedTraceItemRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "RELATED-TRACE-ITEM-REF",
@@ -239,7 +242,9 @@ class EcucSymbolicNameReferenceDef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ecuc_validation_conds: EcucSymbolicNameReferenceDef.EcucValidationConds | None = field(
+    ecuc_validation_conds: (
+        EcucSymbolicNameReferenceDef.EcucValidationConds | None
+    ) = field(
         default=None,
         metadata={
             "name": "ECUC-VALIDATION-CONDS",
@@ -287,15 +292,19 @@ class EcucSymbolicNameReferenceDef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    configuration_class_affection: EcucConfigurationClassAffection | None = field(
-        default=None,
-        metadata={
-            "name": "CONFIGURATION-CLASS-AFFECTION",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    configuration_class_affection: EcucConfigurationClassAffection | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "CONFIGURATION-CLASS-AFFECTION",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
-    implementation_config_classes: EcucSymbolicNameReferenceDef.ImplementationConfigClasses | None = field(
+    implementation_config_classes: (
+        EcucSymbolicNameReferenceDef.ImplementationConfigClasses | None
+    ) = field(
         default=None,
         metadata={
             "name": "IMPLEMENTATION-CONFIG-CLASSES",
@@ -303,7 +312,9 @@ class EcucSymbolicNameReferenceDef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    multiplicity_config_classes: EcucSymbolicNameReferenceDef.MultiplicityConfigClasses | None = field(
+    multiplicity_config_classes: (
+        EcucSymbolicNameReferenceDef.MultiplicityConfigClasses | None
+    ) = field(
         default=None,
         metadata={
             "name": "MULTIPLICITY-CONFIG-CLASSES",
@@ -343,7 +354,9 @@ class EcucSymbolicNameReferenceDef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    value_config_classes: EcucSymbolicNameReferenceDef.ValueConfigClasses | None = field(
+    value_config_classes: (
+        EcucSymbolicNameReferenceDef.ValueConfigClasses | None
+    ) = field(
         default=None,
         metadata={
             "name": "VALUE-CONFIG-CLASSES",
@@ -359,13 +372,15 @@ class EcucSymbolicNameReferenceDef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    destination_ref: EcucSymbolicNameReferenceDef.DestinationRef | None = field(
-        default=None,
-        metadata={
-            "name": "DESTINATION-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    destination_ref: EcucSymbolicNameReferenceDef.DestinationRef | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "DESTINATION-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     s: str | None = field(
         default=None,

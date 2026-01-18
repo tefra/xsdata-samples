@@ -1,6 +1,5 @@
 from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import Union
 
 from .activation_point import ActivationPoint
 from .beacon_point import BeaconPoint

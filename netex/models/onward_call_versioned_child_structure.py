@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .call_versioned_child_structure import CallVersionedChildStructure
 from .estimated_passing_time_view import EstimatedPassingTimeView

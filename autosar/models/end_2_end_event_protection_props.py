@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -112,7 +111,9 @@ class End2EndEventProtectionProps:
             "required": True,
         },
     )
-    short_name_fragments: End2EndEventProtectionProps.ShortNameFragments | None = field(
+    short_name_fragments: (
+        End2EndEventProtectionProps.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -192,7 +193,9 @@ class End2EndEventProtectionProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    e_2_e_profile_configuration_ref: End2EndEventProtectionProps.E2EProfileConfigurationRef | None = field(
+    e_2_e_profile_configuration_ref: (
+        End2EndEventProtectionProps.E2EProfileConfigurationRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "E-2-E-PROFILE-CONFIGURATION-REF",

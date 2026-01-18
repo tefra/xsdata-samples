@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import ForwardRef, Optional, Union
+from typing import ForwardRef
 
 from .cell_ref import CellRef
 from .fare_price_versioned_child_structure import (
@@ -25,7 +25,9 @@ class GeographicalUnitPricesRelStructure(
         name = "geographicalUnitPrices_RelStructure"
 
     geographical_unit_price_ref_or_geographical_unit_price_or_cell_ref: Iterable[
-        GeographicalUnitPriceRef | GeographicalUnitPriceVersionedChildStructure | CellRef
+        GeographicalUnitPriceRef
+        | GeographicalUnitPriceVersionedChildStructure
+        | CellRef
     ] = field(
         default_factory=list,
         metadata={

@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -128,13 +127,15 @@ class BuildActionManifest:
             "required": True,
         },
     )
-    short_name_fragments: BuildActionManifest.ShortNameFragments | None = field(
-        default=None,
-        metadata={
-            "name": "SHORT-NAME-FRAGMENTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    short_name_fragments: BuildActionManifest.ShortNameFragments | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "SHORT-NAME-FRAGMENTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     long_name: MultilanguageLongName | None = field(
         default=None,
@@ -192,15 +193,13 @@ class BuildActionManifest:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    blueprint_policys: BuildActionManifest.BlueprintPolicys | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "BLUEPRINT-POLICYS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    blueprint_policys: BuildActionManifest.BlueprintPolicys | None = field(
+        default=None,
+        metadata={
+            "name": "BLUEPRINT-POLICYS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     short_name_pattern: String | None = field(
         default=None,
@@ -218,13 +217,15 @@ class BuildActionManifest:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tear_down_action_refs: BuildActionManifest.TearDownActionRefs | None = field(
-        default=None,
-        metadata={
-            "name": "TEAR-DOWN-ACTION-REFS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    tear_down_action_refs: BuildActionManifest.TearDownActionRefs | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "TEAR-DOWN-ACTION-REFS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     build_actions: BuildActionManifest.BuildActions | None = field(
         default=None,
@@ -234,7 +235,9 @@ class BuildActionManifest:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    build_action_environments: BuildActionManifest.BuildActionEnvironments | None = field(
+    build_action_environments: (
+        BuildActionManifest.BuildActionEnvironments | None
+    ) = field(
         default=None,
         metadata={
             "name": "BUILD-ACTION-ENVIRONMENTS",
@@ -242,15 +245,13 @@ class BuildActionManifest:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    dynamic_action_refs: BuildActionManifest.DynamicActionRefs | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "DYNAMIC-ACTION-REFS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    dynamic_action_refs: BuildActionManifest.DynamicActionRefs | None = field(
+        default=None,
+        metadata={
+            "name": "DYNAMIC-ACTION-REFS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     s: str | None = field(
         default=None,

@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import ForwardRef, Optional, Union
+from typing import ForwardRef
 
 from sdmx_ml.models.identifiable_type import IdentifiableType
 from sdmx_ml.models.resolve_period_type import ResolvePeriodType
@@ -41,7 +41,9 @@ class DateMapType(IdentifiableType):
         },
     )
     frequency_dimension_or_mapped_frequencies_or_target_frequency_id: tuple[
-        DateMapType.FrequencyDimension | DateMapType.MappedFrequencies | DateMapType.TargetFrequencyId,
+        DateMapType.FrequencyDimension
+        | DateMapType.MappedFrequencies
+        | DateMapType.TargetFrequencyId,
         ...,
     ] = field(
         default_factory=tuple,

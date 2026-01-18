@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .boolean import Boolean
 from .full_binding_time_enum import FullBindingTimeEnum
@@ -52,7 +51,9 @@ class VariationRestrictionWithSeverity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    valid_binding_times: VariationRestrictionWithSeverity.ValidBindingTimes | None = field(
+    valid_binding_times: (
+        VariationRestrictionWithSeverity.ValidBindingTimes | None
+    ) = field(
         default=None,
         metadata={
             "name": "VALID-BINDING-TIMES",

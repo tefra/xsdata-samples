@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .pdu_collection_trigger_enum_simple import PduCollectionTriggerEnumSimple
 

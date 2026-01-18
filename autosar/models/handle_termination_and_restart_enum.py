@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .handle_termination_and_restart_enum_simple import (
     HandleTerminationAndRestartEnumSimple,

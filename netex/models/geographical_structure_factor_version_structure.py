@@ -1,6 +1,5 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
-from typing import Optional, Union
 
 from .distance_matrix_element_ref import DistanceMatrixElementRef
 from .geographical_interval_ref import GeographicalIntervalRef

@@ -1,9 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Any
 
-from sdmx_ml.models.attribute_representation_type import (
-    AttributeRepresentationType,
-)
 from sdmx_ml.models.component_type import ComponentType
 
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"

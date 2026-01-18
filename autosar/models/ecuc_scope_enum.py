@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .ecuc_scope_enum_simple import EcucScopeEnumSimple
 

@@ -1,7 +1,6 @@
 from collections.abc import Iterable
 from dataclasses import dataclass, field
 from decimal import Decimal
-from typing import Optional, Union
 
 from xsdata.models.datatype import XmlDuration
 
@@ -31,7 +30,13 @@ class ParkingBayVersionStructure(ParkingComponentVersionStructure):
     class Meta:
         name = "ParkingBay_VersionStructure"
 
-    parking_area_ref: VehiclePoolingParkingAreaRef | VehicleSharingParkingAreaRef | TaxiParkingAreaRef | ParkingAreaRef | None = field(
+    parking_area_ref: (
+        VehiclePoolingParkingAreaRef
+        | VehicleSharingParkingAreaRef
+        | TaxiParkingAreaRef
+        | ParkingAreaRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -76,7 +81,14 @@ class ParkingBayVersionStructure(ParkingComponentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    transport_type_ref_or_vehicle_type_ref: SimpleVehicleTypeRef | CompoundTrainRef | TrainRef | VehicleTypeRef | TransportTypeRef | None = field(
+    transport_type_ref_or_vehicle_type_ref: (
+        SimpleVehicleTypeRef
+        | CompoundTrainRef
+        | TrainRef
+        | VehicleTypeRef
+        | TransportTypeRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",

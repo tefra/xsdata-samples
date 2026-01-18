@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from xsdata.models.datatype import XmlDate, XmlDateTime, XmlPeriod
 
@@ -169,27 +168,23 @@ class BaseHeaderType:
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/message",
         },
     )
-    reporting_begin: XmlPeriod | XmlDate | XmlDateTime | str | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "ReportingBegin",
-                "type": "Element",
-                "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/message",
-                "pattern": r".{5}A1.*",
-            },
-        )
+    reporting_begin: XmlPeriod | XmlDate | XmlDateTime | str | None = field(
+        default=None,
+        metadata={
+            "name": "ReportingBegin",
+            "type": "Element",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/message",
+            "pattern": r".{5}A1.*",
+        },
     )
-    reporting_end: XmlPeriod | XmlDate | XmlDateTime | str | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "ReportingEnd",
-                "type": "Element",
-                "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/message",
-                "pattern": r".{5}A1.*",
-            },
-        )
+    reporting_end: XmlPeriod | XmlDate | XmlDateTime | str | None = field(
+        default=None,
+        metadata={
+            "name": "ReportingEnd",
+            "type": "Element",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/message",
+            "pattern": r".{5}A1.*",
+        },
     )
     embargo_date: XmlDateTime | None = field(
         default=None,

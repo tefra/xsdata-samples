@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from xcbl.models.time_series_response import (
     CharacteristicCombinationId,
@@ -50,23 +49,19 @@ class KeyFigureData:
             "type": "Element",
         },
     )
-    key_figure_purpose_coded_other: KeyFigurePurposeCodedOther | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "KeyFigurePurposeCodedOther",
-                "type": "Element",
-            },
-        )
+    key_figure_purpose_coded_other: KeyFigurePurposeCodedOther | None = field(
+        default=None,
+        metadata={
+            "name": "KeyFigurePurposeCodedOther",
+            "type": "Element",
+        },
     )
-    characteristic_combination_id: CharacteristicCombinationId | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "CharacteristicCombinationID",
-                "type": "Element",
-            },
-        )
+    characteristic_combination_id: CharacteristicCombinationId | None = field(
+        default=None,
+        metadata={
+            "name": "CharacteristicCombinationID",
+            "type": "Element",
+        },
     )
     key_figure_information: KeyFigureInformation = field(
         metadata={
@@ -127,7 +122,9 @@ class ListOfKeyFigureData:
 
 @dataclass(kw_only=True)
 class TimeSeriesRequestDetail:
-    list_of_characteristic_combinations: ListOfCharacteristicCombinations | None = field(
+    list_of_characteristic_combinations: (
+        ListOfCharacteristicCombinations | None
+    ) = field(
         default=None,
         metadata={
             "name": "ListOfCharacteristicCombinations",

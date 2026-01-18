@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .pnc_gateway_type_enum_simple import PncGatewayTypeEnumSimple
 

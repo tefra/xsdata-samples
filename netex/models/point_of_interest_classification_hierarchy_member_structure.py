@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .entity_in_version_structure import VersionedChildStructure
 from .point_of_interest_classification_ref_structure import (
@@ -24,7 +23,9 @@ class PointOfInterestClassificationHierarchyMemberStructure(
             },
         )
     )
-    parent_classification_ref: PointOfInterestClassificationRefStructure | None = field(
+    parent_classification_ref: (
+        PointOfInterestClassificationRefStructure | None
+    ) = field(
         default=None,
         metadata={
             "name": "ParentClassificationRef",
@@ -33,7 +34,9 @@ class PointOfInterestClassificationHierarchyMemberStructure(
             "required": True,
         },
     )
-    point_of_interest_classification_ref: PointOfInterestClassificationRefStructure | None = field(
+    point_of_interest_classification_ref: (
+        PointOfInterestClassificationRefStructure | None
+    ) = field(
         default=None,
         metadata={
             "name": "PointOfInterestClassificationRef",

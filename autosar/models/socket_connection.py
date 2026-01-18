@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -175,7 +174,9 @@ class SocketConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    allowed_i_pv_6_ext_headers_ref: SocketConnection.AllowedIPv6ExtHeadersRef | None = field(
+    allowed_i_pv_6_ext_headers_ref: (
+        SocketConnection.AllowedIPv6ExtHeadersRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "ALLOWED-I-PV-6-EXT-HEADERS-REF",
@@ -183,13 +184,15 @@ class SocketConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    allowed_tcp_options_ref: SocketConnection.AllowedTcpOptionsRef | None = field(
-        default=None,
-        metadata={
-            "name": "ALLOWED-TCP-OPTIONS-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    allowed_tcp_options_ref: SocketConnection.AllowedTcpOptionsRef | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "ALLOWED-TCP-OPTIONS-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     autosar_connector: SoAdConnectorType | None = field(
         default=None,
@@ -223,21 +226,25 @@ class SocketConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    do_ip_source_address_ref: SocketConnection.DoIpSourceAddressRef | None = field(
-        default=None,
-        metadata={
-            "name": "DO-IP-SOURCE-ADDRESS-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    do_ip_source_address_ref: SocketConnection.DoIpSourceAddressRef | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "DO-IP-SOURCE-ADDRESS-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
-    do_ip_target_address_ref: SocketConnection.DoIpTargetAddressRef | None = field(
-        default=None,
-        metadata={
-            "name": "DO-IP-TARGET-ADDRESS-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    do_ip_target_address_ref: SocketConnection.DoIpTargetAddressRef | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "DO-IP-TARGET-ADDRESS-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     ident: TpConnectionIdent | None = field(
         default=None,
@@ -295,7 +302,9 @@ class SocketConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    runtime_ip_address_configuration: RuntimeAddressConfigurationEnum | None = field(
+    runtime_ip_address_configuration: (
+        RuntimeAddressConfigurationEnum | None
+    ) = field(
         default=None,
         metadata={
             "name": "RUNTIME-IP-ADDRESS-CONFIGURATION",
@@ -303,15 +312,13 @@ class SocketConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    runtime_port_configuration: RuntimeAddressConfigurationEnum | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "RUNTIME-PORT-CONFIGURATION",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    runtime_port_configuration: RuntimeAddressConfigurationEnum | None = field(
+        default=None,
+        metadata={
+            "name": "RUNTIME-PORT-CONFIGURATION",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     short_label: Identifier | None = field(
         default=None,

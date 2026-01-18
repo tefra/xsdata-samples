@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import VariationPoint
 from .boolean import Boolean
@@ -78,21 +77,25 @@ class SocketConnectionBundle:
             "required": True,
         },
     )
-    short_name_fragments: SocketConnectionBundle.ShortNameFragments | None = field(
-        default=None,
-        metadata={
-            "name": "SHORT-NAME-FRAGMENTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    short_name_fragments: SocketConnectionBundle.ShortNameFragments | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "SHORT-NAME-FRAGMENTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
-    bundled_connections: SocketConnectionBundle.BundledConnections | None = field(
-        default=None,
-        metadata={
-            "name": "BUNDLED-CONNECTIONS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    bundled_connections: SocketConnectionBundle.BundledConnections | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "BUNDLED-CONNECTIONS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     differentiated_service_field: PositiveInteger | None = field(
         default=None,

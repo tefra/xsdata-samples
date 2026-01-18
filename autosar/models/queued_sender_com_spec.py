@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .autosar_data_prototype_subtypes_enum import (
     AutosarDataPrototypeSubtypesEnum,
@@ -68,7 +67,9 @@ class QueuedSenderComSpec:
     class Meta:
         name = "QUEUED-SENDER-COM-SPEC"
 
-    composite_network_representations: QueuedSenderComSpec.CompositeNetworkRepresentations | None = field(
+    composite_network_representations: (
+        QueuedSenderComSpec.CompositeNetworkRepresentations | None
+    ) = field(
         default=None,
         metadata={
             "name": "COMPOSITE-NETWORK-REPRESENTATIONS",

@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from ipxact.models.bits_in_lau import BitsInLau
 from ipxact.models.description import Description

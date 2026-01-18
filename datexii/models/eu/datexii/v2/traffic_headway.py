@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from datexii.models.eu.datexii.v2.duration_value import DurationValue
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
@@ -32,15 +31,13 @@ class TrafficHeadway(TrafficData):
     :ivar traffic_headway_extension:
     """
 
-    average_distance_headway: FloatingPointMetreDistanceValue | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "averageDistanceHeadway",
-                "type": "Element",
-                "namespace": "http://datex2.eu/schema/2/2_0",
-            },
-        )
+    average_distance_headway: FloatingPointMetreDistanceValue | None = field(
+        default=None,
+        metadata={
+            "name": "averageDistanceHeadway",
+            "type": "Element",
+            "namespace": "http://datex2.eu/schema/2/2_0",
+        },
     )
     average_time_headway: DurationValue | None = field(
         default=None,

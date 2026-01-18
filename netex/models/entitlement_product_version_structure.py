@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .fare_product_prices_rel_structure import FareProductPricesRelStructure
 from .general_organisation_ref import GeneralOrganisationRef

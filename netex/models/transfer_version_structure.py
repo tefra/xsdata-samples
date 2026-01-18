@@ -1,6 +1,5 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
-from typing import Optional
 
 from .access_mode_enumeration import AccessModeEnumeration
 from .entity_in_version_structure import DataManagedObjectStructure

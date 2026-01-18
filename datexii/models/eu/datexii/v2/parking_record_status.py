@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from xsdata.models.datatype import XmlDateTime
 
@@ -85,16 +84,14 @@ class ParkingRecordStatus:
     :ivar parking_record_status_extension:
     """
 
-    parking_record_reference: ParkingRecordVersionedReference | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "parkingRecordReference",
-                "type": "Element",
-                "namespace": "http://datex2.eu/schema/2/2_0",
-                "required": True,
-            },
-        )
+    parking_record_reference: ParkingRecordVersionedReference | None = field(
+        default=None,
+        metadata={
+            "name": "parkingRecordReference",
+            "type": "Element",
+            "namespace": "http://datex2.eu/schema/2/2_0",
+            "required": True,
+        },
     )
     parking_status_origin_time: XmlDateTime | None = field(
         default=None,

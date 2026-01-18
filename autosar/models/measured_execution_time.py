@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -122,13 +121,15 @@ class MeasuredExecutionTime:
             "required": True,
         },
     )
-    short_name_fragments: MeasuredExecutionTime.ShortNameFragments | None = field(
-        default=None,
-        metadata={
-            "name": "SHORT-NAME-FRAGMENTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    short_name_fragments: MeasuredExecutionTime.ShortNameFragments | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "SHORT-NAME-FRAGMENTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     long_name: MultilanguageLongName | None = field(
         default=None,
@@ -178,23 +179,23 @@ class MeasuredExecutionTime:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    exclusive_area_ref: MeasuredExecutionTime.ExclusiveAreaRef | None = (
+    exclusive_area_ref: MeasuredExecutionTime.ExclusiveAreaRef | None = field(
+        default=None,
+        metadata={
+            "name": "EXCLUSIVE-AREA-REF",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
+    )
+    executable_entity_ref: MeasuredExecutionTime.ExecutableEntityRef | None = (
         field(
             default=None,
             metadata={
-                "name": "EXCLUSIVE-AREA-REF",
+                "name": "EXECUTABLE-ENTITY-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-    )
-    executable_entity_ref: MeasuredExecutionTime.ExecutableEntityRef | None = field(
-        default=None,
-        metadata={
-            "name": "EXECUTABLE-ENTITY-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
     )
     hardware_configuration: HardwareConfiguration | None = field(
         default=None,
@@ -212,15 +213,19 @@ class MeasuredExecutionTime:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    included_library_refs: MeasuredExecutionTime.IncludedLibraryRefs | None = field(
-        default=None,
-        metadata={
-            "name": "INCLUDED-LIBRARY-REFS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    included_library_refs: MeasuredExecutionTime.IncludedLibraryRefs | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "INCLUDED-LIBRARY-REFS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
-    memory_section_locations: MeasuredExecutionTime.MemorySectionLocations | None = field(
+    memory_section_locations: (
+        MeasuredExecutionTime.MemorySectionLocations | None
+    ) = field(
         default=None,
         metadata={
             "name": "MEMORY-SECTION-LOCATIONS",

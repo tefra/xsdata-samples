@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from ipxact.models.vendor_extensions import VendorExtensions
 
@@ -41,7 +40,9 @@ class ModeLinks:
         :ivar id:
         """
 
-        external_mode_reference: ModeLinks.ModeLink.ExternalModeReference | None = field(
+        external_mode_reference: (
+            ModeLinks.ModeLink.ExternalModeReference | None
+        ) = field(
             default=None,
             metadata={
                 "name": "externalModeReference",

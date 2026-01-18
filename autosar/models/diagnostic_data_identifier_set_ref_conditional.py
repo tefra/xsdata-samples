@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import VariationPoint
 from .diagnostic_data_identifier_set_subtypes_enum import (
@@ -35,7 +34,10 @@ class DiagnosticDataIdentifierSetRefConditional:
     class Meta:
         name = "DIAGNOSTIC-DATA-IDENTIFIER-SET-REF-CONDITIONAL"
 
-    diagnostic_data_identifier_set_ref: DiagnosticDataIdentifierSetRefConditional.DiagnosticDataIdentifierSetRef | None = field(
+    diagnostic_data_identifier_set_ref: (
+        DiagnosticDataIdentifierSetRefConditional.DiagnosticDataIdentifierSetRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "DIAGNOSTIC-DATA-IDENTIFIER-SET-REF",

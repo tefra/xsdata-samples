@@ -1,6 +1,5 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
-from typing import Optional
 
 from .access_equipment_version_structure import AccessEquipmentVersionStructure
 from .handrail_enumeration import HandrailEnumeration
@@ -216,13 +215,15 @@ class LiftEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    reached_floor_announcement: ReachedFloorAnnouncementEnumeration | None = field(
-        default=None,
-        metadata={
-            "name": "ReachedFloorAnnouncement",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        },
+    reached_floor_announcement: ReachedFloorAnnouncementEnumeration | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "ReachedFloorAnnouncement",
+                "type": "Element",
+                "namespace": "http://www.netex.org.uk/netex",
+            },
+        )
     )
     magnetic_induction_loop: bool | None = field(
         default=None,

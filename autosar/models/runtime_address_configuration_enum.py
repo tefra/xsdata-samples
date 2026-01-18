@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .runtime_address_configuration_enum_simple import (
     RuntimeAddressConfigurationEnumSimple,

@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -100,15 +99,13 @@ class IdsmProperties:
             "required": True,
         },
     )
-    short_name_fragments: IdsmProperties.ShortNameFragments | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "SHORT-NAME-FRAGMENTS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    short_name_fragments: IdsmProperties.ShortNameFragments | None = field(
+        default=None,
+        metadata={
+            "name": "SHORT-NAME-FRAGMENTS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     long_name: MultilanguageLongName | None = field(
         default=None,
@@ -166,15 +163,19 @@ class IdsmProperties:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    rate_limitation_filters: IdsmProperties.RateLimitationFilters | None = field(
-        default=None,
-        metadata={
-            "name": "RATE-LIMITATION-FILTERS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    rate_limitation_filters: IdsmProperties.RateLimitationFilters | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "RATE-LIMITATION-FILTERS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
-    traffic_limitation_filters: IdsmProperties.TrafficLimitationFilters | None = field(
+    traffic_limitation_filters: (
+        IdsmProperties.TrafficLimitationFilters | None
+    ) = field(
         default=None,
         metadata={
             "name": "TRAFFIC-LIMITATION-FILTERS",

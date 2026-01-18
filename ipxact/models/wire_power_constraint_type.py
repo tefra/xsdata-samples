@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from ipxact.models.power_domain_ref import PowerDomainRef
 from ipxact.models.range import Range

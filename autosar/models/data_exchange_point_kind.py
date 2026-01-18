@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .data_exchange_point_kind_simple import DataExchangePointKindSimple
 

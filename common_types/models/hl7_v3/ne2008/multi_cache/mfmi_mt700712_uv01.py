@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from ..core.datatypes_base import (
     Cd,
@@ -811,7 +810,15 @@ class MfmiMt700712Uv01PriorRegisteredRole:
             "type": "Attribute",
         },
     )
-    class_code: RoleClassMutualRelationship | RoleClassPassive | str | RoleClassOntological | RoleClassPartitive | RoleClassRootValue | None = field(
+    class_code: (
+        RoleClassMutualRelationship
+        | RoleClassPassive
+        | str
+        | RoleClassOntological
+        | RoleClassPartitive
+        | RoleClassRootValue
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "classCode",
@@ -1017,7 +1024,27 @@ class MfmiMt700712Uv01Definition:
             "type": "Attribute",
         },
     )
-    type_code: ActRelationshipConditional | ActRelationshipHasComponent | ActRelationshipOutcome | ActRelationshipCostTracking | ActRelationshipPosting | str | ActRelationshipHasSupport | ActRelationshipTemporallyPertains | ActRelationshipPertainsValue | ActRelationshipSequel | XActRelationshipDocument | XActRelationshipEntry | XActRelationshipEntryRelationship | XActRelationshipExternalReference | XActRelationshipPatientTransport | XActRelationshipPertinentInfo | XActRelationshipRelatedAuthorizations | XActReplaceOrRevise | XSuccReplPrev = field(
+    type_code: (
+        ActRelationshipConditional
+        | ActRelationshipHasComponent
+        | ActRelationshipOutcome
+        | ActRelationshipCostTracking
+        | ActRelationshipPosting
+        | str
+        | ActRelationshipHasSupport
+        | ActRelationshipTemporallyPertains
+        | ActRelationshipPertainsValue
+        | ActRelationshipSequel
+        | XActRelationshipDocument
+        | XActRelationshipEntry
+        | XActRelationshipEntryRelationship
+        | XActRelationshipExternalReference
+        | XActRelationshipPatientTransport
+        | XActRelationshipPertinentInfo
+        | XActRelationshipRelatedAuthorizations
+        | XActReplaceOrRevise
+        | XSuccReplPrev
+    ) = field(
         init=False,
         default=ActRelationshipSequel.INST,
         metadata={
@@ -1129,16 +1156,14 @@ class MfmiMt700712Uv01Subject3:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    prior_registered_role: MfmiMt700712Uv01PriorRegisteredRole | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "priorRegisteredRole",
-                "type": "Element",
-                "namespace": "urn:hl7-org:v3",
-                "nillable": True,
-            },
-        )
+    prior_registered_role: MfmiMt700712Uv01PriorRegisteredRole | None = field(
+        default=None,
+        metadata={
+            "name": "priorRegisteredRole",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        },
     )
     null_flavor: NullFlavor | None = field(
         default=None,
@@ -1202,7 +1227,27 @@ class MfmiMt700712Uv01Subject4:
             "type": "Attribute",
         },
     )
-    type_code: ActRelationshipConditional | ActRelationshipHasComponent | ActRelationshipOutcome | ActRelationshipCostTracking | ActRelationshipPosting | str | ActRelationshipHasSupport | ActRelationshipTemporallyPertains | ActRelationshipPertainsValue | ActRelationshipSequel | XActRelationshipDocument | XActRelationshipEntry | XActRelationshipEntryRelationship | XActRelationshipExternalReference | XActRelationshipPatientTransport | XActRelationshipPertinentInfo | XActRelationshipRelatedAuthorizations | XActReplaceOrRevise | XSuccReplPrev = field(
+    type_code: (
+        ActRelationshipConditional
+        | ActRelationshipHasComponent
+        | ActRelationshipOutcome
+        | ActRelationshipCostTracking
+        | ActRelationshipPosting
+        | str
+        | ActRelationshipHasSupport
+        | ActRelationshipTemporallyPertains
+        | ActRelationshipPertainsValue
+        | ActRelationshipSequel
+        | XActRelationshipDocument
+        | XActRelationshipEntry
+        | XActRelationshipEntryRelationship
+        | XActRelationshipExternalReference
+        | XActRelationshipPatientTransport
+        | XActRelationshipPertinentInfo
+        | XActRelationshipRelatedAuthorizations
+        | XActReplaceOrRevise
+        | XSuccReplPrev
+    ) = field(
         init=False,
         default=ActRelationshipPertainsValue.SUBJ,
         metadata={
@@ -1251,16 +1296,14 @@ class MfmiMt700712Uv01InFulfillmentOf:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    registration_request: MfmiMt700712Uv01RegistrationRequest | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "registrationRequest",
-                "type": "Element",
-                "namespace": "urn:hl7-org:v3",
-                "nillable": True,
-            },
-        )
+    registration_request: MfmiMt700712Uv01RegistrationRequest | None = field(
+        default=None,
+        metadata={
+            "name": "registrationRequest",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        },
     )
     null_flavor: NullFlavor | None = field(
         default=None,
@@ -1411,7 +1454,27 @@ class MfmiMt700712Uv01ReplacementOf:
             "type": "Attribute",
         },
     )
-    type_code: ActRelationshipConditional | ActRelationshipHasComponent | ActRelationshipOutcome | ActRelationshipCostTracking | ActRelationshipPosting | str | ActRelationshipHasSupport | ActRelationshipTemporallyPertains | ActRelationshipPertainsValue | ActRelationshipSequel | XActRelationshipDocument | XActRelationshipEntry | XActRelationshipEntryRelationship | XActRelationshipExternalReference | XActRelationshipPatientTransport | XActRelationshipPertinentInfo | XActRelationshipRelatedAuthorizations | XActReplaceOrRevise | XSuccReplPrev = field(
+    type_code: (
+        ActRelationshipConditional
+        | ActRelationshipHasComponent
+        | ActRelationshipOutcome
+        | ActRelationshipCostTracking
+        | ActRelationshipPosting
+        | str
+        | ActRelationshipHasSupport
+        | ActRelationshipTemporallyPertains
+        | ActRelationshipPertainsValue
+        | ActRelationshipSequel
+        | XActRelationshipDocument
+        | XActRelationshipEntry
+        | XActRelationshipEntryRelationship
+        | XActRelationshipExternalReference
+        | XActRelationshipPatientTransport
+        | XActRelationshipPertinentInfo
+        | XActRelationshipRelatedAuthorizations
+        | XActReplaceOrRevise
+        | XSuccReplPrev
+    ) = field(
         init=False,
         default=ActRelationshipSequel.RPLC,
         metadata={

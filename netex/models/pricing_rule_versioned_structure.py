@@ -1,6 +1,5 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
-from typing import Optional, Union
 
 from .discounting_rule_ref import DiscountingRuleRef
 from .entity_in_version_structure import DataManagedObjectStructure
@@ -50,7 +49,9 @@ class PricingRuleVersionedStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    discounting_rule_ref_or_pricing_rule_ref: LimitingRuleRef | DiscountingRuleRef | PricingRuleRef | None = field(
+    discounting_rule_ref_or_pricing_rule_ref: (
+        LimitingRuleRef | DiscountingRuleRef | PricingRuleRef | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",

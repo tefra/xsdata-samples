@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from sdmx_ml.models.constraint_attachment_type import ConstraintAttachmentType
 from sdmx_ml.models.constraint_base_type import ConstraintBaseType

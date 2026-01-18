@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .ref import Ref
 from .software_package_storing_enum import SoftwarePackageStoringEnum
@@ -70,15 +69,15 @@ class SoftwarePackageStoring:
 
     @dataclass
     class TransferRefs:
-        transfer_ref: list[
-            SoftwarePackageStoring.TransferRefs.TransferRef
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "TRANSFER-REF",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        transfer_ref: list[SoftwarePackageStoring.TransferRefs.TransferRef] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "TRANSFER-REF",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )
 
         @dataclass

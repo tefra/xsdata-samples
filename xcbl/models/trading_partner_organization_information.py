@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from xcbl.models.trading_partner_user_information import (
     City,
@@ -345,7 +344,9 @@ class TradingPartnerOrganizationPurpose:
             "required": True,
         }
     )
-    trading_partner_organization_purpose_coded_other: TradingPartnerOrganizationPurposeCodedOther | None = field(
+    trading_partner_organization_purpose_coded_other: (
+        TradingPartnerOrganizationPurposeCodedOther | None
+    ) = field(
         default=None,
         metadata={
             "name": "TradingPartnerOrganizationPurposeCodedOther",
@@ -363,7 +364,9 @@ class TradingPartnerOrganizationVisibility:
             "required": True,
         }
     )
-    trading_partner_organization_visibility_coded_other: TradingPartnerOrganizationVisibilityCodedOther | None = field(
+    trading_partner_organization_visibility_coded_other: (
+        TradingPartnerOrganizationVisibilityCodedOther | None
+    ) = field(
         default=None,
         metadata={
             "name": "TradingPartnerOrganizationVisibilityCodedOther",
@@ -392,12 +395,14 @@ class TradingPartnerType:
             "required": True,
         }
     )
-    trading_partner_type_coded_other: TradingPartnerTypeCodedOther | None = field(
-        default=None,
-        metadata={
-            "name": "TradingPartnerTypeCodedOther",
-            "type": "Element",
-        },
+    trading_partner_type_coded_other: TradingPartnerTypeCodedOther | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "TradingPartnerTypeCodedOther",
+                "type": "Element",
+            },
+        )
     )
 
 
@@ -431,21 +436,21 @@ class BankDetail:
             "required": True,
         }
     )
-    international_bank_account_number: InternationalBankAccountNumber | None = field(
+    international_bank_account_number: (
+        InternationalBankAccountNumber | None
+    ) = field(
         default=None,
         metadata={
             "name": "InternationalBankAccountNumber",
             "type": "Element",
         },
     )
-    trading_partner_account_holder: TradingPartnerAccountHolder | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "TradingPartnerAccountHolder",
-                "type": "Element",
-            },
-        )
+    trading_partner_account_holder: TradingPartnerAccountHolder | None = field(
+        default=None,
+        metadata={
+            "name": "TradingPartnerAccountHolder",
+            "type": "Element",
+        },
     )
     bank_account_control_key: BankAccountControlKey | None = field(
         default=None,
@@ -691,7 +696,9 @@ class TradingPartnerOrganizationHeader:
             "required": True,
         }
     )
-    parent_trading_partner_identifications: ParentTradingPartnerIdentifications | None = field(
+    parent_trading_partner_identifications: (
+        ParentTradingPartnerIdentifications | None
+    ) = field(
         default=None,
         metadata={
             "name": "ParentTradingPartnerIdentifications",

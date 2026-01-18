@@ -1,6 +1,5 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
-from typing import Optional, Union
 
 from xsdata.models.datatype import XmlDateTime
 
@@ -64,7 +63,16 @@ class TravelSpecificationVersionStructure(FareContractEntryVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    fare_request_ref_or_passenger_information_request_ref: RepeatedTripFareRequestRef | SingleTripFareRequestRef | FareRequestRef | StopFinderRequestRef | StopEventRequestRef | ScheduleRequestRef | TripPlanRequestRef | None = field(
+    fare_request_ref_or_passenger_information_request_ref: (
+        RepeatedTripFareRequestRef
+        | SingleTripFareRequestRef
+        | FareRequestRef
+        | StopFinderRequestRef
+        | StopEventRequestRef
+        | ScheduleRequestRef
+        | TripPlanRequestRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -107,7 +115,28 @@ class TravelSpecificationVersionStructure(FareContractEntryVersionStructure):
             ),
         },
     )
-    fare_price_ref_or_cell_ref: CustomerPurchasePackagePriceRef | ParkingPriceRef | TimeIntervalPriceRef | TimeUnitPriceRef | QualityStructureFactorPriceRef | ControllableElementPriceRef | ValidableElementPriceRef | GeographicalIntervalPriceRef | GeographicalUnitPriceRef | UsageParameterPriceRef | SeriesConstraintPriceRef | SalesOfferPackagePriceRef | DistanceMatrixElementPriceRef | FareStructureElementPriceRef | FulfilmentMethodPriceRef | CappingRulePriceRef | FareProductPriceRef | FarePriceRef | CellRef | None = field(
+    fare_price_ref_or_cell_ref: (
+        CustomerPurchasePackagePriceRef
+        | ParkingPriceRef
+        | TimeIntervalPriceRef
+        | TimeUnitPriceRef
+        | QualityStructureFactorPriceRef
+        | ControllableElementPriceRef
+        | ValidableElementPriceRef
+        | GeographicalIntervalPriceRef
+        | GeographicalUnitPriceRef
+        | UsageParameterPriceRef
+        | SeriesConstraintPriceRef
+        | SalesOfferPackagePriceRef
+        | DistanceMatrixElementPriceRef
+        | FareStructureElementPriceRef
+        | FulfilmentMethodPriceRef
+        | CappingRulePriceRef
+        | FareProductPriceRef
+        | FarePriceRef
+        | CellRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -285,7 +314,9 @@ class TravelSpecificationVersionStructure(FareContractEntryVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    travel_specification_summary_view: TravelSpecificationSummaryView | None = field(
+    travel_specification_summary_view: (
+        TravelSpecificationSummaryView | None
+    ) = field(
         default=None,
         metadata={
             "name": "TravelSpecificationSummaryView",
@@ -293,7 +324,9 @@ class TravelSpecificationVersionStructure(FareContractEntryVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    specific_parameter_assignments: SpecificParameterAssignmentsRelStructure | None = field(
+    specific_parameter_assignments: (
+        SpecificParameterAssignmentsRelStructure | None
+    ) = field(
         default=None,
         metadata={
             "name": "specificParameterAssignments",

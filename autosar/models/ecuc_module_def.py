@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -241,25 +240,21 @@ class EcucModuleDef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    related_trace_item_ref: EcucModuleDef.RelatedTraceItemRef | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "RELATED-TRACE-ITEM-REF",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    related_trace_item_ref: EcucModuleDef.RelatedTraceItemRef | None = field(
+        default=None,
+        metadata={
+            "name": "RELATED-TRACE-ITEM-REF",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
-    ecuc_validation_conds: EcucModuleDef.EcucValidationConds | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "ECUC-VALIDATION-CONDS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    ecuc_validation_conds: EcucModuleDef.EcucValidationConds | None = field(
+        default=None,
+        metadata={
+            "name": "ECUC-VALIDATION-CONDS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     ecuc_cond: EcucConditionSpecification | None = field(
         default=None,
@@ -317,23 +312,23 @@ class EcucModuleDef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    refined_module_def_ref: EcucModuleDef.RefinedModuleDefRef | None = (
+    refined_module_def_ref: EcucModuleDef.RefinedModuleDefRef | None = field(
+        default=None,
+        metadata={
+            "name": "REFINED-MODULE-DEF-REF",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
+    )
+    supported_config_variants: EcucModuleDef.SupportedConfigVariants | None = (
         field(
             default=None,
             metadata={
-                "name": "REFINED-MODULE-DEF-REF",
+                "name": "SUPPORTED-CONFIG-VARIANTS",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-    )
-    supported_config_variants: EcucModuleDef.SupportedConfigVariants | None = field(
-        default=None,
-        metadata={
-            "name": "SUPPORTED-CONFIG-VARIANTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
     )
     containers: EcucModuleDef.Containers | None = field(
         default=None,

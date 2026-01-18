@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -162,15 +161,13 @@ class DiagnosticEvent:
             "required": True,
         },
     )
-    short_name_fragments: DiagnosticEvent.ShortNameFragments | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "SHORT-NAME-FRAGMENTS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    short_name_fragments: DiagnosticEvent.ShortNameFragments | None = field(
+        default=None,
+        metadata={
+            "name": "SHORT-NAME-FRAGMENTS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     long_name: MultilanguageLongName | None = field(
         default=None,
@@ -244,7 +241,9 @@ class DiagnosticEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    clear_event_allowed_behavior: DiagnosticClearEventAllowedBehaviorEnum | None = field(
+    clear_event_allowed_behavior: (
+        DiagnosticClearEventAllowedBehaviorEnum | None
+    ) = field(
         default=None,
         metadata={
             "name": "CLEAR-EVENT-ALLOWED-BEHAVIOR",
@@ -260,25 +259,21 @@ class DiagnosticEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    confirmation_threshold: PositiveIntegerValueVariationPoint | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "CONFIRMATION-THRESHOLD",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    confirmation_threshold: PositiveIntegerValueVariationPoint | None = field(
+        default=None,
+        metadata={
+            "name": "CONFIRMATION-THRESHOLD",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
-    connected_indicators: DiagnosticEvent.ConnectedIndicators | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "CONNECTED-INDICATORS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    connected_indicators: DiagnosticEvent.ConnectedIndicators | None = field(
+        default=None,
+        metadata={
+            "name": "CONNECTED-INDICATORS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     event_clear_allowed: DiagnosticEventClearAllowedEnum | None = field(
         default=None,
@@ -288,7 +283,9 @@ class DiagnosticEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    event_failure_cycle_counter_threshold: PositiveIntegerValueVariationPoint | None = field(
+    event_failure_cycle_counter_threshold: (
+        PositiveIntegerValueVariationPoint | None
+    ) = field(
         default=None,
         metadata={
             "name": "EVENT-FAILURE-CYCLE-COUNTER-THRESHOLD",

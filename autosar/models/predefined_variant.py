@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -114,15 +113,13 @@ class PredefinedVariant:
             "required": True,
         },
     )
-    short_name_fragments: PredefinedVariant.ShortNameFragments | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "SHORT-NAME-FRAGMENTS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    short_name_fragments: PredefinedVariant.ShortNameFragments | None = field(
+        default=None,
+        metadata={
+            "name": "SHORT-NAME-FRAGMENTS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     long_name: MultilanguageLongName | None = field(
         default=None,
@@ -180,15 +177,19 @@ class PredefinedVariant:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    included_variant_refs: PredefinedVariant.IncludedVariantRefs | None = field(
-        default=None,
-        metadata={
-            "name": "INCLUDED-VARIANT-REFS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    included_variant_refs: PredefinedVariant.IncludedVariantRefs | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "INCLUDED-VARIANT-REFS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
-    post_build_variant_criterion_value_set_refs: PredefinedVariant.PostBuildVariantCriterionValueSetRefs | None = field(
+    post_build_variant_criterion_value_set_refs: (
+        PredefinedVariant.PostBuildVariantCriterionValueSetRefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "POST-BUILD-VARIANT-CRITERION-VALUE-SET-REFS",
@@ -196,7 +197,9 @@ class PredefinedVariant:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_systemconstant_value_set_refs: PredefinedVariant.SwSystemconstantValueSetRefs | None = field(
+    sw_systemconstant_value_set_refs: (
+        PredefinedVariant.SwSystemconstantValueSetRefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "SW-SYSTEMCONSTANT-VALUE-SET-REFS",
@@ -288,15 +291,13 @@ class PredefinedVariant:
 
         @dataclass
         class PostBuildVariantCriterionValueSetRef(Ref):
-            dest: PostBuildVariantCriterionValueSetSubtypesEnum | None = (
-                field(
-                    default=None,
-                    metadata={
-                        "name": "DEST",
-                        "type": "Attribute",
-                        "required": True,
-                    },
-                )
+            dest: PostBuildVariantCriterionValueSetSubtypesEnum | None = field(
+                default=None,
+                metadata={
+                    "name": "DEST",
+                    "type": "Attribute",
+                    "required": True,
+                },
             )
 
     @dataclass

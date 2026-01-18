@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .class_ref_structure import ClassRefStructure
 from .entity_in_version_structure import VersionedChildStructure

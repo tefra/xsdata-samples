@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .request_method_enum import RequestMethodEnum
 from .string import String

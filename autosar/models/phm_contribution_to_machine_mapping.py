@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -102,7 +101,9 @@ class PhmContributionToMachineMapping:
             "required": True,
         },
     )
-    short_name_fragments: PhmContributionToMachineMapping.ShortNameFragments | None = field(
+    short_name_fragments: (
+        PhmContributionToMachineMapping.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -150,15 +151,13 @@ class PhmContributionToMachineMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: PhmContributionToMachineMapping.Annotations | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "ANNOTATIONS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    annotations: PhmContributionToMachineMapping.Annotations | None = field(
+        default=None,
+        metadata={
+            "name": "ANNOTATIONS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     variation_point: VariationPoint | None = field(
         default=None,
@@ -168,17 +167,17 @@ class PhmContributionToMachineMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    machine_ref: PhmContributionToMachineMapping.MachineRef | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "MACHINE-REF",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    machine_ref: PhmContributionToMachineMapping.MachineRef | None = field(
+        default=None,
+        metadata={
+            "name": "MACHINE-REF",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
-    phm_contribution_refs: PhmContributionToMachineMapping.PhmContributionRefs | None = field(
+    phm_contribution_refs: (
+        PhmContributionToMachineMapping.PhmContributionRefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "PHM-CONTRIBUTION-REFS",
@@ -257,11 +256,13 @@ class PhmContributionToMachineMapping:
 
         @dataclass
         class PhmContributionRef(Ref):
-            dest: PlatformHealthManagementContributionSubtypesEnum | None = field(
-                default=None,
-                metadata={
-                    "name": "DEST",
-                    "type": "Attribute",
-                    "required": True,
-                },
+            dest: PlatformHealthManagementContributionSubtypesEnum | None = (
+                field(
+                    default=None,
+                    metadata={
+                        "name": "DEST",
+                        "type": "Attribute",
+                        "required": True,
+                    },
+                )
             )

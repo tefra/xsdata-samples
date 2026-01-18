@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -116,7 +115,9 @@ class TransformationTechnology:
             "required": True,
         },
     )
-    short_name_fragments: TransformationTechnology.ShortNameFragments | None = field(
+    short_name_fragments: (
+        TransformationTechnology.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -204,7 +205,9 @@ class TransformationTechnology:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    transformation_descriptions: TransformationTechnology.TransformationDescriptions | None = field(
+    transformation_descriptions: (
+        TransformationTechnology.TransformationDescriptions | None
+    ) = field(
         default=None,
         metadata={
             "name": "TRANSFORMATION-DESCRIPTIONS",

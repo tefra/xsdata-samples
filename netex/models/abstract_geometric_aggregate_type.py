@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .abstract_geometry_type import AbstractGeometryType
 from .aggregation_type import AggregationType

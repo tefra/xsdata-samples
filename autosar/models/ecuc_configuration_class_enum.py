@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .ecuc_configuration_class_enum_simple import (
     EcucConfigurationClassEnumSimple,

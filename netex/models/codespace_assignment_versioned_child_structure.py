@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import ForwardRef, Optional, Union
+from typing import ForwardRef
 
 from xsdata.models.datatype import XmlDate
 
@@ -21,25 +21,23 @@ class CodespaceAssignmentVersionedChildStructure(VersionedChildStructure):
     class Meta:
         name = "CodespaceAssignment_VersionedChildStructure"
 
-    codespace_ref_or_codespace: CodespaceRef | Codespace | None = (
-        field(
-            default=None,
-            metadata={
-                "type": "Elements",
-                "choices": (
-                    {
-                        "name": "CodespaceRef",
-                        "type": CodespaceRef,
-                        "namespace": "http://www.netex.org.uk/netex",
-                    },
-                    {
-                        "name": "Codespace",
-                        "type": Codespace,
-                        "namespace": "http://www.netex.org.uk/netex",
-                    },
-                ),
-            },
-        )
+    codespace_ref_or_codespace: CodespaceRef | Codespace | None = field(
+        default=None,
+        metadata={
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "CodespaceRef",
+                    "type": CodespaceRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "Codespace",
+                    "type": Codespace,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+        },
     )
     administrative_zone_ref: AdministrativeZoneRef | None = field(
         default=None,
@@ -82,7 +80,8 @@ class CodespaceAssignmentVersionedChildStructure(VersionedChildStructure):
         },
     )
     start_value_or_end_value: Iterable[
-        CodespaceAssignmentVersionedChildStructure.StartValue | CodespaceAssignmentVersionedChildStructure.EndValue
+        CodespaceAssignmentVersionedChildStructure.StartValue
+        | CodespaceAssignmentVersionedChildStructure.EndValue
     ] = field(
         default_factory=list,
         metadata={
@@ -122,13 +121,15 @@ class CodespaceAssignmentVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    type_of_codespace_assignment_ref: TypeOfCodespaceAssignmentRef | None = field(
-        default=None,
-        metadata={
-            "name": "TypeOfCodespaceAssignmentRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        },
+    type_of_codespace_assignment_ref: TypeOfCodespaceAssignmentRef | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "TypeOfCodespaceAssignmentRef",
+                "type": "Element",
+                "namespace": "http://www.netex.org.uk/netex",
+            },
+        )
     )
 
     @dataclass

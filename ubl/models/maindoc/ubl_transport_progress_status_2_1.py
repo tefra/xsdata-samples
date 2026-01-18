@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from ubl.models.common.ubl_common_aggregate_components_2_1 import (
     ReceiverParty,
@@ -163,7 +162,9 @@ class TransportProgressStatusType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    transport_progress_status_request_document_reference: TransportProgressStatusRequestDocumentReference | None = field(
+    transport_progress_status_request_document_reference: (
+        TransportProgressStatusRequestDocumentReference | None
+    ) = field(
         default=None,
         metadata={
             "name": "TransportProgressStatusRequestDocumentReference",

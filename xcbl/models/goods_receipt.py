@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from xcbl.models.order_confirmation import DeliveryComplete
 from xcbl.models.remittance_advice import PurchaseOrderLineItemNumber
@@ -270,14 +269,12 @@ class GoodsCondition:
             "type": "Element",
         },
     )
-    element_identifier_coded_other: ElementIdentifierCodedOther | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "ElementIdentifierCodedOther",
-                "type": "Element",
-            },
-        )
+    element_identifier_coded_other: ElementIdentifierCodedOther | None = field(
+        default=None,
+        metadata={
+            "name": "ElementIdentifierCodedOther",
+            "type": "Element",
+        },
     )
     identifying_reference: IdentifyingReference | None = field(
         default=None,
@@ -286,23 +283,19 @@ class GoodsCondition:
             "type": "Element",
         },
     )
-    delivery_stage_qualifier_coded: DeliveryStageQualifierCoded | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "DeliveryStageQualifierCoded",
-                "type": "Element",
-            },
-        )
+    delivery_stage_qualifier_coded: DeliveryStageQualifierCoded | None = field(
+        default=None,
+        metadata={
+            "name": "DeliveryStageQualifierCoded",
+            "type": "Element",
+        },
     )
-    delivery_stage_qualifier_other: DeliveryStageQualifierOther | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "DeliveryStageQualifierOther",
-                "type": "Element",
-            },
-        )
+    delivery_stage_qualifier_other: DeliveryStageQualifierOther | None = field(
+        default=None,
+        metadata={
+            "name": "DeliveryStageQualifierOther",
+            "type": "Element",
+        },
     )
     goods_condition_coded: GoodsConditionCoded = field(
         metadata={
@@ -612,7 +605,9 @@ class GoodsReceiptReferences:
             "type": "Element",
         },
     )
-    list_of_goods_receipt_order_reference: ListOfGoodsReceiptOrderReference | None = field(
+    list_of_goods_receipt_order_reference: (
+        ListOfGoodsReceiptOrderReference | None
+    ) = field(
         default=None,
         metadata={
             "name": "ListOfGoodsReceiptOrderReference",
@@ -684,14 +679,12 @@ class GoodsReceiptHeader:
             "required": True,
         }
     )
-    goods_receipt_type_coded_other: GoodsReceiptTypeCodedOther | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "GoodsReceiptTypeCodedOther",
-                "type": "Element",
-            },
-        )
+    goods_receipt_type_coded_other: GoodsReceiptTypeCodedOther | None = field(
+        default=None,
+        metadata={
+            "name": "GoodsReceiptTypeCodedOther",
+            "type": "Element",
+        },
     )
     list_of_goods_condition: ListOfGoodsCondition | None = field(
         default=None,
@@ -788,7 +781,9 @@ class GoodsReceiptLineItemReferences:
             "type": "Element",
         },
     )
-    list_of_goods_receipt_item_order_reference: ListOfGoodsReceiptItemOrderReference | None = field(
+    list_of_goods_receipt_item_order_reference: (
+        ListOfGoodsReceiptItemOrderReference | None
+    ) = field(
         default=None,
         metadata={
             "name": "ListOfGoodsReceiptItemOrderReference",
@@ -855,12 +850,14 @@ class GoodsReceiptItemDetail:
             "type": "Element",
         },
     )
-    list_of_line_item_goods_condition: ListOfLineItemGoodsCondition | None = field(
-        default=None,
-        metadata={
-            "name": "ListOfLineItemGoodsCondition",
-            "type": "Element",
-        },
+    list_of_line_item_goods_condition: ListOfLineItemGoodsCondition | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "ListOfLineItemGoodsCondition",
+                "type": "Element",
+            },
+        )
     )
     unacceptable_packaging: UnacceptablePackaging | None = field(
         default=None,
@@ -869,21 +866,21 @@ class GoodsReceiptItemDetail:
             "type": "Element",
         },
     )
-    goods_receipt_line_item_references: GoodsReceiptLineItemReferences | None = field(
+    goods_receipt_line_item_references: (
+        GoodsReceiptLineItemReferences | None
+    ) = field(
         default=None,
         metadata={
             "name": "GoodsReceiptLineItemReferences",
             "type": "Element",
         },
     )
-    goods_receipt_delivery_detail: GoodsReceiptDeliveryDetail | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "GoodsReceiptDeliveryDetail",
-                "type": "Element",
-            },
-        )
+    goods_receipt_delivery_detail: GoodsReceiptDeliveryDetail | None = field(
+        default=None,
+        metadata={
+            "name": "GoodsReceiptDeliveryDetail",
+            "type": "Element",
+        },
     )
     list_of_structured_note: ListOfStructuredNote | None = field(
         default=None,
@@ -936,7 +933,9 @@ class GoodsReceiptDetail:
             "required": True,
         }
     )
-    list_of_goods_receipt_package_detail: ListOfGoodsReceiptPackageDetail | None = field(
+    list_of_goods_receipt_package_detail: (
+        ListOfGoodsReceiptPackageDetail | None
+    ) = field(
         default=None,
         metadata={
             "name": "ListOfGoodsReceiptPackageDetail",

@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .bsw_call_type_simple import BswCallTypeSimple
 

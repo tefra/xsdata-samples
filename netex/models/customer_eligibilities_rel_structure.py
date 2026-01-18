@@ -1,6 +1,5 @@
 from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import Union
 
 from .commercial_profile_eligibility import CommercialProfileEligibility
 from .containment_aggregation_structure import ContainmentAggregationStructure
@@ -18,7 +17,9 @@ class CustomerEligibilitiesRelStructure(ContainmentAggregationStructure):
         name = "customerEligibilities_RelStructure"
 
     customer_eligibility: Iterable[
-        ResidentialQualificationEligibility | CommercialProfileEligibility | UserProfileEligibility
+        ResidentialQualificationEligibility
+        | CommercialProfileEligibility
+        | UserProfileEligibility
     ] = field(
         default_factory=list,
         metadata={

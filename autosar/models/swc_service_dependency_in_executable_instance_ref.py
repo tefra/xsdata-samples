@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .ref import Ref
 from .root_sw_component_prototype_subtypes_enum import (
@@ -38,7 +37,10 @@ class SwcServiceDependencyInExecutableInstanceRef:
     class Meta:
         name = "SWC-SERVICE-DEPENDENCY-IN-EXECUTABLE-INSTANCE-REF"
 
-    context_root_component_ref: SwcServiceDependencyInExecutableInstanceRef.ContextRootComponentRef | None = field(
+    context_root_component_ref: (
+        SwcServiceDependencyInExecutableInstanceRef.ContextRootComponentRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "CONTEXT-ROOT-COMPONENT-REF",
@@ -56,7 +58,10 @@ class SwcServiceDependencyInExecutableInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    target_swc_service_dependency_ref: SwcServiceDependencyInExecutableInstanceRef.TargetSwcServiceDependencyRef | None = field(
+    target_swc_service_dependency_ref: (
+        SwcServiceDependencyInExecutableInstanceRef.TargetSwcServiceDependencyRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "TARGET-SWC-SERVICE-DEPENDENCY-REF",

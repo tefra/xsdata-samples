@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .accesses_rel_structure import AccessesRelStructure
 from .country_ref import CountryRef
@@ -44,13 +43,15 @@ class TopographicPlaceVersionStructure(PlaceVersionStructure):
             },
         )
     )
-    alternative_descriptors: TopographicPlaceDescriptorsRelStructure | None = field(
-        default=None,
-        metadata={
-            "name": "alternativeDescriptors",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        },
+    alternative_descriptors: TopographicPlaceDescriptorsRelStructure | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "alternativeDescriptors",
+                "type": "Element",
+                "namespace": "http://www.netex.org.uk/netex",
+            },
+        )
     )
     topographic_place_type: TopographicPlaceTypeEnumeration | None = field(
         default=None,
@@ -92,15 +93,13 @@ class TopographicPlaceVersionStructure(PlaceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    parent_topographic_place_ref: TopographicPlaceRefStructure | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "ParentTopographicPlaceRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            },
-        )
+    parent_topographic_place_ref: TopographicPlaceRefStructure | None = field(
+        default=None,
+        metadata={
+            "name": "ParentTopographicPlaceRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        },
     )
     adjacent_places: TopographicPlaceRefsRelStructure | None = field(
         default=None,

@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -280,7 +279,9 @@ class EcuInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    associated_com_i_pdu_group_refs: EcuInstance.AssociatedComIPduGroupRefs | None = field(
+    associated_com_i_pdu_group_refs: (
+        EcuInstance.AssociatedComIPduGroupRefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "ASSOCIATED-COM-I-PDU-GROUP-REFS",
@@ -288,7 +289,9 @@ class EcuInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    associated_consumed_provided_service_instance_groups: EcuInstance.AssociatedConsumedProvidedServiceInstanceGroups | None = field(
+    associated_consumed_provided_service_instance_groups: (
+        EcuInstance.AssociatedConsumedProvidedServiceInstanceGroups | None
+    ) = field(
         default=None,
         metadata={
             "name": "ASSOCIATED-CONSUMED-PROVIDED-SERVICE-INSTANCE-GROUPS",
@@ -296,7 +299,9 @@ class EcuInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    associated_pdur_i_pdu_group_refs: EcuInstance.AssociatedPdurIPduGroupRefs | None = field(
+    associated_pdur_i_pdu_group_refs: (
+        EcuInstance.AssociatedPdurIPduGroupRefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "ASSOCIATED-PDUR-I-PDU-GROUP-REFS",

@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from xsdata.models.datatype import XmlTime
 
@@ -24,7 +23,9 @@ class StartTimeAtStopPointVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    scheduled_stop_point_ref: FareScheduledStopPointRef | ScheduledStopPointRef | None = field(
+    scheduled_stop_point_ref: (
+        FareScheduledStopPointRef | ScheduledStopPointRef | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",

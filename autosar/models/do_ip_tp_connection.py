@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .do_ip_logic_address_subtypes_enum import DoIpLogicAddressSubtypesEnum
 from .pdu_triggering_subtypes_enum import PduTriggeringSubtypesEnum
@@ -50,21 +49,25 @@ class DoIpTpConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    do_ip_source_address_ref: DoIpTpConnection.DoIpSourceAddressRef | None = field(
-        default=None,
-        metadata={
-            "name": "DO-IP-SOURCE-ADDRESS-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    do_ip_source_address_ref: DoIpTpConnection.DoIpSourceAddressRef | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "DO-IP-SOURCE-ADDRESS-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
-    do_ip_target_address_ref: DoIpTpConnection.DoIpTargetAddressRef | None = field(
-        default=None,
-        metadata={
-            "name": "DO-IP-TARGET-ADDRESS-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    do_ip_target_address_ref: DoIpTpConnection.DoIpTargetAddressRef | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "DO-IP-TARGET-ADDRESS-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     tp_sdu_ref: DoIpTpConnection.TpSduRef | None = field(
         default=None,

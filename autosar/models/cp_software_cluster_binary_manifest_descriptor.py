@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -125,7 +124,9 @@ class CpSoftwareClusterBinaryManifestDescriptor:
             "required": True,
         },
     )
-    short_name_fragments: CpSoftwareClusterBinaryManifestDescriptor.ShortNameFragments | None = field(
+    short_name_fragments: (
+        CpSoftwareClusterBinaryManifestDescriptor.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -173,7 +174,9 @@ class CpSoftwareClusterBinaryManifestDescriptor:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: CpSoftwareClusterBinaryManifestDescriptor.Annotations | None = field(
+    annotations: (
+        CpSoftwareClusterBinaryManifestDescriptor.Annotations | None
+    ) = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -189,7 +192,9 @@ class CpSoftwareClusterBinaryManifestDescriptor:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    cp_software_cluster_ref: CpSoftwareClusterBinaryManifestDescriptor.CpSoftwareClusterRef | None = field(
+    cp_software_cluster_ref: (
+        CpSoftwareClusterBinaryManifestDescriptor.CpSoftwareClusterRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "CP-SOFTWARE-CLUSTER-REF",
@@ -197,7 +202,9 @@ class CpSoftwareClusterBinaryManifestDescriptor:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    meta_data_fields: CpSoftwareClusterBinaryManifestDescriptor.MetaDataFields | None = field(
+    meta_data_fields: (
+        CpSoftwareClusterBinaryManifestDescriptor.MetaDataFields | None
+    ) = field(
         default=None,
         metadata={
             "name": "META-DATA-FIELDS",
@@ -205,7 +212,9 @@ class CpSoftwareClusterBinaryManifestDescriptor:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    provide_resources: CpSoftwareClusterBinaryManifestDescriptor.ProvideResources | None = field(
+    provide_resources: (
+        CpSoftwareClusterBinaryManifestDescriptor.ProvideResources | None
+    ) = field(
         default=None,
         metadata={
             "name": "PROVIDE-RESOURCES",
@@ -213,7 +222,9 @@ class CpSoftwareClusterBinaryManifestDescriptor:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    require_resources: CpSoftwareClusterBinaryManifestDescriptor.RequireResources | None = field(
+    require_resources: (
+        CpSoftwareClusterBinaryManifestDescriptor.RequireResources | None
+    ) = field(
         default=None,
         metadata={
             "name": "REQUIRE-RESOURCES",
@@ -221,7 +232,9 @@ class CpSoftwareClusterBinaryManifestDescriptor:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    resource_definitions: CpSoftwareClusterBinaryManifestDescriptor.ResourceDefinitions | None = field(
+    resource_definitions: (
+        CpSoftwareClusterBinaryManifestDescriptor.ResourceDefinitions | None
+    ) = field(
         default=None,
         metadata={
             "name": "RESOURCE-DEFINITIONS",

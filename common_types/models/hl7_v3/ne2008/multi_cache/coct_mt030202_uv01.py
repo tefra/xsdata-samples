@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from ..core.datatypes_base import (
     AdExplicit,
@@ -172,7 +171,23 @@ class CoctMt030202Uv01Birthplace:
             "type": "Attribute",
         },
     )
-    class_code: RoleClassMutualRelationship | RoleClassPassive | str | RoleClassOntological | RoleClassPartitive | RoleClassRootValue | XAccommodationRequestorRole | XDocumentEntrySubject | XDocumentSubject | XInformationRecipientRole | XRoleClassAccommodationRequestor | XRoleClassCoverage | XRoleClassCoverageInvoice | XRoleClassCredentialedEntity | XRoleClassPayeePolicyRelationship = field(
+    class_code: (
+        RoleClassMutualRelationship
+        | RoleClassPassive
+        | str
+        | RoleClassOntological
+        | RoleClassPartitive
+        | RoleClassRootValue
+        | XAccommodationRequestorRole
+        | XDocumentEntrySubject
+        | XDocumentSubject
+        | XInformationRecipientRole
+        | XRoleClassAccommodationRequestor
+        | XRoleClassCoverage
+        | XRoleClassCoverageInvoice
+        | XRoleClassCredentialedEntity
+        | XRoleClassPayeePolicyRelationship
+    ) = field(
         init=False,
         default=RoleClassPassive.BIRTHPL,
         metadata={

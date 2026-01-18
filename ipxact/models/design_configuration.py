@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from ipxact.models.assertions import Assertions
 from ipxact.models.choices import Choices
@@ -418,12 +417,14 @@ class DesignConfiguration:
             :ivar view_ref:
             """
 
-            configurable_element_values: ConfigurableElementValues | None = field(
-                default=None,
-                metadata={
-                    "name": "configurableElementValues",
-                    "type": "Element",
-                },
+            configurable_element_values: ConfigurableElementValues | None = (
+                field(
+                    default=None,
+                    metadata={
+                        "name": "configurableElementValues",
+                        "type": "Element",
+                    },
+                )
             )
             view_ref: str | None = field(
                 default=None,

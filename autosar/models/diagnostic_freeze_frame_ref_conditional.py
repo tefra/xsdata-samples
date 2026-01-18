@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import VariationPoint
 from .diagnostic_freeze_frame_subtypes_enum import (
@@ -35,7 +34,9 @@ class DiagnosticFreezeFrameRefConditional:
     class Meta:
         name = "DIAGNOSTIC-FREEZE-FRAME-REF-CONDITIONAL"
 
-    diagnostic_freeze_frame_ref: DiagnosticFreezeFrameRefConditional.DiagnosticFreezeFrameRef | None = field(
+    diagnostic_freeze_frame_ref: (
+        DiagnosticFreezeFrameRefConditional.DiagnosticFreezeFrameRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "DIAGNOSTIC-FREEZE-FRAME-REF",

@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .abstract_implementation_data_type_subtypes_enum import (
     AbstractImplementationDataTypeSubtypesEnum,
@@ -155,7 +154,9 @@ class PersistencyKeyValueStorageInterface:
             "required": True,
         },
     )
-    short_name_fragments: PersistencyKeyValueStorageInterface.ShortNameFragments | None = field(
+    short_name_fragments: (
+        PersistencyKeyValueStorageInterface.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -203,13 +204,15 @@ class PersistencyKeyValueStorageInterface:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: PersistencyKeyValueStorageInterface.Annotations | None = field(
-        default=None,
-        metadata={
-            "name": "ANNOTATIONS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    annotations: PersistencyKeyValueStorageInterface.Annotations | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "ANNOTATIONS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     variation_point: VariationPoint | None = field(
         default=None,
@@ -219,7 +222,9 @@ class PersistencyKeyValueStorageInterface:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    blueprint_policys: PersistencyKeyValueStorageInterface.BlueprintPolicys | None = field(
+    blueprint_policys: (
+        PersistencyKeyValueStorageInterface.BlueprintPolicys | None
+    ) = field(
         default=None,
         metadata={
             "name": "BLUEPRINT-POLICYS",
@@ -243,15 +248,13 @@ class PersistencyKeyValueStorageInterface:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    namespaces: PersistencyKeyValueStorageInterface.Namespaces | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "NAMESPACES",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    namespaces: PersistencyKeyValueStorageInterface.Namespaces | None = field(
+        default=None,
+        metadata={
+            "name": "NAMESPACES",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     service_kind: ServiceProviderEnum | None = field(
         default=None,
@@ -277,7 +280,9 @@ class PersistencyKeyValueStorageInterface:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    redundancy_handlings: PersistencyKeyValueStorageInterface.RedundancyHandlings | None = field(
+    redundancy_handlings: (
+        PersistencyKeyValueStorageInterface.RedundancyHandlings | None
+    ) = field(
         default=None,
         metadata={
             "name": "REDUNDANCY-HANDLINGS",
@@ -295,15 +300,19 @@ class PersistencyKeyValueStorageInterface:
             },
         )
     )
-    data_elements: PersistencyKeyValueStorageInterface.DataElements | None = field(
-        default=None,
-        metadata={
-            "name": "DATA-ELEMENTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    data_elements: PersistencyKeyValueStorageInterface.DataElements | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "DATA-ELEMENTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
-    data_type_for_serialization_refs: PersistencyKeyValueStorageInterface.DataTypeForSerializationRefs | None = field(
+    data_type_for_serialization_refs: (
+        PersistencyKeyValueStorageInterface.DataTypeForSerializationRefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "DATA-TYPE-FOR-SERIALIZATION-REFS",

@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import VariationPoint
 from .ref import Ref
@@ -35,7 +34,10 @@ class SomeipSdServerServiceInstanceConfigRefConditional:
     class Meta:
         name = "SOMEIP-SD-SERVER-SERVICE-INSTANCE-CONFIG-REF-CONDITIONAL"
 
-    someip_sd_server_service_instance_config_ref: SomeipSdServerServiceInstanceConfigRefConditional.SomeipSdServerServiceInstanceConfigRef | None = field(
+    someip_sd_server_service_instance_config_ref: (
+        SomeipSdServerServiceInstanceConfigRefConditional.SomeipSdServerServiceInstanceConfigRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "SOMEIP-SD-SERVER-SERVICE-INSTANCE-CONFIG-REF",
@@ -69,13 +71,11 @@ class SomeipSdServerServiceInstanceConfigRefConditional:
 
     @dataclass
     class SomeipSdServerServiceInstanceConfigRef(Ref):
-        dest: SomeipSdServerServiceInstanceConfigSubtypesEnum | None = (
-            field(
-                default=None,
-                metadata={
-                    "name": "DEST",
-                    "type": "Attribute",
-                    "required": True,
-                },
-            )
+        dest: SomeipSdServerServiceInstanceConfigSubtypesEnum | None = field(
+            default=None,
+            metadata={
+                "name": "DEST",
+                "type": "Attribute",
+                "required": True,
+            },
         )

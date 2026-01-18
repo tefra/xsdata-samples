@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.predefined_location_versioned_reference import (
@@ -24,7 +23,9 @@ class LinearTrafficView:
     :ivar id:
     """
 
-    linear_predefined_location_reference: PredefinedLocationVersionedReference | None = field(
+    linear_predefined_location_reference: (
+        PredefinedLocationVersionedReference | None
+    ) = field(
         default=None,
         metadata={
             "name": "linearPredefinedLocationReference",

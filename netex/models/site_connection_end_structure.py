@@ -1,6 +1,5 @@
 from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from .access_space_ref import AccessSpaceRef
 from .all_vehicle_modes_of_transport_enumeration import (
@@ -52,7 +51,9 @@ class SiteConnectionEndStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    scheduled_stop_point_ref_or_vehicle_meeting_point_ref: ScheduledStopPointRefStructure | PointRefStructure | None = field(
+    scheduled_stop_point_ref_or_vehicle_meeting_point_ref: (
+        ScheduledStopPointRefStructure | PointRefStructure | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -71,7 +72,24 @@ class SiteConnectionEndStructure:
         },
     )
     choice: Iterable[
-        TaxiRankRef | StopPlaceRef | AccessSpaceRef | BoardingPositionRef | TaxiStandRef | QuayRef | StopPlaceEntranceRef | PointOfInterestRef | PointOfInterestSpaceRef | PointOfInterestEntranceRef | ParkingRef | VehiclePoolingParkingAreaRef | VehicleSharingParkingAreaRef | TaxiParkingAreaRef | ParkingAreaRef | ParkingEntranceForVehiclesRef | ParkingPassengerEntranceRef | ParkingEntranceRef
+        TaxiRankRef
+        | StopPlaceRef
+        | AccessSpaceRef
+        | BoardingPositionRef
+        | TaxiStandRef
+        | QuayRef
+        | StopPlaceEntranceRef
+        | PointOfInterestRef
+        | PointOfInterestSpaceRef
+        | PointOfInterestEntranceRef
+        | ParkingRef
+        | VehiclePoolingParkingAreaRef
+        | VehicleSharingParkingAreaRef
+        | TaxiParkingAreaRef
+        | ParkingAreaRef
+        | ParkingEntranceForVehiclesRef
+        | ParkingPassengerEntranceRef
+        | ParkingEntranceRef
     ] = field(
         default_factory=list,
         metadata={
@@ -171,7 +189,9 @@ class SiteConnectionEndStructure:
             "max_occurs": 8,
         },
     )
-    authority_ref_or_operator_ref_or_operator_view: AuthorityRef | OperatorRef | OperatorView | None = field(
+    authority_ref_or_operator_ref_or_operator_view: (
+        AuthorityRef | OperatorRef | OperatorView | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",

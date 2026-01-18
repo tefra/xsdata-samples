@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import ForwardRef, Optional
+from typing import ForwardRef
 
 from .ecuc_query_subtypes_enum import EcucQuerySubtypesEnum
 from .ref import Ref

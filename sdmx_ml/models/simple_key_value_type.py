@@ -1,7 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Any
 
-from sdmx_ml.models.exclude_root_type import ExcludeRootType
 from sdmx_ml.models.simple_component_value_type import SimpleComponentValueType
 
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"

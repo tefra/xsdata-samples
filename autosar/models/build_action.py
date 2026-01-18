@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -220,15 +219,13 @@ class BuildAction:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    predecessor_action_refs: BuildAction.PredecessorActionRefs | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "PREDECESSOR-ACTION-REFS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    predecessor_action_refs: BuildAction.PredecessorActionRefs | None = field(
+        default=None,
+        metadata={
+            "name": "PREDECESSOR-ACTION-REFS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     follow_up_action_refs: BuildAction.FollowUpActionRefs | None = field(
         default=None,
@@ -262,13 +259,15 @@ class BuildAction:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    required_environment_ref: BuildAction.RequiredEnvironmentRef | None = field(
-        default=None,
-        metadata={
-            "name": "REQUIRED-ENVIRONMENT-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    required_environment_ref: BuildAction.RequiredEnvironmentRef | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "REQUIRED-ENVIRONMENT-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     variation_point: VariationPoint | None = field(
         default=None,

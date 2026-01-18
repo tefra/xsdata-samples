@@ -1,6 +1,5 @@
 from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import Union
 
 from .capping_rule_price import CappingRulePrice
 from .capping_rule_price_ref import CappingRulePriceRef
@@ -56,7 +55,43 @@ class CompositePricesRelStructure(StrictContainmentAggregationStructure):
         name = "compositePrices_RelStructure"
 
     choice: Iterable[
-        CustomerPurchasePackagePriceRef | ParkingPriceRef | TimeIntervalPriceRef | TimeUnitPriceRef | QualityStructureFactorPriceRef | ControllableElementPriceRef | ValidableElementPriceRef | GeographicalIntervalPriceRef | GeographicalUnitPriceRef | UsageParameterPriceRef | SeriesConstraintPriceRef | SalesOfferPackagePriceRef | DistanceMatrixElementPriceRef | FareStructureElementPriceRef | FulfilmentMethodPriceRef | CappingRulePriceRef | FareProductPriceRef | FarePriceRef | PriceGroupRef | CustomerPurchasePackagePrice | ParkingPrice | SalesOfferPackagePrice | FulfilmentMethodPrice | CappingRulePrice | FareProductPrice | FareStructureElementPrice | TimeIntervalPrice | TimeUnitPrice | QualityStructureFactorPrice | ControllableElementPrice | ValidableElementPrice | UsageParameterPrice | DistanceMatrixElementPrice | GeographicalIntervalPrice | GeographicalUnitPrice | SeriesConstraintPrice | PriceGroup
+        CustomerPurchasePackagePriceRef
+        | ParkingPriceRef
+        | TimeIntervalPriceRef
+        | TimeUnitPriceRef
+        | QualityStructureFactorPriceRef
+        | ControllableElementPriceRef
+        | ValidableElementPriceRef
+        | GeographicalIntervalPriceRef
+        | GeographicalUnitPriceRef
+        | UsageParameterPriceRef
+        | SeriesConstraintPriceRef
+        | SalesOfferPackagePriceRef
+        | DistanceMatrixElementPriceRef
+        | FareStructureElementPriceRef
+        | FulfilmentMethodPriceRef
+        | CappingRulePriceRef
+        | FareProductPriceRef
+        | FarePriceRef
+        | PriceGroupRef
+        | CustomerPurchasePackagePrice
+        | ParkingPrice
+        | SalesOfferPackagePrice
+        | FulfilmentMethodPrice
+        | CappingRulePrice
+        | FareProductPrice
+        | FareStructureElementPrice
+        | TimeIntervalPrice
+        | TimeUnitPrice
+        | QualityStructureFactorPrice
+        | ControllableElementPrice
+        | ValidableElementPrice
+        | UsageParameterPrice
+        | DistanceMatrixElementPrice
+        | GeographicalIntervalPrice
+        | GeographicalUnitPrice
+        | SeriesConstraintPrice
+        | PriceGroup
     ] = field(
         default_factory=list,
         metadata={

@@ -1,6 +1,5 @@
 from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import Union
 
 from .car_pooling_service import CarPoolingService
 from .chauffeured_vehicle_service import ChauffeuredVehicleService
@@ -19,7 +18,12 @@ class MobilityServicesRelStructure(ContainmentAggregationStructure):
         name = "mobilityServices_RelStructure"
 
     mobility_service_or_common_vehicle_service_or_vehicle_pooling_service: Iterable[
-        OnlineService | VehicleRentalService | VehicleSharingService | ChauffeuredVehicleService | CarPoolingService | TaxiService
+        OnlineService
+        | VehicleRentalService
+        | VehicleSharingService
+        | ChauffeuredVehicleService
+        | CarPoolingService
+        | TaxiService
     ] = field(
         default_factory=list,
         metadata={

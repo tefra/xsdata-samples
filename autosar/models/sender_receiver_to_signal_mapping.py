@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .abstract_service_instance_subtypes_enum import (
     AbstractServiceInstanceSubtypesEnum,
@@ -76,15 +75,19 @@ class SenderReceiverToSignalMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    event_group_refs: SenderReceiverToSignalMapping.EventGroupRefs | None = field(
-        default=None,
-        metadata={
-            "name": "EVENT-GROUP-REFS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    event_group_refs: SenderReceiverToSignalMapping.EventGroupRefs | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "EVENT-GROUP-REFS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
-    event_handler_refs: SenderReceiverToSignalMapping.EventHandlerRefs | None = field(
+    event_handler_refs: (
+        SenderReceiverToSignalMapping.EventHandlerRefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "EVENT-HANDLER-REFS",
@@ -100,7 +103,9 @@ class SenderReceiverToSignalMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    service_instance_refs: SenderReceiverToSignalMapping.ServiceInstanceRefs | None = field(
+    service_instance_refs: (
+        SenderReceiverToSignalMapping.ServiceInstanceRefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "SERVICE-INSTANCE-REFS",
@@ -116,15 +121,13 @@ class SenderReceiverToSignalMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    data_element_iref: VariableDataPrototypeInSystemInstanceRef | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "DATA-ELEMENT-IREF",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    data_element_iref: VariableDataPrototypeInSystemInstanceRef | None = field(
+        default=None,
+        metadata={
+            "name": "DATA-ELEMENT-IREF",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     sender_to_signal_text_table_mapping: TextTableMapping | None = field(
         default=None,
@@ -142,13 +145,15 @@ class SenderReceiverToSignalMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    system_signal_ref: SenderReceiverToSignalMapping.SystemSignalRef | None = field(
-        default=None,
-        metadata={
-            "name": "SYSTEM-SIGNAL-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    system_signal_ref: SenderReceiverToSignalMapping.SystemSignalRef | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "SYSTEM-SIGNAL-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     s: str | None = field(
         default=None,

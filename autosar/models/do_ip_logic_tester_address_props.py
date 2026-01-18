@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -97,7 +96,9 @@ class DoIpLogicTesterAddressProps:
             "required": True,
         },
     )
-    short_name_fragments: DoIpLogicTesterAddressProps.ShortNameFragments | None = field(
+    short_name_fragments: (
+        DoIpLogicTesterAddressProps.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -153,7 +154,9 @@ class DoIpLogicTesterAddressProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    do_ip_tester_routing_activation_refs: DoIpLogicTesterAddressProps.DoIpTesterRoutingActivationRefs | None = field(
+    do_ip_tester_routing_activation_refs: (
+        DoIpLogicTesterAddressProps.DoIpTesterRoutingActivationRefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "DO-IP-TESTER-ROUTING-ACTIVATION-REFS",

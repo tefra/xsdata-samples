@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from ipxact.models.file_type import FileType
 from ipxact.models.string_expression import StringExpression

@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .usage_parameter_version_structure import UsageParameterVersionStructure
 

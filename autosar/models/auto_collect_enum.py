@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .auto_collect_enum_simple import AutoCollectEnumSimple
 

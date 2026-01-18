@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from ubl.models.common.ubl_common_aggregate_components_2_1 import (
     CarrierParty,
@@ -176,15 +175,13 @@ class ForwardingInstructionsType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    declared_carriage_value_amount: DeclaredCarriageValueAmount | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "DeclaredCarriageValueAmount",
-                "type": "Element",
-                "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            },
-        )
+    declared_carriage_value_amount: DeclaredCarriageValueAmount | None = field(
+        default=None,
+        metadata={
+            "name": "DeclaredCarriageValueAmount",
+            "type": "Element",
+            "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
+        },
     )
     other_instruction: tuple[OtherInstruction, ...] = field(
         default_factory=tuple,

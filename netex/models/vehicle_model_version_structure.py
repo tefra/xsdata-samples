@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from .car_model_profile_ref import CarModelProfileRef
 from .compound_train_ref import CompoundTrainRef
@@ -46,7 +45,14 @@ class VehicleModelVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    transport_type_ref_or_vehicle_type_ref: SimpleVehicleTypeRef | CompoundTrainRef | TrainRef | VehicleTypeRef | TransportTypeRef | None = field(
+    transport_type_ref_or_vehicle_type_ref: (
+        SimpleVehicleTypeRef
+        | CompoundTrainRef
+        | TrainRef
+        | VehicleTypeRef
+        | TransportTypeRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -79,17 +85,17 @@ class VehicleModelVersionStructure(DataManagedObjectStructure):
             ),
         },
     )
-    equipment_profiles: VehicleEquipmentProfileRefsRelStructure | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "equipmentProfiles",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            },
-        )
+    equipment_profiles: VehicleEquipmentProfileRefsRelStructure | None = field(
+        default=None,
+        metadata={
+            "name": "equipmentProfiles",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        },
     )
-    vehicle_model_profile_ref: CycleModelProfileRef | CarModelProfileRef | None = field(
+    vehicle_model_profile_ref: (
+        CycleModelProfileRef | CarModelProfileRef | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",

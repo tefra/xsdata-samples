@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .integer_value_variation_point import IntegerValueVariationPoint
 from .ref import Ref
@@ -63,15 +62,13 @@ class SwAxisGeneric:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_generic_axis_params: SwAxisGeneric.SwGenericAxisParams | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "SW-GENERIC-AXIS-PARAMS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    sw_generic_axis_params: SwAxisGeneric.SwGenericAxisParams | None = field(
+        default=None,
+        metadata={
+            "name": "SW-GENERIC-AXIS-PARAMS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     s: str | None = field(
         default=None,

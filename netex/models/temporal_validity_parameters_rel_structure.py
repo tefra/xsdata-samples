@@ -1,6 +1,5 @@
 from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import Union
 
 from .availability_condition_ref import AvailabilityConditionRef
 from .day_type_ref import DayTypeRef
@@ -79,7 +78,10 @@ class TemporalValidityParametersRelStructure(OneToManyRelationshipStructure):
         },
     )
     validity_condition_ref: Iterable[
-        AvailabilityConditionRef | ValidityRuleParameterRef | ValidityTriggerRef | ValidityConditionRef
+        AvailabilityConditionRef
+        | ValidityRuleParameterRef
+        | ValidityTriggerRef
+        | ValidityConditionRef
     ] = field(
         default_factory=list,
         metadata={

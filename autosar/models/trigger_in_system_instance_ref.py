@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .port_prototype_subtypes_enum import PortPrototypeSubtypesEnum
 from .ref import Ref
@@ -42,7 +41,9 @@ class TriggerInSystemInstanceRef:
     class Meta:
         name = "TRIGGER-IN-SYSTEM-INSTANCE-REF"
 
-    context_composition_ref: TriggerInSystemInstanceRef.ContextCompositionRef | None = field(
+    context_composition_ref: (
+        TriggerInSystemInstanceRef.ContextCompositionRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "CONTEXT-COMPOSITION-REF",
@@ -60,23 +61,23 @@ class TriggerInSystemInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    context_port_ref: TriggerInSystemInstanceRef.ContextPortRef | None = (
+    context_port_ref: TriggerInSystemInstanceRef.ContextPortRef | None = field(
+        default=None,
+        metadata={
+            "name": "CONTEXT-PORT-REF",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
+    )
+    target_trigger_ref: TriggerInSystemInstanceRef.TargetTriggerRef | None = (
         field(
             default=None,
             metadata={
-                "name": "CONTEXT-PORT-REF",
+                "name": "TARGET-TRIGGER-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-    )
-    target_trigger_ref: TriggerInSystemInstanceRef.TargetTriggerRef | None = field(
-        default=None,
-        metadata={
-            "name": "TARGET-TRIGGER-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
     )
     s: str | None = field(
         default=None,

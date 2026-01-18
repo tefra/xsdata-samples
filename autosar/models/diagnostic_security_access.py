@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -115,7 +114,9 @@ class DiagnosticSecurityAccess:
             "required": True,
         },
     )
-    short_name_fragments: DiagnosticSecurityAccess.ShortNameFragments | None = field(
+    short_name_fragments: (
+        DiagnosticSecurityAccess.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -179,7 +180,9 @@ class DiagnosticSecurityAccess:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    access_permission_ref: DiagnosticSecurityAccess.AccessPermissionRef | None = field(
+    access_permission_ref: (
+        DiagnosticSecurityAccess.AccessPermissionRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "ACCESS-PERMISSION-REF",
@@ -195,7 +198,9 @@ class DiagnosticSecurityAccess:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    security_access_class_ref: DiagnosticSecurityAccess.SecurityAccessClassRef | None = field(
+    security_access_class_ref: (
+        DiagnosticSecurityAccess.SecurityAccessClassRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "SECURITY-ACCESS-CLASS-REF",
@@ -203,13 +208,15 @@ class DiagnosticSecurityAccess:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    security_level_ref: DiagnosticSecurityAccess.SecurityLevelRef | None = field(
-        default=None,
-        metadata={
-            "name": "SECURITY-LEVEL-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    security_level_ref: DiagnosticSecurityAccess.SecurityLevelRef | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "SECURITY-LEVEL-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     s: str | None = field(
         default=None,

@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from ubl.models.common.ubl_common_aggregate_components_2_1 import (
     ApplicableTerritoryAddress,
@@ -140,23 +139,23 @@ class CatalogueRequestType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    pricing_update_request_indicator: PricingUpdateRequestIndicator | None = field(
-        default=None,
-        metadata={
-            "name": "PricingUpdateRequestIndicator",
-            "type": "Element",
-            "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        },
-    )
-    item_update_request_indicator: ItemUpdateRequestIndicator | None = (
+    pricing_update_request_indicator: PricingUpdateRequestIndicator | None = (
         field(
             default=None,
             metadata={
-                "name": "ItemUpdateRequestIndicator",
+                "name": "PricingUpdateRequestIndicator",
                 "type": "Element",
                 "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
             },
         )
+    )
+    item_update_request_indicator: ItemUpdateRequestIndicator | None = field(
+        default=None,
+        metadata={
+            "name": "ItemUpdateRequestIndicator",
+            "type": "Element",
+            "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
+        },
     )
     line_count_numeric: LineCountNumeric | None = field(
         default=None,
@@ -216,15 +215,13 @@ class CatalogueRequestType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    requested_catalogue_reference: RequestedCatalogueReference | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "RequestedCatalogueReference",
-                "type": "Element",
-                "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-            },
-        )
+    requested_catalogue_reference: RequestedCatalogueReference | None = field(
+        default=None,
+        metadata={
+            "name": "RequestedCatalogueReference",
+            "type": "Element",
+            "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
+        },
     )
     referenced_contract: tuple[ReferencedContract, ...] = field(
         default_factory=tuple,

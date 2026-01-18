@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import Any, ForwardRef, Optional, Union
+from typing import Any, ForwardRef
 
 from xsdata.models.datatype import XmlDate, XmlDateTime, XmlDuration, XmlTime
 
@@ -323,36 +323,36 @@ class TimebandVersionedChildStructure(DataManagedObjectStructure):
             ),
         },
     )
-    choice: Iterable[
-        XmlTime | TimeOfDayEnumeration | int | XmlDuration
-    ] = field(
-        default_factory=list,
-        metadata={
-            "type": "Elements",
-            "choices": (
-                {
-                    "name": "EndTime",
-                    "type": XmlTime,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "EndEvent",
-                    "type": TimeOfDayEnumeration,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "DayOffset",
-                    "type": int,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "Duration",
-                    "type": XmlDuration,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-            ),
-            "max_occurs": 2,
-        },
+    choice: Iterable[XmlTime | TimeOfDayEnumeration | int | XmlDuration] = (
+        field(
+            default_factory=list,
+            metadata={
+                "type": "Elements",
+                "choices": (
+                    {
+                        "name": "EndTime",
+                        "type": XmlTime,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "EndEvent",
+                        "type": TimeOfDayEnumeration,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "DayOffset",
+                        "type": int,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "Duration",
+                        "type": XmlDuration,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                ),
+                "max_occurs": 2,
+            },
+        )
     )
 
 
@@ -487,7 +487,11 @@ class ValidityRuleParameterVersionStructure(ValidityConditionVersionStructure):
         },
     )
     choice: Iterable[
-        str | RelativeOperatorEnumeration | ValidityRuleParameterVersionStructure.AttributeValue | ValidityRuleParameterVersionStructure.Method | bool
+        str
+        | RelativeOperatorEnumeration
+        | ValidityRuleParameterVersionStructure.AttributeValue
+        | ValidityRuleParameterVersionStructure.Method
+        | bool
     ] = field(
         default_factory=list,
         metadata={
@@ -744,7 +748,13 @@ class ValidDuringVersionStructure(ValidBetweenVersionStructure):
     class Meta:
         name = "ValidDuring_VersionStructure"
 
-    choice: FareDayTypeRef | DayTypeRef | Iterable[DayOfWeekEnumeration] | str | None = field(
+    choice: (
+        FareDayTypeRef
+        | DayTypeRef
+        | Iterable[DayOfWeekEnumeration]
+        | str
+        | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -972,7 +982,11 @@ class DayTypesRelStructure(ContainmentAggregationStructure):
         name = "dayTypes_RelStructure"
 
     day_type_ref_or_day_type: Iterable[
-        FareDayTypeRef | DayTypeRef | FareDayType | OrganisationDayType | DayType
+        FareDayTypeRef
+        | DayTypeRef
+        | FareDayType
+        | OrganisationDayType
+        | DayType
     ] = field(
         default_factory=list,
         metadata={
@@ -1081,7 +1095,17 @@ class ValidityConditionsRelStructure(ContainmentAggregationStructure):
         name = "validityConditions_RelStructure"
 
     choice: Iterable[
-        AvailabilityConditionRef | ValidityRuleParameterRef | ValidityTriggerRef | ValidityConditionRef | ValidBetween | SimpleAvailabilityCondition | ValidDuring | AvailabilityCondition | ValidityRuleParameter | ValidityTrigger | ValidityCondition
+        AvailabilityConditionRef
+        | ValidityRuleParameterRef
+        | ValidityTriggerRef
+        | ValidityConditionRef
+        | ValidBetween
+        | SimpleAvailabilityCondition
+        | ValidDuring
+        | AvailabilityCondition
+        | ValidityRuleParameter
+        | ValidityTrigger
+        | ValidityCondition
     ] = field(
         default_factory=list,
         metadata={

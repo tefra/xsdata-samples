@@ -1,6 +1,5 @@
 from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import Union
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .vehicle_meeting_place_2 import VehicleMeetingPlace2

@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .r_port_prototype_subtypes_enum import RPortPrototypeSubtypesEnum
 from .ref import Ref
@@ -36,7 +35,10 @@ class RPortPrototypeInSoftwareClusterDesignInstanceRef:
     class Meta:
         name = "R-PORT-PROTOTYPE-IN-SOFTWARE-CLUSTER-DESIGN-INSTANCE-REF"
 
-    context_root_sw_cluster_design_component_prototype_ref: RPortPrototypeInSoftwareClusterDesignInstanceRef.ContextRootSwClusterDesignComponentPrototypeRef | None = field(
+    context_root_sw_cluster_design_component_prototype_ref: (
+        RPortPrototypeInSoftwareClusterDesignInstanceRef.ContextRootSwClusterDesignComponentPrototypeRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "CONTEXT-ROOT-SW-CLUSTER-DESIGN-COMPONENT-PROTOTYPE-REF",
@@ -54,7 +56,10 @@ class RPortPrototypeInSoftwareClusterDesignInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    target_r_port_prototype_ref: RPortPrototypeInSoftwareClusterDesignInstanceRef.TargetRPortPrototypeRef | None = field(
+    target_r_port_prototype_ref: (
+        RPortPrototypeInSoftwareClusterDesignInstanceRef.TargetRPortPrototypeRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "TARGET-R-PORT-PROTOTYPE-REF",
@@ -80,15 +85,13 @@ class RPortPrototypeInSoftwareClusterDesignInstanceRef:
 
     @dataclass
     class ContextRootSwClusterDesignComponentPrototypeRef(Ref):
-        dest: RootSwClusterDesignComponentPrototypeSubtypesEnum | None = (
-            field(
-                default=None,
-                metadata={
-                    "name": "DEST",
-                    "type": "Attribute",
-                    "required": True,
-                },
-            )
+        dest: RootSwClusterDesignComponentPrototypeSubtypesEnum | None = field(
+            default=None,
+            metadata={
+                "name": "DEST",
+                "type": "Attribute",
+                "required": True,
+            },
         )
 
     @dataclass

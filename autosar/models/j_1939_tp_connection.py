@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import VariationPoint
 from .boolean import Boolean
@@ -141,15 +140,13 @@ class J1939TpConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    flow_control_pdu_refs: J1939TpConnection.FlowControlPduRefs | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "FLOW-CONTROL-PDU-REFS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    flow_control_pdu_refs: J1939TpConnection.FlowControlPduRefs | None = field(
+        default=None,
+        metadata={
+            "name": "FLOW-CONTROL-PDU-REFS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     max_bs: PositiveInteger | None = field(
         default=None,
@@ -280,15 +277,13 @@ class J1939TpConnection:
 
     @dataclass
     class ReceiverRefs:
-        receiver_ref: list[J1939TpConnection.ReceiverRefs.ReceiverRef] = (
-            field(
-                default_factory=list,
-                metadata={
-                    "name": "RECEIVER-REF",
-                    "type": "Element",
-                    "namespace": "http://autosar.org/schema/r4.0",
-                },
-            )
+        receiver_ref: list[J1939TpConnection.ReceiverRefs.ReceiverRef] = field(
+            default_factory=list,
+            metadata={
+                "name": "RECEIVER-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
         )
 
         @dataclass

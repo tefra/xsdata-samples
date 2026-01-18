@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from ipxact.models.bus_width import BusWidth
 from ipxact.models.initiative import Initiative
@@ -97,15 +96,13 @@ class PortTransactionalType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    power_constraints: PortTransactionalType.PowerConstraints | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "powerConstraints",
-                "type": "Element",
-                "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
-            },
-        )
+    power_constraints: PortTransactionalType.PowerConstraints | None = field(
+        default=None,
+        metadata={
+            "name": "powerConstraints",
+            "type": "Element",
+            "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
+        },
     )
     all_logical_initiatives_allowed: bool = field(
         default=False,

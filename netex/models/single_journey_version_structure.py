@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from xsdata.models.datatype import XmlTime
 
@@ -25,7 +24,14 @@ class SingleJourneyVersionStructure(JourneyVersionStructure):
     class Meta:
         name = "SingleJourney_VersionStructure"
 
-    common_vehicle_service_ref_or_vehicle_pooling_service_ref: VehicleRentalServiceRef | VehicleSharingServiceRef | ChauffeuredVehicleServiceRef | TaxiServiceRef | CarPoolingServiceRef | None = field(
+    common_vehicle_service_ref_or_vehicle_pooling_service_ref: (
+        VehicleRentalServiceRef
+        | VehicleSharingServiceRef
+        | ChauffeuredVehicleServiceRef
+        | TaxiServiceRef
+        | CarPoolingServiceRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -106,7 +112,9 @@ class SingleJourneyVersionStructure(JourneyVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    meeting_point_assignments: VehicleMeetingPointAssignmentsRelStructure | None = field(
+    meeting_point_assignments: (
+        VehicleMeetingPointAssignmentsRelStructure | None
+    ) = field(
         default=None,
         metadata={
             "name": "meetingPointAssignments",

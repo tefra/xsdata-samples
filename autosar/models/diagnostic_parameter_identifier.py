@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -108,7 +107,9 @@ class DiagnosticParameterIdentifier:
             "required": True,
         },
     )
-    short_name_fragments: DiagnosticParameterIdentifier.ShortNameFragments | None = field(
+    short_name_fragments: (
+        DiagnosticParameterIdentifier.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -172,15 +173,13 @@ class DiagnosticParameterIdentifier:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    data_elements: DiagnosticParameterIdentifier.DataElements | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "DATA-ELEMENTS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    data_elements: DiagnosticParameterIdentifier.DataElements | None = field(
+        default=None,
+        metadata={
+            "name": "DATA-ELEMENTS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     id: PositiveInteger | None = field(
         default=None,

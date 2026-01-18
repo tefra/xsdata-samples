@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -128,7 +127,9 @@ class DiagnosticComControlClass:
             "required": True,
         },
     )
-    short_name_fragments: DiagnosticComControlClass.ShortNameFragments | None = field(
+    short_name_fragments: (
+        DiagnosticComControlClass.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -192,7 +193,9 @@ class DiagnosticComControlClass:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    access_permission_ref: DiagnosticComControlClass.AccessPermissionRef | None = field(
+    access_permission_ref: (
+        DiagnosticComControlClass.AccessPermissionRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "ACCESS-PERMISSION-REF",
@@ -200,7 +203,9 @@ class DiagnosticComControlClass:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    access_permission_validity: DiagnosticAccessPermissionValidityEnum | None = field(
+    access_permission_validity: (
+        DiagnosticAccessPermissionValidityEnum | None
+    ) = field(
         default=None,
         metadata={
             "name": "ACCESS-PERMISSION-VALIDITY",
@@ -208,29 +213,35 @@ class DiagnosticComControlClass:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    all_channels_refs: DiagnosticComControlClass.AllChannelsRefs | None = field(
-        default=None,
-        metadata={
-            "name": "ALL-CHANNELS-REFS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    all_channels_refs: DiagnosticComControlClass.AllChannelsRefs | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "ALL-CHANNELS-REFS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
-    specific_channels: DiagnosticComControlClass.SpecificChannels | None = field(
-        default=None,
-        metadata={
-            "name": "SPECIFIC-CHANNELS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    specific_channels: DiagnosticComControlClass.SpecificChannels | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "SPECIFIC-CHANNELS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
-    sub_node_channels: DiagnosticComControlClass.SubNodeChannels | None = field(
-        default=None,
-        metadata={
-            "name": "SUB-NODE-CHANNELS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    sub_node_channels: DiagnosticComControlClass.SubNodeChannels | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "SUB-NODE-CHANNELS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     s: str | None = field(
         default=None,

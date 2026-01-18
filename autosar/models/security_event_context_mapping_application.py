@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -118,7 +117,9 @@ class SecurityEventContextMappingApplication:
             "required": True,
         },
     )
-    short_name_fragments: SecurityEventContextMappingApplication.ShortNameFragments | None = field(
+    short_name_fragments: (
+        SecurityEventContextMappingApplication.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -166,13 +167,15 @@ class SecurityEventContextMappingApplication:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: SecurityEventContextMappingApplication.Annotations | None = field(
-        default=None,
-        metadata={
-            "name": "ANNOTATIONS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    annotations: SecurityEventContextMappingApplication.Annotations | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "ANNOTATIONS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     variation_point: VariationPoint | None = field(
         default=None,
@@ -182,7 +185,9 @@ class SecurityEventContextMappingApplication:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    filter_chains: SecurityEventContextMappingApplication.FilterChains | None = field(
+    filter_chains: (
+        SecurityEventContextMappingApplication.FilterChains | None
+    ) = field(
         default=None,
         metadata={
             "name": "FILTER-CHAINS",
@@ -190,7 +195,9 @@ class SecurityEventContextMappingApplication:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    idsm_instances: SecurityEventContextMappingApplication.IdsmInstances | None = field(
+    idsm_instances: (
+        SecurityEventContextMappingApplication.IdsmInstances | None
+    ) = field(
         default=None,
         metadata={
             "name": "IDSM-INSTANCES",
@@ -198,7 +205,9 @@ class SecurityEventContextMappingApplication:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    mapped_security_events: SecurityEventContextMappingApplication.MappedSecurityEvents | None = field(
+    mapped_security_events: (
+        SecurityEventContextMappingApplication.MappedSecurityEvents | None
+    ) = field(
         default=None,
         metadata={
             "name": "MAPPED-SECURITY-EVENTS",

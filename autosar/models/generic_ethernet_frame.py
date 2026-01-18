@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -101,13 +100,15 @@ class GenericEthernetFrame:
             "required": True,
         },
     )
-    short_name_fragments: GenericEthernetFrame.ShortNameFragments | None = field(
-        default=None,
-        metadata={
-            "name": "SHORT-NAME-FRAGMENTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    short_name_fragments: GenericEthernetFrame.ShortNameFragments | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "SHORT-NAME-FRAGMENTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     long_name: MultilanguageLongName | None = field(
         default=None,
@@ -173,13 +174,15 @@ class GenericEthernetFrame:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    pdu_to_frame_mappings: GenericEthernetFrame.PduToFrameMappings | None = field(
-        default=None,
-        metadata={
-            "name": "PDU-TO-FRAME-MAPPINGS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    pdu_to_frame_mappings: GenericEthernetFrame.PduToFrameMappings | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "PDU-TO-FRAME-MAPPINGS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     s: str | None = field(
         default=None,

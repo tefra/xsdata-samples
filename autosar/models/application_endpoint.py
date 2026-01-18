@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -129,13 +128,15 @@ class ApplicationEndpoint:
             "required": True,
         },
     )
-    short_name_fragments: ApplicationEndpoint.ShortNameFragments | None = field(
-        default=None,
-        metadata={
-            "name": "SHORT-NAME-FRAGMENTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    short_name_fragments: ApplicationEndpoint.ShortNameFragments | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "SHORT-NAME-FRAGMENTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     long_name: MultilanguageLongName | None = field(
         default=None,
@@ -185,7 +186,9 @@ class ApplicationEndpoint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    consumed_service_instances: ApplicationEndpoint.ConsumedServiceInstances | None = field(
+    consumed_service_instances: (
+        ApplicationEndpoint.ConsumedServiceInstances | None
+    ) = field(
         default=None,
         metadata={
             "name": "CONSUMED-SERVICE-INSTANCES",
@@ -209,13 +212,15 @@ class ApplicationEndpoint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    network_endpoint_ref: ApplicationEndpoint.NetworkEndpointRef | None = field(
-        default=None,
-        metadata={
-            "name": "NETWORK-ENDPOINT-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    network_endpoint_ref: ApplicationEndpoint.NetworkEndpointRef | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "NETWORK-ENDPOINT-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     priority: PositiveInteger | None = field(
         default=None,
@@ -225,7 +230,9 @@ class ApplicationEndpoint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    provided_service_instances: ApplicationEndpoint.ProvidedServiceInstances | None = field(
+    provided_service_instances: (
+        ApplicationEndpoint.ProvidedServiceInstances | None
+    ) = field(
         default=None,
         metadata={
             "name": "PROVIDED-SERVICE-INSTANCES",
@@ -241,7 +248,9 @@ class ApplicationEndpoint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    serialization_technology_ref: ApplicationEndpoint.SerializationTechnologyRef | None = field(
+    serialization_technology_ref: (
+        ApplicationEndpoint.SerializationTechnologyRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "SERIALIZATION-TECHNOLOGY-REF",
@@ -249,13 +258,15 @@ class ApplicationEndpoint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tls_crypto_mapping_ref: ApplicationEndpoint.TlsCryptoMappingRef | None = field(
-        default=None,
-        metadata={
-            "name": "TLS-CRYPTO-MAPPING-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    tls_crypto_mapping_ref: ApplicationEndpoint.TlsCryptoMappingRef | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "TLS-CRYPTO-MAPPING-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     tp_configuration: ApplicationEndpoint.TpConfiguration | None = field(
         default=None,

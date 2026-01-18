@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from .companion_profile_ref import CompanionProfileRef
 from .customer_eligibility_versioned_child_structure import (
@@ -18,7 +17,9 @@ class UserProfileEligibilityVersionedChildStructure(
     class Meta:
         name = "UserProfileEligibility_VersionedChildStructure"
 
-    user_profile_ref: VehiclePoolerProfileRef | CompanionProfileRef | UserProfileRef | None = field(
+    user_profile_ref: (
+        VehiclePoolerProfileRef | CompanionProfileRef | UserProfileRef | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",

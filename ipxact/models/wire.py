@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from ipxact.models.abstraction_def_port_constraints_type import (
     AbstractionDefPortConstraintsType,
@@ -142,12 +141,14 @@ class Wire:
                 "type": "Element",
             },
         )
-        mirrored_mode_constraints: AbstractionDefPortConstraintsType | None = field(
-            default=None,
-            metadata={
-                "name": "mirroredModeConstraints",
-                "type": "Element",
-            },
+        mirrored_mode_constraints: AbstractionDefPortConstraintsType | None = (
+            field(
+                default=None,
+                metadata={
+                    "name": "mirroredModeConstraints",
+                    "type": "Element",
+                },
+            )
         )
         id: str | None = field(
             default=None,
@@ -221,12 +222,14 @@ class Wire:
                 "type": "Element",
             },
         )
-        mirrored_mode_constraints: AbstractionDefPortConstraintsType | None = field(
-            default=None,
-            metadata={
-                "name": "mirroredModeConstraints",
-                "type": "Element",
-            },
+        mirrored_mode_constraints: AbstractionDefPortConstraintsType | None = (
+            field(
+                default=None,
+                metadata={
+                    "name": "mirroredModeConstraints",
+                    "type": "Element",
+                },
+            )
         )
 
         @dataclass
@@ -293,12 +296,14 @@ class Wire:
                 "type": "Element",
             },
         )
-        mirrored_mode_constraints: AbstractionDefPortConstraintsType | None = field(
-            default=None,
-            metadata={
-                "name": "mirroredModeConstraints",
-                "type": "Element",
-            },
+        mirrored_mode_constraints: AbstractionDefPortConstraintsType | None = (
+            field(
+                default=None,
+                metadata={
+                    "name": "mirroredModeConstraints",
+                    "type": "Element",
+                },
+            )
         )
 
         @dataclass

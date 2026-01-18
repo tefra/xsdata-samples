@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -124,15 +123,13 @@ class DoIpInstantiation:
             "required": True,
         },
     )
-    short_name_fragments: DoIpInstantiation.ShortNameFragments | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "SHORT-NAME-FRAGMENTS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    short_name_fragments: DoIpInstantiation.ShortNameFragments | None = field(
+        default=None,
+        metadata={
+            "name": "SHORT-NAME-FRAGMENTS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     long_name: MultilanguageLongName | None = field(
         default=None,
@@ -230,23 +227,23 @@ class DoIpInstantiation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    network_interfaces: DoIpInstantiation.NetworkInterfaces | None = (
+    network_interfaces: DoIpInstantiation.NetworkInterfaces | None = field(
+        default=None,
+        metadata={
+            "name": "NETWORK-INTERFACES",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
+    )
+    request_configurations: DoIpInstantiation.RequestConfigurations | None = (
         field(
             default=None,
             metadata={
-                "name": "NETWORK-INTERFACES",
+                "name": "REQUEST-CONFIGURATIONS",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-    )
-    request_configurations: DoIpInstantiation.RequestConfigurations | None = field(
-        default=None,
-        metadata={
-            "name": "REQUEST-CONFIGURATIONS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
     )
     vin_invalidity_pattern: PositiveInteger | None = field(
         default=None,

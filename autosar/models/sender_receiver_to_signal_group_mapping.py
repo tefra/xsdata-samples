@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .abstract_service_instance_subtypes_enum import (
     AbstractServiceInstanceSubtypesEnum,
@@ -76,7 +75,9 @@ class SenderReceiverToSignalGroupMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    event_group_refs: SenderReceiverToSignalGroupMapping.EventGroupRefs | None = field(
+    event_group_refs: (
+        SenderReceiverToSignalGroupMapping.EventGroupRefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "EVENT-GROUP-REFS",
@@ -84,7 +85,9 @@ class SenderReceiverToSignalGroupMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    event_handler_refs: SenderReceiverToSignalGroupMapping.EventHandlerRefs | None = field(
+    event_handler_refs: (
+        SenderReceiverToSignalGroupMapping.EventHandlerRefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "EVENT-HANDLER-REFS",
@@ -100,7 +103,9 @@ class SenderReceiverToSignalGroupMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    service_instance_refs: SenderReceiverToSignalGroupMapping.ServiceInstanceRefs | None = field(
+    service_instance_refs: (
+        SenderReceiverToSignalGroupMapping.ServiceInstanceRefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "SERVICE-INSTANCE-REFS",
@@ -116,17 +121,17 @@ class SenderReceiverToSignalGroupMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    data_element_iref: VariableDataPrototypeInSystemInstanceRef | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "DATA-ELEMENT-IREF",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    data_element_iref: VariableDataPrototypeInSystemInstanceRef | None = field(
+        default=None,
+        metadata={
+            "name": "DATA-ELEMENT-IREF",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
-    signal_group_ref: SenderReceiverToSignalGroupMapping.SignalGroupRef | None = field(
+    signal_group_ref: (
+        SenderReceiverToSignalGroupMapping.SignalGroupRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "SIGNAL-GROUP-REF",
@@ -134,13 +139,15 @@ class SenderReceiverToSignalGroupMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    type_mapping: SenderReceiverToSignalGroupMapping.TypeMapping | None = field(
-        default=None,
-        metadata={
-            "name": "TYPE-MAPPING",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    type_mapping: SenderReceiverToSignalGroupMapping.TypeMapping | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "TYPE-MAPPING",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     s: str | None = field(
         default=None,
@@ -253,11 +260,13 @@ class SenderReceiverToSignalGroupMapping:
                 },
             )
         )
-        sender_rec_record_type_mapping: SenderRecRecordTypeMapping | None = field(
-            default=None,
-            metadata={
-                "name": "SENDER-REC-RECORD-TYPE-MAPPING",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        sender_rec_record_type_mapping: SenderRecRecordTypeMapping | None = (
+            field(
+                default=None,
+                metadata={
+                    "name": "SENDER-REC-RECORD-TYPE-MAPPING",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )

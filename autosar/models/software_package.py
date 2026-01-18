@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -137,15 +136,13 @@ class SoftwarePackage:
             "required": True,
         },
     )
-    short_name_fragments: SoftwarePackage.ShortNameFragments | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "SHORT-NAME-FRAGMENTS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    short_name_fragments: SoftwarePackage.ShortNameFragments | None = field(
+        default=None,
+        metadata={
+            "name": "SHORT-NAME-FRAGMENTS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     long_name: MultilanguageLongName | None = field(
         default=None,
@@ -219,15 +216,13 @@ class SoftwarePackage:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    delta_package_applicable_version: StrongRevisionLabelString | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "DELTA-PACKAGE-APPLICABLE-VERSION",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    delta_package_applicable_version: StrongRevisionLabelString | None = field(
+        default=None,
+        metadata={
+            "name": "DELTA-PACKAGE-APPLICABLE-VERSION",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     maximum_supported_ucm_version: RevisionLabelString | None = field(
         default=None,
@@ -253,13 +248,15 @@ class SoftwarePackage:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    packager_signature_ref: SoftwarePackage.PackagerSignatureRef | None = field(
-        default=None,
-        metadata={
-            "name": "PACKAGER-SIGNATURE-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    packager_signature_ref: SoftwarePackage.PackagerSignatureRef | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "PACKAGER-SIGNATURE-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     post_verification_reboot: Boolean | None = field(
         default=None,
@@ -285,15 +282,13 @@ class SoftwarePackage:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    software_cluster_ref: SoftwarePackage.SoftwareClusterRef | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "SOFTWARE-CLUSTER-REF",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    software_cluster_ref: SoftwarePackage.SoftwareClusterRef | None = field(
+        default=None,
+        metadata={
+            "name": "SOFTWARE-CLUSTER-REF",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     uncompressed_software_cluster_size: PositiveInteger | None = field(
         default=None,

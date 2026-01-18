@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import VariationPoint
 from .boolean import Boolean
@@ -66,7 +65,9 @@ class BswModuleClientServerEntry:
             "required": True,
         },
     )
-    short_name_fragments: BswModuleClientServerEntry.ShortNameFragments | None = field(
+    short_name_fragments: (
+        BswModuleClientServerEntry.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -74,7 +75,9 @@ class BswModuleClientServerEntry:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    encapsulated_entry_ref: BswModuleClientServerEntry.EncapsulatedEntryRef | None = field(
+    encapsulated_entry_ref: (
+        BswModuleClientServerEntry.EncapsulatedEntryRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "ENCAPSULATED-ENTRY-REF",

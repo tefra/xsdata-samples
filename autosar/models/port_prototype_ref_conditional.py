@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import VariationPoint
 from .port_prototype_subtypes_enum import PortPrototypeSubtypesEnum
@@ -33,13 +32,15 @@ class PortPrototypeRefConditional:
     class Meta:
         name = "PORT-PROTOTYPE-REF-CONDITIONAL"
 
-    port_prototype_ref: PortPrototypeRefConditional.PortPrototypeRef | None = field(
-        default=None,
-        metadata={
-            "name": "PORT-PROTOTYPE-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    port_prototype_ref: PortPrototypeRefConditional.PortPrototypeRef | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "PORT-PROTOTYPE-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     variation_point: VariationPoint | None = field(
         default=None,

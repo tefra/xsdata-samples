@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .interchange_version_structure import InterchangeVersionStructure
 from .scheduled_stop_point_ref_structure import ScheduledStopPointRefStructure
@@ -66,7 +65,9 @@ class ServiceJourneyInterchangeVersionStructure(InterchangeVersionStructure):
             "required": True,
         },
     )
-    service_journey_pattern_interchange_ref: ServiceJourneyPatternInterchangeRef | None = field(
+    service_journey_pattern_interchange_ref: (
+        ServiceJourneyPatternInterchangeRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "ServiceJourneyPatternInterchangeRef",

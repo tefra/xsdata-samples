@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -118,13 +117,15 @@ class PortInterfaceMappingSet:
             "required": True,
         },
     )
-    short_name_fragments: PortInterfaceMappingSet.ShortNameFragments | None = field(
-        default=None,
-        metadata={
-            "name": "SHORT-NAME-FRAGMENTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    short_name_fragments: PortInterfaceMappingSet.ShortNameFragments | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "SHORT-NAME-FRAGMENTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     long_name: MultilanguageLongName | None = field(
         default=None,
@@ -182,15 +183,13 @@ class PortInterfaceMappingSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    blueprint_policys: PortInterfaceMappingSet.BlueprintPolicys | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "BLUEPRINT-POLICYS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    blueprint_policys: PortInterfaceMappingSet.BlueprintPolicys | None = field(
+        default=None,
+        metadata={
+            "name": "BLUEPRINT-POLICYS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     short_name_pattern: String | None = field(
         default=None,
@@ -200,7 +199,9 @@ class PortInterfaceMappingSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    port_interface_mappings: PortInterfaceMappingSet.PortInterfaceMappings | None = field(
+    port_interface_mappings: (
+        PortInterfaceMappingSet.PortInterfaceMappings | None
+    ) = field(
         default=None,
         metadata={
             "name": "PORT-INTERFACE-MAPPINGS",

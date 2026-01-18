@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -176,13 +175,15 @@ class J1939TpConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    communication_cluster_ref: J1939TpConfig.CommunicationClusterRef | None = field(
-        default=None,
-        metadata={
-            "name": "COMMUNICATION-CLUSTER-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    communication_cluster_ref: J1939TpConfig.CommunicationClusterRef | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "COMMUNICATION-CLUSTER-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     tp_addresss: J1939TpConfig.TpAddresss | None = field(
         default=None,

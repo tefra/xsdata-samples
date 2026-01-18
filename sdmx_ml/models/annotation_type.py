@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from sdmx_ml.models.annotation_urltype import AnnotationUrltype
 from sdmx_ml.models.text_type import TextType

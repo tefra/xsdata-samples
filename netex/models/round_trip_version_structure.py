@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .round_trip_type_enumeration import RoundTripTypeEnumeration
 from .usage_parameter_version_structure import UsageParameterVersionStructure

@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .aggregation_tailoring_subtypes_enum import (
     AggregationTailoringSubtypesEnum,

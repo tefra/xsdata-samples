@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.amount_type import (
     AmountType,
@@ -259,15 +258,13 @@ class AgreementType(BaseGbotype):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    coinsurer_involvements: AgreementTypeCoinsurerInvolvements | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "CoinsurerInvolvements",
-                "type": "Element",
-                "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-            },
-        )
+    coinsurer_involvements: AgreementTypeCoinsurerInvolvements | None = field(
+        default=None,
+        metadata={
+            "name": "CoinsurerInvolvements",
+            "type": "Element",
+            "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
+        },
     )
     contacts: ContactsInvolvement | None = field(
         default=None,

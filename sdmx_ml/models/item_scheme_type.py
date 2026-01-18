@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Union
 
 from sdmx_ml.models.item_type import (
     Agency,
@@ -41,7 +40,23 @@ class ItemSchemeType(MaintainableType):
     """
 
     choice: tuple[
-        CustomType | UserDefinedOperator | Ruleset | NamePersonalisation | VtlMapping | Transformation | ReportingCategory | OrganisationUnit | MetadataProvider | DataProvider | DataConsumer | Agency | Concept | GeoGridCode | GeoFeatureSetCode | Code | Category,
+        CustomType
+        | UserDefinedOperator
+        | Ruleset
+        | NamePersonalisation
+        | VtlMapping
+        | Transformation
+        | ReportingCategory
+        | OrganisationUnit
+        | MetadataProvider
+        | DataProvider
+        | DataConsumer
+        | Agency
+        | Concept
+        | GeoGridCode
+        | GeoFeatureSetCode
+        | Code
+        | Category,
         ...,
     ] = field(
         default_factory=tuple,

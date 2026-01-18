@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from datexii.models.eu.datexii.v2.accessibility_enum import AccessibilityEnum
 from datexii.models.eu.datexii.v2.availability_enum import AvailabilityEnum
@@ -167,11 +166,13 @@ class ParkingEquipmentOrServiceFacility:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    parking_equipment_or_service_facility_extension: ExtensionType | None = field(
-        default=None,
-        metadata={
-            "name": "parkingEquipmentOrServiceFacilityExtension",
-            "type": "Element",
-            "namespace": "http://datex2.eu/schema/2/2_0",
-        },
+    parking_equipment_or_service_facility_extension: ExtensionType | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "parkingEquipmentOrServiceFacilityExtension",
+                "type": "Element",
+                "namespace": "http://datex2.eu/schema/2/2_0",
+            },
+        )
     )

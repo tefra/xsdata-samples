@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from sdmx_ml.models.metadata_attribute_list import MetadataAttributeList
 from sdmx_ml.models.metadata_structure_components_base_type import (

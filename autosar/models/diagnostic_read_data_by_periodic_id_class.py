@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -113,7 +112,9 @@ class DiagnosticReadDataByPeriodicIdClass:
             "required": True,
         },
     )
-    short_name_fragments: DiagnosticReadDataByPeriodicIdClass.ShortNameFragments | None = field(
+    short_name_fragments: (
+        DiagnosticReadDataByPeriodicIdClass.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -161,13 +162,15 @@ class DiagnosticReadDataByPeriodicIdClass:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: DiagnosticReadDataByPeriodicIdClass.Annotations | None = field(
-        default=None,
-        metadata={
-            "name": "ANNOTATIONS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    annotations: DiagnosticReadDataByPeriodicIdClass.Annotations | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "ANNOTATIONS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     variation_point: VariationPoint | None = field(
         default=None,
@@ -177,7 +180,9 @@ class DiagnosticReadDataByPeriodicIdClass:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    access_permission_ref: DiagnosticReadDataByPeriodicIdClass.AccessPermissionRef | None = field(
+    access_permission_ref: (
+        DiagnosticReadDataByPeriodicIdClass.AccessPermissionRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "ACCESS-PERMISSION-REF",
@@ -185,7 +190,9 @@ class DiagnosticReadDataByPeriodicIdClass:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    access_permission_validity: DiagnosticAccessPermissionValidityEnum | None = field(
+    access_permission_validity: (
+        DiagnosticAccessPermissionValidityEnum | None
+    ) = field(
         default=None,
         metadata={
             "name": "ACCESS-PERMISSION-VALIDITY",
@@ -201,7 +208,9 @@ class DiagnosticReadDataByPeriodicIdClass:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    periodic_rates: DiagnosticReadDataByPeriodicIdClass.PeriodicRates | None = field(
+    periodic_rates: (
+        DiagnosticReadDataByPeriodicIdClass.PeriodicRates | None
+    ) = field(
         default=None,
         metadata={
             "name": "PERIODIC-RATES",

@@ -1,6 +1,5 @@
 from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from .all_vehicle_modes_of_transport_enumeration import (
     AllVehicleModesOfTransportEnumeration,
@@ -71,7 +70,15 @@ class GroupOfLinesVersionStructure(GroupOfEntitiesVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    mode_of_operation_ref_or_alternative_mode_of_operation_ref_or_conventional_mode_of_operation_ref: PersonalModeOfOperationRef | VehiclePoolingRef | VehicleSharingRef | VehicleRentalRef | FlexibleModeOfOperationRef | ScheduledModeOfOperationRef | None = field(
+    mode_of_operation_ref_or_alternative_mode_of_operation_ref_or_conventional_mode_of_operation_ref: (
+        PersonalModeOfOperationRef
+        | VehiclePoolingRef
+        | VehicleSharingRef
+        | VehicleRentalRef
+        | FlexibleModeOfOperationRef
+        | ScheduledModeOfOperationRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -126,15 +133,13 @@ class GroupOfLinesVersionStructure(GroupOfEntitiesVersionStructure):
             "tokens": True,
         },
     )
-    types_of_payment_method: TypeOfPaymentMethodValueStructure | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "typesOfPaymentMethod",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            },
-        )
+    types_of_payment_method: TypeOfPaymentMethodValueStructure | None = field(
+        default=None,
+        metadata={
+            "name": "typesOfPaymentMethod",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        },
     )
     purchase_moment: Iterable[PurchaseMomentEnumeration] = field(
         default_factory=list,

@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from xsdata.models.datatype import XmlDate
 
@@ -78,15 +77,13 @@ class ParkingStandardsAndSecurity:
             },
         )
     )
-    label_service_level_self_assessment: LABELServiceLevelEnum | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "labelServiceLevelSelfAssessment",
-                "type": "Element",
-                "namespace": "http://datex2.eu/schema/2/2_0",
-            },
-        )
+    label_service_level_self_assessment: LABELServiceLevelEnum | None = field(
+        default=None,
+        metadata={
+            "name": "labelServiceLevelSelfAssessment",
+            "type": "Element",
+            "namespace": "http://datex2.eu/schema/2/2_0",
+        },
     )
     parking_security: list[ParkingSecurityEnum] = field(
         default_factory=list,

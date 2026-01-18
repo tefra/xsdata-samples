@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -96,13 +95,15 @@ class TlvDataIdDefinitionSet:
             "required": True,
         },
     )
-    short_name_fragments: TlvDataIdDefinitionSet.ShortNameFragments | None = field(
-        default=None,
-        metadata={
-            "name": "SHORT-NAME-FRAGMENTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    short_name_fragments: TlvDataIdDefinitionSet.ShortNameFragments | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "SHORT-NAME-FRAGMENTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     long_name: MultilanguageLongName | None = field(
         default=None,
@@ -160,7 +161,9 @@ class TlvDataIdDefinitionSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tlv_data_id_definitions: TlvDataIdDefinitionSet.TlvDataIdDefinitions | None = field(
+    tlv_data_id_definitions: (
+        TlvDataIdDefinitionSet.TlvDataIdDefinitions | None
+    ) = field(
         default=None,
         metadata={
             "name": "TLV-DATA-ID-DEFINITIONS",

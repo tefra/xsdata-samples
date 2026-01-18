@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .diag_pdu_type_simple import DiagPduTypeSimple
 

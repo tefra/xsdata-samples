@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .p_port_prototype_subtypes_enum import PPortPrototypeSubtypesEnum
 from .ref import Ref
@@ -36,7 +35,10 @@ class PPortPrototypeInExecutableInstanceRef:
     class Meta:
         name = "P-PORT-PROTOTYPE-IN-EXECUTABLE-INSTANCE-REF"
 
-    context_root_sw_component_prototype_ref: PPortPrototypeInExecutableInstanceRef.ContextRootSwComponentPrototypeRef | None = field(
+    context_root_sw_component_prototype_ref: (
+        PPortPrototypeInExecutableInstanceRef.ContextRootSwComponentPrototypeRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "CONTEXT-ROOT-SW-COMPONENT-PROTOTYPE-REF",
@@ -54,7 +56,9 @@ class PPortPrototypeInExecutableInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    target_p_port_prototype_ref: PPortPrototypeInExecutableInstanceRef.TargetPPortPrototypeRef | None = field(
+    target_p_port_prototype_ref: (
+        PPortPrototypeInExecutableInstanceRef.TargetPPortPrototypeRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "TARGET-P-PORT-PROTOTYPE-REF",

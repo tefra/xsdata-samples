@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -105,7 +104,9 @@ class CryptoProviderToPortPrototypeMapping:
             "required": True,
         },
     )
-    short_name_fragments: CryptoProviderToPortPrototypeMapping.ShortNameFragments | None = field(
+    short_name_fragments: (
+        CryptoProviderToPortPrototypeMapping.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -153,13 +154,15 @@ class CryptoProviderToPortPrototypeMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: CryptoProviderToPortPrototypeMapping.Annotations | None = field(
-        default=None,
-        metadata={
-            "name": "ANNOTATIONS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    annotations: CryptoProviderToPortPrototypeMapping.Annotations | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "ANNOTATIONS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     variation_point: VariationPoint | None = field(
         default=None,
@@ -169,7 +172,9 @@ class CryptoProviderToPortPrototypeMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    crypto_provider_ref: CryptoProviderToPortPrototypeMapping.CryptoProviderRef | None = field(
+    crypto_provider_ref: (
+        CryptoProviderToPortPrototypeMapping.CryptoProviderRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "CRYPTO-PROVIDER-REF",
@@ -177,23 +182,23 @@ class CryptoProviderToPortPrototypeMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    port_prototype_iref: PortPrototypeInExecutableInstanceRef | None = (
+    port_prototype_iref: PortPrototypeInExecutableInstanceRef | None = field(
+        default=None,
+        metadata={
+            "name": "PORT-PROTOTYPE-IREF",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
+    )
+    process_ref: CryptoProviderToPortPrototypeMapping.ProcessRef | None = (
         field(
             default=None,
             metadata={
-                "name": "PORT-PROTOTYPE-IREF",
+                "name": "PROCESS-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-    )
-    process_ref: CryptoProviderToPortPrototypeMapping.ProcessRef | None = field(
-        default=None,
-        metadata={
-            "name": "PROCESS-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
     )
     s: str | None = field(
         default=None,

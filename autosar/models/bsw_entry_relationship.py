@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .bsw_entry_relationship_enum import BswEntryRelationshipEnum
 from .bsw_module_entry_subtypes_enum import BswModuleEntrySubtypesEnum

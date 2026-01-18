@@ -1,6 +1,5 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
-from typing import Optional
 
 from .compass_bearing16_enumeration import CompassBearing16Enumeration
 from .entity_in_version_structure import DataManagedObjectStructure

@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from ipxact.models.payload import Payload
 from ipxact.models.protocol_type_type import ProtocolTypeType

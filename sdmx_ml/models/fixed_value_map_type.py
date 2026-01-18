@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import ForwardRef, Optional, Union
+from typing import ForwardRef
 
 from sdmx_ml.models.annotable_type import AnnotableType
 
@@ -18,7 +18,9 @@ class FixedValueMapType(AnnotableType):
     :ivar value: The fixed value for the component.
     """
 
-    source_or_target: FixedValueMapType.Source | FixedValueMapType.Target | None = field(
+    source_or_target: (
+        FixedValueMapType.Source | FixedValueMapType.Target | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",

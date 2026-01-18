@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from ..core.datatypes_base import (
     Cd,
@@ -227,7 +226,9 @@ class RepcMt000400Uv01Component4:
             "nillable": True,
         },
     )
-    substance_administration: RepcMt000100Uv01SubstanceAdministration | None = field(
+    substance_administration: (
+        RepcMt000100Uv01SubstanceAdministration | None
+    ) = field(
         default=None,
         metadata={
             "name": "substanceAdministration",

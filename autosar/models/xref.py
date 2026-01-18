@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .ref import Ref
 from .referrable_subtypes_enum import ReferrableSubtypesEnum
@@ -125,14 +124,12 @@ class Xref:
             "type": "Attribute",
         },
     )
-    show_resource_alias_name: ShowResourceAliasNameEnumSimple | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "SHOW-RESOURCE-ALIAS-NAME",
-                "type": "Attribute",
-            },
-        )
+    show_resource_alias_name: ShowResourceAliasNameEnumSimple | None = field(
+        default=None,
+        metadata={
+            "name": "SHOW-RESOURCE-ALIAS-NAME",
+            "type": "Attribute",
+        },
     )
     show_resource_category: ShowResourceCategoryEnumSimple | None = field(
         default=None,
@@ -162,14 +159,12 @@ class Xref:
             "type": "Attribute",
         },
     )
-    show_resource_short_name: ShowResourceShortNameEnumSimple | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "SHOW-RESOURCE-SHORT-NAME",
-                "type": "Attribute",
-            },
-        )
+    show_resource_short_name: ShowResourceShortNameEnumSimple | None = field(
+        default=None,
+        metadata={
+            "name": "SHOW-RESOURCE-SHORT-NAME",
+            "type": "Attribute",
+        },
     )
     show_resource_type: ShowResourceTypeEnumSimple | None = field(
         default=None,

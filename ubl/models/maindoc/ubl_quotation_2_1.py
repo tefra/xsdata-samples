@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from ubl.models.common.ubl_common_aggregate_components_2_1 import (
     AdditionalDocumentReference,
@@ -154,7 +153,9 @@ class QuotationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    request_for_quotation_document_reference: RequestForQuotationDocumentReference | None = field(
+    request_for_quotation_document_reference: (
+        RequestForQuotationDocumentReference | None
+    ) = field(
         default=None,
         metadata={
             "name": "RequestForQuotationDocumentReference",

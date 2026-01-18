@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .boolean import Boolean
 from .dlt_log_channel import DltLogChannel

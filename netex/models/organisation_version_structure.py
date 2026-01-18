@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import Any, Optional
+from typing import Any
 
 from .alternative_names_rel_structure import AlternativeNamesRelStructure
 from .contact_structure import ContactStructure
@@ -163,15 +163,13 @@ class OrganisationVersionStructure(DataManagedObjectStructure):
             "tokens": True,
         },
     )
-    types_of_organisation: TypeOfOrganisationRefsRelStructure | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "typesOfOrganisation",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            },
-        )
+    types_of_organisation: TypeOfOrganisationRefsRelStructure | None = field(
+        default=None,
+        metadata={
+            "name": "typesOfOrganisation",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        },
     )
     status: bool | None = field(
         default=None,
@@ -181,13 +179,15 @@ class OrganisationVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    validity_period: OrganisationVersionStructure.ValidityPeriod | None = field(
-        default=None,
-        metadata={
-            "name": "ValidityPeriod",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        },
+    validity_period: OrganisationVersionStructure.ValidityPeriod | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "ValidityPeriod",
+                "type": "Element",
+                "namespace": "http://www.netex.org.uk/netex",
+            },
+        )
     )
     parts: OrganisationPartsRelStructure | None = field(
         default=None,

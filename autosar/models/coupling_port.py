@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -215,7 +214,9 @@ class CouplingPort:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    connection_negotiation_behavior: EthernetConnectionNegotiationEnum | None = field(
+    connection_negotiation_behavior: (
+        EthernetConnectionNegotiationEnum | None
+    ) = field(
         default=None,
         metadata={
             "name": "CONNECTION-NEGOTIATION-BEHAVIOR",
@@ -263,13 +264,15 @@ class CouplingPort:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    mac_multicast_address_refs: CouplingPort.MacMulticastAddressRefs | None = field(
-        default=None,
-        metadata={
-            "name": "MAC-MULTICAST-ADDRESS-REFS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    mac_multicast_address_refs: CouplingPort.MacMulticastAddressRefs | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "MAC-MULTICAST-ADDRESS-REFS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     physical_layer_type: EthernetPhysicalLayerTypeEnum | None = field(
         default=None,
@@ -319,7 +322,9 @@ class CouplingPort:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    wakeup_sleep_on_dataline_config_ref: CouplingPort.WakeupSleepOnDatalineConfigRef | None = field(
+    wakeup_sleep_on_dataline_config_ref: (
+        CouplingPort.WakeupSleepOnDatalineConfigRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "WAKEUP-SLEEP-ON-DATALINE-CONFIG-REF",
@@ -463,13 +468,11 @@ class CouplingPort:
 
     @dataclass
     class WakeupSleepOnDatalineConfigRef(Ref):
-        dest: EthernetWakeupSleepOnDatalineConfigSubtypesEnum | None = (
-            field(
-                default=None,
-                metadata={
-                    "name": "DEST",
-                    "type": "Attribute",
-                    "required": True,
-                },
-            )
+        dest: EthernetWakeupSleepOnDatalineConfigSubtypesEnum | None = field(
+            default=None,
+            metadata={
+                "name": "DEST",
+                "type": "Attribute",
+                "required": True,
+            },
         )

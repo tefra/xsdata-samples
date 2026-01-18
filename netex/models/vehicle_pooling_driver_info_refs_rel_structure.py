@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .one_to_many_relationship_structure import OneToManyRelationshipStructure
 from .vehicle_pooling_driver_info_ref import VehiclePoolingDriverInfoRef

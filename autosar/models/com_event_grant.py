@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .abstract_iam_remote_subject_subtypes_enum import (
     AbstractIamRemoteSubjectSubtypesEnum,
@@ -203,15 +202,13 @@ class ComEventGrant:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    service_deployment_ref: ComEventGrant.ServiceDeploymentRef | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "SERVICE-DEPLOYMENT-REF",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    service_deployment_ref: ComEventGrant.ServiceDeploymentRef | None = field(
+        default=None,
+        metadata={
+            "name": "SERVICE-DEPLOYMENT-REF",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     s: str | None = field(
         default=None,

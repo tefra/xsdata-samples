@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .j_1939_controller_application_subtypes_enum import (
     J1939ControllerApplicationSubtypesEnum,
@@ -42,7 +41,10 @@ class J1939ControllerApplicationToJ1939NmNodeMapping:
     class Meta:
         name = "J-1939-CONTROLLER-APPLICATION-TO-J-1939-NM-NODE-MAPPING"
 
-    j_1939_controller_application_ref: J1939ControllerApplicationToJ1939NmNodeMapping.J1939ControllerApplicationRef | None = field(
+    j_1939_controller_application_ref: (
+        J1939ControllerApplicationToJ1939NmNodeMapping.J1939ControllerApplicationRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "J-1939-CONTROLLER-APPLICATION-REF",
@@ -50,7 +52,9 @@ class J1939ControllerApplicationToJ1939NmNodeMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    j_1939_nm_node_ref: J1939ControllerApplicationToJ1939NmNodeMapping.J1939NmNodeRef | None = field(
+    j_1939_nm_node_ref: (
+        J1939ControllerApplicationToJ1939NmNodeMapping.J1939NmNodeRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "J-1939-NM-NODE-REF",

@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -106,7 +105,9 @@ class TdEventServiceInstanceDiscovery:
             "required": True,
         },
     )
-    short_name_fragments: TdEventServiceInstanceDiscovery.ShortNameFragments | None = field(
+    short_name_fragments: (
+        TdEventServiceInstanceDiscovery.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -154,15 +155,13 @@ class TdEventServiceInstanceDiscovery:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: TdEventServiceInstanceDiscovery.Annotations | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "ANNOTATIONS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    annotations: TdEventServiceInstanceDiscovery.Annotations | None = field(
+        default=None,
+        metadata={
+            "name": "ANNOTATIONS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     variation_point: VariationPoint | None = field(
         default=None,
@@ -180,7 +179,10 @@ class TdEventServiceInstanceDiscovery:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    service_instance_to_port_prototype_mapping_ref: TdEventServiceInstanceDiscovery.ServiceInstanceToPortPrototypeMappingRef | None = field(
+    service_instance_to_port_prototype_mapping_ref: (
+        TdEventServiceInstanceDiscovery.ServiceInstanceToPortPrototypeMappingRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "SERVICE-INSTANCE-TO-PORT-PROTOTYPE-MAPPING-REF",
@@ -188,7 +190,9 @@ class TdEventServiceInstanceDiscovery:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    td_event_service_instance_discovery_type: TdEventServiceInstanceDiscoveryTypeEnum | None = field(
+    td_event_service_instance_discovery_type: (
+        TdEventServiceInstanceDiscoveryTypeEnum | None
+    ) = field(
         default=None,
         metadata={
             "name": "TD-EVENT-SERVICE-INSTANCE-DISCOVERY-TYPE",
@@ -243,13 +247,11 @@ class TdEventServiceInstanceDiscovery:
 
     @dataclass
     class ServiceInstanceToPortPrototypeMappingRef(Ref):
-        dest: ServiceInstanceToPortPrototypeMappingSubtypesEnum | None = (
-            field(
-                default=None,
-                metadata={
-                    "name": "DEST",
-                    "type": "Attribute",
-                    "required": True,
-                },
-            )
+        dest: ServiceInstanceToPortPrototypeMappingSubtypesEnum | None = field(
+            default=None,
+            metadata={
+                "name": "DEST",
+                "type": "Attribute",
+                "required": True,
+            },
         )

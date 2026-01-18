@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from xcbl.models.planning_schedule_response import (
     LocationGroupedPlanningDetail,
@@ -46,14 +45,18 @@ class PlanningSchedule:
             "required": True,
         }
     )
-    list_of_location_grouped_planning_detail: ListOfLocationGroupedPlanningDetail | None = field(
+    list_of_location_grouped_planning_detail: (
+        ListOfLocationGroupedPlanningDetail | None
+    ) = field(
         default=None,
         metadata={
             "name": "ListOfLocationGroupedPlanningDetail",
             "type": "Element",
         },
     )
-    list_of_material_grouped_planning_detail: ListOfMaterialGroupedPlanningDetail | None = field(
+    list_of_material_grouped_planning_detail: (
+        ListOfMaterialGroupedPlanningDetail | None
+    ) = field(
         default=None,
         metadata={
             "name": "ListOfMaterialGroupedPlanningDetail",

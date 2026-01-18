@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -181,13 +180,15 @@ class LinNmCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    communication_cluster_ref: LinNmCluster.CommunicationClusterRef | None = field(
-        default=None,
-        metadata={
-            "name": "COMMUNICATION-CLUSTER-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    communication_cluster_ref: LinNmCluster.CommunicationClusterRef | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "COMMUNICATION-CLUSTER-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     nm_channel_id: PositiveInteger | None = field(
         default=None,

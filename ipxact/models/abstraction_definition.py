@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from ipxact.models.assertions import Assertions
 from ipxact.models.choices import Choices
@@ -236,7 +235,9 @@ class AbstractionDefinition:
                     "type": "Element",
                 },
             )
-            transactional: AbstractionDefinition.Ports.Port.Transactional | None = field(
+            transactional: (
+                AbstractionDefinition.Ports.Port.Transactional | None
+            ) = field(
                 default=None,
                 metadata={
                     "type": "Element",
@@ -293,14 +294,20 @@ class AbstractionDefinition:
                         "type": "Element",
                     },
                 )
-                on_initiator: AbstractionDefinition.Ports.Port.Transactional.OnInitiator | None = field(
+                on_initiator: (
+                    AbstractionDefinition.Ports.Port.Transactional.OnInitiator
+                    | None
+                ) = field(
                     default=None,
                     metadata={
                         "name": "onInitiator",
                         "type": "Element",
                     },
                 )
-                on_target: AbstractionDefinition.Ports.Port.Transactional.OnTarget | None = field(
+                on_target: (
+                    AbstractionDefinition.Ports.Port.Transactional.OnTarget
+                    | None
+                ) = field(
                     default=None,
                     metadata={
                         "name": "onTarget",

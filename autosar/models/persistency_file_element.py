@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -102,13 +101,15 @@ class PersistencyFileElement:
             "required": True,
         },
     )
-    short_name_fragments: PersistencyFileElement.ShortNameFragments | None = field(
-        default=None,
-        metadata={
-            "name": "SHORT-NAME-FRAGMENTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    short_name_fragments: PersistencyFileElement.ShortNameFragments | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "SHORT-NAME-FRAGMENTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     long_name: MultilanguageLongName | None = field(
         default=None,
@@ -158,15 +159,13 @@ class PersistencyFileElement:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    update_strategy: PersistencyElementLevelUpdateStrategyEnum | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "UPDATE-STRATEGY",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    update_strategy: PersistencyElementLevelUpdateStrategyEnum | None = field(
+        default=None,
+        metadata={
+            "name": "UPDATE-STRATEGY",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     content_uri: UriString | None = field(
         default=None,

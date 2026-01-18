@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.non_road_event_information import (
@@ -33,13 +32,11 @@ class RoadOperatorServiceDisruption(NonRoadEventInformation):
             "min_occurs": 1,
         },
     )
-    road_operator_service_disruption_extension: ExtensionType | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "roadOperatorServiceDisruptionExtension",
-                "type": "Element",
-                "namespace": "http://datex2.eu/schema/2/2_0",
-            },
-        )
+    road_operator_service_disruption_extension: ExtensionType | None = field(
+        default=None,
+        metadata={
+            "name": "roadOperatorServiceDisruptionExtension",
+            "type": "Element",
+            "namespace": "http://datex2.eu/schema/2/2_0",
+        },
     )

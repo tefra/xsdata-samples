@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from .abstract_group_member_versioned_child_structure import (
     AbstractGroupMemberVersionedChildStructure,
@@ -35,7 +34,20 @@ class GroupOfServicesMemberStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    choice: SingleJourneyRef | DatedVehicleJourneyRef | DatedSpecialServiceRef | SpecialServiceRef | TemplateServiceJourneyRef | ServiceJourneyRef | DeadRunRef | VehicleJourneyRef | TrainNumberRef | JourneyDesignator | ServiceDesignator | None = field(
+    choice: (
+        SingleJourneyRef
+        | DatedVehicleJourneyRef
+        | DatedSpecialServiceRef
+        | SpecialServiceRef
+        | TemplateServiceJourneyRef
+        | ServiceJourneyRef
+        | DeadRunRef
+        | VehicleJourneyRef
+        | TrainNumberRef
+        | JourneyDesignator
+        | ServiceDesignator
+        | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",

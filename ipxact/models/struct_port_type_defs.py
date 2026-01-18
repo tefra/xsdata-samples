@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from ipxact.models.type_parameter import TypeParameter
 
@@ -41,13 +40,15 @@ class StructPortTypeDefs:
         :ivar id:
         """
 
-        type_name: StructPortTypeDefs.StructPortTypeDef.TypeName | None = field(
-            default=None,
-            metadata={
-                "name": "typeName",
-                "type": "Element",
-                "required": True,
-            },
+        type_name: StructPortTypeDefs.StructPortTypeDef.TypeName | None = (
+            field(
+                default=None,
+                metadata={
+                    "name": "typeName",
+                    "type": "Element",
+                    "required": True,
+                },
+            )
         )
         type_definition: list[
             StructPortTypeDefs.StructPortTypeDef.TypeDefinition
@@ -58,7 +59,9 @@ class StructPortTypeDefs:
                 "type": "Element",
             },
         )
-        type_parameters: StructPortTypeDefs.StructPortTypeDef.TypeParameters | None = field(
+        type_parameters: (
+            StructPortTypeDefs.StructPortTypeDef.TypeParameters | None
+        ) = field(
             default=None,
             metadata={
                 "name": "typeParameters",

@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -110,7 +109,9 @@ class DiagnosticRequestVehicleInfo:
             "required": True,
         },
     )
-    short_name_fragments: DiagnosticRequestVehicleInfo.ShortNameFragments | None = field(
+    short_name_fragments: (
+        DiagnosticRequestVehicleInfo.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -174,7 +175,9 @@ class DiagnosticRequestVehicleInfo:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    access_permission_ref: DiagnosticRequestVehicleInfo.AccessPermissionRef | None = field(
+    access_permission_ref: (
+        DiagnosticRequestVehicleInfo.AccessPermissionRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "ACCESS-PERMISSION-REF",
@@ -182,17 +185,17 @@ class DiagnosticRequestVehicleInfo:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    info_type_ref: DiagnosticRequestVehicleInfo.InfoTypeRef | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "INFO-TYPE-REF",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    info_type_ref: DiagnosticRequestVehicleInfo.InfoTypeRef | None = field(
+        default=None,
+        metadata={
+            "name": "INFO-TYPE-REF",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
-    request_vehicle_information_class_ref: DiagnosticRequestVehicleInfo.RequestVehicleInformationClassRef | None = field(
+    request_vehicle_information_class_ref: (
+        DiagnosticRequestVehicleInfo.RequestVehicleInformationClassRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "REQUEST-VEHICLE-INFORMATION-CLASS-REF",

@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .identifier import Identifier
 from .ref import Ref
@@ -55,7 +54,9 @@ class SomeipRequiredEventGroup:
             "required": True,
         },
     )
-    short_name_fragments: SomeipRequiredEventGroup.ShortNameFragments | None = field(
+    short_name_fragments: (
+        SomeipRequiredEventGroup.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -63,17 +64,17 @@ class SomeipRequiredEventGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    event_group_ref: SomeipRequiredEventGroup.EventGroupRef | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "EVENT-GROUP-REF",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    event_group_ref: SomeipRequiredEventGroup.EventGroupRef | None = field(
+        default=None,
+        metadata={
+            "name": "EVENT-GROUP-REF",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
-    sd_client_event_group_timing_config_ref: SomeipRequiredEventGroup.SdClientEventGroupTimingConfigRef | None = field(
+    sd_client_event_group_timing_config_ref: (
+        SomeipRequiredEventGroup.SdClientEventGroupTimingConfigRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "SD-CLIENT-EVENT-GROUP-TIMING-CONFIG-REF",
@@ -121,13 +122,11 @@ class SomeipRequiredEventGroup:
 
     @dataclass
     class SdClientEventGroupTimingConfigRef(Ref):
-        dest: SomeipSdClientEventGroupTimingConfigSubtypesEnum | None = (
-            field(
-                default=None,
-                metadata={
-                    "name": "DEST",
-                    "type": "Attribute",
-                    "required": True,
-                },
-            )
+        dest: SomeipSdClientEventGroupTimingConfigSubtypesEnum | None = field(
+            default=None,
+            metadata={
+                "name": "DEST",
+                "type": "Attribute",
+                "required": True,
+            },
         )

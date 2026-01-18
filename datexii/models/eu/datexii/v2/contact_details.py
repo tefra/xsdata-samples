@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from datexii.models.eu.datexii.v2.contact import Contact
 from datexii.models.eu.datexii.v2.country_enum import CountryEnum

@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -116,7 +115,9 @@ class SomeipDataPrototypeTransformationProps:
             "required": True,
         },
     )
-    short_name_fragments: SomeipDataPrototypeTransformationProps.ShortNameFragments | None = field(
+    short_name_fragments: (
+        SomeipDataPrototypeTransformationProps.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -164,13 +165,15 @@ class SomeipDataPrototypeTransformationProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: SomeipDataPrototypeTransformationProps.Annotations | None = field(
-        default=None,
-        metadata={
-            "name": "ANNOTATIONS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    annotations: SomeipDataPrototypeTransformationProps.Annotations | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "ANNOTATIONS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     variation_point: VariationPoint | None = field(
         default=None,
@@ -180,7 +183,9 @@ class SomeipDataPrototypeTransformationProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    data_prototypes: SomeipDataPrototypeTransformationProps.DataPrototypes | None = field(
+    data_prototypes: (
+        SomeipDataPrototypeTransformationProps.DataPrototypes | None
+    ) = field(
         default=None,
         metadata={
             "name": "DATA-PROTOTYPES",
@@ -196,7 +201,10 @@ class SomeipDataPrototypeTransformationProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    someip_transformation_props_ref: SomeipDataPrototypeTransformationProps.SomeipTransformationPropsRef | None = field(
+    someip_transformation_props_ref: (
+        SomeipDataPrototypeTransformationProps.SomeipTransformationPropsRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "SOMEIP-TRANSFORMATION-PROPS-REF",

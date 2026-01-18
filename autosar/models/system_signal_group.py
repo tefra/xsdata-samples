@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -103,15 +102,13 @@ class SystemSignalGroup:
             "required": True,
         },
     )
-    short_name_fragments: SystemSignalGroup.ShortNameFragments | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "SHORT-NAME-FRAGMENTS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    short_name_fragments: SystemSignalGroup.ShortNameFragments | None = field(
+        default=None,
+        metadata={
+            "name": "SHORT-NAME-FRAGMENTS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     long_name: MultilanguageLongName | None = field(
         default=None,
@@ -177,7 +174,9 @@ class SystemSignalGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    transforming_system_signal_ref: SystemSignalGroup.TransformingSystemSignalRef | None = field(
+    transforming_system_signal_ref: (
+        SystemSignalGroup.TransformingSystemSignalRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "TRANSFORMING-SYSTEM-SIGNAL-REF",

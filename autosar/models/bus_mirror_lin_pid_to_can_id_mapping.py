@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .lin_frame_triggering_subtypes_enum import LinFrameTriggeringSubtypesEnum
 from .positive_integer import PositiveInteger
@@ -42,7 +41,9 @@ class BusMirrorLinPidToCanIdMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    source_lin_pid_ref: BusMirrorLinPidToCanIdMapping.SourceLinPidRef | None = field(
+    source_lin_pid_ref: (
+        BusMirrorLinPidToCanIdMapping.SourceLinPidRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "SOURCE-LIN-PID-REF",

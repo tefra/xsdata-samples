@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from .boarding_position import BoardingPosition
 from .boarding_position_ref import BoardingPositionRef
@@ -22,7 +21,9 @@ class PassengerStopAssignmentVersionStructure(StopAssignmentVersionStructure):
     class Meta:
         name = "PassengerStopAssignment_VersionStructure"
 
-    taxi_rank_ref_or_stop_place_ref_or_stop_place: TaxiRankRef | StopPlaceRef | StopPlace | None = field(
+    taxi_rank_ref_or_stop_place_ref_or_stop_place: (
+        TaxiRankRef | StopPlaceRef | StopPlace | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -45,7 +46,9 @@ class PassengerStopAssignmentVersionStructure(StopAssignmentVersionStructure):
             ),
         },
     )
-    taxi_stand_ref_or_quay_ref_or_quay: TaxiStandRef | QuayRef | Quay | None = field(
+    taxi_stand_ref_or_quay_ref_or_quay: (
+        TaxiStandRef | QuayRef | Quay | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -68,7 +71,9 @@ class PassengerStopAssignmentVersionStructure(StopAssignmentVersionStructure):
             ),
         },
     )
-    boarding_position_ref_or_boarding_position: BoardingPositionRef | BoardingPosition | None = field(
+    boarding_position_ref_or_boarding_position: (
+        BoardingPositionRef | BoardingPosition | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",

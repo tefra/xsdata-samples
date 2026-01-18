@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .memory_allocation_keyword_policy_type_simple import (
     MemoryAllocationKeywordPolicyTypeSimple,

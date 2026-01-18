@@ -1,10 +1,8 @@
 from dataclasses import dataclass, field
-from typing import Any, Union
+from typing import Any
 
 from xsdata.models.datatype import XmlDate, XmlDateTime, XmlPeriod
 
-from sdmx_ml.models.structured_text import StructuredText
-from sdmx_ml.models.text import Text
 from sdmx_ml.models.value_type import ValueType
 
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common"

@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -125,7 +124,9 @@ class CpSoftwareClusterMappingSet:
             "required": True,
         },
     )
-    short_name_fragments: CpSoftwareClusterMappingSet.ShortNameFragments | None = field(
+    short_name_fragments: (
+        CpSoftwareClusterMappingSet.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -189,7 +190,9 @@ class CpSoftwareClusterMappingSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    port_element_to_com_resource_mappings: CpSoftwareClusterMappingSet.PortElementToComResourceMappings | None = field(
+    port_element_to_com_resource_mappings: (
+        CpSoftwareClusterMappingSet.PortElementToComResourceMappings | None
+    ) = field(
         default=None,
         metadata={
             "name": "PORT-ELEMENT-TO-COM-RESOURCE-MAPPINGS",
@@ -197,7 +200,10 @@ class CpSoftwareClusterMappingSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    resource_to_application_partition_mappings: CpSoftwareClusterMappingSet.ResourceToApplicationPartitionMappings | None = field(
+    resource_to_application_partition_mappings: (
+        CpSoftwareClusterMappingSet.ResourceToApplicationPartitionMappings
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "RESOURCE-TO-APPLICATION-PARTITION-MAPPINGS",
@@ -205,7 +211,9 @@ class CpSoftwareClusterMappingSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    software_cluster_to_resource_mappings: CpSoftwareClusterMappingSet.SoftwareClusterToResourceMappings | None = field(
+    software_cluster_to_resource_mappings: (
+        CpSoftwareClusterMappingSet.SoftwareClusterToResourceMappings | None
+    ) = field(
         default=None,
         metadata={
             "name": "SOFTWARE-CLUSTER-TO-RESOURCE-MAPPINGS",
@@ -213,7 +221,9 @@ class CpSoftwareClusterMappingSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    swc_to_application_partition_mappings: CpSoftwareClusterMappingSet.SwcToApplicationPartitionMappings | None = field(
+    swc_to_application_partition_mappings: (
+        CpSoftwareClusterMappingSet.SwcToApplicationPartitionMappings | None
+    ) = field(
         default=None,
         metadata={
             "name": "SWC-TO-APPLICATION-PARTITION-MAPPINGS",

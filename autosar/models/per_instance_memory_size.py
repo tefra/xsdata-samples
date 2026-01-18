@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import VariationPoint
 from .per_instance_memory_subtypes_enum import PerInstanceMemorySubtypesEnum
@@ -57,7 +56,9 @@ class PerInstanceMemorySize:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    per_instance_memory_ref: PerInstanceMemorySize.PerInstanceMemoryRef | None = field(
+    per_instance_memory_ref: (
+        PerInstanceMemorySize.PerInstanceMemoryRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "PER-INSTANCE-MEMORY-REF",

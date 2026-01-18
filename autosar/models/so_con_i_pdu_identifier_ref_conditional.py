@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import VariationPoint
 from .ref import Ref
@@ -35,7 +34,9 @@ class SoConIPduIdentifierRefConditional:
     class Meta:
         name = "SO-CON-I-PDU-IDENTIFIER-REF-CONDITIONAL"
 
-    so_con_i_pdu_identifier_ref: SoConIPduIdentifierRefConditional.SoConIPduIdentifierRef | None = field(
+    so_con_i_pdu_identifier_ref: (
+        SoConIPduIdentifierRefConditional.SoConIPduIdentifierRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "SO-CON-I-PDU-IDENTIFIER-REF",

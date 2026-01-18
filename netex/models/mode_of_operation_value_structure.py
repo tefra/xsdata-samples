@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .submodes_rel_structure import SubmodesRelStructure
 from .type_of_mode_of_operation_ref import TypeOfModeOfOperationRef

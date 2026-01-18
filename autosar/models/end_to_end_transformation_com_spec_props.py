@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -164,7 +163,10 @@ class EndToEndTransformationComSpecProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    e_2_e_profile_compatibility_props_ref: EndToEndTransformationComSpecProps.E2EProfileCompatibilityPropsRef | None = field(
+    e_2_e_profile_compatibility_props_ref: (
+        EndToEndTransformationComSpecProps.E2EProfileCompatibilityPropsRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "E-2-E-PROFILE-COMPATIBILITY-PROPS-REF",

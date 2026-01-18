@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -96,7 +95,9 @@ class E2EProfileConfigurationSet:
             "required": True,
         },
     )
-    short_name_fragments: E2EProfileConfigurationSet.ShortNameFragments | None = field(
+    short_name_fragments: (
+        E2EProfileConfigurationSet.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -160,7 +161,9 @@ class E2EProfileConfigurationSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    e_2_e_profile_configurations: E2EProfileConfigurationSet.E2EProfileConfigurations | None = field(
+    e_2_e_profile_configurations: (
+        E2EProfileConfigurationSet.E2EProfileConfigurations | None
+    ) = field(
         default=None,
         metadata={
             "name": "E-2-E-PROFILE-CONFIGURATIONS",

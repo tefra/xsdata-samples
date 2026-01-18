@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from .monitored_vehicle_sharing_parking_bay_ref import (
     MonitoredVehicleSharingParkingBayRef,
@@ -49,7 +48,13 @@ class TaxiServicePlaceAssignmentVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    parking_bay_ref_or_vehicle_sharing_parking_bay_ref: VehiclePoolingParkingBayRef | MonitoredVehicleSharingParkingBayRef | VehicleSharingParkingBayRef | ParkingBayRef | None = field(
+    parking_bay_ref_or_vehicle_sharing_parking_bay_ref: (
+        VehiclePoolingParkingBayRef
+        | MonitoredVehicleSharingParkingBayRef
+        | VehicleSharingParkingBayRef
+        | ParkingBayRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",

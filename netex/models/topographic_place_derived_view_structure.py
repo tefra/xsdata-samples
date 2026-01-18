@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .country_ref import CountryRef
 from .derived_view_structure import DerivedViewStructure

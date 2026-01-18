@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .derived_view_structure import DerivedViewStructure
 from .multilingual_string import MultilingualString
@@ -15,7 +14,9 @@ class PointOfInterestClassificationDerivedViewStructure(DerivedViewStructure):
     class Meta:
         name = "PointOfInterestClassification_DerivedViewStructure"
 
-    point_of_interest_classification_ref: PointOfInterestClassificationRef | None = field(
+    point_of_interest_classification_ref: (
+        PointOfInterestClassificationRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "PointOfInterestClassificationRef",

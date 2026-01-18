@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -111,13 +110,15 @@ class DiagnosticComControl:
             "required": True,
         },
     )
-    short_name_fragments: DiagnosticComControl.ShortNameFragments | None = field(
-        default=None,
-        metadata={
-            "name": "SHORT-NAME-FRAGMENTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    short_name_fragments: DiagnosticComControl.ShortNameFragments | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "SHORT-NAME-FRAGMENTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     long_name: MultilanguageLongName | None = field(
         default=None,
@@ -175,21 +176,25 @@ class DiagnosticComControl:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    access_permission_ref: DiagnosticComControl.AccessPermissionRef | None = field(
-        default=None,
-        metadata={
-            "name": "ACCESS-PERMISSION-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    access_permission_ref: DiagnosticComControl.AccessPermissionRef | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "ACCESS-PERMISSION-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
-    com_control_class_ref: DiagnosticComControl.ComControlClassRef | None = field(
-        default=None,
-        metadata={
-            "name": "COM-CONTROL-CLASS-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    com_control_class_ref: DiagnosticComControl.ComControlClassRef | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "COM-CONTROL-CLASS-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     custom_sub_function_number: PositiveInteger | None = field(
         default=None,

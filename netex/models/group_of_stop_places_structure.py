@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from .air_submode import AirSubmode
 from .all_vehicle_modes_of_transport_enumeration import (
@@ -74,7 +73,19 @@ class GroupOfStopPlacesStructure(GroupOfEntitiesVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    choice: AirSubmode | BusSubmode | CoachSubmode | FunicularSubmode | MetroSubmode | TramSubmode | TelecabinSubmode | RailSubmode | WaterSubmode | SnowAndIceSubmode | None = field(
+    choice: (
+        AirSubmode
+        | BusSubmode
+        | CoachSubmode
+        | FunicularSubmode
+        | MetroSubmode
+        | TramSubmode
+        | TelecabinSubmode
+        | RailSubmode
+        | WaterSubmode
+        | SnowAndIceSubmode
+        | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",

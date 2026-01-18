@@ -1,6 +1,5 @@
 from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import Union
 
 from .flexible_service_properties import FlexibleServiceProperties
 from .flexible_service_properties_ref import FlexibleServicePropertiesRef

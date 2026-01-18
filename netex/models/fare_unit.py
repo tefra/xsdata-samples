@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .fare_unit_version_structure import FareUnitVersionStructure
 

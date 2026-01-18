@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .security_event_reporting_mode_enum_simple import (
     SecurityEventReportingModeEnumSimple,

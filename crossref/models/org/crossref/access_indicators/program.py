@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from crossref.models.org.crossref.access_indicators.free_to_read import (
     FreeToRead,

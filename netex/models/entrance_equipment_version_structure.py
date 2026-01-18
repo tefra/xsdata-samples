@@ -1,6 +1,5 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
-from typing import Optional
 
 from .access_equipment_version_structure import AccessEquipmentVersionStructure
 from .compass_bearing8_enumeration import CompassBearing8Enumeration
@@ -244,13 +243,15 @@ class EntranceEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    turning_space_position: EntranceTurningSpacePositionEnumeration | None = field(
-        default=None,
-        metadata={
-            "name": "TurningSpacePosition",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        },
+    turning_space_position: EntranceTurningSpacePositionEnumeration | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "TurningSpacePosition",
+                "type": "Element",
+                "namespace": "http://www.netex.org.uk/netex",
+            },
+        )
     )
     wheelchair_turning_circle: Decimal | None = field(
         default=None,

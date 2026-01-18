@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .fulfilment_method_prices_rel_structure import (
     FulfilmentMethodPricesRelStructure,
@@ -42,13 +41,15 @@ class FulfilmentMethodVersionStructure(PriceableObjectVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    types_of_travel_document: TypeOfTravelDocumentRefsRelStructure | None = field(
-        default=None,
-        metadata={
-            "name": "typesOfTravelDocument",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        },
+    types_of_travel_document: TypeOfTravelDocumentRefsRelStructure | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "typesOfTravelDocument",
+                "type": "Element",
+                "namespace": "http://www.netex.org.uk/netex",
+            },
+        )
     )
     prices: FulfilmentMethodPricesRelStructure | None = field(
         default=None,

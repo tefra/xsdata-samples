@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -145,7 +144,9 @@ class LinCommunicationConnector:
             "required": True,
         },
     )
-    short_name_fragments: LinCommunicationConnector.ShortNameFragments | None = field(
+    short_name_fragments: (
+        LinCommunicationConnector.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -201,13 +202,15 @@ class LinCommunicationConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    comm_controller_ref: LinCommunicationConnector.CommControllerRef | None = field(
-        default=None,
-        metadata={
-            "name": "COMM-CONTROLLER-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    comm_controller_ref: LinCommunicationConnector.CommControllerRef | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "COMM-CONTROLLER-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     create_ecu_wakeup_source: Boolean | None = field(
         default=None,
@@ -225,7 +228,9 @@ class LinCommunicationConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ecu_comm_port_instances: LinCommunicationConnector.EcuCommPortInstances | None = field(
+    ecu_comm_port_instances: (
+        LinCommunicationConnector.EcuCommPortInstances | None
+    ) = field(
         default=None,
         metadata={
             "name": "ECU-COMM-PORT-INSTANCES",
@@ -257,7 +262,9 @@ class LinCommunicationConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    lin_configurable_frames: LinCommunicationConnector.LinConfigurableFrames | None = field(
+    lin_configurable_frames: (
+        LinCommunicationConnector.LinConfigurableFrames | None
+    ) = field(
         default=None,
         metadata={
             "name": "LIN-CONFIGURABLE-FRAMES",
@@ -265,7 +272,9 @@ class LinCommunicationConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    lin_ordered_configurable_frames: LinCommunicationConnector.LinOrderedConfigurableFrames | None = field(
+    lin_ordered_configurable_frames: (
+        LinCommunicationConnector.LinOrderedConfigurableFrames | None
+    ) = field(
         default=None,
         metadata={
             "name": "LIN-ORDERED-CONFIGURABLE-FRAMES",

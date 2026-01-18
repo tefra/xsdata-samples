@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from datexii.models.eu.datexii.v2.destination import Destination
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
@@ -18,7 +17,9 @@ class NetworkLocation(Location):
     location).
     """
 
-    supplementary_positional_description: SupplementaryPositionalDescription | None = field(
+    supplementary_positional_description: (
+        SupplementaryPositionalDescription | None
+    ) = field(
         default=None,
         metadata={
             "name": "supplementaryPositionalDescription",

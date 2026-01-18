@@ -2,7 +2,6 @@ from __future__ import annotations
 
 from dataclasses import dataclass, field
 from enum import Enum
-from typing import Optional
 
 from xcbl.models.trading_partner_organization_information import (
     ExternalAddressId,
@@ -1844,7 +1843,9 @@ class TimeSeriesSummary:
             "type": "Element",
         },
     )
-    total_characteristic_combinations: TotalCharacteristicCombinations | None = field(
+    total_characteristic_combinations: (
+        TotalCharacteristicCombinations | None
+    ) = field(
         default=None,
         metadata={
             "name": "TotalCharacteristicCombinations",
@@ -2105,14 +2106,12 @@ class Location:
             "type": "Element",
         },
     )
-    location_qualifier_coded_other: LocationQualifierCodedOther | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "LocationQualifierCodedOther",
-                "type": "Element",
-            },
-        )
+    location_qualifier_coded_other: LocationQualifierCodedOther | None = field(
+        default=None,
+        metadata={
+            "name": "LocationQualifierCodedOther",
+            "type": "Element",
+        },
     )
     location_identifier: LocationIdentifier | None = field(
         default=None,
@@ -2241,28 +2240,36 @@ class ShippingContact:
 
 @dataclass(kw_only=True)
 class TimeSeriesKeyFigureData:
-    time_series_key_figure_purpose_coded: TimeSeriesKeyFigurePurposeCoded | None = field(
+    time_series_key_figure_purpose_coded: (
+        TimeSeriesKeyFigurePurposeCoded | None
+    ) = field(
         default=None,
         metadata={
             "name": "TimeSeriesKeyFigurePurposeCoded",
             "type": "Element",
         },
     )
-    time_series_key_figure_purpose_coded_other: TimeSeriesKeyFigurePurposeCodedOther | None = field(
+    time_series_key_figure_purpose_coded_other: (
+        TimeSeriesKeyFigurePurposeCodedOther | None
+    ) = field(
         default=None,
         metadata={
             "name": "TimeSeriesKeyFigurePurposeCodedOther",
             "type": "Element",
         },
     )
-    time_series_key_figure_response_coded: TimeSeriesKeyFigureResponseCoded | None = field(
+    time_series_key_figure_response_coded: (
+        TimeSeriesKeyFigureResponseCoded | None
+    ) = field(
         default=None,
         metadata={
             "name": "TimeSeriesKeyFigureResponseCoded",
             "type": "Element",
         },
     )
-    time_series_key_figure_response_coded_other: TimeSeriesKeyFigureResponseCodedOther | None = field(
+    time_series_key_figure_response_coded_other: (
+        TimeSeriesKeyFigureResponseCodedOther | None
+    ) = field(
         default=None,
         metadata={
             "name": "TimeSeriesKeyFigureResponseCodedOther",
@@ -2358,7 +2365,9 @@ class CharacteristicAttribute:
             "type": "Element",
         },
     )
-    characteristic_attribute_description: CharacteristicAttributeDescription | None = field(
+    characteristic_attribute_description: (
+        CharacteristicAttributeDescription | None
+    ) = field(
         default=None,
         metadata={
             "name": "CharacteristicAttributeDescription",
@@ -2372,23 +2381,19 @@ class CharacteristicAttribute:
             "type": "Element",
         },
     )
-    characteristic_attribute_note: CharacteristicAttributeNote | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "CharacteristicAttributeNote",
-                "type": "Element",
-            },
-        )
+    characteristic_attribute_note: CharacteristicAttributeNote | None = field(
+        default=None,
+        metadata={
+            "name": "CharacteristicAttributeNote",
+            "type": "Element",
+        },
     )
-    other_characteristic_attribute: list[OtherCharacteristicAttribute] = (
-        field(
-            default_factory=list,
-            metadata={
-                "name": "OtherCharacteristicAttribute",
-                "type": "Element",
-            },
-        )
+    other_characteristic_attribute: list[OtherCharacteristicAttribute] = field(
+        default_factory=list,
+        metadata={
+            "name": "OtherCharacteristicAttribute",
+            "type": "Element",
+        },
     )
 
 
@@ -2704,14 +2709,12 @@ class BaseCharacteristicProduct:
             "type": "Element",
         },
     )
-    product_attribute_description: ProductAttributeDescription | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "ProductAttributeDescription",
-                "type": "Element",
-            },
-        )
+    product_attribute_description: ProductAttributeDescription | None = field(
+        default=None,
+        metadata={
+            "name": "ProductAttributeDescription",
+            "type": "Element",
+        },
     )
     list_of_dimension: ListOfDimension | None = field(
         default=None,
@@ -3013,28 +3016,36 @@ class CharacteristicProductGroup:
 
 @dataclass(kw_only=True)
 class CharacteristicCombination:
-    characteristic_combination_purpose_coded: CharacteristicCombinationPurposeCoded | None = field(
+    characteristic_combination_purpose_coded: (
+        CharacteristicCombinationPurposeCoded | None
+    ) = field(
         default=None,
         metadata={
             "name": "CharacteristicCombinationPurposeCoded",
             "type": "Element",
         },
     )
-    characteristic_combination_purpose_coded_other: CharacteristicCombinationPurposeCodedOther | None = field(
+    characteristic_combination_purpose_coded_other: (
+        CharacteristicCombinationPurposeCodedOther | None
+    ) = field(
         default=None,
         metadata={
             "name": "CharacteristicCombinationPurposeCodedOther",
             "type": "Element",
         },
     )
-    characteristic_combination_response_coded: CharacteristicCombinationResponseCoded | None = field(
+    characteristic_combination_response_coded: (
+        CharacteristicCombinationResponseCoded | None
+    ) = field(
         default=None,
         metadata={
             "name": "CharacteristicCombinationResponseCoded",
             "type": "Element",
         },
     )
-    characteristic_combination_response_coded_other: CharacteristicCombinationResponseCodedOther | None = field(
+    characteristic_combination_response_coded_other: (
+        CharacteristicCombinationResponseCodedOther | None
+    ) = field(
         default=None,
         metadata={
             "name": "CharacteristicCombinationResponseCodedOther",
@@ -3122,7 +3133,9 @@ class TimeSeriesResponseHeader:
             "required": True,
         }
     )
-    time_series_header_response_coded_other: TimeSeriesHeaderResponseCodedOther | None = field(
+    time_series_header_response_coded_other: (
+        TimeSeriesHeaderResponseCodedOther | None
+    ) = field(
         default=None,
         metadata={
             "name": "TimeSeriesHeaderResponseCodedOther",
@@ -3193,14 +3206,18 @@ class TimeSeriesResponseDetail:
             "required": True,
         }
     )
-    list_of_changed_characteristic_combinations: ListOfChangedCharacteristicCombinations | None = field(
+    list_of_changed_characteristic_combinations: (
+        ListOfChangedCharacteristicCombinations | None
+    ) = field(
         default=None,
         metadata={
             "name": "ListOfChangedCharacteristicCombinations",
             "type": "Element",
         },
     )
-    list_of_changed_time_series_key_figure_data: ListOfChangedTimeSeriesKeyFigureData | None = field(
+    list_of_changed_time_series_key_figure_data: (
+        ListOfChangedTimeSeriesKeyFigureData | None
+    ) = field(
         default=None,
         metadata={
             "name": "ListOfChangedTimeSeriesKeyFigureData",

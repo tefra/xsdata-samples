@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .port_group_subtypes_enum import PortGroupSubtypesEnum
 from .ref import Ref
@@ -37,7 +36,9 @@ class PortGroupInSystemInstanceRef:
     class Meta:
         name = "PORT-GROUP-IN-SYSTEM-INSTANCE-REF"
 
-    context_composition_ref: PortGroupInSystemInstanceRef.ContextCompositionRef | None = field(
+    context_composition_ref: (
+        PortGroupInSystemInstanceRef.ContextCompositionRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "CONTEXT-COMPOSITION-REF",

@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from ubl.models.common.ubl_common_aggregate_components_2_1 import (
     AdditionalDocumentReference,
@@ -141,15 +140,13 @@ class OrderCancellationType:
             "min_occurs": 1,
         },
     )
-    originator_document_reference: OriginatorDocumentReference | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "OriginatorDocumentReference",
-                "type": "Element",
-                "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-            },
-        )
+    originator_document_reference: OriginatorDocumentReference | None = field(
+        default=None,
+        metadata={
+            "name": "OriginatorDocumentReference",
+            "type": "Element",
+            "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
+        },
     )
     additional_document_reference: tuple[AdditionalDocumentReference, ...] = (
         field(

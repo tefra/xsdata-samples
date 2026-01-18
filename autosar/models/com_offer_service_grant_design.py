@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -102,7 +101,9 @@ class ComOfferServiceGrantDesign:
             "required": True,
         },
     )
-    short_name_fragments: ComOfferServiceGrantDesign.ShortNameFragments | None = field(
+    short_name_fragments: (
+        ComOfferServiceGrantDesign.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -166,15 +167,19 @@ class ComOfferServiceGrantDesign:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    process_design_ref: ComOfferServiceGrantDesign.ProcessDesignRef | None = field(
-        default=None,
-        metadata={
-            "name": "PROCESS-DESIGN-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    process_design_ref: ComOfferServiceGrantDesign.ProcessDesignRef | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "PROCESS-DESIGN-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
-    provided_service_port_iref: PPortPrototypeInExecutableInstanceRef | None = field(
+    provided_service_port_iref: (
+        PPortPrototypeInExecutableInstanceRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "PROVIDED-SERVICE-PORT-IREF",

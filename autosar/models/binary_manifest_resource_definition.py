@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -94,7 +93,9 @@ class BinaryManifestResourceDefinition:
             "required": True,
         },
     )
-    short_name_fragments: BinaryManifestResourceDefinition.ShortNameFragments | None = field(
+    short_name_fragments: (
+        BinaryManifestResourceDefinition.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -142,17 +143,17 @@ class BinaryManifestResourceDefinition:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: BinaryManifestResourceDefinition.Annotations | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "ANNOTATIONS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    annotations: BinaryManifestResourceDefinition.Annotations | None = field(
+        default=None,
+        metadata={
+            "name": "ANNOTATIONS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
-    item_definitions: BinaryManifestResourceDefinition.ItemDefinitions | None = field(
+    item_definitions: (
+        BinaryManifestResourceDefinition.ItemDefinitions | None
+    ) = field(
         default=None,
         metadata={
             "name": "ITEM-DEFINITIONS",

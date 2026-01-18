@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from .all_vehicle_modes_of_transport_enumeration import (
     AllVehicleModesOfTransportEnumeration,
@@ -45,7 +44,9 @@ class RouteDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    flexible_line_ref_or_line_ref_or_line_view: FlexibleLineRef | LineRef | LineView | None = field(
+    flexible_line_ref_or_line_ref_or_line_view: (
+        FlexibleLineRef | LineRef | LineView | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",

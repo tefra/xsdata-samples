@@ -1,6 +1,5 @@
 from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import Union
 
 from .access_space_ref import AccessSpaceRef
 from .address_ref import AddressRef
@@ -206,7 +205,12 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
         },
     )
     mode_of_operation_ref_or_alternative_mode_of_operation_ref_or_conventional_mode_of_operation_ref: Iterable[
-        PersonalModeOfOperationRef | VehiclePoolingRef | VehicleSharingRef | VehicleRentalRef | FlexibleModeOfOperationRef | ScheduledModeOfOperationRef
+        PersonalModeOfOperationRef
+        | VehiclePoolingRef
+        | VehicleSharingRef
+        | VehicleRentalRef
+        | FlexibleModeOfOperationRef
+        | ScheduledModeOfOperationRef
     ] = field(
         default_factory=list,
         metadata={
@@ -255,7 +259,21 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
         },
     )
     choice: Iterable[
-        AllAuthoritiesRef | AllOperatorsRef | AllPublicTransportOrganisationsRef | AllTransportOrganisationsRef | AllOrganisationsRef | RetailConsortiumRef | OnlineServiceOperatorRef | GeneralOrganisationRef | ManagementAgentRef | ServicedOrganisationRef | TravelAgentRef | OtherOrganisationRef | AuthorityRef | OperatorRef | OrganisationRef
+        AllAuthoritiesRef
+        | AllOperatorsRef
+        | AllPublicTransportOrganisationsRef
+        | AllTransportOrganisationsRef
+        | AllOrganisationsRef
+        | RetailConsortiumRef
+        | OnlineServiceOperatorRef
+        | GeneralOrganisationRef
+        | ManagementAgentRef
+        | ServicedOrganisationRef
+        | TravelAgentRef
+        | OtherOrganisationRef
+        | AuthorityRef
+        | OperatorRef
+        | OrganisationRef
     ] = field(
         default_factory=list,
         metadata={
@@ -487,33 +505,65 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             "sequence": 1,
         },
     )
-    address_ref: Iterable[
-        PostalAddressRef | RoadAddressRef | AddressRef
-    ] = field(
-        default_factory=list,
-        metadata={
-            "type": "Elements",
-            "choices": (
-                {
-                    "name": "PostalAddressRef",
-                    "type": PostalAddressRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "RoadAddressRef",
-                    "type": RoadAddressRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "AddressRef",
-                    "type": AddressRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-            ),
-        },
+    address_ref: Iterable[PostalAddressRef | RoadAddressRef | AddressRef] = (
+        field(
+            default_factory=list,
+            metadata={
+                "type": "Elements",
+                "choices": (
+                    {
+                        "name": "PostalAddressRef",
+                        "type": PostalAddressRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "RoadAddressRef",
+                        "type": RoadAddressRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "AddressRef",
+                        "type": AddressRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                ),
+            },
+        )
     )
     choice_1: Iterable[
-        VehicleStoppingPositionRef | VehicleStoppingPlaceRef | BoardingPositionRef | AccessSpaceRef | TaxiStandRef | QuayRef | StopPlaceSpaceRef | VehiclePoolingParkingBayRef | MonitoredVehicleSharingParkingBayRef | VehicleSharingParkingBayRef | ParkingBayRef | VehiclePoolingParkingAreaRef | VehicleSharingParkingAreaRef | TaxiParkingAreaRef | ParkingAreaRef | PointOfInterestSpaceRef | StopPlaceVehicleEntranceRef | StopPlaceEntranceRef | ParkingEntranceForVehiclesRef | ParkingPassengerEntranceRef | ParkingEntranceRef | PointOfInterestVehicleEntranceRef | PointOfInterestEntranceRef | VehicleEntranceRef | EntranceRef | SiteComponentRef | TaxiRankRef | StopPlaceRef | ParkingRef | PointOfInterestRef | ServiceSiteRef | SiteRef | SiteElementRef
+        VehicleStoppingPositionRef
+        | VehicleStoppingPlaceRef
+        | BoardingPositionRef
+        | AccessSpaceRef
+        | TaxiStandRef
+        | QuayRef
+        | StopPlaceSpaceRef
+        | VehiclePoolingParkingBayRef
+        | MonitoredVehicleSharingParkingBayRef
+        | VehicleSharingParkingBayRef
+        | ParkingBayRef
+        | VehiclePoolingParkingAreaRef
+        | VehicleSharingParkingAreaRef
+        | TaxiParkingAreaRef
+        | ParkingAreaRef
+        | PointOfInterestSpaceRef
+        | StopPlaceVehicleEntranceRef
+        | StopPlaceEntranceRef
+        | ParkingEntranceForVehiclesRef
+        | ParkingPassengerEntranceRef
+        | ParkingEntranceRef
+        | PointOfInterestVehicleEntranceRef
+        | PointOfInterestEntranceRef
+        | VehicleEntranceRef
+        | EntranceRef
+        | SiteComponentRef
+        | TaxiRankRef
+        | StopPlaceRef
+        | ParkingRef
+        | PointOfInterestRef
+        | ServiceSiteRef
+        | SiteRef
+        | SiteElementRef
     ] = field(
         default_factory=list,
         metadata={
@@ -863,7 +913,11 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
         },
     )
     transport_type_ref_or_vehicle_type_ref: Iterable[
-        SimpleVehicleTypeRef | CompoundTrainRef | TrainRef | VehicleTypeRef | TransportTypeRef
+        SimpleVehicleTypeRef
+        | CompoundTrainRef
+        | TrainRef
+        | VehicleTypeRef
+        | TransportTypeRef
     ] = field(
         default_factory=list,
         metadata={
@@ -936,7 +990,27 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
         },
     )
     choice_2: Iterable[
-        OnlineServiceRef | VehicleRentalServiceRef | VehicleSharingServiceRef | ChauffeuredVehicleServiceRef | TaxiServiceRef | CarPoolingServiceRef | AssistanceBookingServiceRef | CateringServiceRef | RetailServiceRef | MoneyServiceRef | HireServiceRef | CommunicationServiceRef | MeetingPointServiceRef | LeftLuggageServiceRef | LuggageServiceRef | LostPropertyServiceRef | ComplaintsServiceRef | CustomerServiceRef | AssistanceServiceRef | TicketingServiceRef | LocalServiceRef
+        OnlineServiceRef
+        | VehicleRentalServiceRef
+        | VehicleSharingServiceRef
+        | ChauffeuredVehicleServiceRef
+        | TaxiServiceRef
+        | CarPoolingServiceRef
+        | AssistanceBookingServiceRef
+        | CateringServiceRef
+        | RetailServiceRef
+        | MoneyServiceRef
+        | HireServiceRef
+        | CommunicationServiceRef
+        | MeetingPointServiceRef
+        | LeftLuggageServiceRef
+        | LuggageServiceRef
+        | LostPropertyServiceRef
+        | ComplaintsServiceRef
+        | CustomerServiceRef
+        | AssistanceServiceRef
+        | TicketingServiceRef
+        | LocalServiceRef
     ] = field(
         default_factory=list,
         metadata={

@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .abstract_provided_port_prototype_subtypes_enum import (
     AbstractProvidedPortPrototypeSubtypesEnum,
@@ -44,7 +43,9 @@ class PModeInSystemInstanceRef:
     class Meta:
         name = "P-MODE-IN-SYSTEM-INSTANCE-REF"
 
-    context_composition_ref: PModeInSystemInstanceRef.ContextCompositionRef | None = field(
+    context_composition_ref: (
+        PModeInSystemInstanceRef.ContextCompositionRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "CONTEXT-COMPOSITION-REF",
@@ -62,15 +63,19 @@ class PModeInSystemInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    context_p_port_ref: PModeInSystemInstanceRef.ContextPPortRef | None = field(
-        default=None,
-        metadata={
-            "name": "CONTEXT-P-PORT-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    context_p_port_ref: PModeInSystemInstanceRef.ContextPPortRef | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "CONTEXT-P-PORT-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
-    context_mode_declaration_group_ref: PModeInSystemInstanceRef.ContextModeDeclarationGroupRef | None = field(
+    context_mode_declaration_group_ref: (
+        PModeInSystemInstanceRef.ContextModeDeclarationGroupRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "CONTEXT-MODE-DECLARATION-GROUP-REF",
@@ -78,15 +83,13 @@ class PModeInSystemInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    target_mode_ref: PModeInSystemInstanceRef.TargetModeRef | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "TARGET-MODE-REF",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    target_mode_ref: PModeInSystemInstanceRef.TargetModeRef | None = field(
+        default=None,
+        metadata={
+            "name": "TARGET-MODE-REF",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     s: str | None = field(
         default=None,

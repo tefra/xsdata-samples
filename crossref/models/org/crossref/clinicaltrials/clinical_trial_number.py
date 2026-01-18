@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from crossref.models.org.crossref.clinicaltrials.clinical_trial_number_type import (
     ClinicalTrialNumberType,

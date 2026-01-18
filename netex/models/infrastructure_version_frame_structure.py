@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .activated_equipments_in_frame_rel_structure import (
     ActivatedEquipmentsInFrameRelStructure,
@@ -129,13 +128,15 @@ class InfrastructureVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    traffic_control_points: TrafficControlPointsInFrameRelStructure | None = field(
-        default=None,
-        metadata={
-            "name": "trafficControlPoints",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        },
+    traffic_control_points: TrafficControlPointsInFrameRelStructure | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "trafficControlPoints",
+                "type": "Element",
+                "namespace": "http://www.netex.org.uk/netex",
+            },
+        )
     )
     activation_points: ActivationPointsInFrameRelStructure | None = field(
         default=None,
@@ -179,7 +180,9 @@ class InfrastructureVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    vehicle_equipment_profiles: VehicleEquipmenProfilesInFrameRelStructure | None = field(
+    vehicle_equipment_profiles: (
+        VehicleEquipmenProfilesInFrameRelStructure | None
+    ) = field(
         default=None,
         metadata={
             "name": "vehicleEquipmentProfiles",
@@ -187,13 +190,15 @@ class InfrastructureVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    vehicle_model_profiles: VehicleModelProfilesInFrameRelStructure | None = field(
-        default=None,
-        metadata={
-            "name": "vehicleModelProfiles",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        },
+    vehicle_model_profiles: VehicleModelProfilesInFrameRelStructure | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "vehicleModelProfiles",
+                "type": "Element",
+                "namespace": "http://www.netex.org.uk/netex",
+            },
+        )
     )
     vehicles: VehiclesInFrameRelStructure | None = field(
         default=None,

@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -138,7 +137,9 @@ class CanCommunicationConnector:
             "required": True,
         },
     )
-    short_name_fragments: CanCommunicationConnector.ShortNameFragments | None = field(
+    short_name_fragments: (
+        CanCommunicationConnector.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -194,13 +195,15 @@ class CanCommunicationConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    comm_controller_ref: CanCommunicationConnector.CommControllerRef | None = field(
-        default=None,
-        metadata={
-            "name": "COMM-CONTROLLER-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    comm_controller_ref: CanCommunicationConnector.CommControllerRef | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "COMM-CONTROLLER-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     create_ecu_wakeup_source: Boolean | None = field(
         default=None,
@@ -218,7 +221,9 @@ class CanCommunicationConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ecu_comm_port_instances: CanCommunicationConnector.EcuCommPortInstances | None = field(
+    ecu_comm_port_instances: (
+        CanCommunicationConnector.EcuCommPortInstances | None
+    ) = field(
         default=None,
         metadata={
             "name": "ECU-COMM-PORT-INSTANCES",

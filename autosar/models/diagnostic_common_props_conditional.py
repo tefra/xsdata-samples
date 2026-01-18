@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import VariationPoint
 from .boolean import Boolean
@@ -144,7 +143,9 @@ class DiagnosticCommonPropsConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    debounce_algorithm_propss: DiagnosticCommonPropsConditional.DebounceAlgorithmPropss | None = field(
+    debounce_algorithm_propss: (
+        DiagnosticCommonPropsConditional.DebounceAlgorithmPropss | None
+    ) = field(
         default=None,
         metadata={
             "name": "DEBOUNCE-ALGORITHM-PROPSS",
@@ -176,7 +177,9 @@ class DiagnosticCommonPropsConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    event_displacement_strategy: DiagnosticEventDisplacementStrategyEnum | None = field(
+    event_displacement_strategy: (
+        DiagnosticEventDisplacementStrategyEnum | None
+    ) = field(
         default=None,
         metadata={
             "name": "EVENT-DISPLACEMENT-STRATEGY",
@@ -192,7 +195,9 @@ class DiagnosticCommonPropsConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    max_number_of_request_correctly_received_response_pending: PositiveInteger | None = field(
+    max_number_of_request_correctly_received_response_pending: (
+        PositiveInteger | None
+    ) = field(
         default=None,
         metadata={
             "name": "MAX-NUMBER-OF-REQUEST-CORRECTLY-RECEIVED-RESPONSE-PENDING",
@@ -200,7 +205,9 @@ class DiagnosticCommonPropsConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    memory_entry_storage_trigger: DiagnosticMemoryEntryStorageTriggerEnum | None = field(
+    memory_entry_storage_trigger: (
+        DiagnosticMemoryEntryStorageTriggerEnum | None
+    ) = field(
         default=None,
         metadata={
             "name": "MEMORY-ENTRY-STORAGE-TRIGGER",
@@ -208,7 +215,9 @@ class DiagnosticCommonPropsConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    occurrence_counter_processing: DiagnosticOccurrenceCounterProcessingEnum | None = field(
+    occurrence_counter_processing: (
+        DiagnosticOccurrenceCounterProcessingEnum | None
+    ) = field(
         default=None,
         metadata={
             "name": "OCCURRENCE-COUNTER-PROCESSING",
@@ -248,7 +257,9 @@ class DiagnosticCommonPropsConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    status_bit_handling_test_failed_since_last_clear: DiagnosticStatusBitHandlingTestFailedSinceLastClearEnum | None = field(
+    status_bit_handling_test_failed_since_last_clear: (
+        DiagnosticStatusBitHandlingTestFailedSinceLastClearEnum | None
+    ) = field(
         default=None,
         metadata={
             "name": "STATUS-BIT-HANDLING-TEST-FAILED-SINCE-LAST-CLEAR",
@@ -272,7 +283,9 @@ class DiagnosticCommonPropsConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    type_of_freeze_frame_record_numeration: DiagnosticTypeOfFreezeFrameRecordNumerationEnum | None = field(
+    type_of_freeze_frame_record_numeration: (
+        DiagnosticTypeOfFreezeFrameRecordNumerationEnum | None
+    ) = field(
         default=None,
         metadata={
             "name": "TYPE-OF-FREEZE-FRAME-RECORD-NUMERATION",

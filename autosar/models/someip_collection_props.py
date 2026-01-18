@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .time_value import TimeValue
 from .udp_collection_trigger_enum import UdpCollectionTriggerEnum

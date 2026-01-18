@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -98,7 +97,9 @@ class DiagnosticStorageConditionGroup:
             "required": True,
         },
     )
-    short_name_fragments: DiagnosticStorageConditionGroup.ShortNameFragments | None = field(
+    short_name_fragments: (
+        DiagnosticStorageConditionGroup.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -146,15 +147,13 @@ class DiagnosticStorageConditionGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: DiagnosticStorageConditionGroup.Annotations | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "ANNOTATIONS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    annotations: DiagnosticStorageConditionGroup.Annotations | None = field(
+        default=None,
+        metadata={
+            "name": "ANNOTATIONS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     variation_point: VariationPoint | None = field(
         default=None,
@@ -164,7 +163,9 @@ class DiagnosticStorageConditionGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    storage_conditions: DiagnosticStorageConditionGroup.StorageConditions | None = field(
+    storage_conditions: (
+        DiagnosticStorageConditionGroup.StorageConditions | None
+    ) = field(
         default=None,
         metadata={
             "name": "STORAGE-CONDITIONS",

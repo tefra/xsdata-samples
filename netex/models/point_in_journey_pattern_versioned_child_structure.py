@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from .activation_point_ref import ActivationPointRef
 from .beacon_point_ref import BeaconPointRef
@@ -36,7 +35,25 @@ class PointInJourneyPatternVersionedChildStructure(
     class Meta:
         name = "PointInJourneyPattern_VersionedChildStructure"
 
-    choice_1: VehicleMeetingPointRef | WirePointRef | RoadPointRef | RailwayPointRef | TrafficControlPointRef | BeaconPointRef | ActivationPointRef | BorderPointRef | FareScheduledStopPointRef | ScheduledStopPointRef | GaragePointRef | ParkingPointRef | ReliefPointRef | TimingPointRef | RoutePointRef | PointRef | None = field(
+    choice_1: (
+        VehicleMeetingPointRef
+        | WirePointRef
+        | RoadPointRef
+        | RailwayPointRef
+        | TrafficControlPointRef
+        | BeaconPointRef
+        | ActivationPointRef
+        | BorderPointRef
+        | FareScheduledStopPointRef
+        | ScheduledStopPointRef
+        | GaragePointRef
+        | ParkingPointRef
+        | ReliefPointRef
+        | TimingPointRef
+        | RoutePointRef
+        | PointRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -124,7 +141,9 @@ class PointInJourneyPatternVersionedChildStructure(
             ),
         },
     )
-    destination_display_ref_or_destination_display_view: DestinationDisplayRef | DestinationDisplayView | None = field(
+    destination_display_ref_or_destination_display_view: (
+        DestinationDisplayRef | DestinationDisplayView | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",

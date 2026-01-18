@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from .fare_product_version_structure import FareProductVersionStructure
 from .general_group_of_entities import GeneralGroupOfEntities
@@ -22,7 +21,9 @@ class SaleDiscountRightVersionStructure(FareProductVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    general_group_of_entities_ref_or_general_group_of_entities: GeneralGroupOfEntitiesRef | GeneralGroupOfEntities | None = field(
+    general_group_of_entities_ref_or_general_group_of_entities: (
+        GeneralGroupOfEntitiesRef | GeneralGroupOfEntities | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",

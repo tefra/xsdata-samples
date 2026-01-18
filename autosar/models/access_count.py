@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .abstract_access_point_subtypes_enum import (
     AbstractAccessPointSubtypesEnum,

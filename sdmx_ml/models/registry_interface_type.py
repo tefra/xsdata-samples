@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from sdmx_ml.models.basic_header_type import BasicHeaderType
 from sdmx_ml.models.footer import Footer
@@ -54,7 +53,20 @@ class RegistryInterfaceType:
             "required": True,
         },
     )
-    choice: SubmitRegistrationsRequestType | SubmitRegistrationsResponseType | QueryRegistrationRequestType | QueryRegistrationResponseType | SubmitStructureRequestType1 | SubmitStructureResponseType1 | SubmitSubscriptionsRequestType | SubmitSubscriptionsResponseType | QuerySubscriptionRequestType | QuerySubscriptionResponseType | NotifyRegistryEventType | None = field(
+    choice: (
+        SubmitRegistrationsRequestType
+        | SubmitRegistrationsResponseType
+        | QueryRegistrationRequestType
+        | QueryRegistrationResponseType
+        | SubmitStructureRequestType1
+        | SubmitStructureResponseType1
+        | SubmitSubscriptionsRequestType
+        | SubmitSubscriptionsResponseType
+        | QuerySubscriptionRequestType
+        | QuerySubscriptionResponseType
+        | NotifyRegistryEventType
+        | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",

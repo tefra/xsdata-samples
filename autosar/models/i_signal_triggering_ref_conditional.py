@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import VariationPoint
 from .i_signal_triggering_subtypes_enum import ISignalTriggeringSubtypesEnum
@@ -33,7 +32,9 @@ class ISignalTriggeringRefConditional:
     class Meta:
         name = "I-SIGNAL-TRIGGERING-REF-CONDITIONAL"
 
-    i_signal_triggering_ref: ISignalTriggeringRefConditional.ISignalTriggeringRef | None = field(
+    i_signal_triggering_ref: (
+        ISignalTriggeringRefConditional.ISignalTriggeringRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "I-SIGNAL-TRIGGERING-REF",

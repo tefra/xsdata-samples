@@ -3,7 +3,7 @@ from __future__ import annotations
 from collections.abc import Iterable
 from dataclasses import dataclass, field
 from decimal import Decimal
-from typing import ForwardRef, Optional, Union
+from typing import ForwardRef
 
 from .coordinates_structure import CoordinatesStructure
 
@@ -16,7 +16,9 @@ class LocationStructure1:
         name = "LocationStructure"
 
     longitude_or_latitude_or_coordinates: Iterable[
-        LocationStructure1.Longitude | LocationStructure1.Latitude | CoordinatesStructure
+        LocationStructure1.Longitude
+        | LocationStructure1.Latitude
+        | CoordinatesStructure
     ] = field(
         default_factory=list,
         metadata={

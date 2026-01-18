@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -119,15 +118,13 @@ class TdEventOperation:
             "required": True,
         },
     )
-    short_name_fragments: TdEventOperation.ShortNameFragments | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "SHORT-NAME-FRAGMENTS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    short_name_fragments: TdEventOperation.ShortNameFragments | None = field(
+        default=None,
+        metadata={
+            "name": "SHORT-NAME-FRAGMENTS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     long_name: MultilanguageLongName | None = field(
         default=None,
@@ -209,7 +206,9 @@ class TdEventOperation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    port_prototype_blueprint_ref: TdEventOperation.PortPrototypeBlueprintRef | None = field(
+    port_prototype_blueprint_ref: (
+        TdEventOperation.PortPrototypeBlueprintRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "PORT-PROTOTYPE-BLUEPRINT-REF",

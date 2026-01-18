@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .documentation import Documentation
 from .extension_elements import ExtensionElements

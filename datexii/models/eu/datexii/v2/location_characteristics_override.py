@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.lane_enum import LaneEnum
@@ -39,13 +38,11 @@ class LocationCharacteristicsOverride:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    location_characteristics_override_extension: ExtensionType | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "locationCharacteristicsOverrideExtension",
-                "type": "Element",
-                "namespace": "http://datex2.eu/schema/2/2_0",
-            },
-        )
+    location_characteristics_override_extension: ExtensionType | None = field(
+        default=None,
+        metadata={
+            "name": "locationCharacteristicsOverrideExtension",
+            "type": "Element",
+            "namespace": "http://datex2.eu/schema/2/2_0",
+        },
     )

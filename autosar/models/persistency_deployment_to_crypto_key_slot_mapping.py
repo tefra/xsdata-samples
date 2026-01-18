@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -107,7 +106,9 @@ class PersistencyDeploymentToCryptoKeySlotMapping:
             "required": True,
         },
     )
-    short_name_fragments: PersistencyDeploymentToCryptoKeySlotMapping.ShortNameFragments | None = field(
+    short_name_fragments: (
+        PersistencyDeploymentToCryptoKeySlotMapping.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -155,7 +156,9 @@ class PersistencyDeploymentToCryptoKeySlotMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: PersistencyDeploymentToCryptoKeySlotMapping.Annotations | None = field(
+    annotations: (
+        PersistencyDeploymentToCryptoKeySlotMapping.Annotations | None
+    ) = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -171,7 +174,9 @@ class PersistencyDeploymentToCryptoKeySlotMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    crypto_key_slot_ref: PersistencyDeploymentToCryptoKeySlotMapping.CryptoKeySlotRef | None = field(
+    crypto_key_slot_ref: (
+        PersistencyDeploymentToCryptoKeySlotMapping.CryptoKeySlotRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "CRYPTO-KEY-SLOT-REF",
@@ -187,7 +192,10 @@ class PersistencyDeploymentToCryptoKeySlotMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    persistency_deployment_ref: PersistencyDeploymentToCryptoKeySlotMapping.PersistencyDeploymentRef | None = field(
+    persistency_deployment_ref: (
+        PersistencyDeploymentToCryptoKeySlotMapping.PersistencyDeploymentRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "PERSISTENCY-DEPLOYMENT-REF",

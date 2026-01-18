@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import VariationPoint
 from .external_triggering_point_ident import ExternalTriggeringPointIdent
@@ -86,7 +85,9 @@ class ExternalTriggeringPoint:
 
     @dataclass
     class TriggerIref:
-        p_trigger_in_atomic_swc_type_instance_ref: PTriggerInAtomicSwcTypeInstanceRef | None = field(
+        p_trigger_in_atomic_swc_type_instance_ref: (
+            PTriggerInAtomicSwcTypeInstanceRef | None
+        ) = field(
             default=None,
             metadata={
                 "name": "P-TRIGGER-IN-ATOMIC-SWC-TYPE-INSTANCE-REF",

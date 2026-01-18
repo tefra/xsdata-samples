@@ -1,6 +1,5 @@
 from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import Union
 
 from .cell_ref import CellRef
 from .sales_offer_package_price_ref import SalesOfferPackagePriceRef
@@ -22,7 +21,9 @@ class SalesOfferPackagePricesRelStructure(
         name = "salesOfferPackagePrices_RelStructure"
 
     sales_offer_package_price_ref_or_sales_offer_package_price_or_cell_ref: Iterable[
-        SalesOfferPackagePriceRef | SalesOfferPackagePriceVersionedChildStructure | CellRef
+        SalesOfferPackagePriceRef
+        | SalesOfferPackagePriceVersionedChildStructure
+        | CellRef
     ] = field(
         default_factory=list,
         metadata={

@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .priceable_object_ref_structure import PriceableObjectRefStructure
 

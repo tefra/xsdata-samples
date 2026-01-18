@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from xsdata.models.datatype import XmlDateTime
 
@@ -64,12 +63,10 @@ class BasicData:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    measurement_or_calculated_time_precision: TimePrecisionEnum | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "measurementOrCalculatedTimePrecision",
-                "type": "Attribute",
-            },
-        )
+    measurement_or_calculated_time_precision: TimePrecisionEnum | None = field(
+        default=None,
+        metadata={
+            "name": "measurementOrCalculatedTimePrecision",
+            "type": "Attribute",
+        },
     )

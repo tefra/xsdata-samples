@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from xcbl.models.price_check_result import ErrorInfo
 from xcbl.models.sourcing_result import (
@@ -333,7 +332,9 @@ class ApplicationResponseHeader:
             "required": True,
         }
     )
-    business_document_type_coded_other: BusinessDocumentTypeCodedOther | None = field(
+    business_document_type_coded_other: (
+        BusinessDocumentTypeCodedOther | None
+    ) = field(
         default=None,
         metadata={
             "name": "BusinessDocumentTypeCodedOther",
@@ -405,7 +406,9 @@ class ApplicationResponse:
             "required": True,
         }
     )
-    list_of_application_response_detail: ListOfApplicationResponseDetail | None = field(
+    list_of_application_response_detail: (
+        ListOfApplicationResponseDetail | None
+    ) = field(
         default=None,
         metadata={
             "name": "ListOfApplicationResponseDetail",

@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 
 @dataclass(kw_only=True)
@@ -772,12 +771,14 @@ class Agency:
             "type": "Element",
         },
     )
-    code_list_identifier_coded_other: CodeListIdentifierCodedOther | None = field(
-        default=None,
-        metadata={
-            "name": "CodeListIdentifierCodedOther",
-            "type": "Element",
-        },
+    code_list_identifier_coded_other: CodeListIdentifierCodedOther | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "CodeListIdentifierCodedOther",
+                "type": "Element",
+            },
+        )
     )
 
 
@@ -810,12 +811,14 @@ class ContactRelationType:
             "required": True,
         }
     )
-    contact_relation_type_coded_other: ContactRelationTypeCodedOther | None = field(
-        default=None,
-        metadata={
-            "name": "ContactRelationTypeCodedOther",
-            "type": "Element",
-        },
+    contact_relation_type_coded_other: ContactRelationTypeCodedOther | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "ContactRelationTypeCodedOther",
+                "type": "Element",
+            },
+        )
     )
 
 
@@ -975,7 +978,9 @@ class TradingPartnerUserPurpose:
             "required": True,
         }
     )
-    trading_partner_user_purpose_coded_other: TradingPartnerUserPurposeCodedOther | None = field(
+    trading_partner_user_purpose_coded_other: (
+        TradingPartnerUserPurposeCodedOther | None
+    ) = field(
         default=None,
         metadata={
             "name": "TradingPartnerUserPurposeCodedOther",
@@ -1072,12 +1077,14 @@ class X509CertificateInfo:
 
 @dataclass(kw_only=True)
 class CommunicationDetail:
-    communication_detail_description: CommunicationDetailDescription | None = field(
-        default=None,
-        metadata={
-            "name": "CommunicationDetailDescription",
-            "type": "Element",
-        },
+    communication_detail_description: CommunicationDetailDescription | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "CommunicationDetailDescription",
+                "type": "Element",
+            },
+        )
     )
     person_communication_type: PersonCommunicationType = field(
         metadata={

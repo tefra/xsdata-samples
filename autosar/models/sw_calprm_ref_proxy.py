@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .autosar_parameter_ref import AutosarParameterRef
 from .mc_data_instance_subtypes_enum import McDataInstanceSubtypesEnum
@@ -47,15 +46,13 @@ class SwCalprmRefProxy:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    mc_data_instance_ref: SwCalprmRefProxy.McDataInstanceRef | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "MC-DATA-INSTANCE-REF",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    mc_data_instance_ref: SwCalprmRefProxy.McDataInstanceRef | None = field(
+        default=None,
+        metadata={
+            "name": "MC-DATA-INSTANCE-REF",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     s: str | None = field(
         default=None,

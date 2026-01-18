@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .multilingual_string import MultilingualString
 from .relation_to_vehicle_enumeration import RelationToVehicleEnumeration
@@ -53,7 +52,9 @@ class VehicleStoppingPositionVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    vehicle_position_alignments: VehiclePositionAlignmentsRelStructure | None = field(
+    vehicle_position_alignments: (
+        VehiclePositionAlignmentsRelStructure | None
+    ) = field(
         default=None,
         metadata={
             "name": "vehiclePositionAlignments",

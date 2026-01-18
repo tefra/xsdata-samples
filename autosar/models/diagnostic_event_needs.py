@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -167,13 +166,15 @@ class DiagnosticEventNeeds:
             "required": True,
         },
     )
-    short_name_fragments: DiagnosticEventNeeds.ShortNameFragments | None = field(
-        default=None,
-        metadata={
-            "name": "SHORT-NAME-FRAGMENTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    short_name_fragments: DiagnosticEventNeeds.ShortNameFragments | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "SHORT-NAME-FRAGMENTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     long_name: MultilanguageLongName | None = field(
         default=None,
@@ -255,17 +256,17 @@ class DiagnosticEventNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    deferring_fid_refs: DiagnosticEventNeeds.DeferringFidRefs | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "DEFERRING-FID-REFS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    deferring_fid_refs: DiagnosticEventNeeds.DeferringFidRefs | None = field(
+        default=None,
+        metadata={
+            "name": "DEFERRING-FID-REFS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
-    diag_event_debounce_algorithm: DiagnosticEventNeeds.DiagEventDebounceAlgorithm | None = field(
+    diag_event_debounce_algorithm: (
+        DiagnosticEventNeeds.DiagEventDebounceAlgorithm | None
+    ) = field(
         default=None,
         metadata={
             "name": "DIAG-EVENT-DEBOUNCE-ALGORITHM",
@@ -289,17 +290,17 @@ class DiagnosticEventNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    inhibiting_fid_ref: DiagnosticEventNeeds.InhibitingFidRef | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "INHIBITING-FID-REF",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    inhibiting_fid_ref: DiagnosticEventNeeds.InhibitingFidRef | None = field(
+        default=None,
+        metadata={
+            "name": "INHIBITING-FID-REF",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
-    inhibiting_secondary_fid_refs: DiagnosticEventNeeds.InhibitingSecondaryFidRefs | None = field(
+    inhibiting_secondary_fid_refs: (
+        DiagnosticEventNeeds.InhibitingSecondaryFidRefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "INHIBITING-SECONDARY-FID-REFS",
@@ -436,7 +437,9 @@ class DiagnosticEventNeeds:
 
     @dataclass
     class DiagEventDebounceAlgorithm:
-        diag_event_debounce_counter_based: DiagEventDebounceCounterBased | None = field(
+        diag_event_debounce_counter_based: (
+            DiagEventDebounceCounterBased | None
+        ) = field(
             default=None,
             metadata={
                 "name": "DIAG-EVENT-DEBOUNCE-COUNTER-BASED",
@@ -444,7 +447,9 @@ class DiagnosticEventNeeds:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diag_event_debounce_monitor_internal: DiagEventDebounceMonitorInternal | None = field(
+        diag_event_debounce_monitor_internal: (
+            DiagEventDebounceMonitorInternal | None
+        ) = field(
             default=None,
             metadata={
                 "name": "DIAG-EVENT-DEBOUNCE-MONITOR-INTERNAL",
@@ -452,13 +457,15 @@ class DiagnosticEventNeeds:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diag_event_debounce_time_based: DiagEventDebounceTimeBased | None = field(
-            default=None,
-            metadata={
-                "name": "DIAG-EVENT-DEBOUNCE-TIME-BASED",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        diag_event_debounce_time_based: DiagEventDebounceTimeBased | None = (
+            field(
+                default=None,
+                metadata={
+                    "name": "DIAG-EVENT-DEBOUNCE-TIME-BASED",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )
 
     @dataclass

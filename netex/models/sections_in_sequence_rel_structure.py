@@ -3,7 +3,6 @@ from __future__ import annotations
 from collections.abc import Iterable
 from dataclasses import dataclass, field
 from decimal import Decimal
-from typing import Optional, Union
 
 from .authority_ref import AuthorityRef
 from .common_section_point_members_rel_structure import (
@@ -192,25 +191,29 @@ class JourneyPatternVersionStructure(LinkSequenceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    direction_ref_or_direction_view: DirectionRef | DirectionView | None = field(
-        default=None,
-        metadata={
-            "type": "Elements",
-            "choices": (
-                {
-                    "name": "DirectionRef",
-                    "type": DirectionRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "DirectionView",
-                    "type": DirectionView,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-            ),
-        },
+    direction_ref_or_direction_view: DirectionRef | DirectionView | None = (
+        field(
+            default=None,
+            metadata={
+                "type": "Elements",
+                "choices": (
+                    {
+                        "name": "DirectionRef",
+                        "type": DirectionRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "DirectionView",
+                        "type": DirectionView,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                ),
+            },
+        )
     )
-    destination_display_ref_or_destination_display_view: DestinationDisplayRef | DestinationDisplayView | None = field(
+    destination_display_ref_or_destination_display_view: (
+        DestinationDisplayRef | DestinationDisplayView | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -343,7 +346,11 @@ class CommonSectionVersionStructure(SectionVersionStructure):
     class Meta:
         name = "CommonSection_VersionStructure"
 
-    points_on_section_or_members: PointsOnSectionRelStructure | CommonSectionPointMembersRelStructure | None = field(
+    points_on_section_or_members: (
+        PointsOnSectionRelStructure
+        | CommonSectionPointMembersRelStructure
+        | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -397,7 +404,11 @@ class LineSectionVersionStructure(SectionVersionStructure):
     class Meta:
         name = "LineSection_VersionStructure"
 
-    points_on_section_or_members: PointOnLineSectionsRelStructure | CommonSectionPointMembersRelStructure | None = field(
+    points_on_section_or_members: (
+        PointOnLineSectionsRelStructure
+        | CommonSectionPointMembersRelStructure
+        | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -415,7 +426,11 @@ class LineSectionVersionStructure(SectionVersionStructure):
             ),
         },
     )
-    reverse_points_on_section_or_reverse_members: PointOnLineSectionsRelStructure | CommonSectionPointMembersRelStructure | None = field(
+    reverse_points_on_section_or_reverse_members: (
+        PointOnLineSectionsRelStructure
+        | CommonSectionPointMembersRelStructure
+        | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -459,25 +474,23 @@ class LineSectionVersionStructure(SectionVersionStructure):
             ),
         },
     )
-    transport_organisation_ref: AuthorityRef | OperatorRef | None = (
-        field(
-            default=None,
-            metadata={
-                "type": "Elements",
-                "choices": (
-                    {
-                        "name": "AuthorityRef",
-                        "type": AuthorityRef,
-                        "namespace": "http://www.netex.org.uk/netex",
-                    },
-                    {
-                        "name": "OperatorRef",
-                        "type": OperatorRef,
-                        "namespace": "http://www.netex.org.uk/netex",
-                    },
-                ),
-            },
-        )
+    transport_organisation_ref: AuthorityRef | OperatorRef | None = field(
+        default=None,
+        metadata={
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "AuthorityRef",
+                    "type": AuthorityRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "OperatorRef",
+                    "type": OperatorRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+        },
     )
 
 
@@ -492,7 +505,14 @@ class FareSectionVersionStructure(GeneralSectionVersionStructure):
     class Meta:
         name = "FareSection_VersionStructure"
 
-    choice: ServiceJourneyPatternRef | ServicePatternRef | DeadRunJourneyPatternRef | JourneyPatternRef | JourneyPattern | None = field(
+    choice: (
+        ServiceJourneyPatternRef
+        | ServicePatternRef
+        | DeadRunJourneyPatternRef
+        | JourneyPatternRef
+        | JourneyPattern
+        | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -525,15 +545,13 @@ class FareSectionVersionStructure(GeneralSectionVersionStructure):
             ),
         },
     )
-    from_point_in_pattern_ref: FarePointInPatternRefStructure | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "FromPointInPatternRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            },
-        )
+    from_point_in_pattern_ref: FarePointInPatternRefStructure | None = field(
+        default=None,
+        metadata={
+            "name": "FromPointInPatternRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        },
     )
     to_point_in_pattern_ref: FarePointInPatternRefStructure | None = field(
         default=None,
@@ -570,7 +588,19 @@ class SectionInSequenceVersionedChildStructure(
     class Meta:
         name = "SectionInSequence_VersionedChildStructure"
 
-    section_ref_or_general_section_ref_or_section: ParentCommonSectionRef | CommonSectionRef | LineSectionRef | FareSectionRef | GeneralSectionRef | SectionRef | FareSection | CommonSection | LineSection | GeneralSection | None = field(
+    section_ref_or_general_section_ref_or_section: (
+        ParentCommonSectionRef
+        | CommonSectionRef
+        | LineSectionRef
+        | FareSectionRef
+        | GeneralSectionRef
+        | SectionRef
+        | FareSection
+        | CommonSection
+        | LineSection
+        | GeneralSection
+        | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",

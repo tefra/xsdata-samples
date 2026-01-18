@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -94,7 +93,9 @@ class BinaryManifestItemDefinition:
             "required": True,
         },
     )
-    short_name_fragments: BinaryManifestItemDefinition.ShortNameFragments | None = field(
+    short_name_fragments: (
+        BinaryManifestItemDefinition.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -150,7 +151,9 @@ class BinaryManifestItemDefinition:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    auxiliary_field_definitions: BinaryManifestItemDefinition.AuxiliaryFieldDefinitions | None = field(
+    auxiliary_field_definitions: (
+        BinaryManifestItemDefinition.AuxiliaryFieldDefinitions | None
+    ) = field(
         default=None,
         metadata={
             "name": "AUXILIARY-FIELD-DEFINITIONS",
@@ -213,13 +216,13 @@ class BinaryManifestItemDefinition:
 
     @dataclass
     class AuxiliaryFieldDefinitions:
-        binary_manifest_item_definition: list[
-            BinaryManifestItemDefinition
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "BINARY-MANIFEST-ITEM-DEFINITION",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        binary_manifest_item_definition: list[BinaryManifestItemDefinition] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "BINARY-MANIFEST-ITEM-DEFINITION",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )

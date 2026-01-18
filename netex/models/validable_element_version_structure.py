@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .amount_of_price_unit_refs_rel_structure import (
     AmountOfPriceUnitRefsRelStructure,
@@ -40,13 +39,15 @@ class ValidableElementVersionStructure(PriceableObjectVersionStructure):
             },
         )
     )
-    fare_elements_in_sequence: FareElementInSequenceRefsRelStructure | None = field(
-        default=None,
-        metadata={
-            "name": "fareElementsInSequence",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        },
+    fare_elements_in_sequence: FareElementInSequenceRefsRelStructure | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "fareElementsInSequence",
+                "type": "Element",
+                "namespace": "http://www.netex.org.uk/netex",
+            },
+        )
     )
     discount_rights: DiscountRightRefsRelStructure | None = field(
         default=None,
@@ -72,7 +73,9 @@ class ValidableElementVersionStructure(PriceableObjectVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    validity_parameter_assignments: ValidityParameterAssignmentsRelStructure | None = field(
+    validity_parameter_assignments: (
+        ValidityParameterAssignmentsRelStructure | None
+    ) = field(
         default=None,
         metadata={
             "name": "validityParameterAssignments",

@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -106,13 +105,15 @@ class DiagnosticTransferExit:
             "required": True,
         },
     )
-    short_name_fragments: DiagnosticTransferExit.ShortNameFragments | None = field(
-        default=None,
-        metadata={
-            "name": "SHORT-NAME-FRAGMENTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    short_name_fragments: DiagnosticTransferExit.ShortNameFragments | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "SHORT-NAME-FRAGMENTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     long_name: MultilanguageLongName | None = field(
         default=None,
@@ -170,7 +171,9 @@ class DiagnosticTransferExit:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    access_permission_ref: DiagnosticTransferExit.AccessPermissionRef | None = field(
+    access_permission_ref: (
+        DiagnosticTransferExit.AccessPermissionRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "ACCESS-PERMISSION-REF",
@@ -178,7 +181,9 @@ class DiagnosticTransferExit:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    transfer_exit_class_ref: DiagnosticTransferExit.TransferExitClassRef | None = field(
+    transfer_exit_class_ref: (
+        DiagnosticTransferExit.TransferExitClassRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "TRANSFER-EXIT-CLASS-REF",

@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     DocumentationBlock,
@@ -54,7 +53,9 @@ class ClientServerOperationBlueprintMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    bsw_module_entry_ref: ClientServerOperationBlueprintMapping.BswModuleEntryRef | None = field(
+    bsw_module_entry_ref: (
+        ClientServerOperationBlueprintMapping.BswModuleEntryRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "BSW-MODULE-ENTRY-REF",
@@ -62,7 +63,9 @@ class ClientServerOperationBlueprintMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    client_server_operation_ref: ClientServerOperationBlueprintMapping.ClientServerOperationRef | None = field(
+    client_server_operation_ref: (
+        ClientServerOperationBlueprintMapping.ClientServerOperationRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "CLIENT-SERVER-OPERATION-REF",

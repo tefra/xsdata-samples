@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -142,7 +141,9 @@ class CustomCppImplementationDataType:
             "required": True,
         },
     )
-    short_name_fragments: CustomCppImplementationDataType.ShortNameFragments | None = field(
+    short_name_fragments: (
+        CustomCppImplementationDataType.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -190,17 +191,17 @@ class CustomCppImplementationDataType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: CustomCppImplementationDataType.Annotations | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "ANNOTATIONS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    annotations: CustomCppImplementationDataType.Annotations | None = field(
+        default=None,
+        metadata={
+            "name": "ANNOTATIONS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
-    blueprint_policys: CustomCppImplementationDataType.BlueprintPolicys | None = field(
+    blueprint_policys: (
+        CustomCppImplementationDataType.BlueprintPolicys | None
+    ) = field(
         default=None,
         metadata={
             "name": "BLUEPRINT-POLICYS",
@@ -256,17 +257,17 @@ class CustomCppImplementationDataType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sub_elements: CustomCppImplementationDataType.SubElements | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "SUB-ELEMENTS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    sub_elements: CustomCppImplementationDataType.SubElements | None = field(
+        default=None,
+        metadata={
+            "name": "SUB-ELEMENTS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
-    template_arguments: CustomCppImplementationDataType.TemplateArguments | None = field(
+    template_arguments: (
+        CustomCppImplementationDataType.TemplateArguments | None
+    ) = field(
         default=None,
         metadata={
             "name": "TEMPLATE-ARGUMENTS",
@@ -282,7 +283,9 @@ class CustomCppImplementationDataType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    type_reference_ref: CustomCppImplementationDataType.TypeReferenceRef | None = field(
+    type_reference_ref: (
+        CustomCppImplementationDataType.TypeReferenceRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "TYPE-REFERENCE-REF",

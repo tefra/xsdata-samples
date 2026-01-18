@@ -1,6 +1,5 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
-from typing import Optional, Union
 
 from xsdata.models.datatype import XmlDate
 
@@ -80,7 +79,19 @@ class StandardFareTableVersionStructure(GroupOfEntitiesVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    organisation_ref_or_other_organisation_ref_or_transport_organisation_ref: RetailConsortiumRef | OnlineServiceOperatorRef | GeneralOrganisationRef | ManagementAgentRef | ServicedOrganisationRef | TravelAgentRef | OtherOrganisationRef | AuthorityRef | OperatorRef | OrganisationRef | None = field(
+    organisation_ref_or_other_organisation_ref_or_transport_organisation_ref: (
+        RetailConsortiumRef
+        | OnlineServiceOperatorRef
+        | GeneralOrganisationRef
+        | ManagementAgentRef
+        | ServicedOrganisationRef
+        | TravelAgentRef
+        | OtherOrganisationRef
+        | AuthorityRef
+        | OperatorRef
+        | OrganisationRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",

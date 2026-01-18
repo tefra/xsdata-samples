@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from xsdata.models.datatype import XmlDuration
 
@@ -27,7 +26,14 @@ class StopPointInJourneyPatternDerivedViewStructure(DerivedViewStructure):
     class Meta:
         name = "StopPointInJourneyPattern_DerivedViewStructure"
 
-    point_in_journey_pattern_ref: PointInSingleJourneyPathRef | FarePointInPatternRef | StopPointInJourneyPatternRef | TimingPointInJourneyPatternRef | PointInJourneyPatternRef | None = field(
+    point_in_journey_pattern_ref: (
+        PointInSingleJourneyPathRef
+        | FarePointInPatternRef
+        | StopPointInJourneyPatternRef
+        | TimingPointInJourneyPatternRef
+        | PointInJourneyPatternRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -68,7 +74,12 @@ class StopPointInJourneyPatternDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view: FareScheduledStopPointRef | ScheduledStopPointRef | ScheduledStopPointView | None = field(
+    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view: (
+        FareScheduledStopPointRef
+        | ScheduledStopPointRef
+        | ScheduledStopPointView
+        | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -99,7 +110,9 @@ class StopPointInJourneyPatternDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    onward_service_link_ref_or_onward_service_link_view: ServiceLinkRefStructure | OnwardServiceLinkView | None = field(
+    onward_service_link_ref_or_onward_service_link_view: (
+        ServiceLinkRefStructure | OnwardServiceLinkView | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -133,7 +146,9 @@ class StopPointInJourneyPatternDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    time_demand_type_ref_or_timeband_ref: TimeDemandTypeRef | TimebandRef | None = field(
+    time_demand_type_ref_or_timeband_ref: (
+        TimeDemandTypeRef | TimebandRef | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",

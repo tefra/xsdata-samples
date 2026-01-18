@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from ubl.models.common.ubl_common_basic_components_2_1 import (
     AcceptedVariantsDescription,
@@ -1516,7 +1515,9 @@ class ConsumptionCorrectionType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    actual_temperature_reduction_quantity: ActualTemperatureReductionQuantity | None = field(
+    actual_temperature_reduction_quantity: (
+        ActualTemperatureReductionQuantity | None
+    ) = field(
         default=None,
         metadata={
             "name": "ActualTemperatureReductionQuantity",
@@ -1524,7 +1525,9 @@ class ConsumptionCorrectionType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    normal_temperature_reduction_quantity: NormalTemperatureReductionQuantity | None = field(
+    normal_temperature_reduction_quantity: (
+        NormalTemperatureReductionQuantity | None
+    ) = field(
         default=None,
         metadata={
             "name": "NormalTemperatureReductionQuantity",
@@ -1532,7 +1535,9 @@ class ConsumptionCorrectionType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    difference_temperature_reduction_quantity: DifferenceTemperatureReductionQuantity | None = field(
+    difference_temperature_reduction_quantity: (
+        DifferenceTemperatureReductionQuantity | None
+    ) = field(
         default=None,
         metadata={
             "name": "DifferenceTemperatureReductionQuantity",
@@ -1808,7 +1813,9 @@ class EventCommentType:
 
 @dataclass(frozen=True)
 class EventTacticEnumerationType:
-    consumer_incentive_tactic_type_code: ConsumerIncentiveTacticTypeCode | None = field(
+    consumer_incentive_tactic_type_code: (
+        ConsumerIncentiveTacticTypeCode | None
+    ) = field(
         default=None,
         metadata={
             "name": "ConsumerIncentiveTacticTypeCode",
@@ -1832,7 +1839,9 @@ class EventTacticEnumerationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    trade_item_packing_labeling_type_code: TradeItemPackingLabelingTypeCode | None = field(
+    trade_item_packing_labeling_type_code: (
+        TradeItemPackingLabelingTypeCode | None
+    ) = field(
         default=None,
         metadata={
             "name": "TradeItemPackingLabelingTypeCode",
@@ -2048,25 +2057,21 @@ class ForecastExceptionType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    comparison_forecast_issue_time: ComparisonForecastIssueTime | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "ComparisonForecastIssueTime",
-                "type": "Element",
-                "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            },
-        )
+    comparison_forecast_issue_time: ComparisonForecastIssueTime | None = field(
+        default=None,
+        metadata={
+            "name": "ComparisonForecastIssueTime",
+            "type": "Element",
+            "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
+        },
     )
-    comparison_forecast_issue_date: ComparisonForecastIssueDate | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "ComparisonForecastIssueDate",
-                "type": "Element",
-                "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            },
-        )
+    comparison_forecast_issue_date: ComparisonForecastIssueDate | None = field(
+        default=None,
+        metadata={
+            "name": "ComparisonForecastIssueDate",
+            "type": "Element",
+            "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
+        },
     )
 
 
@@ -2289,13 +2294,15 @@ class MeterReadingType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    meter_reading_type: UblCommonBasicComponents21MeterReadingType | None = field(
-        default=None,
-        metadata={
-            "name": "MeterReadingType",
-            "type": "Element",
-            "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        },
+    meter_reading_type: UblCommonBasicComponents21MeterReadingType | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "MeterReadingType",
+                "type": "Element",
+                "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
+            },
+        )
     )
     meter_reading_type_code: MeterReadingTypeCode | None = field(
         default=None,
@@ -2341,17 +2348,17 @@ class MeterReadingType:
             "required": True,
         },
     )
-    previous_meter_reading_method: PreviousMeterReadingMethod | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "PreviousMeterReadingMethod",
-                "type": "Element",
-                "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            },
-        )
+    previous_meter_reading_method: PreviousMeterReadingMethod | None = field(
+        default=None,
+        metadata={
+            "name": "PreviousMeterReadingMethod",
+            "type": "Element",
+            "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
+        },
     )
-    previous_meter_reading_method_code: PreviousMeterReadingMethodCode | None = field(
+    previous_meter_reading_method_code: (
+        PreviousMeterReadingMethodCode | None
+    ) = field(
         default=None,
         metadata={
             "name": "PreviousMeterReadingMethodCode",
@@ -2367,13 +2374,15 @@ class MeterReadingType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    latest_meter_reading_method_code: LatestMeterReadingMethodCode | None = field(
-        default=None,
-        metadata={
-            "name": "LatestMeterReadingMethodCode",
-            "type": "Element",
-            "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        },
+    latest_meter_reading_method_code: LatestMeterReadingMethodCode | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "LatestMeterReadingMethodCode",
+                "type": "Element",
+                "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
+            },
+        )
     )
     meter_reading_comments: tuple[MeterReadingComments, ...] = field(
         default_factory=tuple,
@@ -2648,7 +2657,9 @@ class PhysicalAttributeType:
 
 @dataclass(frozen=True)
 class ProcessJustificationType:
-    previous_cancellation_reason_code: PreviousCancellationReasonCode | None = field(
+    previous_cancellation_reason_code: (
+        PreviousCancellationReasonCode | None
+    ) = field(
         default=None,
         metadata={
             "name": "PreviousCancellationReasonCode",
@@ -4420,15 +4431,13 @@ class ConsumptionReportReferenceType:
             "required": True,
         },
     )
-    consumption_type: UblCommonBasicComponents21ConsumptionType | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "ConsumptionType",
-                "type": "Element",
-                "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            },
-        )
+    consumption_type: UblCommonBasicComponents21ConsumptionType | None = field(
+        default=None,
+        metadata={
+            "name": "ConsumptionType",
+            "type": "Element",
+            "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
+        },
     )
     consumption_type_code: ConsumptionTypeCode | None = field(
         default=None,
@@ -4638,15 +4647,13 @@ class FinancialGuaranteeType:
 
 @dataclass(frozen=True)
 class HazardousGoodsTransitType:
-    transport_emergency_card_code: TransportEmergencyCardCode | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "TransportEmergencyCardCode",
-                "type": "Element",
-                "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            },
-        )
+    transport_emergency_card_code: TransportEmergencyCardCode | None = field(
+        default=None,
+        metadata={
+            "name": "TransportEmergencyCardCode",
+            "type": "Element",
+            "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
+        },
     )
     packing_criteria_code: PackingCriteriaCode | None = field(
         default=None,
@@ -4664,15 +4671,13 @@ class HazardousGoodsTransitType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    inhalation_toxicity_zone_code: InhalationToxicityZoneCode | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "InhalationToxicityZoneCode",
-                "type": "Element",
-                "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            },
-        )
+    inhalation_toxicity_zone_code: InhalationToxicityZoneCode | None = field(
+        default=None,
+        metadata={
+            "name": "InhalationToxicityZoneCode",
+            "type": "Element",
+            "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
+        },
     )
     transport_authorization_code: TransportAuthorizationCode | None = field(
         default=None,
@@ -5555,13 +5560,15 @@ class CorporateRegistrationSchemeType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    corporate_registration_type_code: CorporateRegistrationTypeCode | None = field(
-        default=None,
-        metadata={
-            "name": "CorporateRegistrationTypeCode",
-            "type": "Element",
-            "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        },
+    corporate_registration_type_code: CorporateRegistrationTypeCode | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "CorporateRegistrationTypeCode",
+                "type": "Element",
+                "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
+            },
+        )
     )
     jurisdiction_region_address: tuple[JurisdictionRegionAddress, ...] = field(
         default_factory=tuple,
@@ -6641,15 +6648,13 @@ class ConsumptionReportType:
             "required": True,
         },
     )
-    consumption_type: UblCommonBasicComponents21ConsumptionType | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "ConsumptionType",
-                "type": "Element",
-                "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            },
-        )
+    consumption_type: UblCommonBasicComponents21ConsumptionType | None = field(
+        default=None,
+        metadata={
+            "name": "ConsumptionType",
+            "type": "Element",
+            "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
+        },
     )
     consumption_type_code: ConsumptionTypeCode | None = field(
         default=None,
@@ -7203,7 +7208,9 @@ class MaritimeTransportType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    registry_certificate_document_reference: RegistryCertificateDocumentReference | None = field(
+    registry_certificate_document_reference: (
+        RegistryCertificateDocumentReference | None
+    ) = field(
         default=None,
         metadata={
             "name": "RegistryCertificateDocumentReference",
@@ -7874,14 +7881,16 @@ class EnergyWaterSupplyType:
 
 @dataclass(frozen=True)
 class EnvironmentalEmissionType:
-    environmental_emission_type_code: EnvironmentalEmissionTypeCode | None = field(
-        default=None,
-        metadata={
-            "name": "EnvironmentalEmissionTypeCode",
-            "type": "Element",
-            "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
-        },
+    environmental_emission_type_code: EnvironmentalEmissionTypeCode | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "EnvironmentalEmissionTypeCode",
+                "type": "Element",
+                "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
+                "required": True,
+            },
+        )
     )
     value_measure: ValueMeasure | None = field(
         default=None,
@@ -8224,7 +8233,9 @@ class ProjectReferenceType:
 
 @dataclass(frozen=True)
 class RequestedTenderTotalType:
-    estimated_overall_contract_amount: EstimatedOverallContractAmount | None = field(
+    estimated_overall_contract_amount: (
+        EstimatedOverallContractAmount | None
+    ) = field(
         default=None,
         metadata={
             "name": "EstimatedOverallContractAmount",
@@ -8272,7 +8283,9 @@ class RequestedTenderTotalType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    average_subsequent_contract_amount: AverageSubsequentContractAmount | None = field(
+    average_subsequent_contract_amount: (
+        AverageSubsequentContractAmount | None
+    ) = field(
         default=None,
         metadata={
             "name": "AverageSubsequentContractAmount",
@@ -8437,15 +8450,13 @@ class UtilityItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    consumption_type: UblCommonBasicComponents21ConsumptionType | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "ConsumptionType",
-                "type": "Element",
-                "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            },
-        )
+    consumption_type: UblCommonBasicComponents21ConsumptionType | None = field(
+        default=None,
+        metadata={
+            "name": "ConsumptionType",
+            "type": "Element",
+            "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
+        },
     )
     consumption_type_code: ConsumptionTypeCode | None = field(
         default=None,
@@ -10467,25 +10478,21 @@ class HazardousItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    upper_orange_hazard_placard_id: UpperOrangeHazardPlacardId | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "UpperOrangeHazardPlacardID",
-                "type": "Element",
-                "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            },
-        )
+    upper_orange_hazard_placard_id: UpperOrangeHazardPlacardId | None = field(
+        default=None,
+        metadata={
+            "name": "UpperOrangeHazardPlacardID",
+            "type": "Element",
+            "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
+        },
     )
-    lower_orange_hazard_placard_id: LowerOrangeHazardPlacardId | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "LowerOrangeHazardPlacardID",
-                "type": "Element",
-                "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            },
-        )
+    lower_orange_hazard_placard_id: LowerOrangeHazardPlacardId | None = field(
+        default=None,
+        metadata={
+            "name": "LowerOrangeHazardPlacardID",
+            "type": "Element",
+            "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
+        },
     )
     marking_id: MarkingId | None = field(
         default=None,
@@ -10579,15 +10586,13 @@ class HazardousItemType:
 
 @dataclass(frozen=True)
 class ImmobilizedSecurityType:
-    immobilization_certificate_id: ImmobilizationCertificateId | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "ImmobilizationCertificateID",
-                "type": "Element",
-                "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            },
-        )
+    immobilization_certificate_id: ImmobilizationCertificateId | None = field(
+        default=None,
+        metadata={
+            "name": "ImmobilizationCertificateID",
+            "type": "Element",
+            "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
+        },
     )
     security_id: SecurityId | None = field(
         default=None,
@@ -10703,7 +10708,9 @@ class NotificationRequirementType:
             "required": True,
         },
     )
-    post_event_notification_duration_measure: PostEventNotificationDurationMeasure | None = field(
+    post_event_notification_duration_measure: (
+        PostEventNotificationDurationMeasure | None
+    ) = field(
         default=None,
         metadata={
             "name": "PostEventNotificationDurationMeasure",
@@ -10711,7 +10718,9 @@ class NotificationRequirementType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    pre_event_notification_duration_measure: PreEventNotificationDurationMeasure | None = field(
+    pre_event_notification_duration_measure: (
+        PreEventNotificationDurationMeasure | None
+    ) = field(
         default=None,
         metadata={
             "name": "PreEventNotificationDurationMeasure",
@@ -10763,7 +10772,9 @@ class PaymentMandateType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    maximum_payment_instructions_numeric: MaximumPaymentInstructionsNumeric | None = field(
+    maximum_payment_instructions_numeric: (
+        MaximumPaymentInstructionsNumeric | None
+    ) = field(
         default=None,
         metadata={
             "name": "MaximumPaymentInstructionsNumeric",
@@ -11726,16 +11737,14 @@ class CertificateType:
             "required": True,
         },
     )
-    certificate_type: UblCommonBasicComponents21CertificateType | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "CertificateType",
-                "type": "Element",
-                "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-                "required": True,
-            },
-        )
+    certificate_type: UblCommonBasicComponents21CertificateType | None = field(
+        default=None,
+        metadata={
+            "name": "CertificateType",
+            "type": "Element",
+            "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
+            "required": True,
+        },
     )
     remarks: tuple[Remarks, ...] = field(
         default_factory=tuple,
@@ -11881,15 +11890,13 @@ class EndorsementType:
 
 @dataclass(frozen=True)
 class EvaluationCriterionType:
-    evaluation_criterion_type_code: EvaluationCriterionTypeCode | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "EvaluationCriterionTypeCode",
-                "type": "Element",
-                "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            },
-        )
+    evaluation_criterion_type_code: EvaluationCriterionTypeCode | None = field(
+        default=None,
+        metadata={
+            "name": "EvaluationCriterionTypeCode",
+            "type": "Element",
+            "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
+        },
     )
     description: tuple[Description, ...] = field(
         default_factory=tuple,
@@ -11999,15 +12006,13 @@ class PartyLegalEntityType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    sole_proprietorship_indicator: SoleProprietorshipIndicator | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "SoleProprietorshipIndicator",
-                "type": "Element",
-                "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            },
-        )
+    sole_proprietorship_indicator: SoleProprietorshipIndicator | None = field(
+        default=None,
+        metadata={
+            "name": "SoleProprietorshipIndicator",
+            "type": "Element",
+            "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
+        },
     )
     company_liquidation_status_code: CompanyLiquidationStatusCode | None = (
         field(
@@ -12043,15 +12048,13 @@ class PartyLegalEntityType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    corporate_registration_scheme: CorporateRegistrationScheme | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "CorporateRegistrationScheme",
-                "type": "Element",
-                "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-            },
-        )
+    corporate_registration_scheme: CorporateRegistrationScheme | None = field(
+        default=None,
+        metadata={
+            "name": "CorporateRegistrationScheme",
+            "type": "Element",
+            "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
+        },
     )
     head_office_party: HeadOfficeParty | None = field(
         default=None,
@@ -12190,15 +12193,13 @@ class TendererRequirementType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    tenderer_requirement_type_code: TendererRequirementTypeCode | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "TendererRequirementTypeCode",
-                "type": "Element",
-                "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            },
-        )
+    tenderer_requirement_type_code: TendererRequirementTypeCode | None = field(
+        default=None,
+        metadata={
+            "name": "TendererRequirementTypeCode",
+            "type": "Element",
+            "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
+        },
     )
     description: tuple[Description, ...] = field(
         default_factory=tuple,
@@ -12236,15 +12237,13 @@ class TenderingProcessType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    original_contracting_system_id: OriginalContractingSystemId | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "OriginalContractingSystemID",
-                "type": "Element",
-                "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            },
-        )
+    original_contracting_system_id: OriginalContractingSystemId | None = field(
+        default=None,
+        metadata={
+            "name": "OriginalContractingSystemID",
+            "type": "Element",
+            "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
+        },
     )
     description: tuple[Description, ...] = field(
         default_factory=tuple,
@@ -12310,7 +12309,9 @@ class TenderingProcessType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    candidate_reduction_constraint_indicator: CandidateReductionConstraintIndicator | None = field(
+    candidate_reduction_constraint_indicator: (
+        CandidateReductionConstraintIndicator | None
+    ) = field(
         default=None,
         metadata={
             "name": "CandidateReductionConstraintIndicator",
@@ -12318,7 +12319,9 @@ class TenderingProcessType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    government_agreement_constraint_indicator: GovernmentAgreementConstraintIndicator | None = field(
+    government_agreement_constraint_indicator: (
+        GovernmentAgreementConstraintIndicator | None
+    ) = field(
         default=None,
         metadata={
             "name": "GovernmentAgreementConstraintIndicator",
@@ -12334,7 +12337,9 @@ class TenderingProcessType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    tender_submission_deadline_period: TenderSubmissionDeadlinePeriod | None = field(
+    tender_submission_deadline_period: (
+        TenderSubmissionDeadlinePeriod | None
+    ) = field(
         default=None,
         metadata={
             "name": "TenderSubmissionDeadlinePeriod",
@@ -12350,7 +12355,9 @@ class TenderingProcessType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    participation_request_reception_period: ParticipationRequestReceptionPeriod | None = field(
+    participation_request_reception_period: (
+        ParticipationRequestReceptionPeriod | None
+    ) = field(
         default=None,
         metadata={
             "name": "ParticipationRequestReceptionPeriod",
@@ -12744,15 +12751,13 @@ class ItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    catalogue_item_identification: CatalogueItemIdentification | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "CatalogueItemIdentification",
-                "type": "Element",
-                "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-            },
-        )
+    catalogue_item_identification: CatalogueItemIdentification | None = field(
+        default=None,
+        metadata={
+            "name": "CatalogueItemIdentification",
+            "type": "Element",
+            "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
+        },
     )
     additional_item_identification: tuple[
         AdditionalItemIdentification, ...
@@ -12838,7 +12843,9 @@ class ItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    information_content_provider_party: InformationContentProviderParty | None = field(
+    information_content_provider_party: (
+        InformationContentProviderParty | None
+    ) = field(
         default=None,
         metadata={
             "name": "InformationContentProviderParty",
@@ -12914,7 +12921,9 @@ class QualifyingPartyType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    business_classification_evidence_id: BusinessClassificationEvidenceId | None = field(
+    business_classification_evidence_id: (
+        BusinessClassificationEvidenceId | None
+    ) = field(
         default=None,
         metadata={
             "name": "BusinessClassificationEvidenceID",
@@ -12922,15 +12931,13 @@ class QualifyingPartyType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    business_identity_evidence_id: BusinessIdentityEvidenceId | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "BusinessIdentityEvidenceID",
-                "type": "Element",
-                "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            },
-        )
+    business_identity_evidence_id: BusinessIdentityEvidenceId | None = field(
+        default=None,
+        metadata={
+            "name": "BusinessIdentityEvidenceID",
+            "type": "Element",
+            "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
+        },
     )
     tenderer_role_code: TendererRoleCode | None = field(
         default=None,
@@ -13245,15 +13252,13 @@ class DeliveryTermsType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    loss_risk_responsibility_code: LossRiskResponsibilityCode | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "LossRiskResponsibilityCode",
-                "type": "Element",
-                "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            },
-        )
+    loss_risk_responsibility_code: LossRiskResponsibilityCode | None = field(
+        default=None,
+        metadata={
+            "name": "LossRiskResponsibilityCode",
+            "type": "Element",
+            "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
+        },
     )
     loss_risk: tuple[LossRisk, ...] = field(
         default_factory=tuple,
@@ -13418,13 +13423,15 @@ class EventLineItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    participating_locations_location: ParticipatingLocationsLocation | None = field(
-        default=None,
-        metadata={
-            "name": "ParticipatingLocationsLocation",
-            "type": "Element",
-            "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        },
+    participating_locations_location: ParticipatingLocationsLocation | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "ParticipatingLocationsLocation",
+                "type": "Element",
+                "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
+            },
+        )
     )
     retail_planned_impact: tuple[RetailPlannedImpact, ...] = field(
         default_factory=tuple,
@@ -13543,7 +13550,9 @@ class ExceptionCriteriaLineType:
             "min_occurs": 1,
         },
     )
-    forecast_exception_criterion_line: ForecastExceptionCriterionLine | None = field(
+    forecast_exception_criterion_line: (
+        ForecastExceptionCriterionLine | None
+    ) = field(
         default=None,
         metadata={
             "name": "ForecastExceptionCriterionLine",
@@ -14289,7 +14298,9 @@ class BillingReferenceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    self_billed_invoice_document_reference: SelfBilledInvoiceDocumentReference | None = field(
+    self_billed_invoice_document_reference: (
+        SelfBilledInvoiceDocumentReference | None
+    ) = field(
         default=None,
         metadata={
             "name": "SelfBilledInvoiceDocumentReference",
@@ -14297,17 +14308,17 @@ class BillingReferenceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    credit_note_document_reference: CreditNoteDocumentReference | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "CreditNoteDocumentReference",
-                "type": "Element",
-                "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-            },
-        )
+    credit_note_document_reference: CreditNoteDocumentReference | None = field(
+        default=None,
+        metadata={
+            "name": "CreditNoteDocumentReference",
+            "type": "Element",
+            "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
+        },
     )
-    self_billed_credit_note_document_reference: SelfBilledCreditNoteDocumentReference | None = field(
+    self_billed_credit_note_document_reference: (
+        SelfBilledCreditNoteDocumentReference | None
+    ) = field(
         default=None,
         metadata={
             "name": "SelfBilledCreditNoteDocumentReference",
@@ -14315,15 +14326,13 @@ class BillingReferenceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    debit_note_document_reference: DebitNoteDocumentReference | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "DebitNoteDocumentReference",
-                "type": "Element",
-                "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-            },
-        )
+    debit_note_document_reference: DebitNoteDocumentReference | None = field(
+        default=None,
+        metadata={
+            "name": "DebitNoteDocumentReference",
+            "type": "Element",
+            "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
+        },
     )
     reminder_document_reference: ReminderDocumentReference | None = field(
         default=None,
@@ -14333,15 +14342,13 @@ class BillingReferenceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    additional_document_reference: AdditionalDocumentReference | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "AdditionalDocumentReference",
-                "type": "Element",
-                "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-            },
-        )
+    additional_document_reference: AdditionalDocumentReference | None = field(
+        default=None,
+        metadata={
+            "name": "AdditionalDocumentReference",
+            "type": "Element",
+            "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
+        },
     )
     billing_reference_line: tuple[BillingReferenceLine, ...] = field(
         default_factory=tuple,
@@ -14388,15 +14395,13 @@ class ConsignmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    freight_forwarder_assigned_id: FreightForwarderAssignedId | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "FreightForwarderAssignedID",
-                "type": "Element",
-                "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            },
-        )
+    freight_forwarder_assigned_id: FreightForwarderAssignedId | None = field(
+        default=None,
+        metadata={
+            "name": "FreightForwarderAssignedID",
+            "type": "Element",
+            "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
+        },
     )
     broker_assigned_id: BrokerAssignedId | None = field(
         default=None,
@@ -14406,25 +14411,21 @@ class ConsignmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    contracted_carrier_assigned_id: ContractedCarrierAssignedId | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "ContractedCarrierAssignedID",
-                "type": "Element",
-                "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            },
-        )
+    contracted_carrier_assigned_id: ContractedCarrierAssignedId | None = field(
+        default=None,
+        metadata={
+            "name": "ContractedCarrierAssignedID",
+            "type": "Element",
+            "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
+        },
     )
-    performing_carrier_assigned_id: PerformingCarrierAssignedId | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "PerformingCarrierAssignedID",
-                "type": "Element",
-                "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            },
-        )
+    performing_carrier_assigned_id: PerformingCarrierAssignedId | None = field(
+        default=None,
+        metadata={
+            "name": "PerformingCarrierAssignedID",
+            "type": "Element",
+            "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
+        },
     )
     summary_description: tuple[SummaryDescription, ...] = field(
         default_factory=tuple,
@@ -14442,15 +14443,13 @@ class ConsignmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    declared_customs_value_amount: DeclaredCustomsValueAmount | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "DeclaredCustomsValueAmount",
-                "type": "Element",
-                "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            },
-        )
+    declared_customs_value_amount: DeclaredCustomsValueAmount | None = field(
+        default=None,
+        metadata={
+            "name": "DeclaredCustomsValueAmount",
+            "type": "Element",
+            "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
+        },
     )
     tariff_description: tuple[TariffDescription, ...] = field(
         default_factory=tuple,
@@ -14700,7 +14699,9 @@ class ConsignmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    total_transport_handling_unit_quantity: TotalTransportHandlingUnitQuantity | None = field(
+    total_transport_handling_unit_quantity: (
+        TotalTransportHandlingUnitQuantity | None
+    ) = field(
         default=None,
         metadata={
             "name": "TotalTransportHandlingUnitQuantity",
@@ -14716,7 +14717,9 @@ class ConsignmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    declared_for_carriage_value_amount: DeclaredForCarriageValueAmount | None = field(
+    declared_for_carriage_value_amount: (
+        DeclaredForCarriageValueAmount | None
+    ) = field(
         default=None,
         metadata={
             "name": "DeclaredForCarriageValueAmount",
@@ -14724,13 +14727,15 @@ class ConsignmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    declared_statistics_value_amount: DeclaredStatisticsValueAmount | None = field(
-        default=None,
-        metadata={
-            "name": "DeclaredStatisticsValueAmount",
-            "type": "Element",
-            "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        },
+    declared_statistics_value_amount: DeclaredStatisticsValueAmount | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "DeclaredStatisticsValueAmount",
+                "type": "Element",
+                "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
+            },
+        )
     )
     free_on_board_value_amount: FreeOnBoardValueAmount | None = field(
         default=None,
@@ -14828,15 +14833,19 @@ class ConsignmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    requested_pickup_transport_event: RequestedPickupTransportEvent | None = field(
-        default=None,
-        metadata={
-            "name": "RequestedPickupTransportEvent",
-            "type": "Element",
-            "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        },
+    requested_pickup_transport_event: RequestedPickupTransportEvent | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "RequestedPickupTransportEvent",
+                "type": "Element",
+                "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
+            },
+        )
     )
-    requested_delivery_transport_event: RequestedDeliveryTransportEvent | None = field(
+    requested_delivery_transport_event: (
+        RequestedDeliveryTransportEvent | None
+    ) = field(
         default=None,
         metadata={
             "name": "RequestedDeliveryTransportEvent",
@@ -14844,23 +14853,23 @@ class ConsignmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    planned_pickup_transport_event: PlannedPickupTransportEvent | None = (
+    planned_pickup_transport_event: PlannedPickupTransportEvent | None = field(
+        default=None,
+        metadata={
+            "name": "PlannedPickupTransportEvent",
+            "type": "Element",
+            "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
+        },
+    )
+    planned_delivery_transport_event: PlannedDeliveryTransportEvent | None = (
         field(
             default=None,
             metadata={
-                "name": "PlannedPickupTransportEvent",
+                "name": "PlannedDeliveryTransportEvent",
                 "type": "Element",
                 "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
             },
         )
-    )
-    planned_delivery_transport_event: PlannedDeliveryTransportEvent | None = field(
-        default=None,
-        metadata={
-            "name": "PlannedDeliveryTransportEvent",
-            "type": "Element",
-            "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        },
     )
     status: tuple[Status, ...] = field(
         default_factory=tuple,
@@ -14982,7 +14991,9 @@ class ConsignmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    hazardous_item_notification_party: HazardousItemNotificationParty | None = field(
+    hazardous_item_notification_party: (
+        HazardousItemNotificationParty | None
+    ) = field(
         default=None,
         metadata={
             "name": "HazardousItemNotificationParty",
@@ -15054,7 +15065,9 @@ class ConsignmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    original_despatch_transportation_service: OriginalDespatchTransportationService | None = field(
+    original_despatch_transportation_service: (
+        OriginalDespatchTransportationService | None
+    ) = field(
         default=None,
         metadata={
             "name": "OriginalDespatchTransportationService",
@@ -15062,7 +15075,9 @@ class ConsignmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    final_delivery_transportation_service: FinalDeliveryTransportationService | None = field(
+    final_delivery_transportation_service: (
+        FinalDeliveryTransportationService | None
+    ) = field(
         default=None,
         metadata={
             "name": "FinalDeliveryTransportationService",
@@ -15136,15 +15151,13 @@ class ConsignmentType:
             },
         )
     )
-    pre_carriage_shipment_stage: tuple[PreCarriageShipmentStage, ...] = (
-        field(
-            default_factory=tuple,
-            metadata={
-                "name": "PreCarriageShipmentStage",
-                "type": "Element",
-                "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-            },
-        )
+    pre_carriage_shipment_stage: tuple[PreCarriageShipmentStage, ...] = field(
+        default_factory=tuple,
+        metadata={
+            "name": "PreCarriageShipmentStage",
+            "type": "Element",
+            "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
+        },
     )
     on_carriage_shipment_stage: tuple[OnCarriageShipmentStage, ...] = field(
         default_factory=tuple,
@@ -15278,15 +15291,13 @@ class DeliveryType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    alternative_delivery_location: AlternativeDeliveryLocation | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "AlternativeDeliveryLocation",
-                "type": "Element",
-                "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-            },
-        )
+    alternative_delivery_location: AlternativeDeliveryLocation | None = field(
+        default=None,
+        metadata={
+            "name": "AlternativeDeliveryLocation",
+            "type": "Element",
+            "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
+        },
     )
     requested_delivery_period: RequestedDeliveryPeriod | None = field(
         default=None,
@@ -15380,16 +15391,14 @@ class DeliveryType:
 
 @dataclass(frozen=True)
 class MiscellaneousEventType:
-    miscellaneous_event_type_code: MiscellaneousEventTypeCode | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "MiscellaneousEventTypeCode",
-                "type": "Element",
-                "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-                "required": True,
-            },
-        )
+    miscellaneous_event_type_code: MiscellaneousEventTypeCode | None = field(
+        default=None,
+        metadata={
+            "name": "MiscellaneousEventTypeCode",
+            "type": "Element",
+            "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
+            "required": True,
+        },
     )
     event_line_item: tuple[EventLineItem, ...] = field(
         default_factory=tuple,
@@ -15507,7 +15516,9 @@ class TelecommunicationsServiceType:
             "required": True,
         },
     )
-    telecommunications_service_category: TelecommunicationsServiceCategory | None = field(
+    telecommunications_service_category: (
+        TelecommunicationsServiceCategory | None
+    ) = field(
         default=None,
         metadata={
             "name": "TelecommunicationsServiceCategory",
@@ -15515,7 +15526,9 @@ class TelecommunicationsServiceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    telecommunications_service_category_code: TelecommunicationsServiceCategoryCode | None = field(
+    telecommunications_service_category_code: (
+        TelecommunicationsServiceCategoryCode | None
+    ) = field(
         default=None,
         metadata={
             "name": "TelecommunicationsServiceCategoryCode",
@@ -15555,15 +15568,19 @@ class TelecommunicationsServiceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    telecommunications_service_call: TelecommunicationsServiceCall | None = field(
-        default=None,
-        metadata={
-            "name": "TelecommunicationsServiceCall",
-            "type": "Element",
-            "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        },
+    telecommunications_service_call: TelecommunicationsServiceCall | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "TelecommunicationsServiceCall",
+                "type": "Element",
+                "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
+            },
+        )
     )
-    telecommunications_service_call_code: TelecommunicationsServiceCallCode | None = field(
+    telecommunications_service_call_code: (
+        TelecommunicationsServiceCallCode | None
+    ) = field(
         default=None,
         metadata={
             "name": "TelecommunicationsServiceCallCode",
@@ -15892,13 +15909,15 @@ class ConsumptionLineType:
             "required": True,
         },
     )
-    parent_document_line_reference_id: ParentDocumentLineReferenceId | None = field(
-        default=None,
-        metadata={
-            "name": "ParentDocumentLineReferenceID",
-            "type": "Element",
-            "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        },
+    parent_document_line_reference_id: ParentDocumentLineReferenceId | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "ParentDocumentLineReferenceID",
+                "type": "Element",
+                "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
+            },
+        )
     )
     invoiced_quantity: InvoicedQuantity | None = field(
         default=None,
@@ -16145,17 +16164,17 @@ class GoodsItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    declared_customs_value_amount: DeclaredCustomsValueAmount | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "DeclaredCustomsValueAmount",
-                "type": "Element",
-                "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            },
-        )
+    declared_customs_value_amount: DeclaredCustomsValueAmount | None = field(
+        default=None,
+        metadata={
+            "name": "DeclaredCustomsValueAmount",
+            "type": "Element",
+            "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
+        },
     )
-    declared_for_carriage_value_amount: DeclaredForCarriageValueAmount | None = field(
+    declared_for_carriage_value_amount: (
+        DeclaredForCarriageValueAmount | None
+    ) = field(
         default=None,
         metadata={
             "name": "DeclaredForCarriageValueAmount",
@@ -16163,13 +16182,15 @@ class GoodsItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    declared_statistics_value_amount: DeclaredStatisticsValueAmount | None = field(
-        default=None,
-        metadata={
-            "name": "DeclaredStatisticsValueAmount",
-            "type": "Element",
-            "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        },
+    declared_statistics_value_amount: DeclaredStatisticsValueAmount | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "DeclaredStatisticsValueAmount",
+                "type": "Element",
+                "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
+            },
+        )
     )
     free_on_board_value_amount: FreeOnBoardValueAmount | None = field(
         default=None,
@@ -16283,7 +16304,9 @@ class GoodsItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    customs_import_classified_indicator: CustomsImportClassifiedIndicator | None = field(
+    customs_import_classified_indicator: (
+        CustomsImportClassifiedIndicator | None
+    ) = field(
         default=None,
         metadata={
             "name": "CustomsImportClassifiedIndicator",
@@ -16549,7 +16572,9 @@ class ReminderLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    balance_brought_forward_indicator: BalanceBroughtForwardIndicator | None = field(
+    balance_brought_forward_indicator: (
+        BalanceBroughtForwardIndicator | None
+    ) = field(
         default=None,
         metadata={
             "name": "BalanceBroughtForwardIndicator",
@@ -16815,7 +16840,9 @@ class StatementLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    balance_brought_forward_indicator: BalanceBroughtForwardIndicator | None = field(
+    balance_brought_forward_indicator: (
+        BalanceBroughtForwardIndicator | None
+    ) = field(
         default=None,
         metadata={
             "name": "BalanceBroughtForwardIndicator",
@@ -17142,15 +17169,13 @@ class PackageType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    returnable_material_indicator: ReturnableMaterialIndicator | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "ReturnableMaterialIndicator",
-                "type": "Element",
-                "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            },
-        )
+    returnable_material_indicator: ReturnableMaterialIndicator | None = field(
+        default=None,
+        metadata={
+            "name": "ReturnableMaterialIndicator",
+            "type": "Element",
+            "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
+        },
     )
     package_level_code: PackageLevelCode | None = field(
         default=None,
@@ -17192,13 +17217,15 @@ class PackageType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    containing_transport_equipment: ContainingTransportEquipment | None = field(
-        default=None,
-        metadata={
-            "name": "ContainingTransportEquipment",
-            "type": "Element",
-            "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        },
+    containing_transport_equipment: ContainingTransportEquipment | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "ContainingTransportEquipment",
+                "type": "Element",
+                "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
+            },
+        )
     )
     goods_item: tuple[GoodsItem, ...] = field(
         default_factory=tuple,
@@ -17269,13 +17296,15 @@ class PromotionalEventType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    first_shipment_availibility_date: FirstShipmentAvailibilityDate | None = field(
-        default=None,
-        metadata={
-            "name": "FirstShipmentAvailibilityDate",
-            "type": "Element",
-            "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        },
+    first_shipment_availibility_date: FirstShipmentAvailibilityDate | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "FirstShipmentAvailibilityDate",
+                "type": "Element",
+                "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
+            },
+        )
     )
     latest_proposal_acceptance_date: LatestProposalAcceptanceDate | None = (
         field(
@@ -17389,7 +17418,9 @@ class ShipmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    total_transport_handling_unit_quantity: TotalTransportHandlingUnitQuantity | None = field(
+    total_transport_handling_unit_quantity: (
+        TotalTransportHandlingUnitQuantity | None
+    ) = field(
         default=None,
         metadata={
             "name": "TotalTransportHandlingUnitQuantity",
@@ -17405,17 +17436,17 @@ class ShipmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    declared_customs_value_amount: DeclaredCustomsValueAmount | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "DeclaredCustomsValueAmount",
-                "type": "Element",
-                "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            },
-        )
+    declared_customs_value_amount: DeclaredCustomsValueAmount | None = field(
+        default=None,
+        metadata={
+            "name": "DeclaredCustomsValueAmount",
+            "type": "Element",
+            "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
+        },
     )
-    declared_for_carriage_value_amount: DeclaredForCarriageValueAmount | None = field(
+    declared_for_carriage_value_amount: (
+        DeclaredForCarriageValueAmount | None
+    ) = field(
         default=None,
         metadata={
             "name": "DeclaredForCarriageValueAmount",
@@ -17423,13 +17454,15 @@ class ShipmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    declared_statistics_value_amount: DeclaredStatisticsValueAmount | None = field(
-        default=None,
-        metadata={
-            "name": "DeclaredStatisticsValueAmount",
-            "type": "Element",
-            "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        },
+    declared_statistics_value_amount: DeclaredStatisticsValueAmount | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "DeclaredStatisticsValueAmount",
+                "type": "Element",
+                "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
+            },
+        )
     )
     free_on_board_value_amount: FreeOnBoardValueAmount | None = field(
         default=None,
@@ -17563,7 +17596,9 @@ class ShipmentType:
 
 @dataclass(frozen=True)
 class TelecommunicationsSupplyType:
-    telecommunications_supply_type: UblCommonBasicComponents21TelecommunicationsSupplyType | None = field(
+    telecommunications_supply_type: (
+        UblCommonBasicComponents21TelecommunicationsSupplyType | None
+    ) = field(
         default=None,
         metadata={
             "name": "TelecommunicationsSupplyType",
@@ -17571,7 +17606,9 @@ class TelecommunicationsSupplyType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    telecommunications_supply_type_code: TelecommunicationsSupplyTypeCode | None = field(
+    telecommunications_supply_type_code: (
+        TelecommunicationsSupplyTypeCode | None
+    ) = field(
         default=None,
         metadata={
             "name": "TelecommunicationsSupplyTypeCode",
@@ -17694,16 +17731,14 @@ class CertificateOfOriginApplicationType:
             "required": True,
         },
     )
-    certificate_type: UblCommonBasicComponents21CertificateType | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "CertificateType",
-                "type": "Element",
-                "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-                "required": True,
-            },
-        )
+    certificate_type: UblCommonBasicComponents21CertificateType | None = field(
+        default=None,
+        metadata={
+            "name": "CertificateType",
+            "type": "Element",
+            "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
+            "required": True,
+        },
     )
     application_status_code: ApplicationStatusCode | None = field(
         default=None,
@@ -18442,13 +18477,15 @@ class CatalogueLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    order_quantity_increment_numeric: OrderQuantityIncrementNumeric | None = field(
-        default=None,
-        metadata={
-            "name": "OrderQuantityIncrementNumeric",
-            "type": "Element",
-            "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        },
+    order_quantity_increment_numeric: OrderQuantityIncrementNumeric | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "OrderQuantityIncrementNumeric",
+                "type": "Element",
+                "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
+            },
+        )
     )
     minimum_order_quantity: MinimumOrderQuantity | None = field(
         default=None,
@@ -18623,7 +18660,9 @@ class CatalogueLineType:
             },
         )
     )
-    call_for_tenders_document_reference: CallForTendersDocumentReference | None = field(
+    call_for_tenders_document_reference: (
+        CallForTendersDocumentReference | None
+    ) = field(
         default=None,
         metadata={
             "name": "CallForTendersDocumentReference",
@@ -19207,7 +19246,9 @@ class ShipmentStageType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    optional_takeover_transport_event: OptionalTakeoverTransportEvent | None = field(
+    optional_takeover_transport_event: (
+        OptionalTakeoverTransportEvent | None
+    ) = field(
         default=None,
         metadata={
             "name": "OptionalTakeoverTransportEvent",
@@ -19223,15 +19264,13 @@ class ShipmentStageType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    actual_pickup_transport_event: ActualPickupTransportEvent | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "ActualPickupTransportEvent",
-                "type": "Element",
-                "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-            },
-        )
+    actual_pickup_transport_event: ActualPickupTransportEvent | None = field(
+        default=None,
+        metadata={
+            "name": "ActualPickupTransportEvent",
+            "type": "Element",
+            "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
+        },
     )
     delivery_transport_event: DeliveryTransportEvent | None = field(
         default=None,
@@ -19313,7 +19352,9 @@ class ShipmentStageType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    requested_departure_transport_event: RequestedDepartureTransportEvent | None = field(
+    requested_departure_transport_event: (
+        RequestedDepartureTransportEvent | None
+    ) = field(
         default=None,
         metadata={
             "name": "RequestedDepartureTransportEvent",
@@ -19321,7 +19362,9 @@ class ShipmentStageType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    requested_arrival_transport_event: RequestedArrivalTransportEvent | None = field(
+    requested_arrival_transport_event: (
+        RequestedArrivalTransportEvent | None
+    ) = field(
         default=None,
         metadata={
             "name": "RequestedArrivalTransportEvent",
@@ -19339,7 +19382,9 @@ class ShipmentStageType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    planned_departure_transport_event: PlannedDepartureTransportEvent | None = field(
+    planned_departure_transport_event: (
+        PlannedDepartureTransportEvent | None
+    ) = field(
         default=None,
         metadata={
             "name": "PlannedDepartureTransportEvent",
@@ -19367,13 +19412,15 @@ class ShipmentStageType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    actual_departure_transport_event: ActualDepartureTransportEvent | None = field(
-        default=None,
-        metadata={
-            "name": "ActualDepartureTransportEvent",
-            "type": "Element",
-            "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        },
+    actual_departure_transport_event: ActualDepartureTransportEvent | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "ActualDepartureTransportEvent",
+                "type": "Element",
+                "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
+            },
+        )
     )
     actual_waypoint_transport_event: ActualWaypointTransportEvent | None = (
         field(
@@ -19385,15 +19432,13 @@ class ShipmentStageType:
             },
         )
     )
-    actual_arrival_transport_event: ActualArrivalTransportEvent | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "ActualArrivalTransportEvent",
-                "type": "Element",
-                "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-            },
-        )
+    actual_arrival_transport_event: ActualArrivalTransportEvent | None = field(
+        default=None,
+        metadata={
+            "name": "ActualArrivalTransportEvent",
+            "type": "Element",
+            "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
+        },
     )
     transport_event: tuple[TransportEvent, ...] = field(
         default_factory=tuple,
@@ -19403,7 +19448,9 @@ class ShipmentStageType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    estimated_departure_transport_event: EstimatedDepartureTransportEvent | None = field(
+    estimated_departure_transport_event: (
+        EstimatedDepartureTransportEvent | None
+    ) = field(
         default=None,
         metadata={
             "name": "EstimatedDepartureTransportEvent",
@@ -19411,7 +19458,9 @@ class ShipmentStageType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    estimated_arrival_transport_event: EstimatedArrivalTransportEvent | None = field(
+    estimated_arrival_transport_event: (
+        EstimatedArrivalTransportEvent | None
+    ) = field(
         default=None,
         metadata={
             "name": "EstimatedArrivalTransportEvent",
@@ -19589,13 +19638,15 @@ class TenderLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    order_quantity_increment_numeric: OrderQuantityIncrementNumeric | None = field(
-        default=None,
-        metadata={
-            "name": "OrderQuantityIncrementNumeric",
-            "type": "Element",
-            "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        },
+    order_quantity_increment_numeric: OrderQuantityIncrementNumeric | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "OrderQuantityIncrementNumeric",
+                "type": "Element",
+                "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
+            },
+        )
     )
     minimum_order_quantity: MinimumOrderQuantity | None = field(
         default=None,
@@ -19697,7 +19748,9 @@ class TenderLineType:
             },
         )
     )
-    call_for_tenders_document_reference: CallForTendersDocumentReference | None = field(
+    call_for_tenders_document_reference: (
+        CallForTendersDocumentReference | None
+    ) = field(
         default=None,
         metadata={
             "name": "CallForTendersDocumentReference",
@@ -19725,15 +19778,13 @@ class TransportEquipmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    transport_equipment_type_code: TransportEquipmentTypeCode | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "TransportEquipmentTypeCode",
-                "type": "Element",
-                "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            },
-        )
+    transport_equipment_type_code: TransportEquipmentTypeCode | None = field(
+        default=None,
+        metadata={
+            "name": "TransportEquipmentTypeCode",
+            "type": "Element",
+            "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
+        },
     )
     provider_type_code: ProviderTypeCode | None = field(
         default=None,
@@ -19823,27 +19874,25 @@ class TransportEquipmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    animal_food_approved_indicator: AnimalFoodApprovedIndicator | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "AnimalFoodApprovedIndicator",
-                "type": "Element",
-                "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            },
-        )
+    animal_food_approved_indicator: AnimalFoodApprovedIndicator | None = field(
+        default=None,
+        metadata={
+            "name": "AnimalFoodApprovedIndicator",
+            "type": "Element",
+            "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
+        },
     )
-    human_food_approved_indicator: HumanFoodApprovedIndicator | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "HumanFoodApprovedIndicator",
-                "type": "Element",
-                "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            },
-        )
+    human_food_approved_indicator: HumanFoodApprovedIndicator | None = field(
+        default=None,
+        metadata={
+            "name": "HumanFoodApprovedIndicator",
+            "type": "Element",
+            "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
+        },
     )
-    dangerous_goods_approved_indicator: DangerousGoodsApprovedIndicator | None = field(
+    dangerous_goods_approved_indicator: (
+        DangerousGoodsApprovedIndicator | None
+    ) = field(
         default=None,
         metadata={
             "name": "DangerousGoodsApprovedIndicator",
@@ -20265,25 +20314,27 @@ class TransportScheduleType:
             "required": True,
         },
     )
-    actual_arrival_transport_event: ActualArrivalTransportEvent | None = (
+    actual_arrival_transport_event: ActualArrivalTransportEvent | None = field(
+        default=None,
+        metadata={
+            "name": "ActualArrivalTransportEvent",
+            "type": "Element",
+            "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
+        },
+    )
+    actual_departure_transport_event: ActualDepartureTransportEvent | None = (
         field(
             default=None,
             metadata={
-                "name": "ActualArrivalTransportEvent",
+                "name": "ActualDepartureTransportEvent",
                 "type": "Element",
                 "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
             },
         )
     )
-    actual_departure_transport_event: ActualDepartureTransportEvent | None = field(
-        default=None,
-        metadata={
-            "name": "ActualDepartureTransportEvent",
-            "type": "Element",
-            "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        },
-    )
-    estimated_departure_transport_event: EstimatedDepartureTransportEvent | None = field(
+    estimated_departure_transport_event: (
+        EstimatedDepartureTransportEvent | None
+    ) = field(
         default=None,
         metadata={
             "name": "EstimatedDepartureTransportEvent",
@@ -20291,7 +20342,9 @@ class TransportScheduleType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    estimated_arrival_transport_event: EstimatedArrivalTransportEvent | None = field(
+    estimated_arrival_transport_event: (
+        EstimatedArrivalTransportEvent | None
+    ) = field(
         default=None,
         metadata={
             "name": "EstimatedArrivalTransportEvent",
@@ -20299,7 +20352,9 @@ class TransportScheduleType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    planned_departure_transport_event: PlannedDepartureTransportEvent | None = field(
+    planned_departure_transport_event: (
+        PlannedDepartureTransportEvent | None
+    ) = field(
         default=None,
         metadata={
             "name": "PlannedDepartureTransportEvent",
@@ -21451,7 +21506,9 @@ class ProcurementProjectType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    estimated_overall_contract_quantity: EstimatedOverallContractQuantity | None = field(
+    estimated_overall_contract_quantity: (
+        EstimatedOverallContractQuantity | None
+    ) = field(
         default=None,
         metadata={
             "name": "EstimatedOverallContractQuantity",
@@ -21475,15 +21532,13 @@ class ProcurementProjectType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    main_commodity_classification: MainCommodityClassification | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "MainCommodityClassification",
-                "type": "Element",
-                "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-            },
-        )
+    main_commodity_classification: MainCommodityClassification | None = field(
+        default=None,
+        metadata={
+            "name": "MainCommodityClassification",
+            "type": "Element",
+            "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
+        },
     )
     additional_commodity_classification: tuple[
         AdditionalCommodityClassification, ...
@@ -21616,13 +21671,15 @@ class TransportHandlingUnitType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    transport_handling_unit_type_code: TransportHandlingUnitTypeCode | None = field(
-        default=None,
-        metadata={
-            "name": "TransportHandlingUnitTypeCode",
-            "type": "Element",
-            "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        },
+    transport_handling_unit_type_code: TransportHandlingUnitTypeCode | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "TransportHandlingUnitTypeCode",
+                "type": "Element",
+                "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
+            },
+        )
     )
     handling_code: HandlingCode | None = field(
         default=None,
@@ -21770,7 +21827,9 @@ class TransportHandlingUnitType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    floor_space_measurement_dimension: FloorSpaceMeasurementDimension | None = field(
+    floor_space_measurement_dimension: (
+        FloorSpaceMeasurementDimension | None
+    ) = field(
         default=None,
         metadata={
             "name": "FloorSpaceMeasurementDimension",
@@ -21778,7 +21837,9 @@ class TransportHandlingUnitType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    pallet_space_measurement_dimension: PalletSpaceMeasurementDimension | None = field(
+    pallet_space_measurement_dimension: (
+        PalletSpaceMeasurementDimension | None
+    ) = field(
         default=None,
         metadata={
             "name": "PalletSpaceMeasurementDimension",
@@ -21873,7 +21934,9 @@ class TransportationServiceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    transportation_service_details_uri: TransportationServiceDetailsUri | None = field(
+    transportation_service_details_uri: (
+        TransportationServiceDetailsUri | None
+    ) = field(
         default=None,
         metadata={
             "name": "TransportationServiceDetailsURI",
@@ -21993,7 +22056,9 @@ class TransportationServiceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    responsible_transport_service_provider_party: ResponsibleTransportServiceProviderParty | None = field(
+    responsible_transport_service_provider_party: (
+        ResponsibleTransportServiceProviderParty | None
+    ) = field(
         default=None,
         metadata={
             "name": "ResponsibleTransportServiceProviderParty",
@@ -22454,7 +22519,9 @@ class TransportationSegmentType:
             "required": True,
         },
     )
-    transport_execution_plan_reference_id: TransportExecutionPlanReferenceId | None = field(
+    transport_execution_plan_reference_id: (
+        TransportExecutionPlanReferenceId | None
+    ) = field(
         default=None,
         metadata={
             "name": "TransportExecutionPlanReferenceID",
@@ -22471,14 +22538,16 @@ class TransportationSegmentType:
             "required": True,
         },
     )
-    transport_service_provider_party: TransportServiceProviderParty | None = field(
-        default=None,
-        metadata={
-            "name": "TransportServiceProviderParty",
-            "type": "Element",
-            "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-            "required": True,
-        },
+    transport_service_provider_party: TransportServiceProviderParty | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "TransportServiceProviderParty",
+                "type": "Element",
+                "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
+                "required": True,
+            },
+        )
     )
     referenced_consignment: ReferencedConsignment | None = field(
         default=None,
@@ -22869,7 +22938,9 @@ class TenderResultType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    received_electronic_tender_quantity: ReceivedElectronicTenderQuantity | None = field(
+    received_electronic_tender_quantity: (
+        ReceivedElectronicTenderQuantity | None
+    ) = field(
         default=None,
         metadata={
             "name": "ReceivedElectronicTenderQuantity",
@@ -22877,13 +22948,15 @@ class TenderResultType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    received_foreign_tender_quantity: ReceivedForeignTenderQuantity | None = field(
-        default=None,
-        metadata={
-            "name": "ReceivedForeignTenderQuantity",
-            "type": "Element",
-            "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-        },
+    received_foreign_tender_quantity: ReceivedForeignTenderQuantity | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "ReceivedForeignTenderQuantity",
+                "type": "Element",
+                "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
+            },
+        )
     )
     contract: Contract | None = field(
         default=None,
@@ -22901,15 +22974,13 @@ class TenderResultType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    contract_formalization_period: ContractFormalizationPeriod | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "ContractFormalizationPeriod",
-                "type": "Element",
-                "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-            },
-        )
+    contract_formalization_period: ContractFormalizationPeriod | None = field(
+        default=None,
+        metadata={
+            "name": "ContractFormalizationPeriod",
+            "type": "Element",
+            "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
+        },
     )
     subcontract_terms: tuple[SubcontractTerms, ...] = field(
         default_factory=tuple,
@@ -23023,15 +23094,13 @@ class TenderingTermsType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    economic_operator_registry_uri: EconomicOperatorRegistryUri | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "EconomicOperatorRegistryURI",
-                "type": "Element",
-                "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            },
-        )
+    economic_operator_registry_uri: EconomicOperatorRegistryUri | None = field(
+        default=None,
+        metadata={
+            "name": "EconomicOperatorRegistryURI",
+            "type": "Element",
+            "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
+        },
     )
     required_curricula_indicator: RequiredCurriculaIndicator | None = field(
         default=None,
@@ -23057,15 +23126,13 @@ class TenderingTermsType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    latest_security_clearance_date: LatestSecurityClearanceDate | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "LatestSecurityClearanceDate",
-                "type": "Element",
-                "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            },
-        )
+    latest_security_clearance_date: LatestSecurityClearanceDate | None = field(
+        default=None,
+        metadata={
+            "name": "LatestSecurityClearanceDate",
+            "type": "Element",
+            "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
+        },
     )
     documentation_fee_amount: DocumentationFeeAmount | None = field(
         default=None,
@@ -23093,7 +23160,9 @@ class TenderingTermsType:
             },
         )
     )
-    procurement_legislation_document_reference: ProcurementLegislationDocumentReference | None = field(
+    procurement_legislation_document_reference: (
+        ProcurementLegislationDocumentReference | None
+    ) = field(
         default=None,
         metadata={
             "name": "ProcurementLegislationDocumentReference",
@@ -23101,7 +23170,9 @@ class TenderingTermsType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    fiscal_legislation_document_reference: FiscalLegislationDocumentReference | None = field(
+    fiscal_legislation_document_reference: (
+        FiscalLegislationDocumentReference | None
+    ) = field(
         default=None,
         metadata={
             "name": "FiscalLegislationDocumentReference",
@@ -23109,7 +23180,9 @@ class TenderingTermsType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    environmental_legislation_document_reference: EnvironmentalLegislationDocumentReference | None = field(
+    environmental_legislation_document_reference: (
+        EnvironmentalLegislationDocumentReference | None
+    ) = field(
         default=None,
         metadata={
             "name": "EnvironmentalLegislationDocumentReference",
@@ -23117,7 +23190,9 @@ class TenderingTermsType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    employment_legislation_document_reference: EmploymentLegislationDocumentReference | None = field(
+    employment_legislation_document_reference: (
+        EmploymentLegislationDocumentReference | None
+    ) = field(
         default=None,
         metadata={
             "name": "EmploymentLegislationDocumentReference",
@@ -23135,7 +23210,9 @@ class TenderingTermsType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    call_for_tenders_document_reference: CallForTendersDocumentReference | None = field(
+    call_for_tenders_document_reference: (
+        CallForTendersDocumentReference | None
+    ) = field(
         default=None,
         metadata={
             "name": "CallForTendersDocumentReference",
@@ -23283,7 +23360,9 @@ class TenderingTermsType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    replaced_notice_document_reference: ReplacedNoticeDocumentReference | None = field(
+    replaced_notice_document_reference: (
+        ReplacedNoticeDocumentReference | None
+    ) = field(
         default=None,
         metadata={
             "name": "ReplacedNoticeDocumentReference",

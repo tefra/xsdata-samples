@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -105,15 +104,13 @@ class LocalSupervision:
             "required": True,
         },
     )
-    short_name_fragments: LocalSupervision.ShortNameFragments | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "SHORT-NAME-FRAGMENTS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    short_name_fragments: LocalSupervision.ShortNameFragments | None = field(
+        default=None,
+        metadata={
+            "name": "SHORT-NAME-FRAGMENTS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     long_name: MultilanguageLongName | None = field(
         default=None,
@@ -171,13 +168,15 @@ class LocalSupervision:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    deadline_supervisions: LocalSupervision.DeadlineSupervisions | None = field(
-        default=None,
-        metadata={
-            "name": "DEADLINE-SUPERVISIONS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    deadline_supervisions: LocalSupervision.DeadlineSupervisions | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "DEADLINE-SUPERVISIONS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     failed_supervision_cycles_tolerance: PositiveInteger | None = field(
         default=None,
@@ -187,15 +186,13 @@ class LocalSupervision:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    logical_supervisions: LocalSupervision.LogicalSupervisions | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "LOGICAL-SUPERVISIONS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    logical_supervisions: LocalSupervision.LogicalSupervisions | None = field(
+        default=None,
+        metadata={
+            "name": "LOGICAL-SUPERVISIONS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     transitions: LocalSupervision.Transitions | None = field(
         default=None,

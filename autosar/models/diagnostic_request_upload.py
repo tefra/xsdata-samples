@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -112,13 +111,15 @@ class DiagnosticRequestUpload:
             "required": True,
         },
     )
-    short_name_fragments: DiagnosticRequestUpload.ShortNameFragments | None = field(
-        default=None,
-        metadata={
-            "name": "SHORT-NAME-FRAGMENTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    short_name_fragments: DiagnosticRequestUpload.ShortNameFragments | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "SHORT-NAME-FRAGMENTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     long_name: MultilanguageLongName | None = field(
         default=None,
@@ -176,7 +177,9 @@ class DiagnosticRequestUpload:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    access_permission_ref: DiagnosticRequestUpload.AccessPermissionRef | None = field(
+    access_permission_ref: (
+        DiagnosticRequestUpload.AccessPermissionRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "ACCESS-PERMISSION-REF",
@@ -184,17 +187,17 @@ class DiagnosticRequestUpload:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    memory_range_refs: DiagnosticRequestUpload.MemoryRangeRefs | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "MEMORY-RANGE-REFS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    memory_range_refs: DiagnosticRequestUpload.MemoryRangeRefs | None = field(
+        default=None,
+        metadata={
+            "name": "MEMORY-RANGE-REFS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
-    request_upload_class_ref: DiagnosticRequestUpload.RequestUploadClassRef | None = field(
+    request_upload_class_ref: (
+        DiagnosticRequestUpload.RequestUploadClassRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "REQUEST-UPLOAD-CLASS-REF",

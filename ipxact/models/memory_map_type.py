@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from ipxact.models.address_block import AddressBlock
 from ipxact.models.address_unit_bits import AddressUnitBits
@@ -75,13 +74,15 @@ class MemoryMapType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    memory_map_definition_ref: MemoryMapType.MemoryMapDefinitionRef | None = field(
-        default=None,
-        metadata={
-            "name": "memoryMapDefinitionRef",
-            "type": "Element",
-            "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
-        },
+    memory_map_definition_ref: MemoryMapType.MemoryMapDefinitionRef | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "memoryMapDefinitionRef",
+                "type": "Element",
+                "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
+            },
+        )
     )
     address_block: list[AddressBlock] = field(
         default_factory=list,

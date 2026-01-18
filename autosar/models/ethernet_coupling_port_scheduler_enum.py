@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .ethernet_coupling_port_scheduler_enum_simple import (
     EthernetCouplingPortSchedulerEnumSimple,

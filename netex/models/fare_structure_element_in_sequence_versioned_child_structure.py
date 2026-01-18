@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from .fare_element_in_sequence_versioned_child_structure import (
     FareElementInSequenceVersionedChildStructure,
@@ -38,7 +37,12 @@ class FareStructureElementInSequenceVersionedChildStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    validity_parameter_assignments_or_generic_parameter_assignment_or_generic_parameter_assignment_in_context: GenericParameterAssignmentsRelStructure | GenericParameterAssignment | GenericParameterAssignmentInContext | None = field(
+    validity_parameter_assignments_or_generic_parameter_assignment_or_generic_parameter_assignment_in_context: (
+        GenericParameterAssignmentsRelStructure
+        | GenericParameterAssignment
+        | GenericParameterAssignmentInContext
+        | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",

@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -125,15 +124,13 @@ class SwcToEcuMapping:
             "required": True,
         },
     )
-    short_name_fragments: SwcToEcuMapping.ShortNameFragments | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "SHORT-NAME-FRAGMENTS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    short_name_fragments: SwcToEcuMapping.ShortNameFragments | None = field(
+        default=None,
+        metadata={
+            "name": "SHORT-NAME-FRAGMENTS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     long_name: MultilanguageLongName | None = field(
         default=None,
@@ -191,7 +188,9 @@ class SwcToEcuMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    controlled_hw_element_ref: SwcToEcuMapping.ControlledHwElementRef | None = field(
+    controlled_hw_element_ref: (
+        SwcToEcuMapping.ControlledHwElementRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "CONTROLLED-HW-ELEMENT-REF",

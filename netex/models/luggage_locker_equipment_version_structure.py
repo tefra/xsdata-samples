@@ -1,6 +1,5 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
-from typing import Optional
 
 from .locker_type_enumeration import LockerTypeEnumeration
 from .locking_type_enumeration import LockingTypeEnumeration

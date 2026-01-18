@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from ipxact.models.description import Description
 from ipxact.models.display_name import DisplayName
@@ -139,14 +138,12 @@ class ExecutableImage:
         :ivar linker_command_file:
         """
 
-        file_builder: list[ExecutableImage.LanguageTools.FileBuilder] = (
-            field(
-                default_factory=list,
-                metadata={
-                    "name": "fileBuilder",
-                    "type": "Element",
-                },
-            )
+        file_builder: list[ExecutableImage.LanguageTools.FileBuilder] = field(
+            default_factory=list,
+            metadata={
+                "name": "fileBuilder",
+                "type": "Element",
+            },
         )
         linker: StringExpression | None = field(
             default=None,

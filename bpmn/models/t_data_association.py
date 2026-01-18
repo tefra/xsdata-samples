@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .assignment import Assignment
 from .t_base_element import TBaseElement

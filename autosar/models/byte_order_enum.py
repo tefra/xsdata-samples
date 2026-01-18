@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .byte_order_enum_simple import ByteOrderEnumSimple
 

@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import ForwardRef, Optional, Union
+from typing import ForwardRef
 
 from sdmx_ml.models.empty_type import EmptyType
 from sdmx_ml.models.wild_card_value_type import WildCardValueType
@@ -21,7 +21,10 @@ class VersionableObjectEventType:
     """
 
     choice: tuple[
-        EmptyType | VersionableObjectEventType.Urn | VersionableObjectEventType.Id | VersionableObjectEventType.Version,
+        EmptyType
+        | VersionableObjectEventType.Urn
+        | VersionableObjectEventType.Id
+        | VersionableObjectEventType.Version,
         ...,
     ] = field(
         default_factory=tuple,

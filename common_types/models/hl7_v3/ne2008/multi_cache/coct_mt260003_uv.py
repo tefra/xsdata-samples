@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from ..core.datatypes_base import (
     Ce,
@@ -285,7 +284,23 @@ class CoctMt260003UvPharmacy:
             "type": "Attribute",
         },
     )
-    class_code: RoleClassMutualRelationship | RoleClassPassive | str | RoleClassOntological | RoleClassPartitive | RoleClassRootValue | XAccommodationRequestorRole | XDocumentEntrySubject | XDocumentSubject | XInformationRecipientRole | XRoleClassAccommodationRequestor | XRoleClassCoverage | XRoleClassCoverageInvoice | XRoleClassCredentialedEntity | XRoleClassPayeePolicyRelationship = field(
+    class_code: (
+        RoleClassMutualRelationship
+        | RoleClassPassive
+        | str
+        | RoleClassOntological
+        | RoleClassPartitive
+        | RoleClassRootValue
+        | XAccommodationRequestorRole
+        | XDocumentEntrySubject
+        | XDocumentSubject
+        | XInformationRecipientRole
+        | XRoleClassAccommodationRequestor
+        | XRoleClassCoverage
+        | XRoleClassCoverageInvoice
+        | XRoleClassCredentialedEntity
+        | XRoleClassPayeePolicyRelationship
+    ) = field(
         init=False,
         default=RoleClassPassive.DSDLOC,
         metadata={
@@ -453,7 +468,9 @@ class CoctMt260003UvDefinition:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    detected_medication_issue_definition: CoctMt260003UvDetectedMedicationIssueDefinition | None = field(
+    detected_medication_issue_definition: (
+        CoctMt260003UvDetectedMedicationIssueDefinition | None
+    ) = field(
         default=None,
         metadata={
             "name": "detectedMedicationIssueDefinition",
@@ -469,7 +486,27 @@ class CoctMt260003UvDefinition:
             "type": "Attribute",
         },
     )
-    type_code: ActRelationshipConditional | ActRelationshipHasComponent | ActRelationshipOutcome | ActRelationshipCostTracking | ActRelationshipPosting | str | ActRelationshipHasSupport | ActRelationshipTemporallyPertains | ActRelationshipPertainsValue | ActRelationshipSequel | XActRelationshipDocument | XActRelationshipEntry | XActRelationshipEntryRelationship | XActRelationshipExternalReference | XActRelationshipPatientTransport | XActRelationshipPertinentInfo | XActRelationshipRelatedAuthorizations | XActReplaceOrRevise | XSuccReplPrev = field(
+    type_code: (
+        ActRelationshipConditional
+        | ActRelationshipHasComponent
+        | ActRelationshipOutcome
+        | ActRelationshipCostTracking
+        | ActRelationshipPosting
+        | str
+        | ActRelationshipHasSupport
+        | ActRelationshipTemporallyPertains
+        | ActRelationshipPertainsValue
+        | ActRelationshipSequel
+        | XActRelationshipDocument
+        | XActRelationshipEntry
+        | XActRelationshipEntryRelationship
+        | XActRelationshipExternalReference
+        | XActRelationshipPatientTransport
+        | XActRelationshipPertinentInfo
+        | XActRelationshipRelatedAuthorizations
+        | XActReplaceOrRevise
+        | XSuccReplPrev
+    ) = field(
         default=ActRelationshipSequel.INST,
         metadata={
             "name": "typeCode",
@@ -562,7 +599,9 @@ class CoctMt260003UvManufacturedProduct:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    manufactured_material_kind: CoctMt260003UvManufacturedMaterialKind | None = field(
+    manufactured_material_kind: (
+        CoctMt260003UvManufacturedMaterialKind | None
+    ) = field(
         default=None,
         metadata={
             "name": "manufacturedMaterialKind",
@@ -633,7 +672,27 @@ class CoctMt260003UvSubject:
             "type": "Attribute",
         },
     )
-    type_code: ActRelationshipConditional | ActRelationshipHasComponent | ActRelationshipOutcome | ActRelationshipCostTracking | ActRelationshipPosting | str | ActRelationshipHasSupport | ActRelationshipTemporallyPertains | ActRelationshipPertainsValue | ActRelationshipSequel | XActRelationshipDocument | XActRelationshipEntry | XActRelationshipEntryRelationship | XActRelationshipExternalReference | XActRelationshipPatientTransport | XActRelationshipPertinentInfo | XActRelationshipRelatedAuthorizations | XActReplaceOrRevise | XSuccReplPrev = field(
+    type_code: (
+        ActRelationshipConditional
+        | ActRelationshipHasComponent
+        | ActRelationshipOutcome
+        | ActRelationshipCostTracking
+        | ActRelationshipPosting
+        | str
+        | ActRelationshipHasSupport
+        | ActRelationshipTemporallyPertains
+        | ActRelationshipPertainsValue
+        | ActRelationshipSequel
+        | XActRelationshipDocument
+        | XActRelationshipEntry
+        | XActRelationshipEntryRelationship
+        | XActRelationshipExternalReference
+        | XActRelationshipPatientTransport
+        | XActRelationshipPertinentInfo
+        | XActRelationshipRelatedAuthorizations
+        | XActReplaceOrRevise
+        | XSuccReplPrev
+    ) = field(
         init=False,
         default=ActRelationshipPertainsValue.SUBJ,
         metadata={
@@ -1030,7 +1089,27 @@ class CoctMt260003UvSubject2:
             "type": "Attribute",
         },
     )
-    type_code: ActRelationshipConditional | ActRelationshipHasComponent | ActRelationshipOutcome | ActRelationshipCostTracking | ActRelationshipPosting | str | ActRelationshipHasSupport | ActRelationshipTemporallyPertains | ActRelationshipPertainsValue | ActRelationshipSequel | XActRelationshipDocument | XActRelationshipEntry | XActRelationshipEntryRelationship | XActRelationshipExternalReference | XActRelationshipPatientTransport | XActRelationshipPertinentInfo | XActRelationshipRelatedAuthorizations | XActReplaceOrRevise | XSuccReplPrev = field(
+    type_code: (
+        ActRelationshipConditional
+        | ActRelationshipHasComponent
+        | ActRelationshipOutcome
+        | ActRelationshipCostTracking
+        | ActRelationshipPosting
+        | str
+        | ActRelationshipHasSupport
+        | ActRelationshipTemporallyPertains
+        | ActRelationshipPertainsValue
+        | ActRelationshipSequel
+        | XActRelationshipDocument
+        | XActRelationshipEntry
+        | XActRelationshipEntryRelationship
+        | XActRelationshipExternalReference
+        | XActRelationshipPatientTransport
+        | XActRelationshipPertinentInfo
+        | XActRelationshipRelatedAuthorizations
+        | XActReplaceOrRevise
+        | XSuccReplPrev
+    ) = field(
         init=False,
         default=ActRelationshipPertainsValue.SUBJ,
         metadata={

@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from xcbl.models.price_check_result import (
     ErrorInfo,
@@ -598,7 +597,9 @@ class OrderStatusResultItem:
             "type": "Element",
         },
     )
-    order_status_item_result_transport: OrderStatusItemResultTransport | None = field(
+    order_status_item_result_transport: (
+        OrderStatusItemResultTransport | None
+    ) = field(
         default=None,
         metadata={
             "name": "OrderStatusItemResultTransport",

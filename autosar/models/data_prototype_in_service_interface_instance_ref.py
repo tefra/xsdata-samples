@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .application_composite_element_data_prototype_subtypes_enum import (
     ApplicationCompositeElementDataPrototypeSubtypesEnum,
@@ -36,7 +35,9 @@ class DataPrototypeInServiceInterfaceInstanceRef:
     class Meta:
         name = "DATA-PROTOTYPE-IN-SERVICE-INTERFACE-INSTANCE-REF"
 
-    root_data_prototype_ref: DataPrototypeInServiceInterfaceInstanceRef.RootDataPrototypeRef | None = field(
+    root_data_prototype_ref: (
+        DataPrototypeInServiceInterfaceInstanceRef.RootDataPrototypeRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "ROOT-DATA-PROTOTYPE-REF",
@@ -54,7 +55,10 @@ class DataPrototypeInServiceInterfaceInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    target_data_prototype_ref: DataPrototypeInServiceInterfaceInstanceRef.TargetDataPrototypeRef | None = field(
+    target_data_prototype_ref: (
+        DataPrototypeInServiceInterfaceInstanceRef.TargetDataPrototypeRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "TARGET-DATA-PROTOTYPE-REF",
@@ -91,13 +95,15 @@ class DataPrototypeInServiceInterfaceInstanceRef:
 
     @dataclass
     class ContextDataPrototypeRef(Ref):
-        dest: ApplicationCompositeElementDataPrototypeSubtypesEnum | None = field(
-            default=None,
-            metadata={
-                "name": "DEST",
-                "type": "Attribute",
-                "required": True,
-            },
+        dest: ApplicationCompositeElementDataPrototypeSubtypesEnum | None = (
+            field(
+                default=None,
+                metadata={
+                    "name": "DEST",
+                    "type": "Attribute",
+                    "required": True,
+                },
+            )
         )
 
     @dataclass

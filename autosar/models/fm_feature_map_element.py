@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -108,13 +107,15 @@ class FmFeatureMapElement:
             "required": True,
         },
     )
-    short_name_fragments: FmFeatureMapElement.ShortNameFragments | None = field(
-        default=None,
-        metadata={
-            "name": "SHORT-NAME-FRAGMENTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    short_name_fragments: FmFeatureMapElement.ShortNameFragments | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "SHORT-NAME-FRAGMENTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     long_name: MultilanguageLongName | None = field(
         default=None,
@@ -180,7 +181,9 @@ class FmFeatureMapElement:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    post_build_variant_criterion_value_set_refs: FmFeatureMapElement.PostBuildVariantCriterionValueSetRefs | None = field(
+    post_build_variant_criterion_value_set_refs: (
+        FmFeatureMapElement.PostBuildVariantCriterionValueSetRefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "POST-BUILD-VARIANT-CRITERION-VALUE-SET-REFS",
@@ -188,7 +191,9 @@ class FmFeatureMapElement:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_systemconstant_value_set_refs: FmFeatureMapElement.SwSystemconstantValueSetRefs | None = field(
+    sw_systemconstant_value_set_refs: (
+        FmFeatureMapElement.SwSystemconstantValueSetRefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "SW-SYSTEMCONSTANT-VALUE-SET-REFS",
@@ -278,15 +283,13 @@ class FmFeatureMapElement:
 
         @dataclass
         class PostBuildVariantCriterionValueSetRef(Ref):
-            dest: PostBuildVariantCriterionValueSetSubtypesEnum | None = (
-                field(
-                    default=None,
-                    metadata={
-                        "name": "DEST",
-                        "type": "Attribute",
-                        "required": True,
-                    },
-                )
+            dest: PostBuildVariantCriterionValueSetSubtypesEnum | None = field(
+                default=None,
+                metadata={
+                    "name": "DEST",
+                    "type": "Attribute",
+                    "required": True,
+                },
             )
 
     @dataclass

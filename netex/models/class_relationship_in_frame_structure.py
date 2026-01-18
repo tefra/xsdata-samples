@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 from xml.etree.ElementTree import QName
 
 from .containment_enumeration import ContainmentEnumeration

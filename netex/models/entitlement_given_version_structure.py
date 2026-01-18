@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from xsdata.models.datatype import XmlDuration
 
@@ -25,7 +24,19 @@ class EntitlementGivenVersionStructure(UsageParameterVersionStructure):
     class Meta:
         name = "EntitlementGiven_VersionStructure"
 
-    choice: EntitlementProductRef | SupplementProductRef | PreassignedFareProductRef | AmountOfPriceUnitProductRef | UsageDiscountRightRef | ThirdPartyProductRef | CappedDiscountRightRef | SaleDiscountRightRef | FareProductRef | ServiceAccessRightRef | None = field(
+    choice: (
+        EntitlementProductRef
+        | SupplementProductRef
+        | PreassignedFareProductRef
+        | AmountOfPriceUnitProductRef
+        | UsageDiscountRightRef
+        | ThirdPartyProductRef
+        | CappedDiscountRightRef
+        | SaleDiscountRightRef
+        | FareProductRef
+        | ServiceAccessRightRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",

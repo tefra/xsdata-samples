@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from ubl.models.common.ubl_common_aggregate_components_2_1 import (
     ReceiverParty,
@@ -134,7 +133,9 @@ class GoodsItemItineraryType:
             "required": True,
         },
     )
-    transport_execution_plan_reference_id: TransportExecutionPlanReferenceId | None = field(
+    transport_execution_plan_reference_id: (
+        TransportExecutionPlanReferenceId | None
+    ) = field(
         default=None,
         metadata={
             "name": "TransportExecutionPlanReferenceID",

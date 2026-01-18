@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .infrastructure_link_restriction_version_structure import (
     InfrastructureLinkRestrictionVersionStructure,

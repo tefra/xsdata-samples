@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from .log_entry_version_structure import LogEntryVersionStructure
 from .monitored_vehicle_sharing_parking_bay_ref import (
@@ -19,7 +18,13 @@ class ParkingBayConditionVersionStructure(LogEntryVersionStructure):
     class Meta:
         name = "ParkingBayCondition_VersionStructure"
 
-    parking_bay_ref_or_vehicle_sharing_parking_bay_ref: VehiclePoolingParkingBayRef | MonitoredVehicleSharingParkingBayRef | VehicleSharingParkingBayRef | ParkingBayRef | None = field(
+    parking_bay_ref_or_vehicle_sharing_parking_bay_ref: (
+        VehiclePoolingParkingBayRef
+        | MonitoredVehicleSharingParkingBayRef
+        | VehicleSharingParkingBayRef
+        | ParkingBayRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",

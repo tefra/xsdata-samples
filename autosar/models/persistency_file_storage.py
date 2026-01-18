@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -118,13 +117,15 @@ class PersistencyFileStorage:
             "required": True,
         },
     )
-    short_name_fragments: PersistencyFileStorage.ShortNameFragments | None = field(
-        default=None,
-        metadata={
-            "name": "SHORT-NAME-FRAGMENTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    short_name_fragments: PersistencyFileStorage.ShortNameFragments | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "SHORT-NAME-FRAGMENTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     long_name: MultilanguageLongName | None = field(
         default=None,
@@ -198,13 +199,15 @@ class PersistencyFileStorage:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    redundancy_handlings: PersistencyFileStorage.RedundancyHandlings | None = field(
-        default=None,
-        metadata={
-            "name": "REDUNDANCY-HANDLINGS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    redundancy_handlings: PersistencyFileStorage.RedundancyHandlings | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "REDUNDANCY-HANDLINGS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     update_strategy: PersistencyCollectionLevelUpdateStrategyEnum | None = (
         field(

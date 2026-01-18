@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -125,7 +124,9 @@ class DiagnosticResponseOnEvent:
             "required": True,
         },
     )
-    short_name_fragments: DiagnosticResponseOnEvent.ShortNameFragments | None = field(
+    short_name_fragments: (
+        DiagnosticResponseOnEvent.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -189,7 +190,9 @@ class DiagnosticResponseOnEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    access_permission_ref: DiagnosticResponseOnEvent.AccessPermissionRef | None = field(
+    access_permission_ref: (
+        DiagnosticResponseOnEvent.AccessPermissionRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "ACCESS-PERMISSION-REF",
@@ -223,7 +226,9 @@ class DiagnosticResponseOnEvent:
             },
         )
     )
-    response_on_event_class_ref: DiagnosticResponseOnEvent.ResponseOnEventClassRef | None = field(
+    response_on_event_class_ref: (
+        DiagnosticResponseOnEvent.ResponseOnEventClassRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "RESPONSE-ON-EVENT-CLASS-REF",

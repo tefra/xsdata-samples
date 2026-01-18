@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from crossref.models.org.crossref.access_indicators.program import Program
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.component_language import (

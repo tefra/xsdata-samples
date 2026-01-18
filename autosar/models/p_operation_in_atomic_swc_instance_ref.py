@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .abstract_provided_port_prototype_subtypes_enum import (
     AbstractProvidedPortPrototypeSubtypesEnum,
@@ -34,7 +33,9 @@ class POperationInAtomicSwcInstanceRef:
     class Meta:
         name = "P-OPERATION-IN-ATOMIC-SWC-INSTANCE-REF"
 
-    context_p_port_ref: POperationInAtomicSwcInstanceRef.ContextPPortRef | None = field(
+    context_p_port_ref: (
+        POperationInAtomicSwcInstanceRef.ContextPPortRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "CONTEXT-P-PORT-REF",
@@ -42,7 +43,9 @@ class POperationInAtomicSwcInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    target_provided_operation_ref: POperationInAtomicSwcInstanceRef.TargetProvidedOperationRef | None = field(
+    target_provided_operation_ref: (
+        POperationInAtomicSwcInstanceRef.TargetProvidedOperationRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "TARGET-PROVIDED-OPERATION-REF",

@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.tpeg_loc03_ilc_point_descriptor_subtype_enum import (
@@ -24,7 +23,9 @@ class TpegIlcPointDescriptor(TpegPointDescriptor):
     :ivar tpeg_ilc_point_descriptor_extension:
     """
 
-    tpeg_ilc_point_descriptor_type: TpegLoc03IlcPointDescriptorSubtypeEnum | None = field(
+    tpeg_ilc_point_descriptor_type: (
+        TpegLoc03IlcPointDescriptorSubtypeEnum | None
+    ) = field(
         default=None,
         metadata={
             "name": "tpegIlcPointDescriptorType",

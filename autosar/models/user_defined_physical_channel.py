@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -116,7 +115,9 @@ class UserDefinedPhysicalChannel:
             "required": True,
         },
     )
-    short_name_fragments: UserDefinedPhysicalChannel.ShortNameFragments | None = field(
+    short_name_fragments: (
+        UserDefinedPhysicalChannel.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -172,25 +173,27 @@ class UserDefinedPhysicalChannel:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    comm_connectors: UserDefinedPhysicalChannel.CommConnectors | None = (
+    comm_connectors: UserDefinedPhysicalChannel.CommConnectors | None = field(
+        default=None,
+        metadata={
+            "name": "COMM-CONNECTORS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
+    )
+    frame_triggerings: UserDefinedPhysicalChannel.FrameTriggerings | None = (
         field(
             default=None,
             metadata={
-                "name": "COMM-CONNECTORS",
+                "name": "FRAME-TRIGGERINGS",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
     )
-    frame_triggerings: UserDefinedPhysicalChannel.FrameTriggerings | None = field(
-        default=None,
-        metadata={
-            "name": "FRAME-TRIGGERINGS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
-    )
-    i_signal_triggerings: UserDefinedPhysicalChannel.ISignalTriggerings | None = field(
+    i_signal_triggerings: (
+        UserDefinedPhysicalChannel.ISignalTriggerings | None
+    ) = field(
         default=None,
         metadata={
             "name": "I-SIGNAL-TRIGGERINGS",
@@ -198,7 +201,9 @@ class UserDefinedPhysicalChannel:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    managed_physical_channel_refs: UserDefinedPhysicalChannel.ManagedPhysicalChannelRefs | None = field(
+    managed_physical_channel_refs: (
+        UserDefinedPhysicalChannel.ManagedPhysicalChannelRefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "MANAGED-PHYSICAL-CHANNEL-REFS",
@@ -206,15 +211,13 @@ class UserDefinedPhysicalChannel:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    pdu_triggerings: UserDefinedPhysicalChannel.PduTriggerings | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "PDU-TRIGGERINGS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    pdu_triggerings: UserDefinedPhysicalChannel.PduTriggerings | None = field(
+        default=None,
+        metadata={
+            "name": "PDU-TRIGGERINGS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     variation_point: VariationPoint | None = field(
         default=None,

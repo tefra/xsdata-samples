@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from ipxact.models.access_policies import AccessPolicies
 from ipxact.models.bank_alignment_type import BankAlignmentType
@@ -82,15 +81,13 @@ class AddressBankDefinitionType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    access_handles: AddressBankDefinitionType.AccessHandles | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "accessHandles",
-                "type": "Element",
-                "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
-            },
-        )
+    access_handles: AddressBankDefinitionType.AccessHandles | None = field(
+        default=None,
+        metadata={
+            "name": "accessHandles",
+            "type": "Element",
+            "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
+        },
     )
     base_address: BaseAddress | None = field(
         default=None,
@@ -101,13 +98,15 @@ class AddressBankDefinitionType:
             "required": True,
         },
     )
-    bank_definition_ref: AddressBankDefinitionType.BankDefinitionRef | None = field(
-        default=None,
-        metadata={
-            "name": "bankDefinitionRef",
-            "type": "Element",
-            "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
-        },
+    bank_definition_ref: AddressBankDefinitionType.BankDefinitionRef | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "bankDefinitionRef",
+                "type": "Element",
+                "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
+            },
+        )
     )
     address_block: list[BankedBlockType] = field(
         default_factory=list,

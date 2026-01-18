@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .fare_structure_type_enumeration import FareStructureTypeEnumeration
 from .operator_restrictions_enumeration import OperatorRestrictionsEnumeration
@@ -108,15 +107,13 @@ class ConditionSummaryStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    has_operator_restrictions: OperatorRestrictionsEnumeration | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "HasOperatorRestrictions",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            },
-        )
+    has_operator_restrictions: OperatorRestrictionsEnumeration | None = field(
+        default=None,
+        metadata={
+            "name": "HasOperatorRestrictions",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        },
     )
     has_travel_time_restrictions: bool | None = field(
         default=None,

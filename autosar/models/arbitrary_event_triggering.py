@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -121,7 +120,9 @@ class ArbitraryEventTriggering:
             "required": True,
         },
     )
-    short_name_fragments: ArbitraryEventTriggering.ShortNameFragments | None = field(
+    short_name_fragments: (
+        ArbitraryEventTriggering.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -185,7 +186,9 @@ class ArbitraryEventTriggering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    timing_condition_ref: ArbitraryEventTriggering.TimingConditionRef | None = field(
+    timing_condition_ref: (
+        ArbitraryEventTriggering.TimingConditionRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "TIMING-CONDITION-REF",
@@ -209,23 +212,29 @@ class ArbitraryEventTriggering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    minimum_distances: ArbitraryEventTriggering.MinimumDistances | None = field(
-        default=None,
-        metadata={
-            "name": "MINIMUM-DISTANCES",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    minimum_distances: ArbitraryEventTriggering.MinimumDistances | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "MINIMUM-DISTANCES",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
-    maximum_distances: ArbitraryEventTriggering.MaximumDistances | None = field(
-        default=None,
-        metadata={
-            "name": "MAXIMUM-DISTANCES",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    maximum_distances: ArbitraryEventTriggering.MaximumDistances | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "MAXIMUM-DISTANCES",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
-    confidence_intervals: ArbitraryEventTriggering.ConfidenceIntervals | None = field(
+    confidence_intervals: (
+        ArbitraryEventTriggering.ConfidenceIntervals | None
+    ) = field(
         default=None,
         metadata={
             "name": "CONFIDENCE-INTERVALS",

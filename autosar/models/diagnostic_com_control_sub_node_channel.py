@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .communication_cluster_subtypes_enum import (
     CommunicationClusterSubtypesEnum,
@@ -40,7 +39,9 @@ class DiagnosticComControlSubNodeChannel:
     class Meta:
         name = "DIAGNOSTIC-COM-CONTROL-SUB-NODE-CHANNEL"
 
-    sub_node_channel_ref: DiagnosticComControlSubNodeChannel.SubNodeChannelRef | None = field(
+    sub_node_channel_ref: (
+        DiagnosticComControlSubNodeChannel.SubNodeChannelRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "SUB-NODE-CHANNEL-REF",

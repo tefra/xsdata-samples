@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -104,7 +103,9 @@ class CpSoftwareClusterResourcePool:
             "required": True,
         },
     )
-    short_name_fragments: CpSoftwareClusterResourcePool.ShortNameFragments | None = field(
+    short_name_fragments: (
+        CpSoftwareClusterResourcePool.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -168,15 +169,13 @@ class CpSoftwareClusterResourcePool:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ecu_scope_refs: CpSoftwareClusterResourcePool.EcuScopeRefs | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "ECU-SCOPE-REFS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    ecu_scope_refs: CpSoftwareClusterResourcePool.EcuScopeRefs | None = field(
+        default=None,
+        metadata={
+            "name": "ECU-SCOPE-REFS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     resources: CpSoftwareClusterResourcePool.Resources | None = field(
         default=None,

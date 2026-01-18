@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .service_version_acceptance_kind_enum_simple import (
     ServiceVersionAcceptanceKindEnumSimple,

@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -158,7 +157,9 @@ class DiagnosticTroubleCodeProps:
             "required": True,
         },
     )
-    short_name_fragments: DiagnosticTroubleCodeProps.ShortNameFragments | None = field(
+    short_name_fragments: (
+        DiagnosticTroubleCodeProps.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -238,7 +239,9 @@ class DiagnosticTroubleCodeProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    environment_capture_to_reporting: EnvironmentCaptureToReportingEnum | None = field(
+    environment_capture_to_reporting: (
+        EnvironmentCaptureToReportingEnum | None
+    ) = field(
         default=None,
         metadata={
             "name": "ENVIRONMENT-CAPTURE-TO-REPORTING",
@@ -246,7 +249,9 @@ class DiagnosticTroubleCodeProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    extended_data_records: DiagnosticTroubleCodeProps.ExtendedDataRecords | None = field(
+    extended_data_records: (
+        DiagnosticTroubleCodeProps.ExtendedDataRecords | None
+    ) = field(
         default=None,
         metadata={
             "name": "EXTENDED-DATA-RECORDS",
@@ -270,7 +275,9 @@ class DiagnosticTroubleCodeProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    freeze_frame_content_ref: DiagnosticTroubleCodeProps.FreezeFrameContentRef | None = field(
+    freeze_frame_content_ref: (
+        DiagnosticTroubleCodeProps.FreezeFrameContentRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "FREEZE-FRAME-CONTENT-REF",
@@ -278,7 +285,9 @@ class DiagnosticTroubleCodeProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    freeze_frame_content_wwh_obd_ref: DiagnosticTroubleCodeProps.FreezeFrameContentWwhObdRef | None = field(
+    freeze_frame_content_wwh_obd_ref: (
+        DiagnosticTroubleCodeProps.FreezeFrameContentWwhObdRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "FREEZE-FRAME-CONTENT-WWH-OBD-REF",
@@ -294,7 +303,9 @@ class DiagnosticTroubleCodeProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    legislated_freeze_frame_content_wwh_obds: DiagnosticTroubleCodeProps.LegislatedFreezeFrameContentWwhObds | None = field(
+    legislated_freeze_frame_content_wwh_obds: (
+        DiagnosticTroubleCodeProps.LegislatedFreezeFrameContentWwhObds | None
+    ) = field(
         default=None,
         metadata={
             "name": "LEGISLATED-FREEZE-FRAME-CONTENT-WWH-OBDS",
@@ -310,7 +321,9 @@ class DiagnosticTroubleCodeProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    memory_destination_refs: DiagnosticTroubleCodeProps.MemoryDestinationRefs | None = field(
+    memory_destination_refs: (
+        DiagnosticTroubleCodeProps.MemoryDestinationRefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "MEMORY-DESTINATION-REFS",
@@ -334,7 +347,9 @@ class DiagnosticTroubleCodeProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    snapshot_record_contents: DiagnosticTroubleCodeProps.SnapshotRecordContents | None = field(
+    snapshot_record_contents: (
+        DiagnosticTroubleCodeProps.SnapshotRecordContents | None
+    ) = field(
         default=None,
         metadata={
             "name": "SNAPSHOT-RECORD-CONTENTS",

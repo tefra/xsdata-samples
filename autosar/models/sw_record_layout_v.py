@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .asam_record_layout_semantics import AsamRecordLayoutSemantics
 from .axis_index_type import AxisIndexType
@@ -151,7 +150,9 @@ class SwRecordLayoutV:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_generic_axis_param_type_ref: SwRecordLayoutV.SwGenericAxisParamTypeRef | None = field(
+    sw_generic_axis_param_type_ref: (
+        SwRecordLayoutV.SwGenericAxisParamTypeRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "SW-GENERIC-AXIS-PARAM-TYPE-REF",

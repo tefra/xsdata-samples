@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -110,7 +109,9 @@ class CryptoServiceCertificate:
             "required": True,
         },
     )
-    short_name_fragments: CryptoServiceCertificate.ShortNameFragments | None = field(
+    short_name_fragments: (
+        CryptoServiceCertificate.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -198,7 +199,9 @@ class CryptoServiceCertificate:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    next_higher_certificate_ref: CryptoServiceCertificate.NextHigherCertificateRef | None = field(
+    next_higher_certificate_ref: (
+        CryptoServiceCertificate.NextHigherCertificateRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "NEXT-HIGHER-CERTIFICATE-REF",

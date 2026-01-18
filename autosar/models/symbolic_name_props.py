@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .c_identifier import CIdentifier
 from .identifier import Identifier
@@ -47,15 +46,13 @@ class SymbolicNameProps:
             "required": True,
         },
     )
-    short_name_fragments: SymbolicNameProps.ShortNameFragments | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "SHORT-NAME-FRAGMENTS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    short_name_fragments: SymbolicNameProps.ShortNameFragments | None = field(
+        default=None,
+        metadata={
+            "name": "SHORT-NAME-FRAGMENTS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     symbol: CIdentifier | None = field(
         default=None,

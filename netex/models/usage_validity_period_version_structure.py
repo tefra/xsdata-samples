@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from xsdata.models.datatype import XmlDate, XmlDuration, XmlTime
 
@@ -95,13 +94,15 @@ class UsageValidityPeriodVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    usage_start_constraint_type: UsageStartConstraintTypeEnumeration | None = field(
-        default=None,
-        metadata={
-            "name": "UsageStartConstraintType",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        },
+    usage_start_constraint_type: UsageStartConstraintTypeEnumeration | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "UsageStartConstraintType",
+                "type": "Element",
+                "namespace": "http://www.netex.org.uk/netex",
+            },
+        )
     )
     start_only_on: DayTypesRelStructure | None = field(
         default=None,

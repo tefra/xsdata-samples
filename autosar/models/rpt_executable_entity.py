@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -106,13 +105,15 @@ class RptExecutableEntity:
             "required": True,
         },
     )
-    short_name_fragments: RptExecutableEntity.ShortNameFragments | None = field(
-        default=None,
-        metadata={
-            "name": "SHORT-NAME-FRAGMENTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    short_name_fragments: RptExecutableEntity.ShortNameFragments | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "SHORT-NAME-FRAGMENTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     long_name: MultilanguageLongName | None = field(
         default=None,
@@ -162,7 +163,9 @@ class RptExecutableEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    rpt_executable_entity_events: RptExecutableEntity.RptExecutableEntityEvents | None = field(
+    rpt_executable_entity_events: (
+        RptExecutableEntity.RptExecutableEntityEvents | None
+    ) = field(
         default=None,
         metadata={
             "name": "RPT-EXECUTABLE-ENTITY-EVENTS",

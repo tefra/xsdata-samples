@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -104,7 +103,10 @@ class DiagnosticTroubleCodeUdsToClearConditionGroupMapping:
             "required": True,
         },
     )
-    short_name_fragments: DiagnosticTroubleCodeUdsToClearConditionGroupMapping.ShortNameFragments | None = field(
+    short_name_fragments: (
+        DiagnosticTroubleCodeUdsToClearConditionGroupMapping.ShortNameFragments
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -152,7 +154,9 @@ class DiagnosticTroubleCodeUdsToClearConditionGroupMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: DiagnosticTroubleCodeUdsToClearConditionGroupMapping.Annotations | None = field(
+    annotations: (
+        DiagnosticTroubleCodeUdsToClearConditionGroupMapping.Annotations | None
+    ) = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -168,7 +172,10 @@ class DiagnosticTroubleCodeUdsToClearConditionGroupMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    clear_condition_group_ref: DiagnosticTroubleCodeUdsToClearConditionGroupMapping.ClearConditionGroupRef | None = field(
+    clear_condition_group_ref: (
+        DiagnosticTroubleCodeUdsToClearConditionGroupMapping.ClearConditionGroupRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "CLEAR-CONDITION-GROUP-REF",
@@ -176,7 +183,10 @@ class DiagnosticTroubleCodeUdsToClearConditionGroupMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    trouble_code_uds_ref: DiagnosticTroubleCodeUdsToClearConditionGroupMapping.TroubleCodeUdsRef | None = field(
+    trouble_code_uds_ref: (
+        DiagnosticTroubleCodeUdsToClearConditionGroupMapping.TroubleCodeUdsRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "TROUBLE-CODE-UDS-REF",

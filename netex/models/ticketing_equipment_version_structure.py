@@ -1,7 +1,6 @@
 from collections.abc import Iterable
 from dataclasses import dataclass, field
 from decimal import Decimal
-from typing import Optional
 
 from .all_modes_enumeration import AllModesEnumeration
 from .passenger_equipment_version_structure import (

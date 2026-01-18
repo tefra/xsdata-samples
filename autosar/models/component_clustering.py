@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     DocumentationBlock,
@@ -63,7 +62,9 @@ class ComponentClustering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    clustered_component_irefs: ComponentClustering.ClusteredComponentIrefs | None = field(
+    clustered_component_irefs: (
+        ComponentClustering.ClusteredComponentIrefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "CLUSTERED-COMPONENT-IREFS",

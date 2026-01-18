@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -105,7 +104,9 @@ class TimeBaseProviderToPersistencyMapping:
             "required": True,
         },
     )
-    short_name_fragments: TimeBaseProviderToPersistencyMapping.ShortNameFragments | None = field(
+    short_name_fragments: (
+        TimeBaseProviderToPersistencyMapping.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -153,13 +154,15 @@ class TimeBaseProviderToPersistencyMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: TimeBaseProviderToPersistencyMapping.Annotations | None = field(
-        default=None,
-        metadata={
-            "name": "ANNOTATIONS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    annotations: TimeBaseProviderToPersistencyMapping.Annotations | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "ANNOTATIONS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     variation_point: VariationPoint | None = field(
         default=None,
@@ -169,7 +172,10 @@ class TimeBaseProviderToPersistencyMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    persistency_deployment_element_ref: TimeBaseProviderToPersistencyMapping.PersistencyDeploymentElementRef | None = field(
+    persistency_deployment_element_ref: (
+        TimeBaseProviderToPersistencyMapping.PersistencyDeploymentElementRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "PERSISTENCY-DEPLOYMENT-ELEMENT-REF",
@@ -177,7 +183,9 @@ class TimeBaseProviderToPersistencyMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    time_base_provider_ref: TimeBaseProviderToPersistencyMapping.TimeBaseProviderRef | None = field(
+    time_base_provider_ref: (
+        TimeBaseProviderToPersistencyMapping.TimeBaseProviderRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "TIME-BASE-PROVIDER-REF",

@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from .destination_display_ref import DestinationDisplayRef
 from .destination_display_view import DestinationDisplayView
@@ -67,25 +66,29 @@ class ServicePatternVersionStructure(LinkSequenceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    direction_ref_or_direction_view: DirectionRef | DirectionView | None = field(
-        default=None,
-        metadata={
-            "type": "Elements",
-            "choices": (
-                {
-                    "name": "DirectionRef",
-                    "type": DirectionRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "DirectionView",
-                    "type": DirectionView,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-            ),
-        },
+    direction_ref_or_direction_view: DirectionRef | DirectionView | None = (
+        field(
+            default=None,
+            metadata={
+                "type": "Elements",
+                "choices": (
+                    {
+                        "name": "DirectionRef",
+                        "type": DirectionRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "DirectionView",
+                        "type": DirectionView,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                ),
+            },
+        )
     )
-    destination_display_ref_or_destination_display_view: DestinationDisplayRef | DestinationDisplayView | None = field(
+    destination_display_ref_or_destination_display_view: (
+        DestinationDisplayRef | DestinationDisplayView | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -173,23 +176,19 @@ class ServicePatternVersionStructure(LinkSequenceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    points_in_sequence: StopPointsInJourneyPatternRelStructure | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "pointsInSequence",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            },
-        )
+    points_in_sequence: StopPointsInJourneyPatternRelStructure | None = field(
+        default=None,
+        metadata={
+            "name": "pointsInSequence",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        },
     )
-    links_in_sequence: ServiceLinksInJourneyPatternRelStructure | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "linksInSequence",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            },
-        )
+    links_in_sequence: ServiceLinksInJourneyPatternRelStructure | None = field(
+        default=None,
+        metadata={
+            "name": "linksInSequence",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        },
     )

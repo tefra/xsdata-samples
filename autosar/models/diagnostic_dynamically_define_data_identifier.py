@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -115,7 +114,9 @@ class DiagnosticDynamicallyDefineDataIdentifier:
             "required": True,
         },
     )
-    short_name_fragments: DiagnosticDynamicallyDefineDataIdentifier.ShortNameFragments | None = field(
+    short_name_fragments: (
+        DiagnosticDynamicallyDefineDataIdentifier.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -163,7 +164,9 @@ class DiagnosticDynamicallyDefineDataIdentifier:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: DiagnosticDynamicallyDefineDataIdentifier.Annotations | None = field(
+    annotations: (
+        DiagnosticDynamicallyDefineDataIdentifier.Annotations | None
+    ) = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -179,7 +182,9 @@ class DiagnosticDynamicallyDefineDataIdentifier:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    access_permission_ref: DiagnosticDynamicallyDefineDataIdentifier.AccessPermissionRef | None = field(
+    access_permission_ref: (
+        DiagnosticDynamicallyDefineDataIdentifier.AccessPermissionRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "ACCESS-PERMISSION-REF",
@@ -187,7 +192,9 @@ class DiagnosticDynamicallyDefineDataIdentifier:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    data_identifier_ref: DiagnosticDynamicallyDefineDataIdentifier.DataIdentifierRef | None = field(
+    data_identifier_ref: (
+        DiagnosticDynamicallyDefineDataIdentifier.DataIdentifierRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "DATA-IDENTIFIER-REF",
@@ -195,7 +202,10 @@ class DiagnosticDynamicallyDefineDataIdentifier:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    dynamically_define_data_identifier_class_ref: DiagnosticDynamicallyDefineDataIdentifier.DynamicallyDefineDataIdentifierClassRef | None = field(
+    dynamically_define_data_identifier_class_ref: (
+        DiagnosticDynamicallyDefineDataIdentifier.DynamicallyDefineDataIdentifierClassRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "DYNAMICALLY-DEFINE-DATA-IDENTIFIER-CLASS-REF",
@@ -280,7 +290,9 @@ class DiagnosticDynamicallyDefineDataIdentifier:
 
     @dataclass
     class DynamicallyDefineDataIdentifierClassRef(Ref):
-        dest: DiagnosticDynamicallyDefineDataIdentifierClassSubtypesEnum | None = field(
+        dest: (
+            DiagnosticDynamicallyDefineDataIdentifierClassSubtypesEnum | None
+        ) = field(
             default=None,
             metadata={
                 "name": "DEST",

@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .event_occurrence_kind_enum_simple import EventOccurrenceKindEnumSimple
 

@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from sdmx_ml.models.space_key_type import SpaceKeyType
 from sdmx_ml.models.standard_to_vtl_mapping_method_type import (

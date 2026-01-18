@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -122,7 +121,9 @@ class SomeipServiceInterfaceDeployment:
             "required": True,
         },
     )
-    short_name_fragments: SomeipServiceInterfaceDeployment.ShortNameFragments | None = field(
+    short_name_fragments: (
+        SomeipServiceInterfaceDeployment.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -170,15 +171,13 @@ class SomeipServiceInterfaceDeployment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: SomeipServiceInterfaceDeployment.Annotations | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "ANNOTATIONS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    annotations: SomeipServiceInterfaceDeployment.Annotations | None = field(
+        default=None,
+        metadata={
+            "name": "ANNOTATIONS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     variation_point: VariationPoint | None = field(
         default=None,
@@ -188,7 +187,9 @@ class SomeipServiceInterfaceDeployment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    event_deployments: SomeipServiceInterfaceDeployment.EventDeployments | None = field(
+    event_deployments: (
+        SomeipServiceInterfaceDeployment.EventDeployments | None
+    ) = field(
         default=None,
         metadata={
             "name": "EVENT-DEPLOYMENTS",
@@ -196,7 +197,9 @@ class SomeipServiceInterfaceDeployment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    field_deployments: SomeipServiceInterfaceDeployment.FieldDeployments | None = field(
+    field_deployments: (
+        SomeipServiceInterfaceDeployment.FieldDeployments | None
+    ) = field(
         default=None,
         metadata={
             "name": "FIELD-DEPLOYMENTS",
@@ -204,7 +207,9 @@ class SomeipServiceInterfaceDeployment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    method_deployments: SomeipServiceInterfaceDeployment.MethodDeployments | None = field(
+    method_deployments: (
+        SomeipServiceInterfaceDeployment.MethodDeployments | None
+    ) = field(
         default=None,
         metadata={
             "name": "METHOD-DEPLOYMENTS",
@@ -212,7 +217,9 @@ class SomeipServiceInterfaceDeployment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    service_interface_ref: SomeipServiceInterfaceDeployment.ServiceInterfaceRef | None = field(
+    service_interface_ref: (
+        SomeipServiceInterfaceDeployment.ServiceInterfaceRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "SERVICE-INTERFACE-REF",
@@ -220,15 +227,13 @@ class SomeipServiceInterfaceDeployment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    event_groups: SomeipServiceInterfaceDeployment.EventGroups | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "EVENT-GROUPS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    event_groups: SomeipServiceInterfaceDeployment.EventGroups | None = field(
+        default=None,
+        metadata={
+            "name": "EVENT-GROUPS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     service_interface_id: PositiveInteger | None = field(
         default=None,

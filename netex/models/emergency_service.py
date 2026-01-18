@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .emergency_service_enumeration import EmergencyServiceEnumeration
 

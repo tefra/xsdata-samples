@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -120,7 +119,9 @@ class TdEventBswModeDeclaration:
             "required": True,
         },
     )
-    short_name_fragments: TdEventBswModeDeclaration.ShortNameFragments | None = field(
+    short_name_fragments: (
+        TdEventBswModeDeclaration.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -192,7 +193,9 @@ class TdEventBswModeDeclaration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    bsw_module_description_ref: TdEventBswModeDeclaration.BswModuleDescriptionRef | None = field(
+    bsw_module_description_ref: (
+        TdEventBswModeDeclaration.BswModuleDescriptionRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "BSW-MODULE-DESCRIPTION-REF",
@@ -200,7 +203,9 @@ class TdEventBswModeDeclaration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    entry_mode_declaration_ref: TdEventBswModeDeclaration.EntryModeDeclarationRef | None = field(
+    entry_mode_declaration_ref: (
+        TdEventBswModeDeclaration.EntryModeDeclarationRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "ENTRY-MODE-DECLARATION-REF",
@@ -208,7 +213,9 @@ class TdEventBswModeDeclaration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    exit_mode_declaration_ref: TdEventBswModeDeclaration.ExitModeDeclarationRef | None = field(
+    exit_mode_declaration_ref: (
+        TdEventBswModeDeclaration.ExitModeDeclarationRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "EXIT-MODE-DECLARATION-REF",
@@ -216,7 +223,9 @@ class TdEventBswModeDeclaration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    mode_declaration_ref: TdEventBswModeDeclaration.ModeDeclarationRef | None = field(
+    mode_declaration_ref: (
+        TdEventBswModeDeclaration.ModeDeclarationRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "MODE-DECLARATION-REF",
@@ -224,7 +233,9 @@ class TdEventBswModeDeclaration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    td_event_bsw_mode_declaration_type: TdEventBswModeDeclarationTypeEnum | None = field(
+    td_event_bsw_mode_declaration_type: (
+        TdEventBswModeDeclarationTypeEnum | None
+    ) = field(
         default=None,
         metadata={
             "name": "TD-EVENT-BSW-MODE-DECLARATION-TYPE",

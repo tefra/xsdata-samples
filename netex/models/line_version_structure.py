@@ -1,6 +1,5 @@
 from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .accessibility_assessment import AccessibilityAssessment
 from .all_vehicle_modes_of_transport_enumeration import (
@@ -135,15 +134,13 @@ class LineVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    additional_operators: TransportOrganisationRefsRelStructure | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "additionalOperators",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            },
-        )
+    additional_operators: TransportOrganisationRefsRelStructure | None = field(
+        default=None,
+        metadata={
+            "name": "additionalOperators",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        },
     )
     other_modes: ModeRefsRelStructure | None = field(
         default=None,
@@ -177,15 +174,13 @@ class LineVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    external_product_category_ref: ExternalObjectRefStructure | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "ExternalProductCategoryRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            },
-        )
+    external_product_category_ref: ExternalObjectRefStructure | None = field(
+        default=None,
+        metadata={
+            "name": "ExternalProductCategoryRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        },
     )
     type_of_product_category_ref: TypeOfProductCategoryRef | None = field(
         default=None,
@@ -259,15 +254,13 @@ class LineVersionStructure(DataManagedObjectStructure):
             "tokens": True,
         },
     )
-    types_of_payment_method: TypeOfPaymentMethodValueStructure | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "typesOfPaymentMethod",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            },
-        )
+    types_of_payment_method: TypeOfPaymentMethodValueStructure | None = field(
+        default=None,
+        metadata={
+            "name": "typesOfPaymentMethod",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        },
     )
     purchase_moment: Iterable[PurchaseMomentEnumeration] = field(
         default_factory=list,

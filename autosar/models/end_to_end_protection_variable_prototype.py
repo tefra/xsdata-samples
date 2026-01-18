@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import VariationPoint
 from .identifier import Identifier
@@ -53,7 +52,9 @@ class EndToEndProtectionVariablePrototype:
     class Meta:
         name = "END-TO-END-PROTECTION-VARIABLE-PROTOTYPE"
 
-    receiver_irefs: EndToEndProtectionVariablePrototype.ReceiverIrefs | None = field(
+    receiver_irefs: (
+        EndToEndProtectionVariablePrototype.ReceiverIrefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "RECEIVER-IREFS",

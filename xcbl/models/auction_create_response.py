@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from xcbl.models.auction_result import ListOfMvbvariables
 from xcbl.models.auction_result_response import AuctionCreateReference
@@ -577,14 +576,12 @@ class AuctionItemAttribute:
             "required": True,
         }
     )
-    auction_attribute_description: AuctionAttributeDescription | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "AuctionAttributeDescription",
-                "type": "Element",
-            },
-        )
+    auction_attribute_description: AuctionAttributeDescription | None = field(
+        default=None,
+        metadata={
+            "name": "AuctionAttributeDescription",
+            "type": "Element",
+        },
     )
     auction_attribute_data_type_coded: AuctionAttributeDataTypeCoded = field(
         metadata={
@@ -593,7 +590,9 @@ class AuctionItemAttribute:
             "required": True,
         }
     )
-    auction_attribute_data_type_coded_other: AuctionAttributeDataTypeCodedOther | None = field(
+    auction_attribute_data_type_coded_other: (
+        AuctionAttributeDataTypeCodedOther | None
+    ) = field(
         default=None,
         metadata={
             "name": "AuctionAttributeDataTypeCodedOther",
@@ -959,14 +958,12 @@ class AuctionItem:
             "required": True,
         }
     )
-    list_of_auction_item_attribute: ListOfAuctionItemAttribute | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "ListOfAuctionItemAttribute",
-                "type": "Element",
-            },
-        )
+    list_of_auction_item_attribute: ListOfAuctionItemAttribute | None = field(
+        default=None,
+        metadata={
+            "name": "ListOfAuctionItemAttribute",
+            "type": "Element",
+        },
     )
     auction_item_hierarchy_level: AuctionItemHierarchyLevel = field(
         metadata={
@@ -1259,12 +1256,14 @@ class AuctionCreateHeader:
             "type": "Element",
         },
     )
-    auction_creat_list_of_attachment: AuctionCreatListOfAttachment | None = field(
-        default=None,
-        metadata={
-            "name": "AuctionCreatListOfAttachment",
-            "type": "Element",
-        },
+    auction_creat_list_of_attachment: AuctionCreatListOfAttachment | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "AuctionCreatListOfAttachment",
+                "type": "Element",
+            },
+        )
     )
     auction_specifications: AuctionSpecifications | None = field(
         default=None,
@@ -1330,23 +1329,25 @@ class AuctionCreateResponseDetail:
             "required": True,
         }
     )
-    auction_item_response_coded_other: AuctionItemResponseCodedOther | None = field(
-        default=None,
-        metadata={
-            "name": "AuctionItemResponseCodedOther",
-            "type": "Element",
-        },
-    )
-    changed_auction_create_detail: ChangedAuctionCreateDetail | None = (
+    auction_item_response_coded_other: AuctionItemResponseCodedOther | None = (
         field(
             default=None,
             metadata={
-                "name": "ChangedAuctionCreateDetail",
+                "name": "AuctionItemResponseCodedOther",
                 "type": "Element",
             },
         )
     )
-    list_of_auction_item_component_response: ListOfAuctionItemComponentResponse | None = field(
+    changed_auction_create_detail: ChangedAuctionCreateDetail | None = field(
+        default=None,
+        metadata={
+            "name": "ChangedAuctionCreateDetail",
+            "type": "Element",
+        },
+    )
+    list_of_auction_item_component_response: (
+        ListOfAuctionItemComponentResponse | None
+    ) = field(
         default=None,
         metadata={
             "name": "ListOfAuctionItemComponentResponse",
@@ -1410,14 +1411,12 @@ class AuctionCreateResponseHeader:
             "type": "Element",
         },
     )
-    changed_auction_create_header: ChangedAuctionCreateHeader | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "ChangedAuctionCreateHeader",
-                "type": "Element",
-            },
-        )
+    changed_auction_create_header: ChangedAuctionCreateHeader | None = field(
+        default=None,
+        metadata={
+            "name": "ChangedAuctionCreateHeader",
+            "type": "Element",
+        },
     )
     language: Language = field(
         metadata={
@@ -1467,7 +1466,9 @@ class AuctionCreateResponse:
             "required": True,
         }
     )
-    list_of_auction_create_response_detail: ListOfAuctionCreateResponseDetail | None = field(
+    list_of_auction_create_response_detail: (
+        ListOfAuctionCreateResponseDetail | None
+    ) = field(
         default=None,
         metadata={
             "name": "ListOfAuctionCreateResponseDetail",

@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import DocumentationBlock
 from .integer import Integer
@@ -64,15 +63,13 @@ class ApplicationEntry:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    frame_triggering_ref: ApplicationEntry.FrameTriggeringRef | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "FRAME-TRIGGERING-REF",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    frame_triggering_ref: ApplicationEntry.FrameTriggeringRef | None = field(
+        default=None,
+        metadata={
+            "name": "FRAME-TRIGGERING-REF",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     s: str | None = field(
         default=None,

@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Union
 
 from .rendering import Rendering
 from .t_implementation_value import TImplementationValue

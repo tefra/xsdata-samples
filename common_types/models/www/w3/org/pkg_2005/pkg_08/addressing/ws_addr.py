@@ -1,6 +1,5 @@
 from dataclasses import dataclass, field
 from enum import Enum
-from typing import Optional, Union
 from xml.etree.ElementTree import QName
 
 __NAMESPACE__ = "http://www.w3.org/2005/08/addressing"

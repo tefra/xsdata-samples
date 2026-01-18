@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from .fare_price_versioned_child_structure import (
     FarePriceVersionedChildStructure,
@@ -17,7 +16,9 @@ class SalesOfferPackagePriceVersionedChildStructure(
     class Meta:
         name = "SalesOfferPackagePrice_VersionedChildStructure"
 
-    sales_offer_package_ref_or_sales_offer_package_element_ref: SalesOfferPackageRef | SalesOfferPackageElementRef | None = field(
+    sales_offer_package_ref_or_sales_offer_package_element_ref: (
+        SalesOfferPackageRef | SalesOfferPackageElementRef | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",

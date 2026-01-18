@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .interchange_version_structure import InterchangeVersionStructure
 from .journey_pattern_ref_structure import JourneyPatternRefStructure

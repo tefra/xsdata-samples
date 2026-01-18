@@ -1,6 +1,5 @@
 from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import Union
 
 from .journey_pattern_wait_time import JourneyPatternWaitTime
 from .journey_pattern_wait_time_ref import JourneyPatternWaitTimeRef

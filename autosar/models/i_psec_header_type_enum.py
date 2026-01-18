@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .i_psec_header_type_enum_simple import IPsecHeaderTypeEnumSimple
 

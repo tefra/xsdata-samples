@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from ubl.models.common.ubl_common_aggregate_components_2_1 import (
     Consignment,
@@ -182,7 +181,9 @@ class TransportationStatusRequestType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    transport_execution_plan_document_reference: TransportExecutionPlanDocumentReference | None = field(
+    transport_execution_plan_document_reference: (
+        TransportExecutionPlanDocumentReference | None
+    ) = field(
         default=None,
         metadata={
             "name": "TransportExecutionPlanDocumentReference",

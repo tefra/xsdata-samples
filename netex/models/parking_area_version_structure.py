@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from .entrance_refs_rel_structure import EntranceRefsRelStructure
 from .parking_bays_rel_structure import ParkingBaysRelStructure
@@ -33,7 +32,9 @@ class ParkingAreaVersionStructure(ParkingComponentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    parking_properties_or_parking_properties: ParkingProperties | ParkingPropertiesRelStructure | None = field(
+    parking_properties_or_parking_properties: (
+        ParkingProperties | ParkingPropertiesRelStructure | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",

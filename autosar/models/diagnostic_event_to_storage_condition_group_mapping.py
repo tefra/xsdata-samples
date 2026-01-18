@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -101,7 +100,9 @@ class DiagnosticEventToStorageConditionGroupMapping:
             "required": True,
         },
     )
-    short_name_fragments: DiagnosticEventToStorageConditionGroupMapping.ShortNameFragments | None = field(
+    short_name_fragments: (
+        DiagnosticEventToStorageConditionGroupMapping.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -149,7 +150,9 @@ class DiagnosticEventToStorageConditionGroupMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: DiagnosticEventToStorageConditionGroupMapping.Annotations | None = field(
+    annotations: (
+        DiagnosticEventToStorageConditionGroupMapping.Annotations | None
+    ) = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -165,7 +168,9 @@ class DiagnosticEventToStorageConditionGroupMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    diagnostic_event_ref: DiagnosticEventToStorageConditionGroupMapping.DiagnosticEventRef | None = field(
+    diagnostic_event_ref: (
+        DiagnosticEventToStorageConditionGroupMapping.DiagnosticEventRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "DIAGNOSTIC-EVENT-REF",
@@ -173,7 +178,10 @@ class DiagnosticEventToStorageConditionGroupMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    storage_condition_group_ref: DiagnosticEventToStorageConditionGroupMapping.StorageConditionGroupRef | None = field(
+    storage_condition_group_ref: (
+        DiagnosticEventToStorageConditionGroupMapping.StorageConditionGroupRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "STORAGE-CONDITION-GROUP-REF",

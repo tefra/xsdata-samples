@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from xsdata.models.datatype import XmlDateTime
 
@@ -66,16 +65,14 @@ class TransitInformation(NonRoadEventInformation):
             "max_length": 1024,
         },
     )
-    transit_service_information: TransitServiceInformationEnum | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "transitServiceInformation",
-                "type": "Element",
-                "namespace": "http://datex2.eu/schema/2/2_0",
-                "required": True,
-            },
-        )
+    transit_service_information: TransitServiceInformationEnum | None = field(
+        default=None,
+        metadata={
+            "name": "transitServiceInformation",
+            "type": "Element",
+            "namespace": "http://datex2.eu/schema/2/2_0",
+            "required": True,
+        },
     )
     transit_service_type: TransitServiceTypeEnum | None = field(
         default=None,

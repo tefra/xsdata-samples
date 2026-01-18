@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from .access_vehicle_equipment_ref import AccessVehicleEquipmentRef
 from .activated_equipment_ref import ActivatedEquipmentRef
@@ -110,25 +109,23 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 @dataclass
 class FareTableSpecificsStructure:
-    transport_organisation_ref: AuthorityRef | OperatorRef | None = (
-        field(
-            default=None,
-            metadata={
-                "type": "Elements",
-                "choices": (
-                    {
-                        "name": "AuthorityRef",
-                        "type": AuthorityRef,
-                        "namespace": "http://www.netex.org.uk/netex",
-                    },
-                    {
-                        "name": "OperatorRef",
-                        "type": OperatorRef,
-                        "namespace": "http://www.netex.org.uk/netex",
-                    },
-                ),
-            },
-        )
+    transport_organisation_ref: AuthorityRef | OperatorRef | None = field(
+        default=None,
+        metadata={
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "AuthorityRef",
+                    "type": AuthorityRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "OperatorRef",
+                    "type": OperatorRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+        },
     )
     group_of_lines_ref: NetworkRef | GroupOfLinesRef | None = field(
         default=None,
@@ -166,7 +163,15 @@ class FareTableSpecificsStructure:
             ),
         },
     )
-    stop_place_ref_or_site_ref: TaxiRankRef | StopPlaceRef | ParkingRef | PointOfInterestRef | ServiceSiteRef | SiteRef | None = field(
+    stop_place_ref_or_site_ref: (
+        TaxiRankRef
+        | StopPlaceRef
+        | ParkingRef
+        | PointOfInterestRef
+        | ServiceSiteRef
+        | SiteRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -204,7 +209,9 @@ class FareTableSpecificsStructure:
             ),
         },
     )
-    vehicle_meeting_place_ref: VehiclePoolingMeetingPlaceRef | VehicleMeetingPlaceRef | None = field(
+    vehicle_meeting_place_ref: (
+        VehiclePoolingMeetingPlaceRef | VehicleMeetingPlaceRef | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -278,7 +285,9 @@ class FareTableSpecificsStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    facility_set_ref: ServiceFacilitySetRef | SiteFacilitySetRef | FacilitySetRef | None = field(
+    facility_set_ref: (
+        ServiceFacilitySetRef | SiteFacilitySetRef | FacilitySetRef | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -317,7 +326,15 @@ class FareTableSpecificsStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    choice: TemplateServiceJourneyRef | ServiceJourneyRef | SingleJourneyRef | TrainNumberRef | GroupOfServicesRef | GroupOfSingleJourneysRef | None = field(
+    choice: (
+        TemplateServiceJourneyRef
+        | ServiceJourneyRef
+        | SingleJourneyRef
+        | TrainNumberRef
+        | GroupOfServicesRef
+        | GroupOfSingleJourneysRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -355,7 +372,72 @@ class FareTableSpecificsStructure:
             ),
         },
     )
-    choice_1: RetailDeviceRef | OnlineServiceRef | VehicleRentalServiceRef | VehicleSharingServiceRef | ChauffeuredVehicleServiceRef | TaxiServiceRef | CarPoolingServiceRef | ActivatedEquipmentRef | BatteryEquipmentRef | RefuellingEquipmentRef | VehicleChargingEquipmentRef | AssistanceBookingServiceRef | CateringServiceRef | RetailServiceRef | MoneyServiceRef | HireServiceRef | CommunicationServiceRef | MeetingPointServiceRef | LeftLuggageServiceRef | LuggageServiceRef | LostPropertyServiceRef | ComplaintsServiceRef | CustomerServiceRef | AssistanceServiceRef | TicketingServiceRef | LocalServiceRef | VehicleReleaseEquipmentRef | TicketValidatorEquipmentRef | TicketingEquipmentRef | PassengerInformationEquipmentRef | CycleStorageEquipmentRef | TrolleyStandEquipmentRef | SeatingEquipmentRef | ShelterEquipmentRef | LuggageLockerEquipmentRef | WaitingRoomEquipmentRef | WaitingEquipmentRef | SiteEquipmentRef | PlaceLightingEquipmentRef | RoughSurfaceRef | StaircaseEquipmentRef | QueueingEquipmentRef | TravelatorEquipmentRef | EscalatorEquipmentRef | LiftCallEquipmentRef | LiftEquipmentRef | CrossingEquipmentRef | RampEquipmentRef | EntranceEquipmentRef | HeadingSignRef | GeneralSignRef | PlaceSignRef | SignEquipmentRef | RubbishDisposalEquipmentRef | PassengerBeaconEquipmentRef | HelpPointEquipmentRef | PassengerSafetyEquipmentRef | SanitaryEquipmentRef | WheelchairVehicleRef | AccessVehicleEquipmentRef | VehicleEquipmentRef | PassengerEquipmentRef | EquipmentRef | None = field(
+    choice_1: (
+        RetailDeviceRef
+        | OnlineServiceRef
+        | VehicleRentalServiceRef
+        | VehicleSharingServiceRef
+        | ChauffeuredVehicleServiceRef
+        | TaxiServiceRef
+        | CarPoolingServiceRef
+        | ActivatedEquipmentRef
+        | BatteryEquipmentRef
+        | RefuellingEquipmentRef
+        | VehicleChargingEquipmentRef
+        | AssistanceBookingServiceRef
+        | CateringServiceRef
+        | RetailServiceRef
+        | MoneyServiceRef
+        | HireServiceRef
+        | CommunicationServiceRef
+        | MeetingPointServiceRef
+        | LeftLuggageServiceRef
+        | LuggageServiceRef
+        | LostPropertyServiceRef
+        | ComplaintsServiceRef
+        | CustomerServiceRef
+        | AssistanceServiceRef
+        | TicketingServiceRef
+        | LocalServiceRef
+        | VehicleReleaseEquipmentRef
+        | TicketValidatorEquipmentRef
+        | TicketingEquipmentRef
+        | PassengerInformationEquipmentRef
+        | CycleStorageEquipmentRef
+        | TrolleyStandEquipmentRef
+        | SeatingEquipmentRef
+        | ShelterEquipmentRef
+        | LuggageLockerEquipmentRef
+        | WaitingRoomEquipmentRef
+        | WaitingEquipmentRef
+        | SiteEquipmentRef
+        | PlaceLightingEquipmentRef
+        | RoughSurfaceRef
+        | StaircaseEquipmentRef
+        | QueueingEquipmentRef
+        | TravelatorEquipmentRef
+        | EscalatorEquipmentRef
+        | LiftCallEquipmentRef
+        | LiftEquipmentRef
+        | CrossingEquipmentRef
+        | RampEquipmentRef
+        | EntranceEquipmentRef
+        | HeadingSignRef
+        | GeneralSignRef
+        | PlaceSignRef
+        | SignEquipmentRef
+        | RubbishDisposalEquipmentRef
+        | PassengerBeaconEquipmentRef
+        | HelpPointEquipmentRef
+        | PassengerSafetyEquipmentRef
+        | SanitaryEquipmentRef
+        | WheelchairVehicleRef
+        | AccessVehicleEquipmentRef
+        | VehicleEquipmentRef
+        | PassengerEquipmentRef
+        | EquipmentRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -686,7 +768,9 @@ class FareTableSpecificsStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    distribution_channel_ref_or_group_of_distribution_channels_ref: DistributionChannelRef | GroupOfDistributionChannelsRef | None = field(
+    distribution_channel_ref_or_group_of_distribution_channels_ref: (
+        DistributionChannelRef | GroupOfDistributionChannelsRef | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",

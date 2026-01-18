@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from xsdata.models.datatype import XmlDateTime
 
@@ -31,7 +30,9 @@ class SiteMeasurements:
     :ivar site_measurements_extension:
     """
 
-    measurement_site_reference: MeasurementSiteRecordVersionedReference | None = field(
+    measurement_site_reference: (
+        MeasurementSiteRecordVersionedReference | None
+    ) = field(
         default=None,
         metadata={
             "name": "measurementSiteReference",

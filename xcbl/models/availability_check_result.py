@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from xcbl.models.availability_to_promise_response import (
     AvailabilityShipToParty,
@@ -155,21 +154,21 @@ class AvailabilityCheckResultHeader:
             "required": True,
         }
     )
-    availability_check_result_language: AvailabilityCheckResultLanguage | None = field(
+    availability_check_result_language: (
+        AvailabilityCheckResultLanguage | None
+    ) = field(
         default=None,
         metadata={
             "name": "AvailabilityCheckResultLanguage",
             "type": "Element",
         },
     )
-    availability_check_result_note: AvailabilityCheckResultNote | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "AvailabilityCheckResultNote",
-                "type": "Element",
-            },
-        )
+    availability_check_result_note: AvailabilityCheckResultNote | None = field(
+        default=None,
+        metadata={
+            "name": "AvailabilityCheckResultNote",
+            "type": "Element",
+        },
     )
     result_list_of_attachment: ResultListOfAttachment | None = field(
         default=None,
@@ -285,14 +284,18 @@ class AvailabilityCheckResult:
             "required": True,
         }
     )
-    availability_check_result_detail: AvailabilityCheckResultDetail | None = field(
-        default=None,
-        metadata={
-            "name": "AvailabilityCheckResultDetail",
-            "type": "Element",
-        },
+    availability_check_result_detail: AvailabilityCheckResultDetail | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "AvailabilityCheckResultDetail",
+                "type": "Element",
+            },
+        )
     )
-    availability_check_result_summary: AvailabilityCheckResultSummary | None = field(
+    availability_check_result_summary: (
+        AvailabilityCheckResultSummary | None
+    ) = field(
         default=None,
         metadata={
             "name": "AvailabilityCheckResultSummary",

@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import ForwardRef, Optional, Union
+from typing import ForwardRef
 
 from xsdata.models.datatype import XmlDuration, XmlTime
 
@@ -18,7 +18,13 @@ class ObservedPassingTimeViewStructure(PassingTimeViewStructure):
         name = "ObservedPassingTime_ViewStructure"
 
     choice: Iterable[
-        ObservedPassingTimeViewStructure.ActualArrivalTime | ObservedPassingTimeViewStructure.ArrivalDayOffset | ObservedPassingTimeViewStructure.ActualDepartureTime | ObservedPassingTimeViewStructure.DepartureDayOffset | XmlDuration | ObservedPassingTimeViewStructure.ActualNonstopPassingTime | ObservedPassingTimeViewStructure.PassingTimeDayOffset
+        ObservedPassingTimeViewStructure.ActualArrivalTime
+        | ObservedPassingTimeViewStructure.ArrivalDayOffset
+        | ObservedPassingTimeViewStructure.ActualDepartureTime
+        | ObservedPassingTimeViewStructure.DepartureDayOffset
+        | XmlDuration
+        | ObservedPassingTimeViewStructure.ActualNonstopPassingTime
+        | ObservedPassingTimeViewStructure.PassingTimeDayOffset
     ] = field(
         default_factory=list,
         metadata={

@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -111,7 +110,9 @@ class DiagnosticAccessPermission:
             "required": True,
         },
     )
-    short_name_fragments: DiagnosticAccessPermission.ShortNameFragments | None = field(
+    short_name_fragments: (
+        DiagnosticAccessPermission.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -175,7 +176,9 @@ class DiagnosticAccessPermission:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    diagnostic_session_refs: DiagnosticAccessPermission.DiagnosticSessionRefs | None = field(
+    diagnostic_session_refs: (
+        DiagnosticAccessPermission.DiagnosticSessionRefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "DIAGNOSTIC-SESSION-REFS",
@@ -183,7 +186,9 @@ class DiagnosticAccessPermission:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    environmental_condition_ref: DiagnosticAccessPermission.EnvironmentalConditionRef | None = field(
+    environmental_condition_ref: (
+        DiagnosticAccessPermission.EnvironmentalConditionRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "ENVIRONMENTAL-CONDITION-REF",
@@ -191,7 +196,9 @@ class DiagnosticAccessPermission:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    security_level_refs: DiagnosticAccessPermission.SecurityLevelRefs | None = field(
+    security_level_refs: (
+        DiagnosticAccessPermission.SecurityLevelRefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "SECURITY-LEVEL-REFS",

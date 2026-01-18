@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -96,13 +95,15 @@ class ClientIdDefinitionSet:
             "required": True,
         },
     )
-    short_name_fragments: ClientIdDefinitionSet.ShortNameFragments | None = field(
-        default=None,
-        metadata={
-            "name": "SHORT-NAME-FRAGMENTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    short_name_fragments: ClientIdDefinitionSet.ShortNameFragments | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "SHORT-NAME-FRAGMENTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     long_name: MultilanguageLongName | None = field(
         default=None,
@@ -160,13 +161,15 @@ class ClientIdDefinitionSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    client_id_definitions: ClientIdDefinitionSet.ClientIdDefinitions | None = field(
-        default=None,
-        metadata={
-            "name": "CLIENT-ID-DEFINITIONS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    client_id_definitions: ClientIdDefinitionSet.ClientIdDefinitions | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "CLIENT-ID-DEFINITIONS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     s: str | None = field(
         default=None,

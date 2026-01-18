@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import VariationPoint
 from .mode_declaration_group_prototype_subtypes_enum import (
@@ -35,7 +34,10 @@ class ModeDeclarationGroupPrototypeRefConditional:
     class Meta:
         name = "MODE-DECLARATION-GROUP-PROTOTYPE-REF-CONDITIONAL"
 
-    mode_declaration_group_prototype_ref: ModeDeclarationGroupPrototypeRefConditional.ModeDeclarationGroupPrototypeRef | None = field(
+    mode_declaration_group_prototype_ref: (
+        ModeDeclarationGroupPrototypeRefConditional.ModeDeclarationGroupPrototypeRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "MODE-DECLARATION-GROUP-PROTOTYPE-REF",

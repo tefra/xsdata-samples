@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import DocumentationBlock
 from .argument_data_prototype_subtypes_enum import (
@@ -119,15 +118,13 @@ class IoHwAbstractionServerAnnotation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    argument_ref: IoHwAbstractionServerAnnotation.ArgumentRef | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "ARGUMENT-REF",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    argument_ref: IoHwAbstractionServerAnnotation.ArgumentRef | None = field(
+        default=None,
+        metadata={
+            "name": "ARGUMENT-REF",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     bsw_resolution: Float | None = field(
         default=None,
@@ -137,15 +134,19 @@ class IoHwAbstractionServerAnnotation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    data_element_ref: IoHwAbstractionServerAnnotation.DataElementRef | None = field(
-        default=None,
-        metadata={
-            "name": "DATA-ELEMENT-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    data_element_ref: IoHwAbstractionServerAnnotation.DataElementRef | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "DATA-ELEMENT-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
-    failure_monitoring_ref: IoHwAbstractionServerAnnotation.FailureMonitoringRef | None = field(
+    failure_monitoring_ref: (
+        IoHwAbstractionServerAnnotation.FailureMonitoringRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "FAILURE-MONITORING-REF",
@@ -169,15 +170,13 @@ class IoHwAbstractionServerAnnotation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    trigger_ref: IoHwAbstractionServerAnnotation.TriggerRef | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "TRIGGER-REF",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    trigger_ref: IoHwAbstractionServerAnnotation.TriggerRef | None = field(
+        default=None,
+        metadata={
+            "name": "TRIGGER-REF",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     s: str | None = field(
         default=None,

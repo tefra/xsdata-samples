@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .client_server_operation_subtypes_enum import (
     ClientServerOperationSubtypesEnum,
@@ -40,7 +39,10 @@ class RequiredMethodInExecutableInstanceRef:
     class Meta:
         name = "REQUIRED-METHOD-IN-EXECUTABLE-INSTANCE-REF"
 
-    context_root_sw_component_prototype_ref: RequiredMethodInExecutableInstanceRef.ContextRootSwComponentPrototypeRef | None = field(
+    context_root_sw_component_prototype_ref: (
+        RequiredMethodInExecutableInstanceRef.ContextRootSwComponentPrototypeRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "CONTEXT-ROOT-SW-COMPONENT-PROTOTYPE-REF",
@@ -58,7 +60,9 @@ class RequiredMethodInExecutableInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    context_r_port_prototype_ref: RequiredMethodInExecutableInstanceRef.ContextRPortPrototypeRef | None = field(
+    context_r_port_prototype_ref: (
+        RequiredMethodInExecutableInstanceRef.ContextRPortPrototypeRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "CONTEXT-R-PORT-PROTOTYPE-REF",
@@ -66,7 +70,9 @@ class RequiredMethodInExecutableInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    target_method_ref: RequiredMethodInExecutableInstanceRef.TargetMethodRef | None = field(
+    target_method_ref: (
+        RequiredMethodInExecutableInstanceRef.TargetMethodRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "TARGET-METHOD-REF",

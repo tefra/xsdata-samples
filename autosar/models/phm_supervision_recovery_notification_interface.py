@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -124,7 +123,9 @@ class PhmSupervisionRecoveryNotificationInterface:
             "required": True,
         },
     )
-    short_name_fragments: PhmSupervisionRecoveryNotificationInterface.ShortNameFragments | None = field(
+    short_name_fragments: (
+        PhmSupervisionRecoveryNotificationInterface.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -172,7 +173,9 @@ class PhmSupervisionRecoveryNotificationInterface:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: PhmSupervisionRecoveryNotificationInterface.Annotations | None = field(
+    annotations: (
+        PhmSupervisionRecoveryNotificationInterface.Annotations | None
+    ) = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -188,7 +191,9 @@ class PhmSupervisionRecoveryNotificationInterface:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    blueprint_policys: PhmSupervisionRecoveryNotificationInterface.BlueprintPolicys | None = field(
+    blueprint_policys: (
+        PhmSupervisionRecoveryNotificationInterface.BlueprintPolicys | None
+    ) = field(
         default=None,
         metadata={
             "name": "BLUEPRINT-POLICYS",
@@ -212,7 +217,9 @@ class PhmSupervisionRecoveryNotificationInterface:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    namespaces: PhmSupervisionRecoveryNotificationInterface.Namespaces | None = field(
+    namespaces: (
+        PhmSupervisionRecoveryNotificationInterface.Namespaces | None
+    ) = field(
         default=None,
         metadata={
             "name": "NAMESPACES",

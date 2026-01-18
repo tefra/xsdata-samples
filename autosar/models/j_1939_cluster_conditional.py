@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import VariationPoint
 from .boolean import Boolean
@@ -76,15 +75,13 @@ class J1939ClusterConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    physical_channels: J1939ClusterConditional.PhysicalChannels | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "PHYSICAL-CHANNELS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    physical_channels: J1939ClusterConditional.PhysicalChannels | None = field(
+        default=None,
+        metadata={
+            "name": "PHYSICAL-CHANNELS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     protocol_name: String | None = field(
         default=None,

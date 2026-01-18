@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from .activation_link_ref import ActivationLinkRef
 from .activation_point import ActivationPoint
@@ -59,7 +58,42 @@ class PointOnSectionVersionedChildStructure(
     class Meta:
         name = "PointOnSection_VersionedChildStructure"
 
-    choice_1: VehicleMeetingPointRef | WirePointRef | RoadPointRef | RailwayPointRef | TrafficControlPointRef | BeaconPointRef | ActivationPointRef | BorderPointRef | FareScheduledStopPointRef | ScheduledStopPointRef | GaragePointRef | ParkingPointRef | ReliefPointRef | TimingPointRef | RoutePointRef | PointRef | VehicleMeetingPoint | BorderPoint | FareScheduledStopPoint | ScheduledStopPoint | PathJunction | RoutePoint | ParkingPoint | GaragePoint | ReliefPoint | TimingPoint | WireJunction | RoadJunction | RailwayJunction | TrafficControlPoint | BeaconPoint | ActivationPoint | Point2 | None = field(
+    choice_1: (
+        VehicleMeetingPointRef
+        | WirePointRef
+        | RoadPointRef
+        | RailwayPointRef
+        | TrafficControlPointRef
+        | BeaconPointRef
+        | ActivationPointRef
+        | BorderPointRef
+        | FareScheduledStopPointRef
+        | ScheduledStopPointRef
+        | GaragePointRef
+        | ParkingPointRef
+        | ReliefPointRef
+        | TimingPointRef
+        | RoutePointRef
+        | PointRef
+        | VehicleMeetingPoint
+        | BorderPoint
+        | FareScheduledStopPoint
+        | ScheduledStopPoint
+        | PathJunction
+        | RoutePoint
+        | ParkingPoint
+        | GaragePoint
+        | ReliefPoint
+        | TimingPoint
+        | WireJunction
+        | RoadJunction
+        | RailwayJunction
+        | TrafficControlPoint
+        | BeaconPoint
+        | ActivationPoint
+        | Point2
+        | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -232,7 +266,20 @@ class PointOnSectionVersionedChildStructure(
             ),
         },
     )
-    link_ref_or_infrastructure_link_ref: OnwardVehicleMeetingLinkRef | VehicleMeetingLinkRef | ServiceLinkRef | LineLinkRef | TimingLinkRef | WireLinkRef | RoadLinkRef | RailwayLinkRef | ActivationLinkRef | PathLinkRef | RouteLinkRef | None = field(
+    link_ref_or_infrastructure_link_ref: (
+        OnwardVehicleMeetingLinkRef
+        | VehicleMeetingLinkRef
+        | ServiceLinkRef
+        | LineLinkRef
+        | TimingLinkRef
+        | WireLinkRef
+        | RoadLinkRef
+        | RailwayLinkRef
+        | ActivationLinkRef
+        | PathLinkRef
+        | RouteLinkRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",

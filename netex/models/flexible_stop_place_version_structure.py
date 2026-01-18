@@ -2,7 +2,6 @@ from __future__ import annotations
 
 from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from .all_vehicle_modes_of_transport_enumeration import (
     AllVehicleModesOfTransportEnumeration,
@@ -74,7 +73,10 @@ class FlexibleStopPlaceVersionStructure(PlaceVersionStructure):
     @dataclass
     class Areas:
         choice: Iterable[
-            FlexibleArea | FlexibleAreaRef | HailAndRideArea | HailAndRideAreaRef
+            FlexibleArea
+            | FlexibleAreaRef
+            | HailAndRideArea
+            | HailAndRideAreaRef
         ] = field(
             default_factory=list,
             metadata={

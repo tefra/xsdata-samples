@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -113,7 +112,9 @@ class InternalTriggerOccurredEvent:
             "required": True,
         },
     )
-    short_name_fragments: InternalTriggerOccurredEvent.ShortNameFragments | None = field(
+    short_name_fragments: (
+        InternalTriggerOccurredEvent.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -169,7 +170,9 @@ class InternalTriggerOccurredEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    activation_reason_representation_ref: InternalTriggerOccurredEvent.ActivationReasonRepresentationRef | None = field(
+    activation_reason_representation_ref: (
+        InternalTriggerOccurredEvent.ActivationReasonRepresentationRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "ACTIVATION-REASON-REPRESENTATION-REF",
@@ -177,7 +180,9 @@ class InternalTriggerOccurredEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    disabled_mode_irefs: InternalTriggerOccurredEvent.DisabledModeIrefs | None = field(
+    disabled_mode_irefs: (
+        InternalTriggerOccurredEvent.DisabledModeIrefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "DISABLED-MODE-IREFS",
@@ -185,13 +190,15 @@ class InternalTriggerOccurredEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    start_on_event_ref: InternalTriggerOccurredEvent.StartOnEventRef | None = field(
-        default=None,
-        metadata={
-            "name": "START-ON-EVENT-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    start_on_event_ref: InternalTriggerOccurredEvent.StartOnEventRef | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "START-ON-EVENT-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     variation_point: VariationPoint | None = field(
         default=None,
@@ -201,13 +208,15 @@ class InternalTriggerOccurredEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    event_source_ref: InternalTriggerOccurredEvent.EventSourceRef | None = field(
-        default=None,
-        metadata={
-            "name": "EVENT-SOURCE-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    event_source_ref: InternalTriggerOccurredEvent.EventSourceRef | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "EVENT-SOURCE-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     s: str | None = field(
         default=None,

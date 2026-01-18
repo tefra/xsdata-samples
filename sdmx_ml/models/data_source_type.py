@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Union
 
 from sdmx_ml.models.queryable_data_source_type_2 import (
     QueryableDataSourceType2,

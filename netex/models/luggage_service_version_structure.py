@@ -1,7 +1,6 @@
 from collections.abc import Iterable
 from dataclasses import dataclass, field
 from decimal import Decimal
-from typing import Optional
 
 from .local_service_version_structure import LocalServiceVersionStructure
 from .luggage_service_facility_enumeration import (

@@ -1,7 +1,6 @@
 from collections.abc import Iterable
 from dataclasses import dataclass, field
 from decimal import Decimal
-from typing import Optional
 
 from .accessibility_assessment import AccessibilityAssessment
 from .gender_limitation_enumeration import GenderLimitationEnumeration

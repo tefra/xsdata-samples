@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -105,13 +104,15 @@ class DltLogChannelDesign:
             "required": True,
         },
     )
-    short_name_fragments: DltLogChannelDesign.ShortNameFragments | None = field(
-        default=None,
-        metadata={
-            "name": "SHORT-NAME-FRAGMENTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    short_name_fragments: DltLogChannelDesign.ShortNameFragments | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "SHORT-NAME-FRAGMENTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     long_name: MultilanguageLongName | None = field(
         default=None,
@@ -177,7 +178,9 @@ class DltLogChannelDesign:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    endpoint_configuration_ref: DltLogChannelDesign.EndpointConfigurationRef | None = field(
+    endpoint_configuration_ref: (
+        DltLogChannelDesign.EndpointConfigurationRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "ENDPOINT-CONFIGURATION-REF",
@@ -256,7 +259,9 @@ class DltLogChannelDesign:
 
     @dataclass
     class EndpointConfigurationRef(Ref):
-        dest: PlatformModuleEthernetEndpointConfigurationSubtypesEnum | None = field(
+        dest: (
+            PlatformModuleEthernetEndpointConfigurationSubtypesEnum | None
+        ) = field(
             default=None,
             metadata={
                 "name": "DEST",

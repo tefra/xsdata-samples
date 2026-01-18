@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .nv_block_needs_writing_priority_enum_simple import (
     NvBlockNeedsWritingPriorityEnumSimple,

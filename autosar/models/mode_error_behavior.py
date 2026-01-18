@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .mode_declaration_subtypes_enum import ModeDeclarationSubtypesEnum
 from .mode_error_reaction_policy_enum import ModeErrorReactionPolicyEnum

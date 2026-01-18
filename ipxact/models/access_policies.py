@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from ipxact.models.access_type import AccessType
 from ipxact.models.mode_ref import ModeRef

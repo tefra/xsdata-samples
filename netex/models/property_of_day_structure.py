@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import ForwardRef, Optional, Union
+from typing import ForwardRef
 
 from xsdata.models.datatype import XmlPeriod
 
@@ -55,7 +55,12 @@ class PropertyOfDayStructure:
             "tokens": True,
         },
     )
-    month_of_year_or_day_of_month_or_day_of_year: PropertyOfDayStructure.MonthOfYear | PropertyOfDayStructure.DayOfMonth | PropertyOfDayStructure.DayOfYear | None = field(
+    month_of_year_or_day_of_month_or_day_of_year: (
+        PropertyOfDayStructure.MonthOfYear
+        | PropertyOfDayStructure.DayOfMonth
+        | PropertyOfDayStructure.DayOfYear
+        | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",

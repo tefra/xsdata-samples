@@ -1,6 +1,5 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
-from typing import Optional, Union
 
 from .access_vehicle_equipment_ref import AccessVehicleEquipmentRef
 from .activated_equipment_ref import ActivatedEquipmentRef
@@ -77,7 +76,72 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 @dataclass
 class EquipmentPositionStructure(DataManagedObjectStructure):
-    choice: RetailDeviceRef | OnlineServiceRef | VehicleRentalServiceRef | VehicleSharingServiceRef | ChauffeuredVehicleServiceRef | TaxiServiceRef | CarPoolingServiceRef | ActivatedEquipmentRef | BatteryEquipmentRef | RefuellingEquipmentRef | VehicleChargingEquipmentRef | AssistanceBookingServiceRef | CateringServiceRef | RetailServiceRef | MoneyServiceRef | HireServiceRef | CommunicationServiceRef | MeetingPointServiceRef | LeftLuggageServiceRef | LuggageServiceRef | LostPropertyServiceRef | ComplaintsServiceRef | CustomerServiceRef | AssistanceServiceRef | TicketingServiceRef | LocalServiceRef | VehicleReleaseEquipmentRef | TicketValidatorEquipmentRef | TicketingEquipmentRef | PassengerInformationEquipmentRef | CycleStorageEquipmentRef | TrolleyStandEquipmentRef | SeatingEquipmentRef | ShelterEquipmentRef | LuggageLockerEquipmentRef | WaitingRoomEquipmentRef | WaitingEquipmentRef | SiteEquipmentRef | PlaceLightingEquipmentRef | RoughSurfaceRef | StaircaseEquipmentRef | QueueingEquipmentRef | TravelatorEquipmentRef | EscalatorEquipmentRef | LiftCallEquipmentRef | LiftEquipmentRef | CrossingEquipmentRef | RampEquipmentRef | EntranceEquipmentRef | HeadingSignRef | GeneralSignRef | PlaceSignRef | SignEquipmentRef | RubbishDisposalEquipmentRef | PassengerBeaconEquipmentRef | HelpPointEquipmentRef | PassengerSafetyEquipmentRef | SanitaryEquipmentRef | WheelchairVehicleRef | AccessVehicleEquipmentRef | VehicleEquipmentRef | PassengerEquipmentRef | EquipmentRef | None = field(
+    choice: (
+        RetailDeviceRef
+        | OnlineServiceRef
+        | VehicleRentalServiceRef
+        | VehicleSharingServiceRef
+        | ChauffeuredVehicleServiceRef
+        | TaxiServiceRef
+        | CarPoolingServiceRef
+        | ActivatedEquipmentRef
+        | BatteryEquipmentRef
+        | RefuellingEquipmentRef
+        | VehicleChargingEquipmentRef
+        | AssistanceBookingServiceRef
+        | CateringServiceRef
+        | RetailServiceRef
+        | MoneyServiceRef
+        | HireServiceRef
+        | CommunicationServiceRef
+        | MeetingPointServiceRef
+        | LeftLuggageServiceRef
+        | LuggageServiceRef
+        | LostPropertyServiceRef
+        | ComplaintsServiceRef
+        | CustomerServiceRef
+        | AssistanceServiceRef
+        | TicketingServiceRef
+        | LocalServiceRef
+        | VehicleReleaseEquipmentRef
+        | TicketValidatorEquipmentRef
+        | TicketingEquipmentRef
+        | PassengerInformationEquipmentRef
+        | CycleStorageEquipmentRef
+        | TrolleyStandEquipmentRef
+        | SeatingEquipmentRef
+        | ShelterEquipmentRef
+        | LuggageLockerEquipmentRef
+        | WaitingRoomEquipmentRef
+        | WaitingEquipmentRef
+        | SiteEquipmentRef
+        | PlaceLightingEquipmentRef
+        | RoughSurfaceRef
+        | StaircaseEquipmentRef
+        | QueueingEquipmentRef
+        | TravelatorEquipmentRef
+        | EscalatorEquipmentRef
+        | LiftCallEquipmentRef
+        | LiftEquipmentRef
+        | CrossingEquipmentRef
+        | RampEquipmentRef
+        | EntranceEquipmentRef
+        | HeadingSignRef
+        | GeneralSignRef
+        | PlaceSignRef
+        | SignEquipmentRef
+        | RubbishDisposalEquipmentRef
+        | PassengerBeaconEquipmentRef
+        | HelpPointEquipmentRef
+        | PassengerSafetyEquipmentRef
+        | SanitaryEquipmentRef
+        | WheelchairVehicleRef
+        | AccessVehicleEquipmentRef
+        | VehicleEquipmentRef
+        | PassengerEquipmentRef
+        | EquipmentRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",

@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -151,7 +150,9 @@ class ProvidedSomeipServiceInstance:
             "required": True,
         },
     )
-    short_name_fragments: ProvidedSomeipServiceInstance.ShortNameFragments | None = field(
+    short_name_fragments: (
+        ProvidedSomeipServiceInstance.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -215,7 +216,9 @@ class ProvidedSomeipServiceInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    e_2_e_event_protection_propss: ProvidedSomeipServiceInstance.E2EEventProtectionPropss | None = field(
+    e_2_e_event_protection_propss: (
+        ProvidedSomeipServiceInstance.E2EEventProtectionPropss | None
+    ) = field(
         default=None,
         metadata={
             "name": "E-2-E-EVENT-PROTECTION-PROPSS",
@@ -223,7 +226,9 @@ class ProvidedSomeipServiceInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    e_2_e_method_protection_propss: ProvidedSomeipServiceInstance.E2EMethodProtectionPropss | None = field(
+    e_2_e_method_protection_propss: (
+        ProvidedSomeipServiceInstance.E2EMethodProtectionPropss | None
+    ) = field(
         default=None,
         metadata={
             "name": "E-2-E-METHOD-PROTECTION-PROPSS",
@@ -231,7 +236,9 @@ class ProvidedSomeipServiceInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    secure_com_configs: ProvidedSomeipServiceInstance.SecureComConfigs | None = field(
+    secure_com_configs: (
+        ProvidedSomeipServiceInstance.SecureComConfigs | None
+    ) = field(
         default=None,
         metadata={
             "name": "SECURE-COM-CONFIGS",
@@ -239,7 +246,9 @@ class ProvidedSomeipServiceInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    service_interface_deployment_ref: ProvidedSomeipServiceInstance.ServiceInterfaceDeploymentRef | None = field(
+    service_interface_deployment_ref: (
+        ProvidedSomeipServiceInstance.ServiceInterfaceDeploymentRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "SERVICE-INTERFACE-DEPLOYMENT-REF",
@@ -247,7 +256,9 @@ class ProvidedSomeipServiceInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    capability_records: ProvidedSomeipServiceInstance.CapabilityRecords | None = field(
+    capability_records: (
+        ProvidedSomeipServiceInstance.CapabilityRecords | None
+    ) = field(
         default=None,
         metadata={
             "name": "CAPABILITY-RECORDS",
@@ -255,15 +266,13 @@ class ProvidedSomeipServiceInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    event_propss: ProvidedSomeipServiceInstance.EventPropss | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "EVENT-PROPSS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    event_propss: ProvidedSomeipServiceInstance.EventPropss | None = field(
+        default=None,
+        metadata={
+            "name": "EVENT-PROPSS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     load_balancing_priority: PositiveInteger | None = field(
         default=None,
@@ -281,7 +290,9 @@ class ProvidedSomeipServiceInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    method_response_propss: ProvidedSomeipServiceInstance.MethodResponsePropss | None = field(
+    method_response_propss: (
+        ProvidedSomeipServiceInstance.MethodResponsePropss | None
+    ) = field(
         default=None,
         metadata={
             "name": "METHOD-RESPONSE-PROPSS",
@@ -289,7 +300,9 @@ class ProvidedSomeipServiceInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    provided_event_groups: ProvidedSomeipServiceInstance.ProvidedEventGroups | None = field(
+    provided_event_groups: (
+        ProvidedSomeipServiceInstance.ProvidedEventGroups | None
+    ) = field(
         default=None,
         metadata={
             "name": "PROVIDED-EVENT-GROUPS",
@@ -297,7 +310,9 @@ class ProvidedSomeipServiceInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sd_server_config_ref: ProvidedSomeipServiceInstance.SdServerConfigRef | None = field(
+    sd_server_config_ref: (
+        ProvidedSomeipServiceInstance.SdServerConfigRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "SD-SERVER-CONFIG-REF",
@@ -454,13 +469,11 @@ class ProvidedSomeipServiceInstance:
 
     @dataclass
     class SdServerConfigRef(Ref):
-        dest: SomeipSdServerServiceInstanceConfigSubtypesEnum | None = (
-            field(
-                default=None,
-                metadata={
-                    "name": "DEST",
-                    "type": "Attribute",
-                    "required": True,
-                },
-            )
+        dest: SomeipSdServerServiceInstanceConfigSubtypesEnum | None = field(
+            default=None,
+            metadata={
+                "name": "DEST",
+                "type": "Attribute",
+                "required": True,
+            },
         )

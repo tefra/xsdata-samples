@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .derived_view_structure import DerivedViewStructure
 from .direction_ref import DirectionRef

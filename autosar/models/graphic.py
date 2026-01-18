@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .graphic_fit_enum_simple import GraphicFitEnumSimple
 from .graphic_notation_enum_simple import GraphicNotationEnumSimple

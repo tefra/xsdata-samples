@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -114,7 +113,9 @@ class DiagnosticServiceDataIdentifierPortMapping:
             "required": True,
         },
     )
-    short_name_fragments: DiagnosticServiceDataIdentifierPortMapping.ShortNameFragments | None = field(
+    short_name_fragments: (
+        DiagnosticServiceDataIdentifierPortMapping.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -162,7 +163,9 @@ class DiagnosticServiceDataIdentifierPortMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: DiagnosticServiceDataIdentifierPortMapping.Annotations | None = field(
+    annotations: (
+        DiagnosticServiceDataIdentifierPortMapping.Annotations | None
+    ) = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -178,7 +181,10 @@ class DiagnosticServiceDataIdentifierPortMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    diagnostic_data_element_ref: DiagnosticServiceDataIdentifierPortMapping.DiagnosticDataElementRef | None = field(
+    diagnostic_data_element_ref: (
+        DiagnosticServiceDataIdentifierPortMapping.DiagnosticDataElementRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "DIAGNOSTIC-DATA-ELEMENT-REF",
@@ -186,7 +192,10 @@ class DiagnosticServiceDataIdentifierPortMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    diagnostic_data_identifier_ref: DiagnosticServiceDataIdentifierPortMapping.DiagnosticDataIdentifierRef | None = field(
+    diagnostic_data_identifier_ref: (
+        DiagnosticServiceDataIdentifierPortMapping.DiagnosticDataIdentifierRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "DIAGNOSTIC-DATA-IDENTIFIER-REF",
@@ -194,7 +203,9 @@ class DiagnosticServiceDataIdentifierPortMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    process_ref: DiagnosticServiceDataIdentifierPortMapping.ProcessRef | None = field(
+    process_ref: (
+        DiagnosticServiceDataIdentifierPortMapping.ProcessRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "PROCESS-REF",
@@ -202,7 +213,9 @@ class DiagnosticServiceDataIdentifierPortMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    swc_service_dependency_in_executable_iref: SwcServiceDependencyInExecutableInstanceRef | None = field(
+    swc_service_dependency_in_executable_iref: (
+        SwcServiceDependencyInExecutableInstanceRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "SWC-SERVICE-DEPENDENCY-IN-EXECUTABLE-IREF",

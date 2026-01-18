@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.openlr_functional_road_class_enum import (
@@ -25,14 +24,16 @@ class OpenlrPathAttributes:
     :ivar openlr_path_attributes_extension:
     """
 
-    openlr_lowest_frcto_next_lrpoint: OpenlrFunctionalRoadClassEnum | None = field(
-        default=None,
-        metadata={
-            "name": "openlrLowestFRCToNextLRPoint",
-            "type": "Element",
-            "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
-        },
+    openlr_lowest_frcto_next_lrpoint: OpenlrFunctionalRoadClassEnum | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "openlrLowestFRCToNextLRPoint",
+                "type": "Element",
+                "namespace": "http://datex2.eu/schema/2/2_0",
+                "required": True,
+            },
+        )
     )
     openlr_distance_to_next_lrpoint: int | None = field(
         default=None,

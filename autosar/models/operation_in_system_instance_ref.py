@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .client_server_operation_subtypes_enum import (
     ClientServerOperationSubtypesEnum,
@@ -40,7 +39,9 @@ class OperationInSystemInstanceRef:
     class Meta:
         name = "OPERATION-IN-SYSTEM-INSTANCE-REF"
 
-    context_composition_ref: OperationInSystemInstanceRef.ContextCompositionRef | None = field(
+    context_composition_ref: (
+        OperationInSystemInstanceRef.ContextCompositionRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "CONTEXT-COMPOSITION-REF",
@@ -58,15 +59,19 @@ class OperationInSystemInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    context_port_ref: OperationInSystemInstanceRef.ContextPortRef | None = field(
-        default=None,
-        metadata={
-            "name": "CONTEXT-PORT-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    context_port_ref: OperationInSystemInstanceRef.ContextPortRef | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "CONTEXT-PORT-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
-    target_operation_ref: OperationInSystemInstanceRef.TargetOperationRef | None = field(
+    target_operation_ref: (
+        OperationInSystemInstanceRef.TargetOperationRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "TARGET-OPERATION-REF",

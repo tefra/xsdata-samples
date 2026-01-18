@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -134,13 +133,15 @@ class SenderReceiverInterface:
             "required": True,
         },
     )
-    short_name_fragments: SenderReceiverInterface.ShortNameFragments | None = field(
-        default=None,
-        metadata={
-            "name": "SHORT-NAME-FRAGMENTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    short_name_fragments: SenderReceiverInterface.ShortNameFragments | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "SHORT-NAME-FRAGMENTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     long_name: MultilanguageLongName | None = field(
         default=None,
@@ -198,15 +199,13 @@ class SenderReceiverInterface:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    blueprint_policys: SenderReceiverInterface.BlueprintPolicys | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "BLUEPRINT-POLICYS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    blueprint_policys: SenderReceiverInterface.BlueprintPolicys | None = field(
+        default=None,
+        metadata={
+            "name": "BLUEPRINT-POLICYS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     short_name_pattern: String | None = field(
         default=None,
@@ -248,7 +247,9 @@ class SenderReceiverInterface:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    invalidation_policys: SenderReceiverInterface.InvalidationPolicys | None = field(
+    invalidation_policys: (
+        SenderReceiverInterface.InvalidationPolicys | None
+    ) = field(
         default=None,
         metadata={
             "name": "INVALIDATION-POLICYS",
@@ -256,13 +257,15 @@ class SenderReceiverInterface:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    meta_data_item_sets: SenderReceiverInterface.MetaDataItemSets | None = field(
-        default=None,
-        metadata={
-            "name": "META-DATA-ITEM-SETS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    meta_data_item_sets: SenderReceiverInterface.MetaDataItemSets | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "META-DATA-ITEM-SETS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     s: str | None = field(
         default=None,

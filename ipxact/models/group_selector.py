@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from ipxact.models.group_selector_multiple_group_selection_operator import (
     GroupSelectorMultipleGroupSelectionOperator,

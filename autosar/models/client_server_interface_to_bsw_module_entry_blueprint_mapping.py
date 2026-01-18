@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -134,7 +133,10 @@ class ClientServerInterfaceToBswModuleEntryBlueprintMapping:
             "required": True,
         },
     )
-    short_name_fragments: ClientServerInterfaceToBswModuleEntryBlueprintMapping.ShortNameFragments | None = field(
+    short_name_fragments: (
+        ClientServerInterfaceToBswModuleEntryBlueprintMapping.ShortNameFragments
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -182,7 +184,10 @@ class ClientServerInterfaceToBswModuleEntryBlueprintMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: ClientServerInterfaceToBswModuleEntryBlueprintMapping.Annotations | None = field(
+    annotations: (
+        ClientServerInterfaceToBswModuleEntryBlueprintMapping.Annotations
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -198,7 +203,10 @@ class ClientServerInterfaceToBswModuleEntryBlueprintMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    blueprint_policys: ClientServerInterfaceToBswModuleEntryBlueprintMapping.BlueprintPolicys | None = field(
+    blueprint_policys: (
+        ClientServerInterfaceToBswModuleEntryBlueprintMapping.BlueprintPolicys
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "BLUEPRINT-POLICYS",
@@ -214,7 +222,10 @@ class ClientServerInterfaceToBswModuleEntryBlueprintMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    client_server_interface_ref: ClientServerInterfaceToBswModuleEntryBlueprintMapping.ClientServerInterfaceRef | None = field(
+    client_server_interface_ref: (
+        ClientServerInterfaceToBswModuleEntryBlueprintMapping.ClientServerInterfaceRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "CLIENT-SERVER-INTERFACE-REF",
@@ -222,7 +233,10 @@ class ClientServerInterfaceToBswModuleEntryBlueprintMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    operation_mappings: ClientServerInterfaceToBswModuleEntryBlueprintMapping.OperationMappings | None = field(
+    operation_mappings: (
+        ClientServerInterfaceToBswModuleEntryBlueprintMapping.OperationMappings
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "OPERATION-MAPPINGS",
@@ -230,7 +244,10 @@ class ClientServerInterfaceToBswModuleEntryBlueprintMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    port_defined_argument_blueprints: ClientServerInterfaceToBswModuleEntryBlueprintMapping.PortDefinedArgumentBlueprints | None = field(
+    port_defined_argument_blueprints: (
+        ClientServerInterfaceToBswModuleEntryBlueprintMapping.PortDefinedArgumentBlueprints
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "PORT-DEFINED-ARGUMENT-BLUEPRINTS",

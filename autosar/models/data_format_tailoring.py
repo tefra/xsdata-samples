@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .abstract_class_tailoring import (
     AbstractClassTailoring,
@@ -44,13 +43,15 @@ class DataFormatTailoring:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    constraint_tailorings: DataFormatTailoring.ConstraintTailorings | None = field(
-        default=None,
-        metadata={
-            "name": "CONSTRAINT-TAILORINGS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    constraint_tailorings: DataFormatTailoring.ConstraintTailorings | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "CONSTRAINT-TAILORINGS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     s: str | None = field(
         default=None,

@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import VariationPoint
 from .diagnostic_common_element_subtypes_enum import (
@@ -35,7 +34,9 @@ class DiagnosticCommonElementRefConditional:
     class Meta:
         name = "DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL"
 
-    diagnostic_common_element_ref: DiagnosticCommonElementRefConditional.DiagnosticCommonElementRef | None = field(
+    diagnostic_common_element_ref: (
+        DiagnosticCommonElementRefConditional.DiagnosticCommonElementRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "DIAGNOSTIC-COMMON-ELEMENT-REF",

@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -106,13 +105,15 @@ class DiagnosticDataTransfer:
             "required": True,
         },
     )
-    short_name_fragments: DiagnosticDataTransfer.ShortNameFragments | None = field(
-        default=None,
-        metadata={
-            "name": "SHORT-NAME-FRAGMENTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    short_name_fragments: DiagnosticDataTransfer.ShortNameFragments | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "SHORT-NAME-FRAGMENTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     long_name: MultilanguageLongName | None = field(
         default=None,
@@ -170,7 +171,9 @@ class DiagnosticDataTransfer:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    access_permission_ref: DiagnosticDataTransfer.AccessPermissionRef | None = field(
+    access_permission_ref: (
+        DiagnosticDataTransfer.AccessPermissionRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "ACCESS-PERMISSION-REF",
@@ -178,7 +181,9 @@ class DiagnosticDataTransfer:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    data_transfer_class_ref: DiagnosticDataTransfer.DataTransferClassRef | None = field(
+    data_transfer_class_ref: (
+        DiagnosticDataTransfer.DataTransferClassRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "DATA-TRANSFER-CLASS-REF",

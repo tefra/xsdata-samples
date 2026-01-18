@@ -1,6 +1,5 @@
 from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import Union
 
 from .authority_ref import AuthorityRef
 from .general_organisation_ref import GeneralOrganisationRef
@@ -23,7 +22,16 @@ class OrganisationRefsRelStructure(OneToManyRelationshipStructure):
         name = "organisationRefs_RelStructure"
 
     organisation_ref_or_other_organisation_ref_or_transport_organisation_ref: Iterable[
-        RetailConsortiumRef | OnlineServiceOperatorRef | GeneralOrganisationRef | ManagementAgentRef | ServicedOrganisationRef | TravelAgentRef | OtherOrganisationRef | AuthorityRef | OperatorRef | OrganisationRef
+        RetailConsortiumRef
+        | OnlineServiceOperatorRef
+        | GeneralOrganisationRef
+        | ManagementAgentRef
+        | ServicedOrganisationRef
+        | TravelAgentRef
+        | OtherOrganisationRef
+        | AuthorityRef
+        | OperatorRef
+        | OrganisationRef
     ] = field(
         default_factory=list,
         metadata={

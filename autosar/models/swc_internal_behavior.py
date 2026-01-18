@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -304,13 +303,15 @@ class SwcInternalBehavior:
             "required": True,
         },
     )
-    short_name_fragments: SwcInternalBehavior.ShortNameFragments | None = field(
-        default=None,
-        metadata={
-            "name": "SHORT-NAME-FRAGMENTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    short_name_fragments: SwcInternalBehavior.ShortNameFragments | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "SHORT-NAME-FRAGMENTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     long_name: MultilanguageLongName | None = field(
         default=None,
@@ -368,7 +369,9 @@ class SwcInternalBehavior:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    constant_value_mapping_refs: SwcInternalBehavior.ConstantValueMappingRefs | None = field(
+    constant_value_mapping_refs: (
+        SwcInternalBehavior.ConstantValueMappingRefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "CONSTANT-VALUE-MAPPING-REFS",
@@ -376,13 +379,15 @@ class SwcInternalBehavior:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    data_type_mapping_refs: SwcInternalBehavior.DataTypeMappingRefs | None = field(
-        default=None,
-        metadata={
-            "name": "DATA-TYPE-MAPPING-REFS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    data_type_mapping_refs: SwcInternalBehavior.DataTypeMappingRefs | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "DATA-TYPE-MAPPING-REFS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     exclusive_areas: SwcInternalBehavior.ExclusiveAreas | None = field(
         default=None,
@@ -392,7 +397,9 @@ class SwcInternalBehavior:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    exclusive_area_nesting_orders: SwcInternalBehavior.ExclusiveAreaNestingOrders | None = field(
+    exclusive_area_nesting_orders: (
+        SwcInternalBehavior.ExclusiveAreaNestingOrders | None
+    ) = field(
         default=None,
         metadata={
             "name": "EXCLUSIVE-AREA-NESTING-ORDERS",
@@ -408,7 +415,9 @@ class SwcInternalBehavior:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ar_typed_per_instance_memorys: SwcInternalBehavior.ArTypedPerInstanceMemorys | None = field(
+    ar_typed_per_instance_memorys: (
+        SwcInternalBehavior.ArTypedPerInstanceMemorys | None
+    ) = field(
         default=None,
         metadata={
             "name": "AR-TYPED-PER-INSTANCE-MEMORYS",
@@ -424,15 +433,19 @@ class SwcInternalBehavior:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    exclusive_area_policys: SwcInternalBehavior.ExclusiveAreaPolicys | None = field(
-        default=None,
-        metadata={
-            "name": "EXCLUSIVE-AREA-POLICYS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    exclusive_area_policys: SwcInternalBehavior.ExclusiveAreaPolicys | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "EXCLUSIVE-AREA-POLICYS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
-    explicit_inter_runnable_variables: SwcInternalBehavior.ExplicitInterRunnableVariables | None = field(
+    explicit_inter_runnable_variables: (
+        SwcInternalBehavior.ExplicitInterRunnableVariables | None
+    ) = field(
         default=None,
         metadata={
             "name": "EXPLICIT-INTER-RUNNABLE-VARIABLES",
@@ -440,15 +453,19 @@ class SwcInternalBehavior:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    handle_termination_and_restart: HandleTerminationAndRestartEnum | None = field(
-        default=None,
-        metadata={
-            "name": "HANDLE-TERMINATION-AND-RESTART",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    handle_termination_and_restart: HandleTerminationAndRestartEnum | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "HANDLE-TERMINATION-AND-RESTART",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
-    implicit_inter_runnable_variables: SwcInternalBehavior.ImplicitInterRunnableVariables | None = field(
+    implicit_inter_runnable_variables: (
+        SwcInternalBehavior.ImplicitInterRunnableVariables | None
+    ) = field(
         default=None,
         metadata={
             "name": "IMPLICIT-INTER-RUNNABLE-VARIABLES",
@@ -456,7 +473,9 @@ class SwcInternalBehavior:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    included_data_type_sets: SwcInternalBehavior.IncludedDataTypeSets | None = field(
+    included_data_type_sets: (
+        SwcInternalBehavior.IncludedDataTypeSets | None
+    ) = field(
         default=None,
         metadata={
             "name": "INCLUDED-DATA-TYPE-SETS",
@@ -464,7 +483,9 @@ class SwcInternalBehavior:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    included_mode_declaration_group_sets: SwcInternalBehavior.IncludedModeDeclarationGroupSets | None = field(
+    included_mode_declaration_group_sets: (
+        SwcInternalBehavior.IncludedModeDeclarationGroupSets | None
+    ) = field(
         default=None,
         metadata={
             "name": "INCLUDED-MODE-DECLARATION-GROUP-SETS",
@@ -472,7 +493,9 @@ class SwcInternalBehavior:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    instantiation_data_def_propss: SwcInternalBehavior.InstantiationDataDefPropss | None = field(
+    instantiation_data_def_propss: (
+        SwcInternalBehavior.InstantiationDataDefPropss | None
+    ) = field(
         default=None,
         metadata={
             "name": "INSTANTIATION-DATA-DEF-PROPSS",
@@ -480,15 +503,19 @@ class SwcInternalBehavior:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    per_instance_memorys: SwcInternalBehavior.PerInstanceMemorys | None = field(
-        default=None,
-        metadata={
-            "name": "PER-INSTANCE-MEMORYS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    per_instance_memorys: SwcInternalBehavior.PerInstanceMemorys | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "PER-INSTANCE-MEMORYS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
-    per_instance_parameters: SwcInternalBehavior.PerInstanceParameters | None = field(
+    per_instance_parameters: (
+        SwcInternalBehavior.PerInstanceParameters | None
+    ) = field(
         default=None,
         metadata={
             "name": "PER-INSTANCE-PARAMETERS",
@@ -512,25 +539,21 @@ class SwcInternalBehavior:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    service_dependencys: SwcInternalBehavior.ServiceDependencys | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "SERVICE-DEPENDENCYS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    service_dependencys: SwcInternalBehavior.ServiceDependencys | None = field(
+        default=None,
+        metadata={
+            "name": "SERVICE-DEPENDENCYS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
-    shared_parameters: SwcInternalBehavior.SharedParameters | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "SHARED-PARAMETERS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    shared_parameters: SwcInternalBehavior.SharedParameters | None = field(
+        default=None,
+        metadata={
+            "name": "SHARED-PARAMETERS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     supports_multiple_instantiation: Boolean | None = field(
         default=None,
@@ -540,13 +563,15 @@ class SwcInternalBehavior:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point_proxys: SwcInternalBehavior.VariationPointProxys | None = field(
-        default=None,
-        metadata={
-            "name": "VARIATION-POINT-PROXYS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    variation_point_proxys: SwcInternalBehavior.VariationPointProxys | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "VARIATION-POINT-PROXYS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     variation_point: VariationPoint | None = field(
         default=None,
@@ -627,15 +652,13 @@ class SwcInternalBehavior:
 
         @dataclass
         class ConstantValueMappingRef(Ref):
-            dest: ConstantSpecificationMappingSetSubtypesEnum | None = (
-                field(
-                    default=None,
-                    metadata={
-                        "name": "DEST",
-                        "type": "Attribute",
-                        "required": True,
-                    },
-                )
+            dest: ConstantSpecificationMappingSetSubtypesEnum | None = field(
+                default=None,
+                metadata={
+                    "name": "DEST",
+                    "type": "Attribute",
+                    "required": True,
+                },
             )
 
     @dataclass

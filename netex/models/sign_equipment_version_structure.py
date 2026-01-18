@@ -1,6 +1,5 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
-from typing import Optional
 
 from .audio_trigger_method_enumeration import AudioTriggerMethodEnumeration
 from .font_size_enumeration import FontSizeEnumeration

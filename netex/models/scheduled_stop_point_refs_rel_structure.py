@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from .fare_scheduled_stop_point_ref import FareScheduledStopPointRef
 from .one_to_many_relationship_structure import OneToManyRelationshipStructure
@@ -13,7 +12,9 @@ class ScheduledStopPointRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "scheduledStopPointRefs_RelStructure"
 
-    scheduled_stop_point_ref: FareScheduledStopPointRef | ScheduledStopPointRef | None = field(
+    scheduled_stop_point_ref: (
+        FareScheduledStopPointRef | ScheduledStopPointRef | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",

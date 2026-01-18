@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -98,7 +97,9 @@ class DiagnosticRequestRoutineResults:
             "required": True,
         },
     )
-    short_name_fragments: DiagnosticRequestRoutineResults.ShortNameFragments | None = field(
+    short_name_fragments: (
+        DiagnosticRequestRoutineResults.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -146,17 +147,17 @@ class DiagnosticRequestRoutineResults:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: DiagnosticRequestRoutineResults.Annotations | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "ANNOTATIONS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    annotations: DiagnosticRequestRoutineResults.Annotations | None = field(
+        default=None,
+        metadata={
+            "name": "ANNOTATIONS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
-    access_permission_ref: DiagnosticRequestRoutineResults.AccessPermissionRef | None = field(
+    access_permission_ref: (
+        DiagnosticRequestRoutineResults.AccessPermissionRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "ACCESS-PERMISSION-REF",

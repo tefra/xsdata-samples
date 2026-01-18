@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from ipxact.models.part_select import PartSelect
 from ipxact.models.sub_port_reference import SubPortReference

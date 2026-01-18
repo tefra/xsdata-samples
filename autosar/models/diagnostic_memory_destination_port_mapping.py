@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -109,7 +108,9 @@ class DiagnosticMemoryDestinationPortMapping:
             "required": True,
         },
     )
-    short_name_fragments: DiagnosticMemoryDestinationPortMapping.ShortNameFragments | None = field(
+    short_name_fragments: (
+        DiagnosticMemoryDestinationPortMapping.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -157,13 +158,15 @@ class DiagnosticMemoryDestinationPortMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: DiagnosticMemoryDestinationPortMapping.Annotations | None = field(
-        default=None,
-        metadata={
-            "name": "ANNOTATIONS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    annotations: DiagnosticMemoryDestinationPortMapping.Annotations | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "ANNOTATIONS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     variation_point: VariationPoint | None = field(
         default=None,
@@ -173,7 +176,9 @@ class DiagnosticMemoryDestinationPortMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    memory_destination_ref: DiagnosticMemoryDestinationPortMapping.MemoryDestinationRef | None = field(
+    memory_destination_ref: (
+        DiagnosticMemoryDestinationPortMapping.MemoryDestinationRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "MEMORY-DESTINATION-REF",
@@ -181,15 +186,19 @@ class DiagnosticMemoryDestinationPortMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    process_ref: DiagnosticMemoryDestinationPortMapping.ProcessRef | None = field(
-        default=None,
-        metadata={
-            "name": "PROCESS-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    process_ref: DiagnosticMemoryDestinationPortMapping.ProcessRef | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "PROCESS-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
-    swc_service_dependency_in_executable_iref: SwcServiceDependencyInExecutableInstanceRef | None = field(
+    swc_service_dependency_in_executable_iref: (
+        SwcServiceDependencyInExecutableInstanceRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "SWC-SERVICE-DEPENDENCY-IN-EXECUTABLE-IREF",

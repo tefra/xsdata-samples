@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .autosar_data_prototype_subtypes_enum import (
     AutosarDataPrototypeSubtypesEnum,
@@ -125,7 +124,9 @@ class QueuedReceiverComSpec:
     class Meta:
         name = "QUEUED-RECEIVER-COM-SPEC"
 
-    composite_network_representations: QueuedReceiverComSpec.CompositeNetworkRepresentations | None = field(
+    composite_network_representations: (
+        QueuedReceiverComSpec.CompositeNetworkRepresentations | None
+    ) = field(
         default=None,
         metadata={
             "name": "COMPOSITE-NETWORK-REPRESENTATIONS",
@@ -149,7 +150,9 @@ class QueuedReceiverComSpec:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    external_replacement_ref: QueuedReceiverComSpec.ExternalReplacementRef | None = field(
+    external_replacement_ref: (
+        QueuedReceiverComSpec.ExternalReplacementRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "EXTERNAL-REPLACEMENT-REF",
@@ -173,15 +176,13 @@ class QueuedReceiverComSpec:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    max_delta_counter_init: PositiveIntegerValueVariationPoint | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "MAX-DELTA-COUNTER-INIT",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    max_delta_counter_init: PositiveIntegerValueVariationPoint | None = field(
+        default=None,
+        metadata={
+            "name": "MAX-DELTA-COUNTER-INIT",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     max_no_new_or_repeated_data: PositiveInteger | None = field(
         default=None,
@@ -231,7 +232,9 @@ class QueuedReceiverComSpec:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    transformation_com_spec_propss: QueuedReceiverComSpec.TransformationComSpecPropss | None = field(
+    transformation_com_spec_propss: (
+        QueuedReceiverComSpec.TransformationComSpecPropss | None
+    ) = field(
         default=None,
         metadata={
             "name": "TRANSFORMATION-COM-SPEC-PROPSS",

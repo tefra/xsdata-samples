@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from .consumer_response_endpoint_structure import (
     ConsumerResponseEndpointStructure,
@@ -24,20 +23,20 @@ class DataReadyResponseStructure(ConsumerResponseEndpointStructure):
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    error_condition: DataReadyResponseStructure.ErrorCondition | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "ErrorCondition",
-                "type": "Element",
-                "namespace": "http://www.siri.org.uk/siri",
-            },
-        )
+    error_condition: DataReadyResponseStructure.ErrorCondition | None = field(
+        default=None,
+        metadata={
+            "name": "ErrorCondition",
+            "type": "Element",
+            "namespace": "http://www.siri.org.uk/siri",
+        },
     )
 
     @dataclass
     class ErrorCondition:
-        unknown_subscription_error_or_other_error: UnknownSubscriptionError | OtherError | None = field(
+        unknown_subscription_error_or_other_error: (
+            UnknownSubscriptionError | OtherError | None
+        ) = field(
             default=None,
             metadata={
                 "type": "Elements",

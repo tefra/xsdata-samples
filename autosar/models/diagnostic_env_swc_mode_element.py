@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .identifier import Identifier
 from .p_mode_in_system_instance_ref import PModeInSystemInstanceRef
@@ -48,7 +47,9 @@ class DiagnosticEnvSwcModeElement:
             "required": True,
         },
     )
-    short_name_fragments: DiagnosticEnvSwcModeElement.ShortNameFragments | None = field(
+    short_name_fragments: (
+        DiagnosticEnvSwcModeElement.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",

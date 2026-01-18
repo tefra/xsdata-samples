@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from xsdata.models.datatype import XmlTime
 
@@ -84,7 +83,13 @@ class ConnectingJourneyDerivedViewStructure(DerivedViewStructure):
             ),
         },
     )
-    journey_pattern_ref: ServiceJourneyPatternRef | ServicePatternRef | DeadRunJourneyPatternRef | JourneyPatternRef | None = field(
+    journey_pattern_ref: (
+        ServiceJourneyPatternRef
+        | ServicePatternRef
+        | DeadRunJourneyPatternRef
+        | JourneyPatternRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",

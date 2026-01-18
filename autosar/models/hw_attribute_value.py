@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     Annotation,
@@ -54,15 +53,13 @@ class HwAttributeValue:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    hw_attribute_def_ref: HwAttributeValue.HwAttributeDefRef | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "HW-ATTRIBUTE-DEF-REF",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    hw_attribute_def_ref: HwAttributeValue.HwAttributeDefRef | None = field(
+        default=None,
+        metadata={
+            "name": "HW-ATTRIBUTE-DEF-REF",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     v: NumericalValueVariationPoint | None = field(
         default=None,

@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from .capability_not_supported_error import CapabilityNotSupportedError
 from .error_description_structure import ErrorDescriptionStructure
@@ -69,7 +68,9 @@ class TerminationResponseStatusStructure:
             "required": True,
         },
     )
-    error_condition: TerminationResponseStatusStructure.ErrorCondition | None = field(
+    error_condition: (
+        TerminationResponseStatusStructure.ErrorCondition | None
+    ) = field(
         default=None,
         metadata={
             "name": "ErrorCondition",
@@ -80,7 +81,13 @@ class TerminationResponseStatusStructure:
 
     @dataclass
     class ErrorCondition:
-        choice: CapabilityNotSupportedError | UnknownSubscriberError | UnknownSubscriptionError | OtherError | None = field(
+        choice: (
+            CapabilityNotSupportedError
+            | UnknownSubscriberError
+            | UnknownSubscriptionError
+            | OtherError
+            | None
+        ) = field(
             default=None,
             metadata={
                 "type": "Elements",

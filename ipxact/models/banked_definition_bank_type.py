@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from ipxact.models.access_policies import AccessPolicies
 from ipxact.models.bank_alignment_type import BankAlignmentType
@@ -85,13 +84,15 @@ class BankedDefinitionBankType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    bank_definition_ref: BankedDefinitionBankType.BankDefinitionRef | None = field(
-        default=None,
-        metadata={
-            "name": "bankDefinitionRef",
-            "type": "Element",
-            "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
-        },
+    bank_definition_ref: BankedDefinitionBankType.BankDefinitionRef | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "bankDefinitionRef",
+                "type": "Element",
+                "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
+            },
+        )
     )
     address_block: list[BankedBlockType] = field(
         default_factory=list,

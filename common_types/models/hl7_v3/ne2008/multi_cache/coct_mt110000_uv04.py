@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from ..core.datatypes_base import (
     AdExplicit,
@@ -225,7 +224,15 @@ class CoctMt110000Uv04RelationshipRole:
             "type": "Attribute",
         },
     )
-    class_code: RoleClassMutualRelationship | RoleClassPassive | str | RoleClassOntological | RoleClassPartitive | RoleClassRootValue | None = field(
+    class_code: (
+        RoleClassMutualRelationship
+        | RoleClassPassive
+        | str
+        | RoleClassOntological
+        | RoleClassPartitive
+        | RoleClassRootValue
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "classCode",
@@ -383,16 +390,20 @@ class CoctMt110000Uv04AccountHolder:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    held_account_holder_person: CoctMt110000Uv04AccountHolderPerson | None = field(
-        default=None,
-        metadata={
-            "name": "heldAccountHolderPerson",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
+    held_account_holder_person: CoctMt110000Uv04AccountHolderPerson | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "heldAccountHolderPerson",
+                "type": "Element",
+                "namespace": "urn:hl7-org:v3",
+                "nillable": True,
+            },
+        )
     )
-    held_account_holder_organization: CoctMt110000Uv04AccountHolderOrganization | None = field(
+    held_account_holder_organization: (
+        CoctMt110000Uv04AccountHolderOrganization | None
+    ) = field(
         default=None,
         metadata={
             "name": "heldAccountHolderOrganization",
@@ -408,7 +419,23 @@ class CoctMt110000Uv04AccountHolder:
             "type": "Attribute",
         },
     )
-    class_code: RoleClassMutualRelationship | RoleClassPassive | str | RoleClassOntological | RoleClassPartitive | RoleClassRootValue | XAccommodationRequestorRole | XDocumentEntrySubject | XDocumentSubject | XInformationRecipientRole | XRoleClassAccommodationRequestor | XRoleClassCoverage | XRoleClassCoverageInvoice | XRoleClassCredentialedEntity | XRoleClassPayeePolicyRelationship = field(
+    class_code: (
+        RoleClassMutualRelationship
+        | RoleClassPassive
+        | str
+        | RoleClassOntological
+        | RoleClassPartitive
+        | RoleClassRootValue
+        | XAccommodationRequestorRole
+        | XDocumentEntrySubject
+        | XDocumentSubject
+        | XInformationRecipientRole
+        | XRoleClassAccommodationRequestor
+        | XRoleClassCoverage
+        | XRoleClassCoverageInvoice
+        | XRoleClassCredentialedEntity
+        | XRoleClassPayeePolicyRelationship
+    ) = field(
         init=False,
         default=RoleClassPassive.HLD,
         metadata={

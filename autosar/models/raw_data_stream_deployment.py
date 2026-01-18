@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .abstract_raw_data_stream_interface_subtypes_enum import (
     AbstractRawDataStreamInterfaceSubtypesEnum,
@@ -98,13 +97,15 @@ class RawDataStreamDeployment:
             "required": True,
         },
     )
-    short_name_fragments: RawDataStreamDeployment.ShortNameFragments | None = field(
-        default=None,
-        metadata={
-            "name": "SHORT-NAME-FRAGMENTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    short_name_fragments: RawDataStreamDeployment.ShortNameFragments | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "SHORT-NAME-FRAGMENTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     long_name: MultilanguageLongName | None = field(
         default=None,
@@ -162,7 +163,9 @@ class RawDataStreamDeployment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    raw_data_stream_interface_ref: RawDataStreamDeployment.RawDataStreamInterfaceRef | None = field(
+    raw_data_stream_interface_ref: (
+        RawDataStreamDeployment.RawDataStreamInterfaceRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "RAW-DATA-STREAM-INTERFACE-REF",

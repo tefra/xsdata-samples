@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass, field
 
-from xsdata.models.datatype import XmlDate, XmlDateTime
+from xsdata.models.datatype import XmlDateTime
 
 from npo.models.group_table_type import GroupTableType
 from npo.models.location_table_type import LocationTableType

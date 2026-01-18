@@ -1,6 +1,5 @@
 from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import Union
 
 from .assistance_booking_service import AssistanceBookingService
 from .assistance_booking_service_ref import AssistanceBookingServiceRef
@@ -42,7 +41,35 @@ class ExplicitLocalServicesRelStructure(ContainmentAggregationStructure):
         name = "explicitLocalServices_RelStructure"
 
     local_service_ref_or_local_service_or_customer_service: Iterable[
-        AssistanceBookingServiceRef | CateringServiceRef | RetailServiceRef | MoneyServiceRef | HireServiceRef | CommunicationServiceRef | MeetingPointServiceRef | LeftLuggageServiceRef | LuggageServiceRef | LostPropertyServiceRef | ComplaintsServiceRef | CustomerServiceRef | AssistanceServiceRef | TicketingServiceRef | LocalServiceRef | AssistanceBookingService | CateringService | RetailService | MoneyService | HireService | CommunicationService | MeetingPointService | LostPropertyService | LeftLuggageService | ComplaintsService | CustomerService | LuggageService | AssistanceService | TicketingService
+        AssistanceBookingServiceRef
+        | CateringServiceRef
+        | RetailServiceRef
+        | MoneyServiceRef
+        | HireServiceRef
+        | CommunicationServiceRef
+        | MeetingPointServiceRef
+        | LeftLuggageServiceRef
+        | LuggageServiceRef
+        | LostPropertyServiceRef
+        | ComplaintsServiceRef
+        | CustomerServiceRef
+        | AssistanceServiceRef
+        | TicketingServiceRef
+        | LocalServiceRef
+        | AssistanceBookingService
+        | CateringService
+        | RetailService
+        | MoneyService
+        | HireService
+        | CommunicationService
+        | MeetingPointService
+        | LostPropertyService
+        | LeftLuggageService
+        | ComplaintsService
+        | CustomerService
+        | LuggageService
+        | AssistanceService
+        | TicketingService
     ] = field(
         default_factory=list,
         metadata={

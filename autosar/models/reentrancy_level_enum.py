@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .reentrancy_level_enum_simple import ReentrancyLevelEnumSimple
 

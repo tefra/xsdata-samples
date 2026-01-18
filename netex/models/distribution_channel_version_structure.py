@@ -1,6 +1,5 @@
 from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from .alternative_names_rel_structure import AlternativeNamesRelStructure
 from .authority_ref import AuthorityRef
@@ -78,7 +77,19 @@ class DistributionChannelVersionStructure(TypeOfValueVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    organisation_ref_or_other_organisation_ref_or_transport_organisation_ref: RetailConsortiumRef | OnlineServiceOperatorRef | GeneralOrganisationRef | ManagementAgentRef | ServicedOrganisationRef | TravelAgentRef | OtherOrganisationRef | AuthorityRef | OperatorRef | OrganisationRef | None = field(
+    organisation_ref_or_other_organisation_ref_or_transport_organisation_ref: (
+        RetailConsortiumRef
+        | OnlineServiceOperatorRef
+        | GeneralOrganisationRef
+        | ManagementAgentRef
+        | ServicedOrganisationRef
+        | TravelAgentRef
+        | OtherOrganisationRef
+        | AuthorityRef
+        | OperatorRef
+        | OrganisationRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -164,7 +175,9 @@ class DistributionChannelVersionStructure(TypeOfValueVersionStructure):
             "tokens": True,
         },
     )
-    distribution_points_or_distribution_group_ref: PointRefsRelStructure | GeneralGroupOfEntitiesRefStructure | None = field(
+    distribution_points_or_distribution_group_ref: (
+        PointRefsRelStructure | GeneralGroupOfEntitiesRefStructure | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",

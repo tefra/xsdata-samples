@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from .access_right_parameter_assignment_version_structure import (
     AccessRightParameterAssignmentVersionStructure,
@@ -23,7 +22,9 @@ class ValidityParameterAssignmentVersionStructure(
     class Meta:
         name = "ValidityParameterAssignment_VersionStructure"
 
-    time_interval_ref_or_parking_charge_band_ref_or_time_structure_factor_ref: TimeIntervalRef | ParkingChargeBandRef | TimeStructureFactorRef | None = field(
+    time_interval_ref_or_parking_charge_band_ref_or_time_structure_factor_ref: (
+        TimeIntervalRef | ParkingChargeBandRef | TimeStructureFactorRef | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -46,7 +47,9 @@ class ValidityParameterAssignmentVersionStructure(
             ),
         },
     )
-    geographical_interval_ref_or_geographical_structure_factor_ref: GeographicalIntervalRef | GeographicalStructureFactorRef | None = field(
+    geographical_interval_ref_or_geographical_structure_factor_ref: (
+        GeographicalIntervalRef | GeographicalStructureFactorRef | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -64,7 +67,12 @@ class ValidityParameterAssignmentVersionStructure(
             ),
         },
     )
-    quality_structure_factor_ref: FareQuotaFactorRef | FareDemandFactorRef | QualityStructureFactorRef | None = field(
+    quality_structure_factor_ref: (
+        FareQuotaFactorRef
+        | FareDemandFactorRef
+        | QualityStructureFactorRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",

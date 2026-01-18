@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -105,15 +104,13 @@ class TdEventBswModule:
             "required": True,
         },
     )
-    short_name_fragments: TdEventBswModule.ShortNameFragments | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "SHORT-NAME-FRAGMENTS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    short_name_fragments: TdEventBswModule.ShortNameFragments | None = field(
+        default=None,
+        metadata={
+            "name": "SHORT-NAME-FRAGMENTS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     long_name: MultilanguageLongName | None = field(
         default=None,
@@ -179,7 +176,9 @@ class TdEventBswModule:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    bsw_module_description_ref: TdEventBswModule.BswModuleDescriptionRef | None = field(
+    bsw_module_description_ref: (
+        TdEventBswModule.BswModuleDescriptionRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "BSW-MODULE-DESCRIPTION-REF",
@@ -187,15 +186,13 @@ class TdEventBswModule:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    bsw_module_entry_ref: TdEventBswModule.BswModuleEntryRef | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "BSW-MODULE-ENTRY-REF",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    bsw_module_entry_ref: TdEventBswModule.BswModuleEntryRef | None = field(
+        default=None,
+        metadata={
+            "name": "BSW-MODULE-ENTRY-REF",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     td_event_bsw_module_type: TdEventBswModuleTypeEnum | None = field(
         default=None,

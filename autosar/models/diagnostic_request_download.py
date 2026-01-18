@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -113,7 +112,9 @@ class DiagnosticRequestDownload:
             "required": True,
         },
     )
-    short_name_fragments: DiagnosticRequestDownload.ShortNameFragments | None = field(
+    short_name_fragments: (
+        DiagnosticRequestDownload.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -177,7 +178,9 @@ class DiagnosticRequestDownload:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    access_permission_ref: DiagnosticRequestDownload.AccessPermissionRef | None = field(
+    access_permission_ref: (
+        DiagnosticRequestDownload.AccessPermissionRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "ACCESS-PERMISSION-REF",
@@ -185,15 +188,19 @@ class DiagnosticRequestDownload:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    memory_range_refs: DiagnosticRequestDownload.MemoryRangeRefs | None = field(
-        default=None,
-        metadata={
-            "name": "MEMORY-RANGE-REFS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    memory_range_refs: DiagnosticRequestDownload.MemoryRangeRefs | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "MEMORY-RANGE-REFS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
-    request_download_class_ref: DiagnosticRequestDownload.RequestDownloadClassRef | None = field(
+    request_download_class_ref: (
+        DiagnosticRequestDownload.RequestDownloadClassRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "REQUEST-DOWNLOAD-CLASS-REF",

@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -110,7 +109,9 @@ class CompositionPPortToExecutablePPortMapping:
             "required": True,
         },
     )
-    short_name_fragments: CompositionPPortToExecutablePPortMapping.ShortNameFragments | None = field(
+    short_name_fragments: (
+        CompositionPPortToExecutablePPortMapping.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -158,7 +159,9 @@ class CompositionPPortToExecutablePPortMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: CompositionPPortToExecutablePPortMapping.Annotations | None = field(
+    annotations: (
+        CompositionPPortToExecutablePPortMapping.Annotations | None
+    ) = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -174,7 +177,9 @@ class CompositionPPortToExecutablePPortMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    process_design_ref: CompositionPPortToExecutablePPortMapping.ProcessDesignRef | None = field(
+    process_design_ref: (
+        CompositionPPortToExecutablePPortMapping.ProcessDesignRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "PROCESS-DESIGN-REF",
@@ -182,7 +187,9 @@ class CompositionPPortToExecutablePPortMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    executable_provided_port_iref: PPortPrototypeInExecutableInstanceRef | None = field(
+    executable_provided_port_iref: (
+        PPortPrototypeInExecutableInstanceRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "EXECUTABLE-PROVIDED-PORT-IREF",
@@ -190,7 +197,9 @@ class CompositionPPortToExecutablePPortMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_cluster_design_provided_port_iref: PPortPrototypeInSoftwareClusterDesignInstanceRef | None = field(
+    sw_cluster_design_provided_port_iref: (
+        PPortPrototypeInSoftwareClusterDesignInstanceRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "SW-CLUSTER-DESIGN-PROVIDED-PORT-IREF",

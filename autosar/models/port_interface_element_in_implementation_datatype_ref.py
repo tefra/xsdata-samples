@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .autosar_data_prototype_subtypes_enum import (
     AutosarDataPrototypeSubtypesEnum,
@@ -52,7 +51,10 @@ class PortInterfaceElementInImplementationDatatypeRef:
     class Meta:
         name = "PORT-INTERFACE-ELEMENT-IN-IMPLEMENTATION-DATATYPE-REF"
 
-    context_data_prototype_refs: PortInterfaceElementInImplementationDatatypeRef.ContextDataPrototypeRefs | None = field(
+    context_data_prototype_refs: (
+        PortInterfaceElementInImplementationDatatypeRef.ContextDataPrototypeRefs
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "CONTEXT-DATA-PROTOTYPE-REFS",
@@ -60,7 +62,9 @@ class PortInterfaceElementInImplementationDatatypeRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    port_interface_ref: PortInterfaceElementInImplementationDatatypeRef.PortInterfaceRef | None = field(
+    port_interface_ref: (
+        PortInterfaceElementInImplementationDatatypeRef.PortInterfaceRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "PORT-INTERFACE-REF",
@@ -68,7 +72,10 @@ class PortInterfaceElementInImplementationDatatypeRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    root_data_prototype_ref: PortInterfaceElementInImplementationDatatypeRef.RootDataPrototypeRef | None = field(
+    root_data_prototype_ref: (
+        PortInterfaceElementInImplementationDatatypeRef.RootDataPrototypeRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "ROOT-DATA-PROTOTYPE-REF",
@@ -76,7 +83,10 @@ class PortInterfaceElementInImplementationDatatypeRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    target_data_prototype_ref: PortInterfaceElementInImplementationDatatypeRef.TargetDataPrototypeRef | None = field(
+    target_data_prototype_ref: (
+        PortInterfaceElementInImplementationDatatypeRef.TargetDataPrototypeRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "TARGET-DATA-PROTOTYPE-REF",
@@ -115,13 +125,15 @@ class PortInterfaceElementInImplementationDatatypeRef:
 
         @dataclass
         class ContextDataPrototypeRef(Ref):
-            dest: CppImplementationDataTypeContextTargetSubtypesEnum | None = field(
-                default=None,
-                metadata={
-                    "name": "DEST",
-                    "type": "Attribute",
-                    "required": True,
-                },
+            dest: CppImplementationDataTypeContextTargetSubtypesEnum | None = (
+                field(
+                    default=None,
+                    metadata={
+                        "name": "DEST",
+                        "type": "Attribute",
+                        "required": True,
+                    },
+                )
             )
 
     @dataclass

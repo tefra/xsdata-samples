@@ -1,6 +1,5 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
-from typing import Optional
 
 from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.amount_type import (
     AmountType,
@@ -172,15 +171,13 @@ class GlobalUltimateInfoType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v2",
         },
     )
-    number_of_sites_gugroup_in_this_country_exc_branches: int | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "NumberOfSitesGUGroupInThisCountryExcBranches",
-                "type": "Element",
-                "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v2",
-            },
-        )
+    number_of_sites_gugroup_in_this_country_exc_branches: int | None = field(
+        default=None,
+        metadata={
+            "name": "NumberOfSitesGUGroupInThisCountryExcBranches",
+            "type": "Element",
+            "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v2",
+        },
     )
     number_of_eusites_gugroup: int | None = field(
         default=None,

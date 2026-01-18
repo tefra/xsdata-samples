@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -104,7 +103,9 @@ class DiagnosticReadScalingDataByIdentifierClass:
             "required": True,
         },
     )
-    short_name_fragments: DiagnosticReadScalingDataByIdentifierClass.ShortNameFragments | None = field(
+    short_name_fragments: (
+        DiagnosticReadScalingDataByIdentifierClass.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -152,7 +153,9 @@ class DiagnosticReadScalingDataByIdentifierClass:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: DiagnosticReadScalingDataByIdentifierClass.Annotations | None = field(
+    annotations: (
+        DiagnosticReadScalingDataByIdentifierClass.Annotations | None
+    ) = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -168,7 +171,9 @@ class DiagnosticReadScalingDataByIdentifierClass:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    access_permission_ref: DiagnosticReadScalingDataByIdentifierClass.AccessPermissionRef | None = field(
+    access_permission_ref: (
+        DiagnosticReadScalingDataByIdentifierClass.AccessPermissionRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "ACCESS-PERMISSION-REF",
@@ -176,7 +181,9 @@ class DiagnosticReadScalingDataByIdentifierClass:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    access_permission_validity: DiagnosticAccessPermissionValidityEnum | None = field(
+    access_permission_validity: (
+        DiagnosticAccessPermissionValidityEnum | None
+    ) = field(
         default=None,
         metadata={
             "name": "ACCESS-PERMISSION-VALIDITY",

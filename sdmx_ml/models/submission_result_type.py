@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from sdmx_ml.models.status_message_type_2 import StatusMessageType2
 from sdmx_ml.models.submitted_structure_type import SubmittedStructureType

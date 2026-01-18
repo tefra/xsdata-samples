@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -119,7 +118,9 @@ class PrimitiveAttributeTailoring:
             "required": True,
         },
     )
-    short_name_fragments: PrimitiveAttributeTailoring.ShortNameFragments | None = field(
+    short_name_fragments: (
+        PrimitiveAttributeTailoring.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -209,17 +210,17 @@ class PrimitiveAttributeTailoring:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    default_value_handling: DefaultValueApplicationStrategyEnum | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "DEFAULT-VALUE-HANDLING",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    default_value_handling: DefaultValueApplicationStrategyEnum | None = field(
+        default=None,
+        metadata={
+            "name": "DEFAULT-VALUE-HANDLING",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
-    sub_attribute_tailorings: PrimitiveAttributeTailoring.SubAttributeTailorings | None = field(
+    sub_attribute_tailorings: (
+        PrimitiveAttributeTailoring.SubAttributeTailorings | None
+    ) = field(
         default=None,
         metadata={
             "name": "SUB-ATTRIBUTE-TAILORINGS",

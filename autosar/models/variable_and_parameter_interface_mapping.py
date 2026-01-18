@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -114,7 +113,9 @@ class VariableAndParameterInterfaceMapping:
             "required": True,
         },
     )
-    short_name_fragments: VariableAndParameterInterfaceMapping.ShortNameFragments | None = field(
+    short_name_fragments: (
+        VariableAndParameterInterfaceMapping.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -162,15 +163,19 @@ class VariableAndParameterInterfaceMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: VariableAndParameterInterfaceMapping.Annotations | None = field(
-        default=None,
-        metadata={
-            "name": "ANNOTATIONS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    annotations: VariableAndParameterInterfaceMapping.Annotations | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "ANNOTATIONS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
-    blueprint_policys: VariableAndParameterInterfaceMapping.BlueprintPolicys | None = field(
+    blueprint_policys: (
+        VariableAndParameterInterfaceMapping.BlueprintPolicys | None
+    ) = field(
         default=None,
         metadata={
             "name": "BLUEPRINT-POLICYS",
@@ -194,13 +199,15 @@ class VariableAndParameterInterfaceMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    data_mappings: VariableAndParameterInterfaceMapping.DataMappings | None = field(
-        default=None,
-        metadata={
-            "name": "DATA-MAPPINGS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    data_mappings: VariableAndParameterInterfaceMapping.DataMappings | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "DATA-MAPPINGS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     s: str | None = field(
         default=None,

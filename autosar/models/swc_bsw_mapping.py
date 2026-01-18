@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -209,23 +208,23 @@ class SwcBswMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    synchronized_mode_groups: SwcBswMapping.SynchronizedModeGroups | None = field(
-        default=None,
-        metadata={
-            "name": "SYNCHRONIZED-MODE-GROUPS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
-    )
-    synchronized_triggers: SwcBswMapping.SynchronizedTriggers | None = (
+    synchronized_mode_groups: SwcBswMapping.SynchronizedModeGroups | None = (
         field(
             default=None,
             metadata={
-                "name": "SYNCHRONIZED-TRIGGERS",
+                "name": "SYNCHRONIZED-MODE-GROUPS",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
+    )
+    synchronized_triggers: SwcBswMapping.SynchronizedTriggers | None = field(
+        default=None,
+        metadata={
+            "name": "SYNCHRONIZED-TRIGGERS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     s: str | None = field(
         default=None,

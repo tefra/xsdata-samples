@@ -1,6 +1,5 @@
 from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import Union
 
 from .customer_purchase_package import CustomerPurchasePackage
 from .customer_purchase_package_ref import CustomerPurchasePackageRef

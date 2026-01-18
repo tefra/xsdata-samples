@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import VariationPoint
 from .can_physical_channel import CanPhysicalChannel
@@ -74,13 +73,15 @@ class EthernetClusterConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    physical_channels: EthernetClusterConditional.PhysicalChannels | None = field(
-        default=None,
-        metadata={
-            "name": "PHYSICAL-CHANNELS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    physical_channels: EthernetClusterConditional.PhysicalChannels | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "PHYSICAL-CHANNELS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     protocol_name: String | None = field(
         default=None,
@@ -106,7 +107,9 @@ class EthernetClusterConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    coupling_port_connections: EthernetClusterConditional.CouplingPortConnections | None = field(
+    coupling_port_connections: (
+        EthernetClusterConditional.CouplingPortConnections | None
+    ) = field(
         default=None,
         metadata={
             "name": "COUPLING-PORT-CONNECTIONS",
@@ -130,7 +133,9 @@ class EthernetClusterConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    mac_multicast_groups: EthernetClusterConditional.MacMulticastGroups | None = field(
+    mac_multicast_groups: (
+        EthernetClusterConditional.MacMulticastGroups | None
+    ) = field(
         default=None,
         metadata={
             "name": "MAC-MULTICAST-GROUPS",

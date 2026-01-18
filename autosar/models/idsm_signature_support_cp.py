@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .crypto_service_key_subtypes_enum import CryptoServiceKeySubtypesEnum
 from .crypto_service_primitive_subtypes_enum import (
@@ -40,15 +39,19 @@ class IdsmSignatureSupportCp:
     class Meta:
         name = "IDSM-SIGNATURE-SUPPORT-CP"
 
-    authentication_ref: IdsmSignatureSupportCp.AuthenticationRef | None = field(
-        default=None,
-        metadata={
-            "name": "AUTHENTICATION-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    authentication_ref: IdsmSignatureSupportCp.AuthenticationRef | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "AUTHENTICATION-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
-    crypto_service_key_ref: IdsmSignatureSupportCp.CryptoServiceKeyRef | None = field(
+    crypto_service_key_ref: (
+        IdsmSignatureSupportCp.CryptoServiceKeyRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "CRYPTO-SERVICE-KEY-REF",

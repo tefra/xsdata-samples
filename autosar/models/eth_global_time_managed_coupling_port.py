@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .boolean import Boolean
 from .coupling_port_subtypes_enum import CouplingPortSubtypesEnum
@@ -46,7 +45,9 @@ class EthGlobalTimeManagedCouplingPort:
     class Meta:
         name = "ETH-GLOBAL-TIME-MANAGED-COUPLING-PORT"
 
-    coupling_port_ref: EthGlobalTimeManagedCouplingPort.CouplingPortRef | None = field(
+    coupling_port_ref: (
+        EthGlobalTimeManagedCouplingPort.CouplingPortRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "COUPLING-PORT-REF",

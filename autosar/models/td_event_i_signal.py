@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -107,15 +106,13 @@ class TdEventISignal:
             "required": True,
         },
     )
-    short_name_fragments: TdEventISignal.ShortNameFragments | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "SHORT-NAME-FRAGMENTS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    short_name_fragments: TdEventISignal.ShortNameFragments | None = field(
+        default=None,
+        metadata={
+            "name": "SHORT-NAME-FRAGMENTS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     long_name: MultilanguageLongName | None = field(
         default=None,
@@ -197,15 +194,13 @@ class TdEventISignal:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    physical_channel_ref: TdEventISignal.PhysicalChannelRef | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "PHYSICAL-CHANNEL-REF",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    physical_channel_ref: TdEventISignal.PhysicalChannelRef | None = field(
+        default=None,
+        metadata={
+            "name": "PHYSICAL-CHANNEL-REF",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     td_event_type: TdEventISignalTypeEnum | None = field(
         default=None,

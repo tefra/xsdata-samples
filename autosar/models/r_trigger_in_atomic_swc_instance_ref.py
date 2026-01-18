@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .abstract_required_port_prototype_subtypes_enum import (
     AbstractRequiredPortPrototypeSubtypesEnum,
@@ -32,7 +31,9 @@ class RTriggerInAtomicSwcInstanceRef:
     class Meta:
         name = "R-TRIGGER-IN-ATOMIC-SWC-INSTANCE-REF"
 
-    context_r_port_ref: RTriggerInAtomicSwcInstanceRef.ContextRPortRef | None = field(
+    context_r_port_ref: (
+        RTriggerInAtomicSwcInstanceRef.ContextRPortRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "CONTEXT-R-PORT-REF",
@@ -40,7 +41,9 @@ class RTriggerInAtomicSwcInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    target_trigger_ref: RTriggerInAtomicSwcInstanceRef.TargetTriggerRef | None = field(
+    target_trigger_ref: (
+        RTriggerInAtomicSwcInstanceRef.TargetTriggerRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "TARGET-TRIGGER-REF",

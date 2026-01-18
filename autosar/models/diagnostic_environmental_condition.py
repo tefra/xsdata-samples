@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -102,7 +101,9 @@ class DiagnosticEnvironmentalCondition:
             "required": True,
         },
     )
-    short_name_fragments: DiagnosticEnvironmentalCondition.ShortNameFragments | None = field(
+    short_name_fragments: (
+        DiagnosticEnvironmentalCondition.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -150,15 +151,13 @@ class DiagnosticEnvironmentalCondition:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: DiagnosticEnvironmentalCondition.Annotations | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "ANNOTATIONS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    annotations: DiagnosticEnvironmentalCondition.Annotations | None = field(
+        default=None,
+        metadata={
+            "name": "ANNOTATIONS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     variation_point: VariationPoint | None = field(
         default=None,
@@ -176,13 +175,15 @@ class DiagnosticEnvironmentalCondition:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    mode_elements: DiagnosticEnvironmentalCondition.ModeElements | None = field(
-        default=None,
-        metadata={
-            "name": "MODE-ELEMENTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    mode_elements: DiagnosticEnvironmentalCondition.ModeElements | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "MODE-ELEMENTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     s: str | None = field(
         default=None,

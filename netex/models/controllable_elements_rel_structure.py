@@ -1,6 +1,5 @@
 from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import Union
 
 from .controllable_element import ControllableElement
 from .controllable_element_ref import ControllableElementRef

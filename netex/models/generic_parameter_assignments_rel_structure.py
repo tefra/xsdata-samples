@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import ForwardRef, Optional, Union
+from typing import ForwardRef
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .logical_operation_enumeration import LogicalOperationEnumeration

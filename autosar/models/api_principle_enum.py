@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .api_principle_enum_simple import ApiPrincipleEnumSimple
 

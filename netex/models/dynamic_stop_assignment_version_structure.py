@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from .dead_run_journey_pattern_ref import DeadRunJourneyPatternRef
 from .dynamic_stop_assignment_ref import DynamicStopAssignmentRef
@@ -24,7 +23,13 @@ class DynamicStopAssignmentVersionStructure(
     class Meta:
         name = "DynamicStopAssignment_VersionStructure"
 
-    journey_pattern_ref: ServiceJourneyPatternRef | ServicePatternRef | DeadRunJourneyPatternRef | JourneyPatternRef | None = field(
+    journey_pattern_ref: (
+        ServiceJourneyPatternRef
+        | ServicePatternRef
+        | DeadRunJourneyPatternRef
+        | JourneyPatternRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -52,7 +57,12 @@ class DynamicStopAssignmentVersionStructure(
             ),
         },
     )
-    passenger_stop_assignment_ref: VehicleJourneyStopAssignmentRef | DynamicStopAssignmentRef | PassengerStopAssignmentRef | None = field(
+    passenger_stop_assignment_ref: (
+        VehicleJourneyStopAssignmentRef
+        | DynamicStopAssignmentRef
+        | PassengerStopAssignmentRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",

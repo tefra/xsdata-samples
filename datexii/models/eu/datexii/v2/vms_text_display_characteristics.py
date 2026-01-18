@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.position_absolute_enum import (
@@ -221,13 +220,11 @@ class VmsTextDisplayCharacteristics:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    vms_text_display_characteristics_extension: ExtensionType | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "vmsTextDisplayCharacteristicsExtension",
-                "type": "Element",
-                "namespace": "http://datex2.eu/schema/2/2_0",
-            },
-        )
+    vms_text_display_characteristics_extension: ExtensionType | None = field(
+        default=None,
+        metadata={
+            "name": "vmsTextDisplayCharacteristicsExtension",
+            "type": "Element",
+            "namespace": "http://datex2.eu/schema/2/2_0",
+        },
     )

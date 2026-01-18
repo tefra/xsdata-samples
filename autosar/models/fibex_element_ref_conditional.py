@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import VariationPoint
 from .fibex_element_subtypes_enum import FibexElementSubtypesEnum
@@ -33,13 +32,15 @@ class FibexElementRefConditional:
     class Meta:
         name = "FIBEX-ELEMENT-REF-CONDITIONAL"
 
-    fibex_element_ref: FibexElementRefConditional.FibexElementRef | None = field(
-        default=None,
-        metadata={
-            "name": "FIBEX-ELEMENT-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    fibex_element_ref: FibexElementRefConditional.FibexElementRef | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "FIBEX-ELEMENT-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     variation_point: VariationPoint | None = field(
         default=None,

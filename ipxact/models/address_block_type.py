@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from ipxact.models.access_policies import AccessPolicies
 from ipxact.models.alternate_registers import AlternateRegisters
@@ -127,7 +126,9 @@ class AddressBlockType:
             "required": True,
         },
     )
-    address_block_definition_ref: AddressBlockType.AddressBlockDefinitionRef | None = field(
+    address_block_definition_ref: (
+        AddressBlockType.AddressBlockDefinitionRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "addressBlockDefinitionRef",
@@ -312,15 +313,13 @@ class AddressBlockType:
                 "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
             },
         )
-        access_handles: AddressBlockType.Register.AccessHandles | None = (
-            field(
-                default=None,
-                metadata={
-                    "name": "accessHandles",
-                    "type": "Element",
-                    "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
-                },
-            )
+        access_handles: AddressBlockType.Register.AccessHandles | None = field(
+            default=None,
+            metadata={
+                "name": "accessHandles",
+                "type": "Element",
+                "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
+            },
         )
         array: Array | None = field(
             default=None,
@@ -338,7 +337,9 @@ class AddressBlockType:
                 "required": True,
             },
         )
-        register_definition_ref: AddressBlockType.Register.RegisterDefinitionRef | None = field(
+        register_definition_ref: (
+            AddressBlockType.Register.RegisterDefinitionRef | None
+        ) = field(
             default=None,
             metadata={
                 "name": "registerDefinitionRef",

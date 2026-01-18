@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .application_record_element_subtypes_enum import (
     ApplicationRecordElementSubtypesEnum,
@@ -59,7 +58,9 @@ class ClientServerArrayElementMapping:
     class Meta:
         name = "CLIENT-SERVER-ARRAY-ELEMENT-MAPPING"
 
-    complex_type_mapping: ClientServerArrayElementMapping.ComplexTypeMapping | None = field(
+    complex_type_mapping: (
+        ClientServerArrayElementMapping.ComplexTypeMapping | None
+    ) = field(
         default=None,
         metadata={
             "name": "COMPLEX-TYPE-MAPPING",
@@ -75,7 +76,9 @@ class ClientServerArrayElementMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    system_signal_ref: ClientServerArrayElementMapping.SystemSignalRef | None = field(
+    system_signal_ref: (
+        ClientServerArrayElementMapping.SystemSignalRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "SYSTEM-SIGNAL-REF",
@@ -101,7 +104,9 @@ class ClientServerArrayElementMapping:
 
     @dataclass
     class ComplexTypeMapping:
-        client_server_array_type_mapping: ClientServerArrayTypeMapping | None = field(
+        client_server_array_type_mapping: (
+            ClientServerArrayTypeMapping | None
+        ) = field(
             default=None,
             metadata={
                 "name": "CLIENT-SERVER-ARRAY-TYPE-MAPPING",
@@ -109,7 +114,9 @@ class ClientServerArrayElementMapping:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        client_server_record_type_mapping: ClientServerRecordTypeMapping | None = field(
+        client_server_record_type_mapping: (
+            ClientServerRecordTypeMapping | None
+        ) = field(
             default=None,
             metadata={
                 "name": "CLIENT-SERVER-RECORD-TYPE-MAPPING",
@@ -165,7 +172,9 @@ class ClientServerArrayTypeMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    array_element_mappings: ClientServerArrayTypeMapping.ArrayElementMappings | None = field(
+    array_element_mappings: (
+        ClientServerArrayTypeMapping.ArrayElementMappings | None
+    ) = field(
         default=None,
         metadata={
             "name": "ARRAY-ELEMENT-MAPPINGS",
@@ -262,7 +271,9 @@ class ClientServerRecordElementMapping:
     class Meta:
         name = "CLIENT-SERVER-RECORD-ELEMENT-MAPPING"
 
-    application_record_element_ref: ClientServerRecordElementMapping.ApplicationRecordElementRef | None = field(
+    application_record_element_ref: (
+        ClientServerRecordElementMapping.ApplicationRecordElementRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "APPLICATION-RECORD-ELEMENT-REF",
@@ -270,7 +281,9 @@ class ClientServerRecordElementMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    complex_type_mapping: ClientServerRecordElementMapping.ComplexTypeMapping | None = field(
+    complex_type_mapping: (
+        ClientServerRecordElementMapping.ComplexTypeMapping | None
+    ) = field(
         default=None,
         metadata={
             "name": "COMPLEX-TYPE-MAPPING",
@@ -278,7 +291,9 @@ class ClientServerRecordElementMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    implementation_record_element_ref: ClientServerRecordElementMapping.ImplementationRecordElementRef | None = field(
+    implementation_record_element_ref: (
+        ClientServerRecordElementMapping.ImplementationRecordElementRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "IMPLEMENTATION-RECORD-ELEMENT-REF",
@@ -286,7 +301,9 @@ class ClientServerRecordElementMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    system_signal_ref: ClientServerRecordElementMapping.SystemSignalRef | None = field(
+    system_signal_ref: (
+        ClientServerRecordElementMapping.SystemSignalRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "SYSTEM-SIGNAL-REF",
@@ -323,7 +340,9 @@ class ClientServerRecordElementMapping:
 
     @dataclass
     class ComplexTypeMapping:
-        client_server_array_type_mapping: ClientServerArrayTypeMapping | None = field(
+        client_server_array_type_mapping: (
+            ClientServerArrayTypeMapping | None
+        ) = field(
             default=None,
             metadata={
                 "name": "CLIENT-SERVER-ARRAY-TYPE-MAPPING",
@@ -331,7 +350,9 @@ class ClientServerRecordElementMapping:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        client_server_record_type_mapping: ClientServerRecordTypeMapping | None = field(
+        client_server_record_type_mapping: (
+            ClientServerRecordTypeMapping | None
+        ) = field(
             default=None,
             metadata={
                 "name": "CLIENT-SERVER-RECORD-TYPE-MAPPING",
@@ -390,17 +411,17 @@ class ClientServerRecordTypeMapping:
     class Meta:
         name = "CLIENT-SERVER-RECORD-TYPE-MAPPING"
 
-    argument_ref: ClientServerRecordTypeMapping.ArgumentRef | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "ARGUMENT-REF",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    argument_ref: ClientServerRecordTypeMapping.ArgumentRef | None = field(
+        default=None,
+        metadata={
+            "name": "ARGUMENT-REF",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
-    record_element_mappings: ClientServerRecordTypeMapping.RecordElementMappings | None = field(
+    record_element_mappings: (
+        ClientServerRecordTypeMapping.RecordElementMappings | None
+    ) = field(
         default=None,
         metadata={
             "name": "RECORD-ELEMENT-MAPPINGS",

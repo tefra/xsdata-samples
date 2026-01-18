@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .operation_in_system_instance_ref import OperationInSystemInstanceRef
 from .swc_to_swc_operation_arguments_direction_enum import (
@@ -53,15 +52,13 @@ class SwcToSwcOperationArguments:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    operation_irefs: SwcToSwcOperationArguments.OperationIrefs | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "OPERATION-IREFS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    operation_irefs: SwcToSwcOperationArguments.OperationIrefs | None = field(
+        default=None,
+        metadata={
+            "name": "OPERATION-IREFS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     s: str | None = field(
         default=None,

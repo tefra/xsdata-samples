@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -104,7 +103,9 @@ class TdCpSoftwareClusterMappingSet:
             "required": True,
         },
     )
-    short_name_fragments: TdCpSoftwareClusterMappingSet.ShortNameFragments | None = field(
+    short_name_fragments: (
+        TdCpSoftwareClusterMappingSet.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -168,7 +169,10 @@ class TdCpSoftwareClusterMappingSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    td_cp_software_cluster_resource_to_td_mappings: TdCpSoftwareClusterMappingSet.TdCpSoftwareClusterResourceToTdMappings | None = field(
+    td_cp_software_cluster_resource_to_td_mappings: (
+        TdCpSoftwareClusterMappingSet.TdCpSoftwareClusterResourceToTdMappings
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "TD-CP-SOFTWARE-CLUSTER-RESOURCE-TO-TD-MAPPINGS",
@@ -176,7 +180,9 @@ class TdCpSoftwareClusterMappingSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    td_cp_software_cluster_to_td_mappings: TdCpSoftwareClusterMappingSet.TdCpSoftwareClusterToTdMappings | None = field(
+    td_cp_software_cluster_to_td_mappings: (
+        TdCpSoftwareClusterMappingSet.TdCpSoftwareClusterToTdMappings | None
+    ) = field(
         default=None,
         metadata={
             "name": "TD-CP-SOFTWARE-CLUSTER-TO-TD-MAPPINGS",

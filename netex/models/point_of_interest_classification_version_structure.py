@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .classification_descriptors_rel_structure import (
     ClassificationDescriptorsRelStructure,
@@ -16,11 +15,13 @@ class PointOfInterestClassificationVersionStructure(
     class Meta:
         name = "PointOfInterestClassification_VersionStructure"
 
-    alternative_descriptors: ClassificationDescriptorsRelStructure | None = field(
-        default=None,
-        metadata={
-            "name": "alternativeDescriptors",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        },
+    alternative_descriptors: ClassificationDescriptorsRelStructure | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "alternativeDescriptors",
+                "type": "Element",
+                "namespace": "http://www.netex.org.uk/netex",
+            },
+        )
     )

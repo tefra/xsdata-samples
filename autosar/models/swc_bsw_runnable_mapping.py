@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import VariationPoint
 from .bsw_module_entity_subtypes_enum import BswModuleEntitySubtypesEnum

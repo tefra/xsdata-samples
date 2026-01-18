@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from xsdata.models.datatype import XmlDateTime
 
@@ -111,15 +110,13 @@ class SituationRecord:
             "required": True,
         },
     )
-    situation_record_first_supplier_version_time: XmlDateTime | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "situationRecordFirstSupplierVersionTime",
-                "type": "Element",
-                "namespace": "http://datex2.eu/schema/2/2_0",
-            },
-        )
+    situation_record_first_supplier_version_time: XmlDateTime | None = field(
+        default=None,
+        metadata={
+            "name": "situationRecordFirstSupplierVersionTime",
+            "type": "Element",
+            "namespace": "http://datex2.eu/schema/2/2_0",
+        },
     )
     confidentiality_override: ConfidentialityValueEnum | None = field(
         default=None,

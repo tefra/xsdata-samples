@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Union
 
 from sdmx_ml.models.metadata_attribute_base_type import (
     MetadataAttributeBaseType,

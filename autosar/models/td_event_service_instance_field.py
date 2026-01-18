@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -108,7 +107,9 @@ class TdEventServiceInstanceField:
             "required": True,
         },
     )
-    short_name_fragments: TdEventServiceInstanceField.ShortNameFragments | None = field(
+    short_name_fragments: (
+        TdEventServiceInstanceField.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -180,7 +181,10 @@ class TdEventServiceInstanceField:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    service_instance_to_port_prototype_mapping_ref: TdEventServiceInstanceField.ServiceInstanceToPortPrototypeMappingRef | None = field(
+    service_instance_to_port_prototype_mapping_ref: (
+        TdEventServiceInstanceField.ServiceInstanceToPortPrototypeMappingRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "SERVICE-INSTANCE-TO-PORT-PROTOTYPE-MAPPING-REF",
@@ -196,7 +200,9 @@ class TdEventServiceInstanceField:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    td_event_service_instance_field_type: TdEventServiceInstanceFieldTypeEnum | None = field(
+    td_event_service_instance_field_type: (
+        TdEventServiceInstanceFieldTypeEnum | None
+    ) = field(
         default=None,
         metadata={
             "name": "TD-EVENT-SERVICE-INSTANCE-FIELD-TYPE",
@@ -251,15 +257,13 @@ class TdEventServiceInstanceField:
 
     @dataclass
     class ServiceInstanceToPortPrototypeMappingRef(Ref):
-        dest: ServiceInstanceToPortPrototypeMappingSubtypesEnum | None = (
-            field(
-                default=None,
-                metadata={
-                    "name": "DEST",
-                    "type": "Attribute",
-                    "required": True,
-                },
-            )
+        dest: ServiceInstanceToPortPrototypeMappingSubtypesEnum | None = field(
+            default=None,
+            metadata={
+                "name": "DEST",
+                "type": "Attribute",
+                "required": True,
+            },
         )
 
     @dataclass

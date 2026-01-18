@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -112,7 +111,9 @@ class DiagnosticCommunicationManagerNeeds:
             "required": True,
         },
     )
-    short_name_fragments: DiagnosticCommunicationManagerNeeds.ShortNameFragments | None = field(
+    short_name_fragments: (
+        DiagnosticCommunicationManagerNeeds.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -160,23 +161,23 @@ class DiagnosticCommunicationManagerNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: DiagnosticCommunicationManagerNeeds.Annotations | None = field(
-        default=None,
-        metadata={
-            "name": "ANNOTATIONS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
-    )
-    audiences: DiagnosticCommunicationManagerNeeds.Audiences | None = (
+    annotations: DiagnosticCommunicationManagerNeeds.Annotations | None = (
         field(
             default=None,
             metadata={
-                "name": "AUDIENCES",
+                "name": "ANNOTATIONS",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
+    )
+    audiences: DiagnosticCommunicationManagerNeeds.Audiences | None = field(
+        default=None,
+        metadata={
+            "name": "AUDIENCES",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     diag_requirement: DiagRequirementIdString | None = field(
         default=None,
@@ -194,7 +195,9 @@ class DiagnosticCommunicationManagerNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    service_request_callback_type: DiagnosticServiceRequestCallbackTypeEnum | None = field(
+    service_request_callback_type: (
+        DiagnosticServiceRequestCallbackTypeEnum | None
+    ) = field(
         default=None,
         metadata={
             "name": "SERVICE-REQUEST-CALLBACK-TYPE",

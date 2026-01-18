@@ -1,6 +1,5 @@
 from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import Union
 
 from .dated_special_service_ref import DatedSpecialServiceRef
 from .dated_vehicle_journey_ref import DatedVehicleJourneyRef
@@ -23,7 +22,16 @@ class JourneyRefsRelStructure(OneToManyRelationshipStructure):
         name = "journeyRefs_RelStructure"
 
     choice: Iterable[
-        SingleJourneyRef | DatedVehicleJourneyRef | DatedSpecialServiceRef | SpecialServiceRef | TemplateServiceJourneyRef | ServiceJourneyRef | DeadRunRef | VehicleJourneyRef | JourneyDesignator | ServiceDesignator
+        SingleJourneyRef
+        | DatedVehicleJourneyRef
+        | DatedSpecialServiceRef
+        | SpecialServiceRef
+        | TemplateServiceJourneyRef
+        | ServiceJourneyRef
+        | DeadRunRef
+        | VehicleJourneyRef
+        | JourneyDesignator
+        | ServiceDesignator
     ] = field(
         default_factory=list,
         metadata={

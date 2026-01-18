@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .positive_integer import PositiveInteger
 from .time_value import TimeValue
@@ -64,15 +63,13 @@ class GlobalTimeCorrectionProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    rate_corrections_per_measurement_duration: PositiveInteger | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "RATE-CORRECTIONS-PER-MEASUREMENT-DURATION",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    rate_corrections_per_measurement_duration: PositiveInteger | None = field(
+        default=None,
+        metadata={
+            "name": "RATE-CORRECTIONS-PER-MEASUREMENT-DURATION",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     s: str | None = field(
         default=None,

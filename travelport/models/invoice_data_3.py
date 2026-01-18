@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass, field
 
-from xsdata.models.datatype import XmlDate, XmlDateTime
+from xsdata.models.datatype import XmlDateTime
 
 from travelport.models.booking_traveler_information_3 import (
     BookingTravelerInformation3,

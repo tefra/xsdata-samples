@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .abstract_service_delivery_structure import (
     AbstractServiceDeliveryStructure,

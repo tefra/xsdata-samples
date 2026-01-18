@@ -1,6 +1,5 @@
 from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import Union
 
 from .commercial_profile_eligibility_ref import CommercialProfileEligibilityRef
 from .one_to_many_relationship_structure import OneToManyRelationshipStructure
@@ -18,7 +17,9 @@ class CustomerEligibilityRefsRelStructure(OneToManyRelationshipStructure):
         name = "customerEligibilityRefs_RelStructure"
 
     customer_eligibility_ref: Iterable[
-        ResidentialQualificationEligibilityRef | CommercialProfileEligibilityRef | UserProfileEligibilityRef
+        ResidentialQualificationEligibilityRef
+        | CommercialProfileEligibilityRef
+        | UserProfileEligibilityRef
     ] = field(
         default_factory=list,
         metadata={

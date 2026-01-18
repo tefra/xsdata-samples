@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -96,7 +95,9 @@ class ProcessToMachineMappingSet:
             "required": True,
         },
     )
-    short_name_fragments: ProcessToMachineMappingSet.ShortNameFragments | None = field(
+    short_name_fragments: (
+        ProcessToMachineMappingSet.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -160,7 +161,9 @@ class ProcessToMachineMappingSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    process_to_machine_mappings: ProcessToMachineMappingSet.ProcessToMachineMappings | None = field(
+    process_to_machine_mappings: (
+        ProcessToMachineMappingSet.ProcessToMachineMappings | None
+    ) = field(
         default=None,
         metadata={
             "name": "PROCESS-TO-MACHINE-MAPPINGS",

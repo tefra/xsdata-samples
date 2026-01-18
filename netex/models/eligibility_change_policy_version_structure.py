@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .on_becoming_enumeration import OnBecomingEnumeration
 from .on_ceasing_enumeration import OnCeasingEnumeration

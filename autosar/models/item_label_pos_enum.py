@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .item_label_pos_enum_simple import ItemLabelPosEnumSimple
 

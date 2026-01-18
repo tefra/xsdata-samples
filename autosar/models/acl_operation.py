@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .acl_operation_subtypes_enum import AclOperationSubtypesEnum
 from .admin_data import (
@@ -192,15 +191,13 @@ class AclOperation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    implied_operation_refs: AclOperation.ImpliedOperationRefs | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "IMPLIED-OPERATION-REFS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    implied_operation_refs: AclOperation.ImpliedOperationRefs | None = field(
+        default=None,
+        metadata={
+            "name": "IMPLIED-OPERATION-REFS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     s: str | None = field(
         default=None,

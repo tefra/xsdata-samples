@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .ethernet_physical_channel_subtypes_enum import (
     EthernetPhysicalChannelSubtypesEnum,
@@ -55,7 +54,9 @@ class IpIamAuthenticConnectionProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    local_network_endpoint_ref: IpIamAuthenticConnectionProps.LocalNetworkEndpointRef | None = field(
+    local_network_endpoint_ref: (
+        IpIamAuthenticConnectionProps.LocalNetworkEndpointRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "LOCAL-NETWORK-ENDPOINT-REF",
@@ -79,7 +80,9 @@ class IpIamAuthenticConnectionProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    remote_network_endpoint_ref: IpIamAuthenticConnectionProps.RemoteNetworkEndpointRef | None = field(
+    remote_network_endpoint_ref: (
+        IpIamAuthenticConnectionProps.RemoteNetworkEndpointRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "REMOTE-NETWORK-ENDPOINT-REF",

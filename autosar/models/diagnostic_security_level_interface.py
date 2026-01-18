@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -125,7 +124,9 @@ class DiagnosticSecurityLevelInterface:
             "required": True,
         },
     )
-    short_name_fragments: DiagnosticSecurityLevelInterface.ShortNameFragments | None = field(
+    short_name_fragments: (
+        DiagnosticSecurityLevelInterface.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -173,15 +174,13 @@ class DiagnosticSecurityLevelInterface:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: DiagnosticSecurityLevelInterface.Annotations | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "ANNOTATIONS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    annotations: DiagnosticSecurityLevelInterface.Annotations | None = field(
+        default=None,
+        metadata={
+            "name": "ANNOTATIONS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     variation_point: VariationPoint | None = field(
         default=None,
@@ -191,7 +190,9 @@ class DiagnosticSecurityLevelInterface:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    blueprint_policys: DiagnosticSecurityLevelInterface.BlueprintPolicys | None = field(
+    blueprint_policys: (
+        DiagnosticSecurityLevelInterface.BlueprintPolicys | None
+    ) = field(
         default=None,
         metadata={
             "name": "BLUEPRINT-POLICYS",
@@ -215,15 +216,13 @@ class DiagnosticSecurityLevelInterface:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    namespaces: DiagnosticSecurityLevelInterface.Namespaces | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "NAMESPACES",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    namespaces: DiagnosticSecurityLevelInterface.Namespaces | None = field(
+        default=None,
+        metadata={
+            "name": "NAMESPACES",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     service_kind: ServiceProviderEnum | None = field(
         default=None,

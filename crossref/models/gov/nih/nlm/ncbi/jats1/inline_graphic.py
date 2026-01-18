@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from crossref.models.gov.nih.nlm.ncbi.jats1.alt_text import AltText
 from crossref.models.gov.nih.nlm.ncbi.jats1.long_desc import LongDesc

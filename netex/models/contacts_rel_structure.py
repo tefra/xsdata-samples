@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .contact import Contact
 from .containment_aggregation_structure import ContainmentAggregationStructure

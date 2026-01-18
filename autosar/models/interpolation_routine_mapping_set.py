@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -94,7 +93,9 @@ class InterpolationRoutineMappingSet:
             "required": True,
         },
     )
-    short_name_fragments: InterpolationRoutineMappingSet.ShortNameFragments | None = field(
+    short_name_fragments: (
+        InterpolationRoutineMappingSet.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -142,15 +143,13 @@ class InterpolationRoutineMappingSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: InterpolationRoutineMappingSet.Annotations | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "ANNOTATIONS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    annotations: InterpolationRoutineMappingSet.Annotations | None = field(
+        default=None,
+        metadata={
+            "name": "ANNOTATIONS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     variation_point: VariationPoint | None = field(
         default=None,
@@ -160,7 +159,9 @@ class InterpolationRoutineMappingSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    interpolation_routine_mappings: InterpolationRoutineMappingSet.InterpolationRoutineMappings | None = field(
+    interpolation_routine_mappings: (
+        InterpolationRoutineMappingSet.InterpolationRoutineMappings | None
+    ) = field(
         default=None,
         metadata={
             "name": "INTERPOLATION-ROUTINE-MAPPINGS",

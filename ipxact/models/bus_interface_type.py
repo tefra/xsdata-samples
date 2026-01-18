@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from ipxact.models.abstraction_types import AbstractionTypes
 from ipxact.models.addr_space_ref_type import AddrSpaceRefType
@@ -259,7 +258,9 @@ class BusInterfaceType:
             it maps to.
         """
 
-        address_space_ref: BusInterfaceType.Initiator.AddressSpaceRef | None = field(
+        address_space_ref: (
+            BusInterfaceType.Initiator.AddressSpaceRef | None
+        ) = field(
             default=None,
             metadata={
                 "name": "addressSpaceRef",
@@ -402,7 +403,9 @@ class BusInterfaceType:
         :ivar base_addresses: Represents a set of remap base addresses.
         """
 
-        base_addresses: BusInterfaceType.MirroredTarget.BaseAddresses | None = field(
+        base_addresses: (
+            BusInterfaceType.MirroredTarget.BaseAddresses | None
+        ) = field(
             default=None,
             metadata={
                 "name": "baseAddresses",

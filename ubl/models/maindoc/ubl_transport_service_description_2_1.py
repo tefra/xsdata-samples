@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from ubl.models.common.ubl_common_aggregate_components_2_1 import (
     ReceiverParty,
@@ -161,7 +160,9 @@ class TransportServiceDescriptionType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    transport_service_description_request_document_reference: TransportServiceDescriptionRequestDocumentReference | None = field(
+    transport_service_description_request_document_reference: (
+        TransportServiceDescriptionRequestDocumentReference | None
+    ) = field(
         default=None,
         metadata={
             "name": "TransportServiceDescriptionRequestDocumentReference",
@@ -169,13 +170,15 @@ class TransportServiceDescriptionType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    transport_service_provider_party: TransportServiceProviderParty | None = field(
-        default=None,
-        metadata={
-            "name": "TransportServiceProviderParty",
-            "type": "Element",
-            "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        },
+    transport_service_provider_party: TransportServiceProviderParty | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "TransportServiceProviderParty",
+                "type": "Element",
+                "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
+            },
+        )
     )
     service_charge_payment_terms: ServiceChargePaymentTerms | None = field(
         default=None,

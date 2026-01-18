@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .implementation_data_type_element_subtypes_enum import (
     ImplementationDataTypeElementSubtypesEnum,
@@ -54,7 +53,9 @@ class ArVariableInImplementationDataInstanceRef:
     class Meta:
         name = "AR-VARIABLE-IN-IMPLEMENTATION-DATA-INSTANCE-REF"
 
-    port_prototype_ref: ArVariableInImplementationDataInstanceRef.PortPrototypeRef | None = field(
+    port_prototype_ref: (
+        ArVariableInImplementationDataInstanceRef.PortPrototypeRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "PORT-PROTOTYPE-REF",
@@ -62,7 +63,10 @@ class ArVariableInImplementationDataInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    root_variable_data_prototype_ref: ArVariableInImplementationDataInstanceRef.RootVariableDataPrototypeRef | None = field(
+    root_variable_data_prototype_ref: (
+        ArVariableInImplementationDataInstanceRef.RootVariableDataPrototypeRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "ROOT-VARIABLE-DATA-PROTOTYPE-REF",
@@ -70,7 +74,10 @@ class ArVariableInImplementationDataInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    context_data_prototype_refs: ArVariableInImplementationDataInstanceRef.ContextDataPrototypeRefs | None = field(
+    context_data_prototype_refs: (
+        ArVariableInImplementationDataInstanceRef.ContextDataPrototypeRefs
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "CONTEXT-DATA-PROTOTYPE-REFS",
@@ -78,7 +85,9 @@ class ArVariableInImplementationDataInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    target_data_prototype_ref: ArVariableInImplementationDataInstanceRef.TargetDataPrototypeRef | None = field(
+    target_data_prototype_ref: (
+        ArVariableInImplementationDataInstanceRef.TargetDataPrototypeRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "TARGET-DATA-PROTOTYPE-REF",

@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .passenger_capacity_structure import PassengerCapacityStructure
 

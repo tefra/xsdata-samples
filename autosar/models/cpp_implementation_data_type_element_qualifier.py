@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .boolean import Boolean
 from .cpp_implementation_data_type_subtypes_enum import (
@@ -46,7 +45,9 @@ class CppImplementationDataTypeElementQualifier:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    type_reference_ref: CppImplementationDataTypeElementQualifier.TypeReferenceRef | None = field(
+    type_reference_ref: (
+        CppImplementationDataTypeElementQualifier.TypeReferenceRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "TYPE-REFERENCE-REF",

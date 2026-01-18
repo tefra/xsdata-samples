@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -140,7 +139,9 @@ class EcucModuleConfigurationValues:
             "required": True,
         },
     )
-    short_name_fragments: EcucModuleConfigurationValues.ShortNameFragments | None = field(
+    short_name_fragments: (
+        EcucModuleConfigurationValues.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -204,15 +205,13 @@ class EcucModuleConfigurationValues:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    definition_ref: EcucModuleConfigurationValues.DefinitionRef | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "DEFINITION-REF",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    definition_ref: EcucModuleConfigurationValues.DefinitionRef | None = field(
+        default=None,
+        metadata={
+            "name": "DEFINITION-REF",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     ecuc_def_edition: RevisionLabelString | None = field(
         default=None,
@@ -222,17 +221,17 @@ class EcucModuleConfigurationValues:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    implementation_config_variant: EcucConfigurationVariantEnum | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "IMPLEMENTATION-CONFIG-VARIANT",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    implementation_config_variant: EcucConfigurationVariantEnum | None = field(
+        default=None,
+        metadata={
+            "name": "IMPLEMENTATION-CONFIG-VARIANT",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
-    module_description_ref: EcucModuleConfigurationValues.ModuleDescriptionRef | None = field(
+    module_description_ref: (
+        EcucModuleConfigurationValues.ModuleDescriptionRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "MODULE-DESCRIPTION-REF",

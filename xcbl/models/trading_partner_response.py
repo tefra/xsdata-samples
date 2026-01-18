@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from xcbl.models.trading_partner_user_information import (
     PrimaryId,
@@ -326,7 +325,9 @@ class ReturnMessageInformation:
             "required": True,
         }
     )
-    list_of_secondary_message_information: ListOfSecondaryMessageInformation | None = field(
+    list_of_secondary_message_information: (
+        ListOfSecondaryMessageInformation | None
+    ) = field(
         default=None,
         metadata={
             "name": "ListOfSecondaryMessageInformation",

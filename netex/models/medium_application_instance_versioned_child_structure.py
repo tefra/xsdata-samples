@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from .customer_account_ref import CustomerAccountRef
 from .emv_card_ref import EmvCardRef
@@ -37,7 +36,9 @@ class MediumApplicationInstanceVersionedChildStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    medium_access_device_ref: MobileDeviceRef | EmvCardRef | SmartcardRef | None = field(
+    medium_access_device_ref: (
+        MobileDeviceRef | EmvCardRef | SmartcardRef | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -76,21 +77,23 @@ class MediumApplicationInstanceVersionedChildStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    travel_document_ref: ServiceAccessCodeRef | TravelDocumentRef | None = field(
-        default=None,
-        metadata={
-            "type": "Elements",
-            "choices": (
-                {
-                    "name": "ServiceAccessCodeRef",
-                    "type": ServiceAccessCodeRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "TravelDocumentRef",
-                    "type": TravelDocumentRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-            ),
-        },
+    travel_document_ref: ServiceAccessCodeRef | TravelDocumentRef | None = (
+        field(
+            default=None,
+            metadata={
+                "type": "Elements",
+                "choices": (
+                    {
+                        "name": "ServiceAccessCodeRef",
+                        "type": ServiceAccessCodeRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "TravelDocumentRef",
+                        "type": TravelDocumentRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                ),
+            },
+        )
     )

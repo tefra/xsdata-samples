@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -156,7 +155,9 @@ class ComplexDeviceDriverSwComponentType:
             "required": True,
         },
     )
-    short_name_fragments: ComplexDeviceDriverSwComponentType.ShortNameFragments | None = field(
+    short_name_fragments: (
+        ComplexDeviceDriverSwComponentType.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -204,15 +205,13 @@ class ComplexDeviceDriverSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: ComplexDeviceDriverSwComponentType.Annotations | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "ANNOTATIONS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    annotations: ComplexDeviceDriverSwComponentType.Annotations | None = field(
+        default=None,
+        metadata={
+            "name": "ANNOTATIONS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     variation_point: VariationPoint | None = field(
         default=None,
@@ -222,7 +221,9 @@ class ComplexDeviceDriverSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    blueprint_policys: ComplexDeviceDriverSwComponentType.BlueprintPolicys | None = field(
+    blueprint_policys: (
+        ComplexDeviceDriverSwComponentType.BlueprintPolicys | None
+    ) = field(
         default=None,
         metadata={
             "name": "BLUEPRINT-POLICYS",
@@ -238,7 +239,9 @@ class ComplexDeviceDriverSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_component_documentations: ComplexDeviceDriverSwComponentType.SwComponentDocumentations | None = field(
+    sw_component_documentations: (
+        ComplexDeviceDriverSwComponentType.SwComponentDocumentations | None
+    ) = field(
         default=None,
         metadata={
             "name": "SW-COMPONENT-DOCUMENTATIONS",
@@ -246,7 +249,9 @@ class ComplexDeviceDriverSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    consistency_needss: ComplexDeviceDriverSwComponentType.ConsistencyNeedss | None = field(
+    consistency_needss: (
+        ComplexDeviceDriverSwComponentType.ConsistencyNeedss | None
+    ) = field(
         default=None,
         metadata={
             "name": "CONSISTENCY-NEEDSS",
@@ -262,17 +267,17 @@ class ComplexDeviceDriverSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    port_groups: ComplexDeviceDriverSwComponentType.PortGroups | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "PORT-GROUPS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    port_groups: ComplexDeviceDriverSwComponentType.PortGroups | None = field(
+        default=None,
+        metadata={
+            "name": "PORT-GROUPS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
-    unit_group_refs: ComplexDeviceDriverSwComponentType.UnitGroupRefs | None = field(
+    unit_group_refs: (
+        ComplexDeviceDriverSwComponentType.UnitGroupRefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "UNIT-GROUP-REFS",
@@ -280,7 +285,9 @@ class ComplexDeviceDriverSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    internal_behaviors: ComplexDeviceDriverSwComponentType.InternalBehaviors | None = field(
+    internal_behaviors: (
+        ComplexDeviceDriverSwComponentType.InternalBehaviors | None
+    ) = field(
         default=None,
         metadata={
             "name": "INTERNAL-BEHAVIORS",
@@ -296,7 +303,9 @@ class ComplexDeviceDriverSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    hardware_element_refs: ComplexDeviceDriverSwComponentType.HardwareElementRefs | None = field(
+    hardware_element_refs: (
+        ComplexDeviceDriverSwComponentType.HardwareElementRefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "HARDWARE-ELEMENT-REFS",

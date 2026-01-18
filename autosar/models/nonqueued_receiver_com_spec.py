@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .application_assoc_map_element_value_specification import (
     ApplicationAssocMapValueSpecification,
@@ -175,7 +174,9 @@ class NonqueuedReceiverComSpec:
     class Meta:
         name = "NONQUEUED-RECEIVER-COM-SPEC"
 
-    composite_network_representations: NonqueuedReceiverComSpec.CompositeNetworkRepresentations | None = field(
+    composite_network_representations: (
+        NonqueuedReceiverComSpec.CompositeNetworkRepresentations | None
+    ) = field(
         default=None,
         metadata={
             "name": "COMPOSITE-NETWORK-REPRESENTATIONS",
@@ -183,15 +184,13 @@ class NonqueuedReceiverComSpec:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    data_element_ref: NonqueuedReceiverComSpec.DataElementRef | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "DATA-ELEMENT-REF",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    data_element_ref: NonqueuedReceiverComSpec.DataElementRef | None = field(
+        default=None,
+        metadata={
+            "name": "DATA-ELEMENT-REF",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     data_update_period: TimeValue | None = field(
         default=None,
@@ -201,7 +200,9 @@ class NonqueuedReceiverComSpec:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    external_replacement_ref: NonqueuedReceiverComSpec.ExternalReplacementRef | None = field(
+    external_replacement_ref: (
+        NonqueuedReceiverComSpec.ExternalReplacementRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "EXTERNAL-REPLACEMENT-REF",
@@ -225,15 +226,13 @@ class NonqueuedReceiverComSpec:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    max_delta_counter_init: PositiveIntegerValueVariationPoint | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "MAX-DELTA-COUNTER-INIT",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    max_delta_counter_init: PositiveIntegerValueVariationPoint | None = field(
+        default=None,
+        metadata={
+            "name": "MAX-DELTA-COUNTER-INIT",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     max_no_new_or_repeated_data: PositiveInteger | None = field(
         default=None,
@@ -283,7 +282,9 @@ class NonqueuedReceiverComSpec:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    transformation_com_spec_propss: NonqueuedReceiverComSpec.TransformationComSpecPropss | None = field(
+    transformation_com_spec_propss: (
+        NonqueuedReceiverComSpec.TransformationComSpecPropss | None
+    ) = field(
         default=None,
         metadata={
             "name": "TRANSFORMATION-COM-SPEC-PROPSS",
@@ -355,7 +356,9 @@ class NonqueuedReceiverComSpec:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    timeout_substitution_value: NonqueuedReceiverComSpec.TimeoutSubstitutionValue | None = field(
+    timeout_substitution_value: (
+        NonqueuedReceiverComSpec.TimeoutSubstitutionValue | None
+    ) = field(
         default=None,
         metadata={
             "name": "TIMEOUT-SUBSTITUTION-VALUE",
@@ -439,7 +442,9 @@ class NonqueuedReceiverComSpec:
 
     @dataclass
     class InitValue:
-        application_assoc_map_value_specification: ApplicationAssocMapValueSpecification | None = field(
+        application_assoc_map_value_specification: (
+            ApplicationAssocMapValueSpecification | None
+        ) = field(
             default=None,
             metadata={
                 "name": "APPLICATION-ASSOC-MAP-VALUE-SPECIFICATION",
@@ -447,7 +452,9 @@ class NonqueuedReceiverComSpec:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        application_rule_based_value_specification: ApplicationRuleBasedValueSpecification | None = field(
+        application_rule_based_value_specification: (
+            ApplicationRuleBasedValueSpecification | None
+        ) = field(
             default=None,
             metadata={
                 "name": "APPLICATION-RULE-BASED-VALUE-SPECIFICATION",
@@ -455,7 +462,9 @@ class NonqueuedReceiverComSpec:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        application_value_specification: ApplicationValueSpecification | None = field(
+        application_value_specification: (
+            ApplicationValueSpecification | None
+        ) = field(
             default=None,
             metadata={
                 "name": "APPLICATION-VALUE-SPECIFICATION",
@@ -471,7 +480,9 @@ class NonqueuedReceiverComSpec:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        composite_rule_based_value_specification: CompositeRuleBasedValueSpecification | None = field(
+        composite_rule_based_value_specification: (
+            CompositeRuleBasedValueSpecification | None
+        ) = field(
             default=None,
             metadata={
                 "name": "COMPOSITE-RULE-BASED-VALUE-SPECIFICATION",
@@ -487,7 +498,9 @@ class NonqueuedReceiverComSpec:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        not_available_value_specification: NotAvailableValueSpecification | None = field(
+        not_available_value_specification: (
+            NotAvailableValueSpecification | None
+        ) = field(
             default=None,
             metadata={
                 "name": "NOT-AVAILABLE-VALUE-SPECIFICATION",
@@ -495,7 +508,9 @@ class NonqueuedReceiverComSpec:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        numerical_rule_based_value_specification: NumericalRuleBasedValueSpecification | None = field(
+        numerical_rule_based_value_specification: (
+            NumericalRuleBasedValueSpecification | None
+        ) = field(
             default=None,
             metadata={
                 "name": "NUMERICAL-RULE-BASED-VALUE-SPECIFICATION",
@@ -503,13 +518,15 @@ class NonqueuedReceiverComSpec:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        numerical_value_specification: NumericalValueSpecification | None = field(
-            default=None,
-            metadata={
-                "name": "NUMERICAL-VALUE-SPECIFICATION",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        numerical_value_specification: NumericalValueSpecification | None = (
+            field(
+                default=None,
+                metadata={
+                    "name": "NUMERICAL-VALUE-SPECIFICATION",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )
         record_value_specification: RecordValueSpecification | None = field(
             default=None,
@@ -519,13 +536,15 @@ class NonqueuedReceiverComSpec:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        reference_value_specification: ReferenceValueSpecification | None = field(
-            default=None,
-            metadata={
-                "name": "REFERENCE-VALUE-SPECIFICATION",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        reference_value_specification: ReferenceValueSpecification | None = (
+            field(
+                default=None,
+                metadata={
+                    "name": "REFERENCE-VALUE-SPECIFICATION",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )
         text_value_specification: TextValueSpecification | None = field(
             default=None,
@@ -538,7 +557,9 @@ class NonqueuedReceiverComSpec:
 
     @dataclass
     class TimeoutSubstitutionValue:
-        application_assoc_map_value_specification: ApplicationAssocMapValueSpecification | None = field(
+        application_assoc_map_value_specification: (
+            ApplicationAssocMapValueSpecification | None
+        ) = field(
             default=None,
             metadata={
                 "name": "APPLICATION-ASSOC-MAP-VALUE-SPECIFICATION",
@@ -546,7 +567,9 @@ class NonqueuedReceiverComSpec:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        application_rule_based_value_specification: ApplicationRuleBasedValueSpecification | None = field(
+        application_rule_based_value_specification: (
+            ApplicationRuleBasedValueSpecification | None
+        ) = field(
             default=None,
             metadata={
                 "name": "APPLICATION-RULE-BASED-VALUE-SPECIFICATION",
@@ -554,7 +577,9 @@ class NonqueuedReceiverComSpec:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        application_value_specification: ApplicationValueSpecification | None = field(
+        application_value_specification: (
+            ApplicationValueSpecification | None
+        ) = field(
             default=None,
             metadata={
                 "name": "APPLICATION-VALUE-SPECIFICATION",
@@ -570,7 +595,9 @@ class NonqueuedReceiverComSpec:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        composite_rule_based_value_specification: CompositeRuleBasedValueSpecification | None = field(
+        composite_rule_based_value_specification: (
+            CompositeRuleBasedValueSpecification | None
+        ) = field(
             default=None,
             metadata={
                 "name": "COMPOSITE-RULE-BASED-VALUE-SPECIFICATION",
@@ -586,7 +613,9 @@ class NonqueuedReceiverComSpec:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        not_available_value_specification: NotAvailableValueSpecification | None = field(
+        not_available_value_specification: (
+            NotAvailableValueSpecification | None
+        ) = field(
             default=None,
             metadata={
                 "name": "NOT-AVAILABLE-VALUE-SPECIFICATION",
@@ -594,7 +623,9 @@ class NonqueuedReceiverComSpec:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        numerical_rule_based_value_specification: NumericalRuleBasedValueSpecification | None = field(
+        numerical_rule_based_value_specification: (
+            NumericalRuleBasedValueSpecification | None
+        ) = field(
             default=None,
             metadata={
                 "name": "NUMERICAL-RULE-BASED-VALUE-SPECIFICATION",
@@ -602,13 +633,15 @@ class NonqueuedReceiverComSpec:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        numerical_value_specification: NumericalValueSpecification | None = field(
-            default=None,
-            metadata={
-                "name": "NUMERICAL-VALUE-SPECIFICATION",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        numerical_value_specification: NumericalValueSpecification | None = (
+            field(
+                default=None,
+                metadata={
+                    "name": "NUMERICAL-VALUE-SPECIFICATION",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )
         record_value_specification: RecordValueSpecification | None = field(
             default=None,
@@ -618,13 +651,15 @@ class NonqueuedReceiverComSpec:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        reference_value_specification: ReferenceValueSpecification | None = field(
-            default=None,
-            metadata={
-                "name": "REFERENCE-VALUE-SPECIFICATION",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        reference_value_specification: ReferenceValueSpecification | None = (
+            field(
+                default=None,
+                metadata={
+                    "name": "REFERENCE-VALUE-SPECIFICATION",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )
         text_value_specification: TextValueSpecification | None = field(
             default=None,

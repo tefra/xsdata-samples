@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .link_version_structure import LinkVersionStructure
 from .mode_restriction_assessments_rel_structure import (
@@ -42,7 +41,9 @@ class RouteLinkVersionStructure(LinkVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    mode_restriction_assessments: ModeRestrictionAssessmentsRelStructure | None = field(
+    mode_restriction_assessments: (
+        ModeRestrictionAssessmentsRelStructure | None
+    ) = field(
         default=None,
         metadata={
             "name": "modeRestrictionAssessments",

@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from .authority_ref import AuthorityRef
 from .equipment_places_rel_structure import EquipmentPlacesRelStructure
@@ -39,7 +38,9 @@ class SiteVersionStructure(SiteElementVersionStructure):
     class Meta:
         name = "Site_VersionStructure"
 
-    topographic_place_ref_or_topographic_place_view: TopographicPlaceRef | TopographicPlaceView | None = field(
+    topographic_place_ref_or_topographic_place_view: (
+        TopographicPlaceRef | TopographicPlaceView | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -57,13 +58,15 @@ class SiteVersionStructure(SiteElementVersionStructure):
             ),
         },
     )
-    additional_topographic_places: TopographicPlaceRefsRelStructure | None = field(
-        default=None,
-        metadata={
-            "name": "additionalTopographicPlaces",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        },
+    additional_topographic_places: TopographicPlaceRefsRelStructure | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "additionalTopographicPlaces",
+                "type": "Element",
+                "namespace": "http://www.netex.org.uk/netex",
+            },
+        )
     )
     site_type: SiteTypeEnumeration | None = field(
         default=None,
@@ -89,7 +92,20 @@ class SiteVersionStructure(SiteElementVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    choice: RetailConsortiumRef | OnlineServiceOperatorRef | GeneralOrganisationRef | ManagementAgentRef | ServicedOrganisationRef | TravelAgentRef | OtherOrganisationRef | AuthorityRef | OperatorRef | OrganisationRef | OrganisationDerivedViewStructure | None = field(
+    choice: (
+        RetailConsortiumRef
+        | OnlineServiceOperatorRef
+        | GeneralOrganisationRef
+        | ManagementAgentRef
+        | ServicedOrganisationRef
+        | TravelAgentRef
+        | OtherOrganisationRef
+        | AuthorityRef
+        | OperatorRef
+        | OrganisationRef
+        | OrganisationDerivedViewStructure
+        | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",

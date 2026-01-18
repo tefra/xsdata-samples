@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from .activation_point_ref import ActivationPointRef
 from .beacon_point_ref import BeaconPointRef
@@ -33,7 +32,25 @@ class PointOnRouteVersionedChildStructure(
     class Meta:
         name = "PointOnRoute_VersionedChildStructure"
 
-    choice_1: VehicleMeetingPointRef | WirePointRef | RoadPointRef | RailwayPointRef | TrafficControlPointRef | BeaconPointRef | ActivationPointRef | BorderPointRef | FareScheduledStopPointRef | ScheduledStopPointRef | GaragePointRef | ParkingPointRef | ReliefPointRef | TimingPointRef | RoutePointRef | PointRef | None = field(
+    choice_1: (
+        VehicleMeetingPointRef
+        | WirePointRef
+        | RoadPointRef
+        | RailwayPointRef
+        | TrafficControlPointRef
+        | BeaconPointRef
+        | ActivationPointRef
+        | BorderPointRef
+        | FareScheduledStopPointRef
+        | ScheduledStopPointRef
+        | GaragePointRef
+        | ParkingPointRef
+        | ReliefPointRef
+        | TimingPointRef
+        | RoutePointRef
+        | PointRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",

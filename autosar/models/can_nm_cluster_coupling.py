@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import VariationPoint
 from .boolean import Boolean
@@ -48,13 +47,15 @@ class CanNmClusterCoupling:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    coupled_cluster_refs: CanNmClusterCoupling.CoupledClusterRefs | None = field(
-        default=None,
-        metadata={
-            "name": "COUPLED-CLUSTER-REFS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    coupled_cluster_refs: CanNmClusterCoupling.CoupledClusterRefs | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "COUPLED-CLUSTER-REFS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     nm_busload_reduction_enabled: Boolean | None = field(
         default=None,

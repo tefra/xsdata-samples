@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .delivery_variant_type_enumeration import DeliveryVariantTypeEnumeration
 from .entity_in_version_structure import DataManagedObjectStructure
@@ -23,15 +22,13 @@ class DeliveryVariantVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    delivery_variant_media_type: DeliveryVariantTypeEnumeration | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "DeliveryVariantMediaType",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            },
-        )
+    delivery_variant_media_type: DeliveryVariantTypeEnumeration | None = field(
+        default=None,
+        metadata={
+            "name": "DeliveryVariantMediaType",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        },
     )
     type_of_delivery_variant_ref: TypeOfDeliveryVariantRef | None = field(
         default=None,

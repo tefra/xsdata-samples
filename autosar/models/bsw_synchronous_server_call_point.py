@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import VariationPoint
 from .bsw_distinguished_partition_subtypes_enum import (
@@ -63,7 +62,9 @@ class BswSynchronousServerCallPoint:
             "required": True,
         },
     )
-    short_name_fragments: BswSynchronousServerCallPoint.ShortNameFragments | None = field(
+    short_name_fragments: (
+        BswSynchronousServerCallPoint.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -71,7 +72,9 @@ class BswSynchronousServerCallPoint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    context_limitation_refs: BswSynchronousServerCallPoint.ContextLimitationRefs | None = field(
+    context_limitation_refs: (
+        BswSynchronousServerCallPoint.ContextLimitationRefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "CONTEXT-LIMITATION-REFS",
@@ -87,15 +90,19 @@ class BswSynchronousServerCallPoint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    called_entry_ref: BswSynchronousServerCallPoint.CalledEntryRef | None = field(
-        default=None,
-        metadata={
-            "name": "CALLED-ENTRY-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    called_entry_ref: BswSynchronousServerCallPoint.CalledEntryRef | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "CALLED-ENTRY-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
-    called_from_within_exclusive_area_ref: BswSynchronousServerCallPoint.CalledFromWithinExclusiveAreaRef | None = field(
+    called_from_within_exclusive_area_ref: (
+        BswSynchronousServerCallPoint.CalledFromWithinExclusiveAreaRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "CALLED-FROM-WITHIN-EXCLUSIVE-AREA-REF",

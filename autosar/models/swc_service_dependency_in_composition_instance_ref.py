@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .composition_sw_component_type_subtypes_enum import (
     CompositionSwComponentTypeSubtypesEnum,
@@ -43,15 +42,19 @@ class SwcServiceDependencyInCompositionInstanceRef:
     class Meta:
         name = "SWC-SERVICE-DEPENDENCY-IN-COMPOSITION-INSTANCE-REF"
 
-    base_ref: SwcServiceDependencyInCompositionInstanceRef.BaseRef | None = field(
-        default=None,
-        metadata={
-            "name": "BASE-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    base_ref: SwcServiceDependencyInCompositionInstanceRef.BaseRef | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "BASE-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
-    root_context_ref: SwcServiceDependencyInCompositionInstanceRef.RootContextRef | None = field(
+    root_context_ref: (
+        SwcServiceDependencyInCompositionInstanceRef.RootContextRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "ROOT-CONTEXT-REF",
@@ -69,7 +72,10 @@ class SwcServiceDependencyInCompositionInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    target_swc_service_dependency_ref: SwcServiceDependencyInCompositionInstanceRef.TargetSwcServiceDependencyRef | None = field(
+    target_swc_service_dependency_ref: (
+        SwcServiceDependencyInCompositionInstanceRef.TargetSwcServiceDependencyRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "TARGET-SWC-SERVICE-DEPENDENCY-REF",

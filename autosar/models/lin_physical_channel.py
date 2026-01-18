@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -123,15 +122,13 @@ class LinPhysicalChannel:
             "required": True,
         },
     )
-    short_name_fragments: LinPhysicalChannel.ShortNameFragments | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "SHORT-NAME-FRAGMENTS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    short_name_fragments: LinPhysicalChannel.ShortNameFragments | None = field(
+        default=None,
+        metadata={
+            "name": "SHORT-NAME-FRAGMENTS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     long_name: MultilanguageLongName | None = field(
         default=None,
@@ -197,17 +194,17 @@ class LinPhysicalChannel:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    i_signal_triggerings: LinPhysicalChannel.ISignalTriggerings | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "I-SIGNAL-TRIGGERINGS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    i_signal_triggerings: LinPhysicalChannel.ISignalTriggerings | None = field(
+        default=None,
+        metadata={
+            "name": "I-SIGNAL-TRIGGERINGS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
-    managed_physical_channel_refs: LinPhysicalChannel.ManagedPhysicalChannelRefs | None = field(
+    managed_physical_channel_refs: (
+        LinPhysicalChannel.ManagedPhysicalChannelRefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "MANAGED-PHYSICAL-CHANNEL-REFS",

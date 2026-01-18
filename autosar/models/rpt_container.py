@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -200,7 +199,9 @@ class RptContainer:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    explicit_rpt_profile_selection_refs: RptContainer.ExplicitRptProfileSelectionRefs | None = field(
+    explicit_rpt_profile_selection_refs: (
+        RptContainer.ExplicitRptProfileSelectionRefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "EXPLICIT-RPT-PROFILE-SELECTION-REFS",
@@ -216,13 +217,15 @@ class RptContainer:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    rpt_executable_entity_properties: RptExecutableEntityProperties | None = field(
-        default=None,
-        metadata={
-            "name": "RPT-EXECUTABLE-ENTITY-PROPERTIES",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    rpt_executable_entity_properties: RptExecutableEntityProperties | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "RPT-EXECUTABLE-ENTITY-PROPERTIES",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     rpt_hooks: RptContainer.RptHooks | None = field(
         default=None,

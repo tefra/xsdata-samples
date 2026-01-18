@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import VariationPoint
 from .communication_connector_subtypes_enum import (
@@ -35,7 +34,9 @@ class CommunicationConnectorRefConditional:
     class Meta:
         name = "COMMUNICATION-CONNECTOR-REF-CONDITIONAL"
 
-    communication_connector_ref: CommunicationConnectorRefConditional.CommunicationConnectorRef | None = field(
+    communication_connector_ref: (
+        CommunicationConnectorRefConditional.CommunicationConnectorRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "COMMUNICATION-CONNECTOR-REF",

@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -198,15 +197,13 @@ class Process:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    deterministic_client_ref: Process.DeterministicClientRef | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "DETERMINISTIC-CLIENT-REF",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    deterministic_client_ref: Process.DeterministicClientRef | None = field(
+        default=None,
+        metadata={
+            "name": "DETERMINISTIC-CLIENT-REF",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     executable_ref: Process.ExecutableRef | None = field(
         default=None,
@@ -256,7 +253,9 @@ class Process:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    state_dependent_startup_configs: Process.StateDependentStartupConfigs | None = field(
+    state_dependent_startup_configs: (
+        Process.StateDependentStartupConfigs | None
+    ) = field(
         default=None,
         metadata={
             "name": "STATE-DEPENDENT-STARTUP-CONFIGS",

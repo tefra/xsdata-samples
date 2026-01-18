@@ -1,6 +1,5 @@
 from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from xsdata.models.datatype import XmlDuration, XmlTime
 
@@ -123,7 +122,18 @@ class JourneyMeetingDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    choice: SingleJourneyRef | DatedVehicleJourneyRef | DatedSpecialServiceRef | SpecialServiceRef | TemplateServiceJourneyRef | ServiceJourneyRef | DeadRunRef | VehicleJourneyRef | ConnectingJourneyView | None = field(
+    choice: (
+        SingleJourneyRef
+        | DatedVehicleJourneyRef
+        | DatedSpecialServiceRef
+        | SpecialServiceRef
+        | TemplateServiceJourneyRef
+        | ServiceJourneyRef
+        | DeadRunRef
+        | VehicleJourneyRef
+        | ConnectingJourneyView
+        | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -176,7 +186,9 @@ class JourneyMeetingDerivedViewStructure(DerivedViewStructure):
             ),
         },
     )
-    flexible_line_ref_or_line_ref_or_connecting_line_view: FlexibleLineRef | LineRef | LineDerivedViewStructure | None = field(
+    flexible_line_ref_or_line_ref_or_connecting_line_view: (
+        FlexibleLineRef | LineRef | LineDerivedViewStructure | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",

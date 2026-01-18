@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from xcbl.models.order_response import (
     ChangeOrderHeader,
@@ -63,7 +62,9 @@ class ChangeOrderDetail:
             },
         )
     )
-    list_of_change_order_package_detail: ListOfChangeOrderPackageDetail | None = field(
+    list_of_change_order_package_detail: (
+        ListOfChangeOrderPackageDetail | None
+    ) = field(
         default=None,
         metadata={
             "name": "ListOfChangeOrderPackageDetail",

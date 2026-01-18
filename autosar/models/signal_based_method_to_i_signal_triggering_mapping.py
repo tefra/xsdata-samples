@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -102,7 +101,9 @@ class SignalBasedMethodToISignalTriggeringMapping:
             "required": True,
         },
     )
-    short_name_fragments: SignalBasedMethodToISignalTriggeringMapping.ShortNameFragments | None = field(
+    short_name_fragments: (
+        SignalBasedMethodToISignalTriggeringMapping.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -150,7 +151,9 @@ class SignalBasedMethodToISignalTriggeringMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: SignalBasedMethodToISignalTriggeringMapping.Annotations | None = field(
+    annotations: (
+        SignalBasedMethodToISignalTriggeringMapping.Annotations | None
+    ) = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -158,7 +161,10 @@ class SignalBasedMethodToISignalTriggeringMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    call_signal_triggering_ref: SignalBasedMethodToISignalTriggeringMapping.CallSignalTriggeringRef | None = field(
+    call_signal_triggering_ref: (
+        SignalBasedMethodToISignalTriggeringMapping.CallSignalTriggeringRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "CALL-SIGNAL-TRIGGERING-REF",
@@ -166,7 +172,9 @@ class SignalBasedMethodToISignalTriggeringMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    method_ref: SignalBasedMethodToISignalTriggeringMapping.MethodRef | None = field(
+    method_ref: (
+        SignalBasedMethodToISignalTriggeringMapping.MethodRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "METHOD-REF",
@@ -174,7 +182,10 @@ class SignalBasedMethodToISignalTriggeringMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    return_signal_triggering_ref: SignalBasedMethodToISignalTriggeringMapping.ReturnSignalTriggeringRef | None = field(
+    return_signal_triggering_ref: (
+        SignalBasedMethodToISignalTriggeringMapping.ReturnSignalTriggeringRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "RETURN-SIGNAL-TRIGGERING-REF",

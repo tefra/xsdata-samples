@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from ipxact.models.generator_ref import GeneratorRef
 from ipxact.models.string_expression import StringExpression

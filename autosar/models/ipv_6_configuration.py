@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .boolean import Boolean
 from .ip6_address_string import Ip6AddressString
@@ -68,15 +67,13 @@ class Ipv6Configuration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    dns_server_addresses: Ipv6Configuration.DnsServerAddresses | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "DNS-SERVER-ADDRESSES",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    dns_server_addresses: Ipv6Configuration.DnsServerAddresses | None = field(
+        default=None,
+        metadata={
+            "name": "DNS-SERVER-ADDRESSES",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     enable_anycast: Boolean | None = field(
         default=None,

@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .application_composite_element_data_prototype_subtypes_enum import (
     ApplicationCompositeElementDataPrototypeSubtypesEnum,
@@ -43,7 +42,9 @@ class VariableInAtomicSwcTypeInstanceRef:
     class Meta:
         name = "VARIABLE-IN-ATOMIC-SWC-TYPE-INSTANCE-REF"
 
-    port_prototype_ref: VariableInAtomicSwcTypeInstanceRef.PortPrototypeRef | None = field(
+    port_prototype_ref: (
+        VariableInAtomicSwcTypeInstanceRef.PortPrototypeRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "PORT-PROTOTYPE-REF",
@@ -51,7 +52,9 @@ class VariableInAtomicSwcTypeInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    root_variable_data_prototype_ref: VariableInAtomicSwcTypeInstanceRef.RootVariableDataPrototypeRef | None = field(
+    root_variable_data_prototype_ref: (
+        VariableInAtomicSwcTypeInstanceRef.RootVariableDataPrototypeRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "ROOT-VARIABLE-DATA-PROTOTYPE-REF",
@@ -69,7 +72,9 @@ class VariableInAtomicSwcTypeInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    target_data_prototype_ref: VariableInAtomicSwcTypeInstanceRef.TargetDataPrototypeRef | None = field(
+    target_data_prototype_ref: (
+        VariableInAtomicSwcTypeInstanceRef.TargetDataPrototypeRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "TARGET-DATA-PROTOTYPE-REF",
@@ -117,13 +122,15 @@ class VariableInAtomicSwcTypeInstanceRef:
 
     @dataclass
     class ContextDataPrototypeRef(Ref):
-        dest: ApplicationCompositeElementDataPrototypeSubtypesEnum | None = field(
-            default=None,
-            metadata={
-                "name": "DEST",
-                "type": "Attribute",
-                "required": True,
-            },
+        dest: ApplicationCompositeElementDataPrototypeSubtypesEnum | None = (
+            field(
+                default=None,
+                metadata={
+                    "name": "DEST",
+                    "type": "Attribute",
+                    "required": True,
+                },
+            )
         )
 
     @dataclass

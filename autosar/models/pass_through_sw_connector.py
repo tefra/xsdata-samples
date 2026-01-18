@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .abstract_provided_port_prototype_subtypes_enum import (
     AbstractProvidedPortPrototypeSubtypesEnum,
@@ -110,13 +109,15 @@ class PassThroughSwConnector:
             "required": True,
         },
     )
-    short_name_fragments: PassThroughSwConnector.ShortNameFragments | None = field(
-        default=None,
-        metadata={
-            "name": "SHORT-NAME-FRAGMENTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    short_name_fragments: PassThroughSwConnector.ShortNameFragments | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "SHORT-NAME-FRAGMENTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     long_name: MultilanguageLongName | None = field(
         default=None,
@@ -182,7 +183,9 @@ class PassThroughSwConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    provided_outer_port_ref: PassThroughSwConnector.ProvidedOuterPortRef | None = field(
+    provided_outer_port_ref: (
+        PassThroughSwConnector.ProvidedOuterPortRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "PROVIDED-OUTER-PORT-REF",
@@ -190,7 +193,9 @@ class PassThroughSwConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    required_outer_port_ref: PassThroughSwConnector.RequiredOuterPortRef | None = field(
+    required_outer_port_ref: (
+        PassThroughSwConnector.RequiredOuterPortRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "REQUIRED-OUTER-PORT-REF",

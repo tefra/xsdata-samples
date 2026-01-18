@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .cyclic_timing import CyclicTiming
 from .event_controlled_timing import EventControlledTiming

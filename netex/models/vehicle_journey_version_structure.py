@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from xsdata.models.datatype import XmlDuration, XmlTime
 
@@ -100,7 +99,13 @@ class VehicleJourneyVersionStructure(JourneyVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    journey_pattern_ref: ServiceJourneyPatternRef | ServicePatternRef | DeadRunJourneyPatternRef | JourneyPatternRef | None = field(
+    journey_pattern_ref: (
+        ServiceJourneyPatternRef
+        | ServicePatternRef
+        | DeadRunJourneyPatternRef
+        | JourneyPatternRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -144,7 +149,12 @@ class VehicleJourneyVersionStructure(JourneyVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    journey_frequency_group_ref: RhythmicalJourneyGroupRef | HeadwayJourneyGroupRef | JourneyFrequencyGroupRef | None = field(
+    journey_frequency_group_ref: (
+        RhythmicalJourneyGroupRef
+        | HeadwayJourneyGroupRef
+        | JourneyFrequencyGroupRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -167,28 +177,30 @@ class VehicleJourneyVersionStructure(JourneyVersionStructure):
             ),
         },
     )
-    vehicle_type_ref: CompoundTrainRef | TrainRef | VehicleTypeRef | None = field(
-        default=None,
-        metadata={
-            "type": "Elements",
-            "choices": (
-                {
-                    "name": "CompoundTrainRef",
-                    "type": CompoundTrainRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "TrainRef",
-                    "type": TrainRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "VehicleTypeRef",
-                    "type": VehicleTypeRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-            ),
-        },
+    vehicle_type_ref: CompoundTrainRef | TrainRef | VehicleTypeRef | None = (
+        field(
+            default=None,
+            metadata={
+                "type": "Elements",
+                "choices": (
+                    {
+                        "name": "CompoundTrainRef",
+                        "type": CompoundTrainRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "TrainRef",
+                        "type": TrainRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "VehicleTypeRef",
+                        "type": VehicleTypeRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                ),
+            },
+        )
     )
     operational_context_ref: OperationalContextRef | None = field(
         default=None,
@@ -247,7 +259,9 @@ class VehicleJourneyVersionStructure(JourneyVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    train_component_label_assignments: TrainComponentLabelAssignmentsRelStructure | None = field(
+    train_component_label_assignments: (
+        TrainComponentLabelAssignmentsRelStructure | None
+    ) = field(
         default=None,
         metadata={
             "name": "trainComponentLabelAssignments",
@@ -255,7 +269,9 @@ class VehicleJourneyVersionStructure(JourneyVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    vehicle_journey_stop_assignments: VehicleJourneyStopAssignmentsRelStructure | None = field(
+    vehicle_journey_stop_assignments: (
+        VehicleJourneyStopAssignmentsRelStructure | None
+    ) = field(
         default=None,
         metadata={
             "name": "vehicleJourneyStopAssignments",

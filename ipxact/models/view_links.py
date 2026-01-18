@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from ipxact.models.vendor_extensions import VendorExtensions
 
@@ -41,7 +40,9 @@ class ViewLinks:
         :ivar id:
         """
 
-        external_view_reference: ViewLinks.ViewLink.ExternalViewReference | None = field(
+        external_view_reference: (
+            ViewLinks.ViewLink.ExternalViewReference | None
+        ) = field(
             default=None,
             metadata={
                 "name": "externalViewReference",

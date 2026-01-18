@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .acl_scope_enum_simple import AclScopeEnumSimple
 

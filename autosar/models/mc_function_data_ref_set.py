@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .mc_function_data_ref_set_conditional import (
     McFunctionDataRefSetConditional,
@@ -39,7 +38,9 @@ class McFunctionDataRefSet:
     class Meta:
         name = "MC-FUNCTION-DATA-REF-SET"
 
-    mc_function_data_ref_set_variants: McFunctionDataRefSet.McFunctionDataRefSetVariants | None = field(
+    mc_function_data_ref_set_variants: (
+        McFunctionDataRefSet.McFunctionDataRefSetVariants | None
+    ) = field(
         default=None,
         metadata={
             "name": "MC-FUNCTION-DATA-REF-SET-VARIANTS",

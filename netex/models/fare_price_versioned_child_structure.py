@@ -1,6 +1,5 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
-from typing import Optional, Union
 
 from xsdata.models.datatype import XmlDate
 
@@ -148,7 +147,27 @@ class FarePriceVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    fare_price_ref: CustomerPurchasePackagePriceRef | ParkingPriceRef | TimeIntervalPriceRef | TimeUnitPriceRef | QualityStructureFactorPriceRef | ControllableElementPriceRef | ValidableElementPriceRef | GeographicalIntervalPriceRef | GeographicalUnitPriceRef | UsageParameterPriceRef | SeriesConstraintPriceRef | SalesOfferPackagePriceRef | DistanceMatrixElementPriceRef | FareStructureElementPriceRef | FulfilmentMethodPriceRef | CappingRulePriceRef | FareProductPriceRef | FarePriceRef | None = field(
+    fare_price_ref: (
+        CustomerPurchasePackagePriceRef
+        | ParkingPriceRef
+        | TimeIntervalPriceRef
+        | TimeUnitPriceRef
+        | QualityStructureFactorPriceRef
+        | ControllableElementPriceRef
+        | ValidableElementPriceRef
+        | GeographicalIntervalPriceRef
+        | GeographicalUnitPriceRef
+        | UsageParameterPriceRef
+        | SeriesConstraintPriceRef
+        | SalesOfferPackagePriceRef
+        | DistanceMatrixElementPriceRef
+        | FareStructureElementPriceRef
+        | FulfilmentMethodPriceRef
+        | CappingRulePriceRef
+        | FareProductPriceRef
+        | FarePriceRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -246,7 +265,16 @@ class FarePriceVersionedChildStructure(VersionedChildStructure):
             ),
         },
     )
-    discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule: LimitingRuleRef | DiscountingRuleRef | PricingRuleRef | LimitingRuleInContext | LimitingRule | DiscountingRule | PricingRule | None = field(
+    discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule: (
+        LimitingRuleRef
+        | DiscountingRuleRef
+        | PricingRuleRef
+        | LimitingRuleInContext
+        | LimitingRule
+        | DiscountingRule
+        | PricingRule
+        | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",

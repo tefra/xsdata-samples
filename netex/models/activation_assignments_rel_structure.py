@@ -1,6 +1,5 @@
 from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import Union
 
 from .activation_assignment import ActivationAssignment
 from .activation_assignment_ref import ActivationAssignmentRef

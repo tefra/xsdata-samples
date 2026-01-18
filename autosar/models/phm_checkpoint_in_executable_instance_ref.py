@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .phm_checkpoint_subtypes_enum import PhmCheckpointSubtypesEnum
 from .r_port_prototype_subtypes_enum import RPortPrototypeSubtypesEnum
@@ -38,7 +37,10 @@ class PhmCheckpointInExecutableInstanceRef:
     class Meta:
         name = "PHM-CHECKPOINT-IN-EXECUTABLE-INSTANCE-REF"
 
-    context_root_sw_component_prototype_ref: PhmCheckpointInExecutableInstanceRef.ContextRootSwComponentPrototypeRef | None = field(
+    context_root_sw_component_prototype_ref: (
+        PhmCheckpointInExecutableInstanceRef.ContextRootSwComponentPrototypeRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "CONTEXT-ROOT-SW-COMPONENT-PROTOTYPE-REF",
@@ -56,7 +58,9 @@ class PhmCheckpointInExecutableInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    context_r_port_prototype_ref: PhmCheckpointInExecutableInstanceRef.ContextRPortPrototypeRef | None = field(
+    context_r_port_prototype_ref: (
+        PhmCheckpointInExecutableInstanceRef.ContextRPortPrototypeRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "CONTEXT-R-PORT-PROTOTYPE-REF",
@@ -64,7 +68,9 @@ class PhmCheckpointInExecutableInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    target_phm_checkpoint_ref: PhmCheckpointInExecutableInstanceRef.TargetPhmCheckpointRef | None = field(
+    target_phm_checkpoint_ref: (
+        PhmCheckpointInExecutableInstanceRef.TargetPhmCheckpointRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "TARGET-PHM-CHECKPOINT-REF",

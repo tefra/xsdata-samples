@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .mapping_direction_enum_simple import MappingDirectionEnumSimple
 

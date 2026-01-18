@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .execution_dependency import ExecutionDependency
 from .function_group_state_in_function_group_set_instance_ref import (
@@ -48,7 +47,9 @@ class StateDependentStartupConfig:
     class Meta:
         name = "STATE-DEPENDENT-STARTUP-CONFIG"
 
-    execution_dependencys: StateDependentStartupConfig.ExecutionDependencys | None = field(
+    execution_dependencys: (
+        StateDependentStartupConfig.ExecutionDependencys | None
+    ) = field(
         default=None,
         metadata={
             "name": "EXECUTION-DEPENDENCYS",
@@ -56,7 +57,9 @@ class StateDependentStartupConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    function_group_state_irefs: StateDependentStartupConfig.FunctionGroupStateIrefs | None = field(
+    function_group_state_irefs: (
+        StateDependentStartupConfig.FunctionGroupStateIrefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "FUNCTION-GROUP-STATE-IREFS",
@@ -72,21 +75,25 @@ class StateDependentStartupConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    resource_group_ref: StateDependentStartupConfig.ResourceGroupRef | None = field(
-        default=None,
-        metadata={
-            "name": "RESOURCE-GROUP-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    resource_group_ref: StateDependentStartupConfig.ResourceGroupRef | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "RESOURCE-GROUP-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
-    startup_config_ref: StateDependentStartupConfig.StartupConfigRef | None = field(
-        default=None,
-        metadata={
-            "name": "STARTUP-CONFIG-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    startup_config_ref: StateDependentStartupConfig.StartupConfigRef | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "STARTUP-CONFIG-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     s: str | None = field(
         default=None,

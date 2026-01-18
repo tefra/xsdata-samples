@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -112,7 +111,9 @@ class TimeSyncPortPrototypeToTimeBaseMapping:
             "required": True,
         },
     )
-    short_name_fragments: TimeSyncPortPrototypeToTimeBaseMapping.ShortNameFragments | None = field(
+    short_name_fragments: (
+        TimeSyncPortPrototypeToTimeBaseMapping.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -160,13 +161,15 @@ class TimeSyncPortPrototypeToTimeBaseMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: TimeSyncPortPrototypeToTimeBaseMapping.Annotations | None = field(
-        default=None,
-        metadata={
-            "name": "ANNOTATIONS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    annotations: TimeSyncPortPrototypeToTimeBaseMapping.Annotations | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "ANNOTATIONS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     variation_point: VariationPoint | None = field(
         default=None,
@@ -176,15 +179,19 @@ class TimeSyncPortPrototypeToTimeBaseMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    process_ref: TimeSyncPortPrototypeToTimeBaseMapping.ProcessRef | None = field(
-        default=None,
-        metadata={
-            "name": "PROCESS-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    process_ref: TimeSyncPortPrototypeToTimeBaseMapping.ProcessRef | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "PROCESS-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
-    time_base_resource_ref: TimeSyncPortPrototypeToTimeBaseMapping.TimeBaseResourceRef | None = field(
+    time_base_resource_ref: (
+        TimeSyncPortPrototypeToTimeBaseMapping.TimeBaseResourceRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "TIME-BASE-RESOURCE-REF",
@@ -192,7 +199,9 @@ class TimeSyncPortPrototypeToTimeBaseMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    time_sync_p_port_prototype_iref: PPortPrototypeInExecutableInstanceRef | None = field(
+    time_sync_p_port_prototype_iref: (
+        PPortPrototypeInExecutableInstanceRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "TIME-SYNC-P-PORT-PROTOTYPE-IREF",
@@ -200,7 +209,9 @@ class TimeSyncPortPrototypeToTimeBaseMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    time_sync_r_port_prototype_iref: RPortPrototypeInExecutableInstanceRef | None = field(
+    time_sync_r_port_prototype_iref: (
+        RPortPrototypeInExecutableInstanceRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "TIME-SYNC-R-PORT-PROTOTYPE-IREF",

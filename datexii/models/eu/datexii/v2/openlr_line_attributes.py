@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.openlr_form_of_way_enum import (
@@ -29,16 +28,14 @@ class OpenlrLineAttributes:
     :ivar openlr_line_attributes_extension:
     """
 
-    openlr_functional_road_class: OpenlrFunctionalRoadClassEnum | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "openlrFunctionalRoadClass",
-                "type": "Element",
-                "namespace": "http://datex2.eu/schema/2/2_0",
-                "required": True,
-            },
-        )
+    openlr_functional_road_class: OpenlrFunctionalRoadClassEnum | None = field(
+        default=None,
+        metadata={
+            "name": "openlrFunctionalRoadClass",
+            "type": "Element",
+            "namespace": "http://datex2.eu/schema/2/2_0",
+            "required": True,
+        },
     )
     openlr_form_of_way: OpenlrFormOfWayEnum | None = field(
         default=None,

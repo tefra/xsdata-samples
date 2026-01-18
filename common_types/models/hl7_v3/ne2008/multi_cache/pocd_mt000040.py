@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from ..core.datatypes import (
     IvlInt,
@@ -1426,15 +1425,13 @@ class PocdMt000040Organization:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    as_organization_part_of: PocdMt000040OrganizationPartOf | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "asOrganizationPartOf",
-                "type": "Element",
-                "namespace": "urn:hl7-org:v3",
-            },
-        )
+    as_organization_part_of: PocdMt000040OrganizationPartOf | None = field(
+        default=None,
+        metadata={
+            "name": "asOrganizationPartOf",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+        },
     )
     null_flavor: NullFlavor | None = field(
         default=None,
@@ -1900,7 +1897,9 @@ class PocdMt000040AssignedCustodian:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    represented_custodian_organization: PocdMt000040CustodianOrganization | None = field(
+    represented_custodian_organization: (
+        PocdMt000040CustodianOrganization | None
+    ) = field(
         default=None,
         metadata={
             "name": "representedCustodianOrganization",
@@ -2097,14 +2096,16 @@ class PocdMt000040AssociatedEntity:
             "type": "Attribute",
         },
     )
-    class_code: RoleClassMutualRelationship | RoleClassPassive | str | None = field(
-        default=None,
-        metadata={
-            "name": "classCode",
-            "type": "Attribute",
-            "required": True,
-            "pattern": r"[^\s]+",
-        },
+    class_code: RoleClassMutualRelationship | RoleClassPassive | str | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "classCode",
+                "type": "Attribute",
+                "required": True,
+                "pattern": r"[^\s]+",
+            },
+        )
     )
 
 
@@ -2152,7 +2153,27 @@ class PocdMt000040Authorization:
             "type": "Attribute",
         },
     )
-    type_code: ActRelationshipConditional | ActRelationshipHasComponent | ActRelationshipOutcome | ActRelationshipCostTracking | ActRelationshipPosting | str | ActRelationshipHasSupport | ActRelationshipTemporallyPertains | ActRelationshipPertainsValue | ActRelationshipSequel | XActRelationshipDocument | XActRelationshipEntry | XActRelationshipEntryRelationship | XActRelationshipExternalReference | XActRelationshipPatientTransport | XActRelationshipPertinentInfo | XActRelationshipRelatedAuthorizations | XActReplaceOrRevise | XSuccReplPrev = field(
+    type_code: (
+        ActRelationshipConditional
+        | ActRelationshipHasComponent
+        | ActRelationshipOutcome
+        | ActRelationshipCostTracking
+        | ActRelationshipPosting
+        | str
+        | ActRelationshipHasSupport
+        | ActRelationshipTemporallyPertains
+        | ActRelationshipPertainsValue
+        | ActRelationshipSequel
+        | XActRelationshipDocument
+        | XActRelationshipEntry
+        | XActRelationshipEntryRelationship
+        | XActRelationshipExternalReference
+        | XActRelationshipPatientTransport
+        | XActRelationshipPertinentInfo
+        | XActRelationshipRelatedAuthorizations
+        | XActReplaceOrRevise
+        | XSuccReplPrev
+    ) = field(
         init=False,
         default=ActRelationshipPertainsValue.AUTH,
         metadata={
@@ -2207,7 +2228,23 @@ class PocdMt000040Birthplace:
             "type": "Attribute",
         },
     )
-    class_code: RoleClassMutualRelationship | RoleClassPassive | str | RoleClassOntological | RoleClassPartitive | RoleClassRootValue | XAccommodationRequestorRole | XDocumentEntrySubject | XDocumentSubject | XInformationRecipientRole | XRoleClassAccommodationRequestor | XRoleClassCoverage | XRoleClassCoverageInvoice | XRoleClassCredentialedEntity | XRoleClassPayeePolicyRelationship = field(
+    class_code: (
+        RoleClassMutualRelationship
+        | RoleClassPassive
+        | str
+        | RoleClassOntological
+        | RoleClassPartitive
+        | RoleClassRootValue
+        | XAccommodationRequestorRole
+        | XDocumentEntrySubject
+        | XDocumentSubject
+        | XInformationRecipientRole
+        | XRoleClassAccommodationRequestor
+        | XRoleClassCoverage
+        | XRoleClassCoverageInvoice
+        | XRoleClassCredentialedEntity
+        | XRoleClassPayeePolicyRelationship
+    ) = field(
         init=False,
         default=RoleClassPassive.BIRTHPL,
         metadata={
@@ -2298,7 +2335,23 @@ class PocdMt000040Guardian:
             "type": "Attribute",
         },
     )
-    class_code: RoleClassMutualRelationship | RoleClassPassive | str | RoleClassOntological | RoleClassPartitive | RoleClassRootValue | XAccommodationRequestorRole | XDocumentEntrySubject | XDocumentSubject | XInformationRecipientRole | XRoleClassAccommodationRequestor | XRoleClassCoverage | XRoleClassCoverageInvoice | XRoleClassCredentialedEntity | XRoleClassPayeePolicyRelationship = field(
+    class_code: (
+        RoleClassMutualRelationship
+        | RoleClassPassive
+        | str
+        | RoleClassOntological
+        | RoleClassPartitive
+        | RoleClassRootValue
+        | XAccommodationRequestorRole
+        | XDocumentEntrySubject
+        | XDocumentSubject
+        | XInformationRecipientRole
+        | XRoleClassAccommodationRequestor
+        | XRoleClassCoverage
+        | XRoleClassCoverageInvoice
+        | XRoleClassCredentialedEntity
+        | XRoleClassPayeePolicyRelationship
+    ) = field(
         init=False,
         default=RoleClassMutualRelationship.GUARD,
         metadata={
@@ -2572,7 +2625,23 @@ class PocdMt000040MaintainedEntity:
             "type": "Attribute",
         },
     )
-    class_code: RoleClassMutualRelationship | RoleClassPassive | str | RoleClassOntological | RoleClassPartitive | RoleClassRootValue | XAccommodationRequestorRole | XDocumentEntrySubject | XDocumentSubject | XInformationRecipientRole | XRoleClassAccommodationRequestor | XRoleClassCoverage | XRoleClassCoverageInvoice | XRoleClassCredentialedEntity | XRoleClassPayeePolicyRelationship = field(
+    class_code: (
+        RoleClassMutualRelationship
+        | RoleClassPassive
+        | str
+        | RoleClassOntological
+        | RoleClassPartitive
+        | RoleClassRootValue
+        | XAccommodationRequestorRole
+        | XDocumentEntrySubject
+        | XDocumentSubject
+        | XInformationRecipientRole
+        | XRoleClassAccommodationRequestor
+        | XRoleClassCoverage
+        | XRoleClassCoverageInvoice
+        | XRoleClassCredentialedEntity
+        | XRoleClassPayeePolicyRelationship
+    ) = field(
         init=False,
         default=RoleClassPassive.MNT,
         metadata={
@@ -2734,7 +2803,23 @@ class PocdMt000040OrganizationPartOf:
             "type": "Attribute",
         },
     )
-    class_code: RoleClassMutualRelationship | RoleClassPassive | str | RoleClassOntological | RoleClassPartitive | RoleClassRootValue | XAccommodationRequestorRole | XDocumentEntrySubject | XDocumentSubject | XInformationRecipientRole | XRoleClassAccommodationRequestor | XRoleClassCoverage | XRoleClassCoverageInvoice | XRoleClassCredentialedEntity | XRoleClassPayeePolicyRelationship = field(
+    class_code: (
+        RoleClassMutualRelationship
+        | RoleClassPassive
+        | str
+        | RoleClassOntological
+        | RoleClassPartitive
+        | RoleClassRootValue
+        | XAccommodationRequestorRole
+        | XDocumentEntrySubject
+        | XDocumentSubject
+        | XInformationRecipientRole
+        | XRoleClassAccommodationRequestor
+        | XRoleClassCoverage
+        | XRoleClassCoverageInvoice
+        | XRoleClassCredentialedEntity
+        | XRoleClassPayeePolicyRelationship
+    ) = field(
         init=False,
         default=RoleClassPartitive.PART,
         metadata={
@@ -2833,7 +2918,14 @@ class PocdMt000040ParticipantRole:
             "type": "Attribute",
         },
     )
-    class_code: RoleClassMutualRelationship | RoleClassPassive | str | RoleClassOntological | RoleClassPartitive | RoleClassRootValue = field(
+    class_code: (
+        RoleClassMutualRelationship
+        | RoleClassPassive
+        | str
+        | RoleClassOntological
+        | RoleClassPartitive
+        | RoleClassRootValue
+    ) = field(
         default=RoleClassRootValue.ROL,
         metadata={
             "name": "classCode",
@@ -2887,7 +2979,27 @@ class PocdMt000040Precondition:
             "type": "Attribute",
         },
     )
-    type_code: ActRelationshipConditional | ActRelationshipHasComponent | ActRelationshipOutcome | ActRelationshipCostTracking | ActRelationshipPosting | str | ActRelationshipHasSupport | ActRelationshipTemporallyPertains | ActRelationshipPertainsValue | ActRelationshipSequel | XActRelationshipDocument | XActRelationshipEntry | XActRelationshipEntryRelationship | XActRelationshipExternalReference | XActRelationshipPatientTransport | XActRelationshipPertinentInfo | XActRelationshipRelatedAuthorizations | XActReplaceOrRevise | XSuccReplPrev = field(
+    type_code: (
+        ActRelationshipConditional
+        | ActRelationshipHasComponent
+        | ActRelationshipOutcome
+        | ActRelationshipCostTracking
+        | ActRelationshipPosting
+        | str
+        | ActRelationshipHasSupport
+        | ActRelationshipTemporallyPertains
+        | ActRelationshipPertainsValue
+        | ActRelationshipSequel
+        | XActRelationshipDocument
+        | XActRelationshipEntry
+        | XActRelationshipEntryRelationship
+        | XActRelationshipExternalReference
+        | XActRelationshipPatientTransport
+        | XActRelationshipPertinentInfo
+        | XActRelationshipRelatedAuthorizations
+        | XActReplaceOrRevise
+        | XSuccReplPrev
+    ) = field(
         init=False,
         default=ActRelationshipConditional.PRCN,
         metadata={
@@ -3029,7 +3141,27 @@ class PocdMt000040ReferenceRange:
             "type": "Attribute",
         },
     )
-    type_code: ActRelationshipConditional | ActRelationshipHasComponent | ActRelationshipOutcome | ActRelationshipCostTracking | ActRelationshipPosting | str | ActRelationshipHasSupport | ActRelationshipTemporallyPertains | ActRelationshipPertainsValue | ActRelationshipSequel | XActRelationshipDocument | XActRelationshipEntry | XActRelationshipEntryRelationship | XActRelationshipExternalReference | XActRelationshipPatientTransport | XActRelationshipPertinentInfo | XActRelationshipRelatedAuthorizations | XActReplaceOrRevise | XSuccReplPrev = field(
+    type_code: (
+        ActRelationshipConditional
+        | ActRelationshipHasComponent
+        | ActRelationshipOutcome
+        | ActRelationshipCostTracking
+        | ActRelationshipPosting
+        | str
+        | ActRelationshipHasSupport
+        | ActRelationshipTemporallyPertains
+        | ActRelationshipPertainsValue
+        | ActRelationshipSequel
+        | XActRelationshipDocument
+        | XActRelationshipEntry
+        | XActRelationshipEntryRelationship
+        | XActRelationshipExternalReference
+        | XActRelationshipPatientTransport
+        | XActRelationshipPertinentInfo
+        | XActRelationshipRelatedAuthorizations
+        | XActReplaceOrRevise
+        | XSuccReplPrev
+    ) = field(
         init=False,
         default=ActRelationshipPertainsValue.REFV,
         metadata={
@@ -4920,7 +5052,23 @@ class PocdMt000040PatientRole:
             "type": "Attribute",
         },
     )
-    class_code: RoleClassMutualRelationship | RoleClassPassive | str | RoleClassOntological | RoleClassPartitive | RoleClassRootValue | XAccommodationRequestorRole | XDocumentEntrySubject | XDocumentSubject | XInformationRecipientRole | XRoleClassAccommodationRequestor | XRoleClassCoverage | XRoleClassCoverageInvoice | XRoleClassCredentialedEntity | XRoleClassPayeePolicyRelationship = field(
+    class_code: (
+        RoleClassMutualRelationship
+        | RoleClassPassive
+        | str
+        | RoleClassOntological
+        | RoleClassPartitive
+        | RoleClassRootValue
+        | XAccommodationRequestorRole
+        | XDocumentEntrySubject
+        | XDocumentSubject
+        | XInformationRecipientRole
+        | XRoleClassAccommodationRequestor
+        | XRoleClassCoverage
+        | XRoleClassCoverageInvoice
+        | XRoleClassCredentialedEntity
+        | XRoleClassPayeePolicyRelationship
+    ) = field(
         init=False,
         default=RoleClassMutualRelationship.PAT,
         metadata={
@@ -5121,16 +5269,14 @@ class PocdMt000040Component1:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    encompassing_encounter: PocdMt000040EncompassingEncounter | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "encompassingEncounter",
-                "type": "Element",
-                "namespace": "urn:hl7-org:v3",
-                "required": True,
-            },
-        )
+    encompassing_encounter: PocdMt000040EncompassingEncounter | None = field(
+        default=None,
+        metadata={
+            "name": "encompassingEncounter",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        },
     )
     null_flavor: NullFlavor | None = field(
         default=None,
@@ -5194,7 +5340,27 @@ class PocdMt000040DocumentationOf:
             "type": "Attribute",
         },
     )
-    type_code: ActRelationshipConditional | ActRelationshipHasComponent | ActRelationshipOutcome | ActRelationshipCostTracking | ActRelationshipPosting | str | ActRelationshipHasSupport | ActRelationshipTemporallyPertains | ActRelationshipPertainsValue | ActRelationshipSequel | XActRelationshipDocument | XActRelationshipEntry | XActRelationshipEntryRelationship | XActRelationshipExternalReference | XActRelationshipPatientTransport | XActRelationshipPertinentInfo | XActRelationshipRelatedAuthorizations | XActReplaceOrRevise | XSuccReplPrev = field(
+    type_code: (
+        ActRelationshipConditional
+        | ActRelationshipHasComponent
+        | ActRelationshipOutcome
+        | ActRelationshipCostTracking
+        | ActRelationshipPosting
+        | str
+        | ActRelationshipHasSupport
+        | ActRelationshipTemporallyPertains
+        | ActRelationshipPertainsValue
+        | ActRelationshipSequel
+        | XActRelationshipDocument
+        | XActRelationshipEntry
+        | XActRelationshipEntryRelationship
+        | XActRelationshipExternalReference
+        | XActRelationshipPatientTransport
+        | XActRelationshipPertinentInfo
+        | XActRelationshipRelatedAuthorizations
+        | XActReplaceOrRevise
+        | XSuccReplPrev
+    ) = field(
         init=False,
         default=ActRelationshipSequel.DOC,
         metadata={
@@ -5715,13 +5881,15 @@ class PocdMt000040Component4:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    substance_administration: PocdMt000040SubstanceAdministration | None = field(
-        default=None,
-        metadata={
-            "name": "substanceAdministration",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
+    substance_administration: PocdMt000040SubstanceAdministration | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "substanceAdministration",
+                "type": "Element",
+                "namespace": "urn:hl7-org:v3",
+            },
+        )
     )
     supply: PocdMt000040Supply | None = field(
         default=None,
@@ -6000,13 +6168,15 @@ class PocdMt000040EntryRelationship:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    substance_administration: PocdMt000040SubstanceAdministration | None = field(
-        default=None,
-        metadata={
-            "name": "substanceAdministration",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-        },
+    substance_administration: PocdMt000040SubstanceAdministration | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "substanceAdministration",
+                "type": "Element",
+                "namespace": "urn:hl7-org:v3",
+            },
+        )
     )
     supply: PocdMt000040Supply | None = field(
         default=None,

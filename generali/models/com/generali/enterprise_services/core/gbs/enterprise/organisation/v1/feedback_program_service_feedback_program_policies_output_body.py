@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from generali.models.com.generali.enterprise_services.core.gbs.enterprise.organisation.v1.feedback_program_service_feedback_program_policies_output_body_fault import (
     FeedbackProgramServiceFeedbackProgramPoliciesOutputBodyFault,
@@ -16,7 +15,9 @@ class FeedbackProgramServiceFeedbackProgramPoliciesOutputBody:
     class Meta:
         global_type = False
 
-    feedback_program_policies_response: FeedbackProgramPoliciesResponse | None = field(
+    feedback_program_policies_response: (
+        FeedbackProgramPoliciesResponse | None
+    ) = field(
         default=None,
         metadata={
             "name": "FeedbackProgramPoliciesResponse",
@@ -24,7 +25,9 @@ class FeedbackProgramServiceFeedbackProgramPoliciesOutputBody:
             "namespace": "http://xmlns.generali.com/services/program/FeedbackProgramService/v1",
         },
     )
-    fault: FeedbackProgramServiceFeedbackProgramPoliciesOutputBodyFault | None = field(
+    fault: (
+        FeedbackProgramServiceFeedbackProgramPoliciesOutputBodyFault | None
+    ) = field(
         default=None,
         metadata={
             "name": "Fault",

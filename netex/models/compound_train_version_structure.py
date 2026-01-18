@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .trains_in_compound_train_rel_structure import (
     TrainsInCompoundTrainRelStructure,

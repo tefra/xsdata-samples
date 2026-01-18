@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from .compound_train_ref import CompoundTrainRef
 from .entity_in_version_structure import VersionedChildStructure
@@ -62,7 +61,14 @@ class ParkingCapacityVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    transport_type_ref_or_vehicle_type_ref: SimpleVehicleTypeRef | CompoundTrainRef | TrainRef | VehicleTypeRef | TransportTypeRef | None = field(
+    transport_type_ref_or_vehicle_type_ref: (
+        SimpleVehicleTypeRef
+        | CompoundTrainRef
+        | TrainRef
+        | VehicleTypeRef
+        | TransportTypeRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",

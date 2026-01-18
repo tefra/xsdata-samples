@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import VariationPoint
 from .idsm_traffic_limitation_subtypes_enum import (
@@ -35,7 +34,9 @@ class IdsmTrafficLimitationRefConditional:
     class Meta:
         name = "IDSM-TRAFFIC-LIMITATION-REF-CONDITIONAL"
 
-    idsm_traffic_limitation_ref: IdsmTrafficLimitationRefConditional.IdsmTrafficLimitationRef | None = field(
+    idsm_traffic_limitation_ref: (
+        IdsmTrafficLimitationRefConditional.IdsmTrafficLimitationRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "IDSM-TRAFFIC-LIMITATION-REF",

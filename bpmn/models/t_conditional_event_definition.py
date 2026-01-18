@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .t_event_definition import TEventDefinition
 from .t_expression import TExpression

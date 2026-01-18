@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -117,7 +116,9 @@ class SecurityEventContextMappingFunctionalCluster:
             "required": True,
         },
     )
-    short_name_fragments: SecurityEventContextMappingFunctionalCluster.ShortNameFragments | None = field(
+    short_name_fragments: (
+        SecurityEventContextMappingFunctionalCluster.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -165,7 +166,9 @@ class SecurityEventContextMappingFunctionalCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: SecurityEventContextMappingFunctionalCluster.Annotations | None = field(
+    annotations: (
+        SecurityEventContextMappingFunctionalCluster.Annotations | None
+    ) = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -181,7 +184,9 @@ class SecurityEventContextMappingFunctionalCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    filter_chains: SecurityEventContextMappingFunctionalCluster.FilterChains | None = field(
+    filter_chains: (
+        SecurityEventContextMappingFunctionalCluster.FilterChains | None
+    ) = field(
         default=None,
         metadata={
             "name": "FILTER-CHAINS",
@@ -189,7 +194,9 @@ class SecurityEventContextMappingFunctionalCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    idsm_instances: SecurityEventContextMappingFunctionalCluster.IdsmInstances | None = field(
+    idsm_instances: (
+        SecurityEventContextMappingFunctionalCluster.IdsmInstances | None
+    ) = field(
         default=None,
         metadata={
             "name": "IDSM-INSTANCES",
@@ -197,7 +204,10 @@ class SecurityEventContextMappingFunctionalCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    mapped_security_events: SecurityEventContextMappingFunctionalCluster.MappedSecurityEvents | None = field(
+    mapped_security_events: (
+        SecurityEventContextMappingFunctionalCluster.MappedSecurityEvents
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "MAPPED-SECURITY-EVENTS",

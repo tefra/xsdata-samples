@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .communication_controller_subtypes_enum import (
     CommunicationControllerSubtypesEnum,
@@ -38,7 +37,9 @@ class CommunicationControllerMapping:
     class Meta:
         name = "COMMUNICATION-CONTROLLER-MAPPING"
 
-    communication_controller_ref: CommunicationControllerMapping.CommunicationControllerRef | None = field(
+    communication_controller_ref: (
+        CommunicationControllerMapping.CommunicationControllerRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "COMMUNICATION-CONTROLLER-REF",
@@ -46,7 +47,9 @@ class CommunicationControllerMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    hw_communication_controller_ref: CommunicationControllerMapping.HwCommunicationControllerRef | None = field(
+    hw_communication_controller_ref: (
+        CommunicationControllerMapping.HwCommunicationControllerRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "HW-COMMUNICATION-CONTROLLER-REF",

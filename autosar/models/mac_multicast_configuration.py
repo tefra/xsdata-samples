@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .mac_multicast_group_subtypes_enum import MacMulticastGroupSubtypesEnum
 from .ref import Ref
@@ -30,7 +29,9 @@ class MacMulticastConfiguration:
     class Meta:
         name = "MAC-MULTICAST-CONFIGURATION"
 
-    mac_multicast_group_ref: MacMulticastConfiguration.MacMulticastGroupRef | None = field(
+    mac_multicast_group_ref: (
+        MacMulticastConfiguration.MacMulticastGroupRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "MAC-MULTICAST-GROUP-REF",

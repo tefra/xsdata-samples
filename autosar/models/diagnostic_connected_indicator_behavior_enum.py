@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .diagnostic_connected_indicator_behavior_enum_simple import (
     DiagnosticConnectedIndicatorBehaviorEnumSimple,

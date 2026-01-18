@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from tpdb.models.name import Name
 from tpdb.models.type_mod import Type

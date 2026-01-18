@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -136,7 +135,9 @@ class ImplementationDataTypeElement:
             "required": True,
         },
     )
-    short_name_fragments: ImplementationDataTypeElement.ShortNameFragments | None = field(
+    short_name_fragments: (
+        ImplementationDataTypeElement.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -232,15 +233,13 @@ class ImplementationDataTypeElement:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sub_elements: ImplementationDataTypeElement.SubElements | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "SUB-ELEMENTS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    sub_elements: ImplementationDataTypeElement.SubElements | None = field(
+        default=None,
+        metadata={
+            "name": "SUB-ELEMENTS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     sw_data_def_props: SwDataDefProps | None = field(
         default=None,

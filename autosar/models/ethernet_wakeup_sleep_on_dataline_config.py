@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -146,7 +145,9 @@ class EthernetWakeupSleepOnDatalineConfig:
             "required": True,
         },
     )
-    short_name_fragments: EthernetWakeupSleepOnDatalineConfig.ShortNameFragments | None = field(
+    short_name_fragments: (
+        EthernetWakeupSleepOnDatalineConfig.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -194,13 +195,15 @@ class EthernetWakeupSleepOnDatalineConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: EthernetWakeupSleepOnDatalineConfig.Annotations | None = field(
-        default=None,
-        metadata={
-            "name": "ANNOTATIONS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    annotations: EthernetWakeupSleepOnDatalineConfig.Annotations | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "ANNOTATIONS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     sleep_mode_execution_delay: TimeValue | None = field(
         default=None,

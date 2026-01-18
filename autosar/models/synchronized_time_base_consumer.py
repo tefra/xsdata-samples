@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -92,7 +91,9 @@ class SynchronizedTimeBaseConsumer:
             "required": True,
         },
     )
-    short_name_fragments: SynchronizedTimeBaseConsumer.ShortNameFragments | None = field(
+    short_name_fragments: (
+        SynchronizedTimeBaseConsumer.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -148,7 +149,9 @@ class SynchronizedTimeBaseConsumer:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    network_time_consumer_ref: SynchronizedTimeBaseConsumer.NetworkTimeConsumerRef | None = field(
+    network_time_consumer_ref: (
+        SynchronizedTimeBaseConsumer.NetworkTimeConsumerRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "NETWORK-TIME-CONSUMER-REF",

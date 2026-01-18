@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import ForwardRef, Optional, Union
+from typing import ForwardRef
 
 from .administrative_zone_ref import AdministrativeZoneRef
 from .all_modes_enumeration import AllModesEnumeration
@@ -33,7 +33,9 @@ class AdministrativeZonesRelStructure(ContainmentAggregationStructure):
         name = "administrativeZones_RelStructure"
 
     administrative_zone_ref_or_transport_administrative_zone_or_administrative_zone: Iterable[
-        AdministrativeZoneRef | TransportAdministrativeZone | AdministrativeZone
+        AdministrativeZoneRef
+        | TransportAdministrativeZone
+        | AdministrativeZone
     ] = field(
         default_factory=list,
         metadata={
@@ -72,7 +74,19 @@ class AdministrativeZoneVersionStructure(ZoneVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    organisation_ref_or_other_organisation_ref_or_transport_organisation_ref: RetailConsortiumRef | OnlineServiceOperatorRef | GeneralOrganisationRef | ManagementAgentRef | ServicedOrganisationRef | TravelAgentRef | OtherOrganisationRef | AuthorityRef | OperatorRef | OrganisationRef | None = field(
+    organisation_ref_or_other_organisation_ref_or_transport_organisation_ref: (
+        RetailConsortiumRef
+        | OnlineServiceOperatorRef
+        | GeneralOrganisationRef
+        | ManagementAgentRef
+        | ServicedOrganisationRef
+        | TravelAgentRef
+        | OtherOrganisationRef
+        | AuthorityRef
+        | OperatorRef
+        | OrganisationRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",

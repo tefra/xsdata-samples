@@ -1,6 +1,5 @@
 from dataclasses import dataclass, field
 from enum import Enum
-from typing import Optional
 
 from xcbl.models.sourcing_create import AttributeName
 from xcbl.models.sourcing_result import (
@@ -924,12 +923,14 @@ class PartnerRelationship:
             "required": True,
         }
     )
-    partner_relationship_coded_other: PartnerRelationshipCodedOther | None = field(
-        default=None,
-        metadata={
-            "name": "PartnerRelationshipCodedOther",
-            "type": "Element",
-        },
+    partner_relationship_coded_other: PartnerRelationshipCodedOther | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "PartnerRelationshipCodedOther",
+                "type": "Element",
+            },
+        )
     )
 
 
@@ -1745,12 +1746,14 @@ class Product:
             "type": "Element",
         },
     )
-    comparable_uomconversion_factor: ComparableUomconversionFactor | None = field(
-        default=None,
-        metadata={
-            "name": "ComparableUOMConversionFactor",
-            "type": "Element",
-        },
+    comparable_uomconversion_factor: ComparableUomconversionFactor | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "ComparableUOMConversionFactor",
+                "type": "Element",
+            },
+        )
     )
     manufacturer: Manufacturer | None = field(
         default=None,

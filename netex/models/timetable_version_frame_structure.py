@@ -1,6 +1,5 @@
 from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from .accessibility_assessment import AccessibilityAssessment
 from .common_version_frame_structure import CommonVersionFrameStructure
@@ -159,15 +158,13 @@ class TimetableVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    booking_times: ContainedAvailabilityConditionsRelStructure | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "bookingTimes",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            },
-        )
+    booking_times: ContainedAvailabilityConditionsRelStructure | None = field(
+        default=None,
+        metadata={
+            "name": "bookingTimes",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        },
     )
     accessibility_assessment: AccessibilityAssessment | None = field(
         default=None,
@@ -177,7 +174,14 @@ class TimetableVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    transport_type_ref_or_vehicle_type_ref: SimpleVehicleTypeRef | CompoundTrainRef | TrainRef | VehicleTypeRef | TransportTypeRef | None = field(
+    transport_type_ref_or_vehicle_type_ref: (
+        SimpleVehicleTypeRef
+        | CompoundTrainRef
+        | TrainRef
+        | VehicleTypeRef
+        | TransportTypeRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -218,7 +222,9 @@ class TimetableVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    time_demand_type_assignments: TimeDemandTypeAssignmentsInFrameRelStructure | None = field(
+    time_demand_type_assignments: (
+        TimeDemandTypeAssignmentsInFrameRelStructure | None
+    ) = field(
         default=None,
         metadata={
             "name": "timeDemandTypeAssignments",
@@ -266,15 +272,13 @@ class TimetableVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    journey_part_couples: JourneyPartCouplesInFrameRelStructure | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "journeyPartCouples",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            },
-        )
+    journey_part_couples: JourneyPartCouplesInFrameRelStructure | None = field(
+        default=None,
+        metadata={
+            "name": "journeyPartCouples",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        },
     )
     coupled_journeys: CoupledJourneysInFrameRelStructure | None = field(
         default=None,
@@ -302,7 +306,9 @@ class TimetableVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    flexible_service_properties: FlexibleServicePropertiesInFrameRelStructure | None = field(
+    flexible_service_properties: (
+        FlexibleServicePropertiesInFrameRelStructure | None
+    ) = field(
         default=None,
         metadata={
             "name": "flexibleServiceProperties",
@@ -310,7 +316,9 @@ class TimetableVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    vehicle_journey_stop_assignments: VehicleJourneyStopAssignmentsInFrameRelStructure | None = field(
+    vehicle_journey_stop_assignments: (
+        VehicleJourneyStopAssignmentsInFrameRelStructure | None
+    ) = field(
         default=None,
         metadata={
             "name": "vehicleJourneyStopAssignments",
@@ -377,13 +385,11 @@ class TimetableVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    journey_accountings: JourneyAccountingsInFrameRelStructure | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "journeyAccountings",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            },
-        )
+    journey_accountings: JourneyAccountingsInFrameRelStructure | None = field(
+        default=None,
+        metadata={
+            "name": "journeyAccountings",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        },
     )

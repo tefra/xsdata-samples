@@ -1,6 +1,5 @@
 from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import Union
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .crossing_equipment import CrossingEquipment
@@ -34,7 +33,27 @@ class ExplicitPlaceEquipmentsRelStructure(ContainmentAggregationStructure):
         name = "explicitPlaceEquipments_RelStructure"
 
     choice: Iterable[
-        OtherPlaceEquipment | RoughSurface | EntranceEquipment | StaircaseEquipment | LiftEquipment | LiftCallEquipment | EscalatorEquipment | TravelatorEquipment | RampEquipment | QueueingEquipment | CrossingEquipment | PlaceLighting | PlaceSignStructure | HeadingSignStructure | GeneralSignStructure | HelpPointEquipment | PassengerSafetyEquipment | RubbishDisposalEquipment | SanitaryEquipment | TicketingEquipment | TicketValidatorEquipment
+        OtherPlaceEquipment
+        | RoughSurface
+        | EntranceEquipment
+        | StaircaseEquipment
+        | LiftEquipment
+        | LiftCallEquipment
+        | EscalatorEquipment
+        | TravelatorEquipment
+        | RampEquipment
+        | QueueingEquipment
+        | CrossingEquipment
+        | PlaceLighting
+        | PlaceSignStructure
+        | HeadingSignStructure
+        | GeneralSignStructure
+        | HelpPointEquipment
+        | PassengerSafetyEquipment
+        | RubbishDisposalEquipment
+        | SanitaryEquipment
+        | TicketingEquipment
+        | TicketValidatorEquipment
     ] = field(
         default_factory=list,
         metadata={

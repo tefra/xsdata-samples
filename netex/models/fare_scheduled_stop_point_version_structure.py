@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from .border_point_ref import BorderPointRef
 from .fare_scheduled_stop_point_ref_structure import (
@@ -22,7 +21,9 @@ class FareScheduledStopPointVersionStructure(
     class Meta:
         name = "FareScheduledStopPoint_VersionStructure"
 
-    site_facility_set_ref_or_site_facility_set: SiteFacilitySetRef | SiteFacilitySet | None = field(
+    site_facility_set_ref_or_site_facility_set: (
+        SiteFacilitySetRef | SiteFacilitySet | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",

@@ -1,6 +1,5 @@
 from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import Union
 
 from .access_vehicle_equipment import AccessVehicleEquipment
 from .assistance_booking_service import AssistanceBookingService
@@ -68,7 +67,61 @@ class EquipmentsInFrameRelStructure(ContainmentAggregationStructure):
         name = "equipmentsInFrame_RelStructure"
 
     choice: Iterable[
-        OnlineService | VehicleRentalService | VehicleSharingService | ChauffeuredVehicleService | CarPoolingService | TaxiService | AssistanceBookingService | CateringService | RetailService | MoneyService | HireService | CommunicationService | MeetingPointService | LostPropertyService | LeftLuggageService | ComplaintsService | CustomerService | LuggageService | AssistanceService | TicketingService | RetailDevice | BatteryEquipment | VehicleReleaseEquipment | RefuellingEquipment | VehicleChargingEquipment | CycleStorageEquipment | SeatingEquipment | ShelterEquipment | TrolleyStandEquipment | WaitingRoomEquipment | CrossingEquipment | QueueingEquipment | EntranceEquipment | RampEquipment | LiftCallEquipment | LiftEquipment | TravelatorEquipment | StaircaseEquipment | EscalatorEquipment | PlaceLighting | RoughSurface | GeneralSign | HeadingSign | PlaceSign | SignEquipment | PassengerInformationEquipment | RubbishDisposalEquipment | PassengerBeaconEquipment | HelpPointEquipment | PassengerSafetyEquipment | SanitaryEquipment | TicketValidatorEquipment | TicketingEquipment | WheelchairVehicleEquipment | AccessVehicleEquipment
+        OnlineService
+        | VehicleRentalService
+        | VehicleSharingService
+        | ChauffeuredVehicleService
+        | CarPoolingService
+        | TaxiService
+        | AssistanceBookingService
+        | CateringService
+        | RetailService
+        | MoneyService
+        | HireService
+        | CommunicationService
+        | MeetingPointService
+        | LostPropertyService
+        | LeftLuggageService
+        | ComplaintsService
+        | CustomerService
+        | LuggageService
+        | AssistanceService
+        | TicketingService
+        | RetailDevice
+        | BatteryEquipment
+        | VehicleReleaseEquipment
+        | RefuellingEquipment
+        | VehicleChargingEquipment
+        | CycleStorageEquipment
+        | SeatingEquipment
+        | ShelterEquipment
+        | TrolleyStandEquipment
+        | WaitingRoomEquipment
+        | CrossingEquipment
+        | QueueingEquipment
+        | EntranceEquipment
+        | RampEquipment
+        | LiftCallEquipment
+        | LiftEquipment
+        | TravelatorEquipment
+        | StaircaseEquipment
+        | EscalatorEquipment
+        | PlaceLighting
+        | RoughSurface
+        | GeneralSign
+        | HeadingSign
+        | PlaceSign
+        | SignEquipment
+        | PassengerInformationEquipment
+        | RubbishDisposalEquipment
+        | PassengerBeaconEquipment
+        | HelpPointEquipment
+        | PassengerSafetyEquipment
+        | SanitaryEquipment
+        | TicketValidatorEquipment
+        | TicketingEquipment
+        | WheelchairVehicleEquipment
+        | AccessVehicleEquipment
     ] = field(
         default_factory=list,
         metadata={

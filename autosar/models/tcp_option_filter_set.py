@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -94,15 +93,13 @@ class TcpOptionFilterSet:
             "required": True,
         },
     )
-    short_name_fragments: TcpOptionFilterSet.ShortNameFragments | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "SHORT-NAME-FRAGMENTS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    short_name_fragments: TcpOptionFilterSet.ShortNameFragments | None = field(
+        default=None,
+        metadata={
+            "name": "SHORT-NAME-FRAGMENTS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     long_name: MultilanguageLongName | None = field(
         default=None,
@@ -160,13 +157,15 @@ class TcpOptionFilterSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tcp_option_filter_lists: TcpOptionFilterSet.TcpOptionFilterLists | None = field(
-        default=None,
-        metadata={
-            "name": "TCP-OPTION-FILTER-LISTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    tcp_option_filter_lists: TcpOptionFilterSet.TcpOptionFilterLists | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "TCP-OPTION-FILTER-LISTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     s: str | None = field(
         default=None,

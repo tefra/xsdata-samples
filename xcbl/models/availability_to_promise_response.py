@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from xcbl.models.shipping_schedule_response import (
     TotalNumberOfLineItems,
@@ -147,7 +146,9 @@ class Atpresponse:
             "required": True,
         }
     )
-    availability_to_promise_response_coded_other: AvailabilityToPromiseResponseCodedOther | None = field(
+    availability_to_promise_response_coded_other: (
+        AvailabilityToPromiseResponseCodedOther | None
+    ) = field(
         default=None,
         metadata={
             "name": "AvailabilityToPromiseResponseCodedOther",
@@ -167,7 +168,9 @@ class AvailabilityDeliveryOption:
             }
         )
     )
-    availability_delivery_option_coded_other: AvailabilityDeliveryOptionCodedOther | None = field(
+    availability_delivery_option_coded_other: (
+        AvailabilityDeliveryOptionCodedOther | None
+    ) = field(
         default=None,
         metadata={
             "name": "AvailabilityDeliveryOptionCodedOther",
@@ -246,7 +249,9 @@ class AvailabilityToPromisePurpose:
             "required": True,
         }
     )
-    availability_to_promise_purpose_coded_other: AvailabilityToPromisePurposeCodedOther | None = field(
+    availability_to_promise_purpose_coded_other: (
+        AvailabilityToPromisePurposeCodedOther | None
+    ) = field(
         default=None,
         metadata={
             "name": "AvailabilityToPromisePurposeCodedOther",
@@ -415,7 +420,9 @@ class AvailabilityToPromiseResponseHeader:
             "type": "Element",
         },
     )
-    availability_response_header_transport: AvailabilityResponseHeaderTransport | None = field(
+    availability_response_header_transport: (
+        AvailabilityResponseHeaderTransport | None
+    ) = field(
         default=None,
         metadata={
             "name": "AvailabilityResponseHeaderTransport",
@@ -429,7 +436,9 @@ class AvailabilityToPromiseResponseHeader:
             "type": "Element",
         },
     )
-    availability_response_list_of_attachment: AvailabilityResponseListOfAttachment | None = field(
+    availability_response_list_of_attachment: (
+        AvailabilityResponseListOfAttachment | None
+    ) = field(
         default=None,
         metadata={
             "name": "AvailabilityResponseListOfAttachment",
@@ -440,7 +449,9 @@ class AvailabilityToPromiseResponseHeader:
 
 @dataclass(kw_only=True)
 class AvailabilityToPromiseResponseItemDetail:
-    availability_to_promise_item_response: AvailabilityToPromiseItemResponse | None = field(
+    availability_to_promise_item_response: (
+        AvailabilityToPromiseItemResponse | None
+    ) = field(
         default=None,
         metadata={
             "name": "AvailabilityToPromiseItemResponse",
@@ -454,21 +465,27 @@ class AvailabilityToPromiseResponseItemDetail:
             "required": True,
         }
     )
-    availability_to_promise_response_delivery_detail: AvailabilityToPromiseResponseDeliveryDetail | None = field(
+    availability_to_promise_response_delivery_detail: (
+        AvailabilityToPromiseResponseDeliveryDetail | None
+    ) = field(
         default=None,
         metadata={
             "name": "AvailabilityToPromiseResponseDeliveryDetail",
             "type": "Element",
         },
     )
-    availability_to_promise_response_transport_detail: AvailabilityToPromiseResponseTransportDetail | None = field(
+    availability_to_promise_response_transport_detail: (
+        AvailabilityToPromiseResponseTransportDetail | None
+    ) = field(
         default=None,
         metadata={
             "name": "AvailabilityToPromiseResponseTransportDetail",
             "type": "Element",
         },
     )
-    availability_to_promise_response_item_list_of_attachment: AvailabilityToPromiseResponseItemListOfAttachment | None = field(
+    availability_to_promise_response_item_list_of_attachment: (
+        AvailabilityToPromiseResponseItemListOfAttachment | None
+    ) = field(
         default=None,
         metadata={
             "name": "AvailabilityToPromiseResponseItemListOfAttachment",
@@ -500,7 +517,9 @@ class ListOfAvailabilityToPromiseResponseItemDetail:
 
 @dataclass(kw_only=True)
 class AvailabilityToPromiseResponseDetail:
-    list_of_availability_to_promise_response_item_detail: ListOfAvailabilityToPromiseResponseItemDetail | None = field(
+    list_of_availability_to_promise_response_item_detail: (
+        ListOfAvailabilityToPromiseResponseItemDetail | None
+    ) = field(
         default=None,
         metadata={
             "name": "ListOfAvailabilityToPromiseResponseItemDetail",
@@ -518,14 +537,18 @@ class AvailabilityToPromiseResponse:
             "required": True,
         }
     )
-    availability_to_promise_response_detail: AvailabilityToPromiseResponseDetail | None = field(
+    availability_to_promise_response_detail: (
+        AvailabilityToPromiseResponseDetail | None
+    ) = field(
         default=None,
         metadata={
             "name": "AvailabilityToPromiseResponseDetail",
             "type": "Element",
         },
     )
-    availability_to_promise_response_summary: AvailabilityToPromiseResponseSummary | None = field(
+    availability_to_promise_response_summary: (
+        AvailabilityToPromiseResponseSummary | None
+    ) = field(
         default=None,
         metadata={
             "name": "AvailabilityToPromiseResponseSummary",

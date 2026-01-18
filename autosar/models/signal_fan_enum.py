@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .signal_fan_enum_simple import SignalFanEnumSimple
 

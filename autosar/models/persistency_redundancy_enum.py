@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .persistency_redundancy_enum_simple import PersistencyRedundancyEnumSimple
 

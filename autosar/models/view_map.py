@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -190,15 +189,19 @@ class ViewMap:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    first_element_instance_irefs: ViewMap.FirstElementInstanceIrefs | None = field(
-        default=None,
-        metadata={
-            "name": "FIRST-ELEMENT-INSTANCE-IREFS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    first_element_instance_irefs: ViewMap.FirstElementInstanceIrefs | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "FIRST-ELEMENT-INSTANCE-IREFS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
-    second_element_instance_irefs: ViewMap.SecondElementInstanceIrefs | None = field(
+    second_element_instance_irefs: (
+        ViewMap.SecondElementInstanceIrefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "SECOND-ELEMENT-INSTANCE-IREFS",

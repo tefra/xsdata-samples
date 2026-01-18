@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import VariationPoint
 from .identifier import Identifier
@@ -46,7 +45,9 @@ class ModeSwitchEventTriggeredActivity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    swc_mode_switch_event_ref: ModeSwitchEventTriggeredActivity.SwcModeSwitchEventRef | None = field(
+    swc_mode_switch_event_ref: (
+        ModeSwitchEventTriggeredActivity.SwcModeSwitchEventRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "SWC-MODE-SWITCH-EVENT-REF",

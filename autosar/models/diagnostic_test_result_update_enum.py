@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .diagnostic_test_result_update_enum_simple import (
     DiagnosticTestResultUpdateEnumSimple,

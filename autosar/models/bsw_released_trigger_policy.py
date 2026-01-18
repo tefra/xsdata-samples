@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import VariationPoint
 from .boolean import Boolean
@@ -45,7 +44,9 @@ class BswReleasedTriggerPolicy:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    released_trigger_ref: BswReleasedTriggerPolicy.ReleasedTriggerRef | None = field(
+    released_trigger_ref: (
+        BswReleasedTriggerPolicy.ReleasedTriggerRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "RELEASED-TRIGGER-REF",

@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import VariationPoint
 from .dynamic_part_alternative import DynamicPartAlternative
@@ -49,13 +48,15 @@ class DynamicPart:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    dynamic_part_alternatives: DynamicPart.DynamicPartAlternatives | None = field(
-        default=None,
-        metadata={
-            "name": "DYNAMIC-PART-ALTERNATIVES",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    dynamic_part_alternatives: DynamicPart.DynamicPartAlternatives | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "DYNAMIC-PART-ALTERNATIVES",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     variation_point: VariationPoint | None = field(
         default=None,

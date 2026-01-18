@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .autosar_data_prototype_subtypes_enum import (
     AutosarDataPrototypeSubtypesEnum,
@@ -66,7 +65,10 @@ class ImplementationDataTypeElementInPortInterfaceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    root_data_prototype_ref: ImplementationDataTypeElementInPortInterfaceRef.RootDataPrototypeRef | None = field(
+    root_data_prototype_ref: (
+        ImplementationDataTypeElementInPortInterfaceRef.RootDataPrototypeRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "ROOT-DATA-PROTOTYPE-REF",
@@ -74,7 +76,10 @@ class ImplementationDataTypeElementInPortInterfaceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    context_implementation_data_element_refs: ImplementationDataTypeElementInPortInterfaceRef.ContextImplementationDataElementRefs | None = field(
+    context_implementation_data_element_refs: (
+        ImplementationDataTypeElementInPortInterfaceRef.ContextImplementationDataElementRefs
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "CONTEXT-IMPLEMENTATION-DATA-ELEMENT-REFS",
@@ -82,7 +87,10 @@ class ImplementationDataTypeElementInPortInterfaceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    target_implementation_data_type_element_ref: ImplementationDataTypeElementInPortInterfaceRef.TargetImplementationDataTypeElementRef | None = field(
+    target_implementation_data_type_element_ref: (
+        ImplementationDataTypeElementInPortInterfaceRef.TargetImplementationDataTypeElementRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "TARGET-IMPLEMENTATION-DATA-TYPE-ELEMENT-REF",

@@ -1,6 +1,5 @@
 from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import Union
 
 from .alternative_mode_of_operation import AlternativeModeOfOperation
 from .containment_aggregation_structure import ContainmentAggregationStructure
@@ -20,7 +19,13 @@ class ModesOfOperationRelStructure(ContainmentAggregationStructure):
         name = "modesOfOperationRelStructure"
 
     mode_of_operation_or_alternative_mode_of_operation_or_conventional_mode_of_operation: Iterable[
-        PersonalModeOfOperation | AlternativeModeOfOperation | VehiclePooling | VehicleSharing | VehicleRental | FlexibleOperation | ScheduledOperation
+        PersonalModeOfOperation
+        | AlternativeModeOfOperation
+        | VehiclePooling
+        | VehicleSharing
+        | VehicleRental
+        | FlexibleOperation
+        | ScheduledOperation
     ] = field(
         default_factory=list,
         metadata={

@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -106,13 +105,15 @@ class DiagnosticIumprGroup:
             "required": True,
         },
     )
-    short_name_fragments: DiagnosticIumprGroup.ShortNameFragments | None = field(
-        default=None,
-        metadata={
-            "name": "SHORT-NAME-FRAGMENTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    short_name_fragments: DiagnosticIumprGroup.ShortNameFragments | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "SHORT-NAME-FRAGMENTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     long_name: MultilanguageLongName | None = field(
         default=None,
@@ -178,7 +179,9 @@ class DiagnosticIumprGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    iumpr_group_identifiers: DiagnosticIumprGroup.IumprGroupIdentifiers | None = field(
+    iumpr_group_identifiers: (
+        DiagnosticIumprGroup.IumprGroupIdentifiers | None
+    ) = field(
         default=None,
         metadata={
             "name": "IUMPR-GROUP-IDENTIFIERS",

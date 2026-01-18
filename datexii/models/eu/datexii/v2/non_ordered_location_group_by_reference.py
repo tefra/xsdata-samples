@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.non_ordered_locations import (
@@ -25,7 +24,9 @@ class NonOrderedLocationGroupByReference(NonOrderedLocations):
     :ivar non_ordered_location_group_by_reference_extension:
     """
 
-    predefined_non_ordered_location_group_reference: PredefinedNonOrderedLocationGroupVersionedReference | None = field(
+    predefined_non_ordered_location_group_reference: (
+        PredefinedNonOrderedLocationGroupVersionedReference | None
+    ) = field(
         default=None,
         metadata={
             "name": "predefinedNonOrderedLocationGroupReference",
@@ -34,11 +35,13 @@ class NonOrderedLocationGroupByReference(NonOrderedLocations):
             "required": True,
         },
     )
-    non_ordered_location_group_by_reference_extension: ExtensionType | None = field(
-        default=None,
-        metadata={
-            "name": "nonOrderedLocationGroupByReferenceExtension",
-            "type": "Element",
-            "namespace": "http://datex2.eu/schema/2/2_0",
-        },
+    non_ordered_location_group_by_reference_extension: ExtensionType | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "nonOrderedLocationGroupByReferenceExtension",
+                "type": "Element",
+                "namespace": "http://datex2.eu/schema/2/2_0",
+            },
+        )
     )

@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from xsdata.models.datatype import XmlDateTime
 
@@ -85,15 +84,13 @@ class CustomerAccountVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    customer_account_status_type: AccountStatusTypeEnumeration | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "CustomerAccountStatusType",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            },
-        )
+    customer_account_status_type: AccountStatusTypeEnumeration | None = field(
+        default=None,
+        metadata={
+            "name": "CustomerAccountStatusType",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        },
     )
     fare_contracts: FareContractsRelStructure | None = field(
         default=None,
@@ -103,7 +100,9 @@ class CustomerAccountVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    customer_purchase_packages: CustomerPurchasePackageRefsRelStructure | None = field(
+    customer_purchase_packages: (
+        CustomerPurchasePackageRefsRelStructure | None
+    ) = field(
         default=None,
         metadata={
             "name": "customerPurchasePackages",
@@ -127,13 +126,11 @@ class CustomerAccountVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    medium_access_devices: MediumAccessDeviceRefsRelStructure | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "mediumAccessDevices",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            },
-        )
+    medium_access_devices: MediumAccessDeviceRefsRelStructure | None = field(
+        default=None,
+        metadata={
+            "name": "mediumAccessDevices",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        },
     )

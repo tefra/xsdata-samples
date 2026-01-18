@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -120,7 +119,9 @@ class EocExecutableEntityRefGroup:
             "required": True,
         },
     )
-    short_name_fragments: EocExecutableEntityRefGroup.ShortNameFragments | None = field(
+    short_name_fragments: (
+        EocExecutableEntityRefGroup.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -176,7 +177,9 @@ class EocExecutableEntityRefGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    direct_successor_refs: EocExecutableEntityRefGroup.DirectSuccessorRefs | None = field(
+    direct_successor_refs: (
+        EocExecutableEntityRefGroup.DirectSuccessorRefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "DIRECT-SUCCESSOR-REFS",
@@ -184,13 +187,15 @@ class EocExecutableEntityRefGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    let_interval_refs: EocExecutableEntityRefGroup.LetIntervalRefs | None = field(
-        default=None,
-        metadata={
-            "name": "LET-INTERVAL-REFS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    let_interval_refs: EocExecutableEntityRefGroup.LetIntervalRefs | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "LET-INTERVAL-REFS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     max_cycles: Integer | None = field(
         default=None,
@@ -208,7 +213,9 @@ class EocExecutableEntityRefGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nested_element_refs: EocExecutableEntityRefGroup.NestedElementRefs | None = field(
+    nested_element_refs: (
+        EocExecutableEntityRefGroup.NestedElementRefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "NESTED-ELEMENT-REFS",
@@ -216,17 +223,17 @@ class EocExecutableEntityRefGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    successor_refs: EocExecutableEntityRefGroup.SuccessorRefs | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "SUCCESSOR-REFS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    successor_refs: EocExecutableEntityRefGroup.SuccessorRefs | None = field(
+        default=None,
+        metadata={
+            "name": "SUCCESSOR-REFS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
-    triggering_event_ref: EocExecutableEntityRefGroup.TriggeringEventRef | None = field(
+    triggering_event_ref: (
+        EocExecutableEntityRefGroup.TriggeringEventRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "TRIGGERING-EVENT-REF",

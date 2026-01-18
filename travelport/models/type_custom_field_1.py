@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from decimal import Decimal
 
 from travelport.models.alpha_numeric_restriction_1 import (
     AlphaNumericRestriction1,

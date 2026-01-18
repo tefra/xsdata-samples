@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import VariationPoint
 from .identifier import Identifier
@@ -53,7 +52,9 @@ class RoleBasedDataTypeAssignment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    used_implementation_data_type_ref: RoleBasedDataTypeAssignment.UsedImplementationDataTypeRef | None = field(
+    used_implementation_data_type_ref: (
+        RoleBasedDataTypeAssignment.UsedImplementationDataTypeRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "USED-IMPLEMENTATION-DATA-TYPE-REF",

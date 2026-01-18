@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -105,7 +104,9 @@ class SecOcCryptoServiceMapping:
             "required": True,
         },
     )
-    short_name_fragments: SecOcCryptoServiceMapping.ShortNameFragments | None = field(
+    short_name_fragments: (
+        SecOcCryptoServiceMapping.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -169,15 +170,19 @@ class SecOcCryptoServiceMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    authentication_ref: SecOcCryptoServiceMapping.AuthenticationRef | None = field(
-        default=None,
-        metadata={
-            "name": "AUTHENTICATION-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    authentication_ref: SecOcCryptoServiceMapping.AuthenticationRef | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "AUTHENTICATION-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
-    crypto_service_key_ref: SecOcCryptoServiceMapping.CryptoServiceKeyRef | None = field(
+    crypto_service_key_ref: (
+        SecOcCryptoServiceMapping.CryptoServiceKeyRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "CRYPTO-SERVICE-KEY-REF",
@@ -185,7 +190,9 @@ class SecOcCryptoServiceMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    crypto_service_queue_ref: SecOcCryptoServiceMapping.CryptoServiceQueueRef | None = field(
+    crypto_service_queue_ref: (
+        SecOcCryptoServiceMapping.CryptoServiceQueueRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "CRYPTO-SERVICE-QUEUE-REF",

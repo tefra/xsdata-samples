@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -102,7 +101,9 @@ class ServiceInterfaceMappingSet:
             "required": True,
         },
     )
-    short_name_fragments: ServiceInterfaceMappingSet.ShortNameFragments | None = field(
+    short_name_fragments: (
+        ServiceInterfaceMappingSet.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -166,21 +167,25 @@ class ServiceInterfaceMappingSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    element_mappings: ServiceInterfaceMappingSet.ElementMappings | None = field(
-        default=None,
-        metadata={
-            "name": "ELEMENT-MAPPINGS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    element_mappings: ServiceInterfaceMappingSet.ElementMappings | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "ELEMENT-MAPPINGS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
-    interface_mappings: ServiceInterfaceMappingSet.InterfaceMappings | None = field(
-        default=None,
-        metadata={
-            "name": "INTERFACE-MAPPINGS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    interface_mappings: ServiceInterfaceMappingSet.InterfaceMappings | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "INTERFACE-MAPPINGS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     s: str | None = field(
         default=None,

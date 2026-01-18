@@ -1,6 +1,5 @@
 from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import Optional
 
 from xsdata.models.datatype import XmlDuration
 
@@ -54,15 +53,13 @@ class ReservingVersionStructure(BookingPolicyVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    reservation_charge_type: ReservationChargeTypeEnumeration | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "ReservationChargeType",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            },
-        )
+    reservation_charge_type: ReservationChargeTypeEnumeration | None = field(
+        default=None,
+        metadata={
+            "name": "ReservationChargeType",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        },
     )
     fee_basis: PerBasisEnumeration | None = field(
         default=None,

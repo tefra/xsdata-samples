@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .adaptive_platform_service_instance_subtypes_enum import (
     AdaptivePlatformServiceInstanceSubtypesEnum,
@@ -110,7 +109,9 @@ class ServiceInstanceToSignalMapping:
             "required": True,
         },
     )
-    short_name_fragments: ServiceInstanceToSignalMapping.ShortNameFragments | None = field(
+    short_name_fragments: (
+        ServiceInstanceToSignalMapping.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -158,17 +159,17 @@ class ServiceInstanceToSignalMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: ServiceInstanceToSignalMapping.Annotations | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "ANNOTATIONS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    annotations: ServiceInstanceToSignalMapping.Annotations | None = field(
+        default=None,
+        metadata={
+            "name": "ANNOTATIONS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
-    event_element_mappings: ServiceInstanceToSignalMapping.EventElementMappings | None = field(
+    event_element_mappings: (
+        ServiceInstanceToSignalMapping.EventElementMappings | None
+    ) = field(
         default=None,
         metadata={
             "name": "EVENT-ELEMENT-MAPPINGS",
@@ -176,25 +177,27 @@ class ServiceInstanceToSignalMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    field_mappings: ServiceInstanceToSignalMapping.FieldMappings | None = field(
-        default=None,
-        metadata={
-            "name": "FIELD-MAPPINGS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
-    )
-    method_mapping: SignalBasedMethodToISignalTriggeringMapping | None = (
+    field_mappings: ServiceInstanceToSignalMapping.FieldMappings | None = (
         field(
             default=None,
             metadata={
-                "name": "METHOD-MAPPING",
+                "name": "FIELD-MAPPINGS",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
     )
-    service_instance_ref: ServiceInstanceToSignalMapping.ServiceInstanceRef | None = field(
+    method_mapping: SignalBasedMethodToISignalTriggeringMapping | None = field(
+        default=None,
+        metadata={
+            "name": "METHOD-MAPPING",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
+    )
+    service_instance_ref: (
+        ServiceInstanceToSignalMapping.ServiceInstanceRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "SERVICE-INSTANCE-REF",

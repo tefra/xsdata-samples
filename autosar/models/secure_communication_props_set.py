@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -101,7 +100,9 @@ class SecureCommunicationPropsSet:
             "required": True,
         },
     )
-    short_name_fragments: SecureCommunicationPropsSet.ShortNameFragments | None = field(
+    short_name_fragments: (
+        SecureCommunicationPropsSet.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -165,7 +166,9 @@ class SecureCommunicationPropsSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    authentication_propss: SecureCommunicationPropsSet.AuthenticationPropss | None = field(
+    authentication_propss: (
+        SecureCommunicationPropsSet.AuthenticationPropss | None
+    ) = field(
         default=None,
         metadata={
             "name": "AUTHENTICATION-PROPSS",
@@ -173,13 +176,15 @@ class SecureCommunicationPropsSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    freshness_propss: SecureCommunicationPropsSet.FreshnessPropss | None = field(
-        default=None,
-        metadata={
-            "name": "FRESHNESS-PROPSS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    freshness_propss: SecureCommunicationPropsSet.FreshnessPropss | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "FRESHNESS-PROPSS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     s: str | None = field(
         default=None,

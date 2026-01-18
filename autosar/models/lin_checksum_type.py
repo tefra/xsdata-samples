@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .lin_checksum_type_simple import LinChecksumTypeSimple
 

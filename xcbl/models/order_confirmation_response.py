@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from xcbl.models.price_check_result import ErrorInfo
 from xcbl.models.remittance_advice import (
@@ -477,7 +476,9 @@ class OrderConfirmationType:
             "required": True,
         }
     )
-    order_confirmation_type_coded_other: OrderConfirmationTypeCodedOther | None = field(
+    order_confirmation_type_coded_other: (
+        OrderConfirmationTypeCodedOther | None
+    ) = field(
         default=None,
         metadata={
             "name": "OrderConfirmationTypeCodedOther",
@@ -527,7 +528,9 @@ class OrderConfirmationResponseHeader:
             }
         )
     )
-    order_confirmation_response_issue_date: OrderConfirmationResponseIssueDate | None = field(
+    order_confirmation_response_issue_date: (
+        OrderConfirmationResponseIssueDate | None
+    ) = field(
         default=None,
         metadata={
             "name": "OrderConfirmationResponseIssueDate",
@@ -548,7 +551,9 @@ class OrderConfirmationResponseHeader:
             "required": True,
         }
     )
-    order_confirmation_response_coded_other: OrderConfirmationResponseCodedOther | None = field(
+    order_confirmation_response_coded_other: (
+        OrderConfirmationResponseCodedOther | None
+    ) = field(
         default=None,
         metadata={
             "name": "OrderConfirmationResponseCodedOther",
@@ -569,7 +574,9 @@ class OrderConfirmationResponseHeader:
             "required": True,
         }
     )
-    order_confirmation_response_header_note: OrderConfirmationResponseHeaderNote | None = field(
+    order_confirmation_response_header_note: (
+        OrderConfirmationResponseHeaderNote | None
+    ) = field(
         default=None,
         metadata={
             "name": "OrderConfirmationResponseHeaderNote",
@@ -622,14 +629,18 @@ class OrderConfirmationResponseDetail:
             "required": True,
         }
     )
-    order_confirmation_response_code: OrderConfirmationResponseCode | None = field(
-        default=None,
-        metadata={
-            "name": "OrderConfirmationResponseCode",
-            "type": "Element",
-        },
+    order_confirmation_response_code: OrderConfirmationResponseCode | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "OrderConfirmationResponseCode",
+                "type": "Element",
+            },
+        )
     )
-    order_confirmation_response_coded_other: OrderConfirmationResponseCodedOther | None = field(
+    order_confirmation_response_coded_other: (
+        OrderConfirmationResponseCodedOther | None
+    ) = field(
         default=None,
         metadata={
             "name": "OrderConfirmationResponseCodedOther",
@@ -691,7 +702,9 @@ class OrderConfirmationResponse:
             }
         )
     )
-    list_of_order_confirmation_response_detail: ListOfOrderConfirmationResponseDetail | None = field(
+    list_of_order_confirmation_response_detail: (
+        ListOfOrderConfirmationResponseDetail | None
+    ) = field(
         default=None,
         metadata={
             "name": "ListOfOrderConfirmationResponseDetail",

@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .check_constraints_rel_structure import CheckConstraintsRelStructure
 from .class_of_use_ref import ClassOfUseRef

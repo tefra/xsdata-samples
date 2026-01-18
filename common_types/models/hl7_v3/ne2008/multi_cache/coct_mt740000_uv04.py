@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from ..core.datatypes_base import (
     AdExplicit,
@@ -171,7 +170,9 @@ class CoctMt740000Uv04Location:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    service_delivery_location: CoctMt240003Uv02ServiceDeliveryLocation | None = field(
+    service_delivery_location: (
+        CoctMt240003Uv02ServiceDeliveryLocation | None
+    ) = field(
         default=None,
         metadata={
             "name": "serviceDeliveryLocation",
@@ -389,16 +390,14 @@ class CoctMt740000Uv04HealthCareProvider:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    health_care_provider_person: CoctMt740000Uv04ProviderPerson | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "healthCareProviderPerson",
-                "type": "Element",
-                "namespace": "urn:hl7-org:v3",
-                "nillable": True,
-            },
-        )
+    health_care_provider_person: CoctMt740000Uv04ProviderPerson | None = field(
+        default=None,
+        metadata={
+            "name": "healthCareProviderPerson",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        },
     )
     null_flavor: NullFlavor | None = field(
         default=None,
@@ -407,7 +406,23 @@ class CoctMt740000Uv04HealthCareProvider:
             "type": "Attribute",
         },
     )
-    class_code: RoleClassMutualRelationship | RoleClassPassive | str | RoleClassOntological | RoleClassPartitive | RoleClassRootValue | XAccommodationRequestorRole | XDocumentEntrySubject | XDocumentSubject | XInformationRecipientRole | XRoleClassAccommodationRequestor | XRoleClassCoverage | XRoleClassCoverageInvoice | XRoleClassCredentialedEntity | XRoleClassPayeePolicyRelationship = field(
+    class_code: (
+        RoleClassMutualRelationship
+        | RoleClassPassive
+        | str
+        | RoleClassOntological
+        | RoleClassPartitive
+        | RoleClassRootValue
+        | XAccommodationRequestorRole
+        | XDocumentEntrySubject
+        | XDocumentSubject
+        | XInformationRecipientRole
+        | XRoleClassAccommodationRequestor
+        | XRoleClassCoverage
+        | XRoleClassCoverageInvoice
+        | XRoleClassCredentialedEntity
+        | XRoleClassPayeePolicyRelationship
+    ) = field(
         init=False,
         default=RoleClassMutualRelationship.PROV,
         metadata={
@@ -448,7 +463,9 @@ class CoctMt740000Uv04PertinentInformation1:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    oral_health_substance_administration: CoctMt740000Uv04OralHealthSubstanceAdministration | None = field(
+    oral_health_substance_administration: (
+        CoctMt740000Uv04OralHealthSubstanceAdministration | None
+    ) = field(
         default=None,
         metadata={
             "name": "oralHealthSubstanceAdministration",
@@ -464,7 +481,15 @@ class CoctMt740000Uv04PertinentInformation1:
             "type": "Attribute",
         },
     )
-    type_code: ActRelationshipCostTracking | ActRelationshipPosting | str | ActRelationshipHasSupport | ActRelationshipTemporallyPertains | ActRelationshipPertainsValue | None = field(
+    type_code: (
+        ActRelationshipCostTracking
+        | ActRelationshipPosting
+        | str
+        | ActRelationshipHasSupport
+        | ActRelationshipTemporallyPertains
+        | ActRelationshipPertainsValue
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "typeCode",
@@ -527,7 +552,15 @@ class CoctMt740000Uv04PertinentInformation2:
             "type": "Attribute",
         },
     )
-    type_code: ActRelationshipCostTracking | ActRelationshipPosting | str | ActRelationshipHasSupport | ActRelationshipTemporallyPertains | ActRelationshipPertainsValue | None = field(
+    type_code: (
+        ActRelationshipCostTracking
+        | ActRelationshipPosting
+        | str
+        | ActRelationshipHasSupport
+        | ActRelationshipTemporallyPertains
+        | ActRelationshipPertainsValue
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "typeCode",
@@ -821,7 +854,27 @@ class CoctMt740000Uv04Reference:
             "type": "Attribute",
         },
     )
-    type_code: ActRelationshipConditional | ActRelationshipHasComponent | ActRelationshipOutcome | ActRelationshipCostTracking | ActRelationshipPosting | str | ActRelationshipHasSupport | ActRelationshipTemporallyPertains | ActRelationshipPertainsValue | ActRelationshipSequel | XActRelationshipDocument | XActRelationshipEntry | XActRelationshipEntryRelationship | XActRelationshipExternalReference | XActRelationshipPatientTransport | XActRelationshipPertinentInfo | XActRelationshipRelatedAuthorizations | XActReplaceOrRevise | XSuccReplPrev = field(
+    type_code: (
+        ActRelationshipConditional
+        | ActRelationshipHasComponent
+        | ActRelationshipOutcome
+        | ActRelationshipCostTracking
+        | ActRelationshipPosting
+        | str
+        | ActRelationshipHasSupport
+        | ActRelationshipTemporallyPertains
+        | ActRelationshipPertainsValue
+        | ActRelationshipSequel
+        | XActRelationshipDocument
+        | XActRelationshipEntry
+        | XActRelationshipEntryRelationship
+        | XActRelationshipExternalReference
+        | XActRelationshipPatientTransport
+        | XActRelationshipPertinentInfo
+        | XActRelationshipRelatedAuthorizations
+        | XActReplaceOrRevise
+        | XSuccReplPrev
+    ) = field(
         init=False,
         default=ActRelationshipPertainsValue.REFR,
         metadata={

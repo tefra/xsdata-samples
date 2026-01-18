@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from ipxact.models.access import Access
 from ipxact.models.access_restrictions import AccessRestrictions
@@ -127,7 +126,9 @@ class FieldDefinitions:
                 "type": "Element",
             },
         )
-        field_access_policies: FieldDefinitions.FieldDefinition.FieldAccessPolicies | None = field(
+        field_access_policies: (
+            FieldDefinitions.FieldDefinition.FieldAccessPolicies | None
+        ) = field(
             default=None,
             metadata={
                 "name": "fieldAccessPolicies",
@@ -212,7 +213,9 @@ class FieldDefinitions:
                         "type": "Element",
                     },
                 )
-                field_access_policy_definition_ref: FieldAccessPolicyDefinitionRef | None = field(
+                field_access_policy_definition_ref: (
+                    FieldAccessPolicyDefinitionRef | None
+                ) = field(
                     default=None,
                     metadata={
                         "name": "fieldAccessPolicyDefinitionRef",
@@ -253,7 +256,10 @@ class FieldDefinitions:
                         "type": "Element",
                     },
                 )
-                broadcasts: FieldDefinitions.FieldDefinition.FieldAccessPolicies.FieldAccessPolicy.Broadcasts | None = field(
+                broadcasts: (
+                    FieldDefinitions.FieldDefinition.FieldAccessPolicies.FieldAccessPolicy.Broadcasts
+                    | None
+                ) = field(
                     default=None,
                     metadata={
                         "type": "Element",
@@ -266,7 +272,10 @@ class FieldDefinitions:
                         "type": "Element",
                     },
                 )
-                testable: FieldDefinitions.FieldDefinition.FieldAccessPolicies.FieldAccessPolicy.Testable | None = field(
+                testable: (
+                    FieldDefinitions.FieldDefinition.FieldAccessPolicies.FieldAccessPolicy.Testable
+                    | None
+                ) = field(
                     default=None,
                     metadata={
                         "type": "Element",
@@ -308,14 +317,20 @@ class FieldDefinitions:
 
                     @dataclass
                     class BroadcastTo:
-                        address_space_ref: FieldDefinitions.FieldDefinition.FieldAccessPolicies.FieldAccessPolicy.Broadcasts.BroadcastTo.AddressSpaceRef | None = field(
+                        address_space_ref: (
+                            FieldDefinitions.FieldDefinition.FieldAccessPolicies.FieldAccessPolicy.Broadcasts.BroadcastTo.AddressSpaceRef
+                            | None
+                        ) = field(
                             default=None,
                             metadata={
                                 "name": "addressSpaceRef",
                                 "type": "Element",
                             },
                         )
-                        memory_map_ref: FieldDefinitions.FieldDefinition.FieldAccessPolicies.FieldAccessPolicy.Broadcasts.BroadcastTo.MemoryMapRef | None = field(
+                        memory_map_ref: (
+                            FieldDefinitions.FieldDefinition.FieldAccessPolicies.FieldAccessPolicy.Broadcasts.BroadcastTo.MemoryMapRef
+                            | None
+                        ) = field(
                             default=None,
                             metadata={
                                 "name": "memoryMapRef",
@@ -357,12 +372,14 @@ class FieldDefinitions:
                                 "type": "Element",
                             },
                         )
-                        alternate_register_ref: AlternateRegisterRef | None = field(
-                            default=None,
-                            metadata={
-                                "name": "alternateRegisterRef",
-                                "type": "Element",
-                            },
+                        alternate_register_ref: AlternateRegisterRef | None = (
+                            field(
+                                default=None,
+                                metadata={
+                                    "name": "alternateRegisterRef",
+                                    "type": "Element",
+                                },
+                            )
                         )
                         field_ref: FieldRef | None = field(
                             default=None,

@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -115,7 +114,9 @@ class DiagnosticEcuInstanceProps:
             "required": True,
         },
     )
-    short_name_fragments: DiagnosticEcuInstanceProps.ShortNameFragments | None = field(
+    short_name_fragments: (
+        DiagnosticEcuInstanceProps.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -187,13 +188,15 @@ class DiagnosticEcuInstanceProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ecu_instance_refs: DiagnosticEcuInstanceProps.EcuInstanceRefs | None = field(
-        default=None,
-        metadata={
-            "name": "ECU-INSTANCE-REFS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    ecu_instance_refs: DiagnosticEcuInstanceProps.EcuInstanceRefs | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "ECU-INSTANCE-REFS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     obd_support: DiagnosticObdSupportEnum | None = field(
         default=None,

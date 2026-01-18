@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from xcbl.models.order_response import (
     ListOfTransport,
@@ -336,7 +335,9 @@ class OrderRequestHeader:
             },
         )
     )
-    order_invoice_medium_type_coded_other: OrderInvoiceMediumTypeCodedOther | None = field(
+    order_invoice_medium_type_coded_other: (
+        OrderInvoiceMediumTypeCodedOther | None
+    ) = field(
         default=None,
         metadata={
             "name": "OrderInvoiceMediumTypeCodedOther",

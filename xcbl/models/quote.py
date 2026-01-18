@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from xcbl.models.request_for_quotation import (
     PaymentInstructions,
@@ -330,7 +329,9 @@ class TaxReference:
             "required": True,
         }
     )
-    tax_function_qualifier_coded_other: TaxFunctionQualifierCodedOther | None = field(
+    tax_function_qualifier_coded_other: (
+        TaxFunctionQualifierCodedOther | None
+    ) = field(
         default=None,
         metadata={
             "name": "TaxFunctionQualifierCodedOther",
@@ -393,14 +394,12 @@ class TaxReference:
             "type": "Element",
         },
     )
-    tax_payment_method_coded_other: TaxPaymentMethodCodedOther | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "TaxPaymentMethodCodedOther",
-                "type": "Element",
-            },
-        )
+    tax_payment_method_coded_other: TaxPaymentMethodCodedOther | None = field(
+        default=None,
+        metadata={
+            "name": "TaxPaymentMethodCodedOther",
+            "type": "Element",
+        },
     )
     taxable_amount: TaxableAmount | None = field(
         default=None,
@@ -409,7 +408,9 @@ class TaxReference:
             "type": "Element",
         },
     )
-    taxable_amount_in_tax_accounting_currency: TaxableAmountInTaxAccountingCurrency | None = field(
+    taxable_amount_in_tax_accounting_currency: (
+        TaxableAmountInTaxAccountingCurrency | None
+    ) = field(
         default=None,
         metadata={
             "name": "TaxableAmountInTaxAccountingCurrency",
@@ -423,7 +424,9 @@ class TaxReference:
             "required": True,
         }
     )
-    tax_amount_in_tax_accounting_currency: TaxAmountInTaxAccountingCurrency | None = field(
+    tax_amount_in_tax_accounting_currency: (
+        TaxAmountInTaxAccountingCurrency | None
+    ) = field(
         default=None,
         metadata={
             "name": "TaxAmountInTaxAccountingCurrency",

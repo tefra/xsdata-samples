@@ -1,6 +1,5 @@
 from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import Optional
 
 from xsdata.models.datatype import XmlDuration
 
@@ -47,7 +46,9 @@ class SubscribingVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    subscription_renewal_policy: SubscriptionRenewalPolicyEnumeration | None = field(
+    subscription_renewal_policy: (
+        SubscriptionRenewalPolicyEnumeration | None
+    ) = field(
         default=None,
         metadata={
             "name": "SubscriptionRenewalPolicy",
@@ -74,7 +75,9 @@ class SubscribingVersionStructure(UsageParameterVersionStructure):
             "tokens": True,
         },
     )
-    installment_types_of_payment_method: TypeOfPaymentMethodRefsRelStructure | None = field(
+    installment_types_of_payment_method: (
+        TypeOfPaymentMethodRefsRelStructure | None
+    ) = field(
         default=None,
         metadata={
             "name": "installmentTypesOfPaymentMethod",

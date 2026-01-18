@@ -1,7 +1,6 @@
 from collections.abc import Iterable
 from dataclasses import dataclass, field
 from decimal import Decimal
-from typing import Optional, Union
 
 from .capped_discount_right_ref import CappedDiscountRightRef
 from .capping_period_enumeration import CappingPeriodEnumeration
@@ -76,7 +75,12 @@ class CappingRuleVersionedChildStructure(PriceableObjectVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    validity_parameter_assignments_or_generic_parameter_assignment_or_generic_parameter_assignment_in_context: GenericParameterAssignmentsRelStructure | GenericParameterAssignment | GenericParameterAssignmentInContext | None = field(
+    validity_parameter_assignments_or_generic_parameter_assignment_or_generic_parameter_assignment_in_context: (
+        GenericParameterAssignmentsRelStructure
+        | GenericParameterAssignment
+        | GenericParameterAssignmentInContext
+        | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",

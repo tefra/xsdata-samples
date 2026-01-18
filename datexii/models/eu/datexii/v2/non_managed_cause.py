@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from datexii.models.eu.datexii.v2.cause import Cause
 from datexii.models.eu.datexii.v2.cause_type_enum import CauseTypeEnum

@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -109,7 +108,9 @@ class AsynchronousServerCallResultPoint:
             "required": True,
         },
     )
-    short_name_fragments: AsynchronousServerCallResultPoint.ShortNameFragments | None = field(
+    short_name_fragments: (
+        AsynchronousServerCallResultPoint.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -157,15 +158,13 @@ class AsynchronousServerCallResultPoint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: AsynchronousServerCallResultPoint.Annotations | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "ANNOTATIONS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    annotations: AsynchronousServerCallResultPoint.Annotations | None = field(
+        default=None,
+        metadata={
+            "name": "ANNOTATIONS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     return_value_provision: RteApiReturnValueProvisionEnum | None = field(
         default=None,
@@ -175,7 +174,9 @@ class AsynchronousServerCallResultPoint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    asynchronous_server_call_point_ref: AsynchronousServerCallResultPoint.AsynchronousServerCallPointRef | None = field(
+    asynchronous_server_call_point_ref: (
+        AsynchronousServerCallResultPoint.AsynchronousServerCallPointRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "ASYNCHRONOUS-SERVER-CALL-POINT-REF",

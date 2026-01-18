@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import ForwardRef, Union
+from typing import ForwardRef
 
 from sdmx_ml.models.empty_type import EmptyType
 from sdmx_ml.models.optional_local_dimension_reference_type import (
@@ -20,7 +20,10 @@ class AttributeRelationshipType:
     """
 
     choice: tuple[
-        AttributeRelationshipType.Dataflow | OptionalLocalDimensionReferenceType | str | AttributeRelationshipType.Observation,
+        AttributeRelationshipType.Dataflow
+        | OptionalLocalDimensionReferenceType
+        | str
+        | AttributeRelationshipType.Observation,
         ...,
     ] = field(
         default_factory=tuple,

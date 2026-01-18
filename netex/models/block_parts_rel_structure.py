@@ -1,6 +1,5 @@
 from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import Union
 
 from .block_part import BlockPart
 from .block_part_ref import BlockPartRef

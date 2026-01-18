@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from .fare_element_in_sequence_versioned_child_structure import (
     FareElementInSequenceVersionedChildStructure,
@@ -26,7 +25,9 @@ class AccessRightInProductVersionedChildStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    preassigned_fare_product_ref: SupplementProductRef | PreassignedFareProductRef | None = field(
+    preassigned_fare_product_ref: (
+        SupplementProductRef | PreassignedFareProductRef | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",

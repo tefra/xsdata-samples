@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .sw_service_impl_policy_enum_simple import SwServiceImplPolicyEnumSimple
 

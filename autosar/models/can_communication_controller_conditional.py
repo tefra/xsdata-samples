@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import VariationPoint
 from .boolean import Boolean
@@ -49,7 +48,9 @@ class CanCommunicationControllerConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    can_controller_attributes: CanCommunicationControllerConditional.CanControllerAttributes | None = field(
+    can_controller_attributes: (
+        CanCommunicationControllerConditional.CanControllerAttributes | None
+    ) = field(
         default=None,
         metadata={
             "name": "CAN-CONTROLLER-ATTRIBUTES",
@@ -93,7 +94,9 @@ class CanCommunicationControllerConditional:
                 },
             )
         )
-        can_controller_configuration_requirements: CanControllerConfigurationRequirements | None = field(
+        can_controller_configuration_requirements: (
+            CanControllerConfigurationRequirements | None
+        ) = field(
             default=None,
             metadata={
                 "name": "CAN-CONTROLLER-CONFIGURATION-REQUIREMENTS",

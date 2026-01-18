@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -110,7 +109,9 @@ class SomeipSdClientEventGroupTimingConfig:
             "required": True,
         },
     )
-    short_name_fragments: SomeipSdClientEventGroupTimingConfig.ShortNameFragments | None = field(
+    short_name_fragments: (
+        SomeipSdClientEventGroupTimingConfig.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -158,13 +159,15 @@ class SomeipSdClientEventGroupTimingConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: SomeipSdClientEventGroupTimingConfig.Annotations | None = field(
-        default=None,
-        metadata={
-            "name": "ANNOTATIONS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    annotations: SomeipSdClientEventGroupTimingConfig.Annotations | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "ANNOTATIONS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     variation_point: VariationPoint | None = field(
         default=None,

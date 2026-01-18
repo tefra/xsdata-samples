@@ -1,6 +1,5 @@
 from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from xsdata.models.datatype import XmlDateTime
 
@@ -43,7 +42,9 @@ class OperatingPeriodVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    from_operating_day_ref_or_from_date: OperatingDayRefStructure | XmlDateTime | None = field(
+    from_operating_day_ref_or_from_date: (
+        OperatingDayRefStructure | XmlDateTime | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -61,7 +62,9 @@ class OperatingPeriodVersionStructure(DataManagedObjectStructure):
             ),
         },
     )
-    to_operating_day_ref_or_to_date: OperatingDayRefStructure | XmlDateTime | None = field(
+    to_operating_day_ref_or_to_date: (
+        OperatingDayRefStructure | XmlDateTime | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",

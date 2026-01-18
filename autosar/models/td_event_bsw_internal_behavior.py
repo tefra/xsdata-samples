@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -103,7 +102,9 @@ class TdEventBswInternalBehavior:
             "required": True,
         },
     )
-    short_name_fragments: TdEventBswInternalBehavior.ShortNameFragments | None = field(
+    short_name_fragments: (
+        TdEventBswInternalBehavior.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -175,7 +176,9 @@ class TdEventBswInternalBehavior:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    bsw_module_entity_ref: TdEventBswInternalBehavior.BswModuleEntityRef | None = field(
+    bsw_module_entity_ref: (
+        TdEventBswInternalBehavior.BswModuleEntityRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "BSW-MODULE-ENTITY-REF",
@@ -183,7 +186,9 @@ class TdEventBswInternalBehavior:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    td_event_bsw_internal_behavior_type: TdEventBswInternalBehaviorTypeEnum | None = field(
+    td_event_bsw_internal_behavior_type: (
+        TdEventBswInternalBehaviorTypeEnum | None
+    ) = field(
         default=None,
         metadata={
             "name": "TD-EVENT-BSW-INTERNAL-BEHAVIOR-TYPE",

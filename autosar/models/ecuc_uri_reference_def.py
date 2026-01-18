@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -179,13 +178,15 @@ class EcucUriReferenceDef:
             "required": True,
         },
     )
-    short_name_fragments: EcucUriReferenceDef.ShortNameFragments | None = field(
-        default=None,
-        metadata={
-            "name": "SHORT-NAME-FRAGMENTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    short_name_fragments: EcucUriReferenceDef.ShortNameFragments | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "SHORT-NAME-FRAGMENTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     long_name: MultilanguageLongName | None = field(
         default=None,
@@ -235,21 +236,25 @@ class EcucUriReferenceDef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    related_trace_item_ref: EcucUriReferenceDef.RelatedTraceItemRef | None = field(
-        default=None,
-        metadata={
-            "name": "RELATED-TRACE-ITEM-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    related_trace_item_ref: EcucUriReferenceDef.RelatedTraceItemRef | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "RELATED-TRACE-ITEM-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
-    ecuc_validation_conds: EcucUriReferenceDef.EcucValidationConds | None = field(
-        default=None,
-        metadata={
-            "name": "ECUC-VALIDATION-CONDS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    ecuc_validation_conds: EcucUriReferenceDef.EcucValidationConds | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "ECUC-VALIDATION-CONDS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     ecuc_cond: EcucConditionSpecification | None = field(
         default=None,
@@ -291,15 +296,19 @@ class EcucUriReferenceDef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    configuration_class_affection: EcucConfigurationClassAffection | None = field(
-        default=None,
-        metadata={
-            "name": "CONFIGURATION-CLASS-AFFECTION",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    configuration_class_affection: EcucConfigurationClassAffection | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "CONFIGURATION-CLASS-AFFECTION",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
-    implementation_config_classes: EcucUriReferenceDef.ImplementationConfigClasses | None = field(
+    implementation_config_classes: (
+        EcucUriReferenceDef.ImplementationConfigClasses | None
+    ) = field(
         default=None,
         metadata={
             "name": "IMPLEMENTATION-CONFIG-CLASSES",
@@ -307,7 +316,9 @@ class EcucUriReferenceDef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    multiplicity_config_classes: EcucUriReferenceDef.MultiplicityConfigClasses | None = field(
+    multiplicity_config_classes: (
+        EcucUriReferenceDef.MultiplicityConfigClasses | None
+    ) = field(
         default=None,
         metadata={
             "name": "MULTIPLICITY-CONFIG-CLASSES",
@@ -347,13 +358,15 @@ class EcucUriReferenceDef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    value_config_classes: EcucUriReferenceDef.ValueConfigClasses | None = field(
-        default=None,
-        metadata={
-            "name": "VALUE-CONFIG-CLASSES",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    value_config_classes: EcucUriReferenceDef.ValueConfigClasses | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "VALUE-CONFIG-CLASSES",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     requires_symbolic_name_value: Boolean | None = field(
         default=None,
@@ -363,15 +376,13 @@ class EcucUriReferenceDef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    destination_uri_ref: EcucUriReferenceDef.DestinationUriRef | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "DESTINATION-URI-REF",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    destination_uri_ref: EcucUriReferenceDef.DestinationUriRef | None = field(
+        default=None,
+        metadata={
+            "name": "DESTINATION-URI-REF",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     s: str | None = field(
         default=None,

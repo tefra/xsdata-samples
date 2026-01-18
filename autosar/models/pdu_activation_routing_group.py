@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import VariationPoint
 from .event_group_control_type_enum import EventGroupControlTypeEnum
@@ -67,7 +66,9 @@ class PduActivationRoutingGroup:
             "required": True,
         },
     )
-    short_name_fragments: PduActivationRoutingGroup.ShortNameFragments | None = field(
+    short_name_fragments: (
+        PduActivationRoutingGroup.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -83,7 +84,9 @@ class PduActivationRoutingGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    i_pdu_identifier_tcp_refs: PduActivationRoutingGroup.IPduIdentifierTcpRefs | None = field(
+    i_pdu_identifier_tcp_refs: (
+        PduActivationRoutingGroup.IPduIdentifierTcpRefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "I-PDU-IDENTIFIER-TCP-REFS",
@@ -91,7 +94,9 @@ class PduActivationRoutingGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    i_pdu_identifier_udp_refs: PduActivationRoutingGroup.IPduIdentifierUdpRefs | None = field(
+    i_pdu_identifier_udp_refs: (
+        PduActivationRoutingGroup.IPduIdentifierUdpRefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "I-PDU-IDENTIFIER-UDP-REFS",

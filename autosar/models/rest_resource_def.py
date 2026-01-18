@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -102,15 +101,13 @@ class RestResourceDef:
             "required": True,
         },
     )
-    short_name_fragments: RestResourceDef.ShortNameFragments | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "SHORT-NAME-FRAGMENTS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    short_name_fragments: RestResourceDef.ShortNameFragments | None = field(
+        default=None,
+        metadata={
+            "name": "SHORT-NAME-FRAGMENTS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     long_name: MultilanguageLongName | None = field(
         default=None,
@@ -184,13 +181,15 @@ class RestResourceDef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    system_triggered_events: RestResourceDef.SystemTriggeredEvents | None = field(
-        default=None,
-        metadata={
-            "name": "SYSTEM-TRIGGERED-EVENTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    system_triggered_events: RestResourceDef.SystemTriggeredEvents | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "SYSTEM-TRIGGERED-EVENTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     s: str | None = field(
         default=None,

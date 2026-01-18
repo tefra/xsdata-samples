@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -129,13 +128,15 @@ class ClientServerOperation:
             "required": True,
         },
     )
-    short_name_fragments: ClientServerOperation.ShortNameFragments | None = field(
-        default=None,
-        metadata={
-            "name": "SHORT-NAME-FRAGMENTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    short_name_fragments: ClientServerOperation.ShortNameFragments | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "SHORT-NAME-FRAGMENTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     long_name: MultilanguageLongName | None = field(
         default=None,
@@ -209,7 +210,9 @@ class ClientServerOperation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    possible_ap_error_refs: ClientServerOperation.PossibleApErrorRefs | None = field(
+    possible_ap_error_refs: (
+        ClientServerOperation.PossibleApErrorRefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "POSSIBLE-AP-ERROR-REFS",
@@ -217,7 +220,9 @@ class ClientServerOperation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    possible_ap_error_set_refs: ClientServerOperation.PossibleApErrorSetRefs | None = field(
+    possible_ap_error_set_refs: (
+        ClientServerOperation.PossibleApErrorSetRefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "POSSIBLE-AP-ERROR-SET-REFS",
@@ -225,13 +230,15 @@ class ClientServerOperation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    possible_error_refs: ClientServerOperation.PossibleErrorRefs | None = field(
-        default=None,
-        metadata={
-            "name": "POSSIBLE-ERROR-REFS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    possible_error_refs: ClientServerOperation.PossibleErrorRefs | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "POSSIBLE-ERROR-REFS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     variation_point: VariationPoint | None = field(
         default=None,

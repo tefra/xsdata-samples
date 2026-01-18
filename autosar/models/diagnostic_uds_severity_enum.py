@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .diagnostic_uds_severity_enum_simple import (
     DiagnosticUdsSeverityEnumSimple,

@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .boarding_permission_enumeration import BoardingPermissionEnumeration
 

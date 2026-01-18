@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .flexray_ar_tp_node_subtypes_enum import FlexrayArTpNodeSubtypesEnum
 from .i_pdu_subtypes_enum import IPduSubtypesEnum
@@ -83,23 +82,23 @@ class FlexrayArTpConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    direct_tp_sdu_ref: FlexrayArTpConnection.DirectTpSduRef | None = (
+    direct_tp_sdu_ref: FlexrayArTpConnection.DirectTpSduRef | None = field(
+        default=None,
+        metadata={
+            "name": "DIRECT-TP-SDU-REF",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
+    )
+    flow_control_pdu_ref: FlexrayArTpConnection.FlowControlPduRef | None = (
         field(
             default=None,
             metadata={
-                "name": "DIRECT-TP-SDU-REF",
+                "name": "FLOW-CONTROL-PDU-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-    )
-    flow_control_pdu_ref: FlexrayArTpConnection.FlowControlPduRef | None = field(
-        default=None,
-        metadata={
-            "name": "FLOW-CONTROL-PDU-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
     )
     multicast_ref: FlexrayArTpConnection.MulticastRef | None = field(
         default=None,
@@ -109,15 +108,13 @@ class FlexrayArTpConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    reversed_tp_sdu_ref: FlexrayArTpConnection.ReversedTpSduRef | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "REVERSED-TP-SDU-REF",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    reversed_tp_sdu_ref: FlexrayArTpConnection.ReversedTpSduRef | None = field(
+        default=None,
+        metadata={
+            "name": "REVERSED-TP-SDU-REF",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     source_ref: FlexrayArTpConnection.SourceRef | None = field(
         default=None,
@@ -135,15 +132,13 @@ class FlexrayArTpConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    transmit_pdu_refs: FlexrayArTpConnection.TransmitPduRefs | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "TRANSMIT-PDU-REFS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    transmit_pdu_refs: FlexrayArTpConnection.TransmitPduRefs | None = field(
+        default=None,
+        metadata={
+            "name": "TRANSMIT-PDU-REFS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     s: str | None = field(
         default=None,

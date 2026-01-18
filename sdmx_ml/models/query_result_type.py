@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import ForwardRef, Optional, Union
+from typing import ForwardRef
 
 from sdmx_ml.models.result_type import ResultType
 
@@ -28,7 +28,9 @@ class QueryResultType:
         the source of a metadata set.
     """
 
-    data_result_or_metadata_result: QueryResultType.DataResult | QueryResultType.MetadataResult | None = field(
+    data_result_or_metadata_result: (
+        QueryResultType.DataResult | QueryResultType.MetadataResult | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",

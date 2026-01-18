@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.header_information import HeaderInformation
@@ -25,7 +24,9 @@ class MeasuredDataPublication(PayloadPublication):
     :ivar measured_data_publication_extension:
     """
 
-    measurement_site_table_reference: MeasurementSiteTableVersionedReference | None = field(
+    measurement_site_table_reference: (
+        MeasurementSiteTableVersionedReference | None
+    ) = field(
         default=None,
         metadata={
             "name": "measurementSiteTableReference",

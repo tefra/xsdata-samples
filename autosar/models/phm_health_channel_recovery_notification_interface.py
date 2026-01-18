@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -124,7 +123,9 @@ class PhmHealthChannelRecoveryNotificationInterface:
             "required": True,
         },
     )
-    short_name_fragments: PhmHealthChannelRecoveryNotificationInterface.ShortNameFragments | None = field(
+    short_name_fragments: (
+        PhmHealthChannelRecoveryNotificationInterface.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -172,7 +173,9 @@ class PhmHealthChannelRecoveryNotificationInterface:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: PhmHealthChannelRecoveryNotificationInterface.Annotations | None = field(
+    annotations: (
+        PhmHealthChannelRecoveryNotificationInterface.Annotations | None
+    ) = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -188,7 +191,9 @@ class PhmHealthChannelRecoveryNotificationInterface:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    blueprint_policys: PhmHealthChannelRecoveryNotificationInterface.BlueprintPolicys | None = field(
+    blueprint_policys: (
+        PhmHealthChannelRecoveryNotificationInterface.BlueprintPolicys | None
+    ) = field(
         default=None,
         metadata={
             "name": "BLUEPRINT-POLICYS",
@@ -212,7 +217,9 @@ class PhmHealthChannelRecoveryNotificationInterface:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    namespaces: PhmHealthChannelRecoveryNotificationInterface.Namespaces | None = field(
+    namespaces: (
+        PhmHealthChannelRecoveryNotificationInterface.Namespaces | None
+    ) = field(
         default=None,
         metadata={
             "name": "NAMESPACES",

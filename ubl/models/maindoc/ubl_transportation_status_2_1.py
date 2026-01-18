@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from ubl.models.common.ubl_common_aggregate_components_2_1 import (
     Consignment,
@@ -231,7 +230,9 @@ class TransportationStatusType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    transportation_status_request_document_reference: TransportationStatusRequestDocumentReference | None = field(
+    transportation_status_request_document_reference: (
+        TransportationStatusRequestDocumentReference | None
+    ) = field(
         default=None,
         metadata={
             "name": "TransportationStatusRequestDocumentReference",
@@ -239,7 +240,9 @@ class TransportationStatusType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    transport_execution_plan_document_reference: TransportExecutionPlanDocumentReference | None = field(
+    transport_execution_plan_document_reference: (
+        TransportExecutionPlanDocumentReference | None
+    ) = field(
         default=None,
         metadata={
             "name": "TransportExecutionPlanDocumentReference",
@@ -247,23 +250,23 @@ class TransportationStatusType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    updated_pickup_transport_event: UpdatedPickupTransportEvent | None = (
+    updated_pickup_transport_event: UpdatedPickupTransportEvent | None = field(
+        default=None,
+        metadata={
+            "name": "UpdatedPickupTransportEvent",
+            "type": "Element",
+            "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
+        },
+    )
+    updated_delivery_transport_event: UpdatedDeliveryTransportEvent | None = (
         field(
             default=None,
             metadata={
-                "name": "UpdatedPickupTransportEvent",
+                "name": "UpdatedDeliveryTransportEvent",
                 "type": "Element",
                 "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
             },
         )
-    )
-    updated_delivery_transport_event: UpdatedDeliveryTransportEvent | None = field(
-        default=None,
-        metadata={
-            "name": "UpdatedDeliveryTransportEvent",
-            "type": "Element",
-            "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        },
     )
     status_location: tuple[StatusLocation, ...] = field(
         default_factory=tuple,

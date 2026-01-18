@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.tpeg_loc03_other_point_descriptor_subtype_enum import (
@@ -23,7 +22,9 @@ class TpegOtherPointDescriptor(TpegPointDescriptor):
     :ivar tpeg_other_point_descriptor_extension:
     """
 
-    tpeg_other_point_descriptor_type: TpegLoc03OtherPointDescriptorSubtypeEnum | None = field(
+    tpeg_other_point_descriptor_type: (
+        TpegLoc03OtherPointDescriptorSubtypeEnum | None
+    ) = field(
         default=None,
         metadata={
             "name": "tpegOtherPointDescriptorType",

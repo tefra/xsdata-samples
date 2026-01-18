@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from ipxact.models.api_type import ApiType
 from ipxact.models.description import Description
@@ -178,7 +177,9 @@ class GeneratorType:
         :ivar id:
         """
 
-        transport_method: GeneratorType.TransportMethods.TransportMethod | None = field(
+        transport_method: (
+            GeneratorType.TransportMethods.TransportMethod | None
+        ) = field(
             default=None,
             metadata={
                 "name": "transportMethod",

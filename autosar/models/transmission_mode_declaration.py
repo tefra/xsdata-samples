@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .mode_driven_transmission_mode_condition import (
     ModeDrivenTransmissionModeCondition,
@@ -68,7 +67,9 @@ class TransmissionModeDeclaration:
     class Meta:
         name = "TRANSMISSION-MODE-DECLARATION"
 
-    mode_driven_false_conditions: TransmissionModeDeclaration.ModeDrivenFalseConditions | None = field(
+    mode_driven_false_conditions: (
+        TransmissionModeDeclaration.ModeDrivenFalseConditions | None
+    ) = field(
         default=None,
         metadata={
             "name": "MODE-DRIVEN-FALSE-CONDITIONS",
@@ -76,7 +77,9 @@ class TransmissionModeDeclaration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    mode_driven_true_conditions: TransmissionModeDeclaration.ModeDrivenTrueConditions | None = field(
+    mode_driven_true_conditions: (
+        TransmissionModeDeclaration.ModeDrivenTrueConditions | None
+    ) = field(
         default=None,
         metadata={
             "name": "MODE-DRIVEN-TRUE-CONDITIONS",
@@ -84,7 +87,9 @@ class TransmissionModeDeclaration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    transmission_mode_conditions: TransmissionModeDeclaration.TransmissionModeConditions | None = field(
+    transmission_mode_conditions: (
+        TransmissionModeDeclaration.TransmissionModeConditions | None
+    ) = field(
         default=None,
         metadata={
             "name": "TRANSMISSION-MODE-CONDITIONS",

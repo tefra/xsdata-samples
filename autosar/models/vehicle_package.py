@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -117,15 +116,13 @@ class VehiclePackage:
             "required": True,
         },
     )
-    short_name_fragments: VehiclePackage.ShortNameFragments | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "SHORT-NAME-FRAGMENTS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    short_name_fragments: VehiclePackage.ShortNameFragments | None = field(
+        default=None,
+        metadata={
+            "name": "SHORT-NAME-FRAGMENTS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     long_name: MultilanguageLongName | None = field(
         default=None,
@@ -183,25 +180,21 @@ class VehiclePackage:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    driver_notifications: VehiclePackage.DriverNotifications | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "DRIVER-NOTIFICATIONS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    driver_notifications: VehiclePackage.DriverNotifications | None = field(
+        default=None,
+        metadata={
+            "name": "DRIVER-NOTIFICATIONS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
-    packager_signature_ref: VehiclePackage.PackagerSignatureRef | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "PACKAGER-SIGNATURE-REF",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    packager_signature_ref: VehiclePackage.PackagerSignatureRef | None = field(
+        default=None,
+        metadata={
+            "name": "PACKAGER-SIGNATURE-REF",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     repository: UriString | None = field(
         default=None,
@@ -211,13 +204,15 @@ class VehiclePackage:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    rollout_qualifications: VehiclePackage.RolloutQualifications | None = field(
-        default=None,
-        metadata={
-            "name": "ROLLOUT-QUALIFICATIONS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    rollout_qualifications: VehiclePackage.RolloutQualifications | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "ROLLOUT-QUALIFICATIONS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     ucms: VehiclePackage.Ucms | None = field(
         default=None,
@@ -227,21 +222,25 @@ class VehiclePackage:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ucm_master_fallback_refs: VehiclePackage.UcmMasterFallbackRefs | None = field(
-        default=None,
-        metadata={
-            "name": "UCM-MASTER-FALLBACK-REFS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    ucm_master_fallback_refs: VehiclePackage.UcmMasterFallbackRefs | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "UCM-MASTER-FALLBACK-REFS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
-    vehicle_description_ref: VehiclePackage.VehicleDescriptionRef | None = field(
-        default=None,
-        metadata={
-            "name": "VEHICLE-DESCRIPTION-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    vehicle_description_ref: VehiclePackage.VehicleDescriptionRef | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "VEHICLE-DESCRIPTION-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     s: str | None = field(
         default=None,

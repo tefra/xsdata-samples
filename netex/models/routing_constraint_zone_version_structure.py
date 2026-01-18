@@ -1,6 +1,5 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
-from typing import Optional, Union
 
 from .group_of_lines_ref import GroupOfLinesRef
 from .line_refs_rel_structure import LineRefsRelStructure

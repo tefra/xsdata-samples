@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -130,7 +129,9 @@ class DiagnosticEventPortMapping:
             "required": True,
         },
     )
-    short_name_fragments: DiagnosticEventPortMapping.ShortNameFragments | None = field(
+    short_name_fragments: (
+        DiagnosticEventPortMapping.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -194,7 +195,9 @@ class DiagnosticEventPortMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    bsw_service_dependency_ref: DiagnosticEventPortMapping.BswServiceDependencyRef | None = field(
+    bsw_service_dependency_ref: (
+        DiagnosticEventPortMapping.BswServiceDependencyRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "BSW-SERVICE-DEPENDENCY-REF",
@@ -202,7 +205,9 @@ class DiagnosticEventPortMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    diagnostic_event_ref: DiagnosticEventPortMapping.DiagnosticEventRef | None = field(
+    diagnostic_event_ref: (
+        DiagnosticEventPortMapping.DiagnosticEventRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "DIAGNOSTIC-EVENT-REF",
@@ -218,7 +223,9 @@ class DiagnosticEventPortMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    swc_flat_service_dependency_ref: DiagnosticEventPortMapping.SwcFlatServiceDependencyRef | None = field(
+    swc_flat_service_dependency_ref: (
+        DiagnosticEventPortMapping.SwcFlatServiceDependencyRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "SWC-FLAT-SERVICE-DEPENDENCY-REF",
@@ -226,7 +233,9 @@ class DiagnosticEventPortMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    swc_service_dependency_in_executable_iref: SwcServiceDependencyInExecutableInstanceRef | None = field(
+    swc_service_dependency_in_executable_iref: (
+        SwcServiceDependencyInExecutableInstanceRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "SWC-SERVICE-DEPENDENCY-IN-EXECUTABLE-IREF",
@@ -234,7 +243,9 @@ class DiagnosticEventPortMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    swc_service_dependency_in_system_iref: SwcServiceDependencyInSystemInstanceRef | None = field(
+    swc_service_dependency_in_system_iref: (
+        SwcServiceDependencyInSystemInstanceRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "SWC-SERVICE-DEPENDENCY-IN-SYSTEM-IREF",
@@ -242,7 +253,9 @@ class DiagnosticEventPortMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    swc_service_dependency_iref: SwcServiceDependencyInCompositionInstanceRef | None = field(
+    swc_service_dependency_iref: (
+        SwcServiceDependencyInCompositionInstanceRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "SWC-SERVICE-DEPENDENCY-IREF",

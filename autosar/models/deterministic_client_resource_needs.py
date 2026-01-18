@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -97,7 +96,9 @@ class DeterministicClientResourceNeeds:
             "required": True,
         },
     )
-    short_name_fragments: DeterministicClientResourceNeeds.ShortNameFragments | None = field(
+    short_name_fragments: (
+        DeterministicClientResourceNeeds.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -145,15 +146,13 @@ class DeterministicClientResourceNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: DeterministicClientResourceNeeds.Annotations | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "ANNOTATIONS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    annotations: DeterministicClientResourceNeeds.Annotations | None = field(
+        default=None,
+        metadata={
+            "name": "ANNOTATIONS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     hardware_platform: String | None = field(
         default=None,

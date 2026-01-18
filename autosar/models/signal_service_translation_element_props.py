@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -103,7 +102,9 @@ class SignalServiceTranslationElementProps:
             "required": True,
         },
     )
-    short_name_fragments: SignalServiceTranslationElementProps.ShortNameFragments | None = field(
+    short_name_fragments: (
+        SignalServiceTranslationElementProps.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -151,13 +152,15 @@ class SignalServiceTranslationElementProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: SignalServiceTranslationElementProps.Annotations | None = field(
-        default=None,
-        metadata={
-            "name": "ANNOTATIONS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    annotations: SignalServiceTranslationElementProps.Annotations | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "ANNOTATIONS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     element: SignalServiceTranslationElementProps.Element | None = field(
         default=None,
@@ -230,7 +233,9 @@ class SignalServiceTranslationElementProps:
 
     @dataclass
     class Element:
-        data_prototype_in_port_interface_ref: DataPrototypeInPortInterfaceRef | None = field(
+        data_prototype_in_port_interface_ref: (
+            DataPrototypeInPortInterfaceRef | None
+        ) = field(
             default=None,
             metadata={
                 "name": "DATA-PROTOTYPE-IN-PORT-INTERFACE-REF",
@@ -238,7 +243,9 @@ class SignalServiceTranslationElementProps:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        implementation_data_type_element_in_port_interface_ref: ImplementationDataTypeElementInPortInterfaceRef | None = field(
+        implementation_data_type_element_in_port_interface_ref: (
+            ImplementationDataTypeElementInPortInterfaceRef | None
+        ) = field(
             default=None,
             metadata={
                 "name": "IMPLEMENTATION-DATA-TYPE-ELEMENT-IN-PORT-INTERFACE-REF",

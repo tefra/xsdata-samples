@@ -1,6 +1,5 @@
 from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import Union
 
 from .cell_ref import CellRef
 from .fare_product_price import FareProductPrice

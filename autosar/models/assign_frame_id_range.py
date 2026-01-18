@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import DocumentationBlock
 from .frame_pid import FramePid
@@ -79,7 +78,9 @@ class AssignFrameIdRange:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    assigned_controller_ref: AssignFrameIdRange.AssignedControllerRef | None = field(
+    assigned_controller_ref: (
+        AssignFrameIdRange.AssignedControllerRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "ASSIGNED-CONTROLLER-REF",
@@ -87,7 +88,9 @@ class AssignFrameIdRange:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    assigned_lin_slave_config_ref: AssignFrameIdRange.AssignedLinSlaveConfigRef | None = field(
+    assigned_lin_slave_config_ref: (
+        AssignFrameIdRange.AssignedLinSlaveConfigRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "ASSIGNED-LIN-SLAVE-CONFIG-REF",

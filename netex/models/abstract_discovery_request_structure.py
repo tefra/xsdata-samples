@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .authenticated_request_structure import AuthenticatedRequestStructure
 from .message_qualifier_structure import MessageQualifierStructure

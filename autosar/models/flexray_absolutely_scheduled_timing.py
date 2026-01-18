@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .cycle_counter import CycleCounter
 from .cycle_repetition import CycleRepetition
@@ -47,7 +46,9 @@ class FlexrayAbsolutelyScheduledTiming:
     class Meta:
         name = "FLEXRAY-ABSOLUTELY-SCHEDULED-TIMING"
 
-    communication_cycle: FlexrayAbsolutelyScheduledTiming.CommunicationCycle | None = field(
+    communication_cycle: (
+        FlexrayAbsolutelyScheduledTiming.CommunicationCycle | None
+    ) = field(
         default=None,
         metadata={
             "name": "COMMUNICATION-CYCLE",

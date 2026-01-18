@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.tpeg_loc01_framed_point_location_subtype_enum import (
@@ -31,7 +30,9 @@ class TpegFramedPoint(TpegPointLocation):
     :ivar tpeg_framed_point_extension:
     """
 
-    tpeg_framed_point_location_type: TpegLoc01FramedPointLocationSubtypeEnum | None = field(
+    tpeg_framed_point_location_type: (
+        TpegLoc01FramedPointLocationSubtypeEnum | None
+    ) = field(
         default=None,
         metadata={
             "name": "tpegFramedPointLocationType",

@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -184,15 +183,13 @@ class SwcImplementation:
             "required": True,
         },
     )
-    short_name_fragments: SwcImplementation.ShortNameFragments | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "SHORT-NAME-FRAGMENTS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    short_name_fragments: SwcImplementation.ShortNameFragments | None = field(
+        default=None,
+        metadata={
+            "name": "SHORT-NAME-FRAGMENTS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     long_name: MultilanguageLongName | None = field(
         default=None,
@@ -250,13 +247,15 @@ class SwcImplementation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    build_action_manifests: SwcImplementation.BuildActionManifests | None = field(
-        default=None,
-        metadata={
-            "name": "BUILD-ACTION-MANIFESTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    build_action_manifests: SwcImplementation.BuildActionManifests | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "BUILD-ACTION-MANIFESTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     code_descriptors: SwcImplementation.CodeDescriptors | None = field(
         default=None,
@@ -274,15 +273,13 @@ class SwcImplementation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    generated_artifacts: SwcImplementation.GeneratedArtifacts | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "GENERATED-ARTIFACTS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    generated_artifacts: SwcImplementation.GeneratedArtifacts | None = field(
+        default=None,
+        metadata={
+            "name": "GENERATED-ARTIFACTS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     hw_element_refs: SwcImplementation.HwElementRefs | None = field(
         default=None,
@@ -316,17 +313,17 @@ class SwcImplementation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    required_artifacts: SwcImplementation.RequiredArtifacts | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "REQUIRED-ARTIFACTS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    required_artifacts: SwcImplementation.RequiredArtifacts | None = field(
+        default=None,
+        metadata={
+            "name": "REQUIRED-ARTIFACTS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
-    required_generator_tools: SwcImplementation.RequiredGeneratorTools | None = field(
+    required_generator_tools: (
+        SwcImplementation.RequiredGeneratorTools | None
+    ) = field(
         default=None,
         metadata={
             "name": "REQUIRED-GENERATOR-TOOLS",
@@ -350,15 +347,13 @@ class SwcImplementation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    swc_bsw_mapping_ref: SwcImplementation.SwcBswMappingRef | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "SWC-BSW-MAPPING-REF",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    swc_bsw_mapping_ref: SwcImplementation.SwcBswMappingRef | None = field(
+        default=None,
+        metadata={
+            "name": "SWC-BSW-MAPPING-REF",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     used_code_generator: String | None = field(
         default=None,
@@ -384,7 +379,9 @@ class SwcImplementation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    per_instance_memory_sizes: SwcImplementation.PerInstanceMemorySizes | None = field(
+    per_instance_memory_sizes: (
+        SwcImplementation.PerInstanceMemorySizes | None
+    ) = field(
         default=None,
         metadata={
             "name": "PER-INSTANCE-MEMORY-SIZES",
@@ -493,15 +490,15 @@ class SwcImplementation:
 
     @dataclass
     class HwElementRefs:
-        hw_element_ref: list[
-            SwcImplementation.HwElementRefs.HwElementRef
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "HW-ELEMENT-REF",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        hw_element_ref: list[SwcImplementation.HwElementRefs.HwElementRef] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "HW-ELEMENT-REF",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )
 
         @dataclass

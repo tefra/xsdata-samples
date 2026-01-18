@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .abstract_service_instance_subtypes_enum import (
     AbstractServiceInstanceSubtypesEnum,
@@ -70,25 +69,21 @@ class TriggerToSignalMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    event_group_refs: TriggerToSignalMapping.EventGroupRefs | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "EVENT-GROUP-REFS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    event_group_refs: TriggerToSignalMapping.EventGroupRefs | None = field(
+        default=None,
+        metadata={
+            "name": "EVENT-GROUP-REFS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
-    event_handler_refs: TriggerToSignalMapping.EventHandlerRefs | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "EVENT-HANDLER-REFS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    event_handler_refs: TriggerToSignalMapping.EventHandlerRefs | None = field(
+        default=None,
+        metadata={
+            "name": "EVENT-HANDLER-REFS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     introduction: DocumentationBlock | None = field(
         default=None,
@@ -98,7 +93,9 @@ class TriggerToSignalMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    service_instance_refs: TriggerToSignalMapping.ServiceInstanceRefs | None = field(
+    service_instance_refs: (
+        TriggerToSignalMapping.ServiceInstanceRefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "SERVICE-INSTANCE-REFS",
@@ -122,15 +119,13 @@ class TriggerToSignalMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    system_signal_ref: TriggerToSignalMapping.SystemSignalRef | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "SYSTEM-SIGNAL-REF",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    system_signal_ref: TriggerToSignalMapping.SystemSignalRef | None = field(
+        default=None,
+        metadata={
+            "name": "SYSTEM-SIGNAL-REF",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     s: str | None = field(
         default=None,

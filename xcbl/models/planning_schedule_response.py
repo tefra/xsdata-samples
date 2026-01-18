@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from xcbl.models.shipping_schedule_response import (
     CommitmentLevelCoded,
@@ -249,14 +248,12 @@ class BasePlanningDetail:
             "required": True,
         }
     )
-    forecast_frequency_coded_other: ForecastFrequencyCodedOther | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "ForecastFrequencyCodedOther",
-                "type": "Element",
-            },
-        )
+    forecast_frequency_coded_other: ForecastFrequencyCodedOther | None = field(
+        default=None,
+        metadata={
+            "name": "ForecastFrequencyCodedOther",
+            "type": "Element",
+        },
     )
     item_quantities: ItemQuantities | None = field(
         default=None,
@@ -348,14 +345,12 @@ class PlanningScheduleHeader:
             "required": True,
         }
     )
-    quantity_qualifier_coded_other: QuantityQualifierCodedOther | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "QuantityQualifierCodedOther",
-                "type": "Element",
-            },
-        )
+    quantity_qualifier_coded_other: QuantityQualifierCodedOther | None = field(
+        default=None,
+        metadata={
+            "name": "QuantityQualifierCodedOther",
+            "type": "Element",
+        },
     )
     validity_dates: ValidityDates | None = field(
         default=None,
@@ -378,14 +373,12 @@ class PlanningScheduleHeader:
             "required": True,
         }
     )
-    planning_schedule_header_note: PlanningScheduleHeaderNote | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "PlanningScheduleHeaderNote",
-                "type": "Element",
-            },
-        )
+    planning_schedule_header_note: PlanningScheduleHeaderNote | None = field(
+        default=None,
+        metadata={
+            "name": "PlanningScheduleHeaderNote",
+            "type": "Element",
+        },
     )
     list_of_structured_note: ListOfStructuredNote | None = field(
         default=None,
@@ -627,21 +620,27 @@ class PlanningScheduleResponseHeader:
             "required": True,
         }
     )
-    original_planning_schedule_header: OriginalPlanningScheduleHeader | None = field(
+    original_planning_schedule_header: (
+        OriginalPlanningScheduleHeader | None
+    ) = field(
         default=None,
         metadata={
             "name": "OriginalPlanningScheduleHeader",
             "type": "Element",
         },
     )
-    changed_planning_schedule_header: ChangedPlanningScheduleHeader | None = field(
-        default=None,
-        metadata={
-            "name": "ChangedPlanningScheduleHeader",
-            "type": "Element",
-        },
+    changed_planning_schedule_header: ChangedPlanningScheduleHeader | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "ChangedPlanningScheduleHeader",
+                "type": "Element",
+            },
+        )
     )
-    planning_schedule_response_header_note: PlanningScheduleResponseHeaderNote | None = field(
+    planning_schedule_response_header_note: (
+        PlanningScheduleResponseHeaderNote | None
+    ) = field(
         default=None,
         metadata={
             "name": "PlanningScheduleResponseHeaderNote",
@@ -807,14 +806,18 @@ class LocationGroupedPlanningResponse:
             "type": "Element",
         },
     )
-    original_location_grouped_planning_detail: OriginalLocationGroupedPlanningDetail | None = field(
+    original_location_grouped_planning_detail: (
+        OriginalLocationGroupedPlanningDetail | None
+    ) = field(
         default=None,
         metadata={
             "name": "OriginalLocationGroupedPlanningDetail",
             "type": "Element",
         },
     )
-    changed_location_grouped_planning_detail: ChangedLocationGroupedPlanningDetail | None = field(
+    changed_location_grouped_planning_detail: (
+        ChangedLocationGroupedPlanningDetail | None
+    ) = field(
         default=None,
         metadata={
             "name": "ChangedLocationGroupedPlanningDetail",
@@ -860,14 +863,18 @@ class MaterialGroupedPlanningResponse:
             "type": "Element",
         },
     )
-    original_material_grouped_planning_detail: OriginalMaterialGroupedPlanningDetail | None = field(
+    original_material_grouped_planning_detail: (
+        OriginalMaterialGroupedPlanningDetail | None
+    ) = field(
         default=None,
         metadata={
             "name": "OriginalMaterialGroupedPlanningDetail",
             "type": "Element",
         },
     )
-    changed_material_grouped_planning_detail: ChangedMaterialGroupedPlanningDetail | None = field(
+    changed_material_grouped_planning_detail: (
+        ChangedMaterialGroupedPlanningDetail | None
+    ) = field(
         default=None,
         metadata={
             "name": "ChangedMaterialGroupedPlanningDetail",
@@ -934,21 +941,27 @@ class PlanningScheduleResponse:
             "required": True,
         }
     )
-    list_of_location_grouped_planning_response: ListOfLocationGroupedPlanningResponse | None = field(
+    list_of_location_grouped_planning_response: (
+        ListOfLocationGroupedPlanningResponse | None
+    ) = field(
         default=None,
         metadata={
             "name": "ListOfLocationGroupedPlanningResponse",
             "type": "Element",
         },
     )
-    list_of_material_grouped_planning_response: ListOfMaterialGroupedPlanningResponse | None = field(
+    list_of_material_grouped_planning_response: (
+        ListOfMaterialGroupedPlanningResponse | None
+    ) = field(
         default=None,
         metadata={
             "name": "ListOfMaterialGroupedPlanningResponse",
             "type": "Element",
         },
     )
-    planning_schedule_response_summary: PlanningScheduleResponseSummary | None = field(
+    planning_schedule_response_summary: (
+        PlanningScheduleResponseSummary | None
+    ) = field(
         default=None,
         metadata={
             "name": "PlanningScheduleResponseSummary",

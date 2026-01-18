@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .category_string import CategoryString
 from .software_cluster_dependency_compare_condition import (

@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from crossref.models.org.crossref.relations.description import Description
 from crossref.models.org.crossref.relations.inter_work_relation import (

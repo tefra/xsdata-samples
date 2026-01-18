@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .complex_feature_members_rel_structure import (
     ComplexFeatureMembersRelStructure,

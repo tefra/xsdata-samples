@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .boolean import Boolean
 from .bsw_module_entry_subtypes_enum import BswModuleEntrySubtypesEnum
@@ -59,7 +58,9 @@ class InterpolationRoutine:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    interpolation_routine_ref: InterpolationRoutine.InterpolationRoutineRef | None = field(
+    interpolation_routine_ref: (
+        InterpolationRoutine.InterpolationRoutineRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "INTERPOLATION-ROUTINE-REF",

@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -138,13 +137,15 @@ class SoftwareClusterDesign:
             "required": True,
         },
     )
-    short_name_fragments: SoftwareClusterDesign.ShortNameFragments | None = field(
-        default=None,
-        metadata={
-            "name": "SHORT-NAME-FRAGMENTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    short_name_fragments: SoftwareClusterDesign.ShortNameFragments | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "SHORT-NAME-FRAGMENTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     long_name: MultilanguageLongName | None = field(
         default=None,
@@ -202,7 +203,9 @@ class SoftwareClusterDesign:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    contained_process_refs: SoftwareClusterDesign.ContainedProcessRefs | None = field(
+    contained_process_refs: (
+        SoftwareClusterDesign.ContainedProcessRefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "CONTAINED-PROCESS-REFS",
@@ -218,15 +221,19 @@ class SoftwareClusterDesign:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    diagnostic_addresss: SoftwareClusterDesign.DiagnosticAddresss | None = field(
-        default=None,
-        metadata={
-            "name": "DIAGNOSTIC-ADDRESSS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    diagnostic_addresss: SoftwareClusterDesign.DiagnosticAddresss | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "DIAGNOSTIC-ADDRESSS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
-    diagnostic_contribution_refs: SoftwareClusterDesign.DiagnosticContributionRefs | None = field(
+    diagnostic_contribution_refs: (
+        SoftwareClusterDesign.DiagnosticContributionRefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "DIAGNOSTIC-CONTRIBUTION-REFS",
@@ -234,7 +241,9 @@ class SoftwareClusterDesign:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    intended_target_machine_ref: SoftwareClusterDesign.IntendedTargetMachineRef | None = field(
+    intended_target_machine_ref: (
+        SoftwareClusterDesign.IntendedTargetMachineRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "INTENDED-TARGET-MACHINE-REF",
@@ -242,7 +251,9 @@ class SoftwareClusterDesign:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    required_ar_element_refs: SoftwareClusterDesign.RequiredArElementRefs | None = field(
+    required_ar_element_refs: (
+        SoftwareClusterDesign.RequiredArElementRefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "REQUIRED-AR-ELEMENT-REFS",
@@ -250,7 +261,9 @@ class SoftwareClusterDesign:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    required_fibex_element_refs: SoftwareClusterDesign.RequiredFibexElementRefs | None = field(
+    required_fibex_element_refs: (
+        SoftwareClusterDesign.RequiredFibexElementRefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "REQUIRED-FIBEX-ELEMENT-REFS",
@@ -258,7 +271,9 @@ class SoftwareClusterDesign:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    required_package_element_refs: SoftwareClusterDesign.RequiredPackageElementRefs | None = field(
+    required_package_element_refs: (
+        SoftwareClusterDesign.RequiredPackageElementRefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "REQUIRED-PACKAGE-ELEMENT-REFS",
@@ -274,7 +289,9 @@ class SoftwareClusterDesign:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sub_software_cluster_refs: SoftwareClusterDesign.SubSoftwareClusterRefs | None = field(
+    sub_software_cluster_refs: (
+        SoftwareClusterDesign.SubSoftwareClusterRefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "SUB-SOFTWARE-CLUSTER-REFS",

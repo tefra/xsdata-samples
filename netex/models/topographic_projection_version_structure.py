@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from .country_ref import CountryRef
 from .projection_version_structure import ProjectionVersionStructure
@@ -22,7 +21,9 @@ class TopographicProjectionVersionStructure(ProjectionVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    country_ref_or_topographic_place_ref: CountryRef | TopographicPlaceRef | None = field(
+    country_ref_or_topographic_place_ref: (
+        CountryRef | TopographicPlaceRef | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",

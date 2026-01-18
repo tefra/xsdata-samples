@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from tpdb.models.author import Author
 from tpdb.models.comment import Comment

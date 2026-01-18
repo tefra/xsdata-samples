@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -209,15 +208,13 @@ class NmPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    i_signal_to_i_pdu_mappings: NmPdu.ISignalToIPduMappings | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "I-SIGNAL-TO-I-PDU-MAPPINGS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    i_signal_to_i_pdu_mappings: NmPdu.ISignalToIPduMappings | None = field(
+        default=None,
+        metadata={
+            "name": "I-SIGNAL-TO-I-PDU-MAPPINGS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     nm_data_information: Boolean | None = field(
         default=None,

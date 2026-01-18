@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -115,13 +114,15 @@ class PeriodicEventTriggering:
             "required": True,
         },
     )
-    short_name_fragments: PeriodicEventTriggering.ShortNameFragments | None = field(
-        default=None,
-        metadata={
-            "name": "SHORT-NAME-FRAGMENTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    short_name_fragments: PeriodicEventTriggering.ShortNameFragments | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "SHORT-NAME-FRAGMENTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     long_name: MultilanguageLongName | None = field(
         default=None,
@@ -179,13 +180,15 @@ class PeriodicEventTriggering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    timing_condition_ref: PeriodicEventTriggering.TimingConditionRef | None = field(
-        default=None,
-        metadata={
-            "name": "TIMING-CONDITION-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    timing_condition_ref: PeriodicEventTriggering.TimingConditionRef | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "TIMING-CONDITION-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     variation_point: VariationPoint | None = field(
         default=None,

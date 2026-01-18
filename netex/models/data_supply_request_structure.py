@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .consumer_request_endpoint_structure import (
     ConsumerRequestEndpointStructure,

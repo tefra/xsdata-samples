@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .identifier import Identifier
 from .positive_integer import PositiveInteger
@@ -47,7 +46,9 @@ class CouplingPortTrafficClassAssignment:
             "required": True,
         },
     )
-    short_name_fragments: CouplingPortTrafficClassAssignment.ShortNameFragments | None = field(
+    short_name_fragments: (
+        CouplingPortTrafficClassAssignment.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -55,15 +56,13 @@ class CouplingPortTrafficClassAssignment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    prioritys: CouplingPortTrafficClassAssignment.Prioritys | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "PRIORITYS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    prioritys: CouplingPortTrafficClassAssignment.Prioritys | None = field(
+        default=None,
+        metadata={
+            "name": "PRIORITYS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     traffic_class: PositiveInteger | None = field(
         default=None,

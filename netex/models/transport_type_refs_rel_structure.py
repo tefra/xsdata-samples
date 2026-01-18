@@ -1,6 +1,5 @@
 from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import Union
 
 from .compound_train_ref import CompoundTrainRef
 from .one_to_many_relationship_structure import OneToManyRelationshipStructure
@@ -18,7 +17,11 @@ class TransportTypeRefsRelStructure(OneToManyRelationshipStructure):
         name = "transportTypeRefs_RelStructure"
 
     transport_type_ref_or_vehicle_type_ref: Iterable[
-        SimpleVehicleTypeRef | CompoundTrainRef | TrainRef | VehicleTypeRef | TransportTypeRef
+        SimpleVehicleTypeRef
+        | CompoundTrainRef
+        | TrainRef
+        | VehicleTypeRef
+        | TransportTypeRef
     ] = field(
         default_factory=list,
         metadata={

@@ -1,6 +1,5 @@
 from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import Union
 
 from .cell_ref import CellRef
 from .geographical_interval_price_ref import GeographicalIntervalPriceRef
@@ -22,7 +21,9 @@ class GeographicalIntervalPricesRelStructure(
         name = "geographicalIntervalPrices_RelStructure"
 
     geographical_interval_price_ref_or_geographical_interval_price_or_cell_ref: Iterable[
-        GeographicalIntervalPriceRef | GeographicalIntervalPriceVersionedChildStructure | CellRef
+        GeographicalIntervalPriceRef
+        | GeographicalIntervalPriceVersionedChildStructure
+        | CellRef
     ] = field(
         default_factory=list,
         metadata={

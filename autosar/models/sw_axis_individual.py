@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .application_primitive_data_type_subtypes_enum import (
     ApplicationPrimitiveDataTypeSubtypesEnum,
@@ -103,13 +102,15 @@ class SwAxisIndividual:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    input_variable_type_ref: SwAxisIndividual.InputVariableTypeRef | None = field(
-        default=None,
-        metadata={
-            "name": "INPUT-VARIABLE-TYPE-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    input_variable_type_ref: SwAxisIndividual.InputVariableTypeRef | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "INPUT-VARIABLE-TYPE-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     sw_variable_refs: SwAxisIndividual.SwVariableRefs | None = field(
         default=None,

@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .cycle_counter import CycleCounter
 from .cycle_repetition import CycleRepetition
@@ -43,7 +42,9 @@ class TtcanAbsolutelyScheduledTiming:
     class Meta:
         name = "TTCAN-ABSOLUTELY-SCHEDULED-TIMING"
 
-    communication_cycle: TtcanAbsolutelyScheduledTiming.CommunicationCycle | None = field(
+    communication_cycle: (
+        TtcanAbsolutelyScheduledTiming.CommunicationCycle | None
+    ) = field(
         default=None,
         metadata={
             "name": "COMMUNICATION-CYCLE",

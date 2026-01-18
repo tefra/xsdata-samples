@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -95,13 +94,15 @@ class ServiceInterfaceMapping:
             "required": True,
         },
     )
-    short_name_fragments: ServiceInterfaceMapping.ShortNameFragments | None = field(
-        default=None,
-        metadata={
-            "name": "SHORT-NAME-FRAGMENTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    short_name_fragments: ServiceInterfaceMapping.ShortNameFragments | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "SHORT-NAME-FRAGMENTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     long_name: MultilanguageLongName | None = field(
         default=None,
@@ -151,7 +152,9 @@ class ServiceInterfaceMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    composite_service_interface_ref: ServiceInterfaceMapping.CompositeServiceInterfaceRef | None = field(
+    composite_service_interface_ref: (
+        ServiceInterfaceMapping.CompositeServiceInterfaceRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "COMPOSITE-SERVICE-INTERFACE-REF",
@@ -159,7 +162,9 @@ class ServiceInterfaceMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    source_service_interface_refs: ServiceInterfaceMapping.SourceServiceInterfaceRefs | None = field(
+    source_service_interface_refs: (
+        ServiceInterfaceMapping.SourceServiceInterfaceRefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "SOURCE-SERVICE-INTERFACE-REFS",

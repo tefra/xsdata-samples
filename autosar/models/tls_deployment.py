@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -152,7 +151,9 @@ class TlsDeployment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    psk_identity_to_key_slot_mappings: TlsDeployment.PskIdentityToKeySlotMappings | None = field(
+    psk_identity_to_key_slot_mappings: (
+        TlsDeployment.PskIdentityToKeySlotMappings | None
+    ) = field(
         default=None,
         metadata={
             "name": "PSK-IDENTITY-TO-KEY-SLOT-MAPPINGS",

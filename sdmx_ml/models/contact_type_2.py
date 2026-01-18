@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import ForwardRef, Optional, Union
+from typing import ForwardRef
 
 from sdmx_ml.models.name import Name
 from sdmx_ml.models.text_type import TextType
@@ -51,7 +51,11 @@ class ContactType2:
         },
     )
     choice: tuple[
-        ContactType2.Telephone | ContactType2.Fax | ContactType2.X400 | ContactType2.Uri | ContactType2.Email,
+        ContactType2.Telephone
+        | ContactType2.Fax
+        | ContactType2.X400
+        | ContactType2.Uri
+        | ContactType2.Email,
         ...,
     ] = field(
         default_factory=tuple,

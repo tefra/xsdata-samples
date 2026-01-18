@@ -1,6 +1,5 @@
 from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .line_section_point_type_enumeration import (
     LineSectionPointTypeEnumeration,

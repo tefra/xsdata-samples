@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from .activation_link import ActivationLink
 from .activation_link_ref import ActivationLinkRef
@@ -36,7 +35,30 @@ class LinkOnSectionVersionedChildStructure(
     class Meta:
         name = "LinkOnSection_VersionedChildStructure"
 
-    choice_1: OnwardVehicleMeetingLinkRef | VehicleMeetingLinkRef | ServiceLinkRef | LineLinkRef | TimingLinkRef | WireLinkRef | RoadLinkRef | RailwayLinkRef | ActivationLinkRef | PathLinkRef | RouteLinkRef | VehicleMeetingLink | ServiceLink | SitePathLink | PathLink | RouteLink | TimingLink | WireElement | RoadElement | RailwayElement | ActivationLink | None = field(
+    choice_1: (
+        OnwardVehicleMeetingLinkRef
+        | VehicleMeetingLinkRef
+        | ServiceLinkRef
+        | LineLinkRef
+        | TimingLinkRef
+        | WireLinkRef
+        | RoadLinkRef
+        | RailwayLinkRef
+        | ActivationLinkRef
+        | PathLinkRef
+        | RouteLinkRef
+        | VehicleMeetingLink
+        | ServiceLink
+        | SitePathLink
+        | PathLink
+        | RouteLink
+        | TimingLink
+        | WireElement
+        | RoadElement
+        | RailwayElement
+        | ActivationLink
+        | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",

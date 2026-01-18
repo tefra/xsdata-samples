@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from .class_refs_rel_structure import ClassRefsRelStructure
 from .customer_account_status import CustomerAccountStatus
@@ -63,7 +62,51 @@ class PurposeOfGroupingValueStructure(TypeOfValueVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    type_of_entity: TypeOfMobilityService | TypeOfRetailDevice | CustomerAccountStatus | TypeOfCustomerAccount | TypeOfFareContractEntry | TypeOfFareContract | TypeOfTravelDocument | TypeOfSalesOfferPackage | TypeOfFareProduct | TypeOfFareStructureElement | TypeOfTariff | TypeOfAccessRightAssignment | TypeOfFareStructureFactor | TypeOfFlexibleService | TypeOfTimeDemandType | TypeOfPassengerInformationEquipment | TypeOfJourneyPattern | TypeOfActivation | TypeOfModeOfOperation | TypeOfPlug | TypeOfBatteryChemistry | TypeOfLine | TypeOfDeliveryVariant | TypeOfNotice | TypeOfCongestion | TypeOfFacility | TypeOfService | TypeOfEquipment | TypeOfFeature | TypeOfLinkSequence | TypeOfPlace | TypeOfTransfer | TypeOfOperation | TypeOfOrganisationPart | TypeOfOrganisation | TypeOfZone | TypeOfLink | TypeOfPoint | TypeOfProjection | TypeOfFrame | TypeOfResponsibilityRole | TypeOfEntity | None = field(
+    type_of_entity: (
+        TypeOfMobilityService
+        | TypeOfRetailDevice
+        | CustomerAccountStatus
+        | TypeOfCustomerAccount
+        | TypeOfFareContractEntry
+        | TypeOfFareContract
+        | TypeOfTravelDocument
+        | TypeOfSalesOfferPackage
+        | TypeOfFareProduct
+        | TypeOfFareStructureElement
+        | TypeOfTariff
+        | TypeOfAccessRightAssignment
+        | TypeOfFareStructureFactor
+        | TypeOfFlexibleService
+        | TypeOfTimeDemandType
+        | TypeOfPassengerInformationEquipment
+        | TypeOfJourneyPattern
+        | TypeOfActivation
+        | TypeOfModeOfOperation
+        | TypeOfPlug
+        | TypeOfBatteryChemistry
+        | TypeOfLine
+        | TypeOfDeliveryVariant
+        | TypeOfNotice
+        | TypeOfCongestion
+        | TypeOfFacility
+        | TypeOfService
+        | TypeOfEquipment
+        | TypeOfFeature
+        | TypeOfLinkSequence
+        | TypeOfPlace
+        | TypeOfTransfer
+        | TypeOfOperation
+        | TypeOfOrganisationPart
+        | TypeOfOrganisation
+        | TypeOfZone
+        | TypeOfLink
+        | TypeOfPoint
+        | TypeOfProjection
+        | TypeOfFrame
+        | TypeOfResponsibilityRole
+        | TypeOfEntity
+        | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",

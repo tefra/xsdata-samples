@@ -1,6 +1,5 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
-from typing import Optional
 
 from .distance_matrix_element_prices_rel_structure import (
     DistanceMatrixElementPricesRelStructure,
@@ -62,15 +61,13 @@ class GroupOfDistanceMatrixElementsVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    structure_factors: GeographicalStructureFactorsRelStructure | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "structureFactors",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            },
-        )
+    structure_factors: GeographicalStructureFactorsRelStructure | None = field(
+        default=None,
+        metadata={
+            "name": "structureFactors",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        },
     )
     notice_assignments: NoticeAssignmentsRelStructure | None = field(
         default=None,

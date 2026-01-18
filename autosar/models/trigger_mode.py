@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .trigger_mode_simple import TriggerModeSimple
 

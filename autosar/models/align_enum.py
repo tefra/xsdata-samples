@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .align_enum_simple import AlignEnumSimple
 

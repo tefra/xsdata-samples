@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -110,7 +109,9 @@ class SignalServiceTranslationProps:
             "required": True,
         },
     )
-    short_name_fragments: SignalServiceTranslationProps.ShortNameFragments | None = field(
+    short_name_fragments: (
+        SignalServiceTranslationProps.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -166,7 +167,9 @@ class SignalServiceTranslationProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    control_consumed_event_group_refs: SignalServiceTranslationProps.ControlConsumedEventGroupRefs | None = field(
+    control_consumed_event_group_refs: (
+        SignalServiceTranslationProps.ControlConsumedEventGroupRefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "CONTROL-CONSUMED-EVENT-GROUP-REFS",
@@ -174,15 +177,19 @@ class SignalServiceTranslationProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    control_pnc_refs: SignalServiceTranslationProps.ControlPncRefs | None = field(
-        default=None,
-        metadata={
-            "name": "CONTROL-PNC-REFS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    control_pnc_refs: SignalServiceTranslationProps.ControlPncRefs | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "CONTROL-PNC-REFS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
-    control_provided_event_group_refs: SignalServiceTranslationProps.ControlProvidedEventGroupRefs | None = field(
+    control_provided_event_group_refs: (
+        SignalServiceTranslationProps.ControlProvidedEventGroupRefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "CONTROL-PROVIDED-EVENT-GROUP-REFS",
@@ -198,7 +205,10 @@ class SignalServiceTranslationProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    signal_service_translation_event_propss: SignalServiceTranslationProps.SignalServiceTranslationEventPropss | None = field(
+    signal_service_translation_event_propss: (
+        SignalServiceTranslationProps.SignalServiceTranslationEventPropss
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "SIGNAL-SERVICE-TRANSLATION-EVENT-PROPSS",

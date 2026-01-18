@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .diagnostic_env_data_condition import DiagnosticEnvDataCondition
 from .diagnostic_env_mode_condition import DiagnosticEnvModeCondition

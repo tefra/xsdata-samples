@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from .access_zone_ref import AccessZoneRef
 from .administrative_zone_ref import AdministrativeZoneRef
@@ -21,7 +20,17 @@ class ZoneRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "zoneRefs_RelStructure"
 
-    zone_ref_or_tariff_zone_ref: MobilityServiceConstraintZoneRef | StopAreaRef | TransportAdministrativeZoneRef | AccessZoneRef | AdministrativeZoneRef | FareZoneRef | TariffZoneRef | ZoneRef | None = field(
+    zone_ref_or_tariff_zone_ref: (
+        MobilityServiceConstraintZoneRef
+        | StopAreaRef
+        | TransportAdministrativeZoneRef
+        | AccessZoneRef
+        | AdministrativeZoneRef
+        | FareZoneRef
+        | TariffZoneRef
+        | ZoneRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",

@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -85,7 +84,10 @@ class EndToEndTransformationISignalProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    end_to_end_transformation_i_signal_props_variants: EndToEndTransformationISignalProps.EndToEndTransformationISignalPropsVariants | None = field(
+    end_to_end_transformation_i_signal_props_variants: (
+        EndToEndTransformationISignalProps.EndToEndTransformationISignalPropsVariants
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "END-TO-END-TRANSFORMATION-I-SIGNAL-PROPS-VARIANTS",

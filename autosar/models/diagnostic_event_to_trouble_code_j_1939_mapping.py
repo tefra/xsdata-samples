@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -101,7 +100,9 @@ class DiagnosticEventToTroubleCodeJ1939Mapping:
             "required": True,
         },
     )
-    short_name_fragments: DiagnosticEventToTroubleCodeJ1939Mapping.ShortNameFragments | None = field(
+    short_name_fragments: (
+        DiagnosticEventToTroubleCodeJ1939Mapping.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -149,7 +150,9 @@ class DiagnosticEventToTroubleCodeJ1939Mapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: DiagnosticEventToTroubleCodeJ1939Mapping.Annotations | None = field(
+    annotations: (
+        DiagnosticEventToTroubleCodeJ1939Mapping.Annotations | None
+    ) = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -165,7 +168,9 @@ class DiagnosticEventToTroubleCodeJ1939Mapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    diagnostic_event_ref: DiagnosticEventToTroubleCodeJ1939Mapping.DiagnosticEventRef | None = field(
+    diagnostic_event_ref: (
+        DiagnosticEventToTroubleCodeJ1939Mapping.DiagnosticEventRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "DIAGNOSTIC-EVENT-REF",
@@ -173,7 +178,9 @@ class DiagnosticEventToTroubleCodeJ1939Mapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    trouble_code_j_1939_ref: DiagnosticEventToTroubleCodeJ1939Mapping.TroubleCodeJ1939Ref | None = field(
+    trouble_code_j_1939_ref: (
+        DiagnosticEventToTroubleCodeJ1939Mapping.TroubleCodeJ1939Ref | None
+    ) = field(
         default=None,
         metadata={
             "name": "TROUBLE-CODE-J-1939-REF",

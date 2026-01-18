@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .diagnostic_type_of_freeze_frame_record_numeration_enum_simple import (
     DiagnosticTypeOfFreezeFrameRecordNumerationEnumSimple,

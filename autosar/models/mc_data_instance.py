@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -184,15 +183,13 @@ class McDataInstance:
             "required": True,
         },
     )
-    short_name_fragments: McDataInstance.ShortNameFragments | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "SHORT-NAME-FRAGMENTS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    short_name_fragments: McDataInstance.ShortNameFragments | None = field(
+        default=None,
+        metadata={
+            "name": "SHORT-NAME-FRAGMENTS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     long_name: MultilanguageLongName | None = field(
         default=None,
@@ -266,13 +263,15 @@ class McDataInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    instance_in_memory: ImplementationElementInParameterInstanceRef | None = field(
-        default=None,
-        metadata={
-            "name": "INSTANCE-IN-MEMORY",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    instance_in_memory: ImplementationElementInParameterInstanceRef | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "INSTANCE-IN-MEMORY",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     mc_data_access_details: McDataAccessDetails | None = field(
         default=None,
@@ -298,15 +297,13 @@ class McDataInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    resulting_rpt_sw_prototyping_access: RptSwPrototypingAccess | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "RESULTING-RPT-SW-PROTOTYPING-ACCESS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    resulting_rpt_sw_prototyping_access: RptSwPrototypingAccess | None = field(
+        default=None,
+        metadata={
+            "name": "RESULTING-RPT-SW-PROTOTYPING-ACCESS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     role: Identifier | None = field(
         default=None,

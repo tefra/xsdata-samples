@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .can_frame_triggering_subtypes_enum import CanFrameTriggeringSubtypesEnum
 from .positive_integer import PositiveInteger
@@ -42,13 +41,15 @@ class BusMirrorCanIdToCanIdMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    souce_can_id_ref: BusMirrorCanIdToCanIdMapping.SouceCanIdRef | None = field(
-        default=None,
-        metadata={
-            "name": "SOUCE-CAN-ID-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    souce_can_id_ref: BusMirrorCanIdToCanIdMapping.SouceCanIdRef | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "SOUCE-CAN-ID-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     s: str | None = field(
         default=None,

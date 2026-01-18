@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from ipxact.models.abstractor_port_wire_type import AbstractorPortWireType
 from ipxact.models.arrays import Arrays

@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -195,13 +194,15 @@ class BswSchedulableEntity:
             "required": True,
         },
     )
-    short_name_fragments: BswSchedulableEntity.ShortNameFragments | None = field(
-        default=None,
-        metadata={
-            "name": "SHORT-NAME-FRAGMENTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    short_name_fragments: BswSchedulableEntity.ShortNameFragments | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "SHORT-NAME-FRAGMENTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     long_name: MultilanguageLongName | None = field(
         default=None,
@@ -251,17 +252,17 @@ class BswSchedulableEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    activation_reasons: BswSchedulableEntity.ActivationReasons | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "ACTIVATION-REASONS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    activation_reasons: BswSchedulableEntity.ActivationReasons | None = field(
+        default=None,
+        metadata={
+            "name": "ACTIVATION-REASONS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
-    can_enter_exclusive_area_refs: BswSchedulableEntity.CanEnterExclusiveAreaRefs | None = field(
+    can_enter_exclusive_area_refs: (
+        BswSchedulableEntity.CanEnterExclusiveAreaRefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "CAN-ENTER-EXCLUSIVE-AREA-REFS",
@@ -269,7 +270,9 @@ class BswSchedulableEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    exclusive_area_nesting_order_refs: BswSchedulableEntity.ExclusiveAreaNestingOrderRefs | None = field(
+    exclusive_area_nesting_order_refs: (
+        BswSchedulableEntity.ExclusiveAreaNestingOrderRefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "EXCLUSIVE-AREA-NESTING-ORDER-REFS",
@@ -293,7 +296,9 @@ class BswSchedulableEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    runs_inside_exclusive_area_refs: BswSchedulableEntity.RunsInsideExclusiveAreaRefs | None = field(
+    runs_inside_exclusive_area_refs: (
+        BswSchedulableEntity.RunsInsideExclusiveAreaRefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "RUNS-INSIDE-EXCLUSIVE-AREA-REFS",
@@ -301,33 +306,31 @@ class BswSchedulableEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_addr_method_ref: BswSchedulableEntity.SwAddrMethodRef | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "SW-ADDR-METHOD-REF",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
-    )
-    accessed_mode_groups: BswSchedulableEntity.AccessedModeGroups | None = field(
+    sw_addr_method_ref: BswSchedulableEntity.SwAddrMethodRef | None = field(
         default=None,
         metadata={
-            "name": "ACCESSED-MODE-GROUPS",
+            "name": "SW-ADDR-METHOD-REF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    activation_points: BswSchedulableEntity.ActivationPoints | None = (
+    accessed_mode_groups: BswSchedulableEntity.AccessedModeGroups | None = (
         field(
             default=None,
             metadata={
-                "name": "ACTIVATION-POINTS",
+                "name": "ACCESSED-MODE-GROUPS",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
+    )
+    activation_points: BswSchedulableEntity.ActivationPoints | None = field(
+        default=None,
+        metadata={
+            "name": "ACTIVATION-POINTS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     call_points: BswSchedulableEntity.CallPoints | None = field(
         default=None,
@@ -345,15 +348,13 @@ class BswSchedulableEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    data_receive_points: BswSchedulableEntity.DataReceivePoints | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "DATA-RECEIVE-POINTS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    data_receive_points: BswSchedulableEntity.DataReceivePoints | None = field(
+        default=None,
+        metadata={
+            "name": "DATA-RECEIVE-POINTS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     data_send_points: BswSchedulableEntity.DataSendPoints | None = field(
         default=None,
@@ -363,13 +364,15 @@ class BswSchedulableEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    implemented_entry_ref: BswSchedulableEntity.ImplementedEntryRef | None = field(
-        default=None,
-        metadata={
-            "name": "IMPLEMENTED-ENTRY-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    implemented_entry_ref: BswSchedulableEntity.ImplementedEntryRef | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "IMPLEMENTED-ENTRY-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     issued_triggers: BswSchedulableEntity.IssuedTriggers | None = field(
         default=None,
@@ -379,17 +382,17 @@ class BswSchedulableEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    managed_mode_groups: BswSchedulableEntity.ManagedModeGroups | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "MANAGED-MODE-GROUPS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    managed_mode_groups: BswSchedulableEntity.ManagedModeGroups | None = field(
+        default=None,
+        metadata={
+            "name": "MANAGED-MODE-GROUPS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
-    scheduler_name_prefix_ref: BswSchedulableEntity.SchedulerNamePrefixRef | None = field(
+    scheduler_name_prefix_ref: (
+        BswSchedulableEntity.SchedulerNamePrefixRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "SCHEDULER-NAME-PREFIX-REF",

@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from .additional_driver_option_ref import AdditionalDriverOptionRef
 from .booking_policy_ref import BookingPolicyRef
@@ -54,7 +53,44 @@ class UsageParameterPriceVersionedChildStructure(
     class Meta:
         name = "UsageParameterPrice_VersionedChildStructure"
 
-    choice: AdditionalDriverOptionRef | RentalOptionRef | RentalPenaltyPolicyRef | SalesOfferPackageEntitlementGivenRef | SalesOfferPackageEntitlementRequiredRef | MinimumStayRef | InterchangingRef | FrequencyOfUseRef | SuspendingRef | UsageValidityPeriodRef | StepLimitRef | RoutingRef | RoundTripRef | LuggageAllowanceRef | EntitlementGivenRef | EntitlementRequiredRef | EligibilityChangePolicyRef | GroupTicketRef | CommercialProfileRef | VehiclePoolerProfileRef | CompanionProfileRef | UserProfileRef | ProfileParameterRef | SubscribingRef | PenaltyPolicyRef | ChargingPolicyRef | TransferabilityRef | ReplacingRef | RefundingRef | ExchangingRef | ResellingRef | CancellingRef | ReservingRef | BookingPolicyRef | PurchaseWindowRef | None = field(
+    choice: (
+        AdditionalDriverOptionRef
+        | RentalOptionRef
+        | RentalPenaltyPolicyRef
+        | SalesOfferPackageEntitlementGivenRef
+        | SalesOfferPackageEntitlementRequiredRef
+        | MinimumStayRef
+        | InterchangingRef
+        | FrequencyOfUseRef
+        | SuspendingRef
+        | UsageValidityPeriodRef
+        | StepLimitRef
+        | RoutingRef
+        | RoundTripRef
+        | LuggageAllowanceRef
+        | EntitlementGivenRef
+        | EntitlementRequiredRef
+        | EligibilityChangePolicyRef
+        | GroupTicketRef
+        | CommercialProfileRef
+        | VehiclePoolerProfileRef
+        | CompanionProfileRef
+        | UserProfileRef
+        | ProfileParameterRef
+        | SubscribingRef
+        | PenaltyPolicyRef
+        | ChargingPolicyRef
+        | TransferabilityRef
+        | ReplacingRef
+        | RefundingRef
+        | ExchangingRef
+        | ResellingRef
+        | CancellingRef
+        | ReservingRef
+        | BookingPolicyRef
+        | PurchaseWindowRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",

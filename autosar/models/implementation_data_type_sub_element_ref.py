@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import VariationPoint
 from .ar_parameter_in_implementation_data_instance_ref import (
@@ -47,7 +46,9 @@ class ImplementationDataTypeSubElementRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    implementation_data_type_element: ArVariableInImplementationDataInstanceRef | None = field(
+    implementation_data_type_element: (
+        ArVariableInImplementationDataInstanceRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "IMPLEMENTATION-DATA-TYPE-ELEMENT",
@@ -55,7 +56,9 @@ class ImplementationDataTypeSubElementRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    parameter_implementation_data_type_element: ArParameterInImplementationDataInstanceRef | None = field(
+    parameter_implementation_data_type_element: (
+        ArParameterInImplementationDataInstanceRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "PARAMETER-IMPLEMENTATION-DATA-TYPE-ELEMENT",

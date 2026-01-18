@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from datexii.models.eu.datexii.v2.measurement_specific_characteristics import (
     MeasurementSpecificCharacteristics,
@@ -13,7 +12,9 @@ class MeasurementSiteRecordIndexMeasurementSpecificCharacteristics:
     class Meta:
         name = "_MeasurementSiteRecordIndexMeasurementSpecificCharacteristics"
 
-    measurement_specific_characteristics: MeasurementSpecificCharacteristics | None = field(
+    measurement_specific_characteristics: (
+        MeasurementSpecificCharacteristics | None
+    ) = field(
         default=None,
         metadata={
             "name": "measurementSpecificCharacteristics",

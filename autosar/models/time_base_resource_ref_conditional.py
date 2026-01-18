@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import VariationPoint
 from .ref import Ref
@@ -33,7 +32,9 @@ class TimeBaseResourceRefConditional:
     class Meta:
         name = "TIME-BASE-RESOURCE-REF-CONDITIONAL"
 
-    time_base_resource_ref: TimeBaseResourceRefConditional.TimeBaseResourceRef | None = field(
+    time_base_resource_ref: (
+        TimeBaseResourceRefConditional.TimeBaseResourceRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "TIME-BASE-RESOURCE-REF",

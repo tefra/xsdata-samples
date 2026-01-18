@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from sdmx_ml.models.component_base_type import ComponentBaseType
 from sdmx_ml.models.representation_type import RepresentationType

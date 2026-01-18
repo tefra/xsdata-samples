@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from sdmx_ml.models.coded_status_message_type import CodedStatusMessageType
 from sdmx_ml.models.severity_code_type import SeverityCodeType

@@ -1,6 +1,5 @@
 from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import Union
 
 from .cell_ref import CellRef
 from .fare_structure_element_price_ref import FareStructureElementPriceRef
@@ -22,7 +21,9 @@ class FareStructureElementPricesRelStructure(
         name = "fareStructureElementPrices_RelStructure"
 
     fare_structure_element_price_ref_or_fare_structure_element_price_or_cell_ref: Iterable[
-        FareStructureElementPriceRef | FareStructureElementPriceVersionedChildStructure | CellRef
+        FareStructureElementPriceRef
+        | FareStructureElementPriceVersionedChildStructure
+        | CellRef
     ] = field(
         default_factory=list,
         metadata={

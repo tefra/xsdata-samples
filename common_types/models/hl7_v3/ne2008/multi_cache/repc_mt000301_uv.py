@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from ..core.datatypes_base import (
     AdExplicit,
@@ -165,16 +164,14 @@ class RepcMt000301UvAuthor:
             "nillable": True,
         },
     )
-    personal_relationship: CoctMt910000UvPersonalRelationship | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "personalRelationship",
-                "type": "Element",
-                "namespace": "urn:hl7-org:v3",
-                "nillable": True,
-            },
-        )
+    personal_relationship: CoctMt910000UvPersonalRelationship | None = field(
+        default=None,
+        metadata={
+            "name": "personalRelationship",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        },
     )
     care_giver: CoctMt910000UvCareGiver | None = field(
         default=None,
@@ -459,16 +456,14 @@ class RepcMt000301UvInformant:
             "nillable": True,
         },
     )
-    personal_relationship: CoctMt910000UvPersonalRelationship | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "personalRelationship",
-                "type": "Element",
-                "namespace": "urn:hl7-org:v3",
-                "nillable": True,
-            },
-        )
+    personal_relationship: CoctMt910000UvPersonalRelationship | None = field(
+        default=None,
+        metadata={
+            "name": "personalRelationship",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        },
     )
     care_giver: CoctMt910000UvCareGiver | None = field(
         default=None,
@@ -672,16 +667,14 @@ class RepcMt000301UvPerformer:
             "nillable": True,
         },
     )
-    personal_relationship: CoctMt910000UvPersonalRelationship | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "personalRelationship",
-                "type": "Element",
-                "namespace": "urn:hl7-org:v3",
-                "nillable": True,
-            },
-        )
+    personal_relationship: CoctMt910000UvPersonalRelationship | None = field(
+        default=None,
+        metadata={
+            "name": "personalRelationship",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        },
     )
     care_giver: CoctMt910000UvCareGiver | None = field(
         default=None,
@@ -1142,16 +1135,14 @@ class RepcMt000301UvSubject2:
             "nillable": True,
         },
     )
-    personal_relationship: CoctMt910000UvPersonalRelationship | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "personalRelationship",
-                "type": "Element",
-                "namespace": "urn:hl7-org:v3",
-                "nillable": True,
-            },
-        )
+    personal_relationship: CoctMt910000UvPersonalRelationship | None = field(
+        default=None,
+        metadata={
+            "name": "personalRelationship",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        },
     )
     care_giver: CoctMt910000UvCareGiver | None = field(
         default=None,
@@ -1267,7 +1258,9 @@ class RepcMt000301UvSupport:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    substance_administration: RepcMt000100Uv01SubstanceAdministration | None = field(
+    substance_administration: (
+        RepcMt000100Uv01SubstanceAdministration | None
+    ) = field(
         default=None,
         metadata={
             "name": "substanceAdministration",
@@ -1738,16 +1731,14 @@ class RepcMt000301UvHealthCareFacility:
             "nillable": True,
         },
     )
-    service_provider_organization: RepcMt000301UvOrganization | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "serviceProviderOrganization",
-                "type": "Element",
-                "namespace": "urn:hl7-org:v3",
-                "nillable": True,
-            },
-        )
+    service_provider_organization: RepcMt000301UvOrganization | None = field(
+        default=None,
+        metadata={
+            "name": "serviceProviderOrganization",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        },
     )
     null_flavor: NullFlavor | None = field(
         default=None,
@@ -1811,7 +1802,27 @@ class RepcMt000301UvSubject1:
             "type": "Attribute",
         },
     )
-    type_code: ActRelationshipConditional | ActRelationshipHasComponent | ActRelationshipOutcome | ActRelationshipCostTracking | ActRelationshipPosting | str | ActRelationshipHasSupport | ActRelationshipTemporallyPertains | ActRelationshipPertainsValue | ActRelationshipSequel | XActRelationshipDocument | XActRelationshipEntry | XActRelationshipEntryRelationship | XActRelationshipExternalReference | XActRelationshipPatientTransport | XActRelationshipPertinentInfo | XActRelationshipRelatedAuthorizations | XActReplaceOrRevise | XSuccReplPrev = field(
+    type_code: (
+        ActRelationshipConditional
+        | ActRelationshipHasComponent
+        | ActRelationshipOutcome
+        | ActRelationshipCostTracking
+        | ActRelationshipPosting
+        | str
+        | ActRelationshipHasSupport
+        | ActRelationshipTemporallyPertains
+        | ActRelationshipPertainsValue
+        | ActRelationshipSequel
+        | XActRelationshipDocument
+        | XActRelationshipEntry
+        | XActRelationshipEntryRelationship
+        | XActRelationshipExternalReference
+        | XActRelationshipPatientTransport
+        | XActRelationshipPertinentInfo
+        | XActRelationshipRelatedAuthorizations
+        | XActReplaceOrRevise
+        | XSuccReplPrev
+    ) = field(
         init=False,
         default=ActRelationshipPertainsValue.SUBJ,
         metadata={
@@ -1884,7 +1895,27 @@ class RepcMt000301UvConditionNamed:
             "type": "Attribute",
         },
     )
-    type_code: ActRelationshipConditional | ActRelationshipHasComponent | ActRelationshipOutcome | ActRelationshipCostTracking | ActRelationshipPosting | str | ActRelationshipHasSupport | ActRelationshipTemporallyPertains | ActRelationshipPertainsValue | ActRelationshipSequel | XActRelationshipDocument | XActRelationshipEntry | XActRelationshipEntryRelationship | XActRelationshipExternalReference | XActRelationshipPatientTransport | XActRelationshipPertinentInfo | XActRelationshipRelatedAuthorizations | XActReplaceOrRevise | XSuccReplPrev = field(
+    type_code: (
+        ActRelationshipConditional
+        | ActRelationshipHasComponent
+        | ActRelationshipOutcome
+        | ActRelationshipCostTracking
+        | ActRelationshipPosting
+        | str
+        | ActRelationshipHasSupport
+        | ActRelationshipTemporallyPertains
+        | ActRelationshipPertainsValue
+        | ActRelationshipSequel
+        | XActRelationshipDocument
+        | XActRelationshipEntry
+        | XActRelationshipEntryRelationship
+        | XActRelationshipExternalReference
+        | XActRelationshipPatientTransport
+        | XActRelationshipPertinentInfo
+        | XActRelationshipRelatedAuthorizations
+        | XActReplaceOrRevise
+        | XSuccReplPrev
+    ) = field(
         init=False,
         default=ActRelationshipPertainsValue.NAME,
         metadata={
@@ -1956,7 +1987,27 @@ class RepcMt000301UvLinks:
             "type": "Attribute",
         },
     )
-    type_code: ActRelationshipConditional | ActRelationshipHasComponent | ActRelationshipOutcome | ActRelationshipCostTracking | ActRelationshipPosting | str | ActRelationshipHasSupport | ActRelationshipTemporallyPertains | ActRelationshipPertainsValue | ActRelationshipSequel | XActRelationshipDocument | XActRelationshipEntry | XActRelationshipEntryRelationship | XActRelationshipExternalReference | XActRelationshipPatientTransport | XActRelationshipPertinentInfo | XActRelationshipRelatedAuthorizations | XActReplaceOrRevise | XSuccReplPrev = field(
+    type_code: (
+        ActRelationshipConditional
+        | ActRelationshipHasComponent
+        | ActRelationshipOutcome
+        | ActRelationshipCostTracking
+        | ActRelationshipPosting
+        | str
+        | ActRelationshipHasSupport
+        | ActRelationshipTemporallyPertains
+        | ActRelationshipPertainsValue
+        | ActRelationshipSequel
+        | XActRelationshipDocument
+        | XActRelationshipEntry
+        | XActRelationshipEntryRelationship
+        | XActRelationshipExternalReference
+        | XActRelationshipPatientTransport
+        | XActRelationshipPertinentInfo
+        | XActRelationshipRelatedAuthorizations
+        | XActReplaceOrRevise
+        | XSuccReplPrev
+    ) = field(
         init=False,
         default=ActRelationshipPertainsValue.ELNK,
         metadata={
@@ -2074,7 +2125,27 @@ class RepcMt000301UvSubject3:
             "type": "Attribute",
         },
     )
-    type_code: ActRelationshipConditional | ActRelationshipHasComponent | ActRelationshipOutcome | ActRelationshipCostTracking | ActRelationshipPosting | str | ActRelationshipHasSupport | ActRelationshipTemporallyPertains | ActRelationshipPertainsValue | ActRelationshipSequel | XActRelationshipDocument | XActRelationshipEntry | XActRelationshipEntryRelationship | XActRelationshipExternalReference | XActRelationshipPatientTransport | XActRelationshipPertinentInfo | XActRelationshipRelatedAuthorizations | XActReplaceOrRevise | XSuccReplPrev = field(
+    type_code: (
+        ActRelationshipConditional
+        | ActRelationshipHasComponent
+        | ActRelationshipOutcome
+        | ActRelationshipCostTracking
+        | ActRelationshipPosting
+        | str
+        | ActRelationshipHasSupport
+        | ActRelationshipTemporallyPertains
+        | ActRelationshipPertainsValue
+        | ActRelationshipSequel
+        | XActRelationshipDocument
+        | XActRelationshipEntry
+        | XActRelationshipEntryRelationship
+        | XActRelationshipExternalReference
+        | XActRelationshipPatientTransport
+        | XActRelationshipPertinentInfo
+        | XActRelationshipRelatedAuthorizations
+        | XActReplaceOrRevise
+        | XSuccReplPrev
+    ) = field(
         init=False,
         default=ActRelationshipPertainsValue.SUBJ,
         metadata={
@@ -2147,7 +2218,27 @@ class RepcMt000301UvSubject5:
             "type": "Attribute",
         },
     )
-    type_code: ActRelationshipConditional | ActRelationshipHasComponent | ActRelationshipOutcome | ActRelationshipCostTracking | ActRelationshipPosting | str | ActRelationshipHasSupport | ActRelationshipTemporallyPertains | ActRelationshipPertainsValue | ActRelationshipSequel | XActRelationshipDocument | XActRelationshipEntry | XActRelationshipEntryRelationship | XActRelationshipExternalReference | XActRelationshipPatientTransport | XActRelationshipPertinentInfo | XActRelationshipRelatedAuthorizations | XActReplaceOrRevise | XSuccReplPrev = field(
+    type_code: (
+        ActRelationshipConditional
+        | ActRelationshipHasComponent
+        | ActRelationshipOutcome
+        | ActRelationshipCostTracking
+        | ActRelationshipPosting
+        | str
+        | ActRelationshipHasSupport
+        | ActRelationshipTemporallyPertains
+        | ActRelationshipPertainsValue
+        | ActRelationshipSequel
+        | XActRelationshipDocument
+        | XActRelationshipEntry
+        | XActRelationshipEntryRelationship
+        | XActRelationshipExternalReference
+        | XActRelationshipPatientTransport
+        | XActRelationshipPertinentInfo
+        | XActRelationshipRelatedAuthorizations
+        | XActReplaceOrRevise
+        | XSuccReplPrev
+    ) = field(
         init=False,
         default=ActRelationshipPertainsValue.SUBJ,
         metadata={
@@ -2481,7 +2572,27 @@ class RepcMt000301UvReplacementOf:
             "type": "Attribute",
         },
     )
-    type_code: ActRelationshipConditional | ActRelationshipHasComponent | ActRelationshipOutcome | ActRelationshipCostTracking | ActRelationshipPosting | str | ActRelationshipHasSupport | ActRelationshipTemporallyPertains | ActRelationshipPertainsValue | ActRelationshipSequel | XActRelationshipDocument | XActRelationshipEntry | XActRelationshipEntryRelationship | XActRelationshipExternalReference | XActRelationshipPatientTransport | XActRelationshipPertinentInfo | XActRelationshipRelatedAuthorizations | XActReplaceOrRevise | XSuccReplPrev = field(
+    type_code: (
+        ActRelationshipConditional
+        | ActRelationshipHasComponent
+        | ActRelationshipOutcome
+        | ActRelationshipCostTracking
+        | ActRelationshipPosting
+        | str
+        | ActRelationshipHasSupport
+        | ActRelationshipTemporallyPertains
+        | ActRelationshipPertainsValue
+        | ActRelationshipSequel
+        | XActRelationshipDocument
+        | XActRelationshipEntry
+        | XActRelationshipEntryRelationship
+        | XActRelationshipExternalReference
+        | XActRelationshipPatientTransport
+        | XActRelationshipPertinentInfo
+        | XActRelationshipRelatedAuthorizations
+        | XActReplaceOrRevise
+        | XSuccReplPrev
+    ) = field(
         init=False,
         default=ActRelationshipSequel.RPLC,
         metadata={

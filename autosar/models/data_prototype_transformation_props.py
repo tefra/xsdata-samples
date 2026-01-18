@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .data_prototype_in_port_interface_ref import (
     DataPrototypeInPortInterfaceRef,
@@ -56,7 +55,10 @@ class DataPrototypeTransformationProps:
     class Meta:
         name = "DATA-PROTOTYPE-TRANSFORMATION-PROPS"
 
-    data_protototype_in_port_interface_ref: DataPrototypeTransformationProps.DataProtototypeInPortInterfaceRef | None = field(
+    data_protototype_in_port_interface_ref: (
+        DataPrototypeTransformationProps.DataProtototypeInPortInterfaceRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "DATA-PROTOTOTYPE-IN-PORT-INTERFACE-REF",
@@ -64,7 +66,9 @@ class DataPrototypeTransformationProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    data_prototype_in_port_interface_ref: DataPrototypeTransformationProps.DataPrototypeInPortInterfaceRef | None = field(
+    data_prototype_in_port_interface_ref: (
+        DataPrototypeTransformationProps.DataPrototypeInPortInterfaceRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "DATA-PROTOTYPE-IN-PORT-INTERFACE-REF",
@@ -72,7 +76,9 @@ class DataPrototypeTransformationProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    data_prototype_ref: DataPrototypeTransformationProps.DataPrototypeRef | None = field(
+    data_prototype_ref: (
+        DataPrototypeTransformationProps.DataPrototypeRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "DATA-PROTOTYPE-REF",
@@ -88,7 +94,9 @@ class DataPrototypeTransformationProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    transformation_props_ref: DataPrototypeTransformationProps.TransformationPropsRef | None = field(
+    transformation_props_ref: (
+        DataPrototypeTransformationProps.TransformationPropsRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "TRANSFORMATION-PROPS-REF",
@@ -114,7 +122,9 @@ class DataPrototypeTransformationProps:
 
     @dataclass
     class DataProtototypeInPortInterfaceRef:
-        data_prototype_in_port_interface_ref: DataPrototypeInPortInterfaceRef | None = field(
+        data_prototype_in_port_interface_ref: (
+            DataPrototypeInPortInterfaceRef | None
+        ) = field(
             default=None,
             metadata={
                 "name": "DATA-PROTOTYPE-IN-PORT-INTERFACE-REF",
@@ -122,7 +132,9 @@ class DataPrototypeTransformationProps:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        implementation_data_type_element_in_port_interface_ref: ImplementationDataTypeElementInPortInterfaceRef | None = field(
+        implementation_data_type_element_in_port_interface_ref: (
+            ImplementationDataTypeElementInPortInterfaceRef | None
+        ) = field(
             default=None,
             metadata={
                 "name": "IMPLEMENTATION-DATA-TYPE-ELEMENT-IN-PORT-INTERFACE-REF",
@@ -133,7 +145,9 @@ class DataPrototypeTransformationProps:
 
     @dataclass
     class DataPrototypeInPortInterfaceRef:
-        data_prototype_in_port_interface_ref: DataPrototypeInPortInterfaceRef | None = field(
+        data_prototype_in_port_interface_ref: (
+            DataPrototypeInPortInterfaceRef | None
+        ) = field(
             default=None,
             metadata={
                 "name": "DATA-PROTOTYPE-IN-PORT-INTERFACE-REF",
@@ -141,7 +155,9 @@ class DataPrototypeTransformationProps:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        implementation_data_type_element_in_port_interface_ref: ImplementationDataTypeElementInPortInterfaceRef | None = field(
+        implementation_data_type_element_in_port_interface_ref: (
+            ImplementationDataTypeElementInPortInterfaceRef | None
+        ) = field(
             default=None,
             metadata={
                 "name": "IMPLEMENTATION-DATA-TYPE-ELEMENT-IN-PORT-INTERFACE-REF",
@@ -152,7 +168,9 @@ class DataPrototypeTransformationProps:
 
     @dataclass
     class DataPrototypeRef:
-        data_prototype_with_application_data_type_in_system_ref: DataPrototypeWithApplicationDataTypeInSystemRef | None = field(
+        data_prototype_with_application_data_type_in_system_ref: (
+            DataPrototypeWithApplicationDataTypeInSystemRef | None
+        ) = field(
             default=None,
             metadata={
                 "name": "DATA-PROTOTYPE-WITH-APPLICATION-DATA-TYPE-IN-SYSTEM-REF",
@@ -160,7 +178,9 @@ class DataPrototypeTransformationProps:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        implementation_data_type_element_in_system_ref: ImplementationDataTypeElementInSystemRef | None = field(
+        implementation_data_type_element_in_system_ref: (
+            ImplementationDataTypeElementInSystemRef | None
+        ) = field(
             default=None,
             metadata={
                 "name": "IMPLEMENTATION-DATA-TYPE-ELEMENT-IN-SYSTEM-REF",

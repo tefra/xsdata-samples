@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from xcbl.models.shipping_schedule import ListOfPackageDetail
 from xcbl.models.shipping_schedule_response import (
@@ -893,12 +892,14 @@ class RequestQuotePurpose:
             "required": True,
         }
     )
-    request_quote_purpose_coded_other: RequestQuotePurposeCodedOther | None = field(
-        default=None,
-        metadata={
-            "name": "RequestQuotePurposeCodedOther",
-            "type": "Element",
-        },
+    request_quote_purpose_coded_other: RequestQuotePurposeCodedOther | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "RequestQuotePurposeCodedOther",
+                "type": "Element",
+            },
+        )
     )
 
 
@@ -1086,7 +1087,9 @@ class Discounts:
             "type": "Element",
         },
     )
-    discount_date_time_ref_coded_other: DiscountDateTimeRefCodedOther | None = field(
+    discount_date_time_ref_coded_other: (
+        DiscountDateTimeRefCodedOther | None
+    ) = field(
         default=None,
         metadata={
             "name": "DiscountDateTimeRefCodedOther",
@@ -1280,16 +1283,16 @@ class RequestQuoteDetails:
             "type": "Element",
         },
     )
-    request_quote_delivery_detail: RequestQuoteDeliveryDetail | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "RequestQuoteDeliveryDetail",
-                "type": "Element",
-            },
-        )
+    request_quote_delivery_detail: RequestQuoteDeliveryDetail | None = field(
+        default=None,
+        metadata={
+            "name": "RequestQuoteDeliveryDetail",
+            "type": "Element",
+        },
     )
-    request_quote_item_list_of_attachment: RequestQuoteItemListOfAttachment | None = field(
+    request_quote_item_list_of_attachment: (
+        RequestQuoteItemListOfAttachment | None
+    ) = field(
         default=None,
         metadata={
             "name": "RequestQuoteItemListOfAttachment",
@@ -1335,14 +1338,12 @@ class RequestQuoteReference:
             "type": "Element",
         },
     )
-    other_request_quote_references: OtherRequestQuoteReferences | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "OtherRequestQuoteReferences",
-                "type": "Element",
-            },
-        )
+    other_request_quote_references: OtherRequestQuoteReferences | None = field(
+        default=None,
+        metadata={
+            "name": "OtherRequestQuoteReferences",
+            "type": "Element",
+        },
     )
 
 
@@ -1625,21 +1626,21 @@ class RequestQuoteHeader:
             "type": "Element",
         },
     )
-    request_quote_allowance_or_charge: RequestQuoteAllowanceOrCharge | None = field(
-        default=None,
-        metadata={
-            "name": "RequestQuoteAllowanceOrCharge",
-            "type": "Element",
-        },
-    )
-    request_quote_terms_of_payment: RequestQuoteTermsOfPayment | None = (
+    request_quote_allowance_or_charge: RequestQuoteAllowanceOrCharge | None = (
         field(
             default=None,
             metadata={
-                "name": "RequestQuoteTermsOfPayment",
+                "name": "RequestQuoteAllowanceOrCharge",
                 "type": "Element",
             },
         )
+    )
+    request_quote_terms_of_payment: RequestQuoteTermsOfPayment | None = field(
+        default=None,
+        metadata={
+            "name": "RequestQuoteTermsOfPayment",
+            "type": "Element",
+        },
     )
     request_quote_terms_of_delivery: RequestQuoteTermsOfDelivery | None = (
         field(
@@ -1678,12 +1679,14 @@ class RequestQuoteHeader:
             "type": "Element",
         },
     )
-    request_quote_list_of_attachment: RequestQuoteListOfAttachment | None = field(
-        default=None,
-        metadata={
-            "name": "RequestQuoteListOfAttachment",
-            "type": "Element",
-        },
+    request_quote_list_of_attachment: RequestQuoteListOfAttachment | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "RequestQuoteListOfAttachment",
+                "type": "Element",
+            },
+        )
     )
 
 
@@ -1703,7 +1706,9 @@ class RequestForQuotation:
             "type": "Element",
         },
     )
-    list_of_request_quote_package_detail: ListOfRequestQuotePackageDetail | None = field(
+    list_of_request_quote_package_detail: (
+        ListOfRequestQuotePackageDetail | None
+    ) = field(
         default=None,
         metadata={
             "name": "ListOfRequestQuotePackageDetail",

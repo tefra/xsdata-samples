@@ -1,6 +1,5 @@
 from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import Union
 
 from .strict_containment_aggregation_structure import (
     StrictContainmentAggregationStructure,

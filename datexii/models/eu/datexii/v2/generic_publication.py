@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from datexii.models.eu.datexii.v2.generic_publication_extension_type import (
     GenericPublicationExtensionType,
@@ -28,11 +27,13 @@ class GenericPublication(PayloadPublication):
             "max_length": 1024,
         },
     )
-    generic_publication_extension: GenericPublicationExtensionType | None = field(
-        default=None,
-        metadata={
-            "name": "genericPublicationExtension",
-            "type": "Element",
-            "namespace": "http://datex2.eu/schema/2/2_0",
-        },
+    generic_publication_extension: GenericPublicationExtensionType | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "genericPublicationExtension",
+                "type": "Element",
+                "namespace": "http://datex2.eu/schema/2/2_0",
+            },
+        )
     )

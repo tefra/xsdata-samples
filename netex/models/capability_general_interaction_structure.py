@@ -1,32 +1,31 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
 
 @dataclass
 class CapabilityGeneralInteractionStructure:
-    interaction: CapabilityGeneralInteractionStructure.Interaction | None = field(
-        default=None,
-        metadata={
-            "name": "Interaction",
-            "type": "Element",
-            "namespace": "http://www.siri.org.uk/siri",
-            "required": True,
-        },
-    )
-    delivery: CapabilityGeneralInteractionStructure.Delivery | None = (
+    interaction: CapabilityGeneralInteractionStructure.Interaction | None = (
         field(
             default=None,
             metadata={
-                "name": "Delivery",
+                "name": "Interaction",
                 "type": "Element",
                 "namespace": "http://www.siri.org.uk/siri",
                 "required": True,
             },
         )
+    )
+    delivery: CapabilityGeneralInteractionStructure.Delivery | None = field(
+        default=None,
+        metadata={
+            "name": "Delivery",
+            "type": "Element",
+            "namespace": "http://www.siri.org.uk/siri",
+            "required": True,
+        },
     )
     multipart_despatch: bool = field(
         default=True,

@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Union
 
 from sdmx_ml.models.identifiable_query_type import IdentifiableQueryType
 from sdmx_ml.models.wild_card_value_type import WildCardValueType

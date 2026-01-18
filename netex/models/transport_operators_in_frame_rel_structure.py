@@ -1,6 +1,5 @@
 from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import Union
 
 from .authority import Authority
 from .containment_aggregation_structure import ContainmentAggregationStructure

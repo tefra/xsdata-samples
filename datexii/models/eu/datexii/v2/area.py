@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from datexii.models.eu.datexii.v2.alert_carea import AlertCArea
 from datexii.models.eu.datexii.v2.area_extension_type import AreaExtensionType

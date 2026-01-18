@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from .access_vehicle_equipment_ref import AccessVehicleEquipmentRef
 from .accessibility_assessment import AccessibilityAssessment
@@ -92,30 +91,97 @@ class ActualVehicleEquipmentVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    vehicle_type_ref: CompoundTrainRef | TrainRef | VehicleTypeRef | None = field(
-        default=None,
-        metadata={
-            "type": "Elements",
-            "choices": (
-                {
-                    "name": "CompoundTrainRef",
-                    "type": CompoundTrainRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "TrainRef",
-                    "type": TrainRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "VehicleTypeRef",
-                    "type": VehicleTypeRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-            ),
-        },
+    vehicle_type_ref: CompoundTrainRef | TrainRef | VehicleTypeRef | None = (
+        field(
+            default=None,
+            metadata={
+                "type": "Elements",
+                "choices": (
+                    {
+                        "name": "CompoundTrainRef",
+                        "type": CompoundTrainRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "TrainRef",
+                        "type": TrainRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "VehicleTypeRef",
+                        "type": VehicleTypeRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                ),
+            },
+        )
     )
-    choice: RetailDeviceRef | OnlineServiceRef | VehicleRentalServiceRef | VehicleSharingServiceRef | ChauffeuredVehicleServiceRef | TaxiServiceRef | CarPoolingServiceRef | ActivatedEquipmentRef | BatteryEquipmentRef | RefuellingEquipmentRef | VehicleChargingEquipmentRef | AssistanceBookingServiceRef | CateringServiceRef | RetailServiceRef | MoneyServiceRef | HireServiceRef | CommunicationServiceRef | MeetingPointServiceRef | LeftLuggageServiceRef | LuggageServiceRef | LostPropertyServiceRef | ComplaintsServiceRef | CustomerServiceRef | AssistanceServiceRef | TicketingServiceRef | LocalServiceRef | VehicleReleaseEquipmentRef | TicketValidatorEquipmentRef | TicketingEquipmentRef | PassengerInformationEquipmentRef | CycleStorageEquipmentRef | TrolleyStandEquipmentRef | SeatingEquipmentRef | ShelterEquipmentRef | LuggageLockerEquipmentRef | WaitingRoomEquipmentRef | WaitingEquipmentRef | SiteEquipmentRef | PlaceLightingEquipmentRef | RoughSurfaceRef | StaircaseEquipmentRef | QueueingEquipmentRef | TravelatorEquipmentRef | EscalatorEquipmentRef | LiftCallEquipmentRef | LiftEquipmentRef | CrossingEquipmentRef | RampEquipmentRef | EntranceEquipmentRef | HeadingSignRef | GeneralSignRef | PlaceSignRef | SignEquipmentRef | RubbishDisposalEquipmentRef | PassengerBeaconEquipmentRef | HelpPointEquipmentRef | PassengerSafetyEquipmentRef | SanitaryEquipmentRef | WheelchairVehicleRef | AccessVehicleEquipmentRef | VehicleEquipmentRef | PassengerEquipmentRef | EquipmentRef | None = field(
+    choice: (
+        RetailDeviceRef
+        | OnlineServiceRef
+        | VehicleRentalServiceRef
+        | VehicleSharingServiceRef
+        | ChauffeuredVehicleServiceRef
+        | TaxiServiceRef
+        | CarPoolingServiceRef
+        | ActivatedEquipmentRef
+        | BatteryEquipmentRef
+        | RefuellingEquipmentRef
+        | VehicleChargingEquipmentRef
+        | AssistanceBookingServiceRef
+        | CateringServiceRef
+        | RetailServiceRef
+        | MoneyServiceRef
+        | HireServiceRef
+        | CommunicationServiceRef
+        | MeetingPointServiceRef
+        | LeftLuggageServiceRef
+        | LuggageServiceRef
+        | LostPropertyServiceRef
+        | ComplaintsServiceRef
+        | CustomerServiceRef
+        | AssistanceServiceRef
+        | TicketingServiceRef
+        | LocalServiceRef
+        | VehicleReleaseEquipmentRef
+        | TicketValidatorEquipmentRef
+        | TicketingEquipmentRef
+        | PassengerInformationEquipmentRef
+        | CycleStorageEquipmentRef
+        | TrolleyStandEquipmentRef
+        | SeatingEquipmentRef
+        | ShelterEquipmentRef
+        | LuggageLockerEquipmentRef
+        | WaitingRoomEquipmentRef
+        | WaitingEquipmentRef
+        | SiteEquipmentRef
+        | PlaceLightingEquipmentRef
+        | RoughSurfaceRef
+        | StaircaseEquipmentRef
+        | QueueingEquipmentRef
+        | TravelatorEquipmentRef
+        | EscalatorEquipmentRef
+        | LiftCallEquipmentRef
+        | LiftEquipmentRef
+        | CrossingEquipmentRef
+        | RampEquipmentRef
+        | EntranceEquipmentRef
+        | HeadingSignRef
+        | GeneralSignRef
+        | PlaceSignRef
+        | SignEquipmentRef
+        | RubbishDisposalEquipmentRef
+        | PassengerBeaconEquipmentRef
+        | HelpPointEquipmentRef
+        | PassengerSafetyEquipmentRef
+        | SanitaryEquipmentRef
+        | WheelchairVehicleRef
+        | AccessVehicleEquipmentRef
+        | VehicleEquipmentRef
+        | PassengerEquipmentRef
+        | EquipmentRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",

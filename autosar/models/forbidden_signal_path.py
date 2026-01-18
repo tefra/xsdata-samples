@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     DocumentationBlock,
@@ -75,13 +74,15 @@ class ForbiddenSignalPath:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    physical_channel_refs: ForbiddenSignalPath.PhysicalChannelRefs | None = field(
-        default=None,
-        metadata={
-            "name": "PHYSICAL-CHANNEL-REFS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    physical_channel_refs: ForbiddenSignalPath.PhysicalChannelRefs | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "PHYSICAL-CHANNEL-REFS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     signals: ForbiddenSignalPath.Signals | None = field(
         default=None,

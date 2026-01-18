@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -113,13 +112,15 @@ class DiagnosticServiceTable:
             "required": True,
         },
     )
-    short_name_fragments: DiagnosticServiceTable.ShortNameFragments | None = field(
-        default=None,
-        metadata={
-            "name": "SHORT-NAME-FRAGMENTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    short_name_fragments: DiagnosticServiceTable.ShortNameFragments | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "SHORT-NAME-FRAGMENTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     long_name: MultilanguageLongName | None = field(
         default=None,
@@ -177,7 +178,9 @@ class DiagnosticServiceTable:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    diagnostic_connections: DiagnosticServiceTable.DiagnosticConnections | None = field(
+    diagnostic_connections: (
+        DiagnosticServiceTable.DiagnosticConnections | None
+    ) = field(
         default=None,
         metadata={
             "name": "DIAGNOSTIC-CONNECTIONS",
@@ -185,15 +188,13 @@ class DiagnosticServiceTable:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ecu_instance_ref: DiagnosticServiceTable.EcuInstanceRef | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "ECU-INSTANCE-REF",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    ecu_instance_ref: DiagnosticServiceTable.EcuInstanceRef | None = field(
+        default=None,
+        metadata={
+            "name": "ECU-INSTANCE-REF",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     protocol_kind: NmtokenString | None = field(
         default=None,
@@ -203,7 +204,9 @@ class DiagnosticServiceTable:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    service_instance_refs: DiagnosticServiceTable.ServiceInstanceRefs | None = field(
+    service_instance_refs: (
+        DiagnosticServiceTable.ServiceInstanceRefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "SERVICE-INSTANCE-REFS",

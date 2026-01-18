@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -167,13 +166,15 @@ class EcucForeignReferenceDef:
             "required": True,
         },
     )
-    short_name_fragments: EcucForeignReferenceDef.ShortNameFragments | None = field(
-        default=None,
-        metadata={
-            "name": "SHORT-NAME-FRAGMENTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    short_name_fragments: EcucForeignReferenceDef.ShortNameFragments | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "SHORT-NAME-FRAGMENTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     long_name: MultilanguageLongName | None = field(
         default=None,
@@ -223,7 +224,9 @@ class EcucForeignReferenceDef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    related_trace_item_ref: EcucForeignReferenceDef.RelatedTraceItemRef | None = field(
+    related_trace_item_ref: (
+        EcucForeignReferenceDef.RelatedTraceItemRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "RELATED-TRACE-ITEM-REF",
@@ -231,7 +234,9 @@ class EcucForeignReferenceDef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ecuc_validation_conds: EcucForeignReferenceDef.EcucValidationConds | None = field(
+    ecuc_validation_conds: (
+        EcucForeignReferenceDef.EcucValidationConds | None
+    ) = field(
         default=None,
         metadata={
             "name": "ECUC-VALIDATION-CONDS",
@@ -279,15 +284,19 @@ class EcucForeignReferenceDef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    configuration_class_affection: EcucConfigurationClassAffection | None = field(
-        default=None,
-        metadata={
-            "name": "CONFIGURATION-CLASS-AFFECTION",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    configuration_class_affection: EcucConfigurationClassAffection | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "CONFIGURATION-CLASS-AFFECTION",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
-    implementation_config_classes: EcucForeignReferenceDef.ImplementationConfigClasses | None = field(
+    implementation_config_classes: (
+        EcucForeignReferenceDef.ImplementationConfigClasses | None
+    ) = field(
         default=None,
         metadata={
             "name": "IMPLEMENTATION-CONFIG-CLASSES",
@@ -295,7 +304,9 @@ class EcucForeignReferenceDef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    multiplicity_config_classes: EcucForeignReferenceDef.MultiplicityConfigClasses | None = field(
+    multiplicity_config_classes: (
+        EcucForeignReferenceDef.MultiplicityConfigClasses | None
+    ) = field(
         default=None,
         metadata={
             "name": "MULTIPLICITY-CONFIG-CLASSES",
@@ -335,13 +346,15 @@ class EcucForeignReferenceDef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    value_config_classes: EcucForeignReferenceDef.ValueConfigClasses | None = field(
-        default=None,
-        metadata={
-            "name": "VALUE-CONFIG-CLASSES",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    value_config_classes: EcucForeignReferenceDef.ValueConfigClasses | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "VALUE-CONFIG-CLASSES",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     destination_type: String | None = field(
         default=None,

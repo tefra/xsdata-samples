@@ -1,6 +1,5 @@
 from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from .data_role_type_enumeration import DataRoleTypeEnumeration
 from .entity_in_version_structure import VersionedChildStructure
@@ -57,7 +56,9 @@ class ResponsibilityRoleAssignmentVersionedChildStructure(
             "tokens": True,
         },
     )
-    type_of_responsibility_role_ref_or_responsibility_role_ref: TypeOfResponsibilityRoleRef | ResponsibilityRoleRef | None = field(
+    type_of_responsibility_role_ref_or_responsibility_role_ref: (
+        TypeOfResponsibilityRoleRef | ResponsibilityRoleRef | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",

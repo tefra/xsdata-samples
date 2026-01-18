@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from xcbl.models.auction_create_response import (
     AuctionCreateHeader,
@@ -67,12 +66,14 @@ class AuctionCreateDetail:
             "required": True,
         }
     )
-    list_of_auction_item_components: ListOfAuctionItemComponents | None = field(
-        default=None,
-        metadata={
-            "name": "ListOfAuctionItemComponents",
-            "type": "Element",
-        },
+    list_of_auction_item_components: ListOfAuctionItemComponents | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "ListOfAuctionItemComponents",
+                "type": "Element",
+            },
+        )
     )
 
 

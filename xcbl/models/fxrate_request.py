@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from xcbl.models.fxrate_response import (
     ComputationalMethodCoded,
@@ -193,7 +192,9 @@ class FxrateRequestDetail:
             "type": "Element",
         },
     )
-    originating_financial_institution: OriginatingFinancialInstitution | None = field(
+    originating_financial_institution: (
+        OriginatingFinancialInstitution | None
+    ) = field(
         default=None,
         metadata={
             "name": "OriginatingFinancialInstitution",
@@ -214,12 +215,14 @@ class FxrateRequestDetail:
             "type": "Element",
         },
     )
-    computational_method_coded_other: ComputationalMethodCodedOther | None = field(
-        default=None,
-        metadata={
-            "name": "ComputationalMethodCodedOther",
-            "type": "Element",
-        },
+    computational_method_coded_other: ComputationalMethodCodedOther | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "ComputationalMethodCodedOther",
+                "type": "Element",
+            },
+        )
     )
     fxquote_type_coded: FxquoteTypeCoded | None = field(
         default=None,

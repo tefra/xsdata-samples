@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -178,13 +177,15 @@ class FieldMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    notifier_data_element_ref: FieldMapping.NotifierDataElementRef | None = field(
-        default=None,
-        metadata={
-            "name": "NOTIFIER-DATA-ELEMENT-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    notifier_data_element_ref: FieldMapping.NotifierDataElementRef | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "NOTIFIER-DATA-ELEMENT-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     setter_operation_ref: FieldMapping.SetterOperationRef | None = field(
         default=None,

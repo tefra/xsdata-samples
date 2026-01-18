@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import VariationPoint
 from .boolean import Boolean
@@ -115,7 +114,9 @@ class PortApiOption:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    transformer_status_forwarding: DataTransformationStatusForwardingEnum | None = field(
+    transformer_status_forwarding: (
+        DataTransformationStatusForwardingEnum | None
+    ) = field(
         default=None,
         metadata={
             "name": "TRANSFORMER-STATUS-FORWARDING",

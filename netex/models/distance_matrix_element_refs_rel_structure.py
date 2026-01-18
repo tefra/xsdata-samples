@@ -1,6 +1,5 @@
 from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import Union
 
 from .distance_matrix_element_inverse_ref import (
     DistanceMatrixElementInverseRef,

@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from datexii.models.eu.datexii.v2.area import Area
 from datexii.models.eu.datexii.v2.destination import Destination

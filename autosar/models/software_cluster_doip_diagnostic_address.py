@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .positive_integer import PositiveInteger
 from .software_cluster_diagnostic_address_semantics_enum import (
@@ -35,13 +34,15 @@ class SoftwareClusterDoipDiagnosticAddress:
     class Meta:
         name = "SOFTWARE-CLUSTER-DOIP-DIAGNOSTIC-ADDRESS"
 
-    address_semantics: SoftwareClusterDiagnosticAddressSemanticsEnum | None = field(
-        default=None,
-        metadata={
-            "name": "ADDRESS-SEMANTICS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    address_semantics: SoftwareClusterDiagnosticAddressSemanticsEnum | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "ADDRESS-SEMANTICS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     diagnostic_address: PositiveInteger | None = field(
         default=None,

@@ -2,7 +2,6 @@ from __future__ import annotations
 
 from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .distribution_assignment_ref import DistributionAssignmentRef

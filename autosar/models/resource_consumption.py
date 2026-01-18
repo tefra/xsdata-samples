@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .access_count_set import AccessCountSet
 from .admin_data import (
@@ -131,13 +130,15 @@ class ResourceConsumption:
             "required": True,
         },
     )
-    short_name_fragments: ResourceConsumption.ShortNameFragments | None = field(
-        default=None,
-        metadata={
-            "name": "SHORT-NAME-FRAGMENTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    short_name_fragments: ResourceConsumption.ShortNameFragments | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "SHORT-NAME-FRAGMENTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     long_name: MultilanguageLongName | None = field(
         default=None,
@@ -219,13 +220,15 @@ class ResourceConsumption:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    section_name_prefixs: ResourceConsumption.SectionNamePrefixs | None = field(
-        default=None,
-        metadata={
-            "name": "SECTION-NAME-PREFIXS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    section_name_prefixs: ResourceConsumption.SectionNamePrefixs | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "SECTION-NAME-PREFIXS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     stack_usages: ResourceConsumption.StackUsages | None = field(
         default=None,
@@ -235,13 +238,15 @@ class ResourceConsumption:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    system_memory_usages: ResourceConsumption.SystemMemoryUsages | None = field(
-        default=None,
-        metadata={
-            "name": "SYSTEM-MEMORY-USAGES",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    system_memory_usages: ResourceConsumption.SystemMemoryUsages | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "SYSTEM-MEMORY-USAGES",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     s: str | None = field(
         default=None,

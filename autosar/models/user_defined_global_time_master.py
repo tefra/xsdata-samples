@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -106,7 +105,9 @@ class UserDefinedGlobalTimeMaster:
             "required": True,
         },
     )
-    short_name_fragments: UserDefinedGlobalTimeMaster.ShortNameFragments | None = field(
+    short_name_fragments: (
+        UserDefinedGlobalTimeMaster.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -162,7 +163,9 @@ class UserDefinedGlobalTimeMaster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    communication_connector_ref: UserDefinedGlobalTimeMaster.CommunicationConnectorRef | None = field(
+    communication_connector_ref: (
+        UserDefinedGlobalTimeMaster.CommunicationConnectorRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "COMMUNICATION-CONNECTOR-REF",

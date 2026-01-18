@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -109,7 +108,10 @@ class ProvidedServiceInstanceToSwClusterDesignPPortPrototypeMapping:
             "required": True,
         },
     )
-    short_name_fragments: ProvidedServiceInstanceToSwClusterDesignPPortPrototypeMapping.ShortNameFragments | None = field(
+    short_name_fragments: (
+        ProvidedServiceInstanceToSwClusterDesignPPortPrototypeMapping.ShortNameFragments
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -157,7 +159,10 @@ class ProvidedServiceInstanceToSwClusterDesignPPortPrototypeMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: ProvidedServiceInstanceToSwClusterDesignPPortPrototypeMapping.Annotations | None = field(
+    annotations: (
+        ProvidedServiceInstanceToSwClusterDesignPPortPrototypeMapping.Annotations
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -173,7 +178,9 @@ class ProvidedServiceInstanceToSwClusterDesignPPortPrototypeMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    provided_port_prototype_iref: PPortPrototypeInSoftwareClusterDesignInstanceRef | None = field(
+    provided_port_prototype_iref: (
+        PPortPrototypeInSoftwareClusterDesignInstanceRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "PROVIDED-PORT-PROTOTYPE-IREF",
@@ -181,7 +188,10 @@ class ProvidedServiceInstanceToSwClusterDesignPPortPrototypeMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    provided_service_instance_ref: ProvidedServiceInstanceToSwClusterDesignPPortPrototypeMapping.ProvidedServiceInstanceRef | None = field(
+    provided_service_instance_ref: (
+        ProvidedServiceInstanceToSwClusterDesignPPortPrototypeMapping.ProvidedServiceInstanceRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "PROVIDED-SERVICE-INSTANCE-REF",

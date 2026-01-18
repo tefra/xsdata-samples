@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .i_psec_ip_protocol_enum_simple import IPsecIpProtocolEnumSimple
 

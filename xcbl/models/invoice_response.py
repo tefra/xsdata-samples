@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from xcbl.models.price_check_result import ErrorInfo
 from xcbl.models.remittance_advice import InvoiceType

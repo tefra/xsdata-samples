@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from ...www.w3.org.pkg_2005.pkg_08.addressing.ws_addr import (
     EndpointReferenceType,
@@ -1024,14 +1023,12 @@ class SamlAuthzDecisionStatementEvidenceAssertion(
 
 @dataclass
 class SamlAuthzDecisionStatementEvidenceType:
-    assertion: SamlAuthzDecisionStatementEvidenceAssertionType | None = (
-        field(
-            default=None,
-            metadata={
-                "type": "Element",
-                "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-            },
-        )
+    assertion: SamlAuthzDecisionStatementEvidenceAssertionType | None = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
+        },
     )
 
 

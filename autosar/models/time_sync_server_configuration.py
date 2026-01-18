@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .identifier import Identifier
 from .positive_integer import PositiveInteger
@@ -55,7 +54,9 @@ class TimeSyncServerConfiguration:
             "required": True,
         },
     )
-    short_name_fragments: TimeSyncServerConfiguration.ShortNameFragments | None = field(
+    short_name_fragments: (
+        TimeSyncServerConfiguration.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",

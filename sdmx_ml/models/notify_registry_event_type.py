@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import ForwardRef, Optional, Union
+from typing import ForwardRef
 
 from xsdata.models.datatype import XmlDateTime
 
@@ -47,7 +47,11 @@ class NotifyRegistryEventType:
             "required": True,
         },
     )
-    object_urn_or_registration_id: NotifyRegistryEventType.ObjectUrn | NotifyRegistryEventType.RegistrationId | None = field(
+    object_urn_or_registration_id: (
+        NotifyRegistryEventType.ObjectUrn
+        | NotifyRegistryEventType.RegistrationId
+        | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -85,7 +89,9 @@ class NotifyRegistryEventType:
             "required": True,
         },
     )
-    structural_event_or_registration_event: StructuralEventType | RegistrationEventType | None = field(
+    structural_event_or_registration_event: (
+        StructuralEventType | RegistrationEventType | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",

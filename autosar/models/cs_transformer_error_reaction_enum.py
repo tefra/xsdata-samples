@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .cs_transformer_error_reaction_enum_simple import (
     CsTransformerErrorReactionEnumSimple,

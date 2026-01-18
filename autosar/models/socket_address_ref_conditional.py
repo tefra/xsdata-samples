@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import VariationPoint
 from .ref import Ref
@@ -33,13 +32,15 @@ class SocketAddressRefConditional:
     class Meta:
         name = "SOCKET-ADDRESS-REF-CONDITIONAL"
 
-    socket_address_ref: SocketAddressRefConditional.SocketAddressRef | None = field(
-        default=None,
-        metadata={
-            "name": "SOCKET-ADDRESS-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    socket_address_ref: SocketAddressRefConditional.SocketAddressRef | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "SOCKET-ADDRESS-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     variation_point: VariationPoint | None = field(
         default=None,

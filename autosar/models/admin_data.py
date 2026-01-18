@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import ForwardRef, Optional
+from typing import ForwardRef
 
 from .caption import Caption
 from .category_string import CategoryString
@@ -1226,7 +1226,9 @@ class VariationPoint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    post_build_variant_conditions: VariationPoint.PostBuildVariantConditions | None = field(
+    post_build_variant_conditions: (
+        VariationPoint.PostBuildVariantConditions | None
+    ) = field(
         default=None,
         metadata={
             "name": "POST-BUILD-VARIANT-CONDITIONS",
@@ -1755,13 +1757,15 @@ class StructuredReq:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    applies_to_dependencies: StructuredReq.AppliesToDependencies | None = field(
-        default=None,
-        metadata={
-            "name": "APPLIES-TO-DEPENDENCIES",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    applies_to_dependencies: StructuredReq.AppliesToDependencies | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "APPLIES-TO-DEPENDENCIES",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     dependencies: DocumentationBlock | None = field(
         default=None,

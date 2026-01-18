@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .accessibility_assessment_versioned_child_structure import (
     AccessibilityAssessmentVersionedChildStructure,
@@ -14,7 +13,9 @@ class AccessZoneVersionStructure(ZoneVersionStructure):
     class Meta:
         name = "AccessZone_VersionStructure"
 
-    accessibility_assessment: AccessibilityAssessmentVersionedChildStructure | None = field(
+    accessibility_assessment: (
+        AccessibilityAssessmentVersionedChildStructure | None
+    ) = field(
         default=None,
         metadata={
             "name": "AccessibilityAssessment",

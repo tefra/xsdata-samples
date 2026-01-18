@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import VariationPoint
 from .bsw_module_entry_subtypes_enum import BswModuleEntrySubtypesEnum
@@ -49,7 +48,9 @@ class RoleBasedBswModuleEntryAssignment:
     class Meta:
         name = "ROLE-BASED-BSW-MODULE-ENTRY-ASSIGNMENT"
 
-    assigned_entry_ref: RoleBasedBswModuleEntryAssignment.AssignedEntryRef | None = field(
+    assigned_entry_ref: (
+        RoleBasedBswModuleEntryAssignment.AssignedEntryRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "ASSIGNED-ENTRY-REF",

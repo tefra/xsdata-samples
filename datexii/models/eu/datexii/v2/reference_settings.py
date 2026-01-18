@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.predefined_non_ordered_location_group_versioned_reference import (
@@ -28,7 +27,9 @@ class ReferenceSettings:
     :ivar reference_settings_extension:
     """
 
-    predefined_non_ordered_location_group_reference: PredefinedNonOrderedLocationGroupVersionedReference | None = field(
+    predefined_non_ordered_location_group_reference: (
+        PredefinedNonOrderedLocationGroupVersionedReference | None
+    ) = field(
         default=None,
         metadata={
             "name": "predefinedNonOrderedLocationGroupReference",

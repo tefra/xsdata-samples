@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -106,15 +105,13 @@ class DataPrototypeGroup:
             "required": True,
         },
     )
-    short_name_fragments: DataPrototypeGroup.ShortNameFragments | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "SHORT-NAME-FRAGMENTS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    short_name_fragments: DataPrototypeGroup.ShortNameFragments | None = field(
+        default=None,
+        metadata={
+            "name": "SHORT-NAME-FRAGMENTS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     long_name: MultilanguageLongName | None = field(
         default=None,
@@ -164,7 +161,9 @@ class DataPrototypeGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    data_prototype_group_irefs: DataPrototypeGroup.DataPrototypeGroupIrefs | None = field(
+    data_prototype_group_irefs: (
+        DataPrototypeGroup.DataPrototypeGroupIrefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "DATA-PROTOTYPE-GROUP-IREFS",
@@ -172,7 +171,9 @@ class DataPrototypeGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    implicit_data_access_irefs: DataPrototypeGroup.ImplicitDataAccessIrefs | None = field(
+    implicit_data_access_irefs: (
+        DataPrototypeGroup.ImplicitDataAccessIrefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "IMPLICIT-DATA-ACCESS-IREFS",

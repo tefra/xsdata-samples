@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .network_restriction_version_structure import (
     NetworkRestrictionVersionStructure,

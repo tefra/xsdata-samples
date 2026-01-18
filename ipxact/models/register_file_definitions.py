@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from ipxact.models.access_policies import AccessPolicies
 from ipxact.models.address_unit_bits import AddressUnitBits
@@ -208,7 +207,10 @@ class RegisterFileDefinitions:
                     "type": "Element",
                 },
             )
-            access_handles: RegisterFileDefinitions.RegisterFileDefinition.Register.AccessHandles | None = field(
+            access_handles: (
+                RegisterFileDefinitions.RegisterFileDefinition.Register.AccessHandles
+                | None
+            ) = field(
                 default=None,
                 metadata={
                     "name": "accessHandles",
@@ -229,7 +231,10 @@ class RegisterFileDefinitions:
                     "required": True,
                 },
             )
-            register_definition_ref: RegisterFileDefinitions.RegisterFileDefinition.Register.RegisterDefinitionRef | None = field(
+            register_definition_ref: (
+                RegisterFileDefinitions.RegisterFileDefinition.Register.RegisterDefinitionRef
+                | None
+            ) = field(
                 default=None,
                 metadata={
                     "name": "registerDefinitionRef",

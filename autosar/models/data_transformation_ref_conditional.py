@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import VariationPoint
 from .data_transformation_subtypes_enum import DataTransformationSubtypesEnum
@@ -33,7 +32,9 @@ class DataTransformationRefConditional:
     class Meta:
         name = "DATA-TRANSFORMATION-REF-CONDITIONAL"
 
-    data_transformation_ref: DataTransformationRefConditional.DataTransformationRef | None = field(
+    data_transformation_ref: (
+        DataTransformationRefConditional.DataTransformationRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "DATA-TRANSFORMATION-REF",

@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .application_composite_element_in_port_interface_instance_ref import (
     ApplicationCompositeElementInPortInterfaceInstanceRef,
@@ -36,7 +35,9 @@ class CompositeNetworkRepresentation:
     class Meta:
         name = "COMPOSITE-NETWORK-REPRESENTATION"
 
-    leaf_element_iref: ApplicationCompositeElementInPortInterfaceInstanceRef | None = field(
+    leaf_element_iref: (
+        ApplicationCompositeElementInPortInterfaceInstanceRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "LEAF-ELEMENT-IREF",

@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from ubl.models.common.ubl_common_aggregate_components_2_1 import (
     AppealTerms,
@@ -154,15 +153,13 @@ class TendererQualificationResponseType:
             "required": True,
         },
     )
-    resolution_document_reference: ResolutionDocumentReference | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "ResolutionDocumentReference",
-                "type": "Element",
-                "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-            },
-        )
+    resolution_document_reference: ResolutionDocumentReference | None = field(
+        default=None,
+        metadata={
+            "name": "ResolutionDocumentReference",
+            "type": "Element",
+            "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
+        },
     )
     qualification_resolution: tuple[QualificationResolution, ...] = field(
         default_factory=tuple,

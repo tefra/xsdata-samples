@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from ubl.models.common.ubl_common_aggregate_components_2_1 import (
     AdditionalDocumentReference,
@@ -203,14 +202,16 @@ class TransportExecutionPlanRequestType:
             "required": True,
         },
     )
-    transport_service_provider_party: TransportServiceProviderParty | None = field(
-        default=None,
-        metadata={
-            "name": "TransportServiceProviderParty",
-            "type": "Element",
-            "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-            "required": True,
-        },
+    transport_service_provider_party: TransportServiceProviderParty | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "TransportServiceProviderParty",
+                "type": "Element",
+                "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
+                "required": True,
+            },
+        )
     )
     payee_party: PayeeParty | None = field(
         default=None,
@@ -228,7 +229,9 @@ class TransportExecutionPlanRequestType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    transport_execution_plan_document_reference: TransportExecutionPlanDocumentReference | None = field(
+    transport_execution_plan_document_reference: (
+        TransportExecutionPlanDocumentReference | None
+    ) = field(
         default=None,
         metadata={
             "name": "TransportExecutionPlanDocumentReference",
@@ -236,7 +239,9 @@ class TransportExecutionPlanRequestType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    transport_service_description_document_reference: TransportServiceDescriptionDocumentReference | None = field(
+    transport_service_description_document_reference: (
+        TransportServiceDescriptionDocumentReference | None
+    ) = field(
         default=None,
         metadata={
             "name": "TransportServiceDescriptionDocumentReference",

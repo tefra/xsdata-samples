@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import VariationPoint
 from .pdu_triggering_subtypes_enum import PduTriggeringSubtypesEnum
@@ -33,13 +32,15 @@ class PduTriggeringRefConditional:
     class Meta:
         name = "PDU-TRIGGERING-REF-CONDITIONAL"
 
-    pdu_triggering_ref: PduTriggeringRefConditional.PduTriggeringRef | None = field(
-        default=None,
-        metadata={
-            "name": "PDU-TRIGGERING-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    pdu_triggering_ref: PduTriggeringRefConditional.PduTriggeringRef | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "PDU-TRIGGERING-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     variation_point: VariationPoint | None = field(
         default=None,

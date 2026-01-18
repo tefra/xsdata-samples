@@ -1,6 +1,5 @@
 from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import Union
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .monitored_vehicle_sharing_parking_bay import (
@@ -25,7 +24,14 @@ class ParkingBaysRelStructure(ContainmentAggregationStructure):
         name = "parkingBays_RelStructure"
 
     parking_bay_ref_or_vehicle_sharing_parking_bay_ref_or_parking_bay: Iterable[
-        VehiclePoolingParkingBayRef | MonitoredVehicleSharingParkingBayRef | VehicleSharingParkingBayRef | ParkingBayRef | MonitoredVehicleSharingParkingBay | VehiclePoolingParkingBay | VehicleSharingParkingBay | ParkingBay
+        VehiclePoolingParkingBayRef
+        | MonitoredVehicleSharingParkingBayRef
+        | VehicleSharingParkingBayRef
+        | ParkingBayRef
+        | MonitoredVehicleSharingParkingBay
+        | VehiclePoolingParkingBay
+        | VehicleSharingParkingBay
+        | ParkingBay
     ] = field(
         default_factory=list,
         metadata={

@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from ubl.models.common.ubl_common_aggregate_components_2_1 import (
     ContractingParty,
@@ -182,7 +181,9 @@ class TenderType:
             "required": True,
         },
     )
-    tenderer_qualification_document_reference: TendererQualificationDocumentReference | None = field(
+    tenderer_qualification_document_reference: (
+        TendererQualificationDocumentReference | None
+    ) = field(
         default=None,
         metadata={
             "name": "TendererQualificationDocumentReference",

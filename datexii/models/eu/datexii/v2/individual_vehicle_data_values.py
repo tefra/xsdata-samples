@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from datexii.models.eu.datexii.v2.date_time_value import DateTimeValue
 from datexii.models.eu.datexii.v2.duration_value import DurationValue

@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import Sdg
 from .build_engineering_object import BuildEngineeringObject
@@ -79,15 +78,13 @@ class BuildActionIoElement:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ecuc_definition_ref: BuildActionIoElement.EcucDefinitionRef | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "ECUC-DEFINITION-REF",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    ecuc_definition_ref: BuildActionIoElement.EcucDefinitionRef | None = field(
+        default=None,
+        metadata={
+            "name": "ECUC-DEFINITION-REF",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     engineering_object: BuildEngineeringObject | None = field(
         default=None,

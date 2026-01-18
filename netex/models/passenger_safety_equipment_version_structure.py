@@ -1,6 +1,5 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
-from typing import Optional
 
 from .audio_announcement_type_enumeration import (
     AudioAnnouncementTypeEnumeration,
@@ -85,23 +84,19 @@ class PassengerSafetyEquipmentVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    audio_announcement_type: AudioAnnouncementTypeEnumeration | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "AudioAnnouncementType",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            },
-        )
+    audio_announcement_type: AudioAnnouncementTypeEnumeration | None = field(
+        default=None,
+        metadata={
+            "name": "AudioAnnouncementType",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        },
     )
-    audio_announcements_trigger: AudioTriggerMethodEnumeration | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "AudioAnnouncementsTrigger",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            },
-        )
+    audio_announcements_trigger: AudioTriggerMethodEnumeration | None = field(
+        default=None,
+        metadata={
+            "name": "AudioAnnouncementsTrigger",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        },
     )

@@ -1,6 +1,5 @@
 from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import Union
 
 from .complex_feature_projection import ComplexFeatureProjection
 from .complex_feature_projection_ref import ComplexFeatureProjectionRef
@@ -25,7 +24,18 @@ class ProjectionsRelStructure(ContainmentAggregationStructure):
         name = "projections_RelStructure"
 
     projection_ref_or_projection: Iterable[
-        TopographicProjectionRef | ComplexFeatureProjectionRef | LinkSequenceProjectionRef | ZoneProjectionRef | LinkProjectionRef | PointProjectionRef | TopographicProjection | ZoneProjection | ComplexFeatureProjection | LinkSequenceProjection | LinkProjection | PointProjection
+        TopographicProjectionRef
+        | ComplexFeatureProjectionRef
+        | LinkSequenceProjectionRef
+        | ZoneProjectionRef
+        | LinkProjectionRef
+        | PointProjectionRef
+        | TopographicProjection
+        | ZoneProjection
+        | ComplexFeatureProjection
+        | LinkSequenceProjection
+        | LinkProjection
+        | PointProjection
     ] = field(
         default_factory=list,
         metadata={

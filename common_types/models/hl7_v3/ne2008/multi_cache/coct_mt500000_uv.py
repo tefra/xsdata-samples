@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from ..core.datatypes_base import (
     AdExplicit,
@@ -355,7 +354,9 @@ class CoctMt500000UvCarrierRole:
             "required": True,
         },
     )
-    underwriting_carrier_organization: CoctMt500000UvCarrierOrganization | None = field(
+    underwriting_carrier_organization: (
+        CoctMt500000UvCarrierOrganization | None
+    ) = field(
         default=None,
         metadata={
             "name": "underwritingCarrierOrganization",
@@ -371,7 +372,23 @@ class CoctMt500000UvCarrierRole:
             "type": "Attribute",
         },
     )
-    class_code: RoleClassMutualRelationship | RoleClassPassive | str | RoleClassOntological | RoleClassPartitive | RoleClassRootValue | XAccommodationRequestorRole | XDocumentEntrySubject | XDocumentSubject | XInformationRecipientRole | XRoleClassAccommodationRequestor | XRoleClassCoverage | XRoleClassCoverageInvoice | XRoleClassCredentialedEntity | XRoleClassPayeePolicyRelationship = field(
+    class_code: (
+        RoleClassMutualRelationship
+        | RoleClassPassive
+        | str
+        | RoleClassOntological
+        | RoleClassPartitive
+        | RoleClassRootValue
+        | XAccommodationRequestorRole
+        | XDocumentEntrySubject
+        | XDocumentSubject
+        | XInformationRecipientRole
+        | XRoleClassAccommodationRequestor
+        | XRoleClassCoverage
+        | XRoleClassCoverageInvoice
+        | XRoleClassCredentialedEntity
+        | XRoleClassPayeePolicyRelationship
+    ) = field(
         init=False,
         default=RoleClassMutualRelationship.UNDWRT,
         metadata={
@@ -419,16 +436,14 @@ class CoctMt500000UvEmployment:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    employer_organization: CoctMt500000UvEmployerOrganization | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "employerOrganization",
-                "type": "Element",
-                "namespace": "urn:hl7-org:v3",
-                "nillable": True,
-            },
-        )
+    employer_organization: CoctMt500000UvEmployerOrganization | None = field(
+        default=None,
+        metadata={
+            "name": "employerOrganization",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        },
     )
     null_flavor: NullFlavor | None = field(
         default=None,
@@ -476,16 +491,14 @@ class CoctMt500000UvLimitation:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    accommodation_coverage: CoctMt500000UvAccommodationCoverage | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "accommodationCoverage",
-                "type": "Element",
-                "namespace": "urn:hl7-org:v3",
-                "nillable": True,
-            },
-        )
+    accommodation_coverage: CoctMt500000UvAccommodationCoverage | None = field(
+        default=None,
+        metadata={
+            "name": "accommodationCoverage",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        },
     )
     null_flavor: NullFlavor | None = field(
         default=None,
@@ -494,7 +507,27 @@ class CoctMt500000UvLimitation:
             "type": "Attribute",
         },
     )
-    type_code: ActRelationshipConditional | ActRelationshipHasComponent | ActRelationshipOutcome | ActRelationshipCostTracking | ActRelationshipPosting | str | ActRelationshipHasSupport | ActRelationshipTemporallyPertains | ActRelationshipPertainsValue | ActRelationshipSequel | XActRelationshipDocument | XActRelationshipEntry | XActRelationshipEntryRelationship | XActRelationshipExternalReference | XActRelationshipPatientTransport | XActRelationshipPertinentInfo | XActRelationshipRelatedAuthorizations | XActReplaceOrRevise | XSuccReplPrev = field(
+    type_code: (
+        ActRelationshipConditional
+        | ActRelationshipHasComponent
+        | ActRelationshipOutcome
+        | ActRelationshipCostTracking
+        | ActRelationshipPosting
+        | str
+        | ActRelationshipHasSupport
+        | ActRelationshipTemporallyPertains
+        | ActRelationshipPertainsValue
+        | ActRelationshipSequel
+        | XActRelationshipDocument
+        | XActRelationshipEntry
+        | XActRelationshipEntryRelationship
+        | XActRelationshipExternalReference
+        | XActRelationshipPatientTransport
+        | XActRelationshipPertinentInfo
+        | XActRelationshipRelatedAuthorizations
+        | XActReplaceOrRevise
+        | XSuccReplPrev
+    ) = field(
         init=False,
         default=ActRelationshipPertainsValue.LIMIT,
         metadata={
@@ -687,7 +720,9 @@ class CoctMt500000UvPolicyHolder:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    policy_holder_organization: CoctMt500000UvPolicyHolderOrganization | None = field(
+    policy_holder_organization: (
+        CoctMt500000UvPolicyHolderOrganization | None
+    ) = field(
         default=None,
         metadata={
             "name": "policyHolderOrganization",
@@ -702,7 +737,23 @@ class CoctMt500000UvPolicyHolder:
             "type": "Attribute",
         },
     )
-    class_code: RoleClassMutualRelationship | RoleClassPassive | str | RoleClassOntological | RoleClassPartitive | RoleClassRootValue | XAccommodationRequestorRole | XDocumentEntrySubject | XDocumentSubject | XInformationRecipientRole | XRoleClassAccommodationRequestor | XRoleClassCoverage | XRoleClassCoverageInvoice | XRoleClassCredentialedEntity | XRoleClassPayeePolicyRelationship = field(
+    class_code: (
+        RoleClassMutualRelationship
+        | RoleClassPassive
+        | str
+        | RoleClassOntological
+        | RoleClassPartitive
+        | RoleClassRootValue
+        | XAccommodationRequestorRole
+        | XDocumentEntrySubject
+        | XDocumentSubject
+        | XInformationRecipientRole
+        | XRoleClassAccommodationRequestor
+        | XRoleClassCoverage
+        | XRoleClassCoverageInvoice
+        | XRoleClassCredentialedEntity
+        | XRoleClassPayeePolicyRelationship
+    ) = field(
         init=False,
         default=RoleClassMutualRelationship.POLHOLD,
         metadata={

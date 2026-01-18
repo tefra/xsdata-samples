@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .parameter_data_prototype_subtypes_enum import (
     ParameterDataPrototypeSubtypesEnum,
@@ -40,7 +39,9 @@ class ParameterDataPrototypeInSystemInstanceRef:
     class Meta:
         name = "PARAMETER-DATA-PROTOTYPE-IN-SYSTEM-INSTANCE-REF"
 
-    context_composition_ref: ParameterDataPrototypeInSystemInstanceRef.ContextCompositionRef | None = field(
+    context_composition_ref: (
+        ParameterDataPrototypeInSystemInstanceRef.ContextCompositionRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "CONTEXT-COMPOSITION-REF",
@@ -58,7 +59,9 @@ class ParameterDataPrototypeInSystemInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    context_port_ref: ParameterDataPrototypeInSystemInstanceRef.ContextPortRef | None = field(
+    context_port_ref: (
+        ParameterDataPrototypeInSystemInstanceRef.ContextPortRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "CONTEXT-PORT-REF",
@@ -66,7 +69,10 @@ class ParameterDataPrototypeInSystemInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    target_parameter_data_prototype_ref: ParameterDataPrototypeInSystemInstanceRef.TargetParameterDataPrototypeRef | None = field(
+    target_parameter_data_prototype_ref: (
+        ParameterDataPrototypeInSystemInstanceRef.TargetParameterDataPrototypeRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "TARGET-PARAMETER-DATA-PROTOTYPE-REF",

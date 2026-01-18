@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import VariationPoint
 from .data_prototype_subtypes_enum import DataPrototypeSubtypesEnum
@@ -54,7 +53,9 @@ class ReferenceValueSpecification:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    reference_value_ref: ReferenceValueSpecification.ReferenceValueRef | None = field(
+    reference_value_ref: (
+        ReferenceValueSpecification.ReferenceValueRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "REFERENCE-VALUE-REF",

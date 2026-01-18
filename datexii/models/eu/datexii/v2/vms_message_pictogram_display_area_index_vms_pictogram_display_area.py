@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from datexii.models.eu.datexii.v2.vms_pictogram_display_area import (
     VmsPictogramDisplayArea,

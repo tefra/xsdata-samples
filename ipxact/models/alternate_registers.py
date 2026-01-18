@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from ipxact.models.access_policies import AccessPolicies
 from ipxact.models.description import Description
@@ -88,7 +87,9 @@ class AlternateRegisters:
                 "type": "Element",
             },
         )
-        access_handles: AlternateRegisters.AlternateRegister.AccessHandles | None = field(
+        access_handles: (
+            AlternateRegisters.AlternateRegister.AccessHandles | None
+        ) = field(
             default=None,
             metadata={
                 "name": "accessHandles",

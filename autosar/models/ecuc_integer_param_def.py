@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -193,13 +192,15 @@ class EcucIntegerParamDef:
             "required": True,
         },
     )
-    short_name_fragments: EcucIntegerParamDef.ShortNameFragments | None = field(
-        default=None,
-        metadata={
-            "name": "SHORT-NAME-FRAGMENTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    short_name_fragments: EcucIntegerParamDef.ShortNameFragments | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "SHORT-NAME-FRAGMENTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     long_name: MultilanguageLongName | None = field(
         default=None,
@@ -249,21 +250,25 @@ class EcucIntegerParamDef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    related_trace_item_ref: EcucIntegerParamDef.RelatedTraceItemRef | None = field(
-        default=None,
-        metadata={
-            "name": "RELATED-TRACE-ITEM-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    related_trace_item_ref: EcucIntegerParamDef.RelatedTraceItemRef | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "RELATED-TRACE-ITEM-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
-    ecuc_validation_conds: EcucIntegerParamDef.EcucValidationConds | None = field(
-        default=None,
-        metadata={
-            "name": "ECUC-VALIDATION-CONDS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    ecuc_validation_conds: EcucIntegerParamDef.EcucValidationConds | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "ECUC-VALIDATION-CONDS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     ecuc_cond: EcucConditionSpecification | None = field(
         default=None,
@@ -305,15 +310,19 @@ class EcucIntegerParamDef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    configuration_class_affection: EcucConfigurationClassAffection | None = field(
-        default=None,
-        metadata={
-            "name": "CONFIGURATION-CLASS-AFFECTION",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    configuration_class_affection: EcucConfigurationClassAffection | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "CONFIGURATION-CLASS-AFFECTION",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
-    implementation_config_classes: EcucIntegerParamDef.ImplementationConfigClasses | None = field(
+    implementation_config_classes: (
+        EcucIntegerParamDef.ImplementationConfigClasses | None
+    ) = field(
         default=None,
         metadata={
             "name": "IMPLEMENTATION-CONFIG-CLASSES",
@@ -321,7 +330,9 @@ class EcucIntegerParamDef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    multiplicity_config_classes: EcucIntegerParamDef.MultiplicityConfigClasses | None = field(
+    multiplicity_config_classes: (
+        EcucIntegerParamDef.MultiplicityConfigClasses | None
+    ) = field(
         default=None,
         metadata={
             "name": "MULTIPLICITY-CONFIG-CLASSES",
@@ -361,13 +372,15 @@ class EcucIntegerParamDef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    value_config_classes: EcucIntegerParamDef.ValueConfigClasses | None = field(
-        default=None,
-        metadata={
-            "name": "VALUE-CONFIG-CLASSES",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    value_config_classes: EcucIntegerParamDef.ValueConfigClasses | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "VALUE-CONFIG-CLASSES",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     derivation: EcucDerivationSpecification | None = field(
         default=None,

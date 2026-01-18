@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass, field
 
-from xsdata.models.datatype import XmlDate, XmlDateTime
+from xsdata.models.datatype import XmlDateTime
 
 from npo.models.workflow_enum_type import WorkflowEnumType
 

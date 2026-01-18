@@ -1,7 +1,6 @@
 from collections.abc import Iterable
 from dataclasses import dataclass, field
 from decimal import Decimal
-from typing import Optional
 
 from .access_equipment_version_structure import AccessEquipmentVersionStructure
 from .compass_bearing8_enumeration import CompassBearing8Enumeration

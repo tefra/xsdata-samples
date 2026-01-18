@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from .block_ref import BlockRef
 from .compound_block_ref import CompoundBlockRef
@@ -54,28 +53,30 @@ class BlockPartVersionStructure(DataManagedObjectStructure):
             ),
         },
     )
-    vehicle_type_ref: CompoundTrainRef | TrainRef | VehicleTypeRef | None = field(
-        default=None,
-        metadata={
-            "type": "Elements",
-            "choices": (
-                {
-                    "name": "CompoundTrainRef",
-                    "type": CompoundTrainRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "TrainRef",
-                    "type": TrainRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "VehicleTypeRef",
-                    "type": VehicleTypeRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-            ),
-        },
+    vehicle_type_ref: CompoundTrainRef | TrainRef | VehicleTypeRef | None = (
+        field(
+            default=None,
+            metadata={
+                "type": "Elements",
+                "choices": (
+                    {
+                        "name": "CompoundTrainRef",
+                        "type": CompoundTrainRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "TrainRef",
+                        "type": TrainRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "VehicleTypeRef",
+                        "type": VehicleTypeRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                ),
+            },
+        )
     )
     compound_block_ref: CompoundBlockRef | None = field(
         default=None,
@@ -85,7 +86,9 @@ class BlockPartVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    journey_part_couple_ref_or_journey_parts: JourneyPartCoupleRef | JourneyPartRefsRelStructure | None = field(
+    journey_part_couple_ref_or_journey_parts: (
+        JourneyPartCoupleRef | JourneyPartRefsRelStructure | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",

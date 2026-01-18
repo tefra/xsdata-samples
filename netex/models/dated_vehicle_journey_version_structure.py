@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from .dated_calls_rel_structure import DatedCallsRelStructure
 from .dated_special_service_ref import DatedSpecialServiceRef
@@ -25,7 +24,17 @@ class DatedVehicleJourneyVersionStructure(VehicleJourneyVersionStructure):
     class Meta:
         name = "DatedVehicleJourney_VersionStructure"
 
-    choice: SingleJourneyRef | DatedVehicleJourneyRef | DatedSpecialServiceRef | SpecialServiceRef | TemplateServiceJourneyRef | ServiceJourneyRef | DeadRunRef | VehicleJourneyRef | None = field(
+    choice: (
+        SingleJourneyRef
+        | DatedVehicleJourneyRef
+        | DatedSpecialServiceRef
+        | SpecialServiceRef
+        | TemplateServiceJourneyRef
+        | ServiceJourneyRef
+        | DeadRunRef
+        | VehicleJourneyRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -82,13 +91,15 @@ class DatedVehicleJourneyVersionStructure(VehicleJourneyVersionStructure):
             "required": True,
         },
     )
-    external_dated_vehicle_journey_ref: ExternalObjectRefStructure | None = field(
-        default=None,
-        metadata={
-            "name": "ExternalDatedVehicleJourneyRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        },
+    external_dated_vehicle_journey_ref: ExternalObjectRefStructure | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "ExternalDatedVehicleJourneyRef",
+                "type": "Element",
+                "namespace": "http://www.netex.org.uk/netex",
+            },
+        )
     )
     dated_journey_pattern_ref: JourneyPatternRefStructure | None = field(
         default=None,

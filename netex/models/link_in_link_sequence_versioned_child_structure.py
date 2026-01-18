@@ -1,6 +1,5 @@
 from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from .dated_special_service_ref import DatedSpecialServiceRef
 from .dated_vehicle_journey_ref import DatedVehicleJourneyRef
@@ -33,7 +32,28 @@ class LinkInLinkSequenceVersionedChildStructure(VersionedChildStructure):
     class Meta:
         name = "LinkInLinkSequence_VersionedChildStructure"
 
-    choice: TripRef | TripPatternTripRef | SingleJourneyPathRef | SingleJourneyRef | DatedVehicleJourneyRef | DatedSpecialServiceRef | SpecialServiceRef | TemplateServiceJourneyRef | ServiceJourneyRef | DeadRunRef | VehicleJourneyRef | ServiceJourneyPatternRef | ServicePatternRef | DeadRunJourneyPatternRef | JourneyPatternRef | TimingPatternRef | NavigationPathRef | RouteRef | LinkSequenceRef | None = field(
+    choice: (
+        TripRef
+        | TripPatternTripRef
+        | SingleJourneyPathRef
+        | SingleJourneyRef
+        | DatedVehicleJourneyRef
+        | DatedSpecialServiceRef
+        | SpecialServiceRef
+        | TemplateServiceJourneyRef
+        | ServiceJourneyRef
+        | DeadRunRef
+        | VehicleJourneyRef
+        | ServiceJourneyPatternRef
+        | ServicePatternRef
+        | DeadRunJourneyPatternRef
+        | JourneyPatternRef
+        | TimingPatternRef
+        | NavigationPathRef
+        | RouteRef
+        | LinkSequenceRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",

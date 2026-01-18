@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .client_intent_enum_simple import ClientIntentEnumSimple
 

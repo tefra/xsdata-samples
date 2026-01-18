@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.openlr_area_location_reference import (
@@ -28,13 +27,11 @@ class OpenlrPolygonLocationReference(OpenlrAreaLocationReference):
             "required": True,
         },
     )
-    openlr_polygon_location_reference_extension: ExtensionType | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "openlrPolygonLocationReferenceExtension",
-                "type": "Element",
-                "namespace": "http://datex2.eu/schema/2/2_0",
-            },
-        )
+    openlr_polygon_location_reference_extension: ExtensionType | None = field(
+        default=None,
+        metadata={
+            "name": "openlrPolygonLocationReferenceExtension",
+            "type": "Element",
+            "namespace": "http://datex2.eu/schema/2/2_0",
+        },
     )

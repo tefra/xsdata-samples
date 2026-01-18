@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -124,15 +123,13 @@ class FlexrayTpConfig:
             "required": True,
         },
     )
-    short_name_fragments: FlexrayTpConfig.ShortNameFragments | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "SHORT-NAME-FRAGMENTS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    short_name_fragments: FlexrayTpConfig.ShortNameFragments | None = field(
+        default=None,
+        metadata={
+            "name": "SHORT-NAME-FRAGMENTS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     long_name: MultilanguageLongName | None = field(
         default=None,
@@ -190,7 +187,9 @@ class FlexrayTpConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    communication_cluster_ref: FlexrayTpConfig.CommunicationClusterRef | None = field(
+    communication_cluster_ref: (
+        FlexrayTpConfig.CommunicationClusterRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "COMMUNICATION-CLUSTER-REF",
@@ -222,13 +221,15 @@ class FlexrayTpConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tp_connection_controls: FlexrayTpConfig.TpConnectionControls | None = field(
-        default=None,
-        metadata={
-            "name": "TP-CONNECTION-CONTROLS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    tp_connection_controls: FlexrayTpConfig.TpConnectionControls | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "TP-CONNECTION-CONTROLS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     tp_ecus: FlexrayTpConfig.TpEcus | None = field(
         default=None,

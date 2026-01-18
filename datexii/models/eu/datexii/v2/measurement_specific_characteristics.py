@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.lane_enum import LaneEnum
@@ -69,14 +68,16 @@ class MeasurementSpecificCharacteristics:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    specific_measurement_value_type: MeasuredOrDerivedDataTypeEnum | None = field(
-        default=None,
-        metadata={
-            "name": "specificMeasurementValueType",
-            "type": "Element",
-            "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
-        },
+    specific_measurement_value_type: MeasuredOrDerivedDataTypeEnum | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "specificMeasurementValueType",
+                "type": "Element",
+                "namespace": "http://datex2.eu/schema/2/2_0",
+                "required": True,
+            },
+        )
     )
     specific_vehicle_characteristics: VehicleCharacteristics | None = field(
         default=None,

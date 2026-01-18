@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .software_package_activation_action_enum_simple import (
     SoftwarePackageActivationActionEnumSimple,

@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -112,7 +111,9 @@ class DiagnosticInhibitSourceEventMapping:
             "required": True,
         },
     )
-    short_name_fragments: DiagnosticInhibitSourceEventMapping.ShortNameFragments | None = field(
+    short_name_fragments: (
+        DiagnosticInhibitSourceEventMapping.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -160,13 +161,15 @@ class DiagnosticInhibitSourceEventMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: DiagnosticInhibitSourceEventMapping.Annotations | None = field(
-        default=None,
-        metadata={
-            "name": "ANNOTATIONS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    annotations: DiagnosticInhibitSourceEventMapping.Annotations | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "ANNOTATIONS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     variation_point: VariationPoint | None = field(
         default=None,
@@ -176,7 +179,9 @@ class DiagnosticInhibitSourceEventMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    diagnostic_event_ref: DiagnosticInhibitSourceEventMapping.DiagnosticEventRef | None = field(
+    diagnostic_event_ref: (
+        DiagnosticInhibitSourceEventMapping.DiagnosticEventRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "DIAGNOSTIC-EVENT-REF",
@@ -184,7 +189,9 @@ class DiagnosticInhibitSourceEventMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    event_group_ref: DiagnosticInhibitSourceEventMapping.EventGroupRef | None = field(
+    event_group_ref: (
+        DiagnosticInhibitSourceEventMapping.EventGroupRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "EVENT-GROUP-REF",
@@ -192,7 +199,9 @@ class DiagnosticInhibitSourceEventMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    inhibition_source_ref: DiagnosticInhibitSourceEventMapping.InhibitionSourceRef | None = field(
+    inhibition_source_ref: (
+        DiagnosticInhibitSourceEventMapping.InhibitionSourceRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "INHIBITION-SOURCE-REF",

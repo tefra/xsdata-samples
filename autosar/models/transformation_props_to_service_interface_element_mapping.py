@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -115,7 +114,10 @@ class TransformationPropsToServiceInterfaceElementMapping:
             "required": True,
         },
     )
-    short_name_fragments: TransformationPropsToServiceInterfaceElementMapping.ShortNameFragments | None = field(
+    short_name_fragments: (
+        TransformationPropsToServiceInterfaceElementMapping.ShortNameFragments
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -163,7 +165,9 @@ class TransformationPropsToServiceInterfaceElementMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: TransformationPropsToServiceInterfaceElementMapping.Annotations | None = field(
+    annotations: (
+        TransformationPropsToServiceInterfaceElementMapping.Annotations | None
+    ) = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -171,7 +175,9 @@ class TransformationPropsToServiceInterfaceElementMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    event_refs: TransformationPropsToServiceInterfaceElementMapping.EventRefs | None = field(
+    event_refs: (
+        TransformationPropsToServiceInterfaceElementMapping.EventRefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "EVENT-REFS",
@@ -179,7 +185,9 @@ class TransformationPropsToServiceInterfaceElementMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    field_refs: TransformationPropsToServiceInterfaceElementMapping.FieldRefs | None = field(
+    field_refs: (
+        TransformationPropsToServiceInterfaceElementMapping.FieldRefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "FIELD-REFS",
@@ -187,7 +195,9 @@ class TransformationPropsToServiceInterfaceElementMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    method_refs: TransformationPropsToServiceInterfaceElementMapping.MethodRefs | None = field(
+    method_refs: (
+        TransformationPropsToServiceInterfaceElementMapping.MethodRefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "METHOD-REFS",
@@ -195,7 +205,10 @@ class TransformationPropsToServiceInterfaceElementMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tlv_data_id_definition_refs: TransformationPropsToServiceInterfaceElementMapping.TlvDataIdDefinitionRefs | None = field(
+    tlv_data_id_definition_refs: (
+        TransformationPropsToServiceInterfaceElementMapping.TlvDataIdDefinitionRefs
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "TLV-DATA-ID-DEFINITION-REFS",
@@ -203,7 +216,10 @@ class TransformationPropsToServiceInterfaceElementMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    transformation_props_ref: TransformationPropsToServiceInterfaceElementMapping.TransformationPropsRef | None = field(
+    transformation_props_ref: (
+        TransformationPropsToServiceInterfaceElementMapping.TransformationPropsRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "TRANSFORMATION-PROPS-REF",

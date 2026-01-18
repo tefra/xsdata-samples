@@ -1,6 +1,5 @@
 from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import Union
 
 from .branding import Branding
 from .charging_moment import ChargingMoment
@@ -89,7 +88,80 @@ class TypesOfValueInFrameRelStructure(ContainmentAggregationStructure):
         name = "typesOfValueInFrame_RelStructure"
 
     choice: Iterable[
-        ValueSet | TypeOfFleet | ParkingBayStatus | TypeOfMediumAccessDevice | TypeOfMachineReadability | TypeOfProof | TypeOfConcession | ChargingMoment | TypeOfUsageParameter | TypeOfFareTable | TypeOfPricingRule | PriceUnit | TimingAlgorithmType | PurposeOfJourneyPartition | PointOfInterestClassification | TypeOfParking | TypeOfServiceFeature | Direction | TypeOfSecurityList | TypeOfDriverPermit | PurposeOfEquipmentProfile | TypeOfProductCategory | TypeOfPaymentMethod | ClassOfUse | Submode | OpenTransportMode | TypeOfCodespaceAssignment | TypeOfValidity | PurposeOfGrouping | Branding | DataSource | TypeOfMobilityService | TypeOfRetailDevice | CustomerAccountStatus | TypeOfCustomerAccount | TypeOfFareContractEntry | TypeOfFareContract | TypeOfTravelDocument | TypeOfSalesOfferPackage | TypeOfFareProduct | TypeOfFareStructureElement | TypeOfTariff | TypeOfAccessRightAssignment | TypeOfFareStructureFactor | TypeOfFlexibleService | TypeOfTimeDemandType | TypeOfPassengerInformationEquipment | TypeOfJourneyPattern | TypeOfActivation | TypeOfModeOfOperation | TypeOfPlug | TypeOfBatteryChemistry | TypeOfLine | TypeOfDeliveryVariant | TypeOfNotice | TypeOfCongestion | TypeOfFacility | TypeOfService | TypeOfEquipment | TypeOfFeature | TypeOfLinkSequence | TypeOfPlace | TypeOfTransfer | TypeOfOperation | TypeOfOrganisationPart | TypeOfOrganisation | TypeOfZone | TypeOfLink | TypeOfPoint | TypeOfProjection | TypeOfFrame | TypeOfResponsibilityRole | TypeOfEntity | TypeOfVersion
+        ValueSet
+        | TypeOfFleet
+        | ParkingBayStatus
+        | TypeOfMediumAccessDevice
+        | TypeOfMachineReadability
+        | TypeOfProof
+        | TypeOfConcession
+        | ChargingMoment
+        | TypeOfUsageParameter
+        | TypeOfFareTable
+        | TypeOfPricingRule
+        | PriceUnit
+        | TimingAlgorithmType
+        | PurposeOfJourneyPartition
+        | PointOfInterestClassification
+        | TypeOfParking
+        | TypeOfServiceFeature
+        | Direction
+        | TypeOfSecurityList
+        | TypeOfDriverPermit
+        | PurposeOfEquipmentProfile
+        | TypeOfProductCategory
+        | TypeOfPaymentMethod
+        | ClassOfUse
+        | Submode
+        | OpenTransportMode
+        | TypeOfCodespaceAssignment
+        | TypeOfValidity
+        | PurposeOfGrouping
+        | Branding
+        | DataSource
+        | TypeOfMobilityService
+        | TypeOfRetailDevice
+        | CustomerAccountStatus
+        | TypeOfCustomerAccount
+        | TypeOfFareContractEntry
+        | TypeOfFareContract
+        | TypeOfTravelDocument
+        | TypeOfSalesOfferPackage
+        | TypeOfFareProduct
+        | TypeOfFareStructureElement
+        | TypeOfTariff
+        | TypeOfAccessRightAssignment
+        | TypeOfFareStructureFactor
+        | TypeOfFlexibleService
+        | TypeOfTimeDemandType
+        | TypeOfPassengerInformationEquipment
+        | TypeOfJourneyPattern
+        | TypeOfActivation
+        | TypeOfModeOfOperation
+        | TypeOfPlug
+        | TypeOfBatteryChemistry
+        | TypeOfLine
+        | TypeOfDeliveryVariant
+        | TypeOfNotice
+        | TypeOfCongestion
+        | TypeOfFacility
+        | TypeOfService
+        | TypeOfEquipment
+        | TypeOfFeature
+        | TypeOfLinkSequence
+        | TypeOfPlace
+        | TypeOfTransfer
+        | TypeOfOperation
+        | TypeOfOrganisationPart
+        | TypeOfOrganisation
+        | TypeOfZone
+        | TypeOfLink
+        | TypeOfPoint
+        | TypeOfProjection
+        | TypeOfFrame
+        | TypeOfResponsibilityRole
+        | TypeOfEntity
+        | TypeOfVersion
     ] = field(
         default_factory=list,
         metadata={

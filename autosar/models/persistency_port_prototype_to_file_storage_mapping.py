@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -106,7 +105,9 @@ class PersistencyPortPrototypeToFileStorageMapping:
             "required": True,
         },
     )
-    short_name_fragments: PersistencyPortPrototypeToFileStorageMapping.ShortNameFragments | None = field(
+    short_name_fragments: (
+        PersistencyPortPrototypeToFileStorageMapping.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -154,7 +155,9 @@ class PersistencyPortPrototypeToFileStorageMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: PersistencyPortPrototypeToFileStorageMapping.Annotations | None = field(
+    annotations: (
+        PersistencyPortPrototypeToFileStorageMapping.Annotations | None
+    ) = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -170,17 +173,17 @@ class PersistencyPortPrototypeToFileStorageMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    port_prototype_iref: PortPrototypeInExecutableInstanceRef | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "PORT-PROTOTYPE-IREF",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    port_prototype_iref: PortPrototypeInExecutableInstanceRef | None = field(
+        default=None,
+        metadata={
+            "name": "PORT-PROTOTYPE-IREF",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
-    process_ref: PersistencyPortPrototypeToFileStorageMapping.ProcessRef | None = field(
+    process_ref: (
+        PersistencyPortPrototypeToFileStorageMapping.ProcessRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "PROCESS-REF",
@@ -188,7 +191,9 @@ class PersistencyPortPrototypeToFileStorageMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    file_storage_ref: PersistencyPortPrototypeToFileStorageMapping.FileStorageRef | None = field(
+    file_storage_ref: (
+        PersistencyPortPrototypeToFileStorageMapping.FileStorageRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "FILE-STORAGE-REF",

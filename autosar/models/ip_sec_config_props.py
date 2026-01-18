@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -125,15 +124,13 @@ class IpSecConfigProps:
             "required": True,
         },
     )
-    short_name_fragments: IpSecConfigProps.ShortNameFragments | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "SHORT-NAME-FRAGMENTS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    short_name_fragments: IpSecConfigProps.ShortNameFragments | None = field(
+        default=None,
+        metadata={
+            "name": "SHORT-NAME-FRAGMENTS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     long_name: MultilanguageLongName | None = field(
         default=None,
@@ -191,15 +188,13 @@ class IpSecConfigProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ah_cipher_suite_names: IpSecConfigProps.AhCipherSuiteNames | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "AH-CIPHER-SUITE-NAMES",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    ah_cipher_suite_names: IpSecConfigProps.AhCipherSuiteNames | None = field(
+        default=None,
+        metadata={
+            "name": "AH-CIPHER-SUITE-NAMES",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     dpd_action: IPsecDpdActionEnum | None = field(
         default=None,
@@ -217,13 +212,15 @@ class IpSecConfigProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    esp_cipher_suite_names: IpSecConfigProps.EspCipherSuiteNames | None = field(
-        default=None,
-        metadata={
-            "name": "ESP-CIPHER-SUITE-NAMES",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    esp_cipher_suite_names: IpSecConfigProps.EspCipherSuiteNames | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "ESP-CIPHER-SUITE-NAMES",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     ike_cipher_suite_name: String | None = field(
         default=None,

@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .sw_calibration_access_enum_simple import SwCalibrationAccessEnumSimple
 

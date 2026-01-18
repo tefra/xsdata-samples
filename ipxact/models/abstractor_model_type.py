@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from ipxact.models.abstractor_port_type import AbstractorPortType
 from ipxact.models.component_instantiation_type import (

@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass, field
 
-from xsdata.models.datatype import XmlDate, XmlDateTime, XmlDuration
+from xsdata.models.datatype import XmlDateTime, XmlDuration
 
 from npo.models.image_type_enum import ImageTypeEnum
 from npo.models.license_enum import LicenseEnum

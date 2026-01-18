@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from sdmx_ml.models.agency_schemes_type import AgencySchemesType
 from sdmx_ml.models.categorisations_type import CategorisationsType
@@ -379,13 +378,15 @@ class StructuresType:
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
         },
     )
-    metadata_provision_agreements: MetadataProvisionAgreementsType | None = field(
-        default=None,
-        metadata={
-            "name": "MetadataProvisionAgreements",
-            "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
-        },
+    metadata_provision_agreements: MetadataProvisionAgreementsType | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "MetadataProvisionAgreements",
+                "type": "Element",
+                "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+            },
+        )
     )
     metadata_structures: MetadataStructuresType | None = field(
         default=None,

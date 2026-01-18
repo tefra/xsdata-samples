@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import VariationPoint
 from .bsw_distinguished_partition_subtypes_enum import (
@@ -65,17 +64,17 @@ class BswDirectCallPoint:
             "required": True,
         },
     )
-    short_name_fragments: BswDirectCallPoint.ShortNameFragments | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "SHORT-NAME-FRAGMENTS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    short_name_fragments: BswDirectCallPoint.ShortNameFragments | None = field(
+        default=None,
+        metadata={
+            "name": "SHORT-NAME-FRAGMENTS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
-    context_limitation_refs: BswDirectCallPoint.ContextLimitationRefs | None = field(
+    context_limitation_refs: (
+        BswDirectCallPoint.ContextLimitationRefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "CONTEXT-LIMITATION-REFS",
@@ -99,7 +98,9 @@ class BswDirectCallPoint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    called_from_within_exclusive_area_ref: BswDirectCallPoint.CalledFromWithinExclusiveAreaRef | None = field(
+    called_from_within_exclusive_area_ref: (
+        BswDirectCallPoint.CalledFromWithinExclusiveAreaRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "CALLED-FROM-WITHIN-EXCLUSIVE-AREA-REF",

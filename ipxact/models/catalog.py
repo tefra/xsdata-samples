@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from ipxact.models.description import Description
 from ipxact.models.ipxact_files_type import IpxactFilesType

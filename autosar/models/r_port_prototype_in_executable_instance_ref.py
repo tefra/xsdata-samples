@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .r_port_prototype_subtypes_enum import RPortPrototypeSubtypesEnum
 from .ref import Ref
@@ -36,7 +35,10 @@ class RPortPrototypeInExecutableInstanceRef:
     class Meta:
         name = "R-PORT-PROTOTYPE-IN-EXECUTABLE-INSTANCE-REF"
 
-    context_root_sw_component_prototype_ref: RPortPrototypeInExecutableInstanceRef.ContextRootSwComponentPrototypeRef | None = field(
+    context_root_sw_component_prototype_ref: (
+        RPortPrototypeInExecutableInstanceRef.ContextRootSwComponentPrototypeRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "CONTEXT-ROOT-SW-COMPONENT-PROTOTYPE-REF",
@@ -54,7 +56,9 @@ class RPortPrototypeInExecutableInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    target_r_port_prototype_ref: RPortPrototypeInExecutableInstanceRef.TargetRPortPrototypeRef | None = field(
+    target_r_port_prototype_ref: (
+        RPortPrototypeInExecutableInstanceRef.TargetRPortPrototypeRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "TARGET-R-PORT-PROTOTYPE-REF",

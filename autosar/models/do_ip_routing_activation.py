@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -100,13 +99,15 @@ class DoIpRoutingActivation:
             "required": True,
         },
     )
-    short_name_fragments: DoIpRoutingActivation.ShortNameFragments | None = field(
-        default=None,
-        metadata={
-            "name": "SHORT-NAME-FRAGMENTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    short_name_fragments: DoIpRoutingActivation.ShortNameFragments | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "SHORT-NAME-FRAGMENTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     long_name: MultilanguageLongName | None = field(
         default=None,
@@ -156,7 +157,9 @@ class DoIpRoutingActivation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    do_ip_target_address_refs: DoIpRoutingActivation.DoIpTargetAddressRefs | None = field(
+    do_ip_target_address_refs: (
+        DoIpRoutingActivation.DoIpTargetAddressRefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "DO-IP-TARGET-ADDRESS-REFS",

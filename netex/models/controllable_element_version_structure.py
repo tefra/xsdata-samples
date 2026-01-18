@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .access_right_parameter_assignments_rel_structure import (
     AccessRightParameterAssignmentsRelStructure,
@@ -20,7 +19,9 @@ class ControllableElementVersionStructure(PriceableObjectVersionStructure):
     class Meta:
         name = "ControllableElement_VersionStructure"
 
-    access_right_parameter_assignments: AccessRightParameterAssignmentsRelStructure | None = field(
+    access_right_parameter_assignments: (
+        AccessRightParameterAssignmentsRelStructure | None
+    ) = field(
         default=None,
         metadata={
             "name": "accessRightParameterAssignments",
@@ -28,7 +29,9 @@ class ControllableElementVersionStructure(PriceableObjectVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    controllable_elements_in_sequence: ControllableElementsInSequenceRelStructure | None = field(
+    controllable_elements_in_sequence: (
+        ControllableElementsInSequenceRelStructure | None
+    ) = field(
         default=None,
         metadata={
             "name": "controllableElementsInSequence",

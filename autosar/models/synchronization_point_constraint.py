@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .abstract_event_subtypes_enum import AbstractEventSubtypesEnum
 from .admin_data import (
@@ -119,7 +118,9 @@ class SynchronizationPointConstraint:
             "required": True,
         },
     )
-    short_name_fragments: SynchronizationPointConstraint.ShortNameFragments | None = field(
+    short_name_fragments: (
+        SynchronizationPointConstraint.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -167,15 +168,13 @@ class SynchronizationPointConstraint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: SynchronizationPointConstraint.Annotations | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "ANNOTATIONS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    annotations: SynchronizationPointConstraint.Annotations | None = field(
+        default=None,
+        metadata={
+            "name": "ANNOTATIONS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     trace_refs: SynchronizationPointConstraint.TraceRefs | None = field(
         default=None,
@@ -185,7 +184,9 @@ class SynchronizationPointConstraint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    timing_condition_ref: SynchronizationPointConstraint.TimingConditionRef | None = field(
+    timing_condition_ref: (
+        SynchronizationPointConstraint.TimingConditionRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "TIMING-CONDITION-REF",
@@ -201,15 +202,19 @@ class SynchronizationPointConstraint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    source_eec_refs: SynchronizationPointConstraint.SourceEecRefs | None = field(
-        default=None,
-        metadata={
-            "name": "SOURCE-EEC-REFS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    source_eec_refs: SynchronizationPointConstraint.SourceEecRefs | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "SOURCE-EEC-REFS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
-    source_event_refs: SynchronizationPointConstraint.SourceEventRefs | None = field(
+    source_event_refs: (
+        SynchronizationPointConstraint.SourceEventRefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "SOURCE-EVENT-REFS",
@@ -217,15 +222,19 @@ class SynchronizationPointConstraint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    target_eec_refs: SynchronizationPointConstraint.TargetEecRefs | None = field(
-        default=None,
-        metadata={
-            "name": "TARGET-EEC-REFS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    target_eec_refs: SynchronizationPointConstraint.TargetEecRefs | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "TARGET-EEC-REFS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
-    target_event_refs: SynchronizationPointConstraint.TargetEventRefs | None = field(
+    target_event_refs: (
+        SynchronizationPointConstraint.TargetEventRefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "TARGET-EVENT-REFS",
@@ -280,15 +289,15 @@ class SynchronizationPointConstraint:
 
     @dataclass
     class TraceRefs:
-        trace_ref: list[
-            SynchronizationPointConstraint.TraceRefs.TraceRef
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "TRACE-REF",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        trace_ref: list[SynchronizationPointConstraint.TraceRefs.TraceRef] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "TRACE-REF",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )
 
         @dataclass

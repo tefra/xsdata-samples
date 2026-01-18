@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -100,15 +99,13 @@ class SecOcJobMapping:
             "required": True,
         },
     )
-    short_name_fragments: SecOcJobMapping.ShortNameFragments | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "SHORT-NAME-FRAGMENTS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    short_name_fragments: SecOcJobMapping.ShortNameFragments | None = field(
+        default=None,
+        metadata={
+            "name": "SHORT-NAME-FRAGMENTS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     long_name: MultilanguageLongName | None = field(
         default=None,
@@ -158,7 +155,9 @@ class SecOcJobMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sec_oc_job_requirement_ref: SecOcJobMapping.SecOcJobRequirementRef | None = field(
+    sec_oc_job_requirement_ref: (
+        SecOcJobMapping.SecOcJobRequirementRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "SEC-OC-JOB-REQUIREMENT-REF",

@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -98,7 +97,9 @@ class DiagnosticClearConditionGroup:
             "required": True,
         },
     )
-    short_name_fragments: DiagnosticClearConditionGroup.ShortNameFragments | None = field(
+    short_name_fragments: (
+        DiagnosticClearConditionGroup.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -162,7 +163,9 @@ class DiagnosticClearConditionGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    clear_condition_refs: DiagnosticClearConditionGroup.ClearConditionRefs | None = field(
+    clear_condition_refs: (
+        DiagnosticClearConditionGroup.ClearConditionRefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "CLEAR-CONDITION-REFS",

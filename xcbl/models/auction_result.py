@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from xcbl.models.auction_result_response import AuctionCreateReference
 from xcbl.models.sourcing_result import (
@@ -319,12 +318,14 @@ class AuctionResultHeader:
             "type": "Element",
         },
     )
-    auction_result_list_of_attachment: AuctionResultListOfAttachment | None = field(
-        default=None,
-        metadata={
-            "name": "AuctionResultListOfAttachment",
-            "type": "Element",
-        },
+    auction_result_list_of_attachment: AuctionResultListOfAttachment | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "AuctionResultListOfAttachment",
+                "type": "Element",
+            },
+        )
     )
     auction_result_general_note: AuctionResultGeneralNote | None = field(
         default=None,
@@ -522,7 +523,9 @@ class AuctionResultDetail:
             "type": "Element",
         },
     )
-    list_of_auction_result_detail_attachment: ListOfAuctionResultDetailAttachment | None = field(
+    list_of_auction_result_detail_attachment: (
+        ListOfAuctionResultDetailAttachment | None
+    ) = field(
         default=None,
         metadata={
             "name": "ListOfAuctionResultDetailAttachment",

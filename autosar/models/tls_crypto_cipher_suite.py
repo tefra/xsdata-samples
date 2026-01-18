@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -122,13 +121,15 @@ class TlsCryptoCipherSuite:
             "required": True,
         },
     )
-    short_name_fragments: TlsCryptoCipherSuite.ShortNameFragments | None = field(
-        default=None,
-        metadata={
-            "name": "SHORT-NAME-FRAGMENTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    short_name_fragments: TlsCryptoCipherSuite.ShortNameFragments | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "SHORT-NAME-FRAGMENTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     long_name: MultilanguageLongName | None = field(
         default=None,
@@ -178,15 +179,13 @@ class TlsCryptoCipherSuite:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    authentication_ref: TlsCryptoCipherSuite.AuthenticationRef | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "AUTHENTICATION-REF",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    authentication_ref: TlsCryptoCipherSuite.AuthenticationRef | None = field(
+        default=None,
+        metadata={
+            "name": "AUTHENTICATION-REF",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     certificate_ref: TlsCryptoCipherSuite.CertificateRef | None = field(
         default=None,
@@ -204,25 +203,21 @@ class TlsCryptoCipherSuite:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    key_exchange_refs: TlsCryptoCipherSuite.KeyExchangeRefs | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "KEY-EXCHANGE-REFS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    key_exchange_refs: TlsCryptoCipherSuite.KeyExchangeRefs | None = field(
+        default=None,
+        metadata={
+            "name": "KEY-EXCHANGE-REFS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
-    pre_shared_key_ref: TlsCryptoCipherSuite.PreSharedKeyRef | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "PRE-SHARED-KEY-REF",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    pre_shared_key_ref: TlsCryptoCipherSuite.PreSharedKeyRef | None = field(
+        default=None,
+        metadata={
+            "name": "PRE-SHARED-KEY-REF",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     priority: PositiveInteger | None = field(
         default=None,

@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .log_trace_default_log_level_enum_simple import (
     LogTraceDefaultLogLevelEnumSimple,

@@ -1,6 +1,5 @@
 from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import Union
 
 from .additional_driver_option import AdditionalDriverOption
 from .cancelling import Cancelling
@@ -50,7 +49,39 @@ class UsageParametersInFrameRelStructure(FrameContainmentStructure):
         name = "usageParametersInFrame_RelStructure"
 
     usage_parameter: Iterable[
-        AdditionalDriverOption | RentalOption | RentalPenaltyPolicy | VehiclePoolerProfile | SalesOfferPackageEntitlementRequired | SalesOfferPackageEntitlementGiven | MinimumStay | Interchanging | Suspending | UsageValidityPeriod | FrequencyOfUse | StepLimit | Routing | RoundTrip | LuggageAllowance | EntitlementRequired | EntitlementGiven | EligibilityChangePolicy | CompanionProfile | GroupTicket | CommercialProfile | UserProfile | Subscribing | PenaltyPolicy | ChargingPolicy | Cancelling | Reserving | PurchaseWindow | Transferability | Replacing | Refunding | Exchanging | Reselling
+        AdditionalDriverOption
+        | RentalOption
+        | RentalPenaltyPolicy
+        | VehiclePoolerProfile
+        | SalesOfferPackageEntitlementRequired
+        | SalesOfferPackageEntitlementGiven
+        | MinimumStay
+        | Interchanging
+        | Suspending
+        | UsageValidityPeriod
+        | FrequencyOfUse
+        | StepLimit
+        | Routing
+        | RoundTrip
+        | LuggageAllowance
+        | EntitlementRequired
+        | EntitlementGiven
+        | EligibilityChangePolicy
+        | CompanionProfile
+        | GroupTicket
+        | CommercialProfile
+        | UserProfile
+        | Subscribing
+        | PenaltyPolicy
+        | ChargingPolicy
+        | Cancelling
+        | Reserving
+        | PurchaseWindow
+        | Transferability
+        | Replacing
+        | Refunding
+        | Exchanging
+        | Reselling
     ] = field(
         default_factory=list,
         metadata={

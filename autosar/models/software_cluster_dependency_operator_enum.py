@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .software_cluster_dependency_operator_enum_simple import (
     SoftwareClusterDependencyOperatorEnumSimple,

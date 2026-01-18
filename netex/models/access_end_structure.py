@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .all_modes_enumeration import AllModesEnumeration
 from .place_ref_structure import PlaceRefStructure

@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .ram_block_status_control_enum_simple import (
     RamBlockStatusControlEnumSimple,

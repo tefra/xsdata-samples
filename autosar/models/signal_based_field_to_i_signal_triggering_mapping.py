@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -120,7 +119,9 @@ class SignalBasedFieldToISignalTriggeringMapping:
             "required": True,
         },
     )
-    short_name_fragments: SignalBasedFieldToISignalTriggeringMapping.ShortNameFragments | None = field(
+    short_name_fragments: (
+        SignalBasedFieldToISignalTriggeringMapping.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -168,7 +169,9 @@ class SignalBasedFieldToISignalTriggeringMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: SignalBasedFieldToISignalTriggeringMapping.Annotations | None = field(
+    annotations: (
+        SignalBasedFieldToISignalTriggeringMapping.Annotations | None
+    ) = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -176,7 +179,9 @@ class SignalBasedFieldToISignalTriggeringMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    data_prototype_in_service_interface_ref: DataPrototypeInServiceInterfaceRef | None = field(
+    data_prototype_in_service_interface_ref: (
+        DataPrototypeInServiceInterfaceRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "DATA-PROTOTYPE-IN-SERVICE-INTERFACE-REF",
@@ -192,7 +197,9 @@ class SignalBasedFieldToISignalTriggeringMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    getter_call_signal_ref: SignalBasedFieldToISignalTriggeringMapping.GetterCallSignalRef | None = field(
+    getter_call_signal_ref: (
+        SignalBasedFieldToISignalTriggeringMapping.GetterCallSignalRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "GETTER-CALL-SIGNAL-REF",
@@ -200,7 +207,9 @@ class SignalBasedFieldToISignalTriggeringMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    getter_return_signal_ref: SignalBasedFieldToISignalTriggeringMapping.GetterReturnSignalRef | None = field(
+    getter_return_signal_ref: (
+        SignalBasedFieldToISignalTriggeringMapping.GetterReturnSignalRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "GETTER-RETURN-SIGNAL-REF",
@@ -208,7 +217,10 @@ class SignalBasedFieldToISignalTriggeringMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    notifier_signal_triggering_ref: SignalBasedFieldToISignalTriggeringMapping.NotifierSignalTriggeringRef | None = field(
+    notifier_signal_triggering_ref: (
+        SignalBasedFieldToISignalTriggeringMapping.NotifierSignalTriggeringRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "NOTIFIER-SIGNAL-TRIGGERING-REF",
@@ -216,7 +228,9 @@ class SignalBasedFieldToISignalTriggeringMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    setter_call_signal_ref: SignalBasedFieldToISignalTriggeringMapping.SetterCallSignalRef | None = field(
+    setter_call_signal_ref: (
+        SignalBasedFieldToISignalTriggeringMapping.SetterCallSignalRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "SETTER-CALL-SIGNAL-REF",
@@ -224,7 +238,9 @@ class SignalBasedFieldToISignalTriggeringMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    setter_return_signal_ref: SignalBasedFieldToISignalTriggeringMapping.SetterReturnSignalRef | None = field(
+    setter_return_signal_ref: (
+        SignalBasedFieldToISignalTriggeringMapping.SetterReturnSignalRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "SETTER-RETURN-SIGNAL-REF",

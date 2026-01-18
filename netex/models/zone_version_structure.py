@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from .group_of_points_version_structure import GroupOfPointsVersionStructure
 from .multi_surface import MultiSurface

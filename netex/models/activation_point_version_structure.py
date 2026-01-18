@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .multilingual_string import MultilingualString
 from .point_version_structure import PointVersionStructure

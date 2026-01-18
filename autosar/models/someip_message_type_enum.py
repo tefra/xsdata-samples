@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .someip_message_type_enum_simple import SomeipMessageTypeEnumSimple
 

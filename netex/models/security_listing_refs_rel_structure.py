@@ -1,6 +1,5 @@
 from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import Union
 
 from .customer_account_security_listing_ref import (
     CustomerAccountSecurityListingRef,
@@ -25,7 +24,12 @@ class SecurityListingRefsRelStructure(OneToManyRelationshipStructure):
         name = "SecurityListingRefs_RelStructure"
 
     security_listing_ref: Iterable[
-        TravelDocumentSecurityListingRef | MediumAccessDeviceSecurityListingRef | RetailDeviceSecurityListingRef | CustomerAccountSecurityListingRef | FareContractSecurityListingRef | CustomerSecurityListingRef
+        TravelDocumentSecurityListingRef
+        | MediumAccessDeviceSecurityListingRef
+        | RetailDeviceSecurityListingRef
+        | CustomerAccountSecurityListingRef
+        | FareContractSecurityListingRef
+        | CustomerSecurityListingRef
     ] = field(
         default_factory=list,
         metadata={

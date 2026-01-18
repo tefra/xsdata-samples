@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .adaptive_swc_internal_behavior import AdaptiveSwcInternalBehavior
 from .admin_data import (
@@ -143,7 +142,9 @@ class AdaptiveApplicationSwComponentType:
             "required": True,
         },
     )
-    short_name_fragments: AdaptiveApplicationSwComponentType.ShortNameFragments | None = field(
+    short_name_fragments: (
+        AdaptiveApplicationSwComponentType.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -191,15 +192,13 @@ class AdaptiveApplicationSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: AdaptiveApplicationSwComponentType.Annotations | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "ANNOTATIONS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    annotations: AdaptiveApplicationSwComponentType.Annotations | None = field(
+        default=None,
+        metadata={
+            "name": "ANNOTATIONS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     variation_point: VariationPoint | None = field(
         default=None,
@@ -209,7 +208,9 @@ class AdaptiveApplicationSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    blueprint_policys: AdaptiveApplicationSwComponentType.BlueprintPolicys | None = field(
+    blueprint_policys: (
+        AdaptiveApplicationSwComponentType.BlueprintPolicys | None
+    ) = field(
         default=None,
         metadata={
             "name": "BLUEPRINT-POLICYS",
@@ -225,7 +226,9 @@ class AdaptiveApplicationSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_component_documentations: AdaptiveApplicationSwComponentType.SwComponentDocumentations | None = field(
+    sw_component_documentations: (
+        AdaptiveApplicationSwComponentType.SwComponentDocumentations | None
+    ) = field(
         default=None,
         metadata={
             "name": "SW-COMPONENT-DOCUMENTATIONS",
@@ -233,7 +236,9 @@ class AdaptiveApplicationSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    consistency_needss: AdaptiveApplicationSwComponentType.ConsistencyNeedss | None = field(
+    consistency_needss: (
+        AdaptiveApplicationSwComponentType.ConsistencyNeedss | None
+    ) = field(
         default=None,
         metadata={
             "name": "CONSISTENCY-NEEDSS",
@@ -249,17 +254,17 @@ class AdaptiveApplicationSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    port_groups: AdaptiveApplicationSwComponentType.PortGroups | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "PORT-GROUPS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    port_groups: AdaptiveApplicationSwComponentType.PortGroups | None = field(
+        default=None,
+        metadata={
+            "name": "PORT-GROUPS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
-    unit_group_refs: AdaptiveApplicationSwComponentType.UnitGroupRefs | None = field(
+    unit_group_refs: (
+        AdaptiveApplicationSwComponentType.UnitGroupRefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "UNIT-GROUP-REFS",
@@ -267,7 +272,9 @@ class AdaptiveApplicationSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    internal_behaviors: AdaptiveApplicationSwComponentType.InternalBehaviors | None = field(
+    internal_behaviors: (
+        AdaptiveApplicationSwComponentType.InternalBehaviors | None
+    ) = field(
         default=None,
         metadata={
             "name": "INTERNAL-BEHAVIORS",

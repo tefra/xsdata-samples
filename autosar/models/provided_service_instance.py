@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -154,13 +153,15 @@ class ProvidedServiceInstance:
             "required": True,
         },
     )
-    short_name_fragments: ProvidedServiceInstance.ShortNameFragments | None = field(
-        default=None,
-        metadata={
-            "name": "SHORT-NAME-FRAGMENTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    short_name_fragments: ProvidedServiceInstance.ShortNameFragments | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "SHORT-NAME-FRAGMENTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     long_name: MultilanguageLongName | None = field(
         default=None,
@@ -210,13 +211,15 @@ class ProvidedServiceInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    capability_records: ProvidedServiceInstance.CapabilityRecords | None = field(
-        default=None,
-        metadata={
-            "name": "CAPABILITY-RECORDS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    capability_records: ProvidedServiceInstance.CapabilityRecords | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "CAPABILITY-RECORDS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     major_version: PositiveInteger | None = field(
         default=None,
@@ -226,7 +229,9 @@ class ProvidedServiceInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    method_activation_routing_groups: ProvidedServiceInstance.MethodActivationRoutingGroups | None = field(
+    method_activation_routing_groups: (
+        ProvidedServiceInstance.MethodActivationRoutingGroups | None
+    ) = field(
         default=None,
         metadata={
             "name": "METHOD-ACTIVATION-ROUTING-GROUPS",
@@ -234,13 +239,15 @@ class ProvidedServiceInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    routing_group_refs: ProvidedServiceInstance.RoutingGroupRefs | None = field(
-        default=None,
-        metadata={
-            "name": "ROUTING-GROUP-REFS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    routing_group_refs: ProvidedServiceInstance.RoutingGroupRefs | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "ROUTING-GROUP-REFS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     variation_point: VariationPoint | None = field(
         default=None,
@@ -290,7 +297,9 @@ class ProvidedServiceInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    local_unicast_addresss: ProvidedServiceInstance.LocalUnicastAddresss | None = field(
+    local_unicast_addresss: (
+        ProvidedServiceInstance.LocalUnicastAddresss | None
+    ) = field(
         default=None,
         metadata={
             "name": "LOCAL-UNICAST-ADDRESSS",
@@ -314,7 +323,9 @@ class ProvidedServiceInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    remote_unicast_addresss: ProvidedServiceInstance.RemoteUnicastAddresss | None = field(
+    remote_unicast_addresss: (
+        ProvidedServiceInstance.RemoteUnicastAddresss | None
+    ) = field(
         default=None,
         metadata={
             "name": "REMOTE-UNICAST-ADDRESSS",
@@ -330,7 +341,9 @@ class ProvidedServiceInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sd_server_timer_configs: ProvidedServiceInstance.SdServerTimerConfigs | None = field(
+    sd_server_timer_configs: (
+        ProvidedServiceInstance.SdServerTimerConfigs | None
+    ) = field(
         default=None,
         metadata={
             "name": "SD-SERVER-TIMER-CONFIGS",

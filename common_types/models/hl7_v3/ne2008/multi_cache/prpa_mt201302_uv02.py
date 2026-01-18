@@ -1,6 +1,5 @@
 from dataclasses import dataclass, field
 from enum import Enum
-from typing import Optional, Union
 
 from ..core.datatypes_base import (
     AdExplicit,
@@ -148,7 +147,9 @@ class PrpaMt201302Uv02AdministrativeObservationId(Ii):
     class Meta:
         name = "PRPA_MT201302UV02.AdministrativeObservation.id"
 
-    update_mode: PrpaMt201302Uv02AdministrativeObservationIdUpdateMode | None = field(
+    update_mode: (
+        PrpaMt201302Uv02AdministrativeObservationIdUpdateMode | None
+    ) = field(
         default=None,
         metadata={
             "name": "updateMode",
@@ -569,12 +570,14 @@ class PrpaMt201302Uv02NonPersonLivingSubjectId(Ii):
     class Meta:
         name = "PRPA_MT201302UV02.NonPersonLivingSubject.id"
 
-    update_mode: PrpaMt201302Uv02NonPersonLivingSubjectIdUpdateMode | None = field(
-        default=None,
-        metadata={
-            "name": "updateMode",
-            "type": "Attribute",
-        },
+    update_mode: PrpaMt201302Uv02NonPersonLivingSubjectIdUpdateMode | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "updateMode",
+                "type": "Attribute",
+            },
+        )
     )
 
 
@@ -926,7 +929,23 @@ class PrpaMt201302Uv02BirthPlace:
             "type": "Attribute",
         },
     )
-    class_code: RoleClassMutualRelationship | RoleClassPassive | str | RoleClassOntological | RoleClassPartitive | RoleClassRootValue | XAccommodationRequestorRole | XDocumentEntrySubject | XDocumentSubject | XInformationRecipientRole | XRoleClassAccommodationRequestor | XRoleClassCoverage | XRoleClassCoverageInvoice | XRoleClassCredentialedEntity | XRoleClassPayeePolicyRelationship = field(
+    class_code: (
+        RoleClassMutualRelationship
+        | RoleClassPassive
+        | str
+        | RoleClassOntological
+        | RoleClassPartitive
+        | RoleClassRootValue
+        | XAccommodationRequestorRole
+        | XDocumentEntrySubject
+        | XDocumentSubject
+        | XInformationRecipientRole
+        | XRoleClassAccommodationRequestor
+        | XRoleClassCoverage
+        | XRoleClassCoverageInvoice
+        | XRoleClassCredentialedEntity
+        | XRoleClassPayeePolicyRelationship
+    ) = field(
         init=False,
         default=RoleClassPassive.BIRTHPL,
         metadata={
@@ -1026,7 +1045,23 @@ class PrpaMt201302Uv02CareGiver:
             "type": "Attribute",
         },
     )
-    class_code: RoleClassMutualRelationship | RoleClassPassive | str | RoleClassOntological | RoleClassPartitive | RoleClassRootValue | XAccommodationRequestorRole | XDocumentEntrySubject | XDocumentSubject | XInformationRecipientRole | XRoleClassAccommodationRequestor | XRoleClassCoverage | XRoleClassCoverageInvoice | XRoleClassCredentialedEntity | XRoleClassPayeePolicyRelationship = field(
+    class_code: (
+        RoleClassMutualRelationship
+        | RoleClassPassive
+        | str
+        | RoleClassOntological
+        | RoleClassPartitive
+        | RoleClassRootValue
+        | XAccommodationRequestorRole
+        | XDocumentEntrySubject
+        | XDocumentSubject
+        | XInformationRecipientRole
+        | XRoleClassAccommodationRequestor
+        | XRoleClassCoverage
+        | XRoleClassCoverageInvoice
+        | XRoleClassCredentialedEntity
+        | XRoleClassPayeePolicyRelationship
+    ) = field(
         init=False,
         default=RoleClassMutualRelationship.CAREGIVER,
         metadata={
@@ -1097,7 +1132,23 @@ class PrpaMt201302Uv02Citizen:
             "type": "Attribute",
         },
     )
-    class_code: RoleClassMutualRelationship | RoleClassPassive | str | RoleClassOntological | RoleClassPartitive | RoleClassRootValue | XAccommodationRequestorRole | XDocumentEntrySubject | XDocumentSubject | XInformationRecipientRole | XRoleClassAccommodationRequestor | XRoleClassCoverage | XRoleClassCoverageInvoice | XRoleClassCredentialedEntity | XRoleClassPayeePolicyRelationship = field(
+    class_code: (
+        RoleClassMutualRelationship
+        | RoleClassPassive
+        | str
+        | RoleClassOntological
+        | RoleClassPartitive
+        | RoleClassRootValue
+        | XAccommodationRequestorRole
+        | XDocumentEntrySubject
+        | XDocumentSubject
+        | XInformationRecipientRole
+        | XRoleClassAccommodationRequestor
+        | XRoleClassCoverage
+        | XRoleClassCoverageInvoice
+        | XRoleClassCredentialedEntity
+        | XRoleClassPayeePolicyRelationship
+    ) = field(
         init=False,
         default=RoleClassMutualRelationship.CIT,
         metadata={
@@ -1448,7 +1499,23 @@ class PrpaMt201302Uv02Guardian:
             "type": "Attribute",
         },
     )
-    class_code: RoleClassMutualRelationship | RoleClassPassive | str | RoleClassOntological | RoleClassPartitive | RoleClassRootValue | XAccommodationRequestorRole | XDocumentEntrySubject | XDocumentSubject | XInformationRecipientRole | XRoleClassAccommodationRequestor | XRoleClassCoverage | XRoleClassCoverageInvoice | XRoleClassCredentialedEntity | XRoleClassPayeePolicyRelationship = field(
+    class_code: (
+        RoleClassMutualRelationship
+        | RoleClassPassive
+        | str
+        | RoleClassOntological
+        | RoleClassPartitive
+        | RoleClassRootValue
+        | XAccommodationRequestorRole
+        | XDocumentEntrySubject
+        | XDocumentSubject
+        | XInformationRecipientRole
+        | XRoleClassAccommodationRequestor
+        | XRoleClassCoverage
+        | XRoleClassCoverageInvoice
+        | XRoleClassCredentialedEntity
+        | XRoleClassPayeePolicyRelationship
+    ) = field(
         init=False,
         default=RoleClassMutualRelationship.GUARD,
         metadata={
@@ -1541,7 +1608,23 @@ class PrpaMt201302Uv02Member:
             "type": "Attribute",
         },
     )
-    class_code: RoleClassMutualRelationship | RoleClassPassive | str | RoleClassOntological | RoleClassPartitive | RoleClassRootValue | XAccommodationRequestorRole | XDocumentEntrySubject | XDocumentSubject | XInformationRecipientRole | XRoleClassAccommodationRequestor | XRoleClassCoverage | XRoleClassCoverageInvoice | XRoleClassCredentialedEntity | XRoleClassPayeePolicyRelationship = field(
+    class_code: (
+        RoleClassMutualRelationship
+        | RoleClassPassive
+        | str
+        | RoleClassOntological
+        | RoleClassPartitive
+        | RoleClassRootValue
+        | XAccommodationRequestorRole
+        | XDocumentEntrySubject
+        | XDocumentSubject
+        | XInformationRecipientRole
+        | XRoleClassAccommodationRequestor
+        | XRoleClassCoverage
+        | XRoleClassCoverageInvoice
+        | XRoleClassCredentialedEntity
+        | XRoleClassPayeePolicyRelationship
+    ) = field(
         init=False,
         default=RoleClassPartitive.MBR,
         metadata={
@@ -1622,7 +1705,15 @@ class PrpaMt201302Uv02OtherIds:
             "type": "Attribute",
         },
     )
-    class_code: RoleClassMutualRelationship | RoleClassPassive | str | RoleClassOntological | RoleClassPartitive | RoleClassRootValue | None = field(
+    class_code: (
+        RoleClassMutualRelationship
+        | RoleClassPassive
+        | str
+        | RoleClassOntological
+        | RoleClassPartitive
+        | RoleClassRootValue
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "classCode",
@@ -1678,7 +1769,23 @@ class PrpaMt201302Uv02PatientOfOtherProvider:
             "type": "Attribute",
         },
     )
-    class_code: RoleClassMutualRelationship | RoleClassPassive | str | RoleClassOntological | RoleClassPartitive | RoleClassRootValue | XAccommodationRequestorRole | XDocumentEntrySubject | XDocumentSubject | XInformationRecipientRole | XRoleClassAccommodationRequestor | XRoleClassCoverage | XRoleClassCoverageInvoice | XRoleClassCredentialedEntity | XRoleClassPayeePolicyRelationship = field(
+    class_code: (
+        RoleClassMutualRelationship
+        | RoleClassPassive
+        | str
+        | RoleClassOntological
+        | RoleClassPartitive
+        | RoleClassRootValue
+        | XAccommodationRequestorRole
+        | XDocumentEntrySubject
+        | XDocumentSubject
+        | XInformationRecipientRole
+        | XRoleClassAccommodationRequestor
+        | XRoleClassCoverage
+        | XRoleClassCoverageInvoice
+        | XRoleClassCredentialedEntity
+        | XRoleClassPayeePolicyRelationship
+    ) = field(
         init=False,
         default=RoleClassMutualRelationship.PAT,
         metadata={
@@ -1773,16 +1880,14 @@ class PrpaMt201302Uv02PersonalRelationship:
             "nillable": True,
         },
     )
-    relationship_holder2: CoctMt030007UvNonPersonLivingSubject | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "relationshipHolder2",
-                "type": "Element",
-                "namespace": "urn:hl7-org:v3",
-                "nillable": True,
-            },
-        )
+    relationship_holder2: CoctMt030007UvNonPersonLivingSubject | None = field(
+        default=None,
+        metadata={
+            "name": "relationshipHolder2",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        },
     )
     null_flavor: NullFlavor | None = field(
         default=None,
@@ -1791,7 +1896,23 @@ class PrpaMt201302Uv02PersonalRelationship:
             "type": "Attribute",
         },
     )
-    class_code: RoleClassMutualRelationship | RoleClassPassive | str | RoleClassOntological | RoleClassPartitive | RoleClassRootValue | XAccommodationRequestorRole | XDocumentEntrySubject | XDocumentSubject | XInformationRecipientRole | XRoleClassAccommodationRequestor | XRoleClassCoverage | XRoleClassCoverageInvoice | XRoleClassCredentialedEntity | XRoleClassPayeePolicyRelationship = field(
+    class_code: (
+        RoleClassMutualRelationship
+        | RoleClassPassive
+        | str
+        | RoleClassOntological
+        | RoleClassPartitive
+        | RoleClassRootValue
+        | XAccommodationRequestorRole
+        | XDocumentEntrySubject
+        | XDocumentSubject
+        | XInformationRecipientRole
+        | XRoleClassAccommodationRequestor
+        | XRoleClassCoverage
+        | XRoleClassCoverageInvoice
+        | XRoleClassCredentialedEntity
+        | XRoleClassPayeePolicyRelationship
+    ) = field(
         init=False,
         default=RoleClassMutualRelationship.PRS,
         metadata={
@@ -1892,7 +2013,23 @@ class PrpaMt201302Uv02Student:
             "type": "Attribute",
         },
     )
-    class_code: RoleClassMutualRelationship | RoleClassPassive | str | RoleClassOntological | RoleClassPartitive | RoleClassRootValue | XAccommodationRequestorRole | XDocumentEntrySubject | XDocumentSubject | XInformationRecipientRole | XRoleClassAccommodationRequestor | XRoleClassCoverage | XRoleClassCoverageInvoice | XRoleClassCredentialedEntity | XRoleClassPayeePolicyRelationship = field(
+    class_code: (
+        RoleClassMutualRelationship
+        | RoleClassPassive
+        | str
+        | RoleClassOntological
+        | RoleClassPartitive
+        | RoleClassRootValue
+        | XAccommodationRequestorRole
+        | XDocumentEntrySubject
+        | XDocumentSubject
+        | XInformationRecipientRole
+        | XRoleClassAccommodationRequestor
+        | XRoleClassCoverage
+        | XRoleClassCoverageInvoice
+        | XRoleClassCredentialedEntity
+        | XRoleClassPayeePolicyRelationship
+    ) = field(
         init=False,
         default=RoleClassMutualRelationship.STD,
         metadata={
@@ -2521,7 +2658,9 @@ class PrpaMt201302Uv02Subject4:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    administrative_observation: PrpaMt201302Uv02AdministrativeObservation | None = field(
+    administrative_observation: (
+        PrpaMt201302Uv02AdministrativeObservation | None
+    ) = field(
         default=None,
         metadata={
             "name": "administrativeObservation",
@@ -2553,7 +2692,9 @@ class PrpaMt201302Uv02PatientPatientNonPersonLivingSubject(
     class Meta:
         name = "PRPA_MT201302UV02.Patient.patientNonPersonLivingSubject"
 
-    update_mode: PrpaMt201302Uv02PatientPatientNonPersonLivingSubjectUpdateMode | None = field(
+    update_mode: (
+        PrpaMt201302Uv02PatientPatientNonPersonLivingSubjectUpdateMode | None
+    ) = field(
         default=None,
         metadata={
             "name": "updateMode",
@@ -2567,14 +2708,12 @@ class PrpaMt201302Uv02PatientPatientPerson(PrpaMt201302Uv02Person):
     class Meta:
         name = "PRPA_MT201302UV02.Patient.patientPerson"
 
-    update_mode: PrpaMt201302Uv02PatientPatientPersonUpdateMode | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "updateMode",
-                "type": "Attribute",
-            },
-        )
+    update_mode: PrpaMt201302Uv02PatientPatientPersonUpdateMode | None = field(
+        default=None,
+        metadata={
+            "name": "updateMode",
+            "type": "Attribute",
+        },
     )
 
 
@@ -2671,7 +2810,9 @@ class PrpaMt201302Uv02Patient:
             "nillable": True,
         },
     )
-    patient_non_person_living_subject: PrpaMt201302Uv02PatientPatientNonPersonLivingSubject | None = field(
+    patient_non_person_living_subject: (
+        PrpaMt201302Uv02PatientPatientNonPersonLivingSubject | None
+    ) = field(
         default=None,
         metadata={
             "name": "patientNonPersonLivingSubject",
@@ -2714,7 +2855,23 @@ class PrpaMt201302Uv02Patient:
             "type": "Attribute",
         },
     )
-    class_code: RoleClassMutualRelationship | RoleClassPassive | str | RoleClassOntological | RoleClassPartitive | RoleClassRootValue | XAccommodationRequestorRole | XDocumentEntrySubject | XDocumentSubject | XInformationRecipientRole | XRoleClassAccommodationRequestor | XRoleClassCoverage | XRoleClassCoverageInvoice | XRoleClassCredentialedEntity | XRoleClassPayeePolicyRelationship = field(
+    class_code: (
+        RoleClassMutualRelationship
+        | RoleClassPassive
+        | str
+        | RoleClassOntological
+        | RoleClassPartitive
+        | RoleClassRootValue
+        | XAccommodationRequestorRole
+        | XDocumentEntrySubject
+        | XDocumentSubject
+        | XInformationRecipientRole
+        | XRoleClassAccommodationRequestor
+        | XRoleClassCoverage
+        | XRoleClassCoverageInvoice
+        | XRoleClassCredentialedEntity
+        | XRoleClassPayeePolicyRelationship
+    ) = field(
         init=False,
         default=RoleClassMutualRelationship.PAT,
         metadata={

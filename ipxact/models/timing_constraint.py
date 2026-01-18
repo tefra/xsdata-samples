@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from ipxact.models.delay_value_type import DelayValueType
 from ipxact.models.edge_value_type import EdgeValueType

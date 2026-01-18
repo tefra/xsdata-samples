@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from datexii.models.eu.datexii.v2.accessibility_enum import AccessibilityEnum
 from datexii.models.eu.datexii.v2.dedicated_access import DedicatedAccess

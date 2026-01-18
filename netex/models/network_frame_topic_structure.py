@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import ForwardRef, Optional, Union
+from typing import ForwardRef
 
 from xsdata.models.datatype import XmlDateTime
 
@@ -39,7 +39,14 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 @dataclass
 class NetworkFrameTopicStructure(TopicStructure):
-    choice: EmptyType2 | NetworkFrameTopicStructure.ChangedSince | NetworkFrameTopicStructure.CurrentAt | ClosedTimestampRangeStructure | NetworkFrameTopicStructure.SelectionValidityConditions | None = field(
+    choice: (
+        EmptyType2
+        | NetworkFrameTopicStructure.ChangedSince
+        | NetworkFrameTopicStructure.CurrentAt
+        | ClosedTimestampRangeStructure
+        | NetworkFrameTopicStructure.SelectionValidityConditions
+        | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -85,7 +92,21 @@ class NetworkFrameTopicStructure(TopicStructure):
         },
     )
     choice_1: Iterable[
-        MobilityJourneyFrameRef | MobilityServiceFrameRef | SalesTransactionFrameRef | FareFrameRef | ServiceFrameRef | DriverScheduleFrameRef | VehicleScheduleFrameRef | TimetableFrameRef | SiteFrameRef | InfrastructureFrameRef | GeneralFrameRef | ResourceFrameRef | ServiceCalendarFrameRef | CompositeFrameRef | NetworkFilterByValueStructure
+        MobilityJourneyFrameRef
+        | MobilityServiceFrameRef
+        | SalesTransactionFrameRef
+        | FareFrameRef
+        | ServiceFrameRef
+        | DriverScheduleFrameRef
+        | VehicleScheduleFrameRef
+        | TimetableFrameRef
+        | SiteFrameRef
+        | InfrastructureFrameRef
+        | GeneralFrameRef
+        | ResourceFrameRef
+        | ServiceCalendarFrameRef
+        | CompositeFrameRef
+        | NetworkFilterByValueStructure
     ] = field(
         default_factory=list,
         metadata={
@@ -173,7 +194,12 @@ class NetworkFrameTopicStructure(TopicStructure):
     @dataclass
     class SelectionValidityConditions:
         validity_condition: Iterable[
-            SimpleAvailabilityCondition | ValidDuring | AvailabilityCondition | ValidityRuleParameter | ValidityTrigger | ValidityCondition
+            SimpleAvailabilityCondition
+            | ValidDuring
+            | AvailabilityCondition
+            | ValidityRuleParameter
+            | ValidityTrigger
+            | ValidityCondition
         ] = field(
             default_factory=list,
             metadata={

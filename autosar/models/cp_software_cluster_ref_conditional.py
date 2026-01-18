@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import VariationPoint
 from .cp_software_cluster_subtypes_enum import CpSoftwareClusterSubtypesEnum
@@ -33,7 +32,9 @@ class CpSoftwareClusterRefConditional:
     class Meta:
         name = "CP-SOFTWARE-CLUSTER-REF-CONDITIONAL"
 
-    cp_software_cluster_ref: CpSoftwareClusterRefConditional.CpSoftwareClusterRef | None = field(
+    cp_software_cluster_ref: (
+        CpSoftwareClusterRefConditional.CpSoftwareClusterRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "CP-SOFTWARE-CLUSTER-REF",

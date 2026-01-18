@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -230,7 +229,9 @@ class ISignalIPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    i_pdu_timing_specifications: ISignalIPdu.IPduTimingSpecifications | None = field(
+    i_pdu_timing_specifications: (
+        ISignalIPdu.IPduTimingSpecifications | None
+    ) = field(
         default=None,
         metadata={
             "name": "I-PDU-TIMING-SPECIFICATIONS",
@@ -238,15 +239,13 @@ class ISignalIPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    i_signal_to_pdu_mappings: ISignalIPdu.ISignalToPduMappings | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "I-SIGNAL-TO-PDU-MAPPINGS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    i_signal_to_pdu_mappings: ISignalIPdu.ISignalToPduMappings | None = field(
+        default=None,
+        metadata={
+            "name": "I-SIGNAL-TO-PDU-MAPPINGS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     pdu_counters: ISignalIPdu.PduCounters | None = field(
         default=None,

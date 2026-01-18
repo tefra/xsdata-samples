@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .accessibility_limitations_rel_structure import (
     AccessibilityLimitationsRelStructure,

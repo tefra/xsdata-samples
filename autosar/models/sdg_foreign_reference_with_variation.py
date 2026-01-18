@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -112,7 +111,9 @@ class SdgForeignReferenceWithVariation:
             "required": True,
         },
     )
-    short_name_fragments: SdgForeignReferenceWithVariation.ShortNameFragments | None = field(
+    short_name_fragments: (
+        SdgForeignReferenceWithVariation.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -160,15 +161,13 @@ class SdgForeignReferenceWithVariation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: SdgForeignReferenceWithVariation.Annotations | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "ANNOTATIONS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    annotations: SdgForeignReferenceWithVariation.Annotations | None = field(
+        default=None,
+        metadata={
+            "name": "ANNOTATIONS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     lower_multiplicity: PositiveInteger | None = field(
         default=None,
@@ -218,7 +217,9 @@ class SdgForeignReferenceWithVariation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    valid_binding_times: SdgForeignReferenceWithVariation.ValidBindingTimes | None = field(
+    valid_binding_times: (
+        SdgForeignReferenceWithVariation.ValidBindingTimes | None
+    ) = field(
         default=None,
         metadata={
             "name": "VALID-BINDING-TIMES",

@@ -1,6 +1,5 @@
 from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import Union
 
 from .boarding_position import BoardingPosition
 from .boarding_position_ref import BoardingPositionRef

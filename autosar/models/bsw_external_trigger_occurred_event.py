@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -118,7 +117,9 @@ class BswExternalTriggerOccurredEvent:
             "required": True,
         },
     )
-    short_name_fragments: BswExternalTriggerOccurredEvent.ShortNameFragments | None = field(
+    short_name_fragments: (
+        BswExternalTriggerOccurredEvent.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -166,17 +167,18 @@ class BswExternalTriggerOccurredEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: BswExternalTriggerOccurredEvent.Annotations | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "ANNOTATIONS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    annotations: BswExternalTriggerOccurredEvent.Annotations | None = field(
+        default=None,
+        metadata={
+            "name": "ANNOTATIONS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
-    activation_reason_representation_ref: BswExternalTriggerOccurredEvent.ActivationReasonRepresentationRef | None = field(
+    activation_reason_representation_ref: (
+        BswExternalTriggerOccurredEvent.ActivationReasonRepresentationRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "ACTIVATION-REASON-REPRESENTATION-REF",
@@ -184,7 +186,9 @@ class BswExternalTriggerOccurredEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    context_limitation_refs: BswExternalTriggerOccurredEvent.ContextLimitationRefs | None = field(
+    context_limitation_refs: (
+        BswExternalTriggerOccurredEvent.ContextLimitationRefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "CONTEXT-LIMITATION-REFS",
@@ -192,7 +196,9 @@ class BswExternalTriggerOccurredEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    disabled_in_mode_irefs: BswExternalTriggerOccurredEvent.DisabledInModeIrefs | None = field(
+    disabled_in_mode_irefs: (
+        BswExternalTriggerOccurredEvent.DisabledInModeIrefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "DISABLED-IN-MODE-IREFS",
@@ -200,7 +206,9 @@ class BswExternalTriggerOccurredEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    starts_on_event_ref: BswExternalTriggerOccurredEvent.StartsOnEventRef | None = field(
+    starts_on_event_ref: (
+        BswExternalTriggerOccurredEvent.StartsOnEventRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "STARTS-ON-EVENT-REF",
@@ -216,15 +224,13 @@ class BswExternalTriggerOccurredEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    trigger_ref: BswExternalTriggerOccurredEvent.TriggerRef | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "TRIGGER-REF",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    trigger_ref: BswExternalTriggerOccurredEvent.TriggerRef | None = field(
+        default=None,
+        metadata={
+            "name": "TRIGGER-REF",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     s: str | None = field(
         default=None,

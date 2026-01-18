@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -171,13 +170,15 @@ class DoIpTpConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    communication_cluster_ref: DoIpTpConfig.CommunicationClusterRef | None = field(
-        default=None,
-        metadata={
-            "name": "COMMUNICATION-CLUSTER-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    communication_cluster_ref: DoIpTpConfig.CommunicationClusterRef | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "COMMUNICATION-CLUSTER-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     do_ip_logic_addresss: DoIpTpConfig.DoIpLogicAddresss | None = field(
         default=None,

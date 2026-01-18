@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .abstract_subscription_structure import AbstractSubscriptionStructure
 from .data_object_request import DataObjectRequest

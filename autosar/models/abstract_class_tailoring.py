@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -117,13 +116,15 @@ class AbstractClassTailoring:
             "required": True,
         },
     )
-    short_name_fragments: AbstractClassTailoring.ShortNameFragments | None = field(
-        default=None,
-        metadata={
-            "name": "SHORT-NAME-FRAGMENTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    short_name_fragments: AbstractClassTailoring.ShortNameFragments | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "SHORT-NAME-FRAGMENTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     long_name: MultilanguageLongName | None = field(
         default=None,
@@ -347,13 +348,15 @@ class AggregationTailoring:
             "required": True,
         },
     )
-    short_name_fragments: AggregationTailoring.ShortNameFragments | None = field(
-        default=None,
-        metadata={
-            "name": "SHORT-NAME-FRAGMENTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    short_name_fragments: AggregationTailoring.ShortNameFragments | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "SHORT-NAME-FRAGMENTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     long_name: MultilanguageLongName | None = field(
         default=None,
@@ -592,13 +595,15 @@ class ClassContentConditional:
             "required": True,
         },
     )
-    short_name_fragments: ClassContentConditional.ShortNameFragments | None = field(
-        default=None,
-        metadata={
-            "name": "SHORT-NAME-FRAGMENTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    short_name_fragments: ClassContentConditional.ShortNameFragments | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "SHORT-NAME-FRAGMENTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     long_name: MultilanguageLongName | None = field(
         default=None,
@@ -656,7 +661,9 @@ class ClassContentConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    attribute_tailorings: ClassContentConditional.AttributeTailorings | None = field(
+    attribute_tailorings: (
+        ClassContentConditional.AttributeTailorings | None
+    ) = field(
         default=None,
         metadata={
             "name": "ATTRIBUTE-TAILORINGS",
@@ -664,7 +671,9 @@ class ClassContentConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    constraint_tailorings: ClassContentConditional.ConstraintTailorings | None = field(
+    constraint_tailorings: (
+        ClassContentConditional.ConstraintTailorings | None
+    ) = field(
         default=None,
         metadata={
             "name": "CONSTRAINT-TAILORINGS",
@@ -743,13 +752,15 @@ class ClassContentConditional:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        primitive_attribute_condition: PrimitiveAttributeCondition | None = field(
-            default=None,
-            metadata={
-                "name": "PRIMITIVE-ATTRIBUTE-CONDITION",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        primitive_attribute_condition: PrimitiveAttributeCondition | None = (
+            field(
+                default=None,
+                metadata={
+                    "name": "PRIMITIVE-ATTRIBUTE-CONDITION",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )
         reference_condition: ReferenceCondition | None = field(
             default=None,
@@ -909,13 +920,15 @@ class ConcreteClassTailoring:
             "required": True,
         },
     )
-    short_name_fragments: ConcreteClassTailoring.ShortNameFragments | None = field(
-        default=None,
-        metadata={
-            "name": "SHORT-NAME-FRAGMENTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    short_name_fragments: ConcreteClassTailoring.ShortNameFragments | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "SHORT-NAME-FRAGMENTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     long_name: MultilanguageLongName | None = field(
         default=None,
@@ -1157,15 +1170,13 @@ class ReferenceTailoring:
             "required": True,
         },
     )
-    short_name_fragments: ReferenceTailoring.ShortNameFragments | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "SHORT-NAME-FRAGMENTS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    short_name_fragments: ReferenceTailoring.ShortNameFragments | None = field(
+        default=None,
+        metadata={
+            "name": "SHORT-NAME-FRAGMENTS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     long_name: MultilanguageLongName | None = field(
         default=None,
@@ -1257,7 +1268,9 @@ class ReferenceTailoring:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    unresolved_reference_restriction: UnresolvedReferenceRestrictionWithSeverity | None = field(
+    unresolved_reference_restriction: (
+        UnresolvedReferenceRestrictionWithSeverity | None
+    ) = field(
         default=None,
         metadata={
             "name": "UNRESOLVED-REFERENCE-RESTRICTION",

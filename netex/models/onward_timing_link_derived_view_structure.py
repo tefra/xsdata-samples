@@ -1,6 +1,5 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
-from typing import Optional
 
 from xsdata.models.datatype import XmlDuration
 
@@ -17,7 +16,9 @@ class OnwardTimingLinkDerivedViewStructure(DerivedViewStructure):
     class Meta:
         name = "OnwardTimingLink_DerivedViewStructure"
 
-    timing_link_in_journey_pattern_ref: TimingLinkInJourneyPatternRef | None = field(
+    timing_link_in_journey_pattern_ref: (
+        TimingLinkInJourneyPatternRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "TimingLinkInJourneyPatternRef",

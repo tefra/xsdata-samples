@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from ipxact.models.port_path_segment_type import PortPathSegmentType
 from ipxact.models.range import Range

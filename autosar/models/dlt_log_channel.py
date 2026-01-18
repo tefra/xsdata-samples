@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -237,13 +236,15 @@ class DltLogChannel:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    dlt_log_channel_design_ref: DltLogChannel.DltLogChannelDesignRef | None = field(
-        default=None,
-        metadata={
-            "name": "DLT-LOG-CHANNEL-DESIGN-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    dlt_log_channel_design_ref: DltLogChannel.DltLogChannelDesignRef | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "DLT-LOG-CHANNEL-DESIGN-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     dlt_message_refs: DltLogChannel.DltMessageRefs | None = field(
         default=None,
@@ -253,7 +254,9 @@ class DltLogChannel:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    endpoint_configuration_ref: DltLogChannel.EndpointConfigurationRef | None = field(
+    endpoint_configuration_ref: (
+        DltLogChannel.EndpointConfigurationRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "ENDPOINT-CONFIGURATION-REF",
@@ -293,17 +296,17 @@ class DltLogChannel:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    rx_pdu_triggering_ref: DltLogChannel.RxPduTriggeringRef | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "RX-PDU-TRIGGERING-REF",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    rx_pdu_triggering_ref: DltLogChannel.RxPduTriggeringRef | None = field(
+        default=None,
+        metadata={
+            "name": "RX-PDU-TRIGGERING-REF",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
-    service_instance_to_port_prototype_mapping_ref: DltLogChannel.ServiceInstanceToPortPrototypeMappingRef | None = field(
+    service_instance_to_port_prototype_mapping_ref: (
+        DltLogChannel.ServiceInstanceToPortPrototypeMappingRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "SERVICE-INSTANCE-TO-PORT-PROTOTYPE-MAPPING-REF",
@@ -319,15 +322,13 @@ class DltLogChannel:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tx_pdu_triggering_ref: DltLogChannel.TxPduTriggeringRef | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "TX-PDU-TRIGGERING-REF",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    tx_pdu_triggering_ref: DltLogChannel.TxPduTriggeringRef | None = field(
+        default=None,
+        metadata={
+            "name": "TX-PDU-TRIGGERING-REF",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     s: str | None = field(
         default=None,
@@ -411,7 +412,9 @@ class DltLogChannel:
 
     @dataclass
     class EndpointConfigurationRef(Ref):
-        dest: PlatformModuleEthernetEndpointConfigurationSubtypesEnum | None = field(
+        dest: (
+            PlatformModuleEthernetEndpointConfigurationSubtypesEnum | None
+        ) = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -449,15 +452,13 @@ class DltLogChannel:
 
     @dataclass
     class ServiceInstanceToPortPrototypeMappingRef(Ref):
-        dest: ServiceInstanceToPortPrototypeMappingSubtypesEnum | None = (
-            field(
-                default=None,
-                metadata={
-                    "name": "DEST",
-                    "type": "Attribute",
-                    "required": True,
-                },
-            )
+        dest: ServiceInstanceToPortPrototypeMappingSubtypesEnum | None = field(
+            default=None,
+            metadata={
+                "name": "DEST",
+                "type": "Attribute",
+                "required": True,
+            },
         )
 
     @dataclass

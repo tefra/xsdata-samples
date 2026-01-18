@@ -1,6 +1,5 @@
 from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import Union
 
 from .accommodation import Accommodation
 from .accommodation_ref import AccommodationRef

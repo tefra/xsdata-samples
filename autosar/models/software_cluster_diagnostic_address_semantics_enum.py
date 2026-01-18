@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .software_cluster_diagnostic_address_semantics_enum_simple import (
     SoftwareClusterDiagnosticAddressSemanticsEnumSimple,
@@ -30,13 +29,11 @@ class SoftwareClusterDiagnosticAddressSemanticsEnum:
     class Meta:
         name = "SOFTWARE-CLUSTER-DIAGNOSTIC-ADDRESS-SEMANTICS-ENUM"
 
-    value: SoftwareClusterDiagnosticAddressSemanticsEnumSimple | None = (
-        field(
-            default=None,
-            metadata={
-                "required": True,
-            },
-        )
+    value: SoftwareClusterDiagnosticAddressSemanticsEnumSimple | None = field(
+        default=None,
+        metadata={
+            "required": True,
+        },
     )
     s: str | None = field(
         default=None,

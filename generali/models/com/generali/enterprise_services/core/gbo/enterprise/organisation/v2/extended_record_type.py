@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from generali.models.com.generali.enterprise_services.core.gbo.enterprise.organisation.v2.company_info_type import (
     CompanyInfoType,
@@ -57,13 +56,15 @@ class ExtendedRecordType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v2",
         },
     )
-    duplicated_gunsnumbers: ExtendedRecordTypeDuplicatedGunsnumbers | None = field(
-        default=None,
-        metadata={
-            "name": "DuplicatedGUNSNumbers",
-            "type": "Element",
-            "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v2",
-        },
+    duplicated_gunsnumbers: ExtendedRecordTypeDuplicatedGunsnumbers | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "DuplicatedGUNSNumbers",
+                "type": "Element",
+                "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v2",
+            },
+        )
     )
     party_roles: ExtendedRecordTypePartyRoles | None = field(
         default=None,

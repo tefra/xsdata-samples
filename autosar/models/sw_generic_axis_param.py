@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .numerical_value_variation_point import NumericalValueVariationPoint
 from .ref import Ref
@@ -43,7 +42,9 @@ class SwGenericAxisParam:
     class Meta:
         name = "SW-GENERIC-AXIS-PARAM"
 
-    sw_generic_axis_param_type_ref: SwGenericAxisParam.SwGenericAxisParamTypeRef | None = field(
+    sw_generic_axis_param_type_ref: (
+        SwGenericAxisParam.SwGenericAxisParamTypeRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "SW-GENERIC-AXIS-PARAM-TYPE-REF",

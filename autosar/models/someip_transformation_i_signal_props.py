@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -85,7 +84,10 @@ class SomeipTransformationISignalProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    someip_transformation_i_signal_props_variants: SomeipTransformationISignalProps.SomeipTransformationISignalPropsVariants | None = field(
+    someip_transformation_i_signal_props_variants: (
+        SomeipTransformationISignalProps.SomeipTransformationISignalPropsVariants
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "SOMEIP-TRANSFORMATION-I-SIGNAL-PROPS-VARIANTS",

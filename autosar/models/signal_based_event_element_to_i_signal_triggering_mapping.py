@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -108,7 +107,10 @@ class SignalBasedEventElementToISignalTriggeringMapping:
             "required": True,
         },
     )
-    short_name_fragments: SignalBasedEventElementToISignalTriggeringMapping.ShortNameFragments | None = field(
+    short_name_fragments: (
+        SignalBasedEventElementToISignalTriggeringMapping.ShortNameFragments
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -156,7 +158,9 @@ class SignalBasedEventElementToISignalTriggeringMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: SignalBasedEventElementToISignalTriggeringMapping.Annotations | None = field(
+    annotations: (
+        SignalBasedEventElementToISignalTriggeringMapping.Annotations | None
+    ) = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -164,7 +168,9 @@ class SignalBasedEventElementToISignalTriggeringMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    data_prototype_in_service_interface_ref: DataPrototypeInServiceInterfaceRef | None = field(
+    data_prototype_in_service_interface_ref: (
+        DataPrototypeInServiceInterfaceRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "DATA-PROTOTYPE-IN-SERVICE-INTERFACE-REF",
@@ -180,7 +186,10 @@ class SignalBasedEventElementToISignalTriggeringMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    i_signal_triggering_ref: SignalBasedEventElementToISignalTriggeringMapping.ISignalTriggeringRef | None = field(
+    i_signal_triggering_ref: (
+        SignalBasedEventElementToISignalTriggeringMapping.ISignalTriggeringRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "I-SIGNAL-TRIGGERING-REF",

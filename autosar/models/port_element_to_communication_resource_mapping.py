@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -122,7 +121,9 @@ class PortElementToCommunicationResourceMapping:
             "required": True,
         },
     )
-    short_name_fragments: PortElementToCommunicationResourceMapping.ShortNameFragments | None = field(
+    short_name_fragments: (
+        PortElementToCommunicationResourceMapping.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -170,7 +171,9 @@ class PortElementToCommunicationResourceMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: PortElementToCommunicationResourceMapping.Annotations | None = field(
+    annotations: (
+        PortElementToCommunicationResourceMapping.Annotations | None
+    ) = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -178,17 +181,18 @@ class PortElementToCommunicationResourceMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    client_server_operation_iref: OperationInSystemInstanceRef | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "CLIENT-SERVER-OPERATION-IREF",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    client_server_operation_iref: OperationInSystemInstanceRef | None = field(
+        default=None,
+        metadata={
+            "name": "CLIENT-SERVER-OPERATION-IREF",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
-    communication_resource_ref: PortElementToCommunicationResourceMapping.CommunicationResourceRef | None = field(
+    communication_resource_ref: (
+        PortElementToCommunicationResourceMapping.CommunicationResourceRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "COMMUNICATION-RESOURCE-REF",
@@ -196,7 +200,9 @@ class PortElementToCommunicationResourceMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    mode_declaration_group_prototype_iref: ModeDeclarationGroupPrototypeInSystemInstanceRef | None = field(
+    mode_declaration_group_prototype_iref: (
+        ModeDeclarationGroupPrototypeInSystemInstanceRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "MODE-DECLARATION-GROUP-PROTOTYPE-IREF",
@@ -204,7 +210,9 @@ class PortElementToCommunicationResourceMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    parameter_data_prototype_iref: ParameterDataPrototypeInSystemInstanceRef | None = field(
+    parameter_data_prototype_iref: (
+        ParameterDataPrototypeInSystemInstanceRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "PARAMETER-DATA-PROTOTYPE-IREF",
@@ -220,7 +228,9 @@ class PortElementToCommunicationResourceMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variable_data_prototype_iref: VariableDataPrototypeInSystemInstanceRef | None = field(
+    variable_data_prototype_iref: (
+        VariableDataPrototypeInSystemInstanceRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "VARIABLE-DATA-PROTOTYPE-IREF",

@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .abstract_required_port_prototype_subtypes_enum import (
     AbstractRequiredPortPrototypeSubtypesEnum,
@@ -34,7 +33,9 @@ class RPortInCompositionInstanceRef:
     class Meta:
         name = "R-PORT-IN-COMPOSITION-INSTANCE-REF"
 
-    context_component_ref: RPortInCompositionInstanceRef.ContextComponentRef | None = field(
+    context_component_ref: (
+        RPortInCompositionInstanceRef.ContextComponentRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "CONTEXT-COMPONENT-REF",
@@ -42,13 +43,15 @@ class RPortInCompositionInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    target_r_port_ref: RPortInCompositionInstanceRef.TargetRPortRef | None = field(
-        default=None,
-        metadata={
-            "name": "TARGET-R-PORT-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    target_r_port_ref: RPortInCompositionInstanceRef.TargetRPortRef | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "TARGET-R-PORT-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     s: str | None = field(
         default=None,

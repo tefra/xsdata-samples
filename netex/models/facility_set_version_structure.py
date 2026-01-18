@@ -1,6 +1,5 @@
 from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .accessibility_info_facility_list import AccessibilityInfoFacilityList
 from .accessibility_tool_list import AccessibilityToolList
@@ -72,13 +71,15 @@ class FacilitySetVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    accessibility_info_facility_list: AccessibilityInfoFacilityList | None = field(
-        default=None,
-        metadata={
-            "name": "AccessibilityInfoFacilityList",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        },
+    accessibility_info_facility_list: AccessibilityInfoFacilityList | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "AccessibilityInfoFacilityList",
+                "type": "Element",
+                "namespace": "http://www.netex.org.uk/netex",
+            },
+        )
     )
     assistance_facility_list: AssistanceFacilityList | None = field(
         default=None,
@@ -168,15 +169,13 @@ class FacilitySetVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    passenger_comms_facility_list: PassengerCommsFacilityList | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "PassengerCommsFacilityList",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            },
-        )
+    passenger_comms_facility_list: PassengerCommsFacilityList | None = field(
+        default=None,
+        metadata={
+            "name": "PassengerCommsFacilityList",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        },
     )
     passenger_information_equipment_list: Iterable[
         PassengerInformationEquipmentEnumeration
@@ -189,7 +188,9 @@ class FacilitySetVersionStructure(DataManagedObjectStructure):
             "tokens": True,
         },
     )
-    passenger_information_facility_list: PassengerInformationFacilityList | None = field(
+    passenger_information_facility_list: (
+        PassengerInformationFacilityList | None
+    ) = field(
         default=None,
         metadata={
             "name": "PassengerInformationFacilityList",

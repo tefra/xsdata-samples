@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .onward_vehicle_meeting_link_ref import OnwardVehicleMeetingLinkRef
 from .point_in_journey_pattern_versioned_child_structure import (

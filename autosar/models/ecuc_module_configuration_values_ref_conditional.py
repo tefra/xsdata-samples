@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import VariationPoint
 from .ecuc_module_configuration_values_subtypes_enum import (
@@ -35,7 +34,10 @@ class EcucModuleConfigurationValuesRefConditional:
     class Meta:
         name = "ECUC-MODULE-CONFIGURATION-VALUES-REF-CONDITIONAL"
 
-    ecuc_module_configuration_values_ref: EcucModuleConfigurationValuesRefConditional.EcucModuleConfigurationValuesRef | None = field(
+    ecuc_module_configuration_values_ref: (
+        EcucModuleConfigurationValuesRefConditional.EcucModuleConfigurationValuesRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "ECUC-MODULE-CONFIGURATION-VALUES-REF",

@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -122,13 +121,15 @@ class EvaluatedVariantSet:
             "required": True,
         },
     )
-    short_name_fragments: EvaluatedVariantSet.ShortNameFragments | None = field(
-        default=None,
-        metadata={
-            "name": "SHORT-NAME-FRAGMENTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    short_name_fragments: EvaluatedVariantSet.ShortNameFragments | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "SHORT-NAME-FRAGMENTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     long_name: MultilanguageLongName | None = field(
         default=None,
@@ -194,21 +195,25 @@ class EvaluatedVariantSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    evaluated_element_refs: EvaluatedVariantSet.EvaluatedElementRefs | None = field(
-        default=None,
-        metadata={
-            "name": "EVALUATED-ELEMENT-REFS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    evaluated_element_refs: EvaluatedVariantSet.EvaluatedElementRefs | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "EVALUATED-ELEMENT-REFS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
-    evaluated_variant_refs: EvaluatedVariantSet.EvaluatedVariantRefs | None = field(
-        default=None,
-        metadata={
-            "name": "EVALUATED-VARIANT-REFS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    evaluated_variant_refs: EvaluatedVariantSet.EvaluatedVariantRefs | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "EVALUATED-VARIANT-REFS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     s: str | None = field(
         default=None,

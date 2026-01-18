@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import VariationPoint
 from .idsm_instance_subtypes_enum import IdsmInstanceSubtypesEnum
@@ -33,13 +32,15 @@ class IdsmInstanceRefConditional:
     class Meta:
         name = "IDSM-INSTANCE-REF-CONDITIONAL"
 
-    idsm_instance_ref: IdsmInstanceRefConditional.IdsmInstanceRef | None = field(
-        default=None,
-        metadata={
-            "name": "IDSM-INSTANCE-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    idsm_instance_ref: IdsmInstanceRefConditional.IdsmInstanceRef | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "IDSM-INSTANCE-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     variation_point: VariationPoint | None = field(
         default=None,

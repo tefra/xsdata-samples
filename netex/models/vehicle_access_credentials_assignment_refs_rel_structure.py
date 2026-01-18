@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .one_to_many_relationship_structure import OneToManyRelationshipStructure
 from .vehicle_access_credentials_assignment_ref import (
@@ -16,7 +15,9 @@ class VehicleAccessCredentialsAssignmentRefsRelStructure(
     class Meta:
         name = "vehicleAccessCredentialsAssignmentRefs_RelStructure"
 
-    vehicle_access_credentials_assignment_ref: VehicleAccessCredentialsAssignmentRef | None = field(
+    vehicle_access_credentials_assignment_ref: (
+        VehicleAccessCredentialsAssignmentRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "VehicleAccessCredentialsAssignmentRef",

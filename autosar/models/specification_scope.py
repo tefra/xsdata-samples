@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .specification_document_scope import SpecificationDocumentScope
 
@@ -31,7 +30,9 @@ class SpecificationScope:
     class Meta:
         name = "SPECIFICATION-SCOPE"
 
-    specification_document_scopes: SpecificationScope.SpecificationDocumentScopes | None = field(
+    specification_document_scopes: (
+        SpecificationScope.SpecificationDocumentScopes | None
+    ) = field(
         default=None,
         metadata={
             "name": "SPECIFICATION-DOCUMENT-SCOPES",

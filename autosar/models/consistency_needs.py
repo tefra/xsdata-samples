@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -135,15 +134,13 @@ class ConsistencyNeeds:
             "required": True,
         },
     )
-    short_name_fragments: ConsistencyNeeds.ShortNameFragments | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "SHORT-NAME-FRAGMENTS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    short_name_fragments: ConsistencyNeeds.ShortNameFragments | None = field(
+        default=None,
+        metadata={
+            "name": "SHORT-NAME-FRAGMENTS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     long_name: MultilanguageLongName | None = field(
         default=None,
@@ -209,7 +206,9 @@ class ConsistencyNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    dpg_does_not_require_coherencys: ConsistencyNeeds.DpgDoesNotRequireCoherencys | None = field(
+    dpg_does_not_require_coherencys: (
+        ConsistencyNeeds.DpgDoesNotRequireCoherencys | None
+    ) = field(
         default=None,
         metadata={
             "name": "DPG-DOES-NOT-REQUIRE-COHERENCYS",
@@ -217,15 +216,19 @@ class ConsistencyNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    dpg_requires_coherencys: ConsistencyNeeds.DpgRequiresCoherencys | None = field(
-        default=None,
-        metadata={
-            "name": "DPG-REQUIRES-COHERENCYS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    dpg_requires_coherencys: ConsistencyNeeds.DpgRequiresCoherencys | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "DPG-REQUIRES-COHERENCYS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
-    reg_does_not_require_stabilitys: ConsistencyNeeds.RegDoesNotRequireStabilitys | None = field(
+    reg_does_not_require_stabilitys: (
+        ConsistencyNeeds.RegDoesNotRequireStabilitys | None
+    ) = field(
         default=None,
         metadata={
             "name": "REG-DOES-NOT-REQUIRE-STABILITYS",
@@ -233,13 +236,15 @@ class ConsistencyNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    reg_requires_stabilitys: ConsistencyNeeds.RegRequiresStabilitys | None = field(
-        default=None,
-        metadata={
-            "name": "REG-REQUIRES-STABILITYS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    reg_requires_stabilitys: ConsistencyNeeds.RegRequiresStabilitys | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "REG-REQUIRES-STABILITYS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     variation_point: VariationPoint | None = field(
         default=None,

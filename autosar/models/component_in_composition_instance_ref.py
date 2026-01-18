@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .ref import Ref
 from .sw_component_prototype_subtypes_enum import (
@@ -45,7 +44,9 @@ class ComponentInCompositionInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    target_component_ref: ComponentInCompositionInstanceRef.TargetComponentRef | None = field(
+    target_component_ref: (
+        ComponentInCompositionInstanceRef.TargetComponentRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "TARGET-COMPONENT-REF",

@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -176,13 +175,15 @@ class EcucChoiceContainerDef:
             "required": True,
         },
     )
-    short_name_fragments: EcucChoiceContainerDef.ShortNameFragments | None = field(
-        default=None,
-        metadata={
-            "name": "SHORT-NAME-FRAGMENTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    short_name_fragments: EcucChoiceContainerDef.ShortNameFragments | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "SHORT-NAME-FRAGMENTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     long_name: MultilanguageLongName | None = field(
         default=None,
@@ -232,7 +233,9 @@ class EcucChoiceContainerDef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    related_trace_item_ref: EcucChoiceContainerDef.RelatedTraceItemRef | None = field(
+    related_trace_item_ref: (
+        EcucChoiceContainerDef.RelatedTraceItemRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "RELATED-TRACE-ITEM-REF",
@@ -240,7 +243,9 @@ class EcucChoiceContainerDef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ecuc_validation_conds: EcucChoiceContainerDef.EcucValidationConds | None = field(
+    ecuc_validation_conds: (
+        EcucChoiceContainerDef.EcucValidationConds | None
+    ) = field(
         default=None,
         metadata={
             "name": "ECUC-VALIDATION-CONDS",
@@ -288,15 +293,19 @@ class EcucChoiceContainerDef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    destination_uri_refs: EcucChoiceContainerDef.DestinationUriRefs | None = field(
-        default=None,
-        metadata={
-            "name": "DESTINATION-URI-REFS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    destination_uri_refs: EcucChoiceContainerDef.DestinationUriRefs | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "DESTINATION-URI-REFS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
-    multiplicity_config_classes: EcucChoiceContainerDef.MultiplicityConfigClasses | None = field(
+    multiplicity_config_classes: (
+        EcucChoiceContainerDef.MultiplicityConfigClasses | None
+    ) = field(
         default=None,
         metadata={
             "name": "MULTIPLICITY-CONFIG-CLASSES",
@@ -442,15 +451,13 @@ class EcucChoiceContainerDef:
 
     @dataclass
     class Choices:
-        ecuc_param_conf_container_def: list[EcucParamConfContainerDef] = (
-            field(
-                default_factory=list,
-                metadata={
-                    "name": "ECUC-PARAM-CONF-CONTAINER-DEF",
-                    "type": "Element",
-                    "namespace": "http://autosar.org/schema/r4.0",
-                },
-            )
+        ecuc_param_conf_container_def: list[EcucParamConfContainerDef] = field(
+            default_factory=list,
+            metadata={
+                "name": "ECUC-PARAM-CONF-CONTAINER-DEF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
         )
 
 
@@ -588,7 +595,9 @@ class EcucParamConfContainerDef:
             "required": True,
         },
     )
-    short_name_fragments: EcucParamConfContainerDef.ShortNameFragments | None = field(
+    short_name_fragments: (
+        EcucParamConfContainerDef.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -644,7 +653,9 @@ class EcucParamConfContainerDef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    related_trace_item_ref: EcucParamConfContainerDef.RelatedTraceItemRef | None = field(
+    related_trace_item_ref: (
+        EcucParamConfContainerDef.RelatedTraceItemRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "RELATED-TRACE-ITEM-REF",
@@ -652,7 +663,9 @@ class EcucParamConfContainerDef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ecuc_validation_conds: EcucParamConfContainerDef.EcucValidationConds | None = field(
+    ecuc_validation_conds: (
+        EcucParamConfContainerDef.EcucValidationConds | None
+    ) = field(
         default=None,
         metadata={
             "name": "ECUC-VALIDATION-CONDS",
@@ -700,7 +713,9 @@ class EcucParamConfContainerDef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    destination_uri_refs: EcucParamConfContainerDef.DestinationUriRefs | None = field(
+    destination_uri_refs: (
+        EcucParamConfContainerDef.DestinationUriRefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "DESTINATION-URI-REFS",
@@ -708,7 +723,9 @@ class EcucParamConfContainerDef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    multiplicity_config_classes: EcucParamConfContainerDef.MultiplicityConfigClasses | None = field(
+    multiplicity_config_classes: (
+        EcucParamConfContainerDef.MultiplicityConfigClasses | None
+    ) = field(
         default=None,
         metadata={
             "name": "MULTIPLICITY-CONFIG-CLASSES",
@@ -764,15 +781,13 @@ class EcucParamConfContainerDef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sub_containers: EcucParamConfContainerDef.SubContainers | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "SUB-CONTAINERS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    sub_containers: EcucParamConfContainerDef.SubContainers | None = field(
+        default=None,
+        metadata={
+            "name": "SUB-CONTAINERS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     s: str | None = field(
         default=None,
@@ -1018,13 +1033,11 @@ class EcucParamConfContainerDef:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        ecuc_param_conf_container_def: list[EcucParamConfContainerDef] = (
-            field(
-                default_factory=list,
-                metadata={
-                    "name": "ECUC-PARAM-CONF-CONTAINER-DEF",
-                    "type": "Element",
-                    "namespace": "http://autosar.org/schema/r4.0",
-                },
-            )
+        ecuc_param_conf_container_def: list[EcucParamConfContainerDef] = field(
+            default_factory=list,
+            metadata={
+                "name": "ECUC-PARAM-CONF-CONTAINER-DEF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
         )

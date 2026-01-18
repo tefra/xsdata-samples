@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import VariationPoint
 from .ecu_instance_subtypes_enum import EcuInstanceSubtypesEnum
@@ -33,15 +32,13 @@ class EcuInstanceRefConditional:
     class Meta:
         name = "ECU-INSTANCE-REF-CONDITIONAL"
 
-    ecu_instance_ref: EcuInstanceRefConditional.EcuInstanceRef | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "ECU-INSTANCE-REF",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    ecu_instance_ref: EcuInstanceRefConditional.EcuInstanceRef | None = field(
+        default=None,
+        metadata={
+            "name": "ECU-INSTANCE-REF",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     variation_point: VariationPoint | None = field(
         default=None,

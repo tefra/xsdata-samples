@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from ..core.datatypes_base import (
     AdExplicit,
@@ -738,7 +737,15 @@ class CoctMt220300UvRole:
             "type": "Attribute",
         },
     )
-    class_code: RoleClassMutualRelationship | RoleClassPassive | str | RoleClassOntological | RoleClassPartitive | RoleClassRootValue | None = field(
+    class_code: (
+        RoleClassMutualRelationship
+        | RoleClassPassive
+        | str
+        | RoleClassOntological
+        | RoleClassPartitive
+        | RoleClassRootValue
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "classCode",
@@ -1080,7 +1087,23 @@ class CoctMt220300UvTerritorialAuthority:
             "type": "Attribute",
         },
     )
-    class_code: RoleClassMutualRelationship | RoleClassPassive | str | RoleClassOntological | RoleClassPartitive | RoleClassRootValue | XAccommodationRequestorRole | XDocumentEntrySubject | XDocumentSubject | XInformationRecipientRole | XRoleClassAccommodationRequestor | XRoleClassCoverage | XRoleClassCoverageInvoice | XRoleClassCredentialedEntity | XRoleClassPayeePolicyRelationship = field(
+    class_code: (
+        RoleClassMutualRelationship
+        | RoleClassPassive
+        | str
+        | RoleClassOntological
+        | RoleClassPartitive
+        | RoleClassRootValue
+        | XAccommodationRequestorRole
+        | XDocumentEntrySubject
+        | XDocumentSubject
+        | XInformationRecipientRole
+        | XRoleClassAccommodationRequestor
+        | XRoleClassCoverage
+        | XRoleClassCoverageInvoice
+        | XRoleClassCredentialedEntity
+        | XRoleClassPayeePolicyRelationship
+    ) = field(
         init=False,
         default=RoleClassPassive.TERR,
         metadata={
@@ -1128,16 +1151,14 @@ class CoctMt220300UvAuthor:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    territorial_authority: CoctMt220300UvTerritorialAuthority | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "territorialAuthority",
-                "type": "Element",
-                "namespace": "urn:hl7-org:v3",
-                "required": True,
-            },
-        )
+    territorial_authority: CoctMt220300UvTerritorialAuthority | None = field(
+        default=None,
+        metadata={
+            "name": "territorialAuthority",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        },
     )
     null_flavor: NullFlavor | None = field(
         default=None,
@@ -1910,16 +1931,14 @@ class CoctMt220300UvContent:
             "nillable": True,
         },
     )
-    container_packaged_medicine: CoctMt220300UvPackagedMedicine | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "containerPackagedMedicine",
-                "type": "Element",
-                "namespace": "urn:hl7-org:v3",
-                "required": True,
-            },
-        )
+    container_packaged_medicine: CoctMt220300UvPackagedMedicine | None = field(
+        default=None,
+        metadata={
+            "name": "containerPackagedMedicine",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        },
     )
     subject_of1: list[CoctMt220300UvSubject14] = field(
         default_factory=list,
@@ -1946,7 +1965,23 @@ class CoctMt220300UvContent:
             "type": "Attribute",
         },
     )
-    class_code: RoleClassMutualRelationship | RoleClassPassive | str | RoleClassOntological | RoleClassPartitive | RoleClassRootValue | XAccommodationRequestorRole | XDocumentEntrySubject | XDocumentSubject | XInformationRecipientRole | XRoleClassAccommodationRequestor | XRoleClassCoverage | XRoleClassCoverageInvoice | XRoleClassCredentialedEntity | XRoleClassPayeePolicyRelationship = field(
+    class_code: (
+        RoleClassMutualRelationship
+        | RoleClassPassive
+        | str
+        | RoleClassOntological
+        | RoleClassPartitive
+        | RoleClassRootValue
+        | XAccommodationRequestorRole
+        | XDocumentEntrySubject
+        | XDocumentSubject
+        | XInformationRecipientRole
+        | XRoleClassAccommodationRequestor
+        | XRoleClassCoverage
+        | XRoleClassCoverageInvoice
+        | XRoleClassCredentialedEntity
+        | XRoleClassPayeePolicyRelationship
+    ) = field(
         init=False,
         default=RoleClassPartitive.CONT,
         metadata={
@@ -1994,16 +2029,14 @@ class CoctMt220300UvSubContent:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    contained_packaged_medicine: CoctMt220300UvPackagedMedicine | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "containedPackagedMedicine",
-                "type": "Element",
-                "namespace": "urn:hl7-org:v3",
-                "nillable": True,
-            },
-        )
+    contained_packaged_medicine: CoctMt220300UvPackagedMedicine | None = field(
+        default=None,
+        metadata={
+            "name": "containedPackagedMedicine",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        },
     )
     null_flavor: NullFlavor | None = field(
         default=None,
@@ -2012,7 +2045,23 @@ class CoctMt220300UvSubContent:
             "type": "Attribute",
         },
     )
-    class_code: RoleClassMutualRelationship | RoleClassPassive | str | RoleClassOntological | RoleClassPartitive | RoleClassRootValue | XAccommodationRequestorRole | XDocumentEntrySubject | XDocumentSubject | XInformationRecipientRole | XRoleClassAccommodationRequestor | XRoleClassCoverage | XRoleClassCoverageInvoice | XRoleClassCredentialedEntity | XRoleClassPayeePolicyRelationship = field(
+    class_code: (
+        RoleClassMutualRelationship
+        | RoleClassPassive
+        | str
+        | RoleClassOntological
+        | RoleClassPartitive
+        | RoleClassRootValue
+        | XAccommodationRequestorRole
+        | XDocumentEntrySubject
+        | XDocumentSubject
+        | XInformationRecipientRole
+        | XRoleClassAccommodationRequestor
+        | XRoleClassCoverage
+        | XRoleClassCoverageInvoice
+        | XRoleClassCredentialedEntity
+        | XRoleClassPayeePolicyRelationship
+    ) = field(
         init=False,
         default=RoleClassPartitive.CONT,
         metadata={
@@ -2060,16 +2109,14 @@ class CoctMt220300UvSuperContent:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    container_packaged_medicine: CoctMt220300UvPackagedMedicine | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "containerPackagedMedicine",
-                "type": "Element",
-                "namespace": "urn:hl7-org:v3",
-                "required": True,
-            },
-        )
+    container_packaged_medicine: CoctMt220300UvPackagedMedicine | None = field(
+        default=None,
+        metadata={
+            "name": "containerPackagedMedicine",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        },
     )
     null_flavor: NullFlavor | None = field(
         default=None,
@@ -2078,7 +2125,23 @@ class CoctMt220300UvSuperContent:
             "type": "Attribute",
         },
     )
-    class_code: RoleClassMutualRelationship | RoleClassPassive | str | RoleClassOntological | RoleClassPartitive | RoleClassRootValue | XAccommodationRequestorRole | XDocumentEntrySubject | XDocumentSubject | XInformationRecipientRole | XRoleClassAccommodationRequestor | XRoleClassCoverage | XRoleClassCoverageInvoice | XRoleClassCredentialedEntity | XRoleClassPayeePolicyRelationship = field(
+    class_code: (
+        RoleClassMutualRelationship
+        | RoleClassPassive
+        | str
+        | RoleClassOntological
+        | RoleClassPartitive
+        | RoleClassRootValue
+        | XAccommodationRequestorRole
+        | XDocumentEntrySubject
+        | XDocumentSubject
+        | XInformationRecipientRole
+        | XRoleClassAccommodationRequestor
+        | XRoleClassCoverage
+        | XRoleClassCoverageInvoice
+        | XRoleClassCredentialedEntity
+        | XRoleClassPayeePolicyRelationship
+    ) = field(
         init=False,
         default=RoleClassPartitive.CONT,
         metadata={

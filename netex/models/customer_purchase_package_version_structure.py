@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from .customer_account_ref import CustomerAccountRef
 from .customer_purchase_package_elements_rel_structure import (
@@ -84,7 +83,9 @@ class CustomerPurchasePackageVersionStructure(PriceableObjectVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    customer_purchase_package_status: CustomerPurchasePackageStatusEnumeration | None = field(
+    customer_purchase_package_status: (
+        CustomerPurchasePackageStatusEnumeration | None
+    ) = field(
         default=None,
         metadata={
             "name": "CustomerPurchasePackageStatus",
@@ -92,7 +93,9 @@ class CustomerPurchasePackageVersionStructure(PriceableObjectVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    travel_specification_summary_view: TravelSpecificationSummaryView | None = field(
+    travel_specification_summary_view: (
+        TravelSpecificationSummaryView | None
+    ) = field(
         default=None,
         metadata={
             "name": "TravelSpecificationSummaryView",
@@ -108,7 +111,9 @@ class CustomerPurchasePackageVersionStructure(PriceableObjectVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    validity_parameter_assignments: CustomerPurchaseParameterAssignmentsRelStructure | None = field(
+    validity_parameter_assignments: (
+        CustomerPurchaseParameterAssignmentsRelStructure | None
+    ) = field(
         default=None,
         metadata={
             "name": "validityParameterAssignments",
@@ -126,7 +131,9 @@ class CustomerPurchasePackageVersionStructure(PriceableObjectVersionStructure):
             },
         )
     )
-    customer_purchase_package_elements: CustomerPurchasePackageElementsRelStructure | None = field(
+    customer_purchase_package_elements: (
+        CustomerPurchasePackageElementsRelStructure | None
+    ) = field(
         default=None,
         metadata={
             "name": "customerPurchasePackageElements",
@@ -165,7 +172,9 @@ class CustomerPurchasePackageVersionStructure(PriceableObjectVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    medium_access_device_ref: MobileDeviceRef | EmvCardRef | SmartcardRef | None = field(
+    medium_access_device_ref: (
+        MobileDeviceRef | EmvCardRef | SmartcardRef | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",

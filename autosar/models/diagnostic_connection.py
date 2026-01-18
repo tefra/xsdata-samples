@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -103,13 +102,15 @@ class DiagnosticConnection:
             "required": True,
         },
     )
-    short_name_fragments: DiagnosticConnection.ShortNameFragments | None = field(
-        default=None,
-        metadata={
-            "name": "SHORT-NAME-FRAGMENTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    short_name_fragments: DiagnosticConnection.ShortNameFragments | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "SHORT-NAME-FRAGMENTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     long_name: MultilanguageLongName | None = field(
         default=None,
@@ -167,7 +168,9 @@ class DiagnosticConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    functional_request_refs: DiagnosticConnection.FunctionalRequestRefs | None = field(
+    functional_request_refs: (
+        DiagnosticConnection.FunctionalRequestRefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "FUNCTIONAL-REQUEST-REFS",
@@ -175,7 +178,9 @@ class DiagnosticConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    periodic_response_uudt_refs: DiagnosticConnection.PeriodicResponseUudtRefs | None = field(
+    periodic_response_uudt_refs: (
+        DiagnosticConnection.PeriodicResponseUudtRefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "PERIODIC-RESPONSE-UUDT-REFS",
@@ -183,21 +188,25 @@ class DiagnosticConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    physical_request_ref: DiagnosticConnection.PhysicalRequestRef | None = field(
-        default=None,
-        metadata={
-            "name": "PHYSICAL-REQUEST-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    physical_request_ref: DiagnosticConnection.PhysicalRequestRef | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "PHYSICAL-REQUEST-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
-    response_on_event_ref: DiagnosticConnection.ResponseOnEventRef | None = field(
-        default=None,
-        metadata={
-            "name": "RESPONSE-ON-EVENT-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    response_on_event_ref: DiagnosticConnection.ResponseOnEventRef | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "RESPONSE-ON-EVENT-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     response_ref: DiagnosticConnection.ResponseRef | None = field(
         default=None,

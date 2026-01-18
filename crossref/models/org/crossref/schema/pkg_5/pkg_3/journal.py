@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from crossref.models.org.crossref.schema.pkg_5.pkg_3.journal_article import (
     JournalArticle,

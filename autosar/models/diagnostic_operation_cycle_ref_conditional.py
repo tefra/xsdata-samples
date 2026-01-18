@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import VariationPoint
 from .diagnostic_operation_cycle_subtypes_enum import (
@@ -35,7 +34,10 @@ class DiagnosticOperationCycleRefConditional:
     class Meta:
         name = "DIAGNOSTIC-OPERATION-CYCLE-REF-CONDITIONAL"
 
-    diagnostic_operation_cycle_ref: DiagnosticOperationCycleRefConditional.DiagnosticOperationCycleRef | None = field(
+    diagnostic_operation_cycle_ref: (
+        DiagnosticOperationCycleRefConditional.DiagnosticOperationCycleRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "DIAGNOSTIC-OPERATION-CYCLE-REF",

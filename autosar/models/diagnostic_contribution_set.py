@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -117,7 +116,9 @@ class DiagnosticContributionSet:
             "required": True,
         },
     )
-    short_name_fragments: DiagnosticContributionSet.ShortNameFragments | None = field(
+    short_name_fragments: (
+        DiagnosticContributionSet.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -189,13 +190,15 @@ class DiagnosticContributionSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ecu_instance_refs: DiagnosticContributionSet.EcuInstanceRefs | None = field(
-        default=None,
-        metadata={
-            "name": "ECU-INSTANCE-REFS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    ecu_instance_refs: DiagnosticContributionSet.EcuInstanceRefs | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "ECU-INSTANCE-REFS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     elements: DiagnosticContributionSet.Elements | None = field(
         default=None,
@@ -205,15 +208,13 @@ class DiagnosticContributionSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    service_tables: DiagnosticContributionSet.ServiceTables | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "SERVICE-TABLES",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    service_tables: DiagnosticContributionSet.ServiceTables | None = field(
+        default=None,
+        metadata={
+            "name": "SERVICE-TABLES",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     s: str | None = field(
         default=None,

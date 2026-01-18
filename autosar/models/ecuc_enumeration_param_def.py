@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -194,13 +193,15 @@ class EcucEnumerationParamDef:
             "required": True,
         },
     )
-    short_name_fragments: EcucEnumerationParamDef.ShortNameFragments | None = field(
-        default=None,
-        metadata={
-            "name": "SHORT-NAME-FRAGMENTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    short_name_fragments: EcucEnumerationParamDef.ShortNameFragments | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "SHORT-NAME-FRAGMENTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     long_name: MultilanguageLongName | None = field(
         default=None,
@@ -250,7 +251,9 @@ class EcucEnumerationParamDef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    related_trace_item_ref: EcucEnumerationParamDef.RelatedTraceItemRef | None = field(
+    related_trace_item_ref: (
+        EcucEnumerationParamDef.RelatedTraceItemRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "RELATED-TRACE-ITEM-REF",
@@ -258,7 +261,9 @@ class EcucEnumerationParamDef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ecuc_validation_conds: EcucEnumerationParamDef.EcucValidationConds | None = field(
+    ecuc_validation_conds: (
+        EcucEnumerationParamDef.EcucValidationConds | None
+    ) = field(
         default=None,
         metadata={
             "name": "ECUC-VALIDATION-CONDS",
@@ -306,15 +311,19 @@ class EcucEnumerationParamDef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    configuration_class_affection: EcucConfigurationClassAffection | None = field(
-        default=None,
-        metadata={
-            "name": "CONFIGURATION-CLASS-AFFECTION",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    configuration_class_affection: EcucConfigurationClassAffection | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "CONFIGURATION-CLASS-AFFECTION",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
-    implementation_config_classes: EcucEnumerationParamDef.ImplementationConfigClasses | None = field(
+    implementation_config_classes: (
+        EcucEnumerationParamDef.ImplementationConfigClasses | None
+    ) = field(
         default=None,
         metadata={
             "name": "IMPLEMENTATION-CONFIG-CLASSES",
@@ -322,7 +331,9 @@ class EcucEnumerationParamDef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    multiplicity_config_classes: EcucEnumerationParamDef.MultiplicityConfigClasses | None = field(
+    multiplicity_config_classes: (
+        EcucEnumerationParamDef.MultiplicityConfigClasses | None
+    ) = field(
         default=None,
         metadata={
             "name": "MULTIPLICITY-CONFIG-CLASSES",
@@ -362,13 +373,15 @@ class EcucEnumerationParamDef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    value_config_classes: EcucEnumerationParamDef.ValueConfigClasses | None = field(
-        default=None,
-        metadata={
-            "name": "VALUE-CONFIG-CLASSES",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    value_config_classes: EcucEnumerationParamDef.ValueConfigClasses | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "VALUE-CONFIG-CLASSES",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     derivation: EcucDerivationSpecification | None = field(
         default=None,

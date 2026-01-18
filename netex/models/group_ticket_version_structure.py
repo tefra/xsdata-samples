@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .companion_profiles_rel_structure import CompanionProfilesRelStructure
 from .group_booking_facility import GroupBookingFacility

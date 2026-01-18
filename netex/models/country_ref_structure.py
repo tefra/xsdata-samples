@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .iana_country_tld_enumeration import IanaCountryTldEnumeration
 

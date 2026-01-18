@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from datexii.models.eu.datexii.v2.situation_record_extended_approved import (
     SituationRecordExtendedApproved,
@@ -13,7 +12,9 @@ class SituationRecordExtensionType:
     class Meta:
         name = "_SituationRecordExtensionType"
 
-    situation_record_extended_approved: SituationRecordExtendedApproved | None = field(
+    situation_record_extended_approved: (
+        SituationRecordExtendedApproved | None
+    ) = field(
         default=None,
         metadata={
             "name": "situationRecordExtendedApproved",

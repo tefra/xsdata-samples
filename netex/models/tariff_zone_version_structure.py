@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .presentation_structure import PresentationStructure
 from .print_presentation_structure import PrintPresentationStructure

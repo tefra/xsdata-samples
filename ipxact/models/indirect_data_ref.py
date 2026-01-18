@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from ipxact.models.address_block_ref import AddressBlockRef
 from ipxact.models.alternate_register_ref import AlternateRegisterRef

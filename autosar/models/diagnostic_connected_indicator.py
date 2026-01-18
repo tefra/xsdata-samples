@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -110,7 +109,9 @@ class DiagnosticConnectedIndicator:
             "required": True,
         },
     )
-    short_name_fragments: DiagnosticConnectedIndicator.ShortNameFragments | None = field(
+    short_name_fragments: (
+        DiagnosticConnectedIndicator.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -174,7 +175,9 @@ class DiagnosticConnectedIndicator:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    healing_cycle_counter_threshold: PositiveIntegerValueVariationPoint | None = field(
+    healing_cycle_counter_threshold: (
+        PositiveIntegerValueVariationPoint | None
+    ) = field(
         default=None,
         metadata={
             "name": "HEALING-CYCLE-COUNTER-THRESHOLD",
@@ -182,23 +185,23 @@ class DiagnosticConnectedIndicator:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    healing_cycle_ref: DiagnosticConnectedIndicator.HealingCycleRef | None = field(
-        default=None,
-        metadata={
-            "name": "HEALING-CYCLE-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
-    )
-    indicator_ref: DiagnosticConnectedIndicator.IndicatorRef | None = (
+    healing_cycle_ref: DiagnosticConnectedIndicator.HealingCycleRef | None = (
         field(
             default=None,
             metadata={
-                "name": "INDICATOR-REF",
+                "name": "HEALING-CYCLE-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
+    )
+    indicator_ref: DiagnosticConnectedIndicator.IndicatorRef | None = field(
+        default=None,
+        metadata={
+            "name": "INDICATOR-REF",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     variation_point: VariationPoint | None = field(
         default=None,

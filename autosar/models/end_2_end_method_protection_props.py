@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .e_2_e_profile_configuration_subtypes_enum import (
     E2EProfileConfigurationSubtypesEnum,
@@ -83,7 +82,9 @@ class End2EndMethodProtectionProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    e_2_e_profile_configuration_ref: End2EndMethodProtectionProps.E2EProfileConfigurationRef | None = field(
+    e_2_e_profile_configuration_ref: (
+        End2EndMethodProtectionProps.E2EProfileConfigurationRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "E-2-E-PROFILE-CONFIGURATION-REF",

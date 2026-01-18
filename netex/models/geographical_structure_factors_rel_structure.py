@@ -1,6 +1,5 @@
 from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import Union
 
 from .geographical_structure_factor import GeographicalStructureFactor
 from .geographical_structure_factor_ref import GeographicalStructureFactorRef

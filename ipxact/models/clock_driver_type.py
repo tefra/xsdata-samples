@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from ipxact.models.delay_value_unit_type import DelayValueUnitType
 from ipxact.models.real_expression import RealExpression
@@ -53,16 +52,14 @@ class ClockDriverType:
             "required": True,
         },
     )
-    clock_pulse_duration: ClockDriverType.ClockPulseDuration | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "clockPulseDuration",
-                "type": "Element",
-                "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
-                "required": True,
-            },
-        )
+    clock_pulse_duration: ClockDriverType.ClockPulseDuration | None = field(
+        default=None,
+        metadata={
+            "name": "clockPulseDuration",
+            "type": "Element",
+            "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
+            "required": True,
+        },
     )
     id: str | None = field(
         default=None,

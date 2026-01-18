@@ -1,6 +1,5 @@
 from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import Union
 
 from .dead_run_journey_pattern_ref import DeadRunJourneyPatternRef
 from .journey_pattern_ref import JourneyPatternRef
@@ -17,7 +16,10 @@ class JourneyPatternRefsRelStructure(OneToManyRelationshipStructure):
         name = "journeyPatternRefs_RelStructure"
 
     journey_pattern_ref: Iterable[
-        ServiceJourneyPatternRef | ServicePatternRef | DeadRunJourneyPatternRef | JourneyPatternRef
+        ServiceJourneyPatternRef
+        | ServicePatternRef
+        | DeadRunJourneyPatternRef
+        | JourneyPatternRef
     ] = field(
         default_factory=list,
         metadata={

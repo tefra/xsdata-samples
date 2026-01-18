@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -116,13 +115,15 @@ class TtcanPhysicalChannel:
             "required": True,
         },
     )
-    short_name_fragments: TtcanPhysicalChannel.ShortNameFragments | None = field(
-        default=None,
-        metadata={
-            "name": "SHORT-NAME-FRAGMENTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    short_name_fragments: TtcanPhysicalChannel.ShortNameFragments | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "SHORT-NAME-FRAGMENTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     long_name: MultilanguageLongName | None = field(
         default=None,
@@ -180,25 +181,27 @@ class TtcanPhysicalChannel:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    frame_triggerings: TtcanPhysicalChannel.FrameTriggerings | None = (
+    frame_triggerings: TtcanPhysicalChannel.FrameTriggerings | None = field(
+        default=None,
+        metadata={
+            "name": "FRAME-TRIGGERINGS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
+    )
+    i_signal_triggerings: TtcanPhysicalChannel.ISignalTriggerings | None = (
         field(
             default=None,
             metadata={
-                "name": "FRAME-TRIGGERINGS",
+                "name": "I-SIGNAL-TRIGGERINGS",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
     )
-    i_signal_triggerings: TtcanPhysicalChannel.ISignalTriggerings | None = field(
-        default=None,
-        metadata={
-            "name": "I-SIGNAL-TRIGGERINGS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
-    )
-    managed_physical_channel_refs: TtcanPhysicalChannel.ManagedPhysicalChannelRefs | None = field(
+    managed_physical_channel_refs: (
+        TtcanPhysicalChannel.ManagedPhysicalChannelRefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "MANAGED-PHYSICAL-CHANNEL-REFS",

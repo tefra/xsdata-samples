@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -108,7 +107,9 @@ class DiagnosticClearResetEmissionRelatedInfo:
             "required": True,
         },
     )
-    short_name_fragments: DiagnosticClearResetEmissionRelatedInfo.ShortNameFragments | None = field(
+    short_name_fragments: (
+        DiagnosticClearResetEmissionRelatedInfo.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -156,13 +157,15 @@ class DiagnosticClearResetEmissionRelatedInfo:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: DiagnosticClearResetEmissionRelatedInfo.Annotations | None = field(
-        default=None,
-        metadata={
-            "name": "ANNOTATIONS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    annotations: DiagnosticClearResetEmissionRelatedInfo.Annotations | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "ANNOTATIONS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     variation_point: VariationPoint | None = field(
         default=None,
@@ -172,7 +175,9 @@ class DiagnosticClearResetEmissionRelatedInfo:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    access_permission_ref: DiagnosticClearResetEmissionRelatedInfo.AccessPermissionRef | None = field(
+    access_permission_ref: (
+        DiagnosticClearResetEmissionRelatedInfo.AccessPermissionRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "ACCESS-PERMISSION-REF",
@@ -180,7 +185,10 @@ class DiagnosticClearResetEmissionRelatedInfo:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    clear_reset_emission_related_diagnostic_info_class_ref: DiagnosticClearResetEmissionRelatedInfo.ClearResetEmissionRelatedDiagnosticInfoClassRef | None = field(
+    clear_reset_emission_related_diagnostic_info_class_ref: (
+        DiagnosticClearResetEmissionRelatedInfo.ClearResetEmissionRelatedDiagnosticInfoClassRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "CLEAR-RESET-EMISSION-RELATED-DIAGNOSTIC-INFO-CLASS-REF",
@@ -246,7 +254,9 @@ class DiagnosticClearResetEmissionRelatedInfo:
 
     @dataclass
     class ClearResetEmissionRelatedDiagnosticInfoClassRef(Ref):
-        dest: DiagnosticClearResetEmissionRelatedInfoClassSubtypesEnum | None = field(
+        dest: (
+            DiagnosticClearResetEmissionRelatedInfoClassSubtypesEnum | None
+        ) = field(
             default=None,
             metadata={
                 "name": "DEST",

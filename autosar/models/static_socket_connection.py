@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -106,13 +105,15 @@ class StaticSocketConnection:
             "required": True,
         },
     )
-    short_name_fragments: StaticSocketConnection.ShortNameFragments | None = field(
-        default=None,
-        metadata={
-            "name": "SHORT-NAME-FRAGMENTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    short_name_fragments: StaticSocketConnection.ShortNameFragments | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "SHORT-NAME-FRAGMENTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     long_name: MultilanguageLongName | None = field(
         default=None,
@@ -162,15 +163,13 @@ class StaticSocketConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    i_pdu_identifiers: StaticSocketConnection.IPduIdentifiers | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "I-PDU-IDENTIFIERS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    i_pdu_identifiers: StaticSocketConnection.IPduIdentifiers | None = field(
+        default=None,
+        metadata={
+            "name": "I-PDU-IDENTIFIERS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     remote_addresss: StaticSocketConnection.RemoteAddresss | None = field(
         default=None,

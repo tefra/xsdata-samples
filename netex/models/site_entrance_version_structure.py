@@ -1,6 +1,5 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
-from typing import Optional
 
 from .entrance_enumeration import EntranceEnumeration
 from .multilingual_string import MultilingualString

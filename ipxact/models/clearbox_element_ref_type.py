@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from ipxact.models.slices_type import SlicesType
 from ipxact.models.vendor_extensions import VendorExtensions

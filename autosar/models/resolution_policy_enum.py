@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .resolution_policy_enum_simple import ResolutionPolicyEnumSimple
 

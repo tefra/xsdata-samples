@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -109,7 +108,10 @@ class RequiredServiceInstanceToSwClusterDesignRPortPrototypeMapping:
             "required": True,
         },
     )
-    short_name_fragments: RequiredServiceInstanceToSwClusterDesignRPortPrototypeMapping.ShortNameFragments | None = field(
+    short_name_fragments: (
+        RequiredServiceInstanceToSwClusterDesignRPortPrototypeMapping.ShortNameFragments
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -157,7 +159,10 @@ class RequiredServiceInstanceToSwClusterDesignRPortPrototypeMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: RequiredServiceInstanceToSwClusterDesignRPortPrototypeMapping.Annotations | None = field(
+    annotations: (
+        RequiredServiceInstanceToSwClusterDesignRPortPrototypeMapping.Annotations
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -173,7 +178,9 @@ class RequiredServiceInstanceToSwClusterDesignRPortPrototypeMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    required_port_prototype_iref: RPortPrototypeInSoftwareClusterDesignInstanceRef | None = field(
+    required_port_prototype_iref: (
+        RPortPrototypeInSoftwareClusterDesignInstanceRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "REQUIRED-PORT-PROTOTYPE-IREF",
@@ -181,7 +188,10 @@ class RequiredServiceInstanceToSwClusterDesignRPortPrototypeMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    required_service_instance_ref: RequiredServiceInstanceToSwClusterDesignRPortPrototypeMapping.RequiredServiceInstanceRef | None = field(
+    required_service_instance_ref: (
+        RequiredServiceInstanceToSwClusterDesignRPortPrototypeMapping.RequiredServiceInstanceRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "REQUIRED-SERVICE-INSTANCE-REF",

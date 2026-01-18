@@ -1,6 +1,5 @@
 from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import Union
 
 from .check_constraint import CheckConstraint
 from .check_constraint_ref import CheckConstraintRef

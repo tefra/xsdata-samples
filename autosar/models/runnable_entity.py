@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -281,15 +280,13 @@ class RunnableEntity:
             "required": True,
         },
     )
-    short_name_fragments: RunnableEntity.ShortNameFragments | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "SHORT-NAME-FRAGMENTS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    short_name_fragments: RunnableEntity.ShortNameFragments | None = field(
+        default=None,
+        metadata={
+            "name": "SHORT-NAME-FRAGMENTS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     long_name: MultilanguageLongName | None = field(
         default=None,
@@ -347,7 +344,9 @@ class RunnableEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    can_enter_exclusive_area_refs: RunnableEntity.CanEnterExclusiveAreaRefs | None = field(
+    can_enter_exclusive_area_refs: (
+        RunnableEntity.CanEnterExclusiveAreaRefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "CAN-ENTER-EXCLUSIVE-AREA-REFS",
@@ -355,7 +354,9 @@ class RunnableEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    exclusive_area_nesting_order_refs: RunnableEntity.ExclusiveAreaNestingOrderRefs | None = field(
+    exclusive_area_nesting_order_refs: (
+        RunnableEntity.ExclusiveAreaNestingOrderRefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "EXCLUSIVE-AREA-NESTING-ORDER-REFS",
@@ -379,7 +380,9 @@ class RunnableEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    runs_inside_exclusive_area_refs: RunnableEntity.RunsInsideExclusiveAreaRefs | None = field(
+    runs_inside_exclusive_area_refs: (
+        RunnableEntity.RunsInsideExclusiveAreaRefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "RUNS-INSIDE-EXCLUSIVE-AREA-REFS",
@@ -403,7 +406,9 @@ class RunnableEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    asynchronous_server_call_result_points: RunnableEntity.AsynchronousServerCallResultPoints | None = field(
+    asynchronous_server_call_result_points: (
+        RunnableEntity.AsynchronousServerCallResultPoints | None
+    ) = field(
         default=None,
         metadata={
             "name": "ASYNCHRONOUS-SERVER-CALL-RESULT-POINTS",
@@ -427,7 +432,9 @@ class RunnableEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    data_receive_point_by_arguments: RunnableEntity.DataReceivePointByArguments | None = field(
+    data_receive_point_by_arguments: (
+        RunnableEntity.DataReceivePointByArguments | None
+    ) = field(
         default=None,
         metadata={
             "name": "DATA-RECEIVE-POINT-BY-ARGUMENTS",
@@ -435,7 +442,9 @@ class RunnableEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    data_receive_point_by_values: RunnableEntity.DataReceivePointByValues | None = field(
+    data_receive_point_by_values: (
+        RunnableEntity.DataReceivePointByValues | None
+    ) = field(
         default=None,
         metadata={
             "name": "DATA-RECEIVE-POINT-BY-VALUES",
@@ -459,7 +468,9 @@ class RunnableEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    external_triggering_points: RunnableEntity.ExternalTriggeringPoints | None = field(
+    external_triggering_points: (
+        RunnableEntity.ExternalTriggeringPoints | None
+    ) = field(
         default=None,
         metadata={
             "name": "EXTERNAL-TRIGGERING-POINTS",
@@ -467,7 +478,9 @@ class RunnableEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    internal_triggering_points: RunnableEntity.InternalTriggeringPoints | None = field(
+    internal_triggering_points: (
+        RunnableEntity.InternalTriggeringPoints | None
+    ) = field(
         default=None,
         metadata={
             "name": "INTERNAL-TRIGGERING-POINTS",
@@ -499,15 +512,13 @@ class RunnableEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    read_local_variables: RunnableEntity.ReadLocalVariables | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "READ-LOCAL-VARIABLES",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    read_local_variables: RunnableEntity.ReadLocalVariables | None = field(
+        default=None,
+        metadata={
+            "name": "READ-LOCAL-VARIABLES",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     server_call_points: RunnableEntity.ServerCallPoints | None = field(
         default=None,
@@ -533,13 +544,15 @@ class RunnableEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    written_local_variables: RunnableEntity.WrittenLocalVariables | None = field(
-        default=None,
-        metadata={
-            "name": "WRITTEN-LOCAL-VARIABLES",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    written_local_variables: RunnableEntity.WrittenLocalVariables | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "WRITTEN-LOCAL-VARIABLES",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     variation_point: VariationPoint | None = field(
         default=None,

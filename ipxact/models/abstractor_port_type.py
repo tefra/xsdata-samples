@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from ipxact.models.abstractor_port_transactional_type import (
     AbstractorPortTransactionalType,

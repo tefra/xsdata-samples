@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import VariationPoint
 from .ref import Ref
@@ -50,7 +49,9 @@ class RunnableEntityInCompositionInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    target_runnable_entity_ref: RunnableEntityInCompositionInstanceRef.TargetRunnableEntityRef | None = field(
+    target_runnable_entity_ref: (
+        RunnableEntityInCompositionInstanceRef.TargetRunnableEntityRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "TARGET-RUNNABLE-ENTITY-REF",

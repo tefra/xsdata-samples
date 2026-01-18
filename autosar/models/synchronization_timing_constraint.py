@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -142,7 +141,9 @@ class SynchronizationTimingConstraint:
             "required": True,
         },
     )
-    short_name_fragments: SynchronizationTimingConstraint.ShortNameFragments | None = field(
+    short_name_fragments: (
+        SynchronizationTimingConstraint.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -190,15 +191,13 @@ class SynchronizationTimingConstraint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: SynchronizationTimingConstraint.Annotations | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "ANNOTATIONS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    annotations: SynchronizationTimingConstraint.Annotations | None = field(
+        default=None,
+        metadata={
+            "name": "ANNOTATIONS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     trace_refs: SynchronizationTimingConstraint.TraceRefs | None = field(
         default=None,
@@ -208,7 +207,9 @@ class SynchronizationTimingConstraint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    timing_condition_ref: SynchronizationTimingConstraint.TimingConditionRef | None = field(
+    timing_condition_ref: (
+        SynchronizationTimingConstraint.TimingConditionRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "TIMING-CONDITION-REF",
@@ -232,13 +233,15 @@ class SynchronizationTimingConstraint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    scope_event_refs: SynchronizationTimingConstraint.ScopeEventRefs | None = field(
-        default=None,
-        metadata={
-            "name": "SCOPE-EVENT-REFS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    scope_event_refs: SynchronizationTimingConstraint.ScopeEventRefs | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "SCOPE-EVENT-REFS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     scope_refs: SynchronizationTimingConstraint.ScopeRefs | None = field(
         default=None,
@@ -311,15 +314,15 @@ class SynchronizationTimingConstraint:
 
     @dataclass
     class TraceRefs:
-        trace_ref: list[
-            SynchronizationTimingConstraint.TraceRefs.TraceRef
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "TRACE-REF",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        trace_ref: list[SynchronizationTimingConstraint.TraceRefs.TraceRef] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "TRACE-REF",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )
 
         @dataclass
@@ -370,15 +373,15 @@ class SynchronizationTimingConstraint:
 
     @dataclass
     class ScopeRefs:
-        scope_ref: list[
-            SynchronizationTimingConstraint.ScopeRefs.ScopeRef
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "SCOPE-REF",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        scope_ref: list[SynchronizationTimingConstraint.ScopeRefs.ScopeRef] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "SCOPE-REF",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )
 
         @dataclass

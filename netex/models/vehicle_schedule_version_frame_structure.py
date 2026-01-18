@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .blocks_in_frame_rel_structure import BlocksInFrameRelStructure
 from .common_version_frame_structure import CommonVersionFrameStructure
@@ -37,15 +36,13 @@ class VehicleScheduleVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    courses_of_journeys: CoursesOfJourneysInFrameRelStructure | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "coursesOfJourneys",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            },
-        )
+    courses_of_journeys: CoursesOfJourneysInFrameRelStructure | None = field(
+        default=None,
+        metadata={
+            "name": "coursesOfJourneys",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        },
     )
     vehicle_services: VehicleServicesInFrameRelStructure | None = field(
         default=None,

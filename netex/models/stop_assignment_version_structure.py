@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from .assignment_version_structure_1 import AssignmentVersionStructure1
 from .fare_scheduled_stop_point_ref import FareScheduledStopPointRef
@@ -39,7 +38,12 @@ class StopAssignmentVersionStructure(AssignmentVersionStructure1):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point: FareScheduledStopPointRef | ScheduledStopPointRef | ScheduledStopPoint | None = field(
+    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point: (
+        FareScheduledStopPointRef
+        | ScheduledStopPointRef
+        | ScheduledStopPoint
+        | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",

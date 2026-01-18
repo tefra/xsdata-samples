@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -120,7 +119,9 @@ class SecurityEventContextProps:
             "required": True,
         },
     )
-    short_name_fragments: SecurityEventContextProps.ShortNameFragments | None = field(
+    short_name_fragments: (
+        SecurityEventContextProps.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -200,15 +201,13 @@ class SecurityEventContextProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    security_events: SecurityEventContextProps.SecurityEvents | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "SECURITY-EVENTS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    security_events: SecurityEventContextProps.SecurityEvents | None = field(
+        default=None,
+        metadata={
+            "name": "SECURITY-EVENTS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     sensor_instance_id: PositiveInteger | None = field(
         default=None,

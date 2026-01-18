@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -102,7 +101,9 @@ class TdCpSoftwareClusterMapping:
             "required": True,
         },
     )
-    short_name_fragments: TdCpSoftwareClusterMapping.ShortNameFragments | None = field(
+    short_name_fragments: (
+        TdCpSoftwareClusterMapping.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -166,17 +167,17 @@ class TdCpSoftwareClusterMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    requestor_refs: TdCpSoftwareClusterMapping.RequestorRefs | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "REQUESTOR-REFS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    requestor_refs: TdCpSoftwareClusterMapping.RequestorRefs | None = field(
+        default=None,
+        metadata={
+            "name": "REQUESTOR-REFS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
-    timing_description_ref: TdCpSoftwareClusterMapping.TimingDescriptionRef | None = field(
+    timing_description_ref: (
+        TdCpSoftwareClusterMapping.TimingDescriptionRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "TIMING-DESCRIPTION-REF",

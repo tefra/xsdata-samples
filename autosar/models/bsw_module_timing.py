@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -161,15 +160,13 @@ class BswModuleTiming:
             "required": True,
         },
     )
-    short_name_fragments: BswModuleTiming.ShortNameFragments | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "SHORT-NAME-FRAGMENTS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    short_name_fragments: BswModuleTiming.ShortNameFragments | None = field(
+        default=None,
+        metadata={
+            "name": "SHORT-NAME-FRAGMENTS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     long_name: MultilanguageLongName | None = field(
         default=None,
@@ -235,15 +232,13 @@ class BswModuleTiming:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    timing_descriptions: BswModuleTiming.TimingDescriptions | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "TIMING-DESCRIPTIONS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    timing_descriptions: BswModuleTiming.TimingDescriptions | None = field(
+        default=None,
+        metadata={
+            "name": "TIMING-DESCRIPTIONS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     timing_guarantees: BswModuleTiming.TimingGuarantees | None = field(
         default=None,
@@ -253,15 +248,13 @@ class BswModuleTiming:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    timing_requirements: BswModuleTiming.TimingRequirements | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "TIMING-REQUIREMENTS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    timing_requirements: BswModuleTiming.TimingRequirements | None = field(
+        default=None,
+        metadata={
+            "name": "TIMING-REQUIREMENTS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     timing_resource: TimingExtensionResource | None = field(
         default=None,

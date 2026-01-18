@@ -1,6 +1,5 @@
 from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import Union
 
 from .monitored_vehicle_sharing_parking_bay_ref import (
     MonitoredVehicleSharingParkingBayRef,
@@ -19,7 +18,10 @@ class ParkingBayRefsRelStructure(OneToManyRelationshipStructure):
         name = "parkingBayRefs_RelStructure"
 
     parking_bay_ref_or_vehicle_sharing_parking_bay_ref: Iterable[
-        VehiclePoolingParkingBayRef | MonitoredVehicleSharingParkingBayRef | VehicleSharingParkingBayRef | ParkingBayRef
+        VehiclePoolingParkingBayRef
+        | MonitoredVehicleSharingParkingBayRef
+        | VehicleSharingParkingBayRef
+        | ParkingBayRef
     ] = field(
         default_factory=list,
         metadata={

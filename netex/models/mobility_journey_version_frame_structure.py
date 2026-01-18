@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .common_version_frame_structure import CommonVersionFrameStructure
 from .groups_of_single_journeys_rel_structure import (
@@ -51,15 +50,19 @@ class MobilityJourneyVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    individual_travellers: IndividualTravellersInFrameRelStructure | None = field(
-        default=None,
-        metadata={
-            "name": "individualTravellers",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        },
+    individual_travellers: IndividualTravellersInFrameRelStructure | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "individualTravellers",
+                "type": "Element",
+                "namespace": "http://www.netex.org.uk/netex",
+            },
+        )
     )
-    vehicle_access_credentials: VehicleAccessCredentialAssignmentsRelStructure | None = field(
+    vehicle_access_credentials: (
+        VehicleAccessCredentialAssignmentsRelStructure | None
+    ) = field(
         default=None,
         metadata={
             "name": "vehicleAccessCredentials",
@@ -67,13 +70,11 @@ class MobilityJourneyVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    parking_log_entries: ParkingLogEntriesInFrameRelStructure | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "parkingLogEntries",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            },
-        )
+    parking_log_entries: ParkingLogEntriesInFrameRelStructure | None = field(
+        default=None,
+        metadata={
+            "name": "parkingLogEntries",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        },
     )

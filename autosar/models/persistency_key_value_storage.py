@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -117,7 +116,9 @@ class PersistencyKeyValueStorage:
             "required": True,
         },
     )
-    short_name_fragments: PersistencyKeyValueStorage.ShortNameFragments | None = field(
+    short_name_fragments: (
+        PersistencyKeyValueStorage.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -197,7 +198,9 @@ class PersistencyKeyValueStorage:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    redundancy_handlings: PersistencyKeyValueStorage.RedundancyHandlings | None = field(
+    redundancy_handlings: (
+        PersistencyKeyValueStorage.RedundancyHandlings | None
+    ) = field(
         default=None,
         metadata={
             "name": "REDUNDANCY-HANDLINGS",
@@ -215,15 +218,13 @@ class PersistencyKeyValueStorage:
             },
         )
     )
-    key_value_pairs: PersistencyKeyValueStorage.KeyValuePairs | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "KEY-VALUE-PAIRS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    key_value_pairs: PersistencyKeyValueStorage.KeyValuePairs | None = field(
+        default=None,
+        metadata={
+            "name": "KEY-VALUE-PAIRS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     uri: UriString | None = field(
         default=None,

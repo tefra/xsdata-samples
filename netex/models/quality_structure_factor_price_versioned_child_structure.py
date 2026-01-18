@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from .fare_demand_factor_ref import FareDemandFactorRef
 from .fare_price_versioned_child_structure import (
@@ -18,7 +17,12 @@ class QualityStructureFactorPriceVersionedChildStructure(
     class Meta:
         name = "QualityStructureFactorPrice_VersionedChildStructure"
 
-    quality_structure_factor_ref: FareQuotaFactorRef | FareDemandFactorRef | QualityStructureFactorRef | None = field(
+    quality_structure_factor_ref: (
+        FareQuotaFactorRef
+        | FareDemandFactorRef
+        | QualityStructureFactorRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",

@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .ar_variable_in_implementation_data_instance_ref import (
     ArVariableInImplementationDataInstanceRef,
@@ -62,7 +61,9 @@ class AutosarVariableRef:
     class Meta:
         name = "AUTOSAR-VARIABLE-REF"
 
-    autosar_variable_in_impl_datatype: ArVariableInImplementationDataInstanceRef | None = field(
+    autosar_variable_in_impl_datatype: (
+        ArVariableInImplementationDataInstanceRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "AUTOSAR-VARIABLE-IN-IMPL-DATATYPE",
@@ -70,25 +71,21 @@ class AutosarVariableRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    autosar_variable_iref: VariableInAtomicSwcTypeInstanceRef | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "AUTOSAR-VARIABLE-IREF",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    autosar_variable_iref: VariableInAtomicSwcTypeInstanceRef | None = field(
+        default=None,
+        metadata={
+            "name": "AUTOSAR-VARIABLE-IREF",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
-    local_variable_ref: AutosarVariableRef.LocalVariableRef | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "LOCAL-VARIABLE-REF",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    local_variable_ref: AutosarVariableRef.LocalVariableRef | None = field(
+        default=None,
+        metadata={
+            "name": "LOCAL-VARIABLE-REF",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     s: str | None = field(
         default=None,

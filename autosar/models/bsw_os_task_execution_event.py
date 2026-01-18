@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -120,13 +119,15 @@ class BswOsTaskExecutionEvent:
             "required": True,
         },
     )
-    short_name_fragments: BswOsTaskExecutionEvent.ShortNameFragments | None = field(
-        default=None,
-        metadata={
-            "name": "SHORT-NAME-FRAGMENTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    short_name_fragments: BswOsTaskExecutionEvent.ShortNameFragments | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "SHORT-NAME-FRAGMENTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     long_name: MultilanguageLongName | None = field(
         default=None,
@@ -176,7 +177,9 @@ class BswOsTaskExecutionEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    activation_reason_representation_ref: BswOsTaskExecutionEvent.ActivationReasonRepresentationRef | None = field(
+    activation_reason_representation_ref: (
+        BswOsTaskExecutionEvent.ActivationReasonRepresentationRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "ACTIVATION-REASON-REPRESENTATION-REF",
@@ -184,7 +187,9 @@ class BswOsTaskExecutionEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    context_limitation_refs: BswOsTaskExecutionEvent.ContextLimitationRefs | None = field(
+    context_limitation_refs: (
+        BswOsTaskExecutionEvent.ContextLimitationRefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "CONTEXT-LIMITATION-REFS",
@@ -192,7 +197,9 @@ class BswOsTaskExecutionEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    disabled_in_mode_irefs: BswOsTaskExecutionEvent.DisabledInModeIrefs | None = field(
+    disabled_in_mode_irefs: (
+        BswOsTaskExecutionEvent.DisabledInModeIrefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "DISABLED-IN-MODE-IREFS",
@@ -200,13 +207,15 @@ class BswOsTaskExecutionEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    starts_on_event_ref: BswOsTaskExecutionEvent.StartsOnEventRef | None = field(
-        default=None,
-        metadata={
-            "name": "STARTS-ON-EVENT-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    starts_on_event_ref: BswOsTaskExecutionEvent.StartsOnEventRef | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "STARTS-ON-EVENT-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     variation_point: VariationPoint | None = field(
         default=None,

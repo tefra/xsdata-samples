@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from sdmx_ml.models.item_scheme_map_base_type import ItemSchemeMapBaseType
 from sdmx_ml.models.single_value_mapping_type import SingleValueMappingType

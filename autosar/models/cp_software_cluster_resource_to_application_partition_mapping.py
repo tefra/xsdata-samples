@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -103,7 +102,10 @@ class CpSoftwareClusterResourceToApplicationPartitionMapping:
             "required": True,
         },
     )
-    short_name_fragments: CpSoftwareClusterResourceToApplicationPartitionMapping.ShortNameFragments | None = field(
+    short_name_fragments: (
+        CpSoftwareClusterResourceToApplicationPartitionMapping.ShortNameFragments
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -151,7 +153,10 @@ class CpSoftwareClusterResourceToApplicationPartitionMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: CpSoftwareClusterResourceToApplicationPartitionMapping.Annotations | None = field(
+    annotations: (
+        CpSoftwareClusterResourceToApplicationPartitionMapping.Annotations
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -159,7 +164,10 @@ class CpSoftwareClusterResourceToApplicationPartitionMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    application_partition_ref: CpSoftwareClusterResourceToApplicationPartitionMapping.ApplicationPartitionRef | None = field(
+    application_partition_ref: (
+        CpSoftwareClusterResourceToApplicationPartitionMapping.ApplicationPartitionRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "APPLICATION-PARTITION-REF",
@@ -167,7 +175,10 @@ class CpSoftwareClusterResourceToApplicationPartitionMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    resource_ref: CpSoftwareClusterResourceToApplicationPartitionMapping.ResourceRef | None = field(
+    resource_ref: (
+        CpSoftwareClusterResourceToApplicationPartitionMapping.ResourceRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "RESOURCE-REF",

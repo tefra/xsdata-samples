@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from .activation_point_ref import ActivationPointRef
 from .beacon_point_ref import BeaconPointRef
@@ -42,7 +41,26 @@ class DeadRunCallVersionedChildStructure(VersionedChildStructure):
     class Meta:
         name = "DeadRunCall_VersionedChildStructure"
 
-    choice: VehicleMeetingPointRef | WirePointRef | RoadPointRef | RailwayPointRef | TrafficControlPointRef | BeaconPointRef | ActivationPointRef | BorderPointRef | FareScheduledStopPointRef | ScheduledStopPointRef | GaragePointRef | ParkingPointRef | ReliefPointRef | TimingPointRef | RoutePointRef | PointRef | ScheduledStopPointView | None = field(
+    choice: (
+        VehicleMeetingPointRef
+        | WirePointRef
+        | RoadPointRef
+        | RailwayPointRef
+        | TrafficControlPointRef
+        | BeaconPointRef
+        | ActivationPointRef
+        | BorderPointRef
+        | FareScheduledStopPointRef
+        | ScheduledStopPointRef
+        | GaragePointRef
+        | ParkingPointRef
+        | ReliefPointRef
+        | TimingPointRef
+        | RoutePointRef
+        | PointRef
+        | ScheduledStopPointView
+        | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -135,13 +153,15 @@ class DeadRunCallVersionedChildStructure(VersionedChildStructure):
             ),
         },
     )
-    point_in_journey_pattern_ref: PointInJourneyPatternRefStructure | None = field(
-        default=None,
-        metadata={
-            "name": "PointInJourneyPatternRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        },
+    point_in_journey_pattern_ref: PointInJourneyPatternRefStructure | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "PointInJourneyPatternRef",
+                "type": "Element",
+                "namespace": "http://www.netex.org.uk/netex",
+            },
+        )
     )
     arrival: DeadRunCallPartStructure | None = field(
         default=None,
@@ -159,7 +179,9 @@ class DeadRunCallVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    destination_display_ref_or_destination_display_view: DestinationDisplayRef | DestinationDisplayView | None = field(
+    destination_display_ref_or_destination_display_view: (
+        DestinationDisplayRef | DestinationDisplayView | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",

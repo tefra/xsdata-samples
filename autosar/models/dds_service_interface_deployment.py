@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -127,7 +126,9 @@ class DdsServiceInterfaceDeployment:
             "required": True,
         },
     )
-    short_name_fragments: DdsServiceInterfaceDeployment.ShortNameFragments | None = field(
+    short_name_fragments: (
+        DdsServiceInterfaceDeployment.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -191,7 +192,9 @@ class DdsServiceInterfaceDeployment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    event_deployments: DdsServiceInterfaceDeployment.EventDeployments | None = field(
+    event_deployments: (
+        DdsServiceInterfaceDeployment.EventDeployments | None
+    ) = field(
         default=None,
         metadata={
             "name": "EVENT-DEPLOYMENTS",
@@ -199,7 +202,9 @@ class DdsServiceInterfaceDeployment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    field_deployments: DdsServiceInterfaceDeployment.FieldDeployments | None = field(
+    field_deployments: (
+        DdsServiceInterfaceDeployment.FieldDeployments | None
+    ) = field(
         default=None,
         metadata={
             "name": "FIELD-DEPLOYMENTS",
@@ -207,7 +212,9 @@ class DdsServiceInterfaceDeployment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    method_deployments: DdsServiceInterfaceDeployment.MethodDeployments | None = field(
+    method_deployments: (
+        DdsServiceInterfaceDeployment.MethodDeployments | None
+    ) = field(
         default=None,
         metadata={
             "name": "METHOD-DEPLOYMENTS",
@@ -215,7 +222,9 @@ class DdsServiceInterfaceDeployment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    service_interface_ref: DdsServiceInterfaceDeployment.ServiceInterfaceRef | None = field(
+    service_interface_ref: (
+        DdsServiceInterfaceDeployment.ServiceInterfaceRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "SERVICE-INTERFACE-REF",
@@ -263,7 +272,9 @@ class DdsServiceInterfaceDeployment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    transport_protocols: DdsServiceInterfaceDeployment.TransportProtocols | None = field(
+    transport_protocols: (
+        DdsServiceInterfaceDeployment.TransportProtocols | None
+    ) = field(
         default=None,
         metadata={
             "name": "TRANSPORT-PROTOCOLS",

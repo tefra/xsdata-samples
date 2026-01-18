@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -102,7 +101,9 @@ class ComSecOcToCryptoKeySlotMapping:
             "required": True,
         },
     )
-    short_name_fragments: ComSecOcToCryptoKeySlotMapping.ShortNameFragments | None = field(
+    short_name_fragments: (
+        ComSecOcToCryptoKeySlotMapping.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -150,15 +151,13 @@ class ComSecOcToCryptoKeySlotMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: ComSecOcToCryptoKeySlotMapping.Annotations | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "ANNOTATIONS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    annotations: ComSecOcToCryptoKeySlotMapping.Annotations | None = field(
+        default=None,
+        metadata={
+            "name": "ANNOTATIONS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     variation_point: VariationPoint | None = field(
         default=None,
@@ -168,7 +167,9 @@ class ComSecOcToCryptoKeySlotMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    crypto_key_slot_ref: ComSecOcToCryptoKeySlotMapping.CryptoKeySlotRef | None = field(
+    crypto_key_slot_ref: (
+        ComSecOcToCryptoKeySlotMapping.CryptoKeySlotRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "CRYPTO-KEY-SLOT-REF",
@@ -176,7 +177,9 @@ class ComSecOcToCryptoKeySlotMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    service_element_secure_com_config_ref: ComSecOcToCryptoKeySlotMapping.ServiceElementSecureComConfigRef | None = field(
+    service_element_secure_com_config_ref: (
+        ComSecOcToCryptoKeySlotMapping.ServiceElementSecureComConfigRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "SERVICE-ELEMENT-SECURE-COM-CONFIG-REF",

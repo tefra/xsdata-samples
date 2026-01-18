@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .path_links_in_sequence_rel_structure import (
     PathLinksInSequenceRelStructure,

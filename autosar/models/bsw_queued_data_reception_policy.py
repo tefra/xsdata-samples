@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import VariationPoint
 from .boolean import Boolean
@@ -49,13 +48,15 @@ class BswQueuedDataReceptionPolicy:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    received_data_ref: BswQueuedDataReceptionPolicy.ReceivedDataRef | None = field(
-        default=None,
-        metadata={
-            "name": "RECEIVED-DATA-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    received_data_ref: BswQueuedDataReceptionPolicy.ReceivedDataRef | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "RECEIVED-DATA-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     variation_point: VariationPoint | None = field(
         default=None,

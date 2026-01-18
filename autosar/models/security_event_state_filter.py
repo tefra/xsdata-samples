@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -112,7 +111,9 @@ class SecurityEventStateFilter:
             "required": True,
         },
     )
-    short_name_fragments: SecurityEventStateFilter.ShortNameFragments | None = field(
+    short_name_fragments: (
+        SecurityEventStateFilter.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -168,7 +169,9 @@ class SecurityEventStateFilter:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    block_if_state_active_ap_irefs: SecurityEventStateFilter.BlockIfStateActiveApIrefs | None = field(
+    block_if_state_active_ap_irefs: (
+        SecurityEventStateFilter.BlockIfStateActiveApIrefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "BLOCK-IF-STATE-ACTIVE-AP-IREFS",
@@ -176,7 +179,9 @@ class SecurityEventStateFilter:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    block_if_state_active_cp_refs: SecurityEventStateFilter.BlockIfStateActiveCpRefs | None = field(
+    block_if_state_active_cp_refs: (
+        SecurityEventStateFilter.BlockIfStateActiveCpRefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "BLOCK-IF-STATE-ACTIVE-CP-REFS",

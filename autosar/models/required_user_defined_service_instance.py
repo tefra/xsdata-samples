@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -115,7 +114,9 @@ class RequiredUserDefinedServiceInstance:
             "required": True,
         },
     )
-    short_name_fragments: RequiredUserDefinedServiceInstance.ShortNameFragments | None = field(
+    short_name_fragments: (
+        RequiredUserDefinedServiceInstance.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -163,15 +164,13 @@ class RequiredUserDefinedServiceInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: RequiredUserDefinedServiceInstance.Annotations | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "ANNOTATIONS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    annotations: RequiredUserDefinedServiceInstance.Annotations | None = field(
+        default=None,
+        metadata={
+            "name": "ANNOTATIONS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     variation_point: VariationPoint | None = field(
         default=None,
@@ -181,7 +180,9 @@ class RequiredUserDefinedServiceInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    e_2_e_event_protection_propss: RequiredUserDefinedServiceInstance.E2EEventProtectionPropss | None = field(
+    e_2_e_event_protection_propss: (
+        RequiredUserDefinedServiceInstance.E2EEventProtectionPropss | None
+    ) = field(
         default=None,
         metadata={
             "name": "E-2-E-EVENT-PROTECTION-PROPSS",
@@ -189,7 +190,9 @@ class RequiredUserDefinedServiceInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    e_2_e_method_protection_propss: RequiredUserDefinedServiceInstance.E2EMethodProtectionPropss | None = field(
+    e_2_e_method_protection_propss: (
+        RequiredUserDefinedServiceInstance.E2EMethodProtectionPropss | None
+    ) = field(
         default=None,
         metadata={
             "name": "E-2-E-METHOD-PROTECTION-PROPSS",
@@ -197,7 +200,9 @@ class RequiredUserDefinedServiceInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    secure_com_configs: RequiredUserDefinedServiceInstance.SecureComConfigs | None = field(
+    secure_com_configs: (
+        RequiredUserDefinedServiceInstance.SecureComConfigs | None
+    ) = field(
         default=None,
         metadata={
             "name": "SECURE-COM-CONFIGS",
@@ -205,7 +210,9 @@ class RequiredUserDefinedServiceInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    service_interface_deployment_ref: RequiredUserDefinedServiceInstance.ServiceInterfaceDeploymentRef | None = field(
+    service_interface_deployment_ref: (
+        RequiredUserDefinedServiceInstance.ServiceInterfaceDeploymentRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "SERVICE-INTERFACE-DEPLOYMENT-REF",

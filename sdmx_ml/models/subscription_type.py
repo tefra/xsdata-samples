@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from sdmx_ml.models.event_selector_type import EventSelectorType
 from sdmx_ml.models.notification_urltype import NotificationUrltype

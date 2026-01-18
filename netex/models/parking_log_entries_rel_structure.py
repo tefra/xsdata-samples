@@ -1,6 +1,5 @@
 from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import Union
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .parking_bay_condition import ParkingBayCondition
@@ -17,7 +16,10 @@ class ParkingLogEntriesRelStructure(ContainmentAggregationStructure):
         name = "parkingLogEntries_RelStructure"
 
     choice: Iterable[
-        ParkingBayConditionRef | RentalAvailabilityRef | ParkingBayCondition | RentalAvailability
+        ParkingBayConditionRef
+        | RentalAvailabilityRef
+        | ParkingBayCondition
+        | RentalAvailability
     ] = field(
         default_factory=list,
         metadata={

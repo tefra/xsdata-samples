@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -124,7 +123,10 @@ class DiagnosticDoIpTriggerVehicleAnnouncementInterface:
             "required": True,
         },
     )
-    short_name_fragments: DiagnosticDoIpTriggerVehicleAnnouncementInterface.ShortNameFragments | None = field(
+    short_name_fragments: (
+        DiagnosticDoIpTriggerVehicleAnnouncementInterface.ShortNameFragments
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -172,7 +174,9 @@ class DiagnosticDoIpTriggerVehicleAnnouncementInterface:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: DiagnosticDoIpTriggerVehicleAnnouncementInterface.Annotations | None = field(
+    annotations: (
+        DiagnosticDoIpTriggerVehicleAnnouncementInterface.Annotations | None
+    ) = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -188,7 +192,10 @@ class DiagnosticDoIpTriggerVehicleAnnouncementInterface:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    blueprint_policys: DiagnosticDoIpTriggerVehicleAnnouncementInterface.BlueprintPolicys | None = field(
+    blueprint_policys: (
+        DiagnosticDoIpTriggerVehicleAnnouncementInterface.BlueprintPolicys
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "BLUEPRINT-POLICYS",
@@ -212,7 +219,9 @@ class DiagnosticDoIpTriggerVehicleAnnouncementInterface:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    namespaces: DiagnosticDoIpTriggerVehicleAnnouncementInterface.Namespaces | None = field(
+    namespaces: (
+        DiagnosticDoIpTriggerVehicleAnnouncementInterface.Namespaces | None
+    ) = field(
         default=None,
         metadata={
             "name": "NAMESPACES",

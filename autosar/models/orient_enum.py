@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .orient_enum_simple import OrientEnumSimple
 

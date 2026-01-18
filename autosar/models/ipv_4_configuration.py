@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .ip4_address_string import Ip4AddressString
 from .ip_address_keep_enum import IpAddressKeepEnum
@@ -64,15 +63,13 @@ class Ipv4Configuration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    dns_server_addresses: Ipv4Configuration.DnsServerAddresses | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "DNS-SERVER-ADDRESSES",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    dns_server_addresses: Ipv4Configuration.DnsServerAddresses | None = field(
+        default=None,
+        metadata={
+            "name": "DNS-SERVER-ADDRESSES",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     ip_address_keep_behavior: IpAddressKeepEnum | None = field(
         default=None,

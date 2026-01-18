@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .boarding_position_ref import BoardingPositionRef
 from .entity_in_version_structure import VersionedChildStructure
@@ -14,15 +13,13 @@ class VehiclePositionAlignmentVersionStructure(VersionedChildStructure):
     class Meta:
         name = "VehiclePositionAlignment_VersionStructure"
 
-    vehicle_stopping_position_ref: VehicleStoppingPositionRef | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "VehicleStoppingPositionRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            },
-        )
+    vehicle_stopping_position_ref: VehicleStoppingPositionRef | None = field(
+        default=None,
+        metadata={
+            "name": "VehicleStoppingPositionRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        },
     )
     boarding_position_ref: BoardingPositionRef | None = field(
         default=None,

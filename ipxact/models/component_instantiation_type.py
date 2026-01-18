@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from ipxact.models.clearbox_element_ref_type import ClearboxElementRefType
 from ipxact.models.constraint_set_ref import ConstraintSetRef
@@ -156,13 +155,15 @@ class ComponentInstantiationType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    module_parameters: ComponentInstantiationType.ModuleParameters | None = field(
-        default=None,
-        metadata={
-            "name": "moduleParameters",
-            "type": "Element",
-            "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
-        },
+    module_parameters: ComponentInstantiationType.ModuleParameters | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "moduleParameters",
+                "type": "Element",
+                "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
+            },
+        )
     )
     default_file_builder: list[FileBuilderType] = field(
         default_factory=list,
@@ -188,7 +189,9 @@ class ComponentInstantiationType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    clearbox_element_refs: ComponentInstantiationType.ClearboxElementRefs | None = field(
+    clearbox_element_refs: (
+        ComponentInstantiationType.ClearboxElementRefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "clearboxElementRefs",

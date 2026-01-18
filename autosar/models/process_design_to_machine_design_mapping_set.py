@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -98,7 +97,9 @@ class ProcessDesignToMachineDesignMappingSet:
             "required": True,
         },
     )
-    short_name_fragments: ProcessDesignToMachineDesignMappingSet.ShortNameFragments | None = field(
+    short_name_fragments: (
+        ProcessDesignToMachineDesignMappingSet.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -146,13 +147,15 @@ class ProcessDesignToMachineDesignMappingSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: ProcessDesignToMachineDesignMappingSet.Annotations | None = field(
-        default=None,
-        metadata={
-            "name": "ANNOTATIONS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    annotations: ProcessDesignToMachineDesignMappingSet.Annotations | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "ANNOTATIONS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     variation_point: VariationPoint | None = field(
         default=None,
@@ -162,7 +165,10 @@ class ProcessDesignToMachineDesignMappingSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    process_design_to_machine_design_mappings: ProcessDesignToMachineDesignMappingSet.ProcessDesignToMachineDesignMappings | None = field(
+    process_design_to_machine_design_mappings: (
+        ProcessDesignToMachineDesignMappingSet.ProcessDesignToMachineDesignMappings
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "PROCESS-DESIGN-TO-MACHINE-DESIGN-MAPPINGS",

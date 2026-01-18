@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .ref import Ref
 from .root_sw_composition_prototype_subtypes_enum import (
@@ -36,7 +35,9 @@ class VariableAccessInEcuInstanceRef:
     class Meta:
         name = "VARIABLE-ACCESS-IN-ECU-INSTANCE-REF"
 
-    context_root_composition_ref: VariableAccessInEcuInstanceRef.ContextRootCompositionRef | None = field(
+    context_root_composition_ref: (
+        VariableAccessInEcuInstanceRef.ContextRootCompositionRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "CONTEXT-ROOT-COMPOSITION-REF",
@@ -44,7 +45,9 @@ class VariableAccessInEcuInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    context_atomic_component_ref: VariableAccessInEcuInstanceRef.ContextAtomicComponentRef | None = field(
+    context_atomic_component_ref: (
+        VariableAccessInEcuInstanceRef.ContextAtomicComponentRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "CONTEXT-ATOMIC-COMPONENT-REF",
@@ -52,7 +55,9 @@ class VariableAccessInEcuInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    target_variable_access_ref: VariableAccessInEcuInstanceRef.TargetVariableAccessRef | None = field(
+    target_variable_access_ref: (
+        VariableAccessInEcuInstanceRef.TargetVariableAccessRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "TARGET-VARIABLE-ACCESS-REF",

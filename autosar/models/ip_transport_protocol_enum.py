@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .ip_transport_protocol_enum_simple import IpTransportProtocolEnumSimple
 

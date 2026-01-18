@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from xsdata.models.datatype import XmlDateTime
 
@@ -105,15 +104,13 @@ class VmsMessage:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    coded_reason_for_setting: CodedReasonForSettingMessageEnum | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "codedReasonForSetting",
-                "type": "Element",
-                "namespace": "http://datex2.eu/schema/2/2_0",
-            },
-        )
+    coded_reason_for_setting: CodedReasonForSettingMessageEnum | None = field(
+        default=None,
+        metadata={
+            "name": "codedReasonForSetting",
+            "type": "Element",
+            "namespace": "http://datex2.eu/schema/2/2_0",
+        },
     )
     vms_message_information_type: list[VmsMessageInformationTypeEnum] = field(
         default_factory=list,
@@ -156,23 +153,23 @@ class VmsMessage:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    situation_to_which_message_is_related: VersionedReference | None = (
+    situation_to_which_message_is_related: VersionedReference | None = field(
+        default=None,
+        metadata={
+            "name": "situationToWhichMessageIsRelated",
+            "type": "Element",
+            "namespace": "http://datex2.eu/schema/2/2_0",
+        },
+    )
+    situation_record_to_which_message_is_related: VersionedReference | None = (
         field(
             default=None,
             metadata={
-                "name": "situationToWhichMessageIsRelated",
+                "name": "situationRecordToWhichMessageIsRelated",
                 "type": "Element",
                 "namespace": "http://datex2.eu/schema/2/2_0",
             },
         )
-    )
-    situation_record_to_which_message_is_related: VersionedReference | None = field(
-        default=None,
-        metadata={
-            "name": "situationRecordToWhichMessageIsRelated",
-            "type": "Element",
-            "namespace": "http://datex2.eu/schema/2/2_0",
-        },
     )
     distance_from_situation_record: float | None = field(
         default=None,

@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from ipxact.models.address_block import AddressBlock
 from ipxact.models.bank import Bank
@@ -77,15 +76,13 @@ class MemoryRemapType:
             "min_occurs": 1,
         },
     )
-    remap_definition_ref: MemoryRemapType.RemapDefinitionRef | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "remapDefinitionRef",
-                "type": "Element",
-                "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
-            },
-        )
+    remap_definition_ref: MemoryRemapType.RemapDefinitionRef | None = field(
+        default=None,
+        metadata={
+            "name": "remapDefinitionRef",
+            "type": "Element",
+            "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
+        },
     )
     address_block: list[AddressBlock] = field(
         default_factory=list,

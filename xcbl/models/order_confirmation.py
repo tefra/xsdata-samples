@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from xcbl.models.order_confirmation_response import (
     ListOfAccountAssignment,
@@ -154,7 +153,9 @@ class OrderConfirmationAction:
             "required": True,
         }
     )
-    order_confirmation_action_coded_other: OrderConfirmationActionCodedOther | None = field(
+    order_confirmation_action_coded_other: (
+        OrderConfirmationActionCodedOther | None
+    ) = field(
         default=None,
         metadata={
             "name": "OrderConfirmationActionCodedOther",
@@ -218,14 +219,12 @@ class OrderConfirmationDetailReferences:
             "type": "Element",
         },
     )
-    contract_and_system_reference: ContractAndSystemReference | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "ContractAndSystemReference",
-                "type": "Element",
-            },
-        )
+    contract_and_system_reference: ContractAndSystemReference | None = field(
+        default=None,
+        metadata={
+            "name": "ContractAndSystemReference",
+            "type": "Element",
+        },
     )
     list_of_reference_coded: ListOfReferenceCoded | None = field(
         default=None,
@@ -294,21 +293,21 @@ class OrderConfirmationHeader:
             "type": "Element",
         },
     )
-    order_confirmation_header_short_description: OrderConfirmationHeaderShortDescription | None = field(
+    order_confirmation_header_short_description: (
+        OrderConfirmationHeaderShortDescription | None
+    ) = field(
         default=None,
         metadata={
             "name": "OrderConfirmationHeaderShortDescription",
             "type": "Element",
         },
     )
-    order_confirmation_header_note: OrderConfirmationHeaderNote | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "OrderConfirmationHeaderNote",
-                "type": "Element",
-            },
-        )
+    order_confirmation_header_note: OrderConfirmationHeaderNote | None = field(
+        default=None,
+        metadata={
+            "name": "OrderConfirmationHeaderNote",
+            "type": "Element",
+        },
     )
     list_of_structured_note: ListOfStructuredNote | None = field(
         default=None,
@@ -349,7 +348,9 @@ class OrderConfirmationItemDetail:
             "type": "Element",
         },
     )
-    order_confirmation_detail_short_description: OrderConfirmationDetailShortDescription | None = field(
+    order_confirmation_detail_short_description: (
+        OrderConfirmationDetailShortDescription | None
+    ) = field(
         default=None,
         metadata={
             "name": "OrderConfirmationDetailShortDescription",

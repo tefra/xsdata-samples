@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -107,7 +106,9 @@ class LogAndTraceInstantiation:
             "required": True,
         },
     )
-    short_name_fragments: LogAndTraceInstantiation.ShortNameFragments | None = field(
+    short_name_fragments: (
+        LogAndTraceInstantiation.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -171,15 +172,13 @@ class LogAndTraceInstantiation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    dlt_log_channels: LogAndTraceInstantiation.DltLogChannels | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "DLT-LOG-CHANNELS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    dlt_log_channels: LogAndTraceInstantiation.DltLogChannels | None = field(
+        default=None,
+        metadata={
+            "name": "DLT-LOG-CHANNELS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     queue_size: PositiveInteger | None = field(
         default=None,
@@ -197,7 +196,9 @@ class LogAndTraceInstantiation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    time_base_resource_ref: LogAndTraceInstantiation.TimeBaseResourceRef | None = field(
+    time_base_resource_ref: (
+        LogAndTraceInstantiation.TimeBaseResourceRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "TIME-BASE-RESOURCE-REF",

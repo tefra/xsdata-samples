@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from datexii.models.eu.datexii.v2.alert_clocation import AlertCLocation
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
@@ -36,11 +35,13 @@ class AlertCMethod4SecondaryPointLocation:
             "required": True,
         },
     )
-    alert_cmethod4_secondary_point_location_extension: ExtensionType | None = field(
-        default=None,
-        metadata={
-            "name": "alertCMethod4SecondaryPointLocationExtension",
-            "type": "Element",
-            "namespace": "http://datex2.eu/schema/2/2_0",
-        },
+    alert_cmethod4_secondary_point_location_extension: ExtensionType | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "alertCMethod4SecondaryPointLocationExtension",
+                "type": "Element",
+                "namespace": "http://datex2.eu/schema/2/2_0",
+            },
+        )
     )

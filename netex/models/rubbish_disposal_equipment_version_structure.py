@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .passenger_equipment_version_structure import (
     PassengerEquipmentVersionStructure,

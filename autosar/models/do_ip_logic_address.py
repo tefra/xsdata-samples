@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -94,15 +93,13 @@ class DoIpLogicAddress:
             "required": True,
         },
     )
-    short_name_fragments: DoIpLogicAddress.ShortNameFragments | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "SHORT-NAME-FRAGMENTS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    short_name_fragments: DoIpLogicAddress.ShortNameFragments | None = field(
+        default=None,
+        metadata={
+            "name": "SHORT-NAME-FRAGMENTS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     long_name: MultilanguageLongName | None = field(
         default=None,
@@ -160,7 +157,9 @@ class DoIpLogicAddress:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    do_ip_logic_address_props: DoIpLogicAddress.DoIpLogicAddressProps | None = field(
+    do_ip_logic_address_props: (
+        DoIpLogicAddress.DoIpLogicAddressProps | None
+    ) = field(
         default=None,
         metadata={
             "name": "DO-IP-LOGIC-ADDRESS-PROPS",
@@ -215,7 +214,9 @@ class DoIpLogicAddress:
 
     @dataclass
     class DoIpLogicAddressProps:
-        do_ip_logic_target_address_props: DoIpLogicTargetAddressProps | None = field(
+        do_ip_logic_target_address_props: (
+            DoIpLogicTargetAddressProps | None
+        ) = field(
             default=None,
             metadata={
                 "name": "DO-IP-LOGIC-TARGET-ADDRESS-PROPS",
@@ -223,7 +224,9 @@ class DoIpLogicAddress:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        do_ip_logic_tester_address_props: DoIpLogicTesterAddressProps | None = field(
+        do_ip_logic_tester_address_props: (
+            DoIpLogicTesterAddressProps | None
+        ) = field(
             default=None,
             metadata={
                 "name": "DO-IP-LOGIC-TESTER-ADDRESS-PROPS",

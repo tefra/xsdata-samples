@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .diagnostic_data_identifier_subtypes_enum import (
     DiagnosticDataIdentifierSubtypesEnum,
@@ -47,7 +46,9 @@ class DiagnosticDataChangeTrigger:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    data_identifier_ref: DiagnosticDataChangeTrigger.DataIdentifierRef | None = field(
+    data_identifier_ref: (
+        DiagnosticDataChangeTrigger.DataIdentifierRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "DATA-IDENTIFIER-REF",

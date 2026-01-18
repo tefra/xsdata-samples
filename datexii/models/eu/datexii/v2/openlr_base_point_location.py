@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.openlr_last_location_reference_point import (
@@ -70,7 +69,9 @@ class OpenlrBasePointLocation:
             },
         )
     )
-    openlr_last_location_reference_point: OpenlrLastLocationReferencePoint | None = field(
+    openlr_last_location_reference_point: (
+        OpenlrLastLocationReferencePoint | None
+    ) = field(
         default=None,
         metadata={
             "name": "openlrLastLocationReferencePoint",

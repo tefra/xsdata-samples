@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from .all_vehicle_modes_of_transport_enumeration import (
     AllVehicleModesOfTransportEnumeration,
@@ -45,7 +44,13 @@ class OperationalContextVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    organisation_part_ref: ControlCentreRef | OrganisationalUnitRef | DepartmentRef | OrganisationPartRef | None = field(
+    organisation_part_ref: (
+        ControlCentreRef
+        | OrganisationalUnitRef
+        | DepartmentRef
+        | OrganisationPartRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",

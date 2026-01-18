@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .cse_code_type_string import CseCodeTypeString
 from .integer import Integer

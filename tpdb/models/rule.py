@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from tpdb.models.conditions import Conditions
 from tpdb.models.lhs import Lhs

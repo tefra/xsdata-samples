@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from ipxact.models.clock_driver import ClockDriver
 from ipxact.models.default_value import DefaultValue

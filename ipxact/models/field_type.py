@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from ipxact.models.access import Access
 from ipxact.models.access_restrictions import AccessRestrictions
@@ -280,15 +279,13 @@ class FieldType:
 
     @dataclass
     class AliasOf:
-        address_space_ref: FieldType.AliasOf.AddressSpaceRef | None = (
-            field(
-                default=None,
-                metadata={
-                    "name": "addressSpaceRef",
-                    "type": "Element",
-                    "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
-                },
-            )
+        address_space_ref: FieldType.AliasOf.AddressSpaceRef | None = field(
+            default=None,
+            metadata={
+                "name": "addressSpaceRef",
+                "type": "Element",
+                "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
+            },
         )
         memory_map_ref: FieldType.AliasOf.MemoryMapRef | None = field(
             default=None,
@@ -422,7 +419,9 @@ class FieldType:
                     "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
                 },
             )
-            field_access_policy_definition_ref: FieldAccessPolicyDefinitionRef | None = field(
+            field_access_policy_definition_ref: (
+                FieldAccessPolicyDefinitionRef | None
+            ) = field(
                 default=None,
                 metadata={
                     "name": "fieldAccessPolicyDefinitionRef",
@@ -469,7 +468,10 @@ class FieldType:
                     "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
                 },
             )
-            broadcasts: FieldType.FieldAccessPolicies.FieldAccessPolicy.Broadcasts | None = field(
+            broadcasts: (
+                FieldType.FieldAccessPolicies.FieldAccessPolicy.Broadcasts
+                | None
+            ) = field(
                 default=None,
                 metadata={
                     "type": "Element",
@@ -484,7 +486,9 @@ class FieldType:
                     "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
                 },
             )
-            testable: FieldType.FieldAccessPolicies.FieldAccessPolicy.Testable | None = field(
+            testable: (
+                FieldType.FieldAccessPolicies.FieldAccessPolicy.Testable | None
+            ) = field(
                 default=None,
                 metadata={
                     "type": "Element",
@@ -530,7 +534,10 @@ class FieldType:
 
                 @dataclass
                 class BroadcastTo:
-                    address_space_ref: FieldType.FieldAccessPolicies.FieldAccessPolicy.Broadcasts.BroadcastTo.AddressSpaceRef | None = field(
+                    address_space_ref: (
+                        FieldType.FieldAccessPolicies.FieldAccessPolicy.Broadcasts.BroadcastTo.AddressSpaceRef
+                        | None
+                    ) = field(
                         default=None,
                         metadata={
                             "name": "addressSpaceRef",
@@ -538,7 +545,10 @@ class FieldType:
                             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
                         },
                     )
-                    memory_map_ref: FieldType.FieldAccessPolicies.FieldAccessPolicy.Broadcasts.BroadcastTo.MemoryMapRef | None = field(
+                    memory_map_ref: (
+                        FieldType.FieldAccessPolicies.FieldAccessPolicy.Broadcasts.BroadcastTo.MemoryMapRef
+                        | None
+                    ) = field(
                         default=None,
                         metadata={
                             "name": "memoryMapRef",

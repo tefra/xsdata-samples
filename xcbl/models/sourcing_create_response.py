@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from xcbl.models.sourcing_result_response import (
     Purpose,
@@ -206,14 +205,18 @@ class SourcingCreateResponseDetail:
             "required": True,
         }
     )
-    sourcing_item_response_coded_other: SourcingItemResponseCodedOther | None = field(
+    sourcing_item_response_coded_other: (
+        SourcingItemResponseCodedOther | None
+    ) = field(
         default=None,
         metadata={
             "name": "SourcingItemResponseCodedOther",
             "type": "Element",
         },
     )
-    list_of_sourcing_item_component_response: ListOfSourcingItemComponentResponse | None = field(
+    list_of_sourcing_item_component_response: (
+        ListOfSourcingItemComponentResponse | None
+    ) = field(
         default=None,
         metadata={
             "name": "ListOfSourcingItemComponentResponse",
@@ -235,14 +238,12 @@ class SourcingCreateResponsePurpose:
 
 @dataclass(kw_only=True)
 class SourcingCreateSummary:
-    total_number_of_sourcing_items: TotalNumberOfSourcingItems | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "TotalNumberOfSourcingItems",
-                "type": "Element",
-            },
-        )
+    total_number_of_sourcing_items: TotalNumberOfSourcingItems | None = field(
+        default=None,
+        metadata={
+            "name": "TotalNumberOfSourcingItems",
+            "type": "Element",
+        },
     )
     total_number_of_participants: TotalNumberOfParticipants | None = field(
         default=None,
@@ -320,14 +321,12 @@ class SourcingCreateResponseHeader:
             "required": True,
         }
     )
-    sourcing_response_coded_other: SourcingResponseCodedOther | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "SourcingResponseCodedOther",
-                "type": "Element",
-            },
-        )
+    sourcing_response_coded_other: SourcingResponseCodedOther | None = field(
+        default=None,
+        metadata={
+            "name": "SourcingResponseCodedOther",
+            "type": "Element",
+        },
     )
     language: Language = field(
         metadata={
@@ -336,14 +335,12 @@ class SourcingCreateResponseHeader:
             "required": True,
         }
     )
-    sourcing_create_response_note: SourcingCreateResponseNote | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "SourcingCreateResponseNote",
-                "type": "Element",
-            },
-        )
+    sourcing_create_response_note: SourcingCreateResponseNote | None = field(
+        default=None,
+        metadata={
+            "name": "SourcingCreateResponseNote",
+            "type": "Element",
+        },
     )
 
 
@@ -392,17 +389,21 @@ class SourcingCreateResponse:
             "required": True,
         }
     )
-    list_of_sourcing_create_response_detail: ListOfSourcingCreateResponseDetail | None = field(
+    list_of_sourcing_create_response_detail: (
+        ListOfSourcingCreateResponseDetail | None
+    ) = field(
         default=None,
         metadata={
             "name": "ListOfSourcingCreateResponseDetail",
             "type": "Element",
         },
     )
-    sourcing_create_response_summary: SourcingCreateResponseSummary | None = field(
-        default=None,
-        metadata={
-            "name": "SourcingCreateResponseSummary",
-            "type": "Element",
-        },
+    sourcing_create_response_summary: SourcingCreateResponseSummary | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "SourcingCreateResponseSummary",
+                "type": "Element",
+            },
+        )
     )

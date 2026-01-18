@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import VariationPoint
 from .physical_channel_subtypes_enum import PhysicalChannelSubtypesEnum
@@ -33,7 +32,9 @@ class PhysicalChannelRefConditional:
     class Meta:
         name = "PHYSICAL-CHANNEL-REF-CONDITIONAL"
 
-    physical_channel_ref: PhysicalChannelRefConditional.PhysicalChannelRef | None = field(
+    physical_channel_ref: (
+        PhysicalChannelRefConditional.PhysicalChannelRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "PHYSICAL-CHANNEL-REF",

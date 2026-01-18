@@ -1,6 +1,5 @@
 from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import Union
 
 from .availability_condition_ref import AvailabilityConditionRef
 from .containment_aggregation_structure import ContainmentAggregationStructure
@@ -19,7 +18,10 @@ class AvailabilityConditionsRelStructure(ContainmentAggregationStructure):
         name = "availabilityConditions_RelStructure"
 
     choice: Iterable[
-        AvailabilityConditionRef | AvailabilityCondition | ValidDuring | ValidBetween
+        AvailabilityConditionRef
+        | AvailabilityCondition
+        | ValidDuring
+        | ValidBetween
     ] = field(
         default_factory=list,
         metadata={

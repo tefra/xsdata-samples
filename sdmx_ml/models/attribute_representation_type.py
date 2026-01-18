@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Union
 
 from sdmx_ml.models.representation_type import RepresentationType
 from sdmx_ml.models.unbounded_code_type import UnboundedCodeType

@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from sdmx_ml.models.exclude_root_type import ExcludeRootType
 

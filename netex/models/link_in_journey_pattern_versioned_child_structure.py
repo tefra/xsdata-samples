@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from .link_in_link_sequence_versioned_child_structure import (
     LinkInLinkSequenceVersionedChildStructure,
@@ -17,7 +16,9 @@ class LinkInJourneyPatternVersionedChildStructure(
     class Meta:
         name = "LinkInJourneyPattern_VersionedChildStructure"
 
-    service_link_ref_or_timing_link_ref: ServiceLinkRef | TimingLinkRef | None = field(
+    service_link_ref_or_timing_link_ref: (
+        ServiceLinkRef | TimingLinkRef | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",

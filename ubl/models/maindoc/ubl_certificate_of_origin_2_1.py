@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from ubl.models.common.ubl_common_aggregate_components_2_1 import (
     CertificateOfOriginApplication,
@@ -162,7 +161,9 @@ class CertificateOfOriginType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    certificate_of_origin_application: CertificateOfOriginApplication | None = field(
+    certificate_of_origin_application: (
+        CertificateOfOriginApplication | None
+    ) = field(
         default=None,
         metadata={
             "name": "CertificateOfOriginApplication",

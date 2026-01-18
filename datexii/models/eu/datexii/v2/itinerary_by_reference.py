@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.itinerary import Itinerary
@@ -23,7 +22,9 @@ class ItineraryByReference(Itinerary):
     :ivar itinerary_by_reference_extension:
     """
 
-    predefined_itinerary_reference: PredefinedItineraryVersionedReference | None = field(
+    predefined_itinerary_reference: (
+        PredefinedItineraryVersionedReference | None
+    ) = field(
         default=None,
         metadata={
             "name": "predefinedItineraryReference",

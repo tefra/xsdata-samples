@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from ipxact.models.unsigned_int_expression import UnsignedIntExpression
 

@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -98,7 +97,9 @@ class ServiceInterfaceEventMapping:
             "required": True,
         },
     )
-    short_name_fragments: ServiceInterfaceEventMapping.ShortNameFragments | None = field(
+    short_name_fragments: (
+        ServiceInterfaceEventMapping.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -154,21 +155,25 @@ class ServiceInterfaceEventMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    source_event_ref: ServiceInterfaceEventMapping.SourceEventRef | None = field(
-        default=None,
-        metadata={
-            "name": "SOURCE-EVENT-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    source_event_ref: ServiceInterfaceEventMapping.SourceEventRef | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "SOURCE-EVENT-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
-    target_event_ref: ServiceInterfaceEventMapping.TargetEventRef | None = field(
-        default=None,
-        metadata={
-            "name": "TARGET-EVENT-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    target_event_ref: ServiceInterfaceEventMapping.TargetEventRef | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "TARGET-EVENT-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     s: str | None = field(
         default=None,

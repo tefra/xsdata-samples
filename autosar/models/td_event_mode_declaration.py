@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -131,13 +130,15 @@ class TdEventModeDeclaration:
             "required": True,
         },
     )
-    short_name_fragments: TdEventModeDeclaration.ShortNameFragments | None = field(
-        default=None,
-        metadata={
-            "name": "SHORT-NAME-FRAGMENTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    short_name_fragments: TdEventModeDeclaration.ShortNameFragments | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "SHORT-NAME-FRAGMENTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     long_name: MultilanguageLongName | None = field(
         default=None,
@@ -219,7 +220,9 @@ class TdEventModeDeclaration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    port_prototype_blueprint_ref: TdEventModeDeclaration.PortPrototypeBlueprintRef | None = field(
+    port_prototype_blueprint_ref: (
+        TdEventModeDeclaration.PortPrototypeBlueprintRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "PORT-PROTOTYPE-BLUEPRINT-REF",
@@ -235,7 +238,9 @@ class TdEventModeDeclaration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    entry_mode_declaration_ref: TdEventModeDeclaration.EntryModeDeclarationRef | None = field(
+    entry_mode_declaration_ref: (
+        TdEventModeDeclaration.EntryModeDeclarationRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "ENTRY-MODE-DECLARATION-REF",
@@ -243,7 +248,9 @@ class TdEventModeDeclaration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    exit_mode_declaration_ref: TdEventModeDeclaration.ExitModeDeclarationRef | None = field(
+    exit_mode_declaration_ref: (
+        TdEventModeDeclaration.ExitModeDeclarationRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "EXIT-MODE-DECLARATION-REF",
@@ -251,21 +258,25 @@ class TdEventModeDeclaration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    mode_declaration_ref: TdEventModeDeclaration.ModeDeclarationRef | None = field(
-        default=None,
-        metadata={
-            "name": "MODE-DECLARATION-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    mode_declaration_ref: TdEventModeDeclaration.ModeDeclarationRef | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "MODE-DECLARATION-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
-    td_event_mode_declaration_type: TdEventModeDeclarationTypeEnum | None = field(
-        default=None,
-        metadata={
-            "name": "TD-EVENT-MODE-DECLARATION-TYPE",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    td_event_mode_declaration_type: TdEventModeDeclarationTypeEnum | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "TD-EVENT-MODE-DECLARATION-TYPE",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     s: str | None = field(
         default=None,

@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .mode_error_reaction_policy_enum_simple import (
     ModeErrorReactionPolicyEnumSimple,

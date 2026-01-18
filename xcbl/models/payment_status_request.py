@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from xcbl.models.payment_status_response import (
     ConfirmationId,
@@ -134,7 +133,9 @@ class PaymentStatusRequestDetail:
             "type": "Element",
         },
     )
-    list_of_payment_request_references: ListOfPaymentRequestReferences | None = field(
+    list_of_payment_request_references: (
+        ListOfPaymentRequestReferences | None
+    ) = field(
         default=None,
         metadata={
             "name": "ListOfPaymentRequestReferences",

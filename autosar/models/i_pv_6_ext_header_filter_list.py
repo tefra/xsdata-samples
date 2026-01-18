@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -90,13 +89,15 @@ class IPv6ExtHeaderFilterList:
             "required": True,
         },
     )
-    short_name_fragments: IPv6ExtHeaderFilterList.ShortNameFragments | None = field(
-        default=None,
-        metadata={
-            "name": "SHORT-NAME-FRAGMENTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    short_name_fragments: IPv6ExtHeaderFilterList.ShortNameFragments | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "SHORT-NAME-FRAGMENTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     long_name: MultilanguageLongName | None = field(
         default=None,
@@ -146,7 +147,9 @@ class IPv6ExtHeaderFilterList:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    allowed_i_pv_6_ext_headers: IPv6ExtHeaderFilterList.AllowedIPv6ExtHeaders | None = field(
+    allowed_i_pv_6_ext_headers: (
+        IPv6ExtHeaderFilterList.AllowedIPv6ExtHeaders | None
+    ) = field(
         default=None,
         metadata={
             "name": "ALLOWED-I-PV-6-EXT-HEADERS",

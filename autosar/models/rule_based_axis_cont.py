@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .axis_index_type import AxisIndexType
 from .calprm_axis_category_enum import CalprmAxisCategoryEnum

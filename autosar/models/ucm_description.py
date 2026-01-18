@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -98,15 +97,13 @@ class UcmDescription:
             "required": True,
         },
     )
-    short_name_fragments: UcmDescription.ShortNameFragments | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "SHORT-NAME-FRAGMENTS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    short_name_fragments: UcmDescription.ShortNameFragments | None = field(
+        default=None,
+        metadata={
+            "name": "SHORT-NAME-FRAGMENTS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     long_name: MultilanguageLongName | None = field(
         default=None,
@@ -164,7 +161,9 @@ class UcmDescription:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ucm_module_instantiation_ref: UcmDescription.UcmModuleInstantiationRef | None = field(
+    ucm_module_instantiation_ref: (
+        UcmDescription.UcmModuleInstantiationRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "UCM-MODULE-INSTANTIATION-REF",

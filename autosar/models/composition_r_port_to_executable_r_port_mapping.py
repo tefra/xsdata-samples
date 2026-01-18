@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -110,7 +109,9 @@ class CompositionRPortToExecutableRPortMapping:
             "required": True,
         },
     )
-    short_name_fragments: CompositionRPortToExecutableRPortMapping.ShortNameFragments | None = field(
+    short_name_fragments: (
+        CompositionRPortToExecutableRPortMapping.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -158,7 +159,9 @@ class CompositionRPortToExecutableRPortMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: CompositionRPortToExecutableRPortMapping.Annotations | None = field(
+    annotations: (
+        CompositionRPortToExecutableRPortMapping.Annotations | None
+    ) = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -174,7 +177,9 @@ class CompositionRPortToExecutableRPortMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    process_design_ref: CompositionRPortToExecutableRPortMapping.ProcessDesignRef | None = field(
+    process_design_ref: (
+        CompositionRPortToExecutableRPortMapping.ProcessDesignRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "PROCESS-DESIGN-REF",
@@ -182,7 +187,9 @@ class CompositionRPortToExecutableRPortMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    executable_required_port_iref: RPortPrototypeInExecutableInstanceRef | None = field(
+    executable_required_port_iref: (
+        RPortPrototypeInExecutableInstanceRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "EXECUTABLE-REQUIRED-PORT-IREF",
@@ -190,7 +197,9 @@ class CompositionRPortToExecutableRPortMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_cluster_design_required_port_iref: RPortPrototypeInSoftwareClusterDesignInstanceRef | None = field(
+    sw_cluster_design_required_port_iref: (
+        RPortPrototypeInSoftwareClusterDesignInstanceRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "SW-CLUSTER-DESIGN-REQUIRED-PORT-IREF",

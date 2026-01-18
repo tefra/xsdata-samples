@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from .direction_type import DirectionType
 from .route_ref_structure import RouteRefStructure
@@ -36,7 +35,9 @@ class TimingPatternVersionStructure(LinkSequenceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    time_demand_type_ref_or_timeband_ref: TimeDemandTypeRef | TimebandRef | None = field(
+    time_demand_type_ref_or_timeband_ref: (
+        TimeDemandTypeRef | TimebandRef | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",

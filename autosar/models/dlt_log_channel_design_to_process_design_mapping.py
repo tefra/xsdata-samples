@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -101,7 +100,9 @@ class DltLogChannelDesignToProcessDesignMapping:
             "required": True,
         },
     )
-    short_name_fragments: DltLogChannelDesignToProcessDesignMapping.ShortNameFragments | None = field(
+    short_name_fragments: (
+        DltLogChannelDesignToProcessDesignMapping.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -149,7 +150,9 @@ class DltLogChannelDesignToProcessDesignMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: DltLogChannelDesignToProcessDesignMapping.Annotations | None = field(
+    annotations: (
+        DltLogChannelDesignToProcessDesignMapping.Annotations | None
+    ) = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -165,7 +168,9 @@ class DltLogChannelDesignToProcessDesignMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    dlt_log_channel_design_ref: DltLogChannelDesignToProcessDesignMapping.DltLogChannelDesignRef | None = field(
+    dlt_log_channel_design_ref: (
+        DltLogChannelDesignToProcessDesignMapping.DltLogChannelDesignRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "DLT-LOG-CHANNEL-DESIGN-REF",
@@ -173,7 +178,9 @@ class DltLogChannelDesignToProcessDesignMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    process_design_ref: DltLogChannelDesignToProcessDesignMapping.ProcessDesignRef | None = field(
+    process_design_ref: (
+        DltLogChannelDesignToProcessDesignMapping.ProcessDesignRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "PROCESS-DESIGN-REF",

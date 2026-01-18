@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -107,7 +106,10 @@ class PersistencyDeploymentElementToCryptoKeySlotMapping:
             "required": True,
         },
     )
-    short_name_fragments: PersistencyDeploymentElementToCryptoKeySlotMapping.ShortNameFragments | None = field(
+    short_name_fragments: (
+        PersistencyDeploymentElementToCryptoKeySlotMapping.ShortNameFragments
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -155,7 +157,9 @@ class PersistencyDeploymentElementToCryptoKeySlotMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: PersistencyDeploymentElementToCryptoKeySlotMapping.Annotations | None = field(
+    annotations: (
+        PersistencyDeploymentElementToCryptoKeySlotMapping.Annotations | None
+    ) = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -171,7 +175,10 @@ class PersistencyDeploymentElementToCryptoKeySlotMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    crypto_key_slot_ref: PersistencyDeploymentElementToCryptoKeySlotMapping.CryptoKeySlotRef | None = field(
+    crypto_key_slot_ref: (
+        PersistencyDeploymentElementToCryptoKeySlotMapping.CryptoKeySlotRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "CRYPTO-KEY-SLOT-REF",
@@ -187,7 +194,10 @@ class PersistencyDeploymentElementToCryptoKeySlotMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    persistency_deployment_element_ref: PersistencyDeploymentElementToCryptoKeySlotMapping.PersistencyDeploymentElementRef | None = field(
+    persistency_deployment_element_ref: (
+        PersistencyDeploymentElementToCryptoKeySlotMapping.PersistencyDeploymentElementRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "PERSISTENCY-DEPLOYMENT-ELEMENT-REF",

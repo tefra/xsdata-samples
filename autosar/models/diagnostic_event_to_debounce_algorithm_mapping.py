@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -100,7 +99,9 @@ class DiagnosticEventToDebounceAlgorithmMapping:
             "required": True,
         },
     )
-    short_name_fragments: DiagnosticEventToDebounceAlgorithmMapping.ShortNameFragments | None = field(
+    short_name_fragments: (
+        DiagnosticEventToDebounceAlgorithmMapping.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -148,7 +149,9 @@ class DiagnosticEventToDebounceAlgorithmMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: DiagnosticEventToDebounceAlgorithmMapping.Annotations | None = field(
+    annotations: (
+        DiagnosticEventToDebounceAlgorithmMapping.Annotations | None
+    ) = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -164,7 +167,9 @@ class DiagnosticEventToDebounceAlgorithmMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    debounce_algorithm_ref: DiagnosticEventToDebounceAlgorithmMapping.DebounceAlgorithmRef | None = field(
+    debounce_algorithm_ref: (
+        DiagnosticEventToDebounceAlgorithmMapping.DebounceAlgorithmRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "DEBOUNCE-ALGORITHM-REF",
@@ -172,7 +177,9 @@ class DiagnosticEventToDebounceAlgorithmMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    diagnostic_event_ref: DiagnosticEventToDebounceAlgorithmMapping.DiagnosticEventRef | None = field(
+    diagnostic_event_ref: (
+        DiagnosticEventToDebounceAlgorithmMapping.DiagnosticEventRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "DIAGNOSTIC-EVENT-REF",

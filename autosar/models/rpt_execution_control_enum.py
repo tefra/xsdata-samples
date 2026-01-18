@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .rpt_execution_control_enum_simple import RptExecutionControlEnumSimple
 

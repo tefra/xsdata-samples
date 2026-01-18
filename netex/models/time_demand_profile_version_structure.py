@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from .dead_run_journey_pattern_ref import DeadRunJourneyPatternRef
 from .dead_run_ref import DeadRunRef
@@ -31,7 +30,9 @@ class TimeDemandProfileVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    time_demand_type_ref_or_timeband_ref: TimeDemandTypeRef | TimebandRef | None = field(
+    time_demand_type_ref_or_timeband_ref: (
+        TimeDemandTypeRef | TimebandRef | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -49,7 +50,13 @@ class TimeDemandProfileVersionStructure(DataManagedObjectStructure):
             ),
         },
     )
-    journey_pattern_ref: ServiceJourneyPatternRef | ServicePatternRef | DeadRunJourneyPatternRef | JourneyPatternRef | None = field(
+    journey_pattern_ref: (
+        ServiceJourneyPatternRef
+        | ServicePatternRef
+        | DeadRunJourneyPatternRef
+        | JourneyPatternRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -77,25 +84,23 @@ class TimeDemandProfileVersionStructure(DataManagedObjectStructure):
             ),
         },
     )
-    vehicle_journey_ref: DeadRunRef | VehicleJourneyRef | None = (
-        field(
-            default=None,
-            metadata={
-                "type": "Elements",
-                "choices": (
-                    {
-                        "name": "DeadRunRef",
-                        "type": DeadRunRef,
-                        "namespace": "http://www.netex.org.uk/netex",
-                    },
-                    {
-                        "name": "VehicleJourneyRef",
-                        "type": VehicleJourneyRef,
-                        "namespace": "http://www.netex.org.uk/netex",
-                    },
-                ),
-            },
-        )
+    vehicle_journey_ref: DeadRunRef | VehicleJourneyRef | None = field(
+        default=None,
+        metadata={
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "DeadRunRef",
+                    "type": DeadRunRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "VehicleJourneyRef",
+                    "type": VehicleJourneyRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+        },
     )
     members: TimeDemandProfileMembersRelStructure | None = field(
         default=None,

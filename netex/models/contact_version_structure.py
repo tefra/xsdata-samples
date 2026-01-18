@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .contact_details_structure import ContactDetailsStructure
 from .contact_type_enumeration import ContactTypeEnumeration

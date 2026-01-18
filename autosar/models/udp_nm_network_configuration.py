@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .ip4_address_string import Ip4AddressString
 from .ip6_address_string import Ip6AddressString

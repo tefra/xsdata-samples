@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .can_controller_fd_configuration import CanControllerFdConfiguration
 from .can_controller_fd_configuration_requirements import (
@@ -63,17 +62,17 @@ class CanControllerConfigurationRequirements:
     class Meta:
         name = "CAN-CONTROLLER-CONFIGURATION-REQUIREMENTS"
 
-    can_controller_fd_attributes: CanControllerFdConfiguration | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "CAN-CONTROLLER-FD-ATTRIBUTES",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    can_controller_fd_attributes: CanControllerFdConfiguration | None = field(
+        default=None,
+        metadata={
+            "name": "CAN-CONTROLLER-FD-ATTRIBUTES",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
-    can_controller_fd_requirements: CanControllerFdConfigurationRequirements | None = field(
+    can_controller_fd_requirements: (
+        CanControllerFdConfigurationRequirements | None
+    ) = field(
         default=None,
         metadata={
             "name": "CAN-CONTROLLER-FD-REQUIREMENTS",

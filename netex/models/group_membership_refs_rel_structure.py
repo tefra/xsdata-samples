@@ -1,6 +1,5 @@
 from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import Union
 
 from .access_zone_ref import AccessZoneRef
 from .administrative_zone_ref import AdministrativeZoneRef
@@ -23,7 +22,14 @@ class GroupMembershipRefsRelStructure(OneToManyRelationshipStructure):
         name = "groupMembershipRefs_RelStructure"
 
     zone_ref_or_tariff_zone_ref: Iterable[
-        MobilityServiceConstraintZoneRef | StopAreaRef | TransportAdministrativeZoneRef | AccessZoneRef | AdministrativeZoneRef | FareZoneRef | TariffZoneRef | ZoneRef
+        MobilityServiceConstraintZoneRef
+        | StopAreaRef
+        | TransportAdministrativeZoneRef
+        | AccessZoneRef
+        | AdministrativeZoneRef
+        | FareZoneRef
+        | TariffZoneRef
+        | ZoneRef
     ] = field(
         default_factory=list,
         metadata={

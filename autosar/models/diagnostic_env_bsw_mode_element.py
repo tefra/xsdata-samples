@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .identifier import Identifier
 from .mode_in_bsw_module_description_instance_ref import (
@@ -50,7 +49,9 @@ class DiagnosticEnvBswModeElement:
             "required": True,
         },
     )
-    short_name_fragments: DiagnosticEnvBswModeElement.ShortNameFragments | None = field(
+    short_name_fragments: (
+        DiagnosticEnvBswModeElement.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",

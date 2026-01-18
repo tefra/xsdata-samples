@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -114,13 +113,15 @@ class ProcessToMachineMapping:
             "required": True,
         },
     )
-    short_name_fragments: ProcessToMachineMapping.ShortNameFragments | None = field(
-        default=None,
-        metadata={
-            "name": "SHORT-NAME-FRAGMENTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    short_name_fragments: ProcessToMachineMapping.ShortNameFragments | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "SHORT-NAME-FRAGMENTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     long_name: MultilanguageLongName | None = field(
         default=None,
@@ -186,7 +187,9 @@ class ProcessToMachineMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    non_os_module_instantiation_ref: ProcessToMachineMapping.NonOsModuleInstantiationRef | None = field(
+    non_os_module_instantiation_ref: (
+        ProcessToMachineMapping.NonOsModuleInstantiationRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "NON-OS-MODULE-INSTANTIATION-REF",
@@ -202,23 +205,23 @@ class ProcessToMachineMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    shall_not_run_on_refs: ProcessToMachineMapping.ShallNotRunOnRefs | None = field(
-        default=None,
-        metadata={
-            "name": "SHALL-NOT-RUN-ON-REFS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
-    )
-    shall_run_on_refs: ProcessToMachineMapping.ShallRunOnRefs | None = (
+    shall_not_run_on_refs: ProcessToMachineMapping.ShallNotRunOnRefs | None = (
         field(
             default=None,
             metadata={
-                "name": "SHALL-RUN-ON-REFS",
+                "name": "SHALL-NOT-RUN-ON-REFS",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
+    )
+    shall_run_on_refs: ProcessToMachineMapping.ShallRunOnRefs | None = field(
+        default=None,
+        metadata={
+            "name": "SHALL-RUN-ON-REFS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     s: str | None = field(
         default=None,
@@ -267,15 +270,13 @@ class ProcessToMachineMapping:
 
     @dataclass
     class DesignRef(Ref):
-        dest: ProcessDesignToMachineDesignMappingSubtypesEnum | None = (
-            field(
-                default=None,
-                metadata={
-                    "name": "DEST",
-                    "type": "Attribute",
-                    "required": True,
-                },
-            )
+        dest: ProcessDesignToMachineDesignMappingSubtypesEnum | None = field(
+            default=None,
+            metadata={
+                "name": "DEST",
+                "type": "Attribute",
+                "required": True,
+            },
         )
 
     @dataclass

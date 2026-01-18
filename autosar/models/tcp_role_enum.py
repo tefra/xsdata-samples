@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .tcp_role_enum_simple import TcpRoleEnumSimple
 

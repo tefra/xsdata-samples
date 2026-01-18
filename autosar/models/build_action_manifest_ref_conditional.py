@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import VariationPoint
 from .build_action_manifest_subtypes_enum import (
@@ -35,7 +34,9 @@ class BuildActionManifestRefConditional:
     class Meta:
         name = "BUILD-ACTION-MANIFEST-REF-CONDITIONAL"
 
-    build_action_manifest_ref: BuildActionManifestRefConditional.BuildActionManifestRef | None = field(
+    build_action_manifest_ref: (
+        BuildActionManifestRefConditional.BuildActionManifestRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "BUILD-ACTION-MANIFEST-REF",

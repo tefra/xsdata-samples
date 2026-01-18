@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .boolean import Boolean
 from .limit_value import LimitValue
@@ -120,15 +119,13 @@ class PrimitiveAttributeCondition:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    attribute_ref: PrimitiveAttributeCondition.AttributeRef | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "ATTRIBUTE-REF",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    attribute_ref: PrimitiveAttributeCondition.AttributeRef | None = field(
+        default=None,
+        metadata={
+            "name": "ATTRIBUTE-REF",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     s: str | None = field(
         default=None,

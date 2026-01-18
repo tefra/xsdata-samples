@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -97,15 +96,13 @@ class TransientFault:
             "required": True,
         },
     )
-    short_name_fragments: TransientFault.ShortNameFragments | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "SHORT-NAME-FRAGMENTS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    short_name_fragments: TransientFault.ShortNameFragments | None = field(
+        default=None,
+        metadata={
+            "name": "SHORT-NAME-FRAGMENTS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     long_name: MultilanguageLongName | None = field(
         default=None,
@@ -171,13 +168,15 @@ class TransientFault:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    possible_error_reactions: TransientFault.PossibleErrorReactions | None = field(
-        default=None,
-        metadata={
-            "name": "POSSIBLE-ERROR-REACTIONS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    possible_error_reactions: TransientFault.PossibleErrorReactions | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "POSSIBLE-ERROR-REACTIONS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     s: str | None = field(
         default=None,

@@ -1,6 +1,5 @@
 from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import Union
 
 from .day_type_ref import DayTypeRef
 from .fare_day_type_ref import FareDayTypeRef

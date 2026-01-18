@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .route_ref import RouteRef
 from .sections_in_sequence_rel_structure import LinkSequenceVersionStructure
@@ -23,11 +22,13 @@ class SingleJourneyPathVersionStructure(LinkSequenceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    points_in_sequence: VehicleMeetingPointsInSequenceRelStructure | None = field(
-        default=None,
-        metadata={
-            "name": "pointsInSequence",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        },
+    points_in_sequence: VehicleMeetingPointsInSequenceRelStructure | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "pointsInSequence",
+                "type": "Element",
+                "namespace": "http://www.netex.org.uk/netex",
+            },
+        )
     )

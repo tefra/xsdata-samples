@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .array_size_semantics_enum import ArraySizeSemanticsEnum
 from .integer import Integer

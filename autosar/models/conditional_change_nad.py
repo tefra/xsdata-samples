@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import DocumentationBlock
 from .integer import Integer
@@ -83,7 +82,9 @@ class ConditionalChangeNad:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    assigned_controller_ref: ConditionalChangeNad.AssignedControllerRef | None = field(
+    assigned_controller_ref: (
+        ConditionalChangeNad.AssignedControllerRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "ASSIGNED-CONTROLLER-REF",
@@ -91,7 +92,9 @@ class ConditionalChangeNad:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    assigned_lin_slave_config_ref: ConditionalChangeNad.AssignedLinSlaveConfigRef | None = field(
+    assigned_lin_slave_config_ref: (
+        ConditionalChangeNad.AssignedLinSlaveConfigRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "ASSIGNED-LIN-SLAVE-CONFIG-REF",

@@ -1,6 +1,5 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
-from typing import Optional
 
 from .customer_purchase_packages_rel_structure import (
     CustomerPurchasePackagesRelStructure,
@@ -107,13 +106,15 @@ class SalesTransactionVersionStructure(FareContractEntryVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    customer_purchase_packages: CustomerPurchasePackagesRelStructure | None = field(
-        default=None,
-        metadata={
-            "name": "customerPurchasePackages",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        },
+    customer_purchase_packages: CustomerPurchasePackagesRelStructure | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "customerPurchasePackages",
+                "type": "Element",
+                "namespace": "http://www.netex.org.uk/netex",
+            },
+        )
     )
     travel_documents: TravelDocumentsRelStructure | None = field(
         default=None,

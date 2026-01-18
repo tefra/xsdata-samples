@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import VariationPoint
 from .identifier import Identifier
@@ -54,7 +53,9 @@ class RoleBasedMcDataAssignment:
     class Meta:
         name = "ROLE-BASED-MC-DATA-ASSIGNMENT"
 
-    execution_context_refs: RoleBasedMcDataAssignment.ExecutionContextRefs | None = field(
+    execution_context_refs: (
+        RoleBasedMcDataAssignment.ExecutionContextRefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "EXECUTION-CONTEXT-REFS",
@@ -62,7 +63,9 @@ class RoleBasedMcDataAssignment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    mc_data_instance_refs: RoleBasedMcDataAssignment.McDataInstanceRefs | None = field(
+    mc_data_instance_refs: (
+        RoleBasedMcDataAssignment.McDataInstanceRefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "MC-DATA-INSTANCE-REFS",

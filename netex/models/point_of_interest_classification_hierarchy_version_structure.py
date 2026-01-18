@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .group_of_entities_version_structure import (
     GroupOfEntitiesVersionStructure,
@@ -18,7 +17,9 @@ class PointOfInterestClassificationHierarchyVersionStructure(
     class Meta:
         name = "PointOfInterestClassificationHierarchy_VersionStructure"
 
-    members: PointOfInterestClassificationHierarchyMembersRelStructure | None = field(
+    members: (
+        PointOfInterestClassificationHierarchyMembersRelStructure | None
+    ) = field(
         default=None,
         metadata={
             "type": "Element",

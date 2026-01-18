@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .ordered_master import OrderedMaster
 from .time_sync_technology_enum import TimeSyncTechnologyEnum
@@ -33,7 +32,9 @@ class TimeSyncClientConfiguration:
     class Meta:
         name = "TIME-SYNC-CLIENT-CONFIGURATION"
 
-    ordered_master_list: TimeSyncClientConfiguration.OrderedMasterList | None = field(
+    ordered_master_list: (
+        TimeSyncClientConfiguration.OrderedMasterList | None
+    ) = field(
         default=None,
         metadata={
             "name": "ORDERED-MASTER-LIST",

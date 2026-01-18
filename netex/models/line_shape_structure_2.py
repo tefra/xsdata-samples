@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from .activation_link_ref import ActivationLinkRef
 from .entity_in_version_structure import DataManagedObjectStructure
@@ -39,7 +38,20 @@ class LineShapeStructure2(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    link_ref_or_infrastructure_link_ref: OnwardVehicleMeetingLinkRef | VehicleMeetingLinkRef | ServiceLinkRef | LineLinkRef | TimingLinkRef | WireLinkRef | RoadLinkRef | RailwayLinkRef | ActivationLinkRef | PathLinkRef | RouteLinkRef | None = field(
+    link_ref_or_infrastructure_link_ref: (
+        OnwardVehicleMeetingLinkRef
+        | VehicleMeetingLinkRef
+        | ServiceLinkRef
+        | LineLinkRef
+        | TimingLinkRef
+        | WireLinkRef
+        | RoadLinkRef
+        | RailwayLinkRef
+        | ActivationLinkRef
+        | PathLinkRef
+        | RouteLinkRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",

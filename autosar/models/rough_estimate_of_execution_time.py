@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -122,7 +121,9 @@ class RoughEstimateOfExecutionTime:
             "required": True,
         },
     )
-    short_name_fragments: RoughEstimateOfExecutionTime.ShortNameFragments | None = field(
+    short_name_fragments: (
+        RoughEstimateOfExecutionTime.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -178,7 +179,9 @@ class RoughEstimateOfExecutionTime:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    exclusive_area_ref: RoughEstimateOfExecutionTime.ExclusiveAreaRef | None = field(
+    exclusive_area_ref: (
+        RoughEstimateOfExecutionTime.ExclusiveAreaRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "EXCLUSIVE-AREA-REF",
@@ -186,7 +189,9 @@ class RoughEstimateOfExecutionTime:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    executable_entity_ref: RoughEstimateOfExecutionTime.ExecutableEntityRef | None = field(
+    executable_entity_ref: (
+        RoughEstimateOfExecutionTime.ExecutableEntityRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "EXECUTABLE-ENTITY-REF",
@@ -202,17 +207,17 @@ class RoughEstimateOfExecutionTime:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    hw_element_ref: RoughEstimateOfExecutionTime.HwElementRef | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "HW-ELEMENT-REF",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    hw_element_ref: RoughEstimateOfExecutionTime.HwElementRef | None = field(
+        default=None,
+        metadata={
+            "name": "HW-ELEMENT-REF",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
-    included_library_refs: RoughEstimateOfExecutionTime.IncludedLibraryRefs | None = field(
+    included_library_refs: (
+        RoughEstimateOfExecutionTime.IncludedLibraryRefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "INCLUDED-LIBRARY-REFS",
@@ -220,7 +225,9 @@ class RoughEstimateOfExecutionTime:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    memory_section_locations: RoughEstimateOfExecutionTime.MemorySectionLocations | None = field(
+    memory_section_locations: (
+        RoughEstimateOfExecutionTime.MemorySectionLocations | None
+    ) = field(
         default=None,
         metadata={
             "name": "MEMORY-SECTION-LOCATIONS",

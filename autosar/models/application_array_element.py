@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -116,13 +115,15 @@ class ApplicationArrayElement:
             "required": True,
         },
     )
-    short_name_fragments: ApplicationArrayElement.ShortNameFragments | None = field(
-        default=None,
-        metadata={
-            "name": "SHORT-NAME-FRAGMENTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    short_name_fragments: ApplicationArrayElement.ShortNameFragments | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "SHORT-NAME-FRAGMENTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     long_name: MultilanguageLongName | None = field(
         default=None,
@@ -204,23 +205,23 @@ class ApplicationArrayElement:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    index_data_type_ref: ApplicationArrayElement.IndexDataTypeRef | None = field(
-        default=None,
-        metadata={
-            "name": "INDEX-DATA-TYPE-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
-    )
-    max_number_of_elements: PositiveIntegerValueVariationPoint | None = (
+    index_data_type_ref: ApplicationArrayElement.IndexDataTypeRef | None = (
         field(
             default=None,
             metadata={
-                "name": "MAX-NUMBER-OF-ELEMENTS",
+                "name": "INDEX-DATA-TYPE-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
+    )
+    max_number_of_elements: PositiveIntegerValueVariationPoint | None = field(
+        default=None,
+        metadata={
+            "name": "MAX-NUMBER-OF-ELEMENTS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     s: str | None = field(
         default=None,

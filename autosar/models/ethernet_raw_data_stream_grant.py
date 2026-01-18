@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -105,7 +104,9 @@ class EthernetRawDataStreamGrant:
             "required": True,
         },
     )
-    short_name_fragments: EthernetRawDataStreamGrant.ShortNameFragments | None = field(
+    short_name_fragments: (
+        EthernetRawDataStreamGrant.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -177,7 +178,9 @@ class EthernetRawDataStreamGrant:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ethernet_raw_data_stream_mapping_ref: EthernetRawDataStreamGrant.EthernetRawDataStreamMappingRef | None = field(
+    ethernet_raw_data_stream_mapping_ref: (
+        EthernetRawDataStreamGrant.EthernetRawDataStreamMappingRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "ETHERNET-RAW-DATA-STREAM-MAPPING-REF",

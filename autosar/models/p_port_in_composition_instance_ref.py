@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .abstract_provided_port_prototype_subtypes_enum import (
     AbstractProvidedPortPrototypeSubtypesEnum,
@@ -34,7 +33,9 @@ class PPortInCompositionInstanceRef:
     class Meta:
         name = "P-PORT-IN-COMPOSITION-INSTANCE-REF"
 
-    context_component_ref: PPortInCompositionInstanceRef.ContextComponentRef | None = field(
+    context_component_ref: (
+        PPortInCompositionInstanceRef.ContextComponentRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "CONTEXT-COMPONENT-REF",
@@ -42,13 +43,15 @@ class PPortInCompositionInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    target_p_port_ref: PPortInCompositionInstanceRef.TargetPPortRef | None = field(
-        default=None,
-        metadata={
-            "name": "TARGET-P-PORT-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    target_p_port_ref: PPortInCompositionInstanceRef.TargetPPortRef | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "TARGET-P-PORT-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     s: str | None = field(
         default=None,

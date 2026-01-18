@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -314,15 +313,13 @@ class IpSecRule:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    remote_certificate_refs: IpSecRule.RemoteCertificateRefs | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "REMOTE-CERTIFICATE-REFS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    remote_certificate_refs: IpSecRule.RemoteCertificateRefs | None = field(
+        default=None,
+        metadata={
+            "name": "REMOTE-CERTIFICATE-REFS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     remote_id: String | None = field(
         default=None,

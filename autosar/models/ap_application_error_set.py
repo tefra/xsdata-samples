@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -100,13 +99,15 @@ class ApApplicationErrorSet:
             "required": True,
         },
     )
-    short_name_fragments: ApApplicationErrorSet.ShortNameFragments | None = field(
-        default=None,
-        metadata={
-            "name": "SHORT-NAME-FRAGMENTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    short_name_fragments: ApApplicationErrorSet.ShortNameFragments | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "SHORT-NAME-FRAGMENTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     long_name: MultilanguageLongName | None = field(
         default=None,
@@ -164,7 +165,9 @@ class ApApplicationErrorSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ap_application_error_refs: ApApplicationErrorSet.ApApplicationErrorRefs | None = field(
+    ap_application_error_refs: (
+        ApApplicationErrorSet.ApApplicationErrorRefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "AP-APPLICATION-ERROR-REFS",

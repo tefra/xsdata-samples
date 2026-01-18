@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .td_event_trigger_type_enum_simple import TdEventTriggerTypeEnumSimple
 

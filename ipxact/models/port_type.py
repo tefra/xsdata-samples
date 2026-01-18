@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from ipxact.models.arrays import Arrays
 from ipxact.models.description import Description

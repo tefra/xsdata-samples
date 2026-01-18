@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -109,7 +108,9 @@ class ConsumedProvidedServiceInstanceGroup:
             "required": True,
         },
     )
-    short_name_fragments: ConsumedProvidedServiceInstanceGroup.ShortNameFragments | None = field(
+    short_name_fragments: (
+        ConsumedProvidedServiceInstanceGroup.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -157,13 +158,15 @@ class ConsumedProvidedServiceInstanceGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: ConsumedProvidedServiceInstanceGroup.Annotations | None = field(
-        default=None,
-        metadata={
-            "name": "ANNOTATIONS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    annotations: ConsumedProvidedServiceInstanceGroup.Annotations | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "ANNOTATIONS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     variation_point: VariationPoint | None = field(
         default=None,
@@ -173,7 +176,9 @@ class ConsumedProvidedServiceInstanceGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    consumed_service_instances: ConsumedProvidedServiceInstanceGroup.ConsumedServiceInstances | None = field(
+    consumed_service_instances: (
+        ConsumedProvidedServiceInstanceGroup.ConsumedServiceInstances | None
+    ) = field(
         default=None,
         metadata={
             "name": "CONSUMED-SERVICE-INSTANCES",
@@ -181,7 +186,9 @@ class ConsumedProvidedServiceInstanceGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    provided_service_instances: ConsumedProvidedServiceInstanceGroup.ProvidedServiceInstances | None = field(
+    provided_service_instances: (
+        ConsumedProvidedServiceInstanceGroup.ProvidedServiceInstances | None
+    ) = field(
         default=None,
         metadata={
             "name": "PROVIDED-SERVICE-INSTANCES",

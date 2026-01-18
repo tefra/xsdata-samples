@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from sdmx_ml.models.computation_type import ComputationType
 from sdmx_ml.models.input_output_type import InputOutputType

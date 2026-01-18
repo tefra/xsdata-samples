@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from ipxact.models.cell_class_value_type import CellClassValueType
 from ipxact.models.cell_function_value_type import CellFunctionValueType

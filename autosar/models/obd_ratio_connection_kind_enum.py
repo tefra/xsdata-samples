@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .obd_ratio_connection_kind_enum_simple import (
     ObdRatioConnectionKindEnumSimple,

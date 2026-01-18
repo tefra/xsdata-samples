@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from .datatypes_base import (
     AnyType,
@@ -322,7 +321,9 @@ class PivlTs(SxcmTs):
             "namespace": "urn:hl7-org:v3",
         },
     )
-    alignment: CalendarCycleOneLetter | str | CalendarCycleTwoLetterValue | None = field(
+    alignment: (
+        CalendarCycleOneLetter | str | CalendarCycleTwoLetterValue | None
+    ) = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -1230,7 +1231,9 @@ class PivlPpdTs(SxcmPpdTs):
             "namespace": "urn:hl7-org:v3",
         },
     )
-    alignment: CalendarCycleOneLetter | str | CalendarCycleTwoLetterValue | None = field(
+    alignment: (
+        CalendarCycleOneLetter | str | CalendarCycleTwoLetterValue | None
+    ) = field(
         default=None,
         metadata={
             "type": "Attribute",

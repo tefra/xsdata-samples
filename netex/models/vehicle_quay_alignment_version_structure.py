@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from .entity_in_version_structure import VersionedChildStructure
 from .quay_ref import QuayRef

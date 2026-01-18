@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import ForwardRef, Optional
+from typing import ForwardRef
 
 from .fm_feature_subtypes_enum import FmFeatureSubtypesEnum
 from .ref import Ref

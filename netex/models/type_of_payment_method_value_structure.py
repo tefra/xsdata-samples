@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .payment_method_enumeration import PaymentMethodEnumeration
 from .type_of_value_version_structure import TypeOfValueVersionStructure

@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .boolean import Boolean
 from .positive_integer import PositiveInteger
@@ -71,15 +70,13 @@ class TimeSyncCorrection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    rate_corrections_per_measurement_duration: PositiveInteger | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "RATE-CORRECTIONS-PER-MEASUREMENT-DURATION",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    rate_corrections_per_measurement_duration: PositiveInteger | None = field(
+        default=None,
+        metadata={
+            "name": "RATE-CORRECTIONS-PER-MEASUREMENT-DURATION",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     rate_deviation_measurement_duration: TimeValue | None = field(
         default=None,

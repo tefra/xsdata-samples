@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass, field
 from decimal import Decimal
-from typing import ForwardRef, Optional, Union
+from typing import ForwardRef
 
 from .all_vehicle_modes_of_transport_enumeration import (
     AllVehicleModesOfTransportEnumeration,
@@ -86,7 +86,11 @@ class TransportTypeVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    fuel_type_or_type_of_fuel: TransportTypeVersionStructure.FuelType | TransportTypeVersionStructure.TypeOfFuel | None = field(
+    fuel_type_or_type_of_fuel: (
+        TransportTypeVersionStructure.FuelType
+        | TransportTypeVersionStructure.TypeOfFuel
+        | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",

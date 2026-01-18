@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .organisation_part_version_structure import (
     OrganisationPartVersionStructure,

@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .discovery_technology_enum_simple import DiscoveryTechnologyEnumSimple
 

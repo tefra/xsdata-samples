@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -102,15 +101,13 @@ class LogicalSupervision:
             "required": True,
         },
     )
-    short_name_fragments: LogicalSupervision.ShortNameFragments | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "SHORT-NAME-FRAGMENTS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    short_name_fragments: LogicalSupervision.ShortNameFragments | None = field(
+        default=None,
+        metadata={
+            "name": "SHORT-NAME-FRAGMENTS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     long_name: MultilanguageLongName | None = field(
         default=None,
@@ -160,7 +157,9 @@ class LogicalSupervision:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    initial_checkpoint_refs: LogicalSupervision.InitialCheckpointRefs | None = field(
+    initial_checkpoint_refs: (
+        LogicalSupervision.InitialCheckpointRefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "INITIAL-CHECKPOINT-REFS",
@@ -168,13 +167,15 @@ class LogicalSupervision:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    final_checkpoint_refs: LogicalSupervision.FinalCheckpointRefs | None = field(
-        default=None,
-        metadata={
-            "name": "FINAL-CHECKPOINT-REFS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    final_checkpoint_refs: LogicalSupervision.FinalCheckpointRefs | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "FINAL-CHECKPOINT-REFS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     transition_refs: LogicalSupervision.TransitionRefs | None = field(
         default=None,

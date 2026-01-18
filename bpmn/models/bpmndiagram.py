@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .bpmnlabel_style import BpmnlabelStyle
 from .bpmnplane import Bpmnplane

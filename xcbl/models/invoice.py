@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from xcbl.models.order_response import (
     NumberOfLines,
@@ -292,7 +291,9 @@ class AllowOrChargeTreatment:
             },
         )
     )
-    allow_or_charge_treatment_coded_other: AllowOrChargeTreatmentCodedOther | None = field(
+    allow_or_charge_treatment_coded_other: (
+        AllowOrChargeTreatmentCodedOther | None
+    ) = field(
         default=None,
         metadata={
             "name": "AllowOrChargeTreatmentCodedOther",
@@ -452,7 +453,9 @@ class InvoicePaymentStatus:
             "type": "Element",
         },
     )
-    invoice_payment_status_coded_other: InvoicePaymentStatusCodedOther | None = field(
+    invoice_payment_status_coded_other: (
+        InvoicePaymentStatusCodedOther | None
+    ) = field(
         default=None,
         metadata={
             "name": "InvoicePaymentStatusCodedOther",
@@ -884,7 +887,9 @@ class InvoiceTotals:
             "type": "Element",
         },
     )
-    tax_value_in_tax_accounting_currency: TaxValueInTaxAccountingCurrency | None = field(
+    tax_value_in_tax_accounting_currency: (
+        TaxValueInTaxAccountingCurrency | None
+    ) = field(
         default=None,
         metadata={
             "name": "TaxValueInTaxAccountingCurrency",
@@ -1006,7 +1011,9 @@ class TotalAllowOrCharge:
             "required": True,
         }
     )
-    allow_or_charge_indicator_coded_other: AllowOrChargeIndicatorCodedOther | None = field(
+    allow_or_charge_indicator_coded_other: (
+        AllowOrChargeIndicatorCodedOther | None
+    ) = field(
         default=None,
         metadata={
             "name": "AllowOrChargeIndicatorCodedOther",
@@ -1306,14 +1313,12 @@ class InvoiceHeader:
             "type": "Element",
         },
     )
-    list_of_rate_of_exchange_detail: ListOfRateOfExchangeDetail | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "ListOfRateOfExchangeDetail",
-                "type": "Element",
-            },
-        )
+    list_of_rate_of_exchange_detail: ListOfRateOfExchangeDetail | None = field(
+        default=None,
+        metadata={
+            "name": "ListOfRateOfExchangeDetail",
+            "type": "Element",
+        },
     )
     tax_accounting_currency: TaxAccountingCurrency | None = field(
         default=None,
@@ -1385,23 +1390,19 @@ class InvoiceHeader:
             "type": "Element",
         },
     )
-    invoice_allowances_or_charges: InvoiceAllowancesOrCharges | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "InvoiceAllowancesOrCharges",
-                "type": "Element",
-            },
-        )
+    invoice_allowances_or_charges: InvoiceAllowancesOrCharges | None = field(
+        default=None,
+        metadata={
+            "name": "InvoiceAllowancesOrCharges",
+            "type": "Element",
+        },
     )
-    country_specific_requirements: CountrySpecificRequirements | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "CountrySpecificRequirements",
-                "type": "Element",
-            },
-        )
+    country_specific_requirements: CountrySpecificRequirements | None = field(
+        default=None,
+        metadata={
+            "name": "CountrySpecificRequirements",
+            "type": "Element",
+        },
     )
     invoice_header_note: InvoiceHeaderNote | None = field(
         default=None,

@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import VariationPoint
 from .data_prototype_group_subtypes_enum import DataPrototypeGroupSubtypesEnum
@@ -50,7 +49,10 @@ class InnerDataPrototypeGroupInCompositionInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    target_data_prototype_group_ref: InnerDataPrototypeGroupInCompositionInstanceRef.TargetDataPrototypeGroupRef | None = field(
+    target_data_prototype_group_ref: (
+        InnerDataPrototypeGroupInCompositionInstanceRef.TargetDataPrototypeGroupRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "TARGET-DATA-PROTOTYPE-GROUP-REF",

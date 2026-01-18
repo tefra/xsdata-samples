@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -107,7 +106,9 @@ class DiagnosticRequestEmissionRelatedDtc:
             "required": True,
         },
     )
-    short_name_fragments: DiagnosticRequestEmissionRelatedDtc.ShortNameFragments | None = field(
+    short_name_fragments: (
+        DiagnosticRequestEmissionRelatedDtc.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -155,13 +156,15 @@ class DiagnosticRequestEmissionRelatedDtc:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: DiagnosticRequestEmissionRelatedDtc.Annotations | None = field(
-        default=None,
-        metadata={
-            "name": "ANNOTATIONS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    annotations: DiagnosticRequestEmissionRelatedDtc.Annotations | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "ANNOTATIONS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     variation_point: VariationPoint | None = field(
         default=None,
@@ -171,7 +174,9 @@ class DiagnosticRequestEmissionRelatedDtc:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    access_permission_ref: DiagnosticRequestEmissionRelatedDtc.AccessPermissionRef | None = field(
+    access_permission_ref: (
+        DiagnosticRequestEmissionRelatedDtc.AccessPermissionRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "ACCESS-PERMISSION-REF",
@@ -179,7 +184,10 @@ class DiagnosticRequestEmissionRelatedDtc:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    request_emission_related_dtc_class_ref: DiagnosticRequestEmissionRelatedDtc.RequestEmissionRelatedDtcClassRef | None = field(
+    request_emission_related_dtc_class_ref: (
+        DiagnosticRequestEmissionRelatedDtc.RequestEmissionRelatedDtcClassRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "REQUEST-EMISSION-RELATED-DTC-CLASS-REF",
@@ -245,11 +253,13 @@ class DiagnosticRequestEmissionRelatedDtc:
 
     @dataclass
     class RequestEmissionRelatedDtcClassRef(Ref):
-        dest: DiagnosticRequestEmissionRelatedDtcClassSubtypesEnum | None = field(
-            default=None,
-            metadata={
-                "name": "DEST",
-                "type": "Attribute",
-                "required": True,
-            },
+        dest: DiagnosticRequestEmissionRelatedDtcClassSubtypesEnum | None = (
+            field(
+                default=None,
+                metadata={
+                    "name": "DEST",
+                    "type": "Attribute",
+                    "required": True,
+                },
+            )
         )

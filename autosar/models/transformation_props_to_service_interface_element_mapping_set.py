@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -96,7 +95,10 @@ class TransformationPropsToServiceInterfaceElementMappingSet:
             "required": True,
         },
     )
-    short_name_fragments: TransformationPropsToServiceInterfaceElementMappingSet.ShortNameFragments | None = field(
+    short_name_fragments: (
+        TransformationPropsToServiceInterfaceElementMappingSet.ShortNameFragments
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -144,7 +146,10 @@ class TransformationPropsToServiceInterfaceElementMappingSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: TransformationPropsToServiceInterfaceElementMappingSet.Annotations | None = field(
+    annotations: (
+        TransformationPropsToServiceInterfaceElementMappingSet.Annotations
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -160,7 +165,9 @@ class TransformationPropsToServiceInterfaceElementMappingSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    mappings: TransformationPropsToServiceInterfaceElementMappingSet.Mappings | None = field(
+    mappings: (
+        TransformationPropsToServiceInterfaceElementMappingSet.Mappings | None
+    ) = field(
         default=None,
         metadata={
             "name": "MAPPINGS",

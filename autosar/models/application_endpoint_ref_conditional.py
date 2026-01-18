@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import VariationPoint
 from .application_endpoint_subtypes_enum import ApplicationEndpointSubtypesEnum
@@ -33,7 +32,9 @@ class ApplicationEndpointRefConditional:
     class Meta:
         name = "APPLICATION-ENDPOINT-REF-CONDITIONAL"
 
-    application_endpoint_ref: ApplicationEndpointRefConditional.ApplicationEndpointRef | None = field(
+    application_endpoint_ref: (
+        ApplicationEndpointRefConditional.ApplicationEndpointRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "APPLICATION-ENDPOINT-REF",

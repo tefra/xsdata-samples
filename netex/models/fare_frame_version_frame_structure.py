@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from .access_right_parameter_assignments_in_frame_rel_structure import (
     AccessRightParameterAssignmentsInFrameRelStructure,
@@ -112,25 +111,23 @@ class FareFrameVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    transport_organisation_ref: AuthorityRef | OperatorRef | None = (
-        field(
-            default=None,
-            metadata={
-                "type": "Elements",
-                "choices": (
-                    {
-                        "name": "AuthorityRef",
-                        "type": AuthorityRef,
-                        "namespace": "http://www.netex.org.uk/netex",
-                    },
-                    {
-                        "name": "OperatorRef",
-                        "type": OperatorRef,
-                        "namespace": "http://www.netex.org.uk/netex",
-                    },
-                ),
-            },
-        )
+    transport_organisation_ref: AuthorityRef | OperatorRef | None = field(
+        default=None,
+        metadata={
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "AuthorityRef",
+                    "type": AuthorityRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "OperatorRef",
+                    "type": OperatorRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+        },
     )
     pricing_parameter_set: PricingParameterSet | None = field(
         default=None,
@@ -163,7 +160,9 @@ class FareFrameVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    fare_scheduled_stop_points: FareScheduledStopPointsInFrameRelStructure | None = field(
+    fare_scheduled_stop_points: (
+        FareScheduledStopPointsInFrameRelStructure | None
+    ) = field(
         default=None,
         metadata={
             "name": "fareScheduledStopPoints",
@@ -203,17 +202,17 @@ class FareFrameVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    geographical_intervals: GeographicalIntervalsRelStructure | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "geographicalIntervals",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            },
-        )
+    geographical_intervals: GeographicalIntervalsRelStructure | None = field(
+        default=None,
+        metadata={
+            "name": "geographicalIntervals",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        },
     )
-    geographical_structure_factors: GeographicalStructureFactorsRelStructure | None = field(
+    geographical_structure_factors: (
+        GeographicalStructureFactorsRelStructure | None
+    ) = field(
         default=None,
         metadata={
             "name": "geographicalStructureFactors",
@@ -245,13 +244,15 @@ class FareFrameVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    quality_structure_factors: QualityStructureFactorsRelStructure | None = field(
-        default=None,
-        metadata={
-            "name": "qualityStructureFactors",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        },
+    quality_structure_factors: QualityStructureFactorsRelStructure | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "qualityStructureFactors",
+                "type": "Element",
+                "namespace": "http://www.netex.org.uk/netex",
+            },
+        )
     )
     distance_matrix_elements: DistanceMatrixElementsRelStructure | None = (
         field(
@@ -263,7 +264,9 @@ class FareFrameVersionFrameStructure(CommonVersionFrameStructure):
             },
         )
     )
-    groups_of_distance_matrix_elements: GroupsOfDistanceMatrixElementsRelStructure | None = field(
+    groups_of_distance_matrix_elements: (
+        GroupsOfDistanceMatrixElementsRelStructure | None
+    ) = field(
         default=None,
         metadata={
             "name": "groupsOfDistanceMatrixElements",
@@ -271,7 +274,9 @@ class FareFrameVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    fare_structure_elements: FareStructureElementsInFrameRelStructure | None = field(
+    fare_structure_elements: (
+        FareStructureElementsInFrameRelStructure | None
+    ) = field(
         default=None,
         metadata={
             "name": "fareStructureElements",
@@ -294,13 +299,15 @@ class FareFrameVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    controllable_elements: ControllableElementsInFrameRelStructure | None = field(
-        default=None,
-        metadata={
-            "name": "controllableElements",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        },
+    controllable_elements: ControllableElementsInFrameRelStructure | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "controllableElements",
+                "type": "Element",
+                "namespace": "http://www.netex.org.uk/netex",
+            },
+        )
     )
     usage_parameters: UsageParametersInFrameRelStructure | None = field(
         default=None,
@@ -310,7 +317,9 @@ class FareFrameVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    access_right_parameter_assignments: AccessRightParameterAssignmentsInFrameRelStructure | None = field(
+    access_right_parameter_assignments: (
+        AccessRightParameterAssignmentsInFrameRelStructure | None
+    ) = field(
         default=None,
         metadata={
             "name": "accessRightParameterAssignments",
@@ -342,15 +351,19 @@ class FareFrameVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    distribution_channels: DistributionChannelsInFrameRelStructure | None = field(
-        default=None,
-        metadata={
-            "name": "distributionChannels",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        },
+    distribution_channels: DistributionChannelsInFrameRelStructure | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "distributionChannels",
+                "type": "Element",
+                "namespace": "http://www.netex.org.uk/netex",
+            },
+        )
     )
-    groups_of_distribution_channels: GroupsOfDistributionChannelsInFrameRelStructure | None = field(
+    groups_of_distribution_channels: (
+        GroupsOfDistributionChannelsInFrameRelStructure | None
+    ) = field(
         default=None,
         metadata={
             "name": "groupsOfDistributionChannels",
@@ -366,7 +379,9 @@ class FareFrameVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    types_of_travel_documents: TypesOfTravelDocumentInFrameRelStructure | None = field(
+    types_of_travel_documents: (
+        TypesOfTravelDocumentInFrameRelStructure | None
+    ) = field(
         default=None,
         metadata={
             "name": "typesOfTravelDocuments",
@@ -374,17 +389,17 @@ class FareFrameVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    sales_offer_packages: SalesOfferPackagesInFrameRelStructure | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "salesOfferPackages",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            },
-        )
+    sales_offer_packages: SalesOfferPackagesInFrameRelStructure | None = field(
+        default=None,
+        metadata={
+            "name": "salesOfferPackages",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        },
     )
-    sales_offer_package_elements: SalesOfferPackageElementsInFrameRelStructure | None = field(
+    sales_offer_package_elements: (
+        SalesOfferPackageElementsInFrameRelStructure | None
+    ) = field(
         default=None,
         metadata={
             "name": "salesOfferPackageElements",
@@ -392,7 +407,9 @@ class FareFrameVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    sales_offer_package_substitutions: SalesOfferPackageSubstitutionsInFrameRelStructure | None = field(
+    sales_offer_package_substitutions: (
+        SalesOfferPackageSubstitutionsInFrameRelStructure | None
+    ) = field(
         default=None,
         metadata={
             "name": "salesOfferPackageSubstitutions",
@@ -400,7 +417,9 @@ class FareFrameVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    groups_of_sales_offer_packages: GroupsOfSalesOfferPackagesInFrameRelStructure | None = field(
+    groups_of_sales_offer_packages: (
+        GroupsOfSalesOfferPackagesInFrameRelStructure | None
+    ) = field(
         default=None,
         metadata={
             "name": "groupsOfSalesOfferPackages",
@@ -408,7 +427,9 @@ class FareFrameVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    distribution_assignments: DistributionAssignmentsInFrameRelStructure | None = field(
+    distribution_assignments: (
+        DistributionAssignmentsInFrameRelStructure | None
+    ) = field(
         default=None,
         metadata={
             "name": "distributionAssignments",

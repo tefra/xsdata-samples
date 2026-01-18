@@ -1,6 +1,5 @@
 from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import Union
 
 from .start_time_at_stop_point import StartTimeAtStopPoint
 from .start_time_at_stop_point_ref import StartTimeAtStopPointRef

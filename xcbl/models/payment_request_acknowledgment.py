@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from xcbl.models.payment_status_response import (
     ConfirmationId,
@@ -221,12 +220,14 @@ class PaymentRequestAcknHeader:
             "required": True,
         }
     )
-    payment_request_ackn_coded_other: PaymentRequestAcknCodedOther | None = field(
-        default=None,
-        metadata={
-            "name": "PaymentRequestAcknCodedOther",
-            "type": "Element",
-        },
+    payment_request_ackn_coded_other: PaymentRequestAcknCodedOther | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "PaymentRequestAcknCodedOther",
+                "type": "Element",
+            },
+        )
     )
     payment_request_ackn_issue_date: PaymentRequestAcknIssueDate = field(
         metadata={
@@ -306,14 +307,12 @@ class FinancialInstitutionDetail:
             "required": True,
         }
     )
-    list_of_financial_institutions: ListOfFinancialInstitutions | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "ListOfFinancialInstitutions",
-                "type": "Element",
-            },
-        )
+    list_of_financial_institutions: ListOfFinancialInstitutions | None = field(
+        default=None,
+        metadata={
+            "name": "ListOfFinancialInstitutions",
+            "type": "Element",
+        },
     )
 
 
@@ -375,14 +374,12 @@ class PaymentRequestAcknDetail:
             "type": "Element",
         },
     )
-    list_of_rate_of_exchange_detail: ListOfRateOfExchangeDetail | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "ListOfRateOfExchangeDetail",
-                "type": "Element",
-            },
-        )
+    list_of_rate_of_exchange_detail: ListOfRateOfExchangeDetail | None = field(
+        default=None,
+        metadata={
+            "name": "ListOfRateOfExchangeDetail",
+            "type": "Element",
+        },
     )
     excpetion_note: ExcpetionNote | None = field(
         default=None,

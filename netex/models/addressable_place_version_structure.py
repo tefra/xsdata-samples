@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .place_version_structure import PlaceVersionStructure
 from .postal_address import PostalAddress

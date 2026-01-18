@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .physical_dimension_subtypes_enum import PhysicalDimensionSubtypesEnum
 from .ref import Ref
@@ -34,7 +33,9 @@ class PhysicalDimensionMapping:
     class Meta:
         name = "PHYSICAL-DIMENSION-MAPPING"
 
-    first_physical_dimension_ref: PhysicalDimensionMapping.FirstPhysicalDimensionRef | None = field(
+    first_physical_dimension_ref: (
+        PhysicalDimensionMapping.FirstPhysicalDimensionRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "FIRST-PHYSICAL-DIMENSION-REF",
@@ -42,7 +43,9 @@ class PhysicalDimensionMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    second_physical_dimension_ref: PhysicalDimensionMapping.SecondPhysicalDimensionRef | None = field(
+    second_physical_dimension_ref: (
+        PhysicalDimensionMapping.SecondPhysicalDimensionRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "SECOND-PHYSICAL-DIMENSION-REF",

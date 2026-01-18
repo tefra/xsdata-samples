@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from xcbl.models.payment_status_response import (
     ConfirmationId,
@@ -415,7 +414,9 @@ class FxidentificationData:
     class Meta:
         name = "FXIdentificationData"
 
-    originating_financial_institution: OriginatingFinancialInstitution | None = field(
+    originating_financial_institution: (
+        OriginatingFinancialInstitution | None
+    ) = field(
         default=None,
         metadata={
             "name": "OriginatingFinancialInstitution",
@@ -627,21 +628,21 @@ class IndicativeRateDetail:
             "type": "Element",
         },
     )
-    currency_availability_check_list: CurrencyAvailabilityCheckList | None = field(
-        default=None,
-        metadata={
-            "name": "CurrencyAvailabilityCheckList",
-            "type": "Element",
-        },
-    )
-    indicative_rate_retrieved_date: IndicativeRateRetrievedDate | None = (
+    currency_availability_check_list: CurrencyAvailabilityCheckList | None = (
         field(
             default=None,
             metadata={
-                "name": "IndicativeRateRetrievedDate",
+                "name": "CurrencyAvailabilityCheckList",
                 "type": "Element",
             },
         )
+    )
+    indicative_rate_retrieved_date: IndicativeRateRetrievedDate | None = field(
+        default=None,
+        metadata={
+            "name": "IndicativeRateRetrievedDate",
+            "type": "Element",
+        },
     )
     current_date_time: CurrentDateTime | None = field(
         default=None,
@@ -722,14 +723,12 @@ class SpotRateDetail:
             "type": "Element",
         },
     )
-    fxtransaction_type_coded_other: FxtransactionTypeCodedOther | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "FXTransactionTypeCodedOther",
-                "type": "Element",
-            },
-        )
+    fxtransaction_type_coded_other: FxtransactionTypeCodedOther | None = field(
+        default=None,
+        metadata={
+            "name": "FXTransactionTypeCodedOther",
+            "type": "Element",
+        },
     )
     fxquote_type_coded: FxquoteTypeCoded | None = field(
         default=None,
@@ -780,12 +779,14 @@ class FxrateResponseDetail:
             "type": "Element",
         },
     )
-    computational_method_coded_other: ComputationalMethodCodedOther | None = field(
-        default=None,
-        metadata={
-            "name": "ComputationalMethodCodedOther",
-            "type": "Element",
-        },
+    computational_method_coded_other: ComputationalMethodCodedOther | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "ComputationalMethodCodedOther",
+                "type": "Element",
+            },
+        )
     )
     fxrate: Fxrate = field(
         metadata={

@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .port_group_subtypes_enum import PortGroupSubtypesEnum
 from .ref import Ref
@@ -45,13 +44,15 @@ class InnerPortGroupInCompositionInstanceRef:
             },
         )
     )
-    target_ref: InnerPortGroupInCompositionInstanceRef.TargetRef | None = field(
-        default=None,
-        metadata={
-            "name": "TARGET-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    target_ref: InnerPortGroupInCompositionInstanceRef.TargetRef | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "TARGET-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     s: str | None = field(
         default=None,

@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .mc_data_instance import McDataInstance
 from .mc_sw_emulation_method_support import McSwEmulationMethodSupport
@@ -69,27 +68,25 @@ class McSupportData:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    mc_parameter_instances: McSupportData.McParameterInstances | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "MC-PARAMETER-INSTANCES",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    mc_parameter_instances: McSupportData.McParameterInstances | None = field(
+        default=None,
+        metadata={
+            "name": "MC-PARAMETER-INSTANCES",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
-    mc_variable_instances: McSupportData.McVariableInstances | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "MC-VARIABLE-INSTANCES",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    mc_variable_instances: McSupportData.McVariableInstances | None = field(
+        default=None,
+        metadata={
+            "name": "MC-VARIABLE-INSTANCES",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
-    measurable_system_constant_values_refs: McSupportData.MeasurableSystemConstantValuesRefs | None = field(
+    measurable_system_constant_values_refs: (
+        McSupportData.MeasurableSystemConstantValuesRefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "MEASURABLE-SYSTEM-CONSTANT-VALUES-REFS",

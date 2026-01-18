@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from .activation_link_ref import ActivationLinkRef
 from .entity_in_version_structure import VersionedChildStructure
@@ -23,7 +22,20 @@ class FlexibleLinkPropertiesVersionedChildStructure(VersionedChildStructure):
     class Meta:
         name = "FlexibleLinkProperties_VersionedChildStructure"
 
-    link_ref_or_infrastructure_link_ref: OnwardVehicleMeetingLinkRef | VehicleMeetingLinkRef | ServiceLinkRef | LineLinkRef | TimingLinkRef | WireLinkRef | RoadLinkRef | RailwayLinkRef | ActivationLinkRef | PathLinkRef | RouteLinkRef | None = field(
+    link_ref_or_infrastructure_link_ref: (
+        OnwardVehicleMeetingLinkRef
+        | VehicleMeetingLinkRef
+        | ServiceLinkRef
+        | LineLinkRef
+        | TimingLinkRef
+        | WireLinkRef
+        | RoadLinkRef
+        | RailwayLinkRef
+        | ActivationLinkRef
+        | PathLinkRef
+        | RouteLinkRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",

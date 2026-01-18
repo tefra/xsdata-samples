@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from ipxact.models.modified_write_value_type import ModifiedWriteValueType
 

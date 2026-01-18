@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from sdmx_ml.models.annotable_type import AnnotableType
 from sdmx_ml.models.structured_text import StructuredText

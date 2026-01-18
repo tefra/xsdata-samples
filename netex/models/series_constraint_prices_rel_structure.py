@@ -1,6 +1,5 @@
 from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import Union
 
 from .cell_ref import CellRef
 from .series_constraint_price_ref import SeriesConstraintPriceRef
@@ -22,7 +21,9 @@ class SeriesConstraintPricesRelStructure(
         name = "seriesConstraintPrices_RelStructure"
 
     series_constraint_price_ref_or_series_constraint_price_or_cell_ref: Iterable[
-        SeriesConstraintPriceRef | SeriesConstraintPriceVersionedChildStructure | CellRef
+        SeriesConstraintPriceRef
+        | SeriesConstraintPriceVersionedChildStructure
+        | CellRef
     ] = field(
         default_factory=list,
         metadata={

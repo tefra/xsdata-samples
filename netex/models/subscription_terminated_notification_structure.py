@@ -1,6 +1,5 @@
 from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .error_description_structure import ErrorDescriptionStructure
 from .extensions_1 import Extensions1

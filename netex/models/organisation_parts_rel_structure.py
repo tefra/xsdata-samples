@@ -1,6 +1,5 @@
 from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import Union
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .control_centre import ControlCentre
@@ -22,7 +21,15 @@ class OrganisationPartsRelStructure(ContainmentAggregationStructure):
         name = "organisationParts_RelStructure"
 
     organisation_part_ref_or_organisation_part: Iterable[
-        ControlCentreRef | OrganisationalUnitRef | DepartmentRef | OrganisationPartRef | ControlCentre | OperatingDepartment | OrganisationalUnit | Department | OrganisationPart
+        ControlCentreRef
+        | OrganisationalUnitRef
+        | DepartmentRef
+        | OrganisationPartRef
+        | ControlCentre
+        | OperatingDepartment
+        | OrganisationalUnit
+        | Department
+        | OrganisationPart
     ] = field(
         default_factory=list,
         metadata={

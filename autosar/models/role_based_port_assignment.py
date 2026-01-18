@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import VariationPoint
 from .identifier import Identifier
@@ -47,13 +46,15 @@ class RoleBasedPortAssignment:
     class Meta:
         name = "ROLE-BASED-PORT-ASSIGNMENT"
 
-    port_prototype_ref: RoleBasedPortAssignment.PortPrototypeRef | None = field(
-        default=None,
-        metadata={
-            "name": "PORT-PROTOTYPE-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    port_prototype_ref: RoleBasedPortAssignment.PortPrototypeRef | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "PORT-PROTOTYPE-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     role: Identifier | None = field(
         default=None,

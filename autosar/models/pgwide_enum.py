@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .pgwide_enum_simple import PgwideEnumSimple
 

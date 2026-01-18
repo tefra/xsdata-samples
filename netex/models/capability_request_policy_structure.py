@@ -1,6 +1,5 @@
 from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from .empty_type_1 import EmptyType1
 
@@ -26,21 +25,23 @@ class CapabilityRequestPolicyStructure:
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    gml_coordinate_format_or_wgs_decimal_degrees: str | EmptyType1 | None = field(
-        default=None,
-        metadata={
-            "type": "Elements",
-            "choices": (
-                {
-                    "name": "GmlCoordinateFormat",
-                    "type": str,
-                    "namespace": "http://www.siri.org.uk/siri",
-                },
-                {
-                    "name": "WgsDecimalDegrees",
-                    "type": EmptyType1,
-                    "namespace": "http://www.siri.org.uk/siri",
-                },
-            ),
-        },
+    gml_coordinate_format_or_wgs_decimal_degrees: str | EmptyType1 | None = (
+        field(
+            default=None,
+            metadata={
+                "type": "Elements",
+                "choices": (
+                    {
+                        "name": "GmlCoordinateFormat",
+                        "type": str,
+                        "namespace": "http://www.siri.org.uk/siri",
+                    },
+                    {
+                        "name": "WgsDecimalDegrees",
+                        "type": EmptyType1,
+                        "namespace": "http://www.siri.org.uk/siri",
+                    },
+                ),
+            },
+        )
     )

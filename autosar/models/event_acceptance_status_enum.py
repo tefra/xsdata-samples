@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .event_acceptance_status_enum_simple import (
     EventAcceptanceStatusEnumSimple,

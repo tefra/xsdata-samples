@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import VariationPoint
 from .diagnostic_storage_condition_subtypes_enum import (
@@ -35,7 +34,10 @@ class DiagnosticStorageConditionRefConditional:
     class Meta:
         name = "DIAGNOSTIC-STORAGE-CONDITION-REF-CONDITIONAL"
 
-    diagnostic_storage_condition_ref: DiagnosticStorageConditionRefConditional.DiagnosticStorageConditionRef | None = field(
+    diagnostic_storage_condition_ref: (
+        DiagnosticStorageConditionRefConditional.DiagnosticStorageConditionRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "DIAGNOSTIC-STORAGE-CONDITION-REF",

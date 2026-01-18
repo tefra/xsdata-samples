@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from xsdata.models.datatype import XmlDate, XmlDateTime, XmlPeriod
 
@@ -103,35 +102,35 @@ class DataSetType(AnnotableType):
             "pattern": r".+\.base\.DataProvider=.+:DATA_PROVIDERS\(.+\).+",
         },
     )
-    choice: tuple[
-        AttsType | GroupTypeAbstract | SeriesType | ObsType, ...
-    ] = field(
-        default_factory=tuple,
-        metadata={
-            "type": "Elements",
-            "choices": (
-                {
-                    "name": "Atts",
-                    "type": AttsType,
-                    "namespace": "",
-                },
-                {
-                    "name": "Group",
-                    "type": GroupTypeAbstract,
-                    "namespace": "",
-                },
-                {
-                    "name": "Series",
-                    "type": SeriesType,
-                    "namespace": "",
-                },
-                {
-                    "name": "Obs",
-                    "type": ObsType,
-                    "namespace": "",
-                },
-            ),
-        },
+    choice: tuple[AttsType | GroupTypeAbstract | SeriesType | ObsType, ...] = (
+        field(
+            default_factory=tuple,
+            metadata={
+                "type": "Elements",
+                "choices": (
+                    {
+                        "name": "Atts",
+                        "type": AttsType,
+                        "namespace": "",
+                    },
+                    {
+                        "name": "Group",
+                        "type": GroupTypeAbstract,
+                        "namespace": "",
+                    },
+                    {
+                        "name": "Series",
+                        "type": SeriesType,
+                        "namespace": "",
+                    },
+                    {
+                        "name": "Obs",
+                        "type": ObsType,
+                        "namespace": "",
+                    },
+                ),
+            },
+        )
     )
     metadata: MetadataSetType | None = field(
         default=None,
@@ -166,25 +165,21 @@ class DataSetType(AnnotableType):
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/data/structurespecific",
         },
     )
-    reporting_begin_date: XmlPeriod | XmlDate | XmlDateTime | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "reportingBeginDate",
-                "type": "Attribute",
-                "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/data/structurespecific",
-            },
-        )
+    reporting_begin_date: XmlPeriod | XmlDate | XmlDateTime | None = field(
+        default=None,
+        metadata={
+            "name": "reportingBeginDate",
+            "type": "Attribute",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/data/structurespecific",
+        },
     )
-    reporting_end_date: XmlPeriod | XmlDate | XmlDateTime | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "reportingEndDate",
-                "type": "Attribute",
-                "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/data/structurespecific",
-            },
-        )
+    reporting_end_date: XmlPeriod | XmlDate | XmlDateTime | None = field(
+        default=None,
+        metadata={
+            "name": "reportingEndDate",
+            "type": "Attribute",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/data/structurespecific",
+        },
     )
     valid_from_date: XmlDateTime | None = field(
         default=None,

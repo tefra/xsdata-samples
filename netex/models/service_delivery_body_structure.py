@@ -2,7 +2,6 @@ from __future__ import annotations
 
 from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from .capability_not_supported_error import CapabilityNotSupportedError
 from .data_object_delivery import DataObjectDelivery
@@ -22,13 +21,15 @@ class ServiceDeliveryBodyStructure:
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    error_condition: ServiceDeliveryBodyStructure.ErrorCondition | None = field(
-        default=None,
-        metadata={
-            "name": "ErrorCondition",
-            "type": "Element",
-            "namespace": "http://www.siri.org.uk/siri",
-        },
+    error_condition: ServiceDeliveryBodyStructure.ErrorCondition | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "ErrorCondition",
+                "type": "Element",
+                "namespace": "http://www.siri.org.uk/siri",
+            },
+        )
     )
     more_data: bool | None = field(
         default=None,
@@ -56,7 +57,9 @@ class ServiceDeliveryBodyStructure:
 
     @dataclass
     class ErrorCondition:
-        capability_not_supported_error_or_other_error: CapabilityNotSupportedError | OtherError | None = field(
+        capability_not_supported_error_or_other_error: (
+            CapabilityNotSupportedError | OtherError | None
+        ) = field(
             default=None,
             metadata={
                 "type": "Elements",

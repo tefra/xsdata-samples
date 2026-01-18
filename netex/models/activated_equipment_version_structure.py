@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .activation_assignments_rel_structure import (
     ActivationAssignmentsRelStructure,

@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from xsdata.models.datatype import XmlDuration
 
@@ -93,23 +92,25 @@ class ServiceRequestContextStructure:
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    wgs_decimal_degrees_or_gml_coordinate_format: EmptyType1 | str | None = field(
-        default=None,
-        metadata={
-            "type": "Elements",
-            "choices": (
-                {
-                    "name": "WgsDecimalDegrees",
-                    "type": EmptyType1,
-                    "namespace": "http://www.siri.org.uk/siri",
-                },
-                {
-                    "name": "GmlCoordinateFormat",
-                    "type": str,
-                    "namespace": "http://www.siri.org.uk/siri",
-                },
-            ),
-        },
+    wgs_decimal_degrees_or_gml_coordinate_format: EmptyType1 | str | None = (
+        field(
+            default=None,
+            metadata={
+                "type": "Elements",
+                "choices": (
+                    {
+                        "name": "WgsDecimalDegrees",
+                        "type": EmptyType1,
+                        "namespace": "http://www.siri.org.uk/siri",
+                    },
+                    {
+                        "name": "GmlCoordinateFormat",
+                        "type": str,
+                        "namespace": "http://www.siri.org.uk/siri",
+                    },
+                ),
+            },
+        )
     )
     distance_units: str | None = field(
         default=None,

@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -150,7 +149,9 @@ class PersistencyFileStorageInterface:
             "required": True,
         },
     )
-    short_name_fragments: PersistencyFileStorageInterface.ShortNameFragments | None = field(
+    short_name_fragments: (
+        PersistencyFileStorageInterface.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -198,15 +199,13 @@ class PersistencyFileStorageInterface:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: PersistencyFileStorageInterface.Annotations | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "ANNOTATIONS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    annotations: PersistencyFileStorageInterface.Annotations | None = field(
+        default=None,
+        metadata={
+            "name": "ANNOTATIONS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     variation_point: VariationPoint | None = field(
         default=None,
@@ -216,7 +215,9 @@ class PersistencyFileStorageInterface:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    blueprint_policys: PersistencyFileStorageInterface.BlueprintPolicys | None = field(
+    blueprint_policys: (
+        PersistencyFileStorageInterface.BlueprintPolicys | None
+    ) = field(
         default=None,
         metadata={
             "name": "BLUEPRINT-POLICYS",
@@ -272,7 +273,9 @@ class PersistencyFileStorageInterface:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    redundancy_handlings: PersistencyFileStorageInterface.RedundancyHandlings | None = field(
+    redundancy_handlings: (
+        PersistencyFileStorageInterface.RedundancyHandlings | None
+    ) = field(
         default=None,
         metadata={
             "name": "REDUNDANCY-HANDLINGS",
@@ -290,15 +293,13 @@ class PersistencyFileStorageInterface:
             },
         )
     )
-    file_elements: PersistencyFileStorageInterface.FileElements | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "FILE-ELEMENTS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    file_elements: PersistencyFileStorageInterface.FileElements | None = field(
+        default=None,
+        metadata={
+            "name": "FILE-ELEMENTS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     max_number_of_files: PositiveInteger | None = field(
         default=None,

@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .access_space_ref_structure import AccessSpaceRefStructure
 from .access_space_type_enumeration import AccessSpaceTypeEnumeration

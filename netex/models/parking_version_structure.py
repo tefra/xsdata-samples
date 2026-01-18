@@ -1,6 +1,5 @@
 from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .accesses_rel_structure import AccessesRelStructure
 from .multilingual_string import MultilingualString
@@ -298,13 +297,11 @@ class ParkingVersionStructure(SiteVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    vehicle_entrances: ParkingEntrancesForVehiclesRelStructure | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "vehicleEntrances",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            },
-        )
+    vehicle_entrances: ParkingEntrancesForVehiclesRelStructure | None = field(
+        default=None,
+        metadata={
+            "name": "vehicleEntrances",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        },
     )

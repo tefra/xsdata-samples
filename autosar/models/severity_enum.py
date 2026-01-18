@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .severity_enum_simple import SeverityEnumSimple
 

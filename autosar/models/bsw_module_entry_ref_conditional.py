@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import VariationPoint
 from .bsw_module_entry_subtypes_enum import BswModuleEntrySubtypesEnum
@@ -33,7 +32,9 @@ class BswModuleEntryRefConditional:
     class Meta:
         name = "BSW-MODULE-ENTRY-REF-CONDITIONAL"
 
-    bsw_module_entry_ref: BswModuleEntryRefConditional.BswModuleEntryRef | None = field(
+    bsw_module_entry_ref: (
+        BswModuleEntryRefConditional.BswModuleEntryRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "BSW-MODULE-ENTRY-REF",

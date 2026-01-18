@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Any, Optional
+from typing import Any
 
 from sdmx_ml.models.simple_code_data_type import SimpleCodeDataType
 from sdmx_ml.models.simple_component_text_format_type import (

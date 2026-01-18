@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import VariationPoint
 from .diagnostic_event_subtypes_enum import DiagnosticEventSubtypesEnum
@@ -33,7 +32,9 @@ class DiagnosticEventRefConditional:
     class Meta:
         name = "DIAGNOSTIC-EVENT-REF-CONDITIONAL"
 
-    diagnostic_event_ref: DiagnosticEventRefConditional.DiagnosticEventRef | None = field(
+    diagnostic_event_ref: (
+        DiagnosticEventRefConditional.DiagnosticEventRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "DIAGNOSTIC-EVENT-REF",

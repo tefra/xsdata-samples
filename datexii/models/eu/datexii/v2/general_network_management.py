@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.general_network_management_type_enum import (
@@ -29,7 +28,9 @@ class GeneralNetworkManagement(NetworkManagement):
     :ivar general_network_management_extension:
     """
 
-    general_network_management_type: GeneralNetworkManagementTypeEnum | None = field(
+    general_network_management_type: (
+        GeneralNetworkManagementTypeEnum | None
+    ) = field(
         default=None,
         metadata={
             "name": "generalNetworkManagementType",

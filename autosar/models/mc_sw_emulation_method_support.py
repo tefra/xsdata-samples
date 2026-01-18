@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import VariationPoint
 from .identifier import Identifier
@@ -77,25 +76,27 @@ class McSwEmulationMethodSupport:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    base_reference_ref: McSwEmulationMethodSupport.BaseReferenceRef | None = field(
-        default=None,
-        metadata={
-            "name": "BASE-REFERENCE-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
-    )
-    element_groups: McSwEmulationMethodSupport.ElementGroups | None = (
+    base_reference_ref: McSwEmulationMethodSupport.BaseReferenceRef | None = (
         field(
             default=None,
             metadata={
-                "name": "ELEMENT-GROUPS",
+                "name": "BASE-REFERENCE-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
     )
-    reference_table_ref: McSwEmulationMethodSupport.ReferenceTableRef | None = field(
+    element_groups: McSwEmulationMethodSupport.ElementGroups | None = field(
+        default=None,
+        metadata={
+            "name": "ELEMENT-GROUPS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
+    )
+    reference_table_ref: (
+        McSwEmulationMethodSupport.ReferenceTableRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "REFERENCE-TABLE-REF",

@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from .distance_matrix_element_ref import DistanceMatrixElementRef
 from .fare_price_versioned_child_structure import (
@@ -19,7 +18,9 @@ class DistanceMatrixElementPriceVersionedChildStructure(
     class Meta:
         name = "DistanceMatrixElementPrice_VersionedChildStructure"
 
-    distance_matrix_element_ref_or_group_of_distance_matrix_elements_ref: DistanceMatrixElementRef | GroupOfDistanceMatrixElementsRef | None = field(
+    distance_matrix_element_ref_or_group_of_distance_matrix_elements_ref: (
+        DistanceMatrixElementRef | GroupOfDistanceMatrixElementsRef | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",

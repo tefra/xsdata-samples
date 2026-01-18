@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from tpdb.models.type_mod import Type
 from tpdb.models.var import Var

@@ -1,6 +1,5 @@
 from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from .address_ref import AddressRef
 from .boarding_position_ref import BoardingPositionRef
@@ -32,7 +31,15 @@ class TravelSpecificationSummaryEndpointStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    stop_place_ref_or_site_ref: TaxiRankRef | StopPlaceRef | ParkingRef | PointOfInterestRef | ServiceSiteRef | SiteRef | None = field(
+    stop_place_ref_or_site_ref: (
+        TaxiRankRef
+        | StopPlaceRef
+        | ParkingRef
+        | PointOfInterestRef
+        | ServiceSiteRef
+        | SiteRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",

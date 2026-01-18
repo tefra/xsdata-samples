@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     DocumentationBlock,
@@ -77,15 +76,19 @@ class SwcToEcuMappingConstraint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ecu_instance_refs: SwcToEcuMappingConstraint.EcuInstanceRefs | None = field(
-        default=None,
-        metadata={
-            "name": "ECU-INSTANCE-REFS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    ecu_instance_refs: SwcToEcuMappingConstraint.EcuInstanceRefs | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "ECU-INSTANCE-REFS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
-    swc_to_ecu_mapping_constraint_type: SwcToEcuMappingConstraintType | None = field(
+    swc_to_ecu_mapping_constraint_type: (
+        SwcToEcuMappingConstraintType | None
+    ) = field(
         default=None,
         metadata={
             "name": "SWC-TO-ECU-MAPPING-CONSTRAINT-TYPE",

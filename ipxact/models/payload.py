@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from ipxact.models.payload_type import PayloadType
 from ipxact.models.vendor_extensions import VendorExtensions

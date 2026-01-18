@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .parking_facility_enumeration import ParkingFacilityEnumeration
 

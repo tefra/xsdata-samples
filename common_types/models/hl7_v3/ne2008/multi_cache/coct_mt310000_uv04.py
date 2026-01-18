@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from ..core.datatypes_base import (
     Cs,
@@ -125,7 +124,9 @@ class CoctMt310000Uv04Location:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    service_delivery_location: CoctMt240003Uv02ServiceDeliveryLocation | None = field(
+    service_delivery_location: (
+        CoctMt240003Uv02ServiceDeliveryLocation | None
+    ) = field(
         default=None,
         metadata={
             "name": "serviceDeliveryLocation",
@@ -313,14 +314,16 @@ class CoctMt310000Uv04AccommodationRequestorRole:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    accommodation_requestor: CoctMt310000Uv04AcommodationRequestor | None = field(
-        default=None,
-        metadata={
-            "name": "accommodationRequestor",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
+    accommodation_requestor: CoctMt310000Uv04AcommodationRequestor | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "accommodationRequestor",
+                "type": "Element",
+                "namespace": "urn:hl7-org:v3",
+                "nillable": True,
+            },
+        )
     )
     null_flavor: NullFlavor | None = field(
         default=None,
@@ -368,7 +371,9 @@ class CoctMt310000Uv04PertinentInformation1:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    minimum_available_accommodation: CoctMt310000Uv04MinimumAvailableAccommodation | None = field(
+    minimum_available_accommodation: (
+        CoctMt310000Uv04MinimumAvailableAccommodation | None
+    ) = field(
         default=None,
         metadata={
             "name": "minimumAvailableAccommodation",
@@ -384,7 +389,15 @@ class CoctMt310000Uv04PertinentInformation1:
             "type": "Attribute",
         },
     )
-    type_code: ActRelationshipCostTracking | ActRelationshipPosting | str | ActRelationshipHasSupport | ActRelationshipTemporallyPertains | ActRelationshipPertainsValue | None = field(
+    type_code: (
+        ActRelationshipCostTracking
+        | ActRelationshipPosting
+        | str
+        | ActRelationshipHasSupport
+        | ActRelationshipTemporallyPertains
+        | ActRelationshipPertainsValue
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "typeCode",
@@ -440,7 +453,15 @@ class CoctMt310000Uv04PertinentInformation3:
             "type": "Attribute",
         },
     )
-    type_code: ActRelationshipCostTracking | ActRelationshipPosting | str | ActRelationshipHasSupport | ActRelationshipTemporallyPertains | ActRelationshipPertainsValue | None = field(
+    type_code: (
+        ActRelationshipCostTracking
+        | ActRelationshipPosting
+        | str
+        | ActRelationshipHasSupport
+        | ActRelationshipTemporallyPertains
+        | ActRelationshipPertainsValue
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "typeCode",
@@ -480,7 +501,9 @@ class CoctMt310000Uv04Author:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    accommodation_requestor_role: CoctMt310000Uv04AccommodationRequestorRole | None = field(
+    accommodation_requestor_role: (
+        CoctMt310000Uv04AccommodationRequestorRole | None
+    ) = field(
         default=None,
         metadata={
             "name": "accommodationRequestorRole",
@@ -713,7 +736,15 @@ class CoctMt310000Uv04PertinentInformation2:
             "type": "Attribute",
         },
     )
-    type_code: ActRelationshipCostTracking | ActRelationshipPosting | str | ActRelationshipHasSupport | ActRelationshipTemporallyPertains | ActRelationshipPertainsValue | None = field(
+    type_code: (
+        ActRelationshipCostTracking
+        | ActRelationshipPosting
+        | str
+        | ActRelationshipHasSupport
+        | ActRelationshipTemporallyPertains
+        | ActRelationshipPertainsValue
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "typeCode",
@@ -753,14 +784,16 @@ class CoctMt310000Uv04InFulfillmentOf:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    accommodation_requested: CoctMt310000Uv04AccommodationRequested | None = field(
-        default=None,
-        metadata={
-            "name": "accommodationRequested",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "required": True,
-        },
+    accommodation_requested: CoctMt310000Uv04AccommodationRequested | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "accommodationRequested",
+                "type": "Element",
+                "namespace": "urn:hl7-org:v3",
+                "required": True,
+            },
+        )
     )
     null_flavor: NullFlavor | None = field(
         default=None,

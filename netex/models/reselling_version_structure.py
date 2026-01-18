@@ -1,7 +1,6 @@
 from collections.abc import Iterable
 from dataclasses import dataclass, field
 from decimal import Decimal
-from typing import Optional, Union
 
 from xsdata.models.datatype import XmlDuration
 
@@ -65,7 +64,9 @@ class ResellingVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    exchangable_from_any_time_or_exchangable_from_duration_or_exchangable_from_percent_use: EmptyType2 | XmlDuration | Decimal | None = field(
+    exchangable_from_any_time_or_exchangable_from_duration_or_exchangable_from_percent_use: (
+        EmptyType2 | XmlDuration | Decimal | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -96,7 +97,9 @@ class ResellingVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    exchangable_until_any_time_or_exchangable_until_duration_or_exchangable_until_percent_use: EmptyType2 | XmlDuration | Decimal | None = field(
+    exchangable_until_any_time_or_exchangable_until_duration_or_exchangable_until_percent_use: (
+        EmptyType2 | XmlDuration | Decimal | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -168,11 +171,13 @@ class ResellingVersionStructure(UsageParameterVersionStructure):
             "tokens": True,
         },
     )
-    types_of_payment_method_ref: TypeOfPaymentMethodRefsRelStructure | None = field(
-        default=None,
-        metadata={
-            "name": "typesOfPaymentMethodRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        },
+    types_of_payment_method_ref: TypeOfPaymentMethodRefsRelStructure | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "typesOfPaymentMethodRef",
+                "type": "Element",
+                "namespace": "http://www.netex.org.uk/netex",
+            },
+        )
     )

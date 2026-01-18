@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .accommodation_facility import AccommodationFacility
 from .berth_facility import BerthFacility
@@ -118,13 +117,11 @@ class AccommodationVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    passenger_comms_facility_list: PassengerCommsFacilityList | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "PassengerCommsFacilityList",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            },
-        )
+    passenger_comms_facility_list: PassengerCommsFacilityList | None = field(
+        default=None,
+        metadata={
+            "name": "PassengerCommsFacilityList",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        },
     )

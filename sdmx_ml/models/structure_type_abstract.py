@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from sdmx_ml.models.data_structure_components import DataStructureComponents
 from sdmx_ml.models.maintainable_type import MaintainableType
@@ -21,7 +20,9 @@ class StructureTypeAbstract(MaintainableType):
     class Meta:
         name = "StructureType"
 
-    metadata_structure_components_or_data_structure_components: MetadataStructureComponents | DataStructureComponents | None = field(
+    metadata_structure_components_or_data_structure_components: (
+        MetadataStructureComponents | DataStructureComponents | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",

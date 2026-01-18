@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .data_prototype_subtypes_enum import DataPrototypeSubtypesEnum
 from .parameter_in_atomic_swc_type_instance_ref import (
@@ -58,25 +57,21 @@ class AutosarParameterRef:
     class Meta:
         name = "AUTOSAR-PARAMETER-REF"
 
-    autosar_parameter_iref: ParameterInAtomicSwcTypeInstanceRef | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "AUTOSAR-PARAMETER-IREF",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    autosar_parameter_iref: ParameterInAtomicSwcTypeInstanceRef | None = field(
+        default=None,
+        metadata={
+            "name": "AUTOSAR-PARAMETER-IREF",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
-    local_parameter_ref: AutosarParameterRef.LocalParameterRef | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "LOCAL-PARAMETER-REF",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    local_parameter_ref: AutosarParameterRef.LocalParameterRef | None = field(
+        default=None,
+        metadata={
+            "name": "LOCAL-PARAMETER-REF",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     s: str | None = field(
         default=None,

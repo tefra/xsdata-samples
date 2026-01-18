@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -95,7 +94,9 @@ class HealthChannelSupervision:
             "required": True,
         },
     )
-    short_name_fragments: HealthChannelSupervision.ShortNameFragments | None = field(
+    short_name_fragments: (
+        HealthChannelSupervision.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -159,15 +160,13 @@ class HealthChannelSupervision:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    supervision_ref: HealthChannelSupervision.SupervisionRef | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "SUPERVISION-REF",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    supervision_ref: HealthChannelSupervision.SupervisionRef | None = field(
+        default=None,
+        metadata={
+            "name": "SUPERVISION-REF",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     s: str | None = field(
         default=None,

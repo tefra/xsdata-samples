@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -107,13 +106,15 @@ class FmFeatureSelectionSet:
             "required": True,
         },
     )
-    short_name_fragments: FmFeatureSelectionSet.ShortNameFragments | None = field(
-        default=None,
-        metadata={
-            "name": "SHORT-NAME-FRAGMENTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    short_name_fragments: FmFeatureSelectionSet.ShortNameFragments | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "SHORT-NAME-FRAGMENTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     long_name: MultilanguageLongName | None = field(
         default=None,
@@ -171,15 +172,13 @@ class FmFeatureSelectionSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    feature_model_refs: FmFeatureSelectionSet.FeatureModelRefs | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "FEATURE-MODEL-REFS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    feature_model_refs: FmFeatureSelectionSet.FeatureModelRefs | None = field(
+        default=None,
+        metadata={
+            "name": "FEATURE-MODEL-REFS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     include_refs: FmFeatureSelectionSet.IncludeRefs | None = field(
         default=None,

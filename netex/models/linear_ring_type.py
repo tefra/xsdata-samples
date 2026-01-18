@@ -1,6 +1,5 @@
 from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import Union
 
 from .abstract_ring_type import AbstractRingType
 from .point_property import PointProperty

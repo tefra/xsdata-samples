@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -125,7 +124,9 @@ class Ipv6DhcpServerConfiguration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    dns_server_addresses: Ipv6DhcpServerConfiguration.DnsServerAddresses | None = field(
+    dns_server_addresses: (
+        Ipv6DhcpServerConfiguration.DnsServerAddresses | None
+    ) = field(
         default=None,
         metadata={
             "name": "DNS-SERVER-ADDRESSES",

@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -122,7 +121,9 @@ class BusMirrorChannelMappingCan:
             "required": True,
         },
     )
-    short_name_fragments: BusMirrorChannelMappingCan.ShortNameFragments | None = field(
+    short_name_fragments: (
+        BusMirrorChannelMappingCan.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -202,7 +203,9 @@ class BusMirrorChannelMappingCan:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    target_pdu_triggerings: BusMirrorChannelMappingCan.TargetPduTriggerings | None = field(
+    target_pdu_triggerings: (
+        BusMirrorChannelMappingCan.TargetPduTriggerings | None
+    ) = field(
         default=None,
         metadata={
             "name": "TARGET-PDU-TRIGGERINGS",
@@ -210,7 +213,9 @@ class BusMirrorChannelMappingCan:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    can_id_range_mappings: BusMirrorChannelMappingCan.CanIdRangeMappings | None = field(
+    can_id_range_mappings: (
+        BusMirrorChannelMappingCan.CanIdRangeMappings | None
+    ) = field(
         default=None,
         metadata={
             "name": "CAN-ID-RANGE-MAPPINGS",
@@ -218,7 +223,9 @@ class BusMirrorChannelMappingCan:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    can_id_to_can_id_mappings: BusMirrorChannelMappingCan.CanIdToCanIdMappings | None = field(
+    can_id_to_can_id_mappings: (
+        BusMirrorChannelMappingCan.CanIdToCanIdMappings | None
+    ) = field(
         default=None,
         metadata={
             "name": "CAN-ID-TO-CAN-ID-MAPPINGS",
@@ -226,7 +233,9 @@ class BusMirrorChannelMappingCan:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    lin_pid_to_can_id_mappings: BusMirrorChannelMappingCan.LinPidToCanIdMappings | None = field(
+    lin_pid_to_can_id_mappings: (
+        BusMirrorChannelMappingCan.LinPidToCanIdMappings | None
+    ) = field(
         default=None,
         metadata={
             "name": "LIN-PID-TO-CAN-ID-MAPPINGS",

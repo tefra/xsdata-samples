@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .compu_const import CompuConst
 from .compu_scale import CompuScale

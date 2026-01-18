@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import VariationPoint
 from .bsw_asynchronous_server_call_point_subtypes_enum import (
@@ -59,7 +58,9 @@ class BswAsynchronousServerCallResultPoint:
             "required": True,
         },
     )
-    short_name_fragments: BswAsynchronousServerCallResultPoint.ShortNameFragments | None = field(
+    short_name_fragments: (
+        BswAsynchronousServerCallResultPoint.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -67,7 +68,9 @@ class BswAsynchronousServerCallResultPoint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    context_limitation_refs: BswAsynchronousServerCallResultPoint.ContextLimitationRefs | None = field(
+    context_limitation_refs: (
+        BswAsynchronousServerCallResultPoint.ContextLimitationRefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "CONTEXT-LIMITATION-REFS",
@@ -83,7 +86,10 @@ class BswAsynchronousServerCallResultPoint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    asynchronous_server_call_point_ref: BswAsynchronousServerCallResultPoint.AsynchronousServerCallPointRef | None = field(
+    asynchronous_server_call_point_ref: (
+        BswAsynchronousServerCallResultPoint.AsynchronousServerCallPointRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "ASYNCHRONOUS-SERVER-CALL-POINT-REF",

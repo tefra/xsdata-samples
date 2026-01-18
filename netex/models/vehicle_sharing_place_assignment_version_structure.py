@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from .car_pooling_service_ref import CarPoolingServiceRef
 from .chauffeured_vehicle_service_ref import ChauffeuredVehicleServiceRef
@@ -27,7 +26,14 @@ class VehicleSharingPlaceAssignmentVersionStructure(
     class Meta:
         name = "VehicleSharingPlaceAssignment_VersionStructure"
 
-    common_vehicle_service_ref_or_vehicle_pooling_service_ref: VehicleRentalServiceRef | VehicleSharingServiceRef | ChauffeuredVehicleServiceRef | TaxiServiceRef | CarPoolingServiceRef | None = field(
+    common_vehicle_service_ref_or_vehicle_pooling_service_ref: (
+        VehicleRentalServiceRef
+        | VehicleSharingServiceRef
+        | ChauffeuredVehicleServiceRef
+        | TaxiServiceRef
+        | CarPoolingServiceRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -60,16 +66,24 @@ class VehicleSharingPlaceAssignmentVersionStructure(
             ),
         },
     )
-    vehicle_sharing_parking_area_ref: VehicleSharingParkingAreaRef | None = field(
-        default=None,
-        metadata={
-            "name": "VehicleSharingParkingAreaRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
-        },
+    vehicle_sharing_parking_area_ref: VehicleSharingParkingAreaRef | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "VehicleSharingParkingAreaRef",
+                "type": "Element",
+                "namespace": "http://www.netex.org.uk/netex",
+                "required": True,
+            },
+        )
     )
-    parking_bay_ref_or_vehicle_sharing_parking_bay_ref: VehiclePoolingParkingBayRef | MonitoredVehicleSharingParkingBayRef | VehicleSharingParkingBayRef | ParkingBayRef | None = field(
+    parking_bay_ref_or_vehicle_sharing_parking_bay_ref: (
+        VehiclePoolingParkingBayRef
+        | MonitoredVehicleSharingParkingBayRef
+        | VehicleSharingParkingBayRef
+        | ParkingBayRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",

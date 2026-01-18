@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from .companion_profile_ref import CompanionProfileRef
 from .companion_relationship_enumeration import (
@@ -27,7 +26,9 @@ class CompanionProfileVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    user_profile_ref: VehiclePoolerProfileRef | CompanionProfileRef | UserProfileRef | None = field(
+    user_profile_ref: (
+        VehiclePoolerProfileRef | CompanionProfileRef | UserProfileRef | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",

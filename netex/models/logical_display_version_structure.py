@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .display_assignments_rel_structure import DisplayAssignmentsRelStructure
 from .entity_in_version_structure import DataManagedObjectStructure

@@ -1,6 +1,5 @@
 from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .day_of_week_enumeration import DayOfWeekEnumeration
 from .minimum_stay_type_enumeration import MinimumStayTypeEnumeration

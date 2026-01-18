@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .identifier import Identifier
 from .pdu_collection_semantics_enum import PduCollectionSemanticsEnum
@@ -68,13 +67,15 @@ class SoConIPduIdentifier:
             "required": True,
         },
     )
-    short_name_fragments: SoConIPduIdentifier.ShortNameFragments | None = field(
-        default=None,
-        metadata={
-            "name": "SHORT-NAME-FRAGMENTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    short_name_fragments: SoConIPduIdentifier.ShortNameFragments | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "SHORT-NAME-FRAGMENTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     header_id: PositiveInteger | None = field(
         default=None,
@@ -108,15 +109,13 @@ class SoConIPduIdentifier:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    pdu_triggering_ref: SoConIPduIdentifier.PduTriggeringRef | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "PDU-TRIGGERING-REF",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    pdu_triggering_ref: SoConIPduIdentifier.PduTriggeringRef | None = field(
+        default=None,
+        metadata={
+            "name": "PDU-TRIGGERING-REF",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     s: str | None = field(
         default=None,

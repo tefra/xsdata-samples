@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from crossref.models.org.w3.pkg_1998.math.math_ml.mglyph_fontstyle import (
     MglyphFontstyle,

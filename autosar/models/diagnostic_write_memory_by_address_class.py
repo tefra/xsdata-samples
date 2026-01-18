@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -104,7 +103,9 @@ class DiagnosticWriteMemoryByAddressClass:
             "required": True,
         },
     )
-    short_name_fragments: DiagnosticWriteMemoryByAddressClass.ShortNameFragments | None = field(
+    short_name_fragments: (
+        DiagnosticWriteMemoryByAddressClass.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -152,13 +153,15 @@ class DiagnosticWriteMemoryByAddressClass:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: DiagnosticWriteMemoryByAddressClass.Annotations | None = field(
-        default=None,
-        metadata={
-            "name": "ANNOTATIONS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    annotations: DiagnosticWriteMemoryByAddressClass.Annotations | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "ANNOTATIONS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     variation_point: VariationPoint | None = field(
         default=None,
@@ -168,7 +171,9 @@ class DiagnosticWriteMemoryByAddressClass:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    access_permission_ref: DiagnosticWriteMemoryByAddressClass.AccessPermissionRef | None = field(
+    access_permission_ref: (
+        DiagnosticWriteMemoryByAddressClass.AccessPermissionRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "ACCESS-PERMISSION-REF",
@@ -176,7 +181,9 @@ class DiagnosticWriteMemoryByAddressClass:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    access_permission_validity: DiagnosticAccessPermissionValidityEnum | None = field(
+    access_permission_validity: (
+        DiagnosticAccessPermissionValidityEnum | None
+    ) = field(
         default=None,
         metadata={
             "name": "ACCESS-PERMISSION-VALIDITY",

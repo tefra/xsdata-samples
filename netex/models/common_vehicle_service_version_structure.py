@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .mobility_service_version_structure import MobilityServiceVersionStructure
 from .online_service_refs_rel_structure import OnlineServiceRefsRelStructure

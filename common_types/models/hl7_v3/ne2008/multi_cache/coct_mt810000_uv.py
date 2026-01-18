@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from ..core.datatypes_base import (
     Cd,
@@ -362,16 +361,14 @@ class CoctMt810000UvSupport:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    information_provision: CoctMt810000UvInformationProvision | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "informationProvision",
-                "type": "Element",
-                "namespace": "urn:hl7-org:v3",
-                "nillable": True,
-            },
-        )
+    information_provision: CoctMt810000UvInformationProvision | None = field(
+        default=None,
+        metadata={
+            "name": "informationProvision",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        },
     )
     null_flavor: NullFlavor | None = field(
         default=None,

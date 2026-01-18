@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -105,7 +104,9 @@ class CryptoKeySlotToPortPrototypeMapping:
             "required": True,
         },
     )
-    short_name_fragments: CryptoKeySlotToPortPrototypeMapping.ShortNameFragments | None = field(
+    short_name_fragments: (
+        CryptoKeySlotToPortPrototypeMapping.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -153,13 +154,15 @@ class CryptoKeySlotToPortPrototypeMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: CryptoKeySlotToPortPrototypeMapping.Annotations | None = field(
-        default=None,
-        metadata={
-            "name": "ANNOTATIONS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    annotations: CryptoKeySlotToPortPrototypeMapping.Annotations | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "ANNOTATIONS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     variation_point: VariationPoint | None = field(
         default=None,
@@ -169,33 +172,31 @@ class CryptoKeySlotToPortPrototypeMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    key_slot_ref: CryptoKeySlotToPortPrototypeMapping.KeySlotRef | None = field(
+    key_slot_ref: CryptoKeySlotToPortPrototypeMapping.KeySlotRef | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "KEY-SLOT-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
+    )
+    port_prototype_iref: PortPrototypeInExecutableInstanceRef | None = field(
         default=None,
         metadata={
-            "name": "KEY-SLOT-REF",
+            "name": "PORT-PROTOTYPE-IREF",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    port_prototype_iref: PortPrototypeInExecutableInstanceRef | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "PORT-PROTOTYPE-IREF",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
-    )
-    process_ref: CryptoKeySlotToPortPrototypeMapping.ProcessRef | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "PROCESS-REF",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    process_ref: CryptoKeySlotToPortPrototypeMapping.ProcessRef | None = field(
+        default=None,
+        metadata={
+            "name": "PROCESS-REF",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     s: str | None = field(
         default=None,

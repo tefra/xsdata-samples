@@ -2,7 +2,6 @@ from __future__ import annotations
 
 from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .class_attribute_in_frame import ClassAttributeInFrame
 from .class_ref_type_enumeration import ClassRefTypeEnumeration

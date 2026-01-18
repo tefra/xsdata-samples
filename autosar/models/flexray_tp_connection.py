@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import VariationPoint
 from .boolean import Boolean
@@ -117,15 +116,13 @@ class FlexrayTpConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    reversed_tp_sdu_ref: FlexrayTpConnection.ReversedTpSduRef | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "REVERSED-TP-SDU-REF",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    reversed_tp_sdu_ref: FlexrayTpConnection.ReversedTpSduRef | None = field(
+        default=None,
+        metadata={
+            "name": "REVERSED-TP-SDU-REF",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     rx_pdu_pool_ref: FlexrayTpConnection.RxPduPoolRef | None = field(
         default=None,
@@ -135,7 +132,9 @@ class FlexrayTpConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tp_connection_control_ref: FlexrayTpConnection.TpConnectionControlRef | None = field(
+    tp_connection_control_ref: (
+        FlexrayTpConnection.TpConnectionControlRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "TP-CONNECTION-CONTROL-REF",

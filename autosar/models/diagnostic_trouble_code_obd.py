@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -114,7 +113,9 @@ class DiagnosticTroubleCodeObd:
             "required": True,
         },
     )
-    short_name_fragments: DiagnosticTroubleCodeObd.ShortNameFragments | None = field(
+    short_name_fragments: (
+        DiagnosticTroubleCodeObd.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -202,7 +203,9 @@ class DiagnosticTroubleCodeObd:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    event_readiness_groups: DiagnosticTroubleCodeObd.EventReadinessGroups | None = field(
+    event_readiness_groups: (
+        DiagnosticTroubleCodeObd.EventReadinessGroups | None
+    ) = field(
         default=None,
         metadata={
             "name": "EVENT-READINESS-GROUPS",

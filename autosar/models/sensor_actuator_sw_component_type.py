@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -152,7 +151,9 @@ class SensorActuatorSwComponentType:
             "required": True,
         },
     )
-    short_name_fragments: SensorActuatorSwComponentType.ShortNameFragments | None = field(
+    short_name_fragments: (
+        SensorActuatorSwComponentType.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -216,7 +217,9 @@ class SensorActuatorSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    blueprint_policys: SensorActuatorSwComponentType.BlueprintPolicys | None = field(
+    blueprint_policys: (
+        SensorActuatorSwComponentType.BlueprintPolicys | None
+    ) = field(
         default=None,
         metadata={
             "name": "BLUEPRINT-POLICYS",
@@ -232,7 +235,9 @@ class SensorActuatorSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_component_documentations: SensorActuatorSwComponentType.SwComponentDocumentations | None = field(
+    sw_component_documentations: (
+        SensorActuatorSwComponentType.SwComponentDocumentations | None
+    ) = field(
         default=None,
         metadata={
             "name": "SW-COMPONENT-DOCUMENTATIONS",
@@ -240,7 +245,9 @@ class SensorActuatorSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    consistency_needss: SensorActuatorSwComponentType.ConsistencyNeedss | None = field(
+    consistency_needss: (
+        SensorActuatorSwComponentType.ConsistencyNeedss | None
+    ) = field(
         default=None,
         metadata={
             "name": "CONSISTENCY-NEEDSS",
@@ -264,15 +271,19 @@ class SensorActuatorSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    unit_group_refs: SensorActuatorSwComponentType.UnitGroupRefs | None = field(
-        default=None,
-        metadata={
-            "name": "UNIT-GROUP-REFS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    unit_group_refs: SensorActuatorSwComponentType.UnitGroupRefs | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "UNIT-GROUP-REFS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
-    internal_behaviors: SensorActuatorSwComponentType.InternalBehaviors | None = field(
+    internal_behaviors: (
+        SensorActuatorSwComponentType.InternalBehaviors | None
+    ) = field(
         default=None,
         metadata={
             "name": "INTERNAL-BEHAVIORS",
@@ -288,7 +299,9 @@ class SensorActuatorSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sensor_actuator_ref: SensorActuatorSwComponentType.SensorActuatorRef | None = field(
+    sensor_actuator_ref: (
+        SensorActuatorSwComponentType.SensorActuatorRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "SENSOR-ACTUATOR-REF",

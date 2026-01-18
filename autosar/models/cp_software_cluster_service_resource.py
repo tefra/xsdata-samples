@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -108,7 +107,9 @@ class CpSoftwareClusterServiceResource:
             "required": True,
         },
     )
-    short_name_fragments: CpSoftwareClusterServiceResource.ShortNameFragments | None = field(
+    short_name_fragments: (
+        CpSoftwareClusterServiceResource.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -156,17 +157,17 @@ class CpSoftwareClusterServiceResource:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: CpSoftwareClusterServiceResource.Annotations | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "ANNOTATIONS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    annotations: CpSoftwareClusterServiceResource.Annotations | None = field(
+        default=None,
+        metadata={
+            "name": "ANNOTATIONS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
-    dependent_resources: CpSoftwareClusterServiceResource.DependentResources | None = field(
+    dependent_resources: (
+        CpSoftwareClusterServiceResource.DependentResources | None
+    ) = field(
         default=None,
         metadata={
             "name": "DEPENDENT-RESOURCES",
@@ -190,7 +191,9 @@ class CpSoftwareClusterServiceResource:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    resource_needs_refs: CpSoftwareClusterServiceResource.ResourceNeedsRefs | None = field(
+    resource_needs_refs: (
+        CpSoftwareClusterServiceResource.ResourceNeedsRefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "RESOURCE-NEEDS-REFS",

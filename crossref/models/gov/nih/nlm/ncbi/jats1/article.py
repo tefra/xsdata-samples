@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from crossref.models.gov.nih.nlm.ncbi.jats1.article_dtd_version import (
     ArticleDtdVersion,

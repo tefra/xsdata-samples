@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import VariationPoint
 from .can_physical_channel import CanPhysicalChannel
@@ -58,7 +57,9 @@ class UserDefinedClusterConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    physical_channels: UserDefinedClusterConditional.PhysicalChannels | None = field(
+    physical_channels: (
+        UserDefinedClusterConditional.PhysicalChannels | None
+    ) = field(
         default=None,
         metadata={
             "name": "PHYSICAL-CHANNELS",

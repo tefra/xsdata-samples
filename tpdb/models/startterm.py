@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from tpdb.models.automaton import Automaton
 from tpdb.models.constructor_based import ConstructorBased

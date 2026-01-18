@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .frequency_groups_rel_structure import FrequencyGroupsRelStructure
 from .service_journey_version_structure import ServiceJourneyVersionStructure
@@ -15,7 +14,9 @@ class TemplateServiceJourneyVersionStructure(ServiceJourneyVersionStructure):
     class Meta:
         name = "TemplateServiceJourney_VersionStructure"
 
-    template_vehicle_journey_type: TemplateVehicleJourneyTypeEnumeration | None = field(
+    template_vehicle_journey_type: (
+        TemplateVehicleJourneyTypeEnumeration | None
+    ) = field(
         default=None,
         metadata={
             "name": "TemplateVehicleJourneyType",

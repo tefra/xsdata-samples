@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .aggregation_condition import AggregationCondition
 from .primitive_attribute_condition import PrimitiveAttributeCondition
@@ -74,13 +73,15 @@ class InvertCondition:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        primitive_attribute_condition: PrimitiveAttributeCondition | None = field(
-            default=None,
-            metadata={
-                "name": "PRIMITIVE-ATTRIBUTE-CONDITION",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        primitive_attribute_condition: PrimitiveAttributeCondition | None = (
+            field(
+                default=None,
+                metadata={
+                    "name": "PRIMITIVE-ATTRIBUTE-CONDITION",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )
         reference_condition: ReferenceCondition | None = field(
             default=None,

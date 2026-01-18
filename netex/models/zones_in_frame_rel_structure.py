@@ -1,6 +1,5 @@
 from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import Union
 
 from .access_space import AccessSpace
 from .access_zone import AccessZone
@@ -69,7 +68,58 @@ class ZonesInFrameRelStructure(ContainmentAggregationStructure):
         name = "zonesInFrame_RelStructure"
 
     choice: Iterable[
-        MobilityServiceConstraintZone | RoutingConstraintZone | StopArea | AccessZone | VehicleMeetingPlace1 | VehiclePoolingMeetingPlace | VehicleMeetingPlace2 | HailAndRideArea | FlexibleArea | FlexibleQuay | FlexibleStopPlace | Garage | EquipmentPlace | TaxiStand | VehicleStoppingPlace | BoardingPosition | AccessSpace | Quay | PointOfInterestSpace | ParkingComponent | VehicleStoppingPosition | VehiclePoolingParkingArea | VehicleSharingParkingArea | TaxiParkingArea | ParkingArea | MonitoredVehicleSharingParkingBay | VehiclePoolingParkingBay | VehicleSharingParkingBay | ParkingBay | PointOfInterestVehicleEntrance | PointOfInterestEntrance | ParkingPassengerEntrance | ParkingEntranceForVehicles | StopPlaceVehicleEntrance | StopPlaceEntrance | Entrance | PointOfInterest | Parking | TaxiRank | StopPlace | ServiceSite | TopographicPlace | Country | AddressablePlace | PostalAddress | RoadAddress | TransportAdministrativeZone | AdministrativeZone | FareZone | TariffZone | GeneralZone | Zone
+        MobilityServiceConstraintZone
+        | RoutingConstraintZone
+        | StopArea
+        | AccessZone
+        | VehicleMeetingPlace1
+        | VehiclePoolingMeetingPlace
+        | VehicleMeetingPlace2
+        | HailAndRideArea
+        | FlexibleArea
+        | FlexibleQuay
+        | FlexibleStopPlace
+        | Garage
+        | EquipmentPlace
+        | TaxiStand
+        | VehicleStoppingPlace
+        | BoardingPosition
+        | AccessSpace
+        | Quay
+        | PointOfInterestSpace
+        | ParkingComponent
+        | VehicleStoppingPosition
+        | VehiclePoolingParkingArea
+        | VehicleSharingParkingArea
+        | TaxiParkingArea
+        | ParkingArea
+        | MonitoredVehicleSharingParkingBay
+        | VehiclePoolingParkingBay
+        | VehicleSharingParkingBay
+        | ParkingBay
+        | PointOfInterestVehicleEntrance
+        | PointOfInterestEntrance
+        | ParkingPassengerEntrance
+        | ParkingEntranceForVehicles
+        | StopPlaceVehicleEntrance
+        | StopPlaceEntrance
+        | Entrance
+        | PointOfInterest
+        | Parking
+        | TaxiRank
+        | StopPlace
+        | ServiceSite
+        | TopographicPlace
+        | Country
+        | AddressablePlace
+        | PostalAddress
+        | RoadAddress
+        | TransportAdministrativeZone
+        | AdministrativeZone
+        | FareZone
+        | TariffZone
+        | GeneralZone
+        | Zone
     ] = field(
         default_factory=list,
         metadata={

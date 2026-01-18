@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .diagnostic_data_element_subtypes_enum import (
     DiagnosticDataElementSubtypesEnum,
@@ -48,7 +47,9 @@ class DiagnosticControlEnableMaskBit:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    controlled_data_element_refs: DiagnosticControlEnableMaskBit.ControlledDataElementRefs | None = field(
+    controlled_data_element_refs: (
+        DiagnosticControlEnableMaskBit.ControlledDataElementRefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "CONTROLLED-DATA-ELEMENT-REFS",

@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .phm_health_channel_interface_subtypes_enum import (
     PhmHealthChannelInterfaceSubtypesEnum,
@@ -40,7 +39,10 @@ class PhmHealthChannelInExecutableInstanceRef:
     class Meta:
         name = "PHM-HEALTH-CHANNEL-IN-EXECUTABLE-INSTANCE-REF"
 
-    context_root_sw_component_prototype_ref: PhmHealthChannelInExecutableInstanceRef.ContextRootSwComponentPrototypeRef | None = field(
+    context_root_sw_component_prototype_ref: (
+        PhmHealthChannelInExecutableInstanceRef.ContextRootSwComponentPrototypeRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "CONTEXT-ROOT-SW-COMPONENT-PROTOTYPE-REF",
@@ -58,7 +60,9 @@ class PhmHealthChannelInExecutableInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    context_r_port_prototype_ref: PhmHealthChannelInExecutableInstanceRef.ContextRPortPrototypeRef | None = field(
+    context_r_port_prototype_ref: (
+        PhmHealthChannelInExecutableInstanceRef.ContextRPortPrototypeRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "CONTEXT-R-PORT-PROTOTYPE-REF",
@@ -66,7 +70,9 @@ class PhmHealthChannelInExecutableInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    target_health_channel_ref: PhmHealthChannelInExecutableInstanceRef.TargetHealthChannelRef | None = field(
+    target_health_channel_ref: (
+        PhmHealthChannelInExecutableInstanceRef.TargetHealthChannelRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "TARGET-HEALTH-CHANNEL-REF",

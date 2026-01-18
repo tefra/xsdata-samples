@@ -1,6 +1,5 @@
 from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from xsdata.models.datatype import XmlDate
 
@@ -29,7 +28,13 @@ class DayTypeAssignmentVersionStructure(AssignmentVersionStructure1):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    choice: UicOperatingPeriodRef | OperatingPeriodRef | OperatingDayRef | XmlDate | None = field(
+    choice: (
+        UicOperatingPeriodRef
+        | OperatingPeriodRef
+        | OperatingDayRef
+        | XmlDate
+        | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",

@@ -1,6 +1,5 @@
 from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import Union
 
 from .class_in_frame_ref import ClassInFrameRef
 from .class_ref import ClassRef

@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .ip_address_keep_enum_simple import IpAddressKeepEnumSimple
 

@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from sdmx_ml.models.contact_type_2 import ContactType2
 from sdmx_ml.models.name import Name

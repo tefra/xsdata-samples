@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -90,13 +89,15 @@ class TcpOptionFilterList:
             "required": True,
         },
     )
-    short_name_fragments: TcpOptionFilterList.ShortNameFragments | None = field(
-        default=None,
-        metadata={
-            "name": "SHORT-NAME-FRAGMENTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    short_name_fragments: TcpOptionFilterList.ShortNameFragments | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "SHORT-NAME-FRAGMENTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     long_name: MultilanguageLongName | None = field(
         default=None,
@@ -146,15 +147,13 @@ class TcpOptionFilterList:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    allowed_tcp_options: TcpOptionFilterList.AllowedTcpOptions | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "ALLOWED-TCP-OPTIONS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    allowed_tcp_options: TcpOptionFilterList.AllowedTcpOptions | None = field(
+        default=None,
+        metadata={
+            "name": "ALLOWED-TCP-OPTIONS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     s: str | None = field(
         default=None,

@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .mc_group_data_ref_set_conditional import McGroupDataRefSetConditional
 
@@ -37,7 +36,9 @@ class McGroupDataRefSet:
     class Meta:
         name = "MC-GROUP-DATA-REF-SET"
 
-    mc_group_data_ref_set_variants: McGroupDataRefSet.McGroupDataRefSetVariants | None = field(
+    mc_group_data_ref_set_variants: (
+        McGroupDataRefSet.McGroupDataRefSetVariants | None
+    ) = field(
         default=None,
         metadata={
             "name": "MC-GROUP-DATA-REF-SET-VARIANTS",

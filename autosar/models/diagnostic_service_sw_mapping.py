@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -146,7 +145,9 @@ class DiagnosticServiceSwMapping:
             "required": True,
         },
     )
-    short_name_fragments: DiagnosticServiceSwMapping.ShortNameFragments | None = field(
+    short_name_fragments: (
+        DiagnosticServiceSwMapping.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -210,7 +211,9 @@ class DiagnosticServiceSwMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    diagnostic_data_element_ref: DiagnosticServiceSwMapping.DiagnosticDataElementRef | None = field(
+    diagnostic_data_element_ref: (
+        DiagnosticServiceSwMapping.DiagnosticDataElementRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "DIAGNOSTIC-DATA-ELEMENT-REF",
@@ -218,7 +221,9 @@ class DiagnosticServiceSwMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    mapped_bsw_service_dependency_ref: DiagnosticServiceSwMapping.MappedBswServiceDependencyRef | None = field(
+    mapped_bsw_service_dependency_ref: (
+        DiagnosticServiceSwMapping.MappedBswServiceDependencyRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "MAPPED-BSW-SERVICE-DEPENDENCY-REF",
@@ -226,7 +231,9 @@ class DiagnosticServiceSwMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    mapped_flat_swc_service_dependency_ref: DiagnosticServiceSwMapping.MappedFlatSwcServiceDependencyRef | None = field(
+    mapped_flat_swc_service_dependency_ref: (
+        DiagnosticServiceSwMapping.MappedFlatSwcServiceDependencyRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "MAPPED-FLAT-SWC-SERVICE-DEPENDENCY-REF",
@@ -234,7 +241,9 @@ class DiagnosticServiceSwMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    mapped_swc_service_dependency_in_executable_iref: SwcServiceDependencyInExecutableInstanceRef | None = field(
+    mapped_swc_service_dependency_in_executable_iref: (
+        SwcServiceDependencyInExecutableInstanceRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "MAPPED-SWC-SERVICE-DEPENDENCY-IN-EXECUTABLE-IREF",
@@ -242,7 +251,9 @@ class DiagnosticServiceSwMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    mapped_swc_service_dependency_in_system_iref: SwcServiceDependencyInSystemInstanceRef | None = field(
+    mapped_swc_service_dependency_in_system_iref: (
+        SwcServiceDependencyInSystemInstanceRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "MAPPED-SWC-SERVICE-DEPENDENCY-IN-SYSTEM-IREF",
@@ -250,7 +261,9 @@ class DiagnosticServiceSwMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    mapped_swc_service_dependency_iref: SwcServiceDependencyInCompositionInstanceRef | None = field(
+    mapped_swc_service_dependency_iref: (
+        SwcServiceDependencyInCompositionInstanceRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "MAPPED-SWC-SERVICE-DEPENDENCY-IREF",
@@ -266,7 +279,9 @@ class DiagnosticServiceSwMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    service_instance_ref: DiagnosticServiceSwMapping.ServiceInstanceRef | None = field(
+    service_instance_ref: (
+        DiagnosticServiceSwMapping.ServiceInstanceRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "SERVICE-INSTANCE-REF",

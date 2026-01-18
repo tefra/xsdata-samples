@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from xcbl.models.availability_to_promise_response import (
     AtpcheckType,
@@ -198,7 +197,9 @@ class AvailabilityToPromiseHeader:
             "type": "Element",
         },
     )
-    availability_to_promise_header_transport: AvailabilityToPromiseHeaderTransport | None = field(
+    availability_to_promise_header_transport: (
+        AvailabilityToPromiseHeaderTransport | None
+    ) = field(
         default=None,
         metadata={
             "name": "AvailabilityToPromiseHeaderTransport",
@@ -212,7 +213,9 @@ class AvailabilityToPromiseHeader:
             "type": "Element",
         },
     )
-    availability_to_promise_list_of_attachment: AvailabilityToPromiseListOfAttachment | None = field(
+    availability_to_promise_list_of_attachment: (
+        AvailabilityToPromiseListOfAttachment | None
+    ) = field(
         default=None,
         metadata={
             "name": "AvailabilityToPromiseListOfAttachment",
@@ -230,21 +233,27 @@ class AvailabilityToPromiseItemDetail:
             "required": True,
         }
     )
-    availability_to_promise_delivery_detail: AvailabilityToPromiseDeliveryDetail | None = field(
+    availability_to_promise_delivery_detail: (
+        AvailabilityToPromiseDeliveryDetail | None
+    ) = field(
         default=None,
         metadata={
             "name": "AvailabilityToPromiseDeliveryDetail",
             "type": "Element",
         },
     )
-    availability_to_promise_transport_detail: AvailabilityToPromiseTransportDetail | None = field(
+    availability_to_promise_transport_detail: (
+        AvailabilityToPromiseTransportDetail | None
+    ) = field(
         default=None,
         metadata={
             "name": "AvailabilityToPromiseTransportDetail",
             "type": "Element",
         },
     )
-    availability_to_promise_item_list_of_attachment: AvailabilityToPromiseItemListOfAttachment | None = field(
+    availability_to_promise_item_list_of_attachment: (
+        AvailabilityToPromiseItemListOfAttachment | None
+    ) = field(
         default=None,
         metadata={
             "name": "AvailabilityToPromiseItemListOfAttachment",
@@ -276,7 +285,9 @@ class ListOfAvailabilityToPromiseItemDetail:
 
 @dataclass(kw_only=True)
 class AvailabilityToPromiseDetail:
-    list_of_availability_to_promise_item_detail: ListOfAvailabilityToPromiseItemDetail | None = field(
+    list_of_availability_to_promise_item_detail: (
+        ListOfAvailabilityToPromiseItemDetail | None
+    ) = field(
         default=None,
         metadata={
             "name": "ListOfAvailabilityToPromiseItemDetail",
@@ -294,14 +305,12 @@ class AvailabilityToPromise:
             "required": True,
         }
     )
-    availability_to_promise_detail: AvailabilityToPromiseDetail | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "AvailabilityToPromiseDetail",
-                "type": "Element",
-            },
-        )
+    availability_to_promise_detail: AvailabilityToPromiseDetail | None = field(
+        default=None,
+        metadata={
+            "name": "AvailabilityToPromiseDetail",
+            "type": "Element",
+        },
     )
     availability_to_promise_summary: AvailabilityToPromiseSummary | None = (
         field(

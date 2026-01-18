@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .application_composite_element_data_prototype_subtypes_enum import (
     ApplicationCompositeElementDataPrototypeSubtypesEnum,
@@ -36,7 +35,10 @@ class DataPrototypeInSenderReceiverInterfaceInstanceRef:
     class Meta:
         name = "DATA-PROTOTYPE-IN-SENDER-RECEIVER-INTERFACE-INSTANCE-REF"
 
-    root_data_prototype_in_sr_ref: DataPrototypeInSenderReceiverInterfaceInstanceRef.RootDataPrototypeInSrRef | None = field(
+    root_data_prototype_in_sr_ref: (
+        DataPrototypeInSenderReceiverInterfaceInstanceRef.RootDataPrototypeInSrRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "ROOT-DATA-PROTOTYPE-IN-SR-REF",
@@ -54,7 +56,10 @@ class DataPrototypeInSenderReceiverInterfaceInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    target_data_prototype_in_sr_ref: DataPrototypeInSenderReceiverInterfaceInstanceRef.TargetDataPrototypeInSrRef | None = field(
+    target_data_prototype_in_sr_ref: (
+        DataPrototypeInSenderReceiverInterfaceInstanceRef.TargetDataPrototypeInSrRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "TARGET-DATA-PROTOTYPE-IN-SR-REF",
@@ -91,13 +96,15 @@ class DataPrototypeInSenderReceiverInterfaceInstanceRef:
 
     @dataclass
     class ContextDataPrototypeInSrRef(Ref):
-        dest: ApplicationCompositeElementDataPrototypeSubtypesEnum | None = field(
-            default=None,
-            metadata={
-                "name": "DEST",
-                "type": "Attribute",
-                "required": True,
-            },
+        dest: ApplicationCompositeElementDataPrototypeSubtypesEnum | None = (
+            field(
+                default=None,
+                metadata={
+                    "name": "DEST",
+                    "type": "Attribute",
+                    "required": True,
+                },
+            )
         )
 
     @dataclass

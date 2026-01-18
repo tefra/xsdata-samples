@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .data_managed_object_view_structure import DataManagedObjectViewStructure
 

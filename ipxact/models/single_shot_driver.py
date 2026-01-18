@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from ipxact.models.delay_value_unit_type import DelayValueUnitType
 from ipxact.models.real_expression import RealExpression
@@ -44,15 +43,13 @@ class SingleShotDriver:
             "required": True,
         },
     )
-    single_shot_duration: SingleShotDriver.SingleShotDuration | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "singleShotDuration",
-                "type": "Element",
-                "required": True,
-            },
-        )
+    single_shot_duration: SingleShotDriver.SingleShotDuration | None = field(
+        default=None,
+        metadata={
+            "name": "singleShotDuration",
+            "type": "Element",
+            "required": True,
+        },
     )
 
     @dataclass

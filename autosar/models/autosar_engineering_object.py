@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .nmtoken_string import NmtokenString
 from .revision_label_string import RevisionLabelString
@@ -62,15 +61,13 @@ class AutosarEngineeringObject:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    revision_labels: AutosarEngineeringObject.RevisionLabels | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "REVISION-LABELS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    revision_labels: AutosarEngineeringObject.RevisionLabels | None = field(
+        default=None,
+        metadata={
+            "name": "REVISION-LABELS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     domain: NmtokenString | None = field(
         default=None,

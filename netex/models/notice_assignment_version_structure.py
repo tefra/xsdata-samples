@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from .assignment_version_structure_1 import AssignmentVersionStructure1
 from .common_section_ref import CommonSectionRef
@@ -44,7 +43,9 @@ class NoticeAssignmentVersionStructure(AssignmentVersionStructure1):
     class Meta:
         name = "NoticeAssignment_VersionStructure"
 
-    notice_ref_or_group_of_notices_ref_or_notice: NoticeRef | GeneralGroupOfEntitiesRefStructure | Notice | None = field(
+    notice_ref_or_group_of_notices_ref_or_notice: (
+        NoticeRef | GeneralGroupOfEntitiesRefStructure | Notice | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -75,7 +76,28 @@ class NoticeAssignmentVersionStructure(AssignmentVersionStructure1):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    choice: TripRef | TripPatternTripRef | SingleJourneyPathRef | SingleJourneyRef | DatedVehicleJourneyRef | DatedSpecialServiceRef | SpecialServiceRef | TemplateServiceJourneyRef | ServiceJourneyRef | DeadRunRef | VehicleJourneyRef | ServiceJourneyPatternRef | ServicePatternRef | DeadRunJourneyPatternRef | JourneyPatternRef | TimingPatternRef | NavigationPathRef | RouteRef | LinkSequenceRef | None = field(
+    choice: (
+        TripRef
+        | TripPatternTripRef
+        | SingleJourneyPathRef
+        | SingleJourneyRef
+        | DatedVehicleJourneyRef
+        | DatedSpecialServiceRef
+        | SpecialServiceRef
+        | TemplateServiceJourneyRef
+        | ServiceJourneyRef
+        | DeadRunRef
+        | VehicleJourneyRef
+        | ServiceJourneyPatternRef
+        | ServicePatternRef
+        | DeadRunJourneyPatternRef
+        | JourneyPatternRef
+        | TimingPatternRef
+        | NavigationPathRef
+        | RouteRef
+        | LinkSequenceRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -178,7 +200,15 @@ class NoticeAssignmentVersionStructure(AssignmentVersionStructure1):
             ),
         },
     )
-    section_ref_or_general_section_ref: ParentCommonSectionRef | CommonSectionRef | LineSectionRef | FareSectionRef | GeneralSectionRef | SectionRef | None = field(
+    section_ref_or_general_section_ref: (
+        ParentCommonSectionRef
+        | CommonSectionRef
+        | LineSectionRef
+        | FareSectionRef
+        | GeneralSectionRef
+        | SectionRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",

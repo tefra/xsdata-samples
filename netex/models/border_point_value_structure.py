@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from .group_of_operators import GroupOfOperators
 from .group_of_operators_ref import GroupOfOperatorsRef
@@ -30,7 +29,9 @@ class BorderPointValueStructure(TimingPointVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    group_of_operators_ref_or_group_of_operators: GroupOfOperatorsRef | GroupOfOperators | None = field(
+    group_of_operators_ref_or_group_of_operators: (
+        GroupOfOperatorsRef | GroupOfOperators | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",

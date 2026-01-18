@@ -1,6 +1,5 @@
 from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import Union
 
 from .frame_containment_structure import FrameContainmentStructure
 from .priceable_object_version_structure import (

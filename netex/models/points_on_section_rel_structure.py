@@ -1,6 +1,5 @@
 from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import Union
 
 from .point_on_line_section import PointOnLineSection
 from .point_on_section import PointOnSection
@@ -16,23 +15,21 @@ class PointsOnSectionRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "pointsOnSection_RelStructure"
 
-    point_on_section: Iterable[PointOnLineSection | PointOnSection] = (
-        field(
-            default_factory=list,
-            metadata={
-                "type": "Elements",
-                "choices": (
-                    {
-                        "name": "PointOnLineSection",
-                        "type": PointOnLineSection,
-                        "namespace": "http://www.netex.org.uk/netex",
-                    },
-                    {
-                        "name": "PointOnSection",
-                        "type": PointOnSection,
-                        "namespace": "http://www.netex.org.uk/netex",
-                    },
-                ),
-            },
-        )
+    point_on_section: Iterable[PointOnLineSection | PointOnSection] = field(
+        default_factory=list,
+        metadata={
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "PointOnLineSection",
+                    "type": PointOnLineSection,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "PointOnSection",
+                    "type": PointOnSection,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+        },
     )

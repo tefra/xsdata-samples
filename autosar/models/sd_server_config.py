@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .initial_sd_delay_config import InitialSdDelayConfig
 from .positive_integer import PositiveInteger

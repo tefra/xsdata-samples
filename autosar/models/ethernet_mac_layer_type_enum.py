@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .ethernet_mac_layer_type_enum_simple import EthernetMacLayerTypeEnumSimple
 

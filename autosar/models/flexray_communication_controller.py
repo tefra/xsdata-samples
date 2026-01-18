@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -96,7 +95,9 @@ class FlexrayCommunicationController:
             "required": True,
         },
     )
-    short_name_fragments: FlexrayCommunicationController.ShortNameFragments | None = field(
+    short_name_fragments: (
+        FlexrayCommunicationController.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -144,15 +145,13 @@ class FlexrayCommunicationController:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: FlexrayCommunicationController.Annotations | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "ANNOTATIONS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    annotations: FlexrayCommunicationController.Annotations | None = field(
+        default=None,
+        metadata={
+            "name": "ANNOTATIONS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     variation_point: VariationPoint | None = field(
         default=None,
@@ -162,7 +161,10 @@ class FlexrayCommunicationController:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    flexray_communication_controller_variants: FlexrayCommunicationController.FlexrayCommunicationControllerVariants | None = field(
+    flexray_communication_controller_variants: (
+        FlexrayCommunicationController.FlexrayCommunicationControllerVariants
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "FLEXRAY-COMMUNICATION-CONTROLLER-VARIANTS",

@@ -1,6 +1,5 @@
 from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import Union
 
 from .access_space import AccessSpace
 from .access_space_ref import AccessSpaceRef

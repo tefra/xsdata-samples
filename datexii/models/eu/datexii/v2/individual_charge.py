@@ -1,6 +1,5 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
-from typing import Optional
 
 from datexii.models.eu.datexii.v2.charge_band_versioned_reference import (
     ChargeBandVersionedReference,

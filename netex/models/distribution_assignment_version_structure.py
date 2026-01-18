@@ -1,6 +1,5 @@
 from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from .all_authorities_ref import AllAuthoritiesRef
 from .all_countries_ref import AllCountriesRef
@@ -56,7 +55,19 @@ class DistributionAssignmentVersionStructure(AssignmentVersionStructure2):
     class Meta:
         name = "DistributionAssignment_VersionStructure"
 
-    choice: EntitlementProductRef | SupplementProductRef | PreassignedFareProductRef | AmountOfPriceUnitProductRef | UsageDiscountRightRef | ThirdPartyProductRef | CappedDiscountRightRef | SaleDiscountRightRef | FareProductRef | ServiceAccessRightRef | None = field(
+    choice: (
+        EntitlementProductRef
+        | SupplementProductRef
+        | PreassignedFareProductRef
+        | AmountOfPriceUnitProductRef
+        | UsageDiscountRightRef
+        | ThirdPartyProductRef
+        | CappedDiscountRightRef
+        | SaleDiscountRightRef
+        | FareProductRef
+        | ServiceAccessRightRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -122,13 +133,15 @@ class DistributionAssignmentVersionStructure(AssignmentVersionStructure2):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    group_of_sales_offer_packages_ref: GroupOfSalesOfferPackagesRef | None = field(
-        default=None,
-        metadata={
-            "name": "GroupOfSalesOfferPackagesRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        },
+    group_of_sales_offer_packages_ref: GroupOfSalesOfferPackagesRef | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "GroupOfSalesOfferPackagesRef",
+                "type": "Element",
+                "namespace": "http://www.netex.org.uk/netex",
+            },
+        )
     )
     distribution_rights: Iterable[DistributionRightsEnumeration] = field(
         default_factory=list,
@@ -139,23 +152,25 @@ class DistributionAssignmentVersionStructure(AssignmentVersionStructure2):
             "tokens": True,
         },
     )
-    all_countries_ref_or_country_ref: AllCountriesRef | CountryRef | None = field(
-        default=None,
-        metadata={
-            "type": "Elements",
-            "choices": (
-                {
-                    "name": "AllCountriesRef",
-                    "type": AllCountriesRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "CountryRef",
-                    "type": CountryRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-            ),
-        },
+    all_countries_ref_or_country_ref: AllCountriesRef | CountryRef | None = (
+        field(
+            default=None,
+            metadata={
+                "type": "Elements",
+                "choices": (
+                    {
+                        "name": "AllCountriesRef",
+                        "type": AllCountriesRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "CountryRef",
+                        "type": CountryRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                ),
+            },
+        )
     )
     allowed_in_country: bool | None = field(
         default=None,
@@ -173,7 +188,12 @@ class DistributionAssignmentVersionStructure(AssignmentVersionStructure2):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    all_distribution_channels_ref_or_group_of_distribution_channels_ref_or_distribution_channel_ref: AllDistributionChannelsRef | GroupOfDistributionChannelsRef | DistributionChannelRef | None = field(
+    all_distribution_channels_ref_or_group_of_distribution_channels_ref_or_distribution_channel_ref: (
+        AllDistributionChannelsRef
+        | GroupOfDistributionChannelsRef
+        | DistributionChannelRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -254,7 +274,24 @@ class DistributionAssignmentVersionStructure(AssignmentVersionStructure2):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    choice_1: AllAuthoritiesRef | AllOperatorsRef | AllPublicTransportOrganisationsRef | AllTransportOrganisationsRef | AllOrganisationsRef | RetailConsortiumRef | OnlineServiceOperatorRef | GeneralOrganisationRef | ManagementAgentRef | ServicedOrganisationRef | TravelAgentRef | OtherOrganisationRef | AuthorityRef | OperatorRef | OrganisationRef | None = field(
+    choice_1: (
+        AllAuthoritiesRef
+        | AllOperatorsRef
+        | AllPublicTransportOrganisationsRef
+        | AllTransportOrganisationsRef
+        | AllOrganisationsRef
+        | RetailConsortiumRef
+        | OnlineServiceOperatorRef
+        | GeneralOrganisationRef
+        | ManagementAgentRef
+        | ServicedOrganisationRef
+        | TravelAgentRef
+        | OtherOrganisationRef
+        | AuthorityRef
+        | OperatorRef
+        | OrganisationRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",

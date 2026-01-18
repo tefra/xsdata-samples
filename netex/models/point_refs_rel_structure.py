@@ -1,6 +1,5 @@
 from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import Union
 
 from .activation_point_ref import ActivationPointRef
 from .beacon_point_ref import BeaconPointRef
@@ -29,7 +28,22 @@ class PointRefsRelStructure(OneToManyRelationshipStructure):
         name = "pointRefs_RelStructure"
 
     choice: Iterable[
-        VehicleMeetingPointRef | WirePointRef | RoadPointRef | RailwayPointRef | TrafficControlPointRef | BeaconPointRef | ActivationPointRef | BorderPointRef | FareScheduledStopPointRef | ScheduledStopPointRef | GaragePointRef | ParkingPointRef | ReliefPointRef | TimingPointRef | RoutePointRef | PointRef
+        VehicleMeetingPointRef
+        | WirePointRef
+        | RoadPointRef
+        | RailwayPointRef
+        | TrafficControlPointRef
+        | BeaconPointRef
+        | ActivationPointRef
+        | BorderPointRef
+        | FareScheduledStopPointRef
+        | ScheduledStopPointRef
+        | GaragePointRef
+        | ParkingPointRef
+        | ReliefPointRef
+        | TimingPointRef
+        | RoutePointRef
+        | PointRef
     ] = field(
         default_factory=list,
         metadata={

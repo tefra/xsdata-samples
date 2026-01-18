@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import VariationPoint
 from .boolean import Boolean
@@ -133,15 +132,13 @@ class CanTpConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    flow_control_pdu_ref: CanTpConnection.FlowControlPduRef | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "FLOW-CONTROL-PDU-REF",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    flow_control_pdu_ref: CanTpConnection.FlowControlPduRef | None = field(
+        default=None,
+        metadata={
+            "name": "FLOW-CONTROL-PDU-REF",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     max_block_size: Integer | None = field(
         default=None,

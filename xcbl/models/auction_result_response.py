@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from xcbl.models.sourcing_result_response import (
     GeneralNote,
@@ -129,7 +128,9 @@ class AuctionResultResponseHeader:
             "required": True,
         }
     )
-    auction_result_response_coded_other: AuctionResultResponseCodedOther | None = field(
+    auction_result_response_coded_other: (
+        AuctionResultResponseCodedOther | None
+    ) = field(
         default=None,
         metadata={
             "name": "AuctionResultResponseCodedOther",

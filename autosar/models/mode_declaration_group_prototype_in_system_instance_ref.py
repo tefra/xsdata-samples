@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .mode_declaration_group_prototype_subtypes_enum import (
     ModeDeclarationGroupPrototypeSubtypesEnum,
@@ -40,7 +39,10 @@ class ModeDeclarationGroupPrototypeInSystemInstanceRef:
     class Meta:
         name = "MODE-DECLARATION-GROUP-PROTOTYPE-IN-SYSTEM-INSTANCE-REF"
 
-    context_composition_ref: ModeDeclarationGroupPrototypeInSystemInstanceRef.ContextCompositionRef | None = field(
+    context_composition_ref: (
+        ModeDeclarationGroupPrototypeInSystemInstanceRef.ContextCompositionRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "CONTEXT-COMPOSITION-REF",
@@ -58,7 +60,9 @@ class ModeDeclarationGroupPrototypeInSystemInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    context_port_ref: ModeDeclarationGroupPrototypeInSystemInstanceRef.ContextPortRef | None = field(
+    context_port_ref: (
+        ModeDeclarationGroupPrototypeInSystemInstanceRef.ContextPortRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "CONTEXT-PORT-REF",
@@ -66,7 +70,10 @@ class ModeDeclarationGroupPrototypeInSystemInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    target_mode_declaration_group_prototype_ref: ModeDeclarationGroupPrototypeInSystemInstanceRef.TargetModeDeclarationGroupPrototypeRef | None = field(
+    target_mode_declaration_group_prototype_ref: (
+        ModeDeclarationGroupPrototypeInSystemInstanceRef.TargetModeDeclarationGroupPrototypeRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "TARGET-MODE-DECLARATION-GROUP-PROTOTYPE-REF",

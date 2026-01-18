@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from ipxact.models.is_clock_en_level import IsClockEnLevel
 from ipxact.models.is_flow_control_flow_type import IsFlowControlFlowType

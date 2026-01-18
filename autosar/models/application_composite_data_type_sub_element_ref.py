@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import VariationPoint
 from .application_composite_element_in_port_interface_instance_ref import (
@@ -42,7 +41,9 @@ class ApplicationCompositeDataTypeSubElementRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    application_composite_element_iref: ApplicationCompositeElementInPortInterfaceInstanceRef | None = field(
+    application_composite_element_iref: (
+        ApplicationCompositeElementInPortInterfaceInstanceRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "APPLICATION-COMPOSITE-ELEMENT-IREF",

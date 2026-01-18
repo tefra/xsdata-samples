@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -116,15 +115,13 @@ class DiagnosticEcuReset:
             "required": True,
         },
     )
-    short_name_fragments: DiagnosticEcuReset.ShortNameFragments | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "SHORT-NAME-FRAGMENTS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    short_name_fragments: DiagnosticEcuReset.ShortNameFragments | None = field(
+        default=None,
+        metadata={
+            "name": "SHORT-NAME-FRAGMENTS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     long_name: MultilanguageLongName | None = field(
         default=None,
@@ -182,13 +179,15 @@ class DiagnosticEcuReset:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    access_permission_ref: DiagnosticEcuReset.AccessPermissionRef | None = field(
-        default=None,
-        metadata={
-            "name": "ACCESS-PERMISSION-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    access_permission_ref: DiagnosticEcuReset.AccessPermissionRef | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "ACCESS-PERMISSION-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     custom_sub_function_number: PositiveInteger | None = field(
         default=None,
@@ -198,15 +197,13 @@ class DiagnosticEcuReset:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ecu_reset_class_ref: DiagnosticEcuReset.EcuResetClassRef | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "ECU-RESET-CLASS-REF",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    ecu_reset_class_ref: DiagnosticEcuReset.EcuResetClassRef | None = field(
+        default=None,
+        metadata={
+            "name": "ECU-RESET-CLASS-REF",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     respond_to_reset: DiagnosticResponseToEcuResetEnum | None = field(
         default=None,

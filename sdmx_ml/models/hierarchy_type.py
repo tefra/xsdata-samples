@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from sdmx_ml.models.hierarchical_code_type import HierarchicalCodeType
 from sdmx_ml.models.hierarchy_base_type import HierarchyBaseType

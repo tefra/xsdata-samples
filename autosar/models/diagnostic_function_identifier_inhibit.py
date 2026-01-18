@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -106,7 +105,9 @@ class DiagnosticFunctionIdentifierInhibit:
             "required": True,
         },
     )
-    short_name_fragments: DiagnosticFunctionIdentifierInhibit.ShortNameFragments | None = field(
+    short_name_fragments: (
+        DiagnosticFunctionIdentifierInhibit.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -154,13 +155,15 @@ class DiagnosticFunctionIdentifierInhibit:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: DiagnosticFunctionIdentifierInhibit.Annotations | None = field(
-        default=None,
-        metadata={
-            "name": "ANNOTATIONS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    annotations: DiagnosticFunctionIdentifierInhibit.Annotations | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "ANNOTATIONS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     variation_point: VariationPoint | None = field(
         default=None,
@@ -170,7 +173,9 @@ class DiagnosticFunctionIdentifierInhibit:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    function_identifier_ref: DiagnosticFunctionIdentifierInhibit.FunctionIdentifierRef | None = field(
+    function_identifier_ref: (
+        DiagnosticFunctionIdentifierInhibit.FunctionIdentifierRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "FUNCTION-IDENTIFIER-REF",
@@ -178,7 +183,9 @@ class DiagnosticFunctionIdentifierInhibit:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    inhibit_sources: DiagnosticFunctionIdentifierInhibit.InhibitSources | None = field(
+    inhibit_sources: (
+        DiagnosticFunctionIdentifierInhibit.InhibitSources | None
+    ) = field(
         default=None,
         metadata={
             "name": "INHIBIT-SOURCES",

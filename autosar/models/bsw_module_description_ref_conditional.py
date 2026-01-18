@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import VariationPoint
 from .bsw_module_description_subtypes_enum import (
@@ -35,7 +34,9 @@ class BswModuleDescriptionRefConditional:
     class Meta:
         name = "BSW-MODULE-DESCRIPTION-REF-CONDITIONAL"
 
-    bsw_module_description_ref: BswModuleDescriptionRefConditional.BswModuleDescriptionRef | None = field(
+    bsw_module_description_ref: (
+        BswModuleDescriptionRefConditional.BswModuleDescriptionRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "BSW-MODULE-DESCRIPTION-REF",

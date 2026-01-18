@@ -1,6 +1,5 @@
 from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import Union
 
 from .capped_discount_right_ref import CappedDiscountRightRef
 from .one_to_many_relationship_structure import OneToManyRelationshipStructure

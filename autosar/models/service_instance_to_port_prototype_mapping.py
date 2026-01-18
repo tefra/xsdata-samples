@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .adaptive_platform_service_instance_subtypes_enum import (
     AdaptivePlatformServiceInstanceSubtypesEnum,
@@ -119,7 +118,9 @@ class ServiceInstanceToPortPrototypeMapping:
             "required": True,
         },
     )
-    short_name_fragments: ServiceInstanceToPortPrototypeMapping.ShortNameFragments | None = field(
+    short_name_fragments: (
+        ServiceInstanceToPortPrototypeMapping.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -167,13 +168,15 @@ class ServiceInstanceToPortPrototypeMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: ServiceInstanceToPortPrototypeMapping.Annotations | None = field(
-        default=None,
-        metadata={
-            "name": "ANNOTATIONS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    annotations: ServiceInstanceToPortPrototypeMapping.Annotations | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "ANNOTATIONS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     variation_point: VariationPoint | None = field(
         default=None,
@@ -191,17 +194,17 @@ class ServiceInstanceToPortPrototypeMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    port_prototype_iref: PortPrototypeInExecutableInstanceRef | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "PORT-PROTOTYPE-IREF",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    port_prototype_iref: PortPrototypeInExecutableInstanceRef | None = field(
+        default=None,
+        metadata={
+            "name": "PORT-PROTOTYPE-IREF",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
-    process_design_ref: ServiceInstanceToPortPrototypeMapping.ProcessDesignRef | None = field(
+    process_design_ref: (
+        ServiceInstanceToPortPrototypeMapping.ProcessDesignRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "PROCESS-DESIGN-REF",
@@ -209,15 +212,19 @@ class ServiceInstanceToPortPrototypeMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    process_ref: ServiceInstanceToPortPrototypeMapping.ProcessRef | None = field(
-        default=None,
-        metadata={
-            "name": "PROCESS-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    process_ref: ServiceInstanceToPortPrototypeMapping.ProcessRef | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "PROCESS-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
-    service_instance_ref: ServiceInstanceToPortPrototypeMapping.ServiceInstanceRef | None = field(
+    service_instance_ref: (
+        ServiceInstanceToPortPrototypeMapping.ServiceInstanceRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "SERVICE-INSTANCE-REF",

@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -122,7 +121,9 @@ class BinaryManifestProvideResource:
             "required": True,
         },
     )
-    short_name_fragments: BinaryManifestProvideResource.ShortNameFragments | None = field(
+    short_name_fragments: (
+        BinaryManifestProvideResource.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -194,7 +195,9 @@ class BinaryManifestProvideResource:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    resource_definition_ref: BinaryManifestProvideResource.ResourceDefinitionRef | None = field(
+    resource_definition_ref: (
+        BinaryManifestProvideResource.ResourceDefinitionRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "RESOURCE-DEFINITION-REF",
@@ -210,15 +213,13 @@ class BinaryManifestProvideResource:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    resource_ref: BinaryManifestProvideResource.ResourceRef | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "RESOURCE-REF",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    resource_ref: BinaryManifestProvideResource.ResourceRef | None = field(
+        default=None,
+        metadata={
+            "name": "RESOURCE-REF",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     number_of_notifier_sets: PositiveInteger | None = field(
         default=None,

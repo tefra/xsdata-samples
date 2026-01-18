@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -169,7 +168,9 @@ class InitEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    activation_reason_representation_ref: InitEvent.ActivationReasonRepresentationRef | None = field(
+    activation_reason_representation_ref: (
+        InitEvent.ActivationReasonRepresentationRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "ACTIVATION-REASON-REPRESENTATION-REF",

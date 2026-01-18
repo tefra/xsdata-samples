@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .ecuc_container_value_subtypes_enum import EcucContainerValueSubtypesEnum
 from .ref import Ref
@@ -38,7 +37,9 @@ class RtePluginProps:
     class Meta:
         name = "RTE-PLUGIN-PROPS"
 
-    associated_cross_sw_cluster_com_rte_plugin_ref: RtePluginProps.AssociatedCrossSwClusterComRtePluginRef | None = field(
+    associated_cross_sw_cluster_com_rte_plugin_ref: (
+        RtePluginProps.AssociatedCrossSwClusterComRtePluginRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "ASSOCIATED-CROSS-SW-CLUSTER-COM-RTE-PLUGIN-REF",
@@ -46,13 +47,15 @@ class RtePluginProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    associated_rte_plugin_ref: RtePluginProps.AssociatedRtePluginRef | None = field(
-        default=None,
-        metadata={
-            "name": "ASSOCIATED-RTE-PLUGIN-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    associated_rte_plugin_ref: RtePluginProps.AssociatedRtePluginRef | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "ASSOCIATED-RTE-PLUGIN-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     s: str | None = field(
         default=None,

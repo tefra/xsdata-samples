@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from ..core.datatypes_base import (
     Bl,
@@ -535,7 +534,9 @@ class QupcMt040300Uv01ParameterList:
             },
         )
     )
-    clinical_statement_time_period: QupcMt040300Uv01ClinicalStatementTimePeriod | None = field(
+    clinical_statement_time_period: (
+        QupcMt040300Uv01ClinicalStatementTimePeriod | None
+    ) = field(
         default=None,
         metadata={
             "name": "clinicalStatementTimePeriod",
@@ -544,7 +545,9 @@ class QupcMt040300Uv01ParameterList:
             "nillable": True,
         },
     )
-    include_care_plan_attachment: QupcMt040300Uv01IncludeCarePlanAttachment | None = field(
+    include_care_plan_attachment: (
+        QupcMt040300Uv01IncludeCarePlanAttachment | None
+    ) = field(
         default=None,
         metadata={
             "name": "includeCarePlanAttachment",
@@ -553,7 +556,9 @@ class QupcMt040300Uv01ParameterList:
             "nillable": True,
         },
     )
-    maximum_history_statements: QupcMt040300Uv01MaximumHistoryStatements | None = field(
+    maximum_history_statements: (
+        QupcMt040300Uv01MaximumHistoryStatements | None
+    ) = field(
         default=None,
         metadata={
             "name": "maximumHistoryStatements",
@@ -562,7 +567,9 @@ class QupcMt040300Uv01ParameterList:
             "nillable": True,
         },
     )
-    patient_administrative_gender: QupcMt040300Uv01PatientAdministrativeGender | None = field(
+    patient_administrative_gender: (
+        QupcMt040300Uv01PatientAdministrativeGender | None
+    ) = field(
         default=None,
         metadata={
             "name": "patientAdministrativeGender",

@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .chapter_enum_break_simple import ChapterEnumBreakSimple
 from .general_parameter import GeneralParameter

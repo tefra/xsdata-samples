@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from .arrival_structure import ArrivalStructure
 from .booking_arrangements_structure import BookingArrangementsStructure
@@ -50,7 +49,12 @@ class CallVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view: FareScheduledStopPointRef | ScheduledStopPointRef | ScheduledStopPointView | None = field(
+    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view: (
+        FareScheduledStopPointRef
+        | ScheduledStopPointRef
+        | ScheduledStopPointView
+        | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -81,7 +85,9 @@ class CallVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    onward_service_link_ref_or_onward_service_link_view: ServiceLinkRefStructure | OnwardServiceLinkView | None = field(
+    onward_service_link_ref_or_onward_service_link_view: (
+        ServiceLinkRefStructure | OnwardServiceLinkView | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -107,7 +113,9 @@ class CallVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    service_journey_ref: TemplateServiceJourneyRef | ServiceJourneyRef | None = field(
+    service_journey_ref: (
+        TemplateServiceJourneyRef | ServiceJourneyRef | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -125,13 +133,15 @@ class CallVersionedChildStructure(VersionedChildStructure):
             ),
         },
     )
-    point_in_journey_pattern_ref: PointInJourneyPatternRefStructure | None = field(
-        default=None,
-        metadata={
-            "name": "PointInJourneyPatternRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        },
+    point_in_journey_pattern_ref: PointInJourneyPatternRefStructure | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "PointInJourneyPatternRef",
+                "type": "Element",
+                "namespace": "http://www.netex.org.uk/netex",
+            },
+        )
     )
     arrival: ArrivalStructure | None = field(
         default=None,
@@ -157,7 +167,9 @@ class CallVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    destination_display_ref_or_destination_display_view: DestinationDisplayRef | DestinationDisplayView | None = field(
+    destination_display_ref_or_destination_display_view: (
+        DestinationDisplayRef | DestinationDisplayView | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -262,7 +274,11 @@ class CallVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    passenger_carrying_requirement_ref_or_passenger_carrying_requirements_view: PassengerCarryingRequirementRef | PassengerCarryingRequirementsView | None = field(
+    passenger_carrying_requirement_ref_or_passenger_carrying_requirements_view: (
+        PassengerCarryingRequirementRef
+        | PassengerCarryingRequirementsView
+        | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",

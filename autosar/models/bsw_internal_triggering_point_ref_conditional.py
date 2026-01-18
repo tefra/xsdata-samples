@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import VariationPoint
 from .bsw_internal_triggering_point_subtypes_enum import (
@@ -35,7 +34,10 @@ class BswInternalTriggeringPointRefConditional:
     class Meta:
         name = "BSW-INTERNAL-TRIGGERING-POINT-REF-CONDITIONAL"
 
-    bsw_internal_triggering_point_ref: BswInternalTriggeringPointRefConditional.BswInternalTriggeringPointRef | None = field(
+    bsw_internal_triggering_point_ref: (
+        BswInternalTriggeringPointRefConditional.BswInternalTriggeringPointRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "BSW-INTERNAL-TRIGGERING-POINT-REF",

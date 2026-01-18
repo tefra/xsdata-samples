@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from .car_pooling_service_ref import CarPoolingServiceRef
 from .chauffeured_vehicle_service_ref import ChauffeuredVehicleServiceRef
@@ -26,7 +25,12 @@ class VehiclePoolingPlaceAssignmentVersionStructure(
     class Meta:
         name = "VehiclePoolingPlaceAssignment_VersionStructure"
 
-    vehicle_pooling_service_ref: ChauffeuredVehicleServiceRef | TaxiServiceRef | CarPoolingServiceRef | None = field(
+    vehicle_pooling_service_ref: (
+        ChauffeuredVehicleServiceRef
+        | TaxiServiceRef
+        | CarPoolingServiceRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -49,7 +53,9 @@ class VehiclePoolingPlaceAssignmentVersionStructure(
             ),
         },
     )
-    vehicle_pooling_meeting_place_ref_or_vehicle_pooling_parking_area_ref: VehiclePoolingMeetingPlaceRef | VehiclePoolingParkingAreaRef | None = field(
+    vehicle_pooling_meeting_place_ref_or_vehicle_pooling_parking_area_ref: (
+        VehiclePoolingMeetingPlaceRef | VehiclePoolingParkingAreaRef | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -67,7 +73,13 @@ class VehiclePoolingPlaceAssignmentVersionStructure(
             ),
         },
     )
-    parking_bay_ref_or_vehicle_sharing_parking_bay_ref: VehiclePoolingParkingBayRef | MonitoredVehicleSharingParkingBayRef | VehicleSharingParkingBayRef | ParkingBayRef | None = field(
+    parking_bay_ref_or_vehicle_sharing_parking_bay_ref: (
+        VehiclePoolingParkingBayRef
+        | MonitoredVehicleSharingParkingBayRef
+        | VehicleSharingParkingBayRef
+        | ParkingBayRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",

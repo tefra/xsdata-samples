@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .fare_product_version_structure import FareProductVersionStructure
 from .preassigned_fare_product_enumeration import (

@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -116,7 +115,9 @@ class DiagnosticRequestOnBoardMonitoringTestResults:
             "required": True,
         },
     )
-    short_name_fragments: DiagnosticRequestOnBoardMonitoringTestResults.ShortNameFragments | None = field(
+    short_name_fragments: (
+        DiagnosticRequestOnBoardMonitoringTestResults.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -164,7 +165,9 @@ class DiagnosticRequestOnBoardMonitoringTestResults:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: DiagnosticRequestOnBoardMonitoringTestResults.Annotations | None = field(
+    annotations: (
+        DiagnosticRequestOnBoardMonitoringTestResults.Annotations | None
+    ) = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -180,7 +183,10 @@ class DiagnosticRequestOnBoardMonitoringTestResults:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    access_permission_ref: DiagnosticRequestOnBoardMonitoringTestResults.AccessPermissionRef | None = field(
+    access_permission_ref: (
+        DiagnosticRequestOnBoardMonitoringTestResults.AccessPermissionRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "ACCESS-PERMISSION-REF",
@@ -188,7 +194,10 @@ class DiagnosticRequestOnBoardMonitoringTestResults:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    diagnostic_test_result_refs: DiagnosticRequestOnBoardMonitoringTestResults.DiagnosticTestResultRefs | None = field(
+    diagnostic_test_result_refs: (
+        DiagnosticRequestOnBoardMonitoringTestResults.DiagnosticTestResultRefs
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "DIAGNOSTIC-TEST-RESULT-REFS",
@@ -196,7 +205,10 @@ class DiagnosticRequestOnBoardMonitoringTestResults:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    request_on_board_monitoring_test_results_class_ref: DiagnosticRequestOnBoardMonitoringTestResults.RequestOnBoardMonitoringTestResultsClassRef | None = field(
+    request_on_board_monitoring_test_results_class_ref: (
+        DiagnosticRequestOnBoardMonitoringTestResults.RequestOnBoardMonitoringTestResultsClassRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "REQUEST-ON-BOARD-MONITORING-TEST-RESULTS-CLASS-REF",
@@ -204,7 +216,9 @@ class DiagnosticRequestOnBoardMonitoringTestResults:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    test_result_ref: DiagnosticRequestOnBoardMonitoringTestResults.TestResultRef | None = field(
+    test_result_ref: (
+        DiagnosticRequestOnBoardMonitoringTestResults.TestResultRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "TEST-RESULT-REF",
@@ -294,7 +308,10 @@ class DiagnosticRequestOnBoardMonitoringTestResults:
 
     @dataclass
     class RequestOnBoardMonitoringTestResultsClassRef(Ref):
-        dest: DiagnosticRequestOnBoardMonitoringTestResultsClassSubtypesEnum | None = field(
+        dest: (
+            DiagnosticRequestOnBoardMonitoringTestResultsClassSubtypesEnum
+            | None
+        ) = field(
             default=None,
             metadata={
                 "name": "DEST",

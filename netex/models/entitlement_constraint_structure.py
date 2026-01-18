@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .same_class_of_use_enumeration import SameClassOfUseEnumeration
 from .same_journey_enumeration import SameJourneyEnumeration
@@ -78,7 +77,9 @@ class EntitlementConstraintStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    type_of_product_category_constraint: SameTypeOfProductCategoryEnumeration | None = field(
+    type_of_product_category_constraint: (
+        SameTypeOfProductCategoryEnumeration | None
+    ) = field(
         default=None,
         metadata={
             "name": "TypeOfProductCategoryConstraint",
@@ -94,7 +95,9 @@ class EntitlementConstraintStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    type_of_travel_document_constraint: SameTypeOfTravelDocumentEnumeration | None = field(
+    type_of_travel_document_constraint: (
+        SameTypeOfTravelDocumentEnumeration | None
+    ) = field(
         default=None,
         metadata={
             "name": "TypeOfTravelDocumentConstraint",

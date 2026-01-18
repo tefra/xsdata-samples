@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -101,7 +100,9 @@ class DltLogChannelToProcessMapping:
             "required": True,
         },
     )
-    short_name_fragments: DltLogChannelToProcessMapping.ShortNameFragments | None = field(
+    short_name_fragments: (
+        DltLogChannelToProcessMapping.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -165,7 +166,9 @@ class DltLogChannelToProcessMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    dlt_log_channel_ref: DltLogChannelToProcessMapping.DltLogChannelRef | None = field(
+    dlt_log_channel_ref: (
+        DltLogChannelToProcessMapping.DltLogChannelRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "DLT-LOG-CHANNEL-REF",

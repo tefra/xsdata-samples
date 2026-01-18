@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import VariationPoint
 from .bsw_distinguished_partition_subtypes_enum import (
@@ -61,31 +60,33 @@ class BswVariableAccess:
             "required": True,
         },
     )
-    short_name_fragments: BswVariableAccess.ShortNameFragments | None = (
+    short_name_fragments: BswVariableAccess.ShortNameFragments | None = field(
+        default=None,
+        metadata={
+            "name": "SHORT-NAME-FRAGMENTS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
+    )
+    accessed_variable_ref: BswVariableAccess.AccessedVariableRef | None = (
         field(
             default=None,
             metadata={
-                "name": "SHORT-NAME-FRAGMENTS",
+                "name": "ACCESSED-VARIABLE-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
     )
-    accessed_variable_ref: BswVariableAccess.AccessedVariableRef | None = field(
-        default=None,
-        metadata={
-            "name": "ACCESSED-VARIABLE-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
-    )
-    context_limitation_refs: BswVariableAccess.ContextLimitationRefs | None = field(
-        default=None,
-        metadata={
-            "name": "CONTEXT-LIMITATION-REFS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    context_limitation_refs: BswVariableAccess.ContextLimitationRefs | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "CONTEXT-LIMITATION-REFS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     variation_point: VariationPoint | None = field(
         default=None,

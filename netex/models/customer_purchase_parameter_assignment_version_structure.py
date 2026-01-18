@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .individual_traveller_ref import IndividualTravellerRef
 from .trip_leg_ref import TripLegRef

@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .acl_object_set_subtypes_enum import AclObjectSetSubtypesEnum
 from .acl_operation_subtypes_enum import AclOperationSubtypesEnum
@@ -337,15 +336,13 @@ class AclPermission:
 
     @dataclass
     class AclObjectRefs:
-        acl_object_ref: list[AclPermission.AclObjectRefs.AclObjectRef] = (
-            field(
-                default_factory=list,
-                metadata={
-                    "name": "ACL-OBJECT-REF",
-                    "type": "Element",
-                    "namespace": "http://autosar.org/schema/r4.0",
-                },
-            )
+        acl_object_ref: list[AclPermission.AclObjectRefs.AclObjectRef] = field(
+            default_factory=list,
+            metadata={
+                "name": "ACL-OBJECT-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
         )
 
         @dataclass

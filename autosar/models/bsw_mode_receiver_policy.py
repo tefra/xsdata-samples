@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import VariationPoint
 from .boolean import Boolean
@@ -53,7 +52,9 @@ class BswModeReceiverPolicy:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    required_mode_group_ref: BswModeReceiverPolicy.RequiredModeGroupRef | None = field(
+    required_mode_group_ref: (
+        BswModeReceiverPolicy.RequiredModeGroupRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "REQUIRED-MODE-GROUP-REF",

@@ -1,6 +1,5 @@
 from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import Union
 
 from .abstract_curve_type import AbstractCurveType
 from .point_property import PointProperty

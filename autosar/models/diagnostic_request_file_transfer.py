@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -106,7 +105,9 @@ class DiagnosticRequestFileTransfer:
             "required": True,
         },
     )
-    short_name_fragments: DiagnosticRequestFileTransfer.ShortNameFragments | None = field(
+    short_name_fragments: (
+        DiagnosticRequestFileTransfer.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -170,7 +171,9 @@ class DiagnosticRequestFileTransfer:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    access_permission_ref: DiagnosticRequestFileTransfer.AccessPermissionRef | None = field(
+    access_permission_ref: (
+        DiagnosticRequestFileTransfer.AccessPermissionRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "ACCESS-PERMISSION-REF",
@@ -178,7 +181,9 @@ class DiagnosticRequestFileTransfer:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    request_file_transfer_class_ref: DiagnosticRequestFileTransfer.RequestFileTransferClassRef | None = field(
+    request_file_transfer_class_ref: (
+        DiagnosticRequestFileTransfer.RequestFileTransferClassRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "REQUEST-FILE-TRANSFER-CLASS-REF",

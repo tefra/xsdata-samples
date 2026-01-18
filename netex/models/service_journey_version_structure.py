@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from xsdata.models.datatype import XmlDuration, XmlTime
 
@@ -130,7 +129,13 @@ class ServiceJourneyVersionStructure(JourneyVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    journey_pattern_ref: ServiceJourneyPatternRef | ServicePatternRef | DeadRunJourneyPatternRef | JourneyPatternRef | None = field(
+    journey_pattern_ref: (
+        ServiceJourneyPatternRef
+        | ServicePatternRef
+        | DeadRunJourneyPatternRef
+        | JourneyPatternRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -174,7 +179,12 @@ class ServiceJourneyVersionStructure(JourneyVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    journey_frequency_group_ref: RhythmicalJourneyGroupRef | HeadwayJourneyGroupRef | JourneyFrequencyGroupRef | None = field(
+    journey_frequency_group_ref: (
+        RhythmicalJourneyGroupRef
+        | HeadwayJourneyGroupRef
+        | JourneyFrequencyGroupRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -197,28 +207,30 @@ class ServiceJourneyVersionStructure(JourneyVersionStructure):
             ),
         },
     )
-    vehicle_type_ref: CompoundTrainRef | TrainRef | VehicleTypeRef | None = field(
-        default=None,
-        metadata={
-            "type": "Elements",
-            "choices": (
-                {
-                    "name": "CompoundTrainRef",
-                    "type": CompoundTrainRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "TrainRef",
-                    "type": TrainRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "VehicleTypeRef",
-                    "type": VehicleTypeRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-            ),
-        },
+    vehicle_type_ref: CompoundTrainRef | TrainRef | VehicleTypeRef | None = (
+        field(
+            default=None,
+            metadata={
+                "type": "Elements",
+                "choices": (
+                    {
+                        "name": "CompoundTrainRef",
+                        "type": CompoundTrainRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "TrainRef",
+                        "type": TrainRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "VehicleTypeRef",
+                        "type": VehicleTypeRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                ),
+            },
+        )
     )
     operational_context_ref: OperationalContextRef | None = field(
         default=None,
@@ -280,33 +292,35 @@ class ServiceJourneyVersionStructure(JourneyVersionStructure):
             ),
         },
     )
-    choice: FlexibleLineRef | LineRef | LineView | FlexibleLineView | None = field(
-        default=None,
-        metadata={
-            "type": "Elements",
-            "choices": (
-                {
-                    "name": "FlexibleLineRef",
-                    "type": FlexibleLineRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "LineRef",
-                    "type": LineRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "LineView",
-                    "type": LineView,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "FlexibleLineView",
-                    "type": FlexibleLineView,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-            ),
-        },
+    choice: FlexibleLineRef | LineRef | LineView | FlexibleLineView | None = (
+        field(
+            default=None,
+            metadata={
+                "type": "Elements",
+                "choices": (
+                    {
+                        "name": "FlexibleLineRef",
+                        "type": FlexibleLineRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "LineRef",
+                        "type": LineRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "LineView",
+                        "type": LineView,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "FlexibleLineView",
+                        "type": FlexibleLineView,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                ),
+            },
+        )
     )
     direction_type: DirectionType | None = field(
         default=None,
@@ -440,7 +454,11 @@ class ServiceJourneyVersionStructure(JourneyVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    passenger_carrying_requirement_ref_or_passenger_carrying_requirements_view: PassengerCarryingRequirementRef | PassengerCarryingRequirementsView | None = field(
+    passenger_carrying_requirement_ref_or_passenger_carrying_requirements_view: (
+        PassengerCarryingRequirementRef
+        | PassengerCarryingRequirementsView
+        | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -473,7 +491,9 @@ class ServiceJourneyVersionStructure(JourneyVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    flexible_service_properties_ref_or_flexible_service_properties: FlexibleServicePropertiesRef | FlexibleServiceProperties | None = field(
+    flexible_service_properties_ref_or_flexible_service_properties: (
+        FlexibleServicePropertiesRef | FlexibleServiceProperties | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",

@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .category_string import CategoryString
 from .fm_feature_subtypes_enum import FmFeatureSubtypesEnum

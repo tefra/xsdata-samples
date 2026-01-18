@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .modification_enumeration import ModificationEnumeration
 

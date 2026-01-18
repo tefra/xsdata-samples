@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .full_binding_time_enum_simple import FullBindingTimeEnumSimple
 

@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -132,13 +131,15 @@ class E2EProfileConfiguration:
             "required": True,
         },
     )
-    short_name_fragments: E2EProfileConfiguration.ShortNameFragments | None = field(
-        default=None,
-        metadata={
-            "name": "SHORT-NAME-FRAGMENTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    short_name_fragments: E2EProfileConfiguration.ShortNameFragments | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "SHORT-NAME-FRAGMENTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     long_name: MultilanguageLongName | None = field(
         default=None,
@@ -204,7 +205,9 @@ class E2EProfileConfiguration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    e_2_e_profile_compatibility_props_ref: E2EProfileConfiguration.E2EProfileCompatibilityPropsRef | None = field(
+    e_2_e_profile_compatibility_props_ref: (
+        E2EProfileConfiguration.E2EProfileCompatibilityPropsRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "E-2-E-PROFILE-COMPATIBILITY-PROPS-REF",

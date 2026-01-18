@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from ..core.datatypes_base import (
     AnyType,
@@ -84,7 +83,9 @@ class CoctMt600000Uv06Destination:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    service_delivery_location: CoctMt240003Uv02ServiceDeliveryLocation | None = field(
+    service_delivery_location: (
+        CoctMt240003Uv02ServiceDeliveryLocation | None
+    ) = field(
         default=None,
         metadata={
             "name": "serviceDeliveryLocation",
@@ -226,7 +227,9 @@ class CoctMt600000Uv06Location:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    service_delivery_location: CoctMt240000Uv01ServiceDeliveryLocation | None = field(
+    service_delivery_location: (
+        CoctMt240000Uv01ServiceDeliveryLocation | None
+    ) = field(
         default=None,
         metadata={
             "name": "serviceDeliveryLocation",
@@ -281,7 +284,9 @@ class CoctMt600000Uv06Origin:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    service_delivery_location: CoctMt240003Uv02ServiceDeliveryLocation | None = field(
+    service_delivery_location: (
+        CoctMt240003Uv02ServiceDeliveryLocation | None
+    ) = field(
         default=None,
         metadata={
             "name": "serviceDeliveryLocation",
@@ -620,16 +625,14 @@ class CoctMt600000Uv06HealthCareProvider:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    health_care_provider_person: CoctMt600000Uv06ProviderPerson | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "healthCareProviderPerson",
-                "type": "Element",
-                "namespace": "urn:hl7-org:v3",
-                "nillable": True,
-            },
-        )
+    health_care_provider_person: CoctMt600000Uv06ProviderPerson | None = field(
+        default=None,
+        metadata={
+            "name": "healthCareProviderPerson",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        },
     )
     null_flavor: NullFlavor | None = field(
         default=None,
@@ -638,7 +641,23 @@ class CoctMt600000Uv06HealthCareProvider:
             "type": "Attribute",
         },
     )
-    class_code: RoleClassMutualRelationship | RoleClassPassive | str | RoleClassOntological | RoleClassPartitive | RoleClassRootValue | XAccommodationRequestorRole | XDocumentEntrySubject | XDocumentSubject | XInformationRecipientRole | XRoleClassAccommodationRequestor | XRoleClassCoverage | XRoleClassCoverageInvoice | XRoleClassCredentialedEntity | XRoleClassPayeePolicyRelationship = field(
+    class_code: (
+        RoleClassMutualRelationship
+        | RoleClassPassive
+        | str
+        | RoleClassOntological
+        | RoleClassPartitive
+        | RoleClassRootValue
+        | XAccommodationRequestorRole
+        | XDocumentEntrySubject
+        | XDocumentSubject
+        | XInformationRecipientRole
+        | XRoleClassAccommodationRequestor
+        | XRoleClassCoverage
+        | XRoleClassCoverageInvoice
+        | XRoleClassCredentialedEntity
+        | XRoleClassPayeePolicyRelationship
+    ) = field(
         init=False,
         default=RoleClassMutualRelationship.PROV,
         metadata={
@@ -702,7 +721,15 @@ class CoctMt600000Uv06PertinentInformation:
             "type": "Attribute",
         },
     )
-    type_code: ActRelationshipCostTracking | ActRelationshipPosting | str | ActRelationshipHasSupport | ActRelationshipTemporallyPertains | ActRelationshipPertainsValue | None = field(
+    type_code: (
+        ActRelationshipCostTracking
+        | ActRelationshipPosting
+        | str
+        | ActRelationshipHasSupport
+        | ActRelationshipTemporallyPertains
+        | ActRelationshipPertainsValue
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "typeCode",
@@ -742,7 +769,9 @@ class CoctMt600000Uv06PertinentInformation1:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    vision_prescription_observation_event: CoctMt600000Uv06VisionPrescriptionObservationEvent | None = field(
+    vision_prescription_observation_event: (
+        CoctMt600000Uv06VisionPrescriptionObservationEvent | None
+    ) = field(
         default=None,
         metadata={
             "name": "visionPrescriptionObservationEvent",
@@ -758,7 +787,15 @@ class CoctMt600000Uv06PertinentInformation1:
             "type": "Attribute",
         },
     )
-    type_code: ActRelationshipCostTracking | ActRelationshipPosting | str | ActRelationshipHasSupport | ActRelationshipTemporallyPertains | ActRelationshipPertainsValue | None = field(
+    type_code: (
+        ActRelationshipCostTracking
+        | ActRelationshipPosting
+        | str
+        | ActRelationshipHasSupport
+        | ActRelationshipTemporallyPertains
+        | ActRelationshipPertainsValue
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "typeCode",
@@ -798,14 +835,16 @@ class CoctMt600000Uv06Product2:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    supply_observation_event: CoctMt600000Uv06SupplyObservationEvent | None = field(
-        default=None,
-        metadata={
-            "name": "supplyObservationEvent",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
+    supply_observation_event: CoctMt600000Uv06SupplyObservationEvent | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "supplyObservationEvent",
+                "type": "Element",
+                "namespace": "urn:hl7-org:v3",
+                "nillable": True,
+            },
+        )
     )
     null_flavor: NullFlavor | None = field(
         default=None,
@@ -917,16 +956,14 @@ class CoctMt600000Uv06ManufacturedProduct:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    manufactured_vision_product: CoctMt600000Uv06VisionProduct | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "manufacturedVisionProduct",
-                "type": "Element",
-                "namespace": "urn:hl7-org:v3",
-                "nillable": True,
-            },
-        )
+    manufactured_vision_product: CoctMt600000Uv06VisionProduct | None = field(
+        default=None,
+        metadata={
+            "name": "manufacturedVisionProduct",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        },
     )
     product_of: list[CoctMt600000Uv06Product2] = field(
         default_factory=list,
@@ -1117,16 +1154,14 @@ class CoctMt600000Uv06Product:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    manufactured_product: CoctMt600000Uv06ManufacturedProduct | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "manufacturedProduct",
-                "type": "Element",
-                "namespace": "urn:hl7-org:v3",
-                "required": True,
-            },
-        )
+    manufactured_product: CoctMt600000Uv06ManufacturedProduct | None = field(
+        default=None,
+        metadata={
+            "name": "manufacturedProduct",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "required": True,
+        },
     )
     null_flavor: NullFlavor | None = field(
         default=None,
@@ -1310,7 +1345,15 @@ class CoctMt600000Uv06PertinentInformation2:
             "type": "Attribute",
         },
     )
-    type_code: ActRelationshipCostTracking | ActRelationshipPosting | str | ActRelationshipHasSupport | ActRelationshipTemporallyPertains | ActRelationshipPertainsValue | None = field(
+    type_code: (
+        ActRelationshipCostTracking
+        | ActRelationshipPosting
+        | str
+        | ActRelationshipHasSupport
+        | ActRelationshipTemporallyPertains
+        | ActRelationshipPertainsValue
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "typeCode",

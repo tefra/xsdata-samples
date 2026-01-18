@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -126,7 +125,9 @@ class EthernetRawDataStreamMapping:
             "required": True,
         },
     )
-    short_name_fragments: EthernetRawDataStreamMapping.ShortNameFragments | None = field(
+    short_name_fragments: (
+        EthernetRawDataStreamMapping.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -190,25 +191,21 @@ class EthernetRawDataStreamMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    deployment_ref: EthernetRawDataStreamMapping.DeploymentRef | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "DEPLOYMENT-REF",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    deployment_ref: EthernetRawDataStreamMapping.DeploymentRef | None = field(
+        default=None,
+        metadata={
+            "name": "DEPLOYMENT-REF",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
-    port_prototype_iref: RPortPrototypeInExecutableInstanceRef | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "PORT-PROTOTYPE-IREF",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    port_prototype_iref: RPortPrototypeInExecutableInstanceRef | None = field(
+        default=None,
+        metadata={
+            "name": "PORT-PROTOTYPE-IREF",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     process_ref: EthernetRawDataStreamMapping.ProcessRef | None = field(
         default=None,
@@ -218,7 +215,9 @@ class EthernetRawDataStreamMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    communication_connector_ref: EthernetRawDataStreamMapping.CommunicationConnectorRef | None = field(
+    communication_connector_ref: (
+        EthernetRawDataStreamMapping.CommunicationConnectorRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "COMMUNICATION-CONNECTOR-REF",
@@ -234,15 +233,13 @@ class EthernetRawDataStreamMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    socket_options: EthernetRawDataStreamMapping.SocketOptions | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "SOCKET-OPTIONS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    socket_options: EthernetRawDataStreamMapping.SocketOptions | None = field(
+        default=None,
+        metadata={
+            "name": "SOCKET-OPTIONS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     tcp_port: PositiveInteger | None = field(
         default=None,

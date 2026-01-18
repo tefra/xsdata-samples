@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from sdmx_ml.models.attribute_relationship_type import (
     AttributeRelationshipType,

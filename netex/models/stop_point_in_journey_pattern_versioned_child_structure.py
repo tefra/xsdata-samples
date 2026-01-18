@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from xsdata.models.datatype import XmlDuration
 
@@ -39,7 +38,9 @@ class StopPointInJourneyPatternVersionedChildStructure(
     class Meta:
         name = "StopPointInJourneyPattern_VersionedChildStructure"
 
-    scheduled_stop_point_ref: FareScheduledStopPointRef | ScheduledStopPointRef | None = field(
+    scheduled_stop_point_ref: (
+        FareScheduledStopPointRef | ScheduledStopPointRef | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -73,7 +74,9 @@ class StopPointInJourneyPatternVersionedChildStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    wait_time_or_wait_times: XmlDuration | JourneyPatternWaitTimesRelStructure | None = field(
+    wait_time_or_wait_times: (
+        XmlDuration | JourneyPatternWaitTimesRelStructure | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -122,7 +125,9 @@ class StopPointInJourneyPatternVersionedChildStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    alighting_side_in_direction_of_travel: SideInDirectionOfTravelEnumeration | None = field(
+    alighting_side_in_direction_of_travel: (
+        SideInDirectionOfTravelEnumeration | None
+    ) = field(
         default=None,
         metadata={
             "name": "AlightingSideInDirectionOfTravel",
@@ -130,7 +135,9 @@ class StopPointInJourneyPatternVersionedChildStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    boarding_side_in_direction_of_travel: SideInDirectionOfTravelEnumeration | None = field(
+    boarding_side_in_direction_of_travel: (
+        SideInDirectionOfTravelEnumeration | None
+    ) = field(
         default=None,
         metadata={
             "name": "BoardingSideInDirectionOfTravel",
@@ -138,7 +145,9 @@ class StopPointInJourneyPatternVersionedChildStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    destination_display_ref_or_destination_display_view: DestinationDisplayRef | DestinationDisplayView | None = field(
+    destination_display_ref_or_destination_display_view: (
+        DestinationDisplayRef | DestinationDisplayView | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",

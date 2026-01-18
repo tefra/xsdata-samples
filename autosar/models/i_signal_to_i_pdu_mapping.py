@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -158,13 +157,15 @@ class ISignalToIPduMapping:
             "required": True,
         },
     )
-    short_name_fragments: ISignalToIPduMapping.ShortNameFragments | None = field(
-        default=None,
-        metadata={
-            "name": "SHORT-NAME-FRAGMENTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    short_name_fragments: ISignalToIPduMapping.ShortNameFragments | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "SHORT-NAME-FRAGMENTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     long_name: MultilanguageLongName | None = field(
         default=None,
@@ -214,15 +215,13 @@ class ISignalToIPduMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    i_signal_group_ref: ISignalToIPduMapping.ISignalGroupRef | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "I-SIGNAL-GROUP-REF",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    i_signal_group_ref: ISignalToIPduMapping.ISignalGroupRef | None = field(
+        default=None,
+        metadata={
+            "name": "I-SIGNAL-GROUP-REF",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     i_signal_ref: ISignalToIPduMapping.ISignalRef | None = field(
         default=None,

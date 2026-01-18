@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from ..core.datatypes_base import (
     AdExplicit,
@@ -100,16 +99,14 @@ class CoctMt240000Uv01ServiceDeliveryLocation:
             "nillable": True,
         },
     )
-    service_provider_organization: CoctMt150000Uv02Organization | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "serviceProviderOrganization",
-                "type": "Element",
-                "namespace": "urn:hl7-org:v3",
-                "nillable": True,
-            },
-        )
+    service_provider_organization: CoctMt150000Uv02Organization | None = field(
+        default=None,
+        metadata={
+            "name": "serviceProviderOrganization",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        },
     )
     null_flavor: NullFlavor | None = field(
         default=None,

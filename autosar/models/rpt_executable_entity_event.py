@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -120,7 +119,9 @@ class RptExecutableEntityEvent:
             "required": True,
         },
     )
-    short_name_fragments: RptExecutableEntityEvent.ShortNameFragments | None = field(
+    short_name_fragments: (
+        RptExecutableEntityEvent.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -176,7 +177,9 @@ class RptExecutableEntityEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    execution_context_refs: RptExecutableEntityEvent.ExecutionContextRefs | None = field(
+    execution_context_refs: (
+        RptExecutableEntityEvent.ExecutionContextRefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "EXECUTION-CONTEXT-REFS",
@@ -184,13 +187,15 @@ class RptExecutableEntityEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    mc_data_assignments: RptExecutableEntityEvent.McDataAssignments | None = field(
-        default=None,
-        metadata={
-            "name": "MC-DATA-ASSIGNMENTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    mc_data_assignments: RptExecutableEntityEvent.McDataAssignments | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "MC-DATA-ASSIGNMENTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     rpt_event_id: PositiveInteger | None = field(
         default=None,
@@ -200,13 +205,15 @@ class RptExecutableEntityEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    rpt_executable_entity_properties: RptExecutableEntityProperties | None = field(
-        default=None,
-        metadata={
-            "name": "RPT-EXECUTABLE-ENTITY-PROPERTIES",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    rpt_executable_entity_properties: RptExecutableEntityProperties | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "RPT-EXECUTABLE-ENTITY-PROPERTIES",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     rpt_impl_policy: RptImplPolicy | None = field(
         default=None,
@@ -216,7 +223,9 @@ class RptExecutableEntityEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    rpt_service_point_post_refs: RptExecutableEntityEvent.RptServicePointPostRefs | None = field(
+    rpt_service_point_post_refs: (
+        RptExecutableEntityEvent.RptServicePointPostRefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "RPT-SERVICE-POINT-POST-REFS",
@@ -224,7 +233,9 @@ class RptExecutableEntityEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    rpt_service_point_pre_refs: RptExecutableEntityEvent.RptServicePointPreRefs | None = field(
+    rpt_service_point_pre_refs: (
+        RptExecutableEntityEvent.RptServicePointPreRefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "RPT-SERVICE-POINT-PRE-REFS",

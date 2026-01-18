@@ -1,7 +1,6 @@
 from collections.abc import Iterable
 from dataclasses import dataclass, field
 from decimal import Decimal
-from typing import Optional
 
 from xsdata.models.datatype import XmlPeriod
 
@@ -122,15 +121,13 @@ class UserProfileVersionStructure(UsageParameterVersionStructure):
             "tokens": True,
         },
     )
-    types_of_proof_required_ref: TypesOfProofRefsRelStructure | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "typesOfProofRequiredRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            },
-        )
+    types_of_proof_required_ref: TypesOfProofRefsRelStructure | None = field(
+        default=None,
+        metadata={
+            "name": "typesOfProofRequiredRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        },
     )
     discount_basis: DiscountBasisEnumeration | None = field(
         default=None,

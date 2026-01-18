@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .adaptive_module_instantiation_subtypes_enum import (
     AdaptiveModuleInstantiationSubtypesEnum,
@@ -173,15 +172,13 @@ class SoftwareCluster:
             "required": True,
         },
     )
-    short_name_fragments: SoftwareCluster.ShortNameFragments | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "SHORT-NAME-FRAGMENTS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    short_name_fragments: SoftwareCluster.ShortNameFragments | None = field(
+        default=None,
+        metadata={
+            "name": "SHORT-NAME-FRAGMENTS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     long_name: MultilanguageLongName | None = field(
         default=None,
@@ -239,7 +236,9 @@ class SoftwareCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    claimed_function_group_refs: SoftwareCluster.ClaimedFunctionGroupRefs | None = field(
+    claimed_function_group_refs: (
+        SoftwareCluster.ClaimedFunctionGroupRefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "CLAIMED-FUNCTION-GROUP-REFS",
@@ -255,7 +254,9 @@ class SoftwareCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    contained_ar_element_refs: SoftwareCluster.ContainedArElementRefs | None = field(
+    contained_ar_element_refs: (
+        SoftwareCluster.ContainedArElementRefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "CONTAINED-AR-ELEMENT-REFS",
@@ -263,7 +264,9 @@ class SoftwareCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    contained_fibex_element_refs: SoftwareCluster.ContainedFibexElementRefs | None = field(
+    contained_fibex_element_refs: (
+        SoftwareCluster.ContainedFibexElementRefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "CONTAINED-FIBEX-ELEMENT-REFS",
@@ -271,7 +274,9 @@ class SoftwareCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    contained_package_element_refs: SoftwareCluster.ContainedPackageElementRefs | None = field(
+    contained_package_element_refs: (
+        SoftwareCluster.ContainedPackageElementRefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "CONTAINED-PACKAGE-ELEMENT-REFS",
@@ -279,13 +284,15 @@ class SoftwareCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    contained_process_refs: SoftwareCluster.ContainedProcessRefs | None = field(
-        default=None,
-        metadata={
-            "name": "CONTAINED-PROCESS-REFS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    contained_process_refs: SoftwareCluster.ContainedProcessRefs | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "CONTAINED-PROCESS-REFS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     depends_on: SoftwareClusterDependencyFormula | None = field(
         default=None,
@@ -303,23 +310,23 @@ class SoftwareCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    diagnostic_addresss: SoftwareCluster.DiagnosticAddresss | None = (
+    diagnostic_addresss: SoftwareCluster.DiagnosticAddresss | None = field(
+        default=None,
+        metadata={
+            "name": "DIAGNOSTIC-ADDRESSS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
+    )
+    diagnostic_extract_ref: SoftwareCluster.DiagnosticExtractRef | None = (
         field(
             default=None,
             metadata={
-                "name": "DIAGNOSTIC-ADDRESSS",
+                "name": "DIAGNOSTIC-EXTRACT-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-    )
-    diagnostic_extract_ref: SoftwareCluster.DiagnosticExtractRef | None = field(
-        default=None,
-        metadata={
-            "name": "DIAGNOSTIC-EXTRACT-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
     )
     license_refs: SoftwareCluster.LicenseRefs | None = field(
         default=None,
@@ -329,7 +336,9 @@ class SoftwareCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    module_instantiation_refs: SoftwareCluster.ModuleInstantiationRefs | None = field(
+    module_instantiation_refs: (
+        SoftwareCluster.ModuleInstantiationRefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "MODULE-INSTANTIATION-REFS",
@@ -361,15 +370,13 @@ class SoftwareCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    vendor_signature_ref: SoftwareCluster.VendorSignatureRef | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "VENDOR-SIGNATURE-REF",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    vendor_signature_ref: SoftwareCluster.VendorSignatureRef | None = field(
+        default=None,
+        metadata={
+            "name": "VENDOR-SIGNATURE-REF",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     version: StrongRevisionLabelString | None = field(
         default=None,

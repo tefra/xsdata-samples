@@ -1,6 +1,5 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
-from typing import Optional
 
 from .boarding_positions_rel_structure import BoardingPositionsRelStructure
 from .compass_bearing8_enumeration import CompassBearing8Enumeration

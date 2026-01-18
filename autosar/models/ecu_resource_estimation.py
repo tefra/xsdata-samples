@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     DocumentationBlock,
@@ -82,7 +81,9 @@ class EcuResourceEstimation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_comp_to_ecu_mapping_refs: EcuResourceEstimation.SwCompToEcuMappingRefs | None = field(
+    sw_comp_to_ecu_mapping_refs: (
+        EcuResourceEstimation.SwCompToEcuMappingRefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "SW-COMP-TO-ECU-MAPPING-REFS",

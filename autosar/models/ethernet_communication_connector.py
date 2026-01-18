@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -149,7 +148,9 @@ class EthernetCommunicationConnector:
             "required": True,
         },
     )
-    short_name_fragments: EthernetCommunicationConnector.ShortNameFragments | None = field(
+    short_name_fragments: (
+        EthernetCommunicationConnector.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -197,17 +198,17 @@ class EthernetCommunicationConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: EthernetCommunicationConnector.Annotations | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "ANNOTATIONS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    annotations: EthernetCommunicationConnector.Annotations | None = field(
+        default=None,
+        metadata={
+            "name": "ANNOTATIONS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
-    comm_controller_ref: EthernetCommunicationConnector.CommControllerRef | None = field(
+    comm_controller_ref: (
+        EthernetCommunicationConnector.CommControllerRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "COMM-CONTROLLER-REF",
@@ -231,7 +232,9 @@ class EthernetCommunicationConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ecu_comm_port_instances: EthernetCommunicationConnector.EcuCommPortInstances | None = field(
+    ecu_comm_port_instances: (
+        EthernetCommunicationConnector.EcuCommPortInstances | None
+    ) = field(
         default=None,
         metadata={
             "name": "ECU-COMM-PORT-INSTANCES",
@@ -255,13 +258,15 @@ class EthernetCommunicationConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    eth_ip_props_ref: EthernetCommunicationConnector.EthIpPropsRef | None = field(
-        default=None,
-        metadata={
-            "name": "ETH-IP-PROPS-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    eth_ip_props_ref: EthernetCommunicationConnector.EthIpPropsRef | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "ETH-IP-PROPS-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     ip_v_6_path_mtu_enabled: Boolean | None = field(
         default=None,
@@ -295,7 +300,9 @@ class EthernetCommunicationConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    network_endpoint_refs: EthernetCommunicationConnector.NetworkEndpointRefs | None = field(
+    network_endpoint_refs: (
+        EthernetCommunicationConnector.NetworkEndpointRefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "NETWORK-ENDPOINT-REFS",
@@ -327,7 +334,9 @@ class EthernetCommunicationConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    unicast_network_endpoint_ref: EthernetCommunicationConnector.UnicastNetworkEndpointRef | None = field(
+    unicast_network_endpoint_ref: (
+        EthernetCommunicationConnector.UnicastNetworkEndpointRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "UNICAST-NETWORK-ENDPOINT-REF",

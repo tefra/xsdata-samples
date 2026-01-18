@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -185,15 +184,13 @@ class GlobalTimeDomain:
             "required": True,
         },
     )
-    short_name_fragments: GlobalTimeDomain.ShortNameFragments | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "SHORT-NAME-FRAGMENTS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    short_name_fragments: GlobalTimeDomain.ShortNameFragments | None = field(
+        default=None,
+        metadata={
+            "name": "SHORT-NAME-FRAGMENTS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     long_name: MultilanguageLongName | None = field(
         default=None,
@@ -251,7 +248,9 @@ class GlobalTimeDomain:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    communication_cluster_refs: GlobalTimeDomain.CommunicationClusterRefs | None = field(
+    communication_cluster_refs: (
+        GlobalTimeDomain.CommunicationClusterRefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "COMMUNICATION-CLUSTER-REFS",
@@ -299,7 +298,9 @@ class GlobalTimeDomain:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    global_time_domain_propertys: GlobalTimeDomain.GlobalTimeDomainPropertys | None = field(
+    global_time_domain_propertys: (
+        GlobalTimeDomain.GlobalTimeDomainPropertys | None
+    ) = field(
         default=None,
         metadata={
             "name": "GLOBAL-TIME-DOMAIN-PROPERTYS",
@@ -307,23 +308,23 @@ class GlobalTimeDomain:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    global_time_domain_props: GlobalTimeDomain.GlobalTimeDomainProps | None = field(
-        default=None,
-        metadata={
-            "name": "GLOBAL-TIME-DOMAIN-PROPS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
-    )
-    global_time_masters: GlobalTimeDomain.GlobalTimeMasters | None = (
+    global_time_domain_props: GlobalTimeDomain.GlobalTimeDomainProps | None = (
         field(
             default=None,
             metadata={
-                "name": "GLOBAL-TIME-MASTERS",
+                "name": "GLOBAL-TIME-DOMAIN-PROPS",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
+    )
+    global_time_masters: GlobalTimeDomain.GlobalTimeMasters | None = field(
+        default=None,
+        metadata={
+            "name": "GLOBAL-TIME-MASTERS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     global_time_pdu_ref: GlobalTimeDomain.GlobalTimePduRef | None = field(
         default=None,
@@ -333,7 +334,9 @@ class GlobalTimeDomain:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    global_time_pdu_triggering_ref: GlobalTimeDomain.GlobalTimePduTriggeringRef | None = field(
+    global_time_pdu_triggering_ref: (
+        GlobalTimeDomain.GlobalTimePduTriggeringRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "GLOBAL-TIME-PDU-TRIGGERING-REF",
@@ -341,13 +344,15 @@ class GlobalTimeDomain:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    global_time_sub_domains: GlobalTimeDomain.GlobalTimeSubDomains | None = field(
-        default=None,
-        metadata={
-            "name": "GLOBAL-TIME-SUB-DOMAINS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    global_time_sub_domains: GlobalTimeDomain.GlobalTimeSubDomains | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "GLOBAL-TIME-SUB-DOMAINS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     master: GlobalTimeDomain.Master | None = field(
         default=None,
@@ -365,13 +370,15 @@ class GlobalTimeDomain:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    offset_time_domain_ref: GlobalTimeDomain.OffsetTimeDomainRef | None = field(
-        default=None,
-        metadata={
-            "name": "OFFSET-TIME-DOMAIN-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    offset_time_domain_ref: GlobalTimeDomain.OffsetTimeDomainRef | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "OFFSET-TIME-DOMAIN-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     pdu_triggerings: GlobalTimeDomain.PduTriggerings | None = field(
         default=None,
@@ -522,25 +529,21 @@ class GlobalTimeDomain:
 
     @dataclass
     class GlobalTimeDomainProps:
-        can_global_time_domain_props: CanGlobalTimeDomainProps | None = (
-            field(
-                default=None,
-                metadata={
-                    "name": "CAN-GLOBAL-TIME-DOMAIN-PROPS",
-                    "type": "Element",
-                    "namespace": "http://autosar.org/schema/r4.0",
-                },
-            )
+        can_global_time_domain_props: CanGlobalTimeDomainProps | None = field(
+            default=None,
+            metadata={
+                "name": "CAN-GLOBAL-TIME-DOMAIN-PROPS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
         )
-        eth_global_time_domain_props: EthGlobalTimeDomainProps | None = (
-            field(
-                default=None,
-                metadata={
-                    "name": "ETH-GLOBAL-TIME-DOMAIN-PROPS",
-                    "type": "Element",
-                    "namespace": "http://autosar.org/schema/r4.0",
-                },
-            )
+        eth_global_time_domain_props: EthGlobalTimeDomainProps | None = field(
+            default=None,
+            metadata={
+                "name": "ETH-GLOBAL-TIME-DOMAIN-PROPS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
         )
         fr_global_time_domain_props: FrGlobalTimeDomainProps | None = field(
             default=None,
@@ -649,13 +652,15 @@ class GlobalTimeDomain:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        user_defined_global_time_master: UserDefinedGlobalTimeMaster | None = field(
-            default=None,
-            metadata={
-                "name": "USER-DEFINED-GLOBAL-TIME-MASTER",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        user_defined_global_time_master: UserDefinedGlobalTimeMaster | None = (
+            field(
+                default=None,
+                metadata={
+                    "name": "USER-DEFINED-GLOBAL-TIME-MASTER",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )
 
     @dataclass

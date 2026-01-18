@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -95,7 +94,9 @@ class DiagnosticSoftwareClusterProps:
             "required": True,
         },
     )
-    short_name_fragments: DiagnosticSoftwareClusterProps.ShortNameFragments | None = field(
+    short_name_fragments: (
+        DiagnosticSoftwareClusterProps.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -143,15 +144,13 @@ class DiagnosticSoftwareClusterProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: DiagnosticSoftwareClusterProps.Annotations | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "ANNOTATIONS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    annotations: DiagnosticSoftwareClusterProps.Annotations | None = field(
+        default=None,
+        metadata={
+            "name": "ANNOTATIONS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     variation_point: VariationPoint | None = field(
         default=None,

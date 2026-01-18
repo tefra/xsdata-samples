@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .diagnostic_periodic_rate_category_enum import (
     DiagnosticPeriodicRateCategoryEnum,
@@ -42,15 +41,13 @@ class DiagnosticPeriodicRate:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    periodic_rate_category: DiagnosticPeriodicRateCategoryEnum | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "PERIODIC-RATE-CATEGORY",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    periodic_rate_category: DiagnosticPeriodicRateCategoryEnum | None = field(
+        default=None,
+        metadata={
+            "name": "PERIODIC-RATE-CATEGORY",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     s: str | None = field(
         default=None,

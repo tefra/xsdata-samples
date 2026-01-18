@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .boolean import Boolean
 from .platform_module_ethernet_endpoint_configuration_subtypes_enum import (
@@ -108,7 +107,9 @@ class DoIpNetworkConfiguration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    network_configuration_ref: DoIpNetworkConfiguration.NetworkConfigurationRef | None = field(
+    network_configuration_ref: (
+        DoIpNetworkConfiguration.NetworkConfigurationRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "NETWORK-CONFIGURATION-REF",
@@ -190,7 +191,9 @@ class DoIpNetworkConfiguration:
 
     @dataclass
     class NetworkConfigurationRef(Ref):
-        dest: PlatformModuleEthernetEndpointConfigurationSubtypesEnum | None = field(
+        dest: (
+            PlatformModuleEthernetEndpointConfigurationSubtypesEnum | None
+        ) = field(
             default=None,
             metadata={
                 "name": "DEST",

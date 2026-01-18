@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .uic_rate_type_enumeration import UicRateTypeEnumeration
 

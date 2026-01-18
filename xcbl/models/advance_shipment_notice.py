@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from xcbl.models.goods_receipt import (
     ItemShipFromParty,
@@ -304,14 +303,12 @@ class Asndates:
             "type": "Element",
         },
     )
-    schedule_delivery_date_before: ScheduleDeliveryDateBefore | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "ScheduleDeliveryDateBefore",
-                "type": "Element",
-            },
-        )
+    schedule_delivery_date_before: ScheduleDeliveryDateBefore | None = field(
+        default=None,
+        metadata={
+            "name": "ScheduleDeliveryDateBefore",
+            "type": "Element",
+        },
     )
     list_of_date_coded: ListOfDateCoded | None = field(
         default=None,
@@ -932,7 +929,9 @@ class AsnitemDetail:
             "required": True,
         }
     )
-    asnline_item_list_of_allow_or_charge: AsnlineItemListOfAllowOrCharge | None = field(
+    asnline_item_list_of_allow_or_charge: (
+        AsnlineItemListOfAllowOrCharge | None
+    ) = field(
         default=None,
         metadata={
             "name": "ASNLineItemListOfAllowOrCharge",

@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from crossref.models.gov.nih.nlm.ncbi.jats1.issue import Issue
 from crossref.models.gov.nih.nlm.ncbi.jats1.issue_id import IssueId

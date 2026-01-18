@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.tpeg_loc01_simple_point_location_subtype_enum import (
@@ -23,7 +22,9 @@ class TpegSimplePoint(TpegPointLocation):
     :ivar tpeg_simple_point_extension:
     """
 
-    tpeg_simple_point_location_type: TpegLoc01SimplePointLocationSubtypeEnum | None = field(
+    tpeg_simple_point_location_type: (
+        TpegLoc01SimplePointLocationSubtypeEnum | None
+    ) = field(
         default=None,
         metadata={
             "name": "tpegSimplePointLocationType",

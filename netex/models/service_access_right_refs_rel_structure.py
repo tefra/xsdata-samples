@@ -1,6 +1,5 @@
 from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import Union
 
 from .amount_of_price_unit_product_ref import AmountOfPriceUnitProductRef
 from .capped_discount_right_ref import CappedDiscountRightRef
@@ -23,7 +22,16 @@ class ServiceAccessRightRefsRelStructure(OneToManyRelationshipStructure):
         name = "serviceAccessRightRefs_RelStructure"
 
     choice: Iterable[
-        EntitlementProductRef | SupplementProductRef | PreassignedFareProductRef | AmountOfPriceUnitProductRef | UsageDiscountRightRef | ThirdPartyProductRef | CappedDiscountRightRef | SaleDiscountRightRef | FareProductRef | ServiceAccessRightRef
+        EntitlementProductRef
+        | SupplementProductRef
+        | PreassignedFareProductRef
+        | AmountOfPriceUnitProductRef
+        | UsageDiscountRightRef
+        | ThirdPartyProductRef
+        | CappedDiscountRightRef
+        | SaleDiscountRightRef
+        | FareProductRef
+        | ServiceAccessRightRef
     ] = field(
         default_factory=list,
         metadata={

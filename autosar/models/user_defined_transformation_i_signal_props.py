@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -86,7 +85,10 @@ class UserDefinedTransformationISignalProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    user_defined_transformation_i_signal_props_variants: UserDefinedTransformationISignalProps.UserDefinedTransformationISignalPropsVariants | None = field(
+    user_defined_transformation_i_signal_props_variants: (
+        UserDefinedTransformationISignalProps.UserDefinedTransformationISignalPropsVariants
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "USER-DEFINED-TRANSFORMATION-I-SIGNAL-PROPS-VARIANTS",

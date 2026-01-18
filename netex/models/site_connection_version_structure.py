@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .navigation_paths_rel_structure import NavigationPathsRelStructure
 from .site_connection_end_structure import SiteConnectionEndStructure

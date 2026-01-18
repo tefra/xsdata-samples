@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from sdmx_ml.models.base_dimension_base_type import BaseDimensionBaseType
 

@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .diagnostic_clear_dtc_limitation_enum_simple import (
     DiagnosticClearDtcLimitationEnumSimple,

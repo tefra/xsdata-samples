@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -124,7 +123,9 @@ class TtcanCommunicationConnector:
             "required": True,
         },
     )
-    short_name_fragments: TtcanCommunicationConnector.ShortNameFragments | None = field(
+    short_name_fragments: (
+        TtcanCommunicationConnector.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -180,7 +181,9 @@ class TtcanCommunicationConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    comm_controller_ref: TtcanCommunicationConnector.CommControllerRef | None = field(
+    comm_controller_ref: (
+        TtcanCommunicationConnector.CommControllerRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "COMM-CONTROLLER-REF",
@@ -204,7 +207,9 @@ class TtcanCommunicationConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ecu_comm_port_instances: TtcanCommunicationConnector.EcuCommPortInstances | None = field(
+    ecu_comm_port_instances: (
+        TtcanCommunicationConnector.EcuCommPortInstances | None
+    ) = field(
         default=None,
         metadata={
             "name": "ECU-COMM-PORT-INSTANCES",

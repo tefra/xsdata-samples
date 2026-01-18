@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -120,15 +119,13 @@ class LifeCycleInfoSet:
             "required": True,
         },
     )
-    short_name_fragments: LifeCycleInfoSet.ShortNameFragments | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "SHORT-NAME-FRAGMENTS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    short_name_fragments: LifeCycleInfoSet.ShortNameFragments | None = field(
+        default=None,
+        metadata={
+            "name": "SHORT-NAME-FRAGMENTS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     long_name: MultilanguageLongName | None = field(
         default=None,
@@ -186,15 +183,13 @@ class LifeCycleInfoSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    default_lc_state_ref: LifeCycleInfoSet.DefaultLcStateRef | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "DEFAULT-LC-STATE-REF",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    default_lc_state_ref: LifeCycleInfoSet.DefaultLcStateRef | None = field(
+        default=None,
+        metadata={
+            "name": "DEFAULT-LC-STATE-REF",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     default_period_begin: LifeCyclePeriod | None = field(
         default=None,
@@ -220,7 +215,9 @@ class LifeCycleInfoSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    used_life_cycle_state_definition_group_ref: LifeCycleInfoSet.UsedLifeCycleStateDefinitionGroupRef | None = field(
+    used_life_cycle_state_definition_group_ref: (
+        LifeCycleInfoSet.UsedLifeCycleStateDefinitionGroupRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "USED-LIFE-CYCLE-STATE-DEFINITION-GROUP-REF",

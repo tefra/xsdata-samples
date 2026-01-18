@@ -1,6 +1,5 @@
 from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .multilingual_string import MultilingualString
 from .passenger_equipment_version_structure import (

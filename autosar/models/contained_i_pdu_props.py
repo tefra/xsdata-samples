@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .contained_i_pdu_collection_semantics_enum import (
     ContainedIPduCollectionSemanticsEnum,
@@ -55,15 +54,13 @@ class ContainedIPduProps:
     class Meta:
         name = "CONTAINED-I-PDU-PROPS"
 
-    collection_semantics: ContainedIPduCollectionSemanticsEnum | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "COLLECTION-SEMANTICS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    collection_semantics: ContainedIPduCollectionSemanticsEnum | None = field(
+        default=None,
+        metadata={
+            "name": "COLLECTION-SEMANTICS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     header_id_long_header: PositiveInteger | None = field(
         default=None,

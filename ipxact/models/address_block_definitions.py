@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from ipxact.models.access_policies import AccessPolicies
 from ipxact.models.address_unit_bits import AddressUnitBits
@@ -247,7 +246,10 @@ class AddressBlockDefinitions:
                     "type": "Element",
                 },
             )
-            access_handles: AddressBlockDefinitions.AddressBlockDefinition.Register.AccessHandles | None = field(
+            access_handles: (
+                AddressBlockDefinitions.AddressBlockDefinition.Register.AccessHandles
+                | None
+            ) = field(
                 default=None,
                 metadata={
                     "name": "accessHandles",
@@ -268,7 +270,10 @@ class AddressBlockDefinitions:
                     "required": True,
                 },
             )
-            register_definition_ref: AddressBlockDefinitions.AddressBlockDefinition.Register.RegisterDefinitionRef | None = field(
+            register_definition_ref: (
+                AddressBlockDefinitions.AddressBlockDefinition.Register.RegisterDefinitionRef
+                | None
+            ) = field(
                 default=None,
                 metadata={
                     "name": "registerDefinitionRef",

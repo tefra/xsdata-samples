@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -111,7 +110,9 @@ class BusMirrorChannelMappingIp:
             "required": True,
         },
     )
-    short_name_fragments: BusMirrorChannelMappingIp.ShortNameFragments | None = field(
+    short_name_fragments: (
+        BusMirrorChannelMappingIp.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -191,7 +192,9 @@ class BusMirrorChannelMappingIp:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    target_pdu_triggerings: BusMirrorChannelMappingIp.TargetPduTriggerings | None = field(
+    target_pdu_triggerings: (
+        BusMirrorChannelMappingIp.TargetPduTriggerings | None
+    ) = field(
         default=None,
         metadata={
             "name": "TARGET-PDU-TRIGGERINGS",

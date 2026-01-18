@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from xsdata.models.datatype import XmlTime
 
@@ -144,13 +143,15 @@ class JourneyPartVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    purpose_of_journey_partition_ref: PurposeOfJourneyPartitionRef | None = field(
-        default=None,
-        metadata={
-            "name": "PurposeOfJourneyPartitionRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        },
+    purpose_of_journey_partition_ref: PurposeOfJourneyPartitionRef | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "PurposeOfJourneyPartitionRef",
+                "type": "Element",
+                "namespace": "http://www.netex.org.uk/netex",
+            },
+        )
     )
     facilities: ServiceFacilitySetsRelStructure | None = field(
         default=None,

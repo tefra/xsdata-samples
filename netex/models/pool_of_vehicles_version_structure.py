@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from .car_pooling_service_ref import CarPoolingServiceRef
 from .chauffeured_vehicle_service_ref import ChauffeuredVehicleServiceRef
@@ -27,7 +26,15 @@ class PoolOfVehiclesVersionStructure(GroupOfEntitiesVersionStructure):
     class Meta:
         name = "PoolOfVehicles_VersionStructure"
 
-    mobility_service_ref_or_common_vehicle_service_ref_or_vehicle_pooling_service_ref: OnlineServiceRef | VehicleRentalServiceRef | VehicleSharingServiceRef | ChauffeuredVehicleServiceRef | TaxiServiceRef | CarPoolingServiceRef | None = field(
+    mobility_service_ref_or_common_vehicle_service_ref_or_vehicle_pooling_service_ref: (
+        OnlineServiceRef
+        | VehicleRentalServiceRef
+        | VehicleSharingServiceRef
+        | ChauffeuredVehicleServiceRef
+        | TaxiServiceRef
+        | CarPoolingServiceRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -65,7 +72,9 @@ class PoolOfVehiclesVersionStructure(GroupOfEntitiesVersionStructure):
             ),
         },
     )
-    mobility_service_constraint_zone_ref: MobilityServiceConstraintZoneRef | None = field(
+    mobility_service_constraint_zone_ref: (
+        MobilityServiceConstraintZoneRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "MobilityServiceConstraintZoneRef",

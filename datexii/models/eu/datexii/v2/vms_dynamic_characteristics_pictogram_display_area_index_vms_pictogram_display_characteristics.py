@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from datexii.models.eu.datexii.v2.vms_pictogram_display_characteristics import (
     VmsPictogramDisplayCharacteristics,
@@ -13,7 +12,9 @@ class VmsDynamicCharacteristicsPictogramDisplayAreaIndexVmsPictogramDisplayChara
     class Meta:
         name = "_VmsDynamicCharacteristicsPictogramDisplayAreaIndexVmsPictogramDisplayCharacteristics"
 
-    vms_pictogram_display_characteristics: VmsPictogramDisplayCharacteristics | None = field(
+    vms_pictogram_display_characteristics: (
+        VmsPictogramDisplayCharacteristics | None
+    ) = field(
         default=None,
         metadata={
             "name": "vmsPictogramDisplayCharacteristics",

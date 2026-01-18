@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -124,7 +123,9 @@ class BswOperationInvokedEvent:
             "required": True,
         },
     )
-    short_name_fragments: BswOperationInvokedEvent.ShortNameFragments | None = field(
+    short_name_fragments: (
+        BswOperationInvokedEvent.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -180,7 +181,9 @@ class BswOperationInvokedEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    activation_reason_representation_ref: BswOperationInvokedEvent.ActivationReasonRepresentationRef | None = field(
+    activation_reason_representation_ref: (
+        BswOperationInvokedEvent.ActivationReasonRepresentationRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "ACTIVATION-REASON-REPRESENTATION-REF",
@@ -188,7 +191,9 @@ class BswOperationInvokedEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    context_limitation_refs: BswOperationInvokedEvent.ContextLimitationRefs | None = field(
+    context_limitation_refs: (
+        BswOperationInvokedEvent.ContextLimitationRefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "CONTEXT-LIMITATION-REFS",
@@ -196,7 +201,9 @@ class BswOperationInvokedEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    disabled_in_mode_irefs: BswOperationInvokedEvent.DisabledInModeIrefs | None = field(
+    disabled_in_mode_irefs: (
+        BswOperationInvokedEvent.DisabledInModeIrefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "DISABLED-IN-MODE-IREFS",
@@ -204,13 +211,15 @@ class BswOperationInvokedEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    starts_on_event_ref: BswOperationInvokedEvent.StartsOnEventRef | None = field(
-        default=None,
-        metadata={
-            "name": "STARTS-ON-EVENT-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    starts_on_event_ref: BswOperationInvokedEvent.StartsOnEventRef | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "STARTS-ON-EVENT-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     variation_point: VariationPoint | None = field(
         default=None,

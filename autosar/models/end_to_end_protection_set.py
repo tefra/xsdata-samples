@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -97,13 +96,15 @@ class EndToEndProtectionSet:
             "required": True,
         },
     )
-    short_name_fragments: EndToEndProtectionSet.ShortNameFragments | None = field(
-        default=None,
-        metadata={
-            "name": "SHORT-NAME-FRAGMENTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    short_name_fragments: EndToEndProtectionSet.ShortNameFragments | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "SHORT-NAME-FRAGMENTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     long_name: MultilanguageLongName | None = field(
         default=None,
@@ -161,7 +162,9 @@ class EndToEndProtectionSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    end_to_end_protections: EndToEndProtectionSet.EndToEndProtections | None = field(
+    end_to_end_protections: (
+        EndToEndProtectionSet.EndToEndProtections | None
+    ) = field(
         default=None,
         metadata={
             "name": "END-TO-END-PROTECTIONS",

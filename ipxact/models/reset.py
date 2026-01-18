@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from ipxact.models.unsigned_bit_vector_expression import (
     UnsignedBitVectorExpression,

@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .abstract_implementation_data_type_subtypes_enum import (
     AbstractImplementationDataTypeSubtypesEnum,
@@ -43,7 +42,9 @@ class ModeRequestTypeMap:
     class Meta:
         name = "MODE-REQUEST-TYPE-MAP"
 
-    implementation_data_type_ref: ModeRequestTypeMap.ImplementationDataTypeRef | None = field(
+    implementation_data_type_ref: (
+        ModeRequestTypeMap.ImplementationDataTypeRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "IMPLEMENTATION-DATA-TYPE-REF",

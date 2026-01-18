@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import DocumentationBlock
 from .positive_integer_value_variation_point import (
@@ -60,25 +59,21 @@ class BlueprintPolicyList:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    max_number_of_elements: PositiveIntegerValueVariationPoint | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "MAX-NUMBER-OF-ELEMENTS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    max_number_of_elements: PositiveIntegerValueVariationPoint | None = field(
+        default=None,
+        metadata={
+            "name": "MAX-NUMBER-OF-ELEMENTS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
-    min_number_of_elements: PositiveIntegerValueVariationPoint | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "MIN-NUMBER-OF-ELEMENTS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    min_number_of_elements: PositiveIntegerValueVariationPoint | None = field(
+        default=None,
+        metadata={
+            "name": "MIN-NUMBER-OF-ELEMENTS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     s: str | None = field(
         default=None,

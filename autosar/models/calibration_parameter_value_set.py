@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -98,7 +97,9 @@ class CalibrationParameterValueSet:
             "required": True,
         },
     )
-    short_name_fragments: CalibrationParameterValueSet.ShortNameFragments | None = field(
+    short_name_fragments: (
+        CalibrationParameterValueSet.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -162,7 +163,9 @@ class CalibrationParameterValueSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    calibration_parameter_values: CalibrationParameterValueSet.CalibrationParameterValues | None = field(
+    calibration_parameter_values: (
+        CalibrationParameterValueSet.CalibrationParameterValues | None
+    ) = field(
         default=None,
         metadata={
             "name": "CALIBRATION-PARAMETER-VALUES",

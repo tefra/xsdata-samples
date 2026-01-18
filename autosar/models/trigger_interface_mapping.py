@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -110,13 +109,15 @@ class TriggerInterfaceMapping:
             "required": True,
         },
     )
-    short_name_fragments: TriggerInterfaceMapping.ShortNameFragments | None = field(
-        default=None,
-        metadata={
-            "name": "SHORT-NAME-FRAGMENTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    short_name_fragments: TriggerInterfaceMapping.ShortNameFragments | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "SHORT-NAME-FRAGMENTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     long_name: MultilanguageLongName | None = field(
         default=None,
@@ -166,15 +167,13 @@ class TriggerInterfaceMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    blueprint_policys: TriggerInterfaceMapping.BlueprintPolicys | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "BLUEPRINT-POLICYS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    blueprint_policys: TriggerInterfaceMapping.BlueprintPolicys | None = field(
+        default=None,
+        metadata={
+            "name": "BLUEPRINT-POLICYS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     short_name_pattern: String | None = field(
         default=None,
@@ -192,15 +191,13 @@ class TriggerInterfaceMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    trigger_mappings: TriggerInterfaceMapping.TriggerMappings | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "TRIGGER-MAPPINGS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    trigger_mappings: TriggerInterfaceMapping.TriggerMappings | None = field(
+        default=None,
+        metadata={
+            "name": "TRIGGER-MAPPINGS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     s: str | None = field(
         default=None,

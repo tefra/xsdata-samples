@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from ..core.datatypes_base import (
     Cd,
@@ -351,7 +350,9 @@ class PrpaIn201309Uv02McciMt000100Uv01Message:
             "nillable": True,
         },
     )
-    control_act_process: PrpaIn201309Uv02QuqiMt021001Uv01ControlActProcess | None = field(
+    control_act_process: (
+        PrpaIn201309Uv02QuqiMt021001Uv01ControlActProcess | None
+    ) = field(
         default=None,
         metadata={
             "name": "controlActProcess",

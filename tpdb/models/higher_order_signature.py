@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from tpdb.models.higher_order_signature_function_symbol_type_info import (
     HigherOrderSignatureFunctionSymbolTypeInfo,
@@ -27,7 +26,9 @@ class HigherOrderSignature:
             "type": "Element",
         },
     )
-    function_symbol_type_info: HigherOrderSignatureFunctionSymbolTypeInfo | None = field(
+    function_symbol_type_info: (
+        HigherOrderSignatureFunctionSymbolTypeInfo | None
+    ) = field(
         default=None,
         metadata={
             "name": "functionSymbolTypeInfo",

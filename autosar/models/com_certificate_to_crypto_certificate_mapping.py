@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -101,7 +100,9 @@ class ComCertificateToCryptoCertificateMapping:
             "required": True,
         },
     )
-    short_name_fragments: ComCertificateToCryptoCertificateMapping.ShortNameFragments | None = field(
+    short_name_fragments: (
+        ComCertificateToCryptoCertificateMapping.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -149,7 +150,9 @@ class ComCertificateToCryptoCertificateMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: ComCertificateToCryptoCertificateMapping.Annotations | None = field(
+    annotations: (
+        ComCertificateToCryptoCertificateMapping.Annotations | None
+    ) = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -165,7 +168,9 @@ class ComCertificateToCryptoCertificateMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    crypto_certificate_ref: ComCertificateToCryptoCertificateMapping.CryptoCertificateRef | None = field(
+    crypto_certificate_ref: (
+        ComCertificateToCryptoCertificateMapping.CryptoCertificateRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "CRYPTO-CERTIFICATE-REF",
@@ -173,7 +178,10 @@ class ComCertificateToCryptoCertificateMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    crypto_service_certificate_ref: ComCertificateToCryptoCertificateMapping.CryptoServiceCertificateRef | None = field(
+    crypto_service_certificate_ref: (
+        ComCertificateToCryptoCertificateMapping.CryptoServiceCertificateRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "CRYPTO-SERVICE-CERTIFICATE-REF",

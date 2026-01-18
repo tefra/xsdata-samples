@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.inter_urban_parking_site_location_enum import (
@@ -21,7 +20,9 @@ class InterUrbanParkingSite(ParkingSite):
     :ivar inter_urban_parking_site_extension:
     """
 
-    inter_urban_parking_site_location: InterUrbanParkingSiteLocationEnum | None = field(
+    inter_urban_parking_site_location: (
+        InterUrbanParkingSiteLocationEnum | None
+    ) = field(
         default=None,
         metadata={
             "name": "interUrbanParkingSiteLocation",

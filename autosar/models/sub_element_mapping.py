@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .application_composite_data_type_sub_element_ref import (
     ApplicationCompositeDataTypeSubElementRef,
@@ -61,15 +60,13 @@ class SubElementMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    text_table_mappings: SubElementMapping.TextTableMappings | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "TEXT-TABLE-MAPPINGS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    text_table_mappings: SubElementMapping.TextTableMappings | None = field(
+        default=None,
+        metadata={
+            "name": "TEXT-TABLE-MAPPINGS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     s: str | None = field(
         default=None,

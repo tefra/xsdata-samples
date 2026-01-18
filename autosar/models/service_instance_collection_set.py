@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -97,7 +96,9 @@ class ServiceInstanceCollectionSet:
             "required": True,
         },
     )
-    short_name_fragments: ServiceInstanceCollectionSet.ShortNameFragments | None = field(
+    short_name_fragments: (
+        ServiceInstanceCollectionSet.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -161,13 +162,15 @@ class ServiceInstanceCollectionSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    service_instances: ServiceInstanceCollectionSet.ServiceInstances | None = field(
-        default=None,
-        metadata={
-            "name": "SERVICE-INSTANCES",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    service_instances: ServiceInstanceCollectionSet.ServiceInstances | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "SERVICE-INSTANCES",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     s: str | None = field(
         default=None,

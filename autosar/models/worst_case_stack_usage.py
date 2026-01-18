@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -106,13 +105,15 @@ class WorstCaseStackUsage:
             "required": True,
         },
     )
-    short_name_fragments: WorstCaseStackUsage.ShortNameFragments | None = field(
-        default=None,
-        metadata={
-            "name": "SHORT-NAME-FRAGMENTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    short_name_fragments: WorstCaseStackUsage.ShortNameFragments | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "SHORT-NAME-FRAGMENTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     long_name: MultilanguageLongName | None = field(
         default=None,
@@ -162,13 +163,15 @@ class WorstCaseStackUsage:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    executable_entity_ref: WorstCaseStackUsage.ExecutableEntityRef | None = field(
-        default=None,
-        metadata={
-            "name": "EXECUTABLE-ENTITY-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    executable_entity_ref: WorstCaseStackUsage.ExecutableEntityRef | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "EXECUTABLE-ENTITY-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     hardware_configuration: HardwareConfiguration | None = field(
         default=None,

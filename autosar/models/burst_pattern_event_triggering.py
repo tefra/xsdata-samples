@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -128,7 +127,9 @@ class BurstPatternEventTriggering:
             "required": True,
         },
     )
-    short_name_fragments: BurstPatternEventTriggering.ShortNameFragments | None = field(
+    short_name_fragments: (
+        BurstPatternEventTriggering.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -192,7 +193,9 @@ class BurstPatternEventTriggering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    timing_condition_ref: BurstPatternEventTriggering.TimingConditionRef | None = field(
+    timing_condition_ref: (
+        BurstPatternEventTriggering.TimingConditionRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "TIMING-CONDITION-REF",

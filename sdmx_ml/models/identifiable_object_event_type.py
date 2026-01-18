@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import ForwardRef, Optional, Union
+from typing import ForwardRef
 
 from sdmx_ml.models.empty_type import EmptyType
 from sdmx_ml.models.wild_card_value_type import WildCardValueType
@@ -19,7 +19,12 @@ class IdentifiableObjectEventType:
     specific instance, or specific instances of the object may be selected.
     """
 
-    all_or_urn_or_id: EmptyType | IdentifiableObjectEventType.Urn | IdentifiableObjectEventType.Id | None = field(
+    all_or_urn_or_id: (
+        EmptyType
+        | IdentifiableObjectEventType.Urn
+        | IdentifiableObjectEventType.Id
+        | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",

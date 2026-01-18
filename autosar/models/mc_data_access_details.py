@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .rte_event_in_ecu_instance_ref import RteEventInEcuInstanceRef
 from .variable_access_in_ecu_instance_ref import VariableAccessInEcuInstanceRef
@@ -49,13 +48,15 @@ class McDataAccessDetails:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variable_access_irefs: McDataAccessDetails.VariableAccessIrefs | None = field(
-        default=None,
-        metadata={
-            "name": "VARIABLE-ACCESS-IREFS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    variable_access_irefs: McDataAccessDetails.VariableAccessIrefs | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "VARIABLE-ACCESS-IREFS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     s: str | None = field(
         default=None,

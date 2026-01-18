@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .customer_purchase_package_element_ref import (
     CustomerPurchasePackageElementRef,
@@ -25,7 +24,9 @@ class CustomerPurchasePackageElementAccessVersionedChildStructure(
     class Meta:
         name = "CustomerPurchasePackageElementAccess_VersionedChildStructure"
 
-    customer_purchase_package_element_ref: CustomerPurchasePackageElementRef | None = field(
+    customer_purchase_package_element_ref: (
+        CustomerPurchasePackageElementRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "CustomerPurchasePackageElementRef",
@@ -49,7 +50,9 @@ class CustomerPurchasePackageElementAccessVersionedChildStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    fare_structure_element_in_sequence_ref: FareStructureElementInSequenceRef | None = field(
+    fare_structure_element_in_sequence_ref: (
+        FareStructureElementInSequenceRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "FareStructureElementInSequenceRef",
@@ -73,7 +76,9 @@ class CustomerPurchasePackageElementAccessVersionedChildStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    validity_parameter_assignments: CustomerPurchaseParameterAssignmentsRelStructure | None = field(
+    validity_parameter_assignments: (
+        CustomerPurchaseParameterAssignmentsRelStructure | None
+    ) = field(
         default=None,
         metadata={
             "name": "validityParameterAssignments",

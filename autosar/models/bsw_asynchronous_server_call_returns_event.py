@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -124,7 +123,9 @@ class BswAsynchronousServerCallReturnsEvent:
             "required": True,
         },
     )
-    short_name_fragments: BswAsynchronousServerCallReturnsEvent.ShortNameFragments | None = field(
+    short_name_fragments: (
+        BswAsynchronousServerCallReturnsEvent.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -172,15 +173,20 @@ class BswAsynchronousServerCallReturnsEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: BswAsynchronousServerCallReturnsEvent.Annotations | None = field(
-        default=None,
-        metadata={
-            "name": "ANNOTATIONS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    annotations: BswAsynchronousServerCallReturnsEvent.Annotations | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "ANNOTATIONS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
-    activation_reason_representation_ref: BswAsynchronousServerCallReturnsEvent.ActivationReasonRepresentationRef | None = field(
+    activation_reason_representation_ref: (
+        BswAsynchronousServerCallReturnsEvent.ActivationReasonRepresentationRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "ACTIVATION-REASON-REPRESENTATION-REF",
@@ -188,7 +194,9 @@ class BswAsynchronousServerCallReturnsEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    context_limitation_refs: BswAsynchronousServerCallReturnsEvent.ContextLimitationRefs | None = field(
+    context_limitation_refs: (
+        BswAsynchronousServerCallReturnsEvent.ContextLimitationRefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "CONTEXT-LIMITATION-REFS",
@@ -196,7 +204,9 @@ class BswAsynchronousServerCallReturnsEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    disabled_in_mode_irefs: BswAsynchronousServerCallReturnsEvent.DisabledInModeIrefs | None = field(
+    disabled_in_mode_irefs: (
+        BswAsynchronousServerCallReturnsEvent.DisabledInModeIrefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "DISABLED-IN-MODE-IREFS",
@@ -204,7 +214,9 @@ class BswAsynchronousServerCallReturnsEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    starts_on_event_ref: BswAsynchronousServerCallReturnsEvent.StartsOnEventRef | None = field(
+    starts_on_event_ref: (
+        BswAsynchronousServerCallReturnsEvent.StartsOnEventRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "STARTS-ON-EVENT-REF",
@@ -220,7 +232,9 @@ class BswAsynchronousServerCallReturnsEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    event_source_ref: BswAsynchronousServerCallReturnsEvent.EventSourceRef | None = field(
+    event_source_ref: (
+        BswAsynchronousServerCallReturnsEvent.EventSourceRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "EVENT-SOURCE-REF",
@@ -334,13 +348,11 @@ class BswAsynchronousServerCallReturnsEvent:
 
     @dataclass
     class EventSourceRef(Ref):
-        dest: BswAsynchronousServerCallResultPointSubtypesEnum | None = (
-            field(
-                default=None,
-                metadata={
-                    "name": "DEST",
-                    "type": "Attribute",
-                    "required": True,
-                },
-            )
+        dest: BswAsynchronousServerCallResultPointSubtypesEnum | None = field(
+            default=None,
+            metadata={
+                "name": "DEST",
+                "type": "Attribute",
+                "required": True,
+            },
         )

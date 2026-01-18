@@ -1,6 +1,5 @@
 from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import Union
 
 from .all_distribution_channels_ref import AllDistributionChannelsRef
 from .customer_account_status_ref import CustomerAccountStatusRef
@@ -65,7 +64,56 @@ class TypeOfEntityRefsRelStructure(OneToManyRelationshipStructure):
         name = "typeOfEntityRefs_RelStructure"
 
     choice: Iterable[
-        TypeOfRetailDeviceRef | CustomerAccountStatusRef | TypeOfCustomerAccountRef | TypeOfFareContractEntryRef | TypeOfFareContractRef | TypeOfAccessRightAssignmentRef | TypeOfSalesOfferPackageRef | TypeOfFareStructureElementRef | TypeOfTariffRef | AllDistributionChannelsRef | TypeOfMachineReadabilityRef | TypeOfTravelDocumentRef | TypeOfMobilityServiceRef | TypeOfFareProductRef | TypeOfFareStructureFactorRef | TypeOfPricingRuleRef | TypeOfFlexibleServiceRef | TypeOfPassengerInformationEquipmentRef | TypeOfTimeDemandTypeRef | TypeOfJourneyPatternRef | TypeOfSecurityListRef | TypeOfPlugRef | TypeOfBatteryChemistryRef | TypeOfServiceFeatureRef | TypeOfDeliveryVariantRef | TypeOfNoticeRef | TypeOfCongestionRef | TypeOfServiceRef | TypeOfFacilityRef | TypeOfModeOfOperationRef | PersonalModeOfOperationRef | VehiclePoolingRef | VehicleSharingRef | VehicleRentalRef | FlexibleModeOfOperationRef | ScheduledModeOfOperationRef | TypeOfEquipmentRef | TypeOfProjectionRef | TypeOfFeatureRef | TypeOfLinkSequenceRef | TypeOfOrganisationPartRef | TypeOfOrganisationRef | TypeOfPlaceRef | TypeOfTransferRef | TypeOfZoneRef | TypeOfLinkRef | TypeOfPointRef | TypeOfLineRef | TypeOfValidityRef | TypeOfFrameRef
+        TypeOfRetailDeviceRef
+        | CustomerAccountStatusRef
+        | TypeOfCustomerAccountRef
+        | TypeOfFareContractEntryRef
+        | TypeOfFareContractRef
+        | TypeOfAccessRightAssignmentRef
+        | TypeOfSalesOfferPackageRef
+        | TypeOfFareStructureElementRef
+        | TypeOfTariffRef
+        | AllDistributionChannelsRef
+        | TypeOfMachineReadabilityRef
+        | TypeOfTravelDocumentRef
+        | TypeOfMobilityServiceRef
+        | TypeOfFareProductRef
+        | TypeOfFareStructureFactorRef
+        | TypeOfPricingRuleRef
+        | TypeOfFlexibleServiceRef
+        | TypeOfPassengerInformationEquipmentRef
+        | TypeOfTimeDemandTypeRef
+        | TypeOfJourneyPatternRef
+        | TypeOfSecurityListRef
+        | TypeOfPlugRef
+        | TypeOfBatteryChemistryRef
+        | TypeOfServiceFeatureRef
+        | TypeOfDeliveryVariantRef
+        | TypeOfNoticeRef
+        | TypeOfCongestionRef
+        | TypeOfServiceRef
+        | TypeOfFacilityRef
+        | TypeOfModeOfOperationRef
+        | PersonalModeOfOperationRef
+        | VehiclePoolingRef
+        | VehicleSharingRef
+        | VehicleRentalRef
+        | FlexibleModeOfOperationRef
+        | ScheduledModeOfOperationRef
+        | TypeOfEquipmentRef
+        | TypeOfProjectionRef
+        | TypeOfFeatureRef
+        | TypeOfLinkSequenceRef
+        | TypeOfOrganisationPartRef
+        | TypeOfOrganisationRef
+        | TypeOfPlaceRef
+        | TypeOfTransferRef
+        | TypeOfZoneRef
+        | TypeOfLinkRef
+        | TypeOfPointRef
+        | TypeOfLineRef
+        | TypeOfValidityRef
+        | TypeOfFrameRef
     ] = field(
         default_factory=list,
         metadata={

@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -114,13 +113,15 @@ class DiagnosticTestResult:
             "required": True,
         },
     )
-    short_name_fragments: DiagnosticTestResult.ShortNameFragments | None = field(
-        default=None,
-        metadata={
-            "name": "SHORT-NAME-FRAGMENTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    short_name_fragments: DiagnosticTestResult.ShortNameFragments | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "SHORT-NAME-FRAGMENTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     long_name: MultilanguageLongName | None = field(
         default=None,
@@ -178,15 +179,13 @@ class DiagnosticTestResult:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    diagnostic_events: DiagnosticTestResult.DiagnosticEvents | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "DIAGNOSTIC-EVENTS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    diagnostic_events: DiagnosticTestResult.DiagnosticEvents | None = field(
+        default=None,
+        metadata={
+            "name": "DIAGNOSTIC-EVENTS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     event_ref: DiagnosticTestResult.EventRef | None = field(
         default=None,
@@ -196,7 +195,9 @@ class DiagnosticTestResult:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    monitored_identifier_ref: DiagnosticTestResult.MonitoredIdentifierRef | None = field(
+    monitored_identifier_ref: (
+        DiagnosticTestResult.MonitoredIdentifierRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "MONITORED-IDENTIFIER-REF",
@@ -212,13 +213,15 @@ class DiagnosticTestResult:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    update_kind: DiagnosticTestResultUpdateEnumValueVariationPoint | None = field(
-        default=None,
-        metadata={
-            "name": "UPDATE-KIND",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    update_kind: DiagnosticTestResultUpdateEnumValueVariationPoint | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "UPDATE-KIND",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     s: str | None = field(
         default=None,

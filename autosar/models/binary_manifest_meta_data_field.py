@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .address import Address
 from .admin_data import (
@@ -101,7 +100,9 @@ class BinaryManifestMetaDataField:
             "required": True,
         },
     )
-    short_name_fragments: BinaryManifestMetaDataField.ShortNameFragments | None = field(
+    short_name_fragments: (
+        BinaryManifestMetaDataField.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",

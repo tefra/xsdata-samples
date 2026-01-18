@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from .line_string import LineString
 from .multi_surface import MultiSurface

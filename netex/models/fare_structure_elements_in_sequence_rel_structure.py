@@ -1,6 +1,5 @@
 from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import Union
 
 from .controllable_element_in_sequence import ControllableElementInSequence
 from .fare_structure_element_in_sequence import FareStructureElementInSequence

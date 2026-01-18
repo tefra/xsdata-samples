@@ -1,6 +1,5 @@
 from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import Union
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .operating_period import OperatingPeriod
@@ -17,7 +16,10 @@ class OperatingPeriodsRelStructure(ContainmentAggregationStructure):
         name = "operatingPeriods_RelStructure"
 
     choice: Iterable[
-        UicOperatingPeriodRef | OperatingPeriodRef | OperatingPeriod | UicOperatingPeriod
+        UicOperatingPeriodRef
+        | OperatingPeriodRef
+        | OperatingPeriod
+        | UicOperatingPeriod
     ] = field(
         default_factory=list,
         metadata={

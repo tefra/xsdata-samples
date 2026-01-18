@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -220,15 +219,19 @@ class DoIpInterface:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    do_ip_routing_activations: DoIpInterface.DoIpRoutingActivations | None = field(
-        default=None,
-        metadata={
-            "name": "DO-IP-ROUTING-ACTIVATIONS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    do_ip_routing_activations: DoIpInterface.DoIpRoutingActivations | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "DO-IP-ROUTING-ACTIVATIONS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
-    doip_channel_collection_ref: DoIpInterface.DoipChannelCollectionRef | None = field(
+    doip_channel_collection_ref: (
+        DoIpInterface.DoipChannelCollectionRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "DOIP-CHANNEL-COLLECTION-REF",
@@ -284,15 +287,13 @@ class DoIpInterface:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    socket_connection_refs: DoIpInterface.SocketConnectionRefs | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "SOCKET-CONNECTION-REFS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    socket_connection_refs: DoIpInterface.SocketConnectionRefs | None = field(
+        default=None,
+        metadata={
+            "name": "SOCKET-CONNECTION-REFS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     use_mac_address_for_identification: Boolean | None = field(
         default=None,

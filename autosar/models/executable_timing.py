@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -152,15 +151,13 @@ class ExecutableTiming:
             "required": True,
         },
     )
-    short_name_fragments: ExecutableTiming.ShortNameFragments | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "SHORT-NAME-FRAGMENTS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    short_name_fragments: ExecutableTiming.ShortNameFragments | None = field(
+        default=None,
+        metadata={
+            "name": "SHORT-NAME-FRAGMENTS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     long_name: MultilanguageLongName | None = field(
         default=None,
@@ -226,15 +223,13 @@ class ExecutableTiming:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    timing_descriptions: ExecutableTiming.TimingDescriptions | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "TIMING-DESCRIPTIONS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    timing_descriptions: ExecutableTiming.TimingDescriptions | None = field(
+        default=None,
+        metadata={
+            "name": "TIMING-DESCRIPTIONS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     timing_guarantees: ExecutableTiming.TimingGuarantees | None = field(
         default=None,
@@ -244,15 +239,13 @@ class ExecutableTiming:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    timing_requirements: ExecutableTiming.TimingRequirements | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "TIMING-REQUIREMENTS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    timing_requirements: ExecutableTiming.TimingRequirements | None = field(
+        default=None,
+        metadata={
+            "name": "TIMING-REQUIREMENTS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     timing_resource: TimingExtensionResource | None = field(
         default=None,
@@ -741,15 +734,15 @@ class ExecutableTiming:
 
     @dataclass
     class ExecutableRefs:
-        executable_ref: list[
-            ExecutableTiming.ExecutableRefs.ExecutableRef
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "EXECUTABLE-REF",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        executable_ref: list[ExecutableTiming.ExecutableRefs.ExecutableRef] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "EXECUTABLE-REF",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )
 
         @dataclass

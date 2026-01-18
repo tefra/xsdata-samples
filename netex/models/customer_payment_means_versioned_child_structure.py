@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from xsdata.models.datatype import XmlDateTime
 
@@ -36,7 +35,9 @@ class CustomerPaymentMeansVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    medium_access_device_ref: MobileDeviceRef | EmvCardRef | SmartcardRef | None = field(
+    medium_access_device_ref: (
+        MobileDeviceRef | EmvCardRef | SmartcardRef | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",

@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from datexii.models.eu.datexii.v2.alert_cdirection import AlertCDirection
 from datexii.models.eu.datexii.v2.alert_cmethod2_primary_point_location import (
@@ -28,7 +27,9 @@ class AlertCMethod2Point(AlertCPoint):
             "required": True,
         },
     )
-    alert_cmethod2_primary_point_location: AlertCMethod2PrimaryPointLocation | None = field(
+    alert_cmethod2_primary_point_location: (
+        AlertCMethod2PrimaryPointLocation | None
+    ) = field(
         default=None,
         metadata={
             "name": "alertCMethod2PrimaryPointLocation",

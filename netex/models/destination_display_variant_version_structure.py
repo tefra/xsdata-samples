@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .delivery_variant_type_enumeration import DeliveryVariantTypeEnumeration
 from .destination_display_context_enumeration import (
@@ -27,7 +26,9 @@ class DestinationDisplayVariantVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    destination_display_context: DestinationDisplayContextEnumeration | None = field(
+    destination_display_context: (
+        DestinationDisplayContextEnumeration | None
+    ) = field(
         default=None,
         metadata={
             "name": "DestinationDisplayContext",

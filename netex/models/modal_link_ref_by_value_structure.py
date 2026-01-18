@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .link_ref_by_value_structure import LinkRefByValueStructure
 from .vehicle_mode import VehicleMode

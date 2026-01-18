@@ -1,6 +1,5 @@
 from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import Union
 
 from .garage_point import GaragePoint
 from .garage_point_ref import GaragePointRef

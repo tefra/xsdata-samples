@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .customer_purchase_package_element_accesses_rel_structure import (
     CustomerPurchasePackageElementAccessesRelStructure,
@@ -25,15 +24,13 @@ class CustomerPurchasePackageElementVersionStructure(
     class Meta:
         name = "CustomerPurchasePackageElement_VersionStructure"
 
-    customer_purchase_package_ref: CustomerPurchasePackageRef | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "CustomerPurchasePackageRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            },
-        )
+    customer_purchase_package_ref: CustomerPurchasePackageRef | None = field(
+        default=None,
+        metadata={
+            "name": "CustomerPurchasePackageRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        },
     )
     sales_offer_package_element_ref: SalesOfferPackageElementRef | None = (
         field(
@@ -61,7 +58,9 @@ class CustomerPurchasePackageElementVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    element_accesses: CustomerPurchasePackageElementAccessesRelStructure | None = field(
+    element_accesses: (
+        CustomerPurchasePackageElementAccessesRelStructure | None
+    ) = field(
         default=None,
         metadata={
             "name": "elementAccesses",
@@ -69,7 +68,9 @@ class CustomerPurchasePackageElementVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    validity_parameter_assignments: CustomerPurchaseParameterAssignmentsRelStructure | None = field(
+    validity_parameter_assignments: (
+        CustomerPurchaseParameterAssignmentsRelStructure | None
+    ) = field(
         default=None,
         metadata={
             "name": "validityParameterAssignments",

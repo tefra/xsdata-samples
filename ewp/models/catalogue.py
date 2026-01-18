@@ -2,7 +2,6 @@ from __future__ import annotations
 
 from dataclasses import dataclass, field
 from enum import Enum
-from typing import Optional, Union
 
 
 class LangValue(Enum):
@@ -795,21 +794,27 @@ class Catalogue:
                 "type": "Element",
             },
         )
-        institutions_covered: Catalogue.Host.InstitutionsCovered | None = field(
-            default=None,
-            metadata={
-                "name": "institutions-covered",
-                "type": "Element",
-            },
+        institutions_covered: Catalogue.Host.InstitutionsCovered | None = (
+            field(
+                default=None,
+                metadata={
+                    "name": "institutions-covered",
+                    "type": "Element",
+                },
+            )
         )
-        client_credentials_in_use: Catalogue.Host.ClientCredentialsInUse | None = field(
+        client_credentials_in_use: (
+            Catalogue.Host.ClientCredentialsInUse | None
+        ) = field(
             default=None,
             metadata={
                 "name": "client-credentials-in-use",
                 "type": "Element",
             },
         )
-        server_credentials_in_use: Catalogue.Host.ServerCredentialsInUse | None = field(
+        server_credentials_in_use: (
+            Catalogue.Host.ServerCredentialsInUse | None
+        ) = field(
             default=None,
             metadata={
                 "name": "server-credentials-in-use",

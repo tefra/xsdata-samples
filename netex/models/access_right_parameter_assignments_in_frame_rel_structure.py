@@ -1,6 +1,5 @@
 from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import Union
 
 from .access_right_parameter_assignment import AccessRightParameterAssignment
 from .customer_purchase_parameter_assignment import (
@@ -27,7 +26,12 @@ class AccessRightParameterAssignmentsInFrameRelStructure(
         name = "accessRightParameterAssignmentsInFrame_RelStructure"
 
     access_right_parameter_assignment: Iterable[
-        CustomerPurchaseParameterAssignment | SpecificParameterAssignment | GenericParameterAssignmentInContext | GenericParameterAssignment | ValidityParameterAssignment | AccessRightParameterAssignment
+        CustomerPurchaseParameterAssignment
+        | SpecificParameterAssignment
+        | GenericParameterAssignmentInContext
+        | GenericParameterAssignment
+        | ValidityParameterAssignment
+        | AccessRightParameterAssignment
     ] = field(
         default_factory=list,
         metadata={

@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -117,15 +116,13 @@ class BswTimingEvent:
             "required": True,
         },
     )
-    short_name_fragments: BswTimingEvent.ShortNameFragments | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "SHORT-NAME-FRAGMENTS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    short_name_fragments: BswTimingEvent.ShortNameFragments | None = field(
+        default=None,
+        metadata={
+            "name": "SHORT-NAME-FRAGMENTS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     long_name: MultilanguageLongName | None = field(
         default=None,
@@ -175,7 +172,9 @@ class BswTimingEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    activation_reason_representation_ref: BswTimingEvent.ActivationReasonRepresentationRef | None = field(
+    activation_reason_representation_ref: (
+        BswTimingEvent.ActivationReasonRepresentationRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "ACTIVATION-REASON-REPRESENTATION-REF",
@@ -183,23 +182,23 @@ class BswTimingEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    context_limitation_refs: BswTimingEvent.ContextLimitationRefs | None = field(
-        default=None,
-        metadata={
-            "name": "CONTEXT-LIMITATION-REFS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
-    )
-    disabled_in_mode_irefs: BswTimingEvent.DisabledInModeIrefs | None = (
+    context_limitation_refs: BswTimingEvent.ContextLimitationRefs | None = (
         field(
             default=None,
             metadata={
-                "name": "DISABLED-IN-MODE-IREFS",
+                "name": "CONTEXT-LIMITATION-REFS",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
+    )
+    disabled_in_mode_irefs: BswTimingEvent.DisabledInModeIrefs | None = field(
+        default=None,
+        metadata={
+            "name": "DISABLED-IN-MODE-IREFS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     starts_on_event_ref: BswTimingEvent.StartsOnEventRef | None = field(
         default=None,

@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .diagnostic_common_props_conditional import (
     DiagnosticCommonPropsConditional,
@@ -33,7 +32,9 @@ class DiagnosticCommonProps:
     class Meta:
         name = "DIAGNOSTIC-COMMON-PROPS"
 
-    diagnostic_common_props_variants: DiagnosticCommonProps.DiagnosticCommonPropsVariants | None = field(
+    diagnostic_common_props_variants: (
+        DiagnosticCommonProps.DiagnosticCommonPropsVariants | None
+    ) = field(
         default=None,
         metadata={
             "name": "DIAGNOSTIC-COMMON-PROPS-VARIANTS",

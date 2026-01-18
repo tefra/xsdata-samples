@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from datexii.models.eu.datexii.v2.environmental_obstruction_type_enum import (
     EnvironmentalObstructionTypeEnum,
@@ -28,14 +27,16 @@ class EnvironmentalObstruction(Obstruction):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    environmental_obstruction_type: EnvironmentalObstructionTypeEnum | None = field(
-        default=None,
-        metadata={
-            "name": "environmentalObstructionType",
-            "type": "Element",
-            "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
-        },
+    environmental_obstruction_type: EnvironmentalObstructionTypeEnum | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "environmentalObstructionType",
+                "type": "Element",
+                "namespace": "http://datex2.eu/schema/2/2_0",
+                "required": True,
+            },
+        )
     )
     environmental_obstruction_extension: ExtensionType | None = field(
         default=None,

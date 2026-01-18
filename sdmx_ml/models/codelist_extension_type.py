@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import ForwardRef, Optional, Union
+from typing import ForwardRef
 
 from sdmx_ml.models.code_selection_type import CodeSelectionType
 
@@ -35,7 +35,11 @@ class CodelistExtensionType:
             "pattern": r".+\.codelist\.Codelist=.+",
         },
     )
-    inclusive_code_selection_or_exclusive_code_selection: CodelistExtensionType.InclusiveCodeSelection | CodelistExtensionType.ExclusiveCodeSelection | None = field(
+    inclusive_code_selection_or_exclusive_code_selection: (
+        CodelistExtensionType.InclusiveCodeSelection
+        | CodelistExtensionType.ExclusiveCodeSelection
+        | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",

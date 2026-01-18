@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .application_array_element_subtypes_enum import (
     ApplicationArrayElementSubtypesEnum,
@@ -44,7 +43,9 @@ class IndexedArrayElement:
     class Meta:
         name = "INDEXED-ARRAY-ELEMENT"
 
-    application_array_element_ref: IndexedArrayElement.ApplicationArrayElementRef | None = field(
+    application_array_element_ref: (
+        IndexedArrayElement.ApplicationArrayElementRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "APPLICATION-ARRAY-ELEMENT-REF",
@@ -52,7 +53,9 @@ class IndexedArrayElement:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    implementation_array_element_ref: IndexedArrayElement.ImplementationArrayElementRef | None = field(
+    implementation_array_element_ref: (
+        IndexedArrayElement.ImplementationArrayElementRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "IMPLEMENTATION-ARRAY-ELEMENT-REF",

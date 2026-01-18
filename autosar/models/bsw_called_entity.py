@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -194,15 +193,13 @@ class BswCalledEntity:
             "required": True,
         },
     )
-    short_name_fragments: BswCalledEntity.ShortNameFragments | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "SHORT-NAME-FRAGMENTS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    short_name_fragments: BswCalledEntity.ShortNameFragments | None = field(
+        default=None,
+        metadata={
+            "name": "SHORT-NAME-FRAGMENTS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     long_name: MultilanguageLongName | None = field(
         default=None,
@@ -260,7 +257,9 @@ class BswCalledEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    can_enter_exclusive_area_refs: BswCalledEntity.CanEnterExclusiveAreaRefs | None = field(
+    can_enter_exclusive_area_refs: (
+        BswCalledEntity.CanEnterExclusiveAreaRefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "CAN-ENTER-EXCLUSIVE-AREA-REFS",
@@ -268,7 +267,9 @@ class BswCalledEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    exclusive_area_nesting_order_refs: BswCalledEntity.ExclusiveAreaNestingOrderRefs | None = field(
+    exclusive_area_nesting_order_refs: (
+        BswCalledEntity.ExclusiveAreaNestingOrderRefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "EXCLUSIVE-AREA-NESTING-ORDER-REFS",
@@ -292,7 +293,9 @@ class BswCalledEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    runs_inside_exclusive_area_refs: BswCalledEntity.RunsInsideExclusiveAreaRefs | None = field(
+    runs_inside_exclusive_area_refs: (
+        BswCalledEntity.RunsInsideExclusiveAreaRefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "RUNS-INSIDE-EXCLUSIVE-AREA-REFS",
@@ -308,15 +311,13 @@ class BswCalledEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    accessed_mode_groups: BswCalledEntity.AccessedModeGroups | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "ACCESSED-MODE-GROUPS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    accessed_mode_groups: BswCalledEntity.AccessedModeGroups | None = field(
+        default=None,
+        metadata={
+            "name": "ACCESSED-MODE-GROUPS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     activation_points: BswCalledEntity.ActivationPoints | None = field(
         default=None,
@@ -358,15 +359,13 @@ class BswCalledEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    implemented_entry_ref: BswCalledEntity.ImplementedEntryRef | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "IMPLEMENTED-ENTRY-REF",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    implemented_entry_ref: BswCalledEntity.ImplementedEntryRef | None = field(
+        default=None,
+        metadata={
+            "name": "IMPLEMENTED-ENTRY-REF",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     issued_triggers: BswCalledEntity.IssuedTriggers | None = field(
         default=None,
@@ -384,7 +383,9 @@ class BswCalledEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    scheduler_name_prefix_ref: BswCalledEntity.SchedulerNamePrefixRef | None = field(
+    scheduler_name_prefix_ref: (
+        BswCalledEntity.SchedulerNamePrefixRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "SCHEDULER-NAME-PREFIX-REF",

@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from .destination_display_ref import DestinationDisplayRef
 from .fare_scheduled_stop_point_ref import FareScheduledStopPointRef
@@ -20,7 +19,9 @@ class JourneyEndpointStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    scheduled_stop_point_ref: FareScheduledStopPointRef | ScheduledStopPointRef | None = field(
+    scheduled_stop_point_ref: (
+        FareScheduledStopPointRef | ScheduledStopPointRef | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",

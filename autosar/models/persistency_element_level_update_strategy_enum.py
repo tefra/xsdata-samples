@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .persistency_element_level_update_strategy_enum_simple import (
     PersistencyElementLevelUpdateStrategyEnumSimple,

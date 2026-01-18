@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -97,7 +96,9 @@ class ConsistencyNeedsBlueprintSet:
             "required": True,
         },
     )
-    short_name_fragments: ConsistencyNeedsBlueprintSet.ShortNameFragments | None = field(
+    short_name_fragments: (
+        ConsistencyNeedsBlueprintSet.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -161,7 +162,9 @@ class ConsistencyNeedsBlueprintSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    consistency_needss: ConsistencyNeedsBlueprintSet.ConsistencyNeedss | None = field(
+    consistency_needss: (
+        ConsistencyNeedsBlueprintSet.ConsistencyNeedss | None
+    ) = field(
         default=None,
         metadata={
             "name": "CONSISTENCY-NEEDSS",

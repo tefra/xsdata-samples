@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -110,13 +109,15 @@ class ModeSwitchedAckEvent:
             "required": True,
         },
     )
-    short_name_fragments: ModeSwitchedAckEvent.ShortNameFragments | None = field(
-        default=None,
-        metadata={
-            "name": "SHORT-NAME-FRAGMENTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    short_name_fragments: ModeSwitchedAckEvent.ShortNameFragments | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "SHORT-NAME-FRAGMENTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     long_name: MultilanguageLongName | None = field(
         default=None,
@@ -166,7 +167,9 @@ class ModeSwitchedAckEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    activation_reason_representation_ref: ModeSwitchedAckEvent.ActivationReasonRepresentationRef | None = field(
+    activation_reason_representation_ref: (
+        ModeSwitchedAckEvent.ActivationReasonRepresentationRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "ACTIVATION-REASON-REPRESENTATION-REF",
@@ -174,25 +177,21 @@ class ModeSwitchedAckEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    disabled_mode_irefs: ModeSwitchedAckEvent.DisabledModeIrefs | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "DISABLED-MODE-IREFS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    disabled_mode_irefs: ModeSwitchedAckEvent.DisabledModeIrefs | None = field(
+        default=None,
+        metadata={
+            "name": "DISABLED-MODE-IREFS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
-    start_on_event_ref: ModeSwitchedAckEvent.StartOnEventRef | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "START-ON-EVENT-REF",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    start_on_event_ref: ModeSwitchedAckEvent.StartOnEventRef | None = field(
+        default=None,
+        metadata={
+            "name": "START-ON-EVENT-REF",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     variation_point: VariationPoint | None = field(
         default=None,

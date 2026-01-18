@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import ForwardRef, Optional
+from typing import ForwardRef
 
 from .e_enum_font_simple import EEnumFontSimple
 from .e_enum_simple import EEnumSimple

@@ -1,6 +1,5 @@
 from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import Union
 
 from .group_of_distance_matrix_elements_ref import (
     GroupOfDistanceMatrixElementsRef,
@@ -19,7 +18,10 @@ class UsedInRefsRelStructure(OneToManyRelationshipStructure):
         name = "usedInRefs_RelStructure"
 
     choice: Iterable[
-        ParkingTariffRef | TariffRef | GroupOfDistanceMatrixElementsRef | GroupOfSalesOfferPackagesRef
+        ParkingTariffRef
+        | TariffRef
+        | GroupOfDistanceMatrixElementsRef
+        | GroupOfSalesOfferPackagesRef
     ] = field(
         default_factory=list,
         metadata={

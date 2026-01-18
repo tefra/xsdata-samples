@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.multilingual_string import MultilingualString
@@ -25,13 +24,15 @@ class PredefinedNonOrderedLocationGroup(PredefinedLocationContainer):
     :ivar version:
     """
 
-    predefined_non_ordered_location_group_name: MultilingualString | None = field(
-        default=None,
-        metadata={
-            "name": "predefinedNonOrderedLocationGroupName",
-            "type": "Element",
-            "namespace": "http://datex2.eu/schema/2/2_0",
-        },
+    predefined_non_ordered_location_group_name: MultilingualString | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "predefinedNonOrderedLocationGroupName",
+                "type": "Element",
+                "namespace": "http://datex2.eu/schema/2/2_0",
+            },
+        )
     )
     predefined_location: list[PredefinedLocation] = field(
         default_factory=list,
@@ -42,13 +43,15 @@ class PredefinedNonOrderedLocationGroup(PredefinedLocationContainer):
             "min_occurs": 2,
         },
     )
-    predefined_non_ordered_location_group_extension: ExtensionType | None = field(
-        default=None,
-        metadata={
-            "name": "predefinedNonOrderedLocationGroupExtension",
-            "type": "Element",
-            "namespace": "http://datex2.eu/schema/2/2_0",
-        },
+    predefined_non_ordered_location_group_extension: ExtensionType | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "predefinedNonOrderedLocationGroupExtension",
+                "type": "Element",
+                "namespace": "http://datex2.eu/schema/2/2_0",
+            },
+        )
     )
     id: str | None = field(
         default=None,

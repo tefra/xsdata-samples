@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -210,15 +209,19 @@ class PduTriggering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sec_oc_crypto_mapping_ref: PduTriggering.SecOcCryptoMappingRef | None = field(
-        default=None,
-        metadata={
-            "name": "SEC-OC-CRYPTO-MAPPING-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    sec_oc_crypto_mapping_ref: PduTriggering.SecOcCryptoMappingRef | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "SEC-OC-CRYPTO-MAPPING-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
-    trigger_i_pdu_send_conditions: PduTriggering.TriggerIPduSendConditions | None = field(
+    trigger_i_pdu_send_conditions: (
+        PduTriggering.TriggerIPduSendConditions | None
+    ) = field(
         default=None,
         metadata={
             "name": "TRIGGER-I-PDU-SEND-CONDITIONS",

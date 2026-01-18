@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Union
 
 from sdmx_ml.models.item_type import (
     Agency,
@@ -23,7 +22,11 @@ class OrganisationSchemeType(OrganisationSchemeBaseType):
     """
 
     choice_1: tuple[
-        OrganisationUnit | MetadataProvider | DataProvider | DataConsumer | Agency,
+        OrganisationUnit
+        | MetadataProvider
+        | DataProvider
+        | DataConsumer
+        | Agency,
         ...,
     ] = field(
         default_factory=tuple,

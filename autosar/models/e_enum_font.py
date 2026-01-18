@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .e_enum_font_simple import EEnumFontSimple
 

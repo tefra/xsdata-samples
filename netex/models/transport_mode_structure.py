@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from .air_submode import AirSubmode
 from .all_modes_enumeration import AllModesEnumeration
@@ -29,7 +28,21 @@ class TransportModeStructure:
             "required": True,
         },
     )
-    choice: AirSubmode | BusSubmode | CoachSubmode | FunicularSubmode | MetroSubmode | TramSubmode | TelecabinSubmode | RailSubmode | WaterSubmode | SnowAndIceSubmode | TaxiSubmode | SelfDriveSubmode | None = field(
+    choice: (
+        AirSubmode
+        | BusSubmode
+        | CoachSubmode
+        | FunicularSubmode
+        | MetroSubmode
+        | TramSubmode
+        | TelecabinSubmode
+        | RailSubmode
+        | WaterSubmode
+        | SnowAndIceSubmode
+        | TaxiSubmode
+        | SelfDriveSubmode
+        | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",

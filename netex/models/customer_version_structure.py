@@ -1,6 +1,5 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
-from typing import Optional
 
 from xsdata.models.datatype import XmlDate, XmlDateTime
 
@@ -135,15 +134,13 @@ class CustomerVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    customer_eligibilities: CustomerEligibilitiesRelStructure | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "customerEligibilities",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            },
-        )
+    customer_eligibilities: CustomerEligibilitiesRelStructure | None = field(
+        default=None,
+        metadata={
+            "name": "customerEligibilities",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        },
     )
     customer_accounts: CustomerAccountsRelStructure | None = field(
         default=None,

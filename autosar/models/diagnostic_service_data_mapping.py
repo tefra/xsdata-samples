@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -120,7 +119,9 @@ class DiagnosticServiceDataMapping:
             "required": True,
         },
     )
-    short_name_fragments: DiagnosticServiceDataMapping.ShortNameFragments | None = field(
+    short_name_fragments: (
+        DiagnosticServiceDataMapping.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -184,7 +185,9 @@ class DiagnosticServiceDataMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    diagnostic_data_element_ref: DiagnosticServiceDataMapping.DiagnosticDataElementRef | None = field(
+    diagnostic_data_element_ref: (
+        DiagnosticServiceDataMapping.DiagnosticDataElementRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "DIAGNOSTIC-DATA-ELEMENT-REF",
@@ -192,7 +195,9 @@ class DiagnosticServiceDataMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    mapped_ap_data_element_iref: DataPrototypeInExecutableInstanceRef | None = field(
+    mapped_ap_data_element_iref: (
+        DataPrototypeInExecutableInstanceRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "MAPPED-AP-DATA-ELEMENT-IREF",
@@ -200,15 +205,13 @@ class DiagnosticServiceDataMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    mapped_data_element_iref: DataPrototypeInSystemInstanceRef | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "MAPPED-DATA-ELEMENT-IREF",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    mapped_data_element_iref: DataPrototypeInSystemInstanceRef | None = field(
+        default=None,
+        metadata={
+            "name": "MAPPED-DATA-ELEMENT-IREF",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     process_ref: DiagnosticServiceDataMapping.ProcessRef | None = field(
         default=None,

@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from ipxact.models.abstractor_bus_interface_type import (
     AbstractorBusInterfaceType,
@@ -134,16 +133,14 @@ class AbstractorType:
             "required": True,
         },
     )
-    abstractor_interfaces: AbstractorType.AbstractorInterfaces | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "abstractorInterfaces",
-                "type": "Element",
-                "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
-                "required": True,
-            },
-        )
+    abstractor_interfaces: AbstractorType.AbstractorInterfaces | None = field(
+        default=None,
+        metadata={
+            "name": "abstractorInterfaces",
+            "type": "Element",
+            "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
+            "required": True,
+        },
     )
     model: AbstractorModelType | None = field(
         default=None,

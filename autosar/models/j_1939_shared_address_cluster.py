@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -97,7 +96,9 @@ class J1939SharedAddressCluster:
             "required": True,
         },
     )
-    short_name_fragments: J1939SharedAddressCluster.ShortNameFragments | None = field(
+    short_name_fragments: (
+        J1939SharedAddressCluster.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -153,7 +154,9 @@ class J1939SharedAddressCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    participating_j_1939_cluster_refs: J1939SharedAddressCluster.ParticipatingJ1939ClusterRefs | None = field(
+    participating_j_1939_cluster_refs: (
+        J1939SharedAddressCluster.ParticipatingJ1939ClusterRefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "PARTICIPATING-J-1939-CLUSTER-REFS",

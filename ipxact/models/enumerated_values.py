@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from ipxact.models.enumerated_value_type import EnumeratedValueType
 
@@ -25,7 +24,9 @@ class EnumeratedValues:
         name = "enumeratedValues"
         namespace = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
-    enumeration_definition_ref: EnumeratedValues.EnumerationDefinitionRef | None = field(
+    enumeration_definition_ref: (
+        EnumeratedValues.EnumerationDefinitionRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "enumerationDefinitionRef",

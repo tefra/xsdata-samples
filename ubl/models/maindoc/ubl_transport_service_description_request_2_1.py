@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from ubl.models.common.ubl_common_aggregate_components_2_1 import (
     ReceiverParty,
@@ -119,7 +118,9 @@ class TransportServiceDescriptionRequestType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    service_information_preference_code: ServiceInformationPreferenceCode | None = field(
+    service_information_preference_code: (
+        ServiceInformationPreferenceCode | None
+    ) = field(
         default=None,
         metadata={
             "name": "ServiceInformationPreferenceCode",
@@ -151,13 +152,15 @@ class TransportServiceDescriptionRequestType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    transport_service_provider_party: TransportServiceProviderParty | None = field(
-        default=None,
-        metadata={
-            "name": "TransportServiceProviderParty",
-            "type": "Element",
-            "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-        },
+    transport_service_provider_party: TransportServiceProviderParty | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "TransportServiceProviderParty",
+                "type": "Element",
+                "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
+            },
+        )
     )
     transportation_service: tuple[TransportationService, ...] = field(
         default_factory=tuple,

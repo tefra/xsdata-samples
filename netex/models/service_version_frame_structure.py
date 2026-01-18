@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .common_sections_in_frame_rel_structure import (
     CommonSectionsInFrameRelStructure,
@@ -143,13 +142,15 @@ class ServiceVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    flexible_point_properties: FlexiblePointPropertiesRelStructure | None = field(
-        default=None,
-        metadata={
-            "name": "flexiblePointProperties",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        },
+    flexible_point_properties: FlexiblePointPropertiesRelStructure | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "flexiblePointProperties",
+                "type": "Element",
+                "namespace": "http://www.netex.org.uk/netex",
+            },
+        )
     )
     flexible_link_properties: FlexibleLinkPropertiesRelStructure | None = (
         field(
@@ -315,15 +316,19 @@ class ServiceVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    transfer_restrictions: TransferRestrictionsInFrameRelStructure | None = field(
-        default=None,
-        metadata={
-            "name": "transferRestrictions",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        },
+    transfer_restrictions: TransferRestrictionsInFrameRelStructure | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "transferRestrictions",
+                "type": "Element",
+                "namespace": "http://www.netex.org.uk/netex",
+            },
+        )
     )
-    routing_constraint_zones: RoutingConstraintZonesInFrameRelStructure | None = field(
+    routing_constraint_zones: (
+        RoutingConstraintZonesInFrameRelStructure | None
+    ) = field(
         default=None,
         metadata={
             "name": "routingConstraintZones",
@@ -347,7 +352,9 @@ class ServiceVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    time_demand_type_assignments: TimeDemandTypeAssignmentsInFrameRelStructure | None = field(
+    time_demand_type_assignments: (
+        TimeDemandTypeAssignmentsInFrameRelStructure | None
+    ) = field(
         default=None,
         metadata={
             "name": "timeDemandTypeAssignments",
@@ -386,17 +393,17 @@ class ServiceVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    display_assignments: DisplayAssignmentsInFrameRelStructure | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "displayAssignments",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            },
-        )
+    display_assignments: DisplayAssignmentsInFrameRelStructure | None = field(
+        default=None,
+        metadata={
+            "name": "displayAssignments",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        },
     )
-    passenger_information_equipments: PassengerInformationEquipmentsInFrameRelStructure | None = field(
+    passenger_information_equipments: (
+        PassengerInformationEquipmentsInFrameRelStructure | None
+    ) = field(
         default=None,
         metadata={
             "name": "passengerInformationEquipments",

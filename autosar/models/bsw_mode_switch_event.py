@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -118,15 +117,13 @@ class BswModeSwitchEvent:
             "required": True,
         },
     )
-    short_name_fragments: BswModeSwitchEvent.ShortNameFragments | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "SHORT-NAME-FRAGMENTS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    short_name_fragments: BswModeSwitchEvent.ShortNameFragments | None = field(
+        default=None,
+        metadata={
+            "name": "SHORT-NAME-FRAGMENTS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     long_name: MultilanguageLongName | None = field(
         default=None,
@@ -176,7 +173,9 @@ class BswModeSwitchEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    activation_reason_representation_ref: BswModeSwitchEvent.ActivationReasonRepresentationRef | None = field(
+    activation_reason_representation_ref: (
+        BswModeSwitchEvent.ActivationReasonRepresentationRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "ACTIVATION-REASON-REPRESENTATION-REF",
@@ -184,7 +183,9 @@ class BswModeSwitchEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    context_limitation_refs: BswModeSwitchEvent.ContextLimitationRefs | None = field(
+    context_limitation_refs: (
+        BswModeSwitchEvent.ContextLimitationRefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "CONTEXT-LIMITATION-REFS",
@@ -192,23 +193,23 @@ class BswModeSwitchEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    disabled_in_mode_irefs: BswModeSwitchEvent.DisabledInModeIrefs | None = field(
-        default=None,
-        metadata={
-            "name": "DISABLED-IN-MODE-IREFS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
-    )
-    starts_on_event_ref: BswModeSwitchEvent.StartsOnEventRef | None = (
+    disabled_in_mode_irefs: BswModeSwitchEvent.DisabledInModeIrefs | None = (
         field(
             default=None,
             metadata={
-                "name": "STARTS-ON-EVENT-REF",
+                "name": "DISABLED-IN-MODE-IREFS",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
+    )
+    starts_on_event_ref: BswModeSwitchEvent.StartsOnEventRef | None = field(
+        default=None,
+        metadata={
+            "name": "STARTS-ON-EVENT-REF",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     variation_point: VariationPoint | None = field(
         default=None,

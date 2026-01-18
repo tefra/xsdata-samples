@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from datexii.models.eu.datexii.v2.distance_along_linear_element import (
     DistanceAlongLinearElement,
@@ -29,13 +28,11 @@ class DistanceFromLinearElementStart(DistanceAlongLinearElement):
             "required": True,
         },
     )
-    distance_from_linear_element_start_extension: ExtensionType | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "distanceFromLinearElementStartExtension",
-                "type": "Element",
-                "namespace": "http://datex2.eu/schema/2/2_0",
-            },
-        )
+    distance_from_linear_element_start_extension: ExtensionType | None = field(
+        default=None,
+        metadata={
+            "name": "distanceFromLinearElementStartExtension",
+            "type": "Element",
+            "namespace": "http://datex2.eu/schema/2/2_0",
+        },
     )

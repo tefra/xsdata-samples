@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from ipxact.models.ad_hoc_connections import AdHocConnections
 from ipxact.models.assertions import Assertions

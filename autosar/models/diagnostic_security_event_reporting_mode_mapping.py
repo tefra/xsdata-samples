@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -108,7 +107,9 @@ class DiagnosticSecurityEventReportingModeMapping:
             "required": True,
         },
     )
-    short_name_fragments: DiagnosticSecurityEventReportingModeMapping.ShortNameFragments | None = field(
+    short_name_fragments: (
+        DiagnosticSecurityEventReportingModeMapping.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -156,7 +157,9 @@ class DiagnosticSecurityEventReportingModeMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: DiagnosticSecurityEventReportingModeMapping.Annotations | None = field(
+    annotations: (
+        DiagnosticSecurityEventReportingModeMapping.Annotations | None
+    ) = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -172,7 +175,9 @@ class DiagnosticSecurityEventReportingModeMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    data_element_ref: DiagnosticSecurityEventReportingModeMapping.DataElementRef | None = field(
+    data_element_ref: (
+        DiagnosticSecurityEventReportingModeMapping.DataElementRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "DATA-ELEMENT-REF",
@@ -180,7 +185,9 @@ class DiagnosticSecurityEventReportingModeMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    security_event_ref: DiagnosticSecurityEventReportingModeMapping.SecurityEventRef | None = field(
+    security_event_ref: (
+        DiagnosticSecurityEventReportingModeMapping.SecurityEventRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "SECURITY-EVENT-REF",

@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from ipxact.models.port_access_handle import PortAccessHandle
 from ipxact.models.port_access_type import PortAccessType

@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .ecuc_affection_enum import EcucAffectionEnum
 from .ecuc_common_attributes_subtypes_enum import (
@@ -41,15 +40,13 @@ class EcucConfigurationClassAffection:
     class Meta:
         name = "ECUC-CONFIGURATION-CLASS-AFFECTION"
 
-    affected_refs: EcucConfigurationClassAffection.AffectedRefs | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "AFFECTED-REFS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    affected_refs: EcucConfigurationClassAffection.AffectedRefs | None = field(
+        default=None,
+        metadata={
+            "name": "AFFECTED-REFS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     affection_kind: EcucAffectionEnum | None = field(
         default=None,

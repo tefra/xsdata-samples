@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from sdmx_ml.models.epoch_map_base_type import EpochMapBaseType
 from sdmx_ml.models.epoch_period_type import EpochPeriodType

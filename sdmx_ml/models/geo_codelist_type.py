@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from sdmx_ml.models.geo_codelist_base_type import GeoCodelistBaseType
 from sdmx_ml.models.geo_codelist_type_type import GeoCodelistTypeType

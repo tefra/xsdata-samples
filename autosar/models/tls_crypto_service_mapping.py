@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -103,13 +102,15 @@ class TlsCryptoServiceMapping:
             "required": True,
         },
     )
-    short_name_fragments: TlsCryptoServiceMapping.ShortNameFragments | None = field(
-        default=None,
-        metadata={
-            "name": "SHORT-NAME-FRAGMENTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    short_name_fragments: TlsCryptoServiceMapping.ShortNameFragments | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "SHORT-NAME-FRAGMENTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     long_name: MultilanguageLongName | None = field(
         default=None,
@@ -167,25 +168,21 @@ class TlsCryptoServiceMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    key_exchange_refs: TlsCryptoServiceMapping.KeyExchangeRefs | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "KEY-EXCHANGE-REFS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    key_exchange_refs: TlsCryptoServiceMapping.KeyExchangeRefs | None = field(
+        default=None,
+        metadata={
+            "name": "KEY-EXCHANGE-REFS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
-    tls_cipher_suites: TlsCryptoServiceMapping.TlsCipherSuites | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "TLS-CIPHER-SUITES",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    tls_cipher_suites: TlsCryptoServiceMapping.TlsCipherSuites | None = field(
+        default=None,
+        metadata={
+            "name": "TLS-CIPHER-SUITES",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     s: str | None = field(
         default=None,

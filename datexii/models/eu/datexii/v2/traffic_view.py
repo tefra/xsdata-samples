@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from xsdata.models.datatype import XmlDateTime
 
@@ -39,7 +38,9 @@ class TrafficView:
             "required": True,
         },
     )
-    predefined_non_ordered_location_group_reference: PredefinedNonOrderedLocationGroupVersionedReference | None = field(
+    predefined_non_ordered_location_group_reference: (
+        PredefinedNonOrderedLocationGroupVersionedReference | None
+    ) = field(
         default=None,
         metadata={
             "name": "predefinedNonOrderedLocationGroupReference",

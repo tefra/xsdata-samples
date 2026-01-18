@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from sdmx_ml.models.provision_agreement_base_type import (
     ProvisionAgreementBaseType,

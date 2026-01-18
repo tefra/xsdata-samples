@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .crypto_object_type_enum_simple import CryptoObjectTypeEnumSimple
 

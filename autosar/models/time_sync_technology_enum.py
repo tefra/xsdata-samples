@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .time_sync_technology_enum_simple import TimeSyncTechnologyEnumSimple
 

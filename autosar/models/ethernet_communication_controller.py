@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -96,7 +95,9 @@ class EthernetCommunicationController:
             "required": True,
         },
     )
-    short_name_fragments: EthernetCommunicationController.ShortNameFragments | None = field(
+    short_name_fragments: (
+        EthernetCommunicationController.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -144,15 +145,13 @@ class EthernetCommunicationController:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: EthernetCommunicationController.Annotations | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "ANNOTATIONS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    annotations: EthernetCommunicationController.Annotations | None = field(
+        default=None,
+        metadata={
+            "name": "ANNOTATIONS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     variation_point: VariationPoint | None = field(
         default=None,
@@ -162,7 +161,10 @@ class EthernetCommunicationController:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ethernet_communication_controller_variants: EthernetCommunicationController.EthernetCommunicationControllerVariants | None = field(
+    ethernet_communication_controller_variants: (
+        EthernetCommunicationController.EthernetCommunicationControllerVariants
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "ETHERNET-COMMUNICATION-CONTROLLER-VARIANTS",

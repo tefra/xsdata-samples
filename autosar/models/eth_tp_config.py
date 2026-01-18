@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -164,13 +163,15 @@ class EthTpConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    communication_cluster_ref: EthTpConfig.CommunicationClusterRef | None = field(
-        default=None,
-        metadata={
-            "name": "COMMUNICATION-CLUSTER-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    communication_cluster_ref: EthTpConfig.CommunicationClusterRef | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "COMMUNICATION-CLUSTER-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     tp_connections: EthTpConfig.TpConnections | None = field(
         default=None,

@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from datexii.models.eu.datexii.v2.charge import Charge
 from datexii.models.eu.datexii.v2.currency_enum import CurrencyEnum

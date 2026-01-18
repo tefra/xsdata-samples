@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .diagnostic_obd_support_enum_simple import DiagnosticObdSupportEnumSimple
 

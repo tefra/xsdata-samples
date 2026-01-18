@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -99,7 +98,9 @@ class J1939ControllerApplication:
             "required": True,
         },
     )
-    short_name_fragments: J1939ControllerApplication.ShortNameFragments | None = field(
+    short_name_fragments: (
+        J1939ControllerApplication.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -171,15 +172,13 @@ class J1939ControllerApplication:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_component_prototype_iref: ComponentInSystemInstanceRef | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "SW-COMPONENT-PROTOTYPE-IREF",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    sw_component_prototype_iref: ComponentInSystemInstanceRef | None = field(
+        default=None,
+        metadata={
+            "name": "SW-COMPONENT-PROTOTYPE-IREF",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     s: str | None = field(
         default=None,

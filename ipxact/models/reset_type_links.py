@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from ipxact.models.vendor_extensions import VendorExtensions
 
@@ -42,7 +41,9 @@ class ResetTypeLinks:
         :ivar id:
         """
 
-        external_reset_type_reference: ResetTypeLinks.ResetTypeLink.ExternalResetTypeReference | None = field(
+        external_reset_type_reference: (
+            ResetTypeLinks.ResetTypeLink.ExternalResetTypeReference | None
+        ) = field(
             default=None,
             metadata={
                 "name": "externalResetTypeReference",
@@ -50,7 +51,9 @@ class ResetTypeLinks:
                 "required": True,
             },
         )
-        reset_type_reference: ResetTypeLinks.ResetTypeLink.ResetTypeReference | None = field(
+        reset_type_reference: (
+            ResetTypeLinks.ResetTypeLink.ResetTypeReference | None
+        ) = field(
             default=None,
             metadata={
                 "name": "resetTypeReference",

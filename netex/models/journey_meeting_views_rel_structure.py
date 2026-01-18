@@ -1,6 +1,5 @@
 from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import Union
 
 from .journey_meeting_ref import JourneyMeetingRef
 from .journey_meeting_view import JourneyMeetingView

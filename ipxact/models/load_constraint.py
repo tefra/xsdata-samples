@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from ipxact.models.cell_specification import CellSpecification
 from ipxact.models.unsigned_positive_int_expression import (

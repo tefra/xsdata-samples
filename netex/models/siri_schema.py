@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from .capabilities_request import CapabilitiesRequest
 from .capabilities_response import CapabilitiesResponse
@@ -23,7 +22,25 @@ __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
 @dataclass
 class SiriSchema:
-    choice: ServiceRequest | SubscriptionRequest | TerminateSubscriptionRequest | DataReadyNotification | DataSupplyRequest | CheckStatusRequest | HeartbeatNotification | CapabilitiesRequest | SubscriptionResponse | TerminateSubscriptionResponse | DataReadyAcknowledgement | ServiceDelivery | DataReceivedAcknowledgement | CheckStatusResponse | CapabilitiesResponse | Extensions1 | None = field(
+    choice: (
+        ServiceRequest
+        | SubscriptionRequest
+        | TerminateSubscriptionRequest
+        | DataReadyNotification
+        | DataSupplyRequest
+        | CheckStatusRequest
+        | HeartbeatNotification
+        | CapabilitiesRequest
+        | SubscriptionResponse
+        | TerminateSubscriptionResponse
+        | DataReadyAcknowledgement
+        | ServiceDelivery
+        | DataReceivedAcknowledgement
+        | CheckStatusResponse
+        | CapabilitiesResponse
+        | Extensions1
+        | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",

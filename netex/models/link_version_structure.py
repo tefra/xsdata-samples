@@ -1,6 +1,5 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
-from typing import Optional
 
 from .entity_in_version_structure import DataManagedObjectStructure
 from .line_string import LineString

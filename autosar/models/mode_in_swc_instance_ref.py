@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .mode_declaration_group_prototype_subtypes_enum import (
     ModeDeclarationGroupPrototypeSubtypesEnum,
@@ -63,7 +62,9 @@ class ModeInSwcInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    context_mode_declaration_group_prototype_ref: ModeInSwcInstanceRef.ContextModeDeclarationGroupPrototypeRef | None = field(
+    context_mode_declaration_group_prototype_ref: (
+        ModeInSwcInstanceRef.ContextModeDeclarationGroupPrototypeRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF",
@@ -71,7 +72,9 @@ class ModeInSwcInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    target_mode_declaration_ref: ModeInSwcInstanceRef.TargetModeDeclarationRef | None = field(
+    target_mode_declaration_ref: (
+        ModeInSwcInstanceRef.TargetModeDeclarationRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "TARGET-MODE-DECLARATION-REF",

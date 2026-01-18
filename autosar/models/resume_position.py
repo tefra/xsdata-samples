@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .resume_position_simple import ResumePositionSimple
 

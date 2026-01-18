@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import ForwardRef, Optional, Union
+from typing import ForwardRef
 
 from xsdata.models.datatype import XmlDate, XmlDateTime, XmlPeriod
 
@@ -22,7 +22,10 @@ class TimeRangeValueType:
     """
 
     choice: tuple[
-        TimeRangeValueType.BeforePeriod | TimeRangeValueType.AfterPeriod | TimeRangeValueType.StartPeriod | TimeRangeValueType.EndPeriod,
+        TimeRangeValueType.BeforePeriod
+        | TimeRangeValueType.AfterPeriod
+        | TimeRangeValueType.StartPeriod
+        | TimeRangeValueType.EndPeriod,
         ...,
     ] = field(
         default_factory=tuple,

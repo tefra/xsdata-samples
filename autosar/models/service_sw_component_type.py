@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -148,13 +147,15 @@ class ServiceSwComponentType:
             "required": True,
         },
     )
-    short_name_fragments: ServiceSwComponentType.ShortNameFragments | None = field(
-        default=None,
-        metadata={
-            "name": "SHORT-NAME-FRAGMENTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    short_name_fragments: ServiceSwComponentType.ShortNameFragments | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "SHORT-NAME-FRAGMENTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     long_name: MultilanguageLongName | None = field(
         default=None,
@@ -212,15 +213,13 @@ class ServiceSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    blueprint_policys: ServiceSwComponentType.BlueprintPolicys | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "BLUEPRINT-POLICYS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    blueprint_policys: ServiceSwComponentType.BlueprintPolicys | None = field(
+        default=None,
+        metadata={
+            "name": "BLUEPRINT-POLICYS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     short_name_pattern: String | None = field(
         default=None,
@@ -230,7 +229,9 @@ class ServiceSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_component_documentations: ServiceSwComponentType.SwComponentDocumentations | None = field(
+    sw_component_documentations: (
+        ServiceSwComponentType.SwComponentDocumentations | None
+    ) = field(
         default=None,
         metadata={
             "name": "SW-COMPONENT-DOCUMENTATIONS",
@@ -238,13 +239,15 @@ class ServiceSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    consistency_needss: ServiceSwComponentType.ConsistencyNeedss | None = field(
-        default=None,
-        metadata={
-            "name": "CONSISTENCY-NEEDSS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    consistency_needss: ServiceSwComponentType.ConsistencyNeedss | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "CONSISTENCY-NEEDSS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     ports: ServiceSwComponentType.Ports | None = field(
         default=None,
@@ -270,13 +273,15 @@ class ServiceSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    internal_behaviors: ServiceSwComponentType.InternalBehaviors | None = field(
-        default=None,
-        metadata={
-            "name": "INTERNAL-BEHAVIORS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    internal_behaviors: ServiceSwComponentType.InternalBehaviors | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "INTERNAL-BEHAVIORS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     symbol_props: SymbolProps | None = field(
         default=None,

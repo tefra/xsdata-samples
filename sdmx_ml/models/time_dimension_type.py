@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Any, Optional
+from typing import Any
 
 from sdmx_ml.models.base_dimension_type import BaseDimensionType
 from sdmx_ml.models.time_dimension_representation_type import (

@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import ForwardRef, Optional, Union
+from typing import ForwardRef
 
 from crossref.models.gov.nih.nlm.ncbi.jats1.access_date import AccessDate
 from crossref.models.gov.nih.nlm.ncbi.jats1.alt_text import AltText

@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from crossref.models.gov.nih.nlm.ncbi.jats1.col_align import ColAlign
 from crossref.models.gov.nih.nlm.ncbi.jats1.col_valign import ColValign

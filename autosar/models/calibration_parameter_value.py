@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import VariationPoint
 from .application_assoc_map_element_value_specification import (
@@ -72,27 +71,25 @@ class CalibrationParameterValue:
     class Meta:
         name = "CALIBRATION-PARAMETER-VALUE"
 
-    appl_init_value: CalibrationParameterValue.ApplInitValue | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "APPL-INIT-VALUE",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    appl_init_value: CalibrationParameterValue.ApplInitValue | None = field(
+        default=None,
+        metadata={
+            "name": "APPL-INIT-VALUE",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
-    impl_init_value: CalibrationParameterValue.ImplInitValue | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "IMPL-INIT-VALUE",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    impl_init_value: CalibrationParameterValue.ImplInitValue | None = field(
+        default=None,
+        metadata={
+            "name": "IMPL-INIT-VALUE",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
-    initialized_parameter_ref: CalibrationParameterValue.InitializedParameterRef | None = field(
+    initialized_parameter_ref: (
+        CalibrationParameterValue.InitializedParameterRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "INITIALIZED-PARAMETER-REF",
@@ -126,7 +123,9 @@ class CalibrationParameterValue:
 
     @dataclass
     class ApplInitValue:
-        application_assoc_map_value_specification: ApplicationAssocMapValueSpecification | None = field(
+        application_assoc_map_value_specification: (
+            ApplicationAssocMapValueSpecification | None
+        ) = field(
             default=None,
             metadata={
                 "name": "APPLICATION-ASSOC-MAP-VALUE-SPECIFICATION",
@@ -134,7 +133,9 @@ class CalibrationParameterValue:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        application_rule_based_value_specification: ApplicationRuleBasedValueSpecification | None = field(
+        application_rule_based_value_specification: (
+            ApplicationRuleBasedValueSpecification | None
+        ) = field(
             default=None,
             metadata={
                 "name": "APPLICATION-RULE-BASED-VALUE-SPECIFICATION",
@@ -142,7 +143,9 @@ class CalibrationParameterValue:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        application_value_specification: ApplicationValueSpecification | None = field(
+        application_value_specification: (
+            ApplicationValueSpecification | None
+        ) = field(
             default=None,
             metadata={
                 "name": "APPLICATION-VALUE-SPECIFICATION",
@@ -158,7 +161,9 @@ class CalibrationParameterValue:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        composite_rule_based_value_specification: CompositeRuleBasedValueSpecification | None = field(
+        composite_rule_based_value_specification: (
+            CompositeRuleBasedValueSpecification | None
+        ) = field(
             default=None,
             metadata={
                 "name": "COMPOSITE-RULE-BASED-VALUE-SPECIFICATION",
@@ -174,7 +179,9 @@ class CalibrationParameterValue:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        not_available_value_specification: NotAvailableValueSpecification | None = field(
+        not_available_value_specification: (
+            NotAvailableValueSpecification | None
+        ) = field(
             default=None,
             metadata={
                 "name": "NOT-AVAILABLE-VALUE-SPECIFICATION",
@@ -182,7 +189,9 @@ class CalibrationParameterValue:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        numerical_rule_based_value_specification: NumericalRuleBasedValueSpecification | None = field(
+        numerical_rule_based_value_specification: (
+            NumericalRuleBasedValueSpecification | None
+        ) = field(
             default=None,
             metadata={
                 "name": "NUMERICAL-RULE-BASED-VALUE-SPECIFICATION",
@@ -190,13 +199,15 @@ class CalibrationParameterValue:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        numerical_value_specification: NumericalValueSpecification | None = field(
-            default=None,
-            metadata={
-                "name": "NUMERICAL-VALUE-SPECIFICATION",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        numerical_value_specification: NumericalValueSpecification | None = (
+            field(
+                default=None,
+                metadata={
+                    "name": "NUMERICAL-VALUE-SPECIFICATION",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )
         record_value_specification: RecordValueSpecification | None = field(
             default=None,
@@ -206,13 +217,15 @@ class CalibrationParameterValue:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        reference_value_specification: ReferenceValueSpecification | None = field(
-            default=None,
-            metadata={
-                "name": "REFERENCE-VALUE-SPECIFICATION",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        reference_value_specification: ReferenceValueSpecification | None = (
+            field(
+                default=None,
+                metadata={
+                    "name": "REFERENCE-VALUE-SPECIFICATION",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )
         text_value_specification: TextValueSpecification | None = field(
             default=None,
@@ -225,7 +238,9 @@ class CalibrationParameterValue:
 
     @dataclass
     class ImplInitValue:
-        application_assoc_map_value_specification: ApplicationAssocMapValueSpecification | None = field(
+        application_assoc_map_value_specification: (
+            ApplicationAssocMapValueSpecification | None
+        ) = field(
             default=None,
             metadata={
                 "name": "APPLICATION-ASSOC-MAP-VALUE-SPECIFICATION",
@@ -233,7 +248,9 @@ class CalibrationParameterValue:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        application_rule_based_value_specification: ApplicationRuleBasedValueSpecification | None = field(
+        application_rule_based_value_specification: (
+            ApplicationRuleBasedValueSpecification | None
+        ) = field(
             default=None,
             metadata={
                 "name": "APPLICATION-RULE-BASED-VALUE-SPECIFICATION",
@@ -241,7 +258,9 @@ class CalibrationParameterValue:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        application_value_specification: ApplicationValueSpecification | None = field(
+        application_value_specification: (
+            ApplicationValueSpecification | None
+        ) = field(
             default=None,
             metadata={
                 "name": "APPLICATION-VALUE-SPECIFICATION",
@@ -257,7 +276,9 @@ class CalibrationParameterValue:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        composite_rule_based_value_specification: CompositeRuleBasedValueSpecification | None = field(
+        composite_rule_based_value_specification: (
+            CompositeRuleBasedValueSpecification | None
+        ) = field(
             default=None,
             metadata={
                 "name": "COMPOSITE-RULE-BASED-VALUE-SPECIFICATION",
@@ -273,7 +294,9 @@ class CalibrationParameterValue:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        not_available_value_specification: NotAvailableValueSpecification | None = field(
+        not_available_value_specification: (
+            NotAvailableValueSpecification | None
+        ) = field(
             default=None,
             metadata={
                 "name": "NOT-AVAILABLE-VALUE-SPECIFICATION",
@@ -281,7 +304,9 @@ class CalibrationParameterValue:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        numerical_rule_based_value_specification: NumericalRuleBasedValueSpecification | None = field(
+        numerical_rule_based_value_specification: (
+            NumericalRuleBasedValueSpecification | None
+        ) = field(
             default=None,
             metadata={
                 "name": "NUMERICAL-RULE-BASED-VALUE-SPECIFICATION",
@@ -289,13 +314,15 @@ class CalibrationParameterValue:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        numerical_value_specification: NumericalValueSpecification | None = field(
-            default=None,
-            metadata={
-                "name": "NUMERICAL-VALUE-SPECIFICATION",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        numerical_value_specification: NumericalValueSpecification | None = (
+            field(
+                default=None,
+                metadata={
+                    "name": "NUMERICAL-VALUE-SPECIFICATION",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )
         record_value_specification: RecordValueSpecification | None = field(
             default=None,
@@ -305,13 +332,15 @@ class CalibrationParameterValue:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        reference_value_specification: ReferenceValueSpecification | None = field(
-            default=None,
-            metadata={
-                "name": "REFERENCE-VALUE-SPECIFICATION",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        reference_value_specification: ReferenceValueSpecification | None = (
+            field(
+                default=None,
+                metadata={
+                    "name": "REFERENCE-VALUE-SPECIFICATION",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )
         text_value_specification: TextValueSpecification | None = field(
             default=None,

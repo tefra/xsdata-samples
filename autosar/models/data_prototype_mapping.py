@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .autosar_data_prototype_subtypes_enum import (
     AutosarDataPrototypeSubtypesEnum,
@@ -77,7 +76,9 @@ class DataPrototypeMapping:
     class Meta:
         name = "DATA-PROTOTYPE-MAPPING"
 
-    first_data_prototype_ref: DataPrototypeMapping.FirstDataPrototypeRef | None = field(
+    first_data_prototype_ref: (
+        DataPrototypeMapping.FirstDataPrototypeRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "FIRST-DATA-PROTOTYPE-REF",
@@ -85,7 +86,9 @@ class DataPrototypeMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    first_to_second_data_transformation_ref: DataPrototypeMapping.FirstToSecondDataTransformationRef | None = field(
+    first_to_second_data_transformation_ref: (
+        DataPrototypeMapping.FirstToSecondDataTransformationRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "FIRST-TO-SECOND-DATA-TRANSFORMATION-REF",
@@ -93,7 +96,9 @@ class DataPrototypeMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    second_data_prototype_ref: DataPrototypeMapping.SecondDataPrototypeRef | None = field(
+    second_data_prototype_ref: (
+        DataPrototypeMapping.SecondDataPrototypeRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "SECOND-DATA-PROTOTYPE-REF",
@@ -101,7 +106,9 @@ class DataPrototypeMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    second_to_first_data_transformation_ref: DataPrototypeMapping.SecondToFirstDataTransformationRef | None = field(
+    second_to_first_data_transformation_ref: (
+        DataPrototypeMapping.SecondToFirstDataTransformationRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "SECOND-TO-FIRST-DATA-TRANSFORMATION-REF",
@@ -109,23 +116,23 @@ class DataPrototypeMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sub_element_mappings: DataPrototypeMapping.SubElementMappings | None = field(
-        default=None,
-        metadata={
-            "name": "SUB-ELEMENT-MAPPINGS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
-    )
-    text_table_mappings: DataPrototypeMapping.TextTableMappings | None = (
+    sub_element_mappings: DataPrototypeMapping.SubElementMappings | None = (
         field(
             default=None,
             metadata={
-                "name": "TEXT-TABLE-MAPPINGS",
+                "name": "SUB-ELEMENT-MAPPINGS",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
+    )
+    text_table_mappings: DataPrototypeMapping.TextTableMappings | None = field(
+        default=None,
+        metadata={
+            "name": "TEXT-TABLE-MAPPINGS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     s: str | None = field(
         default=None,

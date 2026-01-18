@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .pdu_mapping_default_value import PduMappingDefaultValue
 from .pdu_triggering_subtypes_enum import PduTriggeringSubtypesEnum

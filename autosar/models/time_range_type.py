@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .absolute_tolerance import AbsoluteTolerance
 from .relative_tolerance import RelativeTolerance

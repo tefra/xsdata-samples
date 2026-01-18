@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -164,15 +163,13 @@ class NvBlockDescriptor:
             "required": True,
         },
     )
-    short_name_fragments: NvBlockDescriptor.ShortNameFragments | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "SHORT-NAME-FRAGMENTS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    short_name_fragments: NvBlockDescriptor.ShortNameFragments | None = field(
+        default=None,
+        metadata={
+            "name": "SHORT-NAME-FRAGMENTS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     long_name: MultilanguageLongName | None = field(
         default=None,
@@ -222,17 +219,17 @@ class NvBlockDescriptor:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    client_server_ports: NvBlockDescriptor.ClientServerPorts | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "CLIENT-SERVER-PORTS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    client_server_ports: NvBlockDescriptor.ClientServerPorts | None = field(
+        default=None,
+        metadata={
+            "name": "CLIENT-SERVER-PORTS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
-    constant_value_mapping_refs: NvBlockDescriptor.ConstantValueMappingRefs | None = field(
+    constant_value_mapping_refs: (
+        NvBlockDescriptor.ConstantValueMappingRefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "CONSTANT-VALUE-MAPPING-REFS",
@@ -240,15 +237,19 @@ class NvBlockDescriptor:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    data_type_mapping_refs: NvBlockDescriptor.DataTypeMappingRefs | None = field(
-        default=None,
-        metadata={
-            "name": "DATA-TYPE-MAPPING-REFS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    data_type_mapping_refs: NvBlockDescriptor.DataTypeMappingRefs | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "DATA-TYPE-MAPPING-REFS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
-    instantiation_data_def_propss: NvBlockDescriptor.InstantiationDataDefPropss | None = field(
+    instantiation_data_def_propss: (
+        NvBlockDescriptor.InstantiationDataDefPropss | None
+    ) = field(
         default=None,
         metadata={
             "name": "INSTANTIATION-DATA-DEF-PROPSS",
@@ -256,7 +257,9 @@ class NvBlockDescriptor:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    mode_switch_event_triggered_activitys: NvBlockDescriptor.ModeSwitchEventTriggeredActivitys | None = field(
+    mode_switch_event_triggered_activitys: (
+        NvBlockDescriptor.ModeSwitchEventTriggeredActivitys | None
+    ) = field(
         default=None,
         metadata={
             "name": "MODE-SWITCH-EVENT-TRIGGERED-ACTIVITYS",
@@ -264,13 +267,15 @@ class NvBlockDescriptor:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nv_block_data_mappings: NvBlockDescriptor.NvBlockDataMappings | None = field(
-        default=None,
-        metadata={
-            "name": "NV-BLOCK-DATA-MAPPINGS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    nv_block_data_mappings: NvBlockDescriptor.NvBlockDataMappings | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "NV-BLOCK-DATA-MAPPINGS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     nv_block_needs: NvBlockNeeds | None = field(
         default=None,
@@ -399,15 +404,13 @@ class NvBlockDescriptor:
 
         @dataclass
         class ConstantValueMappingRef(Ref):
-            dest: ConstantSpecificationMappingSetSubtypesEnum | None = (
-                field(
-                    default=None,
-                    metadata={
-                        "name": "DEST",
-                        "type": "Attribute",
-                        "required": True,
-                    },
-                )
+            dest: ConstantSpecificationMappingSetSubtypesEnum | None = field(
+                default=None,
+                metadata={
+                    "name": "DEST",
+                    "type": "Attribute",
+                    "required": True,
+                },
             )
 
     @dataclass

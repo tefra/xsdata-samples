@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -101,7 +100,9 @@ class CryptoModuleInstantiation:
             "required": True,
         },
     )
-    short_name_fragments: CryptoModuleInstantiation.ShortNameFragments | None = field(
+    short_name_fragments: (
+        CryptoModuleInstantiation.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -157,7 +158,9 @@ class CryptoModuleInstantiation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    certificate_to_key_slot_mappings: CryptoModuleInstantiation.CertificateToKeySlotMappings | None = field(
+    certificate_to_key_slot_mappings: (
+        CryptoModuleInstantiation.CertificateToKeySlotMappings | None
+    ) = field(
         default=None,
         metadata={
             "name": "CERTIFICATE-TO-KEY-SLOT-MAPPINGS",
@@ -165,7 +168,9 @@ class CryptoModuleInstantiation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    crypto_certificates: CryptoModuleInstantiation.CryptoCertificates | None = field(
+    crypto_certificates: (
+        CryptoModuleInstantiation.CryptoCertificates | None
+    ) = field(
         default=None,
         metadata={
             "name": "CRYPTO-CERTIFICATES",
@@ -173,15 +178,13 @@ class CryptoModuleInstantiation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    crypto_providers: CryptoModuleInstantiation.CryptoProviders | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "CRYPTO-PROVIDERS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    crypto_providers: CryptoModuleInstantiation.CryptoProviders | None = field(
+        default=None,
+        metadata={
+            "name": "CRYPTO-PROVIDERS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     s: str | None = field(
         default=None,

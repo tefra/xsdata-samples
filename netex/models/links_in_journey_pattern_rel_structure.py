@@ -1,6 +1,5 @@
 from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import Union
 
 from .service_link_in_journey_pattern import ServiceLinkInJourneyPattern
 from .strict_containment_aggregation_structure import (

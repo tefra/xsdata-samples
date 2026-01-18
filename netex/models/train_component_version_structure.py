@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from .entity_in_version_structure import DataManagedObjectStructure
 from .multilingual_string import MultilingualString
@@ -40,7 +39,9 @@ class TrainComponentVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    train_element_ref_or_train_element: TrainElementRef | TrainElement | None = field(
+    train_element_ref_or_train_element: (
+        TrainElementRef | TrainElement | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",

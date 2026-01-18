@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .adaptive_platform_service_instance_subtypes_enum import (
     AdaptivePlatformServiceInstanceSubtypesEnum,
@@ -104,13 +103,15 @@ class ComOfferServiceGrant:
             "required": True,
         },
     )
-    short_name_fragments: ComOfferServiceGrant.ShortNameFragments | None = field(
-        default=None,
-        metadata={
-            "name": "SHORT-NAME-FRAGMENTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    short_name_fragments: ComOfferServiceGrant.ShortNameFragments | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "SHORT-NAME-FRAGMENTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     long_name: MultilanguageLongName | None = field(
         default=None,
@@ -176,13 +177,15 @@ class ComOfferServiceGrant:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    service_instance_ref: ComOfferServiceGrant.ServiceInstanceRef | None = field(
-        default=None,
-        metadata={
-            "name": "SERVICE-INSTANCE-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    service_instance_ref: ComOfferServiceGrant.ServiceInstanceRef | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "SERVICE-INSTANCE-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     s: str | None = field(
         default=None,

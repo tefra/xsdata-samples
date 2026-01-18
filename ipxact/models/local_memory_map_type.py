@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from ipxact.models.address_block import AddressBlock
 from ipxact.models.description import Description

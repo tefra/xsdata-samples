@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .client_intent_enum import ClientIntentEnum
 from .client_server_operation_subtypes_enum import (
@@ -104,7 +103,9 @@ class ClientComSpec:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    transformation_com_spec_propss: ClientComSpec.TransformationComSpecPropss | None = field(
+    transformation_com_spec_propss: (
+        ClientComSpec.TransformationComSpecPropss | None
+    ) = field(
         default=None,
         metadata={
             "name": "TRANSFORMATION-COM-SPEC-PROPSS",

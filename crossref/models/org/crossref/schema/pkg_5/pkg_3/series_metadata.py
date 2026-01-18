@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from crossref.models.gov.nih.nlm.ncbi.jats1.abbrev import Abstract
 from crossref.models.org.crossref.access_indicators.program import (
@@ -113,13 +112,15 @@ class SeriesMetadata:
             "namespace": "http://www.crossref.org/fundref.xsd",
         },
     )
-    crossref_org_access_indicators_program: AccessIndicatorsProgram | None = field(
-        default=None,
-        metadata={
-            "name": "program",
-            "type": "Element",
-            "namespace": "http://www.crossref.org/AccessIndicators.xsd",
-        },
+    crossref_org_access_indicators_program: AccessIndicatorsProgram | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "program",
+                "type": "Element",
+                "namespace": "http://www.crossref.org/AccessIndicators.xsd",
+            },
+        )
     )
     archive_locations: ArchiveLocations | None = field(
         default=None,

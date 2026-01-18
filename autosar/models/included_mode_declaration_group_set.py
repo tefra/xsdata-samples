@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .identifier import Identifier
 from .mode_declaration_group_subtypes_enum import (
@@ -41,7 +40,9 @@ class IncludedModeDeclarationGroupSet:
     class Meta:
         name = "INCLUDED-MODE-DECLARATION-GROUP-SET"
 
-    mode_declaration_group_refs: IncludedModeDeclarationGroupSet.ModeDeclarationGroupRefs | None = field(
+    mode_declaration_group_refs: (
+        IncludedModeDeclarationGroupSet.ModeDeclarationGroupRefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "MODE-DECLARATION-GROUP-REFS",

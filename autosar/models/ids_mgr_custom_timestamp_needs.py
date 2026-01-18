@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -90,7 +89,9 @@ class IdsMgrCustomTimestampNeeds:
             "required": True,
         },
     )
-    short_name_fragments: IdsMgrCustomTimestampNeeds.ShortNameFragments | None = field(
+    short_name_fragments: (
+        IdsMgrCustomTimestampNeeds.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",

@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .diagnostic_event_clear_allowed_enum_simple import (
     DiagnosticEventClearAllowedEnumSimple,

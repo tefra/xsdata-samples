@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import VariationPoint
 from .diagnostic_connection_subtypes_enum import (
@@ -35,7 +34,9 @@ class DiagnosticConnectionRefConditional:
     class Meta:
         name = "DIAGNOSTIC-CONNECTION-REF-CONDITIONAL"
 
-    diagnostic_connection_ref: DiagnosticConnectionRefConditional.DiagnosticConnectionRef | None = field(
+    diagnostic_connection_ref: (
+        DiagnosticConnectionRefConditional.DiagnosticConnectionRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "DIAGNOSTIC-CONNECTION-REF",

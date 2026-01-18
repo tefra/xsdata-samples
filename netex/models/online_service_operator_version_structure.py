@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Any, ForwardRef, Optional, Union
+from typing import Any, ForwardRef
 
 from .country_ref import CountryRef
 from .online_service_refs_rel_structure import OnlineServiceRefsRelStructure
@@ -26,7 +26,12 @@ class OnlineServiceOperatorVersionStructure(OrganisationVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    address: PostalAddress | RoadAddress | OnlineServiceOperatorVersionStructure.Address | None = field(
+    address: (
+        PostalAddress
+        | RoadAddress
+        | OnlineServiceOperatorVersionStructure.Address
+        | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",

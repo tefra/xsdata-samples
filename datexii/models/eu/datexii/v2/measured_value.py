@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from datexii.models.eu.datexii.v2.basic_data import BasicData
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
@@ -41,7 +40,9 @@ class MeasuredValue:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    location_characteristics_override: LocationCharacteristicsOverride | None = field(
+    location_characteristics_override: (
+        LocationCharacteristicsOverride | None
+    ) = field(
         default=None,
         metadata={
             "name": "locationCharacteristicsOverride",

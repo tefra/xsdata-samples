@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from datexii.models.eu.datexii.v2.activity import Activity
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType

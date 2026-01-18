@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from datexii.models.eu.datexii.v2.parking_equipment_or_service_facility import (
     ParkingEquipmentOrServiceFacility,
@@ -13,7 +12,9 @@ class ParkingSpaceBasicsEquipmentOrServiceFacilityIndexParkingEquipmentOrService
     class Meta:
         name = "_ParkingSpaceBasicsEquipmentOrServiceFacilityIndexParkingEquipmentOrServiceFacility"
 
-    parking_equipment_or_service_facility: ParkingEquipmentOrServiceFacility | None = field(
+    parking_equipment_or_service_facility: (
+        ParkingEquipmentOrServiceFacility | None
+    ) = field(
         default=None,
         metadata={
             "name": "parkingEquipmentOrServiceFacility",

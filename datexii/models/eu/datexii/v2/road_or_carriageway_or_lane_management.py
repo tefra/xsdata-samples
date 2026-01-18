@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.network_management import NetworkManagement
@@ -24,7 +23,9 @@ class RoadOrCarriagewayOrLaneManagement(NetworkManagement):
     :ivar road_or_carriageway_or_lane_management_extension:
     """
 
-    road_or_carriageway_or_lane_management_type: RoadOrCarriagewayOrLaneManagementTypeEnum | None = field(
+    road_or_carriageway_or_lane_management_type: (
+        RoadOrCarriagewayOrLaneManagementTypeEnum | None
+    ) = field(
         default=None,
         metadata={
             "name": "roadOrCarriagewayOrLaneManagementType",
@@ -41,11 +42,13 @@ class RoadOrCarriagewayOrLaneManagement(NetworkManagement):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    road_or_carriageway_or_lane_management_extension: ExtensionType | None = field(
-        default=None,
-        metadata={
-            "name": "roadOrCarriagewayOrLaneManagementExtension",
-            "type": "Element",
-            "namespace": "http://datex2.eu/schema/2/2_0",
-        },
+    road_or_carriageway_or_lane_management_extension: ExtensionType | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "roadOrCarriagewayOrLaneManagementExtension",
+                "type": "Element",
+                "namespace": "http://datex2.eu/schema/2/2_0",
+            },
+        )
     )

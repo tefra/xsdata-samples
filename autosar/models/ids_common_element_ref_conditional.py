@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import VariationPoint
 from .ids_common_element_subtypes_enum import IdsCommonElementSubtypesEnum
@@ -33,7 +32,9 @@ class IdsCommonElementRefConditional:
     class Meta:
         name = "IDS-COMMON-ELEMENT-REF-CONDITIONAL"
 
-    ids_common_element_ref: IdsCommonElementRefConditional.IdsCommonElementRef | None = field(
+    ids_common_element_ref: (
+        IdsCommonElementRefConditional.IdsCommonElementRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "IDS-COMMON-ELEMENT-REF",

@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from ipxact.models.address_unit_bits import AddressUnitBits
 from ipxact.models.description import Description
@@ -162,14 +161,12 @@ class AddressSpaces:
             :ivar segment: Address segment withing an addressSpace
             """
 
-            segment: list[AddressSpaces.AddressSpace.Segments.Segment] = (
-                field(
-                    default_factory=list,
-                    metadata={
-                        "type": "Element",
-                        "min_occurs": 1,
-                    },
-                )
+            segment: list[AddressSpaces.AddressSpace.Segments.Segment] = field(
+                default_factory=list,
+                metadata={
+                    "type": "Element",
+                    "min_occurs": 1,
+                },
             )
 
             @dataclass

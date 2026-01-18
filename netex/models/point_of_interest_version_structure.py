@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .accesses_rel_structure import AccessesRelStructure
 from .navigation_paths_rel_structure import NavigationPathsRelStructure
@@ -24,12 +23,14 @@ class PointOfInterestVersionStructure(SiteVersionStructure):
     class Meta:
         name = "PointOfInterest_VersionStructure"
 
-    classifications: PointOfInterestClassificationsViewsRelStructure | None = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        },
+    classifications: PointOfInterestClassificationsViewsRelStructure | None = (
+        field(
+            default=None,
+            metadata={
+                "type": "Element",
+                "namespace": "http://www.netex.org.uk/netex",
+            },
+        )
     )
     spaces: PointOfInterestSpacesRelStructure | None = field(
         default=None,
@@ -38,15 +39,13 @@ class PointOfInterestVersionStructure(SiteVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    near_topographic_places: TopographicPlaceRefsRelStructure | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "nearTopographicPlaces",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            },
-        )
+    near_topographic_places: TopographicPlaceRefsRelStructure | None = field(
+        default=None,
+        metadata={
+            "name": "nearTopographicPlaces",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        },
     )
     path_links: SitePathLinksRelStructure | None = field(
         default=None,

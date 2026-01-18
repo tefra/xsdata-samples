@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.general_instruction_to_road_users_type_enum import (
@@ -27,7 +26,9 @@ class GeneralInstructionOrMessageToRoadUsers(NetworkManagement):
     :ivar general_instruction_or_message_to_road_users_extension:
     """
 
-    general_instruction_to_road_users_type: GeneralInstructionToRoadUsersTypeEnum | None = field(
+    general_instruction_to_road_users_type: (
+        GeneralInstructionToRoadUsersTypeEnum | None
+    ) = field(
         default=None,
         metadata={
             "name": "generalInstructionToRoadUsersType",
@@ -43,7 +44,9 @@ class GeneralInstructionOrMessageToRoadUsers(NetworkManagement):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    general_instruction_or_message_to_road_users_extension: ExtensionType | None = field(
+    general_instruction_or_message_to_road_users_extension: (
+        ExtensionType | None
+    ) = field(
         default=None,
         metadata={
             "name": "generalInstructionOrMessageToRoadUsersExtension",

@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.road_surface_condition_measurements import (
@@ -36,7 +35,9 @@ class RoadSurfaceConditionInformation(WeatherData):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    road_surface_condition_measurements: RoadSurfaceConditionMeasurements | None = field(
+    road_surface_condition_measurements: (
+        RoadSurfaceConditionMeasurements | None
+    ) = field(
         default=None,
         metadata={
             "name": "roadSurfaceConditionMeasurements",
@@ -45,13 +46,11 @@ class RoadSurfaceConditionInformation(WeatherData):
             "required": True,
         },
     )
-    road_surface_condition_information_extension: ExtensionType | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "roadSurfaceConditionInformationExtension",
-                "type": "Element",
-                "namespace": "http://datex2.eu/schema/2/2_0",
-            },
-        )
+    road_surface_condition_information_extension: ExtensionType | None = field(
+        default=None,
+        metadata={
+            "name": "roadSurfaceConditionInformationExtension",
+            "type": "Element",
+            "namespace": "http://datex2.eu/schema/2/2_0",
+        },
     )

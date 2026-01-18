@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import VariationPoint
 from .consumed_service_instance_subtypes_enum import (
@@ -35,7 +34,9 @@ class ConsumedServiceInstanceRefConditional:
     class Meta:
         name = "CONSUMED-SERVICE-INSTANCE-REF-CONDITIONAL"
 
-    consumed_service_instance_ref: ConsumedServiceInstanceRefConditional.ConsumedServiceInstanceRef | None = field(
+    consumed_service_instance_ref: (
+        ConsumedServiceInstanceRefConditional.ConsumedServiceInstanceRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "CONSUMED-SERVICE-INSTANCE-REF",

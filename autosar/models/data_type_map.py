@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .abstract_implementation_data_type_subtypes_enum import (
     AbstractImplementationDataTypeSubtypesEnum,
@@ -39,15 +38,19 @@ class DataTypeMap:
     class Meta:
         name = "DATA-TYPE-MAP"
 
-    application_data_type_ref: DataTypeMap.ApplicationDataTypeRef | None = field(
-        default=None,
-        metadata={
-            "name": "APPLICATION-DATA-TYPE-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    application_data_type_ref: DataTypeMap.ApplicationDataTypeRef | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "APPLICATION-DATA-TYPE-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
-    implementation_data_type_ref: DataTypeMap.ImplementationDataTypeRef | None = field(
+    implementation_data_type_ref: (
+        DataTypeMap.ImplementationDataTypeRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "IMPLEMENTATION-DATA-TYPE-REF",

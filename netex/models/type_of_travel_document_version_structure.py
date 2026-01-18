@@ -1,6 +1,5 @@
 from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .alternative_names_rel_structure import AlternativeNamesRelStructure
 from .machine_readable_enumeration import MachineReadableEnumeration
@@ -59,7 +58,9 @@ class TypeOfTravelDocumentVersionStructure(TypeOfEntityVersionStructure):
             "tokens": True,
         },
     )
-    types_of_machine_readabilities: TypesOfMachineReadabilitiesRelStructure | None = field(
+    types_of_machine_readabilities: (
+        TypesOfMachineReadabilitiesRelStructure | None
+    ) = field(
         default=None,
         metadata={
             "name": "typesOfMachineReadabilities",

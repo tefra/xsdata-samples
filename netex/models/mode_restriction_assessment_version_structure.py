@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from .data_managed_object_view_structure import DataManagedObjectViewStructure
 from .flexible_mode_of_operation_ref import FlexibleModeOfOperationRef
@@ -36,7 +35,15 @@ class ModeRestrictionAssessmentVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    mode_of_operation_ref_or_alternative_mode_of_operation_ref_or_conventional_mode_of_operation_ref: PersonalModeOfOperationRef | VehiclePoolingRef | VehicleSharingRef | VehicleRentalRef | FlexibleModeOfOperationRef | ScheduledModeOfOperationRef | None = field(
+    mode_of_operation_ref_or_alternative_mode_of_operation_ref_or_conventional_mode_of_operation_ref: (
+        PersonalModeOfOperationRef
+        | VehiclePoolingRef
+        | VehicleSharingRef
+        | VehicleRentalRef
+        | FlexibleModeOfOperationRef
+        | ScheduledModeOfOperationRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",

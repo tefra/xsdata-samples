@@ -1,7 +1,6 @@
 from collections.abc import Iterable
 from dataclasses import dataclass, field
 from decimal import Decimal
-from typing import Optional, Union
 
 from .access_space_ref import AccessSpaceRef
 from .accessibility_info_facility_list import AccessibilityInfoFacilityList
@@ -86,7 +85,35 @@ class PassengerInformationEquipmentVersionStructure(
             ),
         },
     )
-    choice: VehicleStoppingPositionRef | VehicleStoppingPlaceRef | BoardingPositionRef | AccessSpaceRef | TaxiStandRef | QuayRef | StopPlaceSpaceRef | VehiclePoolingParkingBayRef | MonitoredVehicleSharingParkingBayRef | VehicleSharingParkingBayRef | ParkingBayRef | VehiclePoolingParkingAreaRef | VehicleSharingParkingAreaRef | TaxiParkingAreaRef | ParkingAreaRef | PointOfInterestSpaceRef | StopPlaceVehicleEntranceRef | StopPlaceEntranceRef | ParkingEntranceForVehiclesRef | ParkingPassengerEntranceRef | ParkingEntranceRef | PointOfInterestVehicleEntranceRef | PointOfInterestEntranceRef | VehicleEntranceRef | EntranceRef | SiteComponentRef | None = field(
+    choice: (
+        VehicleStoppingPositionRef
+        | VehicleStoppingPlaceRef
+        | BoardingPositionRef
+        | AccessSpaceRef
+        | TaxiStandRef
+        | QuayRef
+        | StopPlaceSpaceRef
+        | VehiclePoolingParkingBayRef
+        | MonitoredVehicleSharingParkingBayRef
+        | VehicleSharingParkingBayRef
+        | ParkingBayRef
+        | VehiclePoolingParkingAreaRef
+        | VehicleSharingParkingAreaRef
+        | TaxiParkingAreaRef
+        | ParkingAreaRef
+        | PointOfInterestSpaceRef
+        | StopPlaceVehicleEntranceRef
+        | StopPlaceEntranceRef
+        | ParkingEntranceForVehiclesRef
+        | ParkingPassengerEntranceRef
+        | ParkingEntranceRef
+        | PointOfInterestVehicleEntranceRef
+        | PointOfInterestEntranceRef
+        | VehicleEntranceRef
+        | EntranceRef
+        | SiteComponentRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -235,7 +262,9 @@ class PassengerInformationEquipmentVersionStructure(
             "tokens": True,
         },
     )
-    type_of_passenger_information_equipment_ref: TypeOfPassengerInformationEquipmentRef | None = field(
+    type_of_passenger_information_equipment_ref: (
+        TypeOfPassengerInformationEquipmentRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "TypeOfPassengerInformationEquipmentRef",
@@ -299,7 +328,9 @@ class PassengerInformationEquipmentVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    passenger_information_facility_list: PassengerInformationFacilityList | None = field(
+    passenger_information_facility_list: (
+        PassengerInformationFacilityList | None
+    ) = field(
         default=None,
         metadata={
             "name": "PassengerInformationFacilityList",
@@ -307,11 +338,13 @@ class PassengerInformationEquipmentVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    accessibility_info_facility_list: AccessibilityInfoFacilityList | None = field(
-        default=None,
-        metadata={
-            "name": "AccessibilityInfoFacilityList",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        },
+    accessibility_info_facility_list: AccessibilityInfoFacilityList | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "AccessibilityInfoFacilityList",
+                "type": "Element",
+                "namespace": "http://www.netex.org.uk/netex",
+            },
+        )
     )

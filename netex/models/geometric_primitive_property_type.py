@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from .line_string import LineString
 from .nil_reason_enumeration_value import NilReasonEnumerationValue
@@ -11,7 +10,9 @@ __NAMESPACE__ = "http://www.opengis.net/gml/3.2"
 
 @dataclass
 class GeometricPrimitivePropertyType:
-    abstract_surface_or_abstract_curve_or_abstract_geometric_primitive: Polygon | LineString | Point1 | None = field(
+    abstract_surface_or_abstract_curve_or_abstract_geometric_primitive: (
+        Polygon | LineString | Point1 | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",

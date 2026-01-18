@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -116,15 +115,13 @@ class LinSporadicFrame:
             "required": True,
         },
     )
-    short_name_fragments: LinSporadicFrame.ShortNameFragments | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "SHORT-NAME-FRAGMENTS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    short_name_fragments: LinSporadicFrame.ShortNameFragments | None = field(
+        default=None,
+        metadata={
+            "name": "SHORT-NAME-FRAGMENTS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     long_name: MultilanguageLongName | None = field(
         default=None,
@@ -190,23 +187,23 @@ class LinSporadicFrame:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    pdu_to_frame_mappings: LinSporadicFrame.PduToFrameMappings | None = (
+    pdu_to_frame_mappings: LinSporadicFrame.PduToFrameMappings | None = field(
+        default=None,
+        metadata={
+            "name": "PDU-TO-FRAME-MAPPINGS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
+    )
+    substituted_frame_refs: LinSporadicFrame.SubstitutedFrameRefs | None = (
         field(
             default=None,
             metadata={
-                "name": "PDU-TO-FRAME-MAPPINGS",
+                "name": "SUBSTITUTED-FRAME-REFS",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-    )
-    substituted_frame_refs: LinSporadicFrame.SubstitutedFrameRefs | None = field(
-        default=None,
-        metadata={
-            "name": "SUBSTITUTED-FRAME-REFS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
     )
     s: str | None = field(
         default=None,

@@ -1,6 +1,5 @@
 from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .class_of_use_ref import ClassOfUseRef
 from .fare_class_enumeration import FareClassEnumeration

@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -190,7 +189,9 @@ class EcucMultilineStringParamDef:
             "required": True,
         },
     )
-    short_name_fragments: EcucMultilineStringParamDef.ShortNameFragments | None = field(
+    short_name_fragments: (
+        EcucMultilineStringParamDef.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -246,7 +247,9 @@ class EcucMultilineStringParamDef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    related_trace_item_ref: EcucMultilineStringParamDef.RelatedTraceItemRef | None = field(
+    related_trace_item_ref: (
+        EcucMultilineStringParamDef.RelatedTraceItemRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "RELATED-TRACE-ITEM-REF",
@@ -254,7 +257,9 @@ class EcucMultilineStringParamDef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ecuc_validation_conds: EcucMultilineStringParamDef.EcucValidationConds | None = field(
+    ecuc_validation_conds: (
+        EcucMultilineStringParamDef.EcucValidationConds | None
+    ) = field(
         default=None,
         metadata={
             "name": "ECUC-VALIDATION-CONDS",
@@ -302,15 +307,19 @@ class EcucMultilineStringParamDef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    configuration_class_affection: EcucConfigurationClassAffection | None = field(
-        default=None,
-        metadata={
-            "name": "CONFIGURATION-CLASS-AFFECTION",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    configuration_class_affection: EcucConfigurationClassAffection | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "CONFIGURATION-CLASS-AFFECTION",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
-    implementation_config_classes: EcucMultilineStringParamDef.ImplementationConfigClasses | None = field(
+    implementation_config_classes: (
+        EcucMultilineStringParamDef.ImplementationConfigClasses | None
+    ) = field(
         default=None,
         metadata={
             "name": "IMPLEMENTATION-CONFIG-CLASSES",
@@ -318,7 +327,9 @@ class EcucMultilineStringParamDef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    multiplicity_config_classes: EcucMultilineStringParamDef.MultiplicityConfigClasses | None = field(
+    multiplicity_config_classes: (
+        EcucMultilineStringParamDef.MultiplicityConfigClasses | None
+    ) = field(
         default=None,
         metadata={
             "name": "MULTIPLICITY-CONFIG-CLASSES",
@@ -358,7 +369,9 @@ class EcucMultilineStringParamDef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    value_config_classes: EcucMultilineStringParamDef.ValueConfigClasses | None = field(
+    value_config_classes: (
+        EcucMultilineStringParamDef.ValueConfigClasses | None
+    ) = field(
         default=None,
         metadata={
             "name": "VALUE-CONFIG-CLASSES",
@@ -390,7 +403,9 @@ class EcucMultilineStringParamDef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ecuc_multiline_string_param_def_variants: EcucMultilineStringParamDef.EcucMultilineStringParamDefVariants | None = field(
+    ecuc_multiline_string_param_def_variants: (
+        EcucMultilineStringParamDef.EcucMultilineStringParamDefVariants | None
+    ) = field(
         default=None,
         metadata={
             "name": "ECUC-MULTILINE-STRING-PARAM-DEF-VARIANTS",

@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -107,7 +106,9 @@ class SpecificationDocumentScope:
             "required": True,
         },
     )
-    short_name_fragments: SpecificationDocumentScope.ShortNameFragments | None = field(
+    short_name_fragments: (
+        SpecificationDocumentScope.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -179,7 +180,9 @@ class SpecificationDocumentScope:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    custom_documentation_ref: SpecificationDocumentScope.CustomDocumentationRef | None = field(
+    custom_documentation_ref: (
+        SpecificationDocumentScope.CustomDocumentationRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "CUSTOM-DOCUMENTATION-REF",
@@ -187,7 +190,9 @@ class SpecificationDocumentScope:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    document_element_scopes: SpecificationDocumentScope.DocumentElementScopes | None = field(
+    document_element_scopes: (
+        SpecificationDocumentScope.DocumentElementScopes | None
+    ) = field(
         default=None,
         metadata={
             "name": "DOCUMENT-ELEMENT-SCOPES",

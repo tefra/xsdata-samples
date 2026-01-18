@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .implementation_data_type_element_subtypes_enum import (
     ImplementationDataTypeElementSubtypesEnum,
@@ -49,7 +48,9 @@ class ImplementationElementInParameterInstanceRef:
     class Meta:
         name = "IMPLEMENTATION-ELEMENT-IN-PARAMETER-INSTANCE-REF"
 
-    context_ref: ImplementationElementInParameterInstanceRef.ContextRef | None = field(
+    context_ref: (
+        ImplementationElementInParameterInstanceRef.ContextRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "CONTEXT-REF",
@@ -57,7 +58,9 @@ class ImplementationElementInParameterInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    target_ref: ImplementationElementInParameterInstanceRef.TargetRef | None = field(
+    target_ref: (
+        ImplementationElementInParameterInstanceRef.TargetRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "TARGET-REF",

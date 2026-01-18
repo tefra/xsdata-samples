@@ -1,6 +1,5 @@
 from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import Union
 
 from .compound_train_ref import CompoundTrainRef
 from .one_to_many_relationship_structure import OneToManyRelationshipStructure

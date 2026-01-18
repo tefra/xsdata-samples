@@ -1,6 +1,5 @@
 from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .abstract_surface_type import AbstractSurfaceType
 from .exterior import Exterior

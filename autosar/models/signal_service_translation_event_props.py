@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .abstract_signal_based_to_i_signal_triggering_mapping_subtypes_enum import (
     AbstractSignalBasedToISignalTriggeringMappingSubtypesEnum,
@@ -111,7 +110,9 @@ class SignalServiceTranslationEventProps:
             "required": True,
         },
     )
-    short_name_fragments: SignalServiceTranslationEventProps.ShortNameFragments | None = field(
+    short_name_fragments: (
+        SignalServiceTranslationEventProps.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -159,23 +160,23 @@ class SignalServiceTranslationEventProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: SignalServiceTranslationEventProps.Annotations | None = (
+    annotations: SignalServiceTranslationEventProps.Annotations | None = field(
+        default=None,
+        metadata={
+            "name": "ANNOTATIONS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
+    )
+    element_propss: SignalServiceTranslationEventProps.ElementPropss | None = (
         field(
             default=None,
             metadata={
-                "name": "ANNOTATIONS",
+                "name": "ELEMENT-PROPSS",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-    )
-    element_propss: SignalServiceTranslationEventProps.ElementPropss | None = field(
-        default=None,
-        metadata={
-            "name": "ELEMENT-PROPSS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
     )
     safe_translation: Boolean | None = field(
         default=None,
@@ -193,7 +194,9 @@ class SignalServiceTranslationEventProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    service_element_mapping_refs: SignalServiceTranslationEventProps.ServiceElementMappingRefs | None = field(
+    service_element_mapping_refs: (
+        SignalServiceTranslationEventProps.ServiceElementMappingRefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "SERVICE-ELEMENT-MAPPING-REFS",
@@ -201,7 +204,9 @@ class SignalServiceTranslationEventProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    translation_target_iref: VariableDataPrototypeInSystemInstanceRef | None = field(
+    translation_target_iref: (
+        VariableDataPrototypeInSystemInstanceRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "TRANSLATION-TARGET-IREF",
@@ -282,7 +287,10 @@ class SignalServiceTranslationEventProps:
 
         @dataclass
         class ServiceElementMappingRef(Ref):
-            dest: AbstractSignalBasedToISignalTriggeringMappingSubtypesEnum | None = field(
+            dest: (
+                AbstractSignalBasedToISignalTriggeringMappingSubtypesEnum
+                | None
+            ) = field(
                 default=None,
                 metadata={
                     "name": "DEST",

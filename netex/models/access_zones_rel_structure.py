@@ -1,6 +1,5 @@
 from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import Union
 
 from .access_zone import AccessZone
 from .access_zone_ref import AccessZoneRef
@@ -14,23 +13,23 @@ class AccessZonesRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "accessZones_RelStructure"
 
-    access_zone_ref_or_access_zone: Iterable[
-        AccessZoneRef | AccessZone
-    ] = field(
-        default_factory=list,
-        metadata={
-            "type": "Elements",
-            "choices": (
-                {
-                    "name": "AccessZoneRef",
-                    "type": AccessZoneRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "AccessZone",
-                    "type": AccessZone,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-            ),
-        },
+    access_zone_ref_or_access_zone: Iterable[AccessZoneRef | AccessZone] = (
+        field(
+            default_factory=list,
+            metadata={
+                "type": "Elements",
+                "choices": (
+                    {
+                        "name": "AccessZoneRef",
+                        "type": AccessZoneRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "AccessZone",
+                        "type": AccessZone,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                ),
+            },
+        )
     )

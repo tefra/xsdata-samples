@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .abstract_service_capabilities_response_structure import (
     AbstractServiceCapabilitiesResponseStructure,
@@ -15,13 +14,15 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 class DataObjectCapabilitiesResponseStructure(
     AbstractServiceCapabilitiesResponseStructure
 ):
-    data_object_service_capabilities: DataObjectServiceCapabilities | None = field(
-        default=None,
-        metadata={
-            "name": "DataObjectServiceCapabilities",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        },
+    data_object_service_capabilities: DataObjectServiceCapabilities | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "DataObjectServiceCapabilities",
+                "type": "Element",
+                "namespace": "http://www.netex.org.uk/netex",
+            },
+        )
     )
     data_object_permissions: DataObjectPermissions | None = field(
         default=None,

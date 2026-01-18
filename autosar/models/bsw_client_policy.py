@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import VariationPoint
 from .boolean import Boolean
@@ -49,7 +48,9 @@ class BswClientPolicy:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    required_client_server_entry_ref: BswClientPolicy.RequiredClientServerEntryRef | None = field(
+    required_client_server_entry_ref: (
+        BswClientPolicy.RequiredClientServerEntryRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "REQUIRED-CLIENT-SERVER-ENTRY-REF",

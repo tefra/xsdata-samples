@@ -1,6 +1,5 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
-from typing import Optional, Union
 
 from .activation_point import ActivationPoint
 from .activation_point_ref import ActivationPointRef
@@ -71,7 +70,42 @@ class PointOnLinkVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    choice: VehicleMeetingPointRef | WirePointRef | RoadPointRef | RailwayPointRef | TrafficControlPointRef | BeaconPointRef | ActivationPointRef | BorderPointRef | FareScheduledStopPointRef | ScheduledStopPointRef | GaragePointRef | ParkingPointRef | ReliefPointRef | TimingPointRef | RoutePointRef | PointRef | VehicleMeetingPoint | BorderPoint | FareScheduledStopPoint | ScheduledStopPoint | PathJunction | RoutePoint | ParkingPoint | GaragePoint | ReliefPoint | TimingPoint | WireJunction | RoadJunction | RailwayJunction | TrafficControlPoint | BeaconPoint | ActivationPoint | Point2 | None = field(
+    choice: (
+        VehicleMeetingPointRef
+        | WirePointRef
+        | RoadPointRef
+        | RailwayPointRef
+        | TrafficControlPointRef
+        | BeaconPointRef
+        | ActivationPointRef
+        | BorderPointRef
+        | FareScheduledStopPointRef
+        | ScheduledStopPointRef
+        | GaragePointRef
+        | ParkingPointRef
+        | ReliefPointRef
+        | TimingPointRef
+        | RoutePointRef
+        | PointRef
+        | VehicleMeetingPoint
+        | BorderPoint
+        | FareScheduledStopPoint
+        | ScheduledStopPoint
+        | PathJunction
+        | RoutePoint
+        | ParkingPoint
+        | GaragePoint
+        | ReliefPoint
+        | TimingPoint
+        | WireJunction
+        | RoadJunction
+        | RailwayJunction
+        | TrafficControlPoint
+        | BeaconPoint
+        | ActivationPoint
+        | Point2
+        | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",

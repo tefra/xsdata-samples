@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -139,15 +138,13 @@ class CanFrameTriggering:
             "required": True,
         },
     )
-    short_name_fragments: CanFrameTriggering.ShortNameFragments | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "SHORT-NAME-FRAGMENTS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    short_name_fragments: CanFrameTriggering.ShortNameFragments | None = field(
+        default=None,
+        metadata={
+            "name": "SHORT-NAME-FRAGMENTS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     long_name: MultilanguageLongName | None = field(
         default=None,
@@ -229,7 +226,9 @@ class CanFrameTriggering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    absolutely_scheduled_timings: CanFrameTriggering.AbsolutelyScheduledTimings | None = field(
+    absolutely_scheduled_timings: (
+        CanFrameTriggering.AbsolutelyScheduledTimings | None
+    ) = field(
         default=None,
         metadata={
             "name": "ABSOLUTELY-SCHEDULED-TIMINGS",
@@ -356,15 +355,15 @@ class CanFrameTriggering:
 
     @dataclass
     class FramePortRefs:
-        frame_port_ref: list[
-            CanFrameTriggering.FramePortRefs.FramePortRef
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "FRAME-PORT-REF",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        frame_port_ref: list[CanFrameTriggering.FramePortRefs.FramePortRef] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "FRAME-PORT-REF",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )
 
         @dataclass

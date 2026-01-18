@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .port_interface_subtypes_enum import PortInterfaceSubtypesEnum
 from .ref import Ref
@@ -35,7 +34,9 @@ class PortInterfaceBlueprintMapping:
     class Meta:
         name = "PORT-INTERFACE-BLUEPRINT-MAPPING"
 
-    port_interface_blueprint_ref: PortInterfaceBlueprintMapping.PortInterfaceBlueprintRef | None = field(
+    port_interface_blueprint_ref: (
+        PortInterfaceBlueprintMapping.PortInterfaceBlueprintRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "PORT-INTERFACE-BLUEPRINT-REF",
@@ -43,7 +44,9 @@ class PortInterfaceBlueprintMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    derived_port_interface_ref: PortInterfaceBlueprintMapping.DerivedPortInterfaceRef | None = field(
+    derived_port_interface_ref: (
+        PortInterfaceBlueprintMapping.DerivedPortInterfaceRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "DERIVED-PORT-INTERFACE-REF",

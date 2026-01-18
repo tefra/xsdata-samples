@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import ForwardRef, Optional, Union
+from typing import ForwardRef
 
 from sdmx_ml.models.cube_region_type import CubeRegionType
 from sdmx_ml.models.data_key_set_type import DataKeySetType
@@ -49,7 +49,14 @@ class QueryRegistrationRequestType:
             "required": True,
         },
     )
-    choice: EmptyType | QueryRegistrationRequestType.ProvisionAgreement | QueryRegistrationRequestType.DataProvider | QueryRegistrationRequestType.Dataflow | QueryRegistrationRequestType.Metadataflow | None = field(
+    choice: (
+        EmptyType
+        | QueryRegistrationRequestType.ProvisionAgreement
+        | QueryRegistrationRequestType.DataProvider
+        | QueryRegistrationRequestType.Dataflow
+        | QueryRegistrationRequestType.Metadataflow
+        | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",

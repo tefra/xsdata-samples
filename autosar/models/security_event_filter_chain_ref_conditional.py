@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import VariationPoint
 from .ref import Ref
@@ -35,7 +34,10 @@ class SecurityEventFilterChainRefConditional:
     class Meta:
         name = "SECURITY-EVENT-FILTER-CHAIN-REF-CONDITIONAL"
 
-    security_event_filter_chain_ref: SecurityEventFilterChainRefConditional.SecurityEventFilterChainRef | None = field(
+    security_event_filter_chain_ref: (
+        SecurityEventFilterChainRefConditional.SecurityEventFilterChainRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "SECURITY-EVENT-FILTER-CHAIN-REF",

@@ -1,7 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Any
 
-from sdmx_ml.models.obs_dimensions_code_type import ObsDimensionsCodeType
 from sdmx_ml.models.payload_structure_type import PayloadStructureType
 
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common"

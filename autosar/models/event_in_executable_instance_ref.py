@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .r_port_prototype_subtypes_enum import RPortPrototypeSubtypesEnum
 from .ref import Ref
@@ -40,7 +39,9 @@ class EventInExecutableInstanceRef:
     class Meta:
         name = "EVENT-IN-EXECUTABLE-INSTANCE-REF"
 
-    context_root_sw_component_prototype_ref: EventInExecutableInstanceRef.ContextRootSwComponentPrototypeRef | None = field(
+    context_root_sw_component_prototype_ref: (
+        EventInExecutableInstanceRef.ContextRootSwComponentPrototypeRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "CONTEXT-ROOT-SW-COMPONENT-PROTOTYPE-REF",
@@ -58,7 +59,9 @@ class EventInExecutableInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    context_r_port_prototype_ref: EventInExecutableInstanceRef.ContextRPortPrototypeRef | None = field(
+    context_r_port_prototype_ref: (
+        EventInExecutableInstanceRef.ContextRPortPrototypeRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "CONTEXT-R-PORT-PROTOTYPE-REF",
@@ -66,13 +69,15 @@ class EventInExecutableInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    target_event_ref: EventInExecutableInstanceRef.TargetEventRef | None = field(
-        default=None,
-        metadata={
-            "name": "TARGET-EVENT-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    target_event_ref: EventInExecutableInstanceRef.TargetEventRef | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "TARGET-EVENT-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     s: str | None = field(
         default=None,

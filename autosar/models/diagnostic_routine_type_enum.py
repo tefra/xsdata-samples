@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .diagnostic_routine_type_enum_simple import (
     DiagnosticRoutineTypeEnumSimple,

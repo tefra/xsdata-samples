@@ -1,6 +1,5 @@
 from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .abstract_geometric_aggregate_type import AbstractGeometricAggregateType
 from .surface_member import SurfaceMember

@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from crossref.models.org.w3.pkg_1998.math.math_ml.malignmark import Malignmark
 from crossref.models.org.w3.pkg_1998.math.math_ml.mglyph import Mglyph

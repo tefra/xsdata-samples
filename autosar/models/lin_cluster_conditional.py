@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import VariationPoint
 from .can_physical_channel import CanPhysicalChannel
@@ -58,15 +57,13 @@ class LinClusterConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    physical_channels: LinClusterConditional.PhysicalChannels | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "PHYSICAL-CHANNELS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    physical_channels: LinClusterConditional.PhysicalChannels | None = field(
+        default=None,
+        metadata={
+            "name": "PHYSICAL-CHANNELS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     protocol_name: String | None = field(
         default=None,

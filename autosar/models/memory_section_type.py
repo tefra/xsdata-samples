@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .memory_section_type_simple import MemorySectionTypeSimple
 

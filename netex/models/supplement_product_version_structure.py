@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from .fare_product_ref_structure import FareProductRefStructure
 from .fare_product_refs_rel_structure import FareProductRefsRelStructure
@@ -26,7 +25,9 @@ class SupplementProductVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    supplement_to_fare_product_ref_or_supplement_to: FareProductRefStructure | FareProductRefsRelStructure | None = field(
+    supplement_to_fare_product_ref_or_supplement_to: (
+        FareProductRefStructure | FareProductRefsRelStructure | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",

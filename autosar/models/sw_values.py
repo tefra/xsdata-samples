@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .numerical_or_text import NumericalOrText
 from .numerical_value import NumericalValue

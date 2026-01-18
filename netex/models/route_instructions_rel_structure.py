@@ -1,6 +1,5 @@
 from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import Union
 
 from .route_instruction import RouteInstruction
 from .route_instruction_ref import RouteInstructionRef

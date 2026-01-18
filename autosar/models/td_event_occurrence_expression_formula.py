@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import ForwardRef, Optional
+from typing import ForwardRef
 
 from .autosar_operation_argument_instance_subtypes_enum import (
     AutosarOperationArgumentInstanceSubtypesEnum,

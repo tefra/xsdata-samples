@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .rental_penalty_policy_type_enumeration import (
     RentalPenaltyPolicyTypeEnumeration,
@@ -14,13 +13,15 @@ class RentalPenaltyPolicyVersionStructure(UsageParameterVersionStructure):
     class Meta:
         name = "RentalPenaltyPolicy_VersionStructure"
 
-    rental_penalty_policy_type: RentalPenaltyPolicyTypeEnumeration | None = field(
-        default=None,
-        metadata={
-            "name": "RentalPenaltyPolicyType",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        },
+    rental_penalty_policy_type: RentalPenaltyPolicyTypeEnumeration | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "RentalPenaltyPolicyType",
+                "type": "Element",
+                "namespace": "http://www.netex.org.uk/netex",
+            },
+        )
     )
     penalty_fee: bool | None = field(
         default=None,

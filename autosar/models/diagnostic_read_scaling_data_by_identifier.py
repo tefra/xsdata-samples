@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -112,7 +111,9 @@ class DiagnosticReadScalingDataByIdentifier:
             "required": True,
         },
     )
-    short_name_fragments: DiagnosticReadScalingDataByIdentifier.ShortNameFragments | None = field(
+    short_name_fragments: (
+        DiagnosticReadScalingDataByIdentifier.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -160,13 +161,15 @@ class DiagnosticReadScalingDataByIdentifier:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: DiagnosticReadScalingDataByIdentifier.Annotations | None = field(
-        default=None,
-        metadata={
-            "name": "ANNOTATIONS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    annotations: DiagnosticReadScalingDataByIdentifier.Annotations | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "ANNOTATIONS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     variation_point: VariationPoint | None = field(
         default=None,
@@ -176,7 +179,9 @@ class DiagnosticReadScalingDataByIdentifier:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    access_permission_ref: DiagnosticReadScalingDataByIdentifier.AccessPermissionRef | None = field(
+    access_permission_ref: (
+        DiagnosticReadScalingDataByIdentifier.AccessPermissionRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "ACCESS-PERMISSION-REF",
@@ -184,7 +189,9 @@ class DiagnosticReadScalingDataByIdentifier:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    data_identifier_ref: DiagnosticReadScalingDataByIdentifier.DataIdentifierRef | None = field(
+    data_identifier_ref: (
+        DiagnosticReadScalingDataByIdentifier.DataIdentifierRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "DATA-IDENTIFIER-REF",
@@ -192,7 +199,9 @@ class DiagnosticReadScalingDataByIdentifier:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    read_scaling_data_class_ref: DiagnosticReadScalingDataByIdentifier.ReadScalingDataClassRef | None = field(
+    read_scaling_data_class_ref: (
+        DiagnosticReadScalingDataByIdentifier.ReadScalingDataClassRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "READ-SCALING-DATA-CLASS-REF",
@@ -269,11 +278,13 @@ class DiagnosticReadScalingDataByIdentifier:
 
     @dataclass
     class ReadScalingDataClassRef(Ref):
-        dest: DiagnosticReadScalingDataByIdentifierClassSubtypesEnum | None = field(
-            default=None,
-            metadata={
-                "name": "DEST",
-                "type": "Attribute",
-                "required": True,
-            },
+        dest: DiagnosticReadScalingDataByIdentifierClassSubtypesEnum | None = (
+            field(
+                default=None,
+                metadata={
+                    "name": "DEST",
+                    "type": "Attribute",
+                    "required": True,
+                },
+            )
         )

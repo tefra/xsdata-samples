@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import VariationPoint
 from .cs_transformer_error_reaction_enum import CsTransformerErrorReactionEnum
@@ -70,7 +69,10 @@ class EndToEndTransformationISignalPropsConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    data_prototype_transformation_propss: EndToEndTransformationISignalPropsConditional.DataPrototypeTransformationPropss | None = field(
+    data_prototype_transformation_propss: (
+        EndToEndTransformationISignalPropsConditional.DataPrototypeTransformationPropss
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "DATA-PROTOTYPE-TRANSFORMATION-PROPSS",
@@ -78,7 +80,9 @@ class EndToEndTransformationISignalPropsConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    transformer_ref: EndToEndTransformationISignalPropsConditional.TransformerRef | None = field(
+    transformer_ref: (
+        EndToEndTransformationISignalPropsConditional.TransformerRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "TRANSFORMER-REF",
@@ -86,13 +90,15 @@ class EndToEndTransformationISignalPropsConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    data_ids: EndToEndTransformationISignalPropsConditional.DataIds | None = field(
-        default=None,
-        metadata={
-            "name": "DATA-IDS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    data_ids: EndToEndTransformationISignalPropsConditional.DataIds | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "DATA-IDS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     data_length: PositiveInteger | None = field(
         default=None,

@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .logic_address import LogicAddress
 from .socket_address import SocketAddress

@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from ipxact.models.configurable_library_ref_type import (
     ConfigurableLibraryRefType,
@@ -67,14 +66,12 @@ class AbstractionTypes:
                 "required": True,
             },
         )
-        port_maps: AbstractionTypes.AbstractionType.PortMaps | None = (
-            field(
-                default=None,
-                metadata={
-                    "name": "portMaps",
-                    "type": "Element",
-                },
-            )
+        port_maps: AbstractionTypes.AbstractionType.PortMaps | None = field(
+            default=None,
+            metadata={
+                "name": "portMaps",
+                "type": "Element",
+            },
         )
         id: str | None = field(
             default=None,
@@ -121,7 +118,10 @@ class AbstractionTypes:
                     inversion.
                 """
 
-                logical_port: AbstractionTypes.AbstractionType.PortMaps.PortMap.LogicalPort | None = field(
+                logical_port: (
+                    AbstractionTypes.AbstractionType.PortMaps.PortMap.LogicalPort
+                    | None
+                ) = field(
                     default=None,
                     metadata={
                         "name": "logicalPort",
@@ -129,7 +129,10 @@ class AbstractionTypes:
                         "required": True,
                     },
                 )
-                physical_port: AbstractionTypes.AbstractionType.PortMaps.PortMap.PhysicalPort | None = field(
+                physical_port: (
+                    AbstractionTypes.AbstractionType.PortMaps.PortMap.PhysicalPort
+                    | None
+                ) = field(
                     default=None,
                     metadata={
                         "name": "physicalPort",

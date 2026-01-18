@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -108,7 +107,9 @@ class RecoveryNotificationToPPortPrototypeMapping:
             "required": True,
         },
     )
-    short_name_fragments: RecoveryNotificationToPPortPrototypeMapping.ShortNameFragments | None = field(
+    short_name_fragments: (
+        RecoveryNotificationToPPortPrototypeMapping.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -156,7 +157,9 @@ class RecoveryNotificationToPPortPrototypeMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: RecoveryNotificationToPPortPrototypeMapping.Annotations | None = field(
+    annotations: (
+        RecoveryNotificationToPPortPrototypeMapping.Annotations | None
+    ) = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -172,7 +175,9 @@ class RecoveryNotificationToPPortPrototypeMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    process_ref: RecoveryNotificationToPPortPrototypeMapping.ProcessRef | None = field(
+    process_ref: (
+        RecoveryNotificationToPPortPrototypeMapping.ProcessRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "PROCESS-REF",
@@ -180,17 +185,18 @@ class RecoveryNotificationToPPortPrototypeMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    recovery_action_iref: PPortPrototypeInExecutableInstanceRef | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "RECOVERY-ACTION-IREF",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    recovery_action_iref: PPortPrototypeInExecutableInstanceRef | None = field(
+        default=None,
+        metadata={
+            "name": "RECOVERY-ACTION-IREF",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
-    recovery_notification_ref: RecoveryNotificationToPPortPrototypeMapping.RecoveryNotificationRef | None = field(
+    recovery_notification_ref: (
+        RecoveryNotificationToPPortPrototypeMapping.RecoveryNotificationRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "RECOVERY-NOTIFICATION-REF",

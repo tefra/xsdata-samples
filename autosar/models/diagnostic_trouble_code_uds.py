@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -121,7 +120,9 @@ class DiagnosticTroubleCodeUds:
             "required": True,
         },
     )
-    short_name_fragments: DiagnosticTroubleCodeUds.ShortNameFragments | None = field(
+    short_name_fragments: (
+        DiagnosticTroubleCodeUds.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -233,7 +234,9 @@ class DiagnosticTroubleCodeUds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    wwh_obd_dtc_class: DiagnosticWwhObdDtcClassEnumValueVariationPoint | None = field(
+    wwh_obd_dtc_class: (
+        DiagnosticWwhObdDtcClassEnumValueVariationPoint | None
+    ) = field(
         default=None,
         metadata={
             "name": "WWH-OBD-DTC-CLASS",

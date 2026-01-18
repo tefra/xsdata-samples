@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .network_endpoint_subtypes_enum import NetworkEndpointSubtypesEnum
 from .positive_integer import PositiveInteger
@@ -45,7 +44,9 @@ class SomeipServiceDiscovery:
     class Meta:
         name = "SOMEIP-SERVICE-DISCOVERY"
 
-    multicast_sd_ip_address_ref: SomeipServiceDiscovery.MulticastSdIpAddressRef | None = field(
+    multicast_sd_ip_address_ref: (
+        SomeipServiceDiscovery.MulticastSdIpAddressRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "MULTICAST-SD-IP-ADDRESS-REF",
@@ -53,7 +54,9 @@ class SomeipServiceDiscovery:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    multicast_secure_com_props_ref: SomeipServiceDiscovery.MulticastSecureComPropsRef | None = field(
+    multicast_secure_com_props_ref: (
+        SomeipServiceDiscovery.MulticastSecureComPropsRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "MULTICAST-SECURE-COM-PROPS-REF",
@@ -69,7 +72,9 @@ class SomeipServiceDiscovery:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    unicast_secure_com_props_refs: SomeipServiceDiscovery.UnicastSecureComPropsRefs | None = field(
+    unicast_secure_com_props_refs: (
+        SomeipServiceDiscovery.UnicastSecureComPropsRefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "UNICAST-SECURE-COM-PROPS-REFS",

@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .default_value_element import DefaultValueElement
 
@@ -32,7 +31,9 @@ class PduMappingDefaultValue:
     class Meta:
         name = "PDU-MAPPING-DEFAULT-VALUE"
 
-    default_value_elements: PduMappingDefaultValue.DefaultValueElements | None = field(
+    default_value_elements: (
+        PduMappingDefaultValue.DefaultValueElements | None
+    ) = field(
         default=None,
         metadata={
             "name": "DEFAULT-VALUE-ELEMENTS",

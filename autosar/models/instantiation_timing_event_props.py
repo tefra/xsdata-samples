@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import VariationPoint
 from .identifier import Identifier
@@ -43,15 +42,13 @@ class InstantiationTimingEventProps:
     class Meta:
         name = "INSTANTIATION-TIMING-EVENT-PROPS"
 
-    refined_event_iref: InstanceEventInCompositionInstanceRef | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "REFINED-EVENT-IREF",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    refined_event_iref: InstanceEventInCompositionInstanceRef | None = field(
+        default=None,
+        metadata={
+            "name": "REFINED-EVENT-IREF",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     short_label: Identifier | None = field(
         default=None,

@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .dated_vehicle_journey_version_structure import (
     DatedVehicleJourneyVersionStructure,

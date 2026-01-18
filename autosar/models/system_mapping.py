@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -266,7 +265,9 @@ class SystemMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    application_partition_to_ecu_partition_mappings: SystemMapping.ApplicationPartitionToEcuPartitionMappings | None = field(
+    application_partition_to_ecu_partition_mappings: (
+        SystemMapping.ApplicationPartitionToEcuPartitionMappings | None
+    ) = field(
         default=None,
         metadata={
             "name": "APPLICATION-PARTITION-TO-ECU-PARTITION-MAPPINGS",
@@ -274,21 +275,25 @@ class SystemMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    com_management_mappings: SystemMapping.ComManagementMappings | None = field(
-        default=None,
-        metadata={
-            "name": "COM-MANAGEMENT-MAPPINGS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    com_management_mappings: SystemMapping.ComManagementMappings | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "COM-MANAGEMENT-MAPPINGS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
-    crypto_service_mappings: SystemMapping.CryptoServiceMappings | None = field(
-        default=None,
-        metadata={
-            "name": "CRYPTO-SERVICE-MAPPINGS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    crypto_service_mappings: SystemMapping.CryptoServiceMappings | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "CRYPTO-SERVICE-MAPPINGS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     data_mappings: SystemMapping.DataMappings | None = field(
         default=None,
@@ -298,17 +303,17 @@ class SystemMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ecu_resource_mappings: SystemMapping.EcuResourceMappings | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "ECU-RESOURCE-MAPPINGS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    ecu_resource_mappings: SystemMapping.EcuResourceMappings | None = field(
+        default=None,
+        metadata={
+            "name": "ECU-RESOURCE-MAPPINGS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
-    j_1939_controller_application_to_j_1939_nm_node_mappings: SystemMapping.J1939ControllerApplicationToJ1939NmNodeMappings | None = field(
+    j_1939_controller_application_to_j_1939_nm_node_mappings: (
+        SystemMapping.J1939ControllerApplicationToJ1939NmNodeMappings | None
+    ) = field(
         default=None,
         metadata={
             "name": "J-1939-CONTROLLER-APPLICATION-TO-J-1939-NM-NODE-MAPPINGS",
@@ -332,7 +337,9 @@ class SystemMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    port_element_to_com_resource_mappings: SystemMapping.PortElementToComResourceMappings | None = field(
+    port_element_to_com_resource_mappings: (
+        SystemMapping.PortElementToComResourceMappings | None
+    ) = field(
         default=None,
         metadata={
             "name": "PORT-ELEMENT-TO-COM-RESOURCE-MAPPINGS",
@@ -340,17 +347,17 @@ class SystemMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    resource_estimations: SystemMapping.ResourceEstimations | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "RESOURCE-ESTIMATIONS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    resource_estimations: SystemMapping.ResourceEstimations | None = field(
+        default=None,
+        metadata={
+            "name": "RESOURCE-ESTIMATIONS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
-    resource_to_application_partition_mappings: SystemMapping.ResourceToApplicationPartitionMappings | None = field(
+    resource_to_application_partition_mappings: (
+        SystemMapping.ResourceToApplicationPartitionMappings | None
+    ) = field(
         default=None,
         metadata={
             "name": "RESOURCE-TO-APPLICATION-PARTITION-MAPPINGS",
@@ -358,15 +365,19 @@ class SystemMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    signal_path_constraints: SystemMapping.SignalPathConstraints | None = field(
-        default=None,
-        metadata={
-            "name": "SIGNAL-PATH-CONSTRAINTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    signal_path_constraints: SystemMapping.SignalPathConstraints | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "SIGNAL-PATH-CONSTRAINTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
-    software_cluster_to_resource_mappings: SystemMapping.SoftwareClusterToResourceMappings | None = field(
+    software_cluster_to_resource_mappings: (
+        SystemMapping.SoftwareClusterToResourceMappings | None
+    ) = field(
         default=None,
         metadata={
             "name": "SOFTWARE-CLUSTER-TO-RESOURCE-MAPPINGS",
@@ -398,7 +409,9 @@ class SystemMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    swc_to_application_partition_mappings: SystemMapping.SwcToApplicationPartitionMappings | None = field(
+    swc_to_application_partition_mappings: (
+        SystemMapping.SwcToApplicationPartitionMappings | None
+    ) = field(
         default=None,
         metadata={
             "name": "SWC-TO-APPLICATION-PARTITION-MAPPINGS",

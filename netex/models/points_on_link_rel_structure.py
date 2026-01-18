@@ -1,6 +1,5 @@
 from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .line_string_type import LineStringType
 from .point_on_link import PointOnLink

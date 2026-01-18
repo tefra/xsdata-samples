@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -162,13 +161,15 @@ class CryptoKeySlotInterface:
             "required": True,
         },
     )
-    short_name_fragments: CryptoKeySlotInterface.ShortNameFragments | None = field(
-        default=None,
-        metadata={
-            "name": "SHORT-NAME-FRAGMENTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    short_name_fragments: CryptoKeySlotInterface.ShortNameFragments | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "SHORT-NAME-FRAGMENTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     long_name: MultilanguageLongName | None = field(
         default=None,
@@ -226,15 +227,13 @@ class CryptoKeySlotInterface:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    blueprint_policys: CryptoKeySlotInterface.BlueprintPolicys | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "BLUEPRINT-POLICYS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    blueprint_policys: CryptoKeySlotInterface.BlueprintPolicys | None = field(
+        default=None,
+        metadata={
+            "name": "BLUEPRINT-POLICYS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     short_name_pattern: String | None = field(
         default=None,
@@ -292,15 +291,19 @@ class CryptoKeySlotInterface:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    key_slot_allowed_modification: CryptoKeySlotAllowedModification | None = field(
-        default=None,
-        metadata={
-            "name": "KEY-SLOT-ALLOWED-MODIFICATION",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    key_slot_allowed_modification: CryptoKeySlotAllowedModification | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "KEY-SLOT-ALLOWED-MODIFICATION",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
-    key_slot_content_allowed_usages: CryptoKeySlotInterface.KeySlotContentAllowedUsages | None = field(
+    key_slot_content_allowed_usages: (
+        CryptoKeySlotInterface.KeySlotContentAllowedUsages | None
+    ) = field(
         default=None,
         metadata={
             "name": "KEY-SLOT-CONTENT-ALLOWED-USAGES",

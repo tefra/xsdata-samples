@@ -1,6 +1,5 @@
 from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from .country_ref import CountryRef
 from .external_object_ref_structure import ExternalObjectRefStructure
@@ -186,7 +185,9 @@ class ScheduledStopPointVersionStructure(TimingPointVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    topographic_place_ref_or_topographic_place_view: TopographicPlaceRef | TopographicPlaceView | None = field(
+    topographic_place_ref_or_topographic_place_view: (
+        TopographicPlaceRef | TopographicPlaceView | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",

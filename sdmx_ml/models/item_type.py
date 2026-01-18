@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Any, ForwardRef, Optional, Union
+from typing import Any, ForwardRef
 
 from sdmx_ml.models.concept_representation import ConceptRepresentation
 from sdmx_ml.models.contact_type_1 import ContactType1
@@ -25,7 +25,24 @@ class ItemType(ItemBaseType):
     """
 
     choice: tuple[
-        str | CustomType | UserDefinedOperator | Ruleset | NamePersonalisation | VtlMapping | Transformation | ReportingCategory | OrganisationUnit | MetadataProvider | DataProvider | DataConsumer | Agency | Concept | GeoGridCode | GeoFeatureSetCode | Code | Category,
+        str
+        | CustomType
+        | UserDefinedOperator
+        | Ruleset
+        | NamePersonalisation
+        | VtlMapping
+        | Transformation
+        | ReportingCategory
+        | OrganisationUnit
+        | MetadataProvider
+        | DataProvider
+        | DataConsumer
+        | Agency
+        | Concept
+        | GeoGridCode
+        | GeoFeatureSetCode
+        | Code
+        | Category,
         ...,
     ] = field(
         default_factory=tuple,
@@ -371,7 +388,8 @@ class ReportingCategoryType(ReportingCategoryBaseType):
     """
 
     structural_metadata_or_provisioning_metadata: tuple[
-        ReportingCategoryType.StructuralMetadata | ReportingCategoryType.ProvisioningMetadata,
+        ReportingCategoryType.StructuralMetadata
+        | ReportingCategoryType.ProvisioningMetadata,
         ...,
     ] = field(
         default_factory=tuple,
@@ -912,7 +930,12 @@ class VtlMappingType(VtlMappingBaseType):
     """
 
     choice_1: tuple[
-        VtlMappingType.Dataflow | EmptyType | ToVtlMappingType | FromVtlMappingType | VtlMappingType.Codelist | VtlMappingType.Concept,
+        VtlMappingType.Dataflow
+        | EmptyType
+        | ToVtlMappingType
+        | FromVtlMappingType
+        | VtlMappingType.Codelist
+        | VtlMappingType.Concept,
         ...,
     ] = field(
         default_factory=tuple,

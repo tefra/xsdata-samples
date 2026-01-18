@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .rpt_service_point_enum_simple import RptServicePointEnumSimple
 

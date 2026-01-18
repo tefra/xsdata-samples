@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import VariationPoint
 from .flat_instance_descriptor_subtypes_enum import (
@@ -41,7 +40,9 @@ class McFunctionDataRefSetConditional:
     class Meta:
         name = "MC-FUNCTION-DATA-REF-SET-CONDITIONAL"
 
-    flat_map_entry_refs: McFunctionDataRefSetConditional.FlatMapEntryRefs | None = field(
+    flat_map_entry_refs: (
+        McFunctionDataRefSetConditional.FlatMapEntryRefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "FLAT-MAP-ENTRY-REFS",
@@ -49,7 +50,9 @@ class McFunctionDataRefSetConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    mc_data_instance_refs: McFunctionDataRefSetConditional.McDataInstanceRefs | None = field(
+    mc_data_instance_refs: (
+        McFunctionDataRefSetConditional.McDataInstanceRefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "MC-DATA-INSTANCE-REFS",

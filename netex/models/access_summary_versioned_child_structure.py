@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .access_feature_enumeration import AccessFeatureEnumeration
 from .entity_in_version_structure import VersionedChildStructure

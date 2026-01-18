@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 
 @dataclass(kw_only=True)
@@ -41,12 +40,14 @@ class MessageAcknowledgement:
             "type": "Element",
         },
     )
-    acknowledgement_reference_number: AcknowledgementReferenceNumber | None = field(
-        default=None,
-        metadata={
-            "name": "AcknowledgementReferenceNumber",
-            "type": "Element",
-        },
+    acknowledgement_reference_number: AcknowledgementReferenceNumber | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "AcknowledgementReferenceNumber",
+                "type": "Element",
+            },
+        )
     )
     acknowledgement_note: AcknowledgementNote | None = field(
         default=None,

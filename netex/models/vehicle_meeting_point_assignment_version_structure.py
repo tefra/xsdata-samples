@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from .access_space_ref import AccessSpaceRef
 from .addressable_place_ref import AddressablePlaceRef
@@ -65,7 +64,46 @@ class VehicleMeetingPointAssignmentVersionStructure(
             "required": True,
         },
     )
-    choice: VehiclePoolingMeetingPlaceRef | VehicleMeetingPlaceRef | GarageRef | VehicleStoppingPositionRef | VehicleStoppingPlaceRef | BoardingPositionRef | AccessSpaceRef | TaxiStandRef | QuayRef | StopPlaceSpaceRef | VehiclePoolingParkingBayRef | MonitoredVehicleSharingParkingBayRef | VehicleSharingParkingBayRef | ParkingBayRef | VehiclePoolingParkingAreaRef | VehicleSharingParkingAreaRef | TaxiParkingAreaRef | ParkingAreaRef | PointOfInterestSpaceRef | StopPlaceVehicleEntranceRef | StopPlaceEntranceRef | ParkingEntranceForVehiclesRef | ParkingPassengerEntranceRef | ParkingEntranceRef | PointOfInterestVehicleEntranceRef | PointOfInterestEntranceRef | VehicleEntranceRef | EntranceRef | SiteComponentRef | TaxiRankRef | StopPlaceRef | ParkingRef | PointOfInterestRef | ServiceSiteRef | SiteRef | SiteElementRef | AddressablePlaceRef | None = field(
+    choice: (
+        VehiclePoolingMeetingPlaceRef
+        | VehicleMeetingPlaceRef
+        | GarageRef
+        | VehicleStoppingPositionRef
+        | VehicleStoppingPlaceRef
+        | BoardingPositionRef
+        | AccessSpaceRef
+        | TaxiStandRef
+        | QuayRef
+        | StopPlaceSpaceRef
+        | VehiclePoolingParkingBayRef
+        | MonitoredVehicleSharingParkingBayRef
+        | VehicleSharingParkingBayRef
+        | ParkingBayRef
+        | VehiclePoolingParkingAreaRef
+        | VehicleSharingParkingAreaRef
+        | TaxiParkingAreaRef
+        | ParkingAreaRef
+        | PointOfInterestSpaceRef
+        | StopPlaceVehicleEntranceRef
+        | StopPlaceEntranceRef
+        | ParkingEntranceForVehiclesRef
+        | ParkingPassengerEntranceRef
+        | ParkingEntranceRef
+        | PointOfInterestVehicleEntranceRef
+        | PointOfInterestEntranceRef
+        | VehicleEntranceRef
+        | EntranceRef
+        | SiteComponentRef
+        | TaxiRankRef
+        | StopPlaceRef
+        | ParkingRef
+        | PointOfInterestRef
+        | ServiceSiteRef
+        | SiteRef
+        | SiteElementRef
+        | AddressablePlaceRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",

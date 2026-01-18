@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import VariationPoint
 from .diagnostic_extended_data_record_subtypes_enum import (
@@ -35,7 +34,10 @@ class DiagnosticExtendedDataRecordRefConditional:
     class Meta:
         name = "DIAGNOSTIC-EXTENDED-DATA-RECORD-REF-CONDITIONAL"
 
-    diagnostic_extended_data_record_ref: DiagnosticExtendedDataRecordRefConditional.DiagnosticExtendedDataRecordRef | None = field(
+    diagnostic_extended_data_record_ref: (
+        DiagnosticExtendedDataRecordRefConditional.DiagnosticExtendedDataRecordRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "DIAGNOSTIC-EXTENDED-DATA-RECORD-REF",

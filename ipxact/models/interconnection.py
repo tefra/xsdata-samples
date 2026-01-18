@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from ipxact.models.active_interface import ActiveInterface
 from ipxact.models.description import Description

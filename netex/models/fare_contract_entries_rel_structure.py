@@ -1,6 +1,5 @@
 from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import Union
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .fare_contract_entry import FareContractEntry
@@ -24,7 +23,17 @@ class FareContractEntriesRelStructure(ContainmentAggregationStructure):
         name = "fareContractEntries_RelStructure"
 
     choice: Iterable[
-        SalesTransactionRef | OfferedTravelSpecificationRef | RequestedTravelSpecificationRef | TravelSpecificationRef | FareContractEntryRef | SalesTransaction | OfferedTravelSpecification | RequestedTravelSpecification | TravelSpecification1 | TravelSpecification2 | FareContractEntry
+        SalesTransactionRef
+        | OfferedTravelSpecificationRef
+        | RequestedTravelSpecificationRef
+        | TravelSpecificationRef
+        | FareContractEntryRef
+        | SalesTransaction
+        | OfferedTravelSpecification
+        | RequestedTravelSpecification
+        | TravelSpecification1
+        | TravelSpecification2
+        | FareContractEntry
     ] = field(
         default_factory=list,
         metadata={

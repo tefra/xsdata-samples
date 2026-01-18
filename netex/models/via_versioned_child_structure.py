@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from .border_point_ref import BorderPointRef
 from .destination_display_ref import DestinationDisplayRef
@@ -23,7 +22,12 @@ class ViaVersionedChildStructure(VersionedChildStructure):
     class Meta:
         name = "Via_VersionedChildStructure"
 
-    destination_display_ref_or_destination_display_view_or_name: DestinationDisplayRef | DestinationDisplayView | MultilingualString | None = field(
+    destination_display_ref_or_destination_display_view_or_name: (
+        DestinationDisplayRef
+        | DestinationDisplayView
+        | MultilingualString
+        | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -46,7 +50,17 @@ class ViaVersionedChildStructure(VersionedChildStructure):
             ),
         },
     )
-    choice: BorderPointRef | FareScheduledStopPointRef | ScheduledStopPointRef | GaragePointRef | ParkingPointRef | ReliefPointRef | TimingPointRef | RoutePointRef | None = field(
+    choice: (
+        BorderPointRef
+        | FareScheduledStopPointRef
+        | ScheduledStopPointRef
+        | GaragePointRef
+        | ParkingPointRef
+        | ReliefPointRef
+        | TimingPointRef
+        | RoutePointRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",

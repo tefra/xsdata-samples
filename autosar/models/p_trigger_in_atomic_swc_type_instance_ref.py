@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .abstract_provided_port_prototype_subtypes_enum import (
     AbstractProvidedPortPrototypeSubtypesEnum,
@@ -32,7 +31,9 @@ class PTriggerInAtomicSwcTypeInstanceRef:
     class Meta:
         name = "P-TRIGGER-IN-ATOMIC-SWC-TYPE-INSTANCE-REF"
 
-    context_p_port_ref: PTriggerInAtomicSwcTypeInstanceRef.ContextPPortRef | None = field(
+    context_p_port_ref: (
+        PTriggerInAtomicSwcTypeInstanceRef.ContextPPortRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "CONTEXT-P-PORT-REF",
@@ -40,7 +41,9 @@ class PTriggerInAtomicSwcTypeInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    target_trigger_ref: PTriggerInAtomicSwcTypeInstanceRef.TargetTriggerRef | None = field(
+    target_trigger_ref: (
+        PTriggerInAtomicSwcTypeInstanceRef.TargetTriggerRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "TARGET-TRIGGER-REF",

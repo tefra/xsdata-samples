@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -124,13 +123,15 @@ class TdEventFrameEthernet:
             "required": True,
         },
     )
-    short_name_fragments: TdEventFrameEthernet.ShortNameFragments | None = field(
-        default=None,
-        metadata={
-            "name": "SHORT-NAME-FRAGMENTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    short_name_fragments: TdEventFrameEthernet.ShortNameFragments | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "SHORT-NAME-FRAGMENTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     long_name: MultilanguageLongName | None = field(
         default=None,
@@ -204,7 +205,9 @@ class TdEventFrameEthernet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    socket_connection_bundle_ref: TdEventFrameEthernet.SocketConnectionBundleRef | None = field(
+    socket_connection_bundle_ref: (
+        TdEventFrameEthernet.SocketConnectionBundleRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "SOCKET-CONNECTION-BUNDLE-REF",
@@ -212,7 +215,9 @@ class TdEventFrameEthernet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    static_socket_connection_ref: TdEventFrameEthernet.StaticSocketConnectionRef | None = field(
+    static_socket_connection_ref: (
+        TdEventFrameEthernet.StaticSocketConnectionRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "STATIC-SOCKET-CONNECTION-REF",
@@ -228,15 +233,19 @@ class TdEventFrameEthernet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    td_header_id_filters: TdEventFrameEthernet.TdHeaderIdFilters | None = field(
-        default=None,
-        metadata={
-            "name": "TD-HEADER-ID-FILTERS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    td_header_id_filters: TdEventFrameEthernet.TdHeaderIdFilters | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "TD-HEADER-ID-FILTERS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
-    td_pdu_triggering_filter_refs: TdEventFrameEthernet.TdPduTriggeringFilterRefs | None = field(
+    td_pdu_triggering_filter_refs: (
+        TdEventFrameEthernet.TdPduTriggeringFilterRefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "TD-PDU-TRIGGERING-FILTER-REFS",

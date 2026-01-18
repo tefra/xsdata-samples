@@ -2,7 +2,6 @@ from __future__ import annotations
 
 from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from .day_type_ref_structure import DayTypeRefStructure
 from .destination_display_refs_rel_structure import (
@@ -46,23 +45,25 @@ class GroupOfServicesVersionStructure(GroupOfEntitiesVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    direction_ref_or_direction_view: DirectionRef | DirectionView | None = field(
-        default=None,
-        metadata={
-            "type": "Elements",
-            "choices": (
-                {
-                    "name": "DirectionRef",
-                    "type": DirectionRef,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-                {
-                    "name": "DirectionView",
-                    "type": DirectionView,
-                    "namespace": "http://www.netex.org.uk/netex",
-                },
-            ),
-        },
+    direction_ref_or_direction_view: DirectionRef | DirectionView | None = (
+        field(
+            default=None,
+            metadata={
+                "type": "Elements",
+                "choices": (
+                    {
+                        "name": "DirectionRef",
+                        "type": DirectionRef,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                    {
+                        "name": "DirectionView",
+                        "type": DirectionView,
+                        "namespace": "http://www.netex.org.uk/netex",
+                    },
+                ),
+            },
+        )
     )
     origin: GroupOfServicesEndPointDerivedViewStructure | None = field(
         default=None,

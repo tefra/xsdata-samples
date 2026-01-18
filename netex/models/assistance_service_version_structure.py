@@ -1,6 +1,5 @@
 from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .accessibility_tool_enumeration import AccessibilityToolEnumeration
 from .assistance_availability_enumeration import (
@@ -28,15 +27,13 @@ class AssistanceServiceVersionStructure(LocalServiceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    assistance_availability: AssistanceAvailabilityEnumeration | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "AssistanceAvailability",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            },
-        )
+    assistance_availability: AssistanceAvailabilityEnumeration | None = field(
+        default=None,
+        metadata={
+            "name": "AssistanceAvailability",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        },
     )
     staffing: StaffingEnumeration | None = field(
         default=None,

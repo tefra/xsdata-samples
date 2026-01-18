@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .access_control_enum import AccessControlEnum
 from .admin_data import (
@@ -194,13 +193,15 @@ class MachineDesign:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    communication_connectors: MachineDesign.CommunicationConnectors | None = field(
-        default=None,
-        metadata={
-            "name": "COMMUNICATION-CONNECTORS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    communication_connectors: MachineDesign.CommunicationConnectors | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "COMMUNICATION-CONNECTORS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     eth_ip_props_ref: MachineDesign.EthIpPropsRef | None = field(
         default=None,
@@ -226,13 +227,15 @@ class MachineDesign:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    service_discover_configs: MachineDesign.ServiceDiscoverConfigs | None = field(
-        default=None,
-        metadata={
-            "name": "SERVICE-DISCOVER-CONFIGS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    service_discover_configs: MachineDesign.ServiceDiscoverConfigs | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "SERVICE-DISCOVER-CONFIGS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     tcp_ip_icmp_props_ref: MachineDesign.TcpIpIcmpPropsRef | None = field(
         default=None,

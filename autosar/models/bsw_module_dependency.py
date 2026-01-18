@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -202,13 +201,15 @@ class BswModuleDependency:
             "required": True,
         },
     )
-    short_name_fragments: BswModuleDependency.ShortNameFragments | None = field(
-        default=None,
-        metadata={
-            "name": "SHORT-NAME-FRAGMENTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    short_name_fragments: BswModuleDependency.ShortNameFragments | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "SHORT-NAME-FRAGMENTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     long_name: MultilanguageLongName | None = field(
         default=None,
@@ -266,15 +267,13 @@ class BswModuleDependency:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    target_module_refs: BswModuleDependency.TargetModuleRefs | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "TARGET-MODULE-REFS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    target_module_refs: BswModuleDependency.TargetModuleRefs | None = field(
+        default=None,
+        metadata={
+            "name": "TARGET-MODULE-REFS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     required_entrys: BswModuleDependency.RequiredEntrys | None = field(
         default=None,
@@ -284,15 +283,13 @@ class BswModuleDependency:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    expected_callbacks: BswModuleDependency.ExpectedCallbacks | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "EXPECTED-CALLBACKS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    expected_callbacks: BswModuleDependency.ExpectedCallbacks | None = field(
+        default=None,
+        metadata={
+            "name": "EXPECTED-CALLBACKS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     service_items: BswModuleDependency.ServiceItems | None = field(
         default=None,

@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from generali.models.com.generali.enterprise_services.core.gbo.common.core_types.v1.number_type import (
     NumberType,
@@ -26,11 +25,13 @@ class ExpansiveStructureType(StructureType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
         },
     )
-    geographic_locations: ExpansiveStructureTypeGeographicLocations | None = field(
-        default=None,
-        metadata={
-            "name": "GeographicLocations",
-            "type": "Element",
-            "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
-        },
+    geographic_locations: ExpansiveStructureTypeGeographicLocations | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "GeographicLocations",
+                "type": "Element",
+                "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
+            },
+        )
     )

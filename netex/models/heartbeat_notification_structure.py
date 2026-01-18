@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from xsdata.models.datatype import XmlDateTime, XmlDuration
 
@@ -35,13 +34,15 @@ class HeartbeatNotificationStructure(ProducerRequestEndpointStructure):
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    error_condition: HeartbeatNotificationStructure.ErrorCondition | None = field(
-        default=None,
-        metadata={
-            "name": "ErrorCondition",
-            "type": "Element",
-            "namespace": "http://www.siri.org.uk/siri",
-        },
+    error_condition: HeartbeatNotificationStructure.ErrorCondition | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "ErrorCondition",
+                "type": "Element",
+                "namespace": "http://www.siri.org.uk/siri",
+            },
+        )
     )
     valid_until: XmlDateTime | None = field(
         default=None,
@@ -78,7 +79,9 @@ class HeartbeatNotificationStructure(ProducerRequestEndpointStructure):
 
     @dataclass
     class ErrorCondition:
-        service_not_available_error_or_other_error: ServiceNotAvailableError | OtherError | None = field(
+        service_not_available_error_or_other_error: (
+            ServiceNotAvailableError | OtherError | None
+        ) = field(
             default=None,
             metadata={
                 "type": "Elements",

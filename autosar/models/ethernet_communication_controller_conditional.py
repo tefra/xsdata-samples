@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import VariationPoint
 from .boolean import Boolean
@@ -75,7 +74,9 @@ class EthernetCommunicationControllerConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    coupling_ports: EthernetCommunicationControllerConditional.CouplingPorts | None = field(
+    coupling_ports: (
+        EthernetCommunicationControllerConditional.CouplingPorts | None
+    ) = field(
         default=None,
         metadata={
             "name": "COUPLING-PORTS",

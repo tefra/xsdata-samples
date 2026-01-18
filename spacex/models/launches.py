@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from typed_dataclass import typed_dataclass
 from xsdata.models.datatype import XmlDateTime

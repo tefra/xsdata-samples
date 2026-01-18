@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .autosar_parameter_ref import AutosarParameterRef
 from .autosar_variable_ref import AutosarVariableRef
@@ -57,16 +56,14 @@ class SwDataDependencyArgs:
             "sequence": 1,
         },
     )
-    mc_data_instance_ref: list[SwDataDependencyArgs.McDataInstanceRef] = (
-        field(
-            default_factory=list,
-            metadata={
-                "name": "MC-DATA-INSTANCE-REF",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-                "sequence": 1,
-            },
-        )
+    mc_data_instance_ref: list[SwDataDependencyArgs.McDataInstanceRef] = field(
+        default_factory=list,
+        metadata={
+            "name": "MC-DATA-INSTANCE-REF",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+            "sequence": 1,
+        },
     )
     autosar_variable: list[AutosarVariableRef] = field(
         default_factory=list,

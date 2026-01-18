@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .rpt_enabler_impl_type_enum import RptEnablerImplTypeEnum
 from .rpt_preparation_enum import RptPreparationEnum

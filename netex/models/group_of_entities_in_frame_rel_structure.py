@@ -1,6 +1,5 @@
 from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import Union
 
 from .access_space import AccessSpace
 from .access_zone import AccessZone
@@ -94,7 +93,81 @@ class GroupOfEntitiesInFrameRelStructure(ContainmentAggregationStructure):
         name = "groupOfEntitiesInFrame_RelStructure"
 
     choice: Iterable[
-        PoolOfVehicles | GroupOfSingleJourneys | GroupOfDistributionChannels | GroupOfDistanceMatrixElements | PriceGroup | StandardFareTable | FareTableInContext | FareTable | GroupOfServices | RhythmicalJourneyGroup | HeadwayJourneyGroup | CrewBase | GroupOfTimingLinks | Network | GroupOfLines | GroupOfOperators | GroupOfPlaces | GroupOfLinkSequences | GroupOfTariffZones | MobilityServiceConstraintZone | RoutingConstraintZone | StopArea | AccessZone | VehicleMeetingPlace1 | VehiclePoolingMeetingPlace | VehicleMeetingPlace2 | HailAndRideArea | FlexibleArea | FlexibleQuay | FlexibleStopPlace | Garage | EquipmentPlace | TaxiStand | VehicleStoppingPlace | BoardingPosition | AccessSpace | Quay | PointOfInterestSpace | ParkingComponent | VehicleStoppingPosition | VehiclePoolingParkingArea | VehicleSharingParkingArea | TaxiParkingArea | ParkingArea | MonitoredVehicleSharingParkingBay | VehiclePoolingParkingBay | VehicleSharingParkingBay | ParkingBay | PointOfInterestVehicleEntrance | PointOfInterestEntrance | ParkingPassengerEntrance | ParkingEntranceForVehicles | StopPlaceVehicleEntrance | StopPlaceEntrance | Entrance | PointOfInterest | Parking | TaxiRank | StopPlace | ServiceSite | TopographicPlace | Country | AddressablePlace | PostalAddress | RoadAddress | TransportAdministrativeZone | AdministrativeZone | FareZone | TariffZone | GeneralZone | Zone | GroupOfLinks | GroupOfPoints | Layer | GeneralGroupOfEntities
+        PoolOfVehicles
+        | GroupOfSingleJourneys
+        | GroupOfDistributionChannels
+        | GroupOfDistanceMatrixElements
+        | PriceGroup
+        | StandardFareTable
+        | FareTableInContext
+        | FareTable
+        | GroupOfServices
+        | RhythmicalJourneyGroup
+        | HeadwayJourneyGroup
+        | CrewBase
+        | GroupOfTimingLinks
+        | Network
+        | GroupOfLines
+        | GroupOfOperators
+        | GroupOfPlaces
+        | GroupOfLinkSequences
+        | GroupOfTariffZones
+        | MobilityServiceConstraintZone
+        | RoutingConstraintZone
+        | StopArea
+        | AccessZone
+        | VehicleMeetingPlace1
+        | VehiclePoolingMeetingPlace
+        | VehicleMeetingPlace2
+        | HailAndRideArea
+        | FlexibleArea
+        | FlexibleQuay
+        | FlexibleStopPlace
+        | Garage
+        | EquipmentPlace
+        | TaxiStand
+        | VehicleStoppingPlace
+        | BoardingPosition
+        | AccessSpace
+        | Quay
+        | PointOfInterestSpace
+        | ParkingComponent
+        | VehicleStoppingPosition
+        | VehiclePoolingParkingArea
+        | VehicleSharingParkingArea
+        | TaxiParkingArea
+        | ParkingArea
+        | MonitoredVehicleSharingParkingBay
+        | VehiclePoolingParkingBay
+        | VehicleSharingParkingBay
+        | ParkingBay
+        | PointOfInterestVehicleEntrance
+        | PointOfInterestEntrance
+        | ParkingPassengerEntrance
+        | ParkingEntranceForVehicles
+        | StopPlaceVehicleEntrance
+        | StopPlaceEntrance
+        | Entrance
+        | PointOfInterest
+        | Parking
+        | TaxiRank
+        | StopPlace
+        | ServiceSite
+        | TopographicPlace
+        | Country
+        | AddressablePlace
+        | PostalAddress
+        | RoadAddress
+        | TransportAdministrativeZone
+        | AdministrativeZone
+        | FareZone
+        | TariffZone
+        | GeneralZone
+        | Zone
+        | GroupOfLinks
+        | GroupOfPoints
+        | Layer
+        | GeneralGroupOfEntities
     ] = field(
         default_factory=list,
         metadata={

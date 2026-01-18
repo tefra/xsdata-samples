@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from xcbl.models.remittance_advice import (
     PayerParty,
@@ -285,14 +284,12 @@ class PaymentStatusRequestId:
 
 @dataclass(kw_only=True)
 class PaymentStatusRequestSummary:
-    total_number_payment_requests: TotalNumberPaymentRequests | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "TotalNumberPaymentRequests",
-                "type": "Element",
-            },
-        )
+    total_number_payment_requests: TotalNumberPaymentRequests | None = field(
+        default=None,
+        metadata={
+            "name": "TotalNumberPaymentRequests",
+            "type": "Element",
+        },
     )
 
 
@@ -384,14 +381,12 @@ class PaymentException:
             "required": True,
         }
     )
-    payment_exception_coded_other: PaymentExceptionCodedOther | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "PaymentExceptionCodedOther",
-                "type": "Element",
-            },
-        )
+    payment_exception_coded_other: PaymentExceptionCodedOther | None = field(
+        default=None,
+        metadata={
+            "name": "PaymentExceptionCodedOther",
+            "type": "Element",
+        },
     )
     payment_exception_note: PaymentExceptionNote | None = field(
         default=None,
@@ -565,19 +560,23 @@ class PaymentStatusResponseDetail:
             "type": "Element",
         },
     )
-    originating_financial_institution: OriginatingFinancialInstitution | None = field(
+    originating_financial_institution: (
+        OriginatingFinancialInstitution | None
+    ) = field(
         default=None,
         metadata={
             "name": "OriginatingFinancialInstitution",
             "type": "Element",
         },
     )
-    receiving_financial_institution: ReceivingFinancialInstitution | None = field(
-        default=None,
-        metadata={
-            "name": "ReceivingFinancialInstitution",
-            "type": "Element",
-        },
+    receiving_financial_institution: ReceivingFinancialInstitution | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "ReceivingFinancialInstitution",
+                "type": "Element",
+            },
+        )
     )
     card_info: CardInfo | None = field(
         default=None,

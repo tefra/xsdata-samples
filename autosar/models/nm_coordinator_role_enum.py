@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .nm_coordinator_role_enum_simple import NmCoordinatorRoleEnumSimple
 

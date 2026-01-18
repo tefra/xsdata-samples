@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from ..core.datatypes_base import (
     Cd,
@@ -274,7 +273,9 @@ class PrpaIn201304Uv02MfmiMt700701Uv01Subject1:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    registration_event: PrpaIn201304Uv02MfmiMt700701Uv01RegistrationEvent | None = field(
+    registration_event: (
+        PrpaIn201304Uv02MfmiMt700701Uv01RegistrationEvent | None
+    ) = field(
         default=None,
         metadata={
             "name": "registrationEvent",
@@ -290,7 +291,27 @@ class PrpaIn201304Uv02MfmiMt700701Uv01Subject1:
             "type": "Attribute",
         },
     )
-    type_code: ActRelationshipConditional | ActRelationshipHasComponent | ActRelationshipOutcome | ActRelationshipCostTracking | ActRelationshipPosting | str | ActRelationshipHasSupport | ActRelationshipTemporallyPertains | ActRelationshipPertainsValue | ActRelationshipSequel | XActRelationshipDocument | XActRelationshipEntry | XActRelationshipEntryRelationship | XActRelationshipExternalReference | XActRelationshipPatientTransport | XActRelationshipPertinentInfo | XActRelationshipRelatedAuthorizations | XActReplaceOrRevise | XSuccReplPrev = field(
+    type_code: (
+        ActRelationshipConditional
+        | ActRelationshipHasComponent
+        | ActRelationshipOutcome
+        | ActRelationshipCostTracking
+        | ActRelationshipPosting
+        | str
+        | ActRelationshipHasSupport
+        | ActRelationshipTemporallyPertains
+        | ActRelationshipPertainsValue
+        | ActRelationshipSequel
+        | XActRelationshipDocument
+        | XActRelationshipEntry
+        | XActRelationshipEntryRelationship
+        | XActRelationshipExternalReference
+        | XActRelationshipPatientTransport
+        | XActRelationshipPertinentInfo
+        | XActRelationshipRelatedAuthorizations
+        | XActReplaceOrRevise
+        | XSuccReplPrev
+    ) = field(
         init=False,
         default=ActRelationshipPertainsValue.SUBJ,
         metadata={
@@ -626,7 +647,9 @@ class PrpaIn201304Uv02McciMt000100Uv01Message:
             "nillable": True,
         },
     )
-    control_act_process: PrpaIn201304Uv02MfmiMt700701Uv01ControlActProcess | None = field(
+    control_act_process: (
+        PrpaIn201304Uv02MfmiMt700701Uv01ControlActProcess | None
+    ) = field(
         default=None,
         metadata={
             "name": "controlActProcess",

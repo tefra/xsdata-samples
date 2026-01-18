@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import ForwardRef, Optional, Union
+from typing import ForwardRef
 
 from sdmx_ml.models.obs_dimensions_code_type import ObsDimensionsCodeType
 
@@ -50,7 +50,12 @@ class PayloadStructureType:
         service which will return the referenced object.
     """
 
-    provision_agreement_or_structure_usage_or_structure: PayloadStructureType.ProvisionAgreement | PayloadStructureType.StructureUsage | PayloadStructureType.Structure | None = field(
+    provision_agreement_or_structure_usage_or_structure: (
+        PayloadStructureType.ProvisionAgreement
+        | PayloadStructureType.StructureUsage
+        | PayloadStructureType.Structure
+        | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -96,15 +101,13 @@ class PayloadStructureType:
             "type": "Attribute",
         },
     )
-    dimension_at_observation: str | ObsDimensionsCodeType | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "dimensionAtObservation",
-                "type": "Attribute",
-                "pattern": r"[A-Za-z][A-Za-z0-9_\-]*",
-            },
-        )
+    dimension_at_observation: str | ObsDimensionsCodeType | None = field(
+        default=None,
+        metadata={
+            "name": "dimensionAtObservation",
+            "type": "Attribute",
+            "pattern": r"[A-Za-z][A-Za-z0-9_\-]*",
+        },
     )
     explicit_measures: bool | None = field(
         default=None,

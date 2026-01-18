@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from sdmx_ml.models.group_dimension_base_type import GroupDimensionBaseType
 

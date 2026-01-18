@@ -1,6 +1,5 @@
 from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from xsdata.models.datatype import XmlDuration
 
@@ -98,7 +97,9 @@ class InterchangeRuleParameterStructure:
             ),
         },
     )
-    scheduled_stop_point_ref: FareScheduledStopPointRef | ScheduledStopPointRef | None = field(
+    scheduled_stop_point_ref: (
+        FareScheduledStopPointRef | ScheduledStopPointRef | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -156,7 +157,12 @@ class InterchangeRuleParameterStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    service_journey_ref_or_journey_designator_or_service_designator: ServiceJourneyRefStructure | JourneyDesignator | ServiceDesignator | None = field(
+    service_journey_ref_or_journey_designator_or_service_designator: (
+        ServiceJourneyRefStructure
+        | JourneyDesignator
+        | ServiceDesignator
+        | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",

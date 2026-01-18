@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -109,7 +108,9 @@ class CryptoCertificateToPortPrototypeMapping:
             "required": True,
         },
     )
-    short_name_fragments: CryptoCertificateToPortPrototypeMapping.ShortNameFragments | None = field(
+    short_name_fragments: (
+        CryptoCertificateToPortPrototypeMapping.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -157,13 +158,15 @@ class CryptoCertificateToPortPrototypeMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: CryptoCertificateToPortPrototypeMapping.Annotations | None = field(
-        default=None,
-        metadata={
-            "name": "ANNOTATIONS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    annotations: CryptoCertificateToPortPrototypeMapping.Annotations | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "ANNOTATIONS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     variation_point: VariationPoint | None = field(
         default=None,
@@ -173,7 +176,9 @@ class CryptoCertificateToPortPrototypeMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    crypto_certificate_ref: CryptoCertificateToPortPrototypeMapping.CryptoCertificateRef | None = field(
+    crypto_certificate_ref: (
+        CryptoCertificateToPortPrototypeMapping.CryptoCertificateRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "CRYPTO-CERTIFICATE-REF",
@@ -181,23 +186,23 @@ class CryptoCertificateToPortPrototypeMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    port_prototype_iref: PortPrototypeInExecutableInstanceRef | None = (
+    port_prototype_iref: PortPrototypeInExecutableInstanceRef | None = field(
+        default=None,
+        metadata={
+            "name": "PORT-PROTOTYPE-IREF",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
+    )
+    process_ref: CryptoCertificateToPortPrototypeMapping.ProcessRef | None = (
         field(
             default=None,
             metadata={
-                "name": "PORT-PROTOTYPE-IREF",
+                "name": "PROCESS-REF",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-    )
-    process_ref: CryptoCertificateToPortPrototypeMapping.ProcessRef | None = field(
-        default=None,
-        metadata={
-            "name": "PROCESS-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
     )
     write_access: Boolean | None = field(
         default=None,

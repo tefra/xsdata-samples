@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -158,15 +157,13 @@ class TtcanCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ttcan_cluster_variants: TtcanCluster.TtcanClusterVariants | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "TTCAN-CLUSTER-VARIANTS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    ttcan_cluster_variants: TtcanCluster.TtcanClusterVariants | None = field(
+        default=None,
+        metadata={
+            "name": "TTCAN-CLUSTER-VARIANTS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     s: str | None = field(
         default=None,

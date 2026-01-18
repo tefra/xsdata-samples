@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .application_data_prototype_in_system_instance_ref import (
     ApplicationDataPrototypeInSystemInstanceRef,
@@ -45,13 +44,15 @@ class DataPrototypeWithApplicationDataTypeInSystemRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    data_prototype_iref: ApplicationDataPrototypeInSystemInstanceRef | None = field(
-        default=None,
-        metadata={
-            "name": "DATA-PROTOTYPE-IREF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    data_prototype_iref: ApplicationDataPrototypeInSystemInstanceRef | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "DATA-PROTOTYPE-IREF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     s: str | None = field(
         default=None,

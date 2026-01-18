@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from .dated_special_service_ref import DatedSpecialServiceRef
 from .dated_vehicle_journey_ref import DatedVehicleJourneyRef
@@ -24,7 +23,17 @@ class PassingTimeVersionedChildStructure(VersionedChildStructure):
     class Meta:
         name = "PassingTime_VersionedChildStructure"
 
-    choice: SingleJourneyRef | DatedVehicleJourneyRef | DatedSpecialServiceRef | SpecialServiceRef | TemplateServiceJourneyRef | ServiceJourneyRef | DeadRunRef | VehicleJourneyRef | None = field(
+    choice: (
+        SingleJourneyRef
+        | DatedVehicleJourneyRef
+        | DatedSpecialServiceRef
+        | SpecialServiceRef
+        | TemplateServiceJourneyRef
+        | ServiceJourneyRef
+        | DeadRunRef
+        | VehicleJourneyRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -80,7 +89,14 @@ class PassingTimeVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    point_in_journey_pattern_ref: PointInSingleJourneyPathRef | FarePointInPatternRef | StopPointInJourneyPatternRef | TimingPointInJourneyPatternRef | PointInJourneyPatternRef | None = field(
+    point_in_journey_pattern_ref: (
+        PointInSingleJourneyPathRef
+        | FarePointInPatternRef
+        | StopPointInJourneyPatternRef
+        | TimingPointInJourneyPatternRef
+        | PointInJourneyPatternRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",

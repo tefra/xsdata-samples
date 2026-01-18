@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -111,7 +110,9 @@ class DiagnosticOperationCycleNeeds:
             "required": True,
         },
     )
-    short_name_fragments: DiagnosticOperationCycleNeeds.ShortNameFragments | None = field(
+    short_name_fragments: (
+        DiagnosticOperationCycleNeeds.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",

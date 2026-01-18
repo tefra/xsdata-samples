@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -120,7 +119,9 @@ class ServiceInterfaceElementSecureComConfig:
             "required": True,
         },
     )
-    short_name_fragments: ServiceInterfaceElementSecureComConfig.ShortNameFragments | None = field(
+    short_name_fragments: (
+        ServiceInterfaceElementSecureComConfig.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -168,13 +169,15 @@ class ServiceInterfaceElementSecureComConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: ServiceInterfaceElementSecureComConfig.Annotations | None = field(
-        default=None,
-        metadata={
-            "name": "ANNOTATIONS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    annotations: ServiceInterfaceElementSecureComConfig.Annotations | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "ANNOTATIONS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     data_id: PositiveInteger | None = field(
         default=None,
@@ -184,17 +187,17 @@ class ServiceInterfaceElementSecureComConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    event_ref: ServiceInterfaceElementSecureComConfig.EventRef | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "EVENT-REF",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    event_ref: ServiceInterfaceElementSecureComConfig.EventRef | None = field(
+        default=None,
+        metadata={
+            "name": "EVENT-REF",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
-    field_notifier_ref: ServiceInterfaceElementSecureComConfig.FieldNotifierRef | None = field(
+    field_notifier_ref: (
+        ServiceInterfaceElementSecureComConfig.FieldNotifierRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "FIELD-NOTIFIER-REF",
@@ -210,7 +213,9 @@ class ServiceInterfaceElementSecureComConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    getter_call_ref: ServiceInterfaceElementSecureComConfig.GetterCallRef | None = field(
+    getter_call_ref: (
+        ServiceInterfaceElementSecureComConfig.GetterCallRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "GETTER-CALL-REF",
@@ -218,7 +223,9 @@ class ServiceInterfaceElementSecureComConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    getter_return_ref: ServiceInterfaceElementSecureComConfig.GetterReturnRef | None = field(
+    getter_return_ref: (
+        ServiceInterfaceElementSecureComConfig.GetterReturnRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "GETTER-RETURN-REF",
@@ -226,7 +233,9 @@ class ServiceInterfaceElementSecureComConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    method_call_ref: ServiceInterfaceElementSecureComConfig.MethodCallRef | None = field(
+    method_call_ref: (
+        ServiceInterfaceElementSecureComConfig.MethodCallRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "METHOD-CALL-REF",
@@ -234,7 +243,9 @@ class ServiceInterfaceElementSecureComConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    method_return_ref: ServiceInterfaceElementSecureComConfig.MethodReturnRef | None = field(
+    method_return_ref: (
+        ServiceInterfaceElementSecureComConfig.MethodReturnRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "METHOD-RETURN-REF",
@@ -242,7 +253,9 @@ class ServiceInterfaceElementSecureComConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    setter_call_ref: ServiceInterfaceElementSecureComConfig.SetterCallRef | None = field(
+    setter_call_ref: (
+        ServiceInterfaceElementSecureComConfig.SetterCallRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "SETTER-CALL-REF",
@@ -250,7 +263,9 @@ class ServiceInterfaceElementSecureComConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    setter_return_ref: ServiceInterfaceElementSecureComConfig.SetterReturnRef | None = field(
+    setter_return_ref: (
+        ServiceInterfaceElementSecureComConfig.SetterReturnRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "SETTER-RETURN-REF",

@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -98,7 +97,9 @@ class ServiceInterfaceMethodMapping:
             "required": True,
         },
     )
-    short_name_fragments: ServiceInterfaceMethodMapping.ShortNameFragments | None = field(
+    short_name_fragments: (
+        ServiceInterfaceMethodMapping.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -154,21 +155,25 @@ class ServiceInterfaceMethodMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    source_method_ref: ServiceInterfaceMethodMapping.SourceMethodRef | None = field(
-        default=None,
-        metadata={
-            "name": "SOURCE-METHOD-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    source_method_ref: ServiceInterfaceMethodMapping.SourceMethodRef | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "SOURCE-METHOD-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
-    target_method_ref: ServiceInterfaceMethodMapping.TargetMethodRef | None = field(
-        default=None,
-        metadata={
-            "name": "TARGET-METHOD-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    target_method_ref: ServiceInterfaceMethodMapping.TargetMethodRef | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "TARGET-METHOD-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     s: str | None = field(
         default=None,

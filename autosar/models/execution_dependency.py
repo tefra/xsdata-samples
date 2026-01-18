@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .mode_in_process_instance_ref import ModeInProcessInstanceRef
 

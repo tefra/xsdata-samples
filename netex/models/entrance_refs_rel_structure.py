@@ -1,6 +1,5 @@
 from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import Union
 
 from .entrance_ref import EntranceRef
 from .one_to_many_relationship_structure import OneToManyRelationshipStructure
@@ -24,7 +23,15 @@ class EntranceRefsRelStructure(OneToManyRelationshipStructure):
         name = "entranceRefs_RelStructure"
 
     entrance_ref_or_parking_entrance_ref: Iterable[
-        StopPlaceVehicleEntranceRef | StopPlaceEntranceRef | ParkingEntranceForVehiclesRef | ParkingPassengerEntranceRef | ParkingEntranceRef | PointOfInterestVehicleEntranceRef | PointOfInterestEntranceRef | VehicleEntranceRef | EntranceRef
+        StopPlaceVehicleEntranceRef
+        | StopPlaceEntranceRef
+        | ParkingEntranceForVehiclesRef
+        | ParkingPassengerEntranceRef
+        | ParkingEntranceRef
+        | PointOfInterestVehicleEntranceRef
+        | PointOfInterestEntranceRef
+        | VehicleEntranceRef
+        | EntranceRef
     ] = field(
         default_factory=list,
         metadata={

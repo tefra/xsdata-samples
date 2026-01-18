@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from ipxact.models.address_block_ref import AddressBlockRef
 from ipxact.models.address_spaces import AddressSpaces
@@ -544,14 +543,16 @@ class ComponentType:
                         "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
                     },
                 )
-                port_ref: ComponentType.Modes.Mode.PortSlice.PortRef | None = field(
-                    default=None,
-                    metadata={
-                        "name": "portRef",
-                        "type": "Element",
-                        "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
-                        "required": True,
-                    },
+                port_ref: ComponentType.Modes.Mode.PortSlice.PortRef | None = (
+                    field(
+                        default=None,
+                        metadata={
+                            "name": "portRef",
+                            "type": "Element",
+                            "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
+                            "required": True,
+                        },
+                    )
                 )
                 sub_port_reference: list[SubPortReference] = field(
                     default_factory=list,
@@ -641,7 +642,9 @@ class ComponentType:
                         "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
                     },
                 )
-                address_space_ref: ComponentType.Modes.Mode.FieldSlice.AddressSpaceRef | None = field(
+                address_space_ref: (
+                    ComponentType.Modes.Mode.FieldSlice.AddressSpaceRef | None
+                ) = field(
                     default=None,
                     metadata={
                         "name": "addressSpaceRef",
@@ -649,7 +652,9 @@ class ComponentType:
                         "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
                     },
                 )
-                memory_map_ref: ComponentType.Modes.Mode.FieldSlice.MemoryMapRef | None = field(
+                memory_map_ref: (
+                    ComponentType.Modes.Mode.FieldSlice.MemoryMapRef | None
+                ) = field(
                     default=None,
                     metadata={
                         "name": "memoryMapRef",
@@ -983,16 +988,14 @@ class ComponentType:
                             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
                         },
                     )
-                    address_offset: UnsignedLongintExpression | None = (
-                        field(
-                            default=None,
-                            metadata={
-                                "name": "addressOffset",
-                                "type": "Element",
-                                "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
-                                "required": True,
-                            },
-                        )
+                    address_offset: UnsignedLongintExpression | None = field(
+                        default=None,
+                        metadata={
+                            "name": "addressOffset",
+                            "type": "Element",
+                            "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
+                            "required": True,
+                        },
                     )
                     range: UnsignedPositiveLongintExpression | None = field(
                         default=None,

@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -171,7 +170,9 @@ class BswDebugInfo:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    parameter_accessed_for_debug_refs: BswDebugInfo.ParameterAccessedForDebugRefs | None = field(
+    parameter_accessed_for_debug_refs: (
+        BswDebugInfo.ParameterAccessedForDebugRefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "PARAMETER-ACCESSED-FOR-DEBUG-REFS",
@@ -179,7 +180,9 @@ class BswDebugInfo:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variable_accessed_for_debug_refs: BswDebugInfo.VariableAccessedForDebugRefs | None = field(
+    variable_accessed_for_debug_refs: (
+        BswDebugInfo.VariableAccessedForDebugRefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "VARIABLE-ACCESSED-FOR-DEBUG-REFS",

@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .integer_value_variation_point import IntegerValueVariationPoint
 from .post_build_variant_criterion_subtypes_enum import (
@@ -42,7 +41,9 @@ class PostBuildVariantCondition:
     class Meta:
         name = "POST-BUILD-VARIANT-CONDITION"
 
-    matching_criterion_ref: PostBuildVariantCondition.MatchingCriterionRef | None = field(
+    matching_criterion_ref: (
+        PostBuildVariantCondition.MatchingCriterionRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "MATCHING-CRITERION-REF",

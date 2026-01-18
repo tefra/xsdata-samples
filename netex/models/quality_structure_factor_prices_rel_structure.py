@@ -1,6 +1,5 @@
 from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import Union
 
 from .cell_ref import CellRef
 from .quality_structure_factor_price_ref import QualityStructureFactorPriceRef
@@ -22,7 +21,9 @@ class QualityStructureFactorPricesRelStructure(
         name = "qualityStructureFactorPrices_RelStructure"
 
     quality_structure_factor_price_ref_or_quality_structure_factor_price_or_cell_ref: Iterable[
-        QualityStructureFactorPriceRef | QualityStructureFactorPriceVersionedChildStructure | CellRef
+        QualityStructureFactorPriceRef
+        | QualityStructureFactorPriceVersionedChildStructure
+        | CellRef
     ] = field(
         default_factory=list,
         metadata={

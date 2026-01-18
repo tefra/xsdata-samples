@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -215,7 +214,9 @@ class SocketAddress:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    allowed_i_pv_6_ext_headers_ref: SocketAddress.AllowedIPv6ExtHeadersRef | None = field(
+    allowed_i_pv_6_ext_headers_ref: (
+        SocketAddress.AllowedIPv6ExtHeadersRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "ALLOWED-I-PV-6-EXT-HEADERS-REF",
@@ -223,15 +224,13 @@ class SocketAddress:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    allowed_tcp_options_ref: SocketAddress.AllowedTcpOptionsRef | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "ALLOWED-TCP-OPTIONS-REF",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    allowed_tcp_options_ref: SocketAddress.AllowedTcpOptionsRef | None = field(
+        default=None,
+        metadata={
+            "name": "ALLOWED-TCP-OPTIONS-REF",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     application_endpoint: ApplicationEndpoint | None = field(
         default=None,
@@ -273,13 +272,15 @@ class SocketAddress:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    multicast_connector_refs: SocketAddress.MulticastConnectorRefs | None = field(
-        default=None,
-        metadata={
-            "name": "MULTICAST-CONNECTOR-REFS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    multicast_connector_refs: SocketAddress.MulticastConnectorRefs | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "MULTICAST-CONNECTOR-REFS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     path_mtu_discovery_enabled: Boolean | None = field(
         default=None,
@@ -313,13 +314,15 @@ class SocketAddress:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    static_socket_connections: SocketAddress.StaticSocketConnections | None = field(
-        default=None,
-        metadata={
-            "name": "STATIC-SOCKET-CONNECTIONS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    static_socket_connections: SocketAddress.StaticSocketConnections | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "STATIC-SOCKET-CONNECTIONS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     udp_checksum_handling: UdpChecksumCalculationEnum | None = field(
         default=None,

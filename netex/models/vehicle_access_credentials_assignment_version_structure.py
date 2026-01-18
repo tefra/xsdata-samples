@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from .assignment_version_structure_1 import AssignmentVersionStructure1
 from .car_pooling_service_ref import CarPoolingServiceRef
@@ -23,7 +22,14 @@ class VehicleAccessCredentialsAssignmentVersionStructure(
     class Meta:
         name = "VehicleAccessCredentialsAssignment_VersionStructure"
 
-    common_vehicle_service_ref_or_vehicle_pooling_service_ref: VehicleRentalServiceRef | VehicleSharingServiceRef | ChauffeuredVehicleServiceRef | TaxiServiceRef | CarPoolingServiceRef | None = field(
+    common_vehicle_service_ref_or_vehicle_pooling_service_ref: (
+        VehicleRentalServiceRef
+        | VehicleSharingServiceRef
+        | ChauffeuredVehicleServiceRef
+        | TaxiServiceRef
+        | CarPoolingServiceRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -64,7 +70,9 @@ class VehicleAccessCredentialsAssignmentVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    medium_access_device_ref: MobileDeviceRef | EmvCardRef | SmartcardRef | None = field(
+    medium_access_device_ref: (
+        MobileDeviceRef | EmvCardRef | SmartcardRef | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",

@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .communication_connector_subtypes_enum import (
     CommunicationConnectorSubtypesEnum,
@@ -40,7 +39,9 @@ class HwPortMapping:
     class Meta:
         name = "HW-PORT-MAPPING"
 
-    communication_connector_ref: HwPortMapping.CommunicationConnectorRef | None = field(
+    communication_connector_ref: (
+        HwPortMapping.CommunicationConnectorRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "COMMUNICATION-CONNECTOR-REF",
@@ -48,13 +49,15 @@ class HwPortMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    hw_communication_port_ref: HwPortMapping.HwCommunicationPortRef | None = field(
-        default=None,
-        metadata={
-            "name": "HW-COMMUNICATION-PORT-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    hw_communication_port_ref: HwPortMapping.HwCommunicationPortRef | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "HW-COMMUNICATION-PORT-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     s: str | None = field(
         default=None,

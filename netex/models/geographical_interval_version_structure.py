@@ -1,6 +1,5 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
-from typing import Optional
 
 from .fare_interval_version_structure import FareIntervalVersionStructure
 from .geographical_interval_prices_rel_structure import (

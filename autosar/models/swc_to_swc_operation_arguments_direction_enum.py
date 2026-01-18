@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .swc_to_swc_operation_arguments_direction_enum_simple import (
     SwcToSwcOperationArgumentsDirectionEnumSimple,

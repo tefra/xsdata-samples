@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .application_error_subtypes_enum import ApplicationErrorSubtypesEnum
 from .ref import Ref
@@ -36,7 +35,9 @@ class ClientServerApplicationErrorMapping:
     class Meta:
         name = "CLIENT-SERVER-APPLICATION-ERROR-MAPPING"
 
-    first_application_error_ref: ClientServerApplicationErrorMapping.FirstApplicationErrorRef | None = field(
+    first_application_error_ref: (
+        ClientServerApplicationErrorMapping.FirstApplicationErrorRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "FIRST-APPLICATION-ERROR-REF",
@@ -44,7 +45,9 @@ class ClientServerApplicationErrorMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    second_application_error_ref: ClientServerApplicationErrorMapping.SecondApplicationErrorRef | None = field(
+    second_application_error_ref: (
+        ClientServerApplicationErrorMapping.SecondApplicationErrorRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "SECOND-APPLICATION-ERROR-REF",

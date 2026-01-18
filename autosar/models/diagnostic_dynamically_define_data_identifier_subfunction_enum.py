@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .diagnostic_dynamically_define_data_identifier_subfunction_enum_simple import (
     DiagnosticDynamicallyDefineDataIdentifierSubfunctionEnumSimple,
@@ -30,7 +29,9 @@ class DiagnosticDynamicallyDefineDataIdentifierSubfunctionEnum:
     class Meta:
         name = "DIAGNOSTIC-DYNAMICALLY-DEFINE-DATA-IDENTIFIER-SUBFUNCTION-ENUM"
 
-    value: DiagnosticDynamicallyDefineDataIdentifierSubfunctionEnumSimple | None = field(
+    value: (
+        DiagnosticDynamicallyDefineDataIdentifierSubfunctionEnumSimple | None
+    ) = field(
         default=None,
         metadata={
             "required": True,

@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import VariationPoint
 from .cs_transformer_error_reaction_enum import CsTransformerErrorReactionEnum
@@ -55,7 +54,10 @@ class UserDefinedTransformationISignalPropsConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    data_prototype_transformation_propss: UserDefinedTransformationISignalPropsConditional.DataPrototypeTransformationPropss | None = field(
+    data_prototype_transformation_propss: (
+        UserDefinedTransformationISignalPropsConditional.DataPrototypeTransformationPropss
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "DATA-PROTOTYPE-TRANSFORMATION-PROPSS",
@@ -63,7 +65,9 @@ class UserDefinedTransformationISignalPropsConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    transformer_ref: UserDefinedTransformationISignalPropsConditional.TransformerRef | None = field(
+    transformer_ref: (
+        UserDefinedTransformationISignalPropsConditional.TransformerRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "TRANSFORMER-REF",

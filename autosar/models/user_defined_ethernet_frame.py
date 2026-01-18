@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -101,7 +100,9 @@ class UserDefinedEthernetFrame:
             "required": True,
         },
     )
-    short_name_fragments: UserDefinedEthernetFrame.ShortNameFragments | None = field(
+    short_name_fragments: (
+        UserDefinedEthernetFrame.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -173,7 +174,9 @@ class UserDefinedEthernetFrame:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    pdu_to_frame_mappings: UserDefinedEthernetFrame.PduToFrameMappings | None = field(
+    pdu_to_frame_mappings: (
+        UserDefinedEthernetFrame.PduToFrameMappings | None
+    ) = field(
         default=None,
         metadata={
             "name": "PDU-TO-FRAME-MAPPINGS",

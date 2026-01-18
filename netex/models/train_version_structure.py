@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .train_components_rel_structure import TrainComponentsRelStructure
 from .train_size import TrainSize

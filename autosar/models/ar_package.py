@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .acl_object_set import AclObjectSet
 from .acl_operation import AclOperation

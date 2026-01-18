@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -160,13 +159,15 @@ class BswCompositionTiming:
             "required": True,
         },
     )
-    short_name_fragments: BswCompositionTiming.ShortNameFragments | None = field(
-        default=None,
-        metadata={
-            "name": "SHORT-NAME-FRAGMENTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    short_name_fragments: BswCompositionTiming.ShortNameFragments | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "SHORT-NAME-FRAGMENTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     long_name: MultilanguageLongName | None = field(
         default=None,
@@ -224,41 +225,41 @@ class BswCompositionTiming:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    timing_conditions: BswCompositionTiming.TimingConditions | None = (
+    timing_conditions: BswCompositionTiming.TimingConditions | None = field(
+        default=None,
+        metadata={
+            "name": "TIMING-CONDITIONS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
+    )
+    timing_descriptions: BswCompositionTiming.TimingDescriptions | None = (
         field(
             default=None,
             metadata={
-                "name": "TIMING-CONDITIONS",
+                "name": "TIMING-DESCRIPTIONS",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
     )
-    timing_descriptions: BswCompositionTiming.TimingDescriptions | None = field(
+    timing_guarantees: BswCompositionTiming.TimingGuarantees | None = field(
         default=None,
         metadata={
-            "name": "TIMING-DESCRIPTIONS",
+            "name": "TIMING-GUARANTEES",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    timing_guarantees: BswCompositionTiming.TimingGuarantees | None = (
+    timing_requirements: BswCompositionTiming.TimingRequirements | None = (
         field(
             default=None,
             metadata={
-                "name": "TIMING-GUARANTEES",
+                "name": "TIMING-REQUIREMENTS",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-    )
-    timing_requirements: BswCompositionTiming.TimingRequirements | None = field(
-        default=None,
-        metadata={
-            "name": "TIMING-REQUIREMENTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
     )
     timing_resource: TimingExtensionResource | None = field(
         default=None,
@@ -268,13 +269,15 @@ class BswCompositionTiming:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    implementation_refs: BswCompositionTiming.ImplementationRefs | None = field(
-        default=None,
-        metadata={
-            "name": "IMPLEMENTATION-REFS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    implementation_refs: BswCompositionTiming.ImplementationRefs | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "IMPLEMENTATION-REFS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     s: str | None = field(
         default=None,

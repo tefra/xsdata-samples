@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .i_psec_policy_enum_simple import IPsecPolicyEnumSimple
 

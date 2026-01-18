@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.insured_involvement_type import (
     InsuredInvolvementType,

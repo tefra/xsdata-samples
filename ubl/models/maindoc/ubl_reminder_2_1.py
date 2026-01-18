@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from ubl.models.common.ubl_common_aggregate_components_2_1 import (
     AccountingCustomerParty,
@@ -197,7 +196,9 @@ class ReminderType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    payment_alternative_currency_code: PaymentAlternativeCurrencyCode | None = field(
+    payment_alternative_currency_code: (
+        PaymentAlternativeCurrencyCode | None
+    ) = field(
         default=None,
         metadata={
             "name": "PaymentAlternativeCurrencyCode",
@@ -345,7 +346,9 @@ class ReminderType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    payment_alternative_exchange_rate: PaymentAlternativeExchangeRate | None = field(
+    payment_alternative_exchange_rate: (
+        PaymentAlternativeExchangeRate | None
+    ) = field(
         default=None,
         metadata={
             "name": "PaymentAlternativeExchangeRate",

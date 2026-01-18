@@ -4,7 +4,6 @@ from typing import Any
 from sdmx_ml.models.data_structure_representation_type import (
     DataStructureRepresentationType,
 )
-from sdmx_ml.models.unbounded_code_type import UnboundedCodeType
 
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 

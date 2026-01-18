@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .constant_specification_subtypes_enum import (
     ConstantSpecificationSubtypesEnum,
@@ -43,21 +42,25 @@ class ConstantSpecificationMapping:
     class Meta:
         name = "CONSTANT-SPECIFICATION-MAPPING"
 
-    appl_constant_ref: ConstantSpecificationMapping.ApplConstantRef | None = field(
-        default=None,
-        metadata={
-            "name": "APPL-CONSTANT-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    appl_constant_ref: ConstantSpecificationMapping.ApplConstantRef | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "APPL-CONSTANT-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
-    impl_constant_ref: ConstantSpecificationMapping.ImplConstantRef | None = field(
-        default=None,
-        metadata={
-            "name": "IMPL-CONSTANT-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    impl_constant_ref: ConstantSpecificationMapping.ImplConstantRef | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "IMPL-CONSTANT-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     s: str | None = field(
         default=None,

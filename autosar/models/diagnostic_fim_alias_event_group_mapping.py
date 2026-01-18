@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -106,7 +105,9 @@ class DiagnosticFimAliasEventGroupMapping:
             "required": True,
         },
     )
-    short_name_fragments: DiagnosticFimAliasEventGroupMapping.ShortNameFragments | None = field(
+    short_name_fragments: (
+        DiagnosticFimAliasEventGroupMapping.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -154,13 +155,15 @@ class DiagnosticFimAliasEventGroupMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: DiagnosticFimAliasEventGroupMapping.Annotations | None = field(
-        default=None,
-        metadata={
-            "name": "ANNOTATIONS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    annotations: DiagnosticFimAliasEventGroupMapping.Annotations | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "ANNOTATIONS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     variation_point: VariationPoint | None = field(
         default=None,
@@ -170,7 +173,9 @@ class DiagnosticFimAliasEventGroupMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    actual_event_ref: DiagnosticFimAliasEventGroupMapping.ActualEventRef | None = field(
+    actual_event_ref: (
+        DiagnosticFimAliasEventGroupMapping.ActualEventRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "ACTUAL-EVENT-REF",
@@ -178,7 +183,9 @@ class DiagnosticFimAliasEventGroupMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    alias_event_ref: DiagnosticFimAliasEventGroupMapping.AliasEventRef | None = field(
+    alias_event_ref: (
+        DiagnosticFimAliasEventGroupMapping.AliasEventRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "ALIAS-EVENT-REF",

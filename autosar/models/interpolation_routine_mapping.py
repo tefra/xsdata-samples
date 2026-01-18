@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .interpolation_routine import InterpolationRoutine
 from .ref import Ref
@@ -42,7 +41,9 @@ class InterpolationRoutineMapping:
     class Meta:
         name = "INTERPOLATION-ROUTINE-MAPPING"
 
-    interpolation_routines: InterpolationRoutineMapping.InterpolationRoutines | None = field(
+    interpolation_routines: (
+        InterpolationRoutineMapping.InterpolationRoutines | None
+    ) = field(
         default=None,
         metadata={
             "name": "INTERPOLATION-ROUTINES",
@@ -50,7 +51,9 @@ class InterpolationRoutineMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_record_layout_ref: InterpolationRoutineMapping.SwRecordLayoutRef | None = field(
+    sw_record_layout_ref: (
+        InterpolationRoutineMapping.SwRecordLayoutRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "SW-RECORD-LAYOUT-REF",

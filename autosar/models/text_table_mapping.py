@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .boolean import Boolean
 from .mapping_direction_enum import MappingDirectionEnum
@@ -50,7 +49,9 @@ class TextTableMapping:
     class Meta:
         name = "TEXT-TABLE-MAPPING"
 
-    bitfield_text_table_mask_first: PositiveIntegerValueVariationPoint | None = field(
+    bitfield_text_table_mask_first: (
+        PositiveIntegerValueVariationPoint | None
+    ) = field(
         default=None,
         metadata={
             "name": "BITFIELD-TEXT-TABLE-MASK-FIRST",
@@ -58,7 +59,9 @@ class TextTableMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    bitfield_text_table_mask_second: PositiveIntegerValueVariationPoint | None = field(
+    bitfield_text_table_mask_second: (
+        PositiveIntegerValueVariationPoint | None
+    ) = field(
         default=None,
         metadata={
             "name": "BITFIELD-TEXT-TABLE-MASK-SECOND",

@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .adaptive_platform_service_instance_subtypes_enum import (
     AdaptivePlatformServiceInstanceSubtypesEnum,
@@ -119,7 +118,9 @@ class UserDefinedServiceInstanceToMachineMapping:
             "required": True,
         },
     )
-    short_name_fragments: UserDefinedServiceInstanceToMachineMapping.ShortNameFragments | None = field(
+    short_name_fragments: (
+        UserDefinedServiceInstanceToMachineMapping.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -167,7 +168,9 @@ class UserDefinedServiceInstanceToMachineMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: UserDefinedServiceInstanceToMachineMapping.Annotations | None = field(
+    annotations: (
+        UserDefinedServiceInstanceToMachineMapping.Annotations | None
+    ) = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -183,7 +186,10 @@ class UserDefinedServiceInstanceToMachineMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    communication_connector_ref: UserDefinedServiceInstanceToMachineMapping.CommunicationConnectorRef | None = field(
+    communication_connector_ref: (
+        UserDefinedServiceInstanceToMachineMapping.CommunicationConnectorRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "COMMUNICATION-CONNECTOR-REF",
@@ -191,7 +197,10 @@ class UserDefinedServiceInstanceToMachineMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sec_oc_com_props_for_multicast_refs: UserDefinedServiceInstanceToMachineMapping.SecOcComPropsForMulticastRefs | None = field(
+    sec_oc_com_props_for_multicast_refs: (
+        UserDefinedServiceInstanceToMachineMapping.SecOcComPropsForMulticastRefs
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "SEC-OC-COM-PROPS-FOR-MULTICAST-REFS",
@@ -199,7 +208,10 @@ class UserDefinedServiceInstanceToMachineMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    secure_com_props_for_tcp_refs: UserDefinedServiceInstanceToMachineMapping.SecureComPropsForTcpRefs | None = field(
+    secure_com_props_for_tcp_refs: (
+        UserDefinedServiceInstanceToMachineMapping.SecureComPropsForTcpRefs
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "SECURE-COM-PROPS-FOR-TCP-REFS",
@@ -207,7 +219,10 @@ class UserDefinedServiceInstanceToMachineMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    secure_com_props_for_udp_refs: UserDefinedServiceInstanceToMachineMapping.SecureComPropsForUdpRefs | None = field(
+    secure_com_props_for_udp_refs: (
+        UserDefinedServiceInstanceToMachineMapping.SecureComPropsForUdpRefs
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "SECURE-COM-PROPS-FOR-UDP-REFS",
@@ -215,7 +230,9 @@ class UserDefinedServiceInstanceToMachineMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    service_instance_refs: UserDefinedServiceInstanceToMachineMapping.ServiceInstanceRefs | None = field(
+    service_instance_refs: (
+        UserDefinedServiceInstanceToMachineMapping.ServiceInstanceRefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "SERVICE-INSTANCE-REFS",
@@ -366,13 +383,11 @@ class UserDefinedServiceInstanceToMachineMapping:
 
         @dataclass
         class ServiceInstanceRef(Ref):
-            dest: AdaptivePlatformServiceInstanceSubtypesEnum | None = (
-                field(
-                    default=None,
-                    metadata={
-                        "name": "DEST",
-                        "type": "Attribute",
-                        "required": True,
-                    },
-                )
+            dest: AdaptivePlatformServiceInstanceSubtypesEnum | None = field(
+                default=None,
+                metadata={
+                    "name": "DEST",
+                    "type": "Attribute",
+                    "required": True,
+                },
             )

@@ -1,7 +1,6 @@
 from collections.abc import Iterable
 from dataclasses import dataclass, field
 from decimal import Decimal
-from typing import Optional
 
 from .actual_vehicle_equipment_version_structure import (
     ActualVehicleEquipmentVersionStructure,
@@ -143,13 +142,15 @@ class AccessVehicleEquipmentVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    assisted_boarding_location: AssistedBoardingLocationEnumeration | None = field(
-        default=None,
-        metadata={
-            "name": "AssistedBoardingLocation",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        },
+    assisted_boarding_location: AssistedBoardingLocationEnumeration | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "AssistedBoardingLocation",
+                "type": "Element",
+                "namespace": "http://www.netex.org.uk/netex",
+            },
+        )
     )
     guide_dogs_allowed: bool | None = field(
         default=None,

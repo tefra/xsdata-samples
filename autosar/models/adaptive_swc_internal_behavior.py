@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -99,7 +98,9 @@ class AdaptiveSwcInternalBehavior:
             "required": True,
         },
     )
-    short_name_fragments: AdaptiveSwcInternalBehavior.ShortNameFragments | None = field(
+    short_name_fragments: (
+        AdaptiveSwcInternalBehavior.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -155,7 +156,9 @@ class AdaptiveSwcInternalBehavior:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    service_dependencys: AdaptiveSwcInternalBehavior.ServiceDependencys | None = field(
+    service_dependencys: (
+        AdaptiveSwcInternalBehavior.ServiceDependencys | None
+    ) = field(
         default=None,
         metadata={
             "name": "SERVICE-DEPENDENCYS",

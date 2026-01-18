@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from datexii.models.eu.datexii.v2.fuel_type2_enum import FuelType2Enum
 from datexii.models.eu.datexii.v2.load_type2_enum import LoadType2Enum

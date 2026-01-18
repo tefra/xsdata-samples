@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .coupling_port_role_enum_simple import CouplingPortRoleEnumSimple
 

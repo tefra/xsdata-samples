@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .persistency_collection_level_update_strategy_enum_simple import (
     PersistencyCollectionLevelUpdateStrategyEnumSimple,
@@ -30,13 +29,11 @@ class PersistencyCollectionLevelUpdateStrategyEnum:
     class Meta:
         name = "PERSISTENCY-COLLECTION-LEVEL-UPDATE-STRATEGY-ENUM"
 
-    value: PersistencyCollectionLevelUpdateStrategyEnumSimple | None = (
-        field(
-            default=None,
-            metadata={
-                "required": True,
-            },
-        )
+    value: PersistencyCollectionLevelUpdateStrategyEnumSimple | None = field(
+        default=None,
+        metadata={
+            "required": True,
+        },
     )
     s: str | None = field(
         default=None,

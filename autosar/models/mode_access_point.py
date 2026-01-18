@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import VariationPoint
 from .mode_access_point_ident import ModeAccessPointIdent
@@ -91,7 +90,9 @@ class ModeAccessPoint:
 
     @dataclass
     class ModeGroupIref:
-        p_mode_group_in_atomic_swc_instance_ref: PModeGroupInAtomicSwcInstanceRef | None = field(
+        p_mode_group_in_atomic_swc_instance_ref: (
+            PModeGroupInAtomicSwcInstanceRef | None
+        ) = field(
             default=None,
             metadata={
                 "name": "P-MODE-GROUP-IN-ATOMIC-SWC-INSTANCE-REF",
@@ -99,7 +100,9 @@ class ModeAccessPoint:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        r_mode_group_in_atomic_swc_instance_ref: RModeGroupInAtomicSwcInstanceRef | None = field(
+        r_mode_group_in_atomic_swc_instance_ref: (
+            RModeGroupInAtomicSwcInstanceRef | None
+        ) = field(
             default=None,
             metadata={
                 "name": "R-MODE-GROUP-IN-ATOMIC-SWC-INSTANCE-REF",

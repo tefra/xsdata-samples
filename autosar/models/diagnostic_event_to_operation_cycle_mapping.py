@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -100,7 +99,9 @@ class DiagnosticEventToOperationCycleMapping:
             "required": True,
         },
     )
-    short_name_fragments: DiagnosticEventToOperationCycleMapping.ShortNameFragments | None = field(
+    short_name_fragments: (
+        DiagnosticEventToOperationCycleMapping.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -148,13 +149,15 @@ class DiagnosticEventToOperationCycleMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: DiagnosticEventToOperationCycleMapping.Annotations | None = field(
-        default=None,
-        metadata={
-            "name": "ANNOTATIONS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    annotations: DiagnosticEventToOperationCycleMapping.Annotations | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "ANNOTATIONS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     variation_point: VariationPoint | None = field(
         default=None,
@@ -164,7 +167,9 @@ class DiagnosticEventToOperationCycleMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    diagnostic_event_ref: DiagnosticEventToOperationCycleMapping.DiagnosticEventRef | None = field(
+    diagnostic_event_ref: (
+        DiagnosticEventToOperationCycleMapping.DiagnosticEventRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "DIAGNOSTIC-EVENT-REF",
@@ -172,7 +177,9 @@ class DiagnosticEventToOperationCycleMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    operation_cycle_ref: DiagnosticEventToOperationCycleMapping.OperationCycleRef | None = field(
+    operation_cycle_ref: (
+        DiagnosticEventToOperationCycleMapping.OperationCycleRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "OPERATION-CYCLE-REF",

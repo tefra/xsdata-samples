@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import DocumentationBlock
 from .integer import Integer
@@ -79,15 +78,19 @@ class AssignFrameId:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    assigned_controller_ref: AssignFrameId.AssignedControllerRef | None = field(
-        default=None,
-        metadata={
-            "name": "ASSIGNED-CONTROLLER-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    assigned_controller_ref: AssignFrameId.AssignedControllerRef | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "ASSIGNED-CONTROLLER-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
-    assigned_lin_slave_config_ref: AssignFrameId.AssignedLinSlaveConfigRef | None = field(
+    assigned_lin_slave_config_ref: (
+        AssignFrameId.AssignedLinSlaveConfigRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "ASSIGNED-LIN-SLAVE-CONFIG-REF",
@@ -95,7 +98,9 @@ class AssignFrameId:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    assigned_frame_triggering_ref: AssignFrameId.AssignedFrameTriggeringRef | None = field(
+    assigned_frame_triggering_ref: (
+        AssignFrameId.AssignedFrameTriggeringRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "ASSIGNED-FRAME-TRIGGERING-REF",

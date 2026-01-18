@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from generali.models.com.generali.enterprise_services.core.gbo.enterprise.agreement.v1.account_manager_involvement_type_account_manager_type import (
     AccountManagerInvolvementTypeAccountManagerType,
@@ -15,7 +14,9 @@ __NAMESPACE__ = (
 
 @dataclass
 class AccountManagerInvolvementType:
-    multinational_fronting_office_role: MultinationalFrontingOfficeRoleType | None = field(
+    multinational_fronting_office_role: (
+        MultinationalFrontingOfficeRoleType | None
+    ) = field(
         default=None,
         metadata={
             "name": "MultinationalFrontingOfficeRole",
@@ -24,7 +25,9 @@ class AccountManagerInvolvementType:
             "required": True,
         },
     )
-    account_manager_type: AccountManagerInvolvementTypeAccountManagerType | None = field(
+    account_manager_type: (
+        AccountManagerInvolvementTypeAccountManagerType | None
+    ) = field(
         default=None,
         metadata={
             "name": "AccountManagerType",

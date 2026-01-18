@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .bpmndiagram import Bpmndiagram
 from .cancel_event_definition import CancelEventDefinition

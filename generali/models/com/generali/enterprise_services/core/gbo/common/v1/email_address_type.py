@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from generali.models.com.generali.enterprise_services.core.gbo.common.v1.email_address_domain_part_type import (
     EmailAddressDomainPartType,

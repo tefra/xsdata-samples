@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from xcbl.models.sourcing_create_response import (
     ItemNumber,
@@ -849,21 +848,21 @@ class VisibilityOfBuyer:
             "type": "Element",
         },
     )
-    alternative_buyer_contact_name: AlternativeBuyerContactName | None = (
+    alternative_buyer_contact_name: AlternativeBuyerContactName | None = field(
+        default=None,
+        metadata={
+            "name": "AlternativeBuyerContactName",
+            "type": "Element",
+        },
+    )
+    alternative_contact_phone_number: AlternativeContactPhoneNumber | None = (
         field(
             default=None,
             metadata={
-                "name": "AlternativeBuyerContactName",
+                "name": "AlternativeContactPhoneNumber",
                 "type": "Element",
             },
         )
-    )
-    alternative_contact_phone_number: AlternativeContactPhoneNumber | None = field(
-        default=None,
-        metadata={
-            "name": "AlternativeContactPhoneNumber",
-            "type": "Element",
-        },
     )
     alternative_contact_mobile: AlternativeContactMobile | None = field(
         default=None,
@@ -872,14 +871,12 @@ class VisibilityOfBuyer:
             "type": "Element",
         },
     )
-    alternative_contact_fax_number: AlternativeContactFaxNumber | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "AlternativeContactFaxNumber",
-                "type": "Element",
-            },
-        )
+    alternative_contact_fax_number: AlternativeContactFaxNumber | None = field(
+        default=None,
+        metadata={
+            "name": "AlternativeContactFaxNumber",
+            "type": "Element",
+        },
     )
     alternative_contact_email: AlternativeContactEmail | None = field(
         default=None,
@@ -1127,7 +1124,9 @@ class SourcingAttribute:
             "required": True,
         }
     )
-    sourcing_attribute_data_type_coded_other: SourcingAttributeDataTypeCodedOther | None = field(
+    sourcing_attribute_data_type_coded_other: (
+        SourcingAttributeDataTypeCodedOther | None
+    ) = field(
         default=None,
         metadata={
             "name": "SourcingAttributeDataTypeCodedOther",
@@ -1183,14 +1182,12 @@ class SourcingAttribute:
             "required": True,
         }
     )
-    sourcing_attribute_field_size: SourcingAttributeFieldSize | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "SourcingAttributeFieldSize",
-                "type": "Element",
-            },
-        )
+    sourcing_attribute_field_size: SourcingAttributeFieldSize | None = field(
+        default=None,
+        metadata={
+            "name": "SourcingAttributeFieldSize",
+            "type": "Element",
+        },
     )
 
 
@@ -1502,12 +1499,14 @@ class SourcingCreateDetail:
             "required": True,
         }
     )
-    list_of_sourcing_item_component: ListOfSourcingItemComponent | None = field(
-        default=None,
-        metadata={
-            "name": "ListOfSourcingItemComponent",
-            "type": "Element",
-        },
+    list_of_sourcing_item_component: ListOfSourcingItemComponent | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "ListOfSourcingItemComponent",
+                "type": "Element",
+            },
+        )
     )
 
 
@@ -1648,16 +1647,16 @@ class SourcingCreateHeader:
             "required": True,
         }
     )
-    sourcing_create_general_notes: SourcingCreateGeneralNotes | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "SourcingCreateGeneralNotes",
-                "type": "Element",
-            },
-        )
+    sourcing_create_general_notes: SourcingCreateGeneralNotes | None = field(
+        default=None,
+        metadata={
+            "name": "SourcingCreateGeneralNotes",
+            "type": "Element",
+        },
     )
-    sourcing_create_list_of_attachment: SourcingCreateListOfAttachment | None = field(
+    sourcing_create_list_of_attachment: (
+        SourcingCreateListOfAttachment | None
+    ) = field(
         default=None,
         metadata={
             "name": "SourcingCreateListOfAttachment",

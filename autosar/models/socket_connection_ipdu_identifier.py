@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .pdu_collection_semantics_enum import PduCollectionSemanticsEnum
 from .pdu_collection_trigger_enum import PduCollectionTriggerEnum
@@ -100,7 +99,9 @@ class SocketConnectionIpduIdentifier:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    pdu_triggering_ref: SocketConnectionIpduIdentifier.PduTriggeringRef | None = field(
+    pdu_triggering_ref: (
+        SocketConnectionIpduIdentifier.PduTriggeringRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "PDU-TRIGGERING-REF",
@@ -108,7 +109,9 @@ class SocketConnectionIpduIdentifier:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    routing_group_refs: SocketConnectionIpduIdentifier.RoutingGroupRefs | None = field(
+    routing_group_refs: (
+        SocketConnectionIpduIdentifier.RoutingGroupRefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "ROUTING-GROUP-REFS",

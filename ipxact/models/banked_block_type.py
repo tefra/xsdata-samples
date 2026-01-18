@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from ipxact.models.access_policies import AccessPolicies
 from ipxact.models.alternate_registers import AlternateRegisters
@@ -248,15 +247,13 @@ class BankedBlockType:
                 "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
             },
         )
-        access_handles: BankedBlockType.Register.AccessHandles | None = (
-            field(
-                default=None,
-                metadata={
-                    "name": "accessHandles",
-                    "type": "Element",
-                    "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
-                },
-            )
+        access_handles: BankedBlockType.Register.AccessHandles | None = field(
+            default=None,
+            metadata={
+                "name": "accessHandles",
+                "type": "Element",
+                "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
+            },
         )
         array: Array | None = field(
             default=None,
@@ -274,7 +271,9 @@ class BankedBlockType:
                 "required": True,
             },
         )
-        register_definition_ref: BankedBlockType.Register.RegisterDefinitionRef | None = field(
+        register_definition_ref: (
+            BankedBlockType.Register.RegisterDefinitionRef | None
+        ) = field(
             default=None,
             metadata={
                 "name": "registerDefinitionRef",

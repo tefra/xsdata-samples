@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from .emv_card_ref import EmvCardRef
 from .mobile_device_ref import MobileDeviceRef
@@ -18,7 +17,9 @@ class MediumAccessDeviceSecurityListingVersionedChildStructure(
     class Meta:
         name = "MediumAccessDeviceSecurityListing_VersionedChildStructure"
 
-    medium_access_device_ref: MobileDeviceRef | EmvCardRef | SmartcardRef | None = field(
+    medium_access_device_ref: (
+        MobileDeviceRef | EmvCardRef | SmartcardRef | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",

@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.location import Location
@@ -20,7 +19,9 @@ class LocationByReference(Location):
     :ivar location_by_reference_extension:
     """
 
-    predefined_location_reference: PredefinedLocationVersionedReference | None = field(
+    predefined_location_reference: (
+        PredefinedLocationVersionedReference | None
+    ) = field(
         default=None,
         metadata={
             "name": "predefinedLocationReference",

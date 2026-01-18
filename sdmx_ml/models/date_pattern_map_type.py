@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from sdmx_ml.models.date_pattern_map_base_type import DatePatternMapBaseType
 

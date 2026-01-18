@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from sdmx_ml.models.data_structure_type_abstract import (
     DataStructureTypeAbstract,
@@ -31,16 +30,14 @@ class StructureSpecificDataStructureType(DataStructureTypeAbstract):
             "required": True,
         },
     )
-    dimension_at_observation: str | ObsDimensionsCodeType | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "dimensionAtObservation",
-                "type": "Attribute",
-                "required": True,
-                "pattern": r"[A-Za-z][A-Za-z0-9_\-]*",
-            },
-        )
+    dimension_at_observation: str | ObsDimensionsCodeType | None = field(
+        default=None,
+        metadata={
+            "name": "dimensionAtObservation",
+            "type": "Attribute",
+            "required": True,
+            "pattern": r"[A-Za-z][A-Za-z0-9_\-]*",
+        },
     )
     explicit_measures: bool = field(
         default=False,

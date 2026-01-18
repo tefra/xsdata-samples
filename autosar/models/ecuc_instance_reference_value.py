@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     Annotation,
@@ -58,15 +57,13 @@ class EcucInstanceReferenceValue:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    definition_ref: EcucInstanceReferenceValue.DefinitionRef | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "DEFINITION-REF",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    definition_ref: EcucInstanceReferenceValue.DefinitionRef | None = field(
+        default=None,
+        metadata={
+            "name": "DEFINITION-REF",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     annotations: EcucInstanceReferenceValue.Annotations | None = field(
         default=None,

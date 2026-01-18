@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .ethernet_switch_vlan_ingress_tag_enum_simple import (
     EthernetSwitchVlanIngressTagEnumSimple,

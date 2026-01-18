@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .implementation_data_type_element_subtypes_enum import (
     ImplementationDataTypeElementSubtypesEnum,
@@ -54,7 +53,10 @@ class ArParameterInImplementationDataInstanceRef:
     class Meta:
         name = "AR-PARAMETER-IN-IMPLEMENTATION-DATA-INSTANCE-REF"
 
-    context_data_prototype_refs: ArParameterInImplementationDataInstanceRef.ContextDataPrototypeRefs | None = field(
+    context_data_prototype_refs: (
+        ArParameterInImplementationDataInstanceRef.ContextDataPrototypeRefs
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "CONTEXT-DATA-PROTOTYPE-REFS",
@@ -62,7 +64,9 @@ class ArParameterInImplementationDataInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    port_prototype_ref: ArParameterInImplementationDataInstanceRef.PortPrototypeRef | None = field(
+    port_prototype_ref: (
+        ArParameterInImplementationDataInstanceRef.PortPrototypeRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "PORT-PROTOTYPE-REF",
@@ -70,7 +74,10 @@ class ArParameterInImplementationDataInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    root_parameter_data_prototype_ref: ArParameterInImplementationDataInstanceRef.RootParameterDataPrototypeRef | None = field(
+    root_parameter_data_prototype_ref: (
+        ArParameterInImplementationDataInstanceRef.RootParameterDataPrototypeRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "ROOT-PARAMETER-DATA-PROTOTYPE-REF",
@@ -78,7 +85,10 @@ class ArParameterInImplementationDataInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    target_data_prototype_ref: ArParameterInImplementationDataInstanceRef.TargetDataPrototypeRef | None = field(
+    target_data_prototype_ref: (
+        ArParameterInImplementationDataInstanceRef.TargetDataPrototypeRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "TARGET-DATA-PROTOTYPE-REF",

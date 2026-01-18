@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import VariationPoint
 from .boolean import Boolean
@@ -251,7 +250,9 @@ class FlexrayCommunicationControllerConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    flexray_fifos: FlexrayCommunicationControllerConditional.FlexrayFifos | None = field(
+    flexray_fifos: (
+        FlexrayCommunicationControllerConditional.FlexrayFifos | None
+    ) = field(
         default=None,
         metadata={
             "name": "FLEXRAY-FIFOS",

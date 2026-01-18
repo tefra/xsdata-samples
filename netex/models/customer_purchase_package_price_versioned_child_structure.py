@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from .customer_purchase_package_element_ref import (
     CustomerPurchasePackageElementRef,
@@ -19,7 +18,9 @@ class CustomerPurchasePackagePriceVersionedChildStructure(
     class Meta:
         name = "CustomerPurchasePackagePrice_VersionedChildStructure"
 
-    customer_purchase_package_ref_or_customer_purchase_package_element_ref: CustomerPurchasePackageRef | CustomerPurchasePackageElementRef | None = field(
+    customer_purchase_package_ref_or_customer_purchase_package_element_ref: (
+        CustomerPurchasePackageRef | CustomerPurchasePackageElementRef | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",

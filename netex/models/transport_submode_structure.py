@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from .air_submode import AirSubmode
 from .bus_submode import BusSubmode
@@ -19,7 +18,21 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 @dataclass
 class TransportSubmodeStructure:
-    choice: AirSubmode | BusSubmode | CoachSubmode | FunicularSubmode | MetroSubmode | TramSubmode | TelecabinSubmode | RailSubmode | WaterSubmode | SnowAndIceSubmode | TaxiSubmode | SelfDriveSubmode | None = field(
+    choice: (
+        AirSubmode
+        | BusSubmode
+        | CoachSubmode
+        | FunicularSubmode
+        | MetroSubmode
+        | TramSubmode
+        | TelecabinSubmode
+        | RailSubmode
+        | WaterSubmode
+        | SnowAndIceSubmode
+        | TaxiSubmode
+        | SelfDriveSubmode
+        | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",

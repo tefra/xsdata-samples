@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.network_management import NetworkManagement
@@ -21,7 +20,9 @@ class WinterDrivingManagement(NetworkManagement):
     :ivar winter_driving_management_extension:
     """
 
-    winter_equipment_management_type: WinterEquipmentManagementTypeEnum | None = field(
+    winter_equipment_management_type: (
+        WinterEquipmentManagementTypeEnum | None
+    ) = field(
         default=None,
         metadata={
             "name": "winterEquipmentManagementType",

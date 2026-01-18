@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from .distance_matrix_element_ref import DistanceMatrixElementRef
 from .distance_matrix_elements_rel_structure import (
@@ -58,7 +57,9 @@ class FareStructureElementVersionStructure(PriceableObjectVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    type_of_fare_structure_element_ref: TypeOfFareStructureElementRef | None = field(
+    type_of_fare_structure_element_ref: (
+        TypeOfFareStructureElementRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "TypeOfFareStructureElementRef",
@@ -66,7 +67,12 @@ class FareStructureElementVersionStructure(PriceableObjectVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    geographical_interval_ref_or_geographical_intervals_or_geographical_structure_factors: GeographicalIntervalRef | GeographicalIntervalsRelStructure | GeographicalStructureFactorsRelStructure | None = field(
+    geographical_interval_ref_or_geographical_intervals_or_geographical_structure_factors: (
+        GeographicalIntervalRef
+        | GeographicalIntervalsRelStructure
+        | GeographicalStructureFactorsRelStructure
+        | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -89,7 +95,12 @@ class FareStructureElementVersionStructure(PriceableObjectVersionStructure):
             ),
         },
     )
-    time_interval_ref_or_time_intervals_or_time_structure_factors: TimeIntervalRef | TimeIntervalsRelStructure | TimeStructureFactorsRelStructure | None = field(
+    time_interval_ref_or_time_intervals_or_time_structure_factors: (
+        TimeIntervalRef
+        | TimeIntervalsRelStructure
+        | TimeStructureFactorsRelStructure
+        | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -112,7 +123,13 @@ class FareStructureElementVersionStructure(PriceableObjectVersionStructure):
             ),
         },
     )
-    choice: FareQuotaFactorRef | FareDemandFactorRef | QualityStructureFactorRef | QualityStructureFactorsRelStructure | None = field(
+    choice: (
+        FareQuotaFactorRef
+        | FareDemandFactorRef
+        | QualityStructureFactorRef
+        | QualityStructureFactorsRelStructure
+        | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -140,7 +157,13 @@ class FareStructureElementVersionStructure(PriceableObjectVersionStructure):
             ),
         },
     )
-    choice_1: DistanceMatrixElementRef | DistanceMatrixElementsRelStructure | GroupOfDistanceMatrixElementsRef | GroupOfDistanceMatrixElements | None = field(
+    choice_1: (
+        DistanceMatrixElementRef
+        | DistanceMatrixElementsRelStructure
+        | GroupOfDistanceMatrixElementsRef
+        | GroupOfDistanceMatrixElements
+        | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -168,7 +191,9 @@ class FareStructureElementVersionStructure(PriceableObjectVersionStructure):
             ),
         },
     )
-    fare_structure_elements_in_sequence: FareStructureElementsInSequenceRelStructure | None = field(
+    fare_structure_elements_in_sequence: (
+        FareStructureElementsInSequenceRelStructure | None
+    ) = field(
         default=None,
         metadata={
             "name": "fareStructureElementsInSequence",
@@ -176,7 +201,12 @@ class FareStructureElementVersionStructure(PriceableObjectVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    validity_parameter_assignments_or_generic_parameter_assignment_or_generic_parameter_assignment_in_context: GenericParameterAssignmentsRelStructure | GenericParameterAssignment | GenericParameterAssignmentInContext | None = field(
+    validity_parameter_assignments_or_generic_parameter_assignment_or_generic_parameter_assignment_in_context: (
+        GenericParameterAssignmentsRelStructure
+        | GenericParameterAssignment
+        | GenericParameterAssignmentInContext
+        | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",

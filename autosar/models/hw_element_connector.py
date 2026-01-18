@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -110,7 +109,9 @@ class HwElementConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    hw_pin_group_connections: HwElementConnector.HwPinGroupConnections | None = field(
+    hw_pin_group_connections: (
+        HwElementConnector.HwPinGroupConnections | None
+    ) = field(
         default=None,
         metadata={
             "name": "HW-PIN-GROUP-CONNECTIONS",
@@ -118,15 +119,13 @@ class HwElementConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    hw_pin_connections: HwElementConnector.HwPinConnections | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "HW-PIN-CONNECTIONS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    hw_pin_connections: HwElementConnector.HwPinConnections | None = field(
+        default=None,
+        metadata={
+            "name": "HW-PIN-CONNECTIONS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     variation_point: VariationPoint | None = field(
         default=None,
@@ -154,16 +153,16 @@ class HwElementConnector:
 
     @dataclass
     class HwElementRefs:
-        hw_element_ref: list[
-            HwElementConnector.HwElementRefs.HwElementRef
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "HW-ELEMENT-REF",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-                "max_occurs": 2,
-            },
+        hw_element_ref: list[HwElementConnector.HwElementRefs.HwElementRef] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "HW-ELEMENT-REF",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                    "max_occurs": 2,
+                },
+            )
         )
 
         @dataclass

@@ -1,6 +1,5 @@
 from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import Union
 
 from .flexible_line_ref import FlexibleLineRef
 from .line_ref import LineRef

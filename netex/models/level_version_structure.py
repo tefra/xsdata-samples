@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from .accessibility_assessment_versioned_child_structure import (
     AccessibilityAssessmentVersionedChildStructure,
@@ -69,7 +68,9 @@ class LevelVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    accessibility_assessment: AccessibilityAssessmentVersionedChildStructure | None = field(
+    accessibility_assessment: (
+        AccessibilityAssessmentVersionedChildStructure | None
+    ) = field(
         default=None,
         metadata={
             "name": "AccessibilityAssessment",
@@ -85,7 +86,15 @@ class LevelVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    stop_place_ref_or_site_ref: TaxiRankRef | StopPlaceRef | ParkingRef | PointOfInterestRef | ServiceSiteRef | SiteRef | None = field(
+    stop_place_ref_or_site_ref: (
+        TaxiRankRef
+        | StopPlaceRef
+        | ParkingRef
+        | PointOfInterestRef
+        | ServiceSiteRef
+        | SiteRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",

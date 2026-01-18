@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -112,7 +111,9 @@ class DiagnosticReadDataByPeriodicId:
             "required": True,
         },
     )
-    short_name_fragments: DiagnosticReadDataByPeriodicId.ShortNameFragments | None = field(
+    short_name_fragments: (
+        DiagnosticReadDataByPeriodicId.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -160,15 +161,13 @@ class DiagnosticReadDataByPeriodicId:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: DiagnosticReadDataByPeriodicId.Annotations | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "ANNOTATIONS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    annotations: DiagnosticReadDataByPeriodicId.Annotations | None = field(
+        default=None,
+        metadata={
+            "name": "ANNOTATIONS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     variation_point: VariationPoint | None = field(
         default=None,
@@ -178,7 +177,9 @@ class DiagnosticReadDataByPeriodicId:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    access_permission_ref: DiagnosticReadDataByPeriodicId.AccessPermissionRef | None = field(
+    access_permission_ref: (
+        DiagnosticReadDataByPeriodicId.AccessPermissionRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "ACCESS-PERMISSION-REF",
@@ -186,7 +187,9 @@ class DiagnosticReadDataByPeriodicId:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    data_identifier_ref: DiagnosticReadDataByPeriodicId.DataIdentifierRef | None = field(
+    data_identifier_ref: (
+        DiagnosticReadDataByPeriodicId.DataIdentifierRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "DATA-IDENTIFIER-REF",
@@ -194,7 +197,9 @@ class DiagnosticReadDataByPeriodicId:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    read_data_class_ref: DiagnosticReadDataByPeriodicId.ReadDataClassRef | None = field(
+    read_data_class_ref: (
+        DiagnosticReadDataByPeriodicId.ReadDataClassRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "READ-DATA-CLASS-REF",
@@ -271,13 +276,11 @@ class DiagnosticReadDataByPeriodicId:
 
     @dataclass
     class ReadDataClassRef(Ref):
-        dest: DiagnosticReadDataByPeriodicIdClassSubtypesEnum | None = (
-            field(
-                default=None,
-                metadata={
-                    "name": "DEST",
-                    "type": "Attribute",
-                    "required": True,
-                },
-            )
+        dest: DiagnosticReadDataByPeriodicIdClassSubtypesEnum | None = field(
+            default=None,
+            metadata={
+                "name": "DEST",
+                "type": "Attribute",
+                "required": True,
+            },
         )

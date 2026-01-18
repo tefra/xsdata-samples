@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from ipxact.models.port_slices_type import PortSlicesType
 from ipxact.models.unsigned_int_expression import UnsignedIntExpression

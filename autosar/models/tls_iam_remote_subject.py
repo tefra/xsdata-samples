@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -112,13 +111,15 @@ class TlsIamRemoteSubject:
             "required": True,
         },
     )
-    short_name_fragments: TlsIamRemoteSubject.ShortNameFragments | None = field(
-        default=None,
-        metadata={
-            "name": "SHORT-NAME-FRAGMENTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    short_name_fragments: TlsIamRemoteSubject.ShortNameFragments | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "SHORT-NAME-FRAGMENTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     long_name: MultilanguageLongName | None = field(
         default=None,
@@ -176,7 +177,9 @@ class TlsIamRemoteSubject:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    accepted_crypto_cipher_suite_with_psk_refs: TlsIamRemoteSubject.AcceptedCryptoCipherSuiteWithPskRefs | None = field(
+    accepted_crypto_cipher_suite_with_psk_refs: (
+        TlsIamRemoteSubject.AcceptedCryptoCipherSuiteWithPskRefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "ACCEPTED-CRYPTO-CIPHER-SUITE-WITH-PSK-REFS",
@@ -184,7 +187,9 @@ class TlsIamRemoteSubject:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    accepted_remote_certificate_refs: TlsIamRemoteSubject.AcceptedRemoteCertificateRefs | None = field(
+    accepted_remote_certificate_refs: (
+        TlsIamRemoteSubject.AcceptedRemoteCertificateRefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "ACCEPTED-REMOTE-CERTIFICATE-REFS",
@@ -208,7 +213,9 @@ class TlsIamRemoteSubject:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    iam_relevant_tls_secure_com_props_refs: TlsIamRemoteSubject.IamRelevantTlsSecureComPropsRefs | None = field(
+    iam_relevant_tls_secure_com_props_refs: (
+        TlsIamRemoteSubject.IamRelevantTlsSecureComPropsRefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "IAM-RELEVANT-TLS-SECURE-COM-PROPS-REFS",

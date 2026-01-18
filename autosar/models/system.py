@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -227,13 +226,15 @@ class System:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    client_id_definition_set_refs: System.ClientIdDefinitionSetRefs | None = field(
-        default=None,
-        metadata={
-            "name": "CLIENT-ID-DEFINITION-SET-REFS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    client_id_definition_set_refs: System.ClientIdDefinitionSetRefs | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "CLIENT-ID-DEFINITION-SET-REFS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     container_i_pdu_header_byte_order: ByteOrderEnum | None = field(
         default=None,
@@ -259,7 +260,9 @@ class System:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    interpolation_routine_mapping_set_refs: System.InterpolationRoutineMappingSetRefs | None = field(
+    interpolation_routine_mapping_set_refs: (
+        System.InterpolationRoutineMappingSetRefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "INTERPOLATION-ROUTINE-MAPPING-SET-REFS",
@@ -267,7 +270,9 @@ class System:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    j_1939_shared_address_clusters: System.J1939SharedAddressClusters | None = field(
+    j_1939_shared_address_clusters: (
+        System.J1939SharedAddressClusters | None
+    ) = field(
         default=None,
         metadata={
             "name": "J-1939-SHARED-ADDRESS-CLUSTERS",
@@ -299,15 +304,13 @@ class System:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    root_software_compositions: System.RootSoftwareCompositions | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "ROOT-SOFTWARE-COMPOSITIONS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    root_software_compositions: System.RootSoftwareCompositions | None = field(
+        default=None,
+        metadata={
+            "name": "ROOT-SOFTWARE-COMPOSITIONS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     sw_clusters: System.SwClusters | None = field(
         default=None,

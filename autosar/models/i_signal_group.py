@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -190,7 +189,9 @@ class ISignalGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    com_based_signal_group_transformations: ISignalGroup.ComBasedSignalGroupTransformations | None = field(
+    com_based_signal_group_transformations: (
+        ISignalGroup.ComBasedSignalGroupTransformations | None
+    ) = field(
         default=None,
         metadata={
             "name": "COM-BASED-SIGNAL-GROUP-TRANSFORMATIONS",
@@ -206,17 +207,17 @@ class ISignalGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    system_signal_group_ref: ISignalGroup.SystemSignalGroupRef | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "SYSTEM-SIGNAL-GROUP-REF",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    system_signal_group_ref: ISignalGroup.SystemSignalGroupRef | None = field(
+        default=None,
+        metadata={
+            "name": "SYSTEM-SIGNAL-GROUP-REF",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
-    transformation_i_signal_propss: ISignalGroup.TransformationISignalPropss | None = field(
+    transformation_i_signal_propss: (
+        ISignalGroup.TransformationISignalPropss | None
+    ) = field(
         default=None,
         metadata={
             "name": "TRANSFORMATION-I-SIGNAL-PROPSS",

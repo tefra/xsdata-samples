@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -208,7 +207,9 @@ class SwAddrMethod:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    memory_allocation_keyword_policy: MemoryAllocationKeywordPolicyType | None = field(
+    memory_allocation_keyword_policy: (
+        MemoryAllocationKeywordPolicyType | None
+    ) = field(
         default=None,
         metadata={
             "name": "MEMORY-ALLOCATION-KEYWORD-POLICY",
@@ -224,13 +225,15 @@ class SwAddrMethod:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    section_initialization_policy: SectionInitializationPolicyType | None = field(
-        default=None,
-        metadata={
-            "name": "SECTION-INITIALIZATION-POLICY",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    section_initialization_policy: SectionInitializationPolicyType | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "SECTION-INITIALIZATION-POLICY",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     section_type: MemorySectionType | None = field(
         default=None,

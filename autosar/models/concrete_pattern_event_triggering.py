@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -117,7 +116,9 @@ class ConcretePatternEventTriggering:
             "required": True,
         },
     )
-    short_name_fragments: ConcretePatternEventTriggering.ShortNameFragments | None = field(
+    short_name_fragments: (
+        ConcretePatternEventTriggering.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -165,15 +166,13 @@ class ConcretePatternEventTriggering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: ConcretePatternEventTriggering.Annotations | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "ANNOTATIONS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    annotations: ConcretePatternEventTriggering.Annotations | None = field(
+        default=None,
+        metadata={
+            "name": "ANNOTATIONS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     trace_refs: ConcretePatternEventTriggering.TraceRefs | None = field(
         default=None,
@@ -183,7 +182,9 @@ class ConcretePatternEventTriggering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    timing_condition_ref: ConcretePatternEventTriggering.TimingConditionRef | None = field(
+    timing_condition_ref: (
+        ConcretePatternEventTriggering.TimingConditionRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "TIMING-CONDITION-REF",
@@ -286,15 +287,15 @@ class ConcretePatternEventTriggering:
 
     @dataclass
     class TraceRefs:
-        trace_ref: list[
-            ConcretePatternEventTriggering.TraceRefs.TraceRef
-        ] = field(
-            default_factory=list,
-            metadata={
-                "name": "TRACE-REF",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
+        trace_ref: list[ConcretePatternEventTriggering.TraceRefs.TraceRef] = (
+            field(
+                default_factory=list,
+                metadata={
+                    "name": "TRACE-REF",
+                    "type": "Element",
+                    "namespace": "http://autosar.org/schema/r4.0",
+                },
+            )
         )
 
         @dataclass

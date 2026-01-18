@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .boolean import Boolean
 from .ref import Ref
@@ -63,7 +62,9 @@ class SoftwareClusterDependencyCompareCondition:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    software_cluster_ref: SoftwareClusterDependencyCompareCondition.SoftwareClusterRef | None = field(
+    software_cluster_ref: (
+        SoftwareClusterDependencyCompareCondition.SoftwareClusterRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "SOFTWARE-CLUSTER-REF",

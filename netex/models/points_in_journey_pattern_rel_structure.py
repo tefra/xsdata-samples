@@ -1,6 +1,5 @@
 from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import Union
 
 from .point_in_journey_pattern import PointInJourneyPattern
 from .stop_point_in_journey_pattern import StopPointInJourneyPattern
@@ -20,7 +19,9 @@ class PointsInJourneyPatternRelStructure(
         name = "pointsInJourneyPattern_RelStructure"
 
     point_in_journey_pattern_or_stop_point_in_journey_pattern_or_timing_point_in_journey_pattern: Iterable[
-        PointInJourneyPattern | StopPointInJourneyPattern | TimingPointInJourneyPattern
+        PointInJourneyPattern
+        | StopPointInJourneyPattern
+        | TimingPointInJourneyPattern
     ] = field(
         default_factory=list,
         metadata={

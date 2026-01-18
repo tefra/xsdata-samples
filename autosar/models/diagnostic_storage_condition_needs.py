@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -104,7 +103,9 @@ class DiagnosticStorageConditionNeeds:
             "required": True,
         },
     )
-    short_name_fragments: DiagnosticStorageConditionNeeds.ShortNameFragments | None = field(
+    short_name_fragments: (
+        DiagnosticStorageConditionNeeds.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -152,15 +153,13 @@ class DiagnosticStorageConditionNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: DiagnosticStorageConditionNeeds.Annotations | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "ANNOTATIONS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    annotations: DiagnosticStorageConditionNeeds.Annotations | None = field(
+        default=None,
+        metadata={
+            "name": "ANNOTATIONS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     audiences: DiagnosticStorageConditionNeeds.Audiences | None = field(
         default=None,

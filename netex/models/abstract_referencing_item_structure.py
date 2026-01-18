@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .abstract_item_structure import AbstractItemStructure
 from .item_ref_structure import ItemRefStructure

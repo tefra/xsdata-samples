@@ -2,7 +2,6 @@ from __future__ import annotations
 
 from dataclasses import dataclass, field
 from decimal import Decimal
-from typing import Optional, Union
 
 from crossref.models.org.w3.pkg_1998.math.math_ml.abs import Abs
 from crossref.models.org.w3.pkg_1998.math.math_ml.and_mod import And

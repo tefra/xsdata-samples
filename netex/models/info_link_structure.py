@@ -1,6 +1,5 @@
 from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .type_of_info_link_enumeration import TypeOfInfoLinkEnumeration
 

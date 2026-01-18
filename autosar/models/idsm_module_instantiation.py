@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -105,13 +104,15 @@ class IdsmModuleInstantiation:
             "required": True,
         },
     )
-    short_name_fragments: IdsmModuleInstantiation.ShortNameFragments | None = field(
-        default=None,
-        metadata={
-            "name": "SHORT-NAME-FRAGMENTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    short_name_fragments: IdsmModuleInstantiation.ShortNameFragments | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "SHORT-NAME-FRAGMENTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     long_name: MultilanguageLongName | None = field(
         default=None,
@@ -161,7 +162,9 @@ class IdsmModuleInstantiation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    network_interface_ref: IdsmModuleInstantiation.NetworkInterfaceRef | None = field(
+    network_interface_ref: (
+        IdsmModuleInstantiation.NetworkInterfaceRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "NETWORK-INTERFACE-REF",
@@ -177,7 +180,9 @@ class IdsmModuleInstantiation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    reportable_security_event_refs: IdsmModuleInstantiation.ReportableSecurityEventRefs | None = field(
+    reportable_security_event_refs: (
+        IdsmModuleInstantiation.ReportableSecurityEventRefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "REPORTABLE-SECURITY-EVENT-REFS",
@@ -232,7 +237,9 @@ class IdsmModuleInstantiation:
 
     @dataclass
     class NetworkInterfaceRef(Ref):
-        dest: PlatformModuleEthernetEndpointConfigurationSubtypesEnum | None = field(
+        dest: (
+            PlatformModuleEthernetEndpointConfigurationSubtypesEnum | None
+        ) = field(
             default=None,
             metadata={
                 "name": "DEST",

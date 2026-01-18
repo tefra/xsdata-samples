@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -153,7 +152,9 @@ class ExecutionOrderConstraint:
             "required": True,
         },
     )
-    short_name_fragments: ExecutionOrderConstraint.ShortNameFragments | None = field(
+    short_name_fragments: (
+        ExecutionOrderConstraint.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -217,7 +218,9 @@ class ExecutionOrderConstraint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    timing_condition_ref: ExecutionOrderConstraint.TimingConditionRef | None = field(
+    timing_condition_ref: (
+        ExecutionOrderConstraint.TimingConditionRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "TIMING-CONDITION-REF",
@@ -233,7 +236,9 @@ class ExecutionOrderConstraint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    base_composition_ref: ExecutionOrderConstraint.BaseCompositionRef | None = field(
+    base_composition_ref: (
+        ExecutionOrderConstraint.BaseCompositionRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "BASE-COMPOSITION-REF",
@@ -241,7 +246,9 @@ class ExecutionOrderConstraint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    execution_order_constraint_type: ExecutionOrderConstraintTypeEnum | None = field(
+    execution_order_constraint_type: (
+        ExecutionOrderConstraintTypeEnum | None
+    ) = field(
         default=None,
         metadata={
             "name": "EXECUTION-ORDER-CONSTRAINT-TYPE",
@@ -265,15 +272,13 @@ class ExecutionOrderConstraint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ordered_elements: ExecutionOrderConstraint.OrderedElements | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "ORDERED-ELEMENTS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    ordered_elements: ExecutionOrderConstraint.OrderedElements | None = field(
+        default=None,
+        metadata={
+            "name": "ORDERED-ELEMENTS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     permit_multiple_references_to_ee: Boolean | None = field(
         default=None,

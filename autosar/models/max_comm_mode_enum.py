@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .max_comm_mode_enum_simple import MaxCommModeEnumSimple
 

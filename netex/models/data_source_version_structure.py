@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .external_object_ref_structure import ExternalObjectRefStructure
 from .type_of_value_version_structure import TypeOfValueVersionStructure

@@ -1,6 +1,5 @@
 from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import Union
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .dated_service_journey import DatedServiceJourney
@@ -17,7 +16,10 @@ class PassengerJourneysInFrameRelStructure(ContainmentAggregationStructure):
         name = "passengerJourneysInFrame_RelStructure"
 
     choice: Iterable[
-        DatedServiceJourney | ServiceJourney | SpecialService | TemplateServiceJourney
+        DatedServiceJourney
+        | ServiceJourney
+        | SpecialService
+        | TemplateServiceJourney
     ] = field(
         default_factory=list,
         metadata={

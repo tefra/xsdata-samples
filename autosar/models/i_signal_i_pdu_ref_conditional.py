@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import VariationPoint
 from .i_signal_i_pdu_subtypes_enum import ISignalIPduSubtypesEnum
@@ -33,13 +32,15 @@ class ISignalIPduRefConditional:
     class Meta:
         name = "I-SIGNAL-I-PDU-REF-CONDITIONAL"
 
-    i_signal_i_pdu_ref: ISignalIPduRefConditional.ISignalIPduRef | None = field(
-        default=None,
-        metadata={
-            "name": "I-SIGNAL-I-PDU-REF",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    i_signal_i_pdu_ref: ISignalIPduRefConditional.ISignalIPduRef | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "I-SIGNAL-I-PDU-REF",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     variation_point: VariationPoint | None = field(
         default=None,

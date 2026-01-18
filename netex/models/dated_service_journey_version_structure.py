@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from .driver_ref import DriverRef
 from .operating_day_ref import OperatingDayRef
@@ -14,7 +13,9 @@ class DatedServiceJourneyVersionStructure(ServiceJourneyVersionStructure):
     class Meta:
         name = "DatedServiceJourney_VersionStructure"
 
-    operating_day_ref_or_uic_operating_period: OperatingDayRef | UicOperatingPeriod | None = field(
+    operating_day_ref_or_uic_operating_period: (
+        OperatingDayRef | UicOperatingPeriod | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",

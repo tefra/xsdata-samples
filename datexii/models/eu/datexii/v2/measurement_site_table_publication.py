@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.header_information import HeaderInformation
@@ -35,13 +34,11 @@ class MeasurementSiteTablePublication(PayloadPublication):
             "min_occurs": 1,
         },
     )
-    measurement_site_table_publication_extension: ExtensionType | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "measurementSiteTablePublicationExtension",
-                "type": "Element",
-                "namespace": "http://datex2.eu/schema/2/2_0",
-            },
-        )
+    measurement_site_table_publication_extension: ExtensionType | None = field(
+        default=None,
+        metadata={
+            "name": "measurementSiteTablePublicationExtension",
+            "type": "Element",
+            "namespace": "http://datex2.eu/schema/2/2_0",
+        },
     )

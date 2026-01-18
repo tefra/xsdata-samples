@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from ipxact.models.address_block_ref import AddressBlockRef
 from ipxact.models.alternate_register_ref import AlternateRegisterRef
@@ -72,14 +71,12 @@ class FieldMap:
 
     @dataclass
     class FieldSlice:
-        address_space_ref: FieldMap.FieldSlice.AddressSpaceRef | None = (
-            field(
-                default=None,
-                metadata={
-                    "name": "addressSpaceRef",
-                    "type": "Element",
-                },
-            )
+        address_space_ref: FieldMap.FieldSlice.AddressSpaceRef | None = field(
+            default=None,
+            metadata={
+                "name": "addressSpaceRef",
+                "type": "Element",
+            },
         )
         memory_map_ref: FieldMap.FieldSlice.MemoryMapRef | None = field(
             default=None,

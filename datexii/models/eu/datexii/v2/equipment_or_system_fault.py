@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from datexii.models.eu.datexii.v2.equipment_or_system_fault_type_enum import (
     EquipmentOrSystemFaultTypeEnum,
@@ -28,25 +27,25 @@ class EquipmentOrSystemFault(TrafficElement):
     :ivar equipment_or_system_fault_extension:
     """
 
-    equipment_or_system_fault_type: EquipmentOrSystemFaultTypeEnum | None = field(
-        default=None,
-        metadata={
-            "name": "equipmentOrSystemFaultType",
-            "type": "Element",
-            "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
-        },
-    )
-    faulty_equipment_or_system_type: EquipmentOrSystemTypeEnum | None = (
+    equipment_or_system_fault_type: EquipmentOrSystemFaultTypeEnum | None = (
         field(
             default=None,
             metadata={
-                "name": "faultyEquipmentOrSystemType",
+                "name": "equipmentOrSystemFaultType",
                 "type": "Element",
                 "namespace": "http://datex2.eu/schema/2/2_0",
                 "required": True,
             },
         )
+    )
+    faulty_equipment_or_system_type: EquipmentOrSystemTypeEnum | None = field(
+        default=None,
+        metadata={
+            "name": "faultyEquipmentOrSystemType",
+            "type": "Element",
+            "namespace": "http://datex2.eu/schema/2/2_0",
+            "required": True,
+        },
     )
     equipment_or_system_fault_extension: ExtensionType | None = field(
         default=None,

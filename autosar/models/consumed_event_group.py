@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -151,15 +150,13 @@ class ConsumedEventGroup:
             "required": True,
         },
     )
-    short_name_fragments: ConsumedEventGroup.ShortNameFragments | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "SHORT-NAME-FRAGMENTS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    short_name_fragments: ConsumedEventGroup.ShortNameFragments | None = field(
+        default=None,
+        metadata={
+            "name": "SHORT-NAME-FRAGMENTS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     long_name: MultilanguageLongName | None = field(
         default=None,
@@ -209,7 +206,9 @@ class ConsumedEventGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    application_endpoint_ref: ConsumedEventGroup.ApplicationEndpointRef | None = field(
+    application_endpoint_ref: (
+        ConsumedEventGroup.ApplicationEndpointRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "APPLICATION-ENDPOINT-REF",
@@ -233,7 +232,9 @@ class ConsumedEventGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    event_multicast_addresss: ConsumedEventGroup.EventMulticastAddresss | None = field(
+    event_multicast_addresss: (
+        ConsumedEventGroup.EventMulticastAddresss | None
+    ) = field(
         default=None,
         metadata={
             "name": "EVENT-MULTICAST-ADDRESSS",
@@ -249,7 +250,9 @@ class ConsumedEventGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    pdu_activation_routing_groups: ConsumedEventGroup.PduActivationRoutingGroups | None = field(
+    pdu_activation_routing_groups: (
+        ConsumedEventGroup.PduActivationRoutingGroups | None
+    ) = field(
         default=None,
         metadata={
             "name": "PDU-ACTIVATION-ROUTING-GROUPS",
@@ -265,15 +268,13 @@ class ConsumedEventGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    routing_group_refs: ConsumedEventGroup.RoutingGroupRefs | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "ROUTING-GROUP-REFS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    routing_group_refs: ConsumedEventGroup.RoutingGroupRefs | None = field(
+        default=None,
+        metadata={
+            "name": "ROUTING-GROUP-REFS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     sd_client_config: SdClientConfig | None = field(
         default=None,
@@ -283,13 +284,15 @@ class ConsumedEventGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sd_client_timer_configs: ConsumedEventGroup.SdClientTimerConfigs | None = field(
-        default=None,
-        metadata={
-            "name": "SD-CLIENT-TIMER-CONFIGS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    sd_client_timer_configs: ConsumedEventGroup.SdClientTimerConfigs | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "SD-CLIENT-TIMER-CONFIGS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     variation_point: VariationPoint | None = field(
         default=None,

@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -233,7 +232,9 @@ class Machine:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    secure_communication_deployments: Machine.SecureCommunicationDeployments | None = field(
+    secure_communication_deployments: (
+        Machine.SecureCommunicationDeployments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SECURE-COMMUNICATION-DEPLOYMENTS",
@@ -241,7 +242,9 @@ class Machine:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    trusted_platform_executable_launch_behavior: TrustedPlatformExecutableLaunchBehaviorEnum | None = field(
+    trusted_platform_executable_launch_behavior: (
+        TrustedPlatformExecutableLaunchBehaviorEnum | None
+    ) = field(
         default=None,
         metadata={
             "name": "TRUSTED-PLATFORM-EXECUTABLE-LAUNCH-BEHAVIOR",

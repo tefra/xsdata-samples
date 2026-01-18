@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .array_size_semantics_enum_simple import ArraySizeSemanticsEnumSimple
 

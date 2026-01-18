@@ -1,6 +1,5 @@
 from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from .dead_run_ref import DeadRunRef
 from .dynamic_stop_assignment_ref import DynamicStopAssignmentRef
@@ -23,27 +22,30 @@ class VehicleJourneyStopAssignmentVersionStructure(
     class Meta:
         name = "VehicleJourneyStopAssignment_VersionStructure"
 
-    vehicle_journey_ref: Iterable[DeadRunRef | VehicleJourneyRef] = (
-        field(
-            default_factory=list,
-            metadata={
-                "type": "Elements",
-                "choices": (
-                    {
-                        "name": "DeadRunRef",
-                        "type": DeadRunRef,
-                        "namespace": "http://www.netex.org.uk/netex",
-                    },
-                    {
-                        "name": "VehicleJourneyRef",
-                        "type": VehicleJourneyRef,
-                        "namespace": "http://www.netex.org.uk/netex",
-                    },
-                ),
-            },
-        )
+    vehicle_journey_ref: Iterable[DeadRunRef | VehicleJourneyRef] = field(
+        default_factory=list,
+        metadata={
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "DeadRunRef",
+                    "type": DeadRunRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "VehicleJourneyRef",
+                    "type": VehicleJourneyRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+        },
     )
-    passenger_stop_assignment_ref: VehicleJourneyStopAssignmentRef | DynamicStopAssignmentRef | PassengerStopAssignmentRef | None = field(
+    passenger_stop_assignment_ref: (
+        VehicleJourneyStopAssignmentRef
+        | DynamicStopAssignmentRef
+        | PassengerStopAssignmentRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",

@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -106,13 +105,15 @@ class TimingExtensionResource:
             "required": True,
         },
     )
-    short_name_fragments: TimingExtensionResource.ShortNameFragments | None = field(
-        default=None,
-        metadata={
-            "name": "SHORT-NAME-FRAGMENTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    short_name_fragments: TimingExtensionResource.ShortNameFragments | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "SHORT-NAME-FRAGMENTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     long_name: MultilanguageLongName | None = field(
         default=None,
@@ -162,15 +163,13 @@ class TimingExtensionResource:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    timing_arguments: TimingExtensionResource.TimingArguments | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "TIMING-ARGUMENTS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    timing_arguments: TimingExtensionResource.TimingArguments | None = field(
+        default=None,
+        metadata={
+            "name": "TIMING-ARGUMENTS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     timing_modes: TimingExtensionResource.TimingModes | None = field(
         default=None,
@@ -180,15 +179,13 @@ class TimingExtensionResource:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    timing_variables: TimingExtensionResource.TimingVariables | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "TIMING-VARIABLES",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    timing_variables: TimingExtensionResource.TimingVariables | None = field(
+        default=None,
+        metadata={
+            "name": "TIMING-VARIABLES",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     s: str | None = field(
         default=None,

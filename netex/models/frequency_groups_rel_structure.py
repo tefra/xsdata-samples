@@ -1,6 +1,5 @@
 from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import Union
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
 from .headway_journey_group import HeadwayJourneyGroup
@@ -17,7 +16,10 @@ class FrequencyGroupsRelStructure(ContainmentAggregationStructure):
         name = "frequencyGroups_RelStructure"
 
     choice: Iterable[
-        HeadwayJourneyGroupRef | HeadwayJourneyGroup | RhythmicalJourneyGroupRef | RhythmicalJourneyGroup
+        HeadwayJourneyGroupRef
+        | HeadwayJourneyGroup
+        | RhythmicalJourneyGroupRef
+        | RhythmicalJourneyGroup
     ] = field(
         default_factory=list,
         metadata={

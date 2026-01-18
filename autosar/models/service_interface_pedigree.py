@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -95,7 +94,9 @@ class ServiceInterfacePedigree:
             "required": True,
         },
     )
-    short_name_fragments: ServiceInterfacePedigree.ShortNameFragments | None = field(
+    short_name_fragments: (
+        ServiceInterfacePedigree.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -159,7 +160,9 @@ class ServiceInterfacePedigree:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    service_interface_refs: ServiceInterfacePedigree.ServiceInterfaceRefs | None = field(
+    service_interface_refs: (
+        ServiceInterfacePedigree.ServiceInterfaceRefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "SERVICE-INTERFACE-REFS",

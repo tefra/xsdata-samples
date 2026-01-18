@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from .assignment_version_structure_1 import AssignmentVersionStructure1
 from .compound_train_ref import CompoundTrainRef
@@ -28,37 +27,40 @@ class VehicleTypeStopAssignmentVersionStructure(AssignmentVersionStructure1):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    vehicle_stopping_position_ref: VehicleStoppingPositionRef | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "VehicleStoppingPositionRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            },
-        )
+    vehicle_stopping_position_ref: VehicleStoppingPositionRef | None = field(
+        default=None,
+        metadata={
+            "name": "VehicleStoppingPositionRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        },
     )
-    vehicle_journey_ref: DeadRunRef | VehicleJourneyRef | None = (
-        field(
-            default=None,
-            metadata={
-                "type": "Elements",
-                "choices": (
-                    {
-                        "name": "DeadRunRef",
-                        "type": DeadRunRef,
-                        "namespace": "http://www.netex.org.uk/netex",
-                    },
-                    {
-                        "name": "VehicleJourneyRef",
-                        "type": VehicleJourneyRef,
-                        "namespace": "http://www.netex.org.uk/netex",
-                    },
-                ),
-            },
-        )
+    vehicle_journey_ref: DeadRunRef | VehicleJourneyRef | None = field(
+        default=None,
+        metadata={
+            "type": "Elements",
+            "choices": (
+                {
+                    "name": "DeadRunRef",
+                    "type": DeadRunRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "VehicleJourneyRef",
+                    "type": VehicleJourneyRef,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+            ),
+        },
     )
-    transport_type_ref_or_vehicle_type_ref: SimpleVehicleTypeRef | CompoundTrainRef | TrainRef | VehicleTypeRef | TransportTypeRef | None = field(
+    transport_type_ref_or_vehicle_type_ref: (
+        SimpleVehicleTypeRef
+        | CompoundTrainRef
+        | TrainRef
+        | VehicleTypeRef
+        | TransportTypeRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",

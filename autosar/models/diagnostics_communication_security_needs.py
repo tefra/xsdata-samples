@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -101,7 +100,9 @@ class DiagnosticsCommunicationSecurityNeeds:
             "required": True,
         },
     )
-    short_name_fragments: DiagnosticsCommunicationSecurityNeeds.ShortNameFragments | None = field(
+    short_name_fragments: (
+        DiagnosticsCommunicationSecurityNeeds.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -149,23 +150,23 @@ class DiagnosticsCommunicationSecurityNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: DiagnosticsCommunicationSecurityNeeds.Annotations | None = field(
-        default=None,
-        metadata={
-            "name": "ANNOTATIONS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
-    )
-    audiences: DiagnosticsCommunicationSecurityNeeds.Audiences | None = (
+    annotations: DiagnosticsCommunicationSecurityNeeds.Annotations | None = (
         field(
             default=None,
             metadata={
-                "name": "AUDIENCES",
+                "name": "ANNOTATIONS",
                 "type": "Element",
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
+    )
+    audiences: DiagnosticsCommunicationSecurityNeeds.Audiences | None = field(
+        default=None,
+        metadata={
+            "name": "AUDIENCES",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     diag_requirement: DiagRequirementIdString | None = field(
         default=None,

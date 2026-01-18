@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -99,7 +98,9 @@ class ComKeyToCryptoKeySlotMapping:
             "required": True,
         },
     )
-    short_name_fragments: ComKeyToCryptoKeySlotMapping.ShortNameFragments | None = field(
+    short_name_fragments: (
+        ComKeyToCryptoKeySlotMapping.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -163,7 +164,9 @@ class ComKeyToCryptoKeySlotMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    crypto_service_key_ref: ComKeyToCryptoKeySlotMapping.CryptoServiceKeyRef | None = field(
+    crypto_service_key_ref: (
+        ComKeyToCryptoKeySlotMapping.CryptoServiceKeyRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "CRYPTO-SERVICE-KEY-REF",

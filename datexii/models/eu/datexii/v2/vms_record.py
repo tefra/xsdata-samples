@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.location import Location
@@ -148,13 +147,15 @@ class VmsRecord:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    vms_text_display_characteristics: VmsTextDisplayCharacteristics | None = field(
-        default=None,
-        metadata={
-            "name": "vmsTextDisplayCharacteristics",
-            "type": "Element",
-            "namespace": "http://datex2.eu/schema/2/2_0",
-        },
+    vms_text_display_characteristics: VmsTextDisplayCharacteristics | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "vmsTextDisplayCharacteristics",
+                "type": "Element",
+                "namespace": "http://datex2.eu/schema/2/2_0",
+            },
+        )
     )
     vms_pictogram_display_characteristics: list[
         VmsRecordPictogramDisplayAreaIndexVmsPictogramDisplayCharacteristics

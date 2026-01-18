@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -237,7 +236,9 @@ class IdsmInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    idsm_module_instantiation_ref: IdsmInstance.IdsmModuleInstantiationRef | None = field(
+    idsm_module_instantiation_ref: (
+        IdsmInstance.IdsmModuleInstantiationRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "IDSM-MODULE-INSTANTIATION-REF",
@@ -245,15 +246,13 @@ class IdsmInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    rate_limitation_filters: IdsmInstance.RateLimitationFilters | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "RATE-LIMITATION-FILTERS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    rate_limitation_filters: IdsmInstance.RateLimitationFilters | None = field(
+        default=None,
+        metadata={
+            "name": "RATE-LIMITATION-FILTERS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     signature_support_ap: IdsmSignatureSupportAp | None = field(
         default=None,
@@ -279,7 +278,9 @@ class IdsmInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    traffic_limitation_filters: IdsmInstance.TrafficLimitationFilters | None = field(
+    traffic_limitation_filters: (
+        IdsmInstance.TrafficLimitationFilters | None
+    ) = field(
         default=None,
         metadata={
             "name": "TRAFFIC-LIMITATION-FILTERS",

@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .adaptive_platform_service_instance_subtypes_enum import (
     AdaptivePlatformServiceInstanceSubtypesEnum,
@@ -259,15 +258,13 @@ class ServiceTiming:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    service_instance_refs: ServiceTiming.ServiceInstanceRefs | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "SERVICE-INSTANCE-REFS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    service_instance_refs: ServiceTiming.ServiceInstanceRefs | None = field(
+        default=None,
+        metadata={
+            "name": "SERVICE-INSTANCE-REFS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     s: str | None = field(
         default=None,
@@ -753,13 +750,11 @@ class ServiceTiming:
 
         @dataclass
         class ServiceInstanceRef(Ref):
-            dest: AdaptivePlatformServiceInstanceSubtypesEnum | None = (
-                field(
-                    default=None,
-                    metadata={
-                        "name": "DEST",
-                        "type": "Attribute",
-                        "required": True,
-                    },
-                )
+            dest: AdaptivePlatformServiceInstanceSubtypesEnum | None = field(
+                default=None,
+                metadata={
+                    "name": "DEST",
+                    "type": "Attribute",
+                    "required": True,
+                },
             )

@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .diagnostic_type_of_dtc_supported_enum_simple import (
     DiagnosticTypeOfDtcSupportedEnumSimple,

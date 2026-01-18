@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .class_of_use_ref_structure import ClassOfUseRefStructure
 from .exchangable_to_enumeration import ExchangableToEnumeration

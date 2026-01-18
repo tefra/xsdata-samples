@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import VariationPoint
 from .eth_global_time_managed_coupling_port import (
@@ -73,17 +72,17 @@ class EthGlobalTimeDomainProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    fup_data_id_lists: EthGlobalTimeDomainProps.FupDataIdLists | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "FUP-DATA-ID-LISTS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    fup_data_id_lists: EthGlobalTimeDomainProps.FupDataIdLists | None = field(
+        default=None,
+        metadata={
+            "name": "FUP-DATA-ID-LISTS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
-    managed_coupling_ports: EthGlobalTimeDomainProps.ManagedCouplingPorts | None = field(
+    managed_coupling_ports: (
+        EthGlobalTimeDomainProps.ManagedCouplingPorts | None
+    ) = field(
         default=None,
         metadata={
             "name": "MANAGED-COUPLING-PORTS",

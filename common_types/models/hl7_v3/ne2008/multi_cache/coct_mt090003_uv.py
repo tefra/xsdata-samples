@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from ..core.datatypes_base import (
     AdExplicit,
@@ -382,7 +381,9 @@ class CoctMt090003UvAssignedEntity:
             "nillable": True,
         },
     )
-    assigned_non_person_living_subject: CoctMt090003UvNonPersonLivingSubject | None = field(
+    assigned_non_person_living_subject: (
+        CoctMt090003UvNonPersonLivingSubject | None
+    ) = field(
         default=None,
         metadata={
             "name": "assignedNonPersonLivingSubject",

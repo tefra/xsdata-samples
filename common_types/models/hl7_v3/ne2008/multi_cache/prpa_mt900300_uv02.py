@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from ..core.datatypes_base import (
     Cd,
@@ -533,7 +532,9 @@ class PrpaMt900300Uv02QueryByParameterPayload:
             "required": True,
         },
     )
-    responsible_organization: PrpaMt900300Uv02ResponsibleOrganization | None = field(
+    responsible_organization: (
+        PrpaMt900300Uv02ResponsibleOrganization | None
+    ) = field(
         default=None,
         metadata={
             "name": "responsibleOrganization",

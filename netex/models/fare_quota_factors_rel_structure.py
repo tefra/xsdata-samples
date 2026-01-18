@@ -1,6 +1,5 @@
 from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import Union
 
 from .fare_quota_factor import FareQuotaFactor
 from .fare_quota_factor_ref import FareQuotaFactorRef

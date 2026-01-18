@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .variable_data_prototype_in_system_instance_ref import (
     VariableDataPrototypeInSystemInstanceRef,

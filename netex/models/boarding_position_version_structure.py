@@ -1,6 +1,5 @@
 from dataclasses import dataclass, field
 from decimal import Decimal
-from typing import Optional
 
 from .boarding_position_type_enumeration import BoardingPositionTypeEnumeration
 from .entrance_refs_rel_structure import EntranceRefsRelStructure

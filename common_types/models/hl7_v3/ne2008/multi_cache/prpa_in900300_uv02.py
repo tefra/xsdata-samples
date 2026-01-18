@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from ..core.datatypes_base import (
     Cd,
@@ -161,7 +160,9 @@ class PrpaIn900300Uv02QuqiMt021001Uv01ControlActProcess:
             "nillable": True,
         },
     )
-    query_by_parameter_payload: PrpaMt900300Uv02QueryByParameterPayload | None = field(
+    query_by_parameter_payload: (
+        PrpaMt900300Uv02QueryByParameterPayload | None
+    ) = field(
         default=None,
         metadata={
             "name": "queryByParameterPayload",
@@ -351,7 +352,9 @@ class PrpaIn900300Uv02McciMt000100Uv01Message:
             "nillable": True,
         },
     )
-    control_act_process: PrpaIn900300Uv02QuqiMt021001Uv01ControlActProcess | None = field(
+    control_act_process: (
+        PrpaIn900300Uv02QuqiMt021001Uv01ControlActProcess | None
+    ) = field(
         default=None,
         metadata={
             "name": "controlActProcess",

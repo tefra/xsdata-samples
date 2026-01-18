@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .adaptive_platform_service_instance_subtypes_enum import (
     AdaptivePlatformServiceInstanceSubtypesEnum,
@@ -157,7 +156,9 @@ class PncMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    dynamic_pnc_mapping_pdu_group_refs: PncMapping.DynamicPncMappingPduGroupRefs | None = field(
+    dynamic_pnc_mapping_pdu_group_refs: (
+        PncMapping.DynamicPncMappingPduGroupRefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "DYNAMIC-PNC-MAPPING-PDU-GROUP-REFS",
@@ -181,7 +182,9 @@ class PncMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    pnc_consumed_provided_service_instance_groups: PncMapping.PncConsumedProvidedServiceInstanceGroups | None = field(
+    pnc_consumed_provided_service_instance_groups: (
+        PncMapping.PncConsumedProvidedServiceInstanceGroups | None
+    ) = field(
         default=None,
         metadata={
             "name": "PNC-CONSUMED-PROVIDED-SERVICE-INSTANCE-GROUPS",
@@ -221,7 +224,9 @@ class PncMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    relevant_for_dynamic_pnc_mapping_refs: PncMapping.RelevantForDynamicPncMappingRefs | None = field(
+    relevant_for_dynamic_pnc_mapping_refs: (
+        PncMapping.RelevantForDynamicPncMappingRefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "RELEVANT-FOR-DYNAMIC-PNC-MAPPING-REFS",
@@ -431,15 +436,13 @@ class PncMapping:
 
         @dataclass
         class ServiceInstanceRef(Ref):
-            dest: AdaptivePlatformServiceInstanceSubtypesEnum | None = (
-                field(
-                    default=None,
-                    metadata={
-                        "name": "DEST",
-                        "type": "Attribute",
-                        "required": True,
-                    },
-                )
+            dest: AdaptivePlatformServiceInstanceSubtypesEnum | None = field(
+                default=None,
+                metadata={
+                    "name": "DEST",
+                    "type": "Attribute",
+                    "required": True,
+                },
             )
 
     @dataclass

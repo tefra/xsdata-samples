@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import VariationPoint
 from .mode_declaration_group_prototype_subtypes_enum import (
@@ -41,7 +40,9 @@ class SwcBswSynchronizedModeGroupPrototype:
     class Meta:
         name = "SWC-BSW-SYNCHRONIZED-MODE-GROUP-PROTOTYPE"
 
-    bsw_mode_group_ref: SwcBswSynchronizedModeGroupPrototype.BswModeGroupRef | None = field(
+    bsw_mode_group_ref: (
+        SwcBswSynchronizedModeGroupPrototype.BswModeGroupRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "BSW-MODE-GROUP-REF",

@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.parking_route_details_versioned_reference import (
@@ -21,14 +20,16 @@ class ParkingRouteStatus:
     :ivar parking_route_status_extension:
     """
 
-    parking_route_reference: ParkingRouteDetailsVersionedReference | None = field(
-        default=None,
-        metadata={
-            "name": "parkingRouteReference",
-            "type": "Element",
-            "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
-        },
+    parking_route_reference: ParkingRouteDetailsVersionedReference | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "parkingRouteReference",
+                "type": "Element",
+                "namespace": "http://datex2.eu/schema/2/2_0",
+                "required": True,
+            },
+        )
     )
     parking_route_active: bool | None = field(
         default=None,

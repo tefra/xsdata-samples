@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import ForwardRef, Optional, Union
+from typing import ForwardRef
 
 from sdmx_ml.models.empty_type import EmptyType
 from sdmx_ml.models.maintainable_event_type import MaintainableEventType
@@ -27,7 +27,13 @@ class DataRegistrationEventsType:
     """
 
     choice: tuple[
-        EmptyType | DataRegistrationEventsType.RegistrationId | DataRegistrationEventsType.ProvisionAgreement | DataRegistrationEventsType.DataProvider | DataRegistrationEventsType.DataflowReference | DataRegistrationEventsType.KeyFamilyReference | DataRegistrationEventsType.Category,
+        EmptyType
+        | DataRegistrationEventsType.RegistrationId
+        | DataRegistrationEventsType.ProvisionAgreement
+        | DataRegistrationEventsType.DataProvider
+        | DataRegistrationEventsType.DataflowReference
+        | DataRegistrationEventsType.KeyFamilyReference
+        | DataRegistrationEventsType.Category,
         ...,
     ] = field(
         default_factory=tuple,

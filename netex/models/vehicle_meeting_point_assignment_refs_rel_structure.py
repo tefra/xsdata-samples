@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from .dynamic_vehicle_meeting_point_assignment_ref import (
     DynamicVehicleMeetingPointAssignmentRef,
@@ -19,7 +18,11 @@ class VehicleMeetingPointAssignmentRefsRelStructure(
     class Meta:
         name = "vehicleMeetingPointAssignmentRefs_RelStructure"
 
-    vehicle_meeting_point_assignment_ref: DynamicVehicleMeetingPointAssignmentRef | VehicleMeetingPointAssignmentRef | None = field(
+    vehicle_meeting_point_assignment_ref: (
+        DynamicVehicleMeetingPointAssignmentRef
+        | VehicleMeetingPointAssignmentRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",

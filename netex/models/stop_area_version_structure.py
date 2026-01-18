@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from .stop_area_ref_structure import StopAreaRefStructure
 from .topographic_place_ref import TopographicPlaceRef
@@ -30,7 +29,9 @@ class StopAreaVersionStructure(ZoneVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    topographic_place_ref_or_topographic_place_view: TopographicPlaceRef | TopographicPlaceView | None = field(
+    topographic_place_ref_or_topographic_place_view: (
+        TopographicPlaceRef | TopographicPlaceView | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",

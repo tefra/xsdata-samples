@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from .alternative_names_rel_structure import AlternativeNamesRelStructure
 from .condition_summary import ConditionSummary
@@ -67,7 +66,9 @@ class GroupOfSalesOfferPackagesVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    discounting_rule_ref_or_pricing_rule_ref: LimitingRuleRef | DiscountingRuleRef | PricingRuleRef | None = field(
+    discounting_rule_ref_or_pricing_rule_ref: (
+        LimitingRuleRef | DiscountingRuleRef | PricingRuleRef | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -106,15 +107,13 @@ class GroupOfSalesOfferPackagesVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    type_of_sales_offer_package_ref: TypeOfSalesOfferPackageRef | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "TypeOfSalesOfferPackageRef",
-                "type": "Element",
-                "namespace": "http://www.netex.org.uk/netex",
-            },
-        )
+    type_of_sales_offer_package_ref: TypeOfSalesOfferPackageRef | None = field(
+        default=None,
+        metadata={
+            "name": "TypeOfSalesOfferPackageRef",
+            "type": "Element",
+            "namespace": "http://www.netex.org.uk/netex",
+        },
     )
     condition_summary: ConditionSummary | None = field(
         default=None,
@@ -124,7 +123,9 @@ class GroupOfSalesOfferPackagesVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    validity_parameter_assignments: GenericParameterAssignmentsRelStructure | None = field(
+    validity_parameter_assignments: (
+        GenericParameterAssignmentsRelStructure | None
+    ) = field(
         default=None,
         metadata={
             "name": "validityParameterAssignments",
@@ -157,7 +158,9 @@ class GroupOfSalesOfferPackagesVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    sales_offer_package_elements: SalesOfferPackageElementsRelStructure | None = field(
+    sales_offer_package_elements: (
+        SalesOfferPackageElementsRelStructure | None
+    ) = field(
         default=None,
         metadata={
             "name": "salesOfferPackageElements",

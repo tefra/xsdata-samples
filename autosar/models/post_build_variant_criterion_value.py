@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import Annotation
 from .integer_value_variation_point import IntegerValueVariationPoint
@@ -43,7 +42,9 @@ class PostBuildVariantCriterionValue:
     class Meta:
         name = "POST-BUILD-VARIANT-CRITERION-VALUE"
 
-    variant_criterion_ref: PostBuildVariantCriterionValue.VariantCriterionRef | None = field(
+    variant_criterion_ref: (
+        PostBuildVariantCriterionValue.VariantCriterionRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "VARIANT-CRITERION-REF",
@@ -59,15 +60,13 @@ class PostBuildVariantCriterionValue:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: PostBuildVariantCriterionValue.Annotations | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "ANNOTATIONS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    annotations: PostBuildVariantCriterionValue.Annotations | None = field(
+        default=None,
+        metadata={
+            "name": "ANNOTATIONS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     s: str | None = field(
         default=None,

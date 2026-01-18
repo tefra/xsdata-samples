@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .controllable_element_ref import ControllableElementRef
 from .fare_price_versioned_child_structure import (

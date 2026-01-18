@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -107,13 +106,15 @@ class BulkNvDataDescriptor:
             "required": True,
         },
     )
-    short_name_fragments: BulkNvDataDescriptor.ShortNameFragments | None = field(
-        default=None,
-        metadata={
-            "name": "SHORT-NAME-FRAGMENTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    short_name_fragments: BulkNvDataDescriptor.ShortNameFragments | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "SHORT-NAME-FRAGMENTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     long_name: MultilanguageLongName | None = field(
         default=None,
@@ -171,13 +172,15 @@ class BulkNvDataDescriptor:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nv_block_data_mappings: BulkNvDataDescriptor.NvBlockDataMappings | None = field(
-        default=None,
-        metadata={
-            "name": "NV-BLOCK-DATA-MAPPINGS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    nv_block_data_mappings: BulkNvDataDescriptor.NvBlockDataMappings | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "NV-BLOCK-DATA-MAPPINGS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     variation_point: VariationPoint | None = field(
         default=None,

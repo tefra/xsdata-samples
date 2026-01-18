@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Any, Optional
+from typing import Any
 
 from sdmx_ml.models.component_list_type import ComponentListType
 

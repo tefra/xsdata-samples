@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from sdmx_ml.models.coded_text_format_type import CodedTextFormatType
 from sdmx_ml.models.text_format_type import TextFormatType

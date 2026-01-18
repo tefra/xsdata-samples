@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -111,13 +110,15 @@ class EocExecutableEntityRef:
             "required": True,
         },
     )
-    short_name_fragments: EocExecutableEntityRef.ShortNameFragments | None = field(
-        default=None,
-        metadata={
-            "name": "SHORT-NAME-FRAGMENTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    short_name_fragments: EocExecutableEntityRef.ShortNameFragments | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "SHORT-NAME-FRAGMENTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     long_name: MultilanguageLongName | None = field(
         default=None,
@@ -167,7 +168,9 @@ class EocExecutableEntityRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    direct_successor_refs: EocExecutableEntityRef.DirectSuccessorRefs | None = field(
+    direct_successor_refs: (
+        EocExecutableEntityRef.DirectSuccessorRefs | None
+    ) = field(
         default=None,
         metadata={
             "name": "DIRECT-SUCCESSOR-REFS",
@@ -175,7 +178,9 @@ class EocExecutableEntityRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    bsw_module_instance_ref: EocExecutableEntityRef.BswModuleInstanceRef | None = field(
+    bsw_module_instance_ref: (
+        EocExecutableEntityRef.BswModuleInstanceRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "BSW-MODULE-INSTANCE-REF",

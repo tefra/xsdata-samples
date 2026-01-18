@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import VariationPoint
 from .ref import Ref
@@ -35,7 +34,10 @@ class SomeipSdServerEventGroupTimingConfigRefConditional:
     class Meta:
         name = "SOMEIP-SD-SERVER-EVENT-GROUP-TIMING-CONFIG-REF-CONDITIONAL"
 
-    someip_sd_server_event_group_timing_config_ref: SomeipSdServerEventGroupTimingConfigRefConditional.SomeipSdServerEventGroupTimingConfigRef | None = field(
+    someip_sd_server_event_group_timing_config_ref: (
+        SomeipSdServerEventGroupTimingConfigRefConditional.SomeipSdServerEventGroupTimingConfigRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "SOMEIP-SD-SERVER-EVENT-GROUP-TIMING-CONFIG-REF",
@@ -69,13 +71,11 @@ class SomeipSdServerEventGroupTimingConfigRefConditional:
 
     @dataclass
     class SomeipSdServerEventGroupTimingConfigRef(Ref):
-        dest: SomeipSdServerEventGroupTimingConfigSubtypesEnum | None = (
-            field(
-                default=None,
-                metadata={
-                    "name": "DEST",
-                    "type": "Attribute",
-                    "required": True,
-                },
-            )
+        dest: SomeipSdServerEventGroupTimingConfigSubtypesEnum | None = field(
+            default=None,
+            metadata={
+                "name": "DEST",
+                "type": "Attribute",
+                "required": True,
+            },
         )

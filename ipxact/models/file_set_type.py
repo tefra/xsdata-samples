@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from ipxact.models.data_type_type import DataTypeType
 from ipxact.models.dependency import Dependency

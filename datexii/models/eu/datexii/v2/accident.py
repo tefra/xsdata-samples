@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from datexii.models.eu.datexii.v2.accident_cause_enum import AccidentCauseEnum
 from datexii.models.eu.datexii.v2.accident_type_enum import AccidentTypeEnum

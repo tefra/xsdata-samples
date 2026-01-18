@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -163,7 +162,9 @@ class ServiceProxySwComponentType:
             "required": True,
         },
     )
-    short_name_fragments: ServiceProxySwComponentType.ShortNameFragments | None = field(
+    short_name_fragments: (
+        ServiceProxySwComponentType.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -227,13 +228,15 @@ class ServiceProxySwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    blueprint_policys: ServiceProxySwComponentType.BlueprintPolicys | None = field(
-        default=None,
-        metadata={
-            "name": "BLUEPRINT-POLICYS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    blueprint_policys: ServiceProxySwComponentType.BlueprintPolicys | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "BLUEPRINT-POLICYS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     short_name_pattern: String | None = field(
         default=None,
@@ -243,7 +246,9 @@ class ServiceProxySwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_component_documentations: ServiceProxySwComponentType.SwComponentDocumentations | None = field(
+    sw_component_documentations: (
+        ServiceProxySwComponentType.SwComponentDocumentations | None
+    ) = field(
         default=None,
         metadata={
             "name": "SW-COMPONENT-DOCUMENTATIONS",
@@ -251,7 +256,9 @@ class ServiceProxySwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    consistency_needss: ServiceProxySwComponentType.ConsistencyNeedss | None = field(
+    consistency_needss: (
+        ServiceProxySwComponentType.ConsistencyNeedss | None
+    ) = field(
         default=None,
         metadata={
             "name": "CONSISTENCY-NEEDSS",
@@ -275,17 +282,17 @@ class ServiceProxySwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    unit_group_refs: ServiceProxySwComponentType.UnitGroupRefs | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "UNIT-GROUP-REFS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    unit_group_refs: ServiceProxySwComponentType.UnitGroupRefs | None = field(
+        default=None,
+        metadata={
+            "name": "UNIT-GROUP-REFS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
-    internal_behaviors: ServiceProxySwComponentType.InternalBehaviors | None = field(
+    internal_behaviors: (
+        ServiceProxySwComponentType.InternalBehaviors | None
+    ) = field(
         default=None,
         metadata={
             "name": "INTERNAL-BEHAVIORS",

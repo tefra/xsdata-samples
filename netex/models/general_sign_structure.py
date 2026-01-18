@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .multilingual_string import MultilingualString
 from .sign_content_enumeration import SignContentEnumeration

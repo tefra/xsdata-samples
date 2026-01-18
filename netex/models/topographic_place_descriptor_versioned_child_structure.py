@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .entity_in_version_structure import VersionedChildStructure
 from .multilingual_string import MultilingualString
@@ -34,7 +33,9 @@ class TopographicPlaceDescriptorVersionedChildStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    qualify: TopographicPlaceDescriptorVersionedChildStructure.Qualify | None = field(
+    qualify: (
+        TopographicPlaceDescriptorVersionedChildStructure.Qualify | None
+    ) = field(
         default=None,
         metadata={
             "name": "Qualify",

@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .country_ref import CountryRef
 from .group_of_sales_offer_packages_ref import GroupOfSalesOfferPackagesRef
@@ -32,11 +31,13 @@ class SalesNoticeAssignmentVersionStructure(NoticeAssignmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    group_of_sales_offer_packages_ref: GroupOfSalesOfferPackagesRef | None = field(
-        default=None,
-        metadata={
-            "name": "GroupOfSalesOfferPackagesRef",
-            "type": "Element",
-            "namespace": "http://www.netex.org.uk/netex",
-        },
+    group_of_sales_offer_packages_ref: GroupOfSalesOfferPackagesRef | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "GroupOfSalesOfferPackagesRef",
+                "type": "Element",
+                "namespace": "http://www.netex.org.uk/netex",
+            },
+        )
     )

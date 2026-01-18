@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import ForwardRef, Optional
+from typing import ForwardRef
 
 from crossref.models.org.crossref.fundref.assertion_name import AssertionName
 from crossref.models.org.crossref.fundref.assertion_provider import (

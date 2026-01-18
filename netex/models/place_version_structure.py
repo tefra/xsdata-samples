@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .type_of_place_refs_rel_structure import TypeOfPlaceRefsRelStructure
 from .zone_version_structure import ZoneVersionStructure

@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from datexii.models.eu.datexii.v2.extension_type import ExtensionType
 from datexii.models.eu.datexii.v2.multilingual_string import MultilingualString
@@ -32,7 +31,9 @@ class VmsSupplementaryPictogram:
     :ivar vms_supplementary_pictogram_extension:
     """
 
-    supplementary_pictogram_description: VmsDatexSupplementalPictogramEnum | None = field(
+    supplementary_pictogram_description: (
+        VmsDatexSupplementalPictogramEnum | None
+    ) = field(
         default=None,
         metadata={
             "name": "supplementaryPictogramDescription",
@@ -57,7 +58,9 @@ class VmsSupplementaryPictogram:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    additional_supplementary_pictogram_description: MultilingualString | None = field(
+    additional_supplementary_pictogram_description: (
+        MultilingualString | None
+    ) = field(
         default=None,
         metadata={
             "name": "additionalSupplementaryPictogramDescription",

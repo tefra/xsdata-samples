@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -101,13 +100,15 @@ class DataTransformationSet:
             "required": True,
         },
     )
-    short_name_fragments: DataTransformationSet.ShortNameFragments | None = field(
-        default=None,
-        metadata={
-            "name": "SHORT-NAME-FRAGMENTS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    short_name_fragments: DataTransformationSet.ShortNameFragments | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "SHORT-NAME-FRAGMENTS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
     long_name: MultilanguageLongName | None = field(
         default=None,
@@ -165,15 +166,19 @@ class DataTransformationSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    data_transformations: DataTransformationSet.DataTransformations | None = field(
-        default=None,
-        metadata={
-            "name": "DATA-TRANSFORMATIONS",
-            "type": "Element",
-            "namespace": "http://autosar.org/schema/r4.0",
-        },
+    data_transformations: DataTransformationSet.DataTransformations | None = (
+        field(
+            default=None,
+            metadata={
+                "name": "DATA-TRANSFORMATIONS",
+                "type": "Element",
+                "namespace": "http://autosar.org/schema/r4.0",
+            },
+        )
     )
-    transformation_technologys: DataTransformationSet.TransformationTechnologys | None = field(
+    transformation_technologys: (
+        DataTransformationSet.TransformationTechnologys | None
+    ) = field(
         default=None,
         metadata={
             "name": "TRANSFORMATION-TECHNOLOGYS",

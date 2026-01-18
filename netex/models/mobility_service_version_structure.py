@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from xsdata.models.datatype import XmlDate
 
@@ -53,7 +52,19 @@ class MobilityServiceVersionStructure(EquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    organisation_ref_or_other_organisation_ref_or_transport_organisation_ref: RetailConsortiumRef | OnlineServiceOperatorRef | GeneralOrganisationRef | ManagementAgentRef | ServicedOrganisationRef | TravelAgentRef | OtherOrganisationRef | AuthorityRef | OperatorRef | OrganisationRef | None = field(
+    organisation_ref_or_other_organisation_ref_or_transport_organisation_ref: (
+        RetailConsortiumRef
+        | OnlineServiceOperatorRef
+        | GeneralOrganisationRef
+        | ManagementAgentRef
+        | ServicedOrganisationRef
+        | TravelAgentRef
+        | OtherOrganisationRef
+        | AuthorityRef
+        | OperatorRef
+        | OrganisationRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -119,7 +130,9 @@ class MobilityServiceVersionStructure(EquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    service_booking_arrangements: ServiceBookingArrangementsStructure | None = field(
+    service_booking_arrangements: (
+        ServiceBookingArrangementsStructure | None
+    ) = field(
         default=None,
         metadata={
             "name": "ServiceBookingArrangements",

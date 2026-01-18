@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from .encumbrance_enumeration import EncumbranceEnumeration
 from .entity_in_version_structure import VersionedChildStructure
@@ -15,7 +14,13 @@ class UserNeedVersionedChildStructure(VersionedChildStructure):
     class Meta:
         name = "UserNeed_VersionedChildStructure"
 
-    choice: MobilityEnumeration | PsychosensoryNeedEnumeration | MedicalNeedEnumeration | EncumbranceEnumeration | None = field(
+    choice: (
+        MobilityEnumeration
+        | PsychosensoryNeedEnumeration
+        | MedicalNeedEnumeration
+        | EncumbranceEnumeration
+        | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",

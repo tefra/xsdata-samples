@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -94,15 +93,13 @@ class EthernetCluster:
             "required": True,
         },
     )
-    short_name_fragments: EthernetCluster.ShortNameFragments | None = (
-        field(
-            default=None,
-            metadata={
-                "name": "SHORT-NAME-FRAGMENTS",
-                "type": "Element",
-                "namespace": "http://autosar.org/schema/r4.0",
-            },
-        )
+    short_name_fragments: EthernetCluster.ShortNameFragments | None = field(
+        default=None,
+        metadata={
+            "name": "SHORT-NAME-FRAGMENTS",
+            "type": "Element",
+            "namespace": "http://autosar.org/schema/r4.0",
+        },
     )
     long_name: MultilanguageLongName | None = field(
         default=None,
@@ -160,7 +157,9 @@ class EthernetCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ethernet_cluster_variants: EthernetCluster.EthernetClusterVariants | None = field(
+    ethernet_cluster_variants: (
+        EthernetCluster.EthernetClusterVariants | None
+    ) = field(
         default=None,
         metadata={
             "name": "ETHERNET-CLUSTER-VARIANTS",

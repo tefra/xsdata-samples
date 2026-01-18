@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .admin_data import (
     AdminData,
@@ -100,7 +99,9 @@ class DiagnosticEventToEnableConditionGroupMapping:
             "required": True,
         },
     )
-    short_name_fragments: DiagnosticEventToEnableConditionGroupMapping.ShortNameFragments | None = field(
+    short_name_fragments: (
+        DiagnosticEventToEnableConditionGroupMapping.ShortNameFragments | None
+    ) = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -148,7 +149,9 @@ class DiagnosticEventToEnableConditionGroupMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: DiagnosticEventToEnableConditionGroupMapping.Annotations | None = field(
+    annotations: (
+        DiagnosticEventToEnableConditionGroupMapping.Annotations | None
+    ) = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -164,7 +167,9 @@ class DiagnosticEventToEnableConditionGroupMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    diagnostic_event_ref: DiagnosticEventToEnableConditionGroupMapping.DiagnosticEventRef | None = field(
+    diagnostic_event_ref: (
+        DiagnosticEventToEnableConditionGroupMapping.DiagnosticEventRef | None
+    ) = field(
         default=None,
         metadata={
             "name": "DIAGNOSTIC-EVENT-REF",
@@ -172,7 +177,10 @@ class DiagnosticEventToEnableConditionGroupMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    enable_condition_group_ref: DiagnosticEventToEnableConditionGroupMapping.EnableConditionGroupRef | None = field(
+    enable_condition_group_ref: (
+        DiagnosticEventToEnableConditionGroupMapping.EnableConditionGroupRef
+        | None
+    ) = field(
         default=None,
         metadata={
             "name": "ENABLE-CONDITION-GROUP-REF",

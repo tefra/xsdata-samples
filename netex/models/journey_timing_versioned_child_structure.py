@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional, Union
 
 from .entity_in_version_structure import VersionedChildStructure
 from .multilingual_string import MultilingualString
@@ -24,7 +23,9 @@ class JourneyTimingVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    time_demand_type_ref_or_timeband_ref: TimeDemandTypeRef | TimebandRef | None = field(
+    time_demand_type_ref_or_timeband_ref: (
+        TimeDemandTypeRef | TimebandRef | None
+    ) = field(
         default=None,
         metadata={
             "type": "Elements",

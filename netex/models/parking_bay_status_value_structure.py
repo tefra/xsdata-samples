@@ -1,5 +1,4 @@
 from dataclasses import dataclass, field
-from typing import Optional
 
 from .parking_bay_status_enumeration import ParkingBayStatusEnumeration
 from .type_of_value_version_structure import TypeOfValueVersionStructure
