@@ -41,6 +41,7 @@ from sdmx_ml.models.structures_type import StructuresType
 from sdmx_ml.models.text_format_type import TextFormatType
 from sdmx_ml.models.time_dimension import TimeDimension
 from sdmx_ml.models.time_dimension_representation_type import TimeDimensionRepresentationType
+from sdmx_ml.models.time_text_format_type import TimeTextFormatType
 from sdmx_ml.models.to_vtl_mapping_type import ToVtlMappingType
 from sdmx_ml.models.transformation_scheme_type import TransformationSchemeType
 from sdmx_ml.models.transformation_schemes_type import TransformationSchemesType
@@ -347,11 +348,9 @@ obj = Structure(
                             time_dimension=TimeDimension(
                                 concept_identity='urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=SDMX:CONCEPTS(1.0).TIME_PERIOD',
                                 local_representation=TimeDimensionRepresentationType(
-                                    text_format_or_enumeration_or_enumeration_format=[
-                                        TextFormatType(
-                                            text_type=DataType.OBSERVATIONAL_TIME_PERIOD
-                                        ),
-                                    ]
+                                    text_format=TimeTextFormatType(
+
+                                    )
                                 )
                             )
                         ),
@@ -410,11 +409,9 @@ obj = Structure(
                             time_dimension=TimeDimension(
                                 concept_identity='urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=SDMX:CONCEPTS(1.0).TIME_PERIOD',
                                 local_representation=TimeDimensionRepresentationType(
-                                    text_format_or_enumeration_or_enumeration_format=[
-                                        TextFormatType(
-                                            text_type=DataType.OBSERVATIONAL_TIME_PERIOD
-                                        ),
-                                    ]
+                                    text_format=TimeTextFormatType(
+
+                                    )
                                 )
                             )
                         ),

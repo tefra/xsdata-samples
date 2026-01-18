@@ -6,6 +6,7 @@ from typing import Any
 from sdmx_ml.models.simple_data_structure_representation_type import (
     SimpleDataStructureRepresentationType,
 )
+from sdmx_ml.models.time_text_format_type import TimeTextFormatType
 
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
@@ -25,4 +26,12 @@ class TimeDimensionRepresentationType(SimpleDataStructureRepresentationType):
         metadata={
             "type": "Ignore",
         },
+    )
+    text_format: TimeTextFormatType = field(
+        metadata={
+            "name": "TextFormat",
+            "type": "Element",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+            "required": True,
+        }
     )

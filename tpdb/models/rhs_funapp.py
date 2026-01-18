@@ -44,7 +44,7 @@ class RhsLambda:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
+            "min_occurs": 1,
             "max_occurs": 2,
         },
     )
@@ -93,7 +93,6 @@ class RhsApplication:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -102,7 +101,6 @@ class RhsApplication:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -112,7 +110,6 @@ class RhsApplication:
         metadata={
             "name": "lambda",
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },
@@ -121,7 +118,6 @@ class RhsApplication:
         default_factory=list,
         metadata={
             "type": "Element",
-            "min_occurs": 2,
             "max_occurs": 2,
             "sequence": 1,
         },

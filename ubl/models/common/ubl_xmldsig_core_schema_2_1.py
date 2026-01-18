@@ -119,10 +119,11 @@ class DigestValue:
         namespace = "http://www.w3.org/2000/09/xmldsig#"
 
     value: bytes = field(
+        default=b"",
         metadata={
             "required": True,
             "format": "base64",
-        }
+        },
     )
 
 
@@ -190,14 +191,14 @@ class PgpdataType:
     class Meta:
         name = "PGPDataType"
 
-    pgpkey_id: bytes = field(
+    pgpkey_id: None | bytes = field(
+        default=None,
         metadata={
             "name": "PGPKeyID",
             "type": "Element",
             "namespace": "http://www.w3.org/2000/09/xmldsig#",
-            "required": True,
             "format": "base64",
-        }
+        },
     )
     pgpkey_packet: tuple[bytes, ...] = field(
         default_factory=tuple,
@@ -324,10 +325,11 @@ class SignaturePropertyType:
 @dataclass(frozen=True, kw_only=True)
 class SignatureValueType:
     value: bytes = field(
+        default=b"",
         metadata={
             "required": True,
             "format": "base64",
-        }
+        },
     )
     id: None | str = field(
         default=None,

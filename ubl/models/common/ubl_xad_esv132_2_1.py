@@ -94,10 +94,11 @@ class EncapsulatedPkidataType:
         name = "EncapsulatedPKIDataType"
 
     value: bytes = field(
+        default=b"",
         metadata={
             "required": True,
             "format": "base64",
-        }
+        },
     )
     id: None | str = field(
         default=None,

@@ -6,7 +6,6 @@ from typing import Any
 from sdmx_ml.models.basic_component_text_format_type import (
     BasicComponentTextFormatType,
 )
-from sdmx_ml.models.simple_data_type import SimpleDataType
 
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
@@ -19,13 +18,6 @@ class SimpleComponentTextFormatType(BasicComponentTextFormatType):
     values.
     """
 
-    text_type: SimpleDataType = field(
-        default=SimpleDataType.STRING,
-        metadata={
-            "name": "textType",
-            "type": "Attribute",
-        },
-    )
     is_multi_lingual: Any = field(
         init=False,
         default=None,

@@ -4,7 +4,6 @@ from dataclasses import dataclass, field
 from typing import Any
 
 from sdmx_ml.models.member_selection_type import MemberSelectionType
-from sdmx_ml.models.simple_key_value_type import SimpleKeyValueType
 
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
@@ -23,7 +22,6 @@ class DataKeyValueType(MemberSelectionType):
         provided. An operator is available on this to indicate whether
         the specified value indicates an exact value or the
         beginning/end of a range (inclusive or exclusive).
-    :ivar value:
     :ivar include:
     :ivar valid_from:
     :ivar valid_to:
@@ -34,15 +32,6 @@ class DataKeyValueType(MemberSelectionType):
         default=None,
         metadata={
             "type": "Ignore",
-        },
-    )
-    value: tuple[SimpleKeyValueType, ...] = field(
-        default_factory=tuple,
-        metadata={
-            "name": "Value",
-            "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
-            "min_occurs": 1,
         },
     )
     include: bool = field(

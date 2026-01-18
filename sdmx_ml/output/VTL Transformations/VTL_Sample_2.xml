@@ -125,7 +125,7 @@
             <ns1:TimeDimension>
               <ns1:ConceptIdentity>urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=SDMX:CONCEPTS2(1.0).TIME_PERIOD</ns1:ConceptIdentity>
               <ns1:LocalRepresentation>
-                <ns1:TextFormat textType="ObservationalTimePeriod"/>
+                <ns1:TextFormat/>
               </ns1:LocalRepresentation>
             </ns1:TimeDimension>
           </ns1:DimensionList>
@@ -155,7 +155,7 @@
             <ns1:TimeDimension>
               <ns1:ConceptIdentity>urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=SDMX:CONCEPTS2(1.0).TIME_PERIOD</ns1:ConceptIdentity>
               <ns1:LocalRepresentation>
-                <ns1:TextFormat textType="ObservationalTimePeriod"/>
+                <ns1:TextFormat/>
               </ns1:LocalRepresentation>
             </ns1:TimeDimension>
           </ns1:DimensionList>

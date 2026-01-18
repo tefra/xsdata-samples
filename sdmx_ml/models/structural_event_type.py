@@ -19,11 +19,11 @@ class StructuralEventType:
         the one changed object.
     """
 
-    structures: Structures = field(
+    structures: None | Structures = field(
+        default=None,
         metadata={
             "name": "Structures",
             "type": "Element",
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
-            "required": True,
-        }
+        },
     )

@@ -4,7 +4,6 @@ from sdmx_ml.models.attribute_relationship_type import AttributeRelationshipType
 from sdmx_ml.models.data_structure_components import DataStructureComponents
 from sdmx_ml.models.data_structure_type import DataStructureType
 from sdmx_ml.models.data_structures_type import DataStructuresType
-from sdmx_ml.models.data_type import DataType
 from sdmx_ml.models.dimension import Dimension
 from sdmx_ml.models.dimension_list import DimensionList
 from sdmx_ml.models.group import Group
@@ -22,6 +21,7 @@ from sdmx_ml.models.structures_type import StructuresType
 from sdmx_ml.models.text_format_type import TextFormatType
 from sdmx_ml.models.time_dimension import TimeDimension
 from sdmx_ml.models.time_dimension_representation_type import TimeDimensionRepresentationType
+from sdmx_ml.models.time_text_format_type import TimeTextFormatType
 from sdmx_ml.models.unbounded_code_type import UnboundedCodeType
 from xsdata.models.datatype import XmlDateTime
 
@@ -116,11 +116,9 @@ obj = Structure(
                                 urn='urn:sdmx:org.sdmx.infomodel.datastructure.TimeDimension=ECB:ECB_EXR_COMPLEX_ATTRIBUTES(1.0).TIME_PERIOD',
                                 concept_identity='urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).TIME_PERIOD',
                                 local_representation=TimeDimensionRepresentationType(
-                                    text_format_or_enumeration_or_enumeration_format=[
-                                        TextFormatType(
-                                            text_type=DataType.OBSERVATIONAL_TIME_PERIOD
-                                        ),
-                                    ]
+                                    text_format=TimeTextFormatType(
+
+                                    )
                                 )
                             )
                         ),

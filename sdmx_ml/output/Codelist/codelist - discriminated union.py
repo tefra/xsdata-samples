@@ -14,7 +14,6 @@ from sdmx_ml.models.data_constraints_type import DataConstraintsType
 from sdmx_ml.models.data_structure_components import DataStructureComponents
 from sdmx_ml.models.data_structure_type import DataStructureType
 from sdmx_ml.models.data_structures_type import DataStructuresType
-from sdmx_ml.models.data_type import DataType
 from sdmx_ml.models.dataflow_type import DataflowType
 from sdmx_ml.models.dataflows_type import DataflowsType
 from sdmx_ml.models.description import Description
@@ -33,10 +32,10 @@ from sdmx_ml.models.simple_component_value_type import SimpleComponentValueType
 from sdmx_ml.models.structure import Structure
 from sdmx_ml.models.structure_header_type import StructureHeaderType
 from sdmx_ml.models.structures_type import StructuresType
-from sdmx_ml.models.text_format_type import TextFormatType
 from sdmx_ml.models.text_type import TextType
 from sdmx_ml.models.time_dimension import TimeDimension
 from sdmx_ml.models.time_dimension_representation_type import TimeDimensionRepresentationType
+from sdmx_ml.models.time_text_format_type import TimeTextFormatType
 from xsdata.models.datatype import XmlDateTime
 
 
@@ -368,11 +367,9 @@ obj = Structure(
                                 urn='urn:sdmx:org.sdmx.infomodel.datastructure.TimeDimension=EXAMPLE:LABOUR(1.0).TIME_PERIOD',
                                 concept_identity='urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=EXAMPLE:CS_EXAMPLE(1.0).TIME_PERIOD',
                                 local_representation=TimeDimensionRepresentationType(
-                                    text_format_or_enumeration_or_enumeration_format=[
-                                        TextFormatType(
-                                            text_type=DataType.OBSERVATIONAL_TIME_PERIOD
-                                        ),
-                                    ]
+                                    text_format=TimeTextFormatType(
+
+                                    )
                                 )
                             )
                         ),

@@ -34,10 +34,11 @@ class AmountType:
 @dataclass(frozen=True, kw_only=True)
 class BinaryObjectType:
     value: bytes = field(
+        default=b"",
         metadata={
             "required": True,
             "format": "base64",
-        }
+        },
     )
     format: None | str = field(
         default=None,

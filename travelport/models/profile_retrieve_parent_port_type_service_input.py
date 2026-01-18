@@ -15,11 +15,12 @@ class ProfileRetrieveParentPortTypeServiceInput:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
 
-    header: object = field(
+    header: None | object = field(
+        default=None,
         metadata={
             "name": "Header",
             "type": "Element",
-        }
+        },
     )
     body: ProfileRetrieveParentPortTypeServiceInput.Body = field(
         metadata={
